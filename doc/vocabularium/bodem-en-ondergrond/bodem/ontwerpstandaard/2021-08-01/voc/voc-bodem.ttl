@@ -1,0 +1,524 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.vlaanderen.be/ns/bodem#Bodemboorgat> a owl:Class;
+  rdfs:label "Bodemboorgat"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit element is een specialisatie van het object boring en is bedoeld voor ondiepe boring te beschrijven waarbij bodemmateriaal wordt verwijderd voor bodembeschrijving en/of monstername."@nl;
+  rdfs:comment "Een smalle schacht geboord in de grond, bedoeld voor de bemonstering van de bodem."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem#Bodemlocatie> .
+
+<https://data.vlaanderen.be/ns/bodem#Kuststreek> a owl:DatatypeProperty;
+  rdfs:label "kuststreek"@nl;
+  <http://purl.org/vocab/vann/usageNote> "In de kusstreek hebben bodems geen profielontwikkeling. Deze bodems hebben daarom een aparte classificatie."@nl;
+  rdfs:comment "Soort bodem aan de kust."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#BelgischeBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/bodem#Profielput> a owl:Class;
+  rdfs:label "Profielput"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Profielput genoemd omdat er doorgaans Observaties van het bodemprofiel op gebeuren (zie BodemkundigeOpbouw)."@nl;
+  rdfs:comment "Uitgegraven put in de bodem."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem#Bodemlocatie> .
+
+<https://data.vlaanderen.be/ns/bodem#afgeleid> a owl:DatatypeProperty;
+  rdfs:label "afgeleid"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Aangeven of de WRB classificatie van het bodemobject in het veld bepaald is (waarde:  nee) of afgeleid is van een eerder bepaalde classificatie (waarde: ja)."@nl;
+  rdfs:comment "De WRB classificatie van het bodemobject is bepaald op basis van een bestaande classificatie van het object."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#WrbBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range xsd:boolean .
+
+<https://data.vlaanderen.be/ns/bodem#afgeleidVan> a owl:ObjectProperty;
+  rdfs:label "afgeleidVan"@nl;
+  <http://purl.org/vocab/vann/usageNote> "In te vullen indien een relevante code voorkomt in de codelijst 'ExtraClassificatieAfgeleidType'."@nl;
+  rdfs:comment "De classificatie waarvan het extra bodemclassificatiesysteem is afgeleid."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#ExtraBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#ExtraClassificatieAfgeleidType> .
+
+<https://data.vlaanderen.be/ns/bodem#begrenzing> a owl:ObjectProperty;
+  rdfs:label "begrenzing"@nl;
+  rdfs:comment "De begrenzing van de bodemsite."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#Bodemsite>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <http://www.opengis.net/ont/sf#Polygon> .
+
+<https://data.vlaanderen.be/ns/bodem#beschrijving> a owl:DatatypeProperty;
+  rdfs:label "beschrijving"@nl;
+  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
+  rdfs:comment "Een korte uitleg die de betekenis van de classificatie uit het veld naam weergeeft."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#WrbBodemklasse>,
+    <https://data.vlaanderen.be/ns/bodem#ExtraBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/bodem#bodemsite> a owl:ObjectProperty;
+  rdfs:label "bodemsite"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bv in het kader van een studie of monitoring."@nl;
+  rdfs:comment "Groter gebied waarbinnen bodemonderzoek in het algemeen of individuele bodemonderzoeken plaatsvinden."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#Bodemlocatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#Bodemsite> .
+
+<https://data.vlaanderen.be/ns/bodem#bodemtype> a owl:DatatypeProperty;
+  rdfs:label "bodemtype"@nl;
+  rdfs:comment "Soort bodem."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#BelgischeBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/bodem#bovengrens2> a owl:DatatypeProperty;
+  rdfs:label "bovengrens2"@nl;
+  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
+  rdfs:comment "De tweede bovengrens van het bodemprofielelement."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#BodemprofielElement>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range xsd:double .
+
+<https://data.vlaanderen.be/ns/bodem#drainageKlasse> a owl:ObjectProperty;
+  rdfs:label "drainageKlasse"@nl;
+  rdfs:comment "Mate waarin de bodem water kan afvoeren."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#BelgischeBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#DrainageKlasse> .
+
+<https://data.vlaanderen.be/ns/bodem#element> a owl:ObjectProperty;
+  rdfs:label "element"@nl;
+  rdfs:comment "Element van het bodemprofiel."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#Bodemprofiel>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#BodemprofielElement> .
+
+<https://data.vlaanderen.be/ns/bodem#fase> a owl:ObjectProperty;
+  rdfs:label "fase"@nl;
+  rdfs:comment "Aanduiding van secundaire bodemkenmerken."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#BelgischeBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#Fase> .
+
+<https://data.vlaanderen.be/ns/bodem#geobserveerdObject> a owl:ObjectProperty;
+  rdfs:label "geobserveerdObject"@nl;
+  <http://purl.org/vocab/vann/usageNote> "In de context van Observaties en Metingen is dit het geobserveerdObject waarvan een bodemkenmerk wordt geobserveerd."@nl,
+    "TODO"@nl;
+  rdfs:comment "Bodemobject dat men observeert."@nl,
+    "Het object dat geobserveerd wordt tijdens de bodemprofielobservatie."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#Bodemclassificatie>,
+    <https://data.vlaanderen.be/ns/bodem#BodemprofielObservatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#Bodemlocatie> .
+
+<https://data.vlaanderen.be/ns/bodem#grensduidelijkheid> a owl:ObjectProperty;
+  rdfs:label "grensduidelijkheid"@nl;
+  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
+  rdfs:comment "Duidelijkheid van de ligging van de grens van het bodemprofielelement."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#BodemprofielElement>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#DiepteIntervalGrensDuidelijkheid> .
+
+<https://data.vlaanderen.be/ns/bodem#grensregelmatigheid> a owl:ObjectProperty;
+  rdfs:label "grensregelmatigheid"@nl;
+  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
+  rdfs:comment "Regelmatigheid van de grens van het bodemprofielelement."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#BodemprofielElement>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#DiepteIntervalGrensregelmatigheid> .
+
+<https://data.vlaanderen.be/ns/bodem#kunstmatigeGronden> a owl:ObjectProperty;
+  rdfs:label "kunstmatigeGronden"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bv poldergronden zijn kunstmatig ontstaan."@nl;
+  rdfs:comment "Soort kunstmatige bodem."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#BelgischeBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#ClassificatieKunstmatigeGronden> .
+
+<https://data.vlaanderen.be/ns/bodem#laag> a owl:ObjectProperty;
+  rdfs:label "laag"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Een bodemlaag kan optreden als een verzamling van meerdere bodemhorizonten."@nl;
+  rdfs:comment "Bodemlaag waar de horizont deel van uit maakt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#Bodemhorizont>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#Bodemlaag> .
+
+<https://data.vlaanderen.be/ns/bodem#monstertype> a owl:ObjectProperty;
+  rdfs:label "monstertype"@nl;
+  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
+  rdfs:comment "Het type van bodemmonster."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#Bodemmonster>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#BodemmonsterType> .
+
+<https://data.vlaanderen.be/ns/bodem#naam> a owl:DatatypeProperty;
+  rdfs:label "naam"@nl;
+  rdfs:comment "Naam van de bodem volgens de WRB bodemclassificatie."@nl,
+    "Naam van de bodem volgens de extra bodemclassificatie."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#WrbBodemklasse>,
+    <https://data.vlaanderen.be/ns/bodem#ExtraBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/bodem#ondergrens2> a owl:DatatypeProperty;
+  rdfs:label "ondergrens2"@nl;
+  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
+  rdfs:comment "De tweede ondergrens van het bodemprofielelement."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#BodemprofielElement>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range xsd:double .
+
+<https://data.vlaanderen.be/ns/bodem#ontwikkeldeHorizont> a owl:ObjectProperty;
+  rdfs:label "ontwikkeldeHorizont"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Een of meerder horizonten kunnen verzameld zijn in een bodemlaag."@nl;
+  rdfs:comment "Horizont die deel uitmaakt van de bodemlaag."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#Bodemlaag>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#Bodemhorizont> .
+
+<https://data.vlaanderen.be/ns/bodem#positie> a owl:ObjectProperty;
+  rdfs:label "positie"@nl;
+  rdfs:comment "De positie van de bodemsite."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#Bodemsite>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <http://www.opengis.net/ont/sf#Point> .
+
+<https://data.vlaanderen.be/ns/bodem#profielontwikkelingsgroep> a owl:ObjectProperty;
+  rdfs:label "profielontwikkelingsgroep"@nl;
+  rdfs:comment "Beschrijving van de aard en de opeenvolging van horizonten."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#BelgischeBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#Profielontwikkelingsgroep> .
+
+<https://data.vlaanderen.be/ns/bodem#qualifierBeschrijving> a owl:DatatypeProperty;
+  rdfs:label "qualifierBeschrijving"@nl;
+  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
+  rdfs:comment "Een korte uitleg die de betekenis van de classificatie uit het veld qualifierFull weergeeft."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#WrbQualifier>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/bodem#qualifierFull> a owl:ObjectProperty;
+  rdfs:label "qualifierFull"@nl;
+  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
+  rdfs:comment "Secundaire classificatie van de bodem volgens het WRB classificatiesysteem."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#WrbQualifier>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#WrbQualifier> .
+
+<https://data.vlaanderen.be/ns/bodem#referenceSoilGroupBeschrijving> a owl:DatatypeProperty;
+  rdfs:label "referenceSoilGroupBeschrijving"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Verplicht in te vullen indien referenceSoilGroupFull is ingevuld."@nl;
+  rdfs:comment "Een korte uitleg die de betekenis van de classificatie uit het veld referencheSoilGroupFull weergeeft."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#WrbBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/bodem#referenceSoilGroupFull> a owl:ObjectProperty;
+  rdfs:label "referenceSoilGroupFull"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bij het gebruik van dit veld moet verplicht ook het veld referenceSoilGroupBeschrijving worden ingevuld."@nl;
+  rdfs:comment "Primaire classificatie van de bodem volgens het WRB classificatiesysteem."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#WrbBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#WrbReferenceSoilGroup> .
+
+<https://data.vlaanderen.be/ns/bodem#resultaat> a owl:ObjectProperty;
+  rdfs:label "resultaat"@nl;
+  rdfs:comment "De uitkomst van de bodemprofielobservatie."@nl,
+    "Resultaat van de classificatie."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#BodemprofielObservatie>,
+    <https://data.vlaanderen.be/ns/bodem#BelgischeBodemClassificatie>,
+    <https://data.vlaanderen.be/ns/bodem#ExtraBodemClassificatie>,
+    <https://data.vlaanderen.be/ns/bodem#WrbBodemClassificatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#Bodemprofiel>,
+    <https://data.vlaanderen.be/ns/bodem#BelgischeBodemklasse>,
+    <https://data.vlaanderen.be/ns/bodem#ExtraBodemklasse>,
+    <https://data.vlaanderen.be/ns/bodem#WrbBodemklasse> .
+
+<https://data.vlaanderen.be/ns/bodem#substraat> a owl:ObjectProperty;
+  rdfs:label "substraat"@nl;
+  rdfs:comment "Onderliggende laag, waarvan de lithologische aard verschilt van die van de oppervlakkige laag."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#BelgischeBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#Substraat> .
+
+<https://data.vlaanderen.be/ns/bodem#textuurKlasse> a owl:ObjectProperty;
+  rdfs:label "textuurKlasse"@nl;
+  rdfs:comment "Beschrijft de granulometrische samenstelling van de bodem."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#BelgischeBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#Textuurklasse> .
+
+<https://data.vlaanderen.be/ns/bodem#type> a owl:ObjectProperty;
+  rdfs:label "type"@nl;
+  <http://purl.org/vocab/vann/usageNote> "TODO"@nl,
+    "Dit veld moet ingevuld worden op basis van de codelijst WrbQualifierType. De positie van een qualifier ten opzichte van de reference soil group, geeft samen met de betekenis van de qualifier zelf duiding over de eigenschappen van de bodem."@nl;
+  rdfs:comment "Het type van bodemobject."@nl,
+    "Het type van extra bodemclassificatie."@nl,
+    "Aanduiding van de positie, rank en soort van de secundaire classificatie in relatie tot de reference soil group."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#Bodemobject>,
+    <https://data.vlaanderen.be/ns/bodem#ExtraBodemClassificatie>,
+    <https://data.vlaanderen.be/ns/bodem#WrbQualifier>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#Bodemobjecttype>,
+    <https://data.vlaanderen.be/ns/bodem#ExtraClassificatieType>,
+    <https://data.vlaanderen.be/ns/bodem#WrbQualifierType> .
+
+<https://data.vlaanderen.be/ns/bodem#varianteMoedermateriaal> a owl:ObjectProperty;
+  rdfs:label "varianteMoedermateriaal"@nl;
+  rdfs:comment "Verdere beschrijving van het moedermateriaal."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#BelgischeBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#VarianteMoedermateriaal> .
+
+<https://data.vlaanderen.be/ns/bodem#varianteProfielontwikkeling> a owl:ObjectProperty;
+  rdfs:label "varianteProfielontwikkeling"@nl;
+  rdfs:comment "Verdere bepaling van de profielontwikkeling."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#BelgischeBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#VarianteProfielontwikkeling> .
+
+<https://data.vlaanderen.be/ns/bodem#versie> a owl:ObjectProperty;
+  rdfs:label "versie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
+  rdfs:comment "Versie van de classificatie."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#WrbBodemClassificatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#WRBVersie> .
+
+<https://data.vlaanderen.be/ns/bodem#wrbQualifier> a owl:ObjectProperty;
+  rdfs:label "wrbQualifier"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Per qualifier wordt er een nieuw wrbQualifier object toegevoegd. De WRBspecifier ook voorzien?"@nl;
+  rdfs:comment "Beschrijving van de secundaire classificatie van de bodem volgens het WRB classificatiesysteem."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem#WrbBodemklasse>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:range <https://data.vlaanderen.be/ns/bodem#WrbQualifier> .
+
+<https://data.vlaanderen.be/ns/bodem#BelgischeBodemClassificatie> a owl:Class;
+  rdfs:label "BelgischeBodemClassificatie"@nl;
+  rdfs:comment "Classificatie van de bodem volgens het Belgisch bodemclassificatiesysteem"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem#Bodemclassificatie> .
+
+<https://data.vlaanderen.be/ns/bodem#Bodemmonster> a owl:Class;
+  rdfs:label "Bodemmonster"@nl;
+  <http://purl.org/vocab/vann/usageNote> "De observatie gebeurt doorgaans in een labo."@nl;
+  rdfs:comment "Monster genomen uit de bodem voor observatie ex situ."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>,
+    <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> .
+
+<https://data.vlaanderen.be/ns/bodem#BodemmonsterType> a owl:Class;
+  rdfs:label "Bodemmonstertype"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#Bodemobject> a owl:Class;
+  rdfs:label "Bodemobject"@nl;
+  rdfs:comment "TODO"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Domeinobject> .
+
+<https://data.vlaanderen.be/ns/bodem#Bodemobjecttype> a owl:Class;
+  rdfs:label "Bodemobjecttype"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#ClassificatieKunstmatigeGronden> a owl:Class;
+  rdfs:label "ClassificatieKunstmatigeGronden"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#DiepteIntervalGrensDuidelijkheid> a owl:Class;
+  rdfs:label "DiepteIntervalGrensDuidelijkheid"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#DiepteIntervalGrensregelmatigheid> a owl:Class;
+  rdfs:label "DiepteIntervalGrensregelmatigheid"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#DrainageKlasse> a owl:Class;
+  rdfs:label "Drainageklasse"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#ExtraClassificatieAfgeleidType> a owl:Class;
+  rdfs:label "ExtraClassificatieAfgeleidType"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#ExtraClassificatieType> a owl:Class;
+  rdfs:label "ExtraClassificatieType"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#Fase> a owl:Class;
+  rdfs:label "Fase"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#Profielontwikkelingsgroep> a owl:Class;
+  rdfs:label "Profielontwikkelingsgroep"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#Substraat> a owl:Class;
+  rdfs:label "Substraat"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#Textuurklasse> a owl:Class;
+  rdfs:label "Textuurklasse"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#VarianteMoedermateriaal> a owl:Class;
+  rdfs:label "VarianteMoedermateriaal"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#VarianteProfielontwikkeling> a owl:Class;
+  rdfs:label "VarianteProfielontwikkeling"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#WRBVersie> a owl:Class;
+  rdfs:label "WRBVersie"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#WrbQualifierType> a owl:Class;
+  rdfs:label "WrbQualifierType"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#WrbReferenceSoilGroup> a owl:Class;
+  rdfs:label "WrbReferenceSoilGroup"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#Bodemhorizont> a owl:Class;
+  rdfs:label "Bodemhorizont"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Ontwikkeld in de moedermateriaallaag door pedogene processen of samengesteld uit in situ gesedimenteerde organische resten van opgroeiende planten (turf)."@nl;
+  rdfs:comment "Laag in de bodem met een zekere verticale omvang, min of meer evenwijdig aan het maaiveld en homogeen voor de meeste morfologische en analytische kenmerken en onstaan door pedogene processen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem#BodemprofielElement> .
+
+<https://data.vlaanderen.be/ns/bodem#Bodemlaag> a owl:Class;
+  rdfs:label "Bodemlaag"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit object is bedoeld voor lagen die niet ontwikkeld zijn door pedogene processen. Deze laag is in het veld niet noodzakelijk visueel of op andere manier onderscheidbaar en hoeft niet op basis van observaties gedefiniëerd te worden."@nl;
+  rdfs:comment "Deel van de bodem met een zekere verticale omvang, min of meer evenwijdig aan het maaiveld,  dat niet bepaald wordt door pedogene processen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag>,
+    <https://data.vlaanderen.be/ns/bodem#BodemprofielElement> .
+
+<https://data.vlaanderen.be/ns/bodem#Bodemprofiel> a owl:Class;
+  rdfs:label "Bodemprofiel"@nl;
+  rdfs:comment "Observatie van de opeenvolging van horizonten of lagen waardoor de bodem gekenmerkt wordt."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/observaties-en-metingen#Profiel> .
+
+<https://data.vlaanderen.be/ns/bodem#BodemprofielObservatie> a owl:Class;
+  rdfs:label "Bodemprofielobservatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
+  rdfs:comment "De observatie van het bodemprofiel."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/ns/bodem#ExtraBodemClassificatie> a owl:Class;
+  rdfs:label "ExtraBodemClassificatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Hieronder verstaan we een classificatiesysteem anders dan de Belgische bodemclassificatie of de WRB bodemclassificatie."@nl;
+  rdfs:comment "Classificatie van de bodem volgens een bijkomend bodemclassificatiesysteem"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem#Bodemclassificatie> .
+
+<https://data.vlaanderen.be/ns/bodem#WrbBodemClassificatie> a owl:Class;
+  rdfs:label "WrbBodemClassificatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "WRB is een internationale standaard voor bodemclassificatie (WRB staat voor World Reference Base for Soil Resources)."@nl;
+  rdfs:comment "Classificatie van de bodem volgens het WRB bodemclassificatiesysteem."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem#Bodemclassificatie> .
+
+<https://data.vlaanderen.be/ns/bodem#Bodemsite> a owl:Class;
+  rdfs:label "Bodemsite"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bv in het kader van een studie of monitoring."@nl;
+  rdfs:comment "Groter gebied waarbinnen bodemonderzoek in het algemeen of individuele bodemonderzoeken plaatsvinden."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface> .
+
+<https://data.vlaanderen.be/ns/bodem#Bodemclassificatie> a owl:Class;
+  rdfs:label "Bodemclassificatie"@nl;
+  rdfs:comment "Observatie waarbij de bodem wordt ingedeeld bij een groep van bodems met dezelfde of verwante eigenschappen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
+    <http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation> .
+
+<https://data.vlaanderen.be/ns/bodem#Bodemlocatie> a owl:Class;
+  rdfs:label "Bodemlocatie"@nl;
+  rdfs:comment "Plek waar een bodemonderzoek wordt uitgevoerd."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>,
+    <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature>,
+    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject> .
+
+<https://data.vlaanderen.be/ns/bodem#ExtraBodemklasse> a owl:Class;
+  rdfs:label "ExtraBodemklasse"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Hieronder verstaan we een classificatiesysteem anders dan de Belgische bodemclassificatie of de WRB bodemclassificatie."@nl;
+  rdfs:comment "Beschrijving van een bodem volgens een bijkomend bodemclassificatiesysteem."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#WrbQualifier> a owl:Class;
+  rdfs:label "WrbQualifier"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Per qualifier wordt er een nieuw wrbQualifier object toegevoegd."@nl;
+  rdfs:comment "Beschrijving van de secundaire classificatie van de bodem volgens het WRB classificatiesysteem."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#BodemprofielElement> a owl:Class;
+  rdfs:label "Bodemprofielelement"@nl;
+  rdfs:comment "Element van het bodemprofiel."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>,
+    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement> .
+
+<https://data.vlaanderen.be/ns/bodem#WrbBodemklasse> a owl:Class;
+  rdfs:label "WrbBodemklasse"@nl;
+  <http://purl.org/vocab/vann/usageNote> "WRB is een internationale standaard voor bodemclassificatie (WRB staat voor World Reference Base for Soil Resources)."@nl;
+  rdfs:comment "Beschrijving van een bodem volgens de WRB bodemclassificatie."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem#BelgischeBodemklasse> a owl:Class;
+  rdfs:label "BelgischeBodemklasse"@nl;
+  rdfs:comment "Beschrijving van een bodem volgens de Belgische bodemclassificatie."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem> .
+
+<https://data.vlaanderen.be/ns/bodem> a owl:Ontology;
+  rdfs:label "voc-bodem"@en,
+    "voc-bodem"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://medewerkerwebsiteurl>;
+      foaf:name "MedewerkerAffiliatie"
+    ];
+    foaf:firstName "MedewerkerVoornaam";
+    foaf:lastName "MedewerkerNaam";
+    foaf:mbox <mailto:medewerkervoornaam.medewerkernaam@medewerkerdomein>
+  ];
+  dc:issued "TODO";
+  dc:license <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>,
+    "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0";
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://editorwebsiteurl>;
+      foaf:name "EditorAffiliatie"
+    ];
+    foaf:firstName "EditorVoornaam";
+    foaf:lastName "EditorNaam";
+    foaf:mbox <mailto:editorvoornaam.editornaam@editordomein>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://auteurwebsiteurl>;
+      foaf:name "AuteurAffiliatie"
+    ];
+    foaf:firstName "AuteurVoornaam";
+    foaf:lastName "AuteurNaam";
+    foaf:mbox <mailto:auteurvoornaam.auteurnaam@auteurdomein>
+  ] .
