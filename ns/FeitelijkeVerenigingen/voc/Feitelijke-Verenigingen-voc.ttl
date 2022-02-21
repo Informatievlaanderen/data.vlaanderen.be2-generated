@@ -13,23 +13,27 @@ skos:Concept a rdfs:Class;
     "ActiviteitType"@nl,
     "Erkenningstype"@nl .
 
-<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#activiteit> a owl:ObjectProperty;
+<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning.activiteit> a owl:ObjectProperty;
   rdfs:domain <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning>,
     <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenningsaanvraag>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
   rdfs:range skos:Concept .
 
+<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning.geldigheidsperiode> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenningsaanvraag.geldigheidsperiode> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Het tijdsinterval waarop de geldigheidsperiode van een Erkenningsaanvraag aanspraak doet, kan verschillen van de Erkenning die uiteindelijk wordt toegekend."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenningsaanvraag>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
+
 <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#bankrekeningnummer> a owl:DatatypeProperty;
   rdfs:domain <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#FeitelijkeVereniging>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
   rdfs:range rdfs:Literal .
-
-<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#geldigheidsperiode> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Het tijdsinterval waarop de geldigheidsperiode van een Erkenningsaanvraag aanspraak doet, kan verschillen van de Erkenning die uiteindelijk wordt toegekend."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning>,
-    <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenningsaanvraag>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
-  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
 
 <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#verantwoordelijke> a owl:ObjectProperty;
   rdfs:domain <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#FeitelijkeVereniging>;
@@ -55,10 +59,13 @@ schema:contactPoint a rdf:Property;
   rdfs:label "contactpunt"@nl .
 
 skos:prefLabel a rdf:Property;
-  rdfs:label "voorkeurslabel"@nl .
+  rdfs:label "voorkeursnaam"@nl .
 
 <http://www.w3.org/ns/adms#Identifier> a rdf:Property;
   rdfs:label "identificator"@nl .
+
+org:hasSite a rdf:Property;
+  rdfs:label "heeftVestiging"@nl .
 
 org:role a rdf:Property;
   rdfs:label "rol"@nl .
@@ -81,6 +88,9 @@ org:subOrganizationOf a rdf:Property .
 
 <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#heeftErkenning> a rdf:Property;
   rdfs:label "heeftErkenning"@nl .
+
+<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#isPositieIn> a rdf:Property;
+  rdfs:label "isPositieIn"@nl .
 
 <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning> a owl:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen> .
@@ -195,12 +205,14 @@ org:subOrganizationOf a rdf:Property .
     foaf:name "Data Vlaanderen"
   ];
   rdfs:seeAlso skos:Concept,
+    <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#isPositieIn>,
     <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#heeftErkenning>,
     <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#geeftrechtOp>,
     <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#dientIn>,
     <http://www.w3.org/ns/regorg#orgActivity>,
     org:subOrganizationOf,
     org:role,
+    org:hasSite,
     <http://www.w3.org/ns/adms#Identifier>,
     skos:prefLabel,
     schema:contactPoint,
