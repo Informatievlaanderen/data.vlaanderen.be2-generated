@@ -19,7 +19,6 @@
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#OprichtingShape>,
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#PeriodeShape>,
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#PubliekeOrganisatieShape>,
-    <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#HoedanigheidShape>,
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#AgentShape>,
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#PlaatsShape>,
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#PubliekeDienstverleningShape>,
@@ -32,6 +31,7 @@
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#ErkenningstypeShape>,
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#OrganisatieActiviteitShape>,
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#NAL_currencyShape>,
+    <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#RechtsvormtypeShape>,
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#IdentificatorShape>,
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#AdresvoorstellingShape>,
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#FormeleOrganisatieShape>,
@@ -40,6 +40,7 @@
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#VestigingShape>,
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#PersoonShape>,
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#GeregistreerdeOrganisatieShape>,
+    <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#HoedanigheidShape>,
     <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#GeregistreerdPersoonShape> .
 
 <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#ActiviteitTypeShape> a shacl:NodeShape;
@@ -379,14 +380,14 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "registratie"@nl;
-    shacl:path <http://fixme.com#registratie>
+    shacl:path <https://data.vlaanderen.be/ns/persoon#registratie>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon> .
 
 <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#GeregistreerdeOrganisatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://fixme.com#Rechtsvorm>;
+    shacl:class skos:Concept;
     shacl:description "Juridisch statuut van de geregistreerde organisatie."@nl;
     shacl:maxCount 1;
     shacl:name "rechtsvorm"@nl;
@@ -427,7 +428,7 @@
 
 <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#HoedanigheidShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://fixme.com#Hoedanigheid> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#Hoedanigheid> .
 
 <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#IdentificatorShape> a shacl:NodeShape;
   shacl:closed false;
@@ -554,14 +555,16 @@
   shacl:closed false;
   shacl:property [
     shacl:datatype xsd:dateTime;
+    shacl:description "Datum waarop de geboorte plaatsvond."@nl;
     shacl:maxCount 1;
     shacl:name "geboortedatum"@nl;
-    shacl:path <http://fixme.com#/geboortedatum>
+    shacl:path <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Persoon.geboortedatum>
   ], [
     shacl:class dc:Location;
+    shacl:description "Plaats waar een persoon woont."@nl;
     shacl:maxCount 1;
     shacl:name "woonplaats"@nl;
-    shacl:path <http://fixme.com#/woonplaats>
+    shacl:path <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Persoon.woonplaats>
   ], [
     shacl:datatype xsd:string;
     shacl:description "Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie."@nl;
@@ -633,6 +636,10 @@
     shacl:path dc:spatial
   ];
   shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
+
+<https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#RechtsvormtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
 
 <https://data.test-vlaanderen.be/shacl/Feitelijke-Verenigingen-ap-SHACL_nl#RolShape> a shacl:NodeShape;
   shacl:closed false;
