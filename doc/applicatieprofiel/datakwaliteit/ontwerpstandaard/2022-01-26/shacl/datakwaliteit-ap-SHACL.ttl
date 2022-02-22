@@ -1,5 +1,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl> <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nlshapes> <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#CI_CitatieShape>,
@@ -13,7 +14,6 @@
     <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#DQ_BeschrijvendResultaatShape>,
     <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#MD_ScopeShape>,
     <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#RecordShape>,
-    <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#DQ_EvaluatieMethodeTypeCodeShape>,
     <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#MaateenheidShape>,
     <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#RecordTypeShape>,
     <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#DQ_VolledigheidShape>,
@@ -21,7 +21,8 @@
     <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#DQ_BruikbaarheidElementShape>,
     <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#DQ_ThematischeAccuraatheidShape>,
     <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#DQ_TemporeleKwaliteitShape>,
-    <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#DQ_PositioneleAccuraatheidShape> .
+    <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#DQ_PositioneleAccuraatheidShape>,
+    <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#DQ_EvaluatieMethodeTypeCodeShape> .
 
 <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#CI_CitatieShape> a shacl:NodeShape;
   shacl:closed false .
@@ -62,23 +63,23 @@
 <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#DQ_ElementShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:description "TODO"@nl;
+    shacl:description "Duidt het originiele Element aan, in geval van aggregatie of afleiding."@nl;
     shacl:name "afgeleidElement"@nl
   ], [
     shacl:description "TODO"@nl;
     shacl:maxCount 1;
-    shacl:name "evaluatieMethode"@nl
+    shacl:name "De gebruikte evaluatiemethode."@nl
   ], [
-    shacl:description "TODO"@nl;
+    shacl:description "Referentie naar de gebruikte datakwaliteitsmaat."@nl;
     shacl:maxCount 1;
     shacl:name "maat"@nl
   ], [
-    shacl:description "TODO"@nl;
+    shacl:description "Waarde of waarden die het resultaat zijn van het toepassen van een datakwaliteitsmaat, of het resultaat van de evaluatie van de bekomen waarde of waarden adhv een gegeven accepteerbaar conformiteitskwaliteitsniveau."@nl;
     shacl:minCount 1;
     shacl:name "resultaat"@nl
   ], [
     shacl:datatype xsd:string;
-    shacl:description "TODO"@nl;
+    shacl:description "Vrije tekst die de gebruikte methodes, de evaluatie, en het resultaat van de datakwaliteit in detail weergeeft."@nl;
     shacl:maxCount 1;
     shacl:name "standaloneKwaliteitRapportDetails"@nl
   ] .
@@ -91,6 +92,8 @@
     shacl:maxCount 1;
     shacl:name "evaluatieMethodeBeschrijving"@nl
   ], [
+    <http://purl.org/linked-data/cube#codeList> <https://data.noaa.gov/resources/iso19139/schema/resources/Codelist/gmxCodelists.xml#DQ_EvaluationMethodTypeCode>;
+    shacl:class skos:Concept;
     shacl:description "Type van de gebruikte methode om de datakwaliteit te evalueren."@nl;
     shacl:maxCount 1;
     shacl:name "evaluatieMethodeType"@nl
@@ -108,7 +111,8 @@
   ] .
 
 <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#DQ_EvaluatieMethodeTypeCodeShape> a shacl:NodeShape;
-  shacl:closed false .
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
 
 <https://data.test-vlaanderen.be/shacl/datakwaliteit-ap-SHACL_nl#DQ_KwantitatiefResultaatShape> a shacl:NodeShape;
   shacl:closed false;
