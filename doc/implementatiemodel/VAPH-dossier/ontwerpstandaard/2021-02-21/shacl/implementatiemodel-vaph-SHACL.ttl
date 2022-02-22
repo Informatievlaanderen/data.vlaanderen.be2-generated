@@ -34,7 +34,6 @@
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#RegistratieShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#StoornisShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#ToegekendHulpmiddelShape>,
-    <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#VAPHPersoonShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#VerslagShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#VerslagNemerShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#VerslagNemerOrganisatieShape>,
@@ -54,10 +53,8 @@
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#OrganisatieShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#PersoonShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#GeboorteShape>,
-    <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#GeregistreerdPersoonShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#OverlijdenShape>,
-    <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#PersoonsgebeurtenisShape>,
-    <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#PersoonsRelatieShape> .
+    <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#PersoonsgebeurtenisShape> .
 
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#ActiviteitShape> a shacl:NodeShape;
   shacl:closed false;
@@ -289,16 +286,6 @@
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#GeboorteShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Geboorte> .
-
-<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#GeregistreerdPersoonShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:class <http://www.w3.org/ns/adms#Identifier>;
-    shacl:description "Identificatiecode vd persoon ih register."@nl;
-    shacl:name "registratie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#registratie>
-  ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon> .
 
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#HulpmiddelShape> a shacl:NodeShape;
   shacl:closed false;
@@ -770,33 +757,44 @@
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#OrganisatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class org:Organization;
-    shacl:name "heeft suborganisatie (target)"@nl;
-    shacl:path org:hasSubOrganization
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de Publieke Organisatie."@nl;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
   ], [
-    shacl:class org:Organization;
-    shacl:name "heeft suborganisatie (source)"@nl;
-    shacl:path org:hasSubOrganization
+    shacl:class schema:ContactPoint;
+    shacl:description """Informatie zoals email, telefoon die toelaat de Organisatie te contacteren.
+"""@nl;
+    shacl:name "is te bereiken op"@nl;
+    shacl:path schema:contactPoint
   ], [
-    shacl:class org:Organization;
-    shacl:description "Niet nader bepaalde relatie met een andere Organisatie."@nl;
-    shacl:name "gelinkt met (target)"@nl;
-    shacl:path org:linkedTo
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:name "registratie"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#registration>
   ], [
-    shacl:class org:Organization;
-    shacl:description "Niet nader bepaalde relatie met een andere Organisatie."@nl;
-    shacl:name "gelinkt met (source)"@nl;
-    shacl:path org:linkedTo
+    shacl:class <https://data.vlaanderen.be/ns/organisatie#OrganisatieStatus>;
+    shacl:description "Toestand vd Organisatie."@nl;
+    shacl:name "organisatiestatus"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#orgStatus>
   ], [
-    shacl:class org:Organization;
-    shacl:description "Verwijst naar de Organisatie die deze Organisatie omvat."@nl;
-    shacl:name "suborganisatie van (target)"@nl;
-    shacl:path org:subOrganizationOf
+    shacl:class <https://data.vlaanderen.be/ns/organisatie#OrganisatieType>;
+    shacl:description "Type Organisatie."@nl;
+    shacl:name "organisatietype"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#orgType>
   ], [
-    shacl:class org:Organization;
-    shacl:description "Verwijst naar de Organisatie die deze Organisatie omvat."@nl;
-    shacl:name "suborganisatie van (source)"@nl;
-    shacl:path org:subOrganizationOf
+    shacl:datatype rdf:langString;
+    shacl:description "Naam waarmee de Organisatie bij voorkeur wordt aangeduid."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "voorkeurslabel"@nl;
+    shacl:path skos:prefLabel
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Wettelijk geregistreerde naam vd organisatie."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "wettelijke naam"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#legalName>
   ];
   shacl:targetClass org:Organization .
 
@@ -934,41 +932,34 @@
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#PersoonShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/persoon#PersoonsRelatie>;
-    shacl:name "heeft persoonsrelatie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#heeftPersoonsrelatie>
+    shacl:datatype xsd:string;
+    shacl:name "familienaam"@nl;
+    shacl:path foaf:familyName
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/persoon#Geboorte>;
-    shacl:description "Verwijst naar de geboortegegevens vd Persoon."@nl;
-    shacl:name "Is Geboren"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#Persoon.isGeboren>
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon die toelaat de Persoon te contacteren."@nl;
+    shacl:name "contactpunt"@nl;
+    shacl:path schema:contactPoint
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/persoon#Geboorte>;
-    shacl:description "Verwijst naar de geboortegegevens vd Persoon."@nl;
-    shacl:name "Is Geboren"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#Persoon.isGeboren>
+    shacl:class skos:Concept;
+    shacl:description "Het feit of men een man of een vrouw is."@nl;
+    shacl:name "geslacht"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#geslacht>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/persoon#Overlijden>;
-    shacl:description "Verwijst naar de overlijdensgegevens vd Persoon."@nl;
-    shacl:name "Is Overleden"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#Persoon.isOverleden>
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificatiecode vd persoon ih register."@nl;
+    shacl:name "registratie"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#registratie>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/persoon#Overlijden>;
-    shacl:description "Verwijst naar de overlijdensgegevens vd Persoon."@nl;
-    shacl:name "Is Overleden"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#Persoon.isOverleden>
+    shacl:datatype xsd:string;
+    shacl:name "volledige naam"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#volledigeNaam>
+  ], [
+    shacl:datatype xsd:string;
+    shacl:name "gegeven naam"@nl;
+    shacl:path foaf:givenName
   ];
   shacl:targetClass <http://www.w3.org/ns/person#Person> .
-
-<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#PersoonsRelatieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:class <http://www.w3.org/ns/person#Person>;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "is relatie met"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#isRelatieMet>
-  ] .
 
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#PersoonsgebeurtenisShape> a shacl:NodeShape;
   shacl:closed false;
@@ -1129,10 +1120,6 @@
     shacl:path <https://vaph.vlaanderen.be/ns/service#hulpmiddel>
   ];
   shacl:targetClass <https://vaph.vlaanderen.be/ns/service#ToegekendHulpmiddel> .
-
-<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#VAPHPersoonShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://vaph.vlaanderen.be/ns/service#VAPHPersoon> .
 
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#VerslagNemerOrganisatieShape> a shacl:NodeShape;
   shacl:closed false;
