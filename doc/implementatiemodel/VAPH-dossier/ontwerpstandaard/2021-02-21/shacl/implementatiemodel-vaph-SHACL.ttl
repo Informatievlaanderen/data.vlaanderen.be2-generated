@@ -1,4 +1,3 @@
-@prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -10,7 +9,9 @@
 
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl> <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nlshapes> <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#ActiviteitShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#BewijsStukShape>,
+    <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#CategorieTypeShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#DiagnoseShape>,
+    <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#DoelgroepShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#ErkenningHandicapShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#ForensischeVAPHUnitShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#HulpmiddelShape>,
@@ -24,13 +25,13 @@
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#OndersteuningsFunctieShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#OndersteuningsPlanShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#OvereenkomstShape>,
-    <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#Overeenkomst-TBDShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#OvereenkomstGeneriekShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#PersoonMetHandicapShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#PersoonsvolgendBudgetShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#RTHShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#RegistratieShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#StoornisShape>,
+    <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#ToegekendBudgetShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#ToegekendHulpmiddelShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#VerslagShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#VerslagNemerShape>,
@@ -51,7 +52,6 @@
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#OrganisatieShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#PersoonShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#GeboorteShape>,
-    <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#OverlijdenShape>,
     <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#PersoonsgebeurtenisShape> .
 
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#ActiviteitShape> a shacl:NodeShape;
@@ -151,6 +151,23 @@
   ];
   shacl:targetClass <https://vaph.vlaanderen.be/ns/service#BewijsStuk> .
 
+<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#CategorieTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class skos:Concept;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "hoofdtype"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#hoofdtype>
+  ], [
+    shacl:class skos:Concept;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "subtype"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#subtype>
+  ];
+  shacl:targetClass <https://vaph.vlaanderen.be/ns/service#CategorieType> .
+
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#CodeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -232,6 +249,21 @@
   ];
   shacl:targetClass <https://vaph.vlaanderen.be/ns/service#Diagnose> .
 
+<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#DoelgroepShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class skos:Concept;
+    shacl:name "categorie"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#categorie>
+  ], [
+    shacl:datatype xsd:string;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "omschrijving"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#omschrijving>
+  ];
+  shacl:targetClass <https://vaph.vlaanderen.be/ns/service#Doelgroep> .
+
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#ErkenningHandicapShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -270,6 +302,7 @@
     shacl:name "startdatum"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#startdatum>
   ], [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#CategorieType>;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "type"@nl;
@@ -304,6 +337,7 @@
     shacl:name "code"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#code>
   ], [
+    shacl:datatype xsd:string;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "domein"@nl;
@@ -315,11 +349,13 @@
     shacl:name "facturen betaalbaar vanaf"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#facturenBetaalbaarVanaf>
   ], [
+    shacl:datatype xsd:string;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "naam"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#naam>
   ], [
+    shacl:datatype xsd:string;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "omschrijving"@nl;
@@ -347,21 +383,25 @@
     shacl:name "datum"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#datum>
   ], [
+    shacl:datatype xsd:integer;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "p"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#p>
   ], [
+    shacl:datatype xsd:integer;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "t"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#t>
   ], [
+    shacl:datatype xsd:string;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "type"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#type>
   ], [
+    shacl:datatype xsd:integer;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "v"@nl;
@@ -376,35 +416,17 @@
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#IdentificatorShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator>;
-    shacl:description "Identificator vh object opgesplitst in zijn onderdelen."@nl;
-    shacl:maxCount 1;
-    shacl:name "gestructureerde identificator"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator>
-  ], [
     shacl:datatype rdfs:Literal;
     shacl:description "String gebruikt om het object uniek te identificeren."@nl;
     shacl:maxCount 1;
     shacl:name "identificator"@nl;
     shacl:path skos:notation
   ], [
-    shacl:class dc:Agent;
-    shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
-    shacl:maxCount 1;
-    shacl:name "toegekend door"@nl;
-    shacl:path dc:creator
-  ], [
     shacl:datatype xsd:string;
     shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
     shacl:maxCount 1;
     shacl:name "toegekend door (String)"@nl;
     shacl:path <http://www.w3.org/ns/adms#schemaAgency>
-  ], [
-    shacl:datatype xsd:dateTime;
-    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
-    shacl:maxCount 1;
-    shacl:name "toegekend op"@nl;
-    shacl:path dc:issued
   ];
   shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
 
@@ -429,6 +451,7 @@
     shacl:name "startdatum"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#startdatum>
   ], [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#CategorieType>;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "type"@nl;
@@ -559,6 +582,7 @@
     shacl:name "toegangs poort maatschappelijke noodzaak"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#toegangsPoortMaatschappelijkeNoodzaak>
   ], [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#CategorieType>;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "type"@nl;
@@ -648,6 +672,7 @@
     shacl:name "startdatum"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#startdatum>
   ], [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#CategorieType>;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "type"@nl;
@@ -690,6 +715,7 @@
     shacl:name "startdatum"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#startdatum>
   ], [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#CategorieType>;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "type"@nl;
@@ -755,10 +781,11 @@
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#OrganisatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:datatype rdf:langString;
-    shacl:description "Beschrijving van de Publieke Organisatie."@nl;
-    shacl:name "beschrijving"@nl;
-    shacl:path dc:description
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "erkenningsnummer"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#erkenningsnummer>
   ], [
     shacl:class schema:ContactPoint;
     shacl:description """Informatie zoals email, telefoon die toelaat de Organisatie te contacteren.
@@ -767,18 +794,16 @@
     shacl:path schema:contactPoint
   ], [
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "De identificator toegekend door Kruispuntbank voor Ondernemingen (KBO)"@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "ondernemingsnummer"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#ondernemingsnummer>
+  ], [
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Een identificator toegekend door een agent"@nl;
     shacl:name "registratie"@nl;
     shacl:path <http://www.w3.org/ns/regorg#registration>
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/organisatie#OrganisatieStatus>;
-    shacl:description "Toestand vd Organisatie."@nl;
-    shacl:name "organisatiestatus"@nl;
-    shacl:path <http://www.w3.org/ns/regorg#orgStatus>
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/organisatie#OrganisatieType>;
-    shacl:description "Type Organisatie."@nl;
-    shacl:name "organisatietype"@nl;
-    shacl:path <http://www.w3.org/ns/regorg#orgType>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "Naam waarmee de Organisatie bij voorkeur wordt aangeduid."@nl;
@@ -786,40 +811,8 @@
     shacl:minCount 1;
     shacl:name "voorkeurslabel"@nl;
     shacl:path skos:prefLabel
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "Wettelijk geregistreerde naam vd organisatie."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "wettelijke naam"@nl;
-    shacl:path <http://www.w3.org/ns/regorg#legalName>
   ];
   shacl:targetClass org:Organization .
-
-<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#Overeenkomst-TBDShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:class <https://vaph.vlaanderen.be/ns/service#ForensischeVAPHUnit>;
-    shacl:name "forensisch vAPHUnit"@nl;
-    shacl:path <https://vaph.vlaanderen.be/ns/service#forensischVAPHUnit>
-  ], [
-    shacl:class <https://vaph.vlaanderen.be/ns/service#Internatie>;
-    shacl:name "geinterneerd"@nl;
-    shacl:path <https://vaph.vlaanderen.be/ns/service#geinterneerd>
-  ], [
-    shacl:class <https://vaph.vlaanderen.be/ns/service#MFC>;
-    shacl:name "mfc"@nl;
-    shacl:path <https://vaph.vlaanderen.be/ns/service#mfc>
-  ], [
-    shacl:class <https://vaph.vlaanderen.be/ns/service#NAH>;
-    shacl:name "nah"@nl;
-    shacl:path <https://vaph.vlaanderen.be/ns/service#nah>
-  ], [
-    shacl:class <https://vaph.vlaanderen.be/ns/service#ODB>;
-    shacl:description "";
-    shacl:path <https://vaph.vlaanderen.be/ns/service#odb>
-  ];
-  shacl:targetClass <https://vaph.vlaanderen.be/ns/service#Overeenkomst-TBD> .
 
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#OvereenkomstGeneriekShape> a shacl:NodeShape;
   shacl:closed false;
@@ -836,6 +829,7 @@
     shacl:name "startdatum"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#startdatum>
   ], [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#CategorieType>;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "type"@nl;
@@ -861,6 +855,26 @@
     shacl:name "einddatum"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#einddatum>
   ], [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#ForensischeVAPHUnit>;
+    shacl:name "forensisch vAPHUnit"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#forensischVAPHUnit>
+  ], [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#Internatie>;
+    shacl:name "geinterneerd"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#geinterneerd>
+  ], [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#MFC>;
+    shacl:name "mfc"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#mfc>
+  ], [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#NAH>;
+    shacl:name "nah"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#nah>
+  ], [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#ODB>;
+    shacl:name "odb"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#odb>
+  ], [
     shacl:datatype xsd:date;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -884,10 +898,6 @@
   ];
   shacl:targetClass <https://vaph.vlaanderen.be/ns/service#Overeenkomst> .
 
-<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#OverlijdenShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Overlijden> .
-
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#PersoonMetHandicapShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -905,7 +915,7 @@
     shacl:name "hulpmiddel"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#hulpmiddel>
   ], [
-    shacl:class <https://vaph.vlaanderen.be/ns/service#Overeenkomst-TBD>;
+    shacl:class <https://vaph.vlaanderen.be/ns/service#Overeenkomst>;
     shacl:name "overeenkomst"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#overeenkomst>
   ], [
@@ -935,14 +945,34 @@
     shacl:name "contactpunt"@nl;
     shacl:path schema:contactPoint
   ], [
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "dossiernummer"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#dossiernummer>
+  ], [
     shacl:class skos:Concept;
     shacl:description "Het feit of men een man of een vrouw is."@nl;
-    shacl:name "geslacht"@nl
+    shacl:name "geslacht"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#geslacht>
   ], [
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
-    shacl:description "Identificatiecode vd persoon ih register."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "ondernemingsnummer"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#ondernemingsnummer>
+  ], [
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Een identificator toegekend door een agent in register."@nl;
     shacl:name "registratie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/persoon#registratie>
+  ], [
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "De identificator toegekend door het Rijksregister van België."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "rijksregisternummer"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#rijksregisternummer>
   ], [
     shacl:datatype xsd:string;
     shacl:name "volledige naam"@nl;
@@ -960,14 +990,74 @@
     shacl:datatype rdfs:Literal;
     shacl:name "datum"@nl;
     shacl:path <https://data.vlaanderen.be/ns/persoon#datum>
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:name "plaats"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/persoon#plaats>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Persoonsgebeurtenis> .
 
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#PersoonsvolgendBudgetShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#ToegekendBudget>;
+    shacl:name "budget"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#budget>
+  ];
+  shacl:targetClass <https://vaph.vlaanderen.be/ns/service#PersoonsvolgendBudget> .
+
+<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#RTHShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#Registratie>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "registratie"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#registratie>
+  ], [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#Zorgaanbieder>;
+    shacl:name "zorgaanbieder"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#zorgaanbieder>
+  ];
+  shacl:targetClass <https://vaph.vlaanderen.be/ns/service#RTH> .
+
+<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#RegistratieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "aantal"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#aantal>
+  ], [
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "jaar"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#jaar>
+  ];
+  shacl:targetClass <https://vaph.vlaanderen.be/ns/service#Registratie> .
+
+<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#StoornisShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:string;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "code"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#Code>
+  ], [
+    shacl:datatype xsd:string;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "naam"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#Naam>
+  ], [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#Verslag>;
+    shacl:name "verslag"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#verslag>
+  ];
+  shacl:targetClass <https://vaph.vlaanderen.be/ns/service#Stoornis> .
+
+<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#TaalStringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#ToegekendBudgetShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class skos:Concept;
@@ -1043,66 +1133,12 @@
     shacl:name "vraag ondersteuningsplan"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#vraagOndersteuningsplan>
   ];
-  shacl:targetClass <https://vaph.vlaanderen.be/ns/service#PersoonsvolgendBudget> .
-
-<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#RTHShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:class <https://vaph.vlaanderen.be/ns/service#Registratie>;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "registratie"@nl;
-    shacl:path <https://vaph.vlaanderen.be/ns/service#registratie>
-  ], [
-    shacl:class <https://vaph.vlaanderen.be/ns/service#Zorgaanbieder>;
-    shacl:name "zorgaanbieder"@nl;
-    shacl:path <https://vaph.vlaanderen.be/ns/service#zorgaanbieder>
-  ];
-  shacl:targetClass <https://vaph.vlaanderen.be/ns/service#RTH> .
-
-<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#RegistratieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "aantal"@nl;
-    shacl:path <https://vaph.vlaanderen.be/ns/service#aantal>
-  ], [
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "jaar"@nl;
-    shacl:path <https://vaph.vlaanderen.be/ns/service#jaar>
-  ];
-  shacl:targetClass <https://vaph.vlaanderen.be/ns/service#Registratie> .
-
-<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#StoornisShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:datatype xsd:string;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "code"@nl;
-    shacl:path <https://vaph.vlaanderen.be/ns/service#Code>
-  ], [
-    shacl:datatype xsd:string;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "naam"@nl;
-    shacl:path <https://vaph.vlaanderen.be/ns/service#Naam>
-  ], [
-    shacl:class <https://vaph.vlaanderen.be/ns/service#Verslag>;
-    shacl:name "verslag"@nl;
-    shacl:path <https://vaph.vlaanderen.be/ns/service#verslag>
-  ];
-  shacl:targetClass <https://vaph.vlaanderen.be/ns/service#Stoornis> .
-
-<https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#TaalStringShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass rdf:langString .
+  shacl:targetClass <https://vaph.vlaanderen.be/ns/service#ToegekendBudget> .
 
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#ToegekendHulpmiddelShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <https://vaph.vlaanderen.be/ns/service#Doelgroep>;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "doelgroep"@nl;
@@ -1184,6 +1220,18 @@
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#ZelfredzaamheidShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:datatype xsd:integer;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "barthel"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#barthel>
+  ], [
+    shacl:datatype xsd:integer;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "elida"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#elida>
+  ], [
     shacl:class <https://vaph.vlaanderen.be/ns/service#Verslag>;
     shacl:name "verslag"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#verslag>
@@ -1205,8 +1253,26 @@
 <https://data.dev-vlaanderen.be/shacl/implementatiemodel-vaph-SHACL_nl#ZorgzwaarteShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:datatype xsd:integer;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "getbwaarde"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#getbwaarde>
+  ], [
+    shacl:datatype xsd:integer;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "getpwaarde"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#getpwaarde>
+  ], [
     shacl:class <https://vaph.vlaanderen.be/ns/service#Verslag>;
     shacl:name "verslag"@nl;
     shacl:path <https://vaph.vlaanderen.be/ns/service#verslag>
+  ], [
+    shacl:class skos:Concept;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "zziwaarde"@nl;
+    shacl:path <https://vaph.vlaanderen.be/ns/service#zziwaarde>
   ];
   shacl:targetClass <https://vaph.vlaanderen.be/ns/service#Zorgzwaarte> .
