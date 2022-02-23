@@ -1,0 +1,277 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.w3.org/2009/08/skos-reference/skos.html#Concept> a rdfs:Class;
+  rdfs:label "Overeenkomsttype"@nl,
+    "Statuurtype"@nl,
+    "Verloningstype"@nl,
+    "Schuldbemiddelingstype"@nl .
+
+schemas:BankAccount a rdfs:Class;
+  rdfs:label "Bankrekening"@nl .
+
+<https://data.vlaanderen.be/ns/loongegevens#Persoon.geboortedatum> a owl:DatatypeProperty;
+  rdfs:label "geboortedatum"@nl;
+  rdfs:comment "Datum waarop de Geboorte plaatsvond."@nl;
+  rdfs:domain <http://www.w3.org/ns/person#Person>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range xsd:date .
+
+<https://data.vlaanderen.be/ns/loongegevens#Persoon.verblijfplaats> a owl:ObjectProperty;
+  rdfs:label "verblijfplaats"@nl;
+  rdfs:comment "Plaats waar een persoon verblijft."@nl;
+  rdfs:domain <http://www.w3.org/ns/person#Person>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range <https://data.vlaanderen.be/ns/persoon#Verblijfplaats> .
+
+<https://data.vlaanderen.be/ns/loongegevens#afTeTrekkenNettoBedragen> a owl:ObjectProperty;
+  rdfs:label "afTeTrekkenNettoBedragen"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit gaat over de sommen voor loonbeslag, loonoverdracht, persoonlijke bijdrage maaltijdcheques, ..."@nl;
+  rdfs:comment "Verplichte inhoudingen door de werkgever."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/loongegevens#arbeidsloon> a owl:ObjectProperty;
+  rdfs:label "arbeidsloon"@nl;
+  rdfs:comment "Het bedrag dat een persoon ontvangt voor geleverde prestaties in arbeidsverband. Het kan gaan om een financieel bedrag, een bedrag in natura, vergoedingen, etc."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon> .
+
+<https://data.vlaanderen.be/ns/loongegevens#arbeidsrelatie> a owl:ObjectProperty;
+  rdfs:label "arbeidsrelatie"@nl;
+  rdfs:comment "De betrekking tussen werkgevers en werknemers die ontstaat bij loonarbeid na afsluiting van een arbeidsovereenkomst."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie> .
+
+<https://data.vlaanderen.be/ns/loongegevens#bankrekening> a owl:ObjectProperty;
+  rdfs:label "bankrekening"@nl;
+  rdfs:comment "Een rekeningnummer dat gelinkt is aan de arbeidsrelatie. Op dit rekeningnummer wordt het arbeidsloon van de persoon gestort."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range schemas:BankAccount .
+
+<https://data.vlaanderen.be/ns/loongegevens#bankrekeningnummer> a owl:ObjectProperty;
+  rdfs:label "bankrekeningnummer"@nl;
+  rdfs:comment "Een uniek nummer dat wordt toegekend aan een rekening bij een bank."@nl;
+  rdfs:domain schemas:BankAccount;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.vlaanderen.be/ns/loongegevens#bedrijfsvoorheffing> a owl:ObjectProperty;
+  rdfs:label "bedrijfsvoorheffing"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Het bedrag van de bedrijfsvoorheffing wordt bepaald door loonhoogte, burgerlijke staat, gezinssituatie,  De bedrijfsvoorheffing wordt ingehouden op het totaal belastbare loon."@nl;
+  rdfs:comment "Voorschot op de definitieve inkomstenbelasting."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/loongegevens#bedrijfswagen> a owl:DatatypeProperty;
+  rdfs:label "bedrijfswagen"@nl;
+  rdfs:comment "Een voertuig dat door de werkgever aan de werknemer ter beschikking wordt gesteld, als onderdeel van het loonpakket."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range xsd:boolean .
+
+<https://data.vlaanderen.be/ns/loongegevens#brutoloon> a owl:ObjectProperty;
+  rdfs:label "brutoloon"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit gaat over de sommen voor gepresteerde arbeid, betaalde afwezigheden, toeslagen, premies, ..."@nl;
+  rdfs:comment "De som van alle loonelementen voor sociale en fiscale inhoudingen."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/loongegevens#contractperiode> a owl:ObjectProperty;
+  rdfs:label "contractperiode"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Indien de uitdienstdatum niet vermeld wordt, wordt deze impliciet verondersteld er niet te zijn."@nl;
+  rdfs:comment "Periode waarover in een arbeidscontract een overeenkomst is afgesloten. Een contractperiode heeft een begindatum, en in sommige gevallen een einddatum. Dat is dan de uitdienstdatum."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.vlaanderen.be/ns/loongegevens#eindejaarstoelage> a owl:ObjectProperty;
+  rdfs:label "eindejaarstoelage"@nl;
+  rdfs:comment "Een eindejaarstoelage is een financiële bonus die een persoon krijgt van zijn/haar werkgever op het einde van het jaar. Er moeten sociale zekerheidsbijdragen en belastingen op betaald worden."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/loongegevens#inhoudingenVoorDeSocialeZekerheid> a owl:ObjectProperty;
+  rdfs:label "inhoudingenVoorDeSocialeZekerheid"@nl;
+  rdfs:comment "Dit is een bedrag van het arbeidsloon dat wordt ingehouden om de sociale zekerheid te financieren."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/loongegevens#maaltijdcheques> a owl:DatatypeProperty;
+  rdfs:label "maaltijdcheques"@nl;
+  rdfs:comment "Een maaltijdcheque is een extralegaal voordeel dat een werknemer van zijn/haar werkgever krijgt. Het is een bijdrage van de werkgever voor de kosten van de werknemer voor maaltijden."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range xsd:boolean .
+
+<https://data.vlaanderen.be/ns/loongegevens#nettoGestortLoon> a owl:ObjectProperty;
+  rdfs:label "nettoGestortLoon"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Het netto gestort loon kan verschillen van het nettoloon. Dit kan voorkomen bij een herberekening van een voorgaande maand, een onkostennota, ..."@nl;
+  rdfs:comment "Het werkelijk gestorte loon op de rekening van de persoon."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/loongegevens#nettoloon> a owl:ObjectProperty;
+  rdfs:label "nettoloon"@nl;
+  rdfs:comment "Het nettoloon is het brutoloon waar de sociale zekerheidsbijdrage en de bedrijfsvoorheffing van afgetrokken zijn."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/loongegevens#overeenkomst> a owl:ObjectProperty;
+  rdfs:label "overeenkomst"@nl;
+  rdfs:comment "Voltijds of deeltijds."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range <http://www.w3.org/2009/08/skos-reference/skos.html#Concept> .
+
+<https://data.vlaanderen.be/ns/loongegevens#periodiciteitVerloning> a owl:ObjectProperty;
+  rdfs:label "periodiciteitVerloning"@nl;
+  rdfs:comment "Heeft betrekking op het verschil tussen een éénmalige verloning en een periodieke verloning."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range <http://www.w3.org/2009/08/skos-reference/skos.html#Concept> .
+
+<https://data.vlaanderen.be/ns/loongegevens#personenFiscaalTenLaste> a owl:DatatypeProperty;
+  rdfs:label "personenFiscaalTenLaste"@nl;
+  rdfs:comment "Personen die niet over een inkomen beschikken, of een netto jaarinkomen hebben dat lager is dan wettelijk vastgelegd voor deze regeling, en onder hetzelfde dak wonen als de persoon die voor hen moet voorzien."@nl;
+  rdfs:domain <http://www.w3.org/ns/person#Person>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range xsd:integer .
+
+<https://data.vlaanderen.be/ns/loongegevens#premie> a owl:ObjectProperty;
+  rdfs:label "premie"@nl;
+  rdfs:comment "Dit is een deel van het loon dat afhankelijk is van geleverde prestaties."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/loongegevens#schuldbemiddeling> a owl:ObjectProperty;
+  rdfs:label "schuldbemiddeling"@nl;
+  rdfs:comment "Bij schuldbemiddeling wordt een instantie ingeschakeld die een afbetalingsplan opstelt voor het betalen van schulden aan de schuldeisers. Het loon van een persoon wordt naar de schuldbemiddelaar gestort, die het volgens de opgestelde regeling spendeert."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range <http://www.w3.org/2009/08/skos-reference/skos.html#Concept> .
+
+<https://data.vlaanderen.be/ns/loongegevens#statuut> a owl:ObjectProperty;
+  rdfs:label "statuut"@nl;
+  rdfs:comment "Werknemer, ambtenaar, student, ..."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range <http://www.w3.org/2009/08/skos-reference/skos.html#Concept> .
+
+<https://data.vlaanderen.be/ns/loongegevens#supplementaireBelastbareBedragen> a owl:ObjectProperty;
+  rdfs:label "supplementaireBelastbareBedragen"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Gewaarborgd maandloon ziekte, dubbel vakantiegeld, ..."@nl;
+  rdfs:comment "Bijkomende sommen die aan het brutoloon toegevoegd worden. Deze zijn vrijgesteld van inhoudingen voor de sociale zekerheid."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/loongegevens#supplementaireNettoBedragen> a owl:ObjectProperty;
+  rdfs:label "supplementaireNettoBedragen"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Onkostenvergoeding, verplaatsingskosten, ... "@nl;
+  rdfs:comment "Bijkomende netto sommen die aan het nettoloon toegevoegd worden. Deze zijn vrijgesteld van belastingen en RSZ."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/loongegevens#tewerkstellingsbreuk> a owl:ObjectProperty;
+  rdfs:label "tewerkstellingsbreuk"@nl;
+  rdfs:comment "Het gemiddeld aantal uren per week waarin de werknemer geacht wordt te werken op basis van zijn contract, gedeeld door het gemiddeld aantal uren per week waarin een modelpersoon geacht wordt te werken."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range <https://data.vlaanderen.be/ns/loongegevens#Tewerkstellingsbreuk> .
+
+<https://data.vlaanderen.be/ns/loongegevens#vakantiegeld> a owl:ObjectProperty;
+  rdfs:label "vakantiegeld"@nl;
+  rdfs:comment "Dit is een jaarlijkse toelage die een werknemer krijgt om de extra kosten van vakantie te dekken."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/loongegevens#verloningsperiode> a owl:ObjectProperty;
+  rdfs:label "verloningsperiode"@nl;
+  rdfs:comment "Een bepaalde tijdsduur met een start- en eindmoment die dient als referentie voor de bepaling van het brutoloon."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.vlaanderen.be/ns/loongegevens#Inkomst> a owl:Class;
+  rdfs:label "Inkomst"@nl;
+  rdfs:comment "Het bedrag dat een persoon ontvangt voor geleverde prestaties, beschikbaar gestelde goederen, land of vermogen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens> .
+
+<https://data.vlaanderen.be/ns/loongegevens#Tewerkstellingsbreuk> a owl:Class;
+  rdfs:label "Tewerkstellingsbreuk"@nl;
+  rdfs:comment "Het gemiddeld aantal uren per week waarin de werknemer geacht wordt te werken op basis van zijn contract, gedeeld door het gemiddeld aantal uren per week waarin een modelpersoon geacht wordt te werken."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens> .
+
+<https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie> a owl:Class;
+  rdfs:label "Arbeidsrelatie"@nl;
+  rdfs:comment "De betrekking tussen werkgevers en werknemers die ontstaat bij loonarbeid na afsluiting van een arbeidsovereenkomst."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens> .
+
+<https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon> a owl:Class;
+  rdfs:label "Arbeidsloon"@nl;
+  rdfs:comment "Het bedrag dat een persoon ontvangt voor geleverde prestaties in arbeidsverband. Het kan gaan om een financieel bedrag, een bedrag in natura, vergoedingen, etc."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/loongegevens#Inkomst> .
+
+<https://data.vlaanderen.be/ns/loongegevens> a owl:Ontology;
+  rdfs:label "loongegevens-voc"@en,
+    "loongegevens-voc"@nl;
+  dc:issued "TODO";
+  dc:license <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>,
+    "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0";
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso <http://www.w3.org/2009/08/skos-reference/skos.html#Concept>,
+    schemas:BankAccount;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.pwc.be>;
+      foaf:name "PwC"
+    ];
+    foaf:firstName "Eva";
+    foaf:lastName "De Rore";
+    foaf:mbox <mailto:eva.de.rore@pwc.com>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.pwc.be>;
+      foaf:name "PwC"
+    ];
+    foaf:firstName "Yves";
+    foaf:lastName "Meersmans";
+    foaf:mbox <mailto:yves.meersmans@pwc.com>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://overheid.vlaanderen.be/>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Dorien";
+    foaf:lastName "Bauwens";
+    foaf:mbox <mailto:dorien.bauwens@vlaanderen.be>
+  ] .

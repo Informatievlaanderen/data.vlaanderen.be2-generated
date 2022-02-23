@@ -1,0 +1,406 @@
+{
+  "@context": {
+    "ActiviteitType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Adresvoorstelling": "http://www.w3.org/ns/locn#Address",
+    "Adresvoorstelling.busnummer": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Adresvoorstelling.gemeentenaam": {
+      "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
+      "@type": "@id"
+    },
+    "Adresvoorstelling.huisnummer": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Adresvoorstelling.land": {
+      "@id": "https://data.vlaanderen.be/ns/adres#land",
+      "@type": "@id"
+    },
+    "Adresvoorstelling.postcode": {
+      "@id": "http://www.w3.org/ns/locn#postCode",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Adresvoorstelling.straatnaam": {
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "@id"
+    },
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Agent.contactInfo": {
+      "@id": "http://data.europa.eu/m8g/hasContactPoint",
+      "@type": "@id"
+    },
+    "Agent.identificator": {
+      "@id": "http://www.w3.org/ns/adms#Identifier",
+      "@type": "@id"
+    },
+    "Bewijs": "http://data.europa.eu/m8g/Evidence",
+    "Bewijs.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "@id"
+    },
+    "Bewijs.documentatie": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Bewijs.naam": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "@id"
+    },
+    "Bewijs.taal": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/language",
+      "@type": "@id"
+    },
+    "Bewijs.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Contactinfo": "http://schema.org/ContactPoint",
+    "Contactinfo.aanschrijfvorm": {
+      "@id": "http://ww.w3.org/2006/vcard/ns#honorific-prefix",
+      "@type": "@id"
+    },
+    "Contactinfo.adres": {
+      "@id": "http://www.w3.org/ns/locn#address",
+      "@type": "@id"
+    },
+    "Contactinfo.contactnaam": {
+      "@id": "http://xmlns.com/foaf/0.1/name",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactinfo.email": {
+      "@id": "http://schema.org/email",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactinfo.fax": {
+      "@id": "http://schema.org/faxNumber",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactinfo.telefoon": {
+      "@id": "http://schema.org/telephone",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactinfo.website": {
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Criteriumvereiste": "http://data.europa.eu/m8g/CriterionRequirement",
+    "Criteriumvereiste.naam": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "@id"
+    },
+    "Criteriumvereiste.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Erkenning": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning",
+    "Erkenning.activiteit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning.activiteit",
+      "@type": "@id"
+    },
+    "Erkenning.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "@id"
+    },
+    "Erkenning.geldigheidsperiode": {
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning.geldigheidsperiode",
+      "@type": "@id"
+    },
+    "Erkenning.toegekendDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#toegekenddoor",
+      "@type": "@id"
+    },
+    "Erkenning.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Erkenningsaanvraag": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenningsaanvraag",
+    "Erkenningsaanvraag.activiteit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning.activiteit",
+      "@type": "@id"
+    },
+    "Erkenningsaanvraag.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "@id"
+    },
+    "Erkenningsaanvraag.criteriumvereiste": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasCriterion",
+      "@type": "@id"
+    },
+    "Erkenningsaanvraag.erkenningsbeslissing": {
+      "@id": "http://data.vlaanderen.be/ns/besluit#erkenningsbeslissing",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Erkenningsaanvraag.geeftRechtOp": {
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#geeftrechtOp",
+      "@type": "@id"
+    },
+    "Erkenningsaanvraag.geldigheidsperiode": {
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenningsaanvraag.geldigheidsperiode",
+      "@type": "@id"
+    },
+    "Erkenningsaanvraag.input": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/cpsv#hasInput",
+      "@type": "@id"
+    },
+    "Erkenningsaanvraag.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Erkenningstype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "FeitelijkeVereniging": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#FeitelijkeVereniging",
+    "FeitelijkeVereniging.activiteit": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/regorg#orgActivity",
+      "@type": "@id"
+    },
+    "FeitelijkeVereniging.bankrekeningnummer": {
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#bankrekeningnummer",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "FeitelijkeVereniging.contactinfo": {
+      "@container": "@set",
+      "@id": "http://schema.org/contactPoint",
+      "@type": "@id"
+    },
+    "FeitelijkeVereniging.dientIn": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#dientIn",
+      "@type": "@id"
+    },
+    "FeitelijkeVereniging.heeftErkenning": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#heeftErkenning",
+      "@type": "@id"
+    },
+    "FeitelijkeVereniging.heeftLid": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#heeftLid",
+      "@type": "@id"
+    },
+    "FeitelijkeVereniging.heeftSuborganisatie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#hasSubOrganization",
+      "@type": "@id"
+    },
+    "FeitelijkeVereniging.heeftVestiging": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#hasSite",
+      "@type": "@id"
+    },
+    "FeitelijkeVereniging.identificator": {
+      "@id": "http://www.w3.org/ns/adms#Identifier",
+      "@type": "@id"
+    },
+    "FeitelijkeVereniging.isSuborganisatieVan": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#subOrganizationOf",
+      "@type": "@id"
+    },
+    "FeitelijkeVereniging.verantwoordelijke": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#verantwoordelijke",
+      "@type": "@id"
+    },
+    "FeitelijkeVereniging.voorkeursnaam": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "@id"
+    },
+    "FeitelijkeVereniging.vraagtAan": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#vraagtAan",
+      "@type": "@id"
+    },
+    "FormeleOrganisatie": "http://www.w3.org/ns/org#FormalOrganization",
+    "GeregistreerdPersoon": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon",
+    "GeregistreerdPersoon.registratie": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#registratie",
+      "@type": "@id"
+    },
+    "GeregistreerdeOrganisatie": "http://www.w3.org/ns/regorg#RegisteredOrganization",
+    "GeregistreerdeOrganisatie.rechtsvorm": {
+      "@id": "https://data.vlaanderen.be/ns/organisatie#rechtsvorm",
+      "@type": "@id"
+    },
+    "GeregistreerdeOrganisatie.registratie": {
+      "@id": "http://www.w3.org/ns/regorg#registration",
+      "@type": "@id"
+    },
+    "GeregistreerdeOrganisatie.wettelijkeNaam": {
+      "@id": "http://www.w3.org/ns/regorg#legalName",
+      "@type": "@id"
+    },
+    "GetypeerdeString": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "GetypeerdeString.string": {
+      "@id": "http://fixme.com#string",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "GetypeerdeString.type": {
+      "@id": "http://fixme.com#type",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Hoedanigheid": "https://data.vlaanderen.be/ns/organisatie#Hoedanigheid",
+    "Identificator": "http://www.w3.org/ns/adms#Identifier",
+    "Kost": "http://data.europa.eu/m8g/Cost",
+    "Kost.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Kost.valuta": {
+      "@id": "http://data.europa.eu/m8g/currency",
+      "@type": "@id"
+    },
+    "Kost.waarde": {
+      "@id": "http://data.europa.eu/m8g/value",
+      "@type": "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "NAL_currency": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Oprichting": "http://data.europa.eu/m8g/FoundationEvent",
+    "Oprichting.datum": {
+      "@id": "http://purl.org/dc/terms/date",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Organisatie": "http://www.w3.org/ns/org#Organization",
+    "Organisatie.^isHetresultaatVan": {
+      "@id": "http://www.w3.org/ns/org#resultedFrom",
+      "@type": "@id"
+    },
+    "Organisatie.^vestiging": {
+      "@id": "http://www.w3.org/ns/org#hasSite",
+      "@type": "@id"
+    },
+    "Organisatie.activiteit": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/regorg#orgActivity",
+      "@type": "@id"
+    },
+    "Organisatie.alternatieveNaam": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "@type": "@id"
+    },
+    "Organisatie.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "@id"
+    },
+    "Organisatie.contactinfo": {
+      "@container": "@set",
+      "@id": "http://schema.org/contactPoint",
+      "@type": "@id"
+    },
+    "Organisatie.heeftSuborganisatie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#hasSubOrganization",
+      "@type": "@id"
+    },
+    "Organisatie.isSuborganisatieVan": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#subOrganizationOf",
+      "@type": "@id"
+    },
+    "Organisatie.voorkeursnaam": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "@id"
+    },
+    "OrganisatieActiviteit": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Periode": "http://data.europa.eu/m8g/PeriodOfTime",
+    "Periode.begin": {
+      "@id": "http://data.europa.eu/m8g/startTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Periode.einde": {
+      "@id": "http://data.europa.eu/m8g/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Persoon": "http://www.w3.org/ns/person#Person",
+    "Persoon.achternaam": {
+      "@id": "http://xmlns.com/foaf/0.1/familyName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Persoon.contactinfo": {
+      "@id": "http://schema.org/contactPoint",
+      "@type": "@id"
+    },
+    "Persoon.geboortedatum": {
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Persoon.geboortedatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Persoon.voornaam": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/givenName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Persoon.woonplaats": {
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Persoon.woonplaats",
+      "@type": "@id"
+    },
+    "Plaats": "http://purl.org/dc/terms/Location",
+    "Plaats.plaatsnaam": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "PubliekeDienstverlening": "http://purl.org/vocab/cpsv#PublicService",
+    "PubliekeDienstverlening.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "@id"
+    },
+    "PubliekeDienstverlening.kost": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasCost",
+      "@type": "@id"
+    },
+    "PubliekeDienstverlening.naam": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "@id"
+    },
+    "PubliekeDienstverlening.verantwoordelijke": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasCompetentAuthority",
+      "@type": "@id"
+    },
+    "PubliekeOrganisatie": "http://data.europa.eu/m8g/PublicOrganisation",
+    "PubliekeOrganisatie.werkingsgebied": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/spatial",
+      "@type": "@id"
+    },
+    "Rechtsvormtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Rol": "http://www.w3.org/ns/org#Role",
+    "Roltype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TaalString": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "Taalcode": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Verantwoordelijke": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Vertegenwoordiger",
+    "Verantwoordelijke.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Verantwoordelijke.contactinfo": {
+      "@container": "@set",
+      "@id": "http://schema.org/contactPoint",
+      "@type": "@id"
+    },
+    "Verantwoordelijke.isPositieIn": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#isPositieIn",
+      "@type": "@id"
+    },
+    "Verantwoordelijke.rol": {
+      "@id": "http://www.w3.org/ns/org#role",
+      "@type": "@id"
+    },
+    "Vereniging": " https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Vereniging",
+    "Vestiging": "http://www.w3.org/ns/org#Site",
+    "Vestiging.vestigingsadres": {
+      "@id": "http://www.w3.org/ns/org#siteAddress",
+      "@type": "@id"
+    }
+  }
+}
