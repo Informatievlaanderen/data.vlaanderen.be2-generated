@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/58314bc5a8752f86c6d7c7013cbf792947b501fd",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/58314bc5a8752f86c6d7c7013cbf792947b501fd/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/dcd1106ba9ed9333c42d0c9311d818cc67ac11b8",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/dcd1106ba9ed9333c42d0c9311d818cc67ac11b8/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/bodem-en-ondergrond/index.html",
     "usesVocs": [],
@@ -86,7 +86,7 @@
         "nl": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt."
       },
       "usage": {
-        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van het type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een Geologischeeenheid of - meer indirect - van een Watermonster genomen op een bepaalde plek in een  Rivier)."
+        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van het type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier)."
       },
       "parents": [],
       "properties": [
@@ -675,9 +675,11 @@
       },
       "sort": "Boorgat",
       "description": {
-        "nl": "Resultaat van een Bemonstering waarbij in het bemonsterdObject een gat wordt geboord."
+        "nl": "Curve ontstaan door het boren van een gat in een vast medium."
       },
-      "usage": {},
+      "usage": {
+        "nl": "Laat toe om bv de variatie van een bepaald fenomeen langs die curve te observeren, bv de gelaagdheid van de ondergrond (typisch op basis van de boorkern of stalen daaruit genomen)."
+      },
       "parents": [
         {
           "label": "Bemonsteringscurve",
@@ -698,9 +700,7 @@
           "description": {
             "nl": "Geometrie van het Boorgat."
           },
-          "usage": {
-            "nl": "De geometrie van het Boorgat wordt beschreven door een Curve."
-          },
+          "usage": {},
           "domain": [
             {
               "EA-Name": "Boorgat",
@@ -735,9 +735,11 @@
       },
       "sort": "Interval",
       "description": {
-        "nl": "Resultaat van een Bemonstering waarbij een deel van het bemonsterdObject tussen twee punten wordt afgebakend."
+        "nl": "Curve, louter bepaald door zijn twee uiteinden."
       },
-      "usage": {},
+      "usage": {
+        "nl": "Tussen die uiteinden gebeuren dan de Observaties, bv een diepte-interval waarin de bodemsamenstelling wordt bestudeerd."
+      },
       "parents": [
         {
           "label": "RuimtelijkBemonsteringsobject",
@@ -765,9 +767,7 @@
           "description": {
             "nl": "Geometrie van het Interval."
           },
-          "usage": {
-            "nl": "De geometrie van het Interval wordt beschreven door een Curve."
-          },
+          "usage": {},
           "domain": [
             {
               "EA-Name": "Interval",
@@ -795,6 +795,73 @@
       ]
     },
     {
+      "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#LidarCloud",
+      "name": "LIDARpuntenwolk",
+      "label": {
+        "nl": "LIDARpuntenwolk"
+      },
+      "sort": "LIDARpuntenwolk",
+      "description": {
+        "nl": "Driedimensionele set van meetpunten verkregen door een actief remote sensing systeem vh type LIDAR."
+      },
+      "usage": {
+        "nl": "Bv om een 3D-beeld van het terrein op te bouwen en gebouwen,  vegetatie etc te detecteren."
+      },
+      "parents": [
+        {
+          "label": "RuimtelijkBemonsteringsobject",
+          "name": "RuimtelijkBemonsteringsobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+          "scoped_uri": "#RuimtelijkBemonsteringsobject"
+        },
+        {
+          "label": "Bemonsterings3Dobject",
+          "name": "Bemonsterings3Dobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingSolid#SF_SamplingSolid",
+          "scoped_uri": "#Bemonsterings3Dobject"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+          "name": "geometrie",
+          "sort": "geometrie",
+          "label": {
+            "nl": "geometrie"
+          },
+          "description": {
+            "nl": "geometrie vd LIDARpuntenwolk"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "LIDARpuntenwolk",
+              "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#LidarCloud"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "3Dobject",
+              "range_uri": "https://data.vlaanderen.be/ns/generiek#3Dobject"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#3Dobject",
+              "range_puri": "https://data.vlaanderen.be/ns/generiek#3Dobject",
+              "range_label": {
+                "nl": "3Dobject"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
       "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#MapHorizon",
       "name": "Kaarthorizon",
       "label": {
@@ -802,9 +869,11 @@
       },
       "sort": "Kaarthorizon",
       "description": {
-        "nl": "Resultaat van een Bemonstering waarbij details van het bemonsterdObject op een kaartvlak worden geprojecteerd."
+        "nl": "Het oppervlak dat in kaart wordt gebracht."
       },
-      "usage": {},
+      "usage": {
+        "nl": "Meestal het aardoppervlak maar kan ook het vlak zijn dat de ondergrond doorsnijdt met het oog op het in kaart brengen ervan."
+      },
       "parents": [
         {
           "label": "RuimtelijkBemonsteringsobject",
@@ -832,13 +901,433 @@
           "description": {
             "nl": "Geometrie van de Kaarthorizon."
           },
-          "usage": {
-            "nl": "De geometrie van de Kaarthorizon wordt beschreven door een Vlak."
-          },
+          "usage": {},
           "domain": [
             {
               "EA-Name": "Kaarthorizon",
               "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#MapHorizon"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Vlak",
+              "range_uri": "https://data.vlaanderen.be/ns/generiek#Vlak"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Vlak",
+              "range_puri": "https://data.vlaanderen.be/ns/generiek#Vlak",
+              "range_label": {
+                "nl": "Vlak"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Mine",
+      "name": "Mijn",
+      "label": {
+        "nl": "Mijn"
+      },
+      "sort": "Mijn",
+      "description": {
+        "nl": "Plaats onder de grond waar delfstoffen worden gewonnen."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "RuimtelijkBemonsteringsobject",
+          "name": "RuimtelijkBemonsteringsobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+          "scoped_uri": "#RuimtelijkBemonsteringsobject"
+        },
+        {
+          "label": "Bemonsterings3Dobject",
+          "name": "Bemonsterings3Dobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingSolid#SF_SamplingSolid",
+          "scoped_uri": "#Bemonsterings3Dobject"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+          "name": "geometrie",
+          "sort": "geometrie",
+          "label": {
+            "nl": "geometrie"
+          },
+          "description": {
+            "nl": "Geometrie van de Mijn."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Mijn",
+              "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Mine"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "3Dobject",
+              "range_uri": "https://data.vlaanderen.be/ns/generiek#3Dobject"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#3Dobject",
+              "range_puri": "https://data.vlaanderen.be/ns/generiek#3Dobject",
+              "range_label": {
+                "nl": "3Dobject"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#MineLevel",
+      "name": "Mijnniveau",
+      "label": {
+        "nl": "Mijnniveau"
+      },
+      "sort": "Mijnniveau",
+      "description": {
+        "nl": "Horizontaal uitegraven mijngang."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "RuimtelijkBemonsteringsobject",
+          "name": "RuimtelijkBemonsteringsobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+          "scoped_uri": "#RuimtelijkBemonsteringsobject"
+        },
+        {
+          "label": "Bemonsteringsvlak",
+          "name": "Bemonsteringsvlak",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface",
+          "scoped_uri": "#Bemonsteringsvlak"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+          "name": "geometrie",
+          "sort": "geometrie",
+          "label": {
+            "nl": "geometrie"
+          },
+          "description": {
+            "nl": "Geometrie van het mijnniveau."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Mijnniveau",
+              "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#MineLevel"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Vlak",
+              "range_uri": "https://data.vlaanderen.be/ns/generiek#Vlak"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Vlak",
+              "range_puri": "https://data.vlaanderen.be/ns/generiek#Vlak",
+              "range_label": {
+                "nl": "Vlak"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#ObservationWell",
+      "name": "Observatieput",
+      "label": {
+        "nl": "Observatieput"
+      },
+      "sort": "Observatieput",
+      "description": {
+        "nl": "Put of gat gegraven of geboord in een vast medium om de binnenkant te bestuderen."
+      },
+      "usage": {
+        "nl": "Bv bedoeld om een rotsformatie of aquifer te observeren hetzij door het nemen van Monsters, hetzij voor in-situ Observaties door peiling met intrumenten."
+      },
+      "parents": [
+        {
+          "label": "RuimtelijkBemonsteringsobject",
+          "name": "RuimtelijkBemonsteringsobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+          "scoped_uri": "#RuimtelijkBemonsteringsobject"
+        },
+        {
+          "label": "Bemonsteringscurve",
+          "name": "Bemonsteringscurve",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve",
+          "scoped_uri": "#Bemonsteringscurve"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+          "name": "geometrie",
+          "sort": "geometrie",
+          "label": {
+            "nl": "geometrie"
+          },
+          "description": {
+            "nl": "Geometrie vd Observatieput."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Observatieput",
+              "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#ObservationWell"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Curve",
+              "range_uri": "https://data.vlaanderen.be/ns/generiek#Curve"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Curve",
+              "range_puri": "https://data.vlaanderen.be/ns/generiek#Curve",
+              "range_label": {
+                "nl": "Curve"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Outcrop",
+      "name": "Ontsluiting",
+      "label": {
+        "nl": "Ontsluiting"
+      },
+      "sort": "Ontsluiting",
+      "description": {
+        "nl": "Plaats waar aardlagen tevoorschijn komen."
+      },
+      "usage": {
+        "nl": "Bv in open mijnbouw of bij grondwerken of op natuurlijke wijze. Laat toe om bv afzettingen of bedrock te analyseren die elders ontoegankelijk is."
+      },
+      "parents": [
+        {
+          "label": "RuimtelijkBemonsteringsobject",
+          "name": "RuimtelijkBemonsteringsobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+          "scoped_uri": "#RuimtelijkBemonsteringsobject"
+        }
+      ],
+      "properties": []
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Profile",
+      "name": "Profiel",
+      "label": {
+        "nl": "Profiel"
+      },
+      "sort": "Profiel",
+      "description": {
+        "nl": "Curve waarlangs een continu variërend fenomeen wordt beschreven."
+      },
+      "usage": {
+        "nl": "Bv het observeren van de samenstelling vd bodem, lithologie van de ondergrond etc."
+      },
+      "parents": [
+        {
+          "label": "RuimtelijkBemonsteringsobject",
+          "name": "RuimtelijkBemonsteringsobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+          "scoped_uri": "#RuimtelijkBemonsteringsobject"
+        },
+        {
+          "label": "Bemonsteringscurve",
+          "name": "Bemonsteringscurve",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve",
+          "scoped_uri": "#Bemonsteringscurve"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+          "name": "geometrie",
+          "sort": "geometrie",
+          "label": {
+            "nl": "geometrie"
+          },
+          "description": {
+            "nl": "Geometrie vh Profiel."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Profiel",
+              "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Profile"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Curve",
+              "range_uri": "https://data.vlaanderen.be/ns/generiek#Curve"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Curve",
+              "range_puri": "https://data.vlaanderen.be/ns/generiek#Curve",
+              "range_label": {
+                "nl": "Curve"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Quadrat",
+      "name": "Kwadraat",
+      "label": {
+        "nl": "Kwadraat"
+      },
+      "sort": "Kwadraat",
+      "description": {
+        "nl": "Meestal vierkant frame gebruikt om een oppervlakte-eenheid te isoleren voor observatie."
+      },
+      "usage": {
+        "nl": "Typisch gebruikt voor ruimtelijke steekproeven in ecologie/geografie. Bv wordt het aantal organismen geteld binnen het kwadraat om op basis daarvan aannames te doen voor een groter gebied."
+      },
+      "parents": [
+        {
+          "label": "RuimtelijkBemonsteringsobject",
+          "name": "RuimtelijkBemonsteringsobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+          "scoped_uri": "#RuimtelijkBemonsteringsobject"
+        },
+        {
+          "label": "Bemonsteringsvlak",
+          "name": "Bemonsteringsvlak",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface",
+          "scoped_uri": "#Bemonsteringsvlak"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+          "name": "geometrie",
+          "sort": "geometrie",
+          "label": {
+            "nl": "geometrie"
+          },
+          "description": {
+            "nl": "Geometrie vh Kwadraat."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Kwadraat",
+              "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Quadrat"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Vlak",
+              "range_uri": "https://data.vlaanderen.be/ns/generiek#Vlak"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Vlak",
+              "range_puri": "https://data.vlaanderen.be/ns/generiek#Vlak",
+              "range_label": {
+                "nl": "Vlak"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Scene",
+      "name": "Scene",
+      "label": {
+        "nl": "Scene"
+      },
+      "sort": "Scene",
+      "description": {
+        "nl": "Doorgaans rechthoekig vlak dat een beeld omvat."
+      },
+      "usage": {
+        "nl": "Bv het vlak begrensd door een luchtfoto of satellietbeeld. Typisch onderdeel van een aaneensluitende set die het aardoppervlak bedekt."
+      },
+      "parents": [
+        {
+          "label": "RuimtelijkBemonsteringsobject",
+          "name": "RuimtelijkBemonsteringsobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+          "scoped_uri": "#RuimtelijkBemonsteringsobject"
+        },
+        {
+          "label": "Bemonsteringsvlak",
+          "name": "Bemonsteringsvlak",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface",
+          "scoped_uri": "#Bemonsteringsvlak"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+          "name": "geometrie",
+          "sort": "geometrie",
+          "label": {
+            "nl": "geometrie"
+          },
+          "description": {
+            "nl": "Geometrie vd Scene."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Scene",
+              "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Scene"
             }
           ],
           "range": [
@@ -869,7 +1358,7 @@
       },
       "sort": "Doorsnede",
       "description": {
-        "nl": "Resultaat van een Bemonstering waarbij een doorsnede van het bemonsterdObject wordt gemaakt."
+        "nl": "Denkbeeldig vlak door een Object om de binnenkant ervan te beschrijven."
       },
       "usage": {},
       "parents": [
@@ -899,9 +1388,7 @@
           "description": {
             "nl": "Geometrie van de Doorsnede."
           },
-          "usage": {
-            "nl": "De geometrie van de Doorsnede wordt beschreven door een Vlak."
-          },
+          "usage": {},
           "domain": [
             {
               "EA-Name": "Doorsnede",
@@ -920,6 +1407,337 @@
               "range_puri": "https://data.vlaanderen.be/ns/generiek#Vlak",
               "range_label": {
                 "nl": "Vlak"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Sounding",
+      "name": "Peilpunt",
+      "label": {
+        "nl": "Peilpunt"
+      },
+      "sort": "Peilpunt",
+      "description": {
+        "nl": "Punt van waaruit een diepte- of hoogtemeting vanop afstand gebeurt."
+      },
+      "usage": {
+        "nl": "Bv dmv een dieptelood, radar, sonar etc."
+      },
+      "parents": [
+        {
+          "label": "Bemonsteringspunt",
+          "name": "Bemonsteringspunt",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint",
+          "scoped_uri": "#Bemonsteringspunt"
+        },
+        {
+          "label": "RuimtelijkBemonsteringsobject",
+          "name": "RuimtelijkBemonsteringsobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+          "scoped_uri": "#RuimtelijkBemonsteringsobject"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+          "name": "geometrie",
+          "sort": "geometrie",
+          "label": {
+            "nl": "geometrie"
+          },
+          "description": {
+            "nl": "Geometrie vh Peilpunt;"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Peilpunt",
+              "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Sounding"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Punt",
+              "range_uri": "http://www.opengis.net/ont/sf#Point"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.opengis.net/ont/sf#Point",
+              "range_puri": "http://www.opengis.net/ont/sf#Point",
+              "range_label": {
+                "nl": "Punt"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Station",
+      "name": "Station",
+      "label": {
+        "nl": "Station"
+      },
+      "sort": "Station",
+      "description": {
+        "nl": "Vaste puntlocatie waar Observaties worden gemaakt."
+      },
+      "usage": {
+        "nl": "Dit gebeurt typisch doorlopend of op regelmatige tijdstippen, bv een weerstation."
+      },
+      "parents": [
+        {
+          "label": "RuimtelijkBemonsteringsobject",
+          "name": "RuimtelijkBemonsteringsobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+          "scoped_uri": "#RuimtelijkBemonsteringsobject"
+        },
+        {
+          "label": "Bemonsteringspunt",
+          "name": "Bemonsteringspunt",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint",
+          "scoped_uri": "#Bemonsteringspunt"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+          "name": "geometrie",
+          "sort": "geometrie",
+          "label": {
+            "nl": "geometrie"
+          },
+          "description": {
+            "nl": "Geometrie vh Station."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Station",
+              "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Station"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Punt",
+              "range_uri": "http://www.opengis.net/ont/sf#Point"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.opengis.net/ont/sf#Point",
+              "range_puri": "http://www.opengis.net/ont/sf#Point",
+              "range_label": {
+                "nl": "Punt"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Swath",
+      "name": "Zwad",
+      "label": {
+        "nl": "Zwad"
+      },
+      "sort": "Zwad",
+      "description": {
+        "nl": "Doorgaans schuin parallellogram waarbinnen een beeld is opgenomen."
+      },
+      "usage": {
+        "nl": "Typisch de strook van het aardoppervlak dat de beeldsensor van een vliegtuig of satelliet kan zien en waarbinnen het individuele luchtfoto's of satellietbeelden kan opnemen."
+      },
+      "parents": [
+        {
+          "label": "RuimtelijkBemonsteringsobject",
+          "name": "RuimtelijkBemonsteringsobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+          "scoped_uri": "#RuimtelijkBemonsteringsobject"
+        },
+        {
+          "label": "Bemonsteringsvlak",
+          "name": "Bemonsteringsvlak",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface",
+          "scoped_uri": "#Bemonsteringsvlak"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+          "name": "geometrie",
+          "sort": "geometrie",
+          "label": {
+            "nl": "geometrie"
+          },
+          "description": {
+            "nl": "Geometrie vh Zwad."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Zwad",
+              "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Swath"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Vlak",
+              "range_uri": "https://data.vlaanderen.be/ns/generiek#Vlak"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Vlak",
+              "range_puri": "https://data.vlaanderen.be/ns/generiek#Vlak",
+              "range_label": {
+                "nl": "Vlak"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Trajectory",
+      "name": "Traject",
+      "label": {
+        "nl": "Traject"
+      },
+      "sort": "Traject",
+      "description": {
+        "nl": "Bemonsteringscurve die opeenvolgend uitgevoerde Observaties verbindt."
+      },
+      "usage": {
+        "nl": "Bv omdat de Sensor op een bewegend Platform gemonteerd is, bv op een schip. Opeenvolgende Metingen komen daardoor ruimtelijk uiteen te liggen afhankelijk van de snelheid waarmee het traject wordt afgelegd."
+      },
+      "parents": [
+        {
+          "label": "RuimtelijkBemonsteringsobject",
+          "name": "RuimtelijkBemonsteringsobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+          "scoped_uri": "#RuimtelijkBemonsteringsobject"
+        },
+        {
+          "label": "Bemonsteringscurve",
+          "name": "Bemonsteringscurve",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve",
+          "scoped_uri": "#Bemonsteringscurve"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+          "name": "geometrie",
+          "sort": "geometrie",
+          "label": {
+            "nl": "geometrie"
+          },
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Traject",
+              "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Trajectory"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Curve",
+              "range_uri": "https://data.vlaanderen.be/ns/generiek#Curve"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Curve",
+              "range_puri": "https://data.vlaanderen.be/ns/generiek#Curve",
+              "range_label": {
+                "nl": "Curve"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Traverse",
+      "name": "Traverse",
+      "label": {
+        "nl": "Traverse"
+      },
+      "sort": "Traverse",
+      "description": {
+        "nl": "Curve ontstaan bij landmeting waarbij vanuit een punt de positie van een ander punt wordt bepaald dmv hoek- en afstandsmeting."
+      },
+      "usage": {},
+      "parents": [
+        {
+          "label": "RuimtelijkBemonsteringsobject",
+          "name": "RuimtelijkBemonsteringsobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+          "scoped_uri": "#RuimtelijkBemonsteringsobject"
+        },
+        {
+          "label": "Bemonsteringscurve",
+          "name": "Bemonsteringscurve",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve",
+          "scoped_uri": "#Bemonsteringscurve"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+          "name": "geometrie",
+          "sort": "geometrie",
+          "label": {
+            "nl": "geometrie"
+          },
+          "description": {
+            "nl": "Geometrie vd Traverse."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Traverse",
+              "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Traverse"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Curve",
+              "range_uri": "https://data.vlaanderen.be/ns/generiek#Curve"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Curve",
+              "range_puri": "https://data.vlaanderen.be/ns/generiek#Curve",
+              "range_label": {
+                "nl": "Curve"
               }
             }
           ],
@@ -4034,721 +4852,6 @@
       "usage": {},
       "parents": [],
       "properties": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Kwadrant",
-      "name": "Kwadrant",
-      "label": {
-        "nl": "Kwadrant"
-      },
-      "sort": "Kwadrant",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [
-        {
-          "label": "RuimtelijkBemonsteringsobject",
-          "name": "RuimtelijkBemonsteringsobject",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
-          "scoped_uri": "#RuimtelijkBemonsteringsobject"
-        },
-        {
-          "label": "Bemonsteringsvlak",
-          "name": "Bemonsteringsvlak",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface",
-          "scoped_uri": "#Bemonsteringsvlak"
-        }
-      ],
-      "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#^geometrie",
-          "name": "geometrie",
-          "sort": "geometrie",
-          "label": {
-            "nl": "geometrie"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Kwadrant",
-              "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Kwadrant"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Vlak",
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Vlak"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Vlak",
-              "range_puri": "https://data.vlaanderen.be/ns/generiek#Vlak",
-              "range_label": {
-                "nl": "Vlak"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        }
-      ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#LIDARpuntenwolk",
-      "name": "LIDARpuntenwolk",
-      "label": {
-        "nl": "LIDARpuntenwolk"
-      },
-      "sort": "LIDARpuntenwolk",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [
-        {
-          "label": "RuimtelijkBemonsteringsobject",
-          "name": "RuimtelijkBemonsteringsobject",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
-          "scoped_uri": "#RuimtelijkBemonsteringsobject"
-        },
-        {
-          "label": "Bemonsterings3Dobject",
-          "name": "Bemonsterings3Dobject",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SamplingSolid#SF_SamplingSolid",
-          "scoped_uri": "#Bemonsterings3Dobject"
-        }
-      ],
-      "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#^geometrie",
-          "name": "geometrie",
-          "sort": "geometrie",
-          "label": {
-            "nl": "geometrie"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "LIDARpuntenwolk",
-              "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#LIDARpuntenwolk"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "3Dobject",
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#3Dobject"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#3Dobject",
-              "range_puri": "https://data.vlaanderen.be/ns/generiek#3Dobject",
-              "range_label": {
-                "nl": "3Dobject"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        }
-      ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Looplijn",
-      "name": "Looplijn",
-      "label": {
-        "nl": "Looplijn"
-      },
-      "sort": "Looplijn",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [
-        {
-          "label": "RuimtelijkBemonsteringsobject",
-          "name": "RuimtelijkBemonsteringsobject",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
-          "scoped_uri": "#RuimtelijkBemonsteringsobject"
-        },
-        {
-          "label": "Bemonsteringscurve",
-          "name": "Bemonsteringscurve",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve",
-          "scoped_uri": "#Bemonsteringscurve"
-        }
-      ],
-      "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#^geometrie",
-          "name": "geometrie",
-          "sort": "geometrie",
-          "label": {
-            "nl": "geometrie"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Looplijn",
-              "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Looplijn"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Curve",
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Curve"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Curve",
-              "range_puri": "https://data.vlaanderen.be/ns/generiek#Curve",
-              "range_label": {
-                "nl": "Curve"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        }
-      ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Mijn",
-      "name": "Mijn",
-      "label": {
-        "nl": "Mijn"
-      },
-      "sort": "Mijn",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [
-        {
-          "label": "RuimtelijkBemonsteringsobject",
-          "name": "RuimtelijkBemonsteringsobject",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
-          "scoped_uri": "#RuimtelijkBemonsteringsobject"
-        },
-        {
-          "label": "Bemonsterings3Dobject",
-          "name": "Bemonsterings3Dobject",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SamplingSolid#SF_SamplingSolid",
-          "scoped_uri": "#Bemonsterings3Dobject"
-        }
-      ],
-      "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#^geometrie",
-          "name": "geometrie",
-          "sort": "geometrie",
-          "label": {
-            "nl": "geometrie"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Mijn",
-              "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Mijn"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "3Dobject",
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#3Dobject"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#3Dobject",
-              "range_puri": "https://data.vlaanderen.be/ns/generiek#3Dobject",
-              "range_label": {
-                "nl": "3Dobject"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        }
-      ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Mijnniveau",
-      "name": "Mijnniveau",
-      "label": {
-        "nl": "Mijnniveau"
-      },
-      "sort": "Mijnniveau",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [
-        {
-          "label": "RuimtelijkBemonsteringsobject",
-          "name": "RuimtelijkBemonsteringsobject",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
-          "scoped_uri": "#RuimtelijkBemonsteringsobject"
-        },
-        {
-          "label": "Bemonsteringsvlak",
-          "name": "Bemonsteringsvlak",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface",
-          "scoped_uri": "#Bemonsteringsvlak"
-        }
-      ],
-      "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#^geometrie",
-          "name": "geometrie",
-          "sort": "geometrie",
-          "label": {
-            "nl": "geometrie"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Mijnniveau",
-              "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Mijnniveau"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Vlak",
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Vlak"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Vlak",
-              "range_puri": "https://data.vlaanderen.be/ns/generiek#Vlak",
-              "range_label": {
-                "nl": "Vlak"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        }
-      ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatieput",
-      "name": "Observatieput",
-      "label": {
-        "nl": "Observatieput"
-      },
-      "sort": "Observatieput",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [
-        {
-          "label": "RuimtelijkBemonsteringsobject",
-          "name": "RuimtelijkBemonsteringsobject",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
-          "scoped_uri": "#RuimtelijkBemonsteringsobject"
-        },
-        {
-          "label": "Bemonsteringscurve",
-          "name": "Bemonsteringscurve",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve",
-          "scoped_uri": "#Bemonsteringscurve"
-        }
-      ],
-      "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#^geometrie",
-          "name": "geometrie",
-          "sort": "geometrie",
-          "label": {
-            "nl": "geometrie"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Observatieput",
-              "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatieput"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Curve",
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Curve"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Curve",
-              "range_puri": "https://data.vlaanderen.be/ns/generiek#Curve",
-              "range_label": {
-                "nl": "Curve"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        }
-      ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Profiel",
-      "name": "Profiel",
-      "label": {
-        "nl": "Profiel"
-      },
-      "sort": "Profiel",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [
-        {
-          "label": "RuimtelijkBemonsteringsobject",
-          "name": "RuimtelijkBemonsteringsobject",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
-          "scoped_uri": "#RuimtelijkBemonsteringsobject"
-        },
-        {
-          "label": "Bemonsteringscurve",
-          "name": "Bemonsteringscurve",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve",
-          "scoped_uri": "#Bemonsteringscurve"
-        }
-      ],
-      "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#^geometrie",
-          "name": "geometrie",
-          "sort": "geometrie",
-          "label": {
-            "nl": "geometrie"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Profiel",
-              "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Profiel"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Curve",
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Curve"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Curve",
-              "range_puri": "https://data.vlaanderen.be/ns/generiek#Curve",
-              "range_label": {
-                "nl": "Curve"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        }
-      ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Scene",
-      "name": "Scene",
-      "label": {
-        "nl": "Scene"
-      },
-      "sort": "Scene",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [
-        {
-          "label": "RuimtelijkBemonsteringsobject",
-          "name": "RuimtelijkBemonsteringsobject",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
-          "scoped_uri": "#RuimtelijkBemonsteringsobject"
-        },
-        {
-          "label": "Bemonsteringsvlak",
-          "name": "Bemonsteringsvlak",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface",
-          "scoped_uri": "#Bemonsteringsvlak"
-        }
-      ],
-      "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#^geometrie",
-          "name": "geometrie",
-          "sort": "geometrie",
-          "label": {
-            "nl": "geometrie"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Scene",
-              "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Scene"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Vlak",
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Vlak"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Vlak",
-              "range_puri": "https://data.vlaanderen.be/ns/generiek#Vlak",
-              "range_label": {
-                "nl": "Vlak"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        }
-      ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Station",
-      "name": "Station",
-      "label": {
-        "nl": "Station"
-      },
-      "sort": "Station",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [
-        {
-          "label": "RuimtelijkBemonsteringsobject",
-          "name": "RuimtelijkBemonsteringsobject",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
-          "scoped_uri": "#RuimtelijkBemonsteringsobject"
-        },
-        {
-          "label": "Bemonsteringspunt",
-          "name": "Bemonsteringspunt",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint",
-          "scoped_uri": "#Bemonsteringspunt"
-        }
-      ],
-      "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#^geometrie",
-          "name": "geometrie",
-          "sort": "geometrie",
-          "label": {
-            "nl": "geometrie"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Station",
-              "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Station"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Punt",
-              "range_uri": "http://www.opengis.net/ont/sf#Point"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.opengis.net/ont/sf#Point",
-              "range_puri": "http://www.opengis.net/ont/sf#Point",
-              "range_label": {
-                "nl": "Punt"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        }
-      ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Strook",
-      "name": "Strook",
-      "label": {
-        "nl": "Strook"
-      },
-      "sort": "Strook",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [
-        {
-          "label": "RuimtelijkBemonsteringsobject",
-          "name": "RuimtelijkBemonsteringsobject",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
-          "scoped_uri": "#RuimtelijkBemonsteringsobject"
-        },
-        {
-          "label": "Bemonsteringsvlak",
-          "name": "Bemonsteringsvlak",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface",
-          "scoped_uri": "#Bemonsteringsvlak"
-        }
-      ],
-      "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#^geometrie",
-          "name": "geometrie",
-          "sort": "geometrie",
-          "label": {
-            "nl": "geometrie"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Strook",
-              "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Strook"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Vlak",
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Vlak"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Vlak",
-              "range_puri": "https://data.vlaanderen.be/ns/generiek#Vlak",
-              "range_label": {
-                "nl": "Vlak"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        }
-      ]
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Traject",
-      "name": "Traject",
-      "label": {
-        "nl": "Traject"
-      },
-      "sort": "Traject",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [
-        {
-          "label": "RuimtelijkBemonsteringsobject",
-          "name": "RuimtelijkBemonsteringsobject",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
-          "scoped_uri": "#RuimtelijkBemonsteringsobject"
-        },
-        {
-          "label": "Bemonsteringscurve",
-          "name": "Bemonsteringscurve",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve",
-          "scoped_uri": "#Bemonsteringscurve"
-        }
-      ],
-      "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#^geometrie",
-          "name": "geometrie",
-          "sort": "geometrie",
-          "label": {
-            "nl": "geometrie"
-          },
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Traject",
-              "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Traject"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Curve",
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Curve"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Curve",
-              "range_puri": "https://data.vlaanderen.be/ns/generiek#Curve",
-              "range_label": {
-                "nl": "Curve"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        }
-      ]
     },
     {
       "uri": "https://uri.fiware.org/ns/data-models#Device",
