@@ -1285,7 +1285,7 @@
           "sh:path": "https://data.vlaanderen.be/ns/observaties-en-metingen#uitgevoerdDoor"
         },
         {
-          "sh:class": "https://www.w3.org/TR/vocab-ssn/#SOSASensor",
+          "sh:class": "https://www.w3.org/ns/sosa/Sensor",
           "sh:description": {
             "nl": "De aanduiding die aangeeft of de observatie al dan niet met een sensor is uitgevoerd."
           },
@@ -1478,13 +1478,6 @@
       "sh:targetClass": "http://fixme.com#Organisatie"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/shacl/ap-grondwatermeetnet-SHACL_nl#ProcedureShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "http://fixme.com#Procedure"
-    },
-    {
       "@id": "https://data.test-vlaanderen.be/shacl/ap-grondwatermeetnet-SHACL_nl#AgentShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -1559,6 +1552,13 @@
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/ns/prov#Location"
+    },
+    {
+      "@id": "https://data.test-vlaanderen.be/shacl/ap-grondwatermeetnet-SHACL_nl#ProcedureShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/ns/sosa/Procedure"
     },
     {
       "@id": "https://data.test-vlaanderen.be/shacl/ap-grondwatermeetnet-SHACL_nl#BemonsteraarShape",
@@ -1792,7 +1792,7 @@
         {
           "sh:class": "http://www.w3.org/ns/sosa/Sampler",
           "sh:description": {
-            "nl": "Bemonsteraar waarmee de Bemonsteringsprocedure is toegepast."
+            "nl": "Bemonsteraar waarmee de Bemonsteringsprocedure is of moet worden toegepast."
           },
           "sh:name": {
             "nl": "geïmplementeerdDoor"
@@ -1802,22 +1802,22 @@
         {
           "sh:class": "http://www.w3.org/ns/ssn/Input",
           "sh:description": {
-            "nl": "De noden om een activiteit te starten."
+            "nl": "Verwijzing naar de Input die de procedure vereist."
           },
           "sh:name": {
             "nl": "input"
           },
-          "sh:path": "http://fixme.com#input"
+          "sh:path": "http://www.w3.org/ns/ssn/hasInput"
         },
         {
           "sh:class": "http://www.w3.org/ns/ssn/Output",
           "sh:description": {
-            "nl": "De onmiddellijke resultaten van een activiteit."
+            "nl": "Verwijzing naar de Output die de Procedure genereert."
           },
           "sh:name": {
             "nl": "output"
           },
-          "sh:path": "http://fixme.com#output"
+          "sh:path": "http://www.w3.org/ns/ssn/hasOutput"
         },
         {
           "sh:class": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
@@ -1832,7 +1832,7 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
           "sh:description": {
-            "nl": "Verwijzing naar een document dat de Observatieprocedure beschrijft."
+            "nl": "Verwijzing naar een document dat de Bemonsteringsprocedure beschrijft."
           },
           "sh:name": {
             "nl": "specificatie"
@@ -1842,7 +1842,7 @@
         {
           "sh:class": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsproceduretype",
           "sh:description": {
-            "nl": "Aard van de Observatieprocedure."
+            "nl": "Aard van deBemonsteringsprocedure."
           },
           "sh:name": {
             "nl": "type"
@@ -2172,9 +2172,9 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://www.w3.org/TR/vocab-ssn/#SOSASensor",
+          "sh:class": "https://www.w3.org/ns/sosa/Sensor",
           "sh:description": {
-            "nl": "TODO"
+            "nl": "Sensor waarmee de Observatieprocedure is of moet worden uitgevoerd."
           },
           "sh:name": {
             "nl": "geïmplementeerdMet"
@@ -2184,27 +2184,27 @@
         {
           "sh:class": "http://www.w3.org/ns/ssn/Input",
           "sh:description": {
-            "nl": "De noden om een activiteit te starten."
+            "nl": "Verwijzing naar de Input die de procedure vereist."
           },
           "sh:name": {
             "nl": "input"
           },
-          "sh:path": "http://fixme.com#input"
+          "sh:path": "http://www.w3.org/ns/ssn/hasInput"
         },
         {
           "sh:class": "http://www.w3.org/ns/ssn/Output",
           "sh:description": {
-            "nl": "De onmiddellijke resultaten van een activiteit."
+            "nl": "Verwijzing naar de Output die de Procedure genereert."
           },
           "sh:name": {
             "nl": "output"
           },
-          "sh:path": "http://fixme.com#output"
+          "sh:path": "http://www.w3.org/ns/ssn/hasOutput"
         },
         {
           "sh:class": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
           "sh:description": {
-            "nl": "Een variabele, meetbare eigenschap wiens waarde een determinant is van de eigenschappen van een systeem."
+            "nl": "Willekeurig gegeven gassocieerd met de Observatieprocedure."
           },
           "sh:name": {
             "nl": "parameter"
@@ -2214,7 +2214,7 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
           "sh:description": {
-            "nl": "Het type object op basis waarvan het punt werd bepaald."
+            "nl": "Verwijzing naar een document dat de Observatieprocedure beschrijft."
           },
           "sh:name": {
             "nl": "specificatie"
@@ -2235,6 +2235,13 @@
       "sh:targetClass": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure"
     },
     {
+      "@id": "https://data.test-vlaanderen.be/shacl/ap-grondwatermeetnet-SHACL_nl#SysteemShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://www.w3.org/TR/vocab-ssn/#ssn-system"
+    },
+    {
       "@id": "https://data.test-vlaanderen.be/shacl/ap-grondwatermeetnet-SHACL_nl#SensorShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -2242,7 +2249,7 @@
         {
           "sh:class": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
           "sh:description": {
-            "nl": "TODO"
+            "nl": "Observatieprocedure die door de Sensor wordt toegepast."
           },
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -2254,22 +2261,15 @@
         {
           "sh:class": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
           "sh:description": {
-            "nl": "De aanduiding die aangeeft of de observatie al dan niet is uitgevoerd."
+            "nl": "Observatie die met de Sensor is uitrgevoerd."
           },
           "sh:name": {
             "nl": "uitgevoerdeObservatie"
           },
-          "sh:path": "http://fixme.com"
+          "sh:path": "http://www.w3.org/ns/sosa/madeObservation"
         }
       ],
-      "sh:targetClass": "https://www.w3.org/TR/vocab-ssn/#SOSASensor"
-    },
-    {
-      "@id": "https://data.test-vlaanderen.be/shacl/ap-grondwatermeetnet-SHACL_nl#SysteemShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "https://www.w3.org/TR/vocab-ssn/#ssn-system"
+      "sh:targetClass": "https://www.w3.org/ns/sosa/Sensor"
     },
     {
       "@id": "https://data.test-vlaanderen.be/shacl/ap-grondwatermeetnet-SHACL_nl#ObservatiecontextShape",

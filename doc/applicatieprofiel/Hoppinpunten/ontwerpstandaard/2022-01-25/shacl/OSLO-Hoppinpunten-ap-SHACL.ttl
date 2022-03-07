@@ -1,5 +1,6 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -70,6 +71,7 @@
     <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#IdentificatorShape>,
     <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#AdresvoorstellingShape>,
     <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#GeometrieShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#LocatieShape>,
     <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#InformatiezuilShape>,
     <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#AanbiederShape>,
     <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#BeschikbaarheidShape>,
@@ -93,6 +95,7 @@
     <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#NetwerkelementShape>,
     <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#ElementShape>,
     <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#BushokShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#FietsstallingShape>,
     <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#HaltepaalShape>,
     <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#InfrastructuurelementShape>,
     <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#StraatmeubilairShape>,
@@ -140,35 +143,47 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Aanbieder>;
+    shacl:description "De aanbieder van de aanvullende dienst.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "aanbieder";
     shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#aanbieder>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Beschikbaarheid>;
-    shacl:description "Beschikbaarheid van de Mobiliteitsdienst.";
+    shacl:class <https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Infrastructuurelement>;
+    shacl:description "Infrastructuurelement waarop de aanvullende dienst wordt aangeboden.";
+    shacl:name "beschikbaarOp";
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#beschikbaarOp>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/transportnetwerk#Transportobject>;
+    shacl:description "Transportobject waarop de aanvullende dienst wordt aangeboden.";
+    shacl:name "beschikbaarOp";
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#beschikbaarOp>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Aanbieder>;
+    shacl:description "Beschikbaarheid van de aanvullende dienst.";
     shacl:name "beschikbaarheid";
-    shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#Mobiliteitsdienst.beschikbaarheid>
+    shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#beschikbaarheid>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "Naam van de Mobiliteitsdienst.";
+    shacl:description "Naam van de aanvullende dienst.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "naam";
-    shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#Mobiliteitsdienst.naam>
+    shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#naam>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Toegankelijkheid>;
-    shacl:description "Toegankelijkheid van de Mobiliteitsdienst.";
+    shacl:description "Toegankelijkheid van de aanvullende dienst.";
     shacl:name "toegankelijkheid";
-    shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#Mobiliteitsdienst.toegankelijkheid>
+    shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#toegankelijkheid>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/vervoersknooppunten#AanvullendeDiensttype>;
-    shacl:description "Aard van de Mobiliteitsdienst.";
+    shacl:description "Aard van de aanvullende dienst.";
     shacl:minCount 1;
     shacl:name "type";
-    shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#Mobiliteitsdienst.type>
+    shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#type>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/vervoersknooppunten#Vervoersknooppunt>;
+    shacl:description "Het vervoersknooppunt waarop de aanvullende dienst wordt aangeboden.";
     shacl:name "vervoersknoop";
     shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#vervoersknoop>
   ];
@@ -310,6 +325,10 @@
 <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#FietsparkingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://schema.mobivoc.org/#BicycleParkingStation> .
+
+<https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#FietsstallingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Fietsstalling> .
 
 <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#FormeelKaderShape> a shacl:NodeShape;
   shacl:closed false;
@@ -559,6 +578,10 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Licentie> .
 
+<https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#LocatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass prov:Location .
+
 <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#MerktypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/vervoersknooppunten#Merktype> .
@@ -582,6 +605,16 @@
     shacl:description "Formeel Kader waarbinnen de Mobiliteitsdienst wordt aangeboden.";
     shacl:name "aangebodenBinnen";
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#aangebodenBinnen>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/transportnetwerk#Transportobject>;
+    shacl:description "Transportobject waarop de Mobiliteitsdienst wordt aangeboden.";
+    shacl:name "beschikbaarOp";
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#beschikbaarOp>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Infrastructuurelement>;
+    shacl:description "Infrastructuurelement waarop de Mobiliteitsdienst beschikbaar is";
+    shacl:name "beschikbaarOp";
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#beschikbaarOp>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Beschikbaarheid>;
     shacl:description "Beschikbaarheid van de Mobiliteitsdienst.";
@@ -641,6 +674,11 @@
     shacl:description "Vervoermiddel waarmee of waarvoor de Mobiliteitsdienst doorgaans wordt georganiseerd.";
     shacl:name "vervoermiddel";
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst.vervoermiddel>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/vervoersknooppunten#Vervoersknooppunt>;
+    shacl:description "De vervoersknoop waar de Mobiliteitsdienst gelinkt is.";
+    shacl:name "vervoersknoop";
+    shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#Vervoersknooppunt>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst> .
 
@@ -898,6 +936,7 @@
     shacl:name "mogelijkeRoute";
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#mogelijkeRoute>
   ], [
+    shacl:class prov:Location;
     shacl:description "Opeenvolging van Locaties die men tijdens de Reis wil aandoen.";
     shacl:minCount 2;
     shacl:name "reisweg";
@@ -953,6 +992,7 @@
     shacl:name "identificator";
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#identificator>
   ], [
+    shacl:class prov:Location;
     shacl:description "Locatie van de Resource.";
     shacl:maxCount 1;
     shacl:name "locatie";
@@ -989,6 +1029,7 @@
 <https://data.vlaanderen.be/shacl/OSLO-Hoppinpunten-ap#RouteShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class prov:Location;
     shacl:description "Locatie waar de Route eindigt.";
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -1040,6 +1081,7 @@
     shacl:name "type";
     shacl:path dc:type
   ], [
+    shacl:class prov:Location;
     shacl:description "Locatie waar de Route begint.";
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -1374,11 +1416,26 @@
     shacl:name "beschikbaarheid";
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Transportobject.beschikbaarheid>
   ], [
+    shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst>;
+    shacl:description "De mobiliteitsdiensten verbonden met het transportobject.";
+    shacl:name "dienst";
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/vervoersknooppunten#AanvullendeDienst>;
+    shacl:description "De aanvullende diensten verbonden met het transportobject";
+    shacl:name "dienst";
+    shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#AanvullendeDienst>
+  ], [
     shacl:datatype rdf:langString;
     shacl:description "Naam van het Transportobject.";
     shacl:maxCount 1;
     shacl:name "geografischeNaam";
     shacl:path <https://data.vlaanderen.be/ns/transportnetwerk#geografischeNaam>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Infrastructuurelement>;
+    shacl:description "De infrastructuurelementen verbonden met het transportobject.";
+    shacl:name "infrastructuurelement";
+    shacl:path <https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Infrastructuurelement>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Toegankelijkheid>;
     shacl:description "Toegankelijkheid van het Transportobject.";
@@ -1389,6 +1446,11 @@
     shacl:description "Transportnetwerk waartoe het transportobject behoort.";
     shacl:name "transportNetwerk";
     shacl:path <https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/vervoersknooppunten#Vervoersknooppunt>;
+    shacl:description "De vervoersknopen waartoe dit transportobject behoort.";
+    shacl:name "vervoersknoop";
+    shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#Vervoersknooppunt>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/transportnetwerk#Transportobject> .
 
@@ -1445,43 +1507,60 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/vervoersknooppunten#Vervoersknooppunttype>;
-    shacl:description "De classificatie van het vervoersknooppunt.";
+    shacl:description "De classificatie van het Vervoersknooppunt.";
     shacl:name "classificatie";
     shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#classificatie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/vervoersknooppunten#AanvullendeDienst>;
+    shacl:description "De aanvullende diensten verbonden met het Vervoersknooppunt.";
     shacl:name "dienst";
-    shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#dienst>
+    shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#AanvullendeDienst>
   ], [
-    shacl:description "De locatie van het vervoersknooppunt.";
+    shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst>;
+    shacl:description "De mobiliteitsdiensten verbonden met het Vervoersknooppunt.";
+    shacl:name "dienst";
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Infrastructuurelement>;
+    shacl:description "Het infrastructuurelement van het Vervoersknooppunt.";
+    shacl:name "infrastructuurelement";
+    shacl:path <https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Infrastructuurelement>
+  ], [
+    shacl:class prov:Location;
+    shacl:description "De locatie van het Vervoersknooppunt.";
     shacl:name "locatie";
     shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#locatie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/vervoersknooppunten#Merktype>;
-    shacl:description "Het merk van het vervoersknooppunt.";
+    shacl:description "Het merk van het Vervoersknooppunt.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "merk";
     shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#merk>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "De naam van het vervoersknooppunt.";
+    shacl:description "De naam van het Vervoersknooppunt.";
     shacl:name "naam";
     shacl:path <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#title>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/vervoersknooppunten#Vervoersknooppuntstatus>;
-    shacl:description "De status van het vervoersknooppunt.";
+    shacl:description "De status van het Vervoersknooppunt.";
     shacl:maxCount 1;
     shacl:name "status";
     shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#status>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Toegankelijkheid>;
-    shacl:description "De toegankelijkheid van het vervoersknooppunt.";
+    shacl:description "De toegankelijkheid van het Vervoersknooppunt.";
     shacl:name "toegankelijkheid";
     shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#toegankelijkheid>
   ], [
+    shacl:class <https://data.vlaanderen.be/ns/transportnetwerk#Transportobject>;
+    shacl:description "Het transportobject van het Vervoersknooppunt.";
+    shacl:name "transportobject";
+    shacl:path <https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk>
+  ], [
     shacl:class dc:Agent;
-    shacl:description "De wegbeheerder van het vervoersknooppunt.";
+    shacl:description "De wegbeheerder van het Vervoersknooppunt.";
     shacl:name "wegbeheerder";
     shacl:path <https://data.vlaanderen.be/ns/vervoersknooppunten#wegbeheerder>
   ];

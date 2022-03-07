@@ -4,12 +4,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl> <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nlshapes> <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#OnveranderlijkObjectShape>,
-    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#SEMIC-LDES::EtcShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#RootNodeShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#ObservatieShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#VersieShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#RetentiebeleidShape>,
-    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#SEMIC-LDES::EventstreamShape>,
+    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#EventstreamShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#CollectionShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#NodeShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#RelationShape> .
@@ -17,6 +16,33 @@
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#CollectionShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://w3id.org/tree#Collection> .
+
+<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#EventstreamShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject>;
+    shacl:description "Een member maakt deel uit van de collectie."@nl;
+    shacl:path <https://w3id.org/tree#member>
+  ], [
+    shacl:description "Een bepaalde shape, gedefinieerd door een URI, aan welke alle elementen in de eventstream moeten voldoen."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "shape"@nl;
+    shacl:path <https://w3id.org/tree#shape>
+  ], [
+    shacl:datatype xsd:anyURI;
+    shacl:description "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tiidstip."@nl;
+    shacl:maxCount 1;
+    shacl:name "timestampPath"@nl;
+    shacl:path <https://w3id.org/ldes#timestampPath>
+  ], [
+    shacl:datatype xsd:anyURI;
+    shacl:description "Geeft de versie van het element weer."@nl;
+    shacl:maxCount 1;
+    shacl:name "versionOfPath"@nl;
+    shacl:path <https://w3id.org/ldes#versionOfPath>
+  ];
+  shacl:targetClass <https://w3id.org/ldes#EventStream> .
 
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#NodeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -50,15 +76,6 @@
 
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#OnveranderlijkObjectShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    shacl:class <https://w3id.org/ldes#EventStream>;
-    shacl:description "Een member maakt deel uit van de collectie."@nl;
-    shacl:path <https://w3id.org/tree#member>
-  ], [
-    shacl:class <https://w3id.org/ldes#EventStream>;
-    shacl:description "Een member maakt deel uit van de collectie."@nl;
-    shacl:path <https://w3id.org/tree#member>
-  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject> .
 
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#RelationShape> a shacl:NodeShape;
@@ -83,6 +100,12 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:path <http://fixme.com#path>
+  ], [
+    shacl:datatype xsd:anyURI;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:path <http://fixme.com#value>
   ];
   shacl:targetClass <https://w3id.org/tree#Relation> .
 
@@ -92,33 +115,6 @@
 
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#RootNodeShape> a shacl:NodeShape;
   shacl:closed false .
-
-<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#SEMIC-LDES::EtcShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/ldes#SEMIC-LDES::Etc> .
-
-<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#SEMIC-LDES::EventstreamShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:description "Een bepaalde shape, gedefinieerd door een URI, aan welke alle elementen in de eventstream moeten voldoen."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "shape"@nl;
-    shacl:path <https://w3id.org/tree#shape>
-  ], [
-    shacl:datatype xsd:anyURI;
-    shacl:description "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tiidstip."@nl;
-    shacl:maxCount 1;
-    shacl:name "timestampPath"@nl;
-    shacl:path <https://w3id.org/ldes#timestampPath>
-  ], [
-    shacl:datatype xsd:anyURI;
-    shacl:description "Geeft de versie van het element weer."@nl;
-    shacl:maxCount 1;
-    shacl:name "versionOfPath"@nl;
-    shacl:path <https://w3id.org/ldes#versionOfPath>
-  ];
-  shacl:targetClass <https://w3id.org/ldes#EventStream> .
 
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#VersieShape> a shacl:NodeShape;
   shacl:closed false;
