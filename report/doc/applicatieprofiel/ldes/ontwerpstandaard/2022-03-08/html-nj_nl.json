@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-ldes/tree/e753617ef1aaebef34a9a90b0c248522118f2003",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-ldes/blob/e753617ef1aaebef34a9a90b0c248522118f2003/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-ldes/tree/d0854badcb1d9b04a77fc51f232bf0ab9a298045",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-ldes/blob/d0854badcb1d9b04a77fc51f232bf0ab9a298045/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-ldes/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/standaard-in-ontwikkeling/vocabularia-en-applicatieprofielen-ldes.html",
     "usesVocs": [],
@@ -23,11 +23,11 @@
   "classes": [
     {
       "uri": "https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject",
-      "name": "onveranderlijkObject",
+      "name": "OnveranderlijkObject",
       "label": {
-        "nl": "onveranderlijkObject"
+        "nl": "OnveranderlijkObject"
       },
-      "sort": "onveranderlijkObject",
+      "sort": "OnveranderlijkObject",
       "description": {
         "nl": "Een onveranderlijkObject is het basiselement van een Linked Data Event Stream."
       },
@@ -38,7 +38,7 @@
       "properties": []
     },
     {
-      "uri": "TO DO",
+      "uri": "https://data.vlaanderen.be/ns/ldes#RootNode",
       "name": "RootNode",
       "label": {
         "nl": "RootNode"
@@ -48,7 +48,7 @@
         "nl": "Een RootNode is een beginpagina, die zelf al leden kan bevatten, via wiens gelinkte paginas alle leden kunnen gevonden worden."
       },
       "usage": {
-        "nl": "een tree:Node die verwezen wordt vanuit een ldes:EventStream via een tree:view property"
+        "nl": "Een tree:Node die verwezen wordt vanuit een ldes:EventStream via een tree:view property. "
       },
       "parents": [],
       "properties": []
@@ -166,10 +166,10 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "#onveranderlijkObject",
+              "range_uri": "#OnveranderlijkObject",
               "range_puri": "https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject",
               "range_label": {
-                "nl": "onveranderlijkObject"
+                "nl": "OnveranderlijkObject"
               }
             }
           ],
@@ -187,7 +187,7 @@
             "nl": "Geeft de versie van het element weer."
           },
           "usage": {
-            "nl": "Bijvoorbeeld een SHACL property path naar de niet-geversioneerde identifier van een element."
+            "nl": "Bijvoorbeeld een SHACL property path naar de niet-geversioneerde identifier van een element. Een voorbeeld is dcterms: isVersionOf. "
           },
           "domain": [
             {
@@ -280,6 +280,39 @@
       "parents": [],
       "properties": [
         {
+          "uri": "https://w3id.org/tree#node",
+          "name": "node",
+          "sort": "node",
+          "label": {
+            "nl": "node"
+          },
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Node",
+              "uri": "https://w3id.org/tree#Node"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Node",
+              "range_uri": "https://w3id.org/tree#Node"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Node",
+              "range_puri": "https://w3id.org/tree#Node",
+              "range_label": {
+                "nl": "Node"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": ""
+        },
+        {
           "uri": "https://w3id.org/ldes#retentionPolicy",
           "name": "retentiebeleid",
           "sort": "retentiebeleid",
@@ -315,37 +348,6 @@
           ],
           "cardinality": "0..1",
           "codelist_uri": ""
-        },
-        {
-          "uri": "http://fixme.com#node",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Node",
-              "uri": "https://w3id.org/tree#Node"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Node",
-              "range_uri": "https://w3id.org/tree#Node"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Node",
-              "range_puri": "https://w3id.org/tree#Node",
-              "range_label": {
-                "nl": "Node"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": ""
         }
       ]
     },
@@ -357,9 +359,11 @@
       },
       "sort": "Relatie",
       "description": {
-        "nl": "Een klasse die de relatie tussen twee nodes beschrijft"
+        "nl": "Een klasse die de relatie tussen twee nodes beschrijft. "
       },
-      "usage": {},
+      "usage": {
+        "nl": "Een tree:Relation die aan de hand van zijn specifieke subklasse de specifieke relatie tussen twee waardes op twee tree:node weergeeft. Deze relaties worden beschreven in het pakket relatie.  "
+      },
       "parents": [],
       "properties": [
         {
@@ -373,7 +377,7 @@
             "nl": "De waarde in de node waarmee de relatie gaat vergelijken om een volgende node aan te linken."
           },
           "usage": {
-            "nl": "TO DO"
+            "nl": "Een tree:value die de contextuele waarde van de node weergeeft. Mogelijke opties hierbij zijn: een string, een integer of een link naar een andere bron waar een duidelijke regel om de waarde van noden te vergelijken geldt. "
           },
           "domain": [
             {
@@ -407,10 +411,10 @@
             "nl": "path"
           },
           "description": {
-            "nl": "TO DO"
+            "nl": "Een property path, gedefinieerd door een SHACL, die weergeeft welke zaken beïnvloed worden door tree:value"
           },
           "usage": {
-            "nl": "TO DO"
+            "nl": "Een SHACL propery path zoals gedefinieerd in punt 2.3.1. van de SHACL specificatie. Alle mogelijke combinaties van bijvoorbeeld shacl:alternativePath, shacl:inversePath of shacl:inLanguage uit de SHACL specificatie mogen gebruikt worden. "
           },
           "domain": [
             {
