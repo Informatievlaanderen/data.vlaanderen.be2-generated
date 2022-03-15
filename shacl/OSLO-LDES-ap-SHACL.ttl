@@ -1,4 +1,5 @@
 @prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
@@ -11,9 +12,8 @@
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#VersieMaterialisatieShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#RootNodeShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#ObservatieShape>,
-    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#(View)Shape>,
-    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#DataServiceShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#DataServiceLDESShape>,
+    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#DataServiceShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#VersieShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#DurationAgoPolicyShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#EventStreamShape>,
@@ -31,6 +31,7 @@
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#RelationShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#SubstringRelatieShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#SuffixRelatieShape>,
+    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#(View)Shape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#DatasetShape> .
 
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#(View)Shape> a shacl:NodeShape;
@@ -55,7 +56,7 @@
     shacl:name "retentienbeleid"@nl;
     shacl:path <http://fixme.com#retentienbeleid>
   ];
-  shacl:targetClass <http://fixme.com#(View)> .
+  shacl:targetClass <https://w3id.org/tree#view> .
 
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#AfgeleideCollectieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -84,7 +85,7 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "shape"@nl;
-    shacl:path <http://fixme.com#shape>
+    shacl:path <https://w3id.org/tree#shape>
   ];
   shacl:targetClass <https://w3id.org/tree#Collection> .
 
@@ -93,11 +94,13 @@
   shacl:property [
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "conformAanProtocol"@nl
+    shacl:name "conformAanProtocol"@nl;
+    shacl:path dc:conformsTo
   ], [
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "endpointURL"@nl
+    shacl:name "endpointURL"@nl;
+    shacl:path dcat:endpointURL
   ];
   shacl:targetClass <http://fixme.com#DataServiceLDES> .
 
@@ -107,22 +110,22 @@
     shacl:class <https://www.w3.org/ns/dcat#Dataset>;
     shacl:description "De data die via deze dataservice worden aangeboden."@nl;
     shacl:name "biedtInformatieAanOver"@nl;
-    shacl:path <http://fixme.com#biedtInformatieAanOver>
+    shacl:path dcat:servesdataset
   ], [
     shacl:description "Een protocal waaraan de dataservice voldoet"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "conformAanProtocol"@nl;
-    shacl:path <http://fixme.com#conformAanProtocol>
+    shacl:path dc:conformsTo
   ], [
     shacl:datatype xsd:anyURI;
     shacl:description "De rootlocatie of het primaire endpoint van de dienst (een web-resolvable URI)."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "endpointURL"@nl;
-    shacl:path <http://fixme.com#endPointURL>
+    shacl:path dcat:endpointURL
   ];
-  shacl:targetClass <http://fixme.com#DataService> .
+  shacl:targetClass dcat:DataService .
 
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#DatasetShape> a shacl:NodeShape;
   shacl:closed false;
@@ -142,7 +145,7 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "value"@nl;
-    shacl:path <http://fixme.com#value>
+    shacl:path <https://w3id.org/tree#value>
   ];
   shacl:targetClass <https://w3id.org/ldes#DurationAgoPolicy> .
 
@@ -161,15 +164,19 @@
     shacl:name "shape"@nl;
     shacl:path <https://w3id.org/tree#shape>
   ], [
+    shacl:class <https://w3id.org/tree#Node>;
+    shacl:name "view"@nl;
+    shacl:path <https://w3id.org/tree#view>
+  ], [
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "conformAanProtocol"@nl;
-    shacl:path <http://fixme.com#conformAanProtocol>
+    shacl:path dc:conformsTo
   ], [
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "endpointURL"@nl;
-    shacl:path <http://fixme.com#endPointURL>
+    shacl:path dcat:endpointURL
   ], [
     shacl:datatype xsd:anyURI;
     shacl:description "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tiidstip."@nl;
@@ -195,17 +202,17 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "latitudeTile"@nl;
-    shacl:path <http://fixme.com#latitudeTile>
+    shacl:path <https://w3id.org/tree#latitudeTile>
   ], [
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "longitudeTile"@nl;
-    shacl:path <http://fixme.com#longitudeTile>
+    shacl:path <https://w3id.org/tree#longitudeTile>
   ], [
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "zoom"@nl;
-    shacl:path <http://fixme.com#zoom>
+    shacl:path <https://w3id.org/tree#zoom>
   ];
   shacl:targetClass <https://w3id.org/tree#GeospatiallyContainsRelation> .
 
@@ -232,7 +239,7 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "amount"@nl;
-    shacl:path <http://fixme.com#amount>
+    shacl:path <https://w3id.org/ldes#amount>
   ], [
     shacl:datatype xsd:anyURI;
     shacl:description "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tiidstip."@nl;
@@ -241,7 +248,7 @@
     shacl:path <https://w3id.org/ldes#timestampPath>
   ], [
     shacl:name "versionKey"@nl;
-    shacl:path <http://fixme.com#versionKey>
+    shacl:path <https://w3id.org/ldes#versionKey>
   ], [
     shacl:datatype xsd:anyURI;
     shacl:description "Geeft de versie van het element weer."@nl;
@@ -254,13 +261,17 @@
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#NodeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject>;
+    shacl:name "lid"@nl;
+    shacl:path <https://w3id.org/tree#member>
+  ], [
     shacl:class <https://w3id.org/tree#Relation>;
     shacl:name "relatie"@nl;
-    shacl:path <http://fixme.com#relatie>
+    shacl:path <https://w3id.org/tree#Relation>
   ], [
     shacl:class <https://w3id.org/tree#Relation>;
     shacl:name "relation"@nl;
-    shacl:path <http://fixme.com#relation>
+    shacl:path <https://w3id.org/tree#Relation>
   ], [
     shacl:class <https://semiceu.github.io/LinkedDataEventStreams/#retention>;
     shacl:description "Een retentiebeleid is een beleid volgens dewelke elementen (i.e. data) verwijdert zullen worden."@nl;
@@ -288,21 +299,21 @@
     shacl:class <https://w3id.org/tree#Node>;
     shacl:maxCount 1;
     shacl:name "node"@nl;
-    shacl:path <http://fixme.com#node>
+    shacl:path <https://w3id.org/tree#Node>
   ], [
     shacl:datatype xsd:anyURI;
     shacl:description "TO DO"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "path"@nl;
-    shacl:path <http://fixme.com#path>
+    shacl:path <https://w3id.org/tree#path>
   ], [
     shacl:datatype xsd:anyURI;
     shacl:description "De waarde in de node waarmee de relatie gaat vergelijken om een volgende node aan te linken."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "value"@nl;
-    shacl:path <http://fixme.com#value>
+    shacl:path <https://w3id.org/tree#value>
   ];
   shacl:targetClass <https://w3id.org/tree#Relation> .
 
@@ -344,7 +355,8 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject>;
-    shacl:name "^lid"@nl
+    shacl:name "^lid"@nl;
+    shacl:path <https://w3id.org/tree#member>
   ], [
     shacl:datatype xsd:anyURI;
     shacl:description "Een bepaalde shape, gedefinieerd door een URI, aan welke alle elementen in de eventstream moeten voldoen."@nl;
@@ -352,6 +364,10 @@
     shacl:minCount 1;
     shacl:name "shape"@nl;
     shacl:path <https://w3id.org/tree#shape>
+  ], [
+    shacl:class <https://w3id.org/tree#Node>;
+    shacl:name "^view"@nl;
+    shacl:path <https://w3id.org/tree#view>
   ], [
     shacl:datatype xsd:dateTime;
     shacl:maxCount 1;
