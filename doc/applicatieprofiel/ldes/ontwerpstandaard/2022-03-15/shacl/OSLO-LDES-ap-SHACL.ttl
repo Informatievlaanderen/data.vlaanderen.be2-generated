@@ -2,6 +2,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -13,8 +14,10 @@
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#VersieMaterialisatieShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#ObservatieShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#DataServiceLDESShape>,
+    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#URiShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#DataServiceShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#VersieShape>,
+    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#ShapeShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#DurationAgoPolicyShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#EventStreamShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#LatestVersionSubsetShape>,
@@ -81,7 +84,7 @@
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#CollectionShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://fixme.com#Shape>;
+    shacl:class shacl:NodeShape;
     shacl:description "Een bepaalde shape, gedefinieerd door een URI, aan welke alle elementen in de eventstream moeten voldoen."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -115,13 +118,14 @@
     shacl:name "biedtInformatieAanOver"@nl;
     shacl:path dcat:servesdataset
   ], [
+    shacl:class dc:Standard;
     shacl:description "Een protocal waaraan de dataservice voldoet"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "conformAanProtocol"@nl;
     shacl:path dc:conformsTo
   ], [
-    shacl:datatype xsd:anyURI;
+    shacl:class rdfs:Resource;
     shacl:description "De rootlocatie of het primaire endpoint van de dienst (een web-resolvable URI)."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -133,6 +137,7 @@
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#DatasetShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class dc:Standard;
     shacl:description "Een standaard, schema, applicatieprofiel, vocabularium waaraan de dataset voldoet."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -161,7 +166,7 @@
     shacl:name "lid"@nl;
     shacl:path <https://w3id.org/tree#member>
   ], [
-    shacl:datatype xsd:anyURI;
+    shacl:class shacl:NodeShape;
     shacl:description "Een bepaalde shape, gedefinieerd door een URI, aan welke alle elementen in de eventstream moeten voldoen."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -173,26 +178,13 @@
     shacl:name "view"@nl;
     shacl:path <https://w3id.org/tree#view>
   ], [
-    shacl:description "Een protocol waaraan de dataservice voldoet."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "conformAanProtocol"@nl;
-    shacl:path dc:conformsTo
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/ldes#RootNode>;
-    shacl:description "De rootlocatie of het primaire endpoint van de dienst (een web-resolvable URI)."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "endpointURL"@nl;
-    shacl:path dcat:endpointURL
-  ], [
-    shacl:datatype xsd:anyURI;
+    shacl:class rdfs:Resource;
     shacl:description "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tiidstip."@nl;
     shacl:maxCount 1;
     shacl:name "timestampPath"@nl;
     shacl:path <https://w3id.org/ldes#timestampPath>
   ], [
-    shacl:datatype xsd:anyURI;
+    shacl:class rdfs:Resource;
     shacl:description "Geeft de versie van het element weer."@nl;
     shacl:maxCount 1;
     shacl:name "versionOfPath"@nl;
@@ -253,7 +245,7 @@
     shacl:name "amount"@nl;
     shacl:path <https://w3id.org/ldes#amount>
   ], [
-    shacl:datatype xsd:anyURI;
+    shacl:class rdfs:Resource;
     shacl:description "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tiidstip."@nl;
     shacl:maxCount 1;
     shacl:name "timestampPath"@nl;
@@ -263,7 +255,7 @@
     shacl:name "versionKey"@nl;
     shacl:path <https://w3id.org/ldes#versionKey>
   ], [
-    shacl:datatype xsd:anyURI;
+    shacl:class rdfs:Resource;
     shacl:description "Geeft de versie van het element weer."@nl;
     shacl:maxCount 1;
     shacl:name "versionOfPath"@nl;
@@ -318,14 +310,14 @@
     shacl:name "node"@nl;
     shacl:path <https://w3id.org/tree#Node>
   ], [
-    shacl:datatype xsd:anyURI;
+    shacl:class rdfs:Resource;
     shacl:description "Een property path, gedefinieerd door een SHACL, die weergeeft welke zaken beïnvloed worden door tree:value"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "path"@nl;
     shacl:path <https://w3id.org/tree#path>
   ], [
-    shacl:datatype xsd:anyURI;
+    shacl:datatype rdfs:Literal;
     shacl:description "De waarde in de node waarmee de relatie gaat vergelijken om een volgende node aan te linken."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -342,6 +334,10 @@
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/ldes#RootNode> .
 
+<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#ShapeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass shacl:NodeShape .
+
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#SubstringRelatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://w3id.org/tree#SubstringRelation> .
@@ -350,17 +346,21 @@
   shacl:closed false;
   shacl:targetClass <https://w3id.org/tree#SuffixRelation> .
 
+<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#URiShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Resource .
+
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#VersieEventStreamShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:datatype xsd:anyURI;
+    shacl:class rdfs:Resource;
     shacl:description "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tiidstip."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "timestampPath"@nl;
     shacl:path <https://w3id.org/ldes#timestampPath>
   ], [
-    shacl:datatype xsd:anyURI;
+    shacl:class rdfs:Resource;
     shacl:description "Geeft de versie van het element weer."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -377,7 +377,7 @@
     shacl:name "^lid"@nl;
     shacl:path <https://w3id.org/tree#member>
   ], [
-    shacl:datatype xsd:anyURI;
+    shacl:class shacl:NodeShape;
     shacl:description "Een bepaalde shape, gedefinieerd door een URI, aan welke alle elementen in de eventstream moeten voldoen."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;

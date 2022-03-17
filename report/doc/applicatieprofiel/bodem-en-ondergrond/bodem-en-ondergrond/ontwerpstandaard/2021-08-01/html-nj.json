@@ -13,8 +13,8 @@
     "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/7b1b5be990fea12e77550c36137c98606d1b61d7",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/7b1b5be990fea12e77550c36137c98606d1b61d7/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/e56718496532a2aa7d9445fe61555d50ddcb0283",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/e56718496532a2aa7d9445fe61555d50ddcb0283/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/applicatieprofiel-bodem-en-ondergrond/index.html",
     "usesVocs": [],
@@ -567,10 +567,10 @@
       },
       "sort_nl": "Opdracht",
       "description": {
-        "nl": "Een te verrichten werk."
+        "nl": "Toegewezen taak."
       },
       "usage": {
-        "nl": "TODO"
+        "nl": "In deze context de taak om Observaties of Bemonsteringen uit te voeren."
       },
       "parents": [],
       "properties": []
@@ -648,7 +648,7 @@
         "nl": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt."
       },
       "usage": {
-        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject en in het bijzonder van alle instanties van het type geobserveerdObject."
+        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van het type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier)."
       },
       "parents": [],
       "properties": []
@@ -667,6 +667,71 @@
       },
       "parents": [],
       "properties": []
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Profile",
+      "name": {
+        "nl": "Profiel"
+      },
+      "sort_nl": "Profiel",
+      "description": {
+        "nl": "Curve waarlangs een continu variërend fenomeen wordt beschreven."
+      },
+      "usage": {
+        "nl": "Bv het observeren van de samenstelling vd bodem, lithologie van de ondergrond etc."
+      },
+      "parents": [
+        {
+          "name": "RuimtelijkBemonsteringsobject",
+          "label": "RuimtelijkBemonsteringsobject",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+          "scoped_uri": "#RuimtelijkBemonsteringsobject"
+        },
+        {
+          "name": "Bemonsteringscurve",
+          "label": "Bemonsteringscurve",
+          "package": "OSLO-ObservatiesEnMetingen",
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve",
+          "scoped_uri": "#Bemonsteringscurve"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+          "name": {
+            "nl": "geometrie"
+          },
+          "sort_nl": "geometrie",
+          "description": {
+            "nl": "Geometrie vh Profiel."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Profile",
+              "EA-Name": "Profiel"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Curve",
+              "range_uri": "https://data.vlaanderen.be/ns/generiek#Curve"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Curve",
+              "range_puri": "https://data.vlaanderen.be/ns/generiek#Curve",
+              "range_label": {
+                "nl": "Curve"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
     },
     {
       "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
@@ -694,6 +759,21 @@
       },
       "usage": {
         "nl": "Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein."
+      },
+      "parents": [],
+      "properties": []
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve",
+      "name": {
+        "nl": "Bemonsteringscurve"
+      },
+      "sort_nl": "Bemonsteringscurve",
+      "description": {
+        "nl": "Een RuimtelijkBemonsteringsobject dat de vorm aanneemt van een Curve."
+      },
+      "usage": {
+        "nl": "Van het Object dat men wil observeren wordt in dat geval een representatief lijnvormig deel beschouwd. Voorbeelden zijn trajecten, boorgaten, profielen, intervallen etc. Doorgaans specialiseert de Curve zich tot Lijnstring of Lijn. OPMERKING: Meer info over deze klasse in het AP Observaties en Metingen."
       },
       "parents": [],
       "properties": []
@@ -766,7 +846,7 @@
             "nl": "Willekeurig gegeven gassocieerd met het Bemonsteringsobject."
           },
           "usage": {
-            "nl": "Bv een parameter die een aspect van de bemonstering beschrijft (bv hoogte bij een luchtopname) of een belangrijke omgevingsparameter (bv het waterpeil bij een boring)."
+            "nl": "Bv een parameter die een aspect van de Bemonstering beschrijft (bv hoogte bij een luchtopname) of een belangrijke omgevingsparameter (bv het waterpeil bij een boring)."
           },
           "domain": [
             {
@@ -871,7 +951,7 @@
           },
           "sort_nl": "type",
           "description": {
-            "nl": "Het type van bemonsteringsobject."
+            "nl": "Aard van het Bemonsteringsobject."
           },
           "usage": {},
           "domain": [
@@ -907,10 +987,10 @@
       },
       "sort_nl": "RuimtelijkBemonsteringsobject",
       "description": {
-        "nl": "TODO"
+        "nl": "Ruimtelijk begrensd deel van het Object dat men observeert en dat representatief wordt geacht voor dat Object."
       },
       "usage": {
-        "nl": "TODO"
+        "nl": "Wordt gebruikt als het geobserveerd Object een zekere omvang heeft waardoor het niet in zijn geheel geobserveerd kan worden. Afhankelijk van de toegankelijkheid van het Object en de aard van de variatie van het geobserveerd Kenmerk binnen het Object, wordt gekozen voor een RuimtelijkBemonsteringsobject in 1, 2 of 3 dimensies."
       },
       "parents": [
         {
@@ -929,10 +1009,10 @@
           },
           "sort_nl": "gehostPlatform",
           "description": {
-            "nl": "TODO"
+            "nl": "Procedure die of instrument dat in of op het RuimtelijkBemonsteringsobject is geïnstalleerd."
           },
           "usage": {
-            "nl": "TODO"
+            "nl": "Bv een Procedure vh type \"MonitoringWaterkwaliteit\" die doorlopend in een meetstation wordt uitgevoerd of een Toestel vh type \"Windmeter\" dat daar is geïnstalleerd."
           },
           "domain": [
             {
@@ -965,10 +1045,10 @@
           },
           "sort_nl": "positioneleNauwkeurigheid",
           "description": {
-            "nl": "TODO"
+            "nl": "Nauwkeurigheid waarmee de geometrie is bepaald."
           },
           "usage": {
-            "nl": "TODO"
+            "nl": "Kardinaliteit is maximaal 2 opdat zowel horizontale als verticale positionele nauwkeurigheid zou kunnen worden opgegeven. Bv voor de horizontale nauwkeurigheid ve Bemonsteringspunt: straal vd cirkel rond het gemeten punt waarin met 90% zekerheid de werkelijke positie ligt."
           },
           "domain": [
             {
@@ -1001,11 +1081,9 @@
           },
           "sort_nl": "geometrie",
           "description": {
-            "nl": "TODO"
+            "nl": "Geometrie van het RuimtelijkBemonsteringsobject."
           },
-          "usage": {
-            "nl": "TODO"
-          },
+          "usage": {},
           "domain": [
             {
               "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
@@ -1057,84 +1135,6 @@
       "usage": {},
       "parents": [],
       "properties": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringscurve",
-      "name": {
-        "nl": "Bemonsteringscurve"
-      },
-      "sort_nl": "Bemonsteringscurve",
-      "description": {
-        "nl": "Een RuimtelijkBemonsteringsobject dat de vorm aanneemt van een Curve."
-      },
-      "usage": {
-        "nl": "Van het Object dat men wil observeren wordt in dat geval een representatief lijnvormig deel beschouwd. Voorbeelden zijn trajecten, boorgaten, profielen, intervallen Doorgaans specialiseert de Curve zich tot Lijnstring of Lijn. OPMERKING: Meer info over deze klasse in het AP Observaties en Metingen."
-      },
-      "parents": [],
-      "properties": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Profiel",
-      "name": {
-        "nl": "Profiel"
-      },
-      "sort_nl": "Profiel",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [
-        {
-          "name": "RuimtelijkBemonsteringsobject",
-          "label": "RuimtelijkBemonsteringsobject",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
-          "scoped_uri": "#RuimtelijkBemonsteringsobject"
-        },
-        {
-          "name": "Bemonsteringscurve",
-          "label": "Bemonsteringscurve",
-          "package": "OSLO-ObservatiesEnMetingen",
-          "uri": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve",
-          "scoped_uri": "#Bemonsteringscurve"
-        }
-      ],
-      "properties": [
-        {
-          "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#^geometrie",
-          "name": {
-            "nl": "geometrie"
-          },
-          "sort_nl": "geometrie",
-          "description": {
-            "nl": "TODO"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Profiel",
-              "EA-Name": "Profiel"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Curve",
-              "range_uri": "https://data.vlaanderen.be/ns/generiek#Curve"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Curve",
-              "range_puri": "https://data.vlaanderen.be/ns/generiek#Curve",
-              "range_label": {
-                "nl": "Curve"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        }
-      ]
     }
   ],
   "properties": [

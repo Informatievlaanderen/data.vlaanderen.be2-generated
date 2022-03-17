@@ -59,15 +59,9 @@
     <https://data.vlaanderen.be/shacl/ap-bodem#RuimtelijkBemonsteringsobjectShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#BemonsteringsProcesShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#BO_RuimtelijkBemonsteringsobjectShape>,
-    <https://data.vlaanderen.be/shacl/ap-bodem#BemonsteraarShape>,
-    <https://data.vlaanderen.be/shacl/ap-bodem#BemonsteringShape>,
-    <https://data.vlaanderen.be/shacl/ap-bodem#BemonsteringsprocedureShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#DomeinobjectShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#GrondmonsterShape>,
-    <https://data.vlaanderen.be/shacl/ap-bodem#InputShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#LaagShape>,
-    <https://data.vlaanderen.be/shacl/ap-bodem#OutputShape>,
-    <https://data.vlaanderen.be/shacl/ap-bodem#ProcedureShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#ProfielelementShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#AgentShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#PuntShape>,
@@ -75,6 +69,12 @@
     <https://data.vlaanderen.be/shacl/ap-bodem#IdentificatorShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#GeometrieShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#LocatieShape>,
+    <https://data.vlaanderen.be/shacl/ap-bodem#ProcedureShape>,
+    <https://data.vlaanderen.be/shacl/ap-bodem#BemonsteraarShape>,
+    <https://data.vlaanderen.be/shacl/ap-bodem#BemonsteringShape>,
+    <https://data.vlaanderen.be/shacl/ap-bodem#InputShape>,
+    <https://data.vlaanderen.be/shacl/ap-bodem#OutputShape>,
+    <https://data.vlaanderen.be/shacl/ap-bodem#BemonsteringsprocedureShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#BemonsteringsobjecttypeShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#DiepteShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#MaaiveldShape>,
@@ -96,8 +96,8 @@
     <https://data.vlaanderen.be/shacl/ap-bodem#GetalShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#KwantitatieveWaardeShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#ObservatieprocedureShape>,
-    <https://data.vlaanderen.be/shacl/ap-bodem#SensorShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#SysteemShape>,
+    <https://data.vlaanderen.be/shacl/ap-bodem#SensorShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem#ObservatiecontextShape> .
 
 <https://data.vlaanderen.be/shacl/ap-bodem#AgentShape> a shacl:NodeShape;
@@ -188,24 +188,24 @@
 <https://data.vlaanderen.be/shacl/ap-bodem#BemonsteraarShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://fixme.com#Bemonsteringsprocedure>;
-    shacl:description "Invoering van een plan.";
+    shacl:class <http://www.w3.org/sosa/om#SamplingProcedure>;
+    shacl:description "Bemonsteringsprocedure die door de Bemonsteraar in praktijk wordt gebracht.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "implementeert";
-    shacl:path <http://fixme.com#implementeert>
+    shacl:path <http://www.w3.org/ns/ssn/implements>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteraartype>;
-    shacl:description "Soort met bepaalde kenmerken.";
+    shacl:description "Aard van de Bemonsteraar.";
     shacl:name "type";
-    shacl:path <http://fixme.com#type>
+    shacl:path <http://purl.org/cd/terms/type>
   ], [
-    shacl:class <http://fixme.com#Bemonstering>;
-    shacl:description "De aanduiding die aangeeft of de bemonstering al dan niet is uitgevoerd.";
+    shacl:class <http://www.w3.org/ns/sosa/Sampling>;
+    shacl:description "Bemonstering die met de Bemonsteraar is uitgevoerd.";
     shacl:name "uitgevoerdeBemonstering";
-    shacl:path <http://fixme.com#uitgevoerdeBemonstering>
+    shacl:path <http://www.w3.org/ns/sosa/madeSampling>
   ];
-  shacl:targetClass <http://fixme.com#Bemonsteraar> .
+  shacl:targetClass <http://www.w3.org/ns/sosa/Sampler> .
 
 <https://data.vlaanderen.be/shacl/ap-bodem#BemonsteraartypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -220,62 +220,62 @@
     shacl:path <http://fixme.com>
   ], [
     shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
-    shacl:description "Het tijdstip waarop een bemonstering wordt uitgevoerd.";
+    shacl:description "Moment waarop de Bemonstering werd afgerond.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "bemonsteringstijdstip";
-    shacl:path <http://fixme.com#bemonsteringstijdstip>
+    shacl:path <http://www.w3.org/ns/sosa/resultTime>
   ], [
     shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
-    shacl:description "Omstandigheden waarin de monstername plaatsvond.";
+    shacl:description "Omstandigheden waarin de Bemonstering plaatsvond.";
     shacl:name "conditie";
     shacl:path <http://fixme.com#conditie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsdoel>;
-    shacl:description "Het beoogde objectief.";
+    shacl:description "Reden waarom de Bemonstering wordt uitgevoerd.";
     shacl:name "doel";
     shacl:path <http://fixme.com#doel>
   ], [
-    shacl:class <http://fixme.com#Bemonsteringsprocedure>;
-    shacl:description "De aanduiding die aangeeft welke procedure gevolgd wordt.";
+    shacl:class <http://www.w3.org/sosa/om#SamplingProcedure>;
+    shacl:description "Bemonsteringsprocedure die werd gevolgd bij de Bemonstering werd toegepast.";
     shacl:name "gebruikteProcedure";
-    shacl:path <http://fixme.com#gebruikteProcedure>
+    shacl:path <http://www.w3.org/ns/sosa/usedProcedure>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht>;
-    shacl:description "Verwijzing naar de Opdracht waarvoor het Bemonsteringsobject werd gecreëerd.";
+    shacl:description "Opdracht in het kader waarvan de Bemonstering plaatsvindt.";
     shacl:name "opdracht";
     shacl:path <http://fixme.com#opdracht>
   ], [
     shacl:class <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>;
-    shacl:description "De uitkomst van een activiteit.";
+    shacl:description "Bemonsteringsobject dat bij de Bemonstering werd verkregen.";
     shacl:minCount 1;
     shacl:name "resultaat";
-    shacl:path <http://fixme.com>
+    shacl:path <http://www.w3.org/ns/sosa/hasresult>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringstype>;
-    shacl:description "Het type van bemonstering.";
+    shacl:description "Aard van de Bemonstering.";
     shacl:name "type";
     shacl:path <http://fixme.com#type>
   ], [
     shacl:class dc:Agent;
-    shacl:description "De aanduiding die aangeeft wie de uitvoering heeft volbracht.";
+    shacl:description "Agent die de Bemonstering heeft uitgevoerd.";
     shacl:name "uitgevoerdDoor";
     shacl:path <http://fixme.com#uitgevoerdDoor>
   ], [
-    shacl:class <http://fixme.com#Bemonsteraar>;
-    shacl:description "De aanduiding die aangeeft hoe een activiteit uitgevoerd is.";
+    shacl:class <http://www.w3.org/ns/sosa/Sampler>;
+    shacl:description "Bemonsteraar waarmee de Bemonstering is uitgevoerd.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "uitgevoerdMet";
-    shacl:path <http://fixme.com#uitgevoerdMet>
+    shacl:path <http://www.w3.org/ns/sosa/madeBySampler>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/generiek#WettelijkKader>;
-    shacl:description "Het kader dat vastlegt wat behoort tot de wet.";
+    shacl:description "WettelijkKader waarbinnen de Bemonstering plaatsvindt.";
     shacl:maxCount 1;
     shacl:name "wettelijkKader";
     shacl:path <http://fixme.com#wettelijkKader>
   ];
-  shacl:targetClass <http://fixme.com#Bemonstering> .
+  shacl:targetClass <http://www.w3.org/ns/sosa/Sampling> .
 
 <https://data.vlaanderen.be/shacl/ap-bodem#BemonsteringsProcesShape> a shacl:NodeShape;
   shacl:closed false;
@@ -303,7 +303,7 @@
     shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.target>
   ], [
     shacl:class <http://def.isotc211.org/iso19103/2005/Names#GenericName>;
-    shacl:description "TODO";
+    shacl:description "Aard van de associatie.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "rol";
@@ -341,11 +341,11 @@
     shacl:name "identificator";
     shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#identificator>
   ], [
-    shacl:class <http://fixme.com#Bemonstering>;
-    shacl:description "Het bekomen resultaat van de observatie.";
+    shacl:class <http://www.w3.org/ns/sosa/Sampling>;
+    shacl:description "Verwijzing naar de Bemonstering waarvan dit Bemonsteringsobject het resultaat is.";
     shacl:minCount 1;
     shacl:name "isResultaatVan";
-    shacl:path <http://fixme.com>
+    shacl:path <http://www.w3.org/ns/sosa/isresultOf>
   ], [
     shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
     shacl:description "Willekeurig gegeven gassocieerd met het Bemonsteringsobject.";
@@ -353,7 +353,7 @@
     shacl:path <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Bemonsteringsobjecttype>;
-    shacl:description "Het type van bemonsteringsobject.";
+    shacl:description "Aard van het Bemonsteringsobject.";
     shacl:maxCount 1;
     shacl:name "type";
     shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#type>
@@ -367,27 +367,37 @@
 <https://data.vlaanderen.be/shacl/ap-bodem#BemonsteringsprocedureShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://fixme.com#Bemonsteraar>;
-    shacl:description "De aanduiding die aangeeft wie de bemonstering uitgevoerd heeft.";
+    shacl:class <http://www.w3.org/ns/sosa/Sampler>;
+    shacl:description "Bemonsteraar waarmee de Bemonsteringsprocedure is of moet worden toegepast.";
     shacl:name "geïmplementeerdDoor";
-    shacl:path <http://fixme.com#geïmplementeerdDoor>
+    shacl:path <http://www.w3.org/ns/ssn/implementedBy>
+  ], [
+    shacl:class <http://www.w3.org/ns/ssn/Input>;
+    shacl:description "Verwijzing naar de Input die de procedure vereist.";
+    shacl:name "input";
+    shacl:path <http://www.w3.org/ns/ssn/hasInput>
+  ], [
+    shacl:class <http://www.w3.org/ns/ssn/Output>;
+    shacl:description "Verwijzing naar de Output die de Procedure genereert.";
+    shacl:name "output";
+    shacl:path <http://www.w3.org/ns/ssn/hasOutput>
   ], [
     shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
-    shacl:description "Een variabele, meetbare eigenschap wiens waarde een determinant is van de eigenschappen van een systeem.";
+    shacl:description "Willekeurig gegeven gassocieerd met de Bemonsteringsprocedure.";
     shacl:name "parameter";
     shacl:path <http://fixme.com#parameter>
   ], [
     shacl:datatype xsd:anyURI;
-    shacl:description "Gedetailleerde omschrijving.";
+    shacl:description "Verwijzing naar een document dat de Bemonsteringsprocedure beschrijft.";
     shacl:name "specificatie";
     shacl:path <http://fixme.com#specificatie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsproceduretype>;
-    shacl:description "Soort met bepaalde kenmerken.";
+    shacl:description "Aard van deBemonsteringsprocedure.";
     shacl:name "type";
     shacl:path <http://fixme.com#type>
   ];
-  shacl:targetClass <http://fixme.com#Bemonsteringsprocedure> .
+  shacl:targetClass <http://www.w3.org/sosa/om#SamplingProcedure> .
 
 <https://data.vlaanderen.be/shacl/ap-bodem#BemonsteringsproceduretypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -806,20 +816,18 @@
   shacl:closed false;
   shacl:property [
     shacl:datatype xsd:anyURI;
-    shacl:description "Verwijzing naar informatie.";
+    shacl:description "TODO";
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "referentie";
     shacl:path <http://fixme.com#referentie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#InputType>;
-    shacl:description "Soort met bepaalde kenmerken.";
+    shacl:description "Aard van de input.";
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "type";
-    shacl:path <http://fixme.com#type>
+    shacl:path <http://purl.org/cd/terms/type>
   ];
-  shacl:targetClass <http://fixme.com#Input> .
+  shacl:targetClass <http://www.w3.org/ns/ssn/Input> .
 
 <https://data.vlaanderen.be/shacl/ap-bodem#InputTypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -960,7 +968,7 @@
     shacl:name "uitgevoerdDoor";
     shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#uitgevoerdDoor>
   ], [
-    shacl:class <https://www.w3.org/TR/vocab-ssn/#SOSASensor>;
+    shacl:class <https://www.w3.org/ns/sosa/Sensor>;
     shacl:description "De aanduiding die aangeeft of de observatie al dan niet met een sensor is uitgevoerd.";
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -990,28 +998,28 @@
 <https://data.vlaanderen.be/shacl/ap-bodem#ObservatieprocedureShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://www.w3.org/TR/vocab-ssn/#SOSASensor>;
-    shacl:description "TODO";
+    shacl:class <https://www.w3.org/ns/sosa/Sensor>;
+    shacl:description "Sensor waarmee de Observatieprocedure is of moet worden uitgevoerd.";
     shacl:name "geïmplementeerdMet";
     shacl:path <http://www.w3.org/ns/ssn/implementedBy>
   ], [
-    shacl:class <http://fixme.com#Input>;
-    shacl:description "De noden om een activiteit te starten.";
+    shacl:class <http://www.w3.org/ns/ssn/Input>;
+    shacl:description "Verwijzing naar de Input die de procedure vereist.";
     shacl:name "input";
-    shacl:path <http://fixme.com#input>
+    shacl:path <http://www.w3.org/ns/ssn/hasInput>
   ], [
-    shacl:class <http://fixme.com#Output>;
-    shacl:description "De onmiddellijke resultaten van een activiteit.";
+    shacl:class <http://www.w3.org/ns/ssn/Output>;
+    shacl:description "Verwijzing naar de Output die de Procedure genereert.";
     shacl:name "output";
-    shacl:path <http://fixme.com#output>
+    shacl:path <http://www.w3.org/ns/ssn/hasOutput>
   ], [
     shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
-    shacl:description "Een variabele, meetbare eigenschap wiens waarde een determinant is van de eigenschappen van een systeem.";
+    shacl:description "Willekeurig gegeven gassocieerd met de Observatieprocedure.";
     shacl:name "parameter";
     shacl:path <http://fixme.com#parameter>
   ], [
     shacl:datatype xsd:anyURI;
-    shacl:description "Het type object op basis waarvan het punt werd bepaald.";
+    shacl:description "Verwijzing naar een document dat de Observatieprocedure beschrijft.";
     shacl:name "specificatie";
     shacl:path <http://fixme.com#specificatie>
   ], [
@@ -1038,20 +1046,18 @@
   shacl:closed false;
   shacl:property [
     shacl:datatype xsd:anyURI;
-    shacl:description "Verwijzing naar informatie.";
+    shacl:description "TODO";
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "referentie";
     shacl:path <http://fixme.com#referentie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#OutputType>;
-    shacl:description "Soort met bepaalde kenmerken.";
+    shacl:description "Aard van de Output.";
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "type";
-    shacl:path <http://fixme.com#type>
+    shacl:path <http://purl.org/cd/terms/type>
   ];
-  shacl:targetClass <http://fixme.com#Output> .
+  shacl:targetClass <http://www.w3.org/ns/ssn/Output> .
 
 <https://data.vlaanderen.be/shacl/ap-bodem#OutputTypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -1063,7 +1069,7 @@
 
 <https://data.vlaanderen.be/shacl/ap-bodem#ProcedureShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://fixme.com#Procedure> .
+  shacl:targetClass <http://www.w3.org/ns/sosa/Procedure> .
 
 <https://data.vlaanderen.be/shacl/ap-bodem#ProcesShape> a shacl:NodeShape;
   shacl:closed false;
@@ -1093,18 +1099,18 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://www.w3.org/TR/vocab-ssn/#SOSAProcedure>;
-    shacl:description "TODO";
+    shacl:description "Observatieprocedure die door de Sensor wordt toegepast.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "implementeert";
     shacl:path <http://www.w3.org/ns/ssn/implements>
   ], [
     shacl:class <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>;
-    shacl:description "De aanduiding die aangeeft of de observatie al dan niet is uitgevoerd.";
+    shacl:description "Observatie die met de Sensor is uitrgevoerd.";
     shacl:name "uitgevoerdeObservatie";
-    shacl:path <http://fixme.com>
+    shacl:path <http://www.w3.org/ns/sosa/madeObservation>
   ];
-  shacl:targetClass <https://www.w3.org/TR/vocab-ssn/#SOSASensor> .
+  shacl:targetClass <https://www.w3.org/ns/sosa/Sensor> .
 
 <https://data.vlaanderen.be/shacl/ap-bodem#StandaardEenheidShape> a shacl:NodeShape;
   shacl:closed false;

@@ -39,7 +39,7 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://data.vlaanderen.be/ns/observaties-en-metingen#Boorgat",
+          "sh:class": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole",
           "sh:description": "TODO",
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -794,7 +794,14 @@
       "@id": "https://data.vlaanderen.be/shacl/ap-bo-observaties#KenmerktypeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
-      "sh:property": [],
+      "sh:property": [
+        {
+          "sh:class": "https://www.w3.org/ns/sosa/Sensor",
+          "sh:description": "Het kenmerktype van de gebruikte sensor tijdens de observatie.",
+          "sh:name": "isGeobserveerdMet",
+          "sh:path": "http://fixme.com"
+        }
+      ],
       "sh:targetClass": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
     },
     {
@@ -832,7 +839,7 @@
       "sh:property": [
         {
           "sh:class": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-          "sh:description": "Observaties die een waarde geven aan Kenmerken van het Object;",
+          "sh:description": "Observaties die op het Object gebeuren.",
           "sh:name": "waardeverschaffer",
           "sh:path": "https://data.vlaanderen.be/ns/observaties-en-metingen#waardeverschaffer"
         }
@@ -964,7 +971,7 @@
           "sh:path": "https://data.vlaanderen.be/ns/observaties-en-metingen#uitgevoerdDoor"
         },
         {
-          "sh:class": "https://www.w3.org/TR/vocab-ssn/#SOSASensor",
+          "sh:class": "https://www.w3.org/ns/sosa/Sensor",
           "sh:description": "De aanduiding die aangeeft of de observatie al dan niet met een sensor is uitgevoerd.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
@@ -1015,7 +1022,7 @@
         },
         {
           "sh:class": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Bemonsteringsobjecttype",
-          "sh:description": "Het type van bemonsteringsobject.",
+          "sh:description": "Aard van het Bemonsteringsobject.",
           "sh:maxCount": "1",
           "sh:name": "type",
           "sh:path": "https://data.vlaanderen.be/ns/observaties-en-metingen#type"
@@ -1031,61 +1038,6 @@
       "sh:targetClass": "http://fixme.com#Boorgat"
     },
     {
-      "@id": "https://data.vlaanderen.be/shacl/ap-bo-observaties#InputShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "sh:description": "Verwijzing naar informatie.",
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": "referentie",
-          "sh:path": "http://fixme.com#referentie"
-        },
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#InputType",
-          "sh:description": "Soort met bepaalde kenmerken.",
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": "type",
-          "sh:path": "http://fixme.com#type"
-        }
-      ],
-      "sh:targetClass": "http://fixme.com#Input"
-    },
-    {
-      "@id": "https://data.vlaanderen.be/shacl/ap-bo-observaties#OutputShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "sh:description": "Verwijzing naar informatie.",
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": "referentie",
-          "sh:path": "http://fixme.com#referentie"
-        },
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#OutputType",
-          "sh:description": "Soort met bepaalde kenmerken.",
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": "type",
-          "sh:path": "http://fixme.com#type"
-        }
-      ],
-      "sh:targetClass": "http://fixme.com#Output"
-    },
-    {
-      "@id": "https://data.vlaanderen.be/shacl/ap-bo-observaties#ProcedureShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "http://fixme.com#Procedure"
-    },
-    {
       "@id": "https://data.vlaanderen.be/shacl/ap-bo-observaties#AgentShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -1098,6 +1050,57 @@
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/ns/adms#Identifier"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/ap-bo-observaties#ProcedureShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/ns/sosa/Procedure"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/ap-bo-observaties#InputShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "sh:description": "TODO",
+          "sh:maxCount": "1",
+          "sh:name": "referentie",
+          "sh:path": "http://fixme.com#referentie"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#InputType",
+          "sh:description": "Aard van de input.",
+          "sh:maxCount": "1",
+          "sh:name": "type",
+          "sh:path": "http://purl.org/cd/terms/type"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/ssn/Input"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/ap-bo-observaties#OutputShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "sh:description": "TODO",
+          "sh:maxCount": "1",
+          "sh:name": "referentie",
+          "sh:path": "http://fixme.com#referentie"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#OutputType",
+          "sh:description": "Aard van de Output.",
+          "sh:maxCount": "1",
+          "sh:name": "type",
+          "sh:path": "http://purl.org/cd/terms/type"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/ssn/Output"
     },
     {
       "@id": "https://data.vlaanderen.be/shacl/ap-bo-observaties#BemonsteringsobjecttypeShape",
@@ -1330,32 +1333,32 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://www.w3.org/TR/vocab-ssn/#SOSASensor",
-          "sh:description": "TODO",
+          "sh:class": "https://www.w3.org/ns/sosa/Sensor",
+          "sh:description": "Sensor waarmee de Observatieprocedure is of moet worden uitgevoerd.",
           "sh:name": "geïmplementeerdMet",
           "sh:path": "http://www.w3.org/ns/ssn/implementedBy"
         },
         {
-          "sh:class": "http://fixme.com#Input",
-          "sh:description": "De noden om een activiteit te starten.",
+          "sh:class": "http://www.w3.org/ns/ssn/Input",
+          "sh:description": "Verwijzing naar de Input die de procedure vereist.",
           "sh:name": "input",
-          "sh:path": "http://fixme.com#input"
+          "sh:path": "http://www.w3.org/ns/ssn/hasInput"
         },
         {
-          "sh:class": "http://fixme.com#Output",
-          "sh:description": "De onmiddellijke resultaten van een activiteit.",
+          "sh:class": "http://www.w3.org/ns/ssn/Output",
+          "sh:description": "Verwijzing naar de Output die de Procedure genereert.",
           "sh:name": "output",
-          "sh:path": "http://fixme.com#output"
+          "sh:path": "http://www.w3.org/ns/ssn/hasOutput"
         },
         {
           "sh:class": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
-          "sh:description": "Een variabele, meetbare eigenschap wiens waarde een determinant is van de eigenschappen van een systeem.",
+          "sh:description": "Willekeurig gegeven gassocieerd met de Observatieprocedure.",
           "sh:name": "parameter",
           "sh:path": "http://fixme.com#parameter"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "sh:description": "Het type object op basis waarvan het punt werd bepaald.",
+          "sh:description": "Verwijzing naar een document dat de Observatieprocedure beschrijft.",
           "sh:name": "specificatie",
           "sh:path": "http://fixme.com#specificatie"
         },
@@ -1369,33 +1372,40 @@
       "sh:targetClass": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure"
     },
     {
+      "@id": "https://data.vlaanderen.be/shacl/ap-bo-observaties#SysteemShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://www.w3.org/TR/vocab-ssn/#ssn-system"
+    },
+    {
       "@id": "https://data.vlaanderen.be/shacl/ap-bo-observaties#SensorShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:class": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
-          "sh:description": "TODO",
+          "sh:description": "Observatieprocedure die door de Sensor wordt toegepast.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
           "sh:name": "implementeert",
           "sh:path": "http://www.w3.org/ns/ssn/implements"
         },
         {
+          "sh:class": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+          "sh:description": "Kenmerk dat door de Sensor wordt geobserveerd.",
+          "sh:minCount": "1",
+          "sh:name": "observeert",
+          "sh:path": "http://www.w3.org/ns/sosa/observes"
+        },
+        {
           "sh:class": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-          "sh:description": "De aanduiding die aangeeft of de observatie al dan niet is uitgevoerd.",
+          "sh:description": "Observatie die met de Sensor is uitrgevoerd.",
           "sh:name": "uitgevoerdeObservatie",
-          "sh:path": "http://fixme.com"
+          "sh:path": "http://www.w3.org/ns/sosa/madeObservation"
         }
       ],
-      "sh:targetClass": "https://www.w3.org/TR/vocab-ssn/#SOSASensor"
-    },
-    {
-      "@id": "https://data.vlaanderen.be/shacl/ap-bo-observaties#SysteemShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "https://www.w3.org/TR/vocab-ssn/#ssn-system"
+      "sh:targetClass": "https://www.w3.org/ns/sosa/Sensor"
     },
     {
       "@id": "https://data.vlaanderen.be/shacl/ap-bo-observaties#ObservatiecontextShape",

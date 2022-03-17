@@ -28,9 +28,11 @@
     <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#KenmerktypeShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#DQ_PositionalAccuracyShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#LI_LineageShape>,
+    <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#ProfielShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#ObjectShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#BenoemdeWaardeShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#ProcesShape>,
+    <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#BemonsteringscurveShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#BemonsteringsobjectShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#RuimtelijkBemonsteringsobjectShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#ObservatieShape>,
@@ -44,8 +46,6 @@
     <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#RecordShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#StandaardEenheidShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#VlakShape>,
-    <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#BemonsteringscurveShape>,
-    <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#ProfielShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#CurveWaardepaarShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#GeometrieWaardepaarShape>,
     <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#GetalShape>,
@@ -102,7 +102,7 @@
 
 <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#BemonsteringscurveShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringscurve> .
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve> .
 
 <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#BemonsteringsobjectComplexShape> a shacl:NodeShape;
   shacl:closed false;
@@ -148,7 +148,7 @@
     shacl:path <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Bemonsteringsobjecttype>;
-    shacl:description "Het type van bemonsteringsobject.";
+    shacl:description "Aard van het Bemonsteringsobject.";
     shacl:maxCount 1;
     shacl:name "type";
     shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#type>
@@ -502,12 +502,13 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/generiek#Curve>;
-    shacl:description "TODO";
+    shacl:description "Geometrie vh Profiel.";
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "^geometrie"
+    shacl:name "^geometrie";
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/observaties-en-metingen#Profiel> .
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Profile> .
 
 <https://data.vlaanderen.be/shacl/ap-bodem-en-ondergrond#ProfielelementShape> a shacl:NodeShape;
   shacl:closed false;
@@ -532,19 +533,19 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process>;
-    shacl:description "TODO";
+    shacl:description "Procedure die of instrument dat in of op het RuimtelijkBemonsteringsobject is geïnstalleerd.";
     shacl:name "gehostPlatform";
     shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure>
   ], [
     shacl:class <http://www.w3.org/ns/locn#Geometry>;
-    shacl:description "TODO";
+    shacl:description "Geometrie van het RuimtelijkBemonsteringsobject.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "geometrie";
     shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape>
   ], [
     shacl:class <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy>;
-    shacl:description "TODO";
+    shacl:description "Nauwkeurigheid waarmee de geometrie is bepaald.";
     shacl:maxCount 2;
     shacl:name "positioneleNauwkeurigheid";
     shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.positionalAccuracy>

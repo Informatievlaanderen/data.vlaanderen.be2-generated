@@ -13,8 +13,8 @@
     "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/7b1b5be990fea12e77550c36137c98606d1b61d7",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/7b1b5be990fea12e77550c36137c98606d1b61d7/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/e56718496532a2aa7d9445fe61555d50ddcb0283",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/e56718496532a2aa7d9445fe61555d50ddcb0283/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/applicatieprofiel-bodem-en-ondergrond-observaties/index.html",
     "usesVocs": [],
@@ -71,13 +71,13 @@
           "range": [
             {
               "range_label": "Boorgat",
-              "range_uri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Boorgat"
+              "range_uri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Boorgat",
-              "range_puri": "https://data.vlaanderen.be/ns/observaties-en-metingen#Boorgat",
+              "range_puri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole",
               "range_label": {
                 "nl": "Boorgat"
               }
@@ -1909,10 +1909,45 @@
         "nl": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt."
       },
       "usage": {
-        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject en in het bijzonder van alle instanties van het type geobserveerdObject."
+        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van het type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier)."
       },
       "parents": [],
-      "properties": []
+      "properties": [
+        {
+          "uri": "http://fixme.com",
+          "name": {
+            "nl": "isGeobserveerdMet"
+          },
+          "sort_nl": "isGeobserveerdMet",
+          "description": {
+            "nl": "Het kenmerktype van de gebruikte sensor tijdens de observatie."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+              "EA-Name": "Kenmerktype"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Sensor",
+              "range_uri": "https://www.w3.org/ns/sosa/Sensor"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Sensor",
+              "range_puri": "https://www.w3.org/ns/sosa/Sensor",
+              "range_label": {
+                "nl": "Sensor"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": ""
+        }
+      ]
     },
     {
       "uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
@@ -1927,7 +1962,42 @@
         "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject en in het bijzonder van alle instanties van het type geobserveerdObject."
       },
       "parents": [],
-      "properties": []
+      "properties": [
+        {
+          "uri": "http://fixme.com",
+          "name": {
+            "nl": "isGeobserveerdMet"
+          },
+          "sort_nl": "isGeobserveerdMet",
+          "description": {
+            "nl": "Het kenmerktype van de gebruikte sensor tijdens de observatie."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+              "EA-Name": "Kenmerktype"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Sensor",
+              "range_uri": "https://www.w3.org/ns/sosa/Sensor"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Sensor",
+              "range_puri": "https://www.w3.org/ns/sosa/Sensor",
+              "range_label": {
+                "nl": "Sensor"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": ""
+        }
+      ]
     },
     {
       "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
@@ -1950,11 +2020,9 @@
           },
           "sort_nl": "waardeverschaffer",
           "description": {
-            "nl": "Observaties die een waarde geven aan Kenmerken van het Object;"
+            "nl": "Observaties die op het Object gebeuren."
           },
-          "usage": {
-            "nl": "TODO"
-          },
+          "usage": {},
           "domain": [
             {
               "uri": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
@@ -1991,7 +2059,7 @@
         "nl": "Het vaststellen van de waarde van een bepaald kenmerk van een Object op een bepaald tijdstip of tussen twee tijdstippen."
       },
       "usage": {
-        "nl": "Het gaat om schattingen van de waarde, maw op de waarde zit een zekere foutmarge.Voorbeelden zijn temperatuur, klasse, kleur. Dit is verschillend van waarden die zijn toegekend en dus geen schattingen zijn zoals naam of prijs."
+        "nl": "Het gaat om schattingen van de waarde, maw op de waarde zit een zekere foutmarge. Voorbeelden zijn temperatuur, klasse, kleur. Dit is verschillend van waarden die zijn toegekend en dus geen schattingen zijn zoals naam of prijs."
       },
       "parents": [],
       "properties": [
@@ -2041,7 +2109,7 @@
             "nl": "Kenmerk dat men observeert vh geobserveerdObject."
           },
           "usage": {
-            "nl": "Soms is de procedure waarmee de waarden vh kenmerk worden bekomen indirect, ttz men meet om praktische reden een ander kenmerk dat een proxy is voor het kenmerk dat men werkelijk wil observeren. Is die proxy geen kenmerk van het geobserveerdObject dan gebeurt de Observatie op een proxy van het geobserveerdObject. Bv om de vegetatie in een gebied te achterhalen meten we de kleurreflectie op het aardoppervlak. CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject."
+            "nl": "Soms is de procedure waarmee de waarden vh kenmerk worden bekomen indirect, ttz men meet om praktische reden een ander kenmerk dat een proxy is voor het kenmerk dat men werkelijk wil observeren.  Bv om de vegetatie in een gebied te achterhalen meten we de kleurreflectie op het aardoppervlak. CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Bv de zuurtegraad van een Bron is eigenlijk de zuurtegraad van het Waterlichaam van de Aquifer die door de Bron is aangeboord."
           },
           "domain": [
             {
@@ -2159,16 +2227,16 @@
           ],
           "range": [
             {
-              "range_label": "GeneriekDatatype",
+              "range_label": "Any",
               "range_uri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#GeneriekDatatype",
+              "range_uri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any",
               "range_puri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any",
               "range_label": {
-                "nl": "GeneriekDatatype"
+                "nl": "Any"
               }
             }
           ],
@@ -2185,7 +2253,7 @@
             "nl": "Mate waarin het resultaat van de Observatie voldoet aan de vereisten of verwachtingen."
           },
           "usage": {
-            "nl": "Het gaat hier om gegevens die eigen zijn aan de Observatie en complementair aan de beschrijving van de procedure die bij de Observatie is gevolgd (analysemethode edm, zie klasse Proces) wat op zich iets zegt over de kwaliteit van het resultaat."
+            "nl": "Het gaat hier om gegevens die eigen zijn aan de Observatie en complementair aan de beschrijving van de procedure die bij de Observatie is gevolgd (analysemethode edm, zie klasse Proces) wat op zich ook al iets zegt over de kwaliteit van het resultaat."
           },
           "domain": [
             {
@@ -2322,40 +2390,6 @@
         {
           "uri": "http://fixme.com",
           "name": {
-            "nl": "uitgevoerdMetSensor"
-          },
-          "sort_nl": "uitgevoerdMetSensor",
-          "description": {
-            "nl": "De aanduiding die aangeeft of de observatie al dan niet met een sensor is uitgevoerd."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-              "EA-Name": "Observatie"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Sensor",
-              "range_uri": "https://www.w3.org/TR/vocab-ssn/#SOSASensor"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Sensor",
-              "range_puri": "https://www.w3.org/TR/vocab-ssn/#SOSASensor",
-              "range_label": {
-                "nl": "Sensor"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "http://fixme.com",
-          "name": {
             "nl": "gebruikteProcedure"
           },
           "sort_nl": "gebruikteProcedure",
@@ -2385,6 +2419,40 @@
             }
           ],
           "cardinality": "0..*",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "http://fixme.com",
+          "name": {
+            "nl": "uitgevoerdMetSensor"
+          },
+          "sort_nl": "uitgevoerdMetSensor",
+          "description": {
+            "nl": "De aanduiding die aangeeft of de observatie al dan niet met een sensor is uitgevoerd."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+              "EA-Name": "Observatie"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Sensor",
+              "range_uri": "https://www.w3.org/ns/sosa/Sensor"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Sensor",
+              "range_puri": "https://www.w3.org/ns/sosa/Sensor",
+              "range_label": {
+                "nl": "Sensor"
+              }
+            }
+          ],
+          "cardinality": "1",
           "codelist_uri": ""
         },
         {
@@ -2532,7 +2600,7 @@
       },
       "sort_nl": "Proces",
       "description": {
-        "nl": "Manier waarop het resultaat van de Observatie is verkregen."
+        "nl": "Opeenvolgende acties of stappen noodzakelijk om een resultaat te bekomen."
       },
       "usage": {
         "nl": "Dat kan dmv een instrument of een sensor zijn; maar het kan ook een menselijke observator zijn of een simulatie of een verwerking of algoritme toegepast op meer primitieve resultaten. Het Proces vormt samen met het Bemonsteringsobject dat is gebruikt het zgn observatieprotocol. OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein."
@@ -2608,7 +2676,7 @@
             "nl": "Willekeurig gegeven gassocieerd met het Bemonsteringsobject."
           },
           "usage": {
-            "nl": "Bv een parameter die een aspect van de bemonstering beschrijft (bv hoogte bij een luchtopname) of een belangrijke omgevingsparameter (bv het waterpeil bij een boring)."
+            "nl": "Bv een parameter die een aspect van de Bemonstering beschrijft (bv hoogte bij een luchtopname) of een belangrijke omgevingsparameter (bv het waterpeil bij een boring)."
           },
           "domain": [
             {
@@ -2713,7 +2781,7 @@
           },
           "sort_nl": "type",
           "description": {
-            "nl": "Het type van bemonsteringsobject."
+            "nl": "Aard van het Bemonsteringsobject."
           },
           "usage": {},
           "domain": [
@@ -2758,13 +2826,41 @@
       "properties": []
     },
     {
-      "uri": "http://fixme.com#Input",
+      "uri": "http://purl.org/dc/terms/Agent",
+      "name": {
+        "nl": "Agent"
+      },
+      "sort_nl": "Agent",
+      "description": {
+        "nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": []
+    },
+    {
+      "uri": "http://www.w3.org/ns/sosa/Procedure",
+      "name": {
+        "nl": "Procedure"
+      },
+      "sort_nl": "Procedure",
+      "description": {
+        "nl": "Vastgelegde of officiële manier om iets te doen."
+      },
+      "usage": {
+        "nl": "In deze context het uitvoeren van Observaties, Bemonstering of de Bediening van Actuators. Neemt in praktijk de vorm aan van een workflow, protocol, plan, algoritme, berekeningswijze etc."
+      },
+      "parents": [],
+      "properties": []
+    },
+    {
+      "uri": "http://www.w3.org/ns/ssn/Input",
       "name": {
         "nl": "Input"
       },
       "sort_nl": "Input",
       "description": {
-        "nl": "De noden om een activiteit te starten."
+        "nl": "Informatie die door een Procedure wordt gebruikt."
       },
       "usage": {},
       "parents": [],
@@ -2776,12 +2872,12 @@
           },
           "sort_nl": "referentie",
           "description": {
-            "nl": "Verwijzing naar informatie."
+            "nl": "TODO"
           },
           "usage": {},
           "domain": [
             {
-              "uri": "http://fixme.com#Input",
+              "uri": "http://www.w3.org/ns/ssn/Input",
               "EA-Name": "Input"
             }
           ],
@@ -2800,22 +2896,22 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": ""
         },
         {
-          "uri": "http://fixme.com#type",
+          "uri": "http://purl.org/cd/terms/type",
           "name": {
             "nl": "type"
           },
           "sort_nl": "type",
           "description": {
-            "nl": "Soort met bepaalde kenmerken."
+            "nl": "Aard van de input."
           },
           "usage": {},
           "domain": [
             {
-              "uri": "http://fixme.com#Input",
+              "uri": "http://www.w3.org/ns/ssn/Input",
               "EA-Name": "Input"
             }
           ],
@@ -2834,19 +2930,19 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": ""
         }
       ]
     },
     {
-      "uri": "http://fixme.com#Output",
+      "uri": "http://www.w3.org/ns/ssn/Output",
       "name": {
         "nl": "Output"
       },
       "sort_nl": "Output",
       "description": {
-        "nl": "De onmiddellijke resultaten van een activiteit."
+        "nl": "Informatie die door een Procedure wordt gegenereerd."
       },
       "usage": {},
       "parents": [],
@@ -2858,12 +2954,12 @@
           },
           "sort_nl": "referentie",
           "description": {
-            "nl": "Verwijzing naar informatie."
+            "nl": "TODO"
           },
           "usage": {},
           "domain": [
             {
-              "uri": "http://fixme.com#Output",
+              "uri": "http://www.w3.org/ns/ssn/Output",
               "EA-Name": "Output"
             }
           ],
@@ -2882,22 +2978,22 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": ""
         },
         {
-          "uri": "http://fixme.com#type",
+          "uri": "http://purl.org/cd/terms/type",
           "name": {
             "nl": "type"
           },
           "sort_nl": "type",
           "description": {
-            "nl": "Soort met bepaalde kenmerken."
+            "nl": "Aard van de Output."
           },
           "usage": {},
           "domain": [
             {
-              "uri": "http://fixme.com#Output",
+              "uri": "http://www.w3.org/ns/ssn/Output",
               "EA-Name": "Output"
             }
           ],
@@ -2916,38 +3012,10 @@
               }
             }
           ],
-          "cardinality": "1",
+          "cardinality": "0..1",
           "codelist_uri": ""
         }
       ]
-    },
-    {
-      "uri": "http://fixme.com#Procedure",
-      "name": {
-        "nl": "Procedure"
-      },
-      "sort_nl": "Procedure",
-      "description": {
-        "nl": "Een algemene reeks van instructies die op volgorde moeten uitgevoerd worden."
-      },
-      "usage": {
-        "nl": "TODO"
-      },
-      "parents": [],
-      "properties": []
-    },
-    {
-      "uri": "http://purl.org/dc/terms/Agent",
-      "name": {
-        "nl": "Agent"
-      },
-      "sort_nl": "Agent",
-      "description": {
-        "nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."
-      },
-      "usage": {},
-      "parents": [],
-      "properties": []
     },
     {
       "uri": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting",
@@ -3042,10 +3110,10 @@
       },
       "sort_nl": "Opdracht",
       "description": {
-        "nl": "Een te verrichten werk."
+        "nl": "Toegewezen taak."
       },
       "usage": {
-        "nl": "TODO"
+        "nl": "In deze context de taak om Observaties of Bemonsteringen uit te voeren."
       },
       "parents": [],
       "properties": []
@@ -3347,9 +3415,11 @@
       },
       "sort_nl": "Observatieprocedure",
       "description": {
-        "nl": "TODO"
+        "nl": "Een workflow, protocol, plan, algoritme of berekeningswijze waarin wordt gespecifieerd hoe een Observatie moet worden uitgevoerd."
       },
-      "usage": {},
+      "usage": {
+        "nl": "De procedure legt uit welke stappen uitgevoerd moeten worden om een reproduceerbaar resultaat te krijgen. Bv de correcte plaatsing van een windmeter (op een welbepaalde hoogte boven het grondoppervlak, bv 10m voor meteorologische waarnemingen). De procedures zijn doorgaans bedoeld om bij meer dan één Bermonstering te worden toegepast."
+      },
       "parents": [
         {
           "name": "Proces",
@@ -3368,83 +3438,17 @@
       ],
       "properties": [
         {
-          "uri": "http://fixme.com#input",
-          "name": {
-            "nl": "input"
-          },
-          "sort_nl": "input",
-          "description": {
-            "nl": "De noden om een activiteit te starten."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "uri": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
-              "EA-Name": "Observatieprocedure"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Input",
-              "range_uri": "http://fixme.com#Input"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Input",
-              "range_puri": "http://fixme.com#Input",
-              "range_label": {
-                "nl": "Input"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "http://fixme.com#output",
-          "name": {
-            "nl": "output"
-          },
-          "sort_nl": "output",
-          "description": {
-            "nl": "De onmiddellijke resultaten van een activiteit."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "uri": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
-              "EA-Name": "Observatieprocedure"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Output",
-              "range_uri": "http://fixme.com#Output"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Output",
-              "range_puri": "http://fixme.com#Output",
-              "range_label": {
-                "nl": "Output"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": ""
-        },
-        {
           "uri": "http://fixme.com#parameter",
           "name": {
             "nl": "parameter"
           },
           "sort_nl": "parameter",
           "description": {
-            "nl": "Een variabele, meetbare eigenschap wiens waarde een determinant is van de eigenschappen van een systeem."
+            "nl": "Willekeurig gegeven gassocieerd met de Observatieprocedure."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Bv een parameter die een aspect van de Observatieprocedure beschrijft (bv de vereiste hoogte voor het observeren van windsnelheid) of een noodzakelijke omgevingsparameter (bv temperatuurbereik waarbinnen een labo-analyse moet plaatsvinden)."
+          },
           "domain": [
             {
               "uri": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
@@ -3476,7 +3480,7 @@
           },
           "sort_nl": "specificatie",
           "description": {
-            "nl": "Het type object op basis waarvan het punt werd bepaald."
+            "nl": "Verwijzing naar een document dat de Observatieprocedure beschrijft."
           },
           "usage": {},
           "domain": [
@@ -3538,13 +3542,81 @@
           "codelist_uri": ""
         },
         {
+          "uri": "http://www.w3.org/ns/ssn/hasInput",
+          "name": {
+            "nl": "input"
+          },
+          "sort_nl": "input",
+          "description": {
+            "nl": "Verwijzing naar de Input die de procedure vereist."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "uri": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
+              "EA-Name": "Observatieprocedure"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Input",
+              "range_uri": "http://www.w3.org/ns/ssn/Input"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Input",
+              "range_puri": "http://www.w3.org/ns/ssn/Input",
+              "range_label": {
+                "nl": "Input"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "http://www.w3.org/ns/ssn/hasOutput",
+          "name": {
+            "nl": "output"
+          },
+          "sort_nl": "output",
+          "description": {
+            "nl": "Verwijzing naar de Output die de Procedure genereert."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "uri": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
+              "EA-Name": "Observatieprocedure"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Output",
+              "range_uri": "http://www.w3.org/ns/ssn/Output"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Output",
+              "range_puri": "http://www.w3.org/ns/ssn/Output",
+              "range_label": {
+                "nl": "Output"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": ""
+        },
+        {
           "uri": "http://www.w3.org/ns/ssn/implementedBy",
           "name": {
             "nl": "geïmplementeerdMet"
           },
           "sort_nl": "geïmplementeerdMet",
           "description": {
-            "nl": "TODO"
+            "nl": "Sensor waarmee de Observatieprocedure is of moet worden uitgevoerd."
           },
           "usage": {},
           "domain": [
@@ -3556,13 +3628,13 @@
           "range": [
             {
               "range_label": "Sensor",
-              "range_uri": "https://www.w3.org/TR/vocab-ssn/#SOSASensor"
+              "range_uri": "https://www.w3.org/ns/sosa/Sensor"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Sensor",
-              "range_puri": "https://www.w3.org/TR/vocab-ssn/#SOSASensor",
+              "range_puri": "https://www.w3.org/ns/sosa/Sensor",
               "range_label": {
                 "nl": "Sensor"
               }
@@ -3574,15 +3646,30 @@
       ]
     },
     {
-      "uri": "https://www.w3.org/TR/vocab-ssn/#SOSASensor",
+      "uri": "https://www.w3.org/TR/vocab-ssn/#ssn-system",
+      "name": {
+        "nl": "Systeem"
+      },
+      "sort_nl": "Systeem",
+      "description": {
+        "nl": "TODO"
+      },
+      "usage": {},
+      "parents": [],
+      "properties": []
+    },
+    {
+      "uri": "https://www.w3.org/ns/sosa/Sensor",
       "name": {
         "nl": "Sensor"
       },
       "sort_nl": "Sensor",
       "description": {
-        "nl": "TODO"
+        "nl": "Toestel of Agent (incl Personen of software) waarmee Observaties gemaakt worden."
       },
-      "usage": {},
+      "usage": {
+        "nl": "Sensoren genereren een resultaat op basis van een Stimulus, ttz een verandering in de omgeving, of op basis van resultaten van andere Observaties. Ze worden typisch gehost door een Platform. Voorbeelden zijn snelheidsmeters, gyroscopen, barometers, magnetometers gemonteerd op een smart phone. Ook bv het menselijk oog kan beschouwd worden als een sensor."
+      },
       "parents": [
         {
           "name": "Systeem",
@@ -3601,18 +3688,18 @@
       ],
       "properties": [
         {
-          "uri": "http://fixme.com",
+          "uri": "http://www.w3.org/ns/sosa/madeObservation",
           "name": {
             "nl": "uitgevoerdeObservatie"
           },
           "sort_nl": "uitgevoerdeObservatie",
           "description": {
-            "nl": "De aanduiding die aangeeft of de observatie al dan niet is uitgevoerd."
+            "nl": "Observatie die met de Sensor is uitrgevoerd."
           },
           "usage": {},
           "domain": [
             {
-              "uri": "https://www.w3.org/TR/vocab-ssn/#SOSASensor",
+              "uri": "https://www.w3.org/ns/sosa/Sensor",
               "EA-Name": "Sensor"
             }
           ],
@@ -3635,18 +3722,52 @@
           "codelist_uri": ""
         },
         {
+          "uri": "http://www.w3.org/ns/sosa/observes",
+          "name": {
+            "nl": "observeert"
+          },
+          "sort_nl": "observeert",
+          "description": {
+            "nl": "Kenmerk dat door de Sensor wordt geobserveerd."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "uri": "https://www.w3.org/ns/sosa/Sensor",
+              "EA-Name": "Sensor"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Kenmerktype",
+              "range_uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kenmerktype",
+              "range_puri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+              "range_label": {
+                "nl": "Kenmerktype"
+              }
+            }
+          ],
+          "cardinality": "1..*",
+          "codelist_uri": ""
+        },
+        {
           "uri": "http://www.w3.org/ns/ssn/implements",
           "name": {
             "nl": "implementeert"
           },
           "sort_nl": "implementeert",
           "description": {
-            "nl": "TODO"
+            "nl": "Observatieprocedure die door de Sensor wordt toegepast."
           },
           "usage": {},
           "domain": [
             {
-              "uri": "https://www.w3.org/TR/vocab-ssn/#SOSASensor",
+              "uri": "https://www.w3.org/ns/sosa/Sensor",
               "EA-Name": "Sensor"
             }
           ],
@@ -3669,19 +3790,6 @@
           "codelist_uri": ""
         }
       ]
-    },
-    {
-      "uri": "https://www.w3.org/TR/vocab-ssn/#ssn-system",
-      "name": {
-        "nl": "Systeem"
-      },
-      "sort_nl": "Systeem",
-      "description": {
-        "nl": "TODO"
-      },
-      "usage": {},
-      "parents": [],
-      "properties": []
     }
   ],
   "properties": [

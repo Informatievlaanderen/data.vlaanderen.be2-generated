@@ -78,20 +78,20 @@
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#BenoemdeWaardeShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#ObservatieShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#ProcesShape>,
+    <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#BemonsteringscurveShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#CurveWaardepaarShape>,
-    <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#InputShape>,
-    <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#OutputShape>,
-    <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#ProcedureShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#ProfielelementShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#AgentShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#IdentificatorShape>,
+    <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#ProcedureShape>,
+    <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#InputShape>,
+    <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#OutputShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#BO_CurveWaardepaarShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#OpdrachtShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#CurveShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#DirectePositieShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#RecordShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#StandaardEenheidShape>,
-    <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#BemonsteringscurveShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#DiscreetBereikObservatieShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#ObservatietypeShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#DiscreetCurvebereikShape>,
@@ -101,8 +101,8 @@
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#GetalShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#KwantitatieveWaardeShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#ObservatieprocedureShape>,
-    <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#SensorShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#SysteemShape>,
+    <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#SensorShape>,
     <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#ObservatiecontextShape> .
 
 <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#AderShape> a shacl:NodeShape;
@@ -229,7 +229,7 @@
 
 <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#BemonsteringscurveShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringscurve> .
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve> .
 
 <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#BenoemdeWaardeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -882,20 +882,18 @@
   shacl:closed false;
   shacl:property [
     shacl:datatype xsd:anyURI;
-    shacl:description "Verwijzing naar informatie.";
+    shacl:description "TODO";
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "referentie";
     shacl:path <http://fixme.com#referentie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#InputType>;
-    shacl:description "Soort met bepaalde kenmerken.";
+    shacl:description "Aard van de input.";
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "type";
-    shacl:path <http://fixme.com#type>
+    shacl:path <http://purl.org/cd/terms/type>
   ];
-  shacl:targetClass <http://fixme.com#Input> .
+  shacl:targetClass <http://www.w3.org/ns/ssn/Input> .
 
 <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#InputTypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -903,6 +901,12 @@
 
 <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#KenmerktypeShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    shacl:class <https://www.w3.org/ns/sosa/Sensor>;
+    shacl:description "Het kenmerktype van de gebruikte sensor tijdens de observatie.";
+    shacl:name "isGeobserveerdMet";
+    shacl:path <http://fixme.com>
+  ];
   shacl:targetClass <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
 
 <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#KwantitatieveWaardeShape> a shacl:NodeShape;
@@ -992,7 +996,7 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>;
-    shacl:description "Observaties die een waarde geven aan Kenmerken van het Object;";
+    shacl:description "Observaties die op het Object gebeuren.";
     shacl:name "waardeverschaffer";
     shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#waardeverschaffer>
   ];
@@ -1082,7 +1086,7 @@
     shacl:name "uitgevoerdDoor";
     shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#uitgevoerdDoor>
   ], [
-    shacl:class <https://www.w3.org/TR/vocab-ssn/#SOSASensor>;
+    shacl:class <https://www.w3.org/ns/sosa/Sensor>;
     shacl:description "De aanduiding die aangeeft of de observatie al dan niet met een sensor is uitgevoerd.";
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -1112,28 +1116,28 @@
 <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#ObservatieprocedureShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://www.w3.org/TR/vocab-ssn/#SOSASensor>;
-    shacl:description "TODO";
+    shacl:class <https://www.w3.org/ns/sosa/Sensor>;
+    shacl:description "Sensor waarmee de Observatieprocedure is of moet worden uitgevoerd.";
     shacl:name "geïmplementeerdMet";
     shacl:path <http://www.w3.org/ns/ssn/implementedBy>
   ], [
-    shacl:class <http://fixme.com#Input>;
-    shacl:description "De noden om een activiteit te starten.";
+    shacl:class <http://www.w3.org/ns/ssn/Input>;
+    shacl:description "Verwijzing naar de Input die de procedure vereist.";
     shacl:name "input";
-    shacl:path <http://fixme.com#input>
+    shacl:path <http://www.w3.org/ns/ssn/hasInput>
   ], [
-    shacl:class <http://fixme.com#Output>;
-    shacl:description "De onmiddellijke resultaten van een activiteit.";
+    shacl:class <http://www.w3.org/ns/ssn/Output>;
+    shacl:description "Verwijzing naar de Output die de Procedure genereert.";
     shacl:name "output";
-    shacl:path <http://fixme.com#output>
+    shacl:path <http://www.w3.org/ns/ssn/hasOutput>
   ], [
     shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
-    shacl:description "Een variabele, meetbare eigenschap wiens waarde een determinant is van de eigenschappen van een systeem.";
+    shacl:description "Willekeurig gegeven gassocieerd met de Observatieprocedure.";
     shacl:name "parameter";
     shacl:path <http://fixme.com#parameter>
   ], [
     shacl:datatype xsd:anyURI;
-    shacl:description "Het type object op basis waarvan het punt werd bepaald.";
+    shacl:description "Verwijzing naar een document dat de Observatieprocedure beschrijft.";
     shacl:name "specificatie";
     shacl:path <http://fixme.com#specificatie>
   ], [
@@ -1164,20 +1168,18 @@
   shacl:closed false;
   shacl:property [
     shacl:datatype xsd:anyURI;
-    shacl:description "Verwijzing naar informatie.";
+    shacl:description "TODO";
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "referentie";
     shacl:path <http://fixme.com#referentie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#OutputType>;
-    shacl:description "Soort met bepaalde kenmerken.";
+    shacl:description "Aard van de Output.";
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "type";
-    shacl:path <http://fixme.com#type>
+    shacl:path <http://purl.org/cd/terms/type>
   ];
-  shacl:targetClass <http://fixme.com#Output> .
+  shacl:targetClass <http://www.w3.org/ns/ssn/Output> .
 
 <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#OutputTypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -1189,7 +1191,7 @@
 
 <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#ProcedureShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://fixme.com#Procedure> .
+  shacl:targetClass <http://www.w3.org/ns/sosa/Procedure> .
 
 <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#ProcesShape> a shacl:NodeShape;
   shacl:closed false;
@@ -1247,18 +1249,24 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://www.w3.org/TR/vocab-ssn/#SOSAProcedure>;
-    shacl:description "TODO";
+    shacl:description "Observatieprocedure die door de Sensor wordt toegepast.";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "implementeert";
     shacl:path <http://www.w3.org/ns/ssn/implements>
   ], [
+    shacl:class <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>;
+    shacl:description "Kenmerk dat door de Sensor wordt geobserveerd.";
+    shacl:minCount 1;
+    shacl:name "observeert";
+    shacl:path <http://www.w3.org/ns/sosa/observes>
+  ], [
     shacl:class <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>;
-    shacl:description "De aanduiding die aangeeft of de observatie al dan niet is uitgevoerd.";
+    shacl:description "Observatie die met de Sensor is uitrgevoerd.";
     shacl:name "uitgevoerdeObservatie";
-    shacl:path <http://fixme.com>
+    shacl:path <http://www.w3.org/ns/sosa/madeObservation>
   ];
-  shacl:targetClass <https://www.w3.org/TR/vocab-ssn/#SOSASensor> .
+  shacl:targetClass <https://www.w3.org/ns/sosa/Sensor> .
 
 <https://data.vlaanderen.be/shacl/ap-bo-interpretaties#StandaardEenheidShape> a shacl:NodeShape;
   shacl:closed false;
