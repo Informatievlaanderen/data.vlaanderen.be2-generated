@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-gebouwEnAdres/tree/5e5d095a8079ec0357a44d7b6faec096e782e7ff",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-gebouwEnAdres/blob/5e5d095a8079ec0357a44d7b6faec096e782e7ff/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-gebouwEnAdres/tree/70e00b7366dce7f78c7cd36c19e2e673325dff27",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-gebouwEnAdres/blob/70e00b7366dce7f78c7cd36c19e2e673325dff27/CHANGELOG",
     "feedbackurl": "https://github.com/informatievlaanderen/OSLOthema-gebouwEnAdres/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaarden/applicatieprofiel-adresregister/applicatieprofiel-adresregister.html",
     "dependencies": [
@@ -570,7 +570,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": ""
+          "codelist_uri": "https://data.vlaanderen.be/id/conceptscheme/adresstatus"
         }
       ]
     },
@@ -588,7 +588,7 @@
       "parents": [],
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/adres#volledigAdres",
+          "uri": "https://data.vlaanderen.be/ns/adres#Adresuitbreiding.volledigadres",
           "name": "volledig adres",
           "sort": "volledig adres",
           "label": {
@@ -646,7 +646,7 @@
       ],
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
+          "uri": "https://data.vlaanderen.be/ns/adres#Gemeente.gemeentenaam",
           "name": "gemeentenaam",
           "sort": "gemeentenaam",
           "label": {
@@ -681,12 +681,16 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/adres#status",
-          "name": "",
-          "sort": "",
-          "label": {},
+          "uri": "http://publications.europa.eu/resource/authority/language",
+          "name": "faciliteitentaal",
+          "sort": "faciliteitentaal",
+          "label": {
+            "nl": "faciliteitentaal"
+          },
           "description": {},
-          "usage": {},
+          "usage": {
+            "nl": "Ipv. de URIs worden de ISO 639-1 codes {nl, fr, de} gebruikt."
+          },
           "domain": [
             {
               "EA-Name": "Gemeente",
@@ -695,21 +699,21 @@
           ],
           "range": [
             {
-              "range_label": "Gemeentestatus",
-              "range_uri": "https://data.vlaanderen.be/id/conceptscheme/gemeentestatus"
+              "range_label": "Taalcode",
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "https://data.vlaanderen.be/id/conceptscheme/gemeentestatus",
-              "range_puri": "https://data.vlaanderen.be/id/conceptscheme/gemeentestatus",
+              "range_uri": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01#Taalcode",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
-                "nl": "Gemeentestatus"
+                "nl": "Taalcode"
               }
             }
           ],
-          "cardinality": "1",
-          "codelist_uri": ""
+          "cardinality": "1..*",
+          "codelist_uri": "http://publications.europa.eu/resource/authority/language"
         },
         {
           "uri": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -745,41 +749,6 @@
           "codelist_uri": "http://publications.europa.eu/resource/authority/language"
         },
         {
-          "uri": "http://www.w3.org/2004/02/skos/core#Concept",
-          "name": "faciliteitentaal",
-          "sort": "faciliteitentaal",
-          "label": {
-            "nl": "faciliteitentaal"
-          },
-          "description": {},
-          "usage": {
-            "nl": "Ipv. de URIs worden de ISO 639-1 codes {nl, fr, de} gebruikt."
-          },
-          "domain": [
-            {
-              "EA-Name": "Gemeente",
-              "uri": "https://basisregisters.vlaanderen.be/ns/adres#Gemeente"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Taalcode",
-              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01#Taalcode",
-              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
-              "range_label": {
-                "nl": "Taalcode"
-              }
-            }
-          ],
-          "cardinality": "1..*",
-          "codelist_uri": "http://publications.europa.eu/resource/authority/language"
-        },
-        {
           "uri": "http://www.w3.org/ns/prov#wasAttributedTo",
           "name": "is toegekend door",
           "sort": "is toegekend door",
@@ -852,6 +821,41 @@
           ],
           "cardinality": "0..*",
           "codelist_uri": ""
+        },
+        {
+          "uri": "https://data.vlaanderen.be/id/conceptscheme/gemeentestatus",
+          "name": "status",
+          "sort": "status",
+          "label": {
+            "nl": "status"
+          },
+          "description": {
+            "nl": "Waarden die de status van een gemeente weergeven."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Gemeente",
+              "uri": "https://basisregisters.vlaanderen.be/ns/adres#Gemeente"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Gemeentestatus",
+              "range_uri": "https://data.vlaanderen.be/id/conceptscheme/gemeentestatus"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "https://data.vlaanderen.be/id/conceptscheme/gemeentestatus",
+              "range_puri": "https://data.vlaanderen.be/id/conceptscheme/gemeentestatus",
+              "range_label": {
+                "nl": "Gemeentestatus"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://data.vlaanderen.be/id/conceptscheme/gemeentestatus"
         }
       ]
     },
@@ -912,7 +916,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/adres#Postinfo.status",
+          "uri": "https://data.vlaanderen.be/id/conceptscheme/postinfostatus",
           "name": "status",
           "sort": "status",
           "label": {
@@ -944,7 +948,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": ""
+          "codelist_uri": "https://data.vlaanderen.be/id/conceptscheme/postinfostatus"
         }
       ]
     },
@@ -1072,7 +1076,7 @@
             }
           ],
           "cardinality": "1",
-          "codelist_uri": ""
+          "codelist_uri": "https://data.vlaanderen.be/id/conceptscheme/straatnaamstatus"
         }
       ]
     }
@@ -1184,21 +1188,6 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/adres#Postinfo.status",
-      "name": {
-        "nl": "status",
-        "undefined": "status"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://data.vlaanderen.be/ns/adres#Adres.heeftStraatnaam",
       "name": {
         "nl": "heeft straatnaam",
@@ -1233,20 +1222,6 @@
       "name": {
         "nl": "positie",
         "undefined": "positie"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/adres#status",
-      "name": {
-        "undefined": ""
       },
       "description": {},
       "domain": [
