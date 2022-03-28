@@ -6,6 +6,9 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://w3id.org/tree#view> a rdfs:Class;
+  rdfs:label "(View)"@nl .
+
 <https://data.vlaanderen.be/ns/ldes#AfgeleideEventStream> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Voorbeelden van afgeleide event streams zijn snapshots, versie-materialisaties, etc."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
@@ -18,6 +21,21 @@
 <https://data.vlaanderen.be/ns/ldes#RootNode> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "een tree:Node die verwezen wordt vanuit een ldes:EventStream via een tree:view property"@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes> .
+
+<https://data.vlaanderen.be/ns/ldes#View.eventStream> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/tree#view>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
+  rdfs:range <https://w3id.org/ldes#EventStream> .
+
+<https://data.vlaanderen.be/ns/ldes#View.node> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/tree#view>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
+  rdfs:range <https://w3id.org/tree#Node> .
+
+<https://data.vlaanderen.be/ns/ldes#retentienbeleid> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/tree#view>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
+  rdfs:range <https://w3id.org/ldes#retentionPolicy> .
 
 <https://data.vlaanderen.be/ns/ldes#versieMaterialisatieTot> a owl:DatatypeProperty;
   rdfs:domain <https://data.vlaanderen.be/ns/ldes#VersieMaterialisatie>;
@@ -74,7 +92,8 @@
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso <https://w3id.org/ldes#timestampPath>,
+  rdfs:seeAlso <https://w3id.org/tree#view>,
+    <https://w3id.org/ldes#timestampPath>,
     <https://w3id.org/ldes#versionOfPath>,
     <https://w3id.org/tree#member>,
     <https://w3id.org/tree#shape>;

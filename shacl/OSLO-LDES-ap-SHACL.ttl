@@ -14,7 +14,6 @@
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#VersieMaterialisatieShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#ObservatieShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#DataServiceLDESShape>,
-    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#URiShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#DataServiceShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#VersieShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#ShapeShape>,
@@ -23,43 +22,10 @@
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#LatestVersionSubsetShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#RetentionPolicyShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#CollectionShape>,
-    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#GelijkAanRelatieShape>,
-    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#GeoSpatiallyContainsRelationShape>,
-    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#GroterDanOfGelijkAanRelatieShape>,
-    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#GroterDanRelatieShape>,
-    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#KleinerDanOfGelijkAanRelatieShape>,
-    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#KleinerDanRelatieShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#NodeShape>,
-    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#PrefixRelatieShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#RelationShape>,
-    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#SubstringRelatieShape>,
-    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#SuffixRelatieShape>,
-    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#(View)Shape>,
+    <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#ViewShape>,
     <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#DatasetShape> .
-
-<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#(View)Shape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:class <https://w3id.org/ldes#EventStream>;
-    shacl:description "Referentie naar verbonden klasse."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "EventStream"@nl;
-    shacl:path <http://fixme.com#(View).eventStream>
-  ], [
-    shacl:class <https://w3id.org/tree#Node>;
-    shacl:description "Referentie naar verbonden klasse."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "Node"@nl;
-    shacl:path <http://fixme.com#(View).node>
-  ], [
-    shacl:class <https://w3id.org/ldes#retentionPolicy>;
-    shacl:maxCount 1;
-    shacl:name "retentienbeleid"@nl;
-    shacl:path <http://fixme.com#retentienbeleid>
-  ];
-  shacl:targetClass <https://w3id.org/tree#view> .
 
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#AfgeleideCollectieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -96,12 +62,14 @@
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#DataServiceLDESShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class dc:Standard;
     shacl:description "Een protocol waaraan de dataservice voldoet."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "conformAanProtocol"@nl;
     shacl:path dc:conformsTo
   ], [
+    shacl:class <https://data.vlaanderen.be/ns/ldes#RootNode>;
     shacl:description "De rootlocatie of het primaire endpoint van de dienst (een web-resolvable URI)."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -190,50 +158,7 @@
     shacl:name "versionOfPath"@nl;
     shacl:path <https://w3id.org/ldes#versionOfPath>
   ];
-  shacl:targetClass <http://fixme.com#(View).eventStream> .
-
-<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#GelijkAanRelatieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://w3id.org/tree#EqualToRelation> .
-
-<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#GeoSpatiallyContainsRelationShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:description "De tegel volgens de lengtegraad"@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "latitudeTile"@nl;
-    shacl:path <https://w3id.org/tree#latitudeTile>
-  ], [
-    shacl:description "De tegel volgens de breedtegraad"@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "longitudeTile"@nl;
-    shacl:path <https://w3id.org/tree#longitudeTile>
-  ], [
-    shacl:description "Het zoom level van een specifieke tegel conform de OSM conventie."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "zoom"@nl;
-    shacl:path <https://w3id.org/tree#zoom>
-  ];
-  shacl:targetClass <https://w3id.org/tree#GeospatiallyContainsRelation> .
-
-<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#GroterDanOfGelijkAanRelatieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://w3id.org/tree#GreaterThanOrEqualToRelation> .
-
-<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#GroterDanRelatieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://w3id.org/tree#GreaterThanRelation> .
-
-<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#KleinerDanOfGelijkAanRelatieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://w3id.org/tree#LessThanOrEqualToRelation> .
-
-<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#KleinerDanRelatieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://w3id.org/tree#LessThanRelation> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/ldes#View.eventStream> .
 
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#LatestVersionSubsetShape> a shacl:NodeShape;
   shacl:closed false;
@@ -287,7 +212,7 @@
     shacl:name "retentiebeleid"@nl;
     shacl:path <https://w3id.org/ldes#retentionPolicy>
   ];
-  shacl:targetClass <http://fixme.com#(View).node> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/ldes#View.node> .
 
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#ObservatieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -296,10 +221,6 @@
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#OnveranderlijkObjectShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject> .
-
-<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#PrefixRelatieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://w3id.org/tree#PrefixRelation> .
 
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#RelationShape> a shacl:NodeShape;
   shacl:closed false;
@@ -337,18 +258,6 @@
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#ShapeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass shacl:NodeShape .
-
-<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#SubstringRelatieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://w3id.org/tree#SubstringRelation> .
-
-<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#SuffixRelatieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://w3id.org/tree#SuffixRelation> .
-
-<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#URiShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass rdfs:Resource .
 
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#VersieEventStreamShape> a shacl:NodeShape;
   shacl:closed false;
@@ -406,3 +315,27 @@
 <https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#VersieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass prov:Entity .
+
+<https://data.test-vlaanderen.be/shacl/OSLO-LDES-ap-SHACL_nl#ViewShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://w3id.org/ldes#EventStream>;
+    shacl:description "Referentie naar verbonden klasse."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "EventStream"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/ldes#View.eventStream>
+  ], [
+    shacl:class <https://w3id.org/tree#Node>;
+    shacl:description "Referentie naar verbonden klasse."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "Node"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/ldes#View.node>
+  ], [
+    shacl:class <https://w3id.org/ldes#retentionPolicy>;
+    shacl:maxCount 1;
+    shacl:name "retentienbeleid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/ldes#retentienbeleid>
+  ];
+  shacl:targetClass <https://w3id.org/tree#view> .
