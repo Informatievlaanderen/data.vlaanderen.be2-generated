@@ -8,12 +8,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-dc:Agent a rdfs:Class;
-  rdfs:label "Vertegenwoordiger"@nl .
-
-<http://purl.org/vocab/cpsv#PublicService> a rdfs:Class;
-  rdfs:label "PubliekeDienstverlening (consumptie)"@nl .
-
 skos:Concept a rdfs:Class;
   rdfs:label "Roltype"@nl,
     "ActiviteitType"@nl,
@@ -24,10 +18,21 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
   rdfs:range skos:Concept .
 
+<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning.geldigheidsperiode> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
+
 <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenningsaanvraag.activiteit> a owl:ObjectProperty;
   rdfs:domain <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenningsaanvraag>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
   rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenningsaanvraag.geldigheidsperiode> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Het tijdsinterval waarop de geldigheidsperiode van een Erkenningsaanvraag aanspraak doet, kan verschillen van de Erkenning die uiteindelijk wordt toegekend."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenningsaanvraag>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
 
 <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Persoon.geboortedatum> a owl:DatatypeProperty;
   rdfs:domain <http://www.w3.org/ns/person#Person>;
@@ -44,21 +49,10 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
   rdfs:range rdfs:Literal .
 
-<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#geldigheidsperiode> a owl:ObjectProperty;
-  rdfs:domain <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
-  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
-
-<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#geldigheidsperiodeErkenning> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Het tijdsinterval waarop de geldigheidsperiode van een Erkenningsaanvraag aanspraak doet, kan verschillen van de Erkenning die uiteindelijk wordt toegekend."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenningsaanvraag>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
-  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
-
 <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#vertegenwoordiger> a owl:ObjectProperty;
   rdfs:domain <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#FeitelijkeVereniging>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
-  rdfs:range dc:Agent .
+  rdfs:range <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Vertegenwoordiger> .
 
 <http://data.europa.eu/m8g/hasCriterion> a rdf:Property;
   rdfs:label "criteriumvereiste"@nl .
@@ -99,9 +93,13 @@ org:subOrganizationOf a rdf:Property;
 <http://www.w3.org/ns/regorg#orgActivity> a rdf:Property;
   rdfs:label "organisatieactiviteit"@nl .
 
-<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Vereniging> a owl:Class;
+<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#OSLO-Dienst::Output> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen> .
+
+<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Vertegenwoordiger> a owl:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
-  rdfs:subClassOf org:Organization .
+  rdfs:subClassOf <http://fixme.com#Hoedanigheid>,
+    dc:Agent .
 
 <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#dientIn> a rdf:Property;
   rdfs:label "dientIn"@nl .
@@ -117,16 +115,14 @@ org:subOrganizationOf a rdf:Property;
 
 <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning> a owl:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
-  rdfs:subClassOf <https://data.europa.eu/m8g/Output> .
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#OSLO-Dienst::Output> .
 
 <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenningsaanvraag> a owl:Class;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
-  rdfs:subClassOf <http://purl.org/vocab/cpsv#PublicService> .
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen> .
 
 <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#FeitelijkeVereniging> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Een Vereniging wordt gedefinieerd als een Organisatie die een onbaatzuchtig doel nastreeft. Dit geldt ook voor een Feitelijke Vereniging, alleen heeft deze geen rechtspersoonlijkheid. Daardoor kunnen de inidividuele leden van de Feitelijke Vereniging aans"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Vereniging> .
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen> .
 
 <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen> a owl:Ontology;
   rdfs:label "Feitelijke-Verenigingen-voc"@en,
@@ -230,9 +226,7 @@ org:subOrganizationOf a rdf:Property;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso dc:Agent,
-    <http://purl.org/vocab/cpsv#PublicService>,
-    skos:Concept,
+  rdfs:seeAlso skos:Concept,
     <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#isPositieIn>,
     <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#heeftErkenning>,
     <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#geeftrechtOp>,
