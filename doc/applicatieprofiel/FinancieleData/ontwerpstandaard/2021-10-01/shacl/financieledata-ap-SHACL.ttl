@@ -8,7 +8,11 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl> <https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nlshapes> <https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#RapportTypeShape>,
+<https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl> <https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nlshapes> <https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#BalansTypeShape>,
+    <https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#ConceptTypeShape>,
+    <https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#EenheidsTypeShape>,
+    <https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#EntiteitShape>,
+    <https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#RapportTypeShape>,
     <https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#FinancieelRapportShape>,
     <https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#ValidatieShape>,
     <https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#SchemaShape>,
@@ -30,10 +34,14 @@
   shacl:closed false;
   shacl:targetClass dc:Agent .
 
+<https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#BalansTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://fixme.com#BalansType> .
+
 <https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#ConceptShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:datatype xsd:string;
+    shacl:class <http://fixme.com#BalansType>;
     shacl:description "TODO"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -59,12 +67,16 @@
     shacl:minCount 1;
     shacl:name "periodeType"@nl
   ], [
-    shacl:datatype xsd:string;
+    shacl:class <http://fixme.com#ConceptType>;
     shacl:description "TODO"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "type"@nl
   ] .
+
+<https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#ConceptTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://fixme.com#ConceptType> .
 
 <https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#ContextShape> a shacl:NodeShape;
   shacl:closed false;
@@ -75,7 +87,7 @@
     shacl:minCount 1;
     shacl:name "code"@nl
   ], [
-    shacl:datatype xsd:string;
+    shacl:class <http://fixme.com#Entiteit>;
     shacl:description "TODO"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -108,6 +120,8 @@
   ], [
     shacl:class org:Organization;
     shacl:description "TODO"@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "ingediendDoor"@nl
   ], [
     shacl:datatype xsd:string;
@@ -123,13 +137,47 @@
     shacl:name "totAanvragen"@nl
   ] .
 
+<https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#EenheidsTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://fixme.com#EenheidsType> .
+
+<https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#EntiteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:string;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1
+  ], [
+    shacl:datatype xsd:string;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1
+  ], [
+    shacl:datatype xsd:string;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1
+  ];
+  shacl:targetClass <http://fixme.com#Entiteit> .
+
 <https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#FeitShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:path <http://fixme.com#code>
+  ], [
     shacl:description "TODO"@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "concept"@nl
   ], [
     shacl:description "TODO"@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "context"@nl
   ], [
     shacl:datatype xsd:integer;
@@ -139,6 +187,7 @@
     shacl:name "decimalen"@nl
   ], [
     shacl:description "TODO"@nl;
+    shacl:maxCount 1;
     shacl:name "meeteenheid"@nl
   ], [
     shacl:datatype xsd:integer;
@@ -157,7 +206,6 @@
     shacl:datatype xsd:string;
     shacl:description "TODO"@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "bron"@nl
   ], [
     shacl:datatype xsd:dateTime;
@@ -174,6 +222,8 @@
   ], [
     shacl:class org:Organization;
     shacl:description "TODO"@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "gaatOver"@nl
   ], [
     shacl:datatype xsd:string;
@@ -183,6 +233,7 @@
     shacl:name "naam"@nl
   ], [
     shacl:description "TODO"@nl;
+    shacl:maxCount 1;
     shacl:name "schema"@nl
   ], [
     shacl:datatype xsd:dateTime;
@@ -371,13 +422,8 @@
 <https://data.test-vlaanderen.be/shacl/financieledata-ap-SHACL_nl#SchemaShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:datatype xsd:dateTime;
     shacl:description "TODO"@nl;
-    shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "geldigheidsperiode"@nl
-  ], [
-    shacl:description "TODO"@nl;
     shacl:name "isVoorstelling"@nl
   ], [
     shacl:datatype rdf:langString;
@@ -386,7 +432,6 @@
     shacl:minCount 1;
     shacl:name "naam"@nl
   ], [
-    shacl:datatype xsd:string;
     shacl:description "TODO"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -411,6 +456,8 @@
   ], [
     shacl:class dc:Agent;
     shacl:description "TODO"@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "gevalideerdDoor"@nl
   ], [
     shacl:datatype xsd:string;
