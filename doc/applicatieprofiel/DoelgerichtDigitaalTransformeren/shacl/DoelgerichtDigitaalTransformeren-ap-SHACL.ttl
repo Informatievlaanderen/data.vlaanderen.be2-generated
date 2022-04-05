@@ -10,9 +10,10 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl> <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nlshapes> <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#FeedbackBronShape>,
-    <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#LeeftijdsklasseShape>,
+<https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl> <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nlshapes> <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#ActiviteitFunctietypeShape>,
+    <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#FeedbackBronShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#LocatieTypeShape>,
+    <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#OrganisatievormTypeShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#PrijsCategorieTypeShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#UitvoerderRolTypeShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#OrganisatieShape>,
@@ -40,6 +41,7 @@
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#SamenwerkingShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#UitvoerderShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#FeedbackContentShape>,
+    <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#LeeftijdsklasseShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#BeschikbaarheidShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#GeregistreerdPersoonShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#AgentShape>,
@@ -100,6 +102,10 @@
     shacl:name "naam"@nl;
     shacl:path <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#naam>
   ], [
+    shacl:class <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#OrganisatievormType>;
+    shacl:description "";
+    shacl:path <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#organisatievorm>
+  ], [
     shacl:class <http://fixme.com>;
     shacl:description "TODO"@nl;
     shacl:name "subaanbieder"@nl;
@@ -142,6 +148,10 @@
 <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#AanbiederTypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#ActiviteitFunctietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ActiviteitFunctietype> .
 
 <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#ActiviteitShape> a shacl:NodeShape;
   shacl:closed false;
@@ -201,6 +211,10 @@
     shacl:maxCount 1;
     shacl:name "duur"@nl;
     shacl:path <http://fixme.com>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ActiviteitFunctietype>;
+    shacl:description "";
+    shacl:path <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#functie>
   ], [
     shacl:class crm:E70_Thing;
     shacl:description "TODO"@nl;
@@ -688,6 +702,10 @@
     shacl:path skos:prefLabel
   ] .
 
+<https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#OrganisatievormTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#OrganisatievormType> .
+
 <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#ParticipantProfielShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -746,11 +764,11 @@
     shacl:name "heeftRelatieMet"@nl;
     shacl:path <http://fixme.com>
   ], [
-    shacl:class <http://fixme.com>;
-    shacl:description "De leeftijdsklasse waarin de participant zich bevindt."@nl;
+    shacl:datatype xsd:string;
+    shacl:description "De leeftijdsgroep waarin de participant zich bevindt."@nl;
     shacl:maxCount 1;
-    shacl:name "leeftijdsklasse"@nl;
-    shacl:path <http://fixme.com>
+    shacl:name "leeftijdsgroep"@nl;
+    shacl:path schemas:typicalAgeRange
   ], [
     shacl:class <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
     shacl:description "TODO"@nl;
@@ -944,11 +962,11 @@
     shacl:name "inkomensniveau"@nl;
     shacl:path <http://fixme.com>
   ], [
-    shacl:class <http://fixme.com>;
-    shacl:description "De leeftijdsklasse waarin de participant zich bevindt"@nl;
+    shacl:datatype xsd:string;
+    shacl:description "De leeftijdsgroep waarin de participant zich bevindt"@nl;
     shacl:maxCount 1;
-    shacl:name "leeftijdsklasse"@nl;
-    shacl:path <http://fixme.com>
+    shacl:name "leeftijdsgroep"@nl;
+    shacl:path schemas:typicalAgeRange
   ], [
     shacl:class prov:Location;
     shacl:description "Locatie van de participant"@nl;
@@ -1096,6 +1114,10 @@
     shacl:class skos:Concept;
     shacl:name "typeActiviteit"@nl;
     shacl:path <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#typeActiviteit>
+  ], [
+    shacl:class rdf:langString;
+    shacl:description "";
+    shacl:path <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#vermeldAls>
   ], [
     shacl:class <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
     shacl:name "voertUit"@nl;
