@@ -7,54 +7,62 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://w3id.org/tree#view> a rdfs:Class;
-  rdfs:label "View"@nl .
+  rdfs:label "EventstreamView"@nl .
 
-<https://data.vlaanderen.be/ns/ldes#AfgeleideEventStream> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Voorbeelden van afgeleide event streams zijn snapshots, versie-materialisaties, etc."@nl;
+<https://data.vlaanderen.be/ns/ldes#AfgeleideCollectie> a owl:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
-  rdfs:subClassOf <https://w3id.org/ldes#EventStream> .
+  rdfs:subClassOf <https://w3id.org/tree#Collection> .
 
 <https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Een onveranderlijk object maakt deel uit van een Linked Data Event Stream en wordt beschreven d.m.v. RDF tripples. Het onveranderlijk object moet voldoen aan de shape vereisten van de Linked Data Event Stream."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes> .
+  <http://purl.org/vocab/vann/usageNote> "Een OnveranderlijkObject maakt deel uit van een Linked Data Event Stream en wordt beschreven d.m.v. RDF tripples. Het OnveranderlijkObject moet voldoen aan de shape vereisten van de LDES."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/ldes#CollectieLid> .
 
-<https://data.vlaanderen.be/ns/ldes#Rootnode> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Een tree:Node die verwezen wordt vanuit een ldes:EventStream via een tree:view property"@nl;
+<https://data.vlaanderen.be/ns/ldes#VeranderlijkObject> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/ldes#CollectieLid> .
+
+<https://data.vlaanderen.be/ns/ldes#eventstreamView> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/ldes#RootNode>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
+  rdfs:range <https://w3id.org/tree#view> .
+
+<https://data.vlaanderen.be/ns/ldes#retentiebeleid> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/tree#view>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
+  rdfs:range <https://w3id.org/ldes#retentionPolicy> .
+
+<https://data.vlaanderen.be/ns/ldes#snapshotTot> a owl:DatatypeProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/ldes#Snapshot>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
+  rdfs:range xsd:dateTime .
+
+<https://data.vlaanderen.be/ns/ldes#snapshotVan> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/ldes#Snapshot>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
+  rdfs:range <https://data.vlaanderen.be/ns/ldes#VersieEventStream> .
+
+<https://data.vlaanderen.be/ns/ldes#versieMaterialisatieTot> a owl:DatatypeProperty;
+  <http://purl.org/vocab/vann/usageNote> "Het attribuut versieMaterialisatieTot geeft weer tot op welk moment de versies werden geaggregeerd."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/ldes#VersieMaterialisatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
+  rdfs:range xsd:dateTime .
+
+<https://data.vlaanderen.be/ns/ldes#versiematerialisatieVan> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/ldes#VersieMaterialisatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
+  rdfs:range <https://data.vlaanderen.be/ns/ldes#Snapshot> .
+
+<https://data.vlaanderen.be/ns/ldes#RootNode> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "een tree:Node die verwezen wordt vanuit een ldes:EventStream via een tree:view property"@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes> .
 
 <https://data.vlaanderen.be/ns/ldes#VersieEventStream> a owl:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
   rdfs:subClassOf <https://w3id.org/ldes#EventStream> .
 
-<https://data.vlaanderen.be/ns/ldes#VersieMaterialisatie> a owl:Class;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/ldes#AfgeleideCollectie> .
-
-<https://data.vlaanderen.be/ns/ldes#View.eventStream> a owl:ObjectProperty;
-  rdfs:domain <https://w3id.org/tree#view>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
-  rdfs:range <https://w3id.org/ldes#EventStream> .
-
-<https://data.vlaanderen.be/ns/ldes#View.node> a owl:ObjectProperty;
-  rdfs:domain <https://w3id.org/tree#view>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
-  rdfs:range <https://w3id.org/tree#Node> .
-
-<https://data.vlaanderen.be/ns/ldes#AfgeleideCollectie> a owl:Class;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
-  rdfs:subClassOf <https://w3id.org/tree#Collection> .
-
-<https://semiceu.github.io/LinkedDataEventStreams/#retention> a rdf:Property;
-  rdfs:label "retentienbeleid"@nl .
-
 <https://w3id.org/ldes#timestampPath> a rdf:Property;
   rdfs:label "timestampPath"@nl .
-
-<https://w3id.org/ldes#versionMaterializationOf> a rdf:Property;
-  rdfs:label "versieMaterialisatieVan"@nl .
-
-<https://w3id.org/ldes#versionMaterializationUntil> a rdf:Property;
-  rdfs:label "versieMaterialisatieTot"@nl .
 
 <https://w3id.org/ldes#versionOfPath> a rdf:Property;
   rdfs:label "versionOfPath"@nl .
@@ -64,6 +72,16 @@
 
 <https://w3id.org/tree#shape> a rdf:Property;
   rdfs:label "shape"@nl .
+
+<https://data.vlaanderen.be/ns/ldes#VersieMaterialisatie> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
+  rdfs:subClassOf <https://w3id.org/tree#Collection>,
+    <https://www.w3.org/ns/dcat#Dataset> .
+
+<https://data.vlaanderen.be/ns/ldes#Snapshot> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/ldes>;
+  rdfs:subClassOf <https://w3id.org/ldes#EventStream>,
+    <https://www.w3.org/ns/dcat#Dataset> .
 
 <https://data.vlaanderen.be/ns/ldes> a owl:Ontology;
   rdfs:label "OSLO-LDES-voc"@en,
@@ -87,10 +105,7 @@
     foaf:name "Data Vlaanderen"
   ];
   rdfs:seeAlso <https://w3id.org/tree#view>,
-    <https://semiceu.github.io/LinkedDataEventStreams/#retention>,
     <https://w3id.org/ldes#timestampPath>,
-    <https://w3id.org/ldes#versionMaterializationOf>,
-    <https://w3id.org/ldes#versionMaterializationUntil>,
     <https://w3id.org/ldes#versionOfPath>,
     <https://w3id.org/tree#member>,
     <https://w3id.org/tree#shape>;
