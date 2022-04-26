@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-ldes/tree/8bdfe10b707338c9ed5b5986eb744f9699141f9f",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-ldes/blob/8bdfe10b707338c9ed5b5986eb744f9699141f9f/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-ldes/tree/23a4cb2c7180dd50793aaedb7ec8b3bc21eef160",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-ldes/blob/23a4cb2c7180dd50793aaedb7ec8b3bc21eef160/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-ldes/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/standaard-in-ontwikkeling/vocabularia-en-applicatieprofielen-ldes.html",
     "usesVocs": [],
@@ -87,7 +87,7 @@
       },
       "sort": "OnveranderlijkObject",
       "description": {
-        "nl": "Een onveranderlijkObject is het basiselement van een Linked Data Event Stream."
+        "nl": "Een onveranderlijk object is een object wiens status niet meer kan veranderen nadat het werd gecreëerd."
       },
       "usage": {
         "nl": "Een onveranderlijk object is het basiselement van iedere Linked Data Event Stream en wordt beschreven a.d.h.v. RDF triples. "
@@ -114,10 +114,46 @@
         "nl": "Een rootnode is een beginpagina, die zelf al leden kan bevatten, via wiens gelinkte paginas alle leden kunnen gevonden worden."
       },
       "usage": {
-        "nl": "Een tree:Node die verwezen wordt vanuit een ldes:EventStream via een tree:view property"
+        "nl": "Een tree:Node die verwezen wordt vanuit een ldes:EventStream via een tree:view property."
       },
       "parents": [],
-      "properties": []
+      "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/ldes#eventstreamView",
+          "name": "eventstreamView",
+          "sort": "eventstreamView",
+          "label": {
+            "nl": "eventstreamView"
+          },
+          "description": {
+            "nl": "De event stream view connecteert de collectie met de rootnode zodanig dat alle leden van de collectie gevonden kunnen worden."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "RootNode",
+              "uri": "https://data.vlaanderen.be/ns/ldes#RootNode"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "EventstreamView",
+              "range_uri": "https://w3id.org/tree#view"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#EventstreamView",
+              "range_puri": "https://w3id.org/tree#view",
+              "range_label": {
+                "nl": "EventstreamView"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": ""
+        }
+      ]
     },
     {
       "uri": "https://data.vlaanderen.be/ns/ldes#Snapshot",
@@ -228,7 +264,7 @@
             "nl": "Een bepaalde shape aan welke alle elementen in de event stream moeten voldoen."
           },
           "usage": {
-            "nl": "Een shape wordt opgelegd aan alle elementen van de LDES. Voorbeelden van zo'n shape zijn SHACL en ShEx. De shape moet cohorent zijn doorheen heel de LDES."
+            "nl": "Een shape wordt opgelegd aan alle elementen van de LDES. Voorbeelden van zo'n shape zijn SHACL en ShEx. De shape moet cohorent zijn doorheen heel de Linked Data Event Stream."
           },
           "domain": [
             {
@@ -299,7 +335,7 @@
       },
       "sort": "VeranderlijkObject",
       "description": {
-        "nl": "Een veranderlijk object is een object wiens status nog kan veranderen nadat het werd gecreëerd"
+        "nl": "Een veranderlijk object is een object wiens status nog kan veranderen nadat het werd gecreëerd."
       },
       "usage": {
         "nl": "Een veranderlijk object wordt gebruikt als basiselement van een dataset. "
@@ -322,7 +358,9 @@
         "nl": "VersieEventStream"
       },
       "sort": "VersieEventStream",
-      "description": {},
+      "description": {
+        "nl": "Een specifieke versie van een event stream."
+      },
       "usage": {},
       "parents": [
         {
@@ -382,7 +420,7 @@
             "nl": "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tijdstip."
           },
           "usage": {
-            "nl": "Bijvoorbeeld een SHACL property path aan het tijdstip wanneer het versieobject is toegevoegd aan de Linked Date Event Stream."
+            "nl": "Bijvoorbeeld een SHACL property path aan het tijdstip wanneer het versieobject is toegevoegd aan de Linked Data Event Stream."
           },
           "domain": [
             {
@@ -556,7 +594,7 @@
             "nl": "Een bepaalde shape aan welke alle elementen in de event stream moeten voldoen."
           },
           "usage": {
-            "nl": "Een shape wordt opgelegd aan alle elementen van de LDES. Voorbeelden van zo'n shape zijn SHACL en ShEx. De shape moet cohorent zijn doorheen heel de LDES."
+            "nl": "Een shape wordt opgelegd aan alle elementen van de LDES. Voorbeelden van zo'n shape zijn SHACL en ShEx. De shape moet cohorent zijn doorheen heel de Linked Data Event Stream."
           },
           "domain": [
             {
@@ -597,16 +635,6 @@
       "usage": {
         "nl": "Het gaat om schattingen van de waarde, m.a.w. op de waarde zit een zekere foutmarge. Voorbeelden zijn temperatuur, klasse, kleur, etc."
       },
-      "parents": [],
-      "properties": []
-    },
-    {
-      "uri": "http://fixme.com#CollectieLid",
-      "name": "",
-      "label": {},
-      "sort": "",
-      "description": {},
-      "usage": {},
       "parents": [],
       "properties": []
     },
@@ -1578,7 +1606,7 @@
             "nl": "path"
           },
           "description": {
-            "nl": "Een property path, gedefinieerd door een SHACL, die weergeeft welke zaken beïnvloed worden door tree:value"
+            "nl": "Een property path, gedefinieerd door een SHACL, die weergeeft welke zaken beïnvloed worden door tree:value."
           },
           "usage": {
             "nl": "Binnen SHACL zijn er RDF terms die een subset van SPARQL property paths beschrijven. Meer informatie kan [zie <a href=\"https://www.w3.org/TR/shacl/#x2.3.1-shacl-property-paths\">hier</a>] teruggevonden worden."
@@ -1722,37 +1750,6 @@
           ],
           "cardinality": "0..1",
           "codelist_uri": ""
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/ldes#view",
-          "name": "",
-          "sort": "",
-          "label": {},
-          "description": {},
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "EventstreamView",
-              "uri": "https://w3id.org/tree#view"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "RootNode",
-              "range_uri": "https://data.vlaanderen.be/ns/ldes#RootNode"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Rootnode",
-              "range_puri": "https://data.vlaanderen.be/ns/ldes#RootNode",
-              "range_label": {
-                "nl": "Rootnode"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
         }
       ]
     },
@@ -1868,9 +1865,10 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/ldes#view",
+      "uri": "https://data.vlaanderen.be/ns/ldes#eventstreamView",
       "name": {
-        "undefined": ""
+        "nl": "eventstreamView",
+        "undefined": "eventstreamView"
       },
       "description": {},
       "domain": [
@@ -1929,7 +1927,18 @@
       "email": "medewerkervoornaam.medewerkernaam@medewerkerdomein"
     }
   ],
-  "datatypes": [],
+  "datatypes": [
+    {
+      "uri": "http://fixme.com#CollectieLid",
+      "name": "",
+      "label": {},
+      "sort": "",
+      "description": {},
+      "usage": {},
+      "parents": [],
+      "properties": []
+    }
+  ],
   "parents": [],
   "documentroot": "/doc/applicatieprofiel/ldes/ontwerpstandaard/2022-04-26"
 }
