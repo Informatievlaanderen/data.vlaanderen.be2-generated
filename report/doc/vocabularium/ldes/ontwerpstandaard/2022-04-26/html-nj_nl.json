@@ -12,8 +12,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-ldes/tree/1a4c1ecb789e512d7df0daddd8bbb9234c24affa",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-ldes/blob/1a4c1ecb789e512d7df0daddd8bbb9234c24affa/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-ldes/tree/410ce440315897b330ba0a63fcb59a5e80316a17",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-ldes/blob/410ce440315897b330ba0a63fcb59a5e80316a17/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-ldes/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/TODO/CORRECT-URL/index.html",
     "usesVocs": [],
@@ -44,10 +44,10 @@
       },
       "sort": "OnveranderlijkObject",
       "description": {
-        "nl": "Een onveranderlijkObject is het basiselement van een Linked Data Event Stream."
+        "nl": "Een onveranderlijk object is een object wiens status niet meer kan veranderen nadat het werd gecreëerd. "
       },
       "usage": {
-        "nl": "Een OnveranderlijkObject maakt deel uit van een Linked Data Event Stream en wordt beschreven d.m.v. RDF tripples. Het OnveranderlijkObject moet voldoen aan de shape vereisten van de LDES."
+        "nl": "Een onveranderlijk object is het basiselement van iedere Linked Data Event Stream en wordt beschreven a.d.h.v. RDF triples. "
       },
       "equivalent": [],
       "parents": [
@@ -133,67 +133,54 @@
   ],
   "properties": [
     {
-      "uri": "https://data.vlaanderen.be/ns/ldes#^lid",
-      "name": "lid",
-      "label": {
-        "nl": "lid"
-      },
-      "sort": "lid",
-      "description": {
-        "nl": "Een lid maakt deel uit van de collectie."
-      },
-      "usage": {},
-      "domain": [
-        "https://data.vlaanderen.be/ns/ldes#VersieMaterialisatie"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/ldes#VeranderlijkObject"
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/ldes#eventstreamView",
+      "uri": "https://data.vlaanderen.be/ns/ldes#view",
       "name": "",
       "label": {},
       "sort": "",
       "description": {},
       "usage": {},
       "domain": [
+        "https://w3id.org/tree#view"
+      ],
+      "range": [
         "https://data.vlaanderen.be/ns/ldes#RootNode"
       ],
-      "range": [
-        "https://w3id.org/tree#view"
-      ],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/ldes#retentiebeleid",
-      "name": "retentiebeleid",
+      "uri": "https://data.vlaanderen.be/ns/ldes#versiematerialisatieVan",
+      "name": "versieMaterialisatieVan",
       "label": {
-        "nl": "retentiebeleid"
+        "nl": "versieMaterialisatieVan"
       },
-      "sort": "retentiebeleid",
-      "description": {},
+      "sort": "versieMaterialisatieVan",
+      "description": {
+        "nl": "Verwijst naar de originele Linked Data Event Stream."
+      },
       "usage": {},
       "domain": [
-        "https://w3id.org/tree#view"
+        "https://data.vlaanderen.be/ns/ldes#VersieMaterialisatie"
       ],
       "range": [
-        "https://w3id.org/ldes#retentionPolicy"
+        "https://data.vlaanderen.be/ns/ldes#Snapshot"
       ],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/ldes#snapshotTot",
+      "uri": "https://data.vlaanderen.be/ns/ldes#versieMaterialisatieTot",
       "name": "versieMaterialisatieTot",
       "label": {
         "nl": "versieMaterialisatieTot"
       },
       "sort": "versieMaterialisatieTot",
-      "description": {},
-      "usage": {},
+      "description": {
+        "nl": "Het tijdstip tot wanneer versies werden verwerkt."
+      },
+      "usage": {
+        "nl": "Het attribuut versieMaterialisatieTot geeft weer tot op welk moment de versies werden geaggregeerd."
+      },
       "domain": [
-        "https://data.vlaanderen.be/ns/ldes#Snapshot"
+        "https://data.vlaanderen.be/ns/ldes#VersieMaterialisatie"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -220,20 +207,16 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/ldes#versieMaterialisatieTot",
+      "uri": "https://data.vlaanderen.be/ns/ldes#snapshotTot",
       "name": "versieMaterialisatieTot",
       "label": {
         "nl": "versieMaterialisatieTot"
       },
       "sort": "versieMaterialisatieTot",
-      "description": {
-        "nl": "Het tijdstip tot wanneer versies werden verwerkt."
-      },
-      "usage": {
-        "nl": "Het attribuut versieMaterialisatieTot geeft weer tot op welk moment de versies werden geaggregeerd."
-      },
+      "description": {},
+      "usage": {},
       "domain": [
-        "https://data.vlaanderen.be/ns/ldes#VersieMaterialisatie"
+        "https://data.vlaanderen.be/ns/ldes#Snapshot"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -241,36 +224,53 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/ldes#versiematerialisatieVan",
-      "name": "versieMaterialisatieVan",
+      "uri": "https://data.vlaanderen.be/ns/ldes#retentiebeleid",
+      "name": "retentiebeleid",
       "label": {
-        "nl": "versieMaterialisatieVan"
+        "nl": "retentiebeleid"
       },
-      "sort": "versieMaterialisatieVan",
-      "description": {
-        "nl": "Verwijst naar de originele Linked Data Event Stream."
-      },
+      "sort": "retentiebeleid",
+      "description": {},
       "usage": {},
       "domain": [
-        "https://data.vlaanderen.be/ns/ldes#VersieMaterialisatie"
+        "https://w3id.org/tree#view"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/ldes#Snapshot"
+        "https://w3id.org/ldes#retentionPolicy"
       ],
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/ldes#eventstreamView",
+      "uri": "https://data.vlaanderen.be/ns/ldes#view",
       "name": "",
       "label": {},
       "sort": "",
       "description": {},
       "usage": {},
       "domain": [
-        "https://data.vlaanderen.be/ns/ldes#RootNode"
+        "https://w3id.org/tree#view"
       ],
       "range": [
-        "https://w3id.org/tree#view"
+        "https://data.vlaanderen.be/ns/ldes#RootNode"
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/ldes#^lid",
+      "name": "lid",
+      "label": {
+        "nl": "lid"
+      },
+      "sort": "lid",
+      "description": {
+        "nl": "Een lid maakt deel uit van de collectie."
+      },
+      "usage": {},
+      "domain": [
+        "https://data.vlaanderen.be/ns/ldes#VersieMaterialisatie"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/ldes#VeranderlijkObject"
       ],
       "parents": []
     }
@@ -323,18 +323,52 @@
       "show": true
     },
     {
-      "uri": "https://w3id.org/ldes#timestampPath",
-      "name": "timestampPath",
+      "uri": "https://w3id.org/tree#shape",
+      "name": "shape",
       "label": {
-        "nl": "timestampPath"
+        "nl": "shape"
       },
       "description": {
-        "nl": "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tijdstip."
+        "nl": "Een bepaalde shape, gedefinieerd door een URi, aan welke alle elementen in de event stream moeten voldoen."
       },
       "usage": {
-        "nl": "Bijvoorbeeld een SHACL property path aan het tijdstip wanneer het versieobject is toegevoegd aan de Linked Date Event Stream."
+        "nl": "Een shape wordt opgelegd aan alle elementen van de LDES. Voorbeelden van zo'n shape zijn SHACL en ShEx."
       },
-      "sort": "timestampPath",
+      "sort": "shape",
+      "inscope": true,
+      "indvl": false,
+      "inpackage": false,
+      "show": true
+    },
+    {
+      "uri": "https://w3id.org/tree#shape",
+      "name": "shape",
+      "label": {
+        "nl": "shape"
+      },
+      "description": {
+        "nl": "Een bepaalde shape, gedefinieerd door een URi, aan welke alle elementen in de event stream moeten voldoen."
+      },
+      "usage": {
+        "nl": "Een shape wordt opgelegd aan alle elementen van de LDES. Voorbeelden van zo'n shape zijn SHACL en ShEx."
+      },
+      "sort": "shape",
+      "inscope": true,
+      "indvl": false,
+      "inpackage": false,
+      "show": true
+    },
+    {
+      "uri": "https://w3id.org/tree#member",
+      "name": "^lid",
+      "label": {
+        "nl": "^lid"
+      },
+      "description": {
+        "nl": "Een lid maakt deel uit van de collectie."
+      },
+      "usage": {},
+      "sort": "^lid",
       "inscope": true,
       "indvl": false,
       "inpackage": false,
@@ -359,52 +393,18 @@
       "show": true
     },
     {
-      "uri": "https://w3id.org/tree#member",
-      "name": "^lid",
+      "uri": "https://w3id.org/ldes#timestampPath",
+      "name": "timestampPath",
       "label": {
-        "nl": "^lid"
+        "nl": "timestampPath"
       },
       "description": {
-        "nl": "Een lid maakt deel uit van de collectie."
-      },
-      "usage": {},
-      "sort": "^lid",
-      "inscope": true,
-      "indvl": false,
-      "inpackage": false,
-      "show": true
-    },
-    {
-      "uri": "https://w3id.org/tree#shape",
-      "name": "shape",
-      "label": {
-        "nl": "shape"
-      },
-      "description": {
-        "nl": "Een bepaalde shape, gedefinieerd door een URi, aan welke alle elementen in de event stream moeten voldoen."
+        "nl": "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tijdstip."
       },
       "usage": {
-        "nl": "Een shape wordt opgelegd aan alle elementen van de LDES. Voorbeelden van zo'n shape zijn SHACL en ShEx."
+        "nl": "Bijvoorbeeld een SHACL property path aan het tijdstip wanneer het versieobject is toegevoegd aan de Linked Date Event Stream."
       },
-      "sort": "shape",
-      "inscope": true,
-      "indvl": false,
-      "inpackage": false,
-      "show": true
-    },
-    {
-      "uri": "https://w3id.org/tree#shape",
-      "name": "shape",
-      "label": {
-        "nl": "shape"
-      },
-      "description": {
-        "nl": "Een bepaalde shape, gedefinieerd door een URi, aan welke alle elementen in de event stream moeten voldoen."
-      },
-      "usage": {
-        "nl": "Een shape wordt opgelegd aan alle elementen van de LDES. Voorbeelden van zo'n shape zijn SHACL en ShEx."
-      },
-      "sort": "shape",
+      "sort": "timestampPath",
       "inscope": true,
       "indvl": false,
       "inpackage": false,
