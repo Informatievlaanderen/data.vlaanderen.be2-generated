@@ -1,6 +1,7 @@
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -16,7 +17,6 @@
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#OrganisatievormTypeShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#PrijsCategorieTypeShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#UitvoerderRolTypeShape>,
-    <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#OrganisatieShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#DeelnameShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#InfrastructuurShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#ObjectShape>,
@@ -44,6 +44,7 @@
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#BetaaltermijnTypeShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#LabelTypeShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#ThemaTypeShape>,
+    <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#OrganisatieShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#PersoonShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#GeregistreerdeOrganisatieShape>,
     <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#DocumentShape>,
@@ -81,7 +82,7 @@
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#alternatieveNaam>
   ], [
     shacl:class <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
-    shacl:description "TODO"@nl;
+    shacl:description "Aanbieder die de Activiteit aanbiedt."@nl;
     shacl:name "biedt aan"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#biedtAan>
   ], [
@@ -126,9 +127,9 @@
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#superaanbieder>
   ], [
     shacl:class skos:Concept;
-    shacl:description "TODO"@nl;
+    shacl:description "Waar de Activiteit inhoudelijk over gaat."@nl;
     shacl:name "themaActiviteit"@nl;
-    shacl:path <http://fixme.com>
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#themaActiviteit>
   ], [
     shacl:description "Indiceert het type van de Aanbieder"@nl;
     shacl:name "type"@nl;
@@ -234,8 +235,6 @@
     shacl:path crm:P32_used_general_technique
   ], [
     shacl:description "Identificator dat de Activiteit verkreeg bij registratie."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "identificator"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#identificator>
   ], [
@@ -712,7 +711,8 @@
     shacl:maxCount 1;
     shacl:name "voorkeursnaam"@nl;
     shacl:path skos:prefLabel
-  ] .
+  ];
+  shacl:targetClass org:Organization .
 
 <https://data.test-vlaanderen.be/shacl/DoelgerichtDigitaalTransformeren-ap-SHACL_nl#OrganisatievormTypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -960,9 +960,9 @@
     shacl:name "samenwerkingStart"@nl;
     shacl:path xsd:dateTime
   ], [
-    shacl:description "Het eindpunt in tijd van de Samenwerking."@nl;
+    shacl:description "Het type Samenwerking tussen de Aanbieders."@nl;
     shacl:name "samenwerkingType"@nl;
-    shacl:path xsd:dateTime
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#samenwerkingType>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#samenwerking> .
 
