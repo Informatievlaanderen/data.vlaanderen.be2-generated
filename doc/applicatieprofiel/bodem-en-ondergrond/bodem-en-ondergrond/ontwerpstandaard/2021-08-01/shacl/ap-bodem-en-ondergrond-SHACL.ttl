@@ -1,3 +1,4 @@
+@prefix dc: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -17,8 +18,6 @@
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#InterpretatieShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#LaagShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#MaaiveldShape>,
-    <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#MaaiveldtypeShape>,
-    <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#MateriaalklasseShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#MeetreeksShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#MeetreeksresultaatShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#MeetreekswaardeShape>,
@@ -32,6 +31,7 @@
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#HerkomstShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#CurveWaardepaarShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#GeometrieWaardepaarShape>,
+    <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#DomeinobjectShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#ProfielShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#ObjectShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#BenoemdeWaardeShape>,
@@ -44,11 +44,15 @@
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#VlakShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#3DobjectShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#PuntShape>,
+    <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#MaaiveldtypeShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#BemonsteringsobjecttypeShape>,
+    <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#MateriaalklasseShape>,
+    <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#ErkenningtypeShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#IdentificatorShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#GeometrieShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#LocatieShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#DirectePositieShape>,
+    <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#OpmetingShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#StandaardEenheidShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#GetalShape>,
     <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#KwantitatieveWaardeShape>,
@@ -215,7 +219,6 @@
     shacl:name "gml"@nl;
     shacl:path <https://data.vlaanderen.be/ns/generiek#gml>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/generiek#Opmeting>;
     shacl:description "De manier waarop het punt werd bepaald."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -230,10 +233,20 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/generiek#DirectePositie> .
 
+<https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#DomeinobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "TODO"@nl;
+    shacl:name "ruimtelijkeSamenstelling"@nl;
+    shacl:path <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject.spatialElement>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject> .
+
 <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#ErkenningShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Erkenningtype>;
+    shacl:class skos:Concept;
     shacl:description "Het soort activiteit dat mag worden uitgevoerd;"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -241,6 +254,10 @@
     shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#type>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Erkenning> .
+
+<https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#ErkenningtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
 
 <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#FractiemetingShape> a shacl:NodeShape;
   shacl:closed false;
@@ -252,7 +269,7 @@
     shacl:name "fractiemetingresultaat"@nl;
     shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting.fractiemetingresultaat>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#KenmerkType>;
+    shacl:class <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>;
     shacl:description "Het geobserveerdKenmerk."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -414,7 +431,7 @@
     shacl:name "hoogte"@nl;
     shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#hoogte>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveldtype>;
+    shacl:class skos:Concept;
     shacl:description "Het type van maaiveld."@nl;
     shacl:maxCount 1;
     shacl:name "type"@nl;
@@ -424,16 +441,16 @@
 
 <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#MaaiveldtypeShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveldtype> .
+  shacl:targetClass skos:Concept .
 
 <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#MateriaalklasseShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Materiaalklasse> .
+  shacl:targetClass skos:Concept .
 
 <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#MeetreeksShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#KenmerkType>;
+    shacl:class <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>;
     shacl:description "Het kenmerk in functie waarvan het geobserveerdKenmerk verandert."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -447,7 +464,7 @@
     shacl:name "meetreeksresultaat"@nl;
     shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetreeksresultaat>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#KenmerkType>;
+    shacl:class <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>;
     shacl:description "Het geobserveerdKenmerk."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -498,6 +515,25 @@
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht> .
 
+<https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#OpmetingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/generiek#Opmetingmethode>;
+    shacl:description "Aard van de gebruikte methode."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "methode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.methode>
+  ], [
+    shacl:class dc:Agent;
+    shacl:description "Agent die de Opmeting heeft uitgevoerd."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "uitgevoerdDoor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Opmeting> .
+
 <https://data.test-vlaanderen.be/shacl/ap-bodem-en-ondergrond-SHACL_nl#PositioneleNauwkeurigheidShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy> .
@@ -514,7 +550,7 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "geometrie"@nl;
-    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingCurve.shape>
   ];
   shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Profile> .
 
