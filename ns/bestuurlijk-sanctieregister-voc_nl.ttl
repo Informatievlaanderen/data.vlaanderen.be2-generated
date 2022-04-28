@@ -1,0 +1,348 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.europa.eu/eli/ontology#LegalResourceSubdivision> a rdfs:Class;
+  rdfs:label "Rechtsbrononderdeel"@nl .
+
+skos:Concept a rdfs:Class;
+  rdfs:label "Bestuurlijk Sepot Type"@nl,
+    "Gepleegd Feit Type"@nl,
+    "Uitsluiting Type"@nl,
+    "Verbeurdverklaring Type"@nl,
+    "Alternatieve Sanctie Type"@nl,
+    "Beslissing Beboetingsinstantie Resultaat"@nl,
+    "Onmiddellijke Inning Status"@nl,
+    "Betaling Status"@nl .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingTotBestuurlijkOpsporingsonderzoek> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingVervolgingsinstantie> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingTotBestuurlijkSepot> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingVervolgingsinstantie> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#UitsluitingVanSteun> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bestuurlijke-sancties#AanvullendeSanctie> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#bedrag> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#OnmiddellijkeInning>,
+    <https://data.vlaanderen.be/ns/bestuurlijke-sancties#Verbeurdverklaring>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#betalingsstatus> a owl:ObjectProperty;
+  rdfs:domain rdfs:Resource;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#betrokkene> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#GepleegdFeit>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon>,
+    <http://www.w3.org/ns/regorg#RegisteredOrganization> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#boete> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeGeldboete>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#datumBetaling> a owl:DatatypeProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeGeldboete>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range xsd:date;
+  rdfs:subPropertyOf dc:date .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#geldsom> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#VervalSanctiemogelijkheidDoorBetalingGeldsom>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#genomenDoor> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeBeslissing>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range <http://www.w3.org/ns/regorg#RegisteredOrganization> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#gerelateerd> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#GepleegdFeit>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bestuurlijke-sancties#GepleegdFeit> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#legtOp> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingBeboetingsinstantie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeSanctie> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#locatie> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#GepleegdFeit>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range prov:Location .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#opgenomenIn> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeSanctie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingBeboetingsinstantie> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#opschorting> a owl:DatatypeProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingBeboetingsinstantie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range xsd:boolean .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#opschortingProefperiode> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingBeboetingsinstantie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#overtreedt> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#GepleegdFeit>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range <http://data.europa.eu/eli/ontology#LegalResourceSubdivision> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#periode> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#GepleegdFeit>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#rechtsbron> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeSanctie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range <http://data.europa.eu/eli/ontology#LegalResourceSubdivision> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#sanctie> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingTotAlternatieveProcedure>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bestuurlijke-sancties#AlternatieveSanctie> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#uitstel> a owl:DatatypeProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeSanctie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range xsd:boolean .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#uitstelperiode> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeSanctie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#verbalisant> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/bestuurlijke-sancties#GepleegdFeit>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:range <http://www.w3.org/ns/regorg#RegisteredOrganization> .
+
+dc:description a rdf:Property;
+  rdfs:label "omschrijving"@nl,
+    "beschrijving"@nl .
+
+dc:requires a rdf:Property;
+  rdfs:label "vereist"@nl .
+
+dc:type a rdf:Property;
+  rdfs:label "type"@nl .
+
+prov:generated a rdf:Property;
+  rdfs:label "leidt tot"@nl .
+
+prov:wasGeneratedBy a rdf:Property;
+  rdfs:label "gevolg van"@nl .
+
+<https://data.vlaanderen.be/ns/besluitvorming#resultaat> a rdf:Property;
+  rdfs:label "resultaat"@nl .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#AlternatieveSanctie> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeSanctie> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingToezichthouder> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeBeslissing> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingTotAlternatieveProcedure> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingTotBestuurlijkeVervolging> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingTotBestuurlijkeVervolging> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingVervolgingsinstantie> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#Hoofdsanctie> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeSanctie> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#OnmiddellijkeInning> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingToezichthouder> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#Verbeurdverklaring> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bestuurlijke-sancties#AanvullendeSanctie> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#VervalSanctiemogelijkheidDoorBetalingGeldsom> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Ook gekend onder de termen \"voorstel tot betaling van een geldsom\" en \"bestuurlijke transactie\"."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties> .
+
+schemas:about a rdf:Property;
+  rdfs:label "over"@nl .
+
+dc:date a rdf:Property;
+  rdfs:label "datum betaling"@nl,
+    "datum"@nl .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#AanvullendeSanctie> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeSanctie> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeGeldboete> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bestuurlijke-sancties#Hoofdsanctie> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingVervolgingsinstantie> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeBeslissing> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingBeboetingsinstantie> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeBeslissing> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeBeslissing> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#GepleegdFeit> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeSanctie> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bestuurlijke-sancties> .
+
+<https://data.vlaanderen.be/ns/bestuurlijke-sancties> a owl:Ontology;
+  rdfs:label "bestuurlijk-sanctieregister-voc"@en,
+    "bestuurlijk-sanctieregister-voc"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Departement Werk en Sociale Economie"];
+    foaf:firstName "Koen";
+    foaf:lastName "van Osselaer"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Departement Omgeving"];
+    foaf:firstName "Dries";
+    foaf:lastName "Wouters"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Openbaar Ministerie Gent"];
+    foaf:firstName "Frederic";
+    foaf:lastName "Vroman"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "VVSG"];
+    foaf:firstName "Steven";
+    foaf:lastName "Verbanck"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Agentschap Wegen en Verkeer"];
+    foaf:firstName "Veerle";
+    foaf:lastName "Vanempten"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Agentschap Wonen Vlaanderen"];
+    foaf:firstName "Kristiaan";
+    foaf:lastName "Vanderbiesen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Openbaar Ministerie Antwerpen"];
+    foaf:firstName "Patrick";
+    foaf:lastName "Vandenbruwaene"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Federale Politie Limburg"];
+    foaf:firstName "Matthias";
+    foaf:lastName "Vandenberk"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Departement Omgeving"];
+    foaf:firstName "Els";
+    foaf:lastName "Vanautryve"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Lokale Politie Antwerpen"];
+    foaf:firstName "Jozef";
+    foaf:lastName "Rayen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Agentschap Binnenlands Bestuur"];
+    foaf:firstName "Filip";
+    foaf:lastName "Delos"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Stad Genk"];
+    foaf:firstName "Hugo";
+    foaf:lastName "De Cuyper"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Openbaar Ministerie Gent"];
+    foaf:firstName "Jan";
+    foaf:lastName "De Clercq"
+  ];
+  dc:issued "2020-08-19";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso <http://data.europa.eu/eli/ontology#LegalResourceSubdivision>,
+    skos:Concept,
+    schemas:about,
+    <https://data.vlaanderen.be/ns/besluitvorming#resultaat>,
+    prov:wasGeneratedBy,
+    prov:generated,
+    dc:type,
+    dc:requires,
+    dc:description,
+    dc:date;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [foaf:name "PwC"];
+    foaf:firstName "Laurens";
+    foaf:lastName "Vercauteren";
+    foaf:mbox <mailto:laurens.vercauteren@pwc.com>
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Informatie Vlaanderen"];
+    foaf:firstName "Vincent";
+    foaf:lastName "Van Elsué";
+    foaf:mbox <mailto:vincent.vanelsue@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Informatie Vlaanderen"];
+    foaf:firstName "An";
+    foaf:lastName "Taelemans";
+    foaf:mbox <mailto:an.taelemans@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "PwC"];
+    foaf:firstName "Dimitri";
+    foaf:lastName "Schepers";
+    foaf:mbox <mailto:dimitri.schepers@pwc.com>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Departement Kanselarij en Bestuur"];
+    foaf:firstName "Paul";
+    foaf:lastName "Vansant";
+    foaf:mbox <mailto:paul.vansant@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Departement Kanselarij en Bestuur"];
+    foaf:firstName "Hubert";
+    foaf:lastName "Bloemen";
+    foaf:mbox <mailto:hubert.bloemen@vlaanderen.be>
+  ] .
