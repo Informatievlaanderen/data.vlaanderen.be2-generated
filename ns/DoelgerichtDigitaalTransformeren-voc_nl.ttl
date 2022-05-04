@@ -2,23 +2,13 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix schemas: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<http://fixme.com> a rdfs:Class,
-    rdf:Property;
-  rdfs:label "Deelname"@nl,
-    "Object"@nl,
-    "Vereniging"@nl,
-    "Beschikbaarheid"@nl,
-    "infrastructuur"@nl,
-    "prijs"@nl,
-    "object"@nl,
-    "deelnameType"@nl .
 
 skos:Concept a rdfs:Class;
   rdfs:label "Onderwijsniveau"@nl,
@@ -37,109 +27,453 @@ skos:Concept a rdfs:Class;
     "DisciplineType"@nl,
     "DeelnameType"@nl,
     "ActiviteitStatus"@nl,
+    "UitvoerderRolType"@nl,
     "BetaaltermijnType"@nl,
+    "LocatieType"@nl,
+    "FeedbackBron"@nl,
     "LabelType"@nl,
+    "PrijsCategorieType"@nl,
+    "OrganisatievormType"@nl,
     "ThemaType"@nl .
 
-<https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7> a rdfs:Class;
-  rdfs:label "Activiteit"@nl .
-
-<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning> a rdfs:Class,
+<https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7> a rdfs:Class,
     rdf:Property;
-  rdfs:label "Erkenning"@nl,
-    "erkenning"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder> a rdfs:Class;
-  rdfs:label "Aanbieder"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantkenmerk> a rdfs:Class;
-  rdfs:label "AlgemeenParticipantkenmerk"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Boekinginfo> a rdfs:Class;
-  rdfs:label "Boekinginfo"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering> a rdfs:Class;
-  rdfs:label "Uitvoering"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#berichtgeving> a rdfs:Class,
-    rdf:Property;
-  rdfs:label "Berichtgeving"@nl,
-    "berichtgeving"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#cultuurdeelname> a rdfs:Class,
-    rdf:Property;
-  rdfs:label "Cultuurdeelname"@nl,
-    "cultureel"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#feedback> a rdfs:Class;
-  rdfs:label "Feedback"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#feedbackcontent> a rdfs:Class;
-  rdfs:label "FeedbackContent"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#kanaal> a rdfs:Class;
-  rdfs:label "Kanaal"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#participant> a rdfs:Class;
-  rdfs:label "Participant"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#participantprofiel> a rdfs:Class;
-  rdfs:label "ParticipantProfiel"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#promotie> a rdfs:Class;
-  rdfs:label "Promotie"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#samenwerking> a rdfs:Class;
-  rdfs:label "Samenwerking"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#sociodemografischkenmerk> a rdfs:Class;
-  rdfs:label "SociodemografischKenmerk"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#subsidie> a rdfs:Class,
-    rdf:Property;
-  rdfs:label "Subsidie"@nl,
-    "subsidie"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#ticket> a rdfs:Class,
-    rdf:Property;
-  rdfs:label "Ticket"@nl,
-    "ticket"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#transactie> a rdfs:Class,
-    rdf:Property;
-  rdfs:label "Transactie"@nl,
-    "transactie"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#uitvoerder> a rdfs:Class,
-    rdf:Property;
-  rdfs:label "Uitvoerder"@nl,
-    "uitvoerder"@nl .
+  rdfs:label "Activiteit"@nl,
+    "activiteit"@nl .
 
 schemas:PriceSpecification a rdfs:Class;
   rdfs:label "Informatie rond de prijssetting van de activiteit."@nl .
 
-<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ActiviteitFunctietype> a owl:Class;
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder.naam> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range rdf:langString .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder.organisatievorm> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder.subaanbieder> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder.subsidie> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <http://data.vlaanderen.be/ns/subsidie#SubsidiemaatregelConsumptie> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder.superaanbieder> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder.voertUit> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Promotie> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder.werktSamenMet> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.aangebodenDoor> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.berichtgeving> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Berichtgeving> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.beschikbaarheid> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Beschikbaarheid> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.beschrijving> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range rdf:langString .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.biedtAan> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.boeking> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Boekinginfo> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.deelnemer> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.discipline> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.documentatie> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range foaf:Document .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.doelgroep> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.duur> a owl:DatatypeProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range xsd:duration .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.functie> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ActiviteitFunctietype> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.isGepromoot> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Promotie> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.naam> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range rdf:langString .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.prijs> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range schemas:PriceSpecification .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.recurrerend> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range schemas:Schedule .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.status> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.subactiviteit> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.subsidie> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <http://data.vlaanderen.be/ns/subsidie#SubsidiemaatregelConsumptie> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.superactiviteit> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.taal> a owl:DatatypeProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range rdfs:Literal .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.thema> a rdf:Property;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
 
-<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#FeedbackBron> a owl:Class;
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.typeActiviteit> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Activiteit.uitvoerder> a owl:ObjectProperty;
+  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#AlgemeenParticipantkenmerk.isDeelVan> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#AlgemeenParticipantKenmerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Cultuurdeelname.deelVan> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Cultuurdeelname>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Cultuurdeelname.themaActiviteit> a rdf:Property;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Cultuurdeelname>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
 
-<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#LocatieType> a owl:Class;
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Cultuurdeelname.typeActiviteit> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Cultuurdeelname>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Deelname.inputVoor> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Deelname>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Deelname.transactie> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Deelname>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Transactie> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Feedback.bron> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Feedback>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Feedback.content> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Feedback>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <http://fixme.com> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Feedback.feedbackOpDeelname> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Deelname>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Feedback> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Feedback.vanDeelname> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Feedback>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Deelname> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#FeedbackContent> a owl:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
 
-<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#OrganisatievormType> a owl:Class;
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Kanaal.medium> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Kanaal>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Kanaal.naam> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Kanaal>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range rdf:langString .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant.heeftPersoonlijkProfiel> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant.heeftProfiel> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant.heeftRelatieMet> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant.neemtDeelAan> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant.onderwijsniveau> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel.afgeleidVan> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Deelname> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel.algemeenKenmerk> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#AlgemeenParticipantKenmerk> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel.cultureel> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Cultuurdeelname> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel.persoonlijkProfielVan> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel.profielVan> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel.sociodemografisch> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#SociodemografischKenmerk> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Prijsinfo.prijscategorie> a owl:ObjectProperty;
+  rdfs:domain schemas:PriceSpecification;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Promotie.activiteit> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Promotie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Promotie.doelParticipant> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Promotie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Promotie.doelProfiel> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Promotie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Promotie.uitgevoerdDoor> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Promotie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Promotie.viaKanaal> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Promotie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Kanaal> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Samenwerking> a owl:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
 
-<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#PrijsCategorieType> a owl:Class;
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#SociodemografischKenmerk.deelVan> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#SociodemografischKenmerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#SociodemografischKenmerk.inkomensniveau> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#SociodemografischKenmerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#SociodemografischKenmerk.onderwijsniveau> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#SociodemografischKenmerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Ticket.transactie> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Ticket>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Transactie> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Transactie.aangekochtDoor> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Transactie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range dc:Agent .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Transactie.betaaltermijn> a rdf:Property;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Transactie>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
 
-<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#UitvoerderRolType> a owl:Class;
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Transactie.geeftRechtOp> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Transactie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Deelname> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Transactie.prijs> a rdf:Property;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Transactie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Transactie.ticket> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Transactie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Ticket> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder.alternatieveNaam> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder>,
+    <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range rdf:langString .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder.erkenning> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder.naam> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range rdf:langString .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder.rol> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder.subsidie> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#subsidie> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder.themaActiviteit> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder.vermeldAls> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range rdf:langString .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder.voertUitActiviteit> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoering.rol> a owl:DatatypeProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoering.rang>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#identificator> a rdf:Property;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#rol> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoering.rang>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#subuitvoerder> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#superuitvoerder> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#themaActiviteit> a rdf:Property;
+  rdfs:domain <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
 
 <http://data.europa.eu/m8g/PeriodOfTime> a rdf:Property;
   rdfs:label "tijdstip"@nl,
-    "beschikbaar"@nl,
-    "geldigheid"@nl .
+    "geldigheid"@nl,
+    "beschikbaar"@nl .
+
+dc:type a rdf:Property;
+  rdfs:label "typeActiviteit"@nl,
+    "type"@nl,
+    "transactietype"@nl,
+    "tickettype"@nl,
+    "samenwerkingType"@nl,
+    "locatieType"@nl,
+    "labeltype"@nl,
+    "deelnameType"@nl .
 
 schema:contactPoint a rdf:Property;
   rdfs:label "contactinfo"@nl .
@@ -147,265 +481,26 @@ schema:contactPoint a rdf:Property;
 crm:P32_used_general_technique a rdf:Property;
   rdfs:label "gebruikteTechniek"@nl .
 
+rdfs:label a rdf:Property;
+  rdfs:label "label"@nl .
+
 xsd:dateTime a rdf:Property;
   rdfs:label "samenwerkingStart"@nl .
 
-foaf:Document a rdf:Property;
-  rdfs:label "documentatie"@nl .
+prov:Entity a rdf:Property;
+  rdfs:label "object"@nl .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitNaam> a rdf:Property;
-  rdfs:label "naam"@nl .
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ActiviteitFunctietype> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitStatus> a rdf:Property;
-  rdfs:label "status"@nl .
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Berichtgeving> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitTaal> a rdf:Property;
-  rdfs:label "taal"@nl .
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Beschikbaarheid> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitThema> a rdf:Property;
-  rdfs:label "thema"@nl,
-    "themaActiviteit"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitType> a rdf:Property;
-  rdfs:label "type"@nl,
-    "typeActiviteit"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantkenmerkType> a rdf:Property;
-  rdfs:label "type"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#aangebodenDoor> a rdf:Property;
-  rdfs:label "aangeboden door"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#aangekochtdoor> a rdf:Property;
-  rdfs:label "aangekocht door"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#activiteitpromotie> a rdf:Property;
-  rdfs:label "activiteit"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#afgeleidvan> a rdf:Property;
-  rdfs:label "afgeleid van"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#algemeenkenmerk> a rdf:Property;
-  rdfs:label "algemeen kenmerk"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#alternatieveNaam> a rdf:Property;
-  rdfs:label "alternatieveNaam"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#alternatievenaam> a rdf:Property;
-  rdfs:label "alternatieve naam"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#beschikbaarheid> a rdf:Property;
-  rdfs:label "beschikbaarheid"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#beschrijving> a rdf:Property;
-  rdfs:label "beschrijving"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#betaaltermijn> a rdf:Property;
-  rdfs:label "betaaltermijn"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#biedtAan> a rdf:Property;
-  rdfs:label "biedt aan"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#boeking> a rdf:Property;
-  rdfs:label "boeking"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#bron> a rdf:Property;
-  rdfs:label "bron"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#contactinfo> a rdf:Property;
-  rdfs:label "contactinfo"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#content> a rdf:Property;
-  rdfs:label "content"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#deelnemer> a rdf:Property;
-  rdfs:label "deelnemer"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#deelvan> a rdf:Property;
-  rdfs:label "deel van"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#discipline> a rdf:Property;
-  rdfs:label "discipline"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#documentatie> a rdf:Property;
-  rdfs:label "documentatie"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#doelgroep> a rdf:Property;
-  rdfs:label "doelgroep"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#doelparticipant> a rdf:Property;
-  rdfs:label "doel participant"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#doelprofiel> a rdf:Property;
-  rdfs:label "doel profiel"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#duur> a rdf:Property;
-  rdfs:label "duur"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#feedbackopdeelname> a rdf:Property;
-  rdfs:label "feedback op deelname"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#functie> a rdf:Property;
-  rdfs:label "functie"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#geefrechtop> a rdf:Property;
-  rdfs:label "geeft recht op"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#heeftpersoonlijkprofiel> a rdf:Property;
-  rdfs:label "heeft persoonlijk profiel"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#heeftprofiel> a rdf:Property;
-  rdfs:label "heeft profiel"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#heeftrelatiemet> a rdf:Property;
-  rdfs:label "heeft relatie met"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#identificator> a rdf:Property;
-  rdfs:label "identificator"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#inkomensniveau> a rdf:Property;
-  rdfs:label "inkomensniveau"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#inputvoor> a rdf:Property;
-  rdfs:label "input voor"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#isDeelVan> a rdf:Property;
-  rdfs:label "is deel van"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#isGepromoot> a rdf:Property;
-  rdfs:label "is gepromoot"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#label> a rdf:Property;
-  rdfs:label "label"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#labeltype> a rdf:Property;
-  rdfs:label "labeltype"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#locatietype> a rdf:Property;
-  rdfs:label "locatieType"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#medium> a rdf:Property;
-  rdfs:label "medium"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#naam> a rdf:Property;
-  rdfs:label "naam"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#naampromotie> a rdf:Property;
-  rdfs:label "naam"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#naamsubsidie> a rdf:Property;
-  rdfs:label "subsidie"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#naamuitvoerder> a rdf:Property;
-  rdfs:label "naam"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#neemtdeelaan> a rdf:Property;
-  rdfs:label "neemt deel aan"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#onderwijsniveau> a rdf:Property;
-  rdfs:label "onderwijsniveau"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#organisatievorm> a rdf:Property;
-  rdfs:label "organisatievorm"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#persoonlijkprofielvan> a rdf:Property;
-  rdfs:label "persoonlijk profiel van"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#prijs> a rdf:Property;
-  rdfs:label "prijs"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#prijscategorie> a rdf:Property;
-  rdfs:label "prijsCategorie"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#profielvan> a rdf:Property;
-  rdfs:label "profiel van"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#promotietype> a rdf:Property;
-  rdfs:label "type"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#rang> a rdf:Property;
-  rdfs:label "rang"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#recurrerend> a rdf:Property;
-  rdfs:label "recurrerend"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#rol> a rdf:Property;
-  rdfs:label "rol"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#roluitvoerder> a rdf:Property;
-  rdfs:label "rol"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#samenwerkingType> a rdf:Property;
-  rdfs:label "samenwerkingType"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#samenwerkingactiviteit> a rdf:Property;
-  rdfs:label "activiteit"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#sociodemografisch> a rdf:Property;
-  rdfs:label "sociodemografisch"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#subaanbieder> a rdf:Property;
-  rdfs:label "subaanbieder"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#subactiviteit> a rdf:Property;
-  rdfs:label "subactiviteit"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#subuitvoerder> a rdf:Property;
-  rdfs:label "subuitvoerder"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#superaanbieder> a rdf:Property;
-  rdfs:label "superaanbieder"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#superactiviteit> a rdf:Property;
-  rdfs:label "superactiviteit"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#superuitvoerder> a rdf:Property;
-  rdfs:label "superuitvoerder"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#themaActiviteit> a rdf:Property;
-  rdfs:label "themaActiviteit"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#tickettype> a rdf:Property;
-  rdfs:label "tickettype"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#transactieticket> a rdf:Property;
-  rdfs:label "transactie"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#transactietype> a rdf:Property;
-  rdfs:label "transactietype"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#type> a rdf:Property;
-  rdfs:label "type"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#typeactiviteit> a rdf:Property;
-  rdfs:label "typeActiviteit"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#typefeedback> a rdf:Property;
-  rdfs:label "type"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#typeobject> a rdf:Property;
-  rdfs:label "type"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#uitgevoerddoor> a rdf:Property;
-  rdfs:label "uitgevoerd door"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#vandeelname> a rdf:Property;
-  rdfs:label "van deelname"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#vermeldAls> a rdf:Property;
-  rdfs:label "vermeldAls"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#viakanaal> a rdf:Property;
-  rdfs:label "via kanaal"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#voertUit> a rdf:Property;
-  rdfs:label "voert uit"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#voertUitActiviteit> a rdf:Property;
-  rdfs:label "voert uit"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#werktSamenMet> a rdf:Property;
-  rdfs:label "werkt samen met"@nl .
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Boekinginfo> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
 
 schemas:QuantitativeValue a rdf:Property;
   rdfs:label "frequentie"@nl .
@@ -427,11 +522,69 @@ schemas:valueAddedTaxIncluded a rdf:Property;
   rdfs:label "consent"@nl .
 
 <https://www.w3.org/2001/XMLSchema#dateTime> a rdf:Property;
-  rdfs:label "tijd"@nl,
-    "tijdstip"@nl .
+  rdfs:label "tijdstip"@nl,
+    "tijd"@nl .
+
+<https://www.w3.org/ns/adms#Identifier> a rdf:Property;
+  rdfs:label "identificator"@nl .
 
 <https://www.w3.org/ns/prov#Location> a rdf:Property;
   rdfs:label "locatie"@nl .
+
+<http://fixme.com> a rdf:Property;
+  rdfs:label "infrastructuur"@nl .
+
+foaf:Document a rdf:Property;
+  rdfs:label "documentatie"@nl .
+
+<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning> a rdf:Property;
+  rdfs:label "erkenning"@nl .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#AlgemeenParticipantKenmerk> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Ticket> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoering.rang> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Kanaal> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Cultuurdeelname> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Feedback> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#SociodemografischKenmerk> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Deelname> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Promotie> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Transactie> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Participant> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:subClassOf dc:Agent .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Uitvoerder> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:subClassOf dc:Agent,
+    <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#ParticipantProfiel> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> .
+
+<https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Aanbieder> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren>;
+  rdfs:subClassOf dc:Agent .
 
 <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren> a owl:Ontology;
   rdfs:label "DoelgerichtDigitaalTransformeren-voc"@en,
@@ -444,144 +597,37 @@ schemas:valueAddedTaxIncluded a rdf:Property;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso <http://fixme.com>,
-    skos:Concept,
+  rdfs:seeAlso skos:Concept,
     <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>,
-    <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantkenmerk>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#Boekinginfo>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#berichtgeving>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#cultuurdeelname>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#feedback>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#feedbackcontent>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#kanaal>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#participant>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#participantprofiel>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#promotie>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#samenwerking>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#sociodemografischkenmerk>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#subsidie>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#ticket>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#transactie>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#uitvoerder>,
     schemas:PriceSpecification,
-    <http://data.europa.eu/m8g/PeriodOfTime>,
-    schema:contactPoint,
-    crm:P32_used_general_technique,
-    xsd:dateTime,
-    foaf:Document,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitNaam>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitStatus>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitTaal>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitThema>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitType>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantkenmerkType>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#aangebodenDoor>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#aangekochtdoor>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#activiteitpromotie>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#afgeleidvan>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#algemeenkenmerk>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#alternatieveNaam>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#alternatievenaam>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#beschikbaarheid>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#beschrijving>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#betaaltermijn>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#biedtAan>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#boeking>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#bron>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#contactinfo>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#content>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#deelnemer>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#deelvan>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#discipline>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#documentatie>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#doelgroep>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#doelparticipant>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#doelprofiel>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#duur>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#feedbackopdeelname>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#functie>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#geefrechtop>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#heeftpersoonlijkprofiel>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#heeftprofiel>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#heeftrelatiemet>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#identificator>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#inkomensniveau>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#inputvoor>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#isDeelVan>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#isGepromoot>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#label>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#labeltype>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#locatietype>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#medium>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#naam>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#naampromotie>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#naamsubsidie>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#naamuitvoerder>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#neemtdeelaan>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#onderwijsniveau>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#organisatievorm>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#persoonlijkprofielvan>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#prijs>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#prijscategorie>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#profielvan>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#promotietype>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#rang>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#recurrerend>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#rol>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#roluitvoerder>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#samenwerkingType>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#samenwerkingactiviteit>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#sociodemografisch>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#subaanbieder>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#subactiviteit>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#subuitvoerder>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#superaanbieder>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#superactiviteit>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#superuitvoerder>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#themaActiviteit>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#tickettype>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#transactieticket>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#transactietype>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#type>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#typeactiviteit>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#typefeedback>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#typeobject>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#uitgevoerddoor>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#vandeelname>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#vermeldAls>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#viakanaal>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#voertUit>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#voertUitActiviteit>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#werktSamenMet>,
-    schemas:QuantitativeValue,
-    schemas:eligibleQuantity,
-    schemas:price,
-    schemas:typicalAgeRange,
-    schemas:valueAddedTaxIncluded,
-    <https://w3id.org/GConsent#Consent>,
+    <https://www.w3.org/ns/prov#Location>,
+    <https://www.w3.org/ns/adms#Identifier>,
     <https://www.w3.org/2001/XMLSchema#dateTime>,
-    <https://www.w3.org/ns/prov#Location>;
+    <https://w3id.org/GConsent#Consent>,
+    schemas:valueAddedTaxIncluded,
+    schemas:typicalAgeRange,
+    schemas:price,
+    schemas:eligibleQuantity,
+    schemas:QuantitativeValue,
+    <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning>,
+    foaf:Document,
+    prov:Entity,
+    xsd:dateTime,
+    rdfs:label,
+    crm:P32_used_general_technique,
+    schema:contactPoint,
+    dc:type,
+    <http://fixme.com>,
+    <http://data.europa.eu/m8g/PeriodOfTime>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.pwc.be/>;
-      foaf:name "PwC"
+      foaf:homepage <https://www.vlaanderen.be/intern>;
+      foaf:name "Digitaal Vlaanderen"
     ];
-    foaf:firstName "Jitse";
-    foaf:lastName "De Cock";
-    foaf:mbox <mailto:jitse.c.cock@pwc.com>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.pwc.be/>;
-      foaf:name "PwC"
-    ];
-    foaf:firstName "Eva";
-    foaf:lastName "De Rore";
-    foaf:mbox <mailto:eva.de.rore@pwc.com>
+    foaf:firstName "Geert";
+    foaf:lastName "Thijs";
+    foaf:mbox <mailto:geert.thijs@vlaanderen.be>
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -594,12 +640,21 @@ schemas:valueAddedTaxIncluded a rdf:Property;
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.vlaanderen.be/intern>;
-      foaf:name "Digitaal Vlaanderen"
+      foaf:homepage <https://www.pwc.be/>;
+      foaf:name "PwC"
     ];
-    foaf:firstName "Geert";
-    foaf:lastName "Thijs";
-    foaf:mbox <mailto:geert.thijs@vlaanderen.be>
+    foaf:firstName "Eva";
+    foaf:lastName "De Rore";
+    foaf:mbox <mailto:eva.de.rore@pwc.com>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.pwc.be/>;
+      foaf:name "PwC"
+    ];
+    foaf:firstName "Jitse";
+    foaf:lastName "De Cock";
+    foaf:mbox <mailto:jitse.c.cock@pwc.com>
   ];
   foaf:maker [
     a foaf:Person;
