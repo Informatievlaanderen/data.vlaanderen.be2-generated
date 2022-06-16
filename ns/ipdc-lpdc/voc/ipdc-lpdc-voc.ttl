@@ -1,0 +1,365 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.europa.eu/eli/ontology#LegalResource> a rdfs:Class;
+  rdfs:label "LegalResource"@nl .
+
+<http://data.europa.eu/m8g/Cost> a rdfs:Class;
+  rdfs:label "Cost"@nl .
+
+<http://data.europa.eu/m8g/Evidence> a rdfs:Class;
+  rdfs:label "Evidence"@nl .
+
+<http://data.europa.eu/m8g/Output> a rdfs:Class;
+  rdfs:label "Output"@nl .
+
+<http://data.europa.eu/m8g/Participation> a rdfs:Class;
+  rdfs:label "Participation"@nl .
+
+<http://data.europa.eu/m8g/Requirement> a rdfs:Class;
+  rdfs:label "Requirement"@nl .
+
+<http://purl.org/vocab/cpsv#PublicService> a rdfs:Class;
+  rdfs:label "Conceptual Public Service"@nl .
+
+<http://purl.org/vocab/cpsv#Rule> a rdfs:Class;
+  rdfs:label "Rule"@nl .
+
+skos:Concept a rdfs:Class .
+
+<http://www.w3.org/ns/locn#Address> a rdfs:Class;
+  rdfs:label "Address"@nl .
+
+foaf:Agent a rdfs:Class;
+  rdfs:label "Agent"@nl .
+
+schemas:ContactPoint a rdfs:Class;
+  rdfs:label "ContactPoint"@nl .
+
+<http://fixme.com#Address.houseNumber> a owl:ObjectProperty;
+  rdfs:domain <http://www.w3.org/ns/locn#Address>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <https://www.w3.org/1999/02/22-rdf-syntax-ns#langString>;
+  rdfs:subPropertyOf <http://www.w3.org/ns/locn#locatorDesignator> .
+
+<http://fixme.com#Address.mailbox> a owl:ObjectProperty;
+  rdfs:domain <http://www.w3.org/ns/locn#Address>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <https://www.w3.org/1999/02/22-rdf-syntax-ns#langString>;
+  rdfs:subPropertyOf <http://www.w3.org/ns/locn#locatorDesignator> .
+
+<http://fixme.com#FinancialAdvantage> a owl:Class;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf <http://data.europa.eu/m8g/Output> .
+
+<http://fixme.com#address> a owl:ObjectProperty;
+  rdfs:comment "Adres dat men kan aanschrijven of bezoeken."@nl;
+  rdfs:domain schemas:ContactPoint;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://www.w3.org/ns/locn#Address> .
+
+<http://fixme.com#country> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de kardinaliteit is: per taal slechts 1 waarde."@nl;
+  rdfs:domain <http://www.w3.org/ns/locn#Address>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range rdf:langString;
+  rdfs:subPropertyOf <http://www.w3.org/ns/locn#adminUnitL1> .
+
+<http://fixme.com#endDate> a owl:DatatypeProperty;
+  rdfs:comment "Datum waarop de publieke dienstverlening stopgezet werd/wordt"@nl;
+  rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range xsd:dateTime .
+
+<http://fixme.com#exceptions> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de kardinaliteit is: per taal slechts 1 waarde."@nl;
+  rdfs:comment "Tekstveld waarin uitzondering op procedures, kostprijzen, ... kunnen aangegeven worden"@nl;
+  rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range rdf:langString .
+
+<http://fixme.com#hasAttachment> a owl:ObjectProperty;
+  rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Document> .
+
+<http://fixme.com#hasOnlineProcedure> a owl:ObjectProperty;
+  rdfs:comment "Link naar online locatie waar de procedure opgestart kan worden"@nl;
+  rdfs:domain <http://purl.org/vocab/cpsv#Rule>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Website> .
+
+<http://fixme.com#regulations> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> """Gebruik bij voorkeur de relatie 'follows(Rule)' om te verwijzen naar de Vlaamse Codex. Deze property is voorzien om backwards compatible te blijven met oudere versies van IPDC. 
+Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de kardinaliteit is: per taal slechts 1 waarde."""@nl;
+  rdfs:comment "Tekstveld waarin de regelgeving waarop de public service gebaseerd is kan beschreven worden."@nl;
+  rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range rdf:langString .
+
+<http://fixme.com#requestPage> a owl:ObjectProperty;
+  rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#URL> .
+
+<http://fixme.com#startDate> a owl:DatatypeProperty;
+  rdfs:comment "Datum waarop de publieke dienstverlening actief aangeboden werd/wordt"@nl;
+  rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range xsd:dateTime .
+
+<http://fixme.com#targetAudience> a owl:ObjectProperty;
+  rdfs:comment "doelgroep(en) waarop de public service gericht is"@nl;
+  rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range skos:Concept .
+
+<http://data.europa.eu/m8g/hasContactPoint> a rdf:Property;
+  rdfs:label "hasContactPoint"@nl .
+
+<http://data.europa.eu/m8g/hasCost> a rdf:Property;
+  rdfs:label "hasCost"@nl .
+
+<http://data.europa.eu/m8g/hasLegalResource> a rdf:Property;
+  rdfs:label "hasLegalResource"@nl .
+
+<http://data.europa.eu/m8g/hasParticipation> a rdf:Property;
+  rdfs:label "hasParticipation"@nl .
+
+<http://data.europa.eu/m8g/hasSupportingEvidence> a rdf:Property;
+  rdfs:label "hasSupportingEvidence"@nl .
+
+<http://data.europa.eu/m8g/playsRole> a rdf:Property;
+  rdfs:label "playsRole"@nl .
+
+<http://data.europa.eu/m8g/role> a rdf:Property;
+  rdfs:label "role"@nl .
+
+<http://data.europa.eu/m8g/sector> a rdf:Property;
+  rdfs:label "sector"@nl .
+
+<http://data.europa.eu/m8g/thematicArea> a rdf:Property;
+  rdfs:label "thematicArea"@nl .
+
+<http://fixme.com#Document> a owl:Class;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Website> a owl:Class;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+dc:created a rdf:Property;
+  rdfs:label "dateCreated"@nl .
+
+dc:description a rdf:Property;
+  rdfs:label "description"@nl .
+
+dc:language a rdf:Property;
+  rdfs:label "language"@nl .
+
+dc:modified a rdf:Property;
+  rdfs:label "dateModified"@nl .
+
+dc:source a rdf:Property;
+  rdfs:label "hasSource"@nl .
+
+dc:spatial a rdf:Property;
+  rdfs:label "spatial"@nl .
+
+dc:title a rdf:Property;
+  rdfs:label "title"@nl,
+    "name"@nl .
+
+dc:type a rdf:Property;
+  rdfs:label "type"@nl .
+
+<http://purl.org/vocab/cpsv#follows> a rdf:Property;
+  rdfs:label "follows"@nl .
+
+<http://purl.org/vocab/cpsv#produces> a rdf:Property;
+  rdfs:label "produces"@nl .
+
+rdfs:seeAlso a rdf:Property;
+  rdfs:label "moreInfo"@nl .
+
+skos:prefLabel a rdf:Property;
+  rdfs:label "name"@nl .
+
+dcat:keyword a rdf:Property;
+  rdfs:label "keyword"@nl .
+
+<http://www.w3.org/ns/locn#adminUnitL2> a rdf:Property;
+  rdfs:label "adminUnitL2"@nl .
+
+<http://www.w3.org/ns/locn#fullAddress> a rdf:Property;
+  rdfs:label "fullAddress"@nl .
+
+<http://www.w3.org/ns/locn#postCode> a rdf:Property;
+  rdfs:label "postalCode"@nl .
+
+<http://www.w3.org/ns/locn#postName> a rdf:Property;
+  rdfs:label "municipality"@nl .
+
+<http://www.w3.org/ns/locn#thoroughfare> a rdf:Property;
+  rdfs:label "thoroughfare"@nl .
+
+schemas:WebSite a rdf:Property;
+  rdfs:label "website"@nl .
+
+schemas:email a rdf:Property;
+  rdfs:label "email"@nl .
+
+schemas:openingHours a rdf:Property;
+  rdfs:label "openinghours"@nl .
+
+schemas:telephone a rdf:Property;
+  rdfs:label "telephone"@nl .
+
+schemas:url a rdf:Property;
+  rdfs:label "location"@nl,
+    "document"@nl .
+
+<https://vocab.belgif.be/ns/publicservice#hasRequirement> a rdf:Property;
+  rdfs:label "hasRequirement"@nl .
+
+<https://vocab.belgif.be/ns/publicservice#lifecycleStatus> a rdf:Property;
+  rdfs:label "lifecycleStatus"@nl .
+
+<http://fixme.com> a owl:Ontology;
+  rdfs:label "ipdc-lpdc-voc"@en,
+    "ipdc-lpdc-voc"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Bert";
+    foaf:lastName "Van Nuffelen";
+    foaf:mbox <mailto:bert.vannuffelen@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://redpencil.io>;
+      foaf:name "redpencil"
+    ];
+    foaf:firstName "Felix";
+    foaf:lastName "Ruiz de Arcaute"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Stefanie";
+    foaf:lastName "Kerkhof";
+    foaf:mbox <mailto:stefanie.kerkhof@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.linkedin.com/in/borisdevloed>;
+      foaf:name "devloed.com"
+    ];
+    foaf:firstName "Boris";
+    foaf:lastName "De Vloed";
+    foaf:mbox <mailto:boris@devloed.com>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Dirk";
+    foaf:lastName "De Smedt";
+    foaf:mbox <mailto:dirk.desmedt@vlaanderen.be>
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso <http://data.europa.eu/eli/ontology#LegalResource>,
+    <http://data.europa.eu/m8g/Cost>,
+    <http://data.europa.eu/m8g/Evidence>,
+    <http://data.europa.eu/m8g/Output>,
+    <http://data.europa.eu/m8g/Participation>,
+    <http://data.europa.eu/m8g/Requirement>,
+    <http://purl.org/vocab/cpsv#PublicService>,
+    <http://purl.org/vocab/cpsv#Rule>,
+    skos:Concept,
+    <http://www.w3.org/ns/locn#Address>,
+    foaf:Agent,
+    schemas:ContactPoint,
+    <https://vocab.belgif.be/ns/publicservice#lifecycleStatus>,
+    <https://vocab.belgif.be/ns/publicservice#hasRequirement>,
+    schemas:url,
+    schemas:telephone,
+    schemas:openingHours,
+    schemas:email,
+    schemas:WebSite,
+    <http://www.w3.org/ns/locn#thoroughfare>,
+    <http://www.w3.org/ns/locn#postName>,
+    <http://www.w3.org/ns/locn#postCode>,
+    <http://www.w3.org/ns/locn#fullAddress>,
+    <http://www.w3.org/ns/locn#adminUnitL2>,
+    dcat:keyword,
+    skos:prefLabel,
+    rdfs:seeAlso,
+    <http://purl.org/vocab/cpsv#produces>,
+    <http://purl.org/vocab/cpsv#follows>,
+    dc:type,
+    dc:title,
+    dc:spatial,
+    dc:source,
+    dc:modified,
+    dc:language,
+    dc:description,
+    dc:created,
+    <http://data.europa.eu/m8g/thematicArea>,
+    <http://data.europa.eu/m8g/sector>,
+    <http://data.europa.eu/m8g/role>,
+    <http://data.europa.eu/m8g/playsRole>,
+    <http://data.europa.eu/m8g/hasSupportingEvidence>,
+    <http://data.europa.eu/m8g/hasParticipation>,
+    <http://data.europa.eu/m8g/hasLegalResource>,
+    <http://data.europa.eu/m8g/hasCost>,
+    <http://data.europa.eu/m8g/hasContactPoint>;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.kunlabora.be>;
+      foaf:name "Kunlabora"
+    ];
+    foaf:firstName "Dieter";
+    foaf:lastName "Van Peer";
+    foaf:mbox <mailto:dieter.vanpeer@kunlabora.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.kunlabora.be>;
+      foaf:name "Kunlabora"
+    ];
+    foaf:firstName "Heidi";
+    foaf:lastName "Bottu";
+    foaf:mbox <mailto:heidi.bottu@kunlabora.be>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.wdcsolutions.be>;
+      foaf:name "WDC Solutions"
+    ];
+    foaf:firstName "Wouter";
+    foaf:lastName "De Cock";
+    foaf:mbox <mailto:wouter.decock@wdcsolutions.be>
+  ] .
