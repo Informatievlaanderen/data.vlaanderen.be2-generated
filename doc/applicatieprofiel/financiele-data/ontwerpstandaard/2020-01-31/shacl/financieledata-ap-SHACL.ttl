@@ -11,7 +11,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31> <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31shapes> <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#NeerleggingShape>,
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31> <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31shapes> <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#EenheidShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#NeerleggingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#OpmerkingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#RapportrelatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#ValidatieShape>,
@@ -71,8 +72,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#MonetairDatatypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#GetalShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#NietNumeriekDatatypeShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#NumeriekDatatypeShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#EenheidShape> .
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#NumeriekDatatypeShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#AandelenDatatypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -543,7 +543,7 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#EenheidShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass schemas:unitText .
+  shacl:targetClass <https://data.vlaanderen.be/ns/financiele-data#Eenheid> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#FeitShape> a shacl:NodeShape;
   shacl:closed false;
@@ -755,6 +755,31 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#IdentificatorShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    shacl:datatype rdfs:Literal;
+    shacl:description "String gebruikt om het object uniek te identificeren."@nl;
+    shacl:maxCount 1;
+    shacl:name "identificator"@nl;
+    shacl:path skos:notation
+  ], [
+    shacl:class dc:Agent;
+    shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
+    shacl:maxCount 1;
+    shacl:name "toegekend door"@nl;
+    shacl:path dc:creator
+  ], [
+    shacl:datatype xsd:string;
+    shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
+    shacl:maxCount 1;
+    shacl:name "toegekend door (String)"@nl;
+    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    shacl:maxCount 1;
+    shacl:name "toegekend op"@nl;
+    shacl:path dc:issued
+  ];
   shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-data/ontwerpstandaard/2020-01-31#InformatieclassificatieShape> a shacl:NodeShape;
@@ -817,7 +842,7 @@
     shacl:name "decimalen"@nl;
     shacl:path <https://data.vlaanderen.be/ns/financiele-data#NumeriekDatatype.decimalen>
   ], [
-    shacl:class schemas:unitText;
+    shacl:class <https://data.vlaanderen.be/ns/financiele-data#Eenheid>;
     shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
