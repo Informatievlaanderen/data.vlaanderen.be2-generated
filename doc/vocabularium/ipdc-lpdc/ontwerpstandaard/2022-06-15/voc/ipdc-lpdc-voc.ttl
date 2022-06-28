@@ -18,12 +18,6 @@
 <http://data.europa.eu/m8g/Evidence> a rdfs:Class;
   rdfs:label "Evidence"@nl .
 
-<http://data.europa.eu/m8g/Output> a rdfs:Class;
-  rdfs:label "Output"@nl .
-
-<http://data.europa.eu/m8g/Participation> a rdfs:Class;
-  rdfs:label "Participation"@nl .
-
 <http://data.europa.eu/m8g/Requirement> a rdfs:Class;
   rdfs:label "Requirement"@nl .
 
@@ -31,34 +25,43 @@
   rdfs:label "Conceptual Public Service"@nl .
 
 <http://purl.org/vocab/cpsv#Rule> a rdfs:Class;
-  rdfs:label "Rule"@nl .
+  rdfs:label "Procedure"@nl .
 
 skos:Concept a rdfs:Class .
 
 <http://www.w3.org/ns/locn#Address> a rdfs:Class;
   rdfs:label "Address"@nl .
 
-foaf:Agent a rdfs:Class;
-  rdfs:label "Agent"@nl .
-
 schemas:ContactPoint a rdfs:Class;
   rdfs:label "ContactPoint"@nl .
 
-<http://fixme.com#Address.houseNumber> a owl:ObjectProperty;
+<http://fixme.com#Address.houseNumber> a owl:DatatypeProperty;
+  rdfs:comment "houseNumber is defined as a subproperty of locatordesignator by defining parentURI ttp://www.w3.org/ns/locn#locatorDesignator."@nl;
   rdfs:domain <http://www.w3.org/ns/locn#Address>;
   rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <https://www.w3.org/1999/02/22-rdf-syntax-ns#langString>;
+  rdfs:range xsd:string;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#locatorDesignator> .
 
-<http://fixme.com#Address.mailbox> a owl:ObjectProperty;
+<http://fixme.com#Address.mailbox> a owl:DatatypeProperty;
+  rdfs:comment "mailbox is defined as a subproperty of locatordesignator by defining parentURI ttp://www.w3.org/ns/locn#locatorDesignator."@nl;
   rdfs:domain <http://www.w3.org/ns/locn#Address>;
   rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <https://www.w3.org/1999/02/22-rdf-syntax-ns#langString>;
+  rdfs:range xsd:string;
   rdfs:subPropertyOf <http://www.w3.org/ns/locn#locatorDesignator> .
+
+<http://fixme.com#AdministrativeUnitLevel1> a owl:Class;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#AdministrativeUnitLevel2> a owl:Class;
+  rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#FinancialAdvantage> a owl:Class;
+  rdfs:comment "We voorzien een subklasse 'FinancialAdvantage' van 'Output'. Deze beschrijft de premiebedragen/subsidiebedragen die het resultaat van de dienstverlening zijn."@nl;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:subClassOf <http://data.europa.eu/m8g/Output> .
+
+<http://fixme.com#Spatial> a owl:Class;
+  rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#address> a owl:ObjectProperty;
   rdfs:comment "Adres dat men kan aanschrijven of bezoeken."@nl;
@@ -66,8 +69,15 @@ schemas:ContactPoint a rdfs:Class;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://www.w3.org/ns/locn#Address> .
 
+<http://fixme.com#competentAuthorityLevel> a owl:ObjectProperty;
+  rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#CompetentAuthorityLevel> .
+
 <http://fixme.com#country> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de kardinaliteit is: per taal slechts 1 waarde."@nl;
+  <http://purl.org/vocab/vann/usageNote> """Best practice is to use the ISO 3166-1 code but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'United Kingdom' or 'UK' consistently throughout the data set and avoid mixing the two.
+Omwille van de meertaligheid dient er 1 waarde per taal te zijn."""@nl;
+  rdfs:comment "The uppermost administrative unit for the address, almost always a country. The domain of locn:adminUnitL1 is locn:Address and the range is a literal, conceptually defined by the INSPIRE Geographical Name data type."@nl;
   rdfs:domain <http://www.w3.org/ns/locn#Address>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range rdf:langString;
@@ -79,36 +89,42 @@ schemas:ContactPoint a rdfs:Class;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range xsd:dateTime .
 
-<http://fixme.com#exceptions> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de kardinaliteit is: per taal slechts 1 waarde."@nl;
+<http://fixme.com#exception> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kan er 1 waarde per taal zijn."@nl;
   rdfs:comment "Tekstveld waarin uitzondering op procedures, kostprijzen, ... kunnen aangegeven worden"@nl;
   rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range rdf:langString .
 
-<http://fixme.com#hasAttachment> a owl:ObjectProperty;
+<http://fixme.com#executingAuthorityLevel> a owl:ObjectProperty;
+  rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#ExecutingAuthorityLevel> .
+
+<http://fixme.com#hasAttachments> a owl:ObjectProperty;
+  rdfs:comment "Bijlagen die gerelateerd zijn aan de dienstverlening."@nl;
   rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#Document> .
 
-<http://fixme.com#hasOnlineProcedure> a owl:ObjectProperty;
-  rdfs:comment "Link naar online locatie waar de procedure opgestart kan worden"@nl;
+<http://fixme.com#hasWebsite> a owl:ObjectProperty;
+  rdfs:comment "Link naar online locatie waar de procedure opgestart kan worden."@nl;
   rdfs:domain <http://purl.org/vocab/cpsv#Rule>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#Website> .
 
-<http://fixme.com#regulations> a owl:ObjectProperty;
+<http://fixme.com#publicationMediums> a owl:ObjectProperty;
+  rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range skos:Concept .
+
+<http://fixme.com#regulation> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> """Gebruik bij voorkeur de relatie 'follows(Rule)' om te verwijzen naar de Vlaamse Codex. Deze property is voorzien om backwards compatible te blijven met oudere versies van IPDC. 
-Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de kardinaliteit is: per taal slechts 1 waarde."""@nl;
+Omwille van de meertaligheid kan er 1 waarde per taal zijn."""@nl;
   rdfs:comment "Tekstveld waarin de regelgeving waarop de public service gebaseerd is kan beschreven worden."@nl;
   rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range rdf:langString .
-
-<http://fixme.com#requestPage> a owl:ObjectProperty;
-  rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
-  rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <http://fixme.com#URL> .
 
 <http://fixme.com#startDate> a owl:DatatypeProperty;
   rdfs:comment "Datum waarop de publieke dienstverlening actief aangeboden werd/wordt"@nl;
@@ -116,56 +132,56 @@ Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interp
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range xsd:dateTime .
 
-<http://fixme.com#targetAudience> a owl:ObjectProperty;
+<http://fixme.com#tags> a owl:ObjectProperty;
+  rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range skos:Concept .
+
+<http://fixme.com#targetAudiences> a owl:ObjectProperty;
   rdfs:comment "doelgroep(en) waarop de public service gericht is"@nl;
   rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range skos:Concept .
 
+<http://fixme.com#yourEuropeCategories> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Enkel van toepassing voor public services die ontsloten worden naar YourEurope in kader van SDG (Single digital gateway). Een public service wordt enkel naar YourEurope ontsloten wanneer deze een waarde heeft voor zowel de hoofdcategorie als de subcategorie."@nl;
+  rdfs:comment "SDG (Single digital gateway) domein waarbinnen de public service gecategoriseerd wordt"@nl;
+  rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range skos:Concept .
+
 <http://data.europa.eu/m8g/hasContactPoint> a rdf:Property;
-  rdfs:label "hasContactPoint"@nl .
+  rdfs:label "hasContactPoints"@nl .
 
 <http://data.europa.eu/m8g/hasCost> a rdf:Property;
   rdfs:label "hasCost"@nl .
 
 <http://data.europa.eu/m8g/hasLegalResource> a rdf:Property;
-  rdfs:label "hasLegalResource"@nl .
-
-<http://data.europa.eu/m8g/hasParticipation> a rdf:Property;
-  rdfs:label "hasParticipation"@nl .
+  rdfs:label "hasLegalResources"@nl .
 
 <http://data.europa.eu/m8g/hasSupportingEvidence> a rdf:Property;
   rdfs:label "hasSupportingEvidence"@nl .
 
-<http://data.europa.eu/m8g/playsRole> a rdf:Property;
-  rdfs:label "playsRole"@nl .
-
-<http://data.europa.eu/m8g/role> a rdf:Property;
-  rdfs:label "role"@nl .
-
-<http://data.europa.eu/m8g/sector> a rdf:Property;
-  rdfs:label "sector"@nl .
-
 <http://data.europa.eu/m8g/thematicArea> a rdf:Property;
-  rdfs:label "thematicArea"@nl .
+  rdfs:label "thematicAreas"@nl .
+
+<http://fixme.com#CompetentAuthorityLevel> a owl:Class;
+  rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#Document> a owl:Class;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#ExecutingAuthorityLevel> a owl:Class;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#Website> a owl:Class;
   rdfs:isDefinedBy <http://fixme.com> .
 
-dc:created a rdf:Property;
-  rdfs:label "dateCreated"@nl .
-
 dc:description a rdf:Property;
   rdfs:label "description"@nl .
 
 dc:language a rdf:Property;
-  rdfs:label "language"@nl .
-
-dc:modified a rdf:Property;
-  rdfs:label "dateModified"@nl .
+  rdfs:label "languages"@nl .
 
 dc:source a rdf:Property;
   rdfs:label "hasSource"@nl .
@@ -174,8 +190,7 @@ dc:spatial a rdf:Property;
   rdfs:label "spatial"@nl .
 
 dc:title a rdf:Property;
-  rdfs:label "title"@nl,
-    "name"@nl .
+  rdfs:label "name"@nl .
 
 dc:type a rdf:Property;
   rdfs:label "type"@nl .
@@ -187,25 +202,25 @@ dc:type a rdf:Property;
   rdfs:label "produces"@nl .
 
 rdfs:seeAlso a rdf:Property;
-  rdfs:label "moreInfo"@nl .
+  rdfs:label "hasMoreInfo"@nl .
 
 skos:prefLabel a rdf:Property;
   rdfs:label "name"@nl .
 
 dcat:keyword a rdf:Property;
-  rdfs:label "keyword"@nl .
+  rdfs:label "keywords"@nl .
 
 <http://www.w3.org/ns/locn#adminUnitL2> a rdf:Property;
-  rdfs:label "adminUnitL2"@nl .
+  rdfs:label "administrativeUnitLevel2"@nl .
 
 <http://www.w3.org/ns/locn#fullAddress> a rdf:Property;
   rdfs:label "fullAddress"@nl .
 
 <http://www.w3.org/ns/locn#postCode> a rdf:Property;
-  rdfs:label "postalCode"@nl .
+  rdfs:label "postCode"@nl .
 
 <http://www.w3.org/ns/locn#postName> a rdf:Property;
-  rdfs:label "municipality"@nl .
+  rdfs:label "postName"@nl .
 
 <http://www.w3.org/ns/locn#thoroughfare> a rdf:Property;
   rdfs:label "thoroughfare"@nl .
@@ -214,13 +229,13 @@ schemas:WebSite a rdf:Property;
   rdfs:label "website"@nl .
 
 schemas:email a rdf:Property;
-  rdfs:label "email"@nl .
+  rdfs:label "hasEmail"@nl .
 
 schemas:openingHours a rdf:Property;
   rdfs:label "openinghours"@nl .
 
 schemas:telephone a rdf:Property;
-  rdfs:label "telephone"@nl .
+  rdfs:label "hasTelephone"@nl .
 
 schemas:url a rdf:Property;
   rdfs:label "location"@nl,
@@ -238,6 +253,15 @@ schemas:url a rdf:Property;
   dc:contributor [
     a foaf:Person;
     schema:affiliation [
+      foaf:homepage <https://redpencil.io>;
+      foaf:name "redpencil"
+    ];
+    foaf:firstName "Niels";
+    foaf:lastName "Vandekeybus";
+    foaf:mbox <mailto:niels.vandekeybus@redpencil.io>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
       foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
       foaf:name "Digitaal Vlaanderen"
     ];
@@ -251,7 +275,8 @@ schemas:url a rdf:Property;
       foaf:name "redpencil"
     ];
     foaf:firstName "Felix";
-    foaf:lastName "Ruiz de Arcaute"
+    foaf:lastName "Ruiz de Arcaute";
+    foaf:mbox <mailto:felix.ruizdearcaute@redpencil.io>
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -291,14 +316,11 @@ schemas:url a rdf:Property;
   rdfs:seeAlso <http://data.europa.eu/eli/ontology#LegalResource>,
     <http://data.europa.eu/m8g/Cost>,
     <http://data.europa.eu/m8g/Evidence>,
-    <http://data.europa.eu/m8g/Output>,
-    <http://data.europa.eu/m8g/Participation>,
     <http://data.europa.eu/m8g/Requirement>,
     <http://purl.org/vocab/cpsv#PublicService>,
     <http://purl.org/vocab/cpsv#Rule>,
     skos:Concept,
     <http://www.w3.org/ns/locn#Address>,
-    foaf:Agent,
     schemas:ContactPoint,
     <https://vocab.belgif.be/ns/publicservice#lifecycleStatus>,
     <https://vocab.belgif.be/ns/publicservice#hasRequirement>,
@@ -321,16 +343,10 @@ schemas:url a rdf:Property;
     dc:title,
     dc:spatial,
     dc:source,
-    dc:modified,
     dc:language,
     dc:description,
-    dc:created,
     <http://data.europa.eu/m8g/thematicArea>,
-    <http://data.europa.eu/m8g/sector>,
-    <http://data.europa.eu/m8g/role>,
-    <http://data.europa.eu/m8g/playsRole>,
     <http://data.europa.eu/m8g/hasSupportingEvidence>,
-    <http://data.europa.eu/m8g/hasParticipation>,
     <http://data.europa.eu/m8g/hasLegalResource>,
     <http://data.europa.eu/m8g/hasCost>,
     <http://data.europa.eu/m8g/hasContactPoint>;
