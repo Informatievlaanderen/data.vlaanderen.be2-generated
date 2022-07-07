@@ -17,6 +17,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21#JuridischeBepalingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21#StandaardShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21#ContactInfoShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21#ContactinfoShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21#IdentificatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21#CatalogusShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21#CatalogusRecordShape>,
@@ -59,6 +60,11 @@
     shacl:name "bron metadatarecord"@nl;
     shacl:path dc:source
   ], [
+    shacl:class rdfs:Resource;
+    shacl:description "Een webpagina in een menselijk leesbare vorm van de bron metadata record."@nl;
+    shacl:maxCount 1;
+    shacl:name "bron metadata record landingspagina"@nl
+  ], [
     shacl:class dc:Standard;
     shacl:description """De (metadata) standaard volgens welke
 regels het hoofdonderwerp waarnaar de
@@ -83,7 +89,6 @@ wordt."""@nl;
   ], [
     shacl:datatype rdf:langString;
     shacl:description "De naam van het record in de catalogus."@nl;
-    shacl:maxCount 1;
     shacl:name "titel"@nl;
     shacl:path dc:title
   ], [
@@ -111,7 +116,7 @@ wordt."""@nl;
     shacl:name "uitgever"@nl;
     shacl:path dc:publisher
   ];
-  shacl:targetClass <http://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.target> .
+  shacl:targetClass <http://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.source> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21#CatalogusShape> a shacl:NodeShape;
   shacl:closed false;
@@ -123,7 +128,6 @@ wordt."""@nl;
   ], [
     shacl:datatype rdf:langString;
     shacl:description "Een bondige tekstuele omschrijving van de catalogus."@nl;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
@@ -166,7 +170,6 @@ wordt."""@nl;
   ], [
     shacl:datatype rdf:langString;
     shacl:description "De naam van de catalogus."@nl;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "titel"@nl;
     shacl:path dc:title
@@ -184,6 +187,23 @@ wordt."""@nl;
   shacl:closed false;
   shacl:targetClass schema:ContactPoint .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21#ContactinfoShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class rdfs:Resource;
+    shacl:description "Een webpagina die ofwel toelaat om contact op te nemen (via b.v. een webformulier) of die informatie bevat hoe men contact kan opnemen."@nl;
+    shacl:maxCount 1;
+    shacl:name "contactpagina"@nl;
+    shacl:path foaf:page
+  ], [
+    shacl:class rdfs:Resource;
+    shacl:description "Het e-mailadres waarmee een gebruiker contact kan opnemen voor informatie."@nl;
+    shacl:maxCount 1;
+    shacl:name "e-mail"@nl;
+    shacl:path vcard:hasEmail
+  ];
+  shacl:targetClass vcard:Kind .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21#DataServiceShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -194,7 +214,6 @@ wordt."""@nl;
   ], [
     shacl:datatype rdf:langString;
     shacl:description "Een bondige tekstuele omschrijving van de dataservice."@nl;
-    shacl:maxCount 1;
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
   ], [
@@ -329,7 +348,6 @@ dataservice behoort"""@nl;
   ], [
     shacl:datatype rdf:langString;
     shacl:description "De naam van de dataservice."@nl;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "titel"@nl;
     shacl:path dc:title
@@ -372,7 +390,7 @@ GEMET thesaurus."""@nl;
     shacl:name "GEMET concept"@nl;
     shacl:path <http://data.vlaanderen.be/ns/metadata-dcat#GEMETconcept>
   ], [
-    <http://purl.org/linked-data/cube#codeList> <https://inspire.ec.europa.eu/themery>;
+    <http://purl.org/linked-data/cube#codeList> <https://inspire.ec.europa.eu/theme>;
     shacl:class skos:Concept;
     shacl:description """De rubriek waartoe de
 dataset behoort volgens de
@@ -397,7 +415,6 @@ geografische metadata"""@nl;
   ], [
     shacl:datatype rdf:langString;
     shacl:description "Een bondige tekstuele omschrijving van de dataset."@nl;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
@@ -407,7 +424,7 @@ geografische metadata"""@nl;
     shacl:name "conform"@nl;
     shacl:path dc:conformsTo
   ], [
-    shacl:class schema:ContactPoint;
+    shacl:class vcard:Kind;
     shacl:description "De relevante contactinformatie waarmee een eindgebruiker in contact kan treden met de verantwoordelijken van de dataset."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -493,7 +510,6 @@ geografische metadata"""@nl;
   ], [
     shacl:datatype rdf:langString;
     shacl:description "De naam van de dataset."@nl;
-    shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "titel"@nl;
     shacl:path dc:title
@@ -517,7 +533,6 @@ geografische metadata"""@nl;
     shacl:name "versie"@nl;
     shacl:path owl:versionInfo
   ], [
-    <http://purl.org/linked-data/cube#codeList> <http://www.w3.org/ns/adms#sample>;
     shacl:class dcat:Distribution;
     shacl:description "Een verkleinde weergave van een afbeelding die de dataset illustreert.?"@nl;
     shacl:name "voorbeeldweergave"@nl;
@@ -579,7 +594,6 @@ waaraan de distributie voldoet."""@nl;
   ], [
     shacl:datatype rdf:langString;
     shacl:description "De naam van de distributie."@nl;
-    shacl:maxCount 1;
     shacl:name "titel"@nl;
     shacl:path dc:title
   ], [
@@ -682,15 +696,15 @@ waaraan de distributie voldoet."""@nl;
     shacl:description "Referentie naar verbonden klasse."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "Catalogus Resource (source)"@nl;
-    shacl:path <http://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.source>
+    shacl:name "Catalogus Resource (target)"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.target>
   ], [
     shacl:class dcat:Resource;
     shacl:description "Referentie naar verbonden klasse."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "Catalogus Resource (target)"@nl;
-    shacl:path <http://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.target>
+    shacl:name "Catalogus Resource (source)"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.source>
   ], [
     <http://purl.org/linked-data/cube#codeList> <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType>;
     shacl:class skos:Concept;
@@ -747,7 +761,6 @@ vinden"""@nl;
   ], [
     shacl:datatype rdf:langString;
     shacl:description "naam van de standaard"@nl;
-    shacl:maxCount 1;
     shacl:name "titel"@nl;
     shacl:path dc:title
   ], [
@@ -776,7 +789,6 @@ standaard bekend is."""@nl;
   shacl:property [
     shacl:datatype rdf:langString;
     shacl:description "Een bondige tekstuele omschrijving van de afbeelding"@nl;
-    shacl:maxCount 1;
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
   ], [
@@ -796,24 +808,7 @@ standaard bekend is."""@nl;
   ], [
     shacl:datatype rdf:langString;
     shacl:description "naam van de afbeelding"@nl;
-    shacl:maxCount 1;
     shacl:name "titel"@nl;
     shacl:path dc:title
   ];
   shacl:targetClass dcat:Distribution .
-
- [
-    shacl:class rdfs:Resource;
-    shacl:description "Een webpagina die ofwel toelaat om contact op te nemen (via b.v. een webformulier) of die informatie bevat hoe men contact kan opnemen."@nl;
-    shacl:maxCount 1;
-    shacl:name "contactpagina"@nl;
-    shacl:path foaf:page
-  ] .
-
- [
-    shacl:class rdfs:Resource;
-    shacl:description "Het e-mailadres waarmee een gebruiker contact kan opnemen voor informatie."@nl;
-    shacl:maxCount 1;
-    shacl:name "e-mail"@nl;
-    shacl:path vcard:hasEmail
-  ] .
