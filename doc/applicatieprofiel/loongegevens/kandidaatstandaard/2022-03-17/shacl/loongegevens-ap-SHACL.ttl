@@ -16,7 +16,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/loongegevens/kandidaatstandaard/2022-03-17#OvereenkomsttypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/loongegevens/kandidaatstandaard/2022-03-17#StatuuttypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/loongegevens/kandidaatstandaard/2022-03-17#VerloningstypeShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/loongegevens/kandidaatstandaard/2022-03-17#SchuldbemiddelingstypeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/loongegevens/kandidaatstandaard/2022-03-17#SchuldenregelingstypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/loongegevens/kandidaatstandaard/2022-03-17#NAL_currencyShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/loongegevens/kandidaatstandaard/2022-03-17#AdresvoorstellingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/loongegevens/kandidaatstandaard/2022-03-17#OrganisatieShape>,
@@ -101,11 +101,32 @@
     shacl:path <https://data.vlaanderen.be/ns/loongegevens#bedrijfswagen>
   ], [
     shacl:class schemas:MonetaryAmount;
+    shacl:description "Een belastbare maaltijdcheque is een maaltijdchecque met een bedrag boven het wettelijk plafond voor belastingvrije maaltijdcheques. Ze worden apart vermeld op de loonbrief."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "belastbareMaaltijdcheques"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#belastbareMaaltijdcheques>
+  ], [
+    shacl:class schemas:MonetaryAmount;
     shacl:description "De som van alle loonelementen voor sociale en fiscale inhoudingen."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "brutoloon"@nl;
     shacl:path <https://data.vlaanderen.be/ns/loongegevens#brutoloon>
+  ], [
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "Een cheque bevat een bepaalde som geld. Bv.Ecocheques"@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "cheque"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#cheques>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Bij collectieve schuldenregeling wordt een afbetalingsplan opgestelt voor het betalen van schulden aan de schuldeisers. Het loon van een persoon wordt gestort en volgens de opgestelde regeling verdeelt."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "collectieveSchuldenregeling"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#collectieveSchuldenregeling>
   ], [
     shacl:class schemas:MonetaryAmount;
     shacl:description "Een eindejaarstoelage is een financiële bonus die een persoon krijgt van zijn/haar werkgever op het einde van het jaar. Er moeten sociale zekerheidsbijdragen en belastingen op betaald worden."@nl;
@@ -156,13 +177,6 @@
     shacl:name "premie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/loongegevens#premie>
   ], [
-    shacl:class skos:Concept;
-    shacl:description "Bij schuldbemiddeling wordt een instantie ingeschakeld die een afbetalingsplan opstelt voor het betalen van schulden aan de schuldeisers. Het loon van een persoon wordt naar de schuldbemiddelaar gestort, die het volgens de opgestelde regeling spendeert."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "schuldbemiddeling"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/loongegevens#schuldbemiddeling>
-  ], [
     shacl:class schemas:MonetaryAmount;
     shacl:description "Bijkomende sommen die aan het brutoloon toegevoegd worden. Deze zijn vrijgesteld van inhoudingen voor de sociale zekerheid."@nl;
     shacl:maxCount 1;
@@ -201,12 +215,11 @@
     shacl:name "arbeidsloon"@nl;
     shacl:path <https://data.vlaanderen.be/ns/loongegevens#arbeidsloon>
   ], [
-    shacl:class schemas:BankAccount;
+    shacl:datatype rdfs:Literal;
     shacl:description "Een rekeningnummer dat gelinkt is aan de arbeidsrelatie. Op dit rekeningnummer wordt het arbeidsloon van de persoon gestort."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "bankrekening"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/loongegevens#bankrekening>
+    shacl:name "bankrekeningnummer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#bankrekeningnummer>
   ], [
     shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
     shacl:description "Periode waarover in een arbeidscontract een overeenkomst is afgesloten. Een contractperiode heeft een begindatum, en in sommige gevallen een einddatum. Dat is dan de uitdienstdatum."@nl;
@@ -312,18 +325,6 @@
     shacl:minCount 1;
     shacl:name "gezinshoofd"@nl;
     shacl:path <https://data.vlaanderen.be/ns/persoon#gezinshoofd>
-  ], [
-    shacl:class <http://www.w3.org/ns/person#Person>;
-    shacl:description "Gezin waartoe een persoon behoort."@nl;
-    shacl:minCount 1;
-    shacl:name "gezinslid"@nl;
-    shacl:path <http://data.vlaanderen.be/ns/persoon#gezinslid>
-  ], [
-    shacl:class <http://www.w3.org/ns/person#Person>;
-    shacl:description "Gezin waartoe een persoon behoort."@nl;
-    shacl:minCount 1;
-    shacl:name "gezinslid"@nl;
-    shacl:path <http://data.vlaanderen.be/ns/persoon#gezinslid>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Gezin> .
 
@@ -385,6 +386,16 @@
     shacl:name "isHoofdVan"@nl;
     shacl:path <https://data.vlaanderen.be/ns/persoon#isHoofdVan>
   ], [
+    shacl:class <https://data.vlaanderen.be/ns/persoon#Gezin>;
+    shacl:description "Persoon die tot een gezin behoort."@nl;
+    shacl:name "gezinslid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#isLidVan>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/persoon#Gezin>;
+    shacl:description "Persoon die tot een gezin behoort."@nl;
+    shacl:name "gezinslid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#isLidVan>
+  ], [
     shacl:datatype xsd:integer;
     shacl:description "Personen die niet over een inkomen beschikken, of een netto jaarinkomen hebben dat lager is dan wettelijk vastgelegd voor deze regeling, en onder hetzelfde dak wonen als de persoon die voor hen moet voorzien."@nl;
     shacl:maxCount 1;
@@ -410,7 +421,7 @@
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/loongegevens/kandidaatstandaard/2022-03-17#SchuldbemiddelingstypeShape> a shacl:NodeShape;
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/loongegevens/kandidaatstandaard/2022-03-17#SchuldenregelingstypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 

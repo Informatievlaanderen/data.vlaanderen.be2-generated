@@ -48,17 +48,15 @@ schemas:BankAccount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
   rdfs:range <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie> .
 
-<https://data.vlaanderen.be/ns/loongegevens#bankrekening> a owl:ObjectProperty;
-  rdfs:comment "Een rekeningnummer dat gelinkt is aan de arbeidsrelatie. Op dit rekeningnummer wordt het arbeidsloon van de persoon gestort."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie>;
+<https://data.vlaanderen.be/ns/loongegevens#bankrekeningnummer> a owl:DatatypeProperty,
+    owl:ObjectProperty;
+  rdfs:comment "Een rekeningnummer dat gelinkt is aan de arbeidsrelatie. Op dit rekeningnummer wordt het arbeidsloon van de persoon gestort."@nl,
+    "Een uniek nummer dat wordt toegekend aan een rekening bij een bank."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie>,
+    schemas:BankAccount;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
-  rdfs:range schemas:BankAccount .
-
-<https://data.vlaanderen.be/ns/loongegevens#bankrekeningnummer> a owl:ObjectProperty;
-  rdfs:comment "Een uniek nummer dat wordt toegekend aan een rekening bij een bank."@nl;
-  rdfs:domain schemas:BankAccount;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
-  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
+  rdfs:range rdfs:Literal,
+    <http://www.w3.org/ns/adms#Identifier> .
 
 <https://data.vlaanderen.be/ns/loongegevens#bedrijfsvoorheffing> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Het bedrag van de bedrijfsvoorheffing wordt bepaald door loonhoogte, burgerlijke staat, gezinssituatie,  De bedrijfsvoorheffing wordt ingehouden op het totaal belastbare loon."@nl;
@@ -73,12 +71,30 @@ schemas:BankAccount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
   rdfs:range xsd:boolean .
 
+<https://data.vlaanderen.be/ns/loongegevens#belastbareMaaltijdcheques> a owl:ObjectProperty;
+  rdfs:comment "Een belastbare maaltijdcheque is een maaltijdchecque met een bedrag boven het wettelijk plafond voor belastingvrije maaltijdcheques. Ze worden apart vermeld op de loonbrief."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range schemas:MonetaryAmount .
+
 <https://data.vlaanderen.be/ns/loongegevens#brutoloon> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Dit gaat over de sommen voor gepresteerde arbeid, betaalde afwezigheden, toeslagen, premies, ..."@nl;
   rdfs:comment "De som van alle loonelementen voor sociale en fiscale inhoudingen."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
   rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/loongegevens#cheques> a owl:ObjectProperty;
+  rdfs:comment "Een cheque bevat een bepaalde som geld. Bv.Ecocheques"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/ns/loongegevens#collectieveSchuldenregeling> a owl:ObjectProperty;
+  rdfs:comment "Bij collectieve schuldenregeling wordt een afbetalingsplan opgestelt voor het betalen van schulden aan de schuldeisers. Het loon van een persoon wordt gestort en volgens de opgestelde regeling verdeelt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
+  rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/loongegevens#contractperiode> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Indien de uitdienstdatum niet vermeld wordt, wordt deze impliciet verondersteld er niet te zijn."@nl;
@@ -142,12 +158,6 @@ schemas:BankAccount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
   rdfs:range schemas:MonetaryAmount .
 
-<https://data.vlaanderen.be/ns/loongegevens#schuldbemiddeling> a owl:ObjectProperty;
-  rdfs:comment "Bij schuldbemiddeling wordt een instantie ingeschakeld die een afbetalingsplan opstelt voor het betalen van schulden aan de schuldeisers. Het loon van een persoon wordt naar de schuldbemiddelaar gestort, die het volgens de opgestelde regeling spendeert."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
-  rdfs:range skos:Concept .
-
 <https://data.vlaanderen.be/ns/loongegevens#statuut> a owl:ObjectProperty;
   rdfs:comment "Werknemer, ambtenaar, student, ..."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie>;
@@ -155,7 +165,7 @@ schemas:BankAccount a rdfs:Class;
   rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/loongegevens#supplementaireBelastbareBedragen> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Gewaarborgd maandloon ziekte, dubbel vakantiegeld, ..."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Gewaarborgd maandloon ziekte, dubbel vakantiegeld, ... Let op dat belastbare maaltijdcheques hier niet in zijn opgenomen. Deze hebben namelijk een apart attribuut in deze klasse."@nl;
   rdfs:comment "Bijkomende sommen die aan het brutoloon toegevoegd worden. Deze zijn vrijgesteld van inhoudingen voor de sociale zekerheid."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/loongegevens>;
@@ -222,18 +232,18 @@ schemas:BankAccount a rdfs:Class;
       foaf:homepage <https://www.pwc.be>;
       foaf:name "PwC"
     ];
-    foaf:firstName "Eva";
-    foaf:lastName "De Rore";
-    foaf:mbox <mailto:eva.de.rore@pwc.com>
+    foaf:firstName "Yves";
+    foaf:lastName "Meersmans";
+    foaf:mbox <mailto:yves.meersmans@pwc.com>
   ], [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.pwc.be>;
       foaf:name "PwC"
     ];
-    foaf:firstName "Yves";
-    foaf:lastName "Meersmans";
-    foaf:mbox <mailto:yves.meersmans@pwc.com>
+    foaf:firstName "Eva";
+    foaf:lastName "De Rore";
+    foaf:mbox <mailto:eva.de.rore@pwc.com>
   ];
   foaf:maker [
     a foaf:Person;
