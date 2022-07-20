@@ -2,6 +2,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30> rdfs:member <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#AdresShape>,
@@ -381,12 +382,14 @@
 <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/0af509b943cb9ef2e07f43326d3b93a6675d7d31>,
+    <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/32852c643af77b907520eb35d8e17993c35f2351>,
     <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/9b5e87bdacf49f9d51e7e8189a8fe986af2416f9>,
     <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/f2caab9c262326d4bfc76edb51e45978128e8a34>,
     <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/0f32aabd92678fbbeda066ceb572710f599217f4>,
     <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/59e08406079a42b5e058647f2d61a20682bce584>,
     <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/5b5c9660dee8c2fe5e12a2171df9ca8f65e56afe>,
     <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/17649827980e8a390b093d2f4a3596c96bf6386d>,
+    <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/17ed39a4c1a638aa714aa713771db2c8fe6ee270>,
     <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/9869a0e4c40da086f5b41c7b412b7ae26fd6c77c>,
     <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/f3fcc06432848cb448bd7c036c5375590f5229c6>,
     <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/0f6cb927d0d26f3819cba3fb903a075cd426180d>,
@@ -425,12 +428,50 @@
   <https://data.vlaanderen.be/ns/shacl#message> [<https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30nl> "De verwachte waarde voor officiële taal is een rdfs:Resource (URI of blank node)"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
+<https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/17ed39a4c1a638aa714aa713771db2c8fe6ee270> rdfs:seeAlso "https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#Gemeente%3Aoffici%C3%ABle%20taal";
+  shacl:name "officiële taal"@nl;
+  shacl:node [
+    a shacl:NodeShape;
+    rdfs:comment "codelist restriction";
+    shacl:property [
+      shacl:class skos:ConceptScheme;
+      shacl:hasValue <https://publications.europa.eu/resource/authority/language>;
+      shacl:minCount 1;
+      shacl:nodeKind shacl:IRI;
+      shacl:path skos:inScheme
+    ]
+  ];
+  shacl:nodeKind shacl:IRI;
+  shacl:path <https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Gemeente%3Aoffici%C3%ABle%20taal>;
+  shacl:severity shacl:Warning;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30nl> "Enkel waarden uit codelijst <https://publications.europa.eu/resource/authority/language> verwacht voor officiële taal"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
 <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/2bc917d85a4ffccfa9de4268bf84b517c322ce2c> rdfs:seeAlso "https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#Gemeente%3Astatus";
   shacl:description "Waarden die de status van een gemeente weergeven."@nl;
   shacl:maxCount 1;
   shacl:name "status"@nl;
   shacl:path <https://data.vlaanderen.be/ns/adres#Gemeente.status>;
   <https://data.vlaanderen.be/ns/shacl#message> [<https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30nl> "Maximaal 1 waarden toegelaten voor status"];
+  <https://data.vlaanderen.be/ns/shacl#rule> "" .
+
+<https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/32852c643af77b907520eb35d8e17993c35f2351> rdfs:seeAlso "https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#Gemeente%3Afaciliteitentaal";
+  shacl:name "faciliteitentaal"@nl;
+  shacl:node [
+    a shacl:NodeShape;
+    rdfs:comment "codelist restriction";
+    shacl:property [
+      shacl:class skos:ConceptScheme;
+      shacl:hasValue <https://publications.europa.eu/resource/authority/language>;
+      shacl:minCount 1;
+      shacl:nodeKind shacl:IRI;
+      shacl:path skos:inScheme
+    ]
+  ];
+  shacl:nodeKind shacl:IRI;
+  shacl:path <https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Gemeente%3Afaciliteitentaal>;
+  shacl:severity shacl:Warning;
+  <https://data.vlaanderen.be/ns/shacl#message> [<https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30nl> "Enkel waarden uit codelijst <https://publications.europa.eu/resource/authority/language> verwacht voor faciliteitentaal"];
   <https://data.vlaanderen.be/ns/shacl#rule> "" .
 
 <https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#GemeenteShape/3c1ab2e1170c5050c8b7742e97810027ddc104b1> rdfs:seeAlso "https://data.dev-vlaanderen.be/doc/implementatiemodel/adressenregister/ontwerpstandaard/2022-06-30#Gemeente%3Astatus";
