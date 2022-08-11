@@ -10,6 +10,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+crm:E7_Activity a rdfs:Class;
+  rdfs:label "Activiteit"@nl .
+
 skos:Concept a rdfs:Class;
   rdfs:label "Onderwijsniveau"@nl,
     "Activiteittype"@nl,
@@ -29,21 +32,58 @@ skos:Concept a rdfs:Class;
     "ActiviteitStatus"@nl,
     "UitvoerderRolType"@nl,
     "BetaaltermijnType"@nl,
-    "LocatieType"@nl,
     "FeedbackBron"@nl,
     "LabelType"@nl,
-    "PrijsCategorieType"@nl,
-    "OrganisatievormType"@nl,
-    "ThemaType"@nl,
-    "DocumentType"@nl .
-
-<https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7> a rdfs:Class,
-    rdf:Property;
-  rdfs:label "Activiteit"@nl,
-    "activiteit"@nl .
+    "ActiviteitFunctietype"@nl,
+    "ThemaType"@nl .
 
 schemas:PriceSpecification a rdfs:Class;
-  rdfs:label "Informatie rond de prijssetting van de activiteit."@nl .
+  rdfs:label "prijsinfo"@nl .
+
+<http://fixme.com#Document.beschikbaar> a owl:ObjectProperty;
+  rdfs:comment "Het tijdsinterval waarin het Document beschikbaar is."@nl;
+  rdfs:domain foaf:Document;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<http://fixme.com#Persoon.geboortedatum> a rdf:Property;
+  rdfs:domain <http://www.w3.org/ns/person#Person>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+
+<http://fixme.com#Persoon.nationaliteit> a rdf:Property;
+  rdfs:comment "De nationaliteit van een Persoon."@nl;
+  rdfs:domain <http://www.w3.org/ns/person#Person>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+
+<http://fixme.com#Persoon.woonplaats> a rdf:Property;
+  rdfs:comment "De plaats waar de Persoon woonachtig is."@nl;
+  rdfs:domain <http://www.w3.org/ns/person#Person>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+
+<http://fixme.com#identificator> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Te gebruiken voor algemeen gebruikte identificatoren zoals een ISBN-nummer."@nl;
+  rdfs:comment "Identificator dat het Ding verkreeg bij registratie."@nl;
+  rdfs:domain crm:E70_Thing;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.erkenning> a owl:ObjectProperty;
+  rdfs:comment "De aanduiding door een bevoegde instelling waarbij wordt vastgesteld dat een persoon of instelling aan bepaalde eisen voldoet, al dan niet tijdelijk."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.identificator> a owl:ObjectProperty;
+  rdfs:comment "Identificator dat de Aanbieder verkreeg bij registratie."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.infrastructuur> a owl:ObjectProperty;
+  rdfs:comment "Infrastructuur die gekoppeld is met de Aanbieder."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.naam> a owl:ObjectProperty;
   rdfs:comment "De naam van de Aanbieder."@nl;
@@ -55,217 +95,182 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:comment "De organisatievorm van de Aanbieder"@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range skos:Concept .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.subaanbieder> a owl:ObjectProperty;
-  rdfs:comment "De Aanbieder maakt deel uit van een overkoepelende Superaanbieder."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder> .
+  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#OrganisatievormType> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.subsidie> a owl:ObjectProperty;
   rdfs:comment "Financiële aansporing om het gedrag van de bevolking of van een specifieke doelgroep (dat kan ook een andere overheid zijn) te beïnvloeden in de door de overheid gewenste richting."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <http://data.vlaanderen.be/ns/subsidie#SubsidiemaatregelConsumptie> .
+  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#subsidie> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.superaanbieder> a owl:ObjectProperty;
-  rdfs:comment "De Aanbieder heeft één of meerdere Subaanbieders."@nl;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.thema> a rdf:Property;
+  rdfs:comment "De inhoudelijke thema's verbonden aan de Aanbieder."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.typeActiviteit> a owl:ObjectProperty;
+  rdfs:comment "Het type van Activiteit verbonden aan de Aanbieder."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.voertUit> a owl:ObjectProperty;
-  rdfs:comment "De Aanbieder die Promotie uitvoert."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.werktSamenMet> a owl:ObjectProperty;
-  rdfs:comment "De Aanbieder die samenwerkt met een andere Aanbieder."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.aangebodenDoor> a owl:ObjectProperty;
-  rdfs:comment "Activiteit die wordt aangeboden door één of meerdere Aanbieder(s)."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder> .
+  rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.berichtgeving> a owl:ObjectProperty;
   rdfs:comment "Berichtgeving rond de Activiteit."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Berichtgeving> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.beschikbaarheid> a owl:ObjectProperty;
   rdfs:comment "Geeft de beschikbaarheid weer van de Activiteit."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Beschikbaarheid> .
+  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Beschikbaarheid> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.beschrijving> a owl:ObjectProperty;
   rdfs:comment "Een tekstuele beschrijving van de Activiteit."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range rdf:langString .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.biedtAan> a owl:ObjectProperty;
-  rdfs:comment "Aanbieder die de Activiteit aanbiedt."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.boeking> a owl:ObjectProperty;
-  rdfs:comment "De Boekinginfo van de Activiteit."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Boekinginfo> .
-
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.deelnemer> a owl:ObjectProperty;
   rdfs:comment "Participant die deelneemt aan een Activiteit."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.discipline> a owl:ObjectProperty;
   rdfs:comment "De verschillende vormen, uitingen of richtingen van kunst met betrekking tot de activiteit."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.documentatie> a owl:ObjectProperty;
   rdfs:comment "Een origineel werk in de brede zin (een verslag,een opname,een boek...)."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range foaf:Document .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.doelgroep> a owl:ObjectProperty;
-  rdfs:comment "De doelgroep van de Activiteit die bepaald wordt aan de hand van het ParticipantProfiel."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.duur> a owl:DatatypeProperty;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.duur> a owl:ObjectProperty;
   rdfs:comment "De tijd dat de Activiteit aan d.e gang is en/of voortduurt"@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range xsd:duration .
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.functie> a owl:ObjectProperty;
   rdfs:comment "Doel van de Activiteit binnen een geheel van een systeem of apparaat."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitFunctietype> .
+  rdfs:range skos:Concept .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.isGepromoot> a owl:ObjectProperty;
-  rdfs:comment "Activiteit die wordt gepromoot aan de hand van een Promotie."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.identificator> a owl:ObjectProperty;
+  rdfs:comment "Identificator dat de Activiteit verkreeg bij registratie."@nl;
+  rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie> .
+  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.informatie> a owl:ObjectProperty;
+  rdfs:comment "Informatie zoals email, telefoon... die toelaat de aanbieder te contacteren."@nl;
+  rdfs:domain crm:E7_Activity;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range schema:ContactPoint .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.infrastructuur> a owl:ObjectProperty;
+  rdfs:comment "Informatie rond de infrastructuur waarrond of waarin de Activiteit doorgaat."@nl;
+  rdfs:domain crm:E7_Activity;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.label> a owl:DatatypeProperty;
+  rdfs:comment "Generiek label van de Activiteit."@nl;
+  rdfs:domain crm:E7_Activity;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.labeltype> a owl:ObjectProperty;
+  rdfs:comment "Het type label."@nl;
+  rdfs:domain crm:E7_Activity;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.locatie> a owl:ObjectProperty;
+  rdfs:comment "Aanduiding van een geografische positie, dmv coordinaten, een toponiem, een adreslabel, een verwijzing naar een plaats/regio of verwijzing naar een adres."@nl;
+  rdfs:domain crm:E7_Activity;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range prov:Location .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.locatieType> a owl:ObjectProperty;
+  rdfs:comment "Het type locatie van de activiteit."@nl;
+  rdfs:domain crm:E7_Activity;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#LocatieType> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.naam> a owl:ObjectProperty;
   rdfs:comment "De naam die de activiteit draagt."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range rdf:langString .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.prijs> a owl:ObjectProperty;
-  rdfs:comment "De Prijsinfo van de Activiteit."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range schemas:PriceSpecification .
-
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.recurrerend> a owl:ObjectProperty;
   rdfs:comment "Geeft aan of een Activiteit meerdere keren plaatsvindt, onderbroken wordt of permanent is."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range schemas:Schedule .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.status> a owl:ObjectProperty;
   rdfs:comment "Geeft de status van de activiteit weer."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range skos:Concept .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.subactiviteit> a owl:ObjectProperty;
-  rdfs:comment "De Activiteit maakt deel uit van een overkoepelende Superactiviteit."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.subsidie> a owl:ObjectProperty;
   rdfs:comment "Financiële tegemoetkoming met voorwaarden, gegeven van een instantie aan een aanbieder, gekoppeld aan een activiteit."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <http://data.vlaanderen.be/ns/subsidie#SubsidiemaatregelConsumptie> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.superactiviteit> a owl:ObjectProperty;
-  rdfs:comment "De Activiteit heeft één of meerdere Subactiviteiten."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7> .
+  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#subsidie> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.taal> a owl:DatatypeProperty;
   rdfs:comment "Taal waarin de activiteit doorgaat."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+  rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range rdfs:Literal .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.thema> a owl:ObjectProperty;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.thema> a rdf:Property;
   rdfs:comment "Waar de Activiteit inhoudelijk over gaat."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range skos:Concept .
+  rdfs:domain crm:E7_Activity;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.typeActiviteit> a owl:ObjectProperty;
-  rdfs:comment "Het type van activiteit."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range skos:Concept .
+<https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantkenmerk> a owl:Class;
+  rdfs:comment "Algemeen kenmerk over de participant"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.uitvoerder> a owl:ObjectProperty;
-  rdfs:comment "De Activiteit wordt uitgevoerd door een Uitvoerder."@nl;
-  rdfs:domain <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Boekinginfo.beschikbaar> a owl:ObjectProperty;
+  rdfs:comment "Periode waarin de boekinginfo beschikbaar is."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Boekinginfo>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder> .
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantkenmerk.isDeelVan> a owl:ObjectProperty;
-  rdfs:comment "AlgemeenParticipantkenmerk is deel van het ParticipantProfiel"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantKenmerk>;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname.frequentie> a owl:ObjectProperty;
+  rdfs:comment "De frequentie waarmee een participant deelneemt aan bepaalde activiteiten"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#cultuurdeelname>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel> .
+  rdfs:range schemas:QuantitativeValue .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname.deelVan> a owl:ObjectProperty;
-  rdfs:comment "Cultuurdeelname is deel van het ParticipantProfiel."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname.themaActiviteit> a owl:ObjectProperty;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname.themaActiviteit> a rdf:Property;
   rdfs:comment "Waar de Activiteit inhoudelijk over gaat."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range skos:Concept .
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#cultuurdeelname>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname.typeActiviteit> a owl:ObjectProperty;
   rdfs:comment "Het type van de activiteit waar de participant aan deelneemt."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname>;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#cultuurdeelname>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range skos:Concept .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname.inputVoor> a owl:ObjectProperty;
-  rdfs:comment "Deelname vormt input voor de vorming van het ParticipantProfiel."@nl;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname.tijdstip> a owl:ObjectProperty;
+  rdfs:comment "De periode van de deelname afgebakend in tijd."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname.transactie> a owl:ObjectProperty;
-  rdfs:comment "Transactie die eventueel nodig is om deel te nemen aan een Activiteit"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie> .
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Feedback.bron> a owl:ObjectProperty;
   rdfs:comment "De bron langs waar de feedback is gegeven."@nl;
@@ -279,20 +284,8 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range <http://fixme.com> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Feedback.feedbackOpDeelname> a owl:ObjectProperty;
-  rdfs:comment "Feedback van de Participant op de Deelname."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Feedback> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Feedback.vanDeelname> a owl:ObjectProperty;
-  rdfs:comment "Feedback die gegeven wordt door de Participant rond de Deelname aan een Activiteit."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Feedback>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname> .
-
 <https://data.vlaanderen.be/ns/cultuurparticipatie#FeedbackContent> a owl:Class;
-  rdfs:comment "De inhoud van de Feedback."@nl;
+  rdfs:comment "De content van de Feedback."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal.medium> a owl:ObjectProperty;
@@ -307,29 +300,17 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range rdf:langString .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.heeftPersoonlijkProfiel> a owl:ObjectProperty;
-  rdfs:comment "Het persoonlijk ParticipantProfiel van de Participant."@nl;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.consent> a owl:ObjectProperty;
+  rdfs:comment "Toestemming van de betrokkene voor de verwerking van zijn persoonsgegevens"@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.heeftProfiel> a owl:ObjectProperty;
-  rdfs:comment "Het generieke profiel dat bij een Participant kan horen."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.heeftRelatieMet> a owl:ObjectProperty;
-  rdfs:comment "De Participant heeft een relatie met een andere Participant."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant> .
+  rdfs:range <https://w3id.org/GConsent#Consent> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.neemtDeelAan> a owl:ObjectProperty;
   rdfs:comment "De Participant neemt deel aan een Activiteit."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7> .
+  rdfs:range crm:E7_Activity .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.onderwijsniveau> a owl:ObjectProperty;
   rdfs:comment "Het onderwijsniveau waarvan de participant heeft genoten."@nl;
@@ -337,87 +318,39 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range skos:Concept .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel.afgeleidVan> a owl:ObjectProperty;
-  rdfs:comment "Het ParticipantProfiel wordt afgeleid van de Deelname van de Participant aan een Activiteit."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname> .
+<https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel> a owl:Class;
+  rdfs:comment "Specifiek of algemeen profiel van een participant."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel.algemeenKenmerk> a owl:ObjectProperty;
-  rdfs:comment "Een ParticipantProfiel heeft een AlgemeenKenmerk."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel>;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Prijsinfo.beschikbaar> a owl:ObjectProperty;
+  rdfs:comment "De periode waarin de prijsinfo van een activiteit beschikbaar is."@nl;
+  rdfs:domain schemas:PriceSpecification;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantKenmerk> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel.cultureel> a owl:ObjectProperty;
-  rdfs:comment "Een ParticipantProfiel heeft een Cultuurdeelname van de Participant."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel.persoonlijkProfielVan> a owl:ObjectProperty;
-  rdfs:comment "Het persoonlijk profiel van de Participant."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel.profielVan> a owl:ObjectProperty;
-  rdfs:comment "Generiek profiel van de Participant."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel.sociodemografisch> a owl:ObjectProperty;
-  rdfs:comment "Sociodemografisch kenmerk over de participant"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk> .
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Prijsinfo.prijscategorie> a owl:ObjectProperty;
   rdfs:comment "De categorie van de prijs zoals een jongerentarief of seniorentarief."@nl;
   rdfs:domain schemas:PriceSpecification;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range skos:Concept .
+  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#PrijsCategorieType> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.activiteit> a owl:ObjectProperty;
-  rdfs:comment "De Activiteit kan een Promotie hebben."@nl;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.tijdstip> a owl:DatatypeProperty;
+  rdfs:comment "De periode van de promotie afgebakend in tijd."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7> .
+  rdfs:range xsd:dateTime .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.doelParticipant> a owl:ObjectProperty;
-  rdfs:comment "Het doel van de Promotie is om de Participant te bereiken."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie>;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.activiteit> a owl:ObjectProperty;
+  rdfs:comment "Activiteit gekoppeld aan de Samenwerking tussen Aanbieders."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant> .
+  rdfs:range crm:E7_Activity .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.doelProfiel> a owl:ObjectProperty;
-  rdfs:comment "Het doel van het ParticipantProfiel is om Promotie te kunnen voeren."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie>;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.periode> a owl:ObjectProperty;
+  rdfs:comment "Het beginpunt in tijd van de Samenwerking."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.uitgevoerdDoor> a owl:ObjectProperty;
-  rdfs:comment "De Promotie wordt uitgevoerd door een Aanbieder."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.viaKanaal> a owl:ObjectProperty;
-  rdfs:comment "De Promotie van een Activiteit verloopt via een Kanaal."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking> a owl:Class;
-  rdfs:comment "Het bijdragen aan een gezamenlijk resultaat door één of meerdere partijen."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk.deelVan> a owl:ObjectProperty;
-  rdfs:comment "Sociodemografisch kenmerk maakt deel uit van het ParticipantProfiel."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel> .
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk.inkomensniveau> a owl:ObjectProperty;
   rdfs:comment "Het inkomensniveau van de participant"@nl;
@@ -425,17 +358,23 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range skos:Concept .
 
+<https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk.locatie> a owl:ObjectProperty;
+  rdfs:comment "Locatie van de participant"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range prov:Location .
+
 <https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk.onderwijsniveau> a owl:ObjectProperty;
   rdfs:comment "Het onderwijsniveau waarvan de participant heeft genoten"@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range skos:Concept .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Ticket.transactie> a owl:ObjectProperty;
-  rdfs:comment "De Transactie kan resulteren in een Ticket."@nl;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Ticket.geldigheid> a owl:ObjectProperty;
+  rdfs:comment "De periode waarin een ticket geldig is."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Ticket>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie> .
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.aangekochtDoor> a owl:ObjectProperty;
   rdfs:comment "Het individu, groep of organisatie die de transactie heeft uitgevoerd"@nl;
@@ -443,163 +382,236 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range dc:Agent .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.betaaltermijn> a owl:ObjectProperty;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.betaaltermijn> a rdf:Property;
   rdfs:comment "De termijn waarin transacties plaatsvinden."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range skos:Concept .
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.geeftRechtOp> a owl:ObjectProperty;
-  rdfs:comment "De Transactie geeft recht op een Ticket."@nl;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.object> a owl:ObjectProperty;
+  rdfs:comment "Materieel ding dat verbonden is aan de transactie zoals een fysieke of digitale kopie van een boek."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname> .
+  rdfs:range prov:Entity .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.prijs> a owl:ObjectProperty;
-  rdfs:comment "Waarde die gepaard gaat met de transactie."@nl;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.tijdstip> a owl:DatatypeProperty;
+  rdfs:comment "Tijdstip wanneer de transactie heeft plaatsgevonden."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range schemas:MonetaryAmount .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.ticket> a owl:ObjectProperty;
-  rdfs:comment "Het Ticket komt voort uit een Transactie."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Ticket> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.alternatieveNaam> a owl:ObjectProperty;
-  rdfs:comment "Alternatieve naam voor een Aanbieder."@nl,
-    "Alternatieve naam voor een uitvoerder."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range rdf:langString .
+  rdfs:range xsd:dateTime .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.erkenning> a owl:ObjectProperty;
   rdfs:comment "De aanduiding door een bevoegde instelling waarbij wordt vastgesteld dat een persoon of instelling aan bepaalde eisen voldoet, al dan niet tijdelijk."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#uitvoerder>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.naam> a owl:ObjectProperty;
   rdfs:comment "De naam van de Uitvoerder."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#uitvoerder>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range rdf:langString .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.rol> a owl:ObjectProperty;
   rdfs:comment "Het geheel aan verantwoordelijkheden, activiteiten en bevoegdheden dat aan een persoon of een team wordt toegekend."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#uitvoerder>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.subsidie> a owl:ObjectProperty;
   rdfs:comment "Financiële tegemoetkoming met voorwaarden, gegeven van een instantie aan een aanbieder, gekoppeld aan een activiteit."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#uitvoerder>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <http://data.vlaanderen.be/ns/subsidie#SubsidiemaatregelConsumptie> .
+  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#subsidie> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.themaActiviteit> a owl:ObjectProperty;
-  rdfs:comment "Waar de Activiteit die de Uitvoerder uitvoert inhoudelijk over gaat."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
+  rdfs:comment "Waar de Activiteit inhoudelijk over gaat."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#uitvoerder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.typeActiviteit> a owl:ObjectProperty;
+  rdfs:comment "Het type van de Activiteit waaronder die valt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#uitvoerder>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.vermeldAls> a owl:ObjectProperty;
   rdfs:comment "Hoe de Uitvoerder vermeld wordt voor de Activiteit."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#uitvoerder>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range rdf:langString .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.voertUitActiviteit> a owl:ObjectProperty;
-  rdfs:comment "De Uitvoerdert voert de Activiteit uit."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.rol> a owl:DatatypeProperty;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.rang> a owl:DatatypeProperty;
   rdfs:comment "De rang van de Uitvoerder ten opzichte van andere Uitvoerders."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.rang>;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range xsd:string .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#identificator> a owl:ObjectProperty;
-  rdfs:comment "Identificator dat de Aanbieder verkreeg bij registratie."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#rol> a owl:ObjectProperty;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.rol> a owl:ObjectProperty;
   rdfs:comment "De concrete rol van de Uitvoerder voor een Activiteit."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.rang>;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range skos:Concept .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#subuitvoerder> a owl:ObjectProperty;
-  rdfs:comment "De Uitvoerder maakt deel uit van een overkoepelende Superuitvoerder."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#superuitvoerder> a owl:ObjectProperty;
-  rdfs:comment "De Uitvoerder heeft één of meerdere Subuitvoerders."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#themaActiviteit> a owl:ObjectProperty;
-  rdfs:comment "Waar de Activiteit inhoudelijk over gaat."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range skos:Concept .
-
-<http://data.europa.eu/m8g/PeriodOfTime> a rdf:Property;
-  rdfs:label "tijdstip"@nl,
-    "geldigheid"@nl,
-    "beschikbaar"@nl .
 
 dc:type a rdf:Property;
-  rdfs:label "typeActiviteit"@nl,
-    "type"@nl,
-    "transactietype"@nl,
-    "tickettype"@nl,
-    "samenwerkingType"@nl,
-    "locatieType"@nl,
-    "labeltype"@nl,
-    "deelnameType"@nl .
+  rdfs:label "type"@nl .
 
 schema:contactPoint a rdf:Property;
   rdfs:label "contactinfo"@nl .
 
 crm:P32_used_general_technique a rdf:Property;
-  rdfs:label "gebruikteTechniek"@nl .
+  rdfs:label "gebruikte techniek"@nl .
 
-rdfs:label a rdf:Property;
-  rdfs:label "label"@nl .
-
-xsd:dateTime a rdf:Property;
-  rdfs:label "samenwerkingStart"@nl .
-
-prov:Entity a rdf:Property;
-  rdfs:label "object"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitFunctietype> a owl:Class;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+skos:altLabel a rdf:Property;
+  rdfs:label "alternatieve naam"@nl .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Berichtgeving> a owl:Class;
   rdfs:comment "Persmateriaal omtrent de activiteit."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Beschikbaarheid> a owl:Class;
+  rdfs:comment "De beschikbaarheid van de Activiteit."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Boekinginfo> a owl:Class;
   rdfs:comment "Informatie omtrent de boeking van de activiteit."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
-schemas:QuantitativeValue a rdf:Property;
-  rdfs:label "frequentie"@nl .
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname> a owl:Class;
+  rdfs:comment "Het deelnemen van een participant aan een activiteit."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#LocatieType> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#OrganisatievormType> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#PrijsCategorieType> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie> a owl:Class;
+  rdfs:comment "Het met enkele of meerdere middelen bekend maken van een actie, activiteit, dienst of product."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Ticket> a owl:Class;
+  rdfs:comment "Stuk waarmee men afhandelen transactie bewijst."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#aangebodenDoor> a rdf:Property;
+  rdfs:label "aangeboden door"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#activiteitpromotie> a rdf:Property;
+  rdfs:label "activiteit"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#afgeleidvan> a rdf:Property;
+  rdfs:label "afgeleid van"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#algemeenkenmerk> a rdf:Property;
+  rdfs:label "algemeen kenmerk"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#biedtAan> a rdf:Property;
+  rdfs:label "biedt aan"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#boeking> a rdf:Property;
+  rdfs:label "boeking"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#deelvan> a rdf:Property;
+  rdfs:label "deel van"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#doelgroep> a rdf:Property;
+  rdfs:label "doelgroep"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#doelparticipant> a rdf:Property;
+  rdfs:label "doel participant"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#doelprofiel> a rdf:Property;
+  rdfs:label "doel profiel"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#feedbackopdeelname> a rdf:Property;
+  rdfs:label "feedback op deelname"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#geefrechtop> a rdf:Property;
+  rdfs:label "geeft recht op"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#heeftpersoonlijkprofiel> a rdf:Property;
+  rdfs:label "heeft persoonlijk profiel"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#heeftprofiel> a rdf:Property;
+  rdfs:label "heeft profiel"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#heeftrelatiemet> a rdf:Property;
+  rdfs:label "heeft relatie met"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#inputvoor> a rdf:Property;
+  rdfs:label "input voor"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#isDeelVan> a rdf:Property;
+  rdfs:label "is deel van"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#isGepromoot> a rdf:Property;
+  rdfs:label "is gepromoot"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#persoonlijkprofielvan> a rdf:Property;
+  rdfs:label "persoonlijk profiel van"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#prijs> a rdf:Property;
+  rdfs:label "prijs"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#profielvan> a rdf:Property;
+  rdfs:label "profiel van"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#sociodemografisch> a rdf:Property;
+  rdfs:label "sociodemografisch"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#subaanbieder> a rdf:Property;
+  rdfs:label "subaanbieder"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#subactiviteit> a rdf:Property;
+  rdfs:label "subactiviteit"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#subuitvoerder> a rdf:Property;
+  rdfs:label "subuitvoerder"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#superaanbieder> a rdf:Property;
+  rdfs:label "superaanbieder"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#superactiviteit> a rdf:Property;
+  rdfs:label "superactiviteit"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#superuitvoerder> a rdf:Property;
+  rdfs:label "superuitvoerder"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#ticket> a rdf:Property;
+  rdfs:label "ticket"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#transactie> a rdf:Property;
+  rdfs:label "transactie"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#transactieticket> a rdf:Property;
+  rdfs:label "transactie"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#uitgevoerddoor> a rdf:Property;
+  rdfs:label "uitgevoerd door"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#vandeelname> a rdf:Property;
+  rdfs:label "van deelname"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#viakanaal> a rdf:Property;
+  rdfs:label "via kanaal"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#voertUit> a rdf:Property;
+  rdfs:label "voert uit"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#voertUitActiviteit> a rdf:Property;
+  rdfs:label "voert uit"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#werktSamenMet> a rdf:Property;
+  rdfs:label "werkt samen met"@nl .
 
 schemas:eligibleQuantity a rdf:Property;
-  rdfs:label "beschikbareHoeveelheid"@nl,
-    "beschikbaarTransactieVolume"@nl .
+  rdfs:label "beschikbare hoeveelheid"@nl,
+    "beschikbaar transactievolume"@nl .
 
 schemas:price a rdf:Property;
   rdfs:label "prijs"@nl .
@@ -608,68 +620,36 @@ schemas:typicalAgeRange a rdf:Property;
   rdfs:label "leeftijdsgroep"@nl .
 
 schemas:valueAddedTaxIncluded a rdf:Property;
-  rdfs:label "inclusiefBTW"@nl .
-
-<https://w3id.org/GConsent#Consent> a rdf:Property;
-  rdfs:label "consent"@nl .
+  rdfs:label "inclusief BTW"@nl .
 
 <https://www.w3.org/2001/XMLSchema#dateTime> a rdf:Property;
-  rdfs:label "tijdstip"@nl,
-    "tijd"@nl .
+  rdfs:label "tijd"@nl .
 
-<https://www.w3.org/ns/adms#Identifier> a rdf:Property;
-  rdfs:label "identificator"@nl .
-
-<https://www.w3.org/ns/prov#Location> a rdf:Property;
-  rdfs:label "locatie"@nl .
-
-<http://fixme.com> a rdf:Property;
-  rdfs:label "infrastructuur"@nl .
-
-foaf:Document a rdf:Property;
-  rdfs:label "documentatie"@nl .
-
-<https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning> a rdf:Property;
-  rdfs:label "erkenning"@nl .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantKenmerk> a owl:Class;
-  rdfs:comment "Algemeen kenmerk over de participant"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Ticket> a owl:Class;
-  rdfs:comment "Stuk waarmee men afhandelen transactie bewijst."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.rang> a owl:Class;
-  rdfs:comment "De concrete uitvoering van een Uitvoerder gekoppeld aan een Activiteit."@nl;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Feedback> a owl:Class;
+  rdfs:comment "Terugkoppeling van de participant over de activiteit."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal> a owl:Class;
   rdfs:comment "Literaire communicatie  die boodschap bij de ontvanger brengt."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname> a owl:Class;
-  rdfs:comment "Capteert verschillende elementen rond de culturele activiteiten waaraan een participant deelneemt"@nl;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking> a owl:Class;
+  rdfs:comment "Het bijdragen aan een gezamenlijk resultaat door één of meerdere partijen."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Feedback> a owl:Class;
-  rdfs:comment "Terugkoppeling van de participant over de activiteit."@nl;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering> a owl:Class;
+  rdfs:comment "De concrete uitvoering van een Uitvoerder gekoppeld aan een Activiteit."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+
+foaf:Document a rdf:Property;
+  rdfs:label "documentatie"@nl .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk> a owl:Class;
-  rdfs:comment "Sociodemografisch kenmerk over de participant"@nl;
+  rdfs:comment "Sociodemografisch kenmerk over de Participant"@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname> a owl:Class;
-  rdfs:comment "Het deelnemen van een participant aan een activiteit."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie> a owl:Class;
-  rdfs:comment "Het met enkele of meerdere middelen bekend maken van een actie, activiteit, dienst of product."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie> a owl:Class;
-  rdfs:comment "Een handeling zoals een  registratie, reservering of aankopen die toegang geeft tot een ding."@nl;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#subsidie> a owl:Class;
+  rdfs:comment "Financiële aansporing om het gedrag van de bevolking of van een specifieke doelgroep (dat kan ook een andere overheid zijn) te beïnvloeden in de door de overheid gewenste richting."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant> a owl:Class;
@@ -677,15 +657,23 @@ foaf:Document a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:subClassOf dc:Agent .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder> a owl:Class;
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie> a owl:Class;
+  rdfs:comment "Een handeling zoals een  registratie, reservering of aankopen die toegang geeft tot een ding."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#cultuurdeelname> a owl:Class,
+    rdf:Property;
+  rdfs:label "cultureel"@nl;
+  rdfs:comment "Capteert verschillende elementen rond de culturele activiteiten waaraan een participant deelneemt"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#uitvoerder> a owl:Class,
+    rdf:Property;
+  rdfs:label "uitvoerder"@nl;
   rdfs:comment "Persoon of organisatie die de activiteit of dingen uitvoert"@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:subClassOf dc:Agent,
     <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel> a owl:Class;
-  rdfs:comment "Specifiek of algemeen profiel van een participant."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder> a owl:Class;
   rdfs:comment "Agent die een Activiteit aanbiedt"@nl;
@@ -703,28 +691,58 @@ foaf:Document a rdf:Property;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso skos:Concept,
-    <https://cidoc-crm.org/html/cidoc_crm_v7.1.1.html#E7>,
+  rdfs:seeAlso crm:E7_Activity,
+    skos:Concept,
     schemas:PriceSpecification,
-    <https://www.w3.org/ns/prov#Location>,
-    <https://www.w3.org/ns/adms#Identifier>,
     <https://www.w3.org/2001/XMLSchema#dateTime>,
-    <https://w3id.org/GConsent#Consent>,
     schemas:valueAddedTaxIncluded,
     schemas:typicalAgeRange,
     schemas:price,
     schemas:eligibleQuantity,
-    schemas:QuantitativeValue,
-    <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#werktSamenMet>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#voertUitActiviteit>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#voertUit>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#viakanaal>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#vandeelname>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#uitvoerder>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#uitgevoerddoor>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#transactieticket>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#transactie>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#ticket>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#superuitvoerder>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#superactiviteit>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#superaanbieder>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#subuitvoerder>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#subactiviteit>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#subaanbieder>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#sociodemografisch>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#profielvan>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#prijs>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#persoonlijkprofielvan>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#isGepromoot>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#isDeelVan>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#inputvoor>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#heeftrelatiemet>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#heeftprofiel>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#heeftpersoonlijkprofiel>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#geefrechtop>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#feedbackopdeelname>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#doelprofiel>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#doelparticipant>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#doelgroep>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#deelvan>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#cultuurdeelname>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#boeking>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#biedtAan>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#algemeenkenmerk>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#afgeleidvan>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#activiteitpromotie>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#aangebodenDoor>,
     foaf:Document,
-    prov:Entity,
-    xsd:dateTime,
-    rdfs:label,
+    skos:altLabel,
     crm:P32_used_general_technique,
     schema:contactPoint,
-    dc:type,
-    <http://fixme.com>,
-    <http://data.europa.eu/m8g/PeriodOfTime>;
+    dc:type;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [

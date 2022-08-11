@@ -35,7 +35,6 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#SubsidieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#UitvoerderShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#PeriodeShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#ErkenningShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#AgentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#ContactInfoShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#DingShape>,
@@ -80,6 +79,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#LocatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#GeregistreerdeOrganisatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#DocumentShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#ErkenningShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#FeitelijkeVerenigingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#VerenigingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#InfrastructuurShape>,
@@ -103,7 +103,7 @@
     shacl:name "biedt aan"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#biedtAan>
   ], [
-    shacl:class <http://fixme.com#Erkenning>;
+    shacl:class <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning>;
     shacl:description "De aanduiding door een bevoegde instelling waarbij wordt vastgesteld dat een persoon of instelling aan bepaalde eisen voldoet, al dan niet tijdelijk."@nl;
     shacl:name "erkenning"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.erkenning>
@@ -214,7 +214,7 @@
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant>;
     shacl:description "Participant die deelneemt aan een Activiteit."@nl;
     shacl:name "deelnemer"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#deelnemer>
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.deelnemer>
   ], [
     shacl:class skos:Concept;
     shacl:description "De verschillende vormen, uitingen of richtingen van kunst met betrekking tot de activiteit."@nl;
@@ -259,7 +259,7 @@
     shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur>;
     shacl:description "Informatie rond de infrastructuur waarrond of waarin de Activiteit doorgaat."@nl;
     shacl:name "infrastructuur"@nl;
-    shacl:path <http://fixme.com>
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.infrastructuur>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie>;
     shacl:description "Activiteit die wordt gepromoot aan de hand van een Promotie."@nl;
@@ -509,6 +509,7 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "Het tijdsinterval waarin het Document beschikbaar is."@nl;
     shacl:maxCount 1;
     shacl:name "beschikbaar"@nl;
     shacl:path <http://fixme.com#Document.beschikbaar>
@@ -525,7 +526,7 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#ErkenningShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://fixme.com#Erkenning> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#FeedbackBronShape> a shacl:NodeShape;
   shacl:closed false;
@@ -585,7 +586,7 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "registratie"@nl;
-    shacl:path <http://fixme.com#registratie>
+    shacl:path <https://data.vlaanderen.be/ns/persoon#registratie>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon> .
 
@@ -596,19 +597,19 @@
     shacl:description "Geeft aan of de rechtspersoonlijkheid van de geregistreerde organisatie deze is van een natuurlijk persoon of van een rechtspersoon. "@nl;
     shacl:maxCount 1;
     shacl:name "rechtspersoonlijkheid"@nl;
-    shacl:path <http://fixme.com#rechtspersoonlijkheid>
+    shacl:path <http://www.w3.org/ns/regorg#orgType>
   ], [
     shacl:class skos:Concept;
     shacl:description "Status van de geregistreerde organisatie."@nl;
     shacl:maxCount 1;
     shacl:name "rechtstoestand"@nl;
-    shacl:path <http://fixme.com#rechtstoestand>
+    shacl:path <http://www.w3.org/ns/regorg#orgStatus>
   ], [
     shacl:class skos:Concept;
     shacl:description "Juridisch statuut van de geregistreerde organisatie."@nl;
     shacl:maxCount 1;
     shacl:name "rechtsvorm"@nl;
-    shacl:path <http://fixme.com#rechtsvorm>
+    shacl:path <http://www.w3.org/ns/regorg#orgType>
   ], [
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "Identificator dat de organisatie verkreeg bij registratie."@nl;
@@ -896,7 +897,7 @@
     shacl:class crm:E7_Activity;
     shacl:description "De Participant neemt deel aan een Activiteit."@nl;
     shacl:name "neemt deel aan"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#neemtdeelaan>
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.neemtDeelAan>
   ], [
     shacl:class skos:Concept;
     shacl:description "Het onderwijsniveau waarvan de participant heeft genoten."@nl;
@@ -951,15 +952,16 @@
     shacl:description "Belangrijkste vd voornamen ve persoon."@nl;
     shacl:maxCount 1;
     shacl:name "gebruikte voornaam"@nl;
-    shacl:path <http://fixme.com#gebruikteVoornaam>
+    shacl:path foaf:givenName
   ], [
     shacl:description "Het feit of men een man of een vrouw is."@nl;
     shacl:maxCount 1;
     shacl:name "geslacht"@nl;
     shacl:path <https://data.vlaanderen.be/ns/persoon#geslacht>
   ], [
+    shacl:description "De nationaliteit van een Persoon."@nl;
     shacl:name "nationaliteit"@nl;
-    shacl:path <http://fixme.com#nationaliteit>
+    shacl:path <http://fixme.com#Persoon.nationaliteit>
   ], [
     shacl:datatype xsd:string;
     shacl:description "Achternaam gebaseerd op de voornaam vd vader ve persoon."@nl;
@@ -973,7 +975,7 @@
     shacl:name "volledige naam"@nl;
     shacl:path foaf:name
   ], [
-    shacl:description "De plaats waar de Persoon woonachtig is. "@nl;
+    shacl:description "De plaats waar de Persoon woonachtig is."@nl;
     shacl:maxCount 1;
     shacl:name "woonplaats"@nl;
     shacl:path <http://fixme.com#Persoon.woonplaats>
@@ -1195,76 +1197,6 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#TijdschemaShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    shacl:datatype xsd:integer;
-    shacl:description "Aantal keer dat het plaatsvindt."@nl;
-    shacl:maxCount 1;
-    shacl:name "aantal herhalingen"@nl;
-    shacl:path schemas:repeatCount
-  ], [
-    shacl:datatype xsd:duration;
-    shacl:description "Duur van hetgeen plaatsvindt."@nl;
-    shacl:maxCount 1;
-    shacl:name "duur"@nl;
-    shacl:path <http://fixme.com#duur>
-  ], [
-    shacl:datatype xsd:date;
-    shacl:description "Datum tot wanneer het plaatsvindt."@nl;
-    shacl:maxCount 1;
-    shacl:name "einddatum"@nl;
-    shacl:path schemas:endDate
-  ], [
-    shacl:datatype xsd:time;
-    shacl:description "Tijdstip waarop het eindigt."@nl;
-    shacl:maxCount 1;
-    shacl:name "eindtijd"@nl;
-    shacl:path schemas:endTime
-  ], [
-    shacl:datatype xsd:string;
-    shacl:description "Frequentie waarmee het plaatsvindt."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "frequentie van de herhaling"@nl;
-    shacl:path schemas:repeatFrequency
-  ], [
-    shacl:datatype xsd:anyURI;
-    shacl:description "Dagen van de week waarop het plaatsvindt."@nl;
-    shacl:name "per dag"@nl;
-    shacl:path schemas:byDay
-  ], [
-    shacl:datatype xsd:integer;
-    shacl:description "Dagen van de maand waarop het plaatsvindt."@nl;
-    shacl:name "per dag van de maand"@nl;
-    shacl:path schemas:byMonthDay
-  ], [
-    shacl:datatype xsd:integer;
-    shacl:description "Maanden van het jaar waarop het plaatsvindt."@nl;
-    shacl:name "per maand"@nl;
-    shacl:path schemas:byMonth
-  ], [
-    shacl:datatype xsd:integer;
-    shacl:description "N-de keer dat iets plaatsvindt uit de verzameling van mogelijke tijdstippen."@nl;
-    shacl:maxCount 1;
-    shacl:name "per setpositie"@nl;
-    shacl:path <http://fixme.com#perSetpositie>
-  ], [
-    shacl:datatype xsd:date;
-    shacl:description "Datum vanaf wanneer het plaatsvindt."@nl;
-    shacl:maxCount 1;
-    shacl:name "startdatum"@nl;
-    shacl:path schemas:startDate
-  ], [
-    shacl:datatype xsd:time;
-    shacl:description "Tijdstip waarop het start."@nl;
-    shacl:maxCount 1;
-    shacl:name "starttijd"@nl;
-    shacl:path schemas:startTime
-  ], [
-    shacl:datatype xsd:date;
-    shacl:description "Datums waarop het uitzonderlijk niet plaatsvindt."@nl;
-    shacl:name "uitzonderingsdatum"@nl;
-    shacl:path schemas:exceptDate
-  ];
   shacl:targetClass schemas:Schedule .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#TransactieShape> a shacl:NodeShape;
@@ -1331,7 +1263,7 @@
     shacl:name "alternatieve naam"@nl;
     shacl:path skos:altLabel
   ], [
-    shacl:class <http://fixme.com#Erkenning>;
+    shacl:class <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning>;
     shacl:description "De aanduiding door een bevoegde instelling waarbij wordt vastgesteld dat een persoon of instelling aan bepaalde eisen voldoet, al dan niet tijdelijk."@nl;
     shacl:name "erkenning"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.erkenning>
