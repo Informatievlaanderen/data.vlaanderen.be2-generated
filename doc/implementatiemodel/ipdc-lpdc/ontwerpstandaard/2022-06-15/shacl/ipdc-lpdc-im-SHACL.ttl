@@ -25,7 +25,9 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15#SpatialShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15#ThematicAreaShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15#AddressShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15#ConceptualPublicServiceShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15#DocumentShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15#InstancePublicServiceShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15#ContactPointShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15#WebsiteShape> .
 
@@ -89,6 +91,146 @@
 <https://data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15#ConceptTagShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15#ConceptualPublicServiceShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class skos:Concept;
+    shacl:name "competentAuthorityLevel"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "De tags betreffen informatieve aanduidingen van de publieke dienstverlening."@nl;
+    shacl:name "conceptTag"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag>
+  ], [
+    shacl:class rdf:langString;
+    shacl:description "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "description"@nl;
+    shacl:path dc:description
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum waarop de publieke dienstverlening stopgezet werd/wordt"@nl;
+    shacl:maxCount 1;
+    shacl:name "endDate"@nl;
+    shacl:path schemas:endDate
+  ], [
+    shacl:class rdf:langString;
+    shacl:description "Tekstveld waarin uitzonderingen op procedures, kostprijzen, ... kunnen aangegeven worden"@nl;
+    shacl:maxCount 1;
+    shacl:name "exception"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception>
+  ], [
+    shacl:class skos:Concept;
+    shacl:name "executingAuthorityLevel"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>
+  ], [
+    shacl:class <http://purl.org/vocab/cpsv#Rule>;
+    shacl:description "The Follows property links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. This model is flexible to allow for significant variation in such a scenario."@nl;
+    shacl:maxCount 1;
+    shacl:name "follows"@nl;
+    shacl:path <http://purl.org/vocab/cpsv#follows>
+  ], [
+    shacl:class <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#Document>;
+    shacl:description "Bijlagen die gerelateerd zijn aan de dienstverlening."@nl;
+    shacl:name "hasAttachment"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasAttachment>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+    shacl:description "This property links a Public Service to a Public Organization, which is the responsible Agent for the delivery of the Public Service. Whether the particular Public Organization provides the public service directly or outsources it is not relevant. The Public Organization that is the Competent Authority of the service is the one that is ultimately responsible for managing and providing the public service. The term Competent Authority is defined in the Services Directive (2006/123/EC) in the following way: \"Any body or authority which has a supervisory or regulatory role in a Member State in relation to service activities, including, in particular, administrative authorities, including courts acting as such, professional bodies, and those professional associations or other professional organizations which, in the exercise of their legal autonomy, regulate in a collective manner access to service activities or the exercise thereof\"."@nl;
+    shacl:minCount 1;
+    shacl:name "hasCompetentAuthority"@nl;
+    shacl:path <http://data.europa.eu/m8g/hasCompetentAuthority>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/Cost>;
+    shacl:description "The Has Cost property links a Public Service to one or more instances of the Cost class. It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship."@nl;
+    shacl:maxCount 1;
+    shacl:name "hasCost"@nl;
+    shacl:path <http://data.europa.eu/m8g/hasCost>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+    shacl:name "hasExecutingAuthority"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>
+  ], [
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description "The Has Legal Resource property links a Public Service to a Legal Resource. It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis."@nl;
+    shacl:name "hasLegalResource"@nl;
+    shacl:path <http://data.europa.eu/m8g/hasLegalResource>
+  ], [
+    shacl:class schemas:WebSite;
+    shacl:description "moreInfo verwijst naar online locaties waar extra info rond iets specifiek gerelateerd aan de publieke dienstverlening vermeld wordt"@nl;
+    shacl:name "hasMoreInfo"@nl;
+    shacl:path rdfs:seeAlso
+  ], [
+    shacl:class <http://data.europa.eu/m8g/Requirement>;
+    shacl:description "Tekstuele beschrijving van de voorwaarden om gebruik te maken van de dienstverlening."@nl;
+    shacl:maxCount 1;
+    shacl:name "hasRequirement"@nl;
+    shacl:path <https://vocab.belgif.be/ns/publicservice#hasRequirement>
+  ], [
+    shacl:class rdf:langString;
+    shacl:description "This property represents a keyword, term or phrase to describe the Public Service."@nl;
+    shacl:name "keyword"@nl;
+    shacl:path dcat:keyword
+  ], [
+    shacl:class dc:LinguisticSystem;
+    shacl:description "This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. The recommended controlled vocabularies are listed in section 4."@nl;
+    shacl:name "language"@nl;
+    shacl:path <http://publications.europa.eu/resource/authority/language>
+  ], [
+    shacl:class rdf:langString;
+    shacl:description "This property represents the official Name of the Public Service."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "name"@nl;
+    shacl:path dc:title
+  ], [
+    shacl:class <http://data.europa.eu/m8g/Output>;
+    shacl:description "The Produces property links a Public Service to one or more instances of the FinancialAdvantage class, describing the actual financial advantages of executing a given Public Service."@nl;
+    shacl:name "produces"@nl;
+    shacl:path <http://purl.org/vocab/cpsv#produces>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "De informatie van de publieke dienstverlening wordt ontsloten naar de gekozen publicatie mediums."@nl;
+    shacl:name "publicationMedium"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium>
+  ], [
+    shacl:class rdf:langString;
+    shacl:description "Tekstveld waarin de regelgeving waarop de public service gebaseerd is kan beschreven worden."@nl;
+    shacl:maxCount 1;
+    shacl:name "regulation"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation>
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum waarop de publieke dienstverlening actief aangeboden werd/wordt"@nl;
+    shacl:maxCount 1;
+    shacl:name "startDate"@nl;
+    shacl:path schemas:startDate
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "doelgroep(en) waarop de public service gericht is"@nl;
+    shacl:name "targetAudience"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "This property represents the Thematic Area of a Public Service as described in a controlled vocabulary."@nl;
+    shacl:name "thematicArea"@nl;
+    shacl:path <http://data.europa.eu/m8g/thematicArea>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Het type/soort van public service (bv advies, financieel voordeel, ...)"@nl;
+    shacl:maxCount 1;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "SDG (Single digital gateway) domein waarbinnen de public service gecategoriseerd wordt"@nl;
+    shacl:name "yourEuropeCategory"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory>
+  ];
+  shacl:targetClass <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15#ContactPointShape> a shacl:NodeShape;
   shacl:closed false;
@@ -206,6 +348,163 @@
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Output> .
 
+<https://data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15#InstancePublicServiceShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class skos:Concept;
+    shacl:name "competentAuthorityLevel"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>
+  ], [
+    shacl:class rdf:langString;
+    shacl:description "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "description"@nl;
+    shacl:path dc:description
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum waarop de publieke dienstverlening stopgezet werd/wordt"@nl;
+    shacl:maxCount 1;
+    shacl:name "endDate"@nl;
+    shacl:path schemas:endDate
+  ], [
+    shacl:class rdf:langString;
+    shacl:description "Tekstveld waarin uitzondering op procedures, kostprijzen, ... kunnen aangegeven worden"@nl;
+    shacl:maxCount 1;
+    shacl:name "exception"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception>
+  ], [
+    shacl:class skos:Concept;
+    shacl:name "executingAuthorityLevel"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>
+  ], [
+    shacl:class <http://purl.org/vocab/cpsv#Rule>;
+    shacl:description "The Follows property links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. This model is flexible to allow for significant variation in such a scenario."@nl;
+    shacl:maxCount 1;
+    shacl:name "follows"@nl;
+    shacl:path <http://purl.org/vocab/cpsv#follows>
+  ], [
+    shacl:class <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#Document>;
+    shacl:description "Bijlagen die gerelateerd zijn aan de dienstverlening."@nl;
+    shacl:name "hasAttachment"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasAttachment>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+    shacl:description "This property links a Public Service to a Public Organization, which is the responsible Agent for the delivery of the Public Service. Whether the particular Public Organization provides the public service directly or outsources it is not relevant. The Public Organization that is the Competent Authority of the service is the one that is ultimately responsible for managing and providing the public service. The term Competent Authority is defined in the Services Directive (2006/123/EC) in the following way: \"Any body or authority which has a supervisory or regulatory role in a Member State in relation to service activities, including, in particular, administrative authorities, including courts acting as such, professional bodies, and those professional associations or other professional organizations which, in the exercise of their legal autonomy, regulate in a collective manner access to service activities or the exercise thereof\"."@nl;
+    shacl:minCount 1;
+    shacl:name "hasCompetentAuthority"@nl;
+    shacl:path <http://data.europa.eu/m8g/hasCompetentAuthority>
+  ], [
+    shacl:class schemas:ContactPoint;
+    shacl:description "A contact point for the service is almost always helpful. The value of this property, the contact information itself, should be provided using schema:ContactPoint. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant."@nl;
+    shacl:name "hasContactPoint"@nl;
+    shacl:path <http://data.europa.eu/m8g/hasContactPoint>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/Cost>;
+    shacl:description "The Has Cost property links a Public Service to one or more instances of the Cost class. It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship."@nl;
+    shacl:maxCount 1;
+    shacl:name "hasCost"@nl;
+    shacl:path <http://data.europa.eu/m8g/hasCost>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+    shacl:minCount 1;
+    shacl:name "hasExecutingAuthority"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>
+  ], [
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description "The Has Legal Resource property links a Public Service to a Legal Resource. It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis."@nl;
+    shacl:name "hasLegalResource"@nl;
+    shacl:path <http://data.europa.eu/m8g/hasLegalResource>
+  ], [
+    shacl:class schemas:WebSite;
+    shacl:description "moreInfo verwijst naar online locaties waar extra info rond iets specifiek gerelateerd aan de publieke dienstverlening vermeld wordt"@nl;
+    shacl:name "hasMoreInfo"@nl;
+    shacl:path rdfs:seeAlso
+  ], [
+    shacl:class <http://data.europa.eu/m8g/Requirement>;
+    shacl:description "Tekstuele beschrijving van de voorwaarden om gebruik te maken van de dienstverlening."@nl;
+    shacl:maxCount 1;
+    shacl:name "hasRequirement"@nl;
+    shacl:path <https://vocab.belgif.be/ns/publicservice#hasRequirement>
+  ], [
+    shacl:class <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService>;
+    shacl:maxCount 1;
+    shacl:name "hasSource"@nl;
+    shacl:path dc:source
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "De tags betreffen informatieve aanduidingen van de publieke dienstverlening."@nl;
+    shacl:name "instanceTag"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#instanceTag>
+  ], [
+    shacl:class rdf:langString;
+    shacl:description "This property represents a keyword, term or phrase to describe the Public Service."@nl;
+    shacl:name "keyword"@nl;
+    shacl:path dcat:keyword
+  ], [
+    shacl:class dc:LinguisticSystem;
+    shacl:description "This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. The recommended controlled vocabularies are listed in section 4."@nl;
+    shacl:name "language"@nl;
+    shacl:path <http://publications.europa.eu/resource/authority/language>
+  ], [
+    shacl:class rdf:langString;
+    shacl:description "This property represents the official Name of the Public Service."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "name"@nl;
+    shacl:path dc:title
+  ], [
+    shacl:class <http://data.europa.eu/m8g/Output>;
+    shacl:description "The Produces property links a Public Service to one or more instances of the FinancialAdvantage class, describing the actual financial advantages of executing a given Public Service."@nl;
+    shacl:name "produces"@nl;
+    shacl:path <http://purl.org/vocab/cpsv#produces>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "De informatie van de publieke dienstverlening wordt ontsloten naar de gekozen publicatie mediums."@nl;
+    shacl:name "publicationMedium"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium>
+  ], [
+    shacl:class rdf:langString;
+    shacl:description "Tekstveld waarin de regelgeving waarop de public service gebaseerd is kan beschreven worden."@nl;
+    shacl:maxCount 1;
+    shacl:name "regulation"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority."@nl;
+    shacl:minCount 1;
+    shacl:name "spatial"@nl;
+    shacl:path dc:spatial
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum waarop de publieke dienstverlening actief aangeboden werd/wordt"@nl;
+    shacl:maxCount 1;
+    shacl:name "startDate"@nl;
+    shacl:path schemas:startDate
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "doelgroep(en) waarop de public service gericht is"@nl;
+    shacl:name "targetAudience"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "This property represents the Thematic Area of a Public Service as described in a controlled vocabulary."@nl;
+    shacl:name "thematicArea"@nl;
+    shacl:path <http://data.europa.eu/m8g/thematicArea>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Het type/soort van public service (bv advies, financieel voordeel, ...)"@nl;
+    shacl:maxCount 1;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "SDG (Single digital gateway) domein waarbinnen de public service gecategoriseerd wordt"@nl;
+    shacl:name "yourEuropeCategory"@nl;
+    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory>
+  ];
+  shacl:targetClass <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+
 <https://data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15#InstanceTagShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
@@ -313,396 +612,3 @@
 <https://data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15#eli::LegalResourceShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResource> .
-
- [
-    shacl:class skos:Concept;
-    shacl:name "competentAuthorityLevel"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:description "De tags betreffen informatieve aanduidingen van de publieke dienstverlening."@nl;
-    shacl:name "conceptTag"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag>
-  ] .
-
- [
-    shacl:class rdf:langString;
-    shacl:description "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "description"@nl;
-    shacl:path dc:description
-  ] .
-
- [
-    shacl:datatype xsd:dateTime;
-    shacl:description "Datum waarop de publieke dienstverlening stopgezet werd/wordt"@nl;
-    shacl:maxCount 1;
-    shacl:name "endDate"@nl;
-    shacl:path schemas:endDate
-  ] .
-
- [
-    shacl:class rdf:langString;
-    shacl:description "Tekstveld waarin uitzonderingen op procedures, kostprijzen, ... kunnen aangegeven worden"@nl;
-    shacl:maxCount 1;
-    shacl:name "exception"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception>
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:name "executingAuthorityLevel"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>
-  ] .
-
- [
-    shacl:class <http://purl.org/vocab/cpsv#Rule>;
-    shacl:description "The Follows property links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. This model is flexible to allow for significant variation in such a scenario."@nl;
-    shacl:maxCount 1;
-    shacl:name "follows"@nl;
-    shacl:path <http://purl.org/vocab/cpsv#follows>
-  ] .
-
- [
-    shacl:class <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#Document>;
-    shacl:description "Bijlagen die gerelateerd zijn aan de dienstverlening."@nl;
-    shacl:name "hasAttachment"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasAttachment>
-  ] .
-
- [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description "This property links a Public Service to a Public Organization, which is the responsible Agent for the delivery of the Public Service. Whether the particular Public Organization provides the public service directly or outsources it is not relevant. The Public Organization that is the Competent Authority of the service is the one that is ultimately responsible for managing and providing the public service. The term Competent Authority is defined in the Services Directive (2006/123/EC) in the following way: \"Any body or authority which has a supervisory or regulatory role in a Member State in relation to service activities, including, in particular, administrative authorities, including courts acting as such, professional bodies, and those professional associations or other professional organizations which, in the exercise of their legal autonomy, regulate in a collective manner access to service activities or the exercise thereof\"."@nl;
-    shacl:minCount 1;
-    shacl:name "hasCompetentAuthority"@nl;
-    shacl:path <http://data.europa.eu/m8g/hasCompetentAuthority>
-  ] .
-
- [
-    shacl:class <http://data.europa.eu/m8g/Cost>;
-    shacl:description "The Has Cost property links a Public Service to one or more instances of the Cost class. It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship."@nl;
-    shacl:maxCount 1;
-    shacl:name "hasCost"@nl;
-    shacl:path <http://data.europa.eu/m8g/hasCost>
-  ] .
-
- [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:name "hasExecutingAuthority"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>
-  ] .
-
- [
-    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
-    shacl:description "The Has Legal Resource property links a Public Service to a Legal Resource. It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis."@nl;
-    shacl:name "hasLegalResource"@nl;
-    shacl:path <http://data.europa.eu/m8g/hasLegalResource>
-  ] .
-
- [
-    shacl:class schemas:WebSite;
-    shacl:description "moreInfo verwijst naar online locaties waar extra info rond iets specifiek gerelateerd aan de publieke dienstverlening vermeld wordt"@nl;
-    shacl:name "hasMoreInfo"@nl;
-    shacl:path rdfs:seeAlso
-  ] .
-
- [
-    shacl:class <http://data.europa.eu/m8g/Requirement>;
-    shacl:description "Tekstuele beschrijving van de voorwaarden om gebruik te maken van de dienstverlening."@nl;
-    shacl:maxCount 1;
-    shacl:name "hasRequirement"@nl;
-    shacl:path <https://vocab.belgif.be/ns/publicservice#hasRequirement>
-  ] .
-
- [
-    shacl:class rdf:langString;
-    shacl:description "This property represents a keyword, term or phrase to describe the Public Service."@nl;
-    shacl:name "keyword"@nl;
-    shacl:path dcat:keyword
-  ] .
-
- [
-    shacl:class dc:LinguisticSystem;
-    shacl:description "This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. The recommended controlled vocabularies are listed in section 4."@nl;
-    shacl:name "language"@nl;
-    shacl:path <http://publications.europa.eu/resource/authority/language>
-  ] .
-
- [
-    shacl:class rdf:langString;
-    shacl:description "This property represents the official Name of the Public Service."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "name"@nl;
-    shacl:path dc:title
-  ] .
-
- [
-    shacl:class <http://data.europa.eu/m8g/Output>;
-    shacl:description "The Produces property links a Public Service to one or more instances of the FinancialAdvantage class, describing the actual financial advantages of executing a given Public Service."@nl;
-    shacl:name "produces"@nl;
-    shacl:path <http://purl.org/vocab/cpsv#produces>
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:description "De informatie van de publieke dienstverlening wordt ontsloten naar de gekozen publicatie mediums."@nl;
-    shacl:name "publicationMedium"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium>
-  ] .
-
- [
-    shacl:class rdf:langString;
-    shacl:description "Tekstveld waarin de regelgeving waarop de public service gebaseerd is kan beschreven worden."@nl;
-    shacl:maxCount 1;
-    shacl:name "regulation"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation>
-  ] .
-
- [
-    shacl:datatype xsd:dateTime;
-    shacl:description "Datum waarop de publieke dienstverlening actief aangeboden werd/wordt"@nl;
-    shacl:maxCount 1;
-    shacl:name "startDate"@nl;
-    shacl:path schemas:startDate
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:description "doelgroep(en) waarop de public service gericht is"@nl;
-    shacl:name "targetAudience"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:description "This property represents the Thematic Area of a Public Service as described in a controlled vocabulary."@nl;
-    shacl:name "thematicArea"@nl;
-    shacl:path <http://data.europa.eu/m8g/thematicArea>
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:description "Het type/soort van public service (bv advies, financieel voordeel, ...)"@nl;
-    shacl:maxCount 1;
-    shacl:name "type"@nl;
-    shacl:path dc:type
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:description "SDG (Single digital gateway) domein waarbinnen de public service gecategoriseerd wordt"@nl;
-    shacl:name "yourEuropeCategory"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory>
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:name "competentAuthorityLevel"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>
-  ] .
-
- [
-    shacl:class rdf:langString;
-    shacl:description "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "description"@nl;
-    shacl:path dc:description
-  ] .
-
- [
-    shacl:datatype xsd:dateTime;
-    shacl:description "Datum waarop de publieke dienstverlening stopgezet werd/wordt"@nl;
-    shacl:maxCount 1;
-    shacl:name "endDate"@nl;
-    shacl:path schemas:endDate
-  ] .
-
- [
-    shacl:class rdf:langString;
-    shacl:description "Tekstveld waarin uitzondering op procedures, kostprijzen, ... kunnen aangegeven worden"@nl;
-    shacl:maxCount 1;
-    shacl:name "exception"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception>
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:name "executingAuthorityLevel"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>
-  ] .
-
- [
-    shacl:class <http://purl.org/vocab/cpsv#Rule>;
-    shacl:description "The Follows property links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. This model is flexible to allow for significant variation in such a scenario."@nl;
-    shacl:maxCount 1;
-    shacl:name "follows"@nl;
-    shacl:path <http://purl.org/vocab/cpsv#follows>
-  ] .
-
- [
-    shacl:class <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#Document>;
-    shacl:description "Bijlagen die gerelateerd zijn aan de dienstverlening."@nl;
-    shacl:name "hasAttachment"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasAttachment>
-  ] .
-
- [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:description "This property links a Public Service to a Public Organization, which is the responsible Agent for the delivery of the Public Service. Whether the particular Public Organization provides the public service directly or outsources it is not relevant. The Public Organization that is the Competent Authority of the service is the one that is ultimately responsible for managing and providing the public service. The term Competent Authority is defined in the Services Directive (2006/123/EC) in the following way: \"Any body or authority which has a supervisory or regulatory role in a Member State in relation to service activities, including, in particular, administrative authorities, including courts acting as such, professional bodies, and those professional associations or other professional organizations which, in the exercise of their legal autonomy, regulate in a collective manner access to service activities or the exercise thereof\"."@nl;
-    shacl:minCount 1;
-    shacl:name "hasCompetentAuthority"@nl;
-    shacl:path <http://data.europa.eu/m8g/hasCompetentAuthority>
-  ] .
-
- [
-    shacl:class schemas:ContactPoint;
-    shacl:description "A contact point for the service is almost always helpful. The value of this property, the contact information itself, should be provided using schema:ContactPoint. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant."@nl;
-    shacl:name "hasContactPoint"@nl;
-    shacl:path <http://data.europa.eu/m8g/hasContactPoint>
-  ] .
-
- [
-    shacl:class <http://data.europa.eu/m8g/Cost>;
-    shacl:description "The Has Cost property links a Public Service to one or more instances of the Cost class. It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship."@nl;
-    shacl:maxCount 1;
-    shacl:name "hasCost"@nl;
-    shacl:path <http://data.europa.eu/m8g/hasCost>
-  ] .
-
- [
-    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:minCount 1;
-    shacl:name "hasExecutingAuthority"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>
-  ] .
-
- [
-    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
-    shacl:description "The Has Legal Resource property links a Public Service to a Legal Resource. It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis."@nl;
-    shacl:name "hasLegalResource"@nl;
-    shacl:path <http://data.europa.eu/m8g/hasLegalResource>
-  ] .
-
- [
-    shacl:class schemas:WebSite;
-    shacl:description "moreInfo verwijst naar online locaties waar extra info rond iets specifiek gerelateerd aan de publieke dienstverlening vermeld wordt"@nl;
-    shacl:name "hasMoreInfo"@nl;
-    shacl:path rdfs:seeAlso
-  ] .
-
- [
-    shacl:class <http://data.europa.eu/m8g/Requirement>;
-    shacl:description "Tekstuele beschrijving van de voorwaarden om gebruik te maken van de dienstverlening."@nl;
-    shacl:maxCount 1;
-    shacl:name "hasRequirement"@nl;
-    shacl:path <https://vocab.belgif.be/ns/publicservice#hasRequirement>
-  ] .
-
- [
-    shacl:class <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService>;
-    shacl:maxCount 1;
-    shacl:name "hasSource"@nl;
-    shacl:path dc:source
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:description "De tags betreffen informatieve aanduidingen van de publieke dienstverlening."@nl;
-    shacl:name "instanceTag"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#instanceTag>
-  ] .
-
- [
-    shacl:class rdf:langString;
-    shacl:description "This property represents a keyword, term or phrase to describe the Public Service."@nl;
-    shacl:name "keyword"@nl;
-    shacl:path dcat:keyword
-  ] .
-
- [
-    shacl:class dc:LinguisticSystem;
-    shacl:description "This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. The recommended controlled vocabularies are listed in section 4."@nl;
-    shacl:name "language"@nl;
-    shacl:path <http://publications.europa.eu/resource/authority/language>
-  ] .
-
- [
-    shacl:class rdf:langString;
-    shacl:description "This property represents the official Name of the Public Service."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "name"@nl;
-    shacl:path dc:title
-  ] .
-
- [
-    shacl:class <http://data.europa.eu/m8g/Output>;
-    shacl:description "The Produces property links a Public Service to one or more instances of the FinancialAdvantage class, describing the actual financial advantages of executing a given Public Service."@nl;
-    shacl:name "produces"@nl;
-    shacl:path <http://purl.org/vocab/cpsv#produces>
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:description "De informatie van de publieke dienstverlening wordt ontsloten naar de gekozen publicatie mediums."@nl;
-    shacl:name "publicationMedium"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium>
-  ] .
-
- [
-    shacl:class rdf:langString;
-    shacl:description "Tekstveld waarin de regelgeving waarop de public service gebaseerd is kan beschreven worden."@nl;
-    shacl:maxCount 1;
-    shacl:name "regulation"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation>
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:description "A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority."@nl;
-    shacl:minCount 1;
-    shacl:name "spatial"@nl;
-    shacl:path dc:spatial
-  ] .
-
- [
-    shacl:datatype xsd:dateTime;
-    shacl:description "Datum waarop de publieke dienstverlening actief aangeboden werd/wordt"@nl;
-    shacl:maxCount 1;
-    shacl:name "startDate"@nl;
-    shacl:path schemas:startDate
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:description "doelgroep(en) waarop de public service gericht is"@nl;
-    shacl:name "targetAudience"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:description "This property represents the Thematic Area of a Public Service as described in a controlled vocabulary."@nl;
-    shacl:name "thematicArea"@nl;
-    shacl:path <http://data.europa.eu/m8g/thematicArea>
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:description "Het type/soort van public service (bv advies, financieel voordeel, ...)"@nl;
-    shacl:maxCount 1;
-    shacl:name "type"@nl;
-    shacl:path dc:type
-  ] .
-
- [
-    shacl:class skos:Concept;
-    shacl:description "SDG (Single digital gateway) domein waarbinnen de public service gecategoriseerd wordt"@nl;
-    shacl:name "yourEuropeCategory"@nl;
-    shacl:path <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory>
-  ] .
