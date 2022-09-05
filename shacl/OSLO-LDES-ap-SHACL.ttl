@@ -1,0 +1,380 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap> <https://data.vlaanderen.be/shacl/OSLO-LDES-apshapes> <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#AfgeleideCollectieShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#CollectieLidShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#DataServiceLDESShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#EventstreamViewShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#OnveranderlijkObjectShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#RootNodeShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#SnapshotShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#VeranderlijkObjectShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#VersieEventStreamShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#VersieMaterialisatieShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#ObservatieShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#DataServiceShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#ObjectShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#ShapeShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#VersieShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#DurationAgoPolicyShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#EventStreamShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#LatestVersionSubsetShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#RetentionPolicyShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#CollectionShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#NodeShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#RelatieShape>,
+    <https://data.vlaanderen.be/shacl/OSLO-LDES-ap#DatasetShape> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#AfgeleideCollectieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://w3id.org/tree#Collection>;
+    shacl:description "Een afleiding is een transformatie van de ene entiteit in een andere, een update van de ene entiteit naar een nieuwe, of de constructie van een nieuwe entiteit gebaseerd op een reeds bestaande entiteit.";
+    shacl:minCount 1;
+    shacl:name "afgeleidVan";
+    shacl:path <http://purl.org/pav/derivedfrom>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/ldes#AfgeleideCollectie> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#CollectieLidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/ldes#CollectieLid> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#CollectionShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/ldes#CollectieLid>;
+    shacl:description "Object dat deel uitmaakt van de collectie.";
+    shacl:name "lid";
+    shacl:path <https://w3id.org/tree#member>
+  ], [
+    shacl:class shacl:NodeShape;
+    shacl:description "Een bepaalde shape aan welke alle elementen in de event stream moeten voldoen.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "shape";
+    shacl:path <https://w3id.org/tree#shape>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/ldes#RootNode>;
+    shacl:description "Een view is de index/ invariant/ organisatie waarmee doorheen de collectie (LDES) kan worden genavigeerd.";
+    shacl:name "view";
+    shacl:path <https://w3id.org/tree#view>
+  ];
+  shacl:targetClass <https://w3id.org/tree#Collection> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#DataServiceLDESShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class dc:Standard;
+    shacl:description "Een protocol waaraan de dataservice voldoet.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "^conformAanProtocol";
+    shacl:path dc:conformsTo
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/ldes#RootNode>;
+    shacl:description "De rootlocatie of het primaire endpoint van de dienst (een web-resolvable URi).";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "endpointURL";
+    shacl:path dcat:endpointURL
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/ldes#DataServiceLDES> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#DataServiceShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://www.w3.org/ns/dcat#Dataset>;
+    shacl:description "De data die via deze dataservice worden aangeboden.";
+    shacl:name "biedtInformatieAanOver";
+    shacl:path dcat:servesdataset
+  ], [
+    shacl:class dc:Standard;
+    shacl:description "Een protocol waaraan de dataservice voldoet.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "conformAanProtocol";
+    shacl:path dc:conformsTo
+  ], [
+    shacl:class rdfs:Resource;
+    shacl:description "De rootlocatie of het primaire endpoint van de dienst (een web-resolvable URi).";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "endPointURL";
+    shacl:path dcat:endpointURL
+  ];
+  shacl:targetClass dcat:DataService .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#DatasetShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class dc:Standard;
+    shacl:description "Een standaard, schema, applicatieprofiel, vocabularium waaraan de dataset voldoet.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "conform";
+    shacl:path dc:conformsTo
+  ];
+  shacl:targetClass <https://www.w3.org/ns/dcat#Dataset> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#DurationAgoPolicyShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class rdfs:Resource;
+    shacl:description "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tijdstip.";
+    shacl:maxCount 1;
+    shacl:name "timestampPath";
+    shacl:path <https://w3id.org/ldes#timestampPath>
+  ], [
+    shacl:datatype xsd:duration;
+    shacl:description "De waarde waarmee de gelinkte node in de relatie tussen de nodes is vergeleken.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "value";
+    shacl:path <https://w3id.org/tree#value>
+  ];
+  shacl:targetClass <https://w3id.org/ldes#DurationAgoPolicy> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#EventStreamShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject>;
+    shacl:description "Onveranderlijk object dat deel uitmaakt van de collectie.";
+    shacl:name "^lid";
+    shacl:path <https://w3id.org/tree#member>
+  ], [
+    shacl:class shacl:NodeShape;
+    shacl:description "Een schema waaraan alle elementen in de eventstream moeten voldoen.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "^shape";
+    shacl:path <https://w3id.org/tree#shape>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/ldes#RootNode>;
+    shacl:description "Een view is de index/invariant/organisatie waarmee doorheen de collectie/ Linked Data Event Stream kan worden genavigeerd.";
+    shacl:name "^view";
+    shacl:path <https://w3id.org/tree#view>
+  ], [
+    shacl:class rdfs:Resource;
+    shacl:description "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een specifiek tijdstip.";
+    shacl:maxCount 1;
+    shacl:name "timestampPath";
+    shacl:path <https://w3id.org/ldes#timestampPath>
+  ], [
+    shacl:class rdfs:Resource;
+    shacl:description "Geeft de versie van het element weer.";
+    shacl:maxCount 1;
+    shacl:name "versionOfPath";
+    shacl:path <https://w3id.org/ldes#versionOfPath>
+  ];
+  shacl:targetClass <https://w3id.org/ldes#EventStream> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#EventstreamViewShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://w3id.org/ldes#RetentionPolicy>;
+    shacl:description "Een retentiebeleid is een beleid volgens welke elementen (i.e. data) verwijderd zullen worden.";
+    shacl:maxCount 1;
+    shacl:name "retentiebeleid";
+    shacl:path <https://data.vlaanderen.be/ns/ldes#retentiebeleid>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/ldes#RootNode>;
+    shacl:description "Een rootnode is een beginpagina, die zelf al leden kan bevatten, via wiens gelinkte paginas alle leden kunnen gevonden worden.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "rootNode";
+    shacl:path <https://data.vlaanderen.be/ns/ldes#rootNode>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/ldes#EventstreamView> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#LatestVersionSubsetShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:integer;
+    shacl:description "Aantal versies van één element die behouden mogen worden.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "amount";
+    shacl:path <https://w3id.org/ldes#amount>
+  ], [
+    shacl:class rdfs:Resource;
+    shacl:description "Geeft weer hoe elementen van een Linked Data Event Stream zich tot elkaar verhouden door een tijdstip.";
+    shacl:maxCount 1;
+    shacl:name "timestampPath";
+    shacl:path <https://w3id.org/ldes#timestampPath>
+  ], [
+    shacl:class rdfs:Resource;
+    shacl:description "Een lijst van SHACL property paths die samen een version key vormen.";
+    shacl:name "versionKey";
+    shacl:path <https://w3id.org/ldes#versionKey>
+  ], [
+    shacl:class rdfs:Resource;
+    shacl:description "Geeft de versie van het element weer.";
+    shacl:maxCount 1;
+    shacl:name "versionOfPath";
+    shacl:path <https://w3id.org/ldes#versionOfPath>
+  ];
+  shacl:targetClass <https://w3id.org/ldes#LatestVersionSubset> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#NodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/ldes#CollectieLid>;
+    shacl:description "Een lid maakt deel uit van de collectie.";
+    shacl:name "lid";
+    shacl:path <https://w3id.org/tree#member>
+  ], [
+    shacl:class <https://w3id.org/tree#Relation>;
+    shacl:description "Een klasse die de relatie tussen twee nodes beschrijft.";
+    shacl:name "relatie";
+    shacl:path <http://fixme.com#relatie>
+  ];
+  shacl:targetClass <https://w3id.org/tree#Node> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#ObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass prov:Entity .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#ObservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#OnveranderlijkObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#RelatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://w3id.org/tree#Node>;
+    shacl:description "Een node is een pagina die relaties naar andere nodes kan bevatten. ";
+    shacl:maxCount 1;
+    shacl:name "node";
+    shacl:path <https://w3id.org/tree#Node>
+  ], [
+    shacl:class rdfs:Resource;
+    shacl:description "Een property path, gedefinieerd door een SHACL, die weergeeft welke zaken beïnvloed worden door tree:value.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "pad";
+    shacl:path <https://w3id.org/tree#path>
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:description "De waarde in de node waarmee de relatie gaat vergelijken om een volgende node aan te linken.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "waarde";
+    shacl:path <https://w3id.org/tree#value>
+  ];
+  shacl:targetClass <https://w3id.org/tree#Relation> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#RetentionPolicyShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://w3id.org/ldes#RetentionPolicy> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#RootNodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/ldes#EventstreamView>;
+    shacl:description "De event stream view connecteert de collectie met de rootnode zodanig dat alle leden van de collectie gevonden kunnen worden.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "eventstreamView";
+    shacl:path <https://data.vlaanderen.be/ns/ldes#eventstreamView>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/ldes#RootNode> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#ShapeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass shacl:NodeShape .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#SnapshotShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject>;
+    shacl:description "Een lid maakt deel uit van de collectie.";
+    shacl:name "^lid";
+    shacl:path <https://w3id.org/tree#member>
+  ], [
+    shacl:class shacl:NodeShape;
+    shacl:description "Een bepaalde shape aan welke alle elementen in de event stream moeten voldoen.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "^shape";
+    shacl:path <https://w3id.org/tree#shape>
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Het tijdstip waarop de snapshot van de Linked Data Event Stream werd genomen. ";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "snapshotTot";
+    shacl:path <https://data.vlaanderen.be/ns/ldes#snapshotTot>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/ldes#VersieEventStream>;
+    shacl:description "Verwijst naar de originele Linked Data Event Stream.";
+    shacl:maxCount 1;
+    shacl:name "snapshotVan";
+    shacl:path <https://data.vlaanderen.be/ns/ldes#snapshotVan>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/ldes#Snapshot> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#VeranderlijkObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/ldes#VeranderlijkObject> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#VersieEventStreamShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class rdfs:Resource;
+    shacl:description "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tijdstip.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "timestampPath";
+    shacl:path <https://w3id.org/ldes#timestampPath>
+  ], [
+    shacl:class rdfs:Resource;
+    shacl:description "Geeft de versie van het element weer.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "versionOfPath";
+    shacl:path <https://w3id.org/ldes#versionOfPath>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/ldes#VersieEventStream> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#VersieMaterialisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/ldes#VeranderlijkObject>;
+    shacl:description "Een lid maakt deel uit van de collectie.";
+    shacl:name "^lid"
+  ], [
+    shacl:class shacl:NodeShape;
+    shacl:description "Een bepaalde shape aan welke alle elementen in de event stream moeten voldoen.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "^shape";
+    shacl:path <https://w3id.org/tree#shape>
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Het tijdstip tot wanneer versies werden verwerkt.";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "versieMaterialisatieTot";
+    shacl:path <https://data.vlaanderen.be/ns/ldes#versieMaterialisatieTot>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/ldes#Snapshot>;
+    shacl:description "Verwijst naar de originele Linked Data Event Stream.";
+    shacl:maxCount 1;
+    shacl:name "versiematerialisatieVan";
+    shacl:path <https://data.vlaanderen.be/ns/ldes#versiematerialisatieVan>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/ldes#VersieMaterialisatie> .
+
+<https://data.vlaanderen.be/shacl/OSLO-LDES-ap#VersieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Versie> .

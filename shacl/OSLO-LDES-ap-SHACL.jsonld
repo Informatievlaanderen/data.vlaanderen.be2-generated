@@ -1,0 +1,495 @@
+{
+  "@context": {
+    "@vocab": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qb:codeList": {
+      "@type": "@id"
+    },
+    "sh": "http://www.w3.org/ns/shacl#",
+    "sh:class": {
+      "@type": "@id"
+    },
+    "sh:datatype": {
+      "@type": "@id"
+    },
+    "sh:maxCount": {
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:minCount": {
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "sh:path": {
+      "@type": "@id"
+    },
+    "sh:property": {
+      "@type": "@id"
+    },
+    "sh:targetClass": {
+      "@type": "@id"
+    },
+    "shapes": {
+      "@type": "@id"
+    }
+  },
+  "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap",
+  "shapes": [
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#AfgeleideCollectieShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://w3id.org/tree#Collection",
+          "sh:description": "Een afleiding is een transformatie van de ene entiteit in een andere, een update van de ene entiteit naar een nieuwe, of de constructie van een nieuwe entiteit gebaseerd op een reeds bestaande entiteit.",
+          "sh:minCount": "1",
+          "sh:name": "afgeleidVan",
+          "sh:path": "http://purl.org/pav/derivedfrom"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/ldes#AfgeleideCollectie"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#CollectieLidShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/ldes#CollectieLid"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#DataServiceLDESShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "http://purl.org/dc/terms/Standard",
+          "sh:description": "Een protocol waaraan de dataservice voldoet.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "^conformAanProtocol",
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/ldes#RootNode",
+          "sh:description": "De rootlocatie of het primaire endpoint van de dienst (een web-resolvable URi).",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "endpointURL",
+          "sh:path": "http://www.w3.org/ns/dcat#endpointURL"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/ldes#DataServiceLDES"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#EventstreamViewShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://w3id.org/ldes#RetentionPolicy",
+          "sh:description": "Een retentiebeleid is een beleid volgens welke elementen (i.e. data) verwijderd zullen worden.",
+          "sh:maxCount": "1",
+          "sh:name": "retentiebeleid",
+          "sh:path": "https://data.vlaanderen.be/ns/ldes#retentiebeleid"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/ldes#RootNode",
+          "sh:description": "Een rootnode is een beginpagina, die zelf al leden kan bevatten, via wiens gelinkte paginas alle leden kunnen gevonden worden.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "rootNode",
+          "sh:path": "https://data.vlaanderen.be/ns/ldes#rootNode"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/ldes#EventstreamView"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#OnveranderlijkObjectShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#RootNodeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/ldes#EventstreamView",
+          "sh:description": "De event stream view connecteert de collectie met de rootnode zodanig dat alle leden van de collectie gevonden kunnen worden.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "eventstreamView",
+          "sh:path": "https://data.vlaanderen.be/ns/ldes#eventstreamView"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/ldes#RootNode"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#SnapshotShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject",
+          "sh:description": "Een lid maakt deel uit van de collectie.",
+          "sh:name": "^lid",
+          "sh:path": "https://w3id.org/tree#member"
+        },
+        {
+          "sh:class": "http://www.w3.org/ns/shacl#NodeShape",
+          "sh:description": "Een bepaalde shape aan welke alle elementen in de event stream moeten voldoen.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "^shape",
+          "sh:path": "https://w3id.org/tree#shape"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "sh:description": "Het tijdstip waarop de snapshot van de Linked Data Event Stream werd genomen. ",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "snapshotTot",
+          "sh:path": "https://data.vlaanderen.be/ns/ldes#snapshotTot"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/ldes#VersieEventStream",
+          "sh:description": "Verwijst naar de originele Linked Data Event Stream.",
+          "sh:maxCount": "1",
+          "sh:name": "snapshotVan",
+          "sh:path": "https://data.vlaanderen.be/ns/ldes#snapshotVan"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/ldes#Snapshot"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#VeranderlijkObjectShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/ldes#VeranderlijkObject"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#VersieEventStreamShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tijdstip.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "timestampPath",
+          "sh:path": "https://w3id.org/ldes#timestampPath"
+        },
+        {
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": "Geeft de versie van het element weer.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "versionOfPath",
+          "sh:path": "https://w3id.org/ldes#versionOfPath"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/ldes#VersieEventStream"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#VersieMaterialisatieShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/ldes#VeranderlijkObject",
+          "sh:description": "Een lid maakt deel uit van de collectie.",
+          "sh:name": "^lid",
+          "sh:path": "https://data.vlaanderen.be/ns/ldes#^lid"
+        },
+        {
+          "sh:class": "http://www.w3.org/ns/shacl#NodeShape",
+          "sh:description": "Een bepaalde shape aan welke alle elementen in de event stream moeten voldoen.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "^shape",
+          "sh:path": "https://w3id.org/tree#shape"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "sh:description": "Het tijdstip tot wanneer versies werden verwerkt.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "versieMaterialisatieTot",
+          "sh:path": "https://data.vlaanderen.be/ns/ldes#versieMaterialisatieTot"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/ldes#Snapshot",
+          "sh:description": "Verwijst naar de originele Linked Data Event Stream.",
+          "sh:maxCount": "1",
+          "sh:name": "versiematerialisatieVan",
+          "sh:path": "https://data.vlaanderen.be/ns/ldes#versiematerialisatieVan"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/ldes#VersieMaterialisatie"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#ObservatieShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#DataServiceShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://www.w3.org/ns/dcat#Dataset",
+          "sh:description": "De data die via deze dataservice worden aangeboden.",
+          "sh:name": "biedtInformatieAanOver",
+          "sh:path": "http://www.w3.org/ns/dcat#servesdataset"
+        },
+        {
+          "sh:class": "http://purl.org/dc/terms/Standard",
+          "sh:description": "Een protocol waaraan de dataservice voldoet.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "conformAanProtocol",
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        },
+        {
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": "De rootlocatie of het primaire endpoint van de dienst (een web-resolvable URi).",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "endPointURL",
+          "sh:path": "http://www.w3.org/ns/dcat#endpointURL"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/dcat#DataService"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#ObjectShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/ns/prov#Entity"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#ShapeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/ns/shacl#NodeShape"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#VersieShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/generiek#Versie"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#DurationAgoPolicyShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tijdstip.",
+          "sh:maxCount": "1",
+          "sh:name": "timestampPath",
+          "sh:path": "https://w3id.org/ldes#timestampPath"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#duration",
+          "sh:description": "De waarde waarmee de gelinkte node in de relatie tussen de nodes is vergeleken.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "value",
+          "sh:path": "https://w3id.org/tree#value"
+        }
+      ],
+      "sh:targetClass": "https://w3id.org/ldes#DurationAgoPolicy"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#EventStreamShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject",
+          "sh:description": "Onveranderlijk object dat deel uitmaakt van de collectie.",
+          "sh:name": "^lid",
+          "sh:path": "https://w3id.org/tree#member"
+        },
+        {
+          "sh:class": "http://www.w3.org/ns/shacl#NodeShape",
+          "sh:description": "Een schema waaraan alle elementen in de eventstream moeten voldoen.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "^shape",
+          "sh:path": "https://w3id.org/tree#shape"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/ldes#RootNode",
+          "sh:description": "Een view is de index/invariant/organisatie waarmee doorheen de collectie/ Linked Data Event Stream kan worden genavigeerd.",
+          "sh:name": "^view",
+          "sh:path": "https://w3id.org/tree#view"
+        },
+        {
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een specifiek tijdstip.",
+          "sh:maxCount": "1",
+          "sh:name": "timestampPath",
+          "sh:path": "https://w3id.org/ldes#timestampPath"
+        },
+        {
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": "Geeft de versie van het element weer.",
+          "sh:maxCount": "1",
+          "sh:name": "versionOfPath",
+          "sh:path": "https://w3id.org/ldes#versionOfPath"
+        }
+      ],
+      "sh:targetClass": "https://w3id.org/ldes#EventStream"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#LatestVersionSubsetShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#integer",
+          "sh:description": "Aantal versies van één element die behouden mogen worden.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "amount",
+          "sh:path": "https://w3id.org/ldes#amount"
+        },
+        {
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": "Geeft weer hoe elementen van een Linked Data Event Stream zich tot elkaar verhouden door een tijdstip.",
+          "sh:maxCount": "1",
+          "sh:name": "timestampPath",
+          "sh:path": "https://w3id.org/ldes#timestampPath"
+        },
+        {
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": "Een lijst van SHACL property paths die samen een version key vormen.",
+          "sh:name": "versionKey",
+          "sh:path": "https://w3id.org/ldes#versionKey"
+        },
+        {
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": "Geeft de versie van het element weer.",
+          "sh:maxCount": "1",
+          "sh:name": "versionOfPath",
+          "sh:path": "https://w3id.org/ldes#versionOfPath"
+        }
+      ],
+      "sh:targetClass": "https://w3id.org/ldes#LatestVersionSubset"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#RetentionPolicyShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://w3id.org/ldes#RetentionPolicy"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#CollectionShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/ldes#CollectieLid",
+          "sh:description": "Object dat deel uitmaakt van de collectie.",
+          "sh:name": "lid",
+          "sh:path": "https://w3id.org/tree#member"
+        },
+        {
+          "sh:class": "http://www.w3.org/ns/shacl#NodeShape",
+          "sh:description": "Een bepaalde shape aan welke alle elementen in de event stream moeten voldoen.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "shape",
+          "sh:path": "https://w3id.org/tree#shape"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/ldes#RootNode",
+          "sh:description": "Een view is de index/ invariant/ organisatie waarmee doorheen de collectie (LDES) kan worden genavigeerd.",
+          "sh:name": "view",
+          "sh:path": "https://w3id.org/tree#view"
+        }
+      ],
+      "sh:targetClass": "https://w3id.org/tree#Collection"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#NodeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/ldes#CollectieLid",
+          "sh:description": "Een lid maakt deel uit van de collectie.",
+          "sh:name": "lid",
+          "sh:path": "https://w3id.org/tree#member"
+        },
+        {
+          "sh:class": "https://w3id.org/tree#Relation",
+          "sh:description": "Een klasse die de relatie tussen twee nodes beschrijft.",
+          "sh:name": "relatie",
+          "sh:path": "http://fixme.com#relatie"
+        }
+      ],
+      "sh:targetClass": "https://w3id.org/tree#Node"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#RelatieShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://w3id.org/tree#Node",
+          "sh:description": "Een node is een pagina die relaties naar andere nodes kan bevatten. ",
+          "sh:maxCount": "1",
+          "sh:name": "node",
+          "sh:path": "https://w3id.org/tree#Node"
+        },
+        {
+          "sh:class": "http://www.w3.org/2000/01/rdf-schema#Resource",
+          "sh:description": "Een property path, gedefinieerd door een SHACL, die weergeeft welke zaken beïnvloed worden door tree:value.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "pad",
+          "sh:path": "https://w3id.org/tree#path"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
+          "sh:description": "De waarde in de node waarmee de relatie gaat vergelijken om een volgende node aan te linken.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "waarde",
+          "sh:path": "https://w3id.org/tree#value"
+        }
+      ],
+      "sh:targetClass": "https://w3id.org/tree#Relation"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/OSLO-LDES-ap#DatasetShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "http://purl.org/dc/terms/Standard",
+          "sh:description": "Een standaard, schema, applicatieprofiel, vocabularium waaraan de dataset voldoet.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "conform",
+          "sh:path": "http://purl.org/dc/terms/conformsTo"
+        }
+      ],
+      "sh:targetClass": "https://www.w3.org/ns/dcat#Dataset"
+    }
+  ]
+}
