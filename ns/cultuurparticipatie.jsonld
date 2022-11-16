@@ -153,6 +153,14 @@
       "parents": []
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "De concrete Organisatie van een Organisator gekoppeld aan een Activiteit."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -234,7 +242,9 @@
       "definition": {
         "nl": "Persoon of organisatie die de activiteit of dingen uitvoert."
       },
-      "parents": []
+      "parents": [
+        "http://purl.org/dc/terms/Agent"
+      ]
     },
     {
       "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering",
@@ -444,6 +454,13 @@
     },
     {
       "name": {
+        "nl": "RolOrganisatie"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Prijsinfo"
       },
       "@id": "https://schema.org/PriceSpecification",
@@ -466,30 +483,16 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#rol",
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.uitvoerderVermeldAls",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De rol die de Organisator inneemt bij het uitvoeren van een Ding."
+        "nl": "De naam waarmee de Uitvoerder vermeldt wordt bij een specifieke Activiteit. "
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator"
+        "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering"
       ],
       "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#rol",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "De rol die de Organisator inneemt bij het uitvoeren van een Ding."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder"
-      ],
-      "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
       ],
       "generalization": []
     },
@@ -511,7 +514,7 @@
       "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.rol",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De concrete rol van de Organisator voor een Activiteit."
+        "nl": "De concrete rol van de Uitvoerder voor een Activiteit."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering"
@@ -525,7 +528,7 @@
       "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.rang",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "De rang van de Organisator ten opzichte van andere Uitvoerders."
+        "nl": "De rang van de Uitvoerder ten opzichte van andere Uitvoerders."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering"
@@ -546,6 +549,34 @@
       ],
       "range": [
         "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.superuitvoerder",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De Organisator heeft één of meerdere Subuitvoerders."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.subuitvoerder",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De Organisator heeft één of meerdere Superuitvoerders."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder"
       ],
       "generalization": []
     },
@@ -735,7 +766,7 @@
       "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.periode",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Het beginpunt in tijd van de Samenwerking."
+        "nl": "Het begin- en eindpunt in tijd van de Samenwerking."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking"
@@ -746,7 +777,7 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.organisator.target",
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.agent.target",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
         "nl": "Referentie naar verbonden klasse."
@@ -755,12 +786,12 @@
         "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator"
+        "http://purl.org/dc/terms/Agent"
       ],
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.organisator.source",
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.agent.source",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
         "nl": "Referentie naar verbonden klasse."
@@ -769,7 +800,7 @@
         "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator"
+        "http://purl.org/dc/terms/Agent"
       ],
       "generalization": []
     },
@@ -777,7 +808,7 @@
       "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.activiteit",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Activiteit gekoppeld aan de Samenwerking tussen Aanbieders."
+        "nl": "Activteit gekoppeld aan de Samenwerking tussen de Agenten. "
       },
       "domain": [
         "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking"
@@ -1345,6 +1376,87 @@
       "generalization": []
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator.biedtAan",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Organisator die de Activiteit aanbiedt."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator"
+      ],
+      "range": [
+        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie.rol",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De concrete rol van de Organisator voor een Activiteit."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie.rang",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "domain": [
+        "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#string"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie.organisatorVermeldAls",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De naam waarmee de Organisator vermeldt wordt bij een specifieke Activiteit."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie"
+      ],
+      "range": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie.organisator",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie.activiteit",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie"
+      ],
+      "range": [
+        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Leeftijdsgroep.ondergrens",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -1621,6 +1733,20 @@
       ],
       "range": [
         "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Agent.werktSamenMet",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De Agent die samenwerkt met een andere Agent. "
+      },
+      "domain": [
+        "http://purl.org/dc/terms/Agent"
+      ],
+      "range": [
+        "http://purl.org/dc/terms/Agent"
       ],
       "generalization": []
     },
@@ -1961,20 +2087,6 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.beschrijving",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Een tekstuele beschrijving van de Activiteit."
-      },
-      "domain": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-      ],
-      "range": [
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.beschikbaarheid",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -2006,41 +2118,13 @@
       "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.aangebodenDoor",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Activiteit die wordt aangeboden door één of meerdere Aanbieder(s)."
+        "nl": "Activiteit die wordt aangeboden door de Organisator."
       },
       "domain": [
         "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.werktSamenMet",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "De Aanbieder die samenwerkt met een andere Aanbieder"
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.biedtAan",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Aanbieder die de Activiteit aanbiedt."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator"
-      ],
-      "range": [
-        "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
       ],
       "generalization": []
     }
@@ -2233,6 +2317,13 @@
         "nl": "type"
       },
       "@id": "http://purl.org/dc/terms/type",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "beschrijving"
+      },
+      "@id": "http://purl.org/dc/terms/description",
       "@type": "rdf:Property"
     },
     {

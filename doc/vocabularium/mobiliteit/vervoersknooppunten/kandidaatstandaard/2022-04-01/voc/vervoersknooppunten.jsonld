@@ -459,12 +459,18 @@
       },
       "parents": [
         "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Infrastructuurelement",
-        "http://fixme.com#CivicStructure"
+        "https://schema.org/CivicStructure"
       ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceReport",
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceRapport",
       "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Het rapport van het aantal Resources met gelijkaardige karakteristieken van beschikbaarheid, type, service, locatie etc die beschikbaar zijn op een welbepaald tijdstip."
+      },
+      "usage": {
+        "nl": "Voorbeeld: Het aantal beschikbare deelfietsen aan een treinstation op een welbepaalde locatie."
+      },
       "parents": []
     },
     {
@@ -625,17 +631,6 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#vervoermiddel",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "domain": [
-        "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceReport"
-      ],
-      "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#transportNetwork",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -664,17 +659,6 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#status",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "domain": [
-        "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceReport"
-      ],
-      "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#specificatie",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -689,28 +673,6 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#service",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "domain": [
-        "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceReport"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#Mobiliteitsdienst"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#nummer",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "domain": [
-        "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceReport"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#integer"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#merk",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -721,17 +683,6 @@
       },
       "domain": [
         "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#Vervoersknooppunt"
-      ],
-      "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#aandrijving",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "domain": [
-        "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceReport"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
@@ -791,6 +742,82 @@
       ],
       "range": [
         "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Toegankelijkheid"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceReport.vervoermiddel",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het vervoermiddel van de Resource."
+      },
+      "usage": {
+        "nl": "."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceRapport"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceReport.status",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De status van de Resource."
+      },
+      "usage": {
+        "nl": "Voorbeeld: gereserveerd, inactief, beschikbaar. Dit veld bepaald of een Resource al dan niet kan gebruikt worden."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceRapport"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceReport.reportTijd",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De Mobiliteitsdienst die gebruikt wordt binnen het ResourceRapport."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceRapport"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#Mobiliteitsdienst"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceReport.nummer",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Het aantal Resources."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceRapport"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#integer"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceReport.aandrijving",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Aandrijving van het vervoermiddel."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#ResourceRapport"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
       ],
       "generalization": []
     },
@@ -937,11 +964,6 @@
       "@type": "rdf:Property"
     },
     {
-      "name": {},
-      "@id": "http://purl.org/dc/terms/type",
-      "@type": "rdf:Property"
-    },
-    {
       "name": {
         "nl": "naam"
       },
@@ -963,12 +985,16 @@
       "@type": "rdf:Property"
     },
     {
-      "name": {},
+      "name": {
+        "nl": "locatie"
+      },
       "@id": "http://purl.org/dc/terms/spatial",
       "@type": "rdf:Property"
     },
     {
-      "name": {},
+      "name": {
+        "nl": "rapportTijd"
+      },
       "@id": "http://purl.org/dc/elements/1.1/date",
       "@type": "rdf:Property"
     }

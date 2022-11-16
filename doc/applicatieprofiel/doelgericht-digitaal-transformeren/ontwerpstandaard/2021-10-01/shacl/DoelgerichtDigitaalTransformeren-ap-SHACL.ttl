@@ -21,6 +21,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#FeedbackContentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#KanaalShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#LeeftijdsgroepShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#OrganisatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#OrganisatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#ParticipantShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#ParticipantProfielShape>,
@@ -55,7 +56,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#DisciplineTypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#DeelnameTypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#ActiviteitStatusShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#RolTypeOrganisatorShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#RolUitvoeringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#BetaaltermijnTypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#LocatieTypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#FeedbackBronShape>,
@@ -76,9 +77,9 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#TriggertypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#TypeTechniekShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#DocumenttypeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#RolOrganisatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#IdentificatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#FormeleOrganisatieShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#OrganisatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#PersoonShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#ObjectShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#LocatieShape>,
@@ -106,7 +107,7 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator>;
-    shacl:description "Activiteit die wordt aangeboden door één of meerdere Aanbieder(s)."@nl;
+    shacl:description "Activiteit die wordt aangeboden door de Organisator."@nl;
     shacl:name "aangeboden door"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.aangebodenDoor>
   ], [
@@ -128,7 +129,7 @@
     shacl:class rdf:langString;
     shacl:description "Een tekstuele beschrijving van de Activiteit."@nl;
     shacl:name "beschrijving"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.beschrijving>
+    shacl:path dc:description
   ], [
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Boekinginfo>;
     shacl:description "De Boekinginfo van de Activiteit."@nl;
@@ -156,8 +157,6 @@
   ], [
     shacl:class skos:Concept;
     shacl:description "Het bedoelde of verwachte publiek van een Activiteit."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "doelgroep"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.doelgroep>
   ], [
@@ -286,7 +285,13 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#AgentShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass dc:Agent .
+  shacl:property [
+    shacl:class dc:Agent;
+    shacl:description "De Agent die samenwerkt met een andere Agent."@nl;
+    shacl:name "werkt samen met"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Agent.werktSamenMet>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.agent.source> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#AlgemeenParticipantKenmerkShape> a shacl:NodeShape;
   shacl:closed false;
@@ -702,6 +707,20 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#OrganisatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class crm:E7_Activity;
+    shacl:description "Referentie naar verbonden klasse."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "Activiteit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie.activiteit>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator>;
+    shacl:description "Referentie naar verbonden klasse."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "Organisator"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie.organisator>
+  ], [
     shacl:class skos:Concept;
     shacl:description "Type activiteit die door de organisatie wordt uitgeoefend."@nl;
     shacl:maxCount 1;
@@ -770,6 +789,23 @@
     shacl:name "suborganisatie van (source)"@nl;
     shacl:path org:subOrganizationOf
   ], [
+    shacl:class rdf:langString;
+    shacl:description "De naam waarmee de Organisator vermeldt wordt bij een specifieke Activiteit."@nl;
+    shacl:maxCount 1;
+    shacl:name "organisator vermeld als"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie.organisatorVermeldAls>
+  ], [
+    shacl:datatype xsd:string;
+    shacl:description "De rang van de Organisator ten opzichte van andere Organisators."@nl;
+    shacl:maxCount 1;
+    shacl:name "rang"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie.rang>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "De concrete rol van de Organisator voor een Activiteit."@nl;
+    shacl:name "rol"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie.rol>
+  ], [
     shacl:class skos:Concept;
     shacl:description "Toestand vd organisatie."@nl;
     shacl:name "status"@nl;
@@ -809,9 +845,9 @@
     shacl:path skos:altLabel
   ], [
     shacl:class crm:E7_Activity;
-    shacl:description "Aanbieder die de Activiteit aanbiedt."@nl;
+    shacl:description "Organisator die de Activiteit aanbiedt."@nl;
     shacl:name "biedt aan"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.biedtAan>
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator.biedtAan>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning>;
     shacl:description "De aanduiding door een bevoegde instelling waarbij wordt vastgesteld dat een persoon of instelling aan bepaalde eisen voldoet, al dan niet tijdelijk."@nl;
@@ -838,11 +874,6 @@
     shacl:description "De organisatievorm van de Organisator."@nl;
     shacl:name "organisatievorm"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator.organisatievorm>
-  ], [
-    shacl:class skos:Concept;
-    shacl:description "De rol die de Organisator inneemt bij het uitvoeren van een Ding."@nl;
-    shacl:name "rol"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#rol>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator>;
     shacl:description "De Organisator maakt deel uit van een overkoepelende Superorganisator."@nl;
@@ -878,13 +909,8 @@
     shacl:description "De Organisator die Promotie uitvoert."@nl;
     shacl:name "voert uit"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator.voertUit>
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator>;
-    shacl:description "De Aanbieder die samenwerkt met een andere Aanbieder"@nl;
-    shacl:name "werkt samen met"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Aanbieder.werktSamenMet>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.organisator.source> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie.organisator> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#OrganisatorTypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -1168,40 +1194,43 @@
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#RolTypeOrganisatorShape> a shacl:NodeShape;
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#RolOrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#RolUitvoeringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#SamenwerkingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator>;
+    shacl:class dc:Agent;
     shacl:description "Referentie naar verbonden klasse."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "Organisator (target)"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.organisator.target>
+    shacl:name "Agent (target)"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.agent.target>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator>;
+    shacl:class dc:Agent;
     shacl:description "Referentie naar verbonden klasse."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "Organisator (source)"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.organisator.source>
+    shacl:name "Agent (source)"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.agent.source>
   ], [
     shacl:class crm:E7_Activity;
-    shacl:description "Activiteit gekoppeld aan de Samenwerking tussen Aanbieders."@nl;
+    shacl:description "Activteit gekoppeld aan de Samenwerking tussen de Agenten. "@nl;
     shacl:name "activiteit"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.activiteit>
   ], [
     shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
-    shacl:description "Het beginpunt in tijd van de Samenwerking."@nl;
-    shacl:maxCount 1;
+    shacl:description "Het begin- en eindpunt in tijd van de Samenwerking."@nl;
     shacl:name "periode"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.periode>
   ], [
     shacl:class skos:Concept;
-    shacl:description "Het eindpunt in tijd van de Samenwerking."@nl;
+    shacl:description "De typering van de Samenwerking."@nl;
     shacl:name "type"@nl;
     shacl:path dc:type
   ];
@@ -1387,15 +1416,20 @@
     shacl:name "organisatievorm"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.organisatievorm>
   ], [
-    shacl:class skos:Concept;
-    shacl:description "De rol die de Organisator inneemt bij het uitvoeren van een Ding."@nl;
-    shacl:name "rol"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#rol>
-  ], [
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Subsidie>;
     shacl:description "Financiële aansporing om het gedrag van de bevolking of van een specifieke doelgroep (dat kan ook een andere overheid zijn) te beïnvloeden in de door de overheid gewenste richting."@nl;
     shacl:name "subsidie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator.subsidie>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
+    shacl:description "De Organisator heeft één of meerdere Superuitvoerders."@nl;
+    shacl:name "subuitvoerder"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.subuitvoerder>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
+    shacl:description "De Organisator heeft één of meerdere Subuitvoerders."@nl;
+    shacl:name "superuitvoerder"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.superuitvoerder>
   ], [
     shacl:class skos:Concept;
     shacl:description "De inhoudelijke thema's verbonden aan de Aanbieder."@nl;
@@ -1442,15 +1476,21 @@
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.uitvoerder>
   ], [
     shacl:datatype xsd:string;
-    shacl:description "De rang van de Organisator ten opzichte van andere Uitvoerders."@nl;
+    shacl:description "De rang van de Uitvoerder ten opzichte van andere Uitvoerders."@nl;
     shacl:maxCount 1;
     shacl:name "rang"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.rang>
   ], [
     shacl:class skos:Concept;
-    shacl:description "De concrete rol van de Organisator voor een Activiteit."@nl;
+    shacl:description "De concrete rol van de Uitvoerder voor een Activiteit."@nl;
     shacl:name "rol"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.rol>
+  ], [
+    shacl:class rdf:langString;
+    shacl:description "De naam waarmee de Uitvoerder vermeldt wordt bij een specifieke Activiteit. "@nl;
+    shacl:maxCount 1;
+    shacl:name "uitvoerder vermeld als"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.uitvoerderVermeldAls>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering> .
 
