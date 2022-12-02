@@ -1,5 +1,5 @@
 {
-  "baseURI": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#",
+  "baseURI": "https://data.vlaanderen.be/ns/bestuurlijke-sancties#",
   "classes": [
     {
       "EA-Guid": "{FFCB7A6C-C789-4a95-A0B7-E9A9BCD8FA85}",
@@ -299,6 +299,19 @@
       }
     },
     {
+      "EA-Guid": "{EBED0E6E-0C11-4b61-B88A-0408C881F2E2}",
+      "name": "locatie",
+      "label": {
+        "nl": "locatie"
+      },
+      "definition": {
+        "nl": "Locatie waar het Gepleegd Feit heeft plaatsgevonden."
+      },
+      "usage": {
+        "nl": "De Locatie kan verschillende vormen aan nemen: een adres, perceel, gebouw, wegsement, geografische coördinaten of een tekstuele beschrijving."
+      }
+    },
+    {
       "EA-Guid": "{B9F765D5-9373-4bc9-82BC-6B3C0A36964A}",
       "name": "legt op",
       "label": {
@@ -362,13 +375,23 @@
       }
     },
     {
-      "EA-Guid": "{37A2DD52-7C91-4757-A551-2BC4C31C6915}",
+      "EA-Guid": "{7B45EBCD-399D-4e92-985C-8D12951A7B7E}",
       "name": "betrokkene",
       "label": {
         "nl": "betrokkene"
       },
       "definition": {
-        "nl": "Een activiteitenassociatie is een toewijzing van verantwoordelijkheid aan een agent voor een activiteit, wat aangeeft dat de agent een rol had in de activiteit. Voorts kan een plan worden gespecificeerd, namelijk het plan dat de agent voor ogen heeft om b"
+        "nl": "De Geregistreerde Persoon die het feit gepleegd heeft."
+      }
+    },
+    {
+      "EA-Guid": "{027C89D9-DEB3-419a-A20D-C2BDE1A9842E}",
+      "name": "betrokkene",
+      "label": {
+        "nl": "betrokkene"
+      },
+      "definition": {
+        "nl": "De Geregistreerde Organisatie die het feit gepleegd heeft."
       }
     },
     {
@@ -617,23 +640,16 @@
       }
     },
     {
-      "EA-Guid": "{A5E5E2F2-DD50-4dbb-A24E-56760EACEAD2}",
-      "name": "",
-      "definition": {
-        "nl": "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.\r\n"
-      }
-    },
-    {
       "EA-Guid": "{F68D197C-BF05-4ba2-AF1C-165B002FB573}",
       "name": "Locatie",
       "label": {
         "nl": "Locatie"
       },
       "definition": {
-        "nl": "Aanduiding van een geografische positie dmv coordinaten,een toponiem,een adreslabel,een verwijzing naar een plaats/regio, verwijzing naar een adres of een verwijzing naar een geografisch object. "
+        "nl": "Aanduiding van een geografische positie,dmv coordinaten,een toponiem,een adreslabel,een verwijzing naar een plaats/regio of verwijzing naar een adres."
       },
       "usage": {
-        "nl": "Te substitueren door klassen voor coordinaten, toponiemen, adreslabels, plaatsen of regios, adresverwijzingen of verwijzingen naar een geografische objecten (gebouw, perceel, wegsegment, ...)."
+        "nl": "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie,GeografischeNaam,Adres etc."
       }
     },
     {
@@ -659,7 +675,20 @@
         "nl": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats,een standplaats of een perceel op basis van een gemeentenaam,een straatnaam,een huisnummer en eventueel een busnummer en een postcode."
       },
       "usage": {
-        "nl": "OPMERKING: Meer info over deze klasse in het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/adresregister/\"> AP OSLO Gebouwenregister</a>."
+        "nl": "De definitie heeft betrekking op Belgische adressen. In andere landen kan een adres eventueel verwijzen naar andere geografisch objecten (niet gebouweenheid of perceel) of bestaan uit andere aanduidingen (verschillend van huisnummer en busnummer) of uit andere componenten dan straatnaam, gemeentenaam of postcode. Alternatieve adresaanduidingen dan huisnummer of busnummer (bv ingangaanduiding, trapaanduiding, verdiepaanduiding...) of een gebouwnaam of kamernaam ed zijn mogelijk dmv een associatie met adresuitbreiding. Uitwisseling van buitenlandse adressen moet gebeuren mbv het object adresvoorstelling."
+      }
+    },
+    {
+      "EA-Guid": "{B44E081B-E9BA-4233-8FC9-D7ED841BBA55}",
+      "name": "Adresseerbaar Object",
+      "label": {
+        "nl": "Adresseerbaar Object"
+      },
+      "definition": {
+        "nl": "Geografisch object dat met een adres kan worden geïdentificeerd."
+      },
+      "usage": {
+        "nl": "Abstracte entiteit, t.t.z. het type adresseerbaar object moet altijd worden opgegeven (bv. gebouweenheid, perceel)."
       }
     },
     {
@@ -680,9 +709,6 @@
       },
       "definition": {
         "nl": "Een gesloten en/of overdekt, bovengronds of ondergronds bouwwerk, dat dient of bestemd is, ofwel om mensen, dieren en voorwerpen onder te brengen, ofwel om economische goederen te vervaardigen of diensten te verstrekken. Een gebouw verwijst naar gelijk welke structuur die op blijvende wijze op een terrein opgetrokken of gebouwd wordt."
-      },
-      "usage": {
-        "nl": "OPMERKING: Meer info over deze klasse in het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/gebouwenregister/\"> AP OSLO Gebouwenregister</a>."
       }
     },
     {
@@ -692,10 +718,7 @@
         "nl": "Gebouweenheid"
       },
       "definition": {
-        "nl": "De kleinste eenheid binnen een gebouw die geschikt is voor woon-, bedrijfsmatige, of recreatieve doeleinden en die ontsloten wordt via een eigen afsluitbare toegang vanaf de openbare weg, een erf of een gedeelde circulatieruimte. Een gebouweenheid is in functioneel opzicht zelfstandig. Daarnaast kan een gebouweenheid ook een gemeenschappelijk deel zijn. "
-      },
-      "usage": {
-        "nl": "OPMERKING: Meer info over deze klasse in het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/gebouwenregister/\"> AP OSLO Gebouwenregister</a>."
+        "nl": "De kleinste eenheid binnen een gebouw die geschikt is voor woon-, bedrijfsmatige, of recreatieve doeleinden en die ontsloten wordt via een eigen afsluitbare toegang vanaf de openbare weg, een erf of een gedeelde circulatieruimte. Een gebouweenheid is in functioneel opzicht zelfstandig. Daarnaast kan een gebouweenheid ook een gemeenschappelijk deel zijn."
       }
     },
     {
@@ -775,9 +798,6 @@
       },
       "definition": {
         "nl": "Lineair object dat de connectiviteit tussen 2 punten in het netwerk beschrijft."
-      },
-      "usage": {
-        "nl": "OPMERKING: Meer info over deze klasse in het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/wegenregister/\"> AP OSLO Gebouwenregister</a>."
       }
     },
     {
@@ -1013,6 +1033,36 @@
       }
     },
     {
+      "EA-Guid": "{5EF3A0C9-2F47-4f5c-9C00-2918FE14D454}",
+      "name": "geometrie",
+      "label": {
+        "nl": "geometrie"
+      },
+      "definition": {
+        "nl": "Geometrie van de Locatie."
+      }
+    },
+    {
+      "EA-Guid": "{9B906328-A336-4014-BCB3-52C074DC77E6}",
+      "name": "ligt op",
+      "label": {
+        "nl": "ligt op"
+      },
+      "definition": {
+        "nl": "De percelen waarmee het gebouw officieel geassocieerd is."
+      }
+    },
+    {
+      "EA-Guid": "{48A59AFB-1D7D-4ced-81BA-4F73FBE502EF}",
+      "name": "bestaat uit",
+      "label": {
+        "nl": "bestaat uit"
+      },
+      "definition": {
+        "nl": "De gebouweenheden die tot het gebouw behoren."
+      }
+    },
+    {
       "EA-Guid": "{98324B28-8F3D-497e-9330-874294E9A589}",
       "name": "genereert",
       "label": {
@@ -1039,6 +1089,19 @@
       }
     },
     {
+      "EA-Guid": "{83F1AEB0-D2B9-4e88-B661-C9CD7E2A017F}",
+      "name": "verwijst naar",
+      "label": {
+        "nl": "verwijst naar"
+      },
+      "definition": {
+        "nl": "Adres waarvan de adresvoorstelling is afgeleid."
+      },
+      "usage": {
+        "nl": "Dit kan enkel voor Belgische adressen aangezien onder adres een Belgisch adres wordt verstaan."
+      }
+    },
+    {
       "EA-Guid": "{12E70351-EC1D-43e9-B0D0-16E5275F9808}",
       "name": "land",
       "label": {
@@ -1049,6 +1112,16 @@
       },
       "usage": {
         "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{AA495FD3-8420-4af4-9A9D-14E1261FD8DE}",
+      "name": "is toegekend aan",
+      "label": {
+        "nl": "is toegekend aan"
+      },
+      "definition": {
+        "nl": "Adresseerbaar object waaraan het adres is toegekend."
       }
     },
     {
@@ -1193,13 +1266,6 @@
       },
       "definition": {
         "nl": "De Beslissing van de Beboetingsinstantie die een gevolg is van de Beslissing van de Vervolgingsinstantie."
-      }
-    },
-    {
-      "EA-Guid": "{5BCCA3D0-4D38-467d-A9A8-9805836375E7}",
-      "name": "",
-      "definition": {
-        "nl": "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark,"
       }
     },
     {

@@ -48,10 +48,10 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#GeometrieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#VestigingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#PersoonShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#prov::AgentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#LocatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#GeregistreerdeOrganisatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#AdresShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#AdresseerbaarObjectShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#StukShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#GebouwShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#GebouweenheidShape>,
@@ -67,18 +67,28 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#AanvullendeSanctieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#Hoofdsanctie>;
+    shacl:class <https://data.vlaanderen.be/ns/bestuurlijke-sancties#Hoofdsanctie>;
     shacl:description "De Hoofdsanctie waaraan de Facultatieve Sanctie bijkomend is."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "vereist"@nl;
     shacl:path dc:requires
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#AanvullendeSanctie> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#AanvullendeSanctie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#AdresShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject>;
+    shacl:description "Adresseerbaar object waaraan het adres is toegekend."@nl;
+    shacl:name "is toegekend aan"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#isToegekendAan>
+  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/adres#Adres> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#AdresseerbaarObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#AdresvoorstellingShape> a shacl:NodeShape;
   shacl:closed false;
@@ -159,6 +169,12 @@
     shacl:name "straatnaam"@nl;
     shacl:path <http://www.w3.org/ns/locn#thoroughfare>
   ], [
+    shacl:class <https://data.vlaanderen.be/ns/adres#Adres>;
+    shacl:description "Adres waarvan de adresvoorstelling is afgeleid."@nl;
+    shacl:maxCount 1;
+    shacl:name "verwijst naar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#verwijstNaar>
+  ], [
     shacl:datatype rdf:langString;
     shacl:description "Het complete adres in één string, al dan niet geformatteerd."@nl;
     shacl:maxCount 1;
@@ -177,7 +193,7 @@
     shacl:name "type"@nl;
     shacl:path dc:type
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#AlternatieveSanctie> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#AlternatieveSanctie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#AlternatieveSanctieTypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -190,30 +206,30 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#BeslissingBeboetingsinstantieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingTotBestuurlijkeVervolging>;
+    shacl:class <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingTotBestuurlijkeVervolging>;
     shacl:description "De Beslissing van de Vervolgingsinstantie die de Beboetingsinstantie vat."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "gevolg van"@nl;
     shacl:path prov:wasGeneratedBy
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BestuurlijkeSanctie>;
+    shacl:class <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeSanctie>;
     shacl:description "De Sanctie die door de Beboetingsinstantie wordt opgelegd."@nl;
     shacl:name "legt op"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#legtOp>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#legtOp>
   ], [
     shacl:datatype xsd:boolean;
     shacl:description "Indicator die aangeeft dat de uitspraak van de veroordeling wordt opgeschort."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "opschorting"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#opschorting>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#opschorting>
   ], [
     shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
     shacl:description "De proefperiode van de opschorting."@nl;
     shacl:maxCount 1;
     shacl:name "opschorting proefperiode"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#opschortingProefperiode>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#opschortingProefperiode>
   ], [
     shacl:class skos:Concept;
     shacl:description "Type van de Beslissing van de Beboetingsinstantie."@nl;
@@ -222,25 +238,25 @@
     shacl:name "resultaat"@nl;
     shacl:path <https://data.vlaanderen.be/ns/besluitvorming#resultaat>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingBeboetingsinstantie> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingBeboetingsinstantie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#BeslissingToezichthouderShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingToezichthouder> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingToezichthouder> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#BeslissingTotAlternatieveProcedureShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#AlternatieveSanctie>;
+    shacl:class <https://data.vlaanderen.be/ns/bestuurlijke-sancties#AlternatieveSanctie>;
     shacl:description "De Alternatieve Sanctie die wordt opgelegd als gevolg van het doorlopen van de Alternatieve Procedure."@nl;
     shacl:name "sanctie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#sanctie>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#sanctie>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingTotAlternatieveProcedure> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingTotAlternatieveProcedure> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#BeslissingTotBestuurlijkOpsporingsonderzoekShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingTotBestuurlijkOpsporingsonderzoek> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingTotBestuurlijkOpsporingsonderzoek> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#BeslissingTotBestuurlijkSepotShape> a shacl:NodeShape;
   shacl:closed false;
@@ -252,28 +268,28 @@
     shacl:name "type"@nl;
     shacl:path dc:type
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingTotBestuurlijkSepot> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingTotBestuurlijkSepot> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#BeslissingTotBestuurlijkeVervolgingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#VervalSanctiemogelijkheidDoorBetalingGeldsom>;
+    shacl:class <https://data.vlaanderen.be/ns/bestuurlijke-sancties#VervalSanctiemogelijkheidDoorBetalingGeldsom>;
     shacl:description "De Voorstel tot Betaling Geldsom die een gevolg is van de Beslissing van de Vervolgingsinstantie."@nl;
     shacl:maxCount 1;
     shacl:name "leidt tot"@nl;
     shacl:path prov:generated
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingBeboetingsinstantie>;
+    shacl:class <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingBeboetingsinstantie>;
     shacl:description "De Beslissing van de Beboetingsinstantie die een gevolg is van de Beslissing van de Vervolgingsinstantie."@nl;
     shacl:maxCount 1;
     shacl:name "leidt tot"@nl;
     shacl:path prov:generated
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingTotBestuurlijkeVervolging> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingTotBestuurlijkeVervolging> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#BeslissingVervolgingsinstantieShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingVervolgingsinstantie> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingVervolgingsinstantie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#BestuurlijkSepotTypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -299,14 +315,14 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "genomen door"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#genomenDoor>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#genomenDoor>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#GepleegdFeit>;
+    shacl:class <https://data.vlaanderen.be/ns/bestuurlijke-sancties#GepleegdFeit>;
     shacl:description "Het Gepleegd Feit waarover de Bestuurlijke Beslissing handelt."@nl;
     shacl:name "over"@nl;
     shacl:path schemas:about
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BestuurlijkeBeslissing> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeBeslissing> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#BestuurlijkeGeldboeteShape> a shacl:NodeShape;
   shacl:closed false;
@@ -315,22 +331,22 @@
     shacl:description "De betalingsstatus van de Bestuurlijke Geldboete."@nl;
     shacl:maxCount 1;
     shacl:name "betalingsstatus"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#betalingsstatus>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#betalingsstatus>
   ], [
     shacl:class schemas:MonetaryAmount;
     shacl:description "Het effectief te betalen geldbedrag."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "boete"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#boete>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#boete>
   ], [
     shacl:datatype xsd:date;
     shacl:description "De datum waarop de Geldboete is betaald."@nl;
     shacl:maxCount 1;
     shacl:name "datum betaling"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#datumBetaling>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#datumBetaling>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BestuurlijkeGeldboete> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeGeldboete> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#BestuurlijkeSanctieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -341,33 +357,33 @@
     shacl:name "omschrijving"@nl;
     shacl:path dc:description
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingBeboetingsinstantie>;
+    shacl:class <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BeslissingBeboetingsinstantie>;
     shacl:description "De Beslissing van de Beboetingsinstantie die de opgelegde Sanctie beschrijft."@nl;
     shacl:maxCount 1;
     shacl:name "opgenomen in"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#opgenomenIn>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#opgenomenIn>
   ], [
     shacl:class <http://data.europa.eu/eli/ontology#LegalResourceSubdivision>;
     shacl:description "Rechtsbrononderdeel op basis waarvan de Bestuurlijke Sanctie wordt uitgesproken."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "rechtsbron"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#rechtsbron>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#rechtsbron>
   ], [
     shacl:datatype xsd:boolean;
     shacl:description "Indicator die aangeeft dat een sanctie wordt uitgesproken, maar nog niet moet worden uitgevoerd."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "uitstel"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#uitstel>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#uitstel>
   ], [
     shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
     shacl:description "De periode waarbinnen uitstel is verleend."@nl;
     shacl:maxCount 1;
     shacl:name "uitstelperiode"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#uitstelperiode>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#uitstelperiode>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BestuurlijkeSanctie> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#BestuurlijkeSanctie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#BetalingStatusShape> a shacl:NodeShape;
   shacl:closed false;
@@ -441,6 +457,17 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#GebouwShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/gebouw#Gebouweenheid>;
+    shacl:description "De gebouweenheden die tot het gebouw behoren."@nl;
+    shacl:name "bestaat uit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#bestaatUit>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/perceel#KadastraalPlanperceel>;
+    shacl:description "De percelen waarmee het gebouw officieel geassocieerd is."@nl;
+    shacl:name "ligt op"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#ligtOp>
+  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/gebouw#Gebouw> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#GebouweenheidShape> a shacl:NodeShape;
@@ -490,11 +517,17 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#GepleegdFeitShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class prov:Agent;
-    shacl:description "Een activiteitenassociatie is een toewijzing van verantwoordelijkheid aan een agent voor een activiteit, wat aangeeft dat de agent een rol had in de activiteit. Voorts kan een plan worden gespecificeerd, namelijk het plan dat de agent voor ogen heeft om b"@nl;
+    shacl:class <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon>;
+    shacl:description "De Geregistreerde Persoon die het feit gepleegd heeft."@nl;
     shacl:maxCount 1;
     shacl:name "betrokkene"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#betrokkene>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#betrokkene>
+  ], [
+    shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>;
+    shacl:description "De Geregistreerde Organisatie die het feit gepleegd heeft."@nl;
+    shacl:maxCount 1;
+    shacl:name "betrokkene"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#betrokkene>
   ], [
     shacl:datatype xsd:dateTime;
     shacl:description "De datum waarop het Gepleegd Feit heeft plaatsgevonden."@nl;
@@ -503,16 +536,15 @@
     shacl:name "datum"@nl;
     shacl:path dc:date
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#GepleegdFeit>;
+    shacl:class <https://data.vlaanderen.be/ns/bestuurlijke-sancties#GepleegdFeit>;
     shacl:description "Een gerelateerd Gepleegd Feit, bv. omwille van gelijkheid in tijd en ruimte."@nl;
     shacl:name "gerelateerd"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#gerelateerd>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#gerelateerd>
   ], [
     shacl:class prov:Location;
-    shacl:description "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark,"@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:path prov:atLocation
+    shacl:description "Locatie waar het Gepleegd Feit heeft plaatsgevonden."@nl;
+    shacl:name "locatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#locatie>
   ], [
     shacl:datatype xsd:string;
     shacl:description "Tekstuele beschrijving van het Gepleegde Feit."@nl;
@@ -525,14 +557,14 @@
     shacl:description "Het Rechtsbrononderdeel dat geschonden wordt door het Gepleegd Feit en daarmee de juridische grondslag voor de vervolging vormt."@nl;
     shacl:minCount 1;
     shacl:name "overtreedt"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#overtreedt>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#overtreedt>
   ], [
     shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
     shacl:description "De periode waarbinnen het Gepleegd Feit heeft plaatsgevonden."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "periode"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#periode>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#periode>
   ], [
     shacl:class skos:Concept;
     shacl:description "Type van het Gepleegd Feit."@nl;
@@ -544,9 +576,9 @@
     shacl:description "De Geregistreerde Organisatie het Gepleegd Feit heeft vastgesteld."@nl;
     shacl:maxCount 1;
     shacl:name "verbalisant"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#verbalisant>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#verbalisant>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#GepleegdFeit> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#GepleegdFeit> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#GepleegdFeitTypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -617,7 +649,7 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#HoofdsanctieShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#Hoofdsanctie> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#Hoofdsanctie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#IdentificatorShape> a shacl:NodeShape;
   shacl:closed false;
@@ -680,6 +712,12 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#LocatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "Geometrie van de Locatie."@nl;
+    shacl:maxCount 1;
+    shacl:name "geometrie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#geometrie>
+  ], [
     shacl:datatype xsd:string;
     shacl:description "Tekstuele beschrijving van de Locatie."@nl;
     shacl:maxCount 1;
@@ -696,13 +734,13 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "bedrag"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#bedrag>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#bedrag>
   ], [
     shacl:class skos:Concept;
     shacl:description "De status van betaling van de Onmiddellijke Inning."@nl;
     shacl:maxCount 1;
     shacl:name "betalingsstatus"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#betalingsstatus>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#betalingsstatus>
   ], [
     shacl:datatype xsd:date;
     shacl:description "De datum waarop de Onmiddellijke Inning is betaald."@nl;
@@ -710,7 +748,7 @@
     shacl:name "datum betaling"@nl;
     shacl:path dc:date
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#OnmiddellijkeInning> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#OnmiddellijkeInning> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#PeriodeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -871,7 +909,7 @@
     shacl:name "type"@nl;
     shacl:path dc:type
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#UitsluitingVanSteun> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#UitsluitingVanSteun> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#VerbeurdverklaringShape> a shacl:NodeShape;
   shacl:closed false;
@@ -880,7 +918,7 @@
     shacl:description "De verbeurdverklaarde som."@nl;
     shacl:maxCount 1;
     shacl:name "bedrag"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#bedrag>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#bedrag>
   ], [
     shacl:class skos:Concept;
     shacl:description "Het type van Verbeurdverklaring."@nl;
@@ -889,7 +927,7 @@
     shacl:name "type"@nl;
     shacl:path dc:type
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#Verbeurdverklaring> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#Verbeurdverklaring> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#VerbeurdverklaringTypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -902,7 +940,7 @@
     shacl:description "De betalingsstatus van de geldsom."@nl;
     shacl:maxCount 1;
     shacl:name "betalingsstatus"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#betalingsstatus>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#betalingsstatus>
   ], [
     shacl:datatype xsd:date;
     shacl:description "De datum waarop de geldsom is betaald."@nl;
@@ -915,9 +953,9 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "geldsom"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#geldsom>
+    shacl:path <https://data.vlaanderen.be/ns/bestuurlijke-sancties#geldsom>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#VervalSanctiemogelijkheidDoorBetalingGeldsom> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijke-sancties#VervalSanctiemogelijkheidDoorBetalingGeldsom> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#VestigingShape> a shacl:NodeShape;
   shacl:closed false;
@@ -933,7 +971,3 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#WegsegmentShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#Wegsegment> .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/2021-02-28#prov::AgentShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass prov:Agent .
