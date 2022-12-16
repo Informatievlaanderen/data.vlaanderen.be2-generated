@@ -11,7 +11,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01> <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01shapes> <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#AlgemeenParticipantKenmerkShape>,
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01> <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01shapes> <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#ActiviteitVerhoudingShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#ActiviteitVerhoudingTypeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#AlgemeenParticipantKenmerkShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#BerichtgevingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#BeschikbaarheidShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#BoekinginfoShape>,
@@ -20,7 +22,6 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#FeedbackShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#FeedbackContentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#KanaalShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#LeeftijdsgroepShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#OrganisatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#OrganisatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#ParticipantShape>,
@@ -164,7 +165,7 @@
     shacl:description "De tijd dat de Activiteit aan d.e gang is en/of voortduurt"@nl;
     shacl:maxCount 1;
     shacl:name "duur"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.duur>
+    shacl:path <https://www.w3.org/2001/XMLSchema#duration>
   ], [
     shacl:class skos:Concept;
     shacl:description "Doel van de Activiteit binnen een geheel van een systeem of apparaat."@nl;
@@ -204,7 +205,7 @@
     shacl:class prov:Location;
     shacl:description "Aanduiding van een geografische positie, dmv coordinaten, een toponiem, een adreslabel, een verwijzing naar een plaats/regio of verwijzing naar een adres."@nl;
     shacl:name "locatie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.locatie>
+    shacl:path <https://www.w3.org/TR/2013/NOTE-prov-xml-20130430/#element-Location>
   ], [
     shacl:class skos:Concept;
     shacl:description "Het type locatie van de activiteit."@nl;
@@ -261,7 +262,7 @@
     shacl:description "Tijdstip wanneer de activiteit zal plaatsvinden of heeft plaatsgevonden."@nl;
     shacl:maxCount 1;
     shacl:name "tijd"@nl;
-    shacl:path <https://www.w3.org/2001/XMLSchema#dateTime>
+    shacl:path <http://cidoc-crm.org/cidoc-crm/7.1.2/P4_has_time-span>
   ], [
     shacl:class skos:Concept;
     shacl:description "Eigenschap van de Activiteit die bepaald gedrag, gevoel of fysieke reactie kan opwekken."@nl;
@@ -272,12 +273,44 @@
     shacl:description "Het type van activiteit."@nl;
     shacl:name "type"@nl;
     shacl:path dc:type
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
+    shacl:description "De Activiteit wordt uitgevoerd door een Uitvoerder."@nl;
+    shacl:name "uitgevoerd door"@nl;
+    shacl:path <http://cidoc-crm.org/cidoc-crm/7.1.2/P14_carried_out_by>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname.activiteit> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding.activiteit.source> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#ActiviteitStatusShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#ActiviteitVerhoudingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class crm:E7_Activity;
+    shacl:description "Referentie naar verbonden klasse."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "Activiteit (target)"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding.activiteit.target>
+  ], [
+    shacl:class crm:E7_Activity;
+    shacl:description "Referentie naar verbonden klasse."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "Activiteit (source)"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding.activiteit.source>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhoudingType>;
+    shacl:description "";
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#type>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#ActiviteitVerhoudingTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhoudingType> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#ActiviteittypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -627,23 +660,6 @@
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#LeeftijdsgroepShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:class schemas:QuantitativeValue;
-    shacl:description "De maximale waarde waaraan iets moet of mag voldoen."@nl;
-    shacl:maxCount 1;
-    shacl:name "bovengrens"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Leeftijdsgroep.bovengrens>
-  ], [
-    shacl:class schemas:QuantitativeValue;
-    shacl:description "De minimale grens waaraan iets moet of mag voldoen."@nl;
-    shacl:maxCount 1;
-    shacl:name "ondergrens"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Leeftijdsgroep.ondergrens>
-  ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#Leeftijdsgroep> .
-
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#LocatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass prov:Location .
@@ -944,13 +960,13 @@
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel.gerichteDoelgroep>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant>;
-    shacl:description "Het persoonlijk profiel van de Participant."@nl;
+    shacl:description "Het persoonlijk profiel van de Participant. dat meer info geeft rond de specifieke cultuurparticipatie van een Participant."@nl;
     shacl:maxCount 1;
     shacl:name "persoonlijk profiel van"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel.persoonlijkProfielVan>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant>;
-    shacl:description "Generiek profiel van de Participant."@nl;
+    shacl:description "Generiek profiel van de Participant dat slaat op een algemenere invulling van een Participant."@nl;
     shacl:name "profiel van"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel.profielVan>
   ], [
@@ -970,7 +986,7 @@
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.consent>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel>;
-    shacl:description "Het persoonlijk ParticipantProfiel van de Participant."@nl;
+    shacl:description "Het persoonlijk profiel van de Participant. dat meer info geeft rond de specifieke cultuurparticipatie van een Participant."@nl;
     shacl:maxCount 1;
     shacl:name "heeft persoonlijk profiel"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.heeftPersoonlijkeProfiel>
@@ -1141,9 +1157,9 @@
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.activiteit>
   ], [
     shacl:class foaf:Document;
-    shacl:description "Een origineel werk in de brede zin (een verslag,een opname,een boek...)."@nl;
+    shacl:description "De documentatie bijhorend bij een Promotie van een Activiteit."@nl;
     shacl:name "documentatie"@nl;
-    shacl:path foaf:Document
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.documentatie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant>;
     shacl:description "Het doel van de Promotie is om de Participant te bereiken."@nl;
@@ -1220,7 +1236,7 @@
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.agent.source>
   ], [
     shacl:class crm:E7_Activity;
-    shacl:description "Activteit gekoppeld aan de Samenwerking tussen de Agenten. "@nl;
+    shacl:description "Activteit gekoppeld aan de Samenwerking tussen de Agenten."@nl;
     shacl:name "activiteit"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.activiteit>
   ], [
@@ -1447,14 +1463,9 @@
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#uitgevoerdDoor>
   ], [
     shacl:class crm:E7_Activity;
-    shacl:description "De Activiteit wordt uitgevoerd door een Organisator."@nl;
-    shacl:name "Organisator"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator.voortUitActiviteit>
-  ], [
-    shacl:class crm:E7_Activity;
-    shacl:description "De Activiteit wordt uitgevoerd door een Organisator."@nl;
-    shacl:name "Organisator"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator.voortUitActiviteit>
+    shacl:description "De Uitvoerder voert de Activiteit uit."@nl;
+    shacl:name "voert uit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.voertUitActiviteit>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.uitvoerder> .
 
@@ -1487,7 +1498,7 @@
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.rol>
   ], [
     shacl:class rdf:langString;
-    shacl:description "De naam waarmee de Uitvoerder vermeldt wordt bij een specifieke Activiteit. "@nl;
+    shacl:description "De naam waarmee de Uitvoerder vermeldt wordt bij een specifieke Activiteit."@nl;
     shacl:maxCount 1;
     shacl:name "uitvoerder vermeld als"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.uitvoerderVermeldAls>

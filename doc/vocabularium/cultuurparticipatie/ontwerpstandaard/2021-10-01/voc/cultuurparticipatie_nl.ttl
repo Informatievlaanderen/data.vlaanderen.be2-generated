@@ -88,12 +88,6 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range skos:Concept .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.duur> a owl:ObjectProperty;
-  rdfs:comment "De tijd dat de Activiteit aan d.e gang is en/of voortduurt"@nl;
-  rdfs:domain crm:E7_Activity;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
-
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.functie> a owl:ObjectProperty;
   rdfs:comment "Doel van de Activiteit binnen een geheel van een systeem of apparaat."@nl;
   rdfs:domain crm:E7_Activity;
@@ -129,12 +123,6 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range skos:Concept .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.locatie> a owl:ObjectProperty;
-  rdfs:comment "Aanduiding van een geografische positie, dmv coordinaten, een toponiem, een adreslabel, een verwijzing naar een plaats/regio of verwijzing naar een adres."@nl;
-  rdfs:domain crm:E7_Activity;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range prov:Location .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.locatieType> a owl:ObjectProperty;
   rdfs:comment "Het type locatie van de activiteit."@nl;
@@ -202,8 +190,20 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range skos:Concept .
 
+<https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding.activiteit.source> a owl:ObjectProperty;
+  rdfs:comment "Referentie naar verbonden klasse."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range crm:E7_Activity .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding.activiteit.target> a owl:ObjectProperty;
+  rdfs:comment "Referentie naar verbonden klasse."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range crm:E7_Activity .
+
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Agent.werktSamenMet> a owl:ObjectProperty;
-  rdfs:comment "De Agent die samenwerkt met een andere Agent. "@nl;
+  rdfs:comment "De Agent die samenwerkt met een andere Agent."@nl;
   rdfs:domain dc:Agent;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range dc:Agent .
@@ -316,18 +316,6 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range rdf:langString .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Leeftijdsgroep.bovengrens> a owl:ObjectProperty;
-  rdfs:comment "De maximale waarde waaraan iets moet of mag voldoen."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Leeftijdsgroep>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range schemas:QuantitativeValue .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Leeftijdsgroep.ondergrens> a owl:ObjectProperty;
-  rdfs:comment "De minimale grens waaraan iets moet of mag voldoen."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Leeftijdsgroep>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range schemas:QuantitativeValue .
-
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie.activiteit> a owl:ObjectProperty;
   rdfs:comment "Referentie naar verbonden klasse."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Organisatie>;
@@ -428,12 +416,6 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator.voortUitActiviteit> a owl:ObjectProperty;
-  rdfs:comment "De Activiteit wordt uitgevoerd door een Organisator."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range crm:E7_Activity .
-
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.consent> a owl:ObjectProperty;
   rdfs:comment "Toestemming van de betrokkene voor de verwerking van zijn persoonsgegevens"@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant>;
@@ -441,7 +423,7 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:range <https://w3id.org/GConsent#Consent> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.heeftPersoonlijkeProfiel> a owl:ObjectProperty;
-  rdfs:comment "Het persoonlijk ParticipantProfiel van de Participant."@nl;
+  rdfs:comment "Het persoonlijk profiel van de Participant. dat meer info geeft rond de specifieke cultuurparticipatie van een Participant."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel> .
@@ -495,13 +477,13 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:range crm:E7_Activity .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel.persoonlijkProfielVan> a owl:ObjectProperty;
-  rdfs:comment "Het persoonlijk profiel van de Participant."@nl;
+  rdfs:comment "Het persoonlijk profiel van de Participant. dat meer info geeft rond de specifieke cultuurparticipatie van een Participant."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel.profielVan> a owl:ObjectProperty;
-  rdfs:comment "Generiek profiel van de Participant."@nl;
+  rdfs:comment "Generiek profiel van de Participant dat slaat op een algemenere invulling van een Participant."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant> .
@@ -547,6 +529,12 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range crm:E7_Activity .
 
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.documentatie> a owl:ObjectProperty;
+  rdfs:comment "De documentatie bijhorend bij een Promotie van een Activiteit."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range foaf:Document .
+
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.doelParticipant> a owl:ObjectProperty;
   rdfs:comment "Het doel van de Promotie is om de Participant te bereiken."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie>;
@@ -578,7 +566,7 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.activiteit> a owl:ObjectProperty;
-  rdfs:comment "Activteit gekoppeld aan de Samenwerking tussen de Agenten. "@nl;
+  rdfs:comment "Activteit gekoppeld aan de Samenwerking tussen de Agenten."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range crm:E7_Activity .
@@ -691,6 +679,12 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder> .
 
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.voertUitActiviteit> a owl:ObjectProperty;
+  rdfs:comment "De Uitvoerder voert de Activiteit uit."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range crm:E7_Activity .
+
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.activiteit> a owl:ObjectProperty;
   rdfs:comment "Referentie naar verbonden klasse."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering>;
@@ -716,16 +710,27 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering.uitvoerderVermeldAls> a owl:ObjectProperty;
-  rdfs:comment "De naam waarmee de Uitvoerder vermeldt wordt bij een specifieke Activiteit. "@nl;
+  rdfs:comment "De naam waarmee de Uitvoerder vermeldt wordt bij een specifieke Activiteit."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoering>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range rdf:langString .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#type> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhoudingType> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#uitgevoerdDoor> a owl:ObjectProperty;
   rdfs:comment "Ding dat is of zal worden uitgevoerd door de Organisator"@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range crm:E70_Thing .
+
+<http://cidoc-crm.org/cidoc-crm/7.1.2/P14_carried_out_by> a rdf:Property;
+  rdfs:label "uitgevoerd door"@nl .
+
+<http://cidoc-crm.org/cidoc-crm/7.1.2/P4_has_time-span> a rdf:Property;
+  rdfs:label "tijd"@nl .
 
 dc:description a rdf:Property;
   rdfs:label "beschrijving"@nl .
@@ -741,6 +746,9 @@ crm:P32_used_general_technique a rdf:Property;
 
 skos:altLabel a rdf:Property;
   rdfs:label "alternatieve naam"@nl .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhoudingType> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Berichtgeving> a owl:Class;
   rdfs:comment "Persmateriaal omtrent de activiteit."@nl;
@@ -777,22 +785,24 @@ schemas:typicalAgeRange a rdf:Property;
 schemas:valueAddedTaxIncluded a rdf:Property;
   rdfs:label "inclusief BTW"@nl .
 
-<https://www.w3.org/2001/XMLSchema#dateTime> a rdf:Property;
-  rdfs:label "tijd"@nl .
+<https://www.w3.org/2001/XMLSchema#duration> a rdf:Property;
+  rdfs:label "duur"@nl .
+
+<https://www.w3.org/TR/2013/NOTE-prov-xml-20130430/#element-Location> a rdf:Property;
+  rdfs:label "locatie"@nl .
 
 <https://www.w3.org/ns/adms#identifier> a rdf:Property;
   rdfs:label "identificator"@nl .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantkenmerk> a owl:Class;
-  rdfs:comment "Algemeen kenmerk over de participant"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#Leeftijdsgroep> a owl:Class;
-  rdfs:comment "Een groep met leden die vallen binnen de gestelde leeftijdsgrenzen."@nl;
+  rdfs:comment "Algemeen kenmerk over de Participant die niet onder SociodemografischKenmerk of Cultuurdeelname valt."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Subsidie> a owl:Class;
   rdfs:comment "Financiële aansporing om het gedrag van de bevolking of van een specifieke doelgroep (dat kan ook een andere overheid zijn) te beïnvloeden in de door de overheid gewenste richting."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding> a owl:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal> a owl:Class;
@@ -802,9 +812,6 @@ schemas:valueAddedTaxIncluded a rdf:Property;
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Ticket> a owl:Class;
   rdfs:comment "Stuk waarmee men afhandelen transactie bewijst."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
-
-foaf:Document a rdf:Property;
-  rdfs:label "documentatie"@nl .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Feedback> a owl:Class;
   rdfs:comment "Terugkoppeling van de participant over de activiteit."@nl;
@@ -848,7 +855,7 @@ foaf:Document a rdf:Property;
   rdfs:subClassOf dc:Agent .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel> a owl:Class;
-  rdfs:comment "Specifiek of algemeen profiel van een participant."@nl;
+  rdfs:comment "Specifiek of algemeen profiel van een Participant die meer info verschaft over de karakteristieke kenmerken in verband met cultuurparticipatie van de Participant."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder> a owl:Class;
@@ -864,6 +871,394 @@ foaf:Document a rdf:Property;
 <https://data.vlaanderen.be/ns/cultuurparticipatie> a owl:Ontology;
   rdfs:label "cultuurparticipatie"@en,
     "cultuurparticipatie"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://vlaamsekunstcollectie.be/>;
+      foaf:name "Vlaamse Kunstcollectie"
+    ];
+    foaf:firstName "Rob";
+    foaf:lastName "Wyse";
+    foaf:mbox <mailto:rob.wyse@vlaamsekunstcollectie.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://vlaamsekunstcollectie.be/>;
+      foaf:name "Vlaamse Kunstcollectie"
+    ];
+    foaf:firstName "Rob";
+    foaf:lastName "Wyse";
+    foaf:mbox <mailto:rob.wyse@vlaamsekunstcollectie.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://faro.be/>;
+      foaf:name "FARO"
+    ];
+    foaf:firstName "Bram";
+    foaf:lastName "Wiercx";
+    foaf:mbox <mailto:bram.wiercx@faro.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://toerismevlaanderen.be/nl>;
+      foaf:name "Toerisme Vlaanderen"
+    ];
+    foaf:firstName "Sofie";
+    foaf:lastName "Wauters";
+    foaf:mbox <mailto:sofie.wauters@toerismevlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.publiq.be/>;
+      foaf:name "publiq"
+    ];
+    foaf:firstName "Stan";
+    foaf:lastName "Vertessen";
+    foaf:mbox <mailto:stan@publiq.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.ugent.be/>;
+      foaf:name "Universiteit Gent"
+    ];
+    foaf:firstName "Melanie ";
+    foaf:lastName "Verstraete";
+    foaf:mbox <mailto:melanie.verstraete@ugent.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.cultuurconnect.be/>;
+      foaf:name "Cultuurconnect"
+    ];
+    foaf:firstName "Ellen";
+    foaf:lastName "Vanmaele";
+    foaf:mbox <mailto:ellen.vanmaele@cultuurconnect.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.cultuurconnect.be/>;
+      foaf:name "Cultuurconnect"
+    ];
+    foaf:firstName "Steven";
+    foaf:lastName "Vandenoortgaete";
+    foaf:mbox <mailto:steven.vandenoortgaete@cultuurconnect.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://redpencil.io/>;
+      foaf:name "Redpencil"
+    ];
+    foaf:firstName "Niels";
+    foaf:lastName "Vandekeybus";
+    foaf:mbox <mailto:niels.vandekeybus@redpencil.io>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.ksz-bcss.fgov.be/nl>;
+      foaf:name "Kruispuntbank van de Sociale Zekerheid"
+    ];
+    foaf:firstName "Lies";
+    foaf:lastName "Vandecasteele";
+    foaf:mbox <mailto:lies.vandecasteele@ksz-bcss.fgov.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://stad.gent/nl>;
+      foaf:name "Stad Gent"
+    ];
+    foaf:firstName "Olivier ";
+    foaf:lastName "Van D'huynslager";
+    foaf:mbox <mailto:olivier.vandhuynslager@stad.gent>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://stad.gent/nl>;
+      foaf:name "Stad Gent"
+    ];
+    foaf:firstName "Sofie";
+    foaf:lastName "Teugels";
+    foaf:mbox <mailto:sofie.teugels@stad.gent>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.podiumkunsten.be/>;
+      foaf:name "Sociaal Fonds voor de Podiumkunsten"
+    ];
+    foaf:firstName "Sam";
+    foaf:lastName "Stobbelaar";
+    foaf:mbox <mailto:sam@podiumkunsten.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.ugent.be/>;
+      foaf:name "Universiteit Gent"
+    ];
+    foaf:firstName "Jessy";
+    foaf:lastName "Siongers";
+    foaf:mbox <mailto:Jessy.Siongers@UGent.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.ugent.be/>;
+      foaf:name "Universiteit Gent"
+    ];
+    foaf:firstName "Jessy";
+    foaf:lastName "Siongers";
+    foaf:mbox <mailto:Jessy.Siongers@UGent.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.kunsten.be/>;
+      foaf:name "Kunstenpunt"
+    ];
+    foaf:firstName "Tom";
+    foaf:lastName "Ruette";
+    foaf:mbox <mailto:tom.ruette@kunsten.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/cjm/nl>;
+      foaf:name "Departement Cultuur, Jeugd en Media"
+    ];
+    foaf:firstName "Jose";
+    foaf:lastName "Rotsaert";
+    foaf:mbox <mailto:jose.rotsaert@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.defederatie.org/>;
+      foaf:name "De Federatie Sociaal-Cultureel Werk"
+    ];
+    foaf:firstName "Hannes";
+    foaf:lastName "Rengle";
+    foaf:mbox <mailto:hannesrengle@defederatie.org>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.literatuurvlaanderen.be/>;
+      foaf:name "Literatuur Vlaanderen"
+    ];
+    foaf:firstName "Lore";
+    foaf:lastName "Piers";
+    foaf:mbox <mailto:lore@literatuurvlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://vi.be/>;
+      foaf:name "VI.BE"
+    ];
+    foaf:firstName "Jan";
+    foaf:lastName "Pauly";
+    foaf:mbox <mailto:jan@vi.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.cultuurconnect.be/>;
+      foaf:name "Cultuurconnect"
+    ];
+    foaf:firstName "Johan";
+    foaf:lastName "Mijs";
+    foaf:mbox <mailto:johan.mijs@cultuurconnect.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://toerismevlaanderen.be/nl>;
+      foaf:name "Toerisme Vlaanderen"
+    ];
+    foaf:firstName "Rein";
+    foaf:lastName "Meus";
+    foaf:mbox <mailto:rein.meus@toerismevlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.digipolisantwerpen.be/>;
+      foaf:name "Digipolis"
+    ];
+    foaf:firstName "Michael";
+    foaf:lastName "Meersmans";
+    foaf:mbox <mailto:michael.meersmans@digipolis.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://socialsecurity.belgium.be/nl>;
+      foaf:name "Federale Overheidsdienst Sociale Zekerheid"
+    ];
+    foaf:firstName "Gineke";
+    foaf:lastName "Mampaey";
+    foaf:mbox <mailto:Gineke.Mampaey@minsoc.fed.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.publiq.be/>;
+      foaf:name "publiq"
+    ];
+    foaf:firstName "Sven";
+    foaf:lastName "Houtmeyers";
+    foaf:mbox <mailto:sven.houtmeyers@publiq.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://thebusinessanalysts.be/>;
+      foaf:name "The Business Analysts"
+    ];
+    foaf:firstName "Bart";
+    foaf:lastName "Hoefman";
+    foaf:mbox <mailto:bart.hoefman@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.publiq.be/>;
+      foaf:name "publiq"
+    ];
+    foaf:firstName "Hans";
+    foaf:lastName "Henderickx";
+    foaf:mbox <mailto:hans@publiq.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://vlaamsekunstcollectie.be/>;
+      foaf:name "Vlaamse Kunstcollectie"
+    ];
+    foaf:firstName "Pascal";
+    foaf:lastName "Ennaert";
+    foaf:mbox <mailto:pascal.ennaert@vlaamsekunstcollectie.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vaf.be/>;
+      foaf:name "Vlaams Audiovisueel Fonds"
+    ];
+    foaf:firstName "Matthias";
+    foaf:lastName "Dillen";
+    foaf:mbox <mailto:mdillen@vaf.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://stad.gent/nl>;
+      foaf:name "Stad Gent"
+    ];
+    foaf:firstName "Thomas";
+    foaf:lastName "Desmedt";
+    foaf:mbox <mailto:thomas.desmedt@stad.gent>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.parcum.be/nl/>;
+      foaf:name "Parcum"
+    ];
+    foaf:firstName "Ellen";
+    foaf:lastName "Descamps";
+    foaf:mbox <mailto:ellen.descamps@parcum.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.so-lva.be/>;
+      foaf:name "SOLvA"
+    ];
+    foaf:firstName "Ewout";
+    foaf:lastName "Depauw";
+    foaf:mbox <mailto:ewout.depauw@so-lva.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.defederatie.org/>;
+      foaf:name "De Federatie Sociaal-Cultureel Werk"
+    ];
+    foaf:firstName "Barbara";
+    foaf:lastName "Delft";
+    foaf:mbox <mailto:barbara@defederatie.org>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://redpencil.io/>;
+      foaf:name "Redpencil"
+    ];
+    foaf:firstName "Johan";
+    foaf:lastName "Delaure";
+    foaf:mbox <mailto:johan.delaure@redpencil.io>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.acagroup.be/nl/>;
+      foaf:name "ACA IT-Solutions"
+    ];
+    foaf:firstName "Tom";
+    foaf:lastName "De Wolf";
+    foaf:mbox <mailto:tom.dewolf@aca-it.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.publiq.be/>;
+      foaf:name "publiq"
+    ];
+    foaf:firstName "Karel";
+    foaf:lastName "De Rudder";
+    foaf:mbox <mailto:karel.derudder@publiq.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.dominionexperts.be/>;
+      foaf:name "Dominion Experts"
+    ];
+    foaf:firstName "Sammey";
+    foaf:lastName "De Mulder";
+    foaf:mbox <mailto:sammey.demulder@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.circuscentrum.be/>;
+      foaf:name "Vlaams Centrum voor Circuskunsten"
+    ];
+    foaf:firstName "Anne";
+    foaf:lastName "Ceulebrouck";
+    foaf:mbox <mailto:anne@circuscentrum.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/cjm/nl>;
+      foaf:name "Departement Cultuur, Jeugd en Media"
+    ];
+    foaf:firstName "Thomas";
+    foaf:lastName "Buijs";
+    foaf:mbox <mailto:thomas.buijs@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.podiumkunsten.be/>;
+      foaf:name "Sociaal Fonds voor de Podiumkunsten"
+    ];
+    foaf:firstName "Maarten";
+    foaf:lastName "Bresseleers";
+    foaf:mbox <mailto:maarten@podiumkunsten.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.cult.be/>;
+      foaf:name "Cult! netwerk cultuurhuizen"
+    ];
+    foaf:firstName "Fien";
+    foaf:lastName "Bracke";
+    foaf:mbox <mailto:fien@cult.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://ambrassade.be/nl>;
+      foaf:name "De Ambrassade"
+    ];
+    foaf:firstName "Peter";
+    foaf:lastName "Bosschaert";
+    foaf:mbox <mailto:peter.bosschaert@ambrassade.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.publiq.be/>;
+      foaf:name "publiq"
+    ];
+    foaf:firstName "Frederik";
+    foaf:lastName "Bastiaensen";
+    foaf:mbox <mailto:frederik@publiq.be>
+  ];
   dc:issued "TODO";
   dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
     <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
@@ -876,19 +1271,21 @@ foaf:Document a rdf:Property;
     skos:Concept,
     schemas:PriceSpecification,
     <https://www.w3.org/ns/adms#identifier>,
-    <https://www.w3.org/2001/XMLSchema#dateTime>,
+    <https://www.w3.org/TR/2013/NOTE-prov-xml-20130430/#element-Location>,
+    <https://www.w3.org/2001/XMLSchema#duration>,
     schemas:valueAddedTaxIncluded,
     schemas:typicalAgeRange,
     schemas:price,
     schemas:eligibleQuantity,
     <https://data.vlaanderen.be/ns/cultuurparticipatie#transactie>,
     <https://data.vlaanderen.be/ns/cultuurparticipatie#geefrechtop>,
-    foaf:Document,
     skos:altLabel,
     crm:P32_used_general_technique,
     schema:contactPoint,
     dc:type,
-    dc:description;
+    dc:description,
+    <http://cidoc-crm.org/cidoc-crm/7.1.2/P4_has_time-span>,
+    <http://cidoc-crm.org/cidoc-crm/7.1.2/P14_carried_out_by>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
