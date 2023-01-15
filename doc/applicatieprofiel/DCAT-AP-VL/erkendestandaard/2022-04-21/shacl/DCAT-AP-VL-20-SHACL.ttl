@@ -17,6 +17,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2022-04-21#JuridischeBepalingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2022-04-21#StandaardShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2022-04-21#ContactInfoShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2022-04-21#URiShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2022-04-21#ContactinfoShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2022-04-21#IdentificatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2022-04-21#CatalogusShape>,
@@ -53,11 +54,13 @@
     shacl:name "alternatieve identificator"@nl;
     shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
+    shacl:class rdfs:Resource;
     shacl:description "De record in een andere catalogus waarvan deze record en de beschrijvingen van het bijhorende hoofdonderwerp van afgeleid zijn."@nl;
     shacl:maxCount 1;
     shacl:name "bron metadatarecord"@nl;
     shacl:path dc:source
   ], [
+    shacl:class rdfs:Resource;
     shacl:description "Een webpagina in een menselijk leesbare vorm van de bron metadata record."@nl;
     shacl:maxCount 1;
     shacl:name "bron metadata record landingspagina"@nl
@@ -156,6 +159,7 @@ wordt."""@nl;
     shacl:class dc:LicenseDocument;
     shacl:description "De licentie van de catalogus."@nl;
     shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "licentie"@nl;
     shacl:path dc:license
   ], [
@@ -181,69 +185,18 @@ wordt."""@nl;
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2022-04-21#ContactInfoShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    shacl:datatype rdf:langString;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "aanschrijfprefix"@nl;
-    shacl:path <http://ww.w3.org/2006/vcard/ns#honorific-prefix>
-  ], [
-    shacl:class <http://www.w3.org/ns/locn#Address>;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "adres"@nl;
-    shacl:path <http://www.w3.org/ns/locn#address>
-  ], [
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "uren beschikbaarheid"@nl;
-    shacl:path schema:hoursAvailable
-  ], [
-    shacl:datatype xsd:string;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "naam"@nl;
-    shacl:path foaf:name
-  ], [
-    shacl:datatype xsd:string;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "email"@nl;
-    shacl:path schema:email
-  ], [
-    shacl:datatype xsd:string;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "fax"@nl;
-    shacl:path schema:faxNumber
-  ], [
-    shacl:datatype rdfs:Literal;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "openingsuren"@nl;
-    shacl:path schema:openingHours
-  ], [
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "telefoon"@nl;
-    shacl:path schema:telephone
-  ], [
-    shacl:datatype xsd:anyURI;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "pagina"@nl;
-    shacl:path foaf:page
-  ];
   shacl:targetClass schema:ContactPoint .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2022-04-21#ContactinfoShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class rdfs:Resource;
     shacl:description "Een webpagina die ofwel toelaat om contact op te nemen (via b.v. een webformulier) of die informatie bevat hoe men contact kan opnemen."@nl;
     shacl:maxCount 1;
     shacl:name "contactpagina"@nl;
     shacl:path foaf:page
   ], [
+    shacl:class rdfs:Resource;
     shacl:description "Het e-mailadres waarmee een gebruiker contact kan opnemen voor informatie."@nl;
     shacl:maxCount 1;
     shacl:name "e-mail"@nl;
@@ -288,12 +241,14 @@ wordt."""@nl;
     shacl:name "creatiedatum"@nl;
     shacl:path dc:created
   ], [
+    shacl:class rdfs:Resource;
     shacl:description "De rootlocatie of het primaire endpoint van de dienst (een web-resolvable URI)."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "endpointURL"@nl;
     shacl:path dcat:endpointURL
   ], [
+    shacl:class rdfs:Resource;
     shacl:description "Een beschrijving van de diensten die beschikbaar zijn via de end-points, met inbegrip van hun operaties, parameters, enz."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -307,20 +262,24 @@ wordt."""@nl;
     shacl:name "identificator"@nl;
     shacl:path dc:identifier
   ], [
+    shacl:class rdfs:Resource;
     shacl:description "Een algemene webpagina waarnaar kan worden genavigeerd in een webbrowser, met algemene aanvullende informatie over de dataservice."@nl;
     shacl:name "landingspagina"@nl;
     shacl:path dcat:landingPage
   ], [
+    shacl:class rdfs:Resource;
     shacl:description "Een verwijzing naar de landingspagina met de specifieke informatie over de authenticatie voor de dataservice."@nl;
     shacl:maxCount 1;
     shacl:name "landingspagina voor authenticatie"@nl;
     shacl:path <http://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorAuthenticatie>
   ], [
+    shacl:class rdfs:Resource;
     shacl:description "Een verwijzing naar de landingspagina met de specifieke informatie over het gebruik van de dataservice."@nl;
     shacl:maxCount 1;
     shacl:name "landingspagina voor gebruiksinformatie"@nl;
     shacl:path <http://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorGebruiksinformatie>
   ], [
+    shacl:class rdfs:Resource;
     shacl:description "Een verwijzing naar de statuspagina van de dataservice"@nl;
     shacl:maxCount 1;
     shacl:name "landingspagina voor statusinformatie"@nl;
@@ -462,6 +421,7 @@ wordt."""@nl;
     shacl:name "identificator"@nl;
     shacl:path dc:identifier
   ], [
+    shacl:class rdfs:Resource;
     shacl:description "Een algemene webpagina waarnaar kan worden genavigeerd in een webbrowser, met algemene informatie over de dataset, zijn distributies en/of aanvullende informatie."@nl;
     shacl:name "landingspagina"@nl;
     shacl:path dcat:landingPage
@@ -538,6 +498,7 @@ waaraan de distributie voldoet."""@nl;
     shacl:name "conform"@nl;
     shacl:path dc:conformsTo
   ], [
+    shacl:class rdfs:Resource;
     shacl:description "De URL waar de data gedownload kan worden."@nl;
     shacl:maxCount 1;
     shacl:name "downloadURL"@nl;
@@ -560,6 +521,7 @@ waaraan de distributie voldoet."""@nl;
     shacl:class dc:LicenseDocument;
     shacl:description "De licentie van de distributie."@nl;
     shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "licentie"@nl;
     shacl:path dc:license
   ], [
@@ -573,6 +535,7 @@ waaraan de distributie voldoet."""@nl;
     shacl:name "titel"@nl;
     shacl:path dc:title
   ], [
+    shacl:class rdfs:Resource;
     shacl:description "Een URL waar de data kan gevonden worden."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -598,38 +561,6 @@ waaraan de distributie voldoet."""@nl;
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2022-04-21#IdentificatorShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    shacl:class <http://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator>;
-    shacl:description "Identificator vh object opgesplitst in zijn onderdelen."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "gestructureerde identificator"@nl;
-    shacl:path <http://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator>
-  ], [
-    shacl:datatype rdfs:Literal;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "notatie"@nl;
-    shacl:path skos:notation
-  ], [
-    shacl:class foaf:Agent;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "toegekend door"@nl;
-    shacl:path dc:creator
-  ], [
-    shacl:class foaf:Agent;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "toegekend door (String)"@nl;
-    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
-  ], [
-    shacl:datatype xsd:dateTime;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "toegekend op"@nl;
-    shacl:path dc:issued
-  ];
   shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2022-04-21#JuridischeBepalingShape> a shacl:NodeShape;
@@ -707,6 +638,7 @@ gepubliceerd"""@nl;
     shacl:name "publicatiedatum"@nl;
     shacl:path dc:issued
   ], [
+    shacl:class rdfs:Resource;
     shacl:description """Een URL waarop men de specificatie kan
 vinden"""@nl;
     shacl:maxCount 1;
@@ -738,6 +670,10 @@ standaard bekend is."""@nl;
   ];
   shacl:targetClass dc:Standard .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2022-04-21#URiShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Resource .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2022-04-21#VoorbeeldWeergaveShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -746,6 +682,7 @@ standaard bekend is."""@nl;
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
   ], [
+    shacl:class rdfs:Resource;
     shacl:description "De URL waar de afbeelding gedownload kan worden."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
