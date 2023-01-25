@@ -5,7 +5,6 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21> <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21shapes> <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#AdvertentieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#AdvertentieEventShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#AgentShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#BeeldShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#DirectMarketingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#DocumentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#DoelgroepTypeShape>,
@@ -23,14 +22,16 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#ProcedureShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicRelationsShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieEventShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieEventTypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieExpressieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieKanaalTypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieObjectTypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieToolTypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#StatusTypeShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#TekstShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#TaalObjectShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#VerkoopPromotieShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#ZelfstandigeExpressieShape> .
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#ZelfstandigeExpressieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PeriodeShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#AdvertentieEventShape> a shacl:NodeShape;
   shacl:closed false;
@@ -43,10 +44,6 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#AgentShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/publicatie/advertentie#Agent> .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#BeeldShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/publicatie/advertentie#Beeld> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#DirectMarketingShape> a shacl:NodeShape;
   shacl:closed false;
@@ -78,16 +75,6 @@
     shacl:class <https://data.vlaanderen.be/ns/publicatie/advertentie#Informatieobject>;
     shacl:name " (source)"@nl;
     shacl:path <https://data.vlaanderen.be/ns/publicatie/advertentie#Informatieobject.omvat.source>
-  ], [
-    shacl:description "";
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:path <https://data.vlaanderen.be/ns/publicatie/advertentie#titel>
-  ], [
-    shacl:description "";
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:path <https://data.vlaanderen.be/ns/publicatie/advertentie#type>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/publicatie/advertentie#Informatieobject> .
 
@@ -137,6 +124,24 @@
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/publicatie/advertentie#Organisatie> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PeriodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Aanvang van de tijdsduur."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "begin"@nl;
+    shacl:path <http://data.europa.eu/m8g/startTime>
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Einde vd tijdsduur."@nl;
+    shacl:maxCount 1;
+    shacl:name "einde"@nl;
+    shacl:path <http://data.europa.eu/m8g/endTime>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/PeriodOfTime> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PersoonShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/publicatie/advertentie#Persoon> .
@@ -156,10 +161,6 @@
     shacl:description "";
     shacl:minCount 1
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/publicatie/advertentie#Locatie>;
-    shacl:description "";
-    shacl:minCount 1
-  ], [
     shacl:class <https://data.vlaanderen.be/ns/publicatie/advertentie#Agent>;
     shacl:description "";
     shacl:minCount 1
@@ -170,8 +171,6 @@
   ], [
     shacl:class <https://data.vlaanderen.be/ns/publicatie/advertentie#PublicatieKanaalType>;
     shacl:description "";
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:path <https://data.vlaanderen.be/ns/publicatie/advertentie#kanaal>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/publicatie/advertentie#Kost>;
@@ -180,29 +179,39 @@
   ], [
     shacl:class <https://data.vlaanderen.be/ns/publicatie/advertentie#PublicatieExpressie>;
     shacl:description "";
-    shacl:path <https://data.vlaanderen.be/ns/publicatie/advertentie#publicatieObject>
+    shacl:path <https://data.vlaanderen.be/ns/publicatie/advertentie#publicatieExpressie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/publicatie/advertentie#PublicatieExpressie>;
     shacl:description "";
-    shacl:path <https://data.vlaanderen.be/ns/publicatie/advertentie#publicatieObject>
+    shacl:path <https://data.vlaanderen.be/ns/publicatie/advertentie#publicatieExpressie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/publicatie/advertentie#StatusType>;
     shacl:description "";
     shacl:maxCount 1;
     shacl:path <https://data.vlaanderen.be/ns/publicatie/advertentie#status>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/publicatie/advertentie#PublicatieEventType>;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:path <https://data.vlaanderen.be/ns/publicatie/advertentie#type>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/publicatie/advertentie#PublicatieEvent> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieEventTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/publicatie/advertentie#PublicatieEventType> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieExpressieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/publicatie/advertentie#Locatie>;
+    shacl:description "";
+    shacl:minCount 1
+  ], [
     shacl:class <https://data.vlaanderen.be/ns/publicatie/advertentie#Kost>;
     shacl:description "";
     shacl:path <https://data.vlaanderen.be/ns/publicatie/advertentie#kost>
-  ], [
-    shacl:description "";
-    shacl:maxCount 1;
-    shacl:path <https://data.vlaanderen.be/ns/publicatie/advertentie#manifestatie>
   ], [
     shacl:description "";
     shacl:maxCount 1;
@@ -212,7 +221,6 @@
     shacl:class <https://data.vlaanderen.be/ns/publicatie/advertentie#PublicatieToolType>;
     shacl:description "";
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:path <https://data.vlaanderen.be/ns/publicatie/advertentie#tool>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/publicatie/advertentie#PublicatieObjectType>;
@@ -222,7 +230,7 @@
     shacl:description "";
     shacl:path <https://data.vlaanderen.be/ns/publicatie/advertentie#werk>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/publicatie/advertentie#PublicatieExpressie> .
+  shacl:targetClass <http://fixme.com#PublicatieExpressie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieKanaalTypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -240,9 +248,9 @@
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/publicatie/advertentie#StatusType> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#TekstShape> a shacl:NodeShape;
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#TaalObjectShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/publicatie/advertentie#Tekst> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/publicatie/advertentie#TaalObject> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#VerkoopPromotieShape> a shacl:NodeShape;
   shacl:closed false;
