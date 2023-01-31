@@ -1,9 +1,34 @@
 {
   "@context": {
+    "Adresvoorstelling": "http://www.w3.org/ns/locn#Address",
     "Advertentie": "https://data.vlaanderen.be/ns/publicatie/advertentie#Advertentie",
     "AdvertentieEvent": "https://data.vlaanderen.be/ns/publicatie/advertentie#AdvertentieEvent",
     "Agent": "http://purl.org/dc/terms/Agent",
     "Beeld": "https://data.vlaanderen.be/ns/publicatie/advertentie#Beeld",
+    "Beeld.Extensie": {
+      "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#Extensie",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Beeld.Oriëntatie": {
+      "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#Oriëntatie",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Beeld.Resolutie": {
+      "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#Resolutie",
+      "@type": ""
+    },
+    "Campagne": "https://data.vlaanderen.be/ns/publicatie/advertentie#Campagne",
+    "Campagne.bestaatUit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#bestaatUit",
+      "@type": "@id"
+    },
+    "Campagne.type": {
+      "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#type",
+      "@type": "@id"
+    },
+    "CampagneComponent": "https://data.vlaanderen.be/ns/publicatie/advertentie#CampagneComponent",
+    "CampagneType": "https://data.vlaanderen.be/ns/publicatie/advertentie#CampagneType",
     "Contactinfo": "http://schema.org/ContactPoint",
     "Contactinfo.aanschrijfvorm": {
       "@id": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
@@ -11,11 +36,11 @@
     },
     "Contactinfo.adres": {
       "@id": "http://www.w3.org/ns/locn#address",
-      "@type": ""
+      "@type": "@id"
     },
     "Contactinfo.beschikbaarheid": {
       "@id": "http://schema.org/hoursAvailable",
-      "@type": ""
+      "@type": "@id"
     },
     "Contactinfo.contactnaam": {
       "@id": "http://xmlns.com/foaf/0.1/name",
@@ -31,7 +56,7 @@
     },
     "Contactinfo.openingsuren": {
       "@id": "http://schema.org/openingHours",
-      "@type": ""
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "Contactinfo.telefoon": {
       "@id": "http://schema.org/telephone",
@@ -43,16 +68,20 @@
     },
     "DirectMarketing": "https://data.vlaanderen.be/ns/publicatie/advertentie#DirectMarketing",
     "Document": "https://data.vlaanderen.be/ns/publicatie/advertentie#Document",
+    "Document.titel": {
+      "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#titel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
     "DoelgroepType": "https://data.vlaanderen.be/ns/publicatie/advertentie#DoelgroepType",
     "FormeleOrganisatie": "http://www.w3.org/ns/org#FormalOrganization",
     "Geometrie": "http://www.w3.org/ns/locn#Geometry",
     "Geometrie.alsGml": {
       "@id": "http://www.opengis.net/ont/geosparql#asGML",
-      "@type": ""
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "Geometrie.alsWkt": {
       "@id": "http://www.opengis.net/ont/geosparql#asWKT",
-      "@type": ""
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "GeregistreerdeOrganisatie": "http://www.w3.org/ns/regorg#RegisteredOrganization",
     "GeregistreerdeOrganisatie.rechtspersoonlijkheid": {
@@ -75,10 +104,11 @@
       "@id": "http://www.w3.org/ns/regorg#legalName",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
+    "GetypeerdeString": "http://www.w3.org/2000/01/rdf-schema#Literal",
     "Identificator": "http://www.w3.org/ns/adms#Identifier",
     "Identificator.notatie": {
       "@id": "http://www.w3.org/2004/02/skos/core#notation",
-      "@type": ""
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "Identificator.toegekendDoor": {
       "@id": "http://purl.org/dc/terms/creator",
@@ -103,14 +133,6 @@
       "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#Informatieobject.omvat.target",
       "@type": "@id"
     },
-    "Informatieobject.titel": {
-      "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#titel",
-      "@type": ""
-    },
-    "Informatieobject.type": {
-      "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#type",
-      "@type": ""
-    },
     "Kost": "https://data.vlaanderen.be/ns/publicatie/advertentie#Kost",
     "Kost.type": {
       "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#type",
@@ -118,18 +140,27 @@
     },
     "KostenType": "https://data.vlaanderen.be/ns/publicatie/advertentie#KostenType",
     "Locatie": "http://www.w3.org/ns/prov#Location",
-    "MarketingCampagne": "https://data.vlaanderen.be/ns/publicatie/advertentie#MarketingCampagne",
-    "MarketingCampagne.bestaatUit": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#bestaatUit",
-      "@type": "@id"
+    "OpeningsurenSpecificatie": "https://schema.org/OpeningHoursSpecification",
+    "OpeningsurenSpecificatie.dagVanDeWeek": {
+      "@id": "https://schema.org/dayOfWeek",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
     },
-    "MarketingCampagne.type": {
-      "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#type",
-      "@type": "@id"
+    "OpeningsurenSpecificatie.geldigTot": {
+      "@id": "https://schema.org/validThrough",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
-    "MarketingCampagneComponent": "https://data.vlaanderen.be/ns/publicatie/advertentie#MarketingCampagneComponent",
-    "MarketingCampagneType": "https://data.vlaanderen.be/ns/publicatie/advertentie#MarketingCampagneType",
+    "OpeningsurenSpecificatie.geldigVan": {
+      "@id": "https://schema.org/validFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "OpeningsurenSpecificatie.gesloten": {
+      "@id": "https://schema.org/closes",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "OpeningsurenSpecificatie.open": {
+      "@id": "https://schema.org/opens",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
     "Organisatie": "http://www.w3.org/ns/org#Organization",
     "Organisatie.activiteit": {
       "@id": "http://www.w3.org/ns/regorg#orgActivity",
@@ -199,10 +230,6 @@
       "@id": "http://schema.org/contactPoint",
       "@type": "@id"
     },
-    "Persoon.geslacht": {
-      "@id": "http://fixme.com#geslacht",
-      "@type": ""
-    },
     "Persoon.voornaam": {
       "@container": "@set",
       "@id": "http://xmlns.com/foaf/0.1/givenName",
@@ -219,6 +246,14 @@
       "@type": ""
     },
     "Procedure": "https://data.vlaanderen.be/ns/publicatie/advertentie#Procedure",
+    "Procedure.naam": {
+      "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#naam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Procedure.type": {
+      "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#type",
+      "@type": ""
+    },
     "PublicRelations": "https://data.vlaanderen.be/ns/publicatie/advertentie#PublicRelations",
     "PublicatieEvent": "https://data.vlaanderen.be/ns/publicatie/advertentie#PublicatieEvent",
     "PublicatieEvent.^periode": {
@@ -242,6 +277,7 @@
       "@type": "@id"
     },
     "PublicatieEvent.kanaal": {
+      "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#kanaal",
       "@type": "@id"
     },
@@ -291,8 +327,17 @@
     "Rechtstoestandtype": "http://www.w3.org/2004/02/skos/core#Concept",
     "Rechtsvormtype": "http://www.w3.org/2004/02/skos/core#Concept",
     "StatusType": "https://data.vlaanderen.be/ns/publicatie/advertentie#StatusType",
+    "Taalcode": "http://www.w3.org/2004/02/skos/core#Concept",
     "Taalstring": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
     "Tekst": "https://data.vlaanderen.be/ns/publicatie/advertentie#Tekst",
+    "Tekst.inhoud": {
+      "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#inhoud",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Tekst.titel": {
+      "@id": "https://data.vlaanderen.be/ns/publicatie/advertentie#titel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
     "VerkoopPromotie": "https://data.vlaanderen.be/ns/publicatie/advertentie#VerkoopPromotie",
     "ZelfstandigeExpressie": "https://data.vlaanderen.be/ns/publicatie/advertentie#ZelfstandigeExpressie"
   }
