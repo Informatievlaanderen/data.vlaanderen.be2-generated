@@ -34,6 +34,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#TransactieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#UitvoerderShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#UitvoeringShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#RuimtetijdShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#PeriodeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#AgentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#PlaatsShape>,
@@ -164,6 +165,7 @@
     shacl:name "doelgroep"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.doelgroep>
   ], [
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
     shacl:description "De tijd dat de Activiteit aan d.e gang is en/of voortduurt"@nl;
     shacl:maxCount 1;
     shacl:name "duur"@nl;
@@ -216,6 +218,7 @@
   ], [
     shacl:class prov:Location;
     shacl:description "Aanduiding van een geografische positie, dmv coordinaten, een toponiem, een adreslabel, een verwijzing naar een plaats/regio of verwijzing naar een adres."@nl;
+    shacl:maxCount 1;
     shacl:name "locatie"@nl;
     shacl:path <https://www.w3.org/TR/2013/NOTE-prov-xml-20130430/#element-Location>
   ], [
@@ -239,6 +242,11 @@
     shacl:maxCount 1;
     shacl:name "recurrerend"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.recurrerend>
+  ], [
+    shacl:class <http://cidoc-crm.org/cidoc-crm/7.1.2/E92_Spacetime_Volume>;
+    shacl:description "Een vierdimensionele puntenreeks in de fysieke ruimtetijd waarbij er een intersectie kan zijn van een plaats en tijdsaanduiding."@nl;
+    shacl:name "ruimtetijd"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#ruimtetijd>
   ], [
     shacl:class skos:Concept;
     shacl:description "Geeft de status van de activiteit weer."@nl;
@@ -1253,6 +1261,21 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#RolUitvoeringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#RuimtetijdShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class prov:Location;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#locatie>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#tijd>
+  ];
+  shacl:targetClass <http://cidoc-crm.org/cidoc-crm/7.1.2/E92_Spacetime_Volume> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/2021-10-01#SamenwerkingShape> a shacl:NodeShape;
   shacl:closed false;

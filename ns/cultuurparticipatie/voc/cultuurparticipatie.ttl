@@ -10,6 +10,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://cidoc-crm.org/cidoc-crm/7.1.2/E92_Spacetime_Volume> a rdfs:Class;
+  rdfs:label "Ruimetijd"@nl .
+
 crm:E7_Activity a rdfs:Class;
   rdfs:label "Activiteit"@nl .
 
@@ -698,11 +701,27 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range rdf:langString .
 
+<https://data.vlaanderen.be/ns/cultuurparticipatie#locatie> a owl:ObjectProperty;
+  rdfs:domain <http://cidoc-crm.org/cidoc-crm/7.1.2/E92_Spacetime_Volume>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range prov:Location .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#ruimtetijd> a owl:ObjectProperty;
+  rdfs:comment "Een vierdimensionele puntenreeks in de fysieke ruimtetijd waarbij er een intersectie kan zijn van een plaats en tijdsaanduiding."@nl;
+  rdfs:domain crm:E7_Activity;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range <http://cidoc-crm.org/cidoc-crm/7.1.2/E92_Spacetime_Volume> .
+
 <https://data.vlaanderen.be/ns/cultuurparticipatie#thema> a owl:ObjectProperty;
   rdfs:comment "Waar de Activiteit inhoudelijk over gaat."@nl;
   rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#tijd> a owl:ObjectProperty;
+  rdfs:domain <http://cidoc-crm.org/cidoc-crm/7.1.2/E92_Spacetime_Volume>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#trigger> a owl:ObjectProperty;
   rdfs:comment "Eigenschap van de Activiteit die bepaald gedrag, gevoel of fysieke reactie kan opwekken."@nl;
@@ -1265,7 +1284,8 @@ schemas:valueAddedTaxIncluded a rdf:Property;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso crm:E7_Activity,
+  rdfs:seeAlso <http://cidoc-crm.org/cidoc-crm/7.1.2/E92_Spacetime_Volume>,
+    crm:E7_Activity,
     skos:Concept,
     schemas:PriceSpecification,
     <https://www.w3.org/ns/adms#identifier>,
