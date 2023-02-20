@@ -24,12 +24,14 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#InformatieobjectShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#KostShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#KostenTypeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PrestatieTypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#ProcedureShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicRelationsShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieEventShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieExpressieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieKanaalTypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieObjectTypeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatiePrestatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieToolTypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#StatusTypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#TekstShape>,
@@ -50,7 +52,6 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#RechtstoestandtypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#RechtsvormtypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#TaalcodeShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#IdentificatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#AdresvoorstellingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#GeometrieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#FormeleOrganisatieShape>,
@@ -58,6 +59,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PersoonShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#LocatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#GeregistreerdeOrganisatieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#GeldbedragShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#OpeningsurenSpecificatieShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#AdresvoorstellingShape> a shacl:NodeShape;
@@ -114,6 +116,7 @@
     shacl:name "bestaat uit"@nl;
     shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#bestaatUit>
   ], [
+    shacl:class schemas:MonetaryAmount;
     shacl:description "Het budget dat vrijgemaakt is voor een campgne"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -203,13 +206,30 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#FormeleOrganisatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:datatype rdfs:Literal;
     shacl:description "Een code die is toegekend aan een rekeninghouder bij een bankinstelling."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "rekeningnummer"@nl;
-    shacl:path <http://fixme.com#rekeningnummer>
+    shacl:path <http://fixme.com#/bankrekeningnummer>
   ];
   shacl:targetClass org:FormalOrganization .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#GeldbedragShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:description "Munteenheid waarin het geldbedrag is gedefinieerd."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "valuta"@nl;
+    shacl:path schemas:currency
+  ], [
+    shacl:description "Getal dat de waarde van het geldbedrag uitdrukt."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "waarde"@nl;
+    shacl:path schemas:value
+  ];
+  shacl:targetClass schemas:MonetaryAmount .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#GeometrieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -269,35 +289,6 @@
   shacl:closed false;
   shacl:targetClass rdfs:Literal .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#IdentificatorShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:datatype rdfs:Literal;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "notatie"@nl;
-    shacl:path skos:notation
-  ], [
-    shacl:class dc:Agent;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "toegekend door"@nl;
-    shacl:path dc:creator
-  ], [
-    shacl:class dc:Agent;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "toegekend door (String)"@nl;
-    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
-  ], [
-    shacl:datatype xsd:dateTime;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "toegekend op"@nl;
-    shacl:path dc:issued
-  ];
-  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
-
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#InformatieobjectShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -326,6 +317,11 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#KostShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#geldbedrag>
+  ], [
     shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#KostenType>;
     shacl:description "Type kost"@nl;
     shacl:maxCount 1;
@@ -531,6 +527,10 @@
   ];
   shacl:targetClass dc:Location .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PrestatieTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/campagne/publicatie#PrestatieType> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#ProcedureShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/campagne/publicatie#Procedure> .
@@ -546,6 +546,18 @@
     shacl:description "Linkt het publiceren van de publicatie met de creatie van de publicatie"@nl;
     shacl:name "PublicatieExpressie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#publicatieExpressie>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#PublicatiePrestatie>;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#publicatiePrestatie>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#PublicatiePrestatie>;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#publicatiePrestatie>
   ], [
     shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
     shacl:description "Een bepaalde tijdspanne"@nl;
@@ -573,8 +585,9 @@
     shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#kanaal>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#Kost>;
-    shacl:description "De prijs die moet betaald worden voor het vertonen van de advertentie"@nl;
-    shacl:name "kost"@nl;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#kost>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#StatusType>;
@@ -592,11 +605,6 @@
     shacl:description "Linkt de creatie van de publicatie met het publiceren van de publicatie"@nl;
     shacl:name "PublicatieEvent"@nl;
     shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#publicatieEvent>
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#Kost>;
-    shacl:description "De prijs die je moet betalen voor de creatie van de advertentie"@nl;
-    shacl:name "kost"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#kost>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "De titel van de advertentie"@nl;
@@ -620,6 +628,28 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieObjectTypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieObjectType> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatiePrestatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#DoelgroepType>;
+    shacl:description "";
+    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#doelgroep>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieKanaalType>;
+    shacl:description "";
+    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#kanaal>
+  ], [
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#nummer>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#PrestatieType>;
+    shacl:description "";
+    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#type>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/campagne/publicatie#publicatiePrestatie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieToolTypeShape> a shacl:NodeShape;
   shacl:closed false;
