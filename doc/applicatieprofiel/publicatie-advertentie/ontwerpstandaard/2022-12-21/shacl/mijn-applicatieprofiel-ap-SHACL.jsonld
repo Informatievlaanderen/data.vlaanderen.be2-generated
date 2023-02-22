@@ -48,11 +48,11 @@
       "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#Advertentie"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#AdvertentieEventShape",
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#AdverterenShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#AdvertentieEvent"
+      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#Adverteren"
     },
     {
       "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#AudioShape",
@@ -109,29 +109,49 @@
           "sh:description": {
             "nl": "De verschillende onderdelen van een campagne"
           },
+          "sh:minCount": "1",
           "sh:name": {
             "nl": "bestaat uit"
           },
           "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#bestaatUit"
         },
         {
-          "sh:class": "https://schema.org/MonetaryAmount",
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#Kost",
           "sh:description": {
             "nl": "Het budget dat vrijgemaakt is voor een campgne"
           },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
           "sh:name": {
             "nl": "budget"
           },
           "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#budget"
         },
         {
+          "sh:class": "http://purl.org/dc/terms/Agent",
+          "sh:description": "",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#gevoerdDoor"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#Marketing",
+          "sh:description": "",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#marketing"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#Product",
+          "sh:description": "",
+          "sh:minCount": "1",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#product"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/PeriodOfTime",
+          "sh:description": "",
+          "sh:minCount": "1",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#tijd"
+        },
+        {
           "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#CampagneType",
           "sh:description": {
             "nl": "Verwijst naar de soort campagne die gevoerd wordt"
           },
-          "sh:maxCount": "1",
           "sh:minCount": "1",
           "sh:name": {
             "nl": "type"
@@ -145,7 +165,13 @@
       "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#CampagneComponentShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
-      "sh:property": [],
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#Campagne",
+          "sh:description": "",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#campagne"
+        }
+      ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent"
     },
     {
@@ -163,6 +189,40 @@
       "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#DirectMarketing"
     },
     {
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#DistributieShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#Drager",
+          "sh:description": "",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#drager"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#Publicatiekanaal",
+          "sh:description": {
+            "nl": "Het kanaal waarmee de publicatie getoond wordt"
+          },
+          "sh:name": {
+            "nl": "kanaal"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#kanaal"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#Marketing",
+          "sh:description": "",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#marketing"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/PeriodOfTime",
+          "sh:description": "",
+          "sh:minCount": "1",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#periode"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#Distributie"
+    },
+    {
       "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#DoelgroepTypeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -170,52 +230,63 @@
       "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#DoelgroepType"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#InformatieobjectShape",
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#DragerShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "De inhoud van het object"
-          },
-          "sh:name": {
-            "nl": "inhoud"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#inhoud"
+          "sh:class": "http://www.w3.org/ns/prov#Location",
+          "sh:description": "",
+          "sh:maxCount": "1",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#locatie"
         },
         {
-          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#Informatieobject",
-          "sh:description": {
-            "nl": "Een object kan een ander object omvatten"
-          },
-          "sh:name": {
-            "nl": "omvat (target)"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#Informatieobject.omvat.target"
-        },
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#Informatieobject",
-          "sh:description": {
-            "nl": "Een object kan een ander object omvatten"
-          },
-          "sh:name": {
-            "nl": "omvat (source)"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#Informatieobject.omvat.source"
-        },
-        {
-          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "nl": "De titel van het object"
-          },
-          "sh:name": {
-            "nl": "titel"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#titel"
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#Dragertype",
+          "sh:description": "",
+          "sh:maxCount": "1",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#type"
         }
       ],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#Informatieobject"
+      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#Drager"
+    },
+    {
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#DragertypeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#Dragertype"
+    },
+    {
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#ImpactShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#DoelgroepType",
+          "sh:description": "",
+          "sh:maxCount": "1",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#doelgroep"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieKanaalType",
+          "sh:description": "",
+          "sh:maxCount": "1",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#kanaal"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#PrestatieType",
+          "sh:description": "",
+          "sh:maxCount": "1",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#type"
+        },
+        {
+          "sh:description": "",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#waarde"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#Impact"
     },
     {
       "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#KostShape",
@@ -251,6 +322,31 @@
       "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#KostenType"
     },
     {
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#MarketingShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#DoelgroepType",
+          "sh:description": "",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#doelgroep"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#Impact",
+          "sh:description": "",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#impact"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#Marketing"
+    },
+    {
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#MateriëleKopieShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#MateriëleKopie"
+    },
+    {
       "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PrestatieTypeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -265,155 +361,43 @@
       "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#Procedure"
     },
     {
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#ProductShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": "",
+          "sh:maxCount": "1",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#beschrijving"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": "",
+          "sh:maxCount": "1",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#naam"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#Producttype",
+          "sh:description": "",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#type"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#Product"
+    },
+    {
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#ProducttypeShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#Producttype"
+    },
+    {
       "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicRelationsShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicRelations"
-    },
-    {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieEventShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieExpressie",
-          "sh:description": {
-            "nl": "Linkt het publiceren van de publicatie met de creatie van de publicatie"
-          },
-          "sh:name": {
-            "nl": "PublicatieExpressie"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#publicatieExpressie"
-        },
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatiePrestatie",
-          "sh:description": "",
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#publicatiePrestatie"
-        },
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatiePrestatie",
-          "sh:description": "",
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#publicatiePrestatie"
-        },
-        {
-          "sh:class": "http://data.europa.eu/m8g/PeriodOfTime",
-          "sh:description": {
-            "nl": "Een bepaalde tijdspanne"
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "periode"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#^periode"
-        },
-        {
-          "sh:class": "http://www.w3.org/ns/prov#Location",
-          "sh:description": {
-            "nl": "Een locatie"
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "plaats"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#^plaats"
-        },
-        {
-          "sh:class": "http://purl.org/dc/terms/Agent",
-          "sh:description": {
-            "nl": "De uitvoerder van de publicatie"
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "uitgevoerd door"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#^uitgevoerdDoor"
-        },
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#DoelgroepType",
-          "sh:description": {
-            "nl": "De groep op wie de advertentie gericht is"
-          },
-          "sh:name": {
-            "nl": "doelgroep"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#doelgroep"
-        },
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieKanaalType",
-          "sh:description": {
-            "nl": "Het kanaal waarmee de publicatie getoond wordt"
-          },
-          "sh:name": {
-            "nl": "kanaal"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#kanaal"
-        },
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#Kost",
-          "sh:description": "",
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#kost"
-        },
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#StatusType",
-          "sh:description": {
-            "nl": "De huidige status van het event"
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "status"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#status"
-        }
-      ],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#publicatieEvent"
-    },
-    {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieExpressieShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieEvent",
-          "sh:description": {
-            "nl": "Linkt de creatie van de publicatie met het publiceren van de publicatie"
-          },
-          "sh:name": {
-            "nl": "PublicatieEvent"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#publicatieEvent"
-        },
-        {
-          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "nl": "De titel van de advertentie"
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "titel"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#titel"
-        },
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieToolType",
-          "sh:description": {
-            "nl": "De tool die gebruikt wordt om de advertentie te maken"
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "tool"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#tool"
-        }
-      ],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#publicatieExpressie"
     },
     {
       "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieKanaalTypeShape",
@@ -430,33 +414,18 @@
       "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieObjectType"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatiePrestatieShape",
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieToolShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#DoelgroepType",
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieToolType",
           "sh:description": "",
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#doelgroep"
-        },
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieKanaalType",
-          "sh:description": "",
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#kanaal"
-        },
-        {
-          "sh:description": "",
-          "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#nummer"
-        },
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#PrestatieType",
-          "sh:description": "",
           "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#type"
         }
       ],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#publicatiePrestatie"
+      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieTool"
     },
     {
       "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieToolTypeShape",
@@ -464,6 +433,26 @@
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieToolType"
+    },
+    {
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatiekanaalShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": "",
+          "sh:maxCount": "1",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#naam"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieKanaalType",
+          "sh:description": "",
+          "sh:minCount": "1",
+          "sh:path": "https://data.vlaanderen.be/ns/campagne/publicatie#type"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#Publicatiekanaal"
     },
     {
       "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#StatusTypeShape",
@@ -485,13 +474,6 @@
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#VerkoopPromotie"
-    },
-    {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#ZelfstandigeExpressieShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/campagne/publicatie#ZelfstandigeExpressie"
     },
     {
       "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PeriodeShape",
@@ -541,6 +523,174 @@
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/PublicOrganisation"
+    },
+    {
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#InformatieobjectShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "sh:description": {
+            "nl": "De inhoud van het object"
+          },
+          "sh:name": {
+            "nl": "inhoud"
+          },
+          "sh:path": "http://fixme.com#inhoud"
+        },
+        {
+          "sh:class": "http://fixme.com#Informatieobject",
+          "sh:description": {
+            "nl": "Een object kan een ander object omvatten"
+          },
+          "sh:name": {
+            "nl": "omvat (target)"
+          },
+          "sh:path": "http://fixme.com#Informatieobject.omvat.target"
+        },
+        {
+          "sh:class": "http://fixme.com#Informatieobject",
+          "sh:description": {
+            "nl": "Een object kan een ander object omvatten"
+          },
+          "sh:name": {
+            "nl": "omvat (source)"
+          },
+          "sh:path": "http://fixme.com#Informatieobject.omvat.source"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "nl": "De titel van het object"
+          },
+          "sh:name": {
+            "nl": "titel"
+          },
+          "sh:path": "http://fixme.com#titel"
+        }
+      ],
+      "sh:targetClass": "http://fixme.com#Informatieobject"
+    },
+    {
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#MensgemaaktDingShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://fixme.com#MensgemaaktDing"
+    },
+    {
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieEventShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "http://www.w3.org/ns/prov#Location",
+          "sh:description": {
+            "nl": "Een locatie"
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "plaats"
+          },
+          "sh:path": "http://fixme.com#^plaats"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/PeriodOfTime",
+          "sh:description": {
+            "nl": "Een bepaalde tijdspanne"
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "periode"
+          },
+          "sh:path": "http://fixme.com#^tijd"
+        },
+        {
+          "sh:class": "http://purl.org/dc/terms/Agent",
+          "sh:description": {
+            "nl": "De uitvoerder van de publicatie"
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "uitgevoerd door"
+          },
+          "sh:path": "http://fixme.com#^uitgevoerdDoor"
+        },
+        {
+          "sh:class": "http://fixme.com#MensgemaaktDing",
+          "sh:description": "",
+          "sh:maxCount": "1",
+          "sh:path": "http://fixme.com#eindproduct"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#Kost",
+          "sh:description": "",
+          "sh:path": "http://fixme.com#kost"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#Marketing",
+          "sh:description": "",
+          "sh:path": "http://fixme.com#marketing"
+        },
+        {
+          "sh:class": "http://fixme.com#PublicatieExpressie",
+          "sh:description": {
+            "nl": "Linkt het publiceren van de publicatie met de creatie van de publicatie"
+          },
+          "sh:name": {
+            "nl": "PublicatieExpressie"
+          },
+          "sh:path": "http://fixme.com#publicatieExpressie"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#StatusType",
+          "sh:description": {
+            "nl": "De huidige status van het event"
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "status"
+          },
+          "sh:path": "http://fixme.com#status"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieTool",
+          "sh:description": {
+            "nl": "De tool die gebruikt wordt om de advertentie te maken"
+          },
+          "sh:name": {
+            "nl": "tool"
+          },
+          "sh:path": "http://fixme.com#tool"
+        }
+      ],
+      "sh:targetClass": "http://fixme.com#PublicatieEvent"
+    },
+    {
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieExpressieShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "http://fixme.com#PublicatieEvent",
+          "sh:description": {
+            "nl": "Linkt de creatie van de publicatie met het publiceren van de publicatie"
+          },
+          "sh:name": {
+            "nl": "PublicatieEvent"
+          },
+          "sh:path": "http://fixme.com#publicatieEvent"
+        }
+      ],
+      "sh:targetClass": "http://fixme.com#PublicatieExpressie"
+    },
+    {
+      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#ZelfstandigeExpressieShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://fixme.com#ZelfstandigeExpressie"
     },
     {
       "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#AgentShape",
@@ -942,6 +1092,17 @@
             "nl": "type"
           },
           "sh:path": "http://www.w3.org/ns/regorg#orgType"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "nl": "Naam waarmee de organisatie bij voorkeur wordt aangeduid.\t"
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "voorkeursnaam"
+          },
+          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
         }
       ],
       "sh:targetClass": "http://www.w3.org/ns/org#Organization"
