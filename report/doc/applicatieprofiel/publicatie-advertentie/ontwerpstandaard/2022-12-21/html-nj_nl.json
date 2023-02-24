@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-visualo/tree/6e87b9afd6ab041fc4273a74d809b144d35e2c7a",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-visualo/blob/6e87b9afd6ab041fc4273a74d809b144d35e2c7a/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-visualo/tree/13bbbc0df831d03e695040dd8871d9641e3e7b13",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-visualo/blob/13bbbc0df831d03e695040dd8871d9641e3e7b13/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-mijnThema/issues",
     "standaardregisterurl": "https://test-data.vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21",
     "usesVocs": [],
@@ -44,7 +44,7 @@
       "properties": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/campagne/publicatie#Adverteren",
+      "uri": "https://data.vlaanderen.be/ns/campagne/publicatie#AdvertentieEvent",
       "name": "Advertentie event",
       "label": {
         "nl": "Advertentie event"
@@ -726,8 +726,21 @@
               "uri": "https://data.vlaanderen.be/ns/campagne/publicatie#Impact"
             }
           ],
-          "range": [],
-          "scopedrange": [],
+          "range": [
+            {
+              "range_label": "KwantitatieveWaarde",
+              "range_uri": "https://schema.org/QuantitativeValue"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Kwantitatieve Waarde",
+              "range_puri": "https://schema.org/QuantitativeValue",
+              "range_label": {
+                "nl": "Kwantitatieve Waarde"
+              }
+            }
+          ],
           "cardinality": "1",
           "codelist_uri": ""
         },
@@ -2912,6 +2925,20 @@
   ],
   "properties": [
     {
+      "uri": "https://data.vlaanderen.be/ns/campagne/publicatie#waarde",
+      "name": {
+        "undefined": ""
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/campagne/publicatie#type",
       "name": {
         "nl": "type",
@@ -3605,6 +3632,22 @@
       ]
     },
     {
+      "uri": "http://fixme.com#StandaardEenheid",
+      "name": "Standaard Eenheid",
+      "label": {
+        "nl": "Standaard Eenheid"
+      },
+      "sort": "Standaard Eenheid",
+      "description": {
+        "nl": "Eenheid vastgelegd door een standaardiserende organisatie."
+      },
+      "usage": {
+        "nl": "Datatype kan een URI zijn of een GetypeerdeString. In het eerste geval wordt verwezen naar op het web gepubliceerde eenheden, bij voorkeur deze van qudt, bv http://qudt.org/vocab/unit/M voor meter. In het geval van een  GetypeerdeString gaat de voorkeur naar de UCUM-codes, bv \"km/h\"^^http://w3id.org/lindt/custom_datatypes#ucumunit."
+      },
+      "parents": [],
+      "properties": []
+    },
+    {
       "uri": "http://schema.org/ContactPoint",
       "name": "Contactinfo",
       "label": {
@@ -4133,8 +4176,21 @@
               "uri": "https://schema.org/MonetaryAmount"
             }
           ],
-          "range": [],
-          "scopedrange": [],
+          "range": [
+            {
+              "range_label": "Getal",
+              "range_uri": "https://schema.org/Number"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Getal",
+              "range_puri": "https://schema.org/Number",
+              "range_label": {
+                "nl": "Getal"
+              }
+            }
+          ],
           "cardinality": "1",
           "codelist_uri": ""
         },
@@ -4161,6 +4217,22 @@
           "codelist_uri": ""
         }
       ]
+    },
+    {
+      "uri": "https://schema.org/Number",
+      "name": "Getal",
+      "label": {
+        "nl": "Getal"
+      },
+      "sort": "Getal",
+      "description": {
+        "nl": "Aanduiding van een hoeveelheid."
+      },
+      "usage": {
+        "nl": "In praktijk de primitieve datatypes waarmee een hoeveelheid kan worden aangeduid,zie xsd datatypes float,double,decimal,integer etc."
+      },
+      "parents": [],
+      "properties": []
     },
     {
       "uri": "https://schema.org/OpeningHoursSpecification",
@@ -4348,6 +4420,130 @@
             }
           ],
           "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
+    },
+    {
+      "uri": "https://schema.org/QuantitativeValue",
+      "name": "Kwantitatieve Waarde",
+      "label": {
+        "nl": "Kwantitatieve Waarde"
+      },
+      "sort": "Kwantitatieve Waarde",
+      "description": {
+        "nl": "Aanduiding van de kwantiteit van een bepaald kenmerk van een object."
+      },
+      "usage": {
+        "nl": "Bv de hoogte van een object,het gewicht,de temperatuur etc. Het gaat om een kenmerk dat numeriek uitgedrukt kan worden en in een bepaalde eenheid. Kwalitatieve aanduidingen zoals hoog,laag ed vallen hier dus niet onder."
+      },
+      "parents": [],
+      "properties": [
+        {
+          "uri": "https://schema.org/value",
+          "name": "waarde",
+          "sort": "waarde",
+          "label": {
+            "nl": "waarde"
+          },
+          "description": {
+            "nl": "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "KwantitatieveWaarde",
+              "uri": "https://schema.org/QuantitativeValue"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Getal",
+              "range_uri": "https://schema.org/Number"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Getal",
+              "range_puri": "https://schema.org/Number",
+              "range_label": {
+                "nl": "Getal"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://schema.org/unitText",
+          "name": "eenheid",
+          "sort": "eenheid",
+          "label": {
+            "nl": "eenheid"
+          },
+          "description": {
+            "nl": "De eenheid waarin de waarde is uitgedrukt."
+          },
+          "usage": {
+            "nl": "Te gebruiken als geen standaard eenheid gekend is."
+          },
+          "domain": [
+            {
+              "EA-Name": "KwantitatieveWaarde",
+              "uri": "https://schema.org/QuantitativeValue"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://schema.org/unitCode",
+          "name": "standaard eenheid",
+          "sort": "standaard eenheid",
+          "label": {
+            "nl": "standaard eenheid"
+          },
+          "description": {
+            "nl": "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "KwantitatieveWaarde",
+              "uri": "https://schema.org/QuantitativeValue"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "StandaardEenheid",
+              "range_uri": "http://fixme.com#StandaardEenheid"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Standaard Eenheid",
+              "range_puri": "http://fixme.com#StandaardEenheid",
+              "range_label": {
+                "nl": "Standaard Eenheid"
+              }
+            }
+          ],
+          "cardinality": "0..1",
           "codelist_uri": ""
         }
       ]
