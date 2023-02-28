@@ -1,3 +1,4 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
@@ -43,15 +44,14 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#VerkoopPromotieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PeriodeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PubliekeOrganisatieShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#InformatieobjectShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#MensgemaaktDingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieEventShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieExpressieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#StandaardEenheidShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#ZelfstandigeExpressieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#AgentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PlaatsShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#ContactInfoShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#InformatieobjectShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#TaalStringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#GetypeerdeStringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#OrganisatieActiviteitShape>,
@@ -72,7 +72,8 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#GeldbedragShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#GetalShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#OpeningsurenSpecificatieShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#KwantitatieveWaardeShape> .
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#KwantitatieveWaardeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieExpressieShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#AdresvoorstellingShape> a shacl:NodeShape;
   shacl:closed false;
@@ -161,7 +162,7 @@
     shacl:description "Verwijst naar de soort campagne die gevoerd wordt"@nl;
     shacl:minCount 1;
     shacl:name "type"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#type>
+    shacl:path crm:P2_has_type
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/campagne/publicatie#Campagne> .
 
@@ -236,6 +237,7 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#Drager>;
+    shacl:description "Het object dat de publicatie zal tonen"@nl;
     shacl:name "drager"@nl;
     shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#drager>
   ], [
@@ -251,7 +253,7 @@
     shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
     shacl:minCount 1;
     shacl:name "periode"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#periode>
+    shacl:path <http://data.europa.eu/m8g/PeriodOfTime>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/campagne/publicatie#Distributie> .
 
@@ -265,12 +267,12 @@
     shacl:class prov:Location;
     shacl:maxCount 1;
     shacl:name "locatie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#locatie>
+    shacl:path prov:Location
   ], [
     shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#Dragertype>;
     shacl:maxCount 1;
     shacl:name "type"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#type>
+    shacl:path crm:P2_has_type
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/campagne/publicatie#Drager> .
 
@@ -385,7 +387,7 @@
     shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#PrestatieType>;
     shacl:maxCount 1;
     shacl:name "type"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#type>
+    shacl:path crm:P2_has_type
   ], [
     shacl:class schemas:QuantitativeValue;
     shacl:maxCount 1;
@@ -403,12 +405,12 @@
     shacl:name "inhoud"@nl;
     shacl:path <http://fixme.com#inhoud>
   ], [
-    shacl:class <http://fixme.com#Informatieobject>;
+    shacl:class crm:E73_Information_Object;
     shacl:description "Een object kan een ander object omvatten"@nl;
     shacl:name "omvat (target)"@nl;
     shacl:path <http://fixme.com#Informatieobject.omvat.target>
   ], [
-    shacl:class <http://fixme.com#Informatieobject>;
+    shacl:class crm:E73_Information_Object;
     shacl:description "Een object kan een ander object omvatten"@nl;
     shacl:name "omvat (source)"@nl;
     shacl:path <http://fixme.com#Informatieobject.omvat.source>
@@ -418,7 +420,7 @@
     shacl:name "titel"@nl;
     shacl:path <http://fixme.com#titel>
   ];
-  shacl:targetClass <http://fixme.com#Informatieobject> .
+  shacl:targetClass crm:E73_Information_Object .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#KostShape> a shacl:NodeShape;
   shacl:closed false;
@@ -707,7 +709,7 @@
   ], [
     shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#Producttype>;
     shacl:name "type"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#type>
+    shacl:path crm:P2_has_type
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/campagne/publicatie#Product> .
 
@@ -725,12 +727,14 @@
     shacl:class prov:Location;
     shacl:description "Een locatie"@nl;
     shacl:minCount 1;
-    shacl:name "plaats"@nl
+    shacl:name "plaats"@nl;
+    shacl:path dc:Location
   ], [
     shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
     shacl:description "Een bepaalde tijdspanne"@nl;
     shacl:minCount 1;
-    shacl:name "periode"@nl
+    shacl:name "periode"@nl;
+    shacl:path <http://data.europa.eu/m8g/PeriodOfTime>
   ], [
     shacl:class dc:Agent;
     shacl:description "De uitvoerder van de publicatie"@nl;
@@ -750,7 +754,7 @@
     shacl:description "";
     shacl:path <http://fixme.com#marketing>
   ], [
-    shacl:class <http://fixme.com#PublicatieExpressie>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F24>;
     shacl:description "Linkt het publiceren van de publicatie met de creatie van de publicatie"@nl;
     shacl:name "PublicatieExpressie"@nl;
     shacl:path <http://fixme.com#publicatieExpressie>
@@ -776,7 +780,7 @@
     shacl:name "PublicatieEvent"@nl;
     shacl:path <http://fixme.com#publicatieEvent>
   ];
-  shacl:targetClass <http://fixme.com#PublicatieExpressie> .
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F24> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#PublicatieKanaalTypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -859,4 +863,4 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/2022-12-21#ZelfstandigeExpressieShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://fixme.com#ZelfstandigeExpressie> .
+  shacl:targetClass <http://fixme.com/#ZelfstandigeExpressie> .
