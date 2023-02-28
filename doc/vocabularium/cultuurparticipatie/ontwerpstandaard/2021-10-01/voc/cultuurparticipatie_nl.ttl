@@ -10,7 +10,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://cidoc-crm.org/cidoc-crm/7.1.2/E92_Spacetime_Volume> a rdfs:Class;
+<http://cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume> a rdfs:Class;
   rdfs:label "Ruimetijd"@nl .
 
 crm:E7_Activity a rdfs:Class;
@@ -133,6 +133,13 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.locatie> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Het is enkel mogelijk om ofwel Activiteit.tijd & Activiteit.locatie te gebruiken voor Activiteiten met één aanduiding in tijd & ruimte ofwel Activiteit.ruimtetijd voor meerdere aanduidingen.  Beide gebruiken is niet mogelijk."@nl;
+  rdfs:comment "Aanduiding van een geografische positie, dmv coordinaten, een toponiem, een adreslabel, een verwijzing naar een plaats/regio of verwijzing naar een adres."@nl;
+  rdfs:domain crm:E7_Activity;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range prov:Location .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.locatieType> a owl:ObjectProperty;
   rdfs:comment "Het type locatie van de activiteit."@nl;
@@ -702,7 +709,9 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:range rdf:langString .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#locatie> a owl:ObjectProperty;
-  rdfs:domain <http://cidoc-crm.org/cidoc-crm/7.1.2/E92_Spacetime_Volume>;
+  <http://purl.org/vocab/vann/usageNote> "Het is enkel mogelijk om ofwel Activiteit.tijd & Activiteit.locatie te gebruiken voor Activiteiten met één aanduiding in tijd & ruimte ofwel Activiteit.ruimtetijd voor meerdere aanduidingen.  Beide gebruiken is niet mogelijk."@nl;
+  rdfs:comment "Aanduiding van een geografische positie, dmv coordinaten, een toponiem, een adreslabel, een verwijzing naar een plaats/regio of verwijzing naar een adres."@nl;
+  rdfs:domain <http://cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range prov:Location .
 
@@ -710,18 +719,13 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:comment "Een vierdimensionele puntenreeks in de fysieke ruimtetijd waarbij er een intersectie kan zijn van een plaats en tijdsaanduiding."@nl;
   rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <http://cidoc-crm.org/cidoc-crm/7.1.2/E92_Spacetime_Volume> .
+  rdfs:range <http://cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#thema> a owl:ObjectProperty;
   rdfs:comment "Waar de Activiteit inhoudelijk over gaat."@nl;
   rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range skos:Concept .
-
-<https://data.vlaanderen.be/ns/cultuurparticipatie#tijd> a owl:ObjectProperty;
-  rdfs:domain <http://cidoc-crm.org/cidoc-crm/7.1.2/E92_Spacetime_Volume>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#trigger> a owl:ObjectProperty;
   rdfs:comment "Eigenschap van de Activiteit die bepaald gedrag, gevoel of fysieke reactie kan opwekken."@nl;
@@ -735,10 +739,10 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range crm:E70_Thing .
 
-<http://cidoc-crm.org/cidoc-crm/7.1.2/P14_carried_out_by> a rdf:Property;
+<http://cidoc-crm.org/cidoc-crm/P14_carried_out_by> a rdf:Property;
   rdfs:label "uitgevoerd door"@nl .
 
-<http://cidoc-crm.org/cidoc-crm/7.1.2/P4_has_time-span> a rdf:Property;
+<http://cidoc-crm.org/cidoc-crm/P4_has_time-span> a rdf:Property;
   rdfs:label "tijd"@nl .
 
 <http://data.europa.eu/m8g/hasNextEvent> a rdf:Property;
@@ -809,14 +813,11 @@ schemas:valueAddedTaxIncluded a rdf:Property;
 <https://www.w3.org/2001/XMLSchema#duration> a rdf:Property;
   rdfs:label "duur"@nl .
 
-<https://www.w3.org/TR/2013/NOTE-prov-xml-20130430/#element-Location> a rdf:Property;
-  rdfs:label "locatie"@nl .
-
 <https://www.w3.org/ns/adms#identifier> a rdf:Property;
   rdfs:label "identificator"@nl .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding> a owl:Class;
-  rdfs:comment "De positie die Activiteiten onderling ten opzichte van elkaar opnemen. "@nl;
+  rdfs:comment "De positie die Activiteiten onderling ten opzichte van elkaar opnemen."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantkenmerk> a owl:Class;
@@ -1284,12 +1285,11 @@ schemas:valueAddedTaxIncluded a rdf:Property;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso <http://cidoc-crm.org/cidoc-crm/7.1.2/E92_Spacetime_Volume>,
+  rdfs:seeAlso <http://cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume>,
     crm:E7_Activity,
     skos:Concept,
     schemas:PriceSpecification,
     <https://www.w3.org/ns/adms#identifier>,
-    <https://www.w3.org/TR/2013/NOTE-prov-xml-20130430/#element-Location>,
     <https://www.w3.org/2001/XMLSchema#duration>,
     schemas:valueAddedTaxIncluded,
     schemas:typicalAgeRange,
@@ -1307,8 +1307,8 @@ schemas:valueAddedTaxIncluded a rdf:Property;
     dc:description,
     <http://data.europa.eu/m8g/hasPreviousEvent>,
     <http://data.europa.eu/m8g/hasNextEvent>,
-    <http://cidoc-crm.org/cidoc-crm/7.1.2/P4_has_time-span>,
-    <http://cidoc-crm.org/cidoc-crm/7.1.2/P14_carried_out_by>;
+    <http://cidoc-crm.org/cidoc-crm/P4_has_time-span>,
+    <http://cidoc-crm.org/cidoc-crm/P14_carried_out_by>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
