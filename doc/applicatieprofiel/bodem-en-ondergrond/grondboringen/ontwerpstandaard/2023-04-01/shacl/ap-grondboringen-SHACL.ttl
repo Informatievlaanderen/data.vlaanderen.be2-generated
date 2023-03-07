@@ -153,13 +153,6 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/grondboringen#Grondobject>;
-    shacl:description "Het Grondobject dat wordt bemonsterd."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "bemonsterdObject"@nl;
-    shacl:path <http://fixme.com>
-  ], [
     shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
     shacl:description "Moment waarop de Bemonstering werd afgerond."@nl;
     shacl:maxCount 1;
@@ -251,12 +244,6 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsobjectShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/grondboringen#Grondobject>;
-    shacl:description "Het Grondobject dat wordt bemonsterd."@nl;
-    shacl:minCount 1;
-    shacl:name "bemonsterdObject"@nl;
-    shacl:path <http://fixme.com>
-  ], [
     shacl:class <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>;
     shacl:description "Ander Bemonsteringsobject waarmee het Bemonsteringsobject geassocieerd is."@nl;
     shacl:name "geassocieerdBemonsteringsobject"@nl;
@@ -278,7 +265,7 @@
     shacl:description "Verwijzing naar de Bemonstering waarvan dit Bemonsteringsobject het resultaat is."@nl;
     shacl:minCount 1;
     shacl:name "isResultaatVan"@nl;
-    shacl:path <http://www.w3.org/ns/sosa/isresultOf>
+    shacl:path <http://www.w3.org/ns/sosa/isResultOf>
   ], [
     shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
     shacl:description "Willekeurig gegeven gassocieerd met het Bemonsteringsobject."@nl;
@@ -369,7 +356,7 @@
     shacl:class <https://data.vlaanderen.be/ns/grondboringen#BoortypeInterval>;
     shacl:description "Het type van boor."@nl;
     shacl:name "type"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/grondboringen#type>
+    shacl:path dc:type
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/grondboringen#Boor> .
 
@@ -379,45 +366,51 @@
     shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Diepte>;
     shacl:description "De diepte van het boorgat."@nl;
     shacl:maxCount 1;
-    shacl:name "diepte"@nl
+    shacl:name "diepte"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/grondboringen#diepte>
   ], [
     shacl:class <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process>;
-    shacl:description "TODO"@nl;
-    shacl:name "^gehostPlatform"@nl
+    shacl:description "Procedure die of instrument dat in of op het Boorgat is geïnstalleerd."@nl;
+    shacl:name "gehostPlatform"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure>
   ], [
     shacl:class <http://www.opengis.net/ont/geosparql#Curve>;
     shacl:description "Curve die de vorm van de Grondboring beschrijft."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "^geometrie"@nl
+    shacl:name "geometrie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/grondboringen#geometrie>
   ], [
     shacl:class prov:Location;
-    shacl:description "De specifieke locatie van het boorgat."@nl;
-    shacl:name "ligging"@nl
+    shacl:description "Aanvullende indicatie van de ligging van het Boorgat."@nl;
+    shacl:name "ligging"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/grondboringen#ligging>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld>;
     shacl:description "Het maaiveld van het boorgat."@nl;
-    shacl:name "maaiveld"@nl
+    shacl:name "maaiveld"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/grondboringen#maaiveld>
   ], [
     shacl:class <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy>;
-    shacl:description "De nauwkeurigheid van de positie van het boorgat."@nl;
+    shacl:description "De nauwkeurigheid van de positie van het Boorgat."@nl;
     shacl:maxCount 2;
-    shacl:name "^positioneleNauwkeurigheid"@nl
+    shacl:name "positioneleNauwkeurigheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/grondboringen#positioneleNauwkeurigheid>
   ], [
     shacl:class schemas:QuantitativeValue;
-    shacl:description "De Grondwaterstand in het boorgat, al dan niet gebaseerd op meerdere Observaties."@nl;
+    shacl:description "De Grondwaterstand in het Boorgat, al dan niet gebaseerd op meerdere Observaties."@nl;
     shacl:maxCount 1;
     shacl:name "aangenomenGrondwaterstand"@nl;
     shacl:path <https://data.vlaanderen.be/ns/grondboringen#aangenomenGrondwaterstand>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/grondboringen#Bekisting>;
-    shacl:description "Verwijzing naar de beschrijving van de Bekisting van het boorgat."@nl;
+    shacl:description "Verwijzing naar de beschrijving van de Bekisting van het Boorgat."@nl;
     shacl:maxCount 1;
     shacl:name "bekisting"@nl;
     shacl:path <https://data.vlaanderen.be/ns/grondboringen#bekisting>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameter>;
-    shacl:description "Verwijzing naar de beschrijving van de Boordiameter van het boorgat."@nl;
+    shacl:description "Verwijzing naar de beschrijving van de Boordiameter van het Boorgat."@nl;
     shacl:maxCount 1;
     shacl:name "boordiameter"@nl;
     shacl:path <https://data.vlaanderen.be/ns/grondboringen#boordiameter>
@@ -429,7 +422,7 @@
     shacl:path <https://data.vlaanderen.be/ns/grondboringen#boringLengte>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/grondboringen#Grondboring>;
-    shacl:description "Het resultaat van de uitgevoerde grondboring."@nl;
+    shacl:description "Grondboring waarvan het Boorgat het resultaat is."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "isResultaatVan"@nl;
@@ -441,7 +434,7 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameterinterval>;
-    shacl:description "Verwijzing naar de beschrijving van de boorgatdiameter per diepteinterval."@nl;
+    shacl:description "Verwijzing naar de beschrijving van de boorgatdiameter voor een bepaald diepteinterval."@nl;
     shacl:minCount 1;
     shacl:name "diameter"@nl;
     shacl:path <https://data.vlaanderen.be/ns/grondboringen#diameter>
@@ -494,7 +487,7 @@
     shacl:path <https://data.vlaanderen.be/ns/grondboringen#inclinatietype>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/grondboringen#BoormethodeInterval>;
-    shacl:description "Verwijzing naar de beschrijving van de methode per diepteinterval."@nl;
+    shacl:description "Verwijzing naar de beschrijving van de boormethode voor een bepaald diepteinterval."@nl;
     shacl:minCount 1;
     shacl:name "methode"@nl;
     shacl:path <https://data.vlaanderen.be/ns/grondboringen#methode>
