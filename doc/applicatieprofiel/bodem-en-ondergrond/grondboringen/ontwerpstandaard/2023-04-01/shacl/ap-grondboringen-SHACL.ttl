@@ -1,4 +1,5 @@
 @prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -64,9 +65,13 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteraarShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsprocedureShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#InputShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#OutputShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#LegaleVerschijningsvormShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#RechtsgrondShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BesluitShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BO_RuimtelijkBemonsteringsobjectShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BoringShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#DiepteShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#ErkenningShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#GrondwaterstandShape>,
@@ -326,7 +331,7 @@
     shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsprocedure.specificatie>
   ], [
     shacl:class skos:Concept;
-    shacl:description "Aard van deBemonsteringsprocedure."@nl;
+    shacl:description "Aard van de Bemonsteringsprocedure."@nl;
     shacl:name "type"@nl;
     shacl:path dc:type
   ];
@@ -358,6 +363,10 @@
     shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value>
   ];
   shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#NamedValue> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BesluitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/besluit#Besluit> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BetrokkenPartijShape> a shacl:NodeShape;
   shacl:closed false;
@@ -539,6 +548,10 @@
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/grondboringen#Boortype> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BoringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-onderegrond#Boring> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BoringdoeltypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/grondboringen#Boringdoeltype> .
@@ -649,11 +662,13 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#GrondboringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <http://def.isotc211.org/iso19115/2006/CitationAndResponsiblePartyInformation#CI_ResponsibleParty>;
     shacl:description "Diegene die de Boring heeft uitgevoerd."@nl;
     shacl:maxCount 1;
     shacl:name "boorder"@nl;
     shacl:path <https://data.vlaanderen.be/ns/grondboringen#boorder>
   ], [
+    shacl:class <http://def.isotc211.org/iso19115/2006/CitationAndResponsiblePartyInformation#CI_ResponsibleParty>;
     shacl:description "Opzichter bij de Boring."@nl;
     shacl:maxCount 1;
     shacl:name "boormeester"@nl;
@@ -685,23 +700,27 @@
     shacl:class <http://www.w3.org/ns/locn#Geometry>;
     shacl:description "Plaats waar het Monster werd genomen."@nl;
     shacl:maxCount 1;
-    shacl:name "^bemonsteringsplaats"@nl
+    shacl:name "bemonsteringsplaats"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation>
   ], [
     shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period>;
     shacl:description "Moment waarop het Grondmonster is genomen."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "^bemonsteringstijdstip"@nl
+    shacl:name "bemonsteringstijdstip"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime>
   ], [
     shacl:class <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>;
     shacl:description "De fysieke omvang van het monster."@nl;
     shacl:maxCount 1;
-    shacl:name "^grootte"@nl
+    shacl:name "grootte"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.size>
   ], [
     shacl:class prov:Location;
     shacl:description "Plaats waar het Monster wordt bewaard."@nl;
     shacl:maxCount 1;
-    shacl:name "^huidigeLocatie"@nl
+    shacl:name "huidigeLocatie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation>
   ], [
     shacl:class <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole>;
     shacl:description "Verwijzing naar de Grondboring waarmee het grondmonster is bekomen."@nl;
@@ -714,7 +733,7 @@
     shacl:description "Basisclassificatie vh materiaal waaruit het Grondmonster bestaat."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "^materiaalklasse"@nl;
+    shacl:name "materiaalklasse"@nl;
     shacl:path <https://data.vlaanderen.be/ns/grondboringen#materiaalklasse>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/grondboringen#Grondmonstertype>;
@@ -733,10 +752,10 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/grondboringen#Grondobjecttype>;
-    shacl:description "Type van grondobject."@nl;
+    shacl:description "Type Grondobject."@nl;
     shacl:maxCount 1;
     shacl:name "type"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/grondboringen#type>
+    shacl:path dc:type
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/grondboringen#Grondobject> .
 
@@ -755,6 +774,23 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#IdentificatorShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#InputShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:anyURI;
+    shacl:description "Verwijzing naar originele Input."@nl;
+    shacl:maxCount 1;
+    shacl:name "referentie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Aard van de input."@nl;
+    shacl:maxCount 1;
+    shacl:name "type"@nl;
+    shacl:path <http://purl.org/cd/terms/type>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/ssn/Input> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#KwantitatieveWaardeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -787,19 +823,19 @@
     shacl:description "Toelichting bij de LegaleVerschijningsvorm."@nl;
     shacl:maxCount 1;
     shacl:name "beschrijving"@nl;
-    shacl:path <http://fixme.com#beschrijving>
+    shacl:path dc11:description
   ], [
     shacl:class <http://fixme.com#LegaleVerschijningsvormtype>;
     shacl:description "Classificatie van de LegaleVerschijningsvorm."@nl;
     shacl:maxCount 1;
     shacl:name "categorie"@nl;
-    shacl:path <http://fixme.com#categorie>
+    shacl:path dc:subject
   ], [
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "Informatie waarme de LegaleVerschijningsvorm uniek kan worden geïdentificeerd."@nl;
     shacl:maxCount 1;
     shacl:name "identificator"@nl;
-    shacl:path <http://fixme.com#identificator>
+    shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
     shacl:class <https://data.europa.eu/eli/ontology#LegalResource>;
     shacl:description "De Rechtgrond die door de LegaleVerschijningsvorm wordt gerealiseerd. Laat toe om bv te verwijzen naar de wetrgeving waarop een verleende vergunning gebaseerd is, bv VLAREM voor boorvergunningen."@nl;
@@ -870,6 +906,23 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#OpdrachtShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#OutputShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:anyURI;
+    shacl:description "Verwijzing naar originele Output."@nl;
+    shacl:maxCount 1;
+    shacl:name "referentie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Output.referentie>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Aard van de Output."@nl;
+    shacl:maxCount 1;
+    shacl:name "type"@nl;
+    shacl:path <http://purl.org/cd/terms/type>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/ssn/Output> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#PeriodeShape> a shacl:NodeShape;
   shacl:closed false;
