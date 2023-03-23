@@ -17,10 +17,14 @@
 
 </rdfs:Class>
 
-<owl:ObjectProperty rdf:about='https://data.vlaanderen.be/ns/grondboringen#Bemonstering.bemonsterdObject'>
-<rdfs:comment xml:lang='nl'>Het Grondobject dat wordt bemonsterd.</rdfs:comment>
+<owl:ObjectProperty rdf:about='https://data.vlaanderen.be/ns/grondboringen#Bekisting.bekisting'>
+<rdfs:comment xml:lang='nl'>Verwijzing naar de beschrijving van de bekisting voor een bepaald diepte-interval.</rdfs:comment>
 
-<rdfs:domain rdf:resource='http://www.w3.org/ns/sosa/Sampling' />
+<rdfs:domain>
+<owl:Class rdf:about='https://data.vlaanderen.be/ns/grondboringen#Bekisting'>
+<ns1:usageNote xml:lang='nl'>Bv het gebruikte materiaal en de dikte ervan. Het verloop van de Bekisting wordt voorgesteld als een DiscreetCurvebereik, dwz dat ze verandert in discrete stappen (intervallen) in functie van de diepte.</ns1:usageNote>
+
+<rdfs:comment xml:lang='nl'>Kenmerken van de afwerking van het boorgat in functie van de diepte.</rdfs:comment>
 
 <rdfs:isDefinedBy>
 <owl:Ontology rdf:about='https://data.vlaanderen.be/ns/grondboringen'>
@@ -201,6 +205,39 @@
 
 </rdfs:isDefinedBy>
 
+<rdfs:subClassOf rdf:resource='http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage' />
+
+</owl:Class>
+
+</rdfs:domain>
+
+<rdfs:isDefinedBy rdf:resource='https://data.vlaanderen.be/ns/grondboringen' />
+
+<rdfs:range>
+<owl:Class rdf:about='https://data.vlaanderen.be/ns/grondboringen#Bekistinginterval'>
+<ns1:usageNote xml:lang='nl'>Specialisatie van een CurveWaardepaar, dit is een Curve en de waarde die eraan is toegekend. De waarde is hier de beschrijving van de Bekisting van een Grondboring, terwijl de Curve aangeeft op welke dieptes deze beschrijving geldig is. De Curve van de Grondboring wordt hierbij als referentiesysteem gebruikt. OPGELET: Als de Curve van de Grondboring niet recht in de grond werd geboord zijn de opgegeven dieptes eerder afstanden langs deze Curve.</ns1:usageNote>
+
+<rdfs:comment xml:lang='nl'>Beschrijving van de Bekisting voor een bepaald diepte-interval.</rdfs:comment>
+
+<rdfs:isDefinedBy rdf:resource='https://data.vlaanderen.be/ns/grondboringen' />
+
+<rdfs:subClassOf rdf:resource='http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair' />
+
+</owl:Class>
+
+</rdfs:range>
+
+<rdfs:subPropertyOf rdf:resource='http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element' />
+
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about='https://data.vlaanderen.be/ns/grondboringen#Bemonstering.bemonsterdObject'>
+<rdfs:comment xml:lang='nl'>Het Grondobject dat wordt bemonsterd.</rdfs:comment>
+
+<rdfs:domain rdf:resource='http://www.w3.org/ns/sosa/Sampling' />
+
+<rdfs:isDefinedBy rdf:resource='https://data.vlaanderen.be/ns/grondboringen' />
+
 <rdfs:range>
 <owl:Class rdf:about='https://data.vlaanderen.be/ns/grondboringen#Grondobject'>
 <ns1:usageNote xml:lang='nl'>Bvb geologische laag, grondwaterlichaam, bodem... Eventueel te substitueren door een subklasse. Onder "grond" wordt het deel vd aardkorst onder het aardoppervlak verstaan.</ns1:usageNote>
@@ -241,6 +278,17 @@
  <rdfs:subClassOf rdf:resource='http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage' />
 
 </owl:Class>
+
+<owl:ObjectProperty rdf:about='https://data.vlaanderen.be/ns/grondboringen#Boorgat.bekisting'>
+<rdfs:comment xml:lang='nl'>Verwijzing naar de beschrijving van de Bekisting van het Boorgat.</rdfs:comment>
+
+<rdfs:domain rdf:resource='http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole' />
+
+<rdfs:isDefinedBy rdf:resource='https://data.vlaanderen.be/ns/grondboringen' />
+
+<rdfs:range rdf:resource='https://data.vlaanderen.be/ns/grondboringen#Bekisting' />
+
+</owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about='https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameter.diameter'>
 <rdfs:comment xml:lang='nl'>Verwijzing naar de beschrijving van de boorgatdiameter voor een bepaald diepteinterval.</rdfs:comment>
@@ -351,46 +399,6 @@
 <rdfs:isDefinedBy rdf:resource='https://data.vlaanderen.be/ns/grondboringen' />
 
 <rdfs:range rdf:resource='https://schema.org/QuantitativeValue' />
-
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about='https://data.vlaanderen.be/ns/grondboringen#bekisting'>
-<rdfs:comment xml:lang='nl'>Verwijzing naar de beschrijving van de Bekisting van het Boorgat.</rdfs:comment>
- <rdfs:comment xml:lang='nl'>Verwijzing naar de beschrijving van de bekisting voor een bepaald diepte-interval.</rdfs:comment>
-
-<rdfs:domain rdf:resource='http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole' />
- <rdfs:domain>
-<owl:Class rdf:about='https://data.vlaanderen.be/ns/grondboringen#Bekisting'>
-<ns1:usageNote xml:lang='nl'>Bv het gebruikte materiaal en de dikte ervan. Het verloop van de Bekisting wordt voorgesteld als een DiscreetCurvebereik, dwz dat ze verandert in discrete stappen (intervallen) in functie van de diepte.</ns1:usageNote>
-
-<rdfs:comment xml:lang='nl'>Kenmerken van de afwerking van het boorgat in functie van de diepte.</rdfs:comment>
-
-<rdfs:isDefinedBy rdf:resource='https://data.vlaanderen.be/ns/grondboringen' />
-
-<rdfs:subClassOf rdf:resource='http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage' />
-
-</owl:Class>
-
-</rdfs:domain>
-
-<rdfs:isDefinedBy rdf:resource='https://data.vlaanderen.be/ns/grondboringen' />
-
-<rdfs:range rdf:resource='https://data.vlaanderen.be/ns/grondboringen#Bekisting' />
- <rdfs:range>
-<owl:Class rdf:about='https://data.vlaanderen.be/ns/grondboringen#Bekistinginterval'>
-<ns1:usageNote xml:lang='nl'>Specialisatie van een CurveWaardepaar, dit is een Curve en de waarde die eraan is toegekend. De waarde is hier de beschrijving van de Bekisting van een Grondboring, terwijl de Curve aangeeft op welke dieptes deze beschrijving geldig is. De Curve van de Grondboring wordt hierbij als referentiesysteem gebruikt. OPGELET: Als de Curve van de Grondboring niet recht in de grond werd geboord zijn de opgegeven dieptes eerder afstanden langs deze Curve.</ns1:usageNote>
-
-<rdfs:comment xml:lang='nl'>Beschrijving van de Bekisting voor een bepaald diepte-interval.</rdfs:comment>
-
-<rdfs:isDefinedBy rdf:resource='https://data.vlaanderen.be/ns/grondboringen' />
-
-<rdfs:subClassOf rdf:resource='http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair' />
-
-</owl:Class>
-
-</rdfs:range>
-
-<rdfs:subPropertyOf rdf:resource='http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element' />
 
 </owl:ObjectProperty>
 
