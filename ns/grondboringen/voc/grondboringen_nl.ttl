@@ -11,14 +11,55 @@
 <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole> a rdfs:Class;
   rdfs:label "Boorgat"@nl .
 
+skos:Concept a rdfs:Class;
+  rdfs:label "Boortype"@nl,
+    "BoormethodeType"@nl,
+    "Boringdoeltype"@nl,
+    "Grondmonstertype"@nl,
+    "Boringstartpunttype"@nl,
+    "Boringinclinatietype"@nl,
+    "Grondobjecttype"@nl,
+    "MateriaalBekistingtype"@nl .
+
+<https://data.vlaanderen.be/ns/grondboringen#Bemonsteringsobject.bemonsterdObject> a owl:ObjectProperty;
+  rdfs:comment "Het Grondobject dat wordt bemonsterd."@nl;
+  rdfs:domain <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
+  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondobject>;
+  rdfs:subPropertyOf <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> .
+
 <https://data.vlaanderen.be/ns/grondboringen#Boor> a owl:Class;
   rdfs:comment "Het hulpstuk dat kan geplaatst worden in een daartoe geschikte boorhouder van een boormachine en door middel van een draaiende en/of kloppende beweging ronde gate kan aanbrengen in diverse materialen."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
   rdfs:subClassOf <http://www.w3.org/ns/sosa/Sampler>,
     <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage> .
 
-<https://data.vlaanderen.be/ns/grondboringen#Grondobjecttype> a owl:Class;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen> .
+<https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameter.diameter> a owl:ObjectProperty;
+  rdfs:comment "Verwijzing naar de beschrijving van de boorgatdiameter voor een bepaald diepteinterval."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameter>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
+  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameterinterval>;
+  rdfs:subPropertyOf <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element> .
+
+<https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameterinterval.diameter> a owl:DatatypeProperty;
+  rdfs:comment "Diameter van het Boorgat."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameterinterval>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
+  rdfs:range xsd:double;
+  rdfs:subPropertyOf <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value> .
+
+<https://data.vlaanderen.be/ns/grondboringen#Boormethode.methode> a owl:ObjectProperty;
+  rdfs:comment "Verwijzing naar de beschrijving van de boormethode voor een bepaald diepteinterval."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/grondboringen#Boormethode>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
+  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#BoormethodeInterval> .
+
+<https://data.vlaanderen.be/ns/grondboringen#Boormethodeinterval.methode> a owl:ObjectProperty;
+  rdfs:comment "Methode van de Boring."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/grondboringen#BoormethodeInterval>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
+  rdfs:range skos:Concept;
+  rdfs:subPropertyOf <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value> .
 
 <https://data.vlaanderen.be/ns/grondboringen#aangenomenGrondwaterstand> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Die Observaties kunnen ook apart beschreven worden."@nl;
@@ -39,12 +80,10 @@
 
 <https://data.vlaanderen.be/ns/grondboringen#bemonsterdObject> a owl:ObjectProperty;
   rdfs:comment "Het Grondobject dat wordt bemonsterd."@nl;
-  rdfs:domain <http://www.w3.org/ns/sosa/Sampling>,
-    <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature>;
+  rdfs:domain <http://www.w3.org/ns/sosa/Sampling>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
   rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondobject>;
-  rdfs:subPropertyOf <http://www.w3.org/ns/sosa/hasFeatureOfInterest>,
-    <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> .
+  rdfs:subPropertyOf <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
 
 <https://data.vlaanderen.be/ns/grondboringen#boorder> a owl:ObjectProperty;
   rdfs:comment "Diegene die de Boring heeft uitgevoerd."@nl;
@@ -73,18 +112,6 @@
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
   rdfs:range schemas:QuantitativeValue .
 
-<https://data.vlaanderen.be/ns/grondboringen#diameter> a owl:ObjectProperty,
-    owl:DatatypeProperty;
-  rdfs:comment "Verwijzing naar de beschrijving van de boorgatdiameter voor een bepaald diepteinterval."@nl,
-    "Diameter van het Boorgat."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameter>,
-    <https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameterinterval>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
-  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameterinterval>,
-    xsd:double;
-  rdfs:subPropertyOf <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element>,
-    <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value> .
-
 <https://data.vlaanderen.be/ns/grondboringen#dikte> a owl:DatatypeProperty;
   rdfs:comment "Dikte van de Bekisting."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/grondboringen#Bekistinginterval>;
@@ -96,7 +123,7 @@
   rdfs:comment "Reden waarom de Grondboring werd uitgevoerd."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/grondboringen#Grondboring>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
-  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Boringdoeltype>;
+  rdfs:range skos:Concept;
   rdfs:subPropertyOf <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.doel> .
 
 <https://data.vlaanderen.be/ns/grondboringen#grondboring> a owl:ObjectProperty;
@@ -111,7 +138,7 @@
   rdfs:comment "Algemene aanduiding van de richting waaronder werd geboord."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/grondboringen#Boormethode>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
-  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Boringinclinatietype> .
+  rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/grondboringen#isResultaatVan> a owl:ObjectProperty;
   rdfs:comment "Grondboring waarvan het Boorgat het resultaat is."@nl;
@@ -124,7 +151,7 @@
   rdfs:comment "Materiaal waaruit de Bekisting bestaat."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/grondboringen#Bekistinginterval>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
-  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#MateriaalBekistingType>;
+  rdfs:range skos:Concept;
   rdfs:subPropertyOf <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value> .
 
 <https://data.vlaanderen.be/ns/grondboringen#materiaalklasse> a owl:ObjectProperty;
@@ -136,15 +163,10 @@
   rdfs:subPropertyOf <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.materialClass> .
 
 <https://data.vlaanderen.be/ns/grondboringen#methode> a owl:ObjectProperty;
-  rdfs:comment "Verwijzing naar de beschrijving van de boormethode voor een bepaald diepteinterval."@nl,
-    "Methode van de Boring."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/grondboringen#Boormethode>,
-    <https://data.vlaanderen.be/ns/grondboringen#BoormethodeInterval>,
-    <https://data.vlaanderen.be/ns/grondboringen#BoortypeInterval>;
+  rdfs:comment "Soort Boor."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/grondboringen#BoortypeInterval>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
-  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#BoormethodeInterval>,
-    <https://data.vlaanderen.be/ns/grondboringen#BoormethodeType>,
-    <https://data.vlaanderen.be/ns/grondboringen#Boortype>;
+  rdfs:range skos:Concept;
   rdfs:subPropertyOf <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value> .
 
 <https://data.vlaanderen.be/ns/grondboringen#monstertype> a owl:ObjectProperty;
@@ -152,7 +174,7 @@
   rdfs:comment "Materiële vorm die het Grondmonster aanneemt."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/grondboringen#Grondmonster>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
-  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondmonstertype>;
+  rdfs:range skos:Concept;
   rdfs:subPropertyOf <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType> .
 
 <https://data.vlaanderen.be/ns/grondboringen#resultaat> a owl:ObjectProperty;
@@ -167,7 +189,7 @@
   rdfs:comment "Aard van het oppervlak waarop de boorkraag is geplaatst."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/grondboringen#Boormethode>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
-  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Boringstartpunttype> .
+  rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/grondboringen#wettelijkKader> a owl:ObjectProperty;
   rdfs:comment "Het kader dat vastlegt wat behoort tot de wet."@nl;
@@ -225,42 +247,9 @@ dc:type a rdf:Property;
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.maaiveld> a rdf:Property;
   rdfs:label "maaiveld"@nl .
 
-<https://data.vlaanderen.be/ns/grondboringen#BoormethodeType> a owl:Class;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen> .
-
-<https://data.vlaanderen.be/ns/grondboringen#Boortype> a owl:Class;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen> .
-
 <https://data.vlaanderen.be/ns/grondboringen#BoortypeInterval> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Specialisatie van een CurveWaardepaar, dit is een Curve en de waarde die eraan is toegekend. De waarde is hier de beschrijving van de Boortype van een Grondboring, terwijl de Curve aangeeft op welke dieptes deze beschrijving geldig is. De Curve van de Grondboring wordt hierbij als referentiesysteem gebruikt. OPGELET: Als de Curve van de Grondboring niet recht in de grond werd geboord zijn de opgegeven dieptes eerder afstanden langs deze Curve."@nl;
-  rdfs:comment "Beschrijving van de Boormethode voor een bepaald diepte-interval."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen> .
-
-<https://data.vlaanderen.be/ns/grondboringen#Boringdoeltype> a owl:Class;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen> .
-
-<https://data.vlaanderen.be/ns/grondboringen#Boringinclinatietype> a owl:Class;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen> .
-
-<https://data.vlaanderen.be/ns/grondboringen#Boringstartpunttype> a owl:Class;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen> .
-
-<https://data.vlaanderen.be/ns/grondboringen#Grondmonstertype> a owl:Class;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen> .
-
-<https://data.vlaanderen.be/ns/grondboringen#Grondobject> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Bvb geologische laag, grondwaterlichaam, bodem... Eventueel te substitueren door een subklasse. Onder \"grond\" wordt het deel vd aardkorst onder het aardoppervlak verstaan."@nl;
-  rdfs:comment "Object in of mbt de grond."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature> .
-
-<https://data.vlaanderen.be/ns/grondboringen#MateriaalBekistingType> a owl:Class;
-  rdfs:comment "TODO"@nl;
+  rdfs:comment "Beschrijving van het type Boor voor een bepaald diepte-interval."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen> .
 
 <https://data.vlaanderen.be/ns/grondboringen#Bekisting> a owl:Class;
@@ -286,6 +275,12 @@ dc:type a rdf:Property;
   rdfs:comment "Beschrijving van de Boormethode voor een bepaald diepte-interval."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
   rdfs:subClassOf <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair> .
+
+<https://data.vlaanderen.be/ns/grondboringen#Grondobject> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Bvb geologische laag, grondwaterlichaam, bodem... Eventueel te substitueren door een subklasse. Onder \"grond\" wordt het deel vd aardkorst onder het aardoppervlak verstaan."@nl;
+  rdfs:comment "Object in of mbt de grond."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature> .
 
 <https://data.vlaanderen.be/ns/grondboringen#Bekistinginterval> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Specialisatie van een CurveWaardepaar, dit is een Curve en de waarde die eraan is toegekend. De waarde is hier de beschrijving van de Bekisting van een Grondboring, terwijl de Curve aangeeft op welke dieptes deze beschrijving geldig is. De Curve van de Grondboring wordt hierbij als referentiesysteem gebruikt. OPGELET: Als de Curve van de Grondboring niet recht in de grond werd geboord zijn de opgegeven dieptes eerder afstanden langs deze Curve."@nl;
@@ -341,6 +336,7 @@ dc:type a rdf:Property;
     foaf:name "Data Vlaanderen"
   ];
   rdfs:seeAlso <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole>,
+    skos:Concept,
     <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.maaiveld>,
     <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.ligging>,
     <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.diepte>,
