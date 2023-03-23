@@ -7,26 +7,46 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://data.europa.eu/m8g/Cost> a rdfs:Class;
   rdfs:label "Kost"@nl .
+
+crm:E18_Physical_Thing a rdfs:Class;
+  rdfs:label "Materieel Ding"@nl .
+
+crm:E29_Design_or_Procedure a rdfs:Class;
+  rdfs:label "Procedure"@nl .
 
 crm:P128i_is_carried_by a rdfs:Class,
     rdf:Property;
   rdfs:label "Drager"@nl,
     "drager"@nl .
 
+skos:Concept a rdfs:Class;
+  rdfs:label "Campagne type"@nl,
+    "Publicatie kanaal type"@nl,
+    "Doelgroep type"@nl,
+    "Status type"@nl,
+    "Kosten type"@nl,
+    "Publicatie tool type"@nl,
+    "bestandsindelingstype"@nl,
+    "Prestatie type"@nl,
+    "Producttype"@nl,
+    "Drager type"@nl .
+
 <https://www.iflastandards.info/fr/frbr/frbroo#F30> a rdfs:Class;
   rdfs:label "Distributie"@nl .
 
 <https://data.vlaanderen.be/ns/campagne/publicatie#Advertentie> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Bv het kopen van een product of deelnemen aan een actie."@nl;
   rdfs:comment "Een promotiemiddel die bedoeld is de lezer ervan te verleiden tot een bepaalde actie."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
   rdfs:subClassOf <https://www.iflastandards.info/fr/frbr/frbroo#F24> .
 
 <https://data.vlaanderen.be/ns/campagne/publicatie#AdvertentieEvent> a owl:Class;
-  rdfs:comment "Het publiceren van een advertentie."@nl;
+  rdfs:comment "Het event om een advertentie stand te brengen en te verspreiden."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent>,
     <https://www.iflastandards.info/fr/frbr/frbroo#F28> .
@@ -36,37 +56,10 @@ crm:P128i_is_carried_by a rdfs:Class,
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
   rdfs:subClassOf crm:E73_Information_Object .
 
-<https://data.vlaanderen.be/ns/campagne/publicatie#CampagneType> a owl:Class;
-  rdfs:comment "De soort campagne."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
-
 <https://data.vlaanderen.be/ns/campagne/publicatie#DirectMarketing> a owl:Class;
-  rdfs:comment "Direct marketing is directe communicatie met individuele consumenten met als doel een antwoord te krijgen."@nl;
+  rdfs:comment "De directe communicatie met individuele consumenten met als doel een antwoord te krijgen."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent> .
-
-<https://data.vlaanderen.be/ns/campagne/publicatie#Dragertype> a owl:Class;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
-
-<https://data.vlaanderen.be/ns/campagne/publicatie#KostenType> a owl:Class;
-  rdfs:comment "Het type van de kost."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
-
-<https://data.vlaanderen.be/ns/campagne/publicatie#MateriëleKopie> a owl:Class;
-  rdfs:comment "Een fysiek object."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
-  rdfs:subClassOf crm:E22_Man-Made_Object .
-
-<https://data.vlaanderen.be/ns/campagne/publicatie#PrestatieType> a owl:Class;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
-
-<https://data.vlaanderen.be/ns/campagne/publicatie#Procedure> a owl:Class;
-  rdfs:comment "Een vastgelegde manier van handelingen uitvoeren."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
-  rdfs:subClassOf crm:E73_Information_Object .
-
-<https://data.vlaanderen.be/ns/campagne/publicatie#Producttype> a owl:Class;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
 
 <https://data.vlaanderen.be/ns/campagne/publicatie#PublicRelations> a owl:Class;
   rdfs:comment "Public relations is de communicatie die als doel heeft om een goeie relatie op te bouwen met het clienteel van een organisatie."@nl;
@@ -78,10 +71,10 @@ crm:P128i_is_carried_by a rdfs:Class,
   rdfs:comment "De huidige status van het event."@nl;
   rdfs:domain <https://www.iflastandards.info/fr/frbr/frbroo#F28>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/campagne/publicatie#StatusType> .
+  rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieEvent.tool> a owl:ObjectProperty;
-  rdfs:comment "De tool die gebruikt wordt om de advertentie te maken."@nl;
+  rdfs:comment "De tool die gebruikt wordt om de publicatie te maken."@nl;
   rdfs:domain <https://www.iflastandards.info/fr/frbr/frbroo#F28>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
   rdfs:range <https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieTool> .
@@ -92,11 +85,6 @@ crm:P128i_is_carried_by a rdfs:Class,
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
   rdfs:range dc:Agent .
 
-<https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieToolType> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Bv. Een applicatie, website, drukkerij, "@nl;
-  rdfs:comment "Platform of applicatie waarop de publicatie kan gecreëerd worden."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
-
 <https://data.vlaanderen.be/ns/campagne/publicatie#Tekst> a owl:Class;
   rdfs:comment "Een reeks letters of symbolen die in een communicatieve situatie als een geheel wordt ervaren."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
@@ -106,12 +94,6 @@ crm:P128i_is_carried_by a rdfs:Class,
   rdfs:comment "Verkoop promotie is een communicatie om de aankoop van een product of dienst te stimuleren."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent> .
-
-<https://data.vlaanderen.be/ns/campagne/publicatie#beschrijving> a owl:DatatypeProperty;
-  rdfs:comment "Beschrijving van het product."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/campagne/publicatie#Product>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
-  rdfs:range rdf:langString .
 
 <https://data.vlaanderen.be/ns/campagne/publicatie#bestaatUit> a owl:ObjectProperty;
   rdfs:comment "De verschillende onderdelen van een campagne."@nl;
@@ -124,7 +106,7 @@ crm:P128i_is_carried_by a rdfs:Class,
   rdfs:comment "De extensie waarin de afbeelding is opgeslagen."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/campagne/publicatie#Beeld>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/campagne/publicatie#BestandsindelingsType> .
+  rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/campagne/publicatie#budget> a owl:ObjectProperty;
   rdfs:comment "Het budget dat vrijgemaakt is voor een campagne."@nl;
@@ -133,7 +115,7 @@ crm:P128i_is_carried_by a rdfs:Class,
   rdfs:range <http://data.europa.eu/m8g/Cost> .
 
 <https://data.vlaanderen.be/ns/campagne/publicatie#campagne> a owl:ObjectProperty;
-  rdfs:comment "Onderdeel van een campagne."@nl;
+  rdfs:comment "De campagne waaronder het campagne component valt."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
   rdfs:range <https://data.vlaanderen.be/ns/campagne/publicatie#Campagne> .
@@ -144,7 +126,7 @@ crm:P128i_is_carried_by a rdfs:Class,
   rdfs:domain <https://data.vlaanderen.be/ns/campagne/publicatie#Impact>,
     <https://data.vlaanderen.be/ns/campagne/publicatie#Marketing>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/campagne/publicatie#DoelgroepType> .
+  rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/campagne/publicatie#gevoerdDoor> a owl:ObjectProperty;
   rdfs:comment "De uitvoerder van de campagne."@nl;
@@ -159,23 +141,16 @@ crm:P128i_is_carried_by a rdfs:Class,
   rdfs:range <https://data.vlaanderen.be/ns/campagne/publicatie#Impact> .
 
 <https://data.vlaanderen.be/ns/campagne/publicatie#kanaal> a owl:ObjectProperty;
-  rdfs:comment "Het kanaal waarmee de publicatie getoond wordt."@nl;
+  rdfs:comment "Het kanaal waarmee de publicatie verspreid wordt."@nl,
+    "Het kanaal waarmee de publicatie getoond wordt."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/campagne/publicatie#Impact>,
     <https://www.iflastandards.info/fr/frbr/frbroo#F30>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
-  rdfs:range <https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieKanaalType>,
+  rdfs:range skos:Concept,
     <https://data.vlaanderen.be/ns/campagne/publicatie#Publicatiekanaal> .
 
-<https://data.vlaanderen.be/ns/campagne/publicatie#naam> a owl:DatatypeProperty;
-  rdfs:comment "Naam van het product."@nl,
-    "Naam van het kanaal."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/campagne/publicatie#Product>,
-    <https://data.vlaanderen.be/ns/campagne/publicatie#Publicatiekanaal>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
-  rdfs:range rdf:langString .
-
 <https://data.vlaanderen.be/ns/campagne/publicatie#product> a owl:ObjectProperty;
-  rdfs:comment "Verbindt het product met de campagne."@nl;
+  rdfs:comment "Het product of producten die verbonden zijn aan de campagne."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/campagne/publicatie#Campagne>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
   rdfs:range <https://data.vlaanderen.be/ns/campagne/publicatie#Product> .
@@ -186,18 +161,21 @@ crm:P128i_is_carried_by a rdfs:Class,
   rdfs:domain <https://data.vlaanderen.be/ns/campagne/publicatie#Beeld>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
 
-<https://data.vlaanderen.be/ns/campagne/publicatie#tijd> a owl:ObjectProperty;
-  rdfs:comment "De periode waarin de campagne plaatsvindt."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/campagne/publicatie#Campagne>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
-  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
-
 <https://data.vlaanderen.be/ns/campagne/publicatie#waarde> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Bv. aantal kliks/views/"@nl;
-  rdfs:comment "Een aantal."@nl;
+  rdfs:comment "Kan je hier eens opzoeken met je python proces welke beschrijvingen ooit al eens bij waarde zijn gezet? Lijkt mij nu wat te miniem."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/campagne/publicatie#Impact>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
   rdfs:range schemas:QuantitativeValue .
+
+<http://data.europa.eu/m8g/PeriodOfTime> a rdf:Property;
+  rdfs:label "periode"@nl .
+
+dc:description a rdf:Property;
+  rdfs:label "beschrijving"@nl .
+
+dc:title a rdf:Property;
+  rdfs:label "naam"@nl .
 
 dc:type a rdf:Property;
   rdfs:label "type"@nl .
@@ -205,50 +183,30 @@ dc:type a rdf:Property;
 prov:Location a rdf:Property;
   rdfs:label "locatie"@nl .
 
-<https://data.vlaanderen.be/ns/campagne/publicatie#BestandsindelingsType> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Bv. JPEG, PNG, "@nl;
-  rdfs:comment "De extensie waarin de afbeelding is opgeslagen."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
-
-<https://data.vlaanderen.be/ns/campagne/publicatie#DoelgroepType> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Bv. Mensen tussen 18 en 24"@nl;
-  rdfs:comment "De doelgroep van de actie."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
-
-<https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieKanaalType> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Bv. Een infoscherm"@nl;
-  rdfs:comment "Een kanaal waarmee een bepaalde publicatie kan verspreid worden."@nl;
+<https://data.vlaanderen.be/ns/campagne/publicatie#Product> a owl:Class;
+  rdfs:comment "Het product of producten waarvoor een campagne gevoerd wordt."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
 
 <https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieTool> a owl:Class;
   rdfs:comment "Tool waarmee de publicatie gemaakt wordt."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
 
-<https://data.vlaanderen.be/ns/campagne/publicatie#StatusType> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Bv. Goedgekeurd, afgekeurd, in afwachting, ..."@nl;
-  rdfs:comment "De huidige status van een object."@nl;
+<https://data.vlaanderen.be/ns/campagne/publicatie#Publicatiekanaal> a owl:Class;
+  rdfs:comment "Kanaal waarmee de publicatie verspreid wordt."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
 
 schemas:MonetaryAmount a rdf:Property;
   rdfs:label "geldbedrag"@nl .
-
-<http://data.europa.eu/m8g/PeriodOfTime> a rdf:Property;
-  rdfs:label "periode"@nl .
 
 <https://data.vlaanderen.be/ns/campagne/publicatie#Beeld> a owl:Class;
   rdfs:comment "Beeld."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
   rdfs:subClassOf crm:E73_Information_Object .
 
-<https://data.vlaanderen.be/ns/campagne/publicatie#Publicatiekanaal> a owl:Class;
-  rdfs:comment "Kanaal waarmee de publicatie verspreid wordt."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
-
 <https://data.vlaanderen.be/ns/campagne/publicatie#Marketing> a owl:Class,
     owl:ObjectProperty;
-  rdfs:comment "Klasse die de resultaten van een publicatie opmeet."@nl,
+  rdfs:comment "De variabelen om de publicatie correct te verspreiden en de resultatenmetingen te bekomen."@nl,
     "De doelgroep van de campagne."@nl,
-    "Naar wie het product gemarketed wordt."@nl,
     "De doelgroep van de distributie."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/campagne/publicatie#Campagne>,
     <https://www.iflastandards.info/fr/frbr/frbroo#F28>,
@@ -256,20 +214,16 @@ schemas:MonetaryAmount a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie>;
   rdfs:range <https://data.vlaanderen.be/ns/campagne/publicatie#Marketing> .
 
-<https://data.vlaanderen.be/ns/campagne/publicatie#Product> a owl:Class;
-  rdfs:comment "Het product waarvoor campagne gevoerd wordt."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
-
 <https://data.vlaanderen.be/ns/campagne/publicatie#Impact> a owl:Class;
   rdfs:comment "De prestatie van de publicatie."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
 
-<https://data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent> a owl:Class;
-  rdfs:comment "Een onderdeel van een campagne."@nl;
+<https://data.vlaanderen.be/ns/campagne/publicatie#Campagne> a owl:Class;
+  rdfs:comment "Een afgebakende set activiteiten met welomschreven doelstellingen, tijdpaden en resultatenmetingen."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
 
-<https://data.vlaanderen.be/ns/campagne/publicatie#Campagne> a owl:Class;
-  rdfs:comment "Een afgebakende set activiteiten met als doelstelling iets aan te prijzen of af te keuren."@nl;
+<https://data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent> a owl:Class;
+  rdfs:comment "Een onderdeel van een campagne."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/campagne/publicatie> .
 
 <https://data.vlaanderen.be/ns/campagne/publicatie> a owl:Ontology;
@@ -466,11 +420,16 @@ schemas:MonetaryAmount a rdf:Property;
     foaf:name "Data Vlaanderen"
   ];
   rdfs:seeAlso <http://data.europa.eu/m8g/Cost>,
+    crm:E18_Physical_Thing,
+    crm:E29_Design_or_Procedure,
     crm:P128i_is_carried_by,
+    skos:Concept,
     <https://www.iflastandards.info/fr/frbr/frbroo#F30>,
     schemas:MonetaryAmount,
     prov:Location,
     dc:type,
+    dc:title,
+    dc:description,
     <http://data.europa.eu/m8g/PeriodOfTime>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
