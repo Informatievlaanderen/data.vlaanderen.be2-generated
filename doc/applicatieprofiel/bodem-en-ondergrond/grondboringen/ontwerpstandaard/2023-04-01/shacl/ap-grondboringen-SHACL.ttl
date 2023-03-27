@@ -24,7 +24,6 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#MaatShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#TemporeleEntiteitShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#PeriodeShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BetrokkenPartijShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#PositioneleNauwkeurigheidShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#HerkomstShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#CurveWaardepaarShape>,
@@ -76,6 +75,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#MaaiveldShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#OpdrachtShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#DirectePositieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#OpmetingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#StandaardEenheidShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#WettelijkKaderShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#GetalShape>,
@@ -367,10 +367,6 @@
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/besluit#Besluit> .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BetrokkenPartijShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <http://def.isotc211.org/iso19115/2006/CitationAndResponsiblePartyInformation#CI_ResponsibleParty> .
-
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BoorShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -587,12 +583,11 @@
     shacl:name "gml"@nl;
     shacl:path <https://data.vlaanderen.be/ns/generiek#gml>
   ], [
-    shacl:class skos:Concept;
-    shacl:description "De manier waarop het punt werd bepaald."@nl;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#Opmeting>;
+    shacl:description "De manier waarop de positie werd bepaald."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "methode"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/generiek#methode>
+    shacl:name "opmeting"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#opmeting>
   ], [
     shacl:datatype rdfs:Literal;
     shacl:description "Directe positie uitgedrukt in wkt-formaat."@nl;
@@ -640,7 +635,7 @@
     shacl:path <http://www.opengis.net/ont/geosparql#asGML>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/generiek#Opmeting>;
-    shacl:description "Het bepalen van de precieze omvang van iets door het te meten."@nl;
+    shacl:description "De manier waarop de geometrie werd bepaald."@nl;
     shacl:maxCount 1;
     shacl:name "opmeting"@nl;
     shacl:path <https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting>
@@ -660,13 +655,13 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#GrondboringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://def.isotc211.org/iso19115/2006/CitationAndResponsiblePartyInformation#CI_ResponsibleParty>;
+    shacl:class dc:Agent;
     shacl:description "Diegene die de Boring heeft uitgevoerd."@nl;
     shacl:maxCount 1;
     shacl:name "boorder"@nl;
     shacl:path <https://data.vlaanderen.be/ns/grondboringen#boorder>
   ], [
-    shacl:class <http://def.isotc211.org/iso19115/2006/CitationAndResponsiblePartyInformation#CI_ResponsibleParty>;
+    shacl:class dc:Agent;
     shacl:description "Opzichter bij de Boring."@nl;
     shacl:maxCount 1;
     shacl:name "boormeester"@nl;
@@ -676,6 +671,12 @@
     shacl:description "Reden waarom de Grondboring werd uitgevoerd."@nl;
     shacl:name "doel"@nl;
     shacl:path <https://data.vlaanderen.be/ns/grondboringen#doel>
+  ], [
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Verwijzing naar de informatie die de activiteit van de Bemonstering uniek identificeert."@nl;
+    shacl:minCount 1;
+    shacl:name "identificator"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/grondboringen#identificator>
   ], [
     shacl:class <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole>;
     shacl:description "Het resultaat van de uitgevoerde grondboring."@nl;
@@ -900,6 +901,25 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#OpdrachtShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#OpmetingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class skos:Concept;
+    shacl:description "Aard van de gebruikte methode."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "methode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.methode>
+  ], [
+    shacl:class dc:Agent;
+    shacl:description "Agent die de Opmeting heeft uitgevoerd."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "uitgevoerdDoor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Opmeting> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#OutputShape> a shacl:NodeShape;
   shacl:closed false;
