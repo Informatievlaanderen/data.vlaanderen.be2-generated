@@ -1,0 +1,454 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.europa.eu/m8g/Cost> a rdfs:Class;
+  rdfs:label "Kost"@nl .
+
+crm:E18_Physical_Thing a rdfs:Class;
+  rdfs:label "Materieel Ding"@nl .
+
+crm:E29_Design_or_Procedure a rdfs:Class;
+  rdfs:label "Procedure"@nl .
+
+crm:P128i_is_carried_by a rdfs:Class,
+    rdf:Property;
+  rdfs:label "Drager"@nl,
+    "drager"@nl .
+
+skos:Concept a rdfs:Class;
+  rdfs:label "Campagne type"@nl,
+    "Publicatie kanaal type"@nl,
+    "Doelgroep type"@nl,
+    "Status type"@nl,
+    "Kosten type"@nl,
+    "Publicatie tool type"@nl,
+    "bestandsindelingstype"@nl,
+    "Prestatie type"@nl,
+    "Producttype"@nl,
+    "Drager type"@nl,
+    "NAL_currency"@nl .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#Advertentie> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Bv het kopen van een product of deelnemen aan een actie."@nl;
+  rdfs:comment "Een promotiemiddel die bedoeld is de lezer ervan te verleiden tot een bepaalde actie."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:subClassOf <https://www.iflastandards.info/fr/frbr/frbroo#F24> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#AdvertentieEvent> a owl:Class;
+  rdfs:comment "Het event om een advertentie stand te brengen en te verspreiden."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:subClassOf <https://test.data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent>,
+    <https://www.iflastandards.info/fr/frbr/frbroo#F30> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#Audio> a owl:Class;
+  rdfs:comment "Geluid."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:subClassOf crm:E73_Information_Object .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#DirectMarketing> a owl:Class;
+  rdfs:comment "De directe communicatie met individuele consumenten met als doel een antwoord te krijgen."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:subClassOf <https://test.data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#PublicRelations> a owl:Class;
+  rdfs:comment "Public relations is de communicatie die als doel heeft om een goeie relatie op te bouwen met het clienteel van een organisatie."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:subClassOf <https://test.data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#PublicatieTool> a owl:Class;
+  rdfs:comment "Tool waarmee de publicatie gemaakt wordt."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#Tekst> a owl:Class;
+  rdfs:comment "Een reeks letters of symbolen die in een communicatieve situatie als een geheel wordt ervaren."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:subClassOf crm:E73_Information_Object .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#VerkoopPromotie> a owl:Class;
+  rdfs:comment "Verkoop promotie is een communicatie om de aankoop van een product of dienst te stimuleren."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:subClassOf <https://test.data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#bestaatUit> a owl:ObjectProperty;
+  rdfs:comment "De verschillende onderdelen van een campagne."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/campagne/publicatie#Campagne>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:range <https://test.data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#bestandsindeling> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Bv. JPEG, PNG, "@nl;
+  rdfs:comment "De extensie waarin de afbeelding is opgeslagen."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/campagne/publicatie#Beeld>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:range skos:Concept .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#budget> a owl:ObjectProperty;
+  rdfs:comment "Het budget dat vrijgemaakt is voor een campagne."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/campagne/publicatie#Campagne>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:range <http://data.europa.eu/m8g/Cost> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#campagne> a owl:ObjectProperty;
+  rdfs:comment "De campagne waaronder het campagne component valt."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:range <https://test.data.vlaanderen.be/ns/campagne/publicatie#Campagne> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#doelgroep> a owl:ObjectProperty;
+  rdfs:comment "De doelgroep van de publicatie."@nl,
+    "Doelgroep van de publicatie."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/campagne/publicatie#Impact>,
+    <https://test.data.vlaanderen.be/ns/campagne/publicatie#Marketing>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:range skos:Concept .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#gevoerdDoor> a owl:ObjectProperty;
+  rdfs:comment "De uitvoerder van de campagne."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/campagne/publicatie#Campagne>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:range dc:Agent .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#impact> a owl:ObjectProperty;
+  rdfs:comment "Bekijkt de impact van de marketing."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/campagne/publicatie#Marketing>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:range <https://test.data.vlaanderen.be/ns/campagne/publicatie#Impact> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#kanaal> a owl:ObjectProperty;
+  rdfs:comment "Het kanaal waarmee de publicatie verspreid wordt."@nl,
+    "Het kanaal waarmee de publicatie getoond wordt."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/campagne/publicatie#Impact>,
+    <https://test.data.vlaanderen.be/ns/campagne/publicatie#Distributie>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:range skos:Concept,
+    <https://test.data.vlaanderen.be/ns/campagne/publicatie#Publicatiekanaal> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#marketing> a owl:ObjectProperty;
+  rdfs:comment "De doelgroep van de campagne."@nl,
+    "De doelgroep van de distributie."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/campagne/publicatie#Campagne>,
+    <https://test.data.vlaanderen.be/ns/campagne/publicatie#Distributie>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:range <https://test.data.vlaanderen.be/ns/campagne/publicatie#Marketing> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#product> a owl:ObjectProperty;
+  rdfs:comment "Het product of producten die verbonden zijn aan de campagne."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/campagne/publicatie#Campagne>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:range <https://test.data.vlaanderen.be/ns/campagne/publicatie#Product> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#resolutie> a rdf:Property;
+  <http://purl.org/vocab/vann/usageNote> "Bv. In pixels (300x700)"@nl;
+  rdfs:comment "De afmetingen van de afbeelding."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/campagne/publicatie#Beeld>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#waarde> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Bv. aantal kliks/views/"@nl;
+  rdfs:comment "Kan je hier eens opzoeken met je python proces welke beschrijvingen ooit al eens bij waarde zijn gezet? Lijkt mij nu wat te miniem."@nl;
+  rdfs:domain <https://test.data.vlaanderen.be/ns/campagne/publicatie#Impact>;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:range schemas:QuantitativeValue .
+
+<http://data.europa.eu/m8g/PeriodOfTime> a rdf:Property;
+  rdfs:label "periode"@nl .
+
+dc:description a rdf:Property;
+  rdfs:label "beschrijving"@nl .
+
+dc:title a rdf:Property;
+  rdfs:label "naam"@nl .
+
+dc:type a rdf:Property;
+  rdfs:label "type"@nl .
+
+prov:Location a rdf:Property;
+  rdfs:label "locatie"@nl .
+
+schemas:MonetaryAmount a rdf:Property;
+  rdfs:label "geldbedrag"@nl .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#Product> a owl:Class;
+  rdfs:comment "Het product of producten waarvoor een campagne gevoerd wordt."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#Publicatiekanaal> a owl:Class;
+  rdfs:comment "Kanaal waarmee de publicatie verspreid wordt."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#Beeld> a owl:Class;
+  rdfs:comment "Beeld."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie>;
+  rdfs:subClassOf crm:E73_Information_Object .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#Distributie> a owl:Class;
+  rdfs:comment "De variabelen om de publicatie correct te verspreiden en de resultatenmetingen te bekomen."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#Marketing> a owl:Class;
+  rdfs:comment "De variabelen om de publicatie correct te verspreiden en de resultatenmetingen te bekomen."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#Impact> a owl:Class;
+  rdfs:comment "De prestatie van de publicatie."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#Campagne> a owl:Class;
+  rdfs:comment "Een afgebakende set activiteiten met welomschreven doelstellingen, tijdpaden en resultatenmetingen."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent> a owl:Class;
+  rdfs:comment "Een onderdeel van een campagne."@nl;
+  rdfs:isDefinedBy <https://test.data.vlaanderen.be/ns/campagne/publicatie> .
+
+<https://test.data.vlaanderen.be/ns/campagne/publicatie> a owl:Ontology;
+  rdfs:label "publicatie-advertentie"@en,
+    "publicatie-advertentie"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.oost-vlaanderen.be/>;
+      foaf:name "Provincie Oost-Vlaanderen"
+    ];
+    foaf:firstName "Joachim";
+    foaf:lastName "Van den Bergh";
+    foaf:mbox <mailto:joachim.van.den.bergh@oost-vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vera.be/>;
+      foaf:name "VERA"
+    ];
+    foaf:firstName "Pieter";
+    foaf:lastName "Taes";
+    foaf:mbox <mailto:pieter.taes@vera.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vera.be/>;
+      foaf:name "VERA"
+    ];
+    foaf:firstName "Kenny";
+    foaf:lastName "Stevens";
+    foaf:mbox <mailto:kenny.stevens@vera.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vera.be/>;
+      foaf:name "VERA"
+    ];
+    foaf:firstName "Sarah";
+    foaf:lastName "Smolders";
+    foaf:mbox <mailto:sarah.smolders@vera.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vera.be/>;
+      foaf:name "VERA"
+    ];
+    foaf:firstName "Jan";
+    foaf:lastName "Potemans";
+    foaf:mbox <mailto:jan.potemans@vera.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaamsbrabant.be/nl>;
+      foaf:name "Provincie Vlaams-Brabant"
+    ];
+    foaf:firstName "Alexander";
+    foaf:lastName "Leysen";
+    foaf:mbox <mailto:alexander.leysen@vlaamsbrabant.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.dendermonde.be/>;
+      foaf:name "Stad Dendermonde"
+    ];
+    foaf:firstName "Kenny";
+    foaf:lastName "Gribbe";
+    foaf:mbox <mailto:kenny.gribbe@dendermonde.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.oost-vlaanderen.be/>;
+      foaf:name "Provincie Oost-Vlaanderen"
+    ];
+    foaf:firstName "Dirk";
+    foaf:lastName "Goeminne";
+    foaf:mbox <mailto:dirk.goeminne@oost-vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://vloca.vlaanderen.be/>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Alain";
+    foaf:lastName "Glickman"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.dendermonde.be/>;
+      foaf:name "Stad Dendermonde"
+    ];
+    foaf:firstName "Pieter-Jan";
+    foaf:lastName "Fieremans";
+    foaf:mbox <mailto:pieter-jan.fieremans@oost-vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.oost-vlaanderen.be/>;
+      foaf:name "Provincie Oost-Vlaanderen"
+    ];
+    foaf:firstName "Maartje";
+    foaf:lastName "Du Pont";
+    foaf:mbox <mailto:maartje.du.pont@oost-vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://haviland.be/>;
+      foaf:name "Haviland"
+    ];
+    foaf:firstName "Frank";
+    foaf:lastName "Desmet";
+    foaf:mbox <mailto:frank.desmet@haviland.be>
+  ], [
+    a foaf:Person;
+    foaf:firstName "Louis";
+    foaf:lastName "Desbuquois"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.dendermonde.be/>;
+      foaf:name "Stad Dendermonde"
+    ];
+    foaf:firstName "Lieven";
+    foaf:lastName "Decraemer";
+    foaf:mbox <mailto:lieven.decraemer@dendermonde.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vera.be/>;
+      foaf:name "VERA"
+    ];
+    foaf:firstName "Kenzo";
+    foaf:lastName "Deceulener";
+    foaf:mbox <mailto:kenzo.deceulener@halle.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://vloca.vlaanderen.be/>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Fabian";
+    foaf:lastName "De La Mellieure"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.dendermonde.be/>;
+      foaf:name "Stad Dendermonde"
+    ];
+    foaf:firstName "Johan";
+    foaf:lastName "De Backer";
+    foaf:mbox <mailto:johan.debacker@dendermonde.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.halle.be/>;
+      foaf:name "Halle"
+    ];
+    foaf:firstName "Barbara";
+    foaf:lastName "Cornelis";
+    foaf:mbox <mailto:barbara.cornelis@halle.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vera.be/>;
+      foaf:name "VERA"
+    ];
+    foaf:firstName "Tine";
+    foaf:lastName "Cahy"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.oost-vlaanderen.be/>;
+      foaf:name "Provincie Oost-Vlaanderen"
+    ];
+    foaf:firstName "Andy";
+    foaf:lastName "Bourriez";
+    foaf:mbox <mailto:andy.bourriez@oost-vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.oost-vlaanderen.be/>;
+      foaf:name "Provincie Oost-Vlaanderen"
+    ];
+    foaf:firstName "Joseph";
+    foaf:lastName "Bertels";
+    foaf:mbox <mailto:joseph.berthels@oost-vlaanderen.be>
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso <http://data.europa.eu/m8g/Cost>,
+    crm:E18_Physical_Thing,
+    crm:E29_Design_or_Procedure,
+    crm:P128i_is_carried_by,
+    skos:Concept,
+    schemas:MonetaryAmount,
+    prov:Location,
+    dc:type,
+    dc:title,
+    dc:description,
+    <http://data.europa.eu/m8g/PeriodOfTime>;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Laurens";
+    foaf:lastName "Vercauteren";
+    foaf:mbox <mailto:laurens.vercauteren@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Arne";
+    foaf:lastName "Scheldeman";
+    foaf:mbox <mailto:arne.scheldeman@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Lucas";
+    foaf:lastName "Cornette";
+    foaf:mbox <mailto:lucas.cornette@vlaanderen.be>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.halle.be/>;
+      foaf:name "Stad Halle"
+    ];
+    foaf:firstName "Kasper";
+    foaf:lastName "Vanbeginne";
+    foaf:mbox <mailto:kasper.vanbeginne@halle.be>
+  ] .
