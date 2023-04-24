@@ -1,6 +1,6 @@
 {
   "@context": {
-    "@vocab": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23",
+    "@vocab": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap",
     "qb": "http://purl.org/linked-data/cube#",
     "qb:codeList": {
       "@type": "@id"
@@ -12,17 +12,11 @@
     "sh:datatype": {
       "@type": "@id"
     },
-    "sh:description": {
-      "@container": "@language"
-    },
     "sh:maxCount": {
       "@type": "http://www.w3.org/2001/XMLSchema#integer"
     },
     "sh:minCount": {
       "@type": "http://www.w3.org/2001/XMLSchema#integer"
-    },
-    "sh:name": {
-      "@container": "@language"
     },
     "sh:path": {
       "@type": "@id"
@@ -35,1517 +29,1184 @@
     },
     "shapes": {
       "@type": "@id"
-    },
-    "vl": "https://data.vlaanderen.be/ns/shacl#"
+    }
   },
-  "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23",
+  "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap",
   "shapes": [
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#BeslissingBeboetingsinstantieShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#AanvullendeSanctieShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingBeboetingsinstantie"
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/sanctie#Hoofdsanctie",
+          "sh:description": "De Hoofdsanctie waaraan de Facultatieve Sanctie bijkomend is.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "vereist",
+          "sh:path": "http://purl.org/dc/terms/requires"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#AanvullendeSanctie"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#BeslissingToezichthouderShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingToezichthouder"
-    },
-    {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#BeslissingTotBestuurlijkOpsporingsonderzoekShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingTotBestuurlijkOpsporingsonderzoek"
-    },
-    {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#BeslissingTotBestuurlijkSepotShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#AlternatieveSanctieShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "Type van de Beslissing tot Sepot."
-          },
+          "sh:description": "Type van de Alternatieve Sanctie.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "type"
-          },
+          "sh:name": "type",
           "sh:path": "http://purl.org/dc/terms/type"
         }
       ],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingTotBestuurlijkSepot"
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#AlternatieveSanctie"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#BeslissingTotBestuurlijkeVervolgingShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#BeslissingBeboetingsinstantieShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#VervalSanctiemogelijkheidDoorBetalingGeldsom",
-          "sh:description": {
-            "nl": "De Voorstel tot Betaling Geldsom die een gevolg is van de Beslissing van de Vervolgingsinstantie."
-          },
+          "sh:class": "https://data.vlaanderen.be/ns/sanctie#BeslissingTotBestuurlijkeVervolging",
+          "sh:description": "De Beslissing van de Vervolgingsinstantie die de Beboetingsinstantie vat.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "leidt tot"
-          },
+          "sh:minCount": "1",
+          "sh:name": "gevolgVan",
+          "sh:path": "http://www.w3.org/ns/prov#wasGeneratedBy"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/sanctie#BestuurlijkeSanctie",
+          "sh:description": "De Sanctie die door de Beboetingsinstantie wordt opgelegd.",
+          "sh:name": "legtOp",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#legtOp"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#boolean",
+          "sh:description": "Indicator die aangeeft dat de uitspraak van de veroordeling wordt opgeschort.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "opschorting",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#opschorting"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/PeriodOfTime",
+          "sh:description": "De proefperiode van de opschorting.",
+          "sh:maxCount": "1",
+          "sh:name": "opschortingProefperiode",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#opschortingProefperiode"
+        },
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": "Type van de Beslissing van de Beboetingsinstantie.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "resultaat",
+          "sh:path": "https://data.vlaanderen.be/ns/besluitvorming#resultaat"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#BeslissingBeboetingsinstantie"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#BeslissingToezichthouderShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#BeslissingToezichthouder"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#BeslissingTotAlternatieveProcedureShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/sanctie#AlternatieveSanctie",
+          "sh:description": "De Alternatieve Sanctie die wordt opgelegd als gevolg van het doorlopen van de Alternatieve Procedure.",
+          "sh:name": "sanctie",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#sanctie"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#BeslissingTotAlternatieveProcedure"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#BeslissingTotBestuurlijkOpsporingsonderzoekShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#BeslissingTotBestuurlijkOpsporingsonderzoek"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#BeslissingTotBestuurlijkSepotShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": "Type van de Beslissing tot Sepot.",
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": "type",
+          "sh:path": "http://purl.org/dc/terms/type"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#BeslissingTotBestuurlijkSepot"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#BeslissingTotBestuurlijkeVervolgingShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/sanctie#BeslissingBeboetingsinstantie",
+          "sh:description": "De Beslissing van de Beboetingsinstantie die een gevolg is van de Beslissing van de Vervolgingsinstantie.",
+          "sh:maxCount": "1",
+          "sh:name": "leidtTot",
           "sh:path": "http://www.w3.org/ns/prov#generated"
         },
         {
-          "sh:class": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#SanctieBeslissing",
-          "sh:description": {
-            "nl": "De Beslissing van de Beboetingsinstantie die een gevolg is van de Beslissing van de Vervolgingsinstantie."
-          },
+          "sh:class": "https://data.vlaanderen.be/ns/sanctie#VervalSanctiemogelijkheidDoorBetalingGeldsom",
+          "sh:description": "De Voorstel tot Betaling Geldsom die een gevolg is van de Beslissing van de Vervolgingsinstantie.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "leidt tot"
-          },
+          "sh:name": "leidtTot",
           "sh:path": "http://www.w3.org/ns/prov#generated"
         }
       ],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingTotBestuurlijkeVervolging"
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#BeslissingTotBestuurlijkeVervolging"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#BestuurlijkeBeslissingShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#BeslissingVervolgingsinstantieShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#BeslissingVervolgingsinstantie"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#BestuurlijkeBeslissingShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#date",
-          "sh:description": {
-            "nl": "De datum waarop de Bestuurlijke Beslissing is genomen."
-          },
+          "sh:description": "De datum waarop de Bestuurlijke Beslissing is genomen.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "datum"
-          },
+          "sh:name": "datum",
           "sh:path": "http://purl.org/dc/terms/date"
         },
         {
           "sh:class": "https://data.vlaanderen.be/ns/dossier#Stuk",
-          "sh:description": {
-            "nl": "Een Bestuurlijke Beslissing genereert een Stuk."
-          },
-          "sh:name": {
-            "nl": "genereert"
-          },
+          "sh:description": "Een Bestuurlijke Beslissing genereert een Stuk.",
+          "sh:name": "genereert",
           "sh:path": "https://data.vlaanderen.be/ns/dossier#genereert"
         },
         {
           "sh:class": "http://www.w3.org/ns/regorg#RegisteredOrganization",
-          "sh:description": {
-            "nl": "De Geregistreerde Organisatie die de Bestuurlijke Beslissing heeft genomen."
-          },
+          "sh:description": "De Geregistreerde Organisatie die de Bestuurlijke Beslissing heeft genomen.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "genomen door"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#genomenDoor"
+          "sh:name": "genomenDoor",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#genomenDoor"
         },
         {
-          "sh:class": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#Feit",
-          "sh:description": {
-            "nl": "Het Gepleegd Feit waarover de Bestuurlijke Beslissing handelt."
-          },
-          "sh:name": {
-            "nl": "over"
-          },
+          "sh:class": "https://data.vlaanderen.be/ns/sanctie#GepleegdFeit",
+          "sh:description": "Het Gepleegd Feit waarover de Bestuurlijke Beslissing handelt.",
+          "sh:name": "over",
           "sh:path": "https://schema.org/about"
         }
       ],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BestuurlijkeBeslissing"
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#BestuurlijkeBeslissing"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#BestuurlijkeGeldboeteShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#BestuurlijkeGeldboeteShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "De betalingsstatus van de Bestuurlijke Geldboete."
-          },
+          "sh:description": "De betalingsstatus van de Bestuurlijke Geldboete.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "betalingsstatus"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#betalingsstatus"
+          "sh:name": "betalingsstatus",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#betalingsstatus"
         },
         {
           "sh:class": "https://schema.org/MonetaryAmount",
-          "sh:description": {
-            "nl": "Het effectief te betalen geldbedrag."
-          },
+          "sh:description": "Het effectief te betalen geldbedrag.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "boete"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#boete"
+          "sh:name": "boete",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#boete"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#date",
-          "sh:description": {
-            "nl": "De datum waarop de Geldboete is betaald."
-          },
+          "sh:description": "De datum waarop de Geldboete is betaald.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "datum betaling"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#datumBetaling"
+          "sh:name": "datumBetaling",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#datumBetaling"
         }
       ],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BestuurlijkeGeldboete"
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#BestuurlijkeGeldboete"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#BestuurlijkeSanctieShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#BestuurlijkeSanctieShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "De tekstuele inhoud van de sanctie."
-          },
+          "sh:description": "De tekstuele inhoud van de sanctie.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "omschrijving"
-          },
+          "sh:name": "omschrijving",
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
-          "sh:class": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#SanctieBeslissing",
-          "sh:description": {
-            "nl": "De Beslissing van de Beboetingsinstantie die de opgelegde Sanctie beschrijft."
-          },
+          "sh:class": "https://data.vlaanderen.be/ns/sanctie#BeslissingBeboetingsinstantie",
+          "sh:description": "De Beslissing van de Beboetingsinstantie die de opgelegde Sanctie beschrijft.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "opgenomen in"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#opgenomenIn"
+          "sh:name": "opgenomenIn",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#opgenomenIn"
         },
         {
           "sh:class": "http://data.europa.eu/eli/ontology#LegalResourceSubdivision",
-          "sh:description": {
-            "nl": "Rechtsbrononderdeel op basis waarvan de Bestuurlijke Sanctie wordt uitgesproken."
-          },
+          "sh:description": "Rechtsbrononderdeel op basis waarvan de Bestuurlijke Sanctie wordt uitgesproken.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "rechtsbron"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#rechtsbron"
+          "sh:name": "rechtsbron",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#rechtsbron"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-          "sh:description": {
-            "nl": "Indicator die aangeeft dat een sanctie wordt uitgesproken, maar nog niet moet worden uitgevoerd."
-          },
+          "sh:description": "Indicator die aangeeft dat een sanctie wordt uitgesproken, maar nog niet moet worden uitgevoerd.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "uitstel"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#uitstel"
+          "sh:name": "uitstel",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#uitstel"
         },
         {
           "sh:class": "http://data.europa.eu/m8g/PeriodOfTime",
-          "sh:description": {
-            "nl": "De periode waarbinnen uitstel is verleend."
-          },
+          "sh:description": "De periode waarbinnen uitstel is verleend.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "uitstelperiode"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#uitstelperiode"
+          "sh:name": "uitstelperiode",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#uitstelperiode"
         }
       ],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BestuurlijkeSanctie"
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#BestuurlijkeSanctie"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#FeitShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#GepleegdFeitShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "http://www.w3.org/ns/prov#Agent",
-          "sh:description": {
-            "nl": "Een activiteitenassociatie is een toewijzing van verantwoordelijkheid aan een agent voor een activiteit, wat aangeeft dat de agent een rol had in de activiteit. Voorts kan een plan worden gespecificeerd, namelijk het plan dat de agent voor ogen heeft om b"
-          },
+          "sh:class": "http://www.w3.org/ns/regorg#RegisteredOrganization",
+          "sh:description": "De Geregistreerde Organisatie die het feit gepleegd heeft.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "betrokkene"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#betrokkene"
+          "sh:name": "betrokkene",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#betrokkene"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon",
+          "sh:description": "De Geregistreerde Persoon die het feit gepleegd heeft.",
+          "sh:maxCount": "1",
+          "sh:name": "betrokkene",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#betrokkene"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-          "sh:description": {
-            "nl": "De datum waarop het Gepleegd Feit heeft plaatsgevonden."
-          },
+          "sh:description": "De datum waarop het Gepleegd Feit heeft plaatsgevonden.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "datum"
-          },
+          "sh:name": "datum",
           "sh:path": "http://purl.org/dc/terms/date"
         },
         {
-          "sh:class": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#Feit",
-          "sh:description": {
-            "nl": "Een gerelateerd Gepleegd Feit, bv. omwille van gelijkheid in tijd en ruimte."
-          },
-          "sh:name": {
-            "nl": "gerelateerd"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#gerelateerd"
+          "sh:class": "https://data.vlaanderen.be/ns/sanctie#GepleegdFeit",
+          "sh:description": "Een gerelateerd Gepleegd Feit, bv. omwille van gelijkheid in tijd en ruimte.",
+          "sh:name": "gerelateerd",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#gerelateerd"
         },
         {
           "sh:class": "http://www.w3.org/ns/prov#Location",
-          "sh:description": {
-            "nl": "Een locatie kan een identificeerbare geografische plaats zijn (ISO 19112), maar ook een niet-geografische plaats zoals een directory, rij of kolom. Als zodanig zijn er tal van manieren waarop locatie kan worden uitgedrukt, zoals door een coördinaat, adres"
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "locatie"
-          },
-          "sh:path": "http://www.w3.org/ns/prov#atLocation"
+          "sh:description": "Locatie waar het Gepleegd Feit heeft plaatsgevonden.",
+          "sh:name": "locatie",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#locatie"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Tekstuele beschrijving van het Gepleegde Feit."
-          },
+          "sh:description": "Tekstuele beschrijving van het Gepleegde Feit.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "beschrijving"
-          },
+          "sh:name": "omschrijving",
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
           "sh:class": "http://data.europa.eu/eli/ontology#LegalResourceSubdivision",
-          "sh:description": {
-            "nl": "Het Rechtsbrononderdeel dat geschonden wordt door het Gepleegd Feit en daarmee de juridische grondslag voor de vervolging vormt."
-          },
+          "sh:description": "Het Rechtsbrononderdeel dat geschonden wordt door het Gepleegd Feit en daarmee de juridische grondslag voor de vervolging vormt.",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "overtreedt"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#overtreedt"
+          "sh:name": "overtreedt",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#overtreedt"
         },
         {
           "sh:class": "http://data.europa.eu/m8g/PeriodOfTime",
-          "sh:description": {
-            "nl": "De periode waarbinnen het Gepleegd Feit heeft plaatsgevonden."
-          },
+          "sh:description": "De periode waarbinnen het Gepleegd Feit heeft plaatsgevonden.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "periode"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#periode"
+          "sh:name": "periode",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#periode"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "Type van het Gepleegd Feit."
-          },
+          "sh:description": "Type van het Gepleegd Feit.",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "type"
-          },
+          "sh:name": "type",
           "sh:path": "http://purl.org/dc/terms/type"
         },
         {
           "sh:class": "http://www.w3.org/ns/regorg#RegisteredOrganization",
-          "sh:description": {
-            "nl": "De Geregistreerde Organisatie het Gepleegd Feit heeft vastgesteld."
-          },
+          "sh:description": "De Geregistreerde Organisatie het Gepleegd Feit heeft vastgesteld.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "verbalisant"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#verbalisant"
+          "sh:name": "verbalisant",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#verbalisant"
         }
       ],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#Feit"
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#GepleegdFeit"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#OnmiddellijkeInningShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#HoofdsanctieShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#Hoofdsanctie"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#OnmiddellijkeInningShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:class": "https://schema.org/MonetaryAmount",
-          "sh:description": {
-            "nl": "De te betalen som."
-          },
+          "sh:description": "De te betalen som.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "bedrag"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#bedrag"
+          "sh:name": "bedrag",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#bedrag"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "De status van betaling van de Onmiddellijke Inning."
-          },
+          "sh:description": "De status van betaling van de Onmiddellijke Inning.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "betalingsstatus"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#betalingsstatus"
+          "sh:name": "betalingsstatus",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#betalingsstatus"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#date",
-          "sh:description": {
-            "nl": "De datum waarop de Onmiddellijke Inning is betaald."
-          },
+          "sh:description": "De datum waarop de Onmiddellijke Inning is betaald.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "datum betaling"
-          },
+          "sh:name": "datumBetaling",
           "sh:path": "http://purl.org/dc/terms/date"
         }
       ],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#OnmiddellijkeInning"
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#OnmiddellijkeInning"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#SanctieBeslissingShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingTotBestuurlijkeVervolging",
-          "sh:description": {
-            "nl": "De Beslissing van de Vervolgingsinstantie die de Beboetingsinstantie vat."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "gevolg van"
-          },
-          "sh:path": "http://www.w3.org/ns/prov#wasGeneratedBy"
-        },
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BestuurlijkeSanctie",
-          "sh:description": {
-            "nl": "De Sanctie die door de Beboetingsinstantie wordt opgelegd."
-          },
-          "sh:name": {
-            "nl": "legt op"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#legtOp"
-        },
-        {
-          "sh:datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-          "sh:description": {
-            "nl": "Indicator die aangeeft dat de uitspraak van de veroordeling wordt opgeschort."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "opschorting"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#opschorting"
-        },
-        {
-          "sh:class": "http://data.europa.eu/m8g/PeriodOfTime",
-          "sh:description": {
-            "nl": "De proefperiode van de opschorting."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "opschorting proefperiode"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#opschortingProefperiode"
-        },
-        {
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "Type van de Beslissing van de Beboetingsinstantie."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "resultaat"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/besluitvorming#resultaat"
-        }
-      ],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#SanctieBeslissing"
-    },
-    {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#UitsluitingVanSteunShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#UitsluitingVanSteunShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "Het type van Uitsluiting Van Steun."
-          },
+          "sh:description": "Het type van Uitsluiting Van Steun.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "type"
-          },
+          "sh:name": "type",
           "sh:path": "http://purl.org/dc/terms/type"
         }
       ],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#UitsluitingVanSteun"
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#UitsluitingVanSteun"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#VerbeurdverklaringShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#VerbeurdverklaringShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:class": "https://schema.org/MonetaryAmount",
-          "sh:description": {
-            "nl": "De verbeurdverklaarde som."
-          },
+          "sh:description": "De verbeurdverklaarde som.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "bedrag"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#bedrag"
+          "sh:name": "bedrag",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#bedrag"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "Het type van Verbeurdverklaring."
-          },
+          "sh:description": "Het type van Verbeurdverklaring.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "type"
-          },
+          "sh:name": "type",
           "sh:path": "http://purl.org/dc/terms/type"
         }
       ],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#Verbeurdverklaring"
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#Verbeurdverklaring"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#VervalSanctiemogelijkheidDoorBetalingGeldsomShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#VervalSanctiemogelijkheidDoorBetalingGeldsomShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "De betalingsstatus van de geldsom."
-          },
+          "sh:description": "De betalingsstatus van de geldsom.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "betalingsstatus"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#betalingsstatus"
+          "sh:name": "betalingsstatus",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#betalingsstatus"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#date",
-          "sh:description": {
-            "nl": "De datum waarop de geldsom is betaald."
-          },
+          "sh:description": "De datum waarop de geldsom is betaald.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "datum betaling"
-          },
+          "sh:name": "datumBetaling",
           "sh:path": "http://purl.org/dc/terms/date"
         },
         {
           "sh:class": "https://schema.org/MonetaryAmount",
-          "sh:description": {
-            "nl": "Het te betalen geldbedrag."
-          },
+          "sh:description": "Het te betalen geldbedrag.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "geldsom"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#geldsom"
+          "sh:name": "geldsom",
+          "sh:path": "https://data.vlaanderen.be/ns/sanctie#geldsom"
         }
       ],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#VervalSanctiemogelijkheidDoorBetalingGeldsom"
+      "sh:targetClass": "https://data.vlaanderen.be/ns/sanctie#VervalSanctiemogelijkheidDoorBetalingGeldsom"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#RechtsbrononderdeelShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#RechtsbrononderdeelShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "qb:codeList": "https://data.vlaanderen.be/id/conceptscheme/TypeRechtsbrononderdeel",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "Het type van het rechtsbrononderdeel."
-          },
+          "sh:description": "Het type van het rechtsbrononderdeel.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "type"
-          },
+          "sh:name": "type",
           "sh:path": "http://purl.org/dc/terms/type"
         }
       ],
       "sh:targetClass": "http://data.europa.eu/eli/ontology#LegalResourceSubdivision"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#PeriodeShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#PeriodeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-          "sh:description": {
-            "nl": "Aanvang van de tijdsduur."
-          },
+          "sh:description": "Aanvang van de tijdsduur.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "begin"
-          },
+          "sh:name": "begin",
           "sh:path": "http://data.europa.eu/m8g/startTime"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-          "sh:description": {
-            "nl": "Einde vd tijdsduur."
-          },
+          "sh:description": "Einde vd tijdsduur.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "einde"
-          },
+          "sh:name": "einde",
           "sh:path": "http://data.europa.eu/m8g/endTime"
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/PeriodOfTime"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#JurisdictieShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#JurisdictieShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:class": "http://purl.org/dc/terms/Location",
-          "sh:description": {
-            "nl": "Ruimtelijk gebied of benoemde plaats waarmee de Jurisdictie samenvalt."
-          },
+          "sh:description": "Ruimtelijk gebied of benoemde plaats waarmee de Jurisdictie samenvalt.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "plaats"
-          },
+          "sh:name": "plaats",
           "sh:path": "https://data.vlaanderen.be/ns/generiek#plaats"
         }
       ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/persoon#Inwonerschap.jurisdictie"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#PlaatsShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#PlaatsShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:class": "http://www.w3.org/ns/locn#Geometry",
-          "sh:description": {
-            "nl": "Geometrie van de plaats of het gebied."
-          },
+          "sh:description": "Geometrie van de plaats of het gebied.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "geometrie"
-          },
+          "sh:name": "geometrie",
           "sh:path": "http://www.w3.org/ns/locn#geometry"
         },
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "nl": "Naam van de plaats of van het gebied."
-          },
+          "sh:description": "Naam van de plaats of van het gebied.",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "plaatsnaam"
-          },
+          "sh:name": "plaatsnaam",
           "sh:path": "http://www.w3.org/2000/01/rdf-schema#label"
         }
       ],
       "sh:targetClass": "http://purl.org/dc/terms/Location"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#ContactInfoShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#ContactInfoShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "nl": "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen."
-          },
+          "sh:description": "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "aanschrijfvorm"
-          },
+          "sh:name": "aanschrijfvorm",
           "sh:path": "http://www.w3.org/2006/vcard/ns#honorific-prefix"
         },
         {
           "sh:class": "http://www.w3.org/ns/locn#Address",
-          "sh:description": {
-            "nl": "Adres dat men kan aanschrijven of bezoeken."
-          },
+          "sh:description": "Adres dat men kan aanschrijven of bezoeken.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "adres"
-          },
+          "sh:name": "adres",
           "sh:path": "http://www.w3.org/ns/locn#address"
         },
         {
-          "sh:description": {
-            "nl": "Periode waarin contact kan worden opgenomen."
-          },
+          "sh:description": "Periode waarin contact kan worden opgenomen.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "beschikbaarheid"
-          },
+          "sh:name": "beschikbaarheid",
           "sh:path": "http://schema.org/hoursAvailable"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Naam van bvb de persoon die men kan contacteren."
-          },
+          "sh:description": "Naam van bvb de persoon die men kan contacteren.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "contactnaam"
-          },
+          "sh:name": "contactnaam",
           "sh:path": "http://xmlns.com/foaf/0.1/name"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Email-adres waarnaar men kan mailen."
-          },
+          "sh:description": "Email-adres waarnaar men kan mailen.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "email"
-          },
+          "sh:name": "email",
           "sh:path": "http://schema.org/email"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Faxnummer waarnaar men kan faxen."
-          },
+          "sh:description": "Faxnummer waarnaar men kan faxen.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "fax"
-          },
+          "sh:name": "fax",
           "sh:path": "http://schema.org/faxNumber"
         },
         {
           "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "nl": "Uren waarbinnen contact kan worden opgenomen."
-          },
+          "sh:description": "Uren waarbinnen contact kan worden opgenomen.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "openingsuren"
-          },
+          "sh:name": "openingsuren",
           "sh:path": "http://schema.org/openingHours"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Telefoonnummer waarop men kan bellen."
-          },
+          "sh:description": "Telefoonnummer waarop men kan bellen.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "telefoon"
-          },
+          "sh:name": "telefoon",
           "sh:path": "http://schema.org/telephone"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "sh:description": {
-            "nl": "Website waarnaar men kan surfen."
-          },
+          "sh:description": "Website waarnaar men kan surfen.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "website"
-          },
+          "sh:name": "website",
           "sh:path": "http://xmlns.com/foaf/0.1/page"
         }
       ],
       "sh:targetClass": "http://schema.org/ContactPoint"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#GeografischeNaamShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#GeografischeNaamShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#GetypeerdeStringShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#GetypeerdeStringShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#BestuurlijkSepotTypeShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#BestuurlijkSepotTypeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#GepleegdFeitTypeShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#GepleegdFeitTypeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#UitsluitingTypeShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#UitsluitingTypeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#VerbeurdverklaringTypeShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#VerbeurdverklaringTypeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#AlternatieveSanctieTypeShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#AlternatieveSanctieTypeShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#BeslissingBeboetingsinstantieResultaatShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#BeslissingBeboetingsinstantieResultaatShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#BetalingStatusShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#OnmiddellijkeInningStatusShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#IdentificatorShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#BetalingStatusShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#IdentificatorShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "nl": "String gebruikt om het object uniek te identificeren. "
-          },
+          "sh:description": "String gebruikt om het object uniek te identificeren. ",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "identificator"
-          },
+          "sh:name": "identificator",
           "sh:path": "http://www.w3.org/2004/02/skos/core#notation"
         },
         {
-          "sh:class": "http://www.w3.org/ns/prov#Agent",
-          "sh:description": {
-            "nl": "Link naar de agent die de identificator heeft uitgegeven."
-          },
+          "sh:class": "http://purl.org/dc/terms/Agent",
+          "sh:description": "Link naar de agent die de identificator heeft uitgegeven.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "toegekend door"
-          },
+          "sh:name": "toegekendDoor",
           "sh:path": "http://purl.org/dc/terms/creator"
         }
       ],
       "sh:targetClass": "http://www.w3.org/ns/adms#Identifier"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#AdresvoorstellingShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#AdresvoorstellingShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "nl": "Hoogste Administratieve eenheid vh adres, doorgaans een land."
-          },
+          "sh:description": "Hoogste Administratieve eenheid vh adres, doorgaans een land.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "administratieve eenheid niveau 1"
-          },
+          "sh:name": "administratieveEenheidNiveau1",
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL1"
         },
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "nl": "De regio vh adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat."
-          },
+          "sh:description": "De regio vh adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "administratieve eenheid niveau 2"
-          },
+          "sh:name": "administratieveEenheidNiveau2",
           "sh:path": "http://www.w3.org/ns/locn#adminUnitL2"
         },
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "nl": "Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is"
-          },
+          "sh:description": "Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "adresgebied"
-          },
+          "sh:name": "adresgebied",
           "sh:path": "http://www.w3.org/ns/locn#addressArea"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."
-          },
+          "sh:description": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "busnummer"
-          },
+          "sh:name": "busnummer",
           "sh:path": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer"
         },
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "nl": "Gemeentenaam vh adres."
-          },
+          "sh:description": "Gemeentenaam vh adres.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "gemeentenaam"
-          },
+          "sh:name": "gemeentenaam",
           "sh:path": "https://data.vlaanderen.be/ns/adres#gemeentenaam"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."
-          },
+          "sh:description": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "huisnummer"
-          },
+          "sh:name": "huisnummer",
           "sh:path": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer"
         },
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "nl": "Land waarin het adres gelegen is."
-          },
+          "sh:description": "Land waarin het adres gelegen is.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "land"
-          },
+          "sh:name": "land",
           "sh:path": "https://data.vlaanderen.be/ns/adres#land"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc."
-          },
-          "sh:name": {
-            "nl": "locatieaanduiding"
-          },
+          "sh:description": "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc.",
+          "sh:name": "locatieaanduiding",
           "sh:path": "http://www.w3.org/ns/locn#locatorDesignator"
         },
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "nl": "Naam of omschrijving vh het geografisch object dat de adreslocator aanduidt."
-          },
-          "sh:name": {
-            "nl": "locatienaam"
-          },
+          "sh:description": "Naam of omschrijving vh het geografisch object dat de adreslocator aanduidt.",
+          "sh:name": "locatienaam",
           "sh:path": "http://www.w3.org/ns/locn#locatorName"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Postbusnummer in een postkantoor."
-          },
+          "sh:description": "Postbusnummer in een postkantoor.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "postbus"
-          },
+          "sh:name": "postbus",
           "sh:path": "http://www.w3.org/ns/locn#poBox"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."
-          },
+          "sh:description": "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "postcode"
-          },
+          "sh:name": "postcode",
           "sh:path": "http://www.w3.org/ns/locn#postCode"
         },
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "nl": "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."
-          },
+          "sh:description": "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "postnaam"
-          },
+          "sh:name": "postnaam",
           "sh:path": "http://www.w3.org/ns/locn#postName"
         },
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "nl": "Straatnaam vh adres."
-          },
+          "sh:description": "Straatnaam vh adres.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "straatnaam"
-          },
+          "sh:name": "straatnaam",
           "sh:path": "http://www.w3.org/ns/locn#thoroughfare"
         },
         {
           "sh:class": "https://data.vlaanderen.be/ns/adres#Adres",
-          "sh:description": "",
+          "sh:description": "Adres waarvan de adresvoorstelling is afgeleid.",
+          "sh:maxCount": "1",
+          "sh:name": "verwijstNaar",
           "sh:path": "https://data.vlaanderen.be/ns/adres#verwijstNaar"
         },
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "nl": "Het complete adres in één string, al dan niet geformatteerd."
-          },
+          "sh:description": "Het complete adres in één string, al dan niet geformatteerd.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "volledig adres"
-          },
+          "sh:name": "volledigAdres",
           "sh:path": "http://www.w3.org/ns/locn#fullAddress"
         }
       ],
       "sh:targetClass": "http://www.w3.org/ns/locn#Address"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#GeometrieShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#GeometrieShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "nl": "Geometrie uitgedrukt in gml-formaat."
-          },
+          "sh:description": "Geometrie uitgedrukt in gml-formaat.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "gml"
-          },
+          "sh:name": "gml",
           "sh:path": "http://www.opengis.net/ont/geosparql#asGML"
         },
         {
           "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": {
-            "nl": "Geometrie uitgedrukt in wkt-formaat."
-          },
+          "sh:description": "Geometrie uitgedrukt in wkt-formaat.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "wkt"
-          },
+          "sh:name": "wkt",
           "sh:path": "http://www.opengis.net/ont/geosparql#asWKT"
         }
       ],
       "sh:targetClass": "http://www.w3.org/ns/locn#Geometry"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#OrganisatieShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#VestigingShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:class": "http://schema.org/ContactPoint",
-          "sh:description": {
-            "nl": "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."
-          },
-          "sh:name": {
-            "nl": "contactinfo"
-          },
-          "sh:path": "http://schema.org/contactPoint"
-        },
-        {
-          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "nl": "Naam waarmee de organisatie bij voorkeur wordt aangeduid."
-          },
+          "sh:description": "Adres vd vestiging.",
           "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "voorkeursnaam"
-          },
-          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
-        }
-      ],
-      "sh:targetClass": "http://www.w3.org/ns/org#Organization"
-    },
-    {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#VestigingShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "http://schema.org/ContactPoint",
-          "sh:description": {
-            "nl": "Adres vd vestiging."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "vestigingsadres"
-          },
+          "sh:name": "vestigingsAdres",
           "sh:path": "http://www.w3.org/ns/org#siteAddress"
         }
       ],
       "sh:targetClass": "http://www.w3.org/ns/org#Site"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#PersoonShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#PersoonShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie."
-          },
+          "sh:description": "Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "achternaam"
-          },
+          "sh:name": "achternaam",
           "sh:path": "http://xmlns.com/foaf/0.1/familyName"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Alternatief voor de volledige naam vd persoon."
-          },
-          "sh:name": {
-            "nl": "alternatieve naam"
-          },
+          "sh:description": "Alternatief voor de volledige naam vd persoon.",
+          "sh:name": "alternatieveNaam",
           "sh:path": "https://data.vlaanderen.be/ns/persoon#alternatieveNaam"
         },
         {
           "sh:class": "http://schema.org/ContactPoint",
-          "sh:description": {
-            "nl": "Informatie zoals email, telefoon, ... die toelaat de Persoon te contacteren."
-          },
+          "sh:description": "Informatie zoals email, telefoon, ... die toelaat de Persoon te contacteren.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "contactinfo"
-          },
+          "sh:name": "contactinfo",
           "sh:path": "http://schema.org/contactPoint"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Volledige naam vd persoon bij geboorte."
-          },
+          "sh:description": "Volledige naam vd persoon bij geboorte.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "geboortenaam"
-          },
+          "sh:name": "geboortenaam",
           "sh:path": "http://www.w3.org/ns/person#birthName"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Belangrijkste vd voornamen ve persoon."
-          },
+          "sh:description": "Belangrijkste vd voornamen ve persoon.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "gebruikte voornaam"
-          },
+          "sh:name": "gebruikteVoornaam",
           "sh:path": "https://data.vlaanderen.be/ns/persoon#gebruikteVoornaam"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "Het feit of de persoon een man of een vrouw is."
-          },
+          "sh:description": "Het feit of de persoon een man of een vrouw is.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "geslacht"
-          },
+          "sh:name": "geslacht",
           "sh:path": "https://data.vlaanderen.be/ns/persoon#geslacht"
         },
         {
           "sh:class": "https://data.vlaanderen.be/ns/persoon#Geboorte",
-          "sh:description": {
-            "nl": "Verwijst naar de geboortegegevens vd persoon."
-          },
+          "sh:description": "Verwijst naar de geboortegegevens vd persoon.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "heeft geboorte"
-          },
+          "sh:name": "heeftGeboorte",
           "sh:path": "https://data.vlaanderen.be/ns/persoon#heeftGeboorte"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Achternaam gebaseerd op de voornaam vd vader ve persoon."
-          },
+          "sh:description": "Achternaam gebaseerd op de voornaam vd vader ve persoon.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "patroniem"
-          },
+          "sh:name": "patroniem",
           "sh:path": "http://www.w3.org/ns/person#patronymicName"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam."
-          },
+          "sh:description": "De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "volledige naam"
-          },
+          "sh:name": "volledigeNaam",
           "sh:path": "https://data.vlaanderen.be/ns/persoon#volledigeNaam"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Naam die een kind bij geboorte wordt gegeven. Onderscheidt het kind van de andere kinderen in de familie."
-          },
+          "sh:description": "Naam die een kind bij geboorte wordt gegeven. Onderscheidt het kind van de andere kinderen in de familie.",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "voornaam"
-          },
+          "sh:name": "voornaam",
           "sh:path": "http://xmlns.com/foaf/0.1/givenName"
         }
       ],
       "sh:targetClass": "http://www.w3.org/ns/person#Person"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#AgentShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "http://www.w3.org/ns/prov#Agent"
-    },
-    {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#LocatieShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#LocatieShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Tekstuele beschrijving van de Locatie."
-          },
+          "sh:class": "http://www.w3.org/ns/locn#Geometry",
+          "sh:description": "Geometrie van de Locatie.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "omschrijving"
-          },
+          "sh:name": "geometrie",
+          "sh:path": "https://data.vlaanderen.be/ns/generiek#geometrie"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
+          "sh:description": "Tekstuele beschrijving van de Locatie.",
+          "sh:maxCount": "1",
+          "sh:name": "omschrijving",
           "sh:path": "http://purl.org/dc/terms/description"
         }
       ],
       "sh:targetClass": "http://www.w3.org/ns/prov#Location"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#GeregistreerdeOrganisatieShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#GeregistreerdeOrganisatieShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:class": "http://www.w3.org/ns/org#Site",
-          "sh:description": {
-            "nl": "Verwijst naar de wettelijk geregistreerde vestiging van de organisatie. Is voor een formele organisatie doorgaans verplicht."
-          },
-          "sh:name": {
-            "nl": "heeft geregistreerde vestiging"
-          },
+          "sh:description": "Verwijst naar de wettelijk geregistreerde vestiging van de organisatie. Is voor een formele organisatie doorgaans verplicht.",
+          "sh:name": "heeftGeregistreerdeVestiging",
           "sh:path": "http://www.w3.org/ns/org#hasRegisteredSite"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "Geeft aan of de rechtspersoonlijkheid van de geregistreerde organisatie deze is van een natuurlijk persoon of van een rechtspersoon. "
-          },
+          "sh:description": "Geeft aan of de rechtspersoonlijkheid van de geregistreerde organisatie deze is van een natuurlijk persoon of van een rechtspersoon. ",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "rechtspersoonlijkheid"
-          },
+          "sh:name": "rechtspersoonlijkheid",
           "sh:path": "https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "Status van de geregistreerde organisatie."
-          },
+          "sh:description": "Status van de geregistreerde organisatie.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "rechtstoestand"
-          },
+          "sh:name": "rechtstoestand",
           "sh:path": "https://data.vlaanderen.be/ns/organisatie#rechtstoestand"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "Juridisch statuut van de geregistreerde organisatie."
-          },
+          "sh:description": "Juridisch statuut van de geregistreerde organisatie.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "rechtsvorm"
-          },
+          "sh:name": "rechtsvorm",
           "sh:path": "https://data.vlaanderen.be/ns/organisatie#rechtsvorm"
         },
         {
           "sh:class": "http://www.w3.org/ns/adms#Identifier",
-          "sh:description": {
-            "nl": "Identificator dat de organisatie verkreeg bij registratie."
-          },
+          "sh:description": "Identificator dat de organisatie verkreeg bij registratie.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "registratie"
-          },
+          "sh:name": "registratie",
           "sh:path": "http://www.w3.org/ns/regorg#registration"
         },
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": {
-            "nl": "Wettelijk geregistreerde naam vd organisatie."
-          },
+          "sh:description": "Wettelijk geregistreerde naam vd organisatie.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "wettelijke naam"
-          },
+          "sh:name": "wettelijkeNaam",
           "sh:path": "http://www.w3.org/ns/regorg#legalName"
         }
       ],
       "sh:targetClass": "http://www.w3.org/ns/regorg#RegisteredOrganization"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#AdresShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#AdresShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
-      "sh:property": [],
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/adres#AdresseerbaarObject",
+          "sh:description": "Adresseerbaar object waaraan het adres is toegekend.",
+          "sh:name": "isToegekendAan",
+          "sh:path": "https://data.vlaanderen.be/ns/adres#isToegekendAan"
+        }
+      ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/adres#Adres"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#StukShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#AdresseerbaarObjectShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/adres#AdresseerbaarObject"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#StukShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "https://data.vlaanderen.be/ns/dossier#Stuk"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#GebouwShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#GebouwShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
-      "sh:property": [],
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid",
+          "sh:description": "De gebouweenheden die tot het gebouw behoren.",
+          "sh:name": "bestaatUit",
+          "sh:path": "https://data.vlaanderen.be/ns/gebouw#bestaatUit"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/perceel#KadastraalPlanperceel",
+          "sh:description": "De percelen waarmee het gebouw officieel geassocieerd is.",
+          "sh:name": "ligtOp",
+          "sh:path": "https://data.vlaanderen.be/ns/gebouw#ligtOp"
+        }
+      ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/gebouw#Gebouw"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#GebouweenheidShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#GebouweenheidShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#KadastraalPlanperceelShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#KadastraalPlanperceelShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "https://data.vlaanderen.be/ns/perceel#KadastraalPlanperceel"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#RuimtelijkeEenheidGeometrieShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#RuimtelijkeEenheidGeometrieShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#boolean",
-          "sh:description": {
-            "nl": "Geometrie die moet worden gebruikt bv bij voorstelling op kaart."
-          },
+          "sh:description": "Geometrie die moet worden gebruikt bv bij voorstelling op kaart.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "default"
-          },
+          "sh:name": "default",
           "sh:path": "https://data.vlaanderen.be/ns/perceel#default"
         },
         {
           "sh:class": "http://www.w3.org/ns/locn#Geometry",
-          "sh:description": {
-            "nl": "Geometrische voorstelling van een ruimtelijke eenheid."
-          },
+          "sh:description": "Geometrische voorstelling van een ruimtelijke eenheid.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "geometrie"
-          },
+          "sh:name": "geometrie",
           "sh:path": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheidGeometrie.geometrie"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "De methode geeft aan op welke manier de geometrie tot stand is gekomen."
-          },
+          "sh:description": "De methode geeft aan op welke manier de geometrie tot stand is gekomen.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "methode"
-          },
+          "sh:name": "methode",
           "sh:path": "https://data.vlaanderen.be/ns/perceel#methode"
         }
       ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheidGeometrie"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#DomicilieShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#DomicilieShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "https://data.vlaanderen.be/ns/persoon#Domicilie"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#GeboorteShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#GeboorteShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "https://data.vlaanderen.be/ns/persoon#Geboorte"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#GeregistreerdPersoonShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#GeregistreerdPersoonShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:class": "http://purl.org/dc/terms/Jurisdiction",
-          "sh:description": {
-            "nl": "Jurisdictie waarbinnen het Inwonerschap vd persoon is gedefinieerd."
-          },
-          "sh:name": {
-            "nl": "inwonerschap"
-          },
+          "sh:description": "Jurisdictie waarbinnen het Inwonerschap vd persoon is gedefinieerd.",
+          "sh:name": "inwonerschap",
           "sh:path": "http://www.w3.org/ns/person#residency"
         },
         {
           "sh:class": "http://www.w3.org/ns/adms#Identifier",
-          "sh:description": {
-            "nl": "Identificatiecode vd persoon ih register."
-          },
+          "sh:description": "Identificatiecode vd persoon ih register.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "registratie"
-          },
+          "sh:name": "registratie",
           "sh:path": "https://data.vlaanderen.be/ns/persoon#registratie"
         }
       ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/persoon#Inwonerschap.geregistreerdPersoon"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#InwonerschapShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#InwonerschapShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:class": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon",
-          "sh:description": {
-            "nl": "Referentie naar verbonden klasse."
-          },
+          "sh:description": "Referentie naar verbonden klasse.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "Geregistreerd Persoon"
-          },
+          "sh:name": "GeregistreerdPersoon",
           "sh:path": "https://data.vlaanderen.be/ns/persoon#Inwonerschap.geregistreerdPersoon"
         },
         {
           "sh:class": "http://purl.org/dc/terms/Jurisdiction",
-          "sh:description": {
-            "nl": "Referentie naar verbonden klasse."
-          },
+          "sh:description": "Referentie naar verbonden klasse.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "Jurisdictie"
-          },
+          "sh:name": "Jurisdictie",
           "sh:path": "https://data.vlaanderen.be/ns/persoon#Inwonerschap.jurisdictie"
         },
         {
           "sh:class": "https://data.vlaanderen.be/ns/persoon#Domicilie",
-          "sh:description": {
-            "nl": "Plaats waar een persoon verblijft."
-          },
+          "sh:description": "Plaats waar een persoon verblijft.",
           "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "heeft verblijfplaats"
-          },
+          "sh:name": "heeftVerblijfplaats",
           "sh:path": "https://data.vlaanderen.be/ns/persoon#heeftVerblijfplaats"
         }
       ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/persoon#Inwonerschap"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#WegsegmentShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#WegsegmentShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "https://data.vlaanderen.be/ns/weg#Wegsegment"
     },
     {
-      "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/kandidaatstandaard/2022-06-23#GeldbedragShape",
+      "@id": "https://data.vlaanderen.be/shacl/bestuurlijk-sanctieregister-ap#GeldbedragShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "De munteenheid."
-          },
+          "sh:description": "De munteenheid.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "valuta"
-          },
+          "sh:name": "valuta",
           "sh:path": "https://schema.org/currency"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#double",
-          "sh:description": {
-            "nl": "De kwantitatieve waarde."
-          },
+          "sh:description": "De kwantitatieve waarde.",
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:name": {
-            "nl": "waarde"
-          },
+          "sh:name": "waarde",
           "sh:path": "https://schema.org/value"
         }
       ],

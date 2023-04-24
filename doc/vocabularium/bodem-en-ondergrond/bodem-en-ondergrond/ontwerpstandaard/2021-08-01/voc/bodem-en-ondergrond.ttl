@@ -14,23 +14,11 @@ skos:Concept a rdfs:Class;
     "Bemonsteringsobjecttype"@nl,
     "Materiaalklasse"@nl .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_Curvewaardepaar.geometrie> a owl:ObjectProperty;
-  rdfs:comment "Geometrie van het element."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_CurveWaardepaar>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:range <http://www.opengis.net/ont/geosparql#Curve> .
-
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_Curvewaardepaar.laag> a owl:ObjectProperty;
   rdfs:comment "Overeenstemmend Profielelement."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_CurveWaardepaar>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_Curvewaardepaar.waarde> a owl:ObjectProperty;
-  rdfs:comment "Waarde van het element."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_CurveWaardepaar>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:range <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.diepte> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Van belang als het Bemonsteringsobject bv een Boorgat is en er is niet perfect verticaal geboord zodat diepte en lengte van elkaar verschillen."@nl;
@@ -53,6 +41,11 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld> .
 
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Boring> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "In het vocabularium Bodem & Ondergrond gebruiken we deze klasse louter als generalisatie van Grondboringen en Bodemboringen."@nl;
+  rdfs:comment "Het aanbrengen van een gat in iets dmv een boor."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond> .
+
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Erkenning> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Bv de toelating aan een boormaatschappij om Boringen uit te voeren."@nl;
   rdfs:comment "Officiële toelating toegekend aan een Persoon of Organisatie om een bepaald soort activiteiten uit te oefenen."@nl;
@@ -60,12 +53,12 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/besluit#Besluit> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting.fractiemetingresultaat> a owl:ObjectProperty;
-  rdfs:comment "Het geobserveerdKenmerk."@nl,
-    "Het resultaat van de fractiemeting."@nl;
+  rdfs:comment "Het resultaat van de fractiemeting."@nl,
+    "Het geobserveerdKenmerk."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>,
-    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat> .
+  rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat>,
+    <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat.fractiemetingwaarde> a owl:ObjectProperty;
   rdfs:comment "Eén waarde in het resultaat van een Fractiemeting."@nl;
@@ -96,11 +89,6 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:range schemas:QuantitativeValue .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Grondwaterstand> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Het verloop van de Grondwaterstand wordt voorgesteld als een DiscreetPuntbereik, dwz dat ze verandert in discrete stappen (weergegeven door punten langs de Curve van de Boring) in functie van de diepte."@nl;
-  rdfs:comment "Bij het boren waargenomen peil van het grondwater op verschillende dieptes."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Interpretatie> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "In de context van Observaties en Metingen is een Interpretatie het resultaat van het toepassen van bestaande kennis op bestaande Observaties. Het onderscheid tussen een Interpretatie en een \"gewone\" Observatie is niet absoluut, in beide gevallen gaat het over het schatten van de waarde van een kenmerk. In het geval van een Interpretatie heeft de Observatie echter meer betekenis (meer \"semantische lading\") omdat er meer theorie en/of verwerking aan te pas kwam."@nl;
@@ -163,14 +151,23 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Toegewezen taak."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement.geometrie> a owl:ObjectProperty;
-  rdfs:comment "Geometrie vh Profielelement."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:range <http://www.opengis.net/ont/geosparql#Curve> .
+<http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry> a rdf:Property;
+  rdfs:label "geometrie"@nl .
 
-<http://purl.org/cd/terms/type> a rdf:Property;
+<http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value> a rdf:Property;
+  rdfs:label "waarde"@nl .
+
+<http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingCurve.shape> a rdf:Property;
+  rdfs:label "geometrie"@nl .
+
+dc:type a rdf:Property;
   rdfs:label "type"@nl .
+
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_CurveWaardepaar> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Laat toe om in het geval van een DiscreetCurvebereik een waardepaar te associëren met een Profielelement (bv een Laag in een Bodemprofiel)."@nl;
+  rdfs:comment "Een Curvewaardepaar dat overeenstemt met een Profielelement."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Diepte> a owl:Class;
   rdfs:comment "Verticale maat naar beneden vanaf het grondoppervlak."@nl;
@@ -196,24 +193,18 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Resultaat van een Meetreeksobservatie."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_CurveWaardepaar> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Laat toe om in het geval van een DiscreetCurvebereik een waardepaar te associëren met een Profielelement (bv een Laag in een Bodemprofiel)."@nl;
-  rdfs:comment "Een Curvewaardepaar dat overeenstemt met een Profielelement."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Het gaat over kenmerken die typisch zijn in de context van Bemonstering bv bij Boringen het maaiveld en de diepte."@nl;
-  rdfs:comment "RuimtelijkBemonsteringsobject met bijkomende kenmerken relevant voor het domein Bodem en Ondergrond."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature> .
-
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Bv een Laag."@nl;
   rdfs:comment "Onderdeel vh Profiel."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature>,
     <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve> .
+
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Het gaat over kenmerken die typisch zijn in de context van Bemonstering bv bij Boringen het maaiveld en de diepte."@nl;
+  rdfs:comment "RuimtelijkBemonsteringsobject met bijkomende kenmerken relevant voor het domein Bodem en Ondergrond."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Bv hoe de lengte van een Object verandert met de temperatuur (door uitzetting). We kunnen dit uitdrukken als y=f(x) waarbij in het vb y de lengte is en x de temperatuur. De variabele x noemen we de meetpuntparameter en y is de meetwaardeparameter. De meetwaardeparameter is in feite het geobserveerdKenmerk. Sommige types van Meetreeksen zijn zo specifiek dat we ze apart hebben gemodelleerd, bvb een Bereikobservatie waarbij een geobserveerdKenmerk varieert volgens positie of tijd."@nl;
@@ -254,7 +245,10 @@ skos:Concept a rdfs:Class;
     foaf:name "Data Vlaanderen"
   ];
   rdfs:seeAlso skos:Concept,
-    <http://purl.org/cd/terms/type>;
+    <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry>,
+    <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value>,
+    <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingCurve.shape>,
+    dc:type;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [

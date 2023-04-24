@@ -112,13 +112,6 @@
     },
     {
       "name": {
-        "nl": "BetrokkenPartij"
-      },
-      "@id": "http://def.isotc211.org/iso19115/2006/CitationAndResponsiblePartyInformation#CI_ResponsibleParty",
-      "@type": "rdfs:Class"
-    },
-    {
-      "name": {
         "nl": "Kwaliteitselement"
       },
       "@id": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element",
@@ -212,7 +205,7 @@
       "name": {
         "nl": "Proces"
       },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
       "@type": "rdfs:Class"
     },
     {
@@ -342,16 +335,142 @@
   ],
   "properties": [
     {
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#gegenereerdeObservatie",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringsobject.identificator",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Verwijzing naar de verkregen Observatie."
+        "nl": "Verwijzing naar de informatie die het Bemonsteringsobject uniek identificeert."
       },
       "usage": {
-        "nl": "Het Proces dat gebruikt werd om het resultaat van de Observatie te verkrijgen levert mogelijk ook resultaten voor andere Observaties."
+        "nl": "Bv het uniek nummer dat aan een Monster wordt toegekend of het numer van een meetstation."
       },
       "domain": [
-        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process"
+        "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+      ],
+      "range": [
+        "http://www.w3.org/ns/adms#Identifier"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.source",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "domain": [
+        "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex"
+      ],
+      "range": [
+        "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.target",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "domain": [
+        "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex"
+      ],
+      "range": [
+        "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.bemonsteringsProces",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "domain": [
+        "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep"
+      ],
+      "range": [
+        "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.monster",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "domain": [
+        "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep"
+      ],
+      "range": [
+        "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Object.waardeverschaffer",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Observaties die op het Object gebeuren."
+      },
+      "domain": [
+        "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+      ],
+      "range": [
+        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.identificator",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "De persoon of het ding dat dient om de observatie vast te stellen."
+      },
+      "domain": [
+        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+      ],
+      "range": [
+        "http://www.w3.org/ns/adms#Identifier"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.opdracht",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Opdracht in het kader waarvan de Observatie plaatsvindt."
+      },
+      "domain": [
+        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Agent die de Observatie heeft uitgevoerd."
+      },
+      "domain": [
+        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+      ],
+      "range": [
+        "http://purl.org/dc/terms/Agent"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.source",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "domain": [
+        "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext"
       ],
       "range": [
         "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
@@ -373,145 +492,19 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.source",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#gegenereerdeObservatie",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Referentie naar verbonden klasse."
-      },
-      "domain": [
-        "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext"
-      ],
-      "range": [
-        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Agent die de Observatie heeft uitgevoerd."
-      },
-      "domain": [
-        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
-      ],
-      "range": [
-        "http://purl.org/dc/terms/Agent"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.opdracht",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Opdracht in het kader waarvan de Observatie plaatsvindt."
-      },
-      "domain": [
-        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.identificator",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "De persoon of het ding dat dient om de observatie vast te stellen."
-      },
-      "domain": [
-        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
-      ],
-      "range": [
-        "http://www.w3.org/ns/adms#Identifier"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Object.waardeverschaffer",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Observaties die op het Object gebeuren."
-      },
-      "domain": [
-        "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
-      ],
-      "range": [
-        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.monster",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Referentie naar verbonden klasse."
-      },
-      "domain": [
-        "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep"
-      ],
-      "range": [
-        "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Monstervoorbereiding.bemonsteringsProces",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Referentie naar verbonden klasse."
-      },
-      "domain": [
-        "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep"
-      ],
-      "range": [
-        "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.target",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Referentie naar verbonden klasse."
-      },
-      "domain": [
-        "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex"
-      ],
-      "range": [
-        "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.source",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Referentie naar verbonden klasse."
-      },
-      "domain": [
-        "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex"
-      ],
-      "range": [
-        "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringsobject.identificator",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Verwijzing naar de informatie die het Bemonsteringsobject uniek identificeert."
+        "nl": "Verwijzing naar de verkregen Observatie."
       },
       "usage": {
-        "nl": "Bv het uniek nummer dat aan een Monster wordt toegekend of het numer van een meetstation."
+        "nl": "Het Proces dat gebruikt werd om het resultaat van de Observatie te verkrijgen levert mogelijk ook resultaten voor andere Observaties."
       },
       "domain": [
-        "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+        "http://def.isotc211.org/iso19156/2011/Observation#OM_Process"
       ],
       "range": [
-        "http://www.w3.org/ns/adms#Identifier"
+        "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
       ],
       "generalization": []
     }
@@ -519,338 +512,16 @@
   "externalproperties": [
     {
       "name": {
-        "nl": "type"
+        "nl": "maat"
       },
-      "@id": "http://purl.org/cd/terms/type",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "type"
-      },
-      "@id": "http://purl.org/cd/terms/type",
+      "@id": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure.value",
       "@type": "rdf:Property"
     },
     {
       "name": {
         "nl": "resultaat"
       },
-      "@id": "http://def.isotc211.org/iso19156/2011/TruthObservation#OM_TruthObservation.result",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "resultaat"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/TimeSeriesObservation#OM_TimeSeriesObservation.result",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "resultaat"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/TemporalObservation#OM_TemporalObservation.result",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "monstertype"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "grootte"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.size",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "bemonsteringstijdstip"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "bemonsteringsmethode"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "bemonsteringsplaats"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "materiaalklasse"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.materialClass",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "huidigeLocatie"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "tijdstip"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "verwerkingsdetails"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "procesoperator"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processOperator",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "geometrie"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "positioneleNauwkeurigheid"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.positionalAccuracy",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "gehostPlatform"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "geometrie"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface.shape",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "geometrie"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/SamplingSolid#SF_SamplingSolid.shape",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "geometrie"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "rol"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.role",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "geassocieerdBemonsteringsobject"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "lid"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection.member",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "bemonsterdObject"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "parameter"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "herkomst"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "geometrie"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve.shape",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "resultaat"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/PointCoverageObservation#OM_PointCoverageObservation.result",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "rol"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "geassocieerdeObservatie"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "geassocieerdeObservatie"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "geldigeTijd"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "resultaattijd"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "resultaatkwaliteit"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "resultaat"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "procedure"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.procedure",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "fenomeentijd"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "parameter"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "geobserveerdKenmerk"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "metadata"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.metadata",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "geobserveerdObject"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "waarde"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "naam"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "resultaat"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement.result",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "resultaat"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/GeometryObservation#OM_GeometryObservation.result",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "resultaat"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation.result",
-      "@type": "rdf:Property"
-    },
-    {
-      "name": {
-        "nl": "resultaat"
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/CountObservation#OM_CountObservation.result",
+      "@id": "http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation.result",
       "@type": "rdf:Property"
     },
     {
@@ -864,14 +535,336 @@
       "name": {
         "nl": "resultaat"
       },
-      "@id": "http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation.result",
+      "@id": "http://def.isotc211.org/iso19156/2011/CountObservation#OM_CountObservation.result",
       "@type": "rdf:Property"
     },
     {
       "name": {
-        "nl": "maat"
+        "nl": "resultaat"
       },
-      "@id": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure.value",
+      "@id": "http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation.result",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "resultaat"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/GeometryObservation#OM_GeometryObservation.result",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "resultaat"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement.result",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "naam"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "waarde"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "geobserveerdObject"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "metadata"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.metadata",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "geobserveerdKenmerk"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "parameter"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "fenomeentijd"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "procedure"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.procedure",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "resultaat"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "resultaatkwaliteit"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "resultaattijd"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "geldigeTijd"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "geassocieerdeObservatie"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "geassocieerdeObservatie"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "rol"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "resultaat"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/PointCoverageObservation#OM_PointCoverageObservation.result",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "geometrie"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve.shape",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "herkomst"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "parameter"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "bemonsterdObject"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "lid"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection.member",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "geassocieerdBemonsteringsobject"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "rol"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.role",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "geometrie"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "geometrie"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingSolid#SF_SamplingSolid.shape",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "geometrie"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface.shape",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "gehostPlatform"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "positioneleNauwkeurigheid"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.positionalAccuracy",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "geometrie"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "procesoperator"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processOperator",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "verwerkingsdetails"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processingDetails",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "tijdstip"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "huidigeLocatie"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "materiaalklasse"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.materialClass",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "bemonsteringsplaats"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "bemonsteringsmethode"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "bemonsteringstijdstip"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "grootte"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.size",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "monstertype"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "resultaat"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/TemporalObservation#OM_TemporalObservation.result",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "resultaat"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/TimeSeriesObservation#OM_TimeSeriesObservation.result",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "resultaat"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/TruthObservation#OM_TruthObservation.result",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "type"
+      },
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "type"
+      },
+      "@id": "http://purl.org/dc/terms/type",
       "@type": "rdf:Property"
     }
   ],

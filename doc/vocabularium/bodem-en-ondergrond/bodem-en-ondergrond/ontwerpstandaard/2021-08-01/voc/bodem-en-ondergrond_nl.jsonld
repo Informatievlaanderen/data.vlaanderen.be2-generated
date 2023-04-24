@@ -80,6 +80,17 @@
       ]
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Boring",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Het aanbrengen van een gat in iets dmv een boor."
+      },
+      "usage": {
+        "nl": "In het vocabularium Bodem & Ondergrond gebruiken we deze klasse louter als generalisatie van Grondboringen en Bodemboringen."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Diepte",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -134,17 +145,6 @@
       "parents": [
         "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde"
       ]
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Grondwaterstand",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "definition": {
-        "nl": "Bij het boren waargenomen peil van het grondwater op verschillende dieptes."
-      },
-      "usage": {
-        "nl": "Het verloop van de Grondwaterstand wordt voorgesteld als een DiscreetPuntbereik, dwz dat ze verandert in discrete stappen (weergegeven door punten langs de Curve van de Boring) in functie van de diepte."
-      },
-      "parents": []
     },
     {
       "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Interpretatie",
@@ -271,75 +271,92 @@
   ],
   "properties": [
     {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement.geometrie",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_Curvewaardepaar.laag",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Geometrie vh Profielelement."
+        "nl": "Overeenstemmend Profielelement."
       },
       "domain": [
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_CurveWaardepaar"
+      ],
+      "range": [
         "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement"
       ],
-      "range": [
-        "http://www.opengis.net/ont/geosparql#Curve"
-      ],
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetwaarde",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.diepte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Waarde van het geobserveerdKenmerk."
+        "nl": "De Diepte vh Bemonsteringsobject."
       },
       "usage": {
-        "nl": "Datatype is te substitueren door het datatype vd meetwaarde."
+        "nl": "Van belang als het Bemonsteringsobject bv een Boorgat is en er is niet perfect verticaal geboord zodat diepte en lengte van elkaar verschillen."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde"
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject"
       ],
       "range": [
-        "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any"
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Diepte"
       ],
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetpunt",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.ligging",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Waarde van het meetpunt."
+        "nl": "De ligging vh Bemonsteringsobject."
       },
       "usage": {
-        "nl": "Datatype is te substitueren door het datatype vh meetpunt."
+        "nl": "Naast de geometrie zijn bijkomende aanduidingen vd locatie soms nuttig, bv in het geval ve Boorgat in welke gemeente is geboord."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde"
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject"
       ],
       "range": [
-        "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any"
+        "http://www.w3.org/ns/prov#Location"
       ],
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.maaiveld",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Eén waarde in het resultaat van een Meetreeks."
+        "nl": "Het Maaiveld vh Bemonsteringsobject."
+      },
+      "usage": {
+        "nl": "De precieze ligging van het grondoppervlak is bv bij een Boorgat erg belangrijk omdat er andere gegevens tegen afgezet worden (bv de diepte vd Boring)."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat"
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde"
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld"
       ],
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetwaardeparameter",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting.fractiemetingresultaat",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het resultaat van de fractiemeting."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting.fractiemetingresultaat",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
         "nl": "Het geobserveerdKenmerk."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks"
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting"
       ],
       "range": [
         "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
@@ -347,66 +364,24 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetreeksresultaat",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat.fractiemetingwaarde",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Het resultaat van de Meetreeks."
+        "nl": "Eén waarde in het resultaat van een Fractiemeting."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks"
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetpuntparameter",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Het kenmerk in functie waarvan het geobserveerdKenmerk verandert."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks"
-      ],
-      "range": [
-        "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld.hoogte",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Verticale maat naar boven vanaf het grondoppervlak van het maaiveld."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/generiek#DirectePositie"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde.meetpuntwaarde",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Waarde van de fractie."
-      },
-      "domain": [
         "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde"
       ],
-      "range": [
-        "https://schema.org/QuantitativeValue"
-      ],
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde.meetpuntOndergrens",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde.meetpunt",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Ondergrens van een klasse van waarden van meetpunten."
+        "nl": "Waarde van het meetpunt."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde"
@@ -431,10 +406,10 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde.meetpunt",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde.meetpuntOndergrens",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Waarde van het meetpunt."
+        "nl": "Ondergrens van een klasse van waarden van meetpunten."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde"
@@ -445,27 +420,41 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat.fractiemetingwaarde",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde.meetpuntwaarde",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Eén waarde in het resultaat van een Fractiemeting."
+        "nl": "Waarde van de fractie."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat"
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde"
+        "https://schema.org/QuantitativeValue"
       ],
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting.fractiemetingresultaat",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld.hoogte",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Het geobserveerdKenmerk."
+        "nl": "Verticale maat naar boven vanaf het grondoppervlak van het maaiveld."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting"
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/generiek#DirectePositie"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetpuntparameter",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Het kenmerk in functie waarvan het geobserveerdKenmerk verandert."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks"
       ],
       "range": [
         "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
@@ -473,109 +462,78 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting.fractiemetingresultaat",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetreeksresultaat",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Het resultaat van de fractiemeting."
+        "nl": "Het resultaat van de Meetreeks."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting"
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat"
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat"
       ],
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.maaiveld",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetwaardeparameter",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Het Maaiveld vh Bemonsteringsobject."
+        "nl": "Het geobserveerdKenmerk."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks"
+      ],
+      "range": [
+        "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Eén waarde in het resultaat van een Meetreeks."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetpunt",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Waarde van het meetpunt."
       },
       "usage": {
-        "nl": "De precieze ligging van het grondoppervlak is bv bij een Boorgat erg belangrijk omdat er andere gegevens tegen afgezet worden (bv de diepte vd Boring)."
+        "nl": "Datatype is te substitueren door het datatype vh meetpunt."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject"
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld"
+        "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any"
       ],
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.ligging",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetwaarde",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De ligging vh Bemonsteringsobject."
+        "nl": "Waarde van het geobserveerdKenmerk."
       },
       "usage": {
-        "nl": "Naast de geometrie zijn bijkomende aanduidingen vd locatie soms nuttig, bv in het geval ve Boorgat in welke gemeente is geboord."
+        "nl": "Datatype is te substitueren door het datatype vd meetwaarde."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject"
+        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde"
       ],
       "range": [
-        "http://www.w3.org/ns/prov#Location"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.diepte",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "De Diepte vh Bemonsteringsobject."
-      },
-      "usage": {
-        "nl": "Van belang als het Bemonsteringsobject bv een Boorgat is en er is niet perfect verticaal geboord zodat diepte en lengte van elkaar verschillen."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Diepte"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_Curvewaardepaar.waarde",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Waarde van het element."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_CurveWaardepaar"
-      ],
-      "range": [
-        "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_Curvewaardepaar.laag",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Overeenstemmend Profielelement."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_CurveWaardepaar"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_Curvewaardepaar.geometrie",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Geometrie van het element."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_CurveWaardepaar"
-      ],
-      "range": [
-        "http://www.opengis.net/ont/geosparql#Curve"
+        "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any"
       ],
       "generalization": []
     }
@@ -583,16 +541,37 @@
   "externalproperties": [
     {
       "name": {
-        "nl": "type"
+        "nl": "geometrie"
       },
-      "@id": "http://purl.org/cd/terms/type",
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "waarde"
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "geometrie"
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingCurve.shape",
       "@type": "rdf:Property"
     },
     {
       "name": {
         "nl": "type"
       },
-      "@id": "http://purl.org/cd/terms/type",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "type"
+      },
+      "@id": "http://purl.org/dc/terms/type",
       "@type": "rdf:Property"
     }
   ],
