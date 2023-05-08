@@ -30,13 +30,15 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#PeriodeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#GeneriekeNaamShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#GeneriekDatatypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#RecordShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#MomentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#TemporeleEntiteitShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#KenmerktypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#KwaliteitselementShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#PositioneleNauwkeurigheidShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#HerkomstShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#DiscreetCurvebereikShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#GeometrieWaardepaarShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#DiscreetBereikShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#DiscreetBereikObservatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#BoorgatShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#ObjectShape>,
@@ -137,6 +139,11 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#BoorgatmetingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage>;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1
+  ], [
     shacl:class <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole>;
     shacl:description "Het Boorgat dat men observeert."@nl;
     shacl:maxCount 1;
@@ -180,9 +187,15 @@
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation> .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#DiscreetCurvebereikShape> a shacl:NodeShape;
+<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#DiscreetBereikShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage> .
+  shacl:property [
+    shacl:class <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair>;
+    shacl:description "Onderdeel van het Bereik."@nl;
+    shacl:name "element"@nl;
+    shacl:path <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage.element>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#DoorlatendheidsproefCVShape> a shacl:NodeShape;
   shacl:closed false;
@@ -362,6 +375,24 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#GeneriekeNaamShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19103/2005/Names#GenericName> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#GeometrieWaardepaarShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature>;
+    shacl:description "Geometrie van het element."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.geometry>
+  ], [
+    shacl:description "Waarde van het element."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "waarde"@nl;
+    shacl:path <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#GetalShape> a shacl:NodeShape;
   shacl:closed false;
@@ -781,6 +812,10 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#ProcesShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#RecordShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#SamendrukbaarheidsproefShape> a shacl:NodeShape;
   shacl:closed false;

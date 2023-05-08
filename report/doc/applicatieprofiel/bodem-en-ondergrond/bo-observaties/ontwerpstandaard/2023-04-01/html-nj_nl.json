@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/78ab7a0251a3550c50be3998f7802e22e78ee1aa",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/78ab7a0251a3550c50be3998f7802e22e78ee1aa/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/tree/c462edab19bdc42e66371210154861dff66d9e8e",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/blob/c462edab19bdc42e66371210154861dff66d9e8e/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-bodemEnOndergrond/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/standaarden-in-ontwikkeling/applicatieprofiel-bodem-en-ondergrond-observaties/index.html",
     "usesVocs": [],
@@ -32,7 +32,7 @@
         "nl": "Meting in of van een Boorgat."
       },
       "usage": {
-        "nl": "Typisch de variatie met de diepte van een fysische eigenschap van het Boorgat zelf, van de grondsoort of het grondwater in of om het Boorgat. De Meting of Metingen gebeuren in principe door een meetapparaat  naar beneden in het Boorgat te laten. "
+        "nl": "Typisch de variatie met de diepte van een fysische eigenschap van het Boorgat zelf, van de grondsoort of het grondwater in of om het Boorgat. De Meting of Metingen gebeuren in principe door een meetapparaat  naar beneden in het Boorgat te laten. Het DiscreetBereik is typisch vh type DiscreetPuntbereik met waarden voor het gemeten kenmerk op verschillende dieptes."
       },
       "parents": [
         {
@@ -80,6 +80,37 @@
               "range_puri": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole",
               "range_label": {
                 "nl": "Boorgat"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/bo-observaties#^resultaat",
+          "name": "",
+          "sort": "",
+          "label": {},
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Boorgatmeting",
+              "uri": "https://data.vlaanderen.be/ns/bo-observaties#Boorgatmeting"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DiscreetBereik",
+              "range_uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#DiscreetBereik",
+              "range_puri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage",
+              "range_label": {
+                "nl": "DiscreetBereik"
               }
             }
           ],
@@ -1957,6 +1988,20 @@
       ]
     },
     {
+      "uri": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record",
+      "name": "Record",
+      "label": {
+        "nl": "Record"
+      },
+      "sort": "Record",
+      "description": {
+        "nl": "Basis datastructuur bestaande uit een collectie van velden van mogelijk verschillende datatypes, typisch een vast aantal in een bepaalde volgorde."
+      },
+      "usage": {},
+      "parents": [],
+      "properties": []
+    },
+    {
       "uri": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
       "name": "Kenmerktype",
       "label": {
@@ -2009,20 +2054,66 @@
       ]
     },
     {
-      "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage",
-      "name": "DiscreetCurvebereik",
+      "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage",
+      "name": "DiscreetBereik",
       "label": {
-        "nl": "DiscreetCurvebereik"
+        "nl": "DiscreetBereik"
       },
-      "sort": "DiscreetCurvebereik",
+      "sort": "DiscreetBereik",
       "description": {
-        "nl": "DiscreetBereik waarbij het fenomeen curvegewijs varieert in de ruimte."
+        "nl": "Een fenomeen dat discreet varieert in ruimte of tijd."
       },
       "usage": {
-        "nl": "Het fenomeen komt enkel voor langs bepaalde lijnen in een gebied (bv straatnamen van wegsegmenten of bodemlagen in een boorgat) of werd enkel bepaald voor een welgekozen set van curves (bv regelmatige intervallen langs een traject of een profiel)."
+        "nl": "De waarde van een bepaald fenomeen kan een constante zijn (bv kleur) of kan variëren in functie van een andere parameter (bv de lengte van een treinspoor is functie van de temperatuur). Als het fenomeen varieert in ruimte of tijd spreken we van een bereik, bv de  temperatuur verandert met de locatie of wijzigt doorheen de tijd. Als het fenomeen bovendien varieert in stappen dan hebben we te maken met een DiscreetBereik. In tegenstelling tot een ContinuBereik waarbij voor elk punt binnen het onderzocht gebied of voor elk punt op de tijdsas een waarde kan worden vastgesteld, is bij een DiscreetBereik de waarde enkel gekend voor een eindige set van punten of deelgebieden. Bv bij remote sensing is de waarde gekend voor de pixels van het beeld (waarbij de vastgestelde waarde, bv de reflectiegraad, dezelfde is voor elk punt binnen eenzelfde pixel). De opdeling kan kunstmatig zijn (zoals het geval met de pixels of bv bij sampling van een gebied dmv meetpunten) of natuurlijk (bv aantal inwoners per gemeente, waarbij het aantal inwoners uiteraard niet varieert binnen de gemeentegrens). Dmv interpolatie kan een DiscreetBereik worden omgezet in een ContinuBereik, de meetpunten vormen dan ahw de controlepunten van de interpolatiefunctie."
       },
-      "parents": [],
-      "properties": []
+      "parents": [
+        {
+          "label": "Bereik",
+          "name": "Bereik",
+          "package": "OSLO-RuimtelijkeBereiken",
+          "uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik",
+          "scoped_uri": "https://data.vlaanderen.be/ns/ruimtelijke-bereiken#Bereik"
+        }
+      ],
+      "properties": [
+        {
+          "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage.element",
+          "name": "element",
+          "sort": "element",
+          "label": {
+            "nl": "element"
+          },
+          "description": {
+            "nl": "Onderdeel van het Bereik."
+          },
+          "usage": {
+            "nl": "Concreet het discrete deel van het bereik waarvoor de waarde vh fenomeen gekend is. Bv een pixel en de waarde vd pixel."
+          },
+          "domain": [
+            {
+              "EA-Name": "DiscreetBereik",
+              "uri": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "GeometrieWaardepaar",
+              "range_uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#GeometrieWaardepaar",
+              "range_puri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair",
+              "range_label": {
+                "nl": "GeometrieWaardepaar"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": ""
+        }
+      ]
     },
     {
       "uri": "http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation",
@@ -2051,7 +2142,7 @@
         "nl": "Curve ontstaan door het boren van een gat in een vast medium."
       },
       "usage": {
-        "nl": "Laat toe om bv de variatie van een bepaald fenomeen langs die curve te observeren, bv de gelaagdheid van de ondergrond (typisch op basis van de boorkern of stalen daaruit genomen). OPMERKING: Meer info over deze klasse in het <a href=https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen>AP Observaties en Metingen</a>."
+        "nl": "Laat toe om bv de variatie van een bepaald fenomeen langs die curve te observeren, bv de gelaagdheid van de ondergrond (typisch op basis van de boorkern of stalen daaruit genomen). OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/\">Bodem en Ondergrond</a>."
       },
       "parents": [],
       "properties": []
@@ -3121,7 +3212,7 @@
         "nl": "Meetreeks waarbij het aandeel van iets varieert in functie van iets anders."
       },
       "usage": {
-        "nl": "Dat aandeel wordt \"fractie\" genoemd. Vb is de statistische verdeling van onderwijsniveaus over de bevolking of de verdeling van korreldiameters in een bodemstaal."
+        "nl": "Dat aandeel wordt \"fractie\" genoemd. Vb is de statistische verdeling van onderwijsniveaus over de bevolking of de verdeling van korreldiameters in een bodemstaal. OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/\">Bodem en Ondergrond</a>."
       },
       "parents": [
         {
@@ -3195,7 +3286,7 @@
         "nl": "Observatie waarbij wordt nagegaan hoe een bepaald kenmerk verandert in functie van een ander kenmerk."
       },
       "usage": {
-        "nl": "Bv hoe de lengte van een Object verandert met de temperatuur (door uitzetting). We kunnen dit uitdrukken als y=f(x) waarbij in het vb y de lengte is en x de temperatuur. De variabele x noemen we de meetpuntparameter en y is de meetwaardeparameter. De meetwaardeparameter is in feite het geobserveerdKenmerk. Sommige types van Meetreeksen zijn zo specifiek dat we ze apart hebben gemodelleerd, bvb de DiscreetBereikobservatie waarbij een geobserveerdKenmerk varieert volgens positie of tijd."
+        "nl": "Bv hoe de lengte van een Object verandert met de temperatuur (door uitzetting). We kunnen dit uitdrukken als y=f(x) waarbij in het vb y de lengte is en x de temperatuur. De variabele x noemen we de meetpuntparameter en y is de meetwaardeparameter. De meetwaardeparameter is in feite het geobserveerdKenmerk. Sommige types van Meetreeksen zijn zo specifiek dat we ze apart hebben gemodelleerd, bvb de DiscreetBereikobservatie waarbij een geobserveerdKenmerk varieert volgens positie of tijd.OPMERKING: Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/\">Bodem en Ondergrond</a>."
       },
       "parents": [],
       "properties": []
@@ -4397,6 +4488,20 @@
       "name": {
         "nl": "resultaat",
         "undefined": "resultaat"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/bo-observaties#^resultaat",
+      "name": {
+        "undefined": ""
       },
       "description": {},
       "domain": [
@@ -5882,6 +5987,82 @@
       },
       "parents": [],
       "properties": []
+    },
+    {
+      "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair",
+      "name": "GeometrieWaardepaar",
+      "label": {
+        "nl": "GeometrieWaardepaar"
+      },
+      "sort": "GeometrieWaardepaar",
+      "description": {
+        "nl": "Element van een DiscreetRuimtelijkBereik."
+      },
+      "usage": {
+        "nl": "Een GeometrieWaardepaar beschrijft de geometrie van een stuk van de ruimte (Punt, Lijn, Vlak etc.) of de tijd (Moment, Periode etc.) en de waarde van een continu variërend fenomeen die men voor dat stuk heeft vastgesteld. Bv de waarde van een pixel in een luchtfoto of de temperatuur in een meetstation op een bepaald tijdstip."
+      },
+      "parents": [],
+      "properties": [
+        {
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+          "name": "waarde",
+          "sort": "waarde",
+          "label": {
+            "nl": "waarde"
+          },
+          "description": {
+            "nl": "Waarde van het element."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "GeometrieWaardepaar",
+              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair"
+            }
+          ],
+          "range": [],
+          "scopedrange": [],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.geometry",
+          "name": "geometrie",
+          "sort": "geometrie",
+          "label": {
+            "nl": "geometrie"
+          },
+          "description": {
+            "nl": "Geometrie van het element."
+          },
+          "usage": {
+            "nl": "Datatype is DomeinObject, te substitueren resp door Geometrie of subklassen daarvan of door TemporeleEntiteit of subklassen daarvan."
+          },
+          "domain": [
+            {
+              "EA-Name": "GeometrieWaardepaar",
+              "uri": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Domeinobject",
+              "range_uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+              "range_puri": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+              "range_label": {
+                "nl": "Domeinobject"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        }
+      ]
     },
     {
       "uri": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
