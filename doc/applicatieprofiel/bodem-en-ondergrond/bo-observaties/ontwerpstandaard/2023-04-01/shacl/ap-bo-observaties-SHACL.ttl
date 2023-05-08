@@ -7,7 +7,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01> <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01shapes> <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#BoorgatmetingShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#BreukcriteriumShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#CVmetingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#DoorlatendheidsproefCVShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#DoorlatendheidsproefCVresultaatShape>,
@@ -50,6 +49,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#AgentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#StandaardEenheidShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#ObservatieproceduretypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#BreukcriteriumShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#BemonsteringsobjecttypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#ObservatietypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#OutputTypeShape>,
@@ -157,7 +157,7 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#BreukcriteriumShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/bo-observaties#Breukcriterium> .
+  shacl:targetClass skos:Concept .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#CVmetingShape> a shacl:NodeShape;
   shacl:closed false;
@@ -512,23 +512,19 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#KorrelverdelingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>;
-    shacl:description "Parameter waarvan de fractie wordt gemeten."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "^meetpuntparameter"@nl
-  ], [
-    shacl:class <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>;
-    shacl:description "TODO"@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "^meetwaardeparameter"@nl
-  ], [
     shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat>;
-    shacl:description "De vastgestelde korrelverdeling."@nl;
+    shacl:description "Het resultaat van de fractiemeting."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "resultaat"@nl
+    shacl:name "resultaat"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting.fractiemetingresultaat>
+  ], [
+    shacl:class <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>;
+    shacl:description "Het geobserveerdKenmerk."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "meetwaardeparameter"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting.meetwaardeparameter>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/grondboringen#Grondmonster>;
     shacl:description "Het grondmonster waarvan de Korrelverdeling werd bepaald."@nl;
@@ -542,6 +538,13 @@
     shacl:maxCount 1;
     shacl:name "humusKalkVerwijderd"@nl;
     shacl:path <https://data.vlaanderen.be/ns/bo-observaties#humusKalkVerwijderd>
+  ], [
+    shacl:class <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>;
+    shacl:description """Het kenmerk in functie waarvan het geobserveerdKenmerk verandert.	"""@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "^meetpuntparameter"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bo-observaties#Korrelverdeling.meetpuntparameter>
   ], [
     shacl:datatype xsd:double;
     shacl:description "TODO"@nl;
@@ -919,7 +922,7 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#SchuifweerstandskarakteristiekShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/bo-observaties#Breukcriterium>;
+    shacl:class skos:Concept;
     shacl:description "TODO"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -1004,7 +1007,7 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2023-04-01#SchuifweerstandsmetingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/bo-observaties#Breukcriterium>;
+    shacl:class skos:Concept;
     shacl:description "TODO"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
