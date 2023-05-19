@@ -1,0 +1,839 @@
+{
+  "@context": {
+    "Activiteit": "https://vaph.vlaanderen.be/ns/service#Activiteit",
+    "Activiteit.regime": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#regime",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Activiteit.toelichting": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#toelichting",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Activiteit.type": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#type",
+      "@type": "@id"
+    },
+    "Adresvoorstelling": "http://www.w3.org/ns/locn#Address",
+    "Adresvoorstelling.busnummer": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Adresvoorstelling.huisnummer": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Adresvoorstelling.land": {
+      "@id": "https://data.vlaanderen.be/ns/adres#land",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Adresvoorstelling.postbus": {
+      "@id": "http://www.w3.org/ns/locn#poBox",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Adresvoorstelling.postcode": {
+      "@id": "http://www.w3.org/ns/locn#postCode",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Adresvoorstelling.straatnaam": {
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Adresvoorstelling.volledigAdres": {
+      "@id": "http://www.w3.org/ns/locn#fullAddress",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "BewijsStuk": "https://vaph.vlaanderen.be/ns/service#BewijsStuk",
+    "BewijsStuk.bedrag": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#bedrag",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "BewijsStuk.betaalbaar": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#betaalbaar",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "BewijsStuk.factuurdatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#factuurdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "BewijsStuk.factuurreferentie": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#factuurreferentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "BewijsStuk.leverancier": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#leverancier",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "CategorieType": "https://vaph.vlaanderen.be/ns/service#CategorieType",
+    "CategorieType.hoofdtype": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#hoofdtype",
+      "@type": "@id"
+    },
+    "CategorieType.subtype": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#subtype",
+      "@type": "@id"
+    },
+    "Code": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Code.beschrijving": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#beschrijving",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Code.code": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#code",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactinfo": "http://schema.org/ContactPoint",
+    "Contactinfo.adres": {
+      "@id": "http://www.w3.org/ns/locn#address",
+      "@type": "@id"
+    },
+    "Contactinfo.email": {
+      "@id": "http://schema.org/email",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactinfo.telefoon": {
+      "@id": "http://schema.org/telephone",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Decimal": "http://www.w3.org/2001/XMLSchema#integer",
+    "Diagnose": "https://vaph.vlaanderen.be/ns/service#Diagnose",
+    "Diagnose.beperking": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#beperking",
+      "@type": "@id"
+    },
+    "Diagnose.handicap": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#handicap",
+      "@type": "@id"
+    },
+    "Diagnose.iqTest": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#iqTest",
+      "@type": "@id"
+    },
+    "Diagnose.laatsteVerslag": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#laatsteVerslag",
+      "@type": "@id"
+    },
+    "Diagnose.motorischeBeperking": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#motorischeBeperking",
+      "@type": "@id"
+    },
+    "Diagnose.stoornis": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#stoornis",
+      "@type": "@id"
+    },
+    "Diagnose.zelfredzaamheid": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#zelfredzaamheid",
+      "@type": "@id"
+    },
+    "Diagnose.zorgzwaarte": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#zorgzwaarte",
+      "@type": "@id"
+    },
+    "Doelgroep": "https://vaph.vlaanderen.be/ns/service#Doelgroep",
+    "Doelgroep.categorie": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#categorie",
+      "@type": "@id"
+    },
+    "Doelgroep.omschrijving": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#omschrijving",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ErkenningHandicap": "https://vaph.vlaanderen.be/ns/service#ErkenningHandicap",
+    "ErkenningHandicap.eindDatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#eindDatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ErkenningHandicap.heeftHandicap": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#heeftHandicap",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ErkenningHandicap.startDatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#startDatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ForensischeVaphUnit": "https://vaph.vlaanderen.be/ns/service#ForensischeVAPHUnit",
+    "ForensischeVaphUnit.einddatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#einddatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ForensischeVaphUnit.startdatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#startdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ForensischeVaphUnit.type": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#type",
+      "@type": "@id"
+    },
+    "ForensischeVaphUnit.zorgaanbieder": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#zorgaanbieder",
+      "@type": "@id"
+    },
+    "Geboorte": "https://data.vlaanderen.be/ns/persoon#Geboorte",
+    "Hulpmiddel": "https://vaph.vlaanderen.be/ns/service#Hulpmiddel",
+    "Hulpmiddel.aanvraagdatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#aanvraagdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Hulpmiddel.bewijs": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#bewijs",
+      "@type": "@id"
+    },
+    "Hulpmiddel.code": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#code",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Hulpmiddel.domein": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#domein",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Hulpmiddel.facturenBetaalbaarVanaf": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#facturenBetaalbaarVanaf",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Hulpmiddel.naam": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#naam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Hulpmiddel.omschrijving": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#omschrijving",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Hulpmiddel.status": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#status",
+      "@type": "@id"
+    },
+    "Hulpmiddel.toegewezenBedrag": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#toegewezenBedrag",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "IQtest": "https://vaph.vlaanderen.be/ns/service#IQtest",
+    "IQtest.datum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#datum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "IQtest.p": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#p",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "IQtest.t": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#t",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "IQtest.type": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#type",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "IQtest.v": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#v",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "IQtest.verslag": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#verslag",
+      "@type": "@id"
+    },
+    "Identificator": "http://www.w3.org/ns/adms#Identifier",
+    "Identificator.identificator": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Identificator.toegekendDoor (string)": {
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Internatie": "https://vaph.vlaanderen.be/ns/service#Internatie",
+    "Internatie.einddatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#einddatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Internatie.module": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#module",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Internatie.startdatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#startdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Internatie.type": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#type",
+      "@type": "@id"
+    },
+    "Internatie.zorgaanbieder": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#zorgaanbieder",
+      "@type": "@id"
+    },
+    "JaarBudget": "https://vaph.vlaanderen.be/ns/service#JaarBudget",
+    "JaarBudget.budgethoogte": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#budgethoogte",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "JaarBudget.einddatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#einddatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "JaarBudget.jaar": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#jaar",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "JaarBudget.saldo": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#saldo",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "JaarBudget.startdatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#startdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "JaarBudget.type": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#type",
+      "@type": "@id"
+    },
+    "Mfc": "https://vaph.vlaanderen.be/ns/service#MFC",
+    "Mfc.begeleiding": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#begeleiding",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Mfc.behandeling": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#behandeling",
+      "@type": "@id"
+    },
+    "Mfc.dagbesteding": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#dagbesteding",
+      "@type": "@id"
+    },
+    "Mfc.dagopvang": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#dagopvang",
+      "@type": "@id"
+    },
+    "Mfc.datumUitstroom": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#datumUitstroom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Mfc.diagnostiek": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#diagnostiek",
+      "@type": "@id"
+    },
+    "Mfc.einddatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#einddatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Mfc.intersectoraalTraject": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#intersectoraalTraject",
+      "@type": "@id"
+    },
+    "Mfc.redenUitstroom": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#redenUitstroom",
+      "@type": "@id"
+    },
+    "Mfc.redenUitstroomUitleg": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#redenUitstroomUitleg",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Mfc.startdatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#startdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Mfc.toegangsPoortJeugdrechter": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#toegangsPoortJeugdrechter",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Mfc.toegangsPoortMaatschappelijkeNoodzaak": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#toegangsPoortMaatschappelijkeNoodzaak",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Mfc.type": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#type",
+      "@type": "@id"
+    },
+    "Mfc.verblijf": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#verblijf",
+      "@type": "@id"
+    },
+    "Mfc.zorgaanbieder": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#zorgaanbieder",
+      "@type": "@id"
+    },
+    "Mfc.zorgpunten": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#zorgpunten",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MotorischeBeperking": "https://vaph.vlaanderen.be/ns/service#MotorischeBeperking",
+    "MotorischeBeperking.bovensteLedematenLinks": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#bovensteLedematenLinks",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MotorischeBeperking.bovensteLedematenRechts": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#bovensteLedematenRechts",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MotorischeBeperking.ondersteLedematenLinks": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#ondersteLedematenLinks",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MotorischeBeperking.ondersteLedematenRechts": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#ondersteLedematenRechts",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MotorischeBeperking.stappen300M": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#stappen300m",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "MotorischeBeperking.verslag": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#verslag",
+      "@type": "@id"
+    },
+    "MotorischeBeperking.wervelkolom": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#wervelkolom",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Nah": "https://vaph.vlaanderen.be/ns/service#NAH",
+    "Nah.einddatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#einddatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Nah.redenUitstroom": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#redenUitstroom",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Nah.startdatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#startdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Nah.type": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#type",
+      "@type": "@id"
+    },
+    "Nah.zorgaanbieder": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#zorgaanbieder",
+      "@type": "@id"
+    },
+    "Odb": "https://vaph.vlaanderen.be/ns/service#ODB",
+    "Odb.dagondersteuning": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#dagondersteuning",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Odb.datumUitstroom": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#datumUitstroom",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Odb.einddatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#einddatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Odb.individuelePsychosocialeBegeleiding": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#individuelePsychosocialeBegeleiding",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Odb.startdatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#startdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Odb.type": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#type",
+      "@type": "@id"
+    },
+    "Odb.woonondersteuning": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#woonondersteuning",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Odb.zorgaanbieder": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#zorgaanbieder",
+      "@type": "@id"
+    },
+    "OndersteuningsFunctie": "https://vaph.vlaanderen.be/ns/service#OndersteuningsFunctie",
+    "OndersteuningsFunctie.eenheid": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#eenheid",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "OndersteuningsFunctie.frequentie": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#frequentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "OndersteuningsFunctie.functie": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#functie",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "OndersteuningsPlan": "https://vaph.vlaanderen.be/ns/service#OndersteuningsPlan",
+    "OndersteuningsPlan.dringendeVraag": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#dringendeVraag",
+      "@type": "@id"
+    },
+    "OndersteuningsPlan.gewoneVraag": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#gewoneVraag",
+      "@type": "@id"
+    },
+    "OndersteuningsPlan.verzendingsdatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#verzendingsdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Organisatie": "http://www.w3.org/ns/org#Organization",
+    "Organisatie.erkenningsnummer": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#erkenningsnummer",
+      "@type": "@id"
+    },
+    "Organisatie.isTeBereikenOp": {
+      "@container": "@set",
+      "@id": "http://schema.org/contactPoint",
+      "@type": "@id"
+    },
+    "Organisatie.ondernemingsnummer": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#ondernemingsnummer",
+      "@type": "@id"
+    },
+    "Organisatie.registratie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/regorg#registration",
+      "@type": "@id"
+    },
+    "Organisatie.voorkeurslabel": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Overeenkomst": "https://vaph.vlaanderen.be/ns/service#Overeenkomst",
+    "Overeenkomst.bedrag": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#bedrag",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Overeenkomst.einddatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#einddatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Overeenkomst.forensischVAphUnit": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#forensischVAPHUnit",
+      "@type": "@id"
+    },
+    "Overeenkomst.geinterneerd": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#geinterneerd",
+      "@type": "@id"
+    },
+    "Overeenkomst.mfc": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#mfc",
+      "@type": "@id"
+    },
+    "Overeenkomst.nah": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#nah",
+      "@type": "@id"
+    },
+    "Overeenkomst.odb": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#odb",
+      "@type": "@id"
+    },
+    "Overeenkomst.startdatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#startdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Overeenkomst.type": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#type",
+      "@type": "@id"
+    },
+    "Overeenkomst.zorgaanbieder": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#zorgaanbieder",
+      "@type": "@id"
+    },
+    "Overeenkomst.zorgpunten": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#zorgpunten",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "OvereenkomstGeneriek": "https://vaph.vlaanderen.be/ns/service#OvereenkomstGeneriek",
+    "OvereenkomstGeneriek.einddatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#einddatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "OvereenkomstGeneriek.startdatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#startdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "OvereenkomstGeneriek.type": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#type",
+      "@type": "@id"
+    },
+    "OvereenkomstGeneriek.zorgaanbieder": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#zorgaanbieder",
+      "@type": "@id"
+    },
+    "Persoon": "http://www.w3.org/ns/person#Person",
+    "Persoon.contactpunt": {
+      "@container": "@set",
+      "@id": "http://schema.org/contactPoint",
+      "@type": "@id"
+    },
+    "Persoon.dossiernummer": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#dossiernummer",
+      "@type": "@id"
+    },
+    "Persoon.familienaam": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/familyName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Persoon.gegevenNaam": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/givenName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Persoon.geslacht": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#geslacht",
+      "@type": "@id"
+    },
+    "Persoon.ondernemingsnummer": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#ondernemingsnummer",
+      "@type": "@id"
+    },
+    "Persoon.registratie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#registratie",
+      "@type": "@id"
+    },
+    "Persoon.rijksregisternummer": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#rijksregisternummer",
+      "@type": "@id"
+    },
+    "Persoon.volledigeNaam": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#volledigeNaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "PersoonMetHandicap": "https://vaph.vlaanderen.be/ns/service#PersoonMetHandicap",
+    "PersoonMetHandicap.diagnose": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#diagnose",
+      "@type": "@id"
+    },
+    "PersoonMetHandicap.erkenningHandicap": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#erkenningHandicap",
+      "@type": "@id"
+    },
+    "PersoonMetHandicap.hulpmiddel": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#hulpmiddel",
+      "@type": "@id"
+    },
+    "PersoonMetHandicap.overeenkomst": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#overeenkomst",
+      "@type": "@id"
+    },
+    "PersoonMetHandicap.persoonsvolgendBudget": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#persoonsvolgendBudget",
+      "@type": "@id"
+    },
+    "PersoonMetHandicap.rth": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#rth",
+      "@type": "@id"
+    },
+    "PersoonMetHandicap.wettelijkevertegenwoordiger": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#wettelijkevertegenwoordiger",
+      "@type": "@id"
+    },
+    "Persoonsgebeurtenis": "https://data.vlaanderen.be/ns/persoon#Persoonsgebeurtenis",
+    "Persoonsgebeurtenis.datum": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#datum",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "PersoonsvolgendBudget": "https://vaph.vlaanderen.be/ns/service#PersoonsvolgendBudget",
+    "PersoonsvolgendBudget.budget": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#budget",
+      "@type": "@id"
+    },
+    "PersoonsvolgendBudget.inAfwachtingVanBudgetOfExtraBudget": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#inAfwachtingVanBudgetOfExtraBudget",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Registratie": "https://vaph.vlaanderen.be/ns/service#Registratie",
+    "Registratie.aantal": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#aantal",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Registratie.jaar": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#jaar",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Rth": "https://vaph.vlaanderen.be/ns/service#RTH",
+    "Rth.registratie": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#registratie",
+      "@type": "@id"
+    },
+    "Rth.zorgaanbieder": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#zorgaanbieder",
+      "@type": "@id"
+    },
+    "Stoornis": "https://vaph.vlaanderen.be/ns/service#Stoornis",
+    "Stoornis.code": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#Code",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Stoornis.naam": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#Naam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Stoornis.verslag": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#verslag",
+      "@type": "@id"
+    },
+    "Taalstring": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "ToegekendBudget": "https://vaph.vlaanderen.be/ns/service#ToegekendBudget",
+    "ToegekendBudget.categorie": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#categorie",
+      "@type": "@id"
+    },
+    "ToegekendBudget.dagbesteding": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#dagbesteding",
+      "@type": "@id"
+    },
+    "ToegekendBudget.einddatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#einddatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ToegekendBudget.jaarbudget": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#jaarbudget",
+      "@type": "@id"
+    },
+    "ToegekendBudget.noodAanToezicht": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#noodAanToezicht",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ToegekendBudget.ondersteuningsplan": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#ondersteuningsplan",
+      "@type": "@id"
+    },
+    "ToegekendBudget.overeenkomst": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#overeenkomst",
+      "@type": "@id"
+    },
+    "ToegekendBudget.startdatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#startdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ToegekendBudget.tekortenHuidigeOndersteuning": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#tekortenHuidigeOndersteuning",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ToegekendBudget.terugvorderbaarVoorschot": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#terugvorderbaarVoorschot",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "ToegekendBudget.toegewezenZorgpunten": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#toegewezenZorgpunten",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "ToegekendBudget.vraagMotiveringMeerwaarde": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#vraagMotiveringMeerwaarde",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ToegekendBudget.vraagOndersteuningsplan": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#vraagOndersteuningsplan",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ToegekendHulpmiddel": "https://vaph.vlaanderen.be/ns/service#ToegekendHulpmiddel",
+    "ToegekendHulpmiddel.doelgroep": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#doelgroep",
+      "@type": "@id"
+    },
+    "ToegekendHulpmiddel.hulpmiddel": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#hulpmiddel",
+      "@type": "@id"
+    },
+    "Verslag": "https://vaph.vlaanderen.be/ns/service#Verslag",
+    "Verslag.mdtVerslagNemer": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#mdtVerslagNemer",
+      "@type": "@id"
+    },
+    "Verslag.verzendingsDatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#verzendingsDatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "VerslagNemer": "https://vaph.vlaanderen.be/ns/service#VerslagNemer",
+    "VerslagNemerOrganisatie": "https://vaph.vlaanderen.be/ns/service#VerslagNemerOrganisatie",
+    "VerslagNemerPersoon": "https://vaph.vlaanderen.be/ns/service#VerslagNemerPersoon",
+    "VerslagNemerPersoon.eindDatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#eindDatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "VerslagNemerPersoon.startDatum": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#startDatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Vraag": "https://vaph.vlaanderen.be/ns/service#Vraag",
+    "Vraag.budgetCategorie": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#budgetCategorie",
+      "@type": "@id"
+    },
+    "Vraag.ondersteuningsfunctie": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#ondersteuningsfunctie",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "WettelijkeVertegenwoordiger": "https://vaph.vlaanderen.be/ns/service#WettelijkeVertegenwoordiger",
+    "WettelijkeVertegenwoordiger.type": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#type",
+      "@type": "@id"
+    },
+    "Zelfredzaamheid": "https://vaph.vlaanderen.be/ns/service#Zelfredzaamheid",
+    "Zelfredzaamheid.barthel": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#barthel",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Zelfredzaamheid.elida": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#elida",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Zelfredzaamheid.verslag": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#verslag",
+      "@type": "@id"
+    },
+    "Zorgaanbieder": "https://vaph.vlaanderen.be/ns/service#Zorgaanbieder",
+    "ZorgaanbiederOrganisatie": "https://vaph.vlaanderen.be/ns/service#ZorgaanbiederOrganisatie",
+    "ZorgaanbiederPersoon": "https://vaph.vlaanderen.be/ns/service#ZorgaanbiederPersoon",
+    "Zorgzwaarte": "https://vaph.vlaanderen.be/ns/service#Zorgzwaarte",
+    "Zorgzwaarte.getbwaarde": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#getbwaarde",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Zorgzwaarte.getpwaarde": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#getpwaarde",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Zorgzwaarte.verslag": {
+      "@container": "@set",
+      "@id": "https://vaph.vlaanderen.be/ns/service#verslag",
+      "@type": "@id"
+    },
+    "Zorgzwaarte.zziwaarde": {
+      "@id": "https://vaph.vlaanderen.be/ns/service#zziwaarde",
+      "@type": "@id"
+    }
+  }
+}
