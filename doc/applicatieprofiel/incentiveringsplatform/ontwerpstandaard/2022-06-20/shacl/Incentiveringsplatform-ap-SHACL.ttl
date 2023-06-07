@@ -1,15 +1,19 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20> <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20shapes> <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#AgentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#BeloningShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#BeloningconsumptieShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#BewijsShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#BewijsconsumptieShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#CriteriumvereisteShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#StimulansaanbodShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#StimulansconsumptieShape> .
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#StimulansconsumptieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#CriteriumVereisteShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#BewijsShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#OutputShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#AgentShape> a shacl:NodeShape;
   shacl:closed false;
@@ -26,6 +30,7 @@
     shacl:maxCount 1;
     shacl:minCount 1
   ], [
+    shacl:class skos:Concept;
     shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1
@@ -49,22 +54,52 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#BewijsShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:description "";
+    shacl:description "Beschrijving vh Bewijs."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:path <http://fixme.com#beschrijving>
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
   ], [
-    shacl:description "";
+    shacl:description "Geeft aan hoe betrouwbaar het bewijs is."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:path <http://fixme.com#naam>
+    shacl:name "betrouwbaarheidsniveau"@nl;
+    shacl:path <http://fixme.com#betrouwbaarheidsniveau>
   ], [
-    shacl:description "";
+    shacl:datatype xsd:anyURI;
+    shacl:description "Documentatie gerelateerd ah Bewiijs."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:path <http://fixme.com#type>
+    shacl:name "pagina"@nl;
+    shacl:path foaf:page
+  ], [
+    shacl:description "Officiële naam vh Bewijs."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "titel"@nl;
+    shacl:path dc:title
+  ], [
+    shacl:description "Identificator van het object."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "referentie"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
+  ], [
+    <http://purl.org/linked-data/cube#codeList> <http://publications.europa.eu/mdr/authority/language/>;
+    shacl:description "Taal waarin het aangeboden Bewijs moet zijn gesteld."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "taal"@nl;
+    shacl:path dc:language
+  ], [
+    <http://purl.org/linked-data/cube#codeList> <https://data.vlaanderen.be/doc/conceptscheme/BewijsType>;
+    shacl:description "Aard van het Bewijs."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "type"@nl;
+    shacl:path dc:type
   ];
-  shacl:targetClass <http://fixme.com#Bewijs> .
+  shacl:targetClass <http://data.europa.eu/m8g/Evidence> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#BewijsconsumptieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -80,25 +115,66 @@
   ];
   shacl:targetClass <http://fixme.com#Bewijsconsumptie> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#CriteriumvereisteShape> a shacl:NodeShape;
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#CriteriumVereisteShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:datatype xsd:string;
     shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:path <http://fixme.com#beschrijving>
   ], [
-    shacl:description "";
+    shacl:datatype xsd:string;
+    shacl:description "Officiële naam vd CriteriumVereiste."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:path <http://fixme.com#naam>
+    shacl:name "titel"@nl;
+    shacl:path dc:title
   ], [
-    shacl:description "";
+    shacl:description "Aard vd CriteriumVereiste."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:path <http://fixme.com#type>
+    shacl:name "type"@nl;
+    shacl:path dc:type
   ];
-  shacl:targetClass <http://fixme.com#Criteriumvereiste> .
+  shacl:targetClass <http://data.europa.eu/m8g/CriterionRequirement> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#OutputShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:description "Beschrijving van de Output."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    shacl:datatype xsd:date;
+    shacl:description "De datum waarop de output werd toegekend of het financieel voordeel werd uitebetaald. "@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "datum"@nl;
+    shacl:path dc:date
+  ], [
+    shacl:description "Officiële naam van de Output."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "titel"@nl;
+    shacl:path dc:title
+  ], [
+    shacl:description "Identificator van het object."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "referentie"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Aard van de Output."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/Output> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#StimulansaanbodShape> a shacl:NodeShape;
   shacl:closed false;
@@ -107,7 +183,7 @@
     shacl:maxCount 1;
     shacl:minCount 1
   ], [
-    shacl:class <http://fixme.com#Criteriumvereiste>;
+    shacl:class <http://data.europa.eu/m8g/CriterionRequirement>;
     shacl:description ""
   ], [
     shacl:description "";
@@ -131,7 +207,7 @@
     shacl:description "";
     shacl:path <http://fixme.com#beloningtype>
   ], [
-    shacl:class <http://fixme.com#Bewijs>;
+    shacl:class <http://data.europa.eu/m8g/Evidence>;
     shacl:description "";
     shacl:path <http://fixme.com#bewijstype>
   ], [
@@ -173,5 +249,11 @@
     shacl:description "";
     shacl:minCount 1;
     shacl:path <http://fixme.com#consument>
+  ], [
+    shacl:datatype xsd:date;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:path <http://fixme.com#opnamedatum>
   ];
   shacl:targetClass <http://fixme.com#Stimulansconsumptie> .
