@@ -1,3 +1,4 @@
+@prefix dc: <http://purl.org/dc/terms/> .
 @prefix dc11: <http://purl.org/dc/elements/1.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
@@ -15,8 +16,6 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#VerkeersobjectShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#VoertuigShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#MetadataShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#AgentShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#GeometrieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LijnstringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LineaireReferentieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LinkreferentieShape>,
@@ -26,43 +25,47 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#TemporeleEntiteitShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#WeglinksequentieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#WegobjectShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#AgentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#RijrichtingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#WegknoopShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#WegsegmentShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#GeometrieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#SAREF::ToestelShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#SSN/SOSA::ObservatieprocedureShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#SSN/SOSA::SensorShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#AgentShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://fixme.com#Agent> .
+  shacl:targetClass dc:Agent .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#GeometrieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:description "";
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "GML"@nl;
     shacl:path <http://fixme.com#gml>
   ], [
-    shacl:description "";
+    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "WKT"@nl;
     shacl:path <http://fixme.com#wkt>
   ];
-  shacl:targetClass <http://fixme.com#Geometrie> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/weg#geometrie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#GerichteLinkShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "link"@nl;
     shacl:path <http://fixme.com#link>
   ], [
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "richting"@nl;
     shacl:path <http://fixme.com#richting>
   ];
   shacl:targetClass <http://fixme.com#GerichteLink> .
@@ -74,14 +77,14 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LineaireReferentieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "totPositie"@nl;
     shacl:path <http://fixme.com#totPositie>
   ], [
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "vanPositie"@nl;
     shacl:path <http://fixme.com#vanPositie>
   ];
   shacl:targetClass <http://fixme.com#LineaireReferentie> .
@@ -89,9 +92,9 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LinkreferentieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "toepassingsRichting"@nl;
     shacl:path <http://fixme.com#toepassingsRichting>
   ];
   shacl:targetClass <http://fixme.com#Linkreferentie> .
@@ -99,7 +102,7 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#MetadataShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://fixme.com#Agent>;
+    shacl:class dc:Agent;
     shacl:description "Entiteit die in de eerste plaats verantwoordelijk is voor het onstaan van de data."@nl;
     shacl:name "auteur"@nl;
     shacl:path dc11:creator
@@ -130,7 +133,7 @@
     shacl:name "identificator"@nl;
     shacl:path dc11:identifier
   ], [
-    shacl:class <http://fixme.com#Agent>;
+    shacl:class dc:Agent;
     shacl:description "Entiteit die tot de data heeft bijgedragen."@nl;
     shacl:name "medeAuteur"@nl;
     shacl:path dc11:contributor
@@ -162,7 +165,7 @@
     shacl:name "type"@nl;
     shacl:path dc11:type
   ], [
-    shacl:class <http://fixme.com#Agent>;
+    shacl:class dc:Agent;
     shacl:description "Entiteit verantwoordelijk voor het publiek maken van de data."@nl;
     shacl:name "uitgever"@nl;
     shacl:path dc11:publisher
@@ -173,9 +176,9 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://fixme.com#Netwerkelement>;
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "element"@nl;
     shacl:path <http://fixme.com#element>
   ];
   shacl:targetClass <http://fixme.com#Netwerkreferentie> .
@@ -187,9 +190,9 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#PuntreferentieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "opPositie"@nl;
     shacl:path <http://fixme.com#opPositie>
   ];
   shacl:targetClass <http://fixme.com#Puntreferentie> .
@@ -202,9 +205,10 @@
     shacl:maxCount 1;
     shacl:minCount 1
   ], [
-    shacl:description "";
+    shacl:description "Geeft de richting van de verkeersstroom aan in relatie tot de logische richting van het wegsegment."@nl;
     shacl:maxCount 1;
-    shacl:path <http://fixme.com#rijrichting>
+    shacl:name "Rijrichtingtype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/weg#rijrichting>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#Rijrichting> .
 
@@ -288,7 +292,7 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#SSN/SOSA::SensorShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:description "";
+    shacl:name "Ligging"@nl;
     shacl:path <http://fixme.com#Ligging>
   ], [
     shacl:class <https://www.w3.org/TR/vocab-ssn/#SOSAProcedure>;
@@ -338,22 +342,22 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://fixme.com#Punt>;
-    shacl:description "";
-    shacl:maxCount 1
+    shacl:maxCount 1;
+    shacl:name "geometrie"@nl
   ], [
     shacl:class <http://fixme.com#Netwerkreferentie>;
-    shacl:description "";
     shacl:maxCount 1;
+    shacl:name "netwerkreferentie"@nl;
     shacl:path <http://fixme.com#netwerkreferentie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/weg#Rijrichting>;
-    shacl:description "";
     shacl:maxCount 1;
+    shacl:name "rijrichting"@nl;
     shacl:path <http://fixme.com#rijrichting>
   ], [
     shacl:class <http://fixme.com#Rijstrook>;
-    shacl:description "";
     shacl:maxCount 1;
+    shacl:name "rijstrook"@nl;
     shacl:path <http://fixme.com#rijstrook>
   ];
   shacl:targetClass <http://fixme.com#Verkeersmeetpunt> .
@@ -362,8 +366,8 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://fixme.com#Lijnstring>;
-    shacl:description "";
     shacl:maxCount 1;
+    shacl:name "geometrie"@nl;
     shacl:path <http://fixme.com#geometrie>
   ], [
     shacl:class <http://fixme.com#Netwerkreferentie>;
@@ -372,8 +376,8 @@
     shacl:path <http://fixme.com#netwerkReferentie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/weg#Rijrichting>;
-    shacl:description "";
     shacl:maxCount 1;
+    shacl:name "rijrichting"@nl;
     shacl:path <http://fixme.com#rijrichting>
   ], [
     shacl:class <http://fixme.com#Rijstrook>;
@@ -387,9 +391,9 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://fixme.com#TemporeleEntiteit>;
-    shacl:description "";
     shacl:maxCount 1;
-    shacl:minCount 1
+    shacl:minCount 1;
+    shacl:name "fenomeentijd"@nl
   ], [
     shacl:class <http://fixme.com#Verkeerskenmerk>;
     shacl:description "";
@@ -402,25 +406,25 @@
     shacl:minCount 1
   ], [
     shacl:class <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any>;
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "resultaat"@nl;
     shacl:path <http://fixme.com#resultaat>
   ], [
-    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>;
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "resuultaatkwaliteit"@nl;
+    shacl:path <http://fixme.com#resultaatkwaliteit>
+  ], [
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "resultaattijd"@nl;
     shacl:path <http://fixme.com#resultaattijd>
   ], [
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:path <http://fixme.com#resuultaatkwaliteit>
-  ], [
-    shacl:description "";
-    shacl:maxCount 1;
-    shacl:minCount 1;
+    shacl:name "uitgevoerdDoor"@nl;
     shacl:path <http://fixme.com#uitgevoerdDoor>
   ];
   shacl:targetClass <http://fixme.com#Verkeersmeting> .
@@ -429,19 +433,19 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://fixme.com#Verkeerskenmerk>;
-    shacl:description "";
-    shacl:maxCount 1
+    shacl:maxCount 1;
+    shacl:name "geobserveerdKenmerk"@nl
   ], [
     shacl:class <http://fixme.com#Verkeersdomeinobject>;
-    shacl:description "";
-    shacl:maxCount 1
+    shacl:maxCount 1;
+    shacl:name "geobserveerdObject"@nl
   ], [
-    shacl:description "";
-    shacl:maxCount 1
+    shacl:maxCount 1;
+    shacl:name "uitgevoerdMet"@nl
   ], [
     shacl:class <http://fixme.com#TemporeleEntiteit>;
-    shacl:description "";
     shacl:maxCount 1;
+    shacl:name "fenomeentijd"@nl;
     shacl:path <http://fixme.com#fenomeentijd>
   ], [
     shacl:class <http://fixme.com#Verkeersmeting>;
@@ -459,10 +463,11 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://fixme.com#Voertuigtype>;
-    shacl:description "";
+    shacl:description "Het type voertuig"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:path <http://fixme.com#voertuigtype>
+    shacl:name "voertuigtype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/weg#voertuigtype>
   ];
   shacl:targetClass <http://fixme.com#Voertuig> .
 
@@ -470,9 +475,11 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://fixme.com#Punt>;
-    shacl:description "";
+    shacl:description "Vorm- en positiekenmerken van een object."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1
+    shacl:minCount 1;
+    shacl:name "geometrie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/weg#geometrie>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#Wegknoop> .
 
@@ -480,8 +487,8 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://fixme.com#GerichteLink>;
-    shacl:description "";
     shacl:minCount 1;
+    shacl:name "link"@nl;
     shacl:path <http://fixme.com#link>
   ];
   shacl:targetClass <http://fixme.com#Weglinksequentie> .
