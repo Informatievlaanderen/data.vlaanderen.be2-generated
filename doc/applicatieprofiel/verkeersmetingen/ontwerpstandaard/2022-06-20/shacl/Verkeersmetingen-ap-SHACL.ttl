@@ -2,6 +2,7 @@
 @prefix dc11: <http://purl.org/dc/elements/1.1/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schemas: <https://schema.org/> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -17,6 +18,10 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#VerkeersmetingverzamelingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#VerkeersobjectShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#VoertuigShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#AnyShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#MomentShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#TemporeleEntiteitShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#KwaliteitselementShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#MetadataShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#DekkingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#DimensieShape>,
@@ -26,7 +31,6 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LinkreferentieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#NetwerkreferentieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#PuntreferentieShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#TemporeleEntiteitShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#WeglinksequentieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#WegobjectShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#AgentShape>,
@@ -43,12 +47,17 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#WegsegmentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#GeometrieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#SAREF::ToestelShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LengteShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#SSN/SOSA::ObservatieprocedureShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#SSN/SOSA::SensorShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#AgentShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass dc:Agent .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#AnyShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#BestandsformaatShape> a shacl:NodeShape;
   shacl:closed false;
@@ -109,6 +118,14 @@
   shacl:closed false;
   shacl:targetClass <http://fixme.com#Informatietype> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#KwaliteitselementShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LengteShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass schemas:Distance .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LijnStringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://www.opengis.net/ont/sf#LineString> .
@@ -120,12 +137,14 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LineaireReferentieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class schemas:Distance;
     shacl:description "Het einde van het lineair element, uitgedrukt als de afstand van de start van het lineair netwerkelement langs diens krommegeometrie."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "totPositie"@nl;
     shacl:path <http://fixme.com#totPositie>
   ], [
+    shacl:class schemas:Distance;
     shacl:description "De start van het lineair element, uitgedrukt als de afstand van de start van het lineair netwerkelement langs diens krommegeometrie."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -166,7 +185,7 @@
     shacl:name "bron"@nl;
     shacl:path dc11:source
   ], [
-    shacl:class <http://fixme.com#TemporeleEntiteit>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
     shacl:description "Moment of periode geassocieerd met een gebeurtenis in de levensloop vd data."@nl;
     shacl:name "datum"@nl;
     shacl:path dc11:date
@@ -225,6 +244,10 @@
   ];
   shacl:targetClass <http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#MomentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#NetwerkreferentieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -248,6 +271,7 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#PuntreferentieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class schemas:Distance;
     shacl:description "Poisitie van het punt, uitgedrukt als de afstand van de start van het lineair netwerkelement langs de krommegeometrie."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -439,7 +463,7 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#VerkeersmeettrajectShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://schemas.opengis.net/sf/1.0/simple_features_geometries.rdf#LineString>;
+    shacl:class <http://www.opengis.net/ont/sf#LineString>;
     shacl:description "Vorm- en positiekenmerken van een object."@nl;
     shacl:maxCount 1;
     shacl:name "geometrie"@nl;
@@ -468,7 +492,7 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#VerkeersmetingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://fixme.com#TemporeleEntiteit>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
     shacl:description "Het moment waarop het resultaat van de Verkeersmeting van toepassing was."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -529,7 +553,7 @@
     shacl:maxCount 1;
     shacl:name "uitgevoerdMet"@nl
   ], [
-    shacl:class <http://fixme.com#TemporeleEntiteit>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
     shacl:description "Het moment waarop het resultaat van de Verkeersmeting van toepassing was."@nl;
     shacl:maxCount 1;
     shacl:name "fenomeentijd"@nl;
@@ -588,7 +612,7 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#WegsegmentShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://schemas.opengis.net/sf/1.0/simple_features_geometries.rdf#LineString>;
+    shacl:class <http://www.opengis.net/ont/sf#LineString>;
     shacl:description "TODO"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
