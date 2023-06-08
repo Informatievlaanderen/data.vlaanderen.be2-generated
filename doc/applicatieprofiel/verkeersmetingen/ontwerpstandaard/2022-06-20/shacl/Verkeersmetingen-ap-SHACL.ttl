@@ -1,11 +1,11 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20> <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20shapes> <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#GerichteLinkShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LocatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#RijstrookShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#VerkeersbemonsteringsobjectShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#VerkeersdomeinobjectShape>,
@@ -27,6 +27,8 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#WeglinksequentieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#WegobjectShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#AgentShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LijnStringShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LocatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#RijrichtingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#WegknoopShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#WegsegmentShape>,
@@ -59,20 +61,24 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#GerichteLinkShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://fixme.com>;
-    shacl:description "TODO"@nl;
+    shacl:class <http://fixme.com#Link>;
+    shacl:description "Curvilineair netwerkelement dat twee posities verbindt en een homogeen pad in het Netwerk vertegenwoordigt. De verbonden posities worden voorgesteld door Knopen."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "link"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#link>
   ], [
-    shacl:description "TODO"@nl;
+    shacl:description "Geeft aan of de richting van de link overeenstemt met zijn positieve of zijn negatieve richting."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "richting"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#richting>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#GerichteLink> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LijnStringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.opengis.net/ont/sf#LineString> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LijnstringShape> a shacl:NodeShape;
   shacl:closed false;
@@ -81,13 +87,13 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LineaireReferentieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:description "TODO"@nl;
+    shacl:description "Het einde van het lineair element, uitgedrukt als de afstand van de start van het lineair netwerkelement langs diens krommegeometrie."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "totPositie"@nl;
     shacl:path <http://fixme.com#totPositie>
   ], [
-    shacl:description "TODO"@nl;
+    shacl:description "De start van het lineair element, uitgedrukt als de afstand van de start van het lineair netwerkelement langs diens krommegeometrie."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "vanPositie"@nl;
@@ -98,7 +104,7 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LinkreferentieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:description "TODO"@nl;
+    shacl:description "De richtingen van de link waarvoor de referentie van toepassing is."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "toepassingsRichting"@nl;
@@ -108,7 +114,7 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LocatieShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Locatie> .
+  shacl:targetClass prov:Location .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#MetadataShape> a shacl:NodeShape;
   shacl:closed false;
@@ -187,7 +193,7 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://fixme.com#Netwerkelement>;
-    shacl:description "TODO"@nl;
+    shacl:description "Element in een Netwerk dat daarin een functie van belang vervult."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "element"@nl;
@@ -202,7 +208,7 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#PuntreferentieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:description "TODO"@nl;
+    shacl:description "Poisitie van het punt, uitgedrukt als de afstand van de start van het lineair netwerkelement langs de krommegeometrie."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "opPositie"@nl;
@@ -308,7 +314,7 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#SSN/SOSA::SensorShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Locatie>;
+    shacl:class prov:Location;
     shacl:name "Ligging"@nl;
     shacl:path <http://fixme.com#Ligging>
   ], [
@@ -387,7 +393,7 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://fixme.com#Lijnstring>;
-    shacl:description "TODO"@nl;
+    shacl:description "Vorm- en positiekenmerken van een object."@nl;
     shacl:maxCount 1;
     shacl:name "geometrie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#geometrie>
@@ -436,20 +442,20 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "resultaat"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#resultaat>
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>
   ], [
     shacl:description "Mate waarin het resultaat van de Verkeersmeting voldoet aan de vereisten of verwachtingen."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "resultaatkwaliteit"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#resultaatkwaliteit>
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality>
   ], [
     shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>;
     shacl:description "Tijdstip waarop het resultaat van de Observatie werd bekomen."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "resultaattijd"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#resultaattijd>
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime>
   ], [
     shacl:description "Agent die de verkeersmeting heeft uitgevoerd"@nl;
     shacl:maxCount 1;
