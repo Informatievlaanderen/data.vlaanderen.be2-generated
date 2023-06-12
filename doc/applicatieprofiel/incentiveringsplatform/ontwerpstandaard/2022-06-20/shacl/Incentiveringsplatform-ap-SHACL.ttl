@@ -12,14 +12,16 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#StimulansconsumptieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#CriteriumVereisteShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#BewijsShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#PeriodeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#AgentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#TaalStringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#BedragShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#CriteriumVereisteTypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#TaalcodeShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#DienstverleningstypeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#DienstverleningsTypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#OutputTypeShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#NAL_currencyShape> .
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#NAL_currencyShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#BewijsTypeShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#AgentShape> a shacl:NodeShape;
   shacl:closed false;
@@ -103,6 +105,7 @@
     shacl:path dc:language
   ], [
     <http://purl.org/linked-data/cube#codeList> <https://data.vlaanderen.be/doc/conceptscheme/BewijsType>;
+    shacl:class skos:Concept;
     shacl:description "Aard van het Bewijs."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -110,6 +113,10 @@
     shacl:path dc:type
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Evidence> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#BewijsTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#BewijsconsumptieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -159,7 +166,7 @@
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#DienstverleningstypeShape> a shacl:NodeShape;
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#DienstverleningsTypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
@@ -170,6 +177,24 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#OutputTypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#PeriodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Aanvang van de tijdsduur."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "begin"@nl;
+    shacl:path <http://data.europa.eu/m8g/startTime>
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Einde vd tijdsduur."@nl;
+    shacl:maxCount 1;
+    shacl:name "einde"@nl;
+    shacl:path <http://data.europa.eu/m8g/endTime>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/PeriodOfTime> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2022-06-20#StimulansaanbodShape> a shacl:NodeShape;
   shacl:closed false;
@@ -188,6 +213,7 @@
     shacl:minCount 1;
     shacl:name "naam"@nl
   ], [
+    shacl:class skos:Concept;
     shacl:description "Type van de stimulans"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -223,6 +249,7 @@
     shacl:name "doel"@nl;
     shacl:path <http://fixme.com#doel>
   ], [
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
     shacl:description "Periode waarin de stimulans kan geconsumeerd worden"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
