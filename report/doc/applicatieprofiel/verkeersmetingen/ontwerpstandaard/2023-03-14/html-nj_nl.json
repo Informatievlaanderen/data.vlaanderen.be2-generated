@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-verkeersmetingen/tree/c8b07e6c5187618919e9b4c2438b5237e66c9704",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-verkeersmetingen/blob/c8b07e6c5187618919e9b4c2438b5237e66c9704/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-verkeersmetingen/tree/0c4bfb35a7ecf7d14a98b19e07c975427ff344c0",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-verkeersmetingen/blob/0c4bfb35a7ecf7d14a98b19e07c975427ff344c0/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-Verkeersmetingen/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/TODO/CORRECT-URL/index.html",
     "usesVocs": [],
@@ -698,28 +698,6 @@
       ],
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#uitgevoerdDoor",
-          "name": "uitgevoerdDoor",
-          "sort": "uitgevoerdDoor",
-          "label": {
-            "nl": "uitgevoerdDoor"
-          },
-          "description": {
-            "nl": "Agent die de verkeersmeting heeft uitgevoerd"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Verkeersmeting",
-              "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting"
-            }
-          ],
-          "range": [],
-          "scopedrange": [],
-          "cardinality": "1",
-          "codelist_uri": ""
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#^geobserveerdObject",
           "name": "geobserveerd object",
           "sort": "geobserveerd object",
@@ -786,7 +764,7 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#^fenomeentijd",
+          "uri": "https://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
           "name": "fenomeentijd",
           "sort": "fenomeentijd",
           "label": {
@@ -819,6 +797,28 @@
               }
             }
           ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/observaties-en-metingen/#Observatie.uitgevoerdDoor",
+          "name": "uitgevoerdDoor",
+          "sort": "uitgevoerdDoor",
+          "label": {
+            "nl": "uitgevoerdDoor"
+          },
+          "description": {
+            "nl": "Agent die de verkeersmeting heeft uitgevoerd"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Verkeersmeting",
+              "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting"
+            }
+          ],
+          "range": [],
+          "scopedrange": [],
           "cardinality": "1",
           "codelist_uri": ""
         },
@@ -952,7 +952,9 @@
           "label": {
             "nl": "heeft lid"
           },
-          "description": {},
+          "description": {
+            "nl": "heeft lid"
+          },
           "usage": {},
           "domain": [
             {
@@ -2336,6 +2338,43 @@
       ],
       "properties": [
         {
+          "uri": "https://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter",
+          "name": "parameter",
+          "sort": "parameter",
+          "label": {
+            "nl": "parameter"
+          },
+          "description": {
+            "nl": "Willekeurig gegeven gassocieerd met de Observatieprocedure."
+          },
+          "usage": {
+            "nl": "Bv een parameter die een aspect van de Observatieprocedure beschrijft (bv de vereiste hoogte voor het observeren van windsnelheid) of een noodzakelijke omgevingsparameter (bv temperatuurbereik waarbinnen een labo-analyse moet plaatsvinden)."
+          },
+          "domain": [
+            {
+              "EA-Name": "SSN/SOSA::Observatieprocedure",
+              "uri": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "BenoemdeWaarde",
+              "range_uri": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
+              "range_puri": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
+              "range_label": {
+                "nl": "BenoemdeWaarde"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": ""
+        },
+        {
           "uri": "http://www.w3.org/ns/ssn/implementedBy",
           "name": "geïmplementeerdMet",
           "sort": "geïmplementeerdMet",
@@ -2504,43 +2543,6 @@
               "range_puri": "http://www.w3.org/2001/XMLSchema#anyURI",
               "range_label": {
                 "nl": "URI"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "http://fixme.com#Observatieprocedure.parameter",
-          "name": "parameter",
-          "sort": "parameter",
-          "label": {
-            "nl": "parameter"
-          },
-          "description": {
-            "nl": "Willekeurig gegeven gassocieerd met de Observatieprocedure."
-          },
-          "usage": {
-            "nl": "Bv een parameter die een aspect van de Observatieprocedure beschrijft (bv de vereiste hoogte voor het observeren van windsnelheid) of een noodzakelijke omgevingsparameter (bv temperatuurbereik waarbinnen een labo-analyse moet plaatsvinden)."
-          },
-          "domain": [
-            {
-              "EA-Name": "SSN/SOSA::Observatieprocedure",
-              "uri": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "BenoemdeWaarde",
-              "range_uri": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
-              "range_puri": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
-              "range_label": {
-                "nl": "BenoemdeWaarde"
               }
             }
           ],
@@ -2936,21 +2938,6 @@
       "name": {
         "nl": "geobserveerd kenmerk",
         "undefined": "geobserveerd kenmerk"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/verkeersmetingen#^fenomeentijd",
-      "name": {
-        "nl": "fenomeentijd",
-        "undefined": "fenomeentijd"
       },
       "description": {},
       "domain": [
