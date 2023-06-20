@@ -1,0 +1,283 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14> <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14shapes> <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BeloningShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BeloningsontvangstShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#StimulansaanbodShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#StimulansconsumptieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#CriteriumVereisteShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BewijsShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#PeriodeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#AgentShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BedragShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#CriteriumVereisteTypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#TaalcodeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#DienstverleningsTypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#OutputTypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#NAL_currencyShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BewijsTypeShape> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BedragShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BeloningShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de beloning"@nl;
+    shacl:maxCount 1;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de beloning"@nl;
+    shacl:maxCount 1;
+    shacl:name "naam"@nl
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Type van de beloning"@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/incentivering#Beloning> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BeloningsontvangstShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de bewijsconsumptie"@nl;
+    shacl:maxCount 1;
+    shacl:name "beschrijving"@nl
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "waarde van de bewijsconsumptie"@nl;
+    shacl:maxCount 1;
+    shacl:name "waarde"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/incentivering#waarde>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/incentivering#Beloningsontvangst> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BewijsShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving vh Bewijs."@nl;
+    shacl:maxCount 1;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    shacl:datatype xsd:anyURI;
+    shacl:description "Documentatie gerelateerd ah Bewiijs."@nl;
+    shacl:maxCount 1;
+    shacl:name "pagina"@nl;
+    shacl:path foaf:page
+  ], [
+    shacl:datatype xsd:string;
+    shacl:description "Officiële naam vh Bewijs."@nl;
+    shacl:maxCount 1;
+    shacl:name "titel"@nl;
+    shacl:path dc:title
+  ], [
+    <http://purl.org/linked-data/cube#codeList> <https://data.vlaanderen.be/doc/conceptscheme/BewijsType>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van het Bewijs."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/Evidence> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BewijsTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#CriteriumVereisteShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:string;
+    shacl:description "beschrijving van de criteriumvereiste"@nl;
+    shacl:maxCount 1;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    shacl:datatype xsd:string;
+    shacl:description "Officiële naam vd CriteriumVereiste."@nl;
+    shacl:maxCount 1;
+    shacl:name "naam"@nl;
+    shacl:path dc:title
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Aard vd CriteriumVereiste."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/CriterionRequirement> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#CriteriumVereisteTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#DienstverleningsTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#NAL_currencyShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#OutputTypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#PeriodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Aanvang van de tijdsduur."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "Begin"@nl;
+    shacl:path <http://data.europa.eu/m8g/startTime>
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Einde vd tijdsduur."@nl;
+    shacl:maxCount 1;
+    shacl:name "einde"@nl;
+    shacl:path <http://data.europa.eu/m8g/endTime>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#StimulansaanbodShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de stimulans"@nl;
+    shacl:maxCount 1;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    shacl:class <http://data.europa.eu/m8g/CriterionRequirement>;
+    shacl:description "Criteriumvereiste"@nl;
+    shacl:name "Criteriumvereiste"@nl
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de stimulans"@nl;
+    shacl:maxCount 1;
+    shacl:name "naam"@nl
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Type van de stimulans"@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    shacl:class dc:Agent;
+    shacl:description "aanbieder"@nl;
+    shacl:name "aanbieder"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/incentivering#aanbieder>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Totale bedrag beschikbaar voor de stimulans"@nl;
+    shacl:maxCount 1;
+    shacl:name "bedrag"@nl;
+    shacl:path rdf:langString
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/incentivering#Beloning>;
+    shacl:description "Type beloning"@nl;
+    shacl:name "beloningtype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/incentivering#beloningtype>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/Evidence>;
+    shacl:description "stimulansconsumptie"@nl;
+    shacl:name "bewijstype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/incentivering#bewijstype>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/incentivering#Stimulansconsumptie>;
+    shacl:description "stimulansaanbod"@nl;
+    shacl:name "consumptie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/incentivering#consumptie>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "doel van de stimulans"@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "doel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/incentivering#doel>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "Periode waarin de stimulans kan geconsumeerd worden"@nl;
+    shacl:maxCount 1;
+    shacl:name "geldigheidsperiode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/incentivering#geldigheidsperiode>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/incentivering#Stimulansaanbod>;
+    shacl:description "isgerelateerdmet"@nl;
+    shacl:name "isgerelateerdmet"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/incentivering#isgerelateerdmet>
+  ], [
+    shacl:class dc:Agent;
+    shacl:description "sponsor"@nl;
+    shacl:name "sponsor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/incentivering#sponsor>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/incentivering#Stimulansaanbod> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#StimulansconsumptieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/incentivering#Beloningsontvangst>;
+    shacl:description "Bewijs"@nl;
+    shacl:name "Bewijs"@nl
+  ], [
+    shacl:description "Beloning"@nl;
+    shacl:name "beloning"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/incentivering#bewijs>
+  ], [
+    shacl:class dc:Agent;
+    shacl:description "consument"@nl;
+    shacl:minCount 1;
+    shacl:name "consument"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/incentivering#consument>
+  ], [
+    shacl:datatype xsd:date;
+    shacl:description "Datum van consumptie van de stimulans"@nl;
+    shacl:maxCount 1;
+    shacl:name "opnamedatum"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/incentivering#opnamedatum>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/incentivering#Stimulansconsumptie> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#TaalcodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+ [
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de beloningsconsumptie"@nl;
+    shacl:maxCount 1;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ] .
+
+ [
+    shacl:datatype rdf:langString;
+    shacl:description "Waarde van de beloningsconsumptie"@nl;
+    shacl:maxCount 1;
+    shacl:name "waarde"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/incentivering#waarde>
+  ] .
