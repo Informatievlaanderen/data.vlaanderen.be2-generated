@@ -8,7 +8,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14> <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14shapes> <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#GerichteLinkShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijrichtingShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijrichtingtypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijstrookShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#ToepassingsrichtingtypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeersbemonsteringsobjectShape>,
@@ -47,6 +47,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#TekenShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#LocatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeerskenmerktypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijrichtingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WegknoopShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WegsegmentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#GeometrieShape>,
@@ -294,12 +295,17 @@
     shacl:minCount 1;
     shacl:name "netwerkreferentie"@nl
   ], [
+    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Rijrichtingtype>;
     shacl:description "Geeft de richting van de verkeersstroom aan in relatie tot de logische richting van het wegsegment."@nl;
     shacl:maxCount 1;
     shacl:name "rijrichtingtype"@nl;
     shacl:path <https://data.vlaanderen.be/ns/weg#rijrichting>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#Rijrichting> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijrichtingtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Rijrichtingtype> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijstrookShape> a shacl:NodeShape;
   shacl:closed false;
@@ -385,17 +391,17 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#SSN/SOSA::SensorShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class prov:Location;
-    shacl:description "Ligging van de sensor."@nl;
-    shacl:name "Ligging"@nl;
-    shacl:path <http://fixme.com#Ligging>
-  ], [
     shacl:class <https://www.w3.org/TR/vocab-ssn/#SOSAProcedure>;
     shacl:description "Observatieprocedure die door de Sensor wordt toegepast."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "implementeert"@nl;
     shacl:path <http://www.w3.org/ns/ssn/implements>
+  ], [
+    shacl:class prov:Location;
+    shacl:description "Ligging van de sensor."@nl;
+    shacl:name "ligging"@nl;
+    shacl:path <http://fixme.com#ligging>
   ];
   shacl:targetClass <https://www.w3.org/ns/sosa/Sensor> .
 
