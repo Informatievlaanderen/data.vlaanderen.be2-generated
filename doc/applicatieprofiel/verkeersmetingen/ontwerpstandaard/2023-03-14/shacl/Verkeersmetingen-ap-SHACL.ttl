@@ -8,7 +8,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14> <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14shapes> <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#GerichteLinkShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijrichtingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijstrookShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#ToepassingsrichtingtypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeersbemonsteringsobjectShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeersdomeinobjectShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeerskenmerkShape>,
@@ -45,7 +47,6 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#TekenShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#LocatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeerskenmerktypeShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijrichtingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WegknoopShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WegsegmentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#GeometrieShape>,
@@ -160,6 +161,7 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#LinkreferentieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Toepassingsrichtingtype>;
     shacl:description "De richtingen van de link waarvoor de referentie van toepassing is."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -204,10 +206,6 @@
     shacl:description "Het bestandsformaat, fysiek medium of de dimensies van de data."@nl;
     shacl:name "formaat"@nl;
     shacl:path dc11:format
-  ], [
-    shacl:description "Unieke referentie naar de data."@nl;
-    shacl:name "identificator"@nl;
-    shacl:path dc11:identifier
   ], [
     shacl:class dc:Agent;
     shacl:description "Entiteit die tot de data heeft bijgedragen."@nl;
@@ -298,7 +296,7 @@
   ], [
     shacl:description "Geeft de richting van de verkeersstroom aan in relatie tot de logische richting van het wegsegment."@nl;
     shacl:maxCount 1;
-    shacl:name "Rijrichtingtype"@nl;
+    shacl:name "rijrichtingtype"@nl;
     shacl:path <https://data.vlaanderen.be/ns/weg#rijrichting>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#Rijrichting> .
@@ -417,10 +415,15 @@
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#ToepassingsrichtingtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Toepassingsrichtingtype> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeersbemonsteringsobjectShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject>;
+    shacl:description "Object dat bemonsterd wordt"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "bemonsterdobject"@nl
@@ -438,12 +441,12 @@
     shacl:description "Type van verkeerskenmerk dat men wil meten"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "VerkeerskenmerkType"@nl;
+    shacl:name "verkeerskenmerkType"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#type>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Voertuigtype>;
     shacl:description "Type van voertuig dat men wil meten"@nl;
-    shacl:name "VoertuigType"@nl;
+    shacl:name "voertuigType"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk> .
@@ -521,11 +524,13 @@
     shacl:path <https://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk>;
+    shacl:description "geobserveerd kenmerk"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "geobserveerd kenmerk"@nl
   ], [
     shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject>;
+    shacl:description "geobserveerd object"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "geobserveerd object"@nl
@@ -639,7 +644,7 @@
     shacl:description "De geometrie die de middellijn van het wegsegment vertegenwoordigt."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "Geometriemiddenlijn"@nl;
+    shacl:name "geometriemiddenlijn"@nl;
     shacl:path <https://data.vlaanderen.be/ns/weg#middellijnGeometrie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/weg#Wegknoop>;
