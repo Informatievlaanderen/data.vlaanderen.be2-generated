@@ -7,9 +7,6 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any> a rdfs:Class;
-  rdfs:label "Any"@nl .
-
 <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant> a rdfs:Class;
   rdfs:label "Moment"@nl .
 
@@ -22,11 +19,125 @@
 prov:Location a rdfs:Class;
   rdfs:label "locatie"@nl .
 
+<https://data.vlaanderen.be/ns/weg#Rijrichting> a rdfs:Class,
+    rdf:Property;
+  rdfs:label "rijrichting"@nl .
+
 <https://data.vlaanderen.be/ns/verkeersmetingen#Rijrichtingtype> a owl:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen> .
 
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Voertuig> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject> .
+
 <https://data.vlaanderen.be/ns/verkeersmetingen#Voertuigtype> a owl:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#fenomeentijd> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <http://fixme.com#TemporeleEntiteit> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#ligging> a owl:ObjectProperty;
+  rdfs:domain <https://www.w3.org/ns/sosa/Sensor>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range prov:Location .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#netwerkReferentie> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/netwerk/#Netwerkreferentie> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#netwerkreferentie> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/netwerk/#Netwerkreferentie> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#rijstrook> a owl:ObjectProperty,
+    owl:DatatypeProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject>,
+    <https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook>,
+    <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook>,
+    rdf:langString .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#type> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerktype> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/transportnetwerk/#Voertuigtype> .
+
+<http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result> a rdf:Property;
+  rdfs:label "resultaat"@nl .
+
+<http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality> a rdf:Property;
+  rdfs:label "resultaatkwaliteit"@nl .
+
+<http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime> a rdf:Property;
+  rdfs:label "resultaattijd"@nl .
+
+<https://data.vlaanderen.be/ns/observaties-en-metingen/#Observatie.uitgevoerdDoor> a rdf:Property;
+  rdfs:label "uitgevoerd door"@nl .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerktype> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://www.w3.org/TR/vocab-ssn-ext/#sosa:ObservationCollection> .
+
+<https://data.vlaanderen.be/ns/weg#geometrie> a rdf:Property;
+  rdfs:label "geometrie"@nl .
+
+<https://data.vlaanderen.be/ns/weg#rijrichting> a rdf:Property;
+  rdfs:label "rijrichting"@nl .
+
+<https://data.vlaanderen.be/ns/weg#voertuigtype> a rdf:Property;
+  rdfs:label "voertuigtype"@nl .
+
+<https://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime> a rdf:Property;
+  rdfs:label "fenomeentijd"@nl .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject>,
+    <https://data.vlaanderen.be/ns/transportnetwerk/#Transporteigenschap> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersbemonsteringsobject> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject>,
+    <http://fixme.com#Domeinobject> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <http://fixme.com#Kenmerktype> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersbemonsteringsobject>,
+    <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersbemonsteringsobject>,
+    <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <http://fixme.com#Object> .
 
 <https://data.vlaanderen.be/ns/verkeersmetingen> a owl:Ontology;
   rdfs:label "Verkeersmetingen-voc"@en,
@@ -392,11 +503,19 @@ prov:Location a rdfs:Class;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any>,
-    <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>,
+  rdfs:seeAlso <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>,
     <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>,
     <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element>,
-    prov:Location;
+    prov:Location,
+    <https://data.vlaanderen.be/ns/weg#Rijrichting>,
+    <https://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime>,
+    <https://data.vlaanderen.be/ns/weg#voertuigtype>,
+    <https://data.vlaanderen.be/ns/weg#rijrichting>,
+    <https://data.vlaanderen.be/ns/weg#geometrie>,
+    <https://data.vlaanderen.be/ns/observaties-en-metingen/#Observatie.uitgevoerdDoor>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
