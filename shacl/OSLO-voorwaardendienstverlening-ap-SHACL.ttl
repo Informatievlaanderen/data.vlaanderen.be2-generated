@@ -32,7 +32,7 @@
   shacl:closed false;
   shacl:property [
     shacl:datatype xsd:dateTime;
-    shacl:description "De datum waarop het bewijs"@nl;
+    shacl:description "De datum waarop het bewijs is afgeleverd."@nl;
     shacl:maxCount 1;
     shacl:name "afleveringsdatum"@nl;
     shacl:path <http://data.europa.eu/m8g/cccev#afleveringsdatum>
@@ -81,18 +81,6 @@
     shacl:class <http://data.europa.eu/m8g/cccev#Requirement>;
     shacl:description "";
     shacl:path <http://data.europa.eu/m8g/cccev#ondersteuntVoorwaarde>
-  ], [
-    shacl:class <http://data.europa.eu/m8g/cccev#SupportedValue>;
-    shacl:description "TODO"@nl;
-    shacl:minCount 1;
-    shacl:name "ondersteunt waarde"@nl;
-    shacl:path <http://data.europa.eu/m8g/cccev#ondersteuntWaarde>
-  ], [
-    shacl:class <http://data.europa.eu/m8g/cccev#SupportedValue>;
-    shacl:description "TODO"@nl;
-    shacl:minCount 1;
-    shacl:name "ondersteunt waarde"@nl;
-    shacl:path <http://data.europa.eu/m8g/cccev#ondersteuntWaarde>
   ], [
     shacl:class dc:LinguisticSystem;
     shacl:description "De taal of talen waarin het Bewijs geleverd wordt."@nl;
@@ -179,9 +167,10 @@
     shacl:path skos:prefLabel
   ], [
     shacl:class <http://data.europa.eu/m8g/cccev#EvidenceType>;
-    shacl:description "";
+    shacl:description "Bewijstype opgenomen in deze lijst met bewijstypen."@nl;
     shacl:minCount 1;
-    shacl:path <http://data.europa.eu/m8g/cccev#specifieert>
+    shacl:name "specifieert"@nl;
+    shacl:path <http://data.europa.eu/m8g/specifiesEvidenceType>
   ];
   shacl:targetClass <http://data.europa.eu/m8g/cccev#EvidenceTypeList> .
 
@@ -215,7 +204,7 @@
     shacl:path dc:type
   ], [
     shacl:datatype rdfs:Literal;
-    shacl:description "Een uitdrukking (functie) van de waarde die de Voorwaarde verwacht."@nl;
+    shacl:description "Formulering in een formele taal van de verwachte waarde(n) voor het Informatieconcept die is afgestemd op de concepten uit de gedefinieerde Voorwaarden en moet worden gerespecteerd door de aangeleverde Ondersteunde Waarden."@nl;
     shacl:name "uitdrukking verwachte waarde"@nl;
     shacl:path <http://data.europa.eu/m8g/expressionOfExpectedValue>
   ];
@@ -249,6 +238,20 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#OndersteunendeWaardeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <http://data.europa.eu/m8g/cccev#Evidence>;
+    shacl:description "Ondersteunde waarde die het bewijs bevat."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "ondersteunt waarde"@nl;
+    shacl:path <http://data.europa.eu/m8g/supportsValue>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/cccev#Evidence>;
+    shacl:description "Ondersteunde waarde die het bewijs bevat."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "ondersteunt waarde"@nl;
+    shacl:path <http://data.europa.eu/m8g/supportsValue>
+  ], [
     shacl:class <http://data.europa.eu/m8g/cccev#InformationConcept>;
     shacl:description "De OndersteunendeWaarde geeft de benodigde waarde aan Informatieconcept"@nl;
     shacl:minCount 1;
@@ -312,28 +315,33 @@
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
-    shacl:description "";
+    shacl:description "Beschrijving van de Procedure"@nl;
     shacl:minCount 1;
+    shacl:name "beschrijving"@nl;
     shacl:path dc:description
   ], [
     shacl:datatype rdfs:Literal;
-    shacl:description "";
+    shacl:description "Unieke identificator van de Procedure"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "identificator"@nl;
     shacl:path dc:identifier
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "";
+    shacl:description "Naam van de Procedure"@nl;
     shacl:minCount 1;
+    shacl:name "naam"@nl;
     shacl:path dc:title
   ], [
     shacl:class dc:LinguisticSystem;
-    shacl:description "";
+    shacl:description "De beschikbare taal van de Procedure"@nl;
+    shacl:name "taal"@nl;
     shacl:path dc:language
   ], [
     shacl:class skos:Concept;
-    shacl:description "";
+    shacl:description "Type van de Procedure"@nl;
     shacl:maxCount 1;
+    shacl:name "type"@nl;
     shacl:path dc:type
   ];
   shacl:targetClass <http://purl.org/vocab/cpsv#Rule> .
@@ -421,19 +429,22 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#TijdsPeriodeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:datatype xsd:dateTime;
-    shacl:description "";
-    shacl:maxCount 1;
-    shacl:path <http://data.europa.eu/m8g/cccev#eindtijd>
-  ], [
-    shacl:description "";
+    shacl:description "Omvang van de tijdsperiode."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:path <http://data.europa.eu/m8g/cccev#looptijd>
+    shacl:name "duratie"@nl;
+    shacl:path <http://data.europa.eu/m8g/cccev#duratie>
   ], [
     shacl:datatype xsd:dateTime;
-    shacl:description "";
+    shacl:description "Tijdstip waarop de Periode is geëindigd."@nl;
     shacl:maxCount 1;
+    shacl:name "eindtijd"@nl;
+    shacl:path <http://www.w3.org/2006/time#hasEnd>
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de Periode is gestart."@nl;
+    shacl:maxCount 1;
+    shacl:name "startijd"@nl;
     shacl:path <http://data.europa.eu/m8g/cccev#starttijd>
   ];
   shacl:targetClass <http://data.europa.eu/m8g/cccev#TijdsPeriode> .
@@ -442,10 +453,10 @@
   shacl:closed false;
   shacl:property [
     shacl:datatype rdf:langString;
-    shacl:description "De effectieve beperking in tekstvorm"@nl;
+    shacl:description "Beperking  toegepast op het InformatieConcept"@nl;
     shacl:maxCount 1;
     shacl:name "beperking"@nl;
-    shacl:path <http://data.europa.eu/m8g/cccev#beperking>
+    shacl:path <http://data.europa.eu/m8g/Constraint>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "Een korte uitleg die het begrip van de Voorwaarde ondersteunt."@nl;
@@ -454,11 +465,12 @@
     shacl:path dc:description
   ], [
     shacl:class <http://data.europa.eu/m8g/cccev#EvidenceTypeList>;
-    shacl:description "";
-    shacl:path <http://data.europa.eu/m8g/cccev#heeftBewijstypelijst>
+    shacl:description "Bewijstypelijst die de soorten bewijs specificeert die nodig zijn om aan de Voorwaarde te voldoen."@nl;
+    shacl:name "heeftBewijstypelijst"@nl;
+    shacl:path <http://data.europa.eu/m8g/hasEvidenceTypeList>
   ], [
     shacl:class <http://data.europa.eu/m8g/cccev#InformationConcept>;
-    shacl:description "Het informatieconcept gekoppeld aan de voorwaarde"@nl;
+    shacl:description "Informatieconcept waarvoor een waarde wordt verwacht door de Voorwaarde."@nl;
     shacl:name "heeft Concept"@nl;
     shacl:path <http://data.europa.eu/m8g/hasConcept>
   ], [
@@ -472,8 +484,8 @@
     shacl:path dc:identifier
   ], [
     shacl:class <http://data.europa.eu/m8g/cccev#Requirement>;
-    shacl:description "Voorwaarden kunnen gegroepeerd worden"@nl;
-    shacl:name "hangt samen met"@nl;
+    shacl:description "Verwijzing naar de Voorwaarde waarvan dit een ondergeschikte Voorwaarde is."@nl;
+    shacl:name "is voorwaarde van"@nl;
     shacl:path <http://data.europa.eu/m8g/isRequirementOf>
   ], [
     shacl:datatype rdf:langString;

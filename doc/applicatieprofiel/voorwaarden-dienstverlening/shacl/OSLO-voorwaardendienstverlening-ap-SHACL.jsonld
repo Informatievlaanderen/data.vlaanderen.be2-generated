@@ -80,7 +80,7 @@
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
           "sh:description": {
-            "nl": "De datum waarop het bewijs"
+            "nl": "De datum waarop het bewijs is afgeleverd."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -164,28 +164,6 @@
           "sh:class": "http://data.europa.eu/m8g/cccev#Requirement",
           "sh:description": "",
           "sh:path": "http://data.europa.eu/m8g/cccev#ondersteuntVoorwaarde"
-        },
-        {
-          "sh:class": "http://data.europa.eu/m8g/cccev#SupportedValue",
-          "sh:description": {
-            "nl": "TODO"
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "ondersteunt waarde"
-          },
-          "sh:path": "http://data.europa.eu/m8g/cccev#ondersteuntWaarde"
-        },
-        {
-          "sh:class": "http://data.europa.eu/m8g/cccev#SupportedValue",
-          "sh:description": {
-            "nl": "TODO"
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "ondersteunt waarde"
-          },
-          "sh:path": "http://data.europa.eu/m8g/cccev#ondersteuntWaarde"
         },
         {
           "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
@@ -340,9 +318,14 @@
         },
         {
           "sh:class": "http://data.europa.eu/m8g/cccev#EvidenceType",
-          "sh:description": "",
+          "sh:description": {
+            "nl": "Bewijstype opgenomen in deze lijst met bewijstypen."
+          },
           "sh:minCount": "1",
-          "sh:path": "http://data.europa.eu/m8g/cccev#specifieert"
+          "sh:name": {
+            "nl": "specifieert"
+          },
+          "sh:path": "http://data.europa.eu/m8g/specifiesEvidenceType"
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/cccev#EvidenceTypeList"
@@ -397,7 +380,7 @@
         {
           "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
           "sh:description": {
-            "nl": "Een uitdrukking (functie) van de waarde die de Voorwaarde verwacht."
+            "nl": "Formulering in een formele taal van de verwachte waarde(n) voor het Informatieconcept die is afgestemd op de concepten uit de gedefinieerde Voorwaarden en moet worden gerespecteerd door de aangeleverde Ondersteunde Waarden."
           },
           "sh:name": {
             "nl": "uitdrukking verwachte waarde"
@@ -415,13 +398,13 @@
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
-            "nl": "De effectieve beperking in tekstvorm"
+            "nl": "Beperking  toegepast op het InformatieConcept"
           },
           "sh:maxCount": "1",
           "sh:name": {
             "nl": "beperking"
           },
-          "sh:path": "http://data.europa.eu/m8g/cccev#beperking"
+          "sh:path": "http://data.europa.eu/m8g/Constraint"
         },
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
@@ -436,13 +419,18 @@
         },
         {
           "sh:class": "http://data.europa.eu/m8g/cccev#EvidenceTypeList",
-          "sh:description": "",
-          "sh:path": "http://data.europa.eu/m8g/cccev#heeftBewijstypelijst"
+          "sh:description": {
+            "nl": "Bewijstypelijst die de soorten bewijs specificeert die nodig zijn om aan de Voorwaarde te voldoen."
+          },
+          "sh:name": {
+            "nl": "heeftBewijstypelijst"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasEvidenceTypeList"
         },
         {
           "sh:class": "http://data.europa.eu/m8g/cccev#InformationConcept",
           "sh:description": {
-            "nl": "Het informatieconcept gekoppeld aan de voorwaarde"
+            "nl": "Informatieconcept waarvoor een waarde wordt verwacht door de Voorwaarde."
           },
           "sh:name": {
             "nl": "heeft Concept"
@@ -467,10 +455,10 @@
         {
           "sh:class": "http://data.europa.eu/m8g/cccev#Requirement",
           "sh:description": {
-            "nl": "Voorwaarden kunnen gegroepeerd worden"
+            "nl": "Verwijzing naar de Voorwaarde waarvan dit een ondergeschikte Voorwaarde is."
           },
           "sh:name": {
-            "nl": "hangt samen met"
+            "nl": "is voorwaarde van"
           },
           "sh:path": "http://data.europa.eu/m8g/isRequirementOf"
         },
@@ -503,6 +491,30 @@
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
+        {
+          "sh:class": "http://data.europa.eu/m8g/cccev#Evidence",
+          "sh:description": {
+            "nl": "Ondersteunde waarde die het bewijs bevat."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "ondersteunt waarde"
+          },
+          "sh:path": "http://data.europa.eu/m8g/supportsValue"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/cccev#Evidence",
+          "sh:description": {
+            "nl": "Ondersteunde waarde die het bewijs bevat."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "ondersteunt waarde"
+          },
+          "sh:path": "http://data.europa.eu/m8g/supportsValue"
+        },
         {
           "sh:class": "http://data.europa.eu/m8g/cccev#InformationConcept",
           "sh:description": {
@@ -547,21 +559,36 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-          "sh:description": "",
-          "sh:maxCount": "1",
-          "sh:path": "http://data.europa.eu/m8g/cccev#eindtijd"
-        },
-        {
-          "sh:description": "",
+          "sh:description": {
+            "nl": "Omvang van de tijdsperiode."
+          },
           "sh:maxCount": "1",
           "sh:minCount": "1",
-          "sh:path": "http://data.europa.eu/m8g/cccev#looptijd"
+          "sh:name": {
+            "nl": "duratie"
+          },
+          "sh:path": "http://data.europa.eu/m8g/cccev#duratie"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-          "sh:description": "",
+          "sh:description": {
+            "nl": "Tijdstip waarop de Periode is geëindigd."
+          },
           "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "eindtijd"
+          },
+          "sh:path": "http://www.w3.org/2006/time#hasEnd"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "sh:description": {
+            "nl": "Tijdstip waarop de Periode is gestart."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "startijd"
+          },
           "sh:path": "http://data.europa.eu/m8g/cccev#starttijd"
         }
       ],
@@ -795,32 +822,57 @@
       "sh:property": [
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": "",
+          "sh:description": {
+            "nl": "Beschrijving van de Procedure"
+          },
           "sh:minCount": "1",
+          "sh:name": {
+            "nl": "beschrijving"
+          },
           "sh:path": "http://purl.org/dc/terms/description"
         },
         {
           "sh:datatype": "http://www.w3.org/2000/01/rdf-schema#Literal",
-          "sh:description": "",
+          "sh:description": {
+            "nl": "Unieke identificator van de Procedure"
+          },
           "sh:maxCount": "1",
           "sh:minCount": "1",
+          "sh:name": {
+            "nl": "identificator"
+          },
           "sh:path": "http://purl.org/dc/terms/identifier"
         },
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-          "sh:description": "",
+          "sh:description": {
+            "nl": "Naam van de Procedure"
+          },
           "sh:minCount": "1",
+          "sh:name": {
+            "nl": "naam"
+          },
           "sh:path": "http://purl.org/dc/terms/title"
         },
         {
           "sh:class": "http://purl.org/dc/terms/LinguisticSystem",
-          "sh:description": "",
+          "sh:description": {
+            "nl": "De beschikbare taal van de Procedure"
+          },
+          "sh:name": {
+            "nl": "taal"
+          },
           "sh:path": "http://purl.org/dc/terms/language"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": "",
+          "sh:description": {
+            "nl": "Type van de Procedure"
+          },
           "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "type"
+          },
           "sh:path": "http://purl.org/dc/terms/type"
         }
       ],
