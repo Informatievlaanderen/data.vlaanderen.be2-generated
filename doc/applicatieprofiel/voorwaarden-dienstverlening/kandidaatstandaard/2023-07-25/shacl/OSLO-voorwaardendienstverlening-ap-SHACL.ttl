@@ -1,0 +1,490 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25> <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25shapes> <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#LegaleVerschijningsvormShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#PubliekeOrganisatieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#BewijsShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#BewijstypeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#BewijstypelijstShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#InformatieconceptShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#VoorwaardeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#OndersteunendeWaardeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#TijdsPeriodeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#ParticipatieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#AgentShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#JurisdictieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#LinguisticSystemShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#PlaatsShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#PubliekeDienstverleningShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#ProcedureShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#CodeShape> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://purl.org/vocab/cpsv#Participatie.agent> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#BewijsShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:dateTime;
+    shacl:description "De datum waarop het bewijs"@nl;
+    shacl:maxCount 1;
+    shacl:name "afleveringsdatum"@nl;
+    shacl:path <http://data.europa.eu/m8g/cccev#afleveringsdatum>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Een beschrijving van het bewijs."@nl;
+    shacl:maxCount 1;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    shacl:class foaf:Agent;
+    shacl:description "Agent die het onderwerp is in de geleverde Evidence."@nl;
+    shacl:minCount 1;
+    shacl:name "gaat over"@nl;
+    shacl:path dc:subject
+  ], [
+    shacl:class <http://data.europa.eu/m8g/cccev#TijdsPeriode>;
+    shacl:description "De periode waarin het Bewijs geldig is."@nl;
+    shacl:maxCount 1;
+    shacl:name "geldigheidsperiode"@nl;
+    shacl:path <https://www.w3.org/2006/time#ProperInterval>
+  ], [
+    shacl:class foaf:Agent;
+    shacl:description "Agent die het Bewijs produceert."@nl;
+    shacl:maxCount 1;
+    shacl:name "gemaakt door"@nl;
+    shacl:path dc:creator
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:description "Een identificator voor het Bewijs."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "identificator"@nl;
+    shacl:path dc:identifier
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "De officiële naam voor het Bewijs."@nl;
+    shacl:minCount 1;
+    shacl:name "naam"@nl;
+    shacl:path dc:title
+  ], [
+    shacl:class <http://data.europa.eu/m8g/cccev#Requirement>;
+    shacl:description "";
+    shacl:path <http://data.europa.eu/m8g/cccev#ondersteuntVoorwaarde>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/cccev#Requirement>;
+    shacl:description "";
+    shacl:path <http://data.europa.eu/m8g/cccev#ondersteuntVoorwaarde>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/cccev#SupportedValue>;
+    shacl:description "TODO"@nl;
+    shacl:minCount 1;
+    shacl:name "ondersteunt waarde"@nl;
+    shacl:path <http://data.europa.eu/m8g/cccev#ondersteuntWaarde>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/cccev#SupportedValue>;
+    shacl:description "TODO"@nl;
+    shacl:minCount 1;
+    shacl:name "ondersteunt waarde"@nl;
+    shacl:path <http://data.europa.eu/m8g/cccev#ondersteuntWaarde>
+  ], [
+    shacl:class dc:LinguisticSystem;
+    shacl:description "De taal of talen waarin het Bewijs geleverd wordt."@nl;
+    shacl:name "taal"@nl;
+    shacl:path dc:language
+  ], [
+    shacl:class dc:Jurisdiction;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:path <http://data.europa.eu/m8g/cccev#toepassingsgebied>
+  ], [
+    shacl:class foaf:Agent;
+    shacl:description "Agent die wettelijk verantwoordelijk is voor de Bewijsstukken, bijv. een wettelijke instantie."@nl;
+    shacl:minCount 1;
+    shacl:name "uitgegevenDoor"@nl;
+    shacl:path dc:publisher
+  ], [
+    shacl:class foaf:Agent;
+    shacl:description "Agent die het Bewijsmateriaal aanlevert."@nl;
+    shacl:maxCount 1;
+    shacl:name "verstrekt door"@nl;
+    shacl:path <http://data.europa.eu/m8g/isProvidedBy>
+  ], [
+    shacl:class <http://fixme.com#VertrouwelijkheidLevelType>;
+    shacl:description "Een classificatie van de informatieveiligheid."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "Vertrouwelijkheid level type"@nl;
+    shacl:path <http://data.europa.eu/m8g/cccev#confidentionalityLevelType>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/cccev#EvidenceType>;
+    shacl:description "Het BewijsType waartoe het Bewijs voldoet."@nl;
+    shacl:minCount 1;
+    shacl:name "vodoetAan"@nl;
+    shacl:path <http://data.europa.eu/m8g/cccev#voldoetAan>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/cccev#Evidence> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#BewijstypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class skos:Concept;
+    shacl:description "Een classificatiecode om de verwachte lay-out en inhoud van een Bewijs te specificeren."@nl;
+    shacl:name "Bewijs type classificatie"@nl;
+    shacl:path <http://data.europa.eu/m8g/cccev#evidenceTypeClassification>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/cccev#TijdsPeriode>;
+    shacl:description "Temporele voorwaarde voor de geldigheidsperiode van het Bewijstype."@nl;
+    shacl:maxCount 1;
+    shacl:name "geldigheidsduur"@nl;
+    shacl:path <https://www.w3.org/2006/time#ProperInterval>
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:description "Ondubbelzinnige verwijzing naar het Bewijstype."@nl;
+    shacl:name "identificator"@nl;
+    shacl:path dc:identifier
+  ], [
+    shacl:class <http://data.europa.eu/m8g/cccev#EvidenceTypeList>;
+    shacl:description "De BewijsTypeLijst waartoe het BewijsType behoort."@nl;
+    shacl:name "is Gespecifieerd In"@nl;
+    shacl:path <http://data.europa.eu/m8g/isSpecifiedIn>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/cccev#EvidenceType> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#BewijstypelijstShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "Een beschrijving van een bewijs type lijst."@nl;
+    shacl:maxCount 1;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:description "Ondubbelzinnige verwijzing naar de Bewijs Type Lijst."@nl;
+    shacl:name "identificator"@nl;
+    shacl:path dc:identifier
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "De naam van de Bewijs Type Lijst."@nl;
+    shacl:minCount 1;
+    shacl:name "naam"@nl;
+    shacl:path skos:prefLabel
+  ], [
+    shacl:class <http://data.europa.eu/m8g/cccev#EvidenceType>;
+    shacl:description "";
+    shacl:minCount 1;
+    shacl:path <http://data.europa.eu/m8g/cccev#specifieert>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/cccev#EvidenceTypeList> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#CodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#InformatieconceptShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "De beschrijving van het Informatie Concept."@nl;
+    shacl:maxCount 1;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:description "Ondubbelzinnige verwijzing naar het Informatie Concept."@nl;
+    shacl:name "identificator"@nl;
+    shacl:path dc:identifier
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "De naam van het Informatie Concept"@nl;
+    shacl:minCount 1;
+    shacl:name "naam"@nl;
+    shacl:path skos:prefLabel
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "De categorie waartoe het Informatie Concept behoort."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:description "Een uitdrukking (functie) van de waarde die de Voorwaarde verwacht."@nl;
+    shacl:name "uitdrukking verwachte waarde"@nl;
+    shacl:path <http://data.europa.eu/m8g/expressionOfExpectedValue>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/cccev#InformationConcept> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#JurisdictieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "Plaatsnaam waarmee de Jurisdictie kan worden aangeduid."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "plaats"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#plaats>
+  ];
+  shacl:targetClass dc:Jurisdiction .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#LegaleVerschijningsvormShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description "";
+    shacl:path <http://data.europa.eu/eli/ontology#gerelateerdAan>
+  ];
+  shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResource> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#LinguisticSystemShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:LinguisticSystem .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#OndersteunendeWaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <http://data.europa.eu/m8g/cccev#InformationConcept>;
+    shacl:description "De OndersteunendeWaarde geeft de benodigde waarde aan Informatieconcept"@nl;
+    shacl:minCount 1;
+    shacl:name "geeft waarde aan"@nl;
+    shacl:path <http://data.europa.eu/m8g/providesValueFor>
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:description "Zoekopdracht waarmee de waarde voor het Informatieconcept kan worden opgehaald uit de Bewijs-gegevens"@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "query"@nl;
+    shacl:path <http://data.europa.eu/m8g/cccev#query>
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:description "Waarde voor het Informatieconcept dat het Bewijs ondersteunt"@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "waarde"@nl;
+    shacl:path <http://data.europa.eu/m8g/cccev#value>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/cccev#SupportedValue> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#ParticipatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class dc:Agent;
+    shacl:description "Referentie naar verbonden klasse."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "Agent"@nl;
+    shacl:path <http://purl.org/vocab/cpsv#Participatie.agent>
+  ], [
+    shacl:class <http://purl.org/vocab/cpsv#PublicService>;
+    shacl:description "Referentie naar verbonden klasse."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "Publieke Dienstverlening"@nl;
+    shacl:path <http://purl.org/vocab/cpsv#Participatie.publiekeDienstverlening>
+  ], [
+    shacl:class rdf:langString;
+    shacl:description "De beschrijving van de Participatie."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Het geeft de gespeelde rol weer van de Agent ten opzichte van de publieke dienstverlening."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "rol"@nl;
+    shacl:path <http://data.europa.eu/m8g/role>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/hasParticipation> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#PlaatsShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Location .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#ProcedureShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "";
+    shacl:minCount 1;
+    shacl:path dc:description
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:path dc:identifier
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "";
+    shacl:minCount 1;
+    shacl:path dc:title
+  ], [
+    shacl:class dc:LinguisticSystem;
+    shacl:description "";
+    shacl:path dc:language
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://purl.org/vocab/cpsv#Rule> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#PubliekeDienstverleningShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "Een beschrijving van de Publieke Dienstverlening"@nl;
+    shacl:minCount 1;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Het doelpubliek waarvoor de Publieke Dienstverlening bedoeld is."@nl;
+    shacl:name "doelpubliek"@nl;
+    shacl:path dc:audience
+  ], [
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description "";
+    shacl:path <http://data.europa.eu/m8g/hasLegalResource>
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:description "Unieke identificator van de Publieke Dienstverlening"@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "identificatie"@nl;
+    shacl:path dc:identifier
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de Publieke Dienstverlening."@nl;
+    shacl:minCount 1;
+    shacl:name "naam"@nl;
+    shacl:path dc:title
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Het doel van een overheidsactiviteit, waar de openbare dienst voor bedoeld is."@nl;
+    shacl:name "overheidsfuncties"@nl;
+    shacl:path dc:type
+  ], [
+    shacl:class dc:Location;
+    shacl:description "Een identificeerbare geografische plaats of benoemde plaats."@nl;
+    shacl:name "ruimetelijke dekking"@nl;
+    shacl:path dc:spatial
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "De industrie of sector waar een overheidsdienst betrekking op heeft of voor bedoeld is."@nl;
+    shacl:name "sector"@nl;
+    shacl:path <http://data.europa.eu/m8g/sector>
+  ], [
+    shacl:class <http://fixme.com#Status>;
+    shacl:description "Het geeft aan of een overheidsdienst actief, inactief, in ontwikkeling enz. is volgens een gecontroleerde woordenlijst."@nl;
+    shacl:maxCount 1;
+    shacl:name "status"@nl;
+    shacl:path <http://www.w3.org/ns/adms#status>
+  ], [
+    shacl:class dc:LinguisticSystem;
+    shacl:description "De taal waarin de Publieke Dienstverlening beschikbaar is."@nl;
+    shacl:name "taal"@nl;
+    shacl:path dc:language
+  ], [
+    shacl:datatype xsd:duration;
+    shacl:description "De (geschatte) tijd die nodig is om een openbare dienst uit te voeren."@nl;
+    shacl:maxCount 1;
+    shacl:name "verwerkingstijd"@nl;
+    shacl:path <http://data.europa.eu/m8g/processingTime>
+  ], [
+    shacl:class <http://purl.org/vocab/cpsv#Rule>;
+    shacl:description "";
+    shacl:path <http://purl.org/vocab/cpsv#follows>
+  ];
+  shacl:targetClass <http://purl.org/vocab/cpsv#Participatie.publiekeDienstverlening> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#PubliekeOrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class dc:Location;
+    shacl:description "Administratief gebied dat de Publieke Organisatie dekt."@nl;
+    shacl:minCount 1;
+    shacl:name "Werkingsgebied"@nl;
+    shacl:path dc:spatial
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#TijdsPeriodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:dateTime;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:path <http://data.europa.eu/m8g/cccev#eindtijd>
+  ], [
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:path <http://data.europa.eu/m8g/cccev#looptijd>
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:path <http://data.europa.eu/m8g/cccev#starttijd>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/cccev#TijdsPeriode> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#VoorwaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "De effectieve beperking in tekstvorm"@nl;
+    shacl:maxCount 1;
+    shacl:name "beperking"@nl;
+    shacl:path <http://data.europa.eu/m8g/cccev#beperking>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Een korte uitleg die het begrip van de Voorwaarde ondersteunt."@nl;
+    shacl:maxCount 1;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    shacl:class <http://data.europa.eu/m8g/cccev#EvidenceTypeList>;
+    shacl:description "";
+    shacl:path <http://data.europa.eu/m8g/cccev#heeftBewijstypelijst>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/cccev#InformationConcept>;
+    shacl:description "Het informatieconcept gekoppeld aan de voorwaarde"@nl;
+    shacl:name "heeft Concept"@nl;
+    shacl:path <http://data.europa.eu/m8g/hasConcept>
+  ], [
+    shacl:class <http://data.europa.eu/m8g/cccev#Requirement>;
+    shacl:description "";
+    shacl:path <http://data.europa.eu/m8g/cccev#heeftVoorwaarde>
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:description "Ondubbelzinnige verwijzing naar de Voorwaarde."@nl;
+    shacl:name "identificatie"@nl;
+    shacl:path dc:identifier
+  ], [
+    shacl:class <http://data.europa.eu/m8g/cccev#Requirement>;
+    shacl:description "Voorwaarden kunnen gegroepeerd worden"@nl;
+    shacl:name "hangt samen met"@nl;
+    shacl:path <http://data.europa.eu/m8g/isRequirementOf>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de Voorwaarde."@nl;
+    shacl:minCount 1;
+    shacl:name "naam"@nl;
+    shacl:path skos:prefLabel
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "De categorie waartoe de voorwaarde hoort."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/cccev#Requirement> .
