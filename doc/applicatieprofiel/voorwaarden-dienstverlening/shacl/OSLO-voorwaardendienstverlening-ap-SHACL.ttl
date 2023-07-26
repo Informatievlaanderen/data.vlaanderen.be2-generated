@@ -18,11 +18,13 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#ParticipatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#AgentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#JurisdictieShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#LinguisticSystemShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#PlaatsShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#PubliekeDienstverleningShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#ProcedureShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#CodeShape> .
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#GeografischeNaamShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#TaalStringShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#CodeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#GeometrieShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#AgentShape> a shacl:NodeShape;
   shacl:closed false;
@@ -37,7 +39,7 @@
     shacl:name "afleveringsdatum"@nl;
     shacl:path <http://data.europa.eu/m8g/cccev#afleveringsdatum>
   ], [
-    shacl:datatype rdf:langString;
+    shacl:class rdf:langString;
     shacl:description "Een beschrijving van het bewijs."@nl;
     shacl:maxCount 1;
     shacl:name "beschrijving"@nl;
@@ -105,7 +107,7 @@
     shacl:name "verstrekt door"@nl;
     shacl:path <http://data.europa.eu/m8g/isProvidedBy>
   ], [
-    shacl:class <http://fixme.com#VertrouwelijkheidLevelType>;
+    shacl:class skos:Concept;
     shacl:description "Een classificatie van de informatieveiligheid."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -149,7 +151,7 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#BewijstypelijstShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:datatype rdf:langString;
+    shacl:class rdf:langString;
     shacl:description "Een beschrijving van een bewijs type lijst."@nl;
     shacl:maxCount 1;
     shacl:name "beschrijving"@nl;
@@ -160,7 +162,7 @@
     shacl:name "identificator"@nl;
     shacl:path dc:identifier
   ], [
-    shacl:datatype rdf:langString;
+    shacl:class rdf:langString;
     shacl:description "De naam van de Bewijs Type Lijst."@nl;
     shacl:minCount 1;
     shacl:name "naam"@nl;
@@ -178,10 +180,18 @@
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#GeografischeNaamShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#GeometrieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Geometrie> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#InformatieconceptShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:datatype rdf:langString;
+    shacl:class rdf:langString;
     shacl:description "De beschrijving van het Informatie Concept."@nl;
     shacl:maxCount 1;
     shacl:name "beschrijving"@nl;
@@ -192,7 +202,7 @@
     shacl:name "identificator"@nl;
     shacl:path dc:identifier
   ], [
-    shacl:datatype rdf:langString;
+    shacl:class rdf:langString;
     shacl:description "De naam van het Informatie Concept"@nl;
     shacl:minCount 1;
     shacl:name "naam"@nl;
@@ -230,10 +240,6 @@
     shacl:path <http://data.europa.eu/eli/ontology#gerelateerdAan>
   ];
   shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResource> .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#LinguisticSystemShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass dc:LinguisticSystem .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#OndersteunendeWaardeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -309,12 +315,27 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#PlaatsShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/generiek#Geometrie>;
+    shacl:description "Geometrie van de plaats of het gebied."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "geometrie"@nl;
+    shacl:path <http://www.w3.org/ns/locn#geometry>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de plaats of van het gebied."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "plaatsnaam"@nl;
+    shacl:path rdfs:label
+  ];
   shacl:targetClass dc:Location .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#ProcedureShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:datatype rdf:langString;
+    shacl:class rdf:langString;
     shacl:description "Beschrijving van de Procedure"@nl;
     shacl:minCount 1;
     shacl:name "beschrijving"@nl;
@@ -327,13 +348,13 @@
     shacl:name "identificator"@nl;
     shacl:path dc:identifier
   ], [
-    shacl:datatype rdf:langString;
+    shacl:class rdf:langString;
     shacl:description "Naam van de Procedure"@nl;
     shacl:minCount 1;
     shacl:name "naam"@nl;
     shacl:path dc:title
   ], [
-    shacl:class dc:LinguisticSystem;
+    shacl:class rdf:langString;
     shacl:description "De beschikbare taal van de Procedure"@nl;
     shacl:name "taal"@nl;
     shacl:path dc:language
@@ -349,7 +370,7 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#PubliekeDienstverleningShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:datatype rdf:langString;
+    shacl:class rdf:langString;
     shacl:description "Een beschrijving van de Publieke Dienstverlening"@nl;
     shacl:minCount 1;
     shacl:name "beschrijving"@nl;
@@ -371,7 +392,7 @@
     shacl:name "identificatie"@nl;
     shacl:path dc:identifier
   ], [
-    shacl:datatype rdf:langString;
+    shacl:class rdf:langString;
     shacl:description "Naam van de Publieke Dienstverlening."@nl;
     shacl:minCount 1;
     shacl:name "naam"@nl;
@@ -392,18 +413,17 @@
     shacl:name "sector"@nl;
     shacl:path <http://data.europa.eu/m8g/sector>
   ], [
-    shacl:class <http://fixme.com#Status>;
+    shacl:class skos:Concept;
     shacl:description "Het geeft aan of een overheidsdienst actief, inactief, in ontwikkeling enz. is volgens een gecontroleerde woordenlijst."@nl;
     shacl:maxCount 1;
     shacl:name "status"@nl;
     shacl:path <http://www.w3.org/ns/adms#status>
   ], [
-    shacl:class dc:LinguisticSystem;
+    shacl:class rdf:langString;
     shacl:description "De taal waarin de Publieke Dienstverlening beschikbaar is."@nl;
     shacl:name "taal"@nl;
     shacl:path dc:language
   ], [
-    shacl:datatype xsd:duration;
     shacl:description "De (geschatte) tijd die nodig is om een openbare dienst uit te voeren."@nl;
     shacl:maxCount 1;
     shacl:name "verwerkingstijd"@nl;
@@ -425,6 +445,25 @@
     shacl:path dc:spatial
   ];
   shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#TaalStringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:string;
+    shacl:description "De string"@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "String"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#string>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "De taal."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "Taal"@nl;
+    shacl:path dc:language
+  ];
+  shacl:targetClass rdf:langString .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#TijdsPeriodeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -452,13 +491,13 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-25#VoorwaardeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:datatype rdf:langString;
+    shacl:class rdf:langString;
     shacl:description "Beperking  toegepast op het InformatieConcept"@nl;
     shacl:maxCount 1;
     shacl:name "beperking"@nl;
     shacl:path <http://data.europa.eu/m8g/Constraint>
   ], [
-    shacl:datatype rdf:langString;
+    shacl:class rdf:langString;
     shacl:description "Een korte uitleg die het begrip van de Voorwaarde ondersteunt."@nl;
     shacl:maxCount 1;
     shacl:name "beschrijving"@nl;
@@ -488,7 +527,7 @@
     shacl:name "is voorwaarde van"@nl;
     shacl:path <http://data.europa.eu/m8g/isRequirementOf>
   ], [
-    shacl:datatype rdf:langString;
+    shacl:class rdf:langString;
     shacl:description "Naam van de Voorwaarde."@nl;
     shacl:minCount 1;
     shacl:name "naam"@nl;
