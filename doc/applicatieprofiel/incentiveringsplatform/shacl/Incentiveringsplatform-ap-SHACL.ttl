@@ -14,7 +14,6 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BewijsShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#OutputShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#PeriodeShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#DienstverleningShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#AgentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BedragShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#CriteriumVereisteTypeShape>,
@@ -22,6 +21,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#OutputTypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#NAL_currencyShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BewijsTypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#DienstverleningShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#Dienstverlening(consumptie)Shape> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#AgentShape> a shacl:NodeShape;
@@ -153,11 +153,11 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#Dienstverlening(consumptie)Shape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://joinup.ec.europa.eu/sites/default/files/distribution/2013-11/cpsv_101.ttl#PublicService> .
+  shacl:targetClass schemas:Service .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#DienstverleningShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://fixme.com#Dienstverlening> .
+  shacl:targetClass schemas:Service .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#DienstverleningsTypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -186,7 +186,7 @@
     shacl:path <http://data.europa.eu/m8g/startTime>
   ], [
     shacl:datatype xsd:dateTime;
-    shacl:description "Einde vd tijdsduur."@nl;
+    shacl:description "Einde van de tijdsduur."@nl;
     shacl:maxCount 1;
     shacl:name "einde"@nl;
     shacl:path <http://data.europa.eu/m8g/endTime>
@@ -220,7 +220,7 @@
     shacl:path dc:type
   ], [
     shacl:class dc:Agent;
-    shacl:description "Persoon of organisatie die het stimulansaanbod aanbiedt."@nl;
+    shacl:description "Persoon of organisatie die het Stimulansaanbod aanbiedt."@nl;
     shacl:name "aanbieder"@nl;
     shacl:path <https://data.vlaanderen.be/ns/incentivering#aanbieder>
   ], [
@@ -231,17 +231,17 @@
     shacl:path rdf:langString
   ], [
     shacl:class <https://data.vlaanderen.be/ns/incentivering#Beloning>;
-    shacl:description "Type beloning"@nl;
+    shacl:description "Type van beloning."@nl;
     shacl:name "beloningtype"@nl;
     shacl:path <https://data.vlaanderen.be/ns/incentivering#beloningtype>
   ], [
     shacl:class <http://data.europa.eu/m8g/Evidence>;
-    shacl:description "Type van bewijs"@nl;
+    shacl:description "Type van bewijs."@nl;
     shacl:name "bewijstype"@nl;
     shacl:path <https://data.vlaanderen.be/ns/incentivering#bewijstype>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/incentivering#Stimulansconsumptie>;
-    shacl:description "Consumptie van een stimulansaanbod door een Agent"@nl;
+    shacl:description "Consumptie van een Stimulansaanbod door een Agent."@nl;
     shacl:name "consumptie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/incentivering#consumptie>
   ], [
@@ -259,12 +259,12 @@
     shacl:path <https://semiceu.github.io/CCCEV/releases/2.00/#Period%20of%20Time>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/incentivering#Stimulansaanbod>;
-    shacl:description "gerelateerd stimulansaanbod"@nl;
+    shacl:description "Gerelateerd Stimulansaanbod."@nl;
     shacl:name "isgerelateerdmet"@nl;
     shacl:path <https://data.vlaanderen.be/ns/incentivering#isgerelateerdmet>
   ], [
     shacl:class dc:Agent;
-    shacl:description "Persoon of organisatie die de stimulansaanbod financiert."@nl;
+    shacl:description "Persoon of organisatie die de Stimulansaanbod financiert."@nl;
     shacl:name "sponsor"@nl;
     shacl:path <https://data.vlaanderen.be/ns/incentivering#sponsor>
   ];
@@ -274,16 +274,16 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/incentivering#Beloningsontvangst>;
-    shacl:description "beloning"@nl;
-    shacl:name "beloning"@nl
+    shacl:description "Gratificatie."@nl;
+    shacl:name "gratificatie"@nl
   ], [
     shacl:class <http://data.europa.eu/m8g/Evidence>;
-    shacl:description "bewijs"@nl;
-    shacl:name "bewijs"@nl;
+    shacl:description "Bekrachtiging."@nl;
+    shacl:name "bekrachtiging"@nl;
     shacl:path <https://data.vlaanderen.be/ns/incentivering#bewijs>
   ], [
     shacl:class dc:Agent;
-    shacl:description "Persoon of organisatie die het stimulansaanbod verbruikt."@nl;
+    shacl:description "Persoon of organisatie die het Stimulansaanbod verbruikt."@nl;
     shacl:minCount 1;
     shacl:name "consument"@nl;
     shacl:path <https://data.vlaanderen.be/ns/incentivering#consument>
