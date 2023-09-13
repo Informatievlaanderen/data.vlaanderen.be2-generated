@@ -15,12 +15,12 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#OutputShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#PeriodeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#AgentShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BedragShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#CriteriumVereisteTypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#DienstverleningsTypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#OutputTypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#NAL_currencyShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BewijsTypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BedragShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#DienstverleningShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#Dienstverlening(consumptie)Shape> .
 
@@ -31,12 +31,12 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BedragShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class skos:Concept;
-    shacl:description "De valuta waarin het bedrag wordt uitgedrukt."@nl;
+    shacl:datatype xsd:string;
+    shacl:description "De eenheid waarin het bedrag wordt uitgedrukt."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "valuta"@nl;
-    shacl:path schemas:currency
+    shacl:path schemas:unitText
   ], [
     shacl:datatype xsd:double;
     shacl:description "Waarde van het bedag."@nl;
@@ -45,7 +45,7 @@
     shacl:name "waarde"@nl;
     shacl:path schemas:value
   ];
-  shacl:targetClass rdf:langString .
+  shacl:targetClass schemas:QuantitativeValue .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BeloningShape> a shacl:NodeShape;
   shacl:closed false;
@@ -80,7 +80,7 @@
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
   ], [
-    shacl:datatype rdf:langString;
+    shacl:class schemas:QuantitativeValue;
     shacl:description "Het gewicht van de beloning."@nl;
     shacl:maxCount 1;
     shacl:name "waarde"@nl;
@@ -224,12 +224,6 @@
     shacl:name "aanbieder"@nl;
     shacl:path <https://data.vlaanderen.be/ns/incentivering#aanbieder>
   ], [
-    shacl:datatype rdf:langString;
-    shacl:description "Totale bedrag beschikbaar voor de stimulans."@nl;
-    shacl:maxCount 1;
-    shacl:name "bedrag"@nl;
-    shacl:path rdf:langString
-  ], [
     shacl:class <https://data.vlaanderen.be/ns/incentivering#Beloning>;
     shacl:description "Type van beloning."@nl;
     shacl:name "beloningtype"@nl;
@@ -267,6 +261,12 @@
     shacl:description "Persoon of organisatie die de Stimulansaanbod financiert."@nl;
     shacl:name "sponsor"@nl;
     shacl:path <https://data.vlaanderen.be/ns/incentivering#sponsor>
+  ], [
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "Totale bedrag beschikbaar voor de stimulans."@nl;
+    shacl:maxCount 1;
+    shacl:name "bedrag"@nl;
+    shacl:path rdf:langString
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/incentivering#Stimulansaanbod> .
 
