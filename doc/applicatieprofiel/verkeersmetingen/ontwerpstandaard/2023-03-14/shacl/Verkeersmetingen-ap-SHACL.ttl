@@ -8,9 +8,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14> <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14shapes> <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijrichtingtypeShape>,
+<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14> <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14shapes> <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#FietspadShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijrichtingtypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijstrookShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijstrooktypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeersbemonsteringsobjectShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeersdeelnemerShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeersdeelnemertypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeersdomeinobjectShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeerskenmerkShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeerskenmerktypeShape>,
@@ -21,6 +25,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeersobjectShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VoertuigShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VoertuigtypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VoetpadShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#AnyShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#MomentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#TemporeleEntiteitShape>,
@@ -43,6 +48,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#ObservatieproceduretypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#TaalcodeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#TekenShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#IdentifierShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#LocatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#ProcedureShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#LinkShape>,
@@ -105,6 +111,17 @@
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#FietspadShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/netwerk/#LineaireReferentie>;
+    shacl:description "Verwijzing naar het Netwerkelement waarop de Rijstrook betrekking heeft. "@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "netwerkreferentie"@nl
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Fietspad> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#FormaatShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Formaat> .
@@ -150,6 +167,35 @@
     shacl:path <https://data.vlaanderen.be/ns/netwerk/#richting>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/netwerk/#GerichteLink> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#IdentifierShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class dc:Agent;
+    shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
+    shacl:maxCount 1;
+    shacl:name "toegekend door"@nl;
+    shacl:path dc:creator
+  ], [
+    shacl:datatype xsd:string;
+    shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
+    shacl:maxCount 1;
+    shacl:name "toegekend door (String)"@nl;
+    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    shacl:maxCount 1;
+    shacl:name "toegekend op"@nl;
+    shacl:path dc:issued
+  ], [
+    shacl:datatype rdfs:Literal;
+    shacl:description "String gebruikt om het object uniek te identificeren."@nl;
+    shacl:maxCount 1;
+    shacl:name "identificator"@nl;
+    shacl:path skos:notation
+  ];
+  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#InformatietypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -388,14 +434,14 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/netwerk/#LineaireReferentie>;
-    shacl:description "Een netwerkreferentie tot een netwerkelement."@nl;
+    shacl:description "Verwijzing naar het Netwerkelement waarop de Rijrichting betrekking heeft. "@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "netwerkreferentie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#netwerkreferentie>
+    shacl:path <https://fixme.com>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Rijrichtingtype>;
-    shacl:description "Geeft de richting van de verkeersstroom aan in relatie tot de logische richting van het wegsegment."@nl;
+    shacl:description "De rijrichting."@nl;
     shacl:maxCount 1;
     shacl:name "rijrichting"@nl;
     shacl:path <https://data.vlaanderen.be/ns/weg#rijrichting>
@@ -410,19 +456,27 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/netwerk/#LineaireReferentie>;
-    shacl:description "Een netwerkreferentie tot een netwerkelement."@nl;
+    shacl:description "Verwijzing naar het Netwerkelement waarop de Rijstrook betrekking heeft. "@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "netwerkreferentie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#netwerkreferentie>
+    shacl:name "netwerkreferentie"@nl
   ], [
-    shacl:datatype rdf:langString;
-    shacl:description "Aanduiding van de rijstrook."@nl;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificator van de Rijstrook."@nl;
     shacl:maxCount 1;
     shacl:name "rijstrook"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#rijstrook>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrooktype>;
+    shacl:description "TODO"@nl;
+    shacl:name "rijstrooktype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#rijstrooktype>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijstrooktypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrooktype> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#SensorShape> a shacl:NodeShape;
   shacl:closed false;
@@ -435,7 +489,7 @@
     shacl:path <http://www.w3.org/ns/ssn/implements>
   ], [
     shacl:class prov:Location;
-    shacl:description "Ligging van de sensor."@nl;
+    shacl:description "Locatie van de Sensor."@nl;
     shacl:name "ligging"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#ligging>
   ];
@@ -510,13 +564,28 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject>;
-    shacl:description "Object dat bemonsterd wordt."@nl;
-    shacl:maxCount 1;
+    shacl:description "Verwijzing naar het Verkeersdomeinobject waarop de meting betrekking heeft en waarvoor het Verkeersbemonsteringsobject representatief is."@nl;
     shacl:minCount 1;
     shacl:name "bemonsterdObject"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#bemonsterdObject>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersbemonsteringsobject> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeersdeelnemerShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdeelnemertype>;
+    shacl:description "TODO"@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "verkeersdeelnemertype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#verkeersdeelnemertype>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdeelnemer> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeersdeelnemertypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdeelnemertype> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeersdomeinobjectShape> a shacl:NodeShape;
   shacl:closed false;
@@ -526,14 +595,19 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerktype>;
-    shacl:description "Type van verkeerskenmerk dat men wil meten."@nl;
+    shacl:description "Type vh Verkeerskenmerk."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "type"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#type>
   ], [
+    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdeelnemertype>;
+    shacl:description "TODO"@nl;
+    shacl:name "verkeersdeelnemertype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#verkeersdeelnemerType>
+  ], [
     shacl:class <https://data.vlaanderen.be/ns/transportnetwerk/#Voertuigtype>;
-    shacl:description "Type van voertuig dat men wil meten."@nl;
+    shacl:description "Soort Voertuig waarvan men het Verkeerskenmerk meet."@nl;
     shacl:name "voertuigType"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType>
   ];
@@ -547,28 +621,28 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://www.opengis.net/ont/sf#Point>;
-    shacl:description "Vorm- en positiekenmerken van een object."@nl;
+    shacl:description "Vorm- en positiekenmerken van het meetpunt."@nl;
     shacl:maxCount 1;
     shacl:name "geometrie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/weg#geometrie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/netwerk/#Netwerkreferentie>;
-    shacl:description "Een netwerkreferentie tot een netwerkelement."@nl;
+    shacl:description "Referentie naar het Netwerkelement waarop of waarlangs het Verkeersmeetpunt ligt."@nl;
     shacl:maxCount 1;
     shacl:name "netwerkreferentie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#netwerkreferentie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/weg#Rijrichting>;
-    shacl:description "Geeft de richting van de verkeersstroom aan in relatie tot de logische richting van het wegsegment."@nl;
+    shacl:description "Geeft aan welke op welke Rijrichting het Verkeersmeetpunt ligt."@nl;
     shacl:maxCount 1;
     shacl:name "rijrichting"@nl;
     shacl:path <https://data.vlaanderen.be/ns/weg#Rijrichting>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook>;
-    shacl:description "Begrensd gedeelte van de rijbaan dat voldoende breed is voor een rij van het voor dat gedeelte bestemde verkeer."@nl;
+    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel>;
+    shacl:description "TODO"@nl;
     shacl:maxCount 1;
-    shacl:name "rijstrook"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#rijstrook>
+    shacl:name "wegdeel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#wegdeel>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt> .
 
@@ -576,28 +650,27 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://www.opengis.net/ont/sf#LineString>;
-    shacl:description "Vorm- en positiekenmerken van een object."@nl;
+    shacl:description "Vorm- en positiekenmerken van het meettraject."@nl;
     shacl:maxCount 1;
     shacl:name "geometrie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/weg#geometrie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/netwerk/#Netwerkreferentie>;
-    shacl:description "Een netwerkreferentie tot een netwerkelement."@nl;
+    shacl:description "Referentie naar het Netwerkelement waarop of waarlangs het Verkeersmeettraject loopt."@nl;
     shacl:maxCount 1;
     shacl:name "netwerkReferentie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#netwerkReferentie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/weg#Rijrichting>;
-    shacl:description "Geeft de richting van de verkeersstroom aan in relatie tot de logische richting van het wegsegment."@nl;
+    shacl:description "Geeft aan welke op welke Rijrichting het Verkeersmeettraject ligt."@nl;
     shacl:maxCount 1;
     shacl:name "rijrichting"@nl;
     shacl:path <https://data.vlaanderen.be/ns/weg#Rijrichting>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook>;
-    shacl:description "Begrensd gedeelte van de rijbaan dat voldoende breed is voor een rij van het voor dat gedeelte bestemde verkeer."@nl;
+    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel>;
+    shacl:description "";
     shacl:maxCount 1;
-    shacl:name "rijstrook"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#rijstrook>
+    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#wegdeel>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject> .
 
@@ -605,28 +678,25 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://fixme.com#TemporeleEntiteit>;
-    shacl:description "Het moment waarop het resultaat van de Verkeersmeting van toepassing was."@nl;
+    shacl:description "Het moment waarop het resultaat van de Verkeersmeting van toepassing is."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "fenomeenTijd"@nl;
     shacl:path <https://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk>;
-    shacl:description "Kenmerk dat geobserveerd wordt."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "geobserveerdKenmerk"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdKenmerk>
+    shacl:class <https://www.w3.org/TR/vocab-ssn/#SOSAProcedure>;
+    shacl:description "Procedure gebruikt voor de Verkeersmeting."@nl;
+    shacl:name "gebruikteProcedure"@nl;
+    shacl:path <https://fixme.com>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject>;
-    shacl:description "Het object dat geobserveerd wordt."@nl;
+    shacl:class <http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata>;
+    shacl:description "Verwijzing naar Metadata van de Verkeersmeting."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "geobserveerdObject"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdObject>
+    shacl:name "metadata"@nl;
+    shacl:path <https://fixme.com>
   ], [
     shacl:class <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any>;
-    shacl:description "De waarde van het geobserveerdeKenmerk als resultaat van de Verkeersmeting."@nl;
+    shacl:description "De waarde van het geobserveerdKenmerk als resultaat van de Verkeersmeting."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "resultaat"@nl;
@@ -638,16 +708,30 @@
     shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality>
   ], [
     shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>;
-    shacl:description "Tijdstip waarop het resultaat van de Observatie werd bekomen."@nl;
+    shacl:description "Tijdstip waarop het resultaat van de Verkeersmeting werd bekomen."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "resultaattijd"@nl;
     shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime>
   ], [
     shacl:class dc:Agent;
-    shacl:description "Agent die de verkeersmeting heeft uitgevoerd."@nl;
+    shacl:description "Agent die de Verkeersmeting heeft uitgevoerd."@nl;
     shacl:name "uitgevoerdDoor"@nl;
     shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen/#Observatie.uitgevoerdDoor>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk>;
+    shacl:description "Kenmerk van het Verkeersobject dat geobserveerd wordt."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "geobserveerdKenmerk"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdKenmerk>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject>;
+    shacl:description "Het Verkeersobject dat geobserveerd wordt."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "geobserveerdObject"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdObject>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting> .
 
@@ -655,34 +739,40 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://fixme.com#TemporeleEntiteit>;
-    shacl:description "Het moment waarop het resultaat van de Verkeersmeting van toepassing was."@nl;
+    shacl:description "Het moment waarop het resultaat van de Verkeersmetingen in de verzameling van toepassing was."@nl;
     shacl:maxCount 1;
     shacl:name "fenomeentijd"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#fenomeentijd>
+    shacl:path <https://fixme.com>
+  ], [
+    shacl:class <http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata>;
+    shacl:description "Verwijzing naar de Metadata van de Verkeersmetingen in de verzameling."@nl;
+    shacl:maxCount 1;
+    shacl:name "metadata"@nl;
+    shacl:path <https://fixme.com>
+  ], [
+    shacl:class <https://www.w3.org/ns/sosa/Sensor>;
+    shacl:description "Sensor waarmee de Verkeersmetingen in de verzameling werd bekomen."@nl;
+    shacl:maxCount 1;
+    shacl:name "uitgevoerdMet"@nl;
+    shacl:path <https://fixme.com>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk>;
-    shacl:description "Kenmerk dat men observeert vh geobserveerdObject."@nl;
+    shacl:description "Kenmerk dat de Verkeersmetingen in de verzameling meten."@nl;
     shacl:maxCount 1;
     shacl:name "geobserveerdKenmerk"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling.geobserveerdKenmerk>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject>;
-    shacl:description "Object dat men observeert."@nl;
+    shacl:description "Object dat door de Verkeersmetingen wordt geobserveerd."@nl;
     shacl:maxCount 1;
     shacl:name "geobserveerdObject"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling.geobserveerdObject>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting>;
-    shacl:description "heeft lid"@nl;
+    shacl:description "Verkeersmetingen die tot de verzameling behoort."@nl;
     shacl:minCount 1;
     shacl:name "heeftLid"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#heeftLid>
-  ], [
-    shacl:class <https://www.w3.org/ns/sosa/Sensor>;
-    shacl:description "Verwijzing naar het Proces waarmee het resultaat van een Observatie is bekomen."@nl;
-    shacl:maxCount 1;
-    shacl:name "uitgevoerdMet"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#uitgevoerdMet>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling> .
 
@@ -690,7 +780,7 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting>;
-    shacl:description "Het Verkeersobject verschaft waarde aan de Verkeersmeting."@nl;
+    shacl:description "Verwijzing naar een Verkeersmeting die voor het geobserveerdObject plaatsvondt."@nl;
     shacl:name "waardeverschaffer"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#waardeverschaffer>
   ];
@@ -700,7 +790,7 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/transportnetwerk/#Voertuigtype>;
-    shacl:description "Het type voertuig."@nl;
+    shacl:description "Soort voertuig."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "voertuigtype"@nl;
@@ -712,11 +802,22 @@
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Voertuigtype> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VoetpadShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/netwerk/#LineaireReferentie>;
+    shacl:description "Een netwerkreferentie tot een netwerkelement."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "netwerkreferentie"@nl
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Voetpad> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WegknoopShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class <http://www.opengis.net/ont/sf#Point>;
-    shacl:description "Vorm- en positiekenmerken van een object."@nl;
+    shacl:description "Locatie van de knoop."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "geometrie"@nl;
@@ -728,10 +829,10 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/netwerk/#GerichteLink>;
-    shacl:description "Curvilineair netwerkelement dat twee posities verbindt en een homogeen pad in het Netwerk vertegenwoordigt. De verbonden posities worden voorgesteld door Knopen."@nl;
+    shacl:description "Link die deel uitmaakt van de Linksequentie."@nl;
     shacl:minCount 1;
     shacl:name "link"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/weg#link>
+    shacl:path <https://fixme.com>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#Weglinksequentie> .
 
@@ -743,17 +844,17 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/weg#Wegknoop>;
-    shacl:description "Start wegknoop."@nl;
+    shacl:description "Knoop die het begin is van het Wegsegment."@nl;
     shacl:name "beginknoop"@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk/#beginknoop>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/weg#Wegknoop>;
-    shacl:description "Eind wegknoop."@nl;
+    shacl:description "Knoop die het einde is van het Wegsegment."@nl;
     shacl:name "eindknoop"@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#eindknoop>
   ], [
     shacl:class <http://www.opengis.net/ont/sf#LineString>;
-    shacl:description "De geometrie die de middellijn van het wegsegment vertegenwoordigt."@nl;
+    shacl:description "Geometrie van de midellijn van het Wegsegment."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "geometriemiddenlijn"@nl;
