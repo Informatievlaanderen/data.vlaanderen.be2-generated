@@ -33,11 +33,14 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#KwaliteitselementShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#MetadataShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#ObjectShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#BenoemdeWaardeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#ObservatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#BemonsteringscurveShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#BemonsteringsobjectShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#BemonsteringspuntShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#DomeinobjectShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#InformatietypeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WegdeelShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#AgentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#BestandsformaatShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#GegevensdragerShape>,
@@ -51,6 +54,8 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#IdentifierShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#LocatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#ProcedureShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#InputShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#OutputShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#LinkShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#NetwerkelementShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#GerichteLinkShape>,
@@ -65,6 +70,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#TransporteigenschapShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#TransportknoopShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#TransportlinkShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#TransportlinksequentieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijrichtingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WegknoopShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WeglinksequentieShape>,
@@ -91,9 +97,32 @@
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#BemonsteringsobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#BemonsteringspuntShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#BenoemdeWaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <http://def.isotc211.org/iso19103/2005/Names#GenericName>;
+    shacl:description "Naam vh type van de waarde."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "naam"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name>
+  ], [
+    shacl:class <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any>;
+    shacl:description "Kwalitatieve of kwantitatieve invulling van de waarde."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "waarde"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#NamedValue> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#BestandsformaatShape> a shacl:NodeShape;
   shacl:closed false;
@@ -200,6 +229,23 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#InformatietypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://fixme.com#Informatietype> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#InputShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:anyURI;
+    shacl:description "Verwijzing naar originele Input."@nl;
+    shacl:maxCount 1;
+    shacl:name "referentie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Aard van de input."@nl;
+    shacl:maxCount 1;
+    shacl:name "type"@nl;
+    shacl:path <http://purl.org/cd/terms/type>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/ssn/Input> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#KenmerktypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -406,6 +452,23 @@
   shacl:closed false;
   shacl:targetClass <https://www.w3.org/TR/vocab-ssn-ext/#sosa:ObservationCollection> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#OutputShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:anyURI;
+    shacl:description "Verwijzing naar originele Output."@nl;
+    shacl:maxCount 1;
+    shacl:name "referentie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Output.referentie>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Aard van de Output."@nl;
+    shacl:maxCount 1;
+    shacl:name "type"@nl;
+    shacl:path <http://purl.org/cd/terms/type>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/ssn/Output> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#PlatformShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://www.w3.org/ns/sosa/Platform> .
@@ -560,6 +623,10 @@
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/transportnetwerk#Transportlink> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#TransportlinksequentieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/transportnetwerk#Transportlinksequentie> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#VerkeersbemonsteringsobjectShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -638,7 +705,7 @@
     shacl:name "rijrichting"@nl;
     shacl:path <https://data.vlaanderen.be/ns/weg#Rijrichting>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel>;
+    shacl:class <http://fixme.com#Wegdeel>;
     shacl:description "Geeft aan welke op welk Wegdeel het Verkeersmeetpunt gelegen is of betrekking heeft."@nl;
     shacl:maxCount 1;
     shacl:name "wegdeel"@nl;
@@ -667,7 +734,7 @@
     shacl:name "rijrichting"@nl;
     shacl:path <https://data.vlaanderen.be/ns/weg#Rijrichting>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel>;
+    shacl:class <http://fixme.com#Wegdeel>;
     shacl:description "Geeft aan welke langs welk Wegdeel het traject loopt of betrekking heeft."@nl;
     shacl:maxCount 1;
     shacl:name "wegdeel"@nl;
@@ -813,6 +880,10 @@
     shacl:name "netwerkreferentie"@nl
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Voetpad> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WegdeelShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://fixme.com#Wegdeel> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WegknoopShape> a shacl:NodeShape;
   shacl:closed false;
