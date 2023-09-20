@@ -1,10 +1,12 @@
 @prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant> a rdfs:Class;
@@ -16,124 +18,150 @@
 <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element> a rdfs:Class;
   rdfs:label "Kwaliteitselement"@nl .
 
+skos:Concept a rdfs:Class;
+  rdfs:label "Verkeerskenmerktype"@nl,
+    "Voertuigtype"@nl,
+    "Rijrichtingtype"@nl,
+    "Verkeersdeelnemertype"@nl,
+    "Rijstrooktype"@nl .
+
 prov:Location a rdfs:Class;
   rdfs:label "Locatie"@nl .
 
-<https://data.vlaanderen.be/ns/weg#Rijrichting> a rdfs:Class,
-    rdf:Property;
-  rdfs:label "Rijrichting"@nl,
-    "rijrichting"@nl .
+<https://data.vlaanderen.be/ns/weg#Rijrichting> a rdfs:Class;
+  rdfs:label "Rijrichting"@nl .
 
-<https://data.vlaanderen.be/ns/verkeersmetingen#Rijrichtingtype> a owl:Class;
-  rdfs:comment "Type van rijrichting"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen> .
+<https://data.vlaanderen.be/ns/verkeersmetingen#Fietspad> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Maakt geen deel uit vd rijbaan (deel van de wegbaan ingericht voor het verkeer van Voertuigen), bvb auto's mogen niet op een Fietspad rijden of stationeren. OPGELET: Niet te verwarren met fietssuggestiestroken (wel deel vd rijbaan) of met de zijstroken ve middenrijbaan (geen deel vd rijbaan maar waarop mag gereden worden door auto's om tegenliggers te ontwijken). Fietspaden kunnen aanliggend zijn aan de rijbaan of vrijliggend of zelfs een eigen wegbaan hebben (in dat laatste geval worden ze door een eigen Wegsegment voorgesteld)."@nl;
+  rdfs:comment "Deel van de wegbaan uitsluitend bedoeld voor fietsverkeer."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject>,
+    <https://data.vlaanderen.be/ns/transportnetwerk/#Transporteigenschap>,
+    <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdeelnemer> a owl:Class;
+  rdfs:comment "Deelnemer aan het verkeer op de  weg, als voetganger of als gebruiker (bestuurder of passagier) van een Voertuig."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject> .
 
 <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling.geobserveerdKenmerk> a owl:ObjectProperty;
-  rdfs:comment "Kenmerk dat men observeert vh geobserveerdObject."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Kenmerk dat de Verkeersmetingen in de verzameling meten."@nl;
+  rdfs:comment "geobserveerdKenmerk"@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
   rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk> .
 
 <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling.geobserveerdObject> a owl:ObjectProperty;
-  rdfs:comment "Object dat men observeert."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Object dat door de Verkeersmetingen wordt geobserveerd."@nl;
+  rdfs:comment "geobserveerdObject"@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
   rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject> .
 
 <https://data.vlaanderen.be/ns/verkeersmetingen#Voertuig> a owl:Class;
-  rdfs:comment "Iets of iemand die zich voortbeweegt."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb auto, fiets, vrachtwagen, bus, trein, tram, schip, boot, vliegtuig etc."@nl;
+  rdfs:comment "Middel om personen of goederen te vervoeren."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject> .
 
-<https://data.vlaanderen.be/ns/verkeersmetingen#Voertuigtype> a owl:Class;
-  rdfs:comment "Type van voertuig"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen> .
+<https://data.vlaanderen.be/ns/verkeersmetingen#Voetpad> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Is per defintie afgescheiden van de rijbaan, typisch via een boordsteen en verhoogde ligging."@nl;
+  rdfs:comment "Deel van de wegbaan bedoeld voor voetgangers."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject>,
+    <https://data.vlaanderen.be/ns/transportnetwerk/#Transporteigenschap>,
+    <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel> .
 
 <https://data.vlaanderen.be/ns/verkeersmetingen#bemonsterdObject> a owl:ObjectProperty;
-  rdfs:comment "Object dat bemonsterd wordt."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb het Voertuig of het Wegsegment waarvan men een Verkeerskenmerk bepaalt."@nl;
+  rdfs:comment "Verwijzing naar het Verkeersdomeinobject waarop de meting betrekking heeft en waarvoor het Verkeersbemonsteringsobject representatief is."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersbemonsteringsobject>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
   rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject> .
 
-<https://data.vlaanderen.be/ns/verkeersmetingen#fenomeentijd> a owl:ObjectProperty;
-  rdfs:comment "Het moment waarop het resultaat van de Verkeersmeting van toepassing was."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
-  rdfs:range <http://fixme.com#TemporeleEntiteit> .
-
 <https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdKenmerk> a owl:ObjectProperty;
-  rdfs:comment "Kenmerk dat geobserveerd wordt."@nl;
+  <http://purl.org/vocab/vann/usageNote> "CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Soms is de procedure waarmee de waarden vh kenmerk worden bekomen indirect, ttz men meet om praktische reden een ander kenmerk dat een proxy is voor het kenmerk dat men werkelijk wil observeren. Bv om de Verkeersintensiteit op een Wegsegment te bepalen telt men individuele doorkomsten van Voertuigen in een Verkeersmeetpunt."@nl;
+  rdfs:comment "Kenmerk van het Verkeersobject dat geobserveerd wordt."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
   rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk> .
 
 <https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdObject> a owl:ObjectProperty;
-  rdfs:comment "Het object dat geobserveerd wordt."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dat kan het Verkeersdomeinobject zelf zijn of een proxy ervan, ttz een Verkeersbemonsteringsobject. OPMERKING: In dat laatste geval weet men soms pas na het observeren welk real-world Object men juist geobserveerd heeft. Bvb in een Verkeersmeetpunt weet men niet op voorhand welke de objecten zullen zijn waarvan men de snelheid wil vaststellen."@nl;
+  rdfs:comment "Het Verkeersobject dat geobserveerd wordt."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
   rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject> .
 
 <https://data.vlaanderen.be/ns/verkeersmetingen#heeftLid> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Verkeersmetingen die tot de verzameling behoort."@nl;
   rdfs:comment "heeft lid"@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
   rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting> .
 
 <https://data.vlaanderen.be/ns/verkeersmetingen#ligging> a owl:ObjectProperty;
-  rdfs:comment "Ligging van de sensor."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb de coördinaten of het adres of een verwijzing naar een meetpunt of ander Bemonsteringsobject. Meerdere verschillende types van locaties kunnen worden opgegeven (bvb adres èn coördinaten). Als de Sensor een meetinstallatie is evt de verschillende meetpunten die worden omvat of een omschrijvende polygoon. OPGELET: De locatie van de Sensor is niet noodzakelijk de positie waar de Observatie gebeurt, die wordt in de eerste plaats gegeven door de ligging vh Bemonsteringsobject. Dit attribuut laat vooral toe om posities van Sensoren te beschrijven los vd metingen die er gebeuren."@nl;
+  rdfs:comment "Locatie van de Sensor."@nl;
   rdfs:domain <https://www.w3.org/ns/sosa/Sensor>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
   rdfs:range prov:Location .
 
 <https://data.vlaanderen.be/ns/verkeersmetingen#netwerkReferentie> a owl:ObjectProperty;
-  rdfs:comment "Een netwerkreferentie tot een netwerkelement."@nl;
+  <http://purl.org/vocab/vann/usageNote> """Nuttig als men weet langs welk Wegsegment het traject loopt en aan welke kant van de weg en op welke afstand van het beginpunt. Alternatief voor of aanvulling op coördinaten. Ook noodzakelijk om aan te geven over welk Wegsegment en aan welke kant ervan de Voertuigen rijden waarvan men bvb de snelheid meet.
+"""@nl;
+  rdfs:comment "Referentie naar het Netwerkelement waarlangs het Verkeersmeettraject loopt of dat door dat traject bemonsterd wordt."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
-  rdfs:range <https://data.vlaanderen.be/ns/netwerk/#Netwerkreferentie> .
+  rdfs:range <https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie> .
 
 <https://data.vlaanderen.be/ns/verkeersmetingen#netwerkreferentie> a owl:ObjectProperty;
-  rdfs:comment "Een netwerkreferentie tot een netwerkelement."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/weg#Rijrichting>,
-    <https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook>,
-    <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt>;
+  <http://purl.org/vocab/vann/usageNote> """Nuttig als men weet langs welk Wegsegment het punt ligt en aan welke kant van de weg en op welke afstand van het beginpunt. Alternatief voor of aanvulling op coördinaten. Ook noodzakelijk om aan te geven over welk Wegsegment en aan welke kant ervan de Voertuigen rijden waarvan men bvb de snelheid meet.
+"""@nl;
+  rdfs:comment "Referentie naar het Netwerkelement waarop of waarlangs het Verkeersmeetpunt ligt of dat door dat punt bemonsterd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
-  rdfs:range <https://data.vlaanderen.be/ns/netwerk/#LineaireReferentie>,
-    <https://data.vlaanderen.be/ns/netwerk/#Netwerkreferentie> .
+  rdfs:range <https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie> .
 
-<https://data.vlaanderen.be/ns/verkeersmetingen#rijstrook> a owl:ObjectProperty,
-    owl:DatatypeProperty;
-  rdfs:comment "Begrensd gedeelte van de rijbaan dat voldoende breed is voor een rij van het voor dat gedeelte bestemde verkeer."@nl,
-    "Aanduiding van de rijstrook."@nl;
+<https://data.vlaanderen.be/ns/verkeersmetingen#rijrichting> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Alternatief voor of aanvulling op geometrie of netwerkreferentie.  Ook noodzakelijk om aan te geven in welke richting de Voertuigen rijden waarvan men bvb de gemiddelde snelheid meet."@nl,
+    "Alternatief voor of aanvulling op geometrie of netwerkreferentie. Ook noodzakelijk om aan te geven in welke richting de Voertuigen rijden waarvan men bvb de snelheid meet."@nl;
+  rdfs:comment "Geeft aan welke op welke Rijrichting het Verkeersmeettraject ligt."@nl,
+    "Geeft aan welke op welke Rijrichting het Verkeersmeetpunt gelegen is of betrekking heeft."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject>,
-    <https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook>,
     <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
-  rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook>,
-    rdf:langString .
+  rdfs:range <https://data.vlaanderen.be/ns/weg#Rijrichting> .
 
-<https://data.vlaanderen.be/ns/verkeersmetingen#type> a owl:ObjectProperty;
-  rdfs:comment "Type van verkeerskenmerk dat men wil meten."@nl;
+<https://data.vlaanderen.be/ns/verkeersmetingen#rijstrook> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "De identificator moet getypeerd worden bvb volgens het systeem dat werd gehanteerd om de Rijstroken te nummeren. Bvb het schema van DATEX II waar over de volledige breedte van de weg van links naar rechts wordt genummerd."@nl;
+  rdfs:comment "Identificator van de Rijstrook."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#verkeersdeelnemerType> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Bvb \"Voetganger\" als men enkel het aantal Voertgangers wil tellen in een Meetpunt. Enkel noodzakelijk voor Verkeersdomeinobjecten die zelf geen Verkeersdeelnemer zijn maar bvb een Wegsegment of Rijstrook etc."@nl;
+  rdfs:comment "Soort Verkeersdeelnemer waarvan men het Verkeerskenmerk meet."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
-  rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerktype> .
-
-<https://data.vlaanderen.be/ns/verkeersmetingen#uitgevoerdMet> a owl:ObjectProperty;
-  rdfs:comment "Verwijzing naar het Proces waarmee het resultaat van een Observatie is bekomen."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
-  rdfs:range <https://www.w3.org/ns/sosa/Sensor> .
-
-<https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType> a owl:ObjectProperty;
-  rdfs:comment "Type van voertuig dat men wil meten."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
-  rdfs:range <https://data.vlaanderen.be/ns/transportnetwerk/#Voertuigtype> .
+  rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/verkeersmetingen#waardeverschaffer> a owl:ObjectProperty;
-  rdfs:comment "Het Verkeersobject verschaft waarde aan de Verkeersmeting."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Die meting verschaft ahw een waarde voor het Verkeerskenmerk dat van het Verkeersobject wordt gemeten."@nl;
+  rdfs:comment "Verwijzing naar een Verkeersmeting die op het geobserveerdObject plaatsvondt."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
   rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#wegdeel> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Alternatief voor of aanvulling op geometrie of netwerkreferentie. Ook noodzakelijk om aan te geven op welk deel van de weg de Voertuigen of Verkeersdeelnemers waarvan men een kenmerk meet zich bevinden, bvb op een bepaalde Rijstrook of op het Fietspad of het Voetpad."@nl;
+  rdfs:comment "Geeft aan welke langs welk Wegdeel het traject loopt of betrekking heeft."@nl,
+    "Geeft aan welke op welk Wegdeel het Verkeersmeetpunt gelegen is of betrekking heeft."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject>,
+    <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel> .
 
 <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result> a rdf:Property;
   rdfs:label "resultaat"@nl .
@@ -144,15 +172,38 @@ prov:Location a rdfs:Class;
 <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime> a rdf:Property;
   rdfs:label "resultaattijd"@nl .
 
+<http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve.shape> a rdf:Property;
+  rdfs:label "geometrie"@nl .
+
+<http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape> a rdf:Property;
+  rdfs:label "geometrie"@nl .
+
+dc11:type a rdf:Property;
+  rdfs:label "voertuigType"@nl,
+    "verkeersdeelnemertype"@nl,
+    "type"@nl,
+    "rijstrooktype"@nl .
+
+<http://www.w3.org/ns/sosa/madeBySensor> a rdf:Property;
+  rdfs:label "uitgevoerdMet"@nl .
+
+<http://www.w3.org/ns/sosa/phenomenonTime> a rdf:Property;
+  rdfs:label "fenomeentijd"@nl .
+
+<https://data.vlaanderen.be/ns/netwerk#netwerkreferentie> a rdf:Property;
+  rdfs:label "netwerkreferentie"@nl .
+
 <https://data.vlaanderen.be/ns/observaties-en-metingen/#Observatie.uitgevoerdDoor> a rdf:Property;
   rdfs:label "uitgevoerd door"@nl .
 
-<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerktype> a owl:Class;
-  rdfs:comment "Type van verkeerskenmerk"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen> .
-
-<https://data.vlaanderen.be/ns/weg#geometrie> a rdf:Property;
-  rdfs:label "geometrie"@nl .
+<https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> """Onder rijbaan verstaan we dat deel van de wegbaan ingericht om met een Voertuig over te rijden. Door de rijbaan op te splitsen krijgt men een meer gecontroleerde verkeersstroom, in de eerste plaats omdat de rijrichtingen of bvb doorgaand en afslaand verkeer gescheiden worden en ook door de breedte te beperken zodat er maar één Voertuig tegelijk doorkan. Rijstroken worden typisch afgebakend dmv wegmarkeringen, bvb een witte doorlopende of onderbroken streep. OPMERKING: Voetpaden of Fietspaden zijn geen Rijstroken aangezien ze niet bedoeld zijn om met een auto over te rijden en dus geen deel zijn van de rijbaan.
+"""@nl;
+  rdfs:comment "In de langsrichting begrensd deel van de rijbaan, bedoeld om een deel van de verkeersstroom te geleiden in een bepaalde richting en met de breedte van maximum één Voertuig."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject>,
+    <https://data.vlaanderen.be/ns/transportnetwerk/#Transporteigenschap>,
+    <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel> .
 
 <https://data.vlaanderen.be/ns/weg#rijrichting> a rdf:Property;
   rdfs:label "rijrichting"@nl .
@@ -163,54 +214,58 @@ prov:Location a rdfs:Class;
 <https://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime> a rdf:Property;
   rdfs:label "fenomeenTijd"@nl .
 
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersbemonsteringsobject> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Van belang als men dit object niet rechtstreeks kan observeren. Bvb om de snelheid ve Voertuig te bepalen kan men moeilijk dat Voertuig gaan volgen, in plaats daarvan zet men een meetpunt op langs de weg om te zien hoe snel passerende Voertuigen rijden. Gelijkaardig voor bvb verkeersintensiteit: men telt in een meetpunt langs de weg doorkomsten van Voertuigen en gaat ervan uit dat dit cijfer representatief is voor  het Wegsegment (deel van de weg tussen twee opeenvolgende kruispunten). OPGELET: Deze klasse is abstract, ze mag niet geinstantieerd worden. Gebruik in de plaats de subklassen Verkeersmeetpunt of Verkeersmeettraject"@nl;
+  rdfs:comment "Object dat representatief is voor het object waarvan men het Verkeerskenmerk meet."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject>,
+    <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Bvb de gemiddelde snelheid van auto's langs een Meetpunt of de verkeersIntensiteit van fietsen op een Wegsegment bvb uitgedrukt in aantal voertuigen of de snelheid van een individueel Voertuig etc."@nl;
+  rdfs:comment "Kenmerk van het Verkeersdomeinobject of het Verkeersbemonsteringsobject dat gemeten wordt en dat betrekking heeft op het verkeer over of langs dat object of op zijn deelname aan het verkeer."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <http://fixme.com#Kenmerktype> .
+
 <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt> a owl:Class;
-  rdfs:comment "Een meetlocatie die de vorm aanneemt van een punt."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit is het punt langs de weg waar bvb doorkomsten van Voertuigen worden geteld en/of hun snelheid wordt gemeten of waarvoor enig ander Verkeerskenmerk wordt vastgesteld dat op het bemonsterd Verkeerdomeinobject betrekking heeft."@nl;
+  rdfs:comment "Punt waarlangs men kenmerken van het voorbijkomend verkeer meet."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersbemonsteringsobject>,
     <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint> .
 
 <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject> a owl:Class;
-  rdfs:comment "Een meetlocatie die de vorm aanneemt van een lijn of traject."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit is een afstand langs de weg waar bvb de snelheid van Voertuigen wordt gemeten (een zgn trajectcontrole) of waarvoor enig ander Verkeerskenmerk wordt vastgesteld dat op het bemonsterd Verkeerdomeinobject betrekking heeft."@nl;
+  rdfs:comment "Traject waarlangs men kenmerken van het voorbijkomend verkeer meet.."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersbemonsteringsobject>,
     <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve> .
 
-<https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook> a owl:Class;
-  rdfs:comment "begrensd gedeelte van de rijbaan dat voldoende breed is voor een rij van het voor dat gedeelte bestemde verkeer"@nl;
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Bv metingen die op hetzelfde tijdstip plaatsvonden of hetzelfde Object of kenmerk observeren of door dezelfde Sensor zijn gemaakt. Bvb de metingen in eenzelfde Verkeersmeetpunt of de metingen op dezelfde infrastructuur etc."@nl;
+  rdfs:comment "Collectie van Verkeersmetingen met dezelfde kenmerken."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject>,
-    <https://data.vlaanderen.be/ns/transportnetwerk/#Transporteigenschap> .
-
-<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersbemonsteringsobject> a owl:Class;
-  rdfs:comment "Deel van het Object dat men wil observeren en dat representatief is voor dat Object."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject> .
-
-<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject> a owl:Class;
-  rdfs:comment "Object uit het verkeersdomein dat bemonsterd wordt."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject>,
-    <http://fixme.com#Domeinobject> .
-
-<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk> a owl:Class;
-  rdfs:comment "Klasse die kenmerken (van instanties) van verkeer vertegenwoordigt."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
-  rdfs:subClassOf <http://fixme.com#Kenmerktype> .
+  rdfs:subClassOf <https://www.w3.org/TR/vocab-ssn-ext/#sosa:ObservationCollection> .
 
 <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting> a owl:Class;
-  rdfs:comment "Het vaststellen van de waarde van een bepaald kenmerk van het wegverkeer op een bepaald tijdstip of tussen twee tijdstippen."@nl;
+  <http://purl.org/vocab/vann/usageNote> """Verkeer wordt gedefinieerd als de verplaatsing van objecten zoals personen, vracht, data etc over media zoals land, water, lucht, kabels. Verkeer kan betrekking hebben op objecten die zichzelf verplaatsen (al dan niet met een vervoermiddel) of objecten die vervoerd worden, maar ook op objecten waarover verkeer plaatsvindt. De meting kan het vaststellen van de waarde van een kenmerk van een individueel object tijdens zijn verplaatsing zijn (bvb zijn snelheid) of van een kenmerk van de infrastructuur waarover het verkeer zich beweegt (bv de verkeersintensiteit). Verkeersmetingen  zijn Observaties, maw op de waarde zit een zekere foutmarge door de gebruikte meettechniek.
+"""@nl;
+  rdfs:comment "Het vaststellen van de waarde van een bepaald kenmerk van het verkeer op een bepaald tijdstip of tussen twee tijdstippen."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
 
 <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject> a owl:Class;
-  rdfs:comment "Klasse die instanties van verkeer vertegenwoordigt."@nl;
+  <http://purl.org/vocab/vann/usageNote> "OPGELET: Deze klasse is abstract, ze moet gespecialiseerd worden als Verkeersdomeinobject of als Verkeersbemonsteringsobject. Als Verkeersdomeinobject als de meting direct betrekking heeft op het object dat men wil observeren of als Verkeersbemonsteringsobject als de meting onrechtstreeks gebeurt (bvb via een Verkeersmeetpunt)."@nl;
+  rdfs:comment "Object waarop of waarlangs zich verkeer voordoet of dat deel uitmaakt vh verkeer."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
   rdfs:subClassOf <http://fixme.com#Object> .
 
-<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling> a owl:Class;
-  rdfs:comment "Aantal bij elkaar horende Verkeersmetingen."@nl;
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Hieronder verstaan we een real-world object uit het verkeer, ttz een Voertuig of Verkeersdeelnemer of een Wegsegment of gelijkaardig waarover verkeer plaatsvindt. Vallen hier niet onder: Verkeersbemonsteringsobjecten zoals Verkeersmeetpunten of Verkeersmeettrajecten, dat zijn de objecten die het Verkeersdomein bemonsteren. OPGELET: Deze klasse is abstract, ze mag maw niet geinstantieerd worden. Gebruik in de plaats subklassen zoal Wegsegment, Rijstrook, Voertuig etc."@nl;
+  rdfs:comment "Object uit het verkeersdomein waarvan men een Verkeerskenmerk meet."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
-  rdfs:subClassOf <https://www.w3.org/TR/vocab-ssn-ext/#sosa:ObservationCollection> .
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject>,
+    <http://fixme.com#Domeinobject> .
 
 <https://data.vlaanderen.be/ns/verkeersmetingen> a owl:Ontology;
   rdfs:label "Verkeersmetingen-voc"@en,
@@ -579,13 +634,19 @@ prov:Location a rdfs:Class;
   rdfs:seeAlso <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>,
     <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>,
     <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element>,
+    skos:Concept,
     prov:Location,
     <https://data.vlaanderen.be/ns/weg#Rijrichting>,
     <https://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime>,
     <https://data.vlaanderen.be/ns/weg#voertuigtype>,
     <https://data.vlaanderen.be/ns/weg#rijrichting>,
-    <https://data.vlaanderen.be/ns/weg#geometrie>,
     <https://data.vlaanderen.be/ns/observaties-en-metingen/#Observatie.uitgevoerdDoor>,
+    <https://data.vlaanderen.be/ns/netwerk#netwerkreferentie>,
+    <http://www.w3.org/ns/sosa/phenomenonTime>,
+    <http://www.w3.org/ns/sosa/madeBySensor>,
+    dc11:type,
+    <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>,
+    <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve.shape>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>;

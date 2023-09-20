@@ -34,7 +34,6 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#BemonsteringsobjectShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#BemonsteringspuntShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#DomeinobjectShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WegdeelShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#AgentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#BestandsformaatShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#GegevensdragerShape>,
@@ -70,6 +69,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#TransportknoopShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#TransportlinkShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#TransportlinksequentieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WegdeelShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#RijrichtingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WegknoopShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WeglinksequentieShape>,
@@ -330,7 +330,7 @@
   ], [
     shacl:class <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Formaat>;
     shacl:description "Het bestandsformaat, fysiek medium of de dimensies van de data."@nl;
-    shacl:name "Formaat"@nl;
+    shacl:name "formaat"@nl;
     shacl:path dc11:format
   ], [
     shacl:class dc:Agent;
@@ -528,7 +528,7 @@
     shacl:class skos:Concept;
     shacl:description "Aard vd Rijstrook."@nl;
     shacl:name "rijstrooktype"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#rijstrooktype>
+    shacl:path dc11:type
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook> .
 
@@ -540,7 +540,7 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://saref.etsi.org/core/Device>;
-    shacl:description "Toestel welke de Sensor host."@nl;
+    shacl:description "Toestel waarop de Sensor gehost wordt."@nl;
     shacl:name "gehostDoor"@nl;
     shacl:path <http://www.w3.org/ns/sosa/isHostedBy>
   ], [
@@ -582,8 +582,8 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://www.w3.org/ns/sosa/Sensor>;
-    shacl:description "host van"@nl;
-    shacl:name "Sensor door het Toestel gehost."@nl;
+    shacl:description "Sensor door het Toestel gehost."@nl;
+    shacl:name "host van"@nl;
     shacl:path <https://www.w3.org/ns/sosa/hosts>
   ], [
     shacl:datatype rdf:langString;
@@ -647,7 +647,7 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "verkeersdeelnemertype"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#verkeersdeelnemertype>
+    shacl:path dc11:type
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdeelnemer> .
 
@@ -667,7 +667,7 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "type"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#type>
+    shacl:path dc11:type
   ], [
     shacl:class skos:Concept;
     shacl:description "Soort Verkeersdeelnemer waarvan men het Verkeerskenmerk meet."@nl;
@@ -677,7 +677,7 @@
     shacl:class <https://data.vlaanderen.be/ns/transportnetwerk/#Voertuigtype>;
     shacl:description "Soort Voertuig waarvan men het Verkeerskenmerk meet."@nl;
     shacl:name "voertuigType"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType>
+    shacl:path dc11:type
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk> .
 
@@ -706,7 +706,7 @@
     shacl:name "rijrichting"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#rijrichting>
   ], [
-    shacl:class <http://fixme.com#Wegdeel>;
+    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel>;
     shacl:description "Geeft aan welke op welk Wegdeel het Verkeersmeetpunt gelegen is of betrekking heeft."@nl;
     shacl:maxCount 1;
     shacl:name "wegdeel"@nl;
@@ -735,7 +735,7 @@
     shacl:name "rijrichting"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#rijrichting>
   ], [
-    shacl:class <http://fixme.com#Wegdeel>;
+    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel>;
     shacl:description "Geeft aan welke langs welk Wegdeel het traject loopt of betrekking heeft."@nl;
     shacl:maxCount 1;
     shacl:name "wegdeel"@nl;
@@ -892,7 +892,7 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WegdeelShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://fixme.com#Wegdeel> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2023-03-14#WegknoopShape> a shacl:NodeShape;
   shacl:closed false;
