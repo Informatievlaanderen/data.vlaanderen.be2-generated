@@ -12,17 +12,16 @@ jobs:
           fingerprints:
             - "9c:16:8f:4a:b7:2c:b4:c1:ec:b8:68:03:99:10:17:a8"
       - run:
-          name: copy statistics scripts
-          command: cp $PWD/statistics/* $PWD/report
-      - run:
           name: build the statistics per specifications
           command: |
-            pushd $PWD/report 
+            export CIRCLEWKD=$( eval echo "${CIRCLE_WORKING_DIRECTORY}" )
+            pushd ${CIRCLEWKD}/report
             make allstats
       - run:
           name: build the statistics
           command: |
-            pushd $PWD/report 
+            export CIRCLEWKD=$( eval echo "${CIRCLE_WORKING_DIRECTORY}" )
+            pushd ${CIRCLEWKD}/report
             make aggr.stat
       - persist_to_workspace:
           root: /tmp/workspace
