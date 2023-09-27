@@ -26,7 +26,7 @@ jobs:
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
-            - src/
+            - /stats
   create-artifact:
     parameters:
       repository:
@@ -58,7 +58,7 @@ jobs:
           workdir: /tmp/workspace
           command: |
             mkdir -p /tmp/statistics/report
-            if [ -d target ] ; then if [ ! "$(ls -A target)" ] ; then echo "directory target is empty" ; else pushd target ; cp -r * /tmp/statistics/ ; popd ; fi fi
+            if [ -d stats ] ; then if [ ! "$(ls -A stats )" ] ; then echo "directory stats is empty" ; else pushd target ; cp -r * /tmp/statistics/ ; popd ; fi fi
       - run:
           name: insert the commit
           workdir: /tmp/statistics
