@@ -697,7 +697,7 @@
           "sh:path": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation"
         },
         {
-          "sh:class": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
+          "sh:class": "http://www.w3.org/ns/sosa/Procedure",
           "sh:description": {
             "nl": "De gebruikte procedure van de observatie."
           },
@@ -1301,13 +1301,6 @@
       "sh:targetClass": "http://purl.org/dc/terms/PhysicalMedium"
     },
     {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#StandaardEenheidShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "http://purl.org/dc/terms/coverage"
-    },
-    {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#CurveShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -1473,6 +1466,181 @@
       "sh:closed": false,
       "sh:property": [],
       "sh:targetClass": "http://www.w3.org/ns/prov#Location"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#ObservatieverzamelingShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object",
+          "sh:description": {
+            "nl": "De fenomeentijd vd Observaties."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "fenomeentijd"
+          },
+          "sh:path": "http://www.w3.org/ns/sosa/phenomenonTime"
+        },
+        {
+          "sh:class": "http://www.w3.org/ns/sosa/Procedure",
+          "sh:description": {
+            "nl": "De Procedure die de Observaties gebruikten."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "gebruikteProcedure"
+          },
+          "sh:path": "http://www.w3.org/ns/sosa/usedProcedure"
+        },
+        {
+          "sh:class": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+          "sh:description": {
+            "nl": "Het Kenmerk dat de Observaties observeerden."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "geobserveerdKenmerk"
+          },
+          "sh:path": "http://www.w3.org/ns/sosa/observedProperty"
+        },
+        {
+          "sh:class": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+          "sh:description": {
+            "nl": "Het Object dat werd geobserveerd."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "geobserveerdObject"
+          },
+          "sh:path": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
+        },
+        {
+          "sh:class": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+          "sh:description": {
+            "nl": "Observatie die deel uitmaakt van de collectie."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "heeftLid"
+          },
+          "sh:path": "http://www.w3.org/ns/sosa/hasMember"
+        },
+        {
+          "sh:class": "http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata",
+          "sh:description": {
+            "nl": "Metadata die de collectie beschrijft."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "metadata"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieverzameling.metadata"
+        },
+        {
+          "sh:class": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
+          "sh:description": {
+            "nl": "Parameter van de Observaties in de collectie."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "parameter"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieverzameling.parameter"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "sh:description": {
+            "nl": "De resultaattijd van de Observaties."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "resultaattijd"
+          },
+          "sh:path": "http://www.w3.org/ns/sosa/resultTime"
+        },
+        {
+          "sh:class": "https://www.w3.org/ns/sosa/Sensor",
+          "sh:description": {
+            "nl": "De sensor waarmee de Observaties in de collectie zijn uitgevoerd."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "uitgevoerdMetsensor"
+          },
+          "sh:path": "http://www.w3.org/ns/sosa/madeBySensor"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/sosa/ObservationCollection"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#ObservatieprocedureShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://www.w3.org/ns/sosa/Sensor",
+          "sh:description": {
+            "nl": "Sensor waarmee de Observatieprocedure is of moet worden uitgevoerd."
+          },
+          "sh:name": {
+            "nl": "geïmplementeerdMet"
+          },
+          "sh:path": "http://www.w3.org/ns/ssn/implementedBy"
+        },
+        {
+          "sh:class": "http://www.w3.org/ns/ssn/Input",
+          "sh:description": {
+            "nl": "Verwijzing naar de Input die de procedure vereist."
+          },
+          "sh:name": {
+            "nl": "input"
+          },
+          "sh:path": "http://www.w3.org/ns/ssn/hasInput"
+        },
+        {
+          "sh:class": "http://www.w3.org/ns/ssn/Output",
+          "sh:description": {
+            "nl": "Verwijzing naar de Output die de Procedure genereert."
+          },
+          "sh:name": {
+            "nl": "output"
+          },
+          "sh:path": "http://www.w3.org/ns/ssn/hasOutput"
+        },
+        {
+          "sh:class": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
+          "sh:description": {
+            "nl": "Willekeurig gegeven gassocieerd met de Observatieprocedure."
+          },
+          "sh:name": {
+            "nl": "parameter"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.parameter"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
+          "sh:description": {
+            "nl": "Verwijzing naar een document dat de Observatieprocedure beschrijft."
+          },
+          "sh:name": {
+            "nl": "specificatie"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie"
+        },
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "nl": "Aard van de Observatieprocedure."
+          },
+          "sh:name": {
+            "nl": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/sosa/Procedure"
     },
     {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#ProcedureShape",
@@ -1776,6 +1944,64 @@
       "sh:targetClass": "http://www.w3.org/ns/ssn/Output"
     },
     {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#SysteemShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "http://www.w3.org/ns/ssn/systems/SystemCapacity",
+          "sh:description": {
+            "nl": "Capaciteit vh Systeem."
+          },
+          "sh:name": {
+            "nl": "capaciteit"
+          },
+          "sh:path": "http://www.w3.org/ns/ssn/systems/hasSystemCapability"
+        },
+        {
+          "sh:class": "https://www.w3.org/ns/sosa/Platform",
+          "sh:description": {
+            "nl": "Platform waarop het Systeem gehost wordt."
+          },
+          "sh:name": {
+            "nl": "gehostDoor"
+          },
+          "sh:path": "http://www.w3.org/ns/sosa/isHostedBy"
+        },
+        {
+          "sh:class": "http://www.w3.org/ns/ssn/systems/SurvivalRange",
+          "sh:description": {
+            "nl": "Levensduur vh Systeem."
+          },
+          "sh:name": {
+            "nl": "overlevingsbereik"
+          },
+          "sh:path": "http://www.w3.org/ns/ssn/systems/hasSurvivalRange"
+        },
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "nl": "Aard vh Systeem."
+          },
+          "sh:name": {
+            "nl": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "sh:class": "http://www.w3.org/ns/ssn/systems/OperatingRange",
+          "sh:description": {
+            "nl": "Werking vh Systeem."
+          },
+          "sh:name": {
+            "nl": "werkingsbereik"
+          },
+          "sh:path": "http://www.w3.org/ns/ssn/systems/hasOperatingRange"
+        }
+      ],
+      "sh:targetClass": "http://www.w3.org/ns/ssn/System"
+    },
+    {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#ConditieShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -1904,6 +2130,13 @@
       "sh:targetClass": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht"
     },
     {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#StandaardEenheidShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid"
+    },
+    {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#WettelijkKaderShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -2021,7 +2254,7 @@
           "sh:path": "https://schema.org/unitText"
         },
         {
-          "sh:class": "http://purl.org/dc/terms/coverage",
+          "sh:class": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid",
           "sh:description": {
             "nl": "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."
           },
@@ -2047,245 +2280,12 @@
       "sh:targetClass": "https://schema.org/QuantitativeValue"
     },
     {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#ObservatieverzamelingShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object",
-          "sh:description": {
-            "nl": "De fenomeentijd vd Observaties."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "fenomeentijd"
-          },
-          "sh:path": "http://www.w3.org/ns/sosa/phenomenonTime"
-        },
-        {
-          "sh:class": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
-          "sh:description": {
-            "nl": "De Procedure die de Observaties gebruikten."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "gebruikteProcedure"
-          },
-          "sh:path": "http://www.w3.org/ns/sosa/usedProcedure"
-        },
-        {
-          "sh:class": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
-          "sh:description": {
-            "nl": "Het Kenmerk dat de Observaties observeerden."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "geobserveerdKenmerk"
-          },
-          "sh:path": "http://www.w3.org/ns/sosa/observedProperty"
-        },
-        {
-          "sh:class": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
-          "sh:description": {
-            "nl": "Het Object dat werd geobserveerd."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "geobserveerdObject"
-          },
-          "sh:path": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
-        },
-        {
-          "sh:class": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-          "sh:description": {
-            "nl": "Observatie die deel uitmaakt van de collectie."
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "heeftLid"
-          },
-          "sh:path": "http://www.w3.org/ns/sosa/hasMember"
-        },
-        {
-          "sh:class": "http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata",
-          "sh:description": {
-            "nl": "Metadata die de collectie beschrijft."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "metadata"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieverzameling.metadata"
-        },
-        {
-          "sh:class": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
-          "sh:description": {
-            "nl": "Parameter van de Observaties in de collectie."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "parameter"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieverzameling.parameter"
-        },
-        {
-          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-          "sh:description": {
-            "nl": "De resultaattijd van de Observaties."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "resultaattijd"
-          },
-          "sh:path": "http://www.w3.org/ns/sosa/resultTime"
-        },
-        {
-          "sh:class": "https://www.w3.org/ns/sosa/Sensor",
-          "sh:description": {
-            "nl": "De sensor waarmee de Observaties in de collectie zijn uitgevoerd."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "uitgevoerdMetsensor"
-          },
-          "sh:path": "http://www.w3.org/ns/sosa/madeBySensor"
-        }
-      ],
-      "sh:targetClass": "https://www.w3.org/TR/vocab-ssn-ext/#sosa:ObservationCollection"
-    },
-    {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#ObservatieprocedureShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "https://www.w3.org/ns/sosa/Sensor",
-          "sh:description": {
-            "nl": "Sensor waarmee de Observatieprocedure is of moet worden uitgevoerd."
-          },
-          "sh:name": {
-            "nl": "geïmplementeerdMet"
-          },
-          "sh:path": "http://www.w3.org/ns/ssn/implementedBy"
-        },
-        {
-          "sh:class": "http://www.w3.org/ns/ssn/Input",
-          "sh:description": {
-            "nl": "Verwijzing naar de Input die de procedure vereist."
-          },
-          "sh:name": {
-            "nl": "input"
-          },
-          "sh:path": "http://www.w3.org/ns/ssn/hasInput"
-        },
-        {
-          "sh:class": "http://www.w3.org/ns/ssn/Output",
-          "sh:description": {
-            "nl": "Verwijzing naar de Output die de Procedure genereert."
-          },
-          "sh:name": {
-            "nl": "output"
-          },
-          "sh:path": "http://www.w3.org/ns/ssn/hasOutput"
-        },
-        {
-          "sh:class": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
-          "sh:description": {
-            "nl": "Willekeurig gegeven gassocieerd met de Observatieprocedure."
-          },
-          "sh:name": {
-            "nl": "parameter"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.parameter"
-        },
-        {
-          "sh:datatype": "http://www.w3.org/2001/XMLSchema#anyURI",
-          "sh:description": {
-            "nl": "Verwijzing naar een document dat de Observatieprocedure beschrijft."
-          },
-          "sh:name": {
-            "nl": "specificatie"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie"
-        },
-        {
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "Aard van de Observatieprocedure."
-          },
-          "sh:name": {
-            "nl": "type"
-          },
-          "sh:path": "http://purl.org/dc/terms/type"
-        }
-      ],
-      "sh:targetClass": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure"
-    },
-    {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#SysteemShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "http://www.w3.org/ns/ssn/systems/SystemCapacity",
-          "sh:description": {
-            "nl": "Capaciteit vh Systeem."
-          },
-          "sh:name": {
-            "nl": "capaciteit"
-          },
-          "sh:path": "http://www.w3.org/ns/ssn/systems/hasSystemCapability"
-        },
-        {
-          "sh:class": "https://www.w3.org/ns/sosa/Platform",
-          "sh:description": {
-            "nl": "Platform waarop het Systeem gehost wordt."
-          },
-          "sh:name": {
-            "nl": "gehostDoor"
-          },
-          "sh:path": "http://www.w3.org/ns/sosa/isHostedBy"
-        },
-        {
-          "sh:class": "http://www.w3.org/ns/ssn/systems/SurvivalRange",
-          "sh:description": {
-            "nl": "Levensduur vh Systeem."
-          },
-          "sh:name": {
-            "nl": "overlevingsbereik"
-          },
-          "sh:path": "http://www.w3.org/ns/ssn/systems/hasSurvivalRange"
-        },
-        {
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "Aard vh Systeem."
-          },
-          "sh:name": {
-            "nl": "type"
-          },
-          "sh:path": "http://purl.org/dc/terms/type"
-        },
-        {
-          "sh:class": "http://www.w3.org/ns/ssn/systems/OperatingRange",
-          "sh:description": {
-            "nl": "Werking vh Systeem."
-          },
-          "sh:name": {
-            "nl": "werkingsbereik"
-          },
-          "sh:path": "http://www.w3.org/ns/ssn/systems/hasOperatingRange"
-        }
-      ],
-      "sh:targetClass": "https://www.w3.org/TR/vocab-ssn/#ssn-system"
-    },
-    {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/kandidaatstandaard/2022-04-28#PlatformShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://www.w3.org/TR/vocab-ssn/#ssn-system",
+          "sh:class": "http://www.w3.org/ns/ssn/System",
           "sh:description": {
             "nl": "Systeem dat door het Platform wordt gehost."
           },
@@ -2315,7 +2315,7 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
+          "sh:class": "http://www.w3.org/ns/sosa/Procedure",
           "sh:description": {
             "nl": "Observatieprocedure die door de Sensor wordt toegepast."
           },
