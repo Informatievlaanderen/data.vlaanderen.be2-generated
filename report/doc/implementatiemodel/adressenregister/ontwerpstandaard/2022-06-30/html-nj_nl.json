@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-gebouwEnAdres/tree/59b98ec4920ee54369b7748a6f5977df60376ddf",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-gebouwEnAdres/blob/59b98ec4920ee54369b7748a6f5977df60376ddf/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-gebouwEnAdres/tree/454a1a33d6c729e1897dd2f7c3164e7870861e1d",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-gebouwEnAdres/blob/454a1a33d6c729e1897dd2f7c3164e7870861e1d/CHANGELOG",
     "feedbackurl": "https://github.com/informatievlaanderen/OSLOthema-gebouwEnAdres/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/applicatieprofiel-adresregister.html",
     "dependencies": [
@@ -51,14 +51,14 @@
       ],
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/adres#Adres.status",
-          "name": "status",
-          "sort": "status",
+          "uri": "https://data.vlaanderen.be/ns/adres#officieelToegekend",
+          "name": "officieel toegekend",
+          "sort": "officieel toegekend",
           "label": {
-            "nl": "status"
+            "nl": "officieel toegekend"
           },
           "description": {
-            "nl": "Fase van de levensloop waarin het adres zich bevindt. "
+            "nl": "Een adres is officieel toegekend wanneer het werd aangemaakt en/of toegewezen door de gemachtigde adresbeheerder. "
           },
           "usage": {},
           "domain": [
@@ -69,31 +69,105 @@
           ],
           "range": [
             {
-              "range_label": "Adresstatus",
-              "range_uri": "https://data.vlaanderen.be/ns/adres#Adres%3Astatus"
+              "range_label": "Boolean",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "#Adresstatus",
-              "range_puri": "https://data.vlaanderen.be/ns/adres#Adres%3Astatus",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
               "range_label": {
-                "nl": "Adresstatus"
+                "nl": "Boolean"
               }
             }
           ],
           "cardinality": "1",
-          "codelist_uri": "https://data.vlaanderen.be/id/conceptscheme/adresstatus"
+          "codelist_uri": ""
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
-          "name": "busnummer",
-          "sort": "busnummer",
+          "uri": "https://data.vlaanderen.be/ns/adres#isVerrijktMet",
+          "name": "is verrijkt met",
+          "sort": "is verrijkt met",
           "label": {
-            "nl": "busnummer"
+            "nl": "is verrijkt met"
           },
           "description": {
-            "nl": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die hetzelfde huisnummer hebben. "
+            "nl": "Verwijzing naar een adresuitbreiding. "
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Adres",
+              "uri": "https://data.vlaanderen.be/ns/adres#Adres"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Adresuitbreiding",
+              "range_uri": "https://data.vlaanderen.be/ns/adres#Adresuitbreiding"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Adresuitbreiding",
+              "range_puri": "https://data.vlaanderen.be/ns/adres#Adresuitbreiding",
+              "range_label": {
+                "nl": "Adresuitbreiding"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/adres#isToegekendAan",
+          "name": "is toegekend aan",
+          "sort": "is toegekend aan",
+          "label": {
+            "nl": "is toegekend aan"
+          },
+          "description": {
+            "nl": "Adresseerbaar object waaraan het adres is toegekend."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Adres",
+              "uri": "https://data.vlaanderen.be/ns/adres#Adres"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "AdresseerbaarObject",
+              "range_uri": "https://data.vlaanderen.be/ns/adres#AdresseerbaarObject"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Adresseerbaar Object",
+              "range_puri": "https://data.vlaanderen.be/ns/adres#AdresseerbaarObject",
+              "range_label": {
+                "nl": "Adresseerbaar Object"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/adres#huisnummer",
+          "name": "huisnummer",
+          "sort": "huisnummer",
+          "label": {
+            "nl": "huisnummer"
+          },
+          "description": {
+            "nl": "Alfanumerieke code officieel toegekend aan gebouwen, gebouweenheden, ligplaatsen, standplaatsen of percelen. "
           },
           "usage": {},
           "domain": [
@@ -114,80 +188,6 @@
               "range_puri": "http://www.w3.org/2001/XMLSchema#string",
               "range_label": {
                 "nl": "String"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/adres#heeftGemeentenaam",
-          "name": "heeft gemeentenaam",
-          "sort": "heeft gemeentenaam",
-          "label": {
-            "nl": "heeft gemeentenaam"
-          },
-          "description": {
-            "nl": "Gemeentenaamcomponent van het adres."
-          },
-          "usage": {
-            "nl": " "
-          },
-          "domain": [
-            {
-              "EA-Name": "Adres",
-              "uri": "https://data.vlaanderen.be/ns/adres#Adres"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Gemeente",
-              "range_uri": "https://data.vlaanderen.be/ns/adres#Gemeentenaam"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Gemeente",
-              "range_puri": "https://data.vlaanderen.be/ns/adres#Gemeentenaam",
-              "range_label": {
-                "nl": "Gemeente"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/adres#heeftPostinfo",
-          "name": "heeft postinfo",
-          "sort": "heeft postinfo",
-          "label": {
-            "nl": "heeft postinfo"
-          },
-          "description": {
-            "nl": "Postinfocomponent van het adres."
-          },
-          "usage": {
-            "nl": " "
-          },
-          "domain": [
-            {
-              "EA-Name": "Adres",
-              "uri": "https://data.vlaanderen.be/ns/adres#Adres"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Postinfo",
-              "range_uri": "https://data.vlaanderen.be/ns/adres#Postinfo"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Postinfo",
-              "range_puri": "https://data.vlaanderen.be/ns/adres#Postinfo",
-              "range_label": {
-                "nl": "Postinfo"
               }
             }
           ],
@@ -232,14 +232,88 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/adres#huisnummer",
-          "name": "huisnummer",
-          "sort": "huisnummer",
+          "uri": "https://data.vlaanderen.be/ns/adres#heeftPostinfo",
+          "name": "heeft postinfo",
+          "sort": "heeft postinfo",
           "label": {
-            "nl": "huisnummer"
+            "nl": "heeft postinfo"
           },
           "description": {
-            "nl": "Alfanumerieke code officieel toegekend aan gebouwen, gebouweenheden, ligplaatsen, standplaatsen of percelen. "
+            "nl": "Postinfocomponent van het adres."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Adres",
+              "uri": "https://data.vlaanderen.be/ns/adres#Adres"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Postinfo",
+              "range_uri": "https://data.vlaanderen.be/ns/adres#Postinfo"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Postinfo",
+              "range_puri": "https://data.vlaanderen.be/ns/adres#Postinfo",
+              "range_label": {
+                "nl": "Postinfo"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/adres#heeftGemeentenaam",
+          "name": "heeft gemeentenaam",
+          "sort": "heeft gemeentenaam",
+          "label": {
+            "nl": "heeft gemeentenaam"
+          },
+          "description": {
+            "nl": "Gemeentenaamcomponent van het adres."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Adres",
+              "uri": "https://data.vlaanderen.be/ns/adres#Adres"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Gemeente",
+              "range_uri": "https://data.vlaanderen.be/ns/adres#Gemeentenaam"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Gemeente",
+              "range_puri": "https://data.vlaanderen.be/ns/adres#Gemeentenaam",
+              "range_label": {
+                "nl": "Gemeente"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+          "name": "busnummer",
+          "sort": "busnummer",
+          "label": {
+            "nl": "busnummer"
+          },
+          "description": {
+            "nl": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die hetzelfde huisnummer hebben. "
           },
           "usage": {},
           "domain": [
@@ -263,92 +337,18 @@
               }
             }
           ],
-          "cardinality": "1",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/adres#isToegekendAan",
-          "name": "is toegekend aan",
-          "sort": "is toegekend aan",
-          "label": {
-            "nl": "is toegekend aan"
-          },
-          "description": {
-            "nl": "Adresseerbaar object waaraan het adres is toegekend."
-          },
-          "usage": {
-            "nl": " "
-          },
-          "domain": [
-            {
-              "EA-Name": "Adres",
-              "uri": "https://data.vlaanderen.be/ns/adres#Adres"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "AdresseerbaarObject",
-              "range_uri": "https://data.vlaanderen.be/ns/adres#AdresseerbaarObject"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Adresseerbaar Object",
-              "range_puri": "https://data.vlaanderen.be/ns/adres#AdresseerbaarObject",
-              "range_label": {
-                "nl": "Adresseerbaar Object"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": ""
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/adres#isVerrijktMet",
-          "name": "is verrijkt met",
-          "sort": "is verrijkt met",
-          "label": {
-            "nl": "is verrijkt met"
-          },
-          "description": {
-            "nl": "Verwijzing naar een adresuitbreiding. "
-          },
-          "usage": {
-            "nl": " "
-          },
-          "domain": [
-            {
-              "EA-Name": "Adres",
-              "uri": "https://data.vlaanderen.be/ns/adres#Adres"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Adresuitbreiding",
-              "range_uri": "https://data.vlaanderen.be/ns/adres#Adresuitbreiding"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Adresuitbreiding",
-              "range_puri": "https://data.vlaanderen.be/ns/adres#Adresuitbreiding",
-              "range_label": {
-                "nl": "Adresuitbreiding"
-              }
-            }
-          ],
           "cardinality": "0..1",
           "codelist_uri": ""
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/adres#officieelToegekend",
-          "name": "officieel toegekend",
-          "sort": "officieel toegekend",
+          "uri": "https://data.vlaanderen.be/ns/adres#Adres.status",
+          "name": "status",
+          "sort": "status",
           "label": {
-            "nl": "officieel toegekend"
+            "nl": "status"
           },
           "description": {
-            "nl": "Een adres is officieel toegekend wanneer het werd aangemaakt en/of toegewezen door de gemachtigde adresbeheerder. "
+            "nl": "Fase van de levensloop waarin het adres zich bevindt. "
           },
           "usage": {},
           "domain": [
@@ -359,21 +359,21 @@
           ],
           "range": [
             {
-              "range_label": "Boolean",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
+              "range_label": "Adresstatus",
+              "range_uri": "https://data.vlaanderen.be/ns/adres#Adres%3Astatus"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_uri": "#Adresstatus",
+              "range_puri": "https://data.vlaanderen.be/ns/adres#Adres%3Astatus",
               "range_label": {
-                "nl": "Boolean"
+                "nl": "Adresstatus"
               }
             }
           ],
           "cardinality": "1",
-          "codelist_uri": ""
+          "codelist_uri": "https://data.vlaanderen.be/id/conceptscheme/adresstatus"
         },
         {
           "uri": "https://data.vlaanderen.be/ns/generiek#Geografische%20Positie",
@@ -498,41 +498,6 @@
       ],
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/adres#Gemeente.status",
-          "name": "status",
-          "sort": "status",
-          "label": {
-            "nl": "status"
-          },
-          "description": {
-            "nl": "Waarden die de status van een gemeente weergeven."
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Gemeente",
-              "uri": "https://data.vlaanderen.be/ns/adres#Gemeentenaam"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Gemeentestatus",
-              "range_uri": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Gemeente%3Astatus"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Gemeentestatus",
-              "range_puri": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Gemeente%3Astatus",
-              "range_label": {
-                "nl": "Gemeentestatus"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "https://data.vlaanderen.be/id/conceptscheme/gemeentestatus"
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
           "name": "gemeentenaam",
           "sort": "gemeentenaam",
@@ -568,11 +533,46 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Gemeente%3Afaciliteitentaal",
-          "name": "faciliteitentaal",
-          "sort": "faciliteitentaal",
+          "uri": "https://data.vlaanderen.be/ns/adres#Gemeente.status",
+          "name": "status",
+          "sort": "status",
           "label": {
-            "nl": "faciliteitentaal"
+            "nl": "status"
+          },
+          "description": {
+            "nl": "Waarden die de status van een gemeente weergeven."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Gemeente",
+              "uri": "https://data.vlaanderen.be/ns/adres#Gemeentenaam"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Gemeentestatus",
+              "range_uri": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Gemeente%3Astatus"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Gemeentestatus",
+              "range_puri": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Gemeente%3Astatus",
+              "range_label": {
+                "nl": "Gemeentestatus"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "https://data.vlaanderen.be/id/conceptscheme/gemeentestatus"
+        },
+        {
+          "uri": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Gemeente%3Aoffici%C3%ABle%20taal",
+          "name": "officiële taal",
+          "sort": "officiële taal",
+          "label": {
+            "nl": "officiële taal"
           },
           "description": {},
           "usage": {
@@ -603,11 +603,11 @@
           "codelist_uri": "https://publications.europa.eu/resource/authority/language"
         },
         {
-          "uri": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Gemeente%3Aoffici%C3%ABle%20taal",
-          "name": "officiële taal",
-          "sort": "officiële taal",
+          "uri": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Gemeente%3Afaciliteitentaal",
+          "name": "faciliteitentaal",
+          "sort": "faciliteitentaal",
           "label": {
-            "nl": "officiële taal"
+            "nl": "faciliteitentaal"
           },
           "description": {},
           "usage": {
@@ -661,41 +661,6 @@
       ],
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/adres#postnaam",
-          "name": "postnaam",
-          "sort": "postnaam",
-          "label": {
-            "nl": "postnaam"
-          },
-          "description": {
-            "nl": "Naam van het geografisch gebied voor postale doeleinden (correcte spelling, eventueel in meerdere talen). "
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Postinfo",
-              "uri": "https://data.vlaanderen.be/ns/adres#Postinfo"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "GeografischeNaam",
-              "range_uri": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01#Geografische%20Naam"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#GeografischeNaam",
-              "range_puri": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01#Geografische%20Naam",
-              "range_label": {
-                "nl": "GeografischeNaam"
-              }
-            }
-          ],
-          "cardinality": "0..*",
-          "codelist_uri": ""
-        },
-        {
           "uri": "https://data.vlaanderen.be/ns/adres#status",
           "name": "status",
           "sort": "status",
@@ -731,11 +696,81 @@
           "codelist_uri": "https://data.vlaanderen.be/id/conceptscheme/postinfostatus"
         },
         {
-          "uri": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Postinfo%3AisToegekendAan",
-          "name": "is toegekend aan",
-          "sort": "Is toegekend aan",
+          "uri": "https://data.vlaanderen.be/ns/adres#postnaam",
+          "name": "postnaam",
+          "sort": "postnaam",
           "label": {
-            "nl": "Is toegekend aan"
+            "nl": "postnaam"
+          },
+          "description": {
+            "nl": "Naam van het geografisch gebied voor postale doeleinden (correcte spelling, eventueel in meerdere talen). "
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Postinfo",
+              "uri": "https://data.vlaanderen.be/ns/adres#Postinfo"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "GeografischeNaam",
+              "range_uri": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01#Geografische%20Naam"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#GeografischeNaam",
+              "range_puri": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01#Geografische%20Naam",
+              "range_label": {
+                "nl": "GeografischeNaam"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Postinfo%3Anuts3",
+          "name": "nuts3",
+          "sort": "nuts3",
+          "label": {
+            "nl": "nuts3"
+          },
+          "description": {
+            "nl": "The NUTS classificatie (Nomenclature of territorial units for statistics) is een verdeling van administratieve gebieden binnen de EU (https://ec.europa.eu/eurostat/web/regions-and-cities/overview)"
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Postinfo",
+              "uri": "https://data.vlaanderen.be/ns/adres#Postinfo"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_label": {
+                "nl": "String"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": ""
+        },
+        {
+          "uri": "https://basisregisters.vlaanderen.be/implementatiemodel/adressenregister#Postinfo%3AisToegekendAan",
+          "name": "isToegekendAan",
+          "sort": "isToegekendAan",
+          "label": {
+            "nl": "isToegekendAan"
           },
           "description": {
             "nl": "Postinfo behoord to deze gemeente."
@@ -789,14 +824,14 @@
       ],
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/adres#Straatnaam",
-          "name": "straatnaam",
-          "sort": "straatnaam",
+          "uri": "https://data.vlaanderen.be/ns/adres#homoniemToevoeging",
+          "name": "homoniem toevoeging",
+          "sort": "homoniem toevoeging",
           "label": {
-            "nl": "straatnaam"
+            "nl": "homoniem toevoeging"
           },
           "description": {
-            "nl": "Naam van de straatnaam (correcte spelling, eventueel in meerdere talen). "
+            "nl": "Toevoeging om dubbele straatnamen (straatnamen met dezelfde naam maar andere ligging in de gemeente en eigen adressen) van elkaar te onderscheiden. "
           },
           "usage": {},
           "domain": [
@@ -807,20 +842,20 @@
           ],
           "range": [
             {
-              "range_label": "GeografischeNaam",
-              "range_uri": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01#Geografische%20Naam"
+              "range_label": "String",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#GeografischeNaam",
-              "range_puri": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01#Geografische%20Naam",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
               "range_label": {
-                "nl": "GeografischeNaam"
+                "nl": "String"
               }
             }
           ],
-          "cardinality": "1..*",
+          "cardinality": "0..1",
           "codelist_uri": ""
         },
         {
@@ -859,14 +894,14 @@
           "codelist_uri": "https://data.vlaanderen.be/id/conceptscheme/straatnaamstatus"
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/adres#homoniemToevoeging",
-          "name": "homoniem toevoeging",
-          "sort": "homoniem toevoeging",
+          "uri": "https://data.vlaanderen.be/ns/adres#Straatnaam",
+          "name": "straatnaam",
+          "sort": "straatnaam",
           "label": {
-            "nl": "homoniem toevoeging"
+            "nl": "straatnaam"
           },
           "description": {
-            "nl": "Toevoeging om dubbele straatnamen (straatnamen met dezelfde naam maar andere ligging in de gemeente en eigen adressen) van elkaar te onderscheiden. "
+            "nl": "Naam van de straatnaam (correcte spelling, eventueel in meerdere talen). "
           },
           "usage": {},
           "domain": [
@@ -877,20 +912,20 @@
           ],
           "range": [
             {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
+              "range_label": "GeografischeNaam",
+              "range_uri": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01#Geografische%20Naam"
             }
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
+              "range_uri": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#GeografischeNaam",
+              "range_puri": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01#Geografische%20Naam",
               "range_label": {
-                "nl": "String"
+                "nl": "GeografischeNaam"
               }
             }
           ],
-          "cardinality": "0..1",
+          "cardinality": "1..*",
           "codelist_uri": ""
         },
         {
@@ -993,7 +1028,97 @@
   ],
   "properties": [
     {
-      "uri": "https://data.vlaanderen.be/ns/adres#Adres.status",
+      "uri": "https://data.vlaanderen.be/ns/adres#status",
+      "name": {
+        "nl": "status",
+        "undefined": "status"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/adres#isVerrijktMet",
+      "name": {
+        "nl": "is verrijkt met",
+        "undefined": "is verrijkt met"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/adres#isToegekendAan",
+      "name": {
+        "nl": "is toegekend aan",
+        "undefined": "is toegekend aan"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/adres#heeftStraatnaam",
+      "name": {
+        "nl": "heeft straatnaam",
+        "undefined": "heeft straatnaam"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/adres#heeftPostinfo",
+      "name": {
+        "nl": "heeft postinfo",
+        "undefined": "heeft postinfo"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/adres#heeftGemeentenaam",
+      "name": {
+        "nl": "heeft gemeentenaam",
+        "undefined": "heeft gemeentenaam"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/adres#Straatnaam.status",
       "name": {
         "nl": "status",
         "undefined": "status"
@@ -1023,97 +1148,7 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/adres#Straatnaam.status",
-      "name": {
-        "nl": "status",
-        "undefined": "status"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/adres#heeftGemeentenaam",
-      "name": {
-        "nl": "heeft gemeentenaam",
-        "undefined": "heeft gemeentenaam"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/adres#heeftPostinfo",
-      "name": {
-        "nl": "heeft postinfo",
-        "undefined": "heeft postinfo"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/adres#heeftStraatnaam",
-      "name": {
-        "nl": "heeft straatnaam",
-        "undefined": "heeft straatnaam"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/adres#isToegekendAan",
-      "name": {
-        "nl": "is toegekend aan",
-        "undefined": "is toegekend aan"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/adres#isVerrijktMet",
-      "name": {
-        "nl": "is verrijkt met",
-        "undefined": "is verrijkt met"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/adres#status",
+      "uri": "https://data.vlaanderen.be/ns/adres#Adres.status",
       "name": {
         "nl": "status",
         "undefined": "status"
