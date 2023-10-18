@@ -5,14 +5,286 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.vlaanderen.be/ns/bo-observaties#breukcriterium> a owl:ObjectProperty;
+skos:Concept a rdfs:Class;
+  rdfs:label "Breukcriterium"@nl .
+
+<https://data.vlaanderen.be/ns/bo-observaties#CVmeting.doorlatendheidscoëfficient> a owl:ObjectProperty;
   rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristiek>,
-    <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsmeting>;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#CVmeting>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
-  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#Breukcriterium> .
+  rdfs:range schemas:QuantitativeValue .
+
+<https://data.vlaanderen.be/ns/bo-observaties#CVmeting.volgnummer> a owl:DatatypeProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#CVmeting>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range xsd:integer .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCV.geobserveerdObject> a owl:ObjectProperty;
+  rdfs:comment "Het Grondmonster waarvan de Doorlatendheid wordt bepaald."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCV>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCV.meetpuntparameter> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Waarvan de waarde standaard \"porositeit\" is."@nl;
+  rdfs:comment """Het kenmerk in functie waarvan het geobserveerdKenmerk verandert.	"""@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCV>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCV.resultaat> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Het resultaat is een Meetreeks met per meetpunt een meetwaarde."@nl;
+  rdfs:comment "Het resultaat van de Doorlatendheidsproef."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCV>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCVresultaat> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCVresultaat.waarde> a owl:ObjectProperty;
+  rdfs:comment "Waarde ve individuele Meting in de Meetreeks.."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCVresultaat>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#CVmeting> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVV.geobserveerdObject> a owl:ObjectProperty;
+  rdfs:comment "Het Grondmonster waarvan de Doorlatendheid wordt bepaald."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVV>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVV.meetpuntparameter> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Waarvan de waarde standaard \"druk\" is."@nl;
+  rdfs:comment """Het kenmerk in functie waarvan het geobserveerdKenmerk verandert.	"""@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVV>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVV.meetwaardeparameter> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Waarvan de waarde standaard \"doorlatendheidscoëfficient\" is."@nl;
+  rdfs:comment "Het geobserveerdKenmerk."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVV>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVV.resultaat> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Het resultaat is een Meetreeks met per meetpunt een meetwaarde."@nl;
+  rdfs:comment "Het resultaat van de Doorlatendheidsproef."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVV>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVVresultaat> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVVresultaat.waarde> a owl:ObjectProperty;
+  rdfs:comment "Waarde ve individuele Meting in de Meetreeks.."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVVresultaat>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#HVVmeting> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVV.geobserveerdObject> a owl:ObjectProperty;
+  rdfs:comment "Het Grondmonster waarvan de Doorlatendheid wordt bepaald."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVV>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVV.meetpuntparameter> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Waarvan de waarde standaard \"druk\" is."@nl;
+  rdfs:comment """Het kenmerk in functie waarvan het geobserveerdKenmerk verandert.	"""@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVV>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVV.meetwaardeparameter> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Waarvan de waarde standaard \"doorlatendheidscoëfficient\" is."@nl;
+  rdfs:comment "Het geobserveerdKenmerk."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVV>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVV.resultaat> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Het resultaat is een Meetreeks met per meetpunt een meetwaarde."@nl;
+  rdfs:comment "Het resultaat van de Doorlatendheidsproef."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVV>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVVresultaat> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVVresultaat.waarde> a owl:ObjectProperty;
+  rdfs:comment "Waarde ve individuele Meting in de Meetreeks.."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVVresultaat>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#VVVmeting> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#HVVmeting.doorlatendheidscoëfficient> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#HVVmeting>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range schemas:QuantitativeValue .
+
+<https://data.vlaanderen.be/ns/bo-observaties#HVVmeting.druk> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#HVVmeting>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range schemas:QuantitativeValue .
+
+<https://data.vlaanderen.be/ns/bo-observaties#HVVmeting.volgnummer> a owl:DatatypeProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#HVVmeting>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range xsd:integer .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Korrelverdeling.geobserveerdObject> a owl:ObjectProperty;
+  rdfs:comment "Het Grondmonster waarvan de Korrelverdeling werd bepaald."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Korrelverdeling>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Korrelverdeling.meetpuntparameter> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Waarvan de waarde standaard \"korreldiameter\" is."@nl;
+  rdfs:comment """Het kenmerk in functie waarvan het geobserveerdKenmerk verandert.	"""@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Korrelverdeling>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproef.meetpuntparameter> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "De waarde van dit attribuut is een constante nl \"druk\"."@nl;
+  rdfs:comment "Kenmerk in functie waarvan het geobserveerdKenmerk varieert."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproef>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproef.meetwaardeparameter> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "De waarde van dit attribuut is een constante nl \"hoogte\"."@nl;
+  rdfs:comment "Kenmerk dat men observeert vh geobserveerdObject."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproef>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproef.resultaat> a owl:ObjectProperty;
+  rdfs:comment "Resultaat van de proef."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproef>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproefresultaat> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproefresultaat.waarde> a owl:ObjectProperty;
+  rdfs:comment "Hoogte van het Grondmonster bij een bepaalde druk."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproefresultaat>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidtrap> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidstrap.druk> a owl:ObjectProperty;
+  rdfs:comment "Op het Grondmonster uitgeoefende druk."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidtrap>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range schemas:QuantitativeValue .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandkarakteristiek.breukcriterium> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristiek>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskaraketeristieken.meetpuntparameter> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristieken>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskaraketeristieken.meetwaardeparameter> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristieken>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristieken.geobserveerdObject> a owl:ObjectProperty;
+  rdfs:comment "Grondmonster waarvoor de schuifweerstand wordt bepaald."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristieken>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristieken.resultaat> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristieken>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristiekenresultaat> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristiekenresultaat.waarde> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristiekenresultaat>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristiek> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsmeting.breukcriterium> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsmeting>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproef.geobserveerdObject> a owl:ObjectProperty;
+  rdfs:comment "Grondmonster waarvoor de schuifweerstand wordt bepaald."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandproef>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproef.meetpuntparameter> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandproef>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproef.meetwaardeparameter> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandproef>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproef.resultaat> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandproef>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproefresultaat> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproefreeks.geobserveerdObject> a owl:ObjectProperty;
+  rdfs:comment "Grondmonster waarvoor de schuifweerstand wordt bepaald."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproefreeks>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproefreeks.meetpuntparameter> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproefreeks>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproefreeks.meetwaardeparameter> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproefreeks>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproefresultaat.waarde> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproefresultaat>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsmeting> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#VVVmeting.doorlatendheidscoëfficient> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#VVVmeting>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range schemas:QuantitativeValue .
+
+<https://data.vlaanderen.be/ns/bo-observaties#VVVmeting.druk> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#VVVmeting>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range schemas:QuantitativeValue .
+
+<https://data.vlaanderen.be/ns/bo-observaties#VVVmeting.volgnummer> a owl:DatatypeProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#VVVmeting>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:range xsd:integer .
 
 <https://data.vlaanderen.be/ns/bo-observaties#consolidatiespanning> a owl:DatatypeProperty;
   rdfs:comment "TODO"@nl;
@@ -23,23 +295,6 @@
 <https://data.vlaanderen.be/ns/bo-observaties#diameter> a owl:ObjectProperty;
   rdfs:comment "Diameter van het Grondmonster."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproef>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
-  rdfs:range schemas:QuantitativeValue .
-
-<https://data.vlaanderen.be/ns/bo-observaties#doorlatendheidscoëfficient> a owl:ObjectProperty;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#CVmeting>,
-    <https://data.vlaanderen.be/ns/bo-observaties#HVVmeting>,
-    <https://data.vlaanderen.be/ns/bo-observaties#VVVmeting>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
-  rdfs:range schemas:QuantitativeValue .
-
-<https://data.vlaanderen.be/ns/bo-observaties#druk> a owl:ObjectProperty;
-  rdfs:comment "TODO"@nl,
-    "Op het Grondmonster uitgeoefende druk."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#HVVmeting>,
-    <https://data.vlaanderen.be/ns/bo-observaties#VVVmeting>,
-    <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidtrap>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
   rdfs:range schemas:QuantitativeValue .
 
@@ -55,35 +310,11 @@
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
   rdfs:range xsd:double .
 
-<https://data.vlaanderen.be/ns/bo-observaties#gassocieerdeSchuifweerstandsproef> a owl:ObjectProperty;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristieken>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
-  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproef> .
-
-<https://data.vlaanderen.be/ns/bo-observaties#geassocieerdeSchuifweerstandsproef> a owl:ObjectProperty;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproef>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
-  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproef> .
-
 <https://data.vlaanderen.be/ns/bo-observaties#geobserveerdObject> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
-  rdfs:comment "Grondmonster waarvoor de schuifweerstand wordt bepaald."@nl,
-    "TODO"@nl,
-    "Het Grondmonster waarop de Samendrukbaarheidsproef wordt uitgevoerd;"@nl,
-    "Het grondmonster waarvan de Korrelverdeling werd bepaald."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristieken>,
-    <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVV>,
-    <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCV>,
-    <https://data.vlaanderen.be/ns/bo-observaties#Boorgatmeting>,
-    <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproef>,
-    <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproef>,
-    <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVV>,
-    <https://data.vlaanderen.be/ns/bo-observaties#Korrelverdeling>;
+  rdfs:comment "Het Boorgat dat men observeert."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Boorgatmeting>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
-  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondmonster>,
-    <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole> .
+  rdfs:range <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole> .
 
 <https://data.vlaanderen.be/ns/bo-observaties#hoogte> a owl:ObjectProperty;
   rdfs:comment "Gemeten hoogte van het grondmonster."@nl;
@@ -129,22 +360,11 @@
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
   rdfs:range xsd:double .
 
-<https://data.vlaanderen.be/ns/bo-observaties#resultaat> a owl:ObjectProperty;
-  rdfs:comment "TODO"@nl,
-    "Resultaat van de proef."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristieken>,
-    <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVV>,
-    <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCV>,
-    <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproef>,
-    <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproef>,
-    <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVV>;
+<https://data.vlaanderen.be/ns/bo-observaties#samendrukbaarheidsproef.geobserveerdObject> a owl:ObjectProperty;
+  rdfs:comment "Het Grondmonster waarop de Samendrukbaarheidsproef wordt uitgevoerd;"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproef>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
-  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristiekenresultaat>,
-    <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVVresultaat>,
-    <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCVresultaat>,
-    <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproefresultaat>,
-    <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproefresultaat>,
-    <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVVresultaat> .
+  rdfs:range <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> .
 
 <https://data.vlaanderen.be/ns/bo-observaties#schijnbareCohesie> a owl:DatatypeProperty;
   rdfs:comment "TODO"@nl;
@@ -200,78 +420,47 @@
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
   rdfs:range xsd:double .
 
-<https://data.vlaanderen.be/ns/bo-observaties#volgnummer> a owl:DatatypeProperty;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#CVmeting>,
-    <https://data.vlaanderen.be/ns/bo-observaties#HVVmeting>,
-    <https://data.vlaanderen.be/ns/bo-observaties#VVVmeting>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
-  rdfs:range xsd:integer .
-
-<https://data.vlaanderen.be/ns/bo-observaties#waarde> a owl:ObjectProperty;
-  rdfs:comment "TODO"@nl,
-    "Hoogte van het Grondmonster bij een bepaalde druk."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristiekenresultaat>,
-    <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproefresultaat>,
-    <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCVresultaat>,
-    <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVVresultaat>,
-    <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVVresultaat>,
-    <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproefresultaat>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
-  rdfs:range <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristiek>,
-    <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsmeting>,
-    <https://data.vlaanderen.be/ns/bo-observaties#CVmeting>,
-    <https://data.vlaanderen.be/ns/bo-observaties#VVVmeting>,
-    <https://data.vlaanderen.be/ns/bo-observaties#HVVmeting>,
-    <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidtrap> .
-
 <https://data.vlaanderen.be/ns/bo-observaties#zwel> a owl:DatatypeProperty;
   rdfs:comment "Geeft aan of de druk gemeten werd na vermindering van de druk."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidtrap>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
   rdfs:range xsd:boolean .
 
+<http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation.result> a rdf:Property;
+  rdfs:label "resultaat"@nl .
+
+<http://www.w3.org/ns/sosa/hasMember> a rdf:Property;
+  rdfs:label "heeftLid"@nl .
+
 <https://data.vlaanderen.be/ns/bo-observaties#Boorgatmeting> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
-  rdfs:comment "TODO"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Typisch de variatie met de diepte van een fysische eigenschap van het Boorgat zelf, van de grondsoort of het grondwater in of om het Boorgat. De Meting of Metingen gebeuren in principe door een meetapparaat  naar beneden in het Boorgat te laten. Het DiscreetBereik is typisch vh type DiscreetPuntbereik met waarden voor het gemeten kenmerk op verschillende dieptes."@nl;
+  rdfs:comment "Meting in of van een Boorgat."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
     <http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation> .
 
-<https://data.vlaanderen.be/ns/bo-observaties#Breukcriterium> a owl:Class;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties> .
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting.fractiemetingresultaat> a rdf:Property;
+  rdfs:label "fractiemetingresultaat"@nl .
 
-<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCV> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
-    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks> .
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting.meetwaardeparameter> a rdf:Property;
+  rdfs:label "meetwaardeparameter"@nl .
+
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetwaardeparameter> a rdf:Property;
+  rdfs:label "meetwaardeparameter"@nl .
 
 <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCVresultaat> a owl:Class;
-  rdfs:comment "TODO"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Aangezien de Doorlatendheidsproef een Meetreeks is bestaat het resultaat uit een reeks individuele Metingen."@nl;
+  rdfs:comment "Resultaat van de een DoorlatendheidsproefCV."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties> .
-
-<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVV> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
-    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks> .
 
 <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVVresultaat> a owl:Class;
-  rdfs:comment "TODO"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Aangezien de Doorlatendheidsproef een Meetreeks is bestaat het resultaat uit een reeks individuele Metingen."@nl;
+  rdfs:comment "Resultaat van de een DoorlatendheidsproefHVV."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties> .
 
-<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVV> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
-    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks> .
-
 <https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVVresultaat> a owl:Class;
-  rdfs:comment "TODO"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Aangezien de Doorlatendheidsproef een Meetreeks is bestaat het resultaat uit een reeks individuele Metingen."@nl;
+  rdfs:comment "Resultaat van de een DoorlatendheidsproefVVV."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties> .
 
 <https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidsproefresultaat> a owl:Class;
@@ -282,6 +471,47 @@
   rdfs:comment "TODO"@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties> .
 
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefCV> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Getest wordt hoeveel water in welke tijd iniltreert in het monster. Bij constant verval wordt het water daarbij steeds aangevuld. Deze Observatie is een Meetreeks, waarbij de doorlatendheid varieert met de porositeit."@nl;
+  rdfs:comment "Observatie waarbij de mate waarin een Grondmonster water doorlaat wordt bepaald dmv constant verval."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
+    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproefreeks> a owl:Class;
+  rdfs:comment "TODO"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservationCollection> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#CVmeting> a owl:Class;
+  rdfs:comment "Individuele meting van de Doorlatendheid bij constant verval."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefHVV> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Getest wordt hoeveel water in welke tijd iniltreert in het monster. Bij veranderlijk verval wordt het waterniveau daarbij niet aangevuld. Deze Observatie is een Meetreeks, waarbij de doorlatendheid varieert met de druk."@nl;
+  rdfs:comment "Observatie waarbij de mate waarin een Grondmonster water horizontaal doorlaat wordt bepaald dmv veranderlijk verval."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
+    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#DoorlatendheidsproefVVV> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Getest wordt hoeveel water in welke tijd iniltreert in het monster. Bij veranderlijk verval wordt het waterniveau daarbij niet aangevuld. Deze Observatie is een Meetreeks, waarbij de doorlatendheid varieert met de druk."@nl;
+  rdfs:comment "Observatie waarbij de mate waarin een Grondmonster water vertikaal doorlaat wordt bepaald dmv veranderlijk verval."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
+    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#HVVmeting> a owl:Class;
+  rdfs:comment "Individuele meting van de horizontale Doorlatendheid bij veranderlijk verval."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandproef> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
+  rdfs:comment "Observatie van de mate waarin de grond aan schuifspanning kan weerstaan."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
 <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristieken> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
   rdfs:comment "Observatie van de mate waarin de grond aan schuifspanning kan weerstaan."@nl;
@@ -289,26 +519,26 @@
   rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
 
-<https://data.vlaanderen.be/ns/bo-observaties#CVmeting> a owl:Class;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties> .
-
-<https://data.vlaanderen.be/ns/bo-observaties#HVVmeting> a owl:Class;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties> .
-
-<https://data.vlaanderen.be/ns/bo-observaties#Korrelverdeling> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Een Korrelverdeling is een Fractiemeting. Een Fractiemeting meet het aandeel van iets in functie van iets anders (hier dus het aandeel korrels in een Grondmonsters in functie van de korreldiameter)."@nl;
-  rdfs:comment "Observatie van de statistische verdeling van de korreldiameter in een Grondmonster."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting>,
-    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
-
 <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproefresultaat> a owl:Class;
   rdfs:comment "TODO"@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties> .
 
 <https://data.vlaanderen.be/ns/bo-observaties#VVVmeting> a owl:Class;
+  rdfs:comment "Individuele meting van de horizontale Doorlatendheid bij veranderlijk verval."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Korrelverdeling> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Een Korrelverdeling is een Fractiemeting. Een Fractiemeting meet het aandeel van iets in functie van iets anders (hier dus het aandeel korrels in een Grondmonster met een bepaalde korreldiameter)."@nl;
+  rdfs:comment "Observatie van de distributie van de korreldiameter in een Grondmonster."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidtrap> a owl:Class;
+  rdfs:comment "Gemeten hoogte van het Grondmonster bij een bepaalde druk."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties> .
+
+<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristiek> a owl:Class;
   rdfs:comment "TODO"@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties> .
 
@@ -317,21 +547,6 @@
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
-
-<https://data.vlaanderen.be/ns/bo-observaties#Samendrukbaarheidtrap> a owl:Class;
-  rdfs:comment "Gemeten hoogte van het Grondmonster bij een bepaalde druk."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties> .
-
-<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsproef> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "TODO"@nl;
-  rdfs:comment "Observatie van de mate waarin de grond aan schuifspanning kan weerstaan."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks>,
-    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
-
-<https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandskarakteristiek> a owl:Class;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bo-observaties> .
 
 <https://data.vlaanderen.be/ns/bo-observaties#Schuifweerstandsmeting> a owl:Class;
   rdfs:comment "TODO"@nl;
@@ -358,6 +573,12 @@
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
+  rdfs:seeAlso skos:Concept,
+    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetwaardeparameter>,
+    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting.meetwaardeparameter>,
+    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting.fractiemetingresultaat>,
+    <http://www.w3.org/ns/sosa/hasMember>,
+    <http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation.result>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
