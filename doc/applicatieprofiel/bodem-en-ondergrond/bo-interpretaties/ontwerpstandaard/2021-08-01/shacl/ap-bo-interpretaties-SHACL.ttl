@@ -91,8 +91,6 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#InputTypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#OutputTypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#IdentificatorShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#GeometrieShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#ObservatieprocedureShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#ProcedureShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#InputShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#OutputShape>,
@@ -103,6 +101,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#StandaardEenheidShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#GetalShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#KwantitatieveWaardeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#ObservatieprocedureShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#SysteemShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#SensorShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#ObservatiecontextShape> .
@@ -214,14 +213,14 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "geometrie"@nl;
-    shacl:path <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry>
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_Curvewaardepaar.geometrie>
   ], [
     shacl:class <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record>;
     shacl:description "Waarde van het element."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "waarde"@nl;
-    shacl:path <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value>
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_Curvewaardepaar.waarde>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement>;
     shacl:description "Overeenstemmend Profielelement."@nl;
@@ -273,19 +272,20 @@
     shacl:description "Directe positie uitgedrukt in gml-formaat."@nl;
     shacl:maxCount 1;
     shacl:name "gml"@nl;
-    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+    shacl:path <https://data.vlaanderen.be/ns/generiek#gml>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/generiek#Opmeting>;
-    shacl:description "De manier waarop de positie werd bepaald."@nl;
+    shacl:class skos:Concept;
+    shacl:description "De manier waarop het punt werd bepaald."@nl;
     shacl:maxCount 1;
-    shacl:name "opmeting"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/generiek#DirectePositie.opmeting>
+    shacl:minCount 1;
+    shacl:name "methode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#methode>
   ], [
     shacl:datatype rdfs:Literal;
     shacl:description "Directe positie uitgedrukt in wkt-formaat."@nl;
     shacl:maxCount 1;
     shacl:name "wkt"@nl;
-    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+    shacl:path <https://data.vlaanderen.be/ns/generiek#wkt>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/generiek#DirectePositie> .
 
@@ -576,29 +576,6 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#GeneriekeNaamShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19103/2005/Names#GenericName> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#GeometrieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:datatype rdfs:Literal;
-    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
-    shacl:maxCount 1;
-    shacl:name "gml"@nl;
-    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/generiek#Opmeting>;
-    shacl:description "De manier waarop de geometrie werd bepaald."@nl;
-    shacl:maxCount 1;
-    shacl:name "opmeting"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting>
-  ], [
-    shacl:datatype rdfs:Literal;
-    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
-    shacl:maxCount 1;
-    shacl:name "wkt"@nl;
-    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
-  ];
-  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#GeotechnischeCoderingBereikInterpretatieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -913,7 +890,7 @@
     shacl:description "Aard van de input."@nl;
     shacl:maxCount 1;
     shacl:name "type"@nl;
-    shacl:path dc:type
+    shacl:path <http://purl.org/cd/terms/type>
   ];
   shacl:targetClass <http://www.w3.org/ns/ssn/Input> .
 
@@ -1047,7 +1024,7 @@
     shacl:name "geassocieerdeObservatie"@nl;
     shacl:path <http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation>
   ], [
-    shacl:class <http://www.w3.org/ns/sosa/Procedure>;
+    shacl:class <https://www.w3.org/TR/vocab-ssn/#SOSAProcedure>;
     shacl:description "De gebruikte procedure van de observatie."@nl;
     shacl:name "gebruikteProcedure"@nl;
     shacl:path <http://www.w3.org/ns/sosa/usedProcedure>
@@ -1109,7 +1086,7 @@
     shacl:class skos:Concept;
     shacl:description "Het type van observatie."@nl;
     shacl:name "type"@nl;
-    shacl:path dc:type
+    shacl:path <http://purl.org/cd/terms/type>
   ], [
     shacl:class dc:Agent;
     shacl:description "Agent die de Observatie heeft uitgevoerd."@nl;
@@ -1174,9 +1151,9 @@
     shacl:class skos:Concept;
     shacl:description "Aard van de Observatieprocedure."@nl;
     shacl:name "type"@nl;
-    shacl:path dc:type
+    shacl:path <http://purl.org/cd/terms/type>
   ];
-  shacl:targetClass <http://www.w3.org/ns/sosa/Procedure> .
+  shacl:targetClass <https://www.w3.org/TR/vocab-ssn/#SOSAProcedure> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#ObservatieproceduretypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -1207,7 +1184,7 @@
     shacl:description "Aard van de Output."@nl;
     shacl:maxCount 1;
     shacl:name "type"@nl;
-    shacl:path dc:type
+    shacl:path <http://purl.org/cd/terms/type>
   ];
   shacl:targetClass <http://www.w3.org/ns/ssn/Output> .
 
@@ -1282,7 +1259,7 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01#SensorShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://www.w3.org/ns/sosa/Procedure>;
+    shacl:class <https://www.w3.org/TR/vocab-ssn/#SOSAProcedure>;
     shacl:description "Observatieprocedure die door de Sensor wordt toegepast."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
