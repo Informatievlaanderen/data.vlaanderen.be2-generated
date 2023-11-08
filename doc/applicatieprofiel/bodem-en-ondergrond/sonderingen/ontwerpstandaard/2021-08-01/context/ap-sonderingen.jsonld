@@ -1,0 +1,662 @@
+{
+  "@context": {
+    ".observatie(source)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.source",
+      "@type": "@id"
+    },
+    ".observatie(target)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.target",
+      "@type": "@id"
+    },
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Bemonsteraar": "http://www.w3.org/ns/sosa/Sampler",
+    "Bemonsteraar.implementeert": {
+      "@id": "http://www.w3.org/ns/ssn/implements",
+      "@type": "@id"
+    },
+    "Bemonsteraar.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Bemonsteraar.uitgevoerdeBemonstering": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/madeSampling",
+      "@type": "@id"
+    },
+    "Bemonsteraartype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bemonstering": "http://www.w3.org/ns/sosa/Sampling",
+    "Bemonstering.bemonsterdObject": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#Bemonstering.bemonsterdObject",
+      "@type": "@id"
+    },
+    "Bemonstering.bemonsteringstijdstip": {
+      "@id": "http://www.w3.org/ns/sosa/resultTime",
+      "@type": "@id"
+    },
+    "Bemonstering.conditie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.conditie",
+      "@type": "@id"
+    },
+    "Bemonstering.doel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.doel",
+      "@type": "@id"
+    },
+    "Bemonstering.gebruikteProcedure": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "@id"
+    },
+    "Bemonstering.opdracht": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.opdracht",
+      "@type": "@id"
+    },
+    "Bemonstering.resultaat": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasResult",
+      "@type": "@id"
+    },
+    "Bemonstering.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Bemonstering.uitgevoerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.uitgevoerdDoor",
+      "@type": "@id"
+    },
+    "Bemonstering.uitgevoerdMet": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySampler",
+      "@type": "@id"
+    },
+    "Bemonstering.wettelijkKader": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.wettelijkKader",
+      "@type": "@id"
+    },
+    "BemonsteringsProces": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process",
+    "Bemonsteringscurve": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve",
+    "Bemonsteringsdoel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bemonsteringsobject": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
+    "Bemonsteringsobject.bemonsterdObject": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#Bemonsteringsobject.bemonsterdObject",
+      "@type": "@id"
+    },
+    "Bemonsteringsobject.geassocieerdBemonsteringsobject": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature",
+      "@type": "@id"
+    },
+    "Bemonsteringsobject.geassocieerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+      "@type": "@id"
+    },
+    "Bemonsteringsobject.herkomst": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage",
+      "@type": "@id"
+    },
+    "Bemonsteringsobject.identificator": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringsobject.identificator",
+      "@type": "@id"
+    },
+    "Bemonsteringsobject.isResultaatVan": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/isResultOf",
+      "@type": "@id"
+    },
+    "Bemonsteringsobject.parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter",
+      "@type": "@id"
+    },
+    "Bemonsteringsobject.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "BemonsteringsobjectComplex": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex",
+    "BemonsteringsobjectComplex.bemonsteringsobject(source)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.source",
+      "@type": "@id"
+    },
+    "BemonsteringsobjectComplex.bemonsteringsobject(target)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.target",
+      "@type": "@id"
+    },
+    "BemonsteringsobjectComplex.rol": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.role",
+      "@type": "@id"
+    },
+    "Bemonsteringsobjecttype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bemonsteringsprocedure": "http://www.w3.org/ns/sosa/om#SamplingProcedure",
+    "Bemonsteringsprocedure.geïmplementeerdDoor": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/implementedBy",
+      "@type": "@id"
+    },
+    "Bemonsteringsprocedure.input": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasInput",
+      "@type": "@id"
+    },
+    "Bemonsteringsprocedure.output": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasOutput",
+      "@type": "@id"
+    },
+    "Bemonsteringsprocedure.parameter": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsprocedure.parameter",
+      "@type": "@id"
+    },
+    "Bemonsteringsprocedure.specificatie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsprocedure.specificatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Bemonsteringsprocedure.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Bemonsteringsproceduretype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bemonsteringstype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "BenoemdeWaarde": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
+    "BenoemdeWaarde.naam": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name",
+      "@type": "@id"
+    },
+    "BenoemdeWaarde.waarde": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value",
+      "@type": "@id"
+    },
+    "BoRuimtelijkBemonsteringsobject": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject",
+    "ConusType": "https://data.vlaanderen.be/ns/sonderingen#ConusType",
+    "Curve": "http://www.opengis.net/ont/geosparql#Curve",
+    "Diepte": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Diepte",
+    "DirectePositie": "https://data.vlaanderen.be/ns/generiek#DirectePositie",
+    "DirectePositie.gml": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "DirectePositie.opmeting": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#DirectePositie.opmeting",
+      "@type": "@id"
+    },
+    "DirectePositie.wkt": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "DiscreetPuntbereik": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscretePointCoverage",
+    "Domeinobject": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+    "FilterLocatie": "https://data.vlaanderen.be/ns/sonderingen#FilterLocatie",
+    "GammaStraling": "https://data.vlaanderen.be/ns/sonderingen#GammaStraling",
+    "GeneriekDatatype": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any",
+    "GeneriekeNaam": "http://def.isotc211.org/iso19103/2005/Names#GenericName",
+    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
+    "Geometrie.gml": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Geometrie.opmeting": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting",
+      "@type": "@id"
+    },
+    "Geometrie.wkt": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "GeometrieWaardepaar": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair",
+    "GeometrieWaardepaar.geometrie": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.geometry",
+      "@type": "@id"
+    },
+    "GeometrieWaardepaar.waarde": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "@id"
+    },
+    "Getal": "https://schema.org/Number",
+    "Grondobject": "https://data.vlaanderen.be/ns/grondboringen#Grondobject",
+    "Grondobject.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Grondobjecttype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Herkomst": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage",
+    "Identificator": "http://www.w3.org/ns/adms#Identifier",
+    "Input": "http://www.w3.org/ns/ssn/Input",
+    "Input.referentie": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Input.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "InputType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Kwaliteitselement": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element",
+    "KwantitatieveWaarde": "https://schema.org/QuantitativeValue",
+    "KwantitatieveWaarde.eenheid": {
+      "@id": "https://schema.org/unitText",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "KwantitatieveWaarde.standaardEenheid": {
+      "@id": "https://schema.org/unitCode",
+      "@type": "@id"
+    },
+    "KwantitatieveWaarde.waarde": {
+      "@id": "https://schema.org/value",
+      "@type": "@id"
+    },
+    "Locatie": "http://www.w3.org/ns/prov#Location",
+    "Maaiveld": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld",
+    "Maaiveld.hoogte": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld.hoogte",
+      "@type": "@id"
+    },
+    "Maaiveld.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Maaiveldtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MagnetischVeld": "https://data.vlaanderen.be/ns/sonderingen#MagnetischVeld",
+    "MethodeVerzadiging": "https://data.vlaanderen.be/ns/sonderingen#MethodeVerzadiging",
+    "Moment": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant",
+    "Nulpunt": "https://data.vlaanderen.be/ns/sonderingen#Nulpunt",
+    "Nulpunt.nulpuntNa": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#nulpuntNa",
+      "@type": "@id"
+    },
+    "Nulpunt.nulpuntVoor": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#nulpuntVoor",
+      "@type": "@id"
+    },
+    "Nulpunt.sondeparameter": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#sondeparameter",
+      "@type": "@id"
+    },
+    "Object": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+    "Observatie": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+    "Observatie.^geobserveerdObject": {
+      "@id": "http://fixme.com",
+      "@type": "@id"
+    },
+    "Observatie.fenomeentijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+      "@type": "@id"
+    },
+    "Observatie.geassocieerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+      "@type": "@id"
+    },
+    "Observatie.gebruikteProcedure": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "@id"
+    },
+    "Observatie.geldigeTijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime",
+      "@type": "@id"
+    },
+    "Observatie.identificator": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.identificator",
+      "@type": "@id"
+    },
+    "Observatie.opdracht": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.opdracht",
+      "@type": "@id"
+    },
+    "Observatie.parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter",
+      "@type": "@id"
+    },
+    "Observatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "Observatie.resultaatkwaliteit": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
+      "@type": "@id"
+    },
+    "Observatie.resultaattijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
+      "@type": "@id"
+    },
+    "Observatie.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Observatie.uitgevoerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
+      "@type": "@id"
+    },
+    "Observatie.uitgevoerdMetSensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "@id"
+    },
+    "Observatieprocedure": "http://www.w3.org/ns/sosa/Procedure",
+    "Observatieprocedure.geïmplementeerdMet": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/implementedBy",
+      "@type": "@id"
+    },
+    "Observatieprocedure.input": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasInput",
+      "@type": "@id"
+    },
+    "Observatieprocedure.output": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasOutput",
+      "@type": "@id"
+    },
+    "Observatieprocedure.parameter": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.parameter",
+      "@type": "@id"
+    },
+    "Observatieprocedure.specificatie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Observatieprocedure.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Observatieproceduretype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Observatietype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Opdracht": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht",
+    "Output": "http://www.w3.org/ns/ssn/Output",
+    "Output.referentie": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Output.referentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Output.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "OutputType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Periode": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period",
+    "Poriedruk": "https://data.vlaanderen.be/ns/sonderingen#Poriedruk",
+    "Poriedruk.u": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#u",
+      "@type": "@id"
+    },
+    "PositioneleNauwkeurigheid": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy",
+    "PostVerwerking": "https://data.vlaanderen.be/ns/sonderingen#PostVerwerking",
+    "PostVerwerking.correctieHelling": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#correctieHelling",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "PostVerwerking.volumemassaBoven": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#volumemassaBoven",
+      "@type": "@id"
+    },
+    "PostVerwerking.volumemassaOnder": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#volumemassaOnder",
+      "@type": "@id"
+    },
+    "Procedure": "http://www.w3.org/ns/sosa/Procedure",
+    "Proces": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
+    "Punt": "http://www.opengis.net/ont/sf#Point",
+    "PuntWaardepaar": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair",
+    "PuntWaardepaar.geometrie": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair.geometry",
+      "@type": "@id"
+    },
+    "Sensor": "https://www.w3.org/ns/sosa/Sensor",
+    "Sensor.implementeert": {
+      "@id": "http://www.w3.org/ns/ssn/implements",
+      "@type": "@id"
+    },
+    "Sensor.uitgevoerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/madeObservation",
+      "@type": "@id"
+    },
+    "SondeerApparaatType": "https://data.vlaanderen.be/ns/sonderingen#SondeerApparaatType",
+    "SondeerMeetlichaam": "https://data.vlaanderen.be/ns/sonderingen#SondeerMeetlichaam",
+    "Sondeerapparaat": "https://data.vlaanderen.be/ns/sonderingen#Sondeerapparaat",
+    "Sondeerapparaat.meetlichaam": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#meetlichaam",
+      "@type": "@id"
+    },
+    "Sondeerapparaat.sondeerapparaat": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#sondeerapparaat",
+      "@type": "@id"
+    },
+    "Sondeerconus": "https://data.vlaanderen.be/ns/sonderingen#Sondeerconus",
+    "Sondeerconus.conusCalibratieDatum": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#conusCalibratieDatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Sondeerconus.conusSerienummer": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#conusSerienummer",
+      "@type": "@id"
+    },
+    "Sondeerconus.conustType": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#conustType",
+      "@type": "@id"
+    },
+    "Sondeerconus.filterLocatie": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#filterLocatie",
+      "@type": "@id"
+    },
+    "Sondeerconus.leverancierConus": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#leverancierConus",
+      "@type": "@id"
+    },
+    "Sondeerconus.methodeVerzadiging": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#methodeVerzadiging",
+      "@type": "@id"
+    },
+    "Sondeerconus.netAreaRatio": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#netAreaRatio",
+      "@type": "@id"
+    },
+    "Sondeerconus.oppervlakteConus": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#oppervlakteConus",
+      "@type": "@id"
+    },
+    "Sondeergat": "https://data.vlaanderen.be/ns/sonderingen#Sondeergat",
+    "Sondeergat.^gehostPlatform": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#^gehostPlatform",
+      "@type": "@id"
+    },
+    "Sondeergat.^geometrie": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#^geometrie",
+      "@type": "@id"
+    },
+    "Sondeergat.^positioneleNauwkeurigheid": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#^positioneleNauwkeurigheid",
+      "@type": "@id"
+    },
+    "Sondeergat.diepte": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#^diepte",
+      "@type": "@id"
+    },
+    "Sondeergat.ligging": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#^ligging",
+      "@type": "@id"
+    },
+    "Sondeergat.maaiveld": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#^maaiveld",
+      "@type": "@id"
+    },
+    "Sondeerkwaliteit": "https://data.vlaanderen.be/ns/sonderingen#Sondeerkwaliteit",
+    "Sondeerkwaliteit.kwaliteitsnorm": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#kwaliteitsnorm",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Sondeerkwaliteit.toepassingsklasse": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#toepassingsklasse",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Sondeermeetpunt": "https://data.vlaanderen.be/ns/sonderingen#Sondeermeetpunt",
+    "Sondeermeetpunt.inclinatie": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#inclinatie",
+      "@type": "@id"
+    },
+    "Sondeermeetpunt.tijdstip": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#tijdstip",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Sondeermethode": "https://data.vlaanderen.be/ns/sonderingen#Sondeermethode",
+    "Sondeerprocedure": "https://data.vlaanderen.be/ns/sonderingen#Sondeerprocedure",
+    "Sondeerprocedure.kwaliteit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#kwaliteit",
+      "@type": "@id"
+    },
+    "Sondeerprocedure.methode": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#methode",
+      "@type": "@id"
+    },
+    "Sondeerprocedure.sondetraject": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#sondetraject",
+      "@type": "@id"
+    },
+    "Sondeertechniek": "https://data.vlaanderen.be/ns/sonderingen#Sondeertechniek",
+    "Sondeertechniek.diepteTechniek": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#diepteTechniek",
+      "@type": "@id"
+    },
+    "Sondeertechniek.diepteVan": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#diepteVan",
+      "@type": "@id"
+    },
+    "Sondeertechniek.techniek": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#techniek",
+      "@type": "@id"
+    },
+    "Sondeertechniek.techniekAndere": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#techniekAndere",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Sondeertechniekbereik": "https://data.vlaanderen.be/ns/sonderingen#Sondeertechniekbereik",
+    "Sondeertechniekbereik.sondeertechniek": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#sondeertechniek",
+      "@type": "@id"
+    },
+    "Sondeertechniektype": "https://data.vlaanderen.be/ns/sonderingen#Sondeertechniektype",
+    "Sondeertest": "https://data.vlaanderen.be/ns/sonderingen#Sondeertest",
+    "Sondeertest.resultaat": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#resultaat",
+      "@type": "@id"
+    },
+    "Sondeertest.sondeertesttype": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#sondeertesttype",
+      "@type": "@id"
+    },
+    "Sondeertest.starttijd": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#starttijd",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Sondeertestprocedure": "https://data.vlaanderen.be/ns/sonderingen#Sondeertestprocedure",
+    "Sondeertestprocedure.nulpunt": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#nulpunt",
+      "@type": "@id"
+    },
+    "Sondeertestprocedure.postverwerking": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#postverwerking",
+      "@type": "@id"
+    },
+    "Sondeertestprocedure.techniek": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#techniek",
+      "@type": "@id"
+    },
+    "Sondeertestresultaat": "https://data.vlaanderen.be/ns/sonderingen#Sondeertestresultaat",
+    "Sondeertestresultaat.meetpunt": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#meetpunt",
+      "@type": "@id"
+    },
+    "Sondeertesttype": "https://data.vlaanderen.be/ns/sonderingen#Sondeertesttype",
+    "Sondeparameter": "https://data.vlaanderen.be/ns/sonderingen#SondeParameter",
+    "Sondering": "https://data.vlaanderen.be/ns/sonderingen#Sondering",
+    "Sondering.datumAanvang": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#datumAanvang",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Sondering.operator": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#operator",
+      "@type": "@id"
+    },
+    "Sondering.uitvoerder": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#uitvoerder",
+      "@type": "@id"
+    },
+    "Sondetraject": "https://data.vlaanderen.be/ns/sonderingen#Sondetraject",
+    "Sondetraject.aantalBuizen": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#aantalBuizen",
+      "@type": "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "Sondetraject.diepteIndring": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#diepteIndring",
+      "@type": "@id"
+    },
+    "Sondetraject.diepteKleefvanger": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#diepteKleefvanger",
+      "@type": "@id"
+    },
+    "Sondetraject.dieptePlaatsenVerlengbuis": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#dieptePlaatsenVerlengbuis",
+      "@type": "@id"
+    },
+    "Sondetraject.dieptePut": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#dieptePut",
+      "@type": "@id"
+    },
+    "Sondetraject.einddiepte": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#einddiepte",
+      "@type": "@id"
+    },
+    "Sondetraject.gemetenSondeerlengte": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#gemetenSondeerlengte",
+      "@type": "@id"
+    },
+    "Sondetraject.meetstap": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#meetstap",
+      "@type": "@id"
+    },
+    "StandaardEenheid": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid",
+    "Systeem": "https://www.w3.org/TR/vocab-ssn/#ssn-system",
+    "TemporeleEntiteit": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object",
+    "VoCconcentration": "https://data.vlaanderen.be/ns/sonderingen#VOCconcentration",
+    "Weerstand": "https://data.vlaanderen.be/ns/sonderingen#Weerstand",
+    "Weerstand.fs": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#fs",
+      "@type": "@id"
+    },
+    "Weerstand.qc": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#qc",
+      "@type": "@id"
+    },
+    "Weerstand.qt": {
+      "@id": "https://data.vlaanderen.be/ns/sonderingen#Qt",
+      "@type": "@id"
+    },
+    "WettelijkKader": "https://data.vlaanderen.be/ns/generiek#WettelijkKader"
+  }
+}
