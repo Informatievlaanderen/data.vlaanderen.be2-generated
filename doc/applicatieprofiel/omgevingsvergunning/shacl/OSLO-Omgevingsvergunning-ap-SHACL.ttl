@@ -10,7 +10,7 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09> <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09shapes> <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#AanvraagShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#ActiviteitShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#ArrestShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#BerekeningShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#BepalingVergundeToestandShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#BeschikkendGedeelteShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#BeslissingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#BestuurlijkeRechtscollegeShape>,
@@ -25,29 +25,49 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#BesluitShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#BestuurseenheidShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#BeslissingsactiviteitShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#RuimtelijkeEenheidShape> .
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#LocatieShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#AanvraagShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit>;
+    shacl:minCount "*"^^xsd:integer;
+    shacl:name "activiteit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#activiteit>
+  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#ActiviteitShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit>;
-    shacl:description "";
+    shacl:name "activiteit"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#activiteit>
   ], [
-    shacl:description "";
+    shacl:class dc:Agent;
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "agent"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#agent>
+  ], [
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "einde"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#einde>
+  ], [
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "identifier"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#identifier>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid>;
-    shacl:description "";
+    shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeCategorie>;
+    shacl:name "juridische categorie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#juridischeCategorie>
+  ], [
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#locatie>
+    shacl:name "start"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#start>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit> .
 
@@ -55,35 +75,44 @@
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Arrest> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#BerekeningShape> a shacl:NodeShape;
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#BepalingVergundeToestandShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "agent"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#agent>
+  ], [
     shacl:class prov:Entity;
-    shacl:description "";
+    shacl:name "input"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#input>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#VergundeToestand>;
-    shacl:description "";
-    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#output>
+    shacl:class <https://data.vlaanderen.be/ns/generiek#Locatie>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "locatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#locatie>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#VergundeToestand>;
-    shacl:description "";
-    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#output>
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "start"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#start>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Berekening> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#BepalingVergundeToestand> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#BeschikkendGedeelteShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Recht>;
-    shacl:description "";
     shacl:minCount "*"^^xsd:integer;
+    shacl:name "recht"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#recht>
   ], [
     shacl:class <http://fixme.com#Code>;
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "type"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#type>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#BeschikkendGedeelte> .
@@ -92,21 +121,33 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://fixme.com#Code>;
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "aanleg"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#aanleg>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#BeschikkendGedeelte>;
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "beschilkkend gedeelte"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#beschikkendGedeelte>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Beslissing> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#BeslissingsactiviteitShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "agent"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/besluitvorming#agent>
+  ], [
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "start"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/besluitvorming#start>
+  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#BesluitShape> a shacl:NodeShape;
@@ -163,7 +204,7 @@
     shacl:name "naam"@nl;
     shacl:path skos:prefLabel
   ], [
-    shacl:class prov:Location;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#Locatie>;
     shacl:description "Geografische gebied waarbinnen de bestuurseenheid bepaalde verantwoordelijkheden heeft waarbinnen het bestuurshandelingen kan stellen."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -175,13 +216,23 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#JuridischeCategorieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <http://fixme.com#Code>;
-    shacl:description "";
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#type>
+    shacl:name "rechtsgrond"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#rechtsgrond>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeCategorie> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#LocatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:string;
+    shacl:maxCount 1;
+    shacl:name "omschrijving"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#omschrijving>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Locatie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#PubliekeOrganisatieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -197,25 +248,25 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit>;
-    shacl:description "";
     shacl:minCount "*"^^xsd:integer;
+    shacl:name "activiteit"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#activiteit>
   ], [
     shacl:class dc:Agent;
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "begunstigde"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#begunstigde>
   ], [
     shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "geldigheidsperiode"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#geldigheidsPeriode>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Voorwaarde>;
-    shacl:description "";
     shacl:minCount "*"^^xsd:integer;
+    shacl:name "voorwaarde"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#voorwaarde>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Recht> .
@@ -254,85 +305,23 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://fixme.com#Code>;
-    shacl:description "";
     shacl:maxCount 1;
     shacl:minCount 1;
+    shacl:name "type"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#type>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtsmiddel> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#RuimtelijkeEenheidShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:class skos:Concept;
-    shacl:description "De dimensie van de ruimtelijke eenheid."@nl;
-    shacl:maxCount 1;
-    shacl:name "dimensie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/perceel#dimensie>
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheidGeometrie>;
-    shacl:description "Geometrie van de ruimtelijke eenheid en metadata over hoe deze werd bepaald."@nl;
-    shacl:minCount 1;
-    shacl:name "geometrie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.geometrie>
-  ], [
-    shacl:class <http://www.w3.org/ns/adms#Identifier>;
-    shacl:description "De identificator van de Ruimtelijke Eenheid."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "identificator"@nl;
-    shacl:path <http://www.w3.org/ns/adms#identifier>
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid>;
-    shacl:description "Andere ruimtelijke eenheid waarmee deze ruimtelijke eenheid kan worden gekoppeld."@nl;
-    shacl:name "is gerelateerd aan (target)"@nl;
-    shacl:path dc:relation
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid>;
-    shacl:description "Andere ruimtelijke eenheid waarmee deze ruimtelijke eenheid kan worden gekoppeld."@nl;
-    shacl:name "is gerelateerd aan (source)"@nl;
-    shacl:path dc:relation
-  ], [
-    <http://purl.org/linked-data/cube#codeList> <http://inspire.ec.europa.eu/codelist/HILUCSValue/>;
-    shacl:class skos:Concept;
-    shacl:description "Geeft het gebruik aan van de ruimtelijke eenheid."@nl;
-    shacl:maxCount 1;
-    shacl:name "landgebruik"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/perceel#landgebruik>
-  ], [
-    shacl:datatype xsd:integer;
-    shacl:description "Het niveau waarop het object zich bevindt, relatief ten opzichte van andere objecten."@nl;
-    shacl:maxCount 1;
-    shacl:name "niveau"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/perceel#niveau>
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheidOppervlakte>;
-    shacl:description "Oppervlakte van de ruimtelijke eenheid en metadata over de manier waarop deze bepaald werd."@nl;
-    shacl:name "oppervlakte"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.oppervlakte>
-  ], [
-    shacl:class skos:Concept;
-    shacl:description "De aard van een ruimtelijke eenheid."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "type"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.type>
-  ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid> .
-
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/ontwerpstandaard/2023-11-09#VergundeToestandShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Recht>;
-    shacl:description "";
-    shacl:minCount "*"^^xsd:integer;
-    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#recht>
+    shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#BepalingVergundeToestand>;
+    shacl:name "bepaling"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#bepaling>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid>;
-    shacl:description "";
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#ruimtelijkeEenheid>
+    shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Recht>;
+    shacl:name "recht"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#recht>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#VergundeToestand> .
 
