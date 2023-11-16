@@ -44,9 +44,8 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#VerkeerskenmerktypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#TaalcodeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#TekenShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#ToepassingsrichtingtypeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LinkrichtingtypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#VoertuigtypeShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#RijrichtingtypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#VerkeersdeelnemertypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#RijstrooktypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#IdentificatorShape>,
@@ -265,14 +264,14 @@
   shacl:closed false;
   shacl:property [
     shacl:class <http://def.isotc211.org/iso19103/2015/MeasureTypes#Length>;
-    shacl:description "Afstand vanaf het begin van de Link of Linksequentie vanaf waar de Netwerkeigenschap geldt."@nl;
+    shacl:description "Afstand vanaf het begin van de Link of Linksequentie tot waar de Netwerkeigenschap geldt."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "totPositie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/weg#totPositie>
   ], [
     shacl:class <http://def.isotc211.org/iso19103/2015/MeasureTypes#Length>;
-    shacl:description "Afstand vanaf het begin van de Link of Linksequentie tot waar de Netwerkeigenschap geldt."@nl;
+    shacl:description "Afstand vanaf het begin van de Link of Linksequentie vanaf waar de Netwerkeigenschap geldt."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "vanPositie"@nl;
@@ -294,7 +293,6 @@
     shacl:name "element"@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#Linkreferentie.element>
   ], [
-    shacl:class skos:Concept;
     shacl:description "Richting waarvoor de Netwerkeigenschap geldt tov de richting van de geometrie van de Link of Linksequentie."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -302,6 +300,10 @@
     shacl:path <https://data.vlaanderen.be/ns/netwerk#Linkreferentie.toepassingsrichting>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#Linkreferentie> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LinkrichtingtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#LocatieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -311,7 +313,7 @@
   shacl:closed false;
   shacl:property [
     shacl:class dc:Agent;
-    shacl:description "Entiteit die in de eerste plaats verantwoordelijk is voor het onstaan van de data."@nl;
+    shacl:description "Referentie naar de identiteit die in de eerste plaats verantwoordelijk is voor het onstaan van de data."@nl;
     shacl:name "auteur"@nl;
     shacl:path dc11:creator
   ], [
@@ -321,7 +323,7 @@
     shacl:path dc11:description
   ], [
     shacl:datatype xsd:anyURI;
-    shacl:description "Andere data waarvan deze data zijn afgeleid."@nl;
+    shacl:description "Referentie naar andere data waarvan deze data zijn afgeleid."@nl;
     shacl:name "bron"@nl;
     shacl:path dc11:source
   ], [
@@ -331,7 +333,7 @@
     shacl:path dc11:date
   ], [
     shacl:class <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking>;
-    shacl:description "Gebied of periode waarop de data betrekking heeft"@nl;
+    shacl:description "De ruimtelijke of temporele omvang van de gegevens."@nl;
     shacl:name "dekking"@nl;
     shacl:path dc11:coverage
   ], [
@@ -341,22 +343,22 @@
     shacl:path dc11:format
   ], [
     shacl:class dc:Agent;
-    shacl:description "Entiteit die tot de data heeft bijgedragen."@nl;
+    shacl:description "Referentie naar de entiteit die tot de data heeft bijgedragen."@nl;
     shacl:name "medeAuteur"@nl;
     shacl:path dc11:contributor
   ], [
     shacl:datatype xsd:anyURI;
-    shacl:description "Waarover de data gaat."@nl;
+    shacl:description "Referentie naar het topic van de data."@nl;
     shacl:name "onderwerp"@nl;
     shacl:path dc11:subject
   ], [
     shacl:datatype xsd:anyURI;
-    shacl:description "Informatie over de rechten inherent of van toepassing op de data."@nl;
+    shacl:description "Referentie naar informatie over de rechten eigen aan of van toepassing op de data."@nl;
     shacl:name "rechten"@nl;
     shacl:path dc11:rights
   ], [
     shacl:datatype xsd:anyURI;
-    shacl:description "Andere data waarmee deze data geassocieerd zijn."@nl;
+    shacl:description "Referentie naar andere data waarmee deze data geassocieerd zijn."@nl;
     shacl:name "relatie"@nl;
     shacl:path dc11:relation
   ], [
@@ -376,7 +378,7 @@
     shacl:path dc11:type
   ], [
     shacl:class dc:Agent;
-    shacl:description "Entiteit verantwoordelijk voor het publiek maken van de data."@nl;
+    shacl:description "Referentie naar de entiteit verantwoordelijk voor het publiek maken van de data."@nl;
     shacl:name "uitgever"@nl;
     shacl:path dc11:publisher
   ];
@@ -414,8 +416,8 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://www.w3.org/ns/sosa/Sensor>;
-    shacl:description "Sensor waarmee de Observatieprocedure is of moet worden uitgevoerd."@nl;
-    shacl:name "geïmplementeerdMet"@nl;
+    shacl:description "[UPDATED] Sensor waarmee de Observatieprocedure is of moet worden uitgevoerd."@nl;
+    shacl:name "[UPDATED] geïmplementeerdMet"@nl;
     shacl:path <http://www.w3.org/ns/ssn/implementedBy>
   ], [
     shacl:class <http://www.w3.org/ns/ssn/Input>;
@@ -427,11 +429,6 @@
     shacl:description "Verwijzing naar de Output die de Procedure genereert."@nl;
     shacl:name "output"@nl;
     shacl:path <http://www.w3.org/ns/ssn/hasOutput>
-  ], [
-    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
-    shacl:description "Willekeurig gegeven geassocieerd met de Observatieprocedure."@nl;
-    shacl:name "parameter"@nl;
-    shacl:path <https://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter>
   ], [
     shacl:datatype xsd:anyURI;
     shacl:description "Verwijzing naar een document dat de Observatieprocedure beschrijft."@nl;
@@ -512,10 +509,6 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#Rijrichting> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#RijrichtingtypeShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass skos:Concept .
-
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#RijstrookShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -547,14 +540,13 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://saref.etsi.org/core/Device>;
-    shacl:description "Toestel waarop de Sensor gehost wordt."@nl;
-    shacl:name "gehostDoor"@nl;
+    shacl:description "[UPDATED] Toestel waarop de Sensor gehost wordt."@nl;
+    shacl:name "[UPDATED] gehostDoor"@nl;
     shacl:path <http://www.w3.org/ns/sosa/isHostedBy>
   ], [
     shacl:class <http://www.w3.org/ns/sosa/Procedure>;
     shacl:description "Observatieprocedure die door de Sensor wordt toegepast."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "implementeert"@nl;
     shacl:path <http://www.w3.org/ns/ssn/implements>
   ], [
@@ -580,10 +572,6 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#TemporeleEntiteitShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object> .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#ToepassingsrichtingtypeShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass skos:Concept .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/2022-06-20#ToestelShape> a shacl:NodeShape;
   shacl:closed false;
@@ -810,10 +798,10 @@
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdKenmerk>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject>;
-    shacl:description "Het Verkeersobject dat geobserveerd wordt."@nl;
+    shacl:description "[UPDATED] Het Verkeersobject dat geobserveerd wordt."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "geobserveerdObject"@nl;
+    shacl:name "[UPDATED] geobserveerdObject"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdObject>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting> .
@@ -917,7 +905,7 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/netwerk#GerichteLink>;
-    shacl:description "Link die deel uitmaakt van de Linksequentie."@nl;
+    shacl:description "GerichteLink die deel uitmaakt van de Linksequentie."@nl;
     shacl:minCount 1;
     shacl:name "link"@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#Linksequentie.link>
