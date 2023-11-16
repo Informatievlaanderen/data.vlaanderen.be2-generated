@@ -1,25 +1,24 @@
 @prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
 @prefix schemas: <https://schema.org/> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06> <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06shapes> <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#EenheidVanLandgebruikShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#InstantiePubliekeDienstverleningShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#NotificatieberichtShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#ResourceShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#RolShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#RuimtelijkeEenheidShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#ShaclPathSelectorShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#TekstShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#AgentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#PlaatsShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#InhoudShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#DoelwitShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#ResourceShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#MotivatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#ThemaShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#ActiviteitstypeShape>,
@@ -35,16 +34,23 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#LegaleVerschijningsvormShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#BeslissingsactiviteitShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#AdministratieveEenheidShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#NotificatieberichtShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#StateShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#StepShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#InstantiePubliekeDienstverleningShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#CreatiefWerkShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#ActiviteitShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class skos:Concept;
-    shacl:description "";
-    shacl:path <https://data.vlaanderen.be/ns/generiek#type>
+    shacl:name "type"@nl;
+    shacl:path rdf:type
+  ], [
+    shacl:class dc:Agent;
+    shacl:minCount 1;
+    shacl:name "was geassocieerd met"@nl;
+    shacl:path prov:wasAssociatedWith
   ];
   shacl:targetClass <http://fixme.com#Rol.activiteit> .
 
@@ -106,6 +112,15 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#BeslissingsactiviteitShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService>;
+    shacl:maxCount 1;
+    shacl:name "gebruikte"@nl;
+    shacl:path prov:used
+  ], [
+    shacl:class <https://data.europa.eu/eli/ontology#LegalExpression>;
+    shacl:name "geeft aanleiding tot"@nl;
+    shacl:path prov:generated
+  ], [
     shacl:class skos:Concept;
     shacl:description "Eindoordeel van de beoordeling."@nl;
     shacl:maxCount 1;
@@ -173,26 +188,31 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#InstantiePubliekeDienstverleningShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://fixme.com#InstantiePubliekeDienstverlening> .
+  shacl:targetClass <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#LegaleVerschijningsvormShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    <http://purl.org/linked-data/cube#codeList> <https://data.vlaanderen.be/id/conceptscheme/BesluitType>;
     shacl:datatype xsd:anyURI;
     shacl:name "besluittype"@nl;
-    shacl:path <http://data.europa.eu/eli/ontology#work_type>
+    shacl:path <http://data.europa.eu/eli/ontology#type_document>
   ], [
     shacl:class <https://data.europa.eu/eli/ontology#LegalExpression>;
-    shacl:description "";
-    shacl:path <http://fixme.com#consolideert>
+    shacl:name "consolideert"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#consolidates>
   ], [
     shacl:class <https://data.europa.eu/eli/ontology#LegalExpression>;
-    shacl:description "";
-    shacl:path <http://fixme.com#corrigeert>
+    shacl:name "corrigeert"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#corrects>
   ], [
     shacl:class dc:Location;
     shacl:name "geografische dekking"@nl;
     shacl:path dc:spatial
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/generiek#AdministratieveEenheid>;
+    shacl:name "jurisdictie"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#jurisdiction>
   ], [
     shacl:class <http://fixme.com#Thema>;
     shacl:name "onderwerp"@nl;
@@ -203,8 +223,8 @@
     shacl:path schemas:keywords
   ], [
     shacl:class <https://data.europa.eu/eli/ontology#LegalExpression>;
-    shacl:description "";
-    shacl:path <http://fixme.com#verandert>
+    shacl:name "wijzigt"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#changes>
   ];
   shacl:targetClass <https://data.europa.eu/eli/ontology#LegalExpression> .
 
@@ -214,7 +234,12 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#NotificatieberichtShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://fixme.com#Notificatiebericht> .
+  shacl:property [
+    shacl:class <https://data.europa.eu/eli/ontology#LegalExpression>;
+    shacl:name "url"@nl;
+    shacl:path schema:url
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/notificatie#Notificatiebericht> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#ObjectShape> a shacl:NodeShape;
   shacl:closed false;
@@ -243,7 +268,7 @@
     shacl:name "heeft selector"@nl;
     shacl:path oa:hasSelector
   ], [
-    shacl:class <http://fixme.com#Resource>;
+    shacl:class rdfs:Resource;
     shacl:name "isOnderdeelVan"@nl;
     shacl:path oa:source
   ];
@@ -251,7 +276,7 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#ResourceShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://fixme.com#Resource> .
+  shacl:targetClass rdfs:Resource .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#RolShape> a shacl:NodeShape;
   shacl:closed false;
@@ -280,8 +305,8 @@
   shacl:closed false;
   shacl:property [
     shacl:class oa:Selector;
-    shacl:description "";
-    shacl:path <http://fixme.com#verfijndDoor>
+    shacl:name "verfijnd door"@nl;
+    shacl:path oa:refinedBy
   ];
   shacl:targetClass oa:Selector .
 
@@ -360,23 +385,28 @@
   ];
   shacl:targetClass oa:TextQuoteSelector .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#TekstShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:class skos:Concept;
-    shacl:description "";
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:path <http://fixme.com#formaat>
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "";
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:path <http://fixme.com#waarde>
-  ];
-  shacl:targetClass <http://fixme.com#Tekst> .
-
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#ThemaShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
+
+ [
+    shacl:class skos:Concept;
+    shacl:maxCount 1;
+    shacl:name "formaat"@nl;
+    shacl:path dc11:format
+  ] .
+
+ [
+    shacl:datatype xsd:string;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:path <http://fixme.com#taal>
+  ] .
+
+ [
+    shacl:datatype rdf:langString;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "waarde"@nl;
+    shacl:path rdf:value
+  ] .
