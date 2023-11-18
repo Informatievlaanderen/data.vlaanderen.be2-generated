@@ -326,7 +326,7 @@
           "sh:name": {
             "nl": "identificator"
           },
-          "sh:path": "https://data.vlaanderen.be/ns/netwerk#identificator"
+          "sh:path": "http://www.w3.org/ns/adms#identifier"
         }
       ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/fiets#Fietsknoop"
@@ -345,7 +345,7 @@
           "sh:name": {
             "nl": "identificator"
           },
-          "sh:path": "http://www.w3.org/ns/adms#Identifier"
+          "sh:path": "http://www.w3.org/ns/adms#identifier"
         },
         {
           "sh:class": "https://schema.org/QuantitativeValue",
@@ -386,7 +386,7 @@
           "sh:name": {
             "nl": "identificator"
           },
-          "sh:path": "http://www.w3.org/ns/adms#Identifier"
+          "sh:path": "http://www.w3.org/ns/adms#identifier"
         },
         {
           "sh:class": "https://data.vlaanderen.be/ns/fiets#GeneriekeFietslink",
@@ -468,7 +468,7 @@
           "sh:path": "https://data.vlaanderen.be/ns/transportnetwerk#geografischeNaam"
         },
         {
-          "sh:class": "https://fixme.com",
+          "sh:class": "https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk",
           "sh:description": {
             "nl": "Het netwerk waarvan een netwerkelement lid is."
           },
@@ -551,7 +551,7 @@
           "sh:name": {
             "nl": "identificator"
           },
-          "sh:path": "http://www.w3.org/ns/adms#Identifier"
+          "sh:path": "http://www.w3.org/ns/adms#identifier"
         }
       ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/fiets#Fietssegment"
@@ -1671,7 +1671,7 @@
           "sh:name": {
             "nl": "totPositie"
           },
-          "sh:path": "https://data.vlaanderen.be/ns/netwerk#totPositie"
+          "sh:path": "https://data.vlaanderen.be/ns/netwerk#LineaireReferentie.totPositie"
         },
         {
           "sh:class": "https://schema.org/Distance",
@@ -1683,7 +1683,7 @@
           "sh:name": {
             "nl": "vanPositie"
           },
-          "sh:path": "https://data.vlaanderen.be/ns/netwerk#vanPositie"
+          "sh:path": "https://data.vlaanderen.be/ns/netwerk#LineaireReferentie.vanPositie"
         }
       ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/netwerk#LineaireReferentie"
@@ -1702,7 +1702,7 @@
           "sh:name": {
             "nl": "toepassingsRichting"
           },
-          "sh:path": "https://data.vlaanderen.be/ns/netwerk#toepassingsRichting"
+          "sh:path": "https://data.vlaanderen.be/ns/netwerk#Linkreferentie.toepassingsrichting"
         }
       ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/netwerk#Linkreferentie"
@@ -1725,7 +1725,19 @@
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17#NetwerkreferentieShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
-      "sh:property": [],
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelement",
+          "sh:description": {
+            "nl": "Netwerkreferentie toegepast op een fietsnetwerkelement."
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "element"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie.element"
+        }
+      ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie"
     },
     {
@@ -1743,7 +1755,7 @@
           "sh:name": {
             "nl": "opPositie"
           },
-          "sh:path": "https://data.vlaanderen.be/ns/netwerk#opPositie"
+          "sh:path": "https://data.vlaanderen.be/ns/netwerk#Puntreferentie.opPositie"
         }
       ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/netwerk#Puntreferentie"
@@ -2022,6 +2034,25 @@
       "sh:targetClass": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Wegsignalisatie"
     },
     {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17#TransporteigenschapShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie",
+          "sh:description": {
+            "nl": "TODO"
+          },
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "netwerkreferentie"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/netwerk#Netwerkeigenschap.netwerkreferentie"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"
+    },
+    {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17#TransportknoopShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -2050,20 +2081,6 @@
       "sh:targetClass": "https://data.vlaanderen.be/ns/transportnetwerk#Transportlinkset"
     },
     {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17#TransportobjectShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/transportnetwerk#Transportobject"
-    },
-    {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17#VervoersknooppuntShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "https://fixme.com"
-    },
-    {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17#TransportnetwerkShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -2078,7 +2095,7 @@
           "sh:name": {
             "nl": "geografischeNaam"
           },
-          "sh:path": "https://fixme.com"
+          "sh:path": "https://data.vlaanderen.be/ns/netwerk#Netwerk.geografischeNaam"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -2093,6 +2110,20 @@
           "sh:path": "https://data.vlaanderen.be/ns/transportnetwerk#transporttype"
         }
       ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17#TransportobjectShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/transportnetwerk#Transportobject"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17#VervoersknooppuntShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
       "sh:targetClass": "https://fixme.com"
     },
     {
@@ -2116,7 +2147,7 @@
           "sh:name": {
             "nl": "identificator"
           },
-          "sh:path": "http://www.w3.org/ns/adms#Identifier"
+          "sh:path": "http://www.w3.org/ns/adms#identifier"
         },
         {
           "sh:class": "https://data.vlaanderen.be/ns/netwerk#Link",
@@ -2171,25 +2202,6 @@
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [],
-      "sh:targetClass": "https://fixme.com"
-    },
-    {
-      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17#TransporteigenschapShape",
-      "@type": "sh:NodeShape",
-      "sh:closed": false,
-      "sh:property": [
-        {
-          "sh:class": "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie",
-          "sh:description": {
-            "nl": "TODO"
-          },
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "netwerkreferentie"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/transportnetwerk#^netwerkreferentie"
-        }
-      ],
       "sh:targetClass": "https://fixme.com"
     },
     {
