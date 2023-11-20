@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:schemas="https://schema.org/" xmlns:ns1="http://purl.org/vocab/vann/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:org="http://www.w3.org/ns/org#" xmlns:schema="http://schema.org/">
-  <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#FietsWinterdienst">
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#BruikbareFietsbreedte.kant">
     <rdfs:isDefinedBy>
       <owl:Ontology rdf:about="https://data.vlaanderen.be/ns/fiets">
         <dc:license>https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0</dc:license>
@@ -137,6 +137,11 @@
           </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
+          <rdf:Property rdf:about="https://data.vlaanderen.be/ns/netwerk#Linksequentie.link">
+            <rdfs:label xml:lang="nl">link</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
           <rdf:Property rdf:about="https://data.vlaanderen.be/ns/netwerk#Knoop.geometrie">
             <rdfs:label xml:lang="nl">geometrie</rdfs:label>
           </rdf:Property>
@@ -166,16 +171,76 @@
         </rdfs:seeAlso>
       </owl:Ontology>
     </rdfs:isDefinedBy>
-    <rdfs:comment xml:lang="nl">De winterdienst die van toepassing is.</rdfs:comment>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap">
+    <rdfs:comment xml:lang="nl">TODO</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#BruikbareFietsbreedte">
         <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-        <rdfs:comment xml:lang="nl">Een eigenschap dat specifiek van toepassing is op een fietsnetwerk.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
+        <rdfs:comment xml:lang="nl">De bruikbare breedte die afwijkt van de fietsbreedte door nabijliggende obstakels.</rdfs:comment>
+        <rdfs:subClassOf>
+          <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap">
+            <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+            <rdfs:comment xml:lang="nl">Een eigenschap dat specifiek van toepassing is op een fietsnetwerk.</rdfs:comment>
+            <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
+          </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
+        <rdfs:subClassOf>
+          <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsbreedte">
+            <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+            <rdfs:comment xml:lang="nl">De breedte die beschikbaar is voor de fietser.</rdfs:comment>
+            <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap"/>
+            <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/weg#Wegbreedte"/>
+            <rdfs:subClassOf rdf:resource="https://fixme.com"/>
+          </owl:Class>
+        </rdfs:subClassOf>
       </owl:Class>
-    </rdfs:subClassOf>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#FietsWinterdienst">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">De winterdienst die van toepassing is.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap"/>
     <rdfs:subClassOf rdf:resource="https://fixme.com"/>
   </owl:Class>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsbuffer.kant">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">TODO</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsbuffer">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+        <rdfs:comment xml:lang="nl">Buffer of afschijding van de fietsinfrastructuur ten opzichte van ander transport.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap"/>
+        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsinfrastructuurobject.beheerder">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">Instantie die instaat voor het beheer van het object.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsinfrastructuurobject">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+        <rdfs:comment xml:lang="nl">Een infrastructuurelement in functie van de fiets.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Infrastructuurelement"/>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsinrichting.verkeersteken">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">TODO</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsinrichting">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+        <rdfs:comment xml:lang="nl">De inrichting van netwerkelement dat voorzien is voor de fiets.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap"/>
+        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://fixme.com"/>
+  </owl:ObjectProperty>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsknoop">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
     <rdfs:comment xml:lang="nl">Significante positie in het Fietsnetwerk die steeds samenvalt met het begin of einde van een GeneriekeFietslink.</rdfs:comment>
@@ -189,37 +254,30 @@
     </rdfs:subClassOf>
     <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transportknoop"/>
   </owl:Class>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Fietslinksequentie.link">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-    <rdfs:comment xml:lang="nl">Geordende verzameling van GerichteFietslinks, dat een onvertakt doorlopend pad in een fietsnetwerk vormt.</rdfs:comment>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietslinksequentie">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-        <rdfs:comment xml:lang="nl">Lineair ruimtelijk object, bestaande uit een geordende verzameling van generiekeFietsLinks, die een overtakt doorlopend pad in een fietsnetwerk vertegenwoordigt.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transportlinksequentie"/>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelement"/>
-        <rdfs:subClassOf>
-          <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#GeneriekeFietslink">
-            <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-            <rdfs:comment xml:lang="nl">Lineair Fietsnetwerkelement.</rdfs:comment>
-            <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/netwerk#GeneriekeLink"/>
-          </owl:Class>
-        </rdfs:subClassOf>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:range>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#GerichteFietslink">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-        <rdfs:comment xml:lang="nl">Link in hetzij zijn positieve,hetzij zijn negatieve richting.</rdfs:comment>
-      </owl:Class>
-    </rdfs:range>
-    <rdfs:subPropertyOf rdf:resource="https://data.vlaanderen.be/ns/netwerk#Linksequentie.link"/>
-  </owl:ObjectProperty>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietslinkset">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
     <rdfs:comment xml:lang="nl">Collectie van GeneriekeFietslinks met een specifieke functie of belang in het Transportnetwerk.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelement"/>
     <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transportlinkset"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelelment.beheerder">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">Instantie die instaat voor het beheer van het fietsnetwerkelement.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietssegment">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">Lineair ruimtelijk object dat de geometrie en connectiviteit beschrijft tussen twee punten in een fietsnetwerk.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelement"/>
+    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transportlink"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#GeneriekeFietslink">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+        <rdfs:comment xml:lang="nl">Lineair Fietsnetwerkelement.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/netwerk#GeneriekeLink"/>
+      </owl:Class>
+    </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsverharding">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
@@ -227,12 +285,56 @@
     <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap"/>
     <rdfs:subClassOf rdf:resource="https://fixme.com"/>
   </owl:Class>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsverkeersteken.richting">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">TODO</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsverkeersteken">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+        <rdfs:comment xml:lang="nl">Een verkeersteken specifiek voor de fiets.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken"/>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap"/>
+        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Geluid.kader">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">Het kader waarin de waarde van de wegverlichting wordt gemeten.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Geluid">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+        <rdfs:comment xml:lang="nl">Het geluid dat in de omgeving van het fietsnetwerkelement aanwezig is.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
+        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#GerichteFietslink">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">Link in hetzij zijn positieve,hetzij zijn negatieve richting.</rdfs:comment>
+  </owl:Class>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Landgebruik">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
     <rdfs:comment xml:lang="nl">Geeft de aard van de bebouwing weer.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
     <rdfs:subClassOf rdf:resource="https://fixme.com"/>
   </owl:Class>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Luchtkwaliteit.kader">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">Het kader waarin de waarde van de luchtkwaliteit wordt gemeten.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Luchtkwaliteit">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+        <rdfs:comment xml:lang="nl">De kwaliteit van de lucht waarin het netwerkelement gelegen is.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
+        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </owl:ObjectProperty>
   <owl:DatatypeProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Netwerk.geografischeNaam">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
     <rdfs:comment xml:lang="nl">Naam van het Netwerk.</rdfs:comment>
@@ -244,16 +346,79 @@
     </rdfs:domain>
     <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
   </owl:DatatypeProperty>
-  <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeerstype">
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#RichtingFietsverkeer.verkeersteken">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-    <rdfs:comment xml:lang="nl">Geeft het type van verkeer aan.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
-    <rdfs:subClassOf rdf:resource="https://fixme.com"/>
-  </owl:Class>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#aantal">
+    <rdfs:comment xml:lang="nl">Het verkeersteken dat bepaalt welke richting er mag gefietst worden.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#RichtingFietsverkeer">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+        <rdfs:comment xml:lang="nl">Geeft de richtingen aan waarin er mag gefietst worden.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap"/>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#RichtingVerkeer"/>
+        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://fixme.com"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Snelheidsbeperking.voertuigtype">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">Het voertuigtype waarvoor de toegestane snelheid van toepassing is.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/weg#Snelheidsbeperking"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Trillingen.kader">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">Het kader waarin de waarde van de trillingen worden gemeten.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Trillingen">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+        <rdfs:comment xml:lang="nl">De trillingen die gemeten worden en een belangrijke factor zijn in de bepaling van het comfort.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeersdeelname.verkeersteken">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">Het verkeersteken dat bepaalt welke voertuigen er mogen deelnemen aan het verkeer.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeersdeelname">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+        <rdfs:comment xml:lang="nl">De voertuigen die deelnemen aan het verkeer.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
+        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://fixme.com"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeersdeelname.voertuigtype">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">Het type van voertuig.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Verkeersdeelname"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeersintensiteit.kader">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">Het kader waarin de waarde van de verkeersintensiteit wordt gemeten.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeersintensiteit">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+        <rdfs:comment xml:lang="nl">De intensiteit van het verkeer.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
+        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeersintensiteit.voertuigtype">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">Het type voertuig waarvan de intensiteit wordt gemeten.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Verkeersintensiteit"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeersongeval.aantal">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
     <rdfs:comment xml:lang="nl">Het aantal verkeersongevallen die voorgevallen zijn in de opgegeven periode.</rdfs:comment>
-    <rdfs:comment xml:lang="nl">Het aantal voertuigen dat geteld is.</rdfs:comment>
     <rdfs:domain>
       <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeersongeval">
         <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
@@ -262,6 +427,11 @@
         <rdfs:subClassOf rdf:resource="https://fixme.com"/>
       </owl:Class>
     </rdfs:domain>
+    <rdfs:range rdf:resource="https://schema.org/Number"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeerstelling.aantal">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">Het aantal voertuigen dat geteld is.</rdfs:comment>
     <rdfs:domain>
       <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeerstelling">
         <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
@@ -273,25 +443,37 @@
     </rdfs:domain>
     <rdfs:range rdf:resource="https://schema.org/Number"/>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeerstelling.richting">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">TODO</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Verkeerstelling"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeerstelling.voertuigtype">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">Het voertuigtype dat geteld wordt.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Verkeerstelling"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeerstype">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
+    <rdfs:comment xml:lang="nl">Geeft het type van verkeer aan.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
+    <rdfs:subClassOf rdf:resource="https://fixme.com"/>
+  </owl:Class>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#afstand">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
     <rdfs:comment xml:lang="nl">De afstand van de FietsLinkSequentie.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietslinksequentie"/>
-    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#beheerder">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-    <rdfs:comment xml:lang="nl">Instantie die instaat voor het beheer van het object.</rdfs:comment>
-    <rdfs:comment xml:lang="nl">Instantie die instaat voor het beheer van het fietsnetwerkelement.</rdfs:comment>
     <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsinfrastructuurobject">
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietslinksequentie">
         <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-        <rdfs:comment xml:lang="nl">Een infrastructuurelement in functie van de fiets.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Infrastructuurelement"/>
+        <rdfs:comment xml:lang="nl">Lineair ruimtelijk object, bestaande uit een geordende verzameling van generiekeFietsLinks, die een overtakt doorlopend pad in een fietsnetwerk vertegenwoordigt.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transportlinksequentie"/>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelement"/>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#GeneriekeFietslink"/>
       </owl:Class>
     </rdfs:domain>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelement"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
   </owl:ObjectProperty>
   <owl:DatatypeProperty rdf:about="https://data.vlaanderen.be/ns/fiets#betekenis">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
@@ -299,7 +481,7 @@
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#betrokkenVoertuigen">
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#betrokkenVoertuig">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
     <rdfs:comment xml:lang="nl">De voertuigen die betrokken zijn bij het verkeersongeval.</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Verkeersongeval"/>
@@ -308,27 +490,13 @@
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#breedte">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
     <rdfs:comment xml:lang="nl">To Do</rdfs:comment>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsbuffer">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-        <rdfs:comment xml:lang="nl">Buffer of afschijding van de fietsinfrastructuur ten opzichte van ander transport.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap"/>
-        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
-      </owl:Class>
-    </rdfs:domain>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsbuffer"/>
     <rdfs:range rdf:resource="https://schema.org/QuantitativeValue"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#bron">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
     <rdfs:comment xml:lang="nl">De bron van het geluid.</rdfs:comment>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Geluid">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-        <rdfs:comment xml:lang="nl">Het geluid dat in de omgeving van het fietsnetwerkelement aanwezig is.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
-        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
-      </owl:Class>
-    </rdfs:domain>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Geluid"/>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#concept">
@@ -375,32 +543,12 @@
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#kader">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-    <rdfs:comment xml:lang="nl">Het kader waarin de waarde van de luchtkwaliteit wordt gemeten.</rdfs:comment>
     <rdfs:comment xml:lang="nl">Het kader waarin de waarde van de wegverlichting wordt gemeten.</rdfs:comment>
-    <rdfs:comment xml:lang="nl">Het kader waarin de waarde van de verkeersintensiteit wordt gemeten.</rdfs:comment>
     <rdfs:comment xml:lang="nl">Het kader dat geldig is voor  de waarde die gemeten wordt.</rdfs:comment>
-    <rdfs:comment xml:lang="nl">Het kader waarin de waarde van de trillingen worden gemeten.</rdfs:comment>
     <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Luchtkwaliteit">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-        <rdfs:comment xml:lang="nl">De kwaliteit van de lucht waarin het netwerkelement gelegen is.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
-        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Wegverlichting">
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Wegverlichting.kader">
         <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
         <rdfs:comment xml:lang="nl">De verlichting die aanwezig is. </rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
-        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Geluid"/>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeersintensiteit">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-        <rdfs:comment xml:lang="nl">De intensiteit van het verkeer.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
         <rdfs:subClassOf rdf:resource="https://fixme.com"/>
       </owl:Class>
@@ -413,58 +561,13 @@
         <rdfs:subClassOf rdf:resource="https://fixme.com"/>
       </owl:Class>
     </rdfs:domain>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Trillingen">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-        <rdfs:comment xml:lang="nl">De trillingen die gemeten worden en een belangrijke factor zijn in de bepaling van het comfort.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
-      </owl:Class>
-    </rdfs:domain>
     <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#kant">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-    <rdfs:comment xml:lang="nl">TODO</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsbuffer"/>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#BruikbareFietsbreedte">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-        <rdfs:comment xml:lang="nl">De bruikbare breedte die afwijkt van de fietsbreedte door nabijliggende obstakels.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap"/>
-        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
-        <rdfs:subClassOf>
-          <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsbreedte">
-            <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-            <rdfs:comment xml:lang="nl">De breedte die beschikbaar is voor de fietser.</rdfs:comment>
-            <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap"/>
-            <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/weg#Wegbreedte"/>
-            <rdfs:subClassOf rdf:resource="https://fixme.com"/>
-          </owl:Class>
-        </rdfs:subClassOf>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#leverancier">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
     <rdfs:comment xml:lang="nl">De organisatie die verantwoordelijk is voor de voorziening van het fietsinfrastructuurobject.</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsinfrastructuurobject"/>
     <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#link">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-    <rdfs:comment xml:lang="nl">De link waarop een richting wordt toegepast.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#GerichteFietslink"/>
-    <rdfs:range>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietssegment">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-        <rdfs:comment xml:lang="nl">Lineair ruimtelijk object dat de geometrie en connectiviteit beschrijft tussen twee punten in een fietsnetwerk.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelement"/>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transportlink"/>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#GeneriekeFietslink"/>
-      </owl:Class>
-    </rdfs:range>
-    <rdfs:subPropertyOf rdf:resource="https://data.vlaanderen.be/ns/netwerk#link"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#obstakel">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
@@ -490,21 +593,6 @@
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsbreedte"/>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#richting">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-    <rdfs:comment xml:lang="nl">TODO</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Verkeerstelling"/>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsverkeersteken">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-        <rdfs:comment xml:lang="nl">Een verkeersteken specifiek voor de fiets.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken"/>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap"/>
-        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#telmethode">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
     <rdfs:comment xml:lang="nl">De methode die de fietstelpaal hanteert om het aantal voorbijgangende fietsers te tellen.</rdfs:comment>
@@ -525,35 +613,7 @@
   </owl:DatatypeProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#verkeersteken">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-    <rdfs:comment xml:lang="nl">Het verkeersteken dat bepaalt welke richting er mag gefietst worden.</rdfs:comment>
-    <rdfs:comment xml:lang="nl">TODO</rdfs:comment>
-    <rdfs:comment xml:lang="nl">Het verkeersteken dat bepaalt welke voertuigen er mogen deelnemen aan het verkeer.</rdfs:comment>
     <rdfs:comment xml:lang="nl">Het verkeersteken dat toegestane snelheid oplegt.</rdfs:comment>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#RichtingFietsverkeer">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-        <rdfs:comment xml:lang="nl">Geeft de richtingen aan waarin er mag gefietst worden.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap"/>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#RichtingVerkeer"/>
-        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Fietsinrichting">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-        <rdfs:comment xml:lang="nl">De inrichting van netwerkelement dat voorzien is voor de fiets.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap"/>
-        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/fiets#Verkeersdeelname">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-        <rdfs:comment xml:lang="nl">De voertuigen die deelnemen aan het verkeer.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap"/>
-        <rdfs:subClassOf rdf:resource="https://fixme.com"/>
-      </owl:Class>
-    </rdfs:domain>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/weg#Snelheidsbeperking"/>
     <rdfs:range rdf:resource="https://fixme.com"/>
   </owl:ObjectProperty>
@@ -561,18 +621,6 @@
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
     <rdfs:comment xml:lang="nl">Geeft aan van welke vervoersmodus de intensiteit gemeten wordt.</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Verkeersintensiteit"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#voertuigtype">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/fiets"/>
-    <rdfs:comment xml:lang="nl">Het type voertuig waarvan de intensiteit wordt gemeten.</rdfs:comment>
-    <rdfs:comment xml:lang="nl">Het voertuigtype dat geteld wordt.</rdfs:comment>
-    <rdfs:comment xml:lang="nl">Het type van voertuig.</rdfs:comment>
-    <rdfs:comment xml:lang="nl">Het voertuigtype waarvoor de toegestane snelheid van toepassing is.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Verkeersintensiteit"/>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Verkeerstelling"/>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/fiets#Verkeersdeelname"/>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/weg#Snelheidsbeperking"/>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/fiets#waarde">
