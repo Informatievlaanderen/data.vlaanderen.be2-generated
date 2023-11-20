@@ -8,19 +8,14 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 skos:Concept a rdfs:Class;
-  rdfs:label "Teken"@nl .
+  rdfs:label "Linkrichtingtype"@nl,
+    "Teken"@nl .
 
 <https://data.vlaanderen.be/ns/netwerk#GerichteLink.link> a owl:ObjectProperty;
   rdfs:comment "Verwijzing naar de Link."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/netwerk#GerichteLink>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
   rdfs:range <https://data.vlaanderen.be/ns/netwerk#Link> .
-
-<https://data.vlaanderen.be/ns/netwerk#GerichteLink.richting> a owl:ObjectProperty;
-  rdfs:comment "Geeft aan of de GerichteLink de oorspronkelijke richting van de Link volgt of niet (positief indien gelijklopend, negatief indien tegengesteld)."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/netwerk#GerichteLink>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
-  rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/netwerk#Knoop.geometrie> a owl:ObjectProperty;
   rdfs:comment "Locatie van de Knoop."@nl;
@@ -49,12 +44,6 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/netwerk#Linkreferentie>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk> .
 
-<https://data.vlaanderen.be/ns/netwerk#Linkreferentie.toepassingsRichting> a owl:ObjectProperty;
-  rdfs:comment "Richting waarvoor de Netwerkeigenschap geldt tov de richting van de geometrie van de Link of Linksequentie."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/netwerk#Linkreferentie>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
-  rdfs:range <https://data.vlaanderen.be/ns/netwerk#Linkrichtingtype> .
-
 <https://data.vlaanderen.be/ns/netwerk#Linksequentie.link> a owl:ObjectProperty;
   rdfs:comment "Link die deel uitmaakt van de Linksequentie"@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/netwerk#Linksequentie>;
@@ -72,24 +61,6 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/netwerk#Netwerk>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
   rdfs:range rdf:langString .
-
-<https://data.vlaanderen.be/ns/netwerk#Netwerkeigenschap.identificator> a owl:ObjectProperty;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/netwerk#Netwerkeigenschap>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
-  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
-
-<https://data.vlaanderen.be/ns/netwerk#Netwerkeigenschap.netwerkreferentie> a owl:ObjectProperty;
-  rdfs:comment "TODO"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/netwerk#Netwerkeigenschap>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
-  rdfs:range <https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie> .
-
-<https://data.vlaanderen.be/ns/netwerk#Netwerkelement.identificator> a owl:ObjectProperty;
-  rdfs:comment "Identificator van het Netwerkelement."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/netwerk#Netwerkelement>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
-  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
 
 <https://data.vlaanderen.be/ns/netwerk#Netwerkgebied.geometrie> a owl:ObjectProperty;
   rdfs:comment "Beschrijving van de geometrie van het netwerkgebied"@nl;
@@ -126,12 +97,36 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
   rdfs:range <https://data.vlaanderen.be/ns/netwerk#Knoop> .
 
+<https://data.vlaanderen.be/ns/netwerk#inNetwerk> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/netwerk#Netwerkelement>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
+  rdfs:range <https://data.vlaanderen.be/ns/netwerk#Netwerk> .
+
 <https://data.vlaanderen.be/ns/netwerk#kruisingVan> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "De set van kruisend Links is geordend met de laagst gelegen Link eerst."@nl;
   rdfs:comment "Links die ongelijkgronds kruisen."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/netwerk#OngelijkgrondseKruising>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
   rdfs:range <https://data.vlaanderen.be/ns/netwerk#Link> .
+
+<https://data.vlaanderen.be/ns/netwerk#netwerkreferentie> a owl:ObjectProperty;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/netwerk#Netwerkeigenschap>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
+  rdfs:range <https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie> .
+
+<https://data.vlaanderen.be/ns/netwerk#richting> a owl:ObjectProperty;
+  rdfs:comment "Geeft aan of de GerichteLink de oorspronkelijke richting van de Link volgt of niet (positief indien gelijklopend, negatief indien tegengesteld)."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/netwerk#GerichteLink>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/netwerk#toepassingsRichting> a owl:ObjectProperty;
+  rdfs:comment "Richting waarvoor de Netwerkeigenschap geldt tov de richting van de geometrie van de Link of Linksequentie."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/netwerk#Linkreferentie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
+  rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/netwerk#verbindt> a owl:ObjectProperty;
   rdfs:comment "Netwerkelementen die door de Connectie verbonden zijn."@nl;
@@ -140,15 +135,15 @@ skos:Concept a rdfs:Class;
   rdfs:range <https://data.vlaanderen.be/ns/netwerk#Netwerkelement> .
 
 dc:type a rdf:Property;
-  rdfs:label "Connectie.type"@nl .
+  rdfs:label "type"@nl .
+
+<http://www.w3.org/ns/adms#identifier> a rdf:Property;
+  rdfs:label "identificator"@nl .
 
 <https://data.vlaanderen.be/ns/netwerk#Connectie> a owl:Class;
   rdfs:comment "Logische verbinding tussen twee of meer Netwerkelementen in verschillende Netwerken."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/netwerk#Netwerkelement> .
-
-<https://data.vlaanderen.be/ns/netwerk#Linkrichtingtype> a owl:Class;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk> .
 
 <https://data.vlaanderen.be/ns/netwerk#Linksequentie> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Bv een route in het Netwerk."@nl;
@@ -160,6 +155,10 @@ dc:type a rdf:Property;
   rdfs:comment "Collectie Linksequenties en/of Links met een specifieke functie of belang in het Netwerk."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/netwerk#Netwerkelement> .
+
+<https://data.vlaanderen.be/ns/netwerk#Netwerkeigenschap> a owl:Class;
+  rdfs:comment "TODO"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk> .
 
 <https://data.vlaanderen.be/ns/netwerk#Netwerkgebied> a owl:Class;
   rdfs:comment "Tweedimensionaal element in een Netwerk."@nl;
@@ -182,15 +181,6 @@ dc:type a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/netwerk#Linkreferentie> .
 
-<https://data.vlaanderen.be/ns/netwerk#Netwerk> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "De reden waarom de Netwerkelementen bij elkaar gebracht worden in een Netwerk kan verschillen, bv omdat ze geschikt zijn voor een bepaald type vervoermiddel."@nl;
-  rdfs:comment "Verzameling van Netwerkelementen."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk> .
-
-<https://data.vlaanderen.be/ns/netwerk#Netwerkeigenschap> a owl:Class;
-  rdfs:comment "TODO"@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk> .
-
 <https://data.vlaanderen.be/ns/netwerk#GeneriekeLink> a owl:Class;
   rdfs:comment "Lineair Netwerkelement."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
@@ -204,6 +194,11 @@ dc:type a rdf:Property;
   rdfs:comment "Significante positie in het Netwerk die steeds samenvalt met het begin of het einde van een Link."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/netwerk#Netwerkelement> .
+
+<https://data.vlaanderen.be/ns/netwerk#Netwerk> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "De reden waarom de Netwerkelementen bij elkaar gebracht worden in een Netwerk kan verschillen, bv omdat ze geschikt zijn voor een bepaald type vervoermiddel."@nl;
+  rdfs:comment "Verzameling van Netwerkelementen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/netwerk> .
 
 <https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie> a owl:Class;
   rdfs:comment "Verwijzing naar het Netwerkelement waarvoor de Netwerkeigenschap geldt."@nl;
@@ -434,6 +429,7 @@ dc:type a rdf:Property;
     foaf:name "Data Vlaanderen"
   ];
   rdfs:seeAlso skos:Concept,
+    <http://www.w3.org/ns/adms#identifier>,
     dc:type;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
