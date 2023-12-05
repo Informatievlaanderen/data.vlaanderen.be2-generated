@@ -60,6 +60,11 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#DirectePositieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#OpmetingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#GerichteLinkShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#KnoopShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#LinkShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#LinksequentieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#LinkSetShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#NetwerkShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#ActiviteitencomplexShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#ElectriciteitskabelShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#FunctieShape>,
@@ -499,7 +504,7 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#GerichteLinkShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Link>;
+    shacl:class <https://data.vlaanderen.be/ns/netwerk#Link>;
     shacl:description "TO DO"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -624,6 +629,10 @@
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#KnoopShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#Knoop> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#LeidingElementContainerShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://fixme.com#LeidingElementContainer> .
@@ -643,6 +652,18 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#LengteeenheidShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19103/2015/MeasureTypes#UomLength> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#LinkSetShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#Linkset> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#LinkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#Link> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#LinksequentieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#Linksequentie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#MaatShape> a shacl:NodeShape;
   shacl:closed false;
@@ -687,9 +708,18 @@
   ];
   shacl:targetClass <http://def.isotc211.org/iso19103/2015/MeasureTypes#UnitOfMeasure> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#NetwerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#Netwerk> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#NustvoorzieningnetwerkelementShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "String gebruikt om het object uniek te identificeren."@nl;
+    shacl:maxCount 1;
+    shacl:name "identificator"@nl
+  ], [
     shacl:class <http://fixme.com#Document>;
     shacl:description "Extra uitleg over het nutsvoorzieningsnetwerkelement."@nl;
     shacl:name "documentatie"@nl;
@@ -713,12 +743,6 @@
     shacl:minCount 1;
     shacl:name "huidigeStatus"@nl;
     shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#huidigeStatus>
-  ], [
-    shacl:class <http://www.w3.org/ns/adms#Identifier>;
-    shacl:description "String gebruikt om het object uniek te identificeren."@nl;
-    shacl:maxCount 1;
-    shacl:name "identificator"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#identificator>
   ], [
     shacl:class skos:Concept;
     shacl:description "Verwijzing naar een overheidsdienstobject dat verband houdt met dit element van een nutsvoorzieningsnetwerkelement."@nl;
@@ -748,7 +772,7 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "geometrie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#geometrie>
+    shacl:path <https://data.vlaanderen.be/ns/netwerk#Knoop.geometrie>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
     shacl:description "Verwijzing naar een Netwerk object waartoe een Nutsvoorzieningknoop behoort."@nl;
@@ -823,64 +847,64 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#NutsvoorzieninglinkShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Node>;
+    shacl:class <https://data.vlaanderen.be/ns/netwerk#Knoop>;
     shacl:description "De optionele eindnode voor deze link. De eindNode kan dezelfde instantie zijn al de startNode."@nl;
     shacl:maxCount 1;
     shacl:name "eindNode"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#eindknoop>
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
-    shacl:description "Verwijzing naar een Netwerk object waartoe een Nutsvoorzieninglink behoort."@nl;
-    shacl:minCount 1;
-    shacl:name "inNetwerk"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#inNetwerk>
+    shacl:path <https://data.vlaanderen.be/ns/netwerk#eindknoop>
   ], [
     shacl:class <http://www.opengis.net/ont/geosparql#Curve>;
     shacl:description "De geometrie die de middellijn van de schakel weergeeft."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "middelijngeometrie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#middellijngeometrie>
+    shacl:path <https://data.vlaanderen.be/ns/netwerk#Link.geometriemiddellijn>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Node>;
+    shacl:class <https://data.vlaanderen.be/ns/netwerk#Knoop>;
     shacl:description "De optionele startnode voor deze link"@nl;
     shacl:maxCount 1;
     shacl:name "startNode"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#startknoop>
+    shacl:path <https://data.vlaanderen.be/ns/netwerk#beginknoop>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
+    shacl:description "Verwijzing naar een Netwerk object waartoe een Nutsvoorzieninglink behoort."@nl;
+    shacl:minCount 1;
+    shacl:name "inNetwerk"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#inNetwerk>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglink> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#NutsvoorzieninglinksequentieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/netwerk#GerichteLink>;
+    shacl:description "Netwerkelement dat twee posities met elkaar verbindt en een homogeen pad in het netwerk vertegenwoordigt. De verbonden posities kunnen voorgesteld zijn als knooppunten."@nl;
+    shacl:minCount 1;
+    shacl:name "link"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/netwerk#GerichteLink.link>
+  ], [
     shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
     shacl:description "Verwijzing naar een Netwerk object waartoe een Nutsvoorzieninglinksetsequentie behoort."@nl;
     shacl:minCount 1;
     shacl:name "inNetwerk"@nl;
     shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#inNetwerk>
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/netwerk#GerichteLink>;
-    shacl:description "Netwerkelement dat twee posities met elkaar verbindt en een homogeen pad in het netwerk vertegenwoordigt. De verbonden posities kunnen voorgesteld zijn als knooppunten."@nl;
-    shacl:minCount 1;
-    shacl:name "link"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#link>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglinksequentie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#NutsvoorzieninglinksetShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/netwerk#GeneriekeLink>;
+    shacl:description "Netwerkelement dat twee posities met elkaar verbindt en een homogeen pad in het netwerk vertegenwoordigt. De verbonden posities kunnen voorgesteld zijn als knooppunten."@nl;
+    shacl:minCount 1;
+    shacl:name "link"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/netwerk#Linkset.link>
+  ], [
     shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
     shacl:description "Verwijzing naar een Netwerk object waartoe een Nutsvoorzieninglinkset behoort"@nl;
     shacl:minCount 1;
     shacl:name "inNetwerk"@nl;
     shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#inNetwerk>
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#GeneralisedLink>;
-    shacl:description "Netwerkelement dat twee posities met elkaar verbindt en een homogeen pad in het netwerk vertegenwoordigt. De verbonden posities kunnen voorgesteld zijn als knooppunten."@nl;
-    shacl:minCount 1;
-    shacl:name "link"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#link>
   ], [
     shacl:class skos:Concept;
     shacl:description "Classificatie van het materiaal gebruikt voor de nutsvoorzieninglinkset."@nl;
@@ -928,6 +952,10 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/nutsvoorzieningen/kandidaatstandaard/2023-12-04#NutsvoorzieningnetwerkShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "TO DO"@nl;
+    shacl:name "geografischeNaam"@nl
+  ], [
     shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Activiteitencomplex>;
     shacl:description "Verwijzing naar een facilitair activiteitencomplex dat is gekoppeld aan (bijvoorbeeld een deel van) dit nutsnetwerk."@nl;
     shacl:name "activiteitencomplexreferentie"@nl;
@@ -948,11 +976,6 @@
     shacl:description "Extra uitleg over het nutsvoorzieningnetwerk."@nl;
     shacl:name "documentatie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#documentatie>
-  ], [
-    shacl:datatype rdf:langString;
-    shacl:description "TO DO"@nl;
-    shacl:name "geografischeNaam"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#geografischeNaam>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
     shacl:description "Een nutsvoorzieningnetwerk kan bestaan uit meerdere nutsvoorzieningnetwerken."@nl;
