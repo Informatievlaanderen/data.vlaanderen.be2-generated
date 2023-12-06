@@ -86,7 +86,7 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Verwijzing naar een facilitair activiteitencomplex dat is gekoppeld aan (bijvoorbeeld een deel van) dit nutsnetwerk."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
-  rdfs:range <http://fixme.com#Activiteitencomplex> .
+  rdfs:range <https://data.vlaanderen.be/ns/generiek#Activiteitencomplex> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#adres> a owl:ObjectProperty;
   rdfs:comment "Identificatie van een plaats  door middel van een straat, nummer en gemeente."@nl;
@@ -146,9 +146,11 @@ skos:Concept a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#documentatie> a owl:ObjectProperty;
   rdfs:comment "Extra uitleg over het nutsvoorzieningsnetwerkelement."@nl,
-    "Extra uitleg over het nutsvoorzieningnetwerk"@nl;
+    "Extra uitleg over het nutsvoorzieningnetwerk"@nl,
+    "Extra uitleg over het activiteitencomplex"@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nustvoorzieningnetwerkelement>,
-    <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
+    <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>,
+    <https://data.vlaanderen.be/ns/generiek#Activiteitencomplex>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
   rdfs:range foaf:Document .
 
@@ -157,6 +159,12 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen#Pijp>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
   rdfs:range <http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure> .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen#functie> a owl:ObjectProperty;
+  rdfs:comment "Activiteiten uitgevoerd door het activiteitencomplex. De functie wordt beschreven door de activiteit en eventueel aangevuld met informatie over inputs en outputs als gevolg daarvan."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/generiek#Activiteitencomplex>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
+  rdfs:range <https://data.vlaanderen.be/ns/nutsvoorzieningen#Functie> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#geassocieerdMet> a owl:ObjectProperty;
   rdfs:comment "Object waar de annotatie betrekking op heeft"@nl;
@@ -182,13 +190,6 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
   rdfs:range xsd:dateTime .
 
-<https://data.vlaanderen.be/ns/nutsvoorzieningen#geometrie> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Beschrijft deze kenmerken dmv punten, lijnen, polygonen en coördinaten."@nl;
-  rdfs:comment "Vorm- en positiekenmerken van een object."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen#BeschermdGebied>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
-  rdfs:range <http://www.w3.org/ns/locn#Geometry> .
-
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#hoogte> a owl:ObjectProperty;
   rdfs:comment "De hoogte van het toebehoren"@nl,
     "TO DO"@nl;
@@ -208,11 +209,13 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Verwijzing naar een Netwerk object waartoe een Nutsvoorzieningknoop behoort."@nl,
     "Verwijzing naar een Netwerk object waartoe een Nutsvoorzieninglinkset behoort"@nl,
     "Verwijzing naar een Netwerk object waartoe een Nutsvoorzieninglink behoort."@nl,
-    "Verwijzing naar een Netwerk object waartoe een Nutsvoorzieninglinksetsequentie behoort."@nl;
+    "Verwijzing naar een Netwerk object waartoe een Nutsvoorzieninglinksetsequentie behoort."@nl,
+    "Verwijzing naar een Netwerk object waartoe een NetwerkElement behoort."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningknoop>,
     <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglinkset>,
     <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglink>,
-    <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglinksequentie>;
+    <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglinksequentie>,
+    <https://data.vlaanderen.be/ns/generiek#Activiteitencomplex>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
   rdfs:range <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
   rdfs:subPropertyOf <https://data.vlaanderen.be/ns/netwerk#inNetwerk> .
@@ -515,6 +518,9 @@ dc:description a rdf:Property;
 dc:type a rdf:Property;
   rdfs:label "type"@nl .
 
+<http://www.w3.org/ns/locn#geometry> a rdf:Property;
+  rdfs:label "geometrie"@nl .
+
 <https://data.vlaanderen.be/ns/netwerk#GerichteLink.link> a rdf:Property;
   rdfs:label "link"@nl .
 
@@ -596,6 +602,10 @@ dc:type a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen#Toebehoren> .
 
+<https://data.vlaanderen.be/ns/nutsvoorzieningen#BeschermdGebied> a owl:Class;
+  rdfs:comment "Object dat een gebied of zone aanduid waar niet gegraven mag worden."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen> .
+
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#Electriciteitskabel> a owl:Class;
   rdfs:comment "Een nutsverbinding of verbindingsreeks die wordt gebruikt om elektriciteit van de ene locatie naar de andere te transporteren."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
@@ -615,14 +625,6 @@ dc:type a rdf:Property;
   rdfs:comment "De manier waarop een object eruit ziet."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen> .
 
-<https://data.vlaanderen.be/ns/nutsvoorzieningen#BeschermdGebied> a owl:Class;
-  rdfs:comment "Object dat een gebied of zone aanduid waar niet gegraven mag worden."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen> .
-
-<https://data.vlaanderen.be/ns/nutsvoorzieningen#Functie> a owl:Class;
-  rdfs:comment "Activiteiten uitgevoerd door het activiteitencomplex. De functie wordt beschreven door de activiteit en eventueel aangevuld met informatie over de invoer en de uitvoer die het resultaat is van deze activiteiten."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen> .
-
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#Referentieoppervlak> a owl:Class;
   rdfs:comment "Het grondoppervlak,waarvan de hoogte vaak opgegeven wordt ten opzichte van een nationaal nul-niveau."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen> .
@@ -631,6 +633,10 @@ dc:type a rdf:Property;
   rdfs:comment "Een toebehoren is een knooppuntobject dat wordt beschreven door zijn type (via het attribuut \"toebehorenType\")"@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningknoop> .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen#Functie> a owl:Class;
+  rdfs:comment "Activiteiten uitgevoerd door het activiteitencomplex. De functie wordt beschreven door de activiteit en eventueel aangevuld met informatie over de invoer en de uitvoer die het resultaat is van deze activiteiten."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#Kabel> a owl:Class;
   rdfs:comment "Een nutsverbinding of verbindingsreeks die wordt gebruikt om elektriciteit of gegevens van de ene locatie naar de andere over te brengen."@nl;
@@ -705,5 +711,6 @@ dc:type a rdf:Property;
     <https://data.vlaanderen.be/ns/netwerk#Link.geometriemiddellijn>,
     <https://data.vlaanderen.be/ns/netwerk#Knoop.geometrie>,
     <https://data.vlaanderen.be/ns/netwerk#GerichteLink.link>,
+    <http://www.w3.org/ns/locn#geometry>,
     dc:type,
     dc:description .
