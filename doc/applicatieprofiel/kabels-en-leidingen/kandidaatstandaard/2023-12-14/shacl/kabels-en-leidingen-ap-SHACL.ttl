@@ -1,4 +1,5 @@
 @prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -81,6 +82,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/kabels-en-leidingen/kandidaatstandaard/2023-12-14#IdentificatorShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/kabels-en-leidingen/kandidaatstandaard/2023-12-14#AdresvoorstellingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/kabels-en-leidingen/kandidaatstandaard/2023-12-14#GeometrieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/kabels-en-leidingen/kandidaatstandaard/2023-12-14#LocatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/kabels-en-leidingen/kandidaatstandaard/2023-12-14#DocumentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/kabels-en-leidingen/kandidaatstandaard/2023-12-14#AdresShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/kabels-en-leidingen/kandidaatstandaard/2023-12-14#ActiviteitencomplexShape>,
@@ -143,6 +145,12 @@
     shacl:minCount 1;
     shacl:name "inNetwerk"@nl;
     shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#inNetwerk>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
+    shacl:description "Nutsvoorzieningnetwerk waartoe het complex behoort."@nl;
+    shacl:minCount 1;
+    shacl:name "inNetwork"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#Activiteitencomplex.inNetwerk>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "[UPDATED] Naam waaronder het complex gekend is."@nl;
@@ -311,23 +319,27 @@
     shacl:datatype rdf:langString;
     shacl:description "[UPDATED] Beschrijving van het BeschermdGebied."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
   ], [
     shacl:class <http://www.w3.org/ns/locn#Geometry>;
     shacl:description "[UPDATED] Geometrie van het BeschermdGebied."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "geometrie"@nl;
     shacl:path <http://www.w3.org/ns/locn#geometry>
   ], [
-    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:class prov:Location;
     shacl:description "[UPDATED] Locatie van het BeschermdGebied."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "[UPDATED] ligging"@nl;
     shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#ligging>
+  ], [
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van het BeschermdGebied."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "naam"@nl;
+    shacl:path dc11:title
   ], [
     shacl:class skos:Concept;
     shacl:description "[UPDATED] Aard van het BeschermdGebied."@nl;
@@ -676,6 +688,10 @@
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#Linksequentie> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/kabels-en-leidingen/kandidaatstandaard/2023-12-14#LocatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass prov:Location .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/kabels-en-leidingen/kandidaatstandaard/2023-12-14#MaatShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -742,12 +758,6 @@
     shacl:minCount 1;
     shacl:name "geometrie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#Knoop.geometrie>
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
-    shacl:description "[UPDATED] Nutsvoorzieningnetwerk waartoe de Knoop behoort."@nl;
-    shacl:minCount 1;
-    shacl:name "inNetwerk"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#inNetwerk>
   ], [
     shacl:class <http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure>;
     shacl:description "[UPDATED] Hoek waarmee het symbool dat de Knoop weergeeft op kaart moet worden geroteerd."@nl;
@@ -834,12 +844,6 @@
     shacl:maxCount 1;
     shacl:name "startNode"@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#beginknoop>
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
-    shacl:description "[UPDATED] Nutsvoorzieningnetwerk waartoe de Link behoort."@nl;
-    shacl:minCount 1;
-    shacl:name "inNetwerk"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#inNetwerk>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglink> .
 
@@ -851,12 +855,6 @@
     shacl:minCount 1;
     shacl:name "link"@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#GerichteLink.link>
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
-    shacl:description "[UPDATED] Nutsvoorzieningnetwerk waartoe de Linksequentie behoort."@nl;
-    shacl:minCount 1;
-    shacl:name "inNetwerk"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#inNetwerk>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglinksequentie> .
 
@@ -868,12 +866,6 @@
     shacl:minCount 1;
     shacl:name "link"@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#Linkset.link>
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
-    shacl:description "[UPDATED] Nutsvoorzieningnetwerk waartoe de Linkset behoort."@nl;
-    shacl:minCount 1;
-    shacl:name "inNetwerk"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#inNetwerk>
   ], [
     shacl:class skos:Concept;
     shacl:description "[UPDATED] Soort materiaal waaruit de Linkset bestaat."@nl;
@@ -946,6 +938,11 @@
     shacl:name "documentatie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#documentatie>
   ], [
+    shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement>;
+    shacl:description "Nutsvoorzieningnetwerkelement dat tot het netwerk behoort."@nl;
+    shacl:name "element"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#element>
+  ], [
     shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
     shacl:description "[UPDATED] Nutsvoorzieningnetwerk dat met het Nutsvoorzieningnetwerk is geassocieerd."@nl;
     shacl:name "netwerk"@nl;
@@ -996,6 +993,12 @@
     shacl:minCount 1;
     shacl:name "huidigeStatus"@nl;
     shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#huidigeStatus>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
+    shacl:description "Nutsvoorzieningnetwerk waartoe het element behoort."@nl;
+    shacl:minCount 1;
+    shacl:name "inNetwerk"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement.inNetwerk>
   ], [
     shacl:class skos:Concept;
     shacl:description "Verwijzing naar een overheidsdienstobject dat verband houdt met dit element van een nutsvoorzieningsnetwerkelement."@nl;

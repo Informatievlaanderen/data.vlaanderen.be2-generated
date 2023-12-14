@@ -1,4 +1,5 @@
 @prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -38,6 +39,12 @@ skos:Concept a rdfs:Class;
 <https://data.vlaanderen.be/ns/generiek#Opmeting> a rdfs:Class;
   rdfs:label "Opmeting"@nl .
 
+<https://data.vlaanderen.be/ns/nutsvoorzieningen#Activiteitencomplex.inNetwerk> a owl:ObjectProperty;
+  rdfs:comment "Nutsvoorzieningnetwerk waartoe het complex behoort."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/generiek#Activiteitencomplex>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
+  rdfs:range <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk> .
+
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#Getal> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "OPMERKING: Te substitueren door de primitieve datatypes waarmee een hoeveelheid kan worden aangeduid. Zie <a href=\"https://www.w3.org/TR/xmlschema-2/\">xsd datatypes</a> Integer, Float, Decimal, Double etc."@nl;
   rdfs:comment "aanduiding van een hoeveelheid."@nl;
@@ -67,6 +74,25 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Eenvoudige Nutsvoorzieningknoopcontainer die de vorm aanneemt van een afgedekte opening in het wegdek die toegang verschaft tot de ondergrond."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningknoopcontainer> .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglink> a owl:Class;
+  rdfs:comment "Een lineair ruimtelijk object dat de geometrie en connectiviteit beschrijft tussen twee punten in een Nutsvoorzieningnetwerk."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement>,
+    <https://data.vlaanderen.be/ns/netwerk#Link> .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglinksequentie> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "In feite een route in het netwerk, bvb een waterleiding in de stroomrichting. Routes hebben een richting, daarom is de Linksequentie samengesteld uit GerichteLinks."@nl;
+  rdfs:comment "Een onvertakt doorlopend pad in het Nutsvoorzieningnetwerk."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement>,
+    <https://data.vlaanderen.be/ns/netwerk#Linksequentie> .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement.inNetwerk> a owl:ObjectProperty;
+  rdfs:comment "Nutsvoorzieningnetwerk waartoe het element behoort."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
+  rdfs:range <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#Opmeting.methode> a owl:ObjectProperty;
   rdfs:comment "Aard van de gebruikte methode."@nl;
@@ -167,6 +193,12 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
   rdfs:range <http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure> .
 
+<https://data.vlaanderen.be/ns/nutsvoorzieningen#element> a owl:ObjectProperty;
+  rdfs:comment "Nutsvoorzieningnetwerkelement dat tot het netwerk behoort."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
+  rdfs:range <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement> .
+
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#functie> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Eventueel aangevuld met informatie over inputs en outputs van de activiteiten."@nl;
   rdfs:comment "Activiteiten uitgevoerd door het complex."@nl;
@@ -216,19 +248,10 @@ skos:Concept a rdfs:Class;
   rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#inNetwerk> a owl:ObjectProperty;
-  rdfs:comment "Nutsvoorzieningnetwerk waartoe de Knoop behoort."@nl,
-    "Nutsvoorzieningnetwerk waartoe de Linkset behoort."@nl,
-    "Nutsvoorzieningnetwerk waartoe de Link behoort."@nl,
-    "Nutsvoorzieningnetwerk waartoe de Linksequentie behoort."@nl,
-    "Nutsvoorzieningnetwerk waartoe het Activiteitencomplex behoort."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningknoop>,
-    <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglinkset>,
-    <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglink>,
-    <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglinksequentie>,
-    <https://data.vlaanderen.be/ns/generiek#Activiteitencomplex>;
+  rdfs:comment "Nutsvoorzieningnetwerk waartoe het Activiteitencomplex behoort."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/generiek#Activiteitencomplex>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
-  rdfs:range <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
-  rdfs:subPropertyOf <https://data.vlaanderen.be/ns/netwerk#inNetwerk> .
+  rdfs:range <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#input> a owl:ObjectProperty;
   rdfs:comment "Invoer voor de activiteit in de functie"@nl;
@@ -237,10 +260,10 @@ skos:Concept a rdfs:Class;
   rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#kabel> a owl:ObjectProperty;
-  rdfs:comment "Kabel gelegen in het Kanaal."@nl,
-    "Kabel gelegen in de Pijp."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen#Kanaal>,
-    <https://data.vlaanderen.be/ns/nutsvoorzieningen#Pijp>;
+  rdfs:comment "Kabel gelegen in de Pijp."@nl,
+    "Kabel gelegen in het Kanaal."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen#Pijp>,
+    <https://data.vlaanderen.be/ns/nutsvoorzieningen#Kanaal>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
   rdfs:range <https://data.vlaanderen.be/ns/nutsvoorzieningen#Kabel> .
 
@@ -284,7 +307,8 @@ skos:Concept a rdfs:Class;
     <https://data.vlaanderen.be/ns/nutsvoorzieningen#Referentieoppervlak>,
     <https://data.vlaanderen.be/ns/nutsvoorzieningen#BeschermdGebied>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
-  rdfs:range <http://www.w3.org/ns/locn#Geometry> .
+  rdfs:range <http://www.w3.org/ns/locn#Geometry>,
+    prov:Location .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#locatie> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Bvb de ligging en vorm van een Maataanduiding."@nl;
@@ -368,10 +392,10 @@ skos:Concept a rdfs:Class;
   rdfs:range <http://def.isotc211.org/iso19103/2015/MeasureTypes#Length> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#pijp> a owl:ObjectProperty;
-  rdfs:comment "Andere Pijp gelegen in de Pijp."@nl,
-    "Pijp gelegen in het Kanaal."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen#Pijp>,
-    <https://data.vlaanderen.be/ns/nutsvoorzieningen#Kanaal>;
+  rdfs:comment "Pijp gelegen in het Kanaal."@nl,
+    "Andere Pijp gelegen in de Pijp."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen#Kanaal>,
+    <https://data.vlaanderen.be/ns/nutsvoorzieningen#Pijp>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
   rdfs:range <https://data.vlaanderen.be/ns/nutsvoorzieningen#Pijp> .
 
@@ -543,6 +567,9 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
   rdfs:range skos:Concept .
 
+dc11:title a rdf:Property;
+  rdfs:label "naam"@nl .
+
 dc:description a rdf:Property;
   rdfs:label "beschrijving"@nl .
 
@@ -585,19 +612,6 @@ dc:type a rdf:Property;
   rdfs:comment "VerticalePositie boven het Referentieoppervlak."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen#VerticalePositie> .
-
-<https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglink> a owl:Class;
-  rdfs:comment "Een lineair ruimtelijk object dat de geometrie en connectiviteit beschrijft tussen twee punten in een Nutsvoorzieningnetwerk."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement>,
-    <https://data.vlaanderen.be/ns/netwerk#Link> .
-
-<https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglinksequentie> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "In feite een route in het netwerk, bvb een waterleiding in de stroomrichting. Routes hebben een richting, daarom is de Linksequentie samengesteld uit GerichteLinks."@nl;
-  rdfs:comment "Een onvertakt doorlopend pad in het Nutsvoorzieningnetwerk."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement>,
-    <https://data.vlaanderen.be/ns/netwerk#Linksequentie> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#OlieGasChemicalienPijp> a owl:Class;
   rdfs:comment "Een pijp die wordt gebruikt om olie, gas of chemicaliën van de ene locatie naar de andere te transporteren."@nl;
@@ -709,12 +723,6 @@ dc:type a rdf:Property;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement>,
     <https://data.vlaanderen.be/ns/nutsvoorzieningen#Leidingelementcontainer> .
 
-<https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Bvb een electriciteitsnet, een rioleringsnet, een gasnet. De netwerkelementen waarvan sprake zijn bvb de elementen van het netwerk van een aanbiedervan internet: optische kabels aankomend in kasten op straat via multiplexers verbonden met koperkabels naar de woningen in die straat."@nl;
-  rdfs:comment "Verzameling van netwerkelementen van één type nutsvoorziening."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/netwerk#Netwerk> .
-
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#Annotatie> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "In deze context typisch Maataanduiding op een kabel- of leidingenkaart, bvb de afstand van een kabel tov een gevel. Kan bestaan uit onderdelen (bvb maatvoeringslijn, maatvoeringshulplijn, twee pijlen) die op zich ook Annotaties zijn."@nl;
   rdfs:comment "Een korte uitleg of notitie toegevoegd aan een Object."@nl;
@@ -732,6 +740,12 @@ dc:type a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglinkset>,
     <https://data.vlaanderen.be/ns/nutsvoorzieningen#KabelEnLeidingContainer> .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Bvb een electriciteitsnet, een rioleringsnet, een gasnet. De netwerkelementen waarvan sprake zijn bvb de elementen van het netwerk van een aanbiedervan internet: optische kabels aankomend in kasten op straat via multiplexers verbonden met koperkabels naar de woningen in die straat."@nl;
+  rdfs:comment "Verzameling van netwerkelementen van één type nutsvoorziening."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/netwerk#Netwerk> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "OPMERKING: is abstract, moet gespecialiseerd worden (bvb als Electriciteitskabel, Riooolpijp, Mangat, Kast etc)."@nl;
@@ -761,4 +775,5 @@ dc:type a rdf:Property;
     <https://data.vlaanderen.be/ns/netwerk#GerichteLink.link>,
     <http://www.w3.org/ns/locn#geometry>,
     dc:type,
-    dc:description .
+    dc:description,
+    dc11:title .

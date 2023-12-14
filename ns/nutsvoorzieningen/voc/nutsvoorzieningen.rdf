@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:ns0="http://purl.org/vocab/vann/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:prov="http://www.w3.org/ns/prov#">
-  <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#Getal">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:dc11="http://purl.org/dc/elements/1.1/" xmlns:ns0="http://purl.org/vocab/vann/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#Activiteitencomplex.inNetwerk">
     <rdfs:isDefinedBy>
       <owl:Ontology rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen">
         <dc:license>https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0</dc:license>
@@ -105,8 +105,26 @@
             <rdfs:label xml:lang="nl">beschrijving</rdfs:label>
           </rdf:Property>
         </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="http://purl.org/dc/elements/1.1/title">
+            <rdfs:label xml:lang="nl">naam</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
       </owl:Ontology>
     </rdfs:isDefinedBy>
+    <rdfs:comment xml:lang="nl">Nutsvoorzieningnetwerk waartoe het complex behoort.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/generiek#Activiteitencomplex"/>
+    <rdfs:range>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
+        <rdfs:comment xml:lang="nl">Verzameling van netwerkelementen van één type nutsvoorziening.</rdfs:comment>
+        <ns0:usageNote xml:lang="nl">Bvb een electriciteitsnet, een rioleringsnet, een gasnet. De netwerkelementen waarvan sprake zijn bvb de elementen van het netwerk van een aanbiedervan internet: optische kabels aankomend in kasten op straat via multiplexers verbonden met koperkabels naar de woningen in die straat.</ns0:usageNote>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/netwerk#Netwerk"/>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#Getal">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
     <rdfs:comment xml:lang="nl">aanduiding van een hoeveelheid.</rdfs:comment>
     <ns0:usageNote xml:lang="nl">OPMERKING: Te substitueren door de primitieve datatypes waarmee een hoeveelheid kan worden aangeduid. Zie &lt;a href="https://www.w3.org/TR/xmlschema-2/"&gt;xsd datatypes&lt;/a&gt; Integer, Float, Decimal, Double etc.</ns0:usageNote>
   </owl:Class>
@@ -161,6 +179,25 @@
     <ns0:usageNote xml:lang="nl">Bvb riooldeksel.</ns0:usageNote>
     <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningknoopcontainer"/>
   </owl:Class>
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglink">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
+    <rdfs:comment xml:lang="nl">Een lineair ruimtelijk object dat de geometrie en connectiviteit beschrijft tussen twee punten in een Nutsvoorzieningnetwerk.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement"/>
+    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/netwerk#Link"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglinksequentie">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
+    <rdfs:comment xml:lang="nl">Een onvertakt doorlopend pad in het Nutsvoorzieningnetwerk.</rdfs:comment>
+    <ns0:usageNote xml:lang="nl">In feite een route in het netwerk, bvb een waterleiding in de stroomrichting. Routes hebben een richting, daarom is de Linksequentie samengesteld uit GerichteLinks.</ns0:usageNote>
+    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement"/>
+    <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/netwerk#Linksequentie"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement.inNetwerk">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
+    <rdfs:comment xml:lang="nl">Nutsvoorzieningnetwerk waartoe het element behoort.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement"/>
+    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk"/>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#Opmeting.methode">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
     <rdfs:comment xml:lang="nl">Aard van de gebruikte methode.</rdfs:comment>
@@ -188,14 +225,7 @@
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#activiteitencomplexreferentie">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
     <rdfs:comment xml:lang="nl">Verwijzing naar een facilitair Activiteitencomplex dat is gekoppeld aan (bijvoorbeeld een deel van) dit nutsnetwerk.</rdfs:comment>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
-        <rdfs:comment xml:lang="nl">Verzameling van netwerkelementen van één type nutsvoorziening.</rdfs:comment>
-        <ns0:usageNote xml:lang="nl">Bvb een electriciteitsnet, een rioleringsnet, een gasnet. De netwerkelementen waarvan sprake zijn bvb de elementen van het netwerk van een aanbiedervan internet: optische kabels aankomend in kasten op straat via multiplexers verbonden met koperkabels naar de woningen in die straat.</ns0:usageNote>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/netwerk#Netwerk"/>
-      </owl:Class>
-    </rdfs:domain>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk"/>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/generiek#Activiteitencomplex"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#adres">
@@ -326,6 +356,12 @@
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Pijp"/>
     <rdfs:range rdf:resource="http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure"/>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#element">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
+    <rdfs:comment xml:lang="nl">Nutsvoorzieningnetwerkelement dat tot het netwerk behoort.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk"/>
+    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement"/>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#functie">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
     <rdfs:comment xml:lang="nl">Activiteiten uitgevoerd door het complex.</rdfs:comment>
@@ -382,33 +418,9 @@
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#inNetwerk">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
-    <rdfs:comment xml:lang="nl">Nutsvoorzieningnetwerk waartoe de Knoop behoort.</rdfs:comment>
-    <rdfs:comment xml:lang="nl">Nutsvoorzieningnetwerk waartoe de Linkset behoort.</rdfs:comment>
-    <rdfs:comment xml:lang="nl">Nutsvoorzieningnetwerk waartoe de Link behoort.</rdfs:comment>
-    <rdfs:comment xml:lang="nl">Nutsvoorzieningnetwerk waartoe de Linksequentie behoort.</rdfs:comment>
     <rdfs:comment xml:lang="nl">Nutsvoorzieningnetwerk waartoe het Activiteitencomplex behoort.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningknoop"/>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglinkset"/>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglink">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
-        <rdfs:comment xml:lang="nl">Een lineair ruimtelijk object dat de geometrie en connectiviteit beschrijft tussen twee punten in een Nutsvoorzieningnetwerk.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement"/>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/netwerk#Link"/>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglinksequentie">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
-        <rdfs:comment xml:lang="nl">Een onvertakt doorlopend pad in het Nutsvoorzieningnetwerk.</rdfs:comment>
-        <ns0:usageNote xml:lang="nl">In feite een route in het netwerk, bvb een waterleiding in de stroomrichting. Routes hebben een richting, daarom is de Linksequentie samengesteld uit GerichteLinks.</ns0:usageNote>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement"/>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/netwerk#Linksequentie"/>
-      </owl:Class>
-    </rdfs:domain>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/generiek#Activiteitencomplex"/>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk"/>
-    <rdfs:subPropertyOf rdf:resource="https://data.vlaanderen.be/ns/netwerk#inNetwerk"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#input">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
@@ -418,10 +430,10 @@
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#kabel">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
-    <rdfs:comment xml:lang="nl">Kabel gelegen in het Kanaal.</rdfs:comment>
     <rdfs:comment xml:lang="nl">Kabel gelegen in de Pijp.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Kanaal"/>
+    <rdfs:comment xml:lang="nl">Kabel gelegen in het Kanaal.</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Pijp"/>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Kanaal"/>
     <rdfs:range>
       <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#Kabel">
         <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
@@ -481,6 +493,7 @@
       </owl:Class>
     </rdfs:domain>
     <rdfs:range rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Location"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#locatie">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
@@ -597,10 +610,10 @@
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#pijp">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
-    <rdfs:comment xml:lang="nl">Andere Pijp gelegen in de Pijp.</rdfs:comment>
     <rdfs:comment xml:lang="nl">Pijp gelegen in het Kanaal.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Pijp"/>
+    <rdfs:comment xml:lang="nl">Andere Pijp gelegen in de Pijp.</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Kanaal"/>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Pijp"/>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Pijp"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#pijpdiameter">
