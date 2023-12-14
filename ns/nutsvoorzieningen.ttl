@@ -8,6 +8,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+rdfs:Resource a rdfs:Class;
+  rdfs:label "Resource"@nl .
+
 skos:Concept a rdfs:Class;
   rdfs:label "Containertype"@nl,
     "Zichtbaarheidstype"@nl,
@@ -143,6 +146,12 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
   rdfs:range dc:Agent .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen#complex> a owl:ObjectProperty;
+  rdfs:comment "Activiteitencomplex dat tot het netwerk behoort."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
+  rdfs:range <https://data.vlaanderen.be/ns/generiek#Activiteitencomplex> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#containertype> a owl:ObjectProperty;
   rdfs:comment "Aard van de Pijp als container."@nl,
@@ -729,17 +738,17 @@ dc:type a rdf:Property;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement>,
     <https://data.vlaanderen.be/ns/netwerk#Linkset> .
 
-<https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Bvb een electriciteitsnet, een rioleringsnet, een gasnet. De netwerkelementen waarvan sprake zijn bvb de elementen van het netwerk van een aanbiedervan internet: optische kabels aankomend in kasten op straat via multiplexers verbonden met koperkabels naar de woningen in die straat."@nl;
-  rdfs:comment "Verzameling van netwerkelementen van één type nutsvoorziening."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/netwerk#Netwerk> .
-
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#Pijp> a owl:Class;
   rdfs:comment "Een Nutsvoorzieninglinkset voor het transport van vaste stoffen, vloeistoffen, chemicaliën of gassen van de ene locatie naar de andere."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglinkset>,
     <https://data.vlaanderen.be/ns/nutsvoorzieningen#KabelEnLeidingContainer> .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Bvb een electriciteitsnet, een rioleringsnet, een gasnet. De netwerkelementen waarvan sprake zijn bvb de elementen van het netwerk van een aanbiedervan internet: optische kabels aankomend in kasten op straat via multiplexers verbonden met koperkabels naar de woningen in die straat."@nl;
+  rdfs:comment "Verzameling van netwerkelementen van één type nutsvoorziening."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/netwerk#Netwerk> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "OPMERKING: is abstract, moet gespecialiseerd worden (bvb als Electriciteitskabel, Riooolpijp, Mangat, Kast etc)."@nl;
@@ -757,7 +766,8 @@ dc:type a rdf:Property;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso skos:Concept,
+  rdfs:seeAlso rdfs:Resource,
+    skos:Concept,
     <https://data.vlaanderen.be/ns/generiek#Opmeting>,
     <https://data.vlaanderen.be/ns/netwerk#eindlink>,
     <https://data.vlaanderen.be/ns/netwerk#eindknoop>,
