@@ -16,11 +16,6 @@
         <rdfs:label xml:lang="nl">nutsvoorzieningen</rdfs:label>
         <dc:issued>TODO</dc:issued>
         <rdfs:seeAlso>
-          <rdfs:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource">
-            <rdfs:label xml:lang="nl">Resource</rdfs:label>
-          </rdfs:Class>
-        </rdfs:seeAlso>
-        <rdfs:seeAlso>
           <rdfs:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
             <rdfs:label xml:lang="nl">Containertype</rdfs:label>
             <rdfs:label xml:lang="nl">Zichtbaarheidstype</rdfs:label>
@@ -114,22 +109,16 @@
         </rdfs:seeAlso>
         <rdfs:seeAlso>
           <rdf:Property rdf:about="http://purl.org/dc/terms/type">
-            <rdfs:label xml:lang="nl">type</rdfs:label>
-            <rdfs:label xml:lang="nl">topografisch elementtype</rdfs:label>
-            <rdfs:label xml:lang="nl">toebehorentype</rdfs:label>
-            <rdfs:label xml:lang="nl">nutsvoorzieningnetwerktype</rdfs:label>
             <rdfs:label xml:lang="nl">containertype</rdfs:label>
-            <rdfs:label xml:lang="nl">annotatietype</rdfs:label>
-          </rdf:Property>
-        </rdfs:seeAlso>
-        <rdfs:seeAlso>
-          <rdf:Property rdf:about="http://purl.org/dc/terms/description">
-            <rdfs:label xml:lang="nl">beschrijving</rdfs:label>
           </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
           <rdf:Property rdf:about="http://purl.org/dc/elements/1.1/type">
             <rdfs:label xml:lang="nl">type</rdfs:label>
+            <rdfs:label xml:lang="nl">topografisch elementtype</rdfs:label>
+            <rdfs:label xml:lang="nl">toebehorentype</rdfs:label>
+            <rdfs:label xml:lang="nl">nutsvoorzieningnetwerktype</rdfs:label>
+            <rdfs:label xml:lang="nl">annotatietype</rdfs:label>
           </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
@@ -140,6 +129,16 @@
         <rdfs:seeAlso>
           <rdf:Property rdf:about="http://purl.org/dc/elements/1.1/relation">
             <rdfs:label xml:lang="nl">documentatie</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="http://purl.org/dc/elements/1.1/description">
+            <rdfs:label xml:lang="nl">beschrijving</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="http://purl.org/dc/elements/1.1/date">
+            <rdfs:label xml:lang="nl">datum</rdfs:label>
           </rdf:Property>
         </rdfs:seeAlso>
       </owl:Ontology>
@@ -160,6 +159,7 @@
                 <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
                 <rdfs:comment xml:lang="nl">Puntvormig ruimtelijk object dat een rol van belang vervult in een Nutsvoorzieningnetwerk.</rdfs:comment>
                 <ns0:usageNote xml:lang="nl">Kan op zichzelf staan of begin of einde vormen van een Nutsvoorzieninglink. OPMERKING: is abstract, moet verder gespecialiseerd worden als Toebehoren of een subklasse daarvan.</ns0:usageNote>
+                <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/netwerk#Knoop"/>
                 <rdfs:subClassOf>
                   <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerkelement">
                     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
@@ -167,7 +167,6 @@
                     <ns0:usageNote xml:lang="nl">OPMERKING: is abstract, moet gespecialiseerd worden (bvb als Electriciteitskabel, Riooolpijp, Mangat, Kast etc).</ns0:usageNote>
                   </owl:Class>
                 </rdfs:subClassOf>
-                <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/netwerk#Knoop"/>
               </owl:Class>
             </rdfs:subClassOf>
           </owl:Class>
@@ -192,11 +191,6 @@
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#BeschermdGebied">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
     <rdfs:comment xml:lang="nl">Gebied waar niet gegraven mag worden.</rdfs:comment>
-  </owl:Class>
-  <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#Getal">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
-    <rdfs:comment xml:lang="nl">Aanduiding van een hoeveelheid.</rdfs:comment>
-    <ns0:usageNote xml:lang="nl">OPMERKING: Te substitueren door de primitieve datatypes waarmee een hoeveelheid kan worden aangeduid. Zie &lt;a href="https://www.w3.org/TR/xmlschema-2/"&gt;xsd datatypes&lt;/a&gt; Integer, Float, Decimal, Double etc.</ns0:usageNote>
   </owl:Class>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#Hoogte">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
@@ -498,12 +492,6 @@
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk"/>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/generiek#Activiteitencomplex"/>
   </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#datum">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
-    <rdfs:comment xml:lang="nl">Het moment waarop de Opmeting heeft plaatsgevonden</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/generiek#Opmeting"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-  </owl:DatatypeProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/nutsvoorzieningen#deel">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/nutsvoorzieningen"/>
     <rdfs:comment xml:lang="nl">Annotatie die deel uitmaakt van de Annotatie.</rdfs:comment>
