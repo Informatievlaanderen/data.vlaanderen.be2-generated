@@ -1,15 +1,21 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://fixme.com#AardOverlijden> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com> .
+skos:Concept a rdfs:Class;
+  rdfs:label "BezwaarType"@nl,
+    "AardOverlijden"@nl,
+    "LijkbezorgingType"@nl,
+    "FoetaalOverlijden"@nl .
 
-<http://fixme.com#BezwaarType> a owl:Class;
+<http://fixme.com#ObservatieType> a owl:Class;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#Observatiestatus> a owl:Class;
@@ -18,245 +24,311 @@
 <http://fixme.com#RisicoType> a owl:Class;
   rdfs:isDefinedBy <http://fixme.com> .
 
-<http://fixme.com#Rouwmaaltijd> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#Testament> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#Volmacht> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com> .
-
 <http://fixme.com#aandoening> a rdf:Property;
-  rdfs:domain <http://fixme.com#GeboorteToestand>;
+  rdfs:label "aandoening"@nl;
+  rdfs:domain <http://fixme.com#Geboortetoestand>;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#aantal> a owl:ObjectProperty;
+  rdfs:label "aantal"@nl;
   rdfs:domain <http://fixme.com#Rouwdrukwerk>;
   rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <http://fixme.com#KwantitatieveWaarde> .
+  rdfs:range schemas:QuantitativeValue .
 
 <http://fixme.com#apgarscore> a owl:ObjectProperty;
-  rdfs:domain <http://fixme.com#GeboorteToestand>;
+  rdfs:label "apgarscore"@nl;
+  rdfs:domain <http://fixme.com#Geboortetoestand>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#Apgarscore> .
 
-<http://fixme.com#assistentie> a owl:ObjectProperty;
-  rdfs:domain <http://fixme.com#Bevalling>;
-  rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <http://fixme.com#AssistentieBevalling> .
-
 <http://fixme.com#begroeting> a rdf:Property;
+  rdfs:label "begroeting"@nl;
   rdfs:domain <http://fixme.com#Wilsbeschikking>;
   rdfs:isDefinedBy <http://fixme.com> .
 
-<http://fixme.com#beschrijving> a rdf:Property;
-  rdfs:domain <http://fixme.com#Doodgeboorte>;
+<http://fixme.com#bepaalt> a owl:ObjectProperty;
+  rdfs:label "bepaalt"@nl;
+  rdfs:domain <http://fixme.com#Uitvaart>,
+    <http://fixme.com#Orgaandonatie>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Wilsbeschikking> .
+
+<http://fixme.com#borstvoeding> a rdf:Property;
+  rdfs:label "borstvoeding"@nl;
+  rdfs:domain <http://fixme.com#Geboortetoestand>;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#consumptieInterval> a rdf:Property;
+  rdfs:label "consumptie interval"@nl;
   rdfs:domain <http://fixme.com#Borstvoeding>;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#duur> a owl:ObjectProperty;
+  rdfs:label "duur"@nl;
   rdfs:domain <http://fixme.com#Apgarscore>;
   rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <http://fixme.com#KwantitatieveWaarde> .
+  rdfs:range schemas:QuantitativeValue .
 
-<http://fixme.com#foetaaloverlijden> a rdf:Property;
+<http://fixme.com#foetaaloverlijden> a owl:ObjectProperty;
+  rdfs:label "foetaal overlijden"@nl;
   rdfs:domain <http://fixme.com#Doodgeboorte>;
-  rdfs:isDefinedBy <http://fixme.com> .
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range skos:Concept .
 
 <http://fixme.com#foetaleBewaking> a rdf:Property;
-  rdfs:domain <http://fixme.com#Bevalling>;
+  rdfs:label "foetale bewaking"@nl;
+  rdfs:domain <http://fixme.com#Bevallingstoestand>;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#foto> a owl:ObjectProperty;
+  rdfs:label "foto"@nl;
   rdfs:domain <http://fixme.com#Rouwdrukwerk>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range foaf:Document .
 
 <http://fixme.com#geboorteGewicht> a owl:ObjectProperty;
-  rdfs:domain <http://fixme.com#GeboorteToestand>;
+  rdfs:label "geboortegewicht"@nl;
+  rdfs:domain <http://fixme.com#Geboortetoestand>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#Gewicht> .
 
 <http://fixme.com#gebruikteMedicatie> a owl:ObjectProperty;
-  rdfs:domain <http://fixme.com#Bevalling>;
+  rdfs:label "gebruikte medicatie"@nl;
+  rdfs:domain <http://fixme.com#Bevallingstoestand>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#Medicatie> .
 
 <http://fixme.com#gemeente> a owl:ObjectProperty;
+  rdfs:label "gemeente"@nl;
   rdfs:domain <http://fixme.com#Wilsbeschikking>;
   rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <http://fixme.com#PubliekeOrganisatie> .
+  rdfs:range dc:Location .
 
 <http://fixme.com#genodigden> a owl:ObjectProperty;
+  rdfs:label "genodigden"@nl;
   rdfs:domain <http://fixme.com#Uitvaart>;
   rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <http://fixme.com#KwantitatieveWaarde> .
+  rdfs:range schemas:QuantitativeValue .
+
+<http://fixme.com#gewicht> a owl:ObjectProperty;
+  rdfs:label "gewicht"@nl;
+  rdfs:domain <http://fixme.com#Foetus>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range schemas:QuantitativeValue .
 
 <http://fixme.com#gewichtMoederBevalling> a owl:ObjectProperty;
-  rdfs:domain <http://fixme.com#Bevalling>;
+  rdfs:label "gewicht moeder bevalling"@nl;
+  rdfs:domain <http://fixme.com#Bevallingstoestand>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#Gewicht> .
 
 <http://fixme.com#gewichtMoederVooBevalling> a owl:ObjectProperty;
-  rdfs:domain <http://fixme.com#Bevalling>;
+  rdfs:label "gewicht moeder voor bevalling"@nl;
+  rdfs:domain <http://fixme.com#Bevallingstoestand>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#Gewicht> .
 
+<http://fixme.com#heeftAssistentie> a owl:ObjectProperty;
+  rdfs:label "heeft assistentie"@nl;
+  rdfs:domain <http://fixme.com#AssistentieBevalling>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Bevalling> .
+
+<http://fixme.com#heeftToestand> a owl:ObjectProperty;
+  rdfs:label "heeft toestand"@nl;
+  rdfs:domain <http://fixme.com#Bevallingstoestand>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Bevalling> .
+
 <http://fixme.com#indicatieKeizersnede> a rdf:Property;
-  rdfs:domain <http://fixme.com#Bevalling>;
+  rdfs:label "indicatie keizersnede"@nl;
+  rdfs:domain <http://fixme.com#Bevallingstoestand>;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#intrapartale> a rdf:Property;
-  rdfs:domain <http://fixme.com#Bevalling>;
+  rdfs:label "intrapartale"@nl;
+  rdfs:domain <http://fixme.com#Bevallingstoestand>;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#koffietafel> a rdf:Property;
+  rdfs:label "koffietafel"@nl;
   rdfs:domain <http://fixme.com#Uitvaart>;
   rdfs:isDefinedBy <http://fixme.com> .
 
+<http://fixme.com#leeftijd> a owl:ObjectProperty;
+  rdfs:label "leeftijd"@nl;
+  rdfs:domain <http://fixme.com#Foetus>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range schemas:QuantitativeValue .
+
 <http://fixme.com#leidtTot> a owl:ObjectProperty;
-  rdfs:domain <http://fixme.com#Begrafenis>,
-    <http://fixme.com#Crematie>;
+  rdfs:label "leidt tot"@nl;
+  rdfs:domain <http://fixme.com#Crematie>,
+    <http://fixme.com#Teraardestelling>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#Uitvaart> .
 
 <http://fixme.com#liggingKindBevalling> a rdf:Property;
-  rdfs:domain <http://fixme.com#Bevalling>;
+  rdfs:label "ligging kind bevalling"@nl;
+  rdfs:domain <http://fixme.com#Bevallingstoestand>;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#lijkbezorging> a owl:ObjectProperty;
+  rdfs:label "lijkbezorging"@nl;
   rdfs:domain <http://fixme.com#Wilsbeschikking>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#LijkbezorgingType> .
 
+<http://fixme.com#locatie> a owl:ObjectProperty;
+  rdfs:label "locatie"@nl;
+  rdfs:domain <http://fixme.com#StoffelijkeRest>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range prov:Location .
+
 <http://fixme.com#neonatale> a rdf:Property;
-  rdfs:domain <http://fixme.com#GeboorteToestand>;
+  rdfs:label "neonatale"@nl;
+  rdfs:domain <http://fixme.com#Geboortetoestand>;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#nutritie> a owl:ObjectProperty;
-  rdfs:domain <http://fixme.com#Bevalling>;
+  rdfs:label "nutritie"@nl;
+  rdfs:domain <http://fixme.com#Bevallingstoestand>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#Borstvoeding> .
 
 <http://fixme.com#nutritionIntake.identifier> a rdf:Property;
+  rdfs:label "nutrition intake"@nl;
   rdfs:domain <http://fixme.com#Borstvoeding>;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#omkadering> a owl:DatatypeProperty;
+  rdfs:label "omkadering"@nl;
   rdfs:domain <http://fixme.com#Uitvaart>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range rdf:langString .
 
 <http://fixme.com#ondertekening> a owl:ObjectProperty;
+  rdfs:label "ondertekening"@nl;
   rdfs:domain <http://fixme.com#Wilsbeschikking>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range foaf:Document .
 
 <http://fixme.com#oorzaak> a rdf:Property;
+  rdfs:label "oorzaak"@nl;
   rdfs:domain <http://fixme.com#Doodsoorzaak>;
   rdfs:isDefinedBy <http://fixme.com> .
 
-<http://fixme.com#opgesteldIn> a owl:ObjectProperty;
+<http://fixme.com#opgesteldBij> a owl:ObjectProperty;
+  rdfs:label "opgesteld bij"@nl;
   rdfs:domain <http://fixme.com#Wilsbeschikking>;
   rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range dc:Location .
+  rdfs:range <http://data.europa.eu/m8g/PublicOrganisation> .
+
+<http://fixme.com#organiseert> a owl:ObjectProperty;
+  rdfs:label "organiseert"@nl;
+  rdfs:domain <http://fixme.com#Uitvaart>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Uitvaartondernemer> .
 
 <http://fixme.com#performer> a rdf:Property;
+  rdfs:label "performer"@nl;
   rdfs:domain <http://fixme.com#Borstvoeding>;
   rdfs:isDefinedBy <http://fixme.com> .
 
-<http://fixme.com#plaats> a owl:ObjectProperty,
-    rdf:Property;
-  rdfs:domain <http://fixme.com#Uitvaart>,
-    <http://fixme.com#Bevalling>;
+<http://fixme.com#plaats> a owl:ObjectProperty;
+  rdfs:label "plaats"@nl;
+  rdfs:domain <http://fixme.com#Uitvaart>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range dc:Location .
 
-<http://fixme.com#rang> a rdf:Property;
-  rdfs:domain <http://fixme.com#Bevalling>;
-  rdfs:isDefinedBy <http://fixme.com> .
+<http://fixme.com#produceert> a owl:ObjectProperty;
+  rdfs:label "produceert"@nl;
+  rdfs:domain <http://fixme.com#StoffelijkeRest>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Crematie>,
+    <http://fixme.com#Teraardestelling> .
 
 <http://fixme.com#ritueel> a owl:ObjectProperty;
+  rdfs:label "ritueel"@nl;
   rdfs:domain <http://fixme.com#Wilsbeschikking>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#RitueelType> .
 
 <http://fixme.com#rouwdrukwerk> a owl:ObjectProperty;
+  rdfs:label "Rouwdrukwerk"@nl;
   rdfs:domain <http://fixme.com#Uitvaart>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#Rouwdrukwerk> .
 
 <http://fixme.com#rouwmaaltijd> a rdf:Property;
+  rdfs:label "rouwmaaltijd"@nl;
   rdfs:domain <http://fixme.com#Uitvaart>;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#score> a owl:ObjectProperty;
+  rdfs:label "score"@nl;
   rdfs:domain <http://fixme.com#Apgarscore>;
   rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <http://fixme.com#KwantitatieveWaarde> .
+  rdfs:range schemas:QuantitativeValue .
 
 <http://fixme.com#tekst> a owl:DatatypeProperty;
+  rdfs:label "tekst"@nl;
   rdfs:domain <http://fixme.com#Rouwdrukwerk>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range rdf:langString .
 
 <http://fixme.com#toestand> a rdf:Property;
-  rdfs:domain <http://fixme.com#GeboorteToestand>;
+  rdfs:label "toestand"@nl;
+  rdfs:domain <http://fixme.com#Geboortetoestand>;
   rdfs:isDefinedBy <http://fixme.com> .
 
-<http://fixme.com#tyoe> a rdf:Property;
-  rdfs:domain <http://fixme.com#Doodgeboorte>;
-  rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#type> a owl:ObjectProperty,
-    rdf:Property;
-  rdfs:domain <http://fixme.com#AdministratieveAfhandeling>,
-    <http://fixme.com#Doodsoorzaak>,
+<http://fixme.com#type> a rdf:Property,
+    owl:ObjectProperty;
+  rdfs:label "type"@nl;
+  rdfs:domain <http://fixme.com#Doodsoorzaak>,
     <http://fixme.com#StoffelijkeRest>,
     <http://fixme.com#Rouwdrukwerk>;
   rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <http://fixme.com#AdministratieveAfhandelingType>,
-    <http://fixme.com#StoffelijkeRestType>,
+  rdfs:range <http://fixme.com#StoffelijkRestType>,
     <http://fixme.com#RouwdrukwerkType> .
 
 <http://fixme.com#uitvaartondernemer> a owl:ObjectProperty;
+  rdfs:label "uitvaartondernemer"@nl;
   rdfs:domain <http://fixme.com#Uitvaart>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#Uitvaartondernemer> .
 
 <http://fixme.com#wordtBepaaldDoor> a owl:ObjectProperty;
+  rdfs:label "wordt bepaald door"@nl;
   rdfs:domain <http://fixme.com#Wilsbeschikking>;
   rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <http://fixme.com#Uitvaart> .
+  rdfs:range <http://fixme.com#Uitvaart>,
+    <http://fixme.com#Orgaandonatie> .
 
 <http://fixme.com#wordtGeorganiseerdDoor> a owl:ObjectProperty;
+  rdfs:label "wordt georganiseerd door"@nl;
   rdfs:domain <http://fixme.com#Uitvaartondernemer>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#Uitvaart> .
 
 <http://fixme.com#wordtGeproduceerdDoor> a owl:ObjectProperty;
-  rdfs:domain <http://fixme.com#PubliekeOrganisatie>,
-    <http://fixme.com#Begrafenis>,
-    <http://fixme.com#Crematie>;
+  rdfs:label "wordt geproduceerd door"@nl;
+  rdfs:domain <http://fixme.com#Crematie>,
+    <http://fixme.com#Teraardestelling>;
   rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <http://fixme.com#AdministratieveAfhandeling>,
-    <http://fixme.com#StoffelijkeRest> .
+  rdfs:range <http://fixme.com#StoffelijkeRest> .
 
 <http://fixme.com#zorgen> a rdf:Property;
-  rdfs:domain <http://fixme.com#GeboorteToestand>;
-  rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#AdministratieveAfhandelingType> a owl:Class;
+  rdfs:label "zorgen"@nl;
+  rdfs:domain <http://fixme.com#Geboortetoestand>;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#AssistentieBevalling> a owl:Class;
+  rdfs:label "Assistentie Bevalling"@nl;
   rdfs:isDefinedBy <http://fixme.com> .
 
-<http://fixme.com#LijkbezorgingType> a owl:Class;
+<http://fixme.com#Doodgeboorte> a owl:Class;
+  rdfs:label "Doodgeboorte"@nl;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#RitueelType> a owl:Class;
@@ -265,61 +337,71 @@
 <http://fixme.com#RouwdrukwerkType> a owl:Class;
   rdfs:isDefinedBy <http://fixme.com> .
 
-<http://fixme.com#StoffelijkeRestType> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#AdministratieveAfhandeling> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:subClassOf <http://data.europa.eu/m8g/Evidence> .
-
-<http://fixme.com#Begrafenis> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#Crematie> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#Doodsoorzaak> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#PubliekeOrganisatie> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:subClassOf <http://fixme.com#Agent> .
-
-<http://fixme.com#StoffelijkeRest> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#Uitvaartondernemer> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:subClassOf <http://fixme.com#Agent> .
-
-<http://fixme.com#Apgarscore> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:subClassOf <http://fixme.com#Observatie> .
-
-<http://fixme.com#Doodgeboorte> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#Borstvoeding> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#KwantitatieveWaarde> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#Rouwdrukwerk> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#GeboorteToestand> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#Wilsbeschikking> a owl:Class;
-  rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#Uitvaart> a owl:Class;
+<http://fixme.com#StoffelijkRestType> a owl:Class;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#Bevalling> a owl:Class;
+  rdfs:label "Bevalling"@nl;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:subClassOf <http://fixme.com#Persoonsgebeurtenis> .
+
+<http://fixme.com#Doodsoorzaak> a owl:Class;
+  rdfs:label "Doodsoorzaak"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Foetus> a owl:Class;
+  rdfs:label "Foetus"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Orgaandonatie> a owl:Class;
+  rdfs:label "Orgaandonatie"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Apgarscore> a owl:Class;
+  rdfs:label "Apgarscore"@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf <http://fixme.com#FHIR::Observatie> .
+
+<http://fixme.com#Crematie> a owl:Class;
+  rdfs:label "Crematie"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Teraardestelling> a owl:Class;
+  rdfs:label "Teraardestelling"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Uitvaartondernemer> a owl:Class;
+  rdfs:label "uitvaartondernemer"@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf <http://fixme.com#Agent> .
+
+<http://fixme.com#Borstvoeding> a owl:Class;
+  rdfs:label "Borstvoeding"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#StoffelijkeRest> a owl:Class;
+  rdfs:label "Stoffelijke Rest"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Rouwdrukwerk> a owl:Class;
+  rdfs:label "Rouwdrukwerk"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Geboortetoestand> a owl:Class;
+  rdfs:label "Geboortetoestand"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Wilsbeschikking> a owl:Class;
+  rdfs:label "Wilsbeschikking"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Bevallingstoestand> a owl:Class;
+  rdfs:label "bevallingstoestand"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Uitvaart> a owl:Class;
+  rdfs:label "Uitvaart"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com> a owl:Ontology;
   rdfs:label "overlijdensaangifte-voc"@en,
@@ -494,6 +576,7 @@
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
+  rdfs:seeAlso skos:Concept;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
@@ -577,6 +660,14 @@
     foaf:mbox <mailto:veerle.beyaert@vlaanderen.be>
   ];
   foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77>;
+      foaf:name "Stad Leuven"
+    ];
+    foaf:firstName "Steve";
+    foaf:lastName "Heylen"
+  ], [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO051320>;
