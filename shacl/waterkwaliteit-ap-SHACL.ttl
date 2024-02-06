@@ -2,7 +2,6 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schemas: <https://schema.org/> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -60,15 +59,12 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#SensorShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#SysteemShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#OpmetingShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#StandaardEenheidShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#WettelijkKaderShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#BioIndicatorObservatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#BiotischeIndexObservatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#ChemischAgensConcentratieObservatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#WaterObjectShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#WaterkwaliteitParameterObservatieShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#GetalShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#KwantitatieveWaardeShape> .
+    <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#WaterkwaliteitParameterObservatieShape> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#AgensShape> a shacl:NodeShape;
   shacl:closed false;
@@ -366,10 +362,6 @@
   ];
   shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#GetalShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass schemas:Number .
-
 <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#HerkomstShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage> .
@@ -409,44 +401,12 @@
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element> .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#KwantitatieveWaardeShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    shacl:datatype xsd:string;
-    shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
-    shacl:maxCount 1;
-    shacl:name "eenheid"@nl;
-    shacl:path schemas:unitText
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/generiek#StandaardEenheid>;
-    shacl:description "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
-    shacl:maxCount 1;
-    shacl:name "standaard eenheid"@nl;
-    shacl:path schemas:unitCode
-  ], [
-    shacl:class schemas:Number;
-    shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "waarde"@nl;
-    shacl:path schemas:value
-  ];
-  shacl:targetClass schemas:QuantitativeValue .
-
 <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#LocatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass prov:Location .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#MaatShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    shacl:class schemas:QuantitativeValue;
-    shacl:description "De hoeveelheid."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "maat"@nl;
-    shacl:path <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure.value>
-  ];
   shacl:targetClass <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#MatrixTypeShape> a shacl:NodeShape;
@@ -690,10 +650,6 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#SoortShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/waterkwaliteit#Soort> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#StandaardEenheidShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#StandaardEenheid> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01#StatistischeObservatieShape> a shacl:NodeShape;
   shacl:closed false;
