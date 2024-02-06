@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:schemas="https://schema.org/" xmlns:org="http://www.w3.org/ns/org#" xmlns:ns1="http://purl.org/vocab/vann/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:schema="http://schema.org/">
-  <owl:Class rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#AantalWerknemers">
+  <owl:DatatypeProperty rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#Betaling.tijdstip">
     <rdfs:isDefinedBy>
       <owl:Ontology rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie">
         <dc:license>https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0</dc:license>
@@ -580,6 +580,11 @@
           </rdfs:Class>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
+          <rdfs:Class rdf:about="https://schema.org/MoneyTransfer">
+            <rdfs:label xml:lang="nl">Betaling</rdfs:label>
+          </rdfs:Class>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
           <rdfs:Class rdf:about="https://schema.org/Product">
             <rdfs:label xml:lang="nl">Product</rdfs:label>
           </rdfs:Class>
@@ -620,24 +625,14 @@
           </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
-          <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#transactie">
-            <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-            <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
-            <rdfs:domain>
-              <owl:Class rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#Betaling">
-                <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
-              </owl:Class>
-            </rdfs:domain>
-            <rdfs:range>
-              <owl:Class rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#Transactie">
-                <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
-                <rdfs:label xml:lang="nl">Transactie</rdfs:label>
-                <rdfs:comment xml:lang="nl">Een overeenkomst tussen een koper en een verkoper om goederen, diensten of monetaire zaken uit te wisselen.</rdfs:comment>
-                <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie#Transactie"/>
-              </owl:Class>
-            </rdfs:range>
+          <rdf:Property rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#transactie">
             <rdfs:label xml:lang="nl">transactie</rdfs:label>
-          </owl:ObjectProperty>
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#betaling">
+            <rdfs:label xml:lang="nl">betaling</rdfs:label>
+          </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
           <rdf:Property rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#aankooplijn">
@@ -656,7 +651,18 @@
         </rdfs:seeAlso>
       </owl:Ontology>
     </rdfs:isDefinedBy>
-  </owl:Class>
+    <rdfs:label xml:lang="nl">tijdstip</rdfs:label>
+    <rdfs:comment xml:lang="nl">Tijdstip waarop de betaling plaatsvindt.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/MoneyTransfer"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#Gebeurtenis.tijdstip">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
+    <rdfs:label xml:lang="nl">tijdstip</rdfs:label>
+    <rdfs:comment xml:lang="nl">Tijdstip waarop een gebeurtenis plaatsvindt.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/Event"/>
+    <rdfs:range rdf:resource="https://schema.org/Schedule"/>
+  </owl:ObjectProperty>
   <owl:DatatypeProperty rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#aantal">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
     <rdfs:label xml:lang="nl">aantal</rdfs:label>
@@ -670,6 +676,19 @@
     </rdfs:domain>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
   </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#aantalWerknemers">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
+    <rdfs:label xml:lang="nl">aantal werknemers</rdfs:label>
+    <rdfs:comment xml:lang="nl">Aantal personen in dienst op een bepaald moment in een specifieke Vestiging van een Organisatie.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Site"/>
+    <rdfs:range>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#AantalWerknemers">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
+        <rdfs:label xml:lang="nl">aantalWerknemers</rdfs:label>
+        <rdfs:comment xml:lang="nl">Classificatie van het aantal personen in dienst op een bepaald moment in een specifieke Vestiging van een Organisatie.</rdfs:comment>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
   <rdf:Property rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#affiliatietype">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
     <rdfs:label xml:lang="nl">affiliatietype</rdfs:label>
@@ -691,7 +710,9 @@
   </rdf:Property>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#bedrag">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie#Betaling"/>
+    <rdfs:label xml:lang="nl">bedrag</rdfs:label>
+    <rdfs:comment xml:lang="nl">Hoeveelheid geld of equivalent die wordt overgemaakt.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/MoneyTransfer"/>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/financiele-data#Monetair"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#bedrijfsgrootte">
@@ -704,7 +725,9 @@
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#betaalmethode">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie#Betaling"/>
+    <rdfs:label xml:lang="nl">betaalmethode</rdfs:label>
+    <rdfs:comment xml:lang="nl">Indicatie van het betaalmiddel dat gebruikt werd.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://schema.org/MoneyTransfer"/>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#bezoekHerkomst">
@@ -723,7 +746,7 @@
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#bezoekersProfiel">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
-    <rdfs:label xml:lang="nl">bezoekersProfiel</rdfs:label>
+    <rdfs:label xml:lang="nl">bezoekersprofiel</rdfs:label>
     <rdfs:comment xml:lang="nl">Bezoekersprofiel dat geobserveerd wordt.</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie#Druktekenmerk"/>
     <rdfs:domain>
@@ -811,15 +834,22 @@
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
     <rdfs:label xml:lang="nl">klantenkaart</rdfs:label>
     <rdfs:comment xml:lang="nl">Klantenkaart die gebruikt wordt bij de transactie.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie#Transactie"/>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#Transactie">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
+        <rdfs:label xml:lang="nl">Transactie</rdfs:label>
+        <rdfs:comment xml:lang="nl">Een overeenkomst tussen een koper en een verkoper om goederen, diensten of monetaire zaken uit te wisselen.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie#Transactie"/>
+      </owl:Class>
+    </rdfs:domain>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#koperprofiel">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
     <rdfs:label xml:lang="nl">koperprofiel</rdfs:label>
-    <rdfs:comment xml:lang="nl">Socio-demografisch profiel van een persoon.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie#Verkoopkenmerk"/>
+    <rdfs:comment xml:lang="nl">Socio-demografisch profiel of organisatieprofiel dat geobserveerd wordt.</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie#Druktekenmerk"/>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie#Verkoopkenmerk"/>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie#Profiel"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#leeftijdsgroep">
@@ -897,11 +927,6 @@
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie#Verkoopkenmerk"/>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#tijdstip">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie#Betaling"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-  </owl:DatatypeProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/lokaleEconomie#type">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/lokaleEconomie"/>
     <rdfs:label xml:lang="nl">type</rdfs:label>
