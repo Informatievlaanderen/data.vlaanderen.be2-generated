@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:ns1="http://purl.org/vocab/vann/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:schema="http://schema.org/">
-  <owl:Class rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit#GeobserveerdWeer">
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensVrachtObservatie.geobserveerdKenmerk">
     <rdfs:isDefinedBy>
       <owl:Ontology rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit">
         <dc:license>https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0</dc:license>
@@ -273,8 +273,40 @@
         </rdfs:seeAlso>
       </owl:Ontology>
     </rdfs:isDefinedBy>
+    <rdfs:comment xml:lang="nl">Type van het geobserveerdKenmerk.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensVrachtObservatie">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit"/>
+        <rdfs:comment xml:lang="nl">Observatie om de chemische kwaliteit van water te beoordelen aan de hand van de afgemeten hoeveelheid vracht.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"/>
+        <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement"/>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensKenmerkType"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit#GeobserveerdWeer">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit"/>
     <rdfs:comment xml:lang="nl">Een observatie van weersomstandigheden op een zekere plaats en tijd.</rdfs:comment>
   </owl:Class>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit#HydromorfologischeIndexObservatie.geobserveerdKenmerk">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit"/>
+    <rdfs:comment xml:lang="nl">Type van het geobserveerdKenmerk.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit#HydromorfologischeIndexObservatie">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit"/>
+        <rdfs:comment xml:lang="nl">Observatie die de kwaliteit van de vormen in het landschap van het watersysteem beoordeelt op basis van kenmerken/parameters van deze vormen.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"/>
+        <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement"/>
+        <rdfs:subClassOf>
+          <owl:Class rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit#StatistischeObservatie">
+            <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit"/>
+            <rdfs:comment xml:lang="nl">Een observatie volgens een statistische methodologie.</rdfs:comment>
+          </owl:Class>
+        </rdfs:subClassOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit#Meetnet">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit"/>
     <rdfs:comment xml:lang="nl">Samenhangend geheel van plaatsen waar Observaties worden uitgevoerd.</rdfs:comment>
@@ -293,14 +325,7 @@
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit#agens">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit"/>
     <rdfs:comment xml:lang="nl">Het agens dat bij de observatie geobserveerd wordt.</rdfs:comment>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensVrachtObservatie">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit"/>
-        <rdfs:comment xml:lang="nl">Observatie om de chemische kwaliteit van water te beoordelen aan de hand van de afgemeten hoeveelheid vracht.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"/>
-        <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement"/>
-      </owl:Class>
-    </rdfs:domain>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensVrachtObservatie"/>
     <rdfs:range>
       <owl:Class rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit#Agens">
         <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit"/>
@@ -313,27 +338,6 @@
     <rdfs:comment xml:lang="nl">De afgemeten hoeveelheid vracht die van het chemisch Agens werd geloosd.</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensVrachtObservatie"/>
     <rdfs:range rdf:resource="http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit#geobserveerdKenmerk">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit"/>
-    <rdfs:comment xml:lang="nl">Type van het geobserveerdKenmerk.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensVrachtObservatie"/>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit#HydromorfologischeIndexObservatie">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit"/>
-        <rdfs:comment xml:lang="nl">Observatie die de kwaliteit van de vormen in het landschap van het watersysteem beoordeelt op basis van kenmerken/parameters van deze vormen.</rdfs:comment>
-        <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"/>
-        <rdfs:subClassOf rdf:resource="http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement"/>
-        <rdfs:subClassOf>
-          <owl:Class rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit#StatistischeObservatie">
-            <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit"/>
-            <rdfs:comment xml:lang="nl">Een observatie volgens een statistische methodologie.</rdfs:comment>
-          </owl:Class>
-        </rdfs:subClassOf>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensKenmerkType"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/waterkwaliteit#hydromorfologischeIndex">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/waterkwaliteit"/>
