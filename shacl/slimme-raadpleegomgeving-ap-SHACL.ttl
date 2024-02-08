@@ -26,8 +26,6 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#ArtikelShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#BehandelingVanAgendapuntShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#BesluitShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#NotificatieberichtShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#StukShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#HandelingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#PlichtShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#FeitShape>,
@@ -52,7 +50,9 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#LocatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#LegaleVerschijningsvormShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#BeslissingsactiviteitShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#StukShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#AdministratieveEenheidShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#NotificatieberichtShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#ConceptueelPubliekeDienstverleningShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#InstantiePubliekeDienstverleningShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#WebsiteShape> .
@@ -154,6 +154,7 @@
     shacl:name "heeft tekstuele inhoud"@nl;
     shacl:path oa:body
   ], [
+    <http://purl.org/linked-data/cube#codeList> <https://data.vlaanderen.be/id/conceptscheme/BesluitThema>;
     shacl:class skos:Concept;
     shacl:description "Thema-code dat de annotatie gebruikt als inhoud voor een resource."@nl;
     shacl:name "heeft thema"@nl;
@@ -174,13 +175,18 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#BehandelingVanAgendapuntShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord>;
-    shacl:description "Geeft een Initiatiefrechtantwoord aan die binnen deze Behandeling Van Agendapunt plaatsvindt."@nl;
-    shacl:name "bestaat uit"@nl;
-    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of>
+    shacl:class crm:E30_Right;
+    shacl:description "Recht dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt."@nl;
+    shacl:name "beeindigt"@nl;
+    shacl:path prov:invalidated
   ], [
     shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag>;
     shacl:description "Geeft een Initiatiefrechtvraag aan die binnen deze Behandeling Van Agendapunt plaatsvindt."@nl;
+    shacl:name "bestaat uit"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord>;
+    shacl:description "Geeft een Initiatiefrechtantwoord aan die binnen deze Behandeling Van Agendapunt plaatsvindt."@nl;
     shacl:name "bestaat uit"@nl;
     shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of>
   ], [
@@ -189,14 +195,19 @@
     shacl:name "bestaat uit"@nl;
     shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of>
   ], [
-    shacl:class <http://fixme.com#Stuk>;
-    shacl:description "Stuk dat werd gebruikt voor de behandeling van de agendapunt."@nl;
-    shacl:name "gebruikte"@nl;
-    shacl:path prov:used
+    shacl:class crm:E30_Right;
+    shacl:description "Recht dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt."@nl;
+    shacl:name "creeert"@nl;
+    shacl:path prov:generated
   ], [
     shacl:class <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService>;
     shacl:description "Instantie publieke dienstverlening die werd gebruikt voor de behandeling van de agendapunt."@nl;
     shacl:maxCount 1;
+    shacl:name "gebruikte"@nl;
+    shacl:path prov:used
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/dossier#Stuk>;
+    shacl:description "Stuk dat werd gebruikt voor de behandeling van de agendapunt."@nl;
     shacl:name "gebruikte"@nl;
     shacl:path prov:used
   ], [
@@ -468,8 +479,14 @@
   ], [
     shacl:class <https://data.vlaanderen.be/ns/generiek#AdministratieveEenheid>;
     shacl:description "Het rechtsgebied waar de legale verschijingsvorm vandaan komt. "@nl;
+    shacl:maxCount 1;
     shacl:name "jurisdictie"@nl;
     shacl:path <http://data.europa.eu/eli/ontology#jurisdiction>
+  ], [
+    shacl:class <https://data.europa.eu/eli/ontology#LegalExpression>;
+    shacl:description "Geeft aan dat een legale verschijningsvorm een andere vervangt."@nl;
+    shacl:name "vervangt"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#repeals>
   ];
   shacl:targetClass <https://data.europa.eu/eli/ontology#LegalExpression> .
 
@@ -486,10 +503,11 @@
   shacl:property [
     shacl:class <https://data.europa.eu/eli/ontology#LegalExpression>;
     shacl:description "Link naar de legale verschijingsvorm."@nl;
+    shacl:maxCount 1;
     shacl:name "url"@nl;
     shacl:path schema:url
   ];
-  shacl:targetClass <http://fixme.com#Notificatiebericht> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/notificatie#Notificatiebericht> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#ObjectShape> a shacl:NodeShape;
   shacl:closed false;
@@ -571,6 +589,11 @@
     shacl:name "eiser"@nl;
     shacl:path <http://ontology.tno.nl/normengineering/flint#hasClaimant>
   ], [
+    shacl:class <http://data.europa.eu/m8g/Requirement>;
+    shacl:description "Voorwaarde die verbonden is met een bepaalde verbintenis."@nl;
+    shacl:name "heeft modaliteit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftModaliteit>
+  ], [
     shacl:class dc:Agent;
     shacl:description "De agent die rechthebbende is van de verbintenis."@nl;
     shacl:maxCount 1;
@@ -587,6 +610,11 @@
     shacl:description "Beschrijving van het Recht."@nl;
     shacl:name "beschrijving"@nl;
     shacl:path crm:P3_has_note
+  ], [
+    shacl:class <http://data.europa.eu/m8g/Requirement>;
+    shacl:description "Voorwaarde die verbonden is met een bepaald recht."@nl;
+    shacl:name "heeft modaliteit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftModaliteit>
   ], [
     shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
     shacl:description "Termijn dat het recht van toepassing is."@nl;
@@ -621,6 +649,8 @@
   ], [
     shacl:class rdfs:Resource;
     shacl:description "De bron waaruit ResourceOnderdeel is verfijnd of specifieker is."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "isOnderdeelVan"@nl;
     shacl:path oa:hasSource
   ];
@@ -679,7 +709,7 @@
     shacl:name "heeft meer info"@nl;
     shacl:path rdfs:seeAlso
   ], [
-    shacl:class <http://fixme.com#Stuk>;
+    shacl:class <https://data.vlaanderen.be/ns/dossier#Stuk>;
     shacl:description "Een stuk kan een relatie hebben tot een ander stuk."@nl;
     shacl:name "heeft relatie tot"@nl;
     shacl:path dc:relation
@@ -711,13 +741,18 @@
     shacl:name "onderwerp"@nl;
     shacl:path dc:subject
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag>;
-    shacl:description "Adviesvraag waarover het stuk gaat."@nl;
+    shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord>;
+    shacl:description "Adviesantwoord waarover het stuk gaat."@nl;
     shacl:name "onderwerp"@nl;
     shacl:path dc:subject
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord>;
-    shacl:description "Adviesantwoord waarover het stuk gaat."@nl;
+    shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord>;
+    shacl:description "Initiatiefrechtantwoord waarover het stuk gaat."@nl;
+    shacl:name "onderwerp"@nl;
+    shacl:path dc:subject
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag>;
+    shacl:description "Adviesvraag waarover het stuk gaat."@nl;
     shacl:name "onderwerp"@nl;
     shacl:path dc:subject
   ], [
@@ -725,10 +760,6 @@
     shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Thema>;
     shacl:description "Onderwerp van dit Stuk."@nl;
     shacl:name "onderwerp"@nl;
-    shacl:path dc:subject
-  ], [
-    shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord>;
-    shacl:name "Initiatiefrechtantwoord waarover het stuk gaat."@nl;
     shacl:path dc:subject
   ], [
     shacl:class skos:Concept;
@@ -741,7 +772,7 @@
     shacl:name "trefwoord"@nl;
     shacl:path schemas:keywords
   ];
-  shacl:targetClass <http://fixme.com#Stuk> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/dossier#Stuk> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2023-11-06#TekstPositieSelectorShape> a shacl:NodeShape;
   shacl:closed false;
