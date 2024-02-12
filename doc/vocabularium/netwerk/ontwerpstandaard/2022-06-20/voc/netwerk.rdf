@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:ns1="http://purl.org/vocab/vann/" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:schema="http://schema.org/">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:ns1="http://purl.org/vocab/vann/" xmlns:schema="http://schema.org/">
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#GerichteLink.link">
     <rdfs:isDefinedBy>
       <owl:Ontology rdf:about="https://data.vlaanderen.be/ns/netwerk">
@@ -445,8 +445,19 @@
         </dc:contributor>
         <dc:issued>TODO</dc:issued>
         <rdfs:seeAlso>
+          <rdfs:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+            <rdfs:label xml:lang="nl">Linkrichtingtype</rdfs:label>
+            <rdfs:label xml:lang="nl">Teken</rdfs:label>
+          </rdfs:Class>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
           <rdf:Property rdf:about="http://purl.org/dc/terms/type">
             <rdfs:label xml:lang="nl">type</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="http://www.w3.org/ns/adms#identifier">
+            <rdfs:label xml:lang="nl">identificator</rdfs:label>
           </rdf:Property>
         </rdfs:seeAlso>
       </owl:Ontology>
@@ -489,6 +500,44 @@
     </rdfs:domain>
     <rdfs:range rdf:resource="http://www.opengis.net/ont/sf#Point"/>
   </owl:ObjectProperty>
+  <rdf:Property rdf:about="https://data.vlaanderen.be/ns/netwerk#LineaireReferentie.totPositie">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
+    <rdfs:comment xml:lang="nl">Afstand vanaf het begin van de Link of Linksequentie vanaf waar de Netwerkeigenschap geldt.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/netwerk#LineaireReferentie">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
+        <rdfs:comment xml:lang="nl">Netwerkreferentie beperkt tot een deel van de Link of Linksequentie waarnaar ze verwijst.</rdfs:comment>
+        <rdfs:subClassOf>
+          <owl:Class rdf:about="https://data.vlaanderen.be/ns/netwerk#Linkreferentie">
+            <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
+            <rdfs:comment xml:lang="nl">Netwerkreferentie waarbij het Netwerkelement waar naar verwezen wordt een Link of Linksequentie is.</rdfs:comment>
+            <rdfs:subClassOf>
+              <owl:Class rdf:about="https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie">
+                <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
+                <rdfs:comment xml:lang="nl">Verwijzing naar het Netwerkelement waarvoor de Netwerkeigenschap geldt.</rdfs:comment>
+              </owl:Class>
+            </rdfs:subClassOf>
+          </owl:Class>
+        </rdfs:subClassOf>
+      </owl:Class>
+    </rdfs:domain>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://data.vlaanderen.be/ns/netwerk#LineaireReferentie.vanPositie">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
+    <rdfs:comment xml:lang="nl">Afstand vanaf het begin van de Link of Linksequentie tot waar de Netwerkeigenschap geldt.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/netwerk#LineaireReferentie"/>
+  </rdf:Property>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#Link.geometriemiddellijn">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
+    <rdfs:comment xml:lang="nl">Geometrie van de middellijn van de Link.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/netwerk#Link"/>
+    <rdfs:range rdf:resource="http://www.opengis.net/ont/sf#LineString"/>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="https://data.vlaanderen.be/ns/netwerk#Linkreferentie.element">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
+    <rdfs:comment xml:lang="nl">Verwijzing naar de Link of Linksequentie.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/netwerk#Linkreferentie"/>
+  </rdf:Property>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#Linksequentie.link">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
     <rdfs:comment xml:lang="nl">Link die deel uitmaakt van de Linksequentie</rdfs:comment>
@@ -514,6 +563,18 @@
     </rdfs:domain>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/netwerk#GeneriekeLink"/>
   </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#Netwerk.geografischeNaam">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
+    <rdfs:comment xml:lang="nl">Naam van het Netwerk.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/netwerk#Netwerk">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
+        <rdfs:comment xml:lang="nl">Verzameling van Netwerkelementen.</rdfs:comment>
+        <ns1:usageNote xml:lang="nl">De reden waarom de Netwerkelementen bij elkaar gebracht worden in een Netwerk kan verschillen, bv omdat ze geschikt zijn voor een bepaald type vervoermiddel.</ns1:usageNote>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+  </owl:DatatypeProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#Netwerkgebied.geometrie">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
     <rdfs:comment xml:lang="nl">Beschrijving van de geometrie van het netwerkgebied</rdfs:comment>
@@ -526,6 +587,23 @@
     </rdfs:domain>
     <rdfs:range rdf:resource="http://www.opengis.net/ont/sf#Polygon"/>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie.element">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
+    <rdfs:comment xml:lang="nl">Verwijzing naar de Link of Linksequentie.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie"/>
+    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/netwerk#Netwerkelement"/>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="https://data.vlaanderen.be/ns/netwerk#Puntreferentie.opPositie">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
+    <rdfs:comment xml:lang="nl">Afstand vanaf het begin van de Link of Linksequentie tot het punt waar de Netwerkeigenschap geldt.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/netwerk#Puntreferentie">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
+        <rdfs:comment xml:lang="nl">Netwerkreferentie beperkt tot een punt langs de Link of Linksequentie waarnaar ze verwijst.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/netwerk#Linkreferentie"/>
+      </owl:Class>
+    </rdfs:domain>
+  </rdf:Property>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#beginknoop">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
     <rdfs:comment xml:lang="nl">Knoop die het begin is van de link.</rdfs:comment>
@@ -535,13 +613,7 @@
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#bestaatUit">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
     <rdfs:comment xml:lang="nl">Netwerkelementen waaruit het Netwerk bestaat.</rdfs:comment>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/netwerk#Netwerk">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
-        <rdfs:comment xml:lang="nl">Verzameling van Netwerkelementen.</rdfs:comment>
-        <ns1:usageNote xml:lang="nl">De reden waarom de Netwerkelementen bij elkaar gebracht worden in een Netwerk kan verschillen, bv omdat ze geschikt zijn voor een bepaald type vervoermiddel.</ns1:usageNote>
-      </owl:Class>
-    </rdfs:domain>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/netwerk#Netwerk"/>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/netwerk#Netwerkelement"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#eindknoop">
@@ -550,23 +622,11 @@
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/netwerk#Link"/>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/netwerk#Knoop"/>
   </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#geografischeNaam">
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#inNetwerk">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
-    <rdfs:comment xml:lang="nl">Naam van het Netwerk.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/netwerk#Netwerk"/>
-    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
-  </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#geometriemiddellijn">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
-    <rdfs:comment xml:lang="nl">Geometrie van de middellijn van de Link.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/netwerk#Link"/>
-    <rdfs:range rdf:resource="http://www.opengis.net/ont/sf#LineString"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#identificator">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
-    <rdfs:comment xml:lang="nl">Identificator van het Netwerkelement.</rdfs:comment>
+    <rdfs:comment xml:lang="nl">TODO</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/netwerk#Netwerkelement"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/netwerk#Netwerk"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#kruisingVan">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
@@ -582,10 +642,27 @@
     </rdfs:domain>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/netwerk#Link"/>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#netwerkreferentie">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
+    <rdfs:comment xml:lang="nl">TODO</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/netwerk#Netwerkeigenschap">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
+        <rdfs:comment xml:lang="nl">TODO</rdfs:comment>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie"/>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#richting">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
-    <rdfs:comment xml:lang="nl">Geeft aan of de richting van de link overeenstemt met zijn positieve of zijn negatieve richting.</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Geeft aan of de GerichteLink de oorspronkelijke richting van de Link volgt of niet (positief indien gelijklopend, negatief indien tegengesteld).</rdfs:comment>
     <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/netwerk#GerichteLink"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#toepassingsRichting">
+    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/netwerk"/>
+    <rdfs:comment xml:lang="nl">Richting waarvoor de Netwerkeigenschap geldt tov de richting van de geometrie van de Link of Linksequentie.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/netwerk#Linkreferentie"/>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/netwerk#verbindt">

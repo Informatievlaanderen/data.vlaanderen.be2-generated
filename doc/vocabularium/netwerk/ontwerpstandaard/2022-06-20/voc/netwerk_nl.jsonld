@@ -394,6 +394,16 @@
       ]
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#LineaireReferentie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Netwerkreferentie beperkt tot een deel van de Link of Linksequentie waarnaar ze verwijst."
+      },
+      "parents": [
+        "https://data.vlaanderen.be/ns/netwerk#Linkreferentie"
+      ]
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/netwerk#Link",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -401,6 +411,16 @@
       },
       "parents": [
         "https://data.vlaanderen.be/ns/netwerk#GeneriekeLink"
+      ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Linkreferentie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Netwerkreferentie waarbij het Netwerkelement waar naar verwezen wordt een Link of Linksequentie is."
+      },
+      "parents": [
+        "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie"
       ]
     },
     {
@@ -438,6 +458,14 @@
       "parents": []
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Netwerkeigenschap",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "TODO"
+      },
+      "parents": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/netwerk#Netwerkelement",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -456,6 +484,14 @@
       ]
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Verwijzing naar het Netwerkelement waarvoor de Netwerkeigenschap geldt."
+      },
+      "parents": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/netwerk#OngelijkgrondseKruising",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
@@ -467,9 +503,34 @@
       "parents": [
         "https://data.vlaanderen.be/ns/netwerk#Netwerkelement"
       ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Puntreferentie",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Netwerkreferentie beperkt tot een punt langs de Link of Linksequentie waarnaar ze verwijst."
+      },
+      "parents": [
+        "https://data.vlaanderen.be/ns/netwerk#Linkreferentie"
+      ]
     }
   ],
-  "externals": [],
+  "externals": [
+    {
+      "name": {
+        "nl": "Linkrichtingtype"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Teken"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    }
+  ],
   "properties": [
     {
       "@id": "https://data.vlaanderen.be/ns/netwerk#GerichteLink.link",
@@ -497,6 +558,56 @@
       "range": [
         "http://www.opengis.net/ont/sf#Point"
       ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#LineaireReferentie.totPositie",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "definition": {
+        "nl": "Afstand vanaf het begin van de Link of Linksequentie vanaf waar de Netwerkeigenschap geldt."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/netwerk#LineaireReferentie"
+      ],
+      "range": [],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#LineaireReferentie.vanPositie",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "definition": {
+        "nl": "Afstand vanaf het begin van de Link of Linksequentie tot waar de Netwerkeigenschap geldt."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/netwerk#LineaireReferentie"
+      ],
+      "range": [],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Link.geometriemiddellijn",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Geometrie van de middellijn van de Link."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/netwerk#Link"
+      ],
+      "range": [
+        "http://www.opengis.net/ont/sf#LineString"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Linkreferentie.element",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "definition": {
+        "nl": "Verwijzing naar de Link of Linksequentie."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/netwerk#Linkreferentie"
+      ],
+      "range": [],
       "generalization": []
     },
     {
@@ -528,6 +639,20 @@
       "generalization": []
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Netwerk.geografischeNaam",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "definition": {
+        "nl": "Naam van het Netwerk."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/netwerk#Netwerk"
+      ],
+      "range": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/netwerk#Netwerkgebied.geometrie",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
@@ -539,6 +664,32 @@
       "range": [
         "http://www.opengis.net/ont/sf#Polygon"
       ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie.element",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Verwijzing naar de Link of Linksequentie."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/netwerk#Netwerkelement"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Puntreferentie.opPositie",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "definition": {
+        "nl": "Afstand vanaf het begin van de Link of Linksequentie tot het punt waar de Netwerkeigenschap geldt."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/netwerk#Puntreferentie"
+      ],
+      "range": [],
       "generalization": []
     },
     {
@@ -584,44 +735,16 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/netwerk#geografischeNaam",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "definition": {
-        "nl": "Naam van het Netwerk."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/netwerk#Netwerk"
-      ],
-      "range": [
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/netwerk#geometriemiddellijn",
+      "@id": "https://data.vlaanderen.be/ns/netwerk#inNetwerk",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Geometrie van de middellijn van de Link."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/netwerk#Link"
-      ],
-      "range": [
-        "http://www.opengis.net/ont/sf#LineString"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/netwerk#identificator",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Identificator van het Netwerkelement."
+        "nl": "TODO"
       },
       "domain": [
         "https://data.vlaanderen.be/ns/netwerk#Netwerkelement"
       ],
       "range": [
-        "http://www.w3.org/ns/adms#Identifier"
+        "https://data.vlaanderen.be/ns/netwerk#Netwerk"
       ],
       "generalization": []
     },
@@ -643,13 +766,41 @@
       "generalization": []
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#netwerkreferentie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "TODO"
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/netwerk#Netwerkeigenschap"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/netwerk#richting",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "Geeft aan of de richting van de link overeenstemt met zijn positieve of zijn negatieve richting."
+        "nl": "Geeft aan of de GerichteLink de oorspronkelijke richting van de Link volgt of niet (positief indien gelijklopend, negatief indien tegengesteld)."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/netwerk#GerichteLink"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#toepassingsRichting",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Richting waarvoor de Netwerkeigenschap geldt tov de richting van de geometrie van de Link of Linksequentie."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/netwerk#Linkreferentie"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
@@ -677,6 +828,20 @@
         "nl": "type"
       },
       "@id": "http://purl.org/dc/terms/type",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "identificator"
+      },
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "identificator"
+      },
+      "@id": "http://www.w3.org/ns/adms#identifier",
       "@type": "rdf:Property"
     }
   ],
