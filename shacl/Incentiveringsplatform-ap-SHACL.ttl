@@ -9,7 +9,7 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14> <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14shapes> <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BeloningShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BeloningsontvangstShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#StimulansaanbodShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#StimulansconsumptieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#StimulansdeelnameShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BewijsShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#OutputShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#PeriodeShape>,
@@ -19,6 +19,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#OutputTypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BewijsTypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#BedragShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#KwantitatieveWaardeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#DienstverleningShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#Dienstverlening(consumptie)Shape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#CriteriumVereisteShape> .
@@ -34,7 +35,7 @@
     shacl:description "Waarde van het bedrag."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "aantal"@nl;
+    shacl:name "waarde"@nl;
     shacl:path schemas:value
   ], [
     shacl:datatype xsd:string;
@@ -165,6 +166,25 @@
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#KwantitatieveWaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:string;
+    shacl:description "De eenheid waarin het bedrag wordt uitgedrukt."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "eenheid"@nl;
+    shacl:path schemas:unitText
+  ], [
+    shacl:datatype xsd:double;
+    shacl:description "De hoeveelheid van de grootheid."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "waarde"@nl;
+    shacl:path schemas:value
+  ];
+  shacl:targetClass schemas:QuantitativeValue .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#OutputShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://data.europa.eu/m8g/Output> .
@@ -202,7 +222,8 @@
   ], [
     shacl:class <https://uri.semic.eu/m8g/Requirement>;
     shacl:description "Een bepaalde norm waaraan iemand of iets moet voldoen."@nl;
-    shacl:name "criteriumvereiste"@nl
+    shacl:name "criteriumvereiste"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/incentiveringsplatform#criteriumvereiste>
   ], [
     shacl:datatype rdf:langString;
     shacl:description "Naam van de stimulans."@nl;
@@ -231,7 +252,7 @@
     shacl:name "bewijstype"@nl;
     shacl:path <https://data.vlaanderen.be/ns/incentiveringsplatform#bewijstype>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/incentiveringsplatform#Stimulansconsumptie>;
+    shacl:class <https://data.vlaanderen.be/ns/incentiveringsplatform#Stimulansdeelname>;
     shacl:description "Consumptie van een Stimulansaanbod door een Agent."@nl;
     shacl:name "consumptie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/incentiveringsplatform#consumptie>
@@ -267,12 +288,13 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/incentiveringsplatform#Stimulansaanbod> .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#StimulansconsumptieShape> a shacl:NodeShape;
+<https://data.vlaanderen.be/doc/applicatieprofiel/incentiveringsplatform/ontwerpstandaard/2023-03-14#StimulansdeelnameShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/incentiveringsplatform#Beloningsontvangst>;
     shacl:description "De beloning van een Stimulansconsumptie."@nl;
-    shacl:name "beloning"@nl
+    shacl:name "beloning"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/incentiveringsplatform#beloning>
   ], [
     shacl:class <http://data.europa.eu/m8g/Evidence>;
     shacl:description "De bewijslevering van een stimulansconsumptie."@nl;
@@ -291,7 +313,7 @@
     shacl:name "opnamedatum"@nl;
     shacl:path <https://data.vlaanderen.be/ns/incentiveringsplatform#opnamedatum>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/incentiveringsplatform#Stimulansconsumptie> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/incentiveringsplatform#Stimulansdeelname> .
 
  [
     shacl:datatype xsd:integer;
