@@ -2,7 +2,7 @@
   "metadata": {
     "title": "OSLO Statistiek",
     "uri": "https://data.vlaanderen.be/ns/statistiek",
-    "issued": "2022-10-17",
+    "issued": "2023-06-01",
     "baseURI": "https://data.vlaanderen.be/ns/statistiek#",
     "filename": "statistiek-ap",
     "navigation": {
@@ -14,8 +14,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
     "statuslabel": "Kandidaat Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-Waterkwaliteit/tree/19dd1550df067960ee857656bfa22c9b37445d3c",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-Waterkwaliteit/blob/19dd1550df067960ee857656bfa22c9b37445d3c/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-Waterkwaliteit/tree/d45c5f931b42b08d1178d5cda4809fd620e6c586",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-Waterkwaliteit/blob/d45c5f931b42b08d1178d5cda4809fd620e6c586/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-Waterkwaliteit/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/kandidaat-standaard/vocabularium-en-applicatieprofiel-oslo-waterkwaliteit.html",
     "usesVocs": [],
@@ -436,9 +436,11 @@
             "nl": "statistiektype"
           },
           "description": {
-            "nl": "Het type statistiek dat gebruikt wordt."
+            "nl": "Het type Statistiek."
           },
-          "usage": {},
+          "usage": {
+            "nl": "Bvb gemiddelde, index etc."
+          },
           "domain": [
             {
               "EA-Name": "Statistiek",
@@ -464,17 +466,17 @@
           "codelist_uri": ""
         },
         {
-          "uri": "https://data.vlaanderen.be/ns/statistiek#Statistiek.waarde",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#:value",
           "name": "waarde",
           "sort": "waarde",
           "label": {
             "nl": "waarde"
           },
           "description": {
-            "nl": "De probabiliteit dat een variabele binnen de opgegeven categorie valt."
+            "nl": "Omvang van de Statistiek."
           },
           "usage": {
-            "nl": "De waarde moet in het interval [0..1] liggen."
+            "nl": "Doorgaans numeriek."
           },
           "domain": [
             {
@@ -503,6 +505,22 @@
       ]
     },
     {
+      "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+      "name": "Observatie",
+      "label": {
+        "nl": "Observatie"
+      },
+      "sort": "Observatie",
+      "description": {
+        "nl": "Het vaststellen van de waarde van een bepaald kenmerk van een Object op een bepaald tijdstip of tussen twee tijdstippen."
+      },
+      "usage": {
+        "nl": "Meer info over deze klasse in het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">applicatieprofiel Observaties en Metingen</a>."
+      },
+      "parents": [],
+      "properties": []
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/waterkwaliteit#StatistischeObservatie",
       "name": "StatistischeObservatie",
       "label": {
@@ -510,16 +528,18 @@
       },
       "sort": "StatistischeObservatie",
       "description": {
-        "nl": "Een observatie ten opzichte van een op voorhand bepaalde verdeling of methode."
+        "nl": "Observatie waarvan het resultaat een Statistiek is."
       },
-      "usage": {},
+      "usage": {
+        "nl": "Bvb een gemiddelde temperatuur."
+      },
       "parents": [
         {
           "label": "Observatie",
           "name": "Observatie",
           "package": "OSLO-ObservatiesEnMetingen",
           "uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-          "scoped_uri": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+          "scoped_uri": "#Observatie"
         }
       ],
       "properties": [
@@ -534,7 +554,7 @@
             "nl": "Tijdstip waarop het resultaat van de Observatie werd bekomen."
           },
           "usage": {
-            "nl": "Is voor sommige Observaties gelijk aan de fenomeentijd maar kan ook verschillen, bv bij het uitvoeren van een analyse op een Monster dat eerder (en doorgaans dan ook elders) werd genomen of bij sensormetingen die pas later worden verwerkt. Ook bruikbaar om herhaalde Observaties bv op eenzelfde Monster uiteen te houden. Is het resultaat een voorspelling dan is de fenomeentijd het moment waarop deze van toepassing zou moeten zijn."
+            "nl": "Typisch het moment waarop de StatistischeObservatie is berekend."
           },
           "domain": [
             {
@@ -571,7 +591,7 @@
             "nl": "Het moment waarop het resultaat van de Observatie van toepassing was."
           },
           "usage": {
-            "nl": "Typisch het moment waarop geobserveerd of bemonsterd werd. Als de Observatie temporeel is en het moment waarop iets plaatsvindt wordt geregistreerd dan is dit meteen ook de fenomeentijd."
+            "nl": "Typisch de periode waarvoor de data waarop de Statistiek wordt berekend geldig is."
           },
           "domain": [
             {
@@ -607,9 +627,7 @@
           "description": {
             "nl": "Kenmerk dat men observeert vh geobserveerdObject."
           },
-          "usage": {
-            "nl": "Soms is de procedure waarmee de waarden vh kenmerk worden bekomen indirect, ttz men meet om praktische reden een ander kenmerk dat een proxy is voor het kenmerk dat men werkelijk wil observeren. Is die proxy geen kenmerk van het geobserveerdObject dan gebeurt de Observatie op een proxy van het geobserveerdObject. Bv om de vegetatie in een gebied te achterhalen meten we de kleurreflectie op het aardoppervlak. CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject."
-          },
+          "usage": {},
           "domain": [
             {
               "EA-Name": "StatistischeObservatie",
@@ -644,9 +662,7 @@
           "description": {
             "nl": "Object dat met observeert."
           },
-          "usage": {
-            "nl": "Dat kan het Object zelf zijn of een proxy ervan, ttz een Bemonsteringsobject. OPMERKING: In dat laatste geval weet men soms pas na het observeren welke real-world Objecten men juist geobserveerd heeft."
-          },
+          "usage": {},
           "domain": [
             {
               "EA-Name": "StatistischeObservatie",
@@ -681,9 +697,7 @@
           "description": {
             "nl": "De waarde van het geobserveerdeKenmerk als resultaat van de StatistischeObservatie."
           },
-          "usage": {
-            "nl": "TODO"
-          },
+          "usage": {},
           "domain": [
             {
               "EA-Name": "StatistischeObservatie",
@@ -747,21 +761,6 @@
       "name": {
         "nl": "categorie",
         "undefined": "categorie"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/statistiek#Statistiek.waarde",
-      "name": {
-        "nl": "waarde",
-        "undefined": "waarde"
       },
       "description": {},
       "domain": [
