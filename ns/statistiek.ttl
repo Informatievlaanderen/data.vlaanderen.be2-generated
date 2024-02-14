@@ -14,46 +14,23 @@ skos:Concept a rdfs:Class;
 <https://data.vlaanderen.be/ns/waterkwaliteit#StatistischeObservatie> a rdfs:Class;
   rdfs:label "StatistischeObservatie"@nl .
 
-<https://data.vlaanderen.be/ns/statistiek#CentraalMoment> a owl:Class;
-  rdfs:comment "Beschrijft het moment van een dataset of variable, ten opzichte van het gemiddelde."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/statistiek#Moment> .
-
-<https://data.vlaanderen.be/ns/statistiek#DiscreteProbabiliteit.waarde> a owl:DatatypeProperty;
-  <http://purl.org/vocab/vann/usageNote> "De waarde moet in het interval [0..1] liggen."@nl;
-  rdfs:comment "De probabiliteit dat een variabele binnen de opgegeven categorie valt."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/statistiek#DiscreteProbabiliteit>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
-  rdfs:range xsd:double .
-
-<https://data.vlaanderen.be/ns/statistiek#NietCentraalMoment> a owl:Class;
-  rdfs:comment "Beschrijft het moment van een dataset of variable, ten opzichte van het nulpunt."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/statistiek#Moment> .
-
-<https://data.vlaanderen.be/ns/statistiek#Probabiliteit.waarde> a owl:DatatypeProperty;
-  <http://purl.org/vocab/vann/usageNote> "De waarde moet in het interval [0..1] liggen."@nl;
-  rdfs:comment "De probabiliteit dat een variabele binnen de opgegeven categorie valt."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/statistiek#Probabiliteit>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
-  rdfs:range xsd:double .
-
 <https://data.vlaanderen.be/ns/statistiek#categorie> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Voorbeelden om de discrete probabiliteiten te berekenen zijn binomiaal, Poisson en Bernoulli."@nl;
-  rdfs:comment "De categorie die gebruikt wordt om de discrete probabiliteit die gebruikt wordt te berekenen."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb eik voor voorgaand vb."@nl;
+  rdfs:comment "De categorie waarvoor de probaliteit bepaald is."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/statistiek#DiscreteProbabiliteit>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
   rdfs:range rdfs:Resource .
 
-<https://data.vlaanderen.be/ns/statistiek#drempelwaarde> a owl:DatatypeProperty;
-  rdfs:comment "De drempelwaarde bepaalt de keuze om een geprojecteerde waarschijnlijkheid of scores toe te kennen of te berekenen."@nl;
+<https://data.vlaanderen.be/ns/statistiek#drempelwaarde> a owl:ObjectProperty;
+  <http://purl.org/vocab/vann/usageNote> "Bvb 10m voor voorgaand vb."@nl;
+  rdfs:comment "De waarde die wordt overschreden."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/statistiek#Probabiliteit>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
-  rdfs:range xsd:double .
+  rdfs:range <https://data.vlaanderen.be/ns/statistiek#Drempelwaarde> .
 
 <https://data.vlaanderen.be/ns/statistiek#niveau> a owl:DatatypeProperty;
-  <http://purl.org/vocab/vann/usageNote> "Het niveau ligt tussen 0 en 1."@nl;
-  rdfs:comment "Het niveau van een kwantiel wordt gebruikt om de waarde van het kwantiel uit te drukken."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb 1 als de Statistiek betrekking heeft op het eerste kwartiel."@nl;
+  rdfs:comment "Nummer van het kwantiel waarvoor de Statistiek geldt."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/statistiek#Kwantiel>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
   rdfs:range xsd:double .
@@ -61,23 +38,21 @@ skos:Concept a rdfs:Class;
 <https://data.vlaanderen.be/ns/statistiek#operator> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Veel voorkomende operators zijn groter dan, kleiner dan, gelijk aan."@nl;
   rdfs:comment "De operator die gebruikt wordt om de probabiliteit te berekenen."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/statistiek#Probabiliteit>;
+  rdfs:domain <https://data.vlaanderen.be/ns/statistiek#Drempelwaarde>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
   rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/statistiek#orde> a owl:DatatypeProperty;
-  <http://purl.org/vocab/vann/usageNote> "Het (niet-centale) eerste-ordemoment komt overeen met het gemiddelde, het (centrale) tweede-ordemoment komt overeen met de variantie."@nl;
-  rdfs:comment "Een positief geheel getal"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Het gemiddelde wordt beschouwd als een moment van orde 1, varantie en standaarddeviatie van orde 2, orde 3 voor de scheefheid van de verdeling en orde 4 voor de mate waarin outlierts de verdeling verbreden of versmallen."@nl;
+  rdfs:comment "Orde van het Moment."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/statistiek#Moment>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
   rdfs:range xsd:integer .
 
-<https://data.vlaanderen.be/ns/statistiek#statistiektype> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Bvb gemiddelde, index etc."@nl;
-  rdfs:comment "Het type Statistiek."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/statistiek#Statistiek>;
+<https://data.vlaanderen.be/ns/statistiek#waarde> a owl:ObjectProperty;
+  rdfs:domain <https://data.vlaanderen.be/ns/statistiek#Drempelwaarde>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
-  rdfs:range skos:Concept .
+  rdfs:range rdfs:Resource .
 
 <http://data.vlaanderen.be/ns/statistiek#StatistischeObservatie.resultaat> a rdf:Property;
   rdfs:label "resultaat"@nl .
@@ -94,28 +69,38 @@ skos:Concept a rdfs:Class;
 <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime> a rdf:Property;
   rdfs:label "resultaattijd"@nl .
 
+dc:type a rdf:Property;
+  rdfs:label "statistiektype"@nl .
+
 rdf::value a rdf:Property;
   rdfs:label "waarde"@nl .
 
-<https://data.vlaanderen.be/ns/statistiek#Kwantiel> a owl:Class;
-  rdfs:comment "Beschrijft voor een gegeven niveau p (gelegen tussen 0 en 1), de waarde w van een variable zodat deze de dataset verdeelt in een deel met grootte p van waarden kleiner dan w, en een deel van grootte 1-p met waarden groter dan w."@nl;
+<https://data.vlaanderen.be/ns/statistiek#DiscreteProbabiliteit> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Bvb de kans dat de begroeiing uit eik bestaat."@nl;
+  rdfs:comment "Statistiek die beschrijft hoe waarschijnlijk het is dat een variable binnen een bepaalde categorie valt."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/statistiek#Statistiek> .
 
-<https://data.vlaanderen.be/ns/statistiek#DiscreteProbabiliteit> a owl:Class;
-  rdfs:comment "Beschrijft hoe waarschijnlijk het is dat een variable binnen een bepaalde categorie valt."@nl;
+<https://data.vlaanderen.be/ns/statistiek#Kwantiel> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Onder kwantiel verstaan we de subset van data die ontstaat door de volledige set te ordenen en in gelijke aantallen op te delen. Bvb een kwartiel van een set waarnemingen bevat 25% van alle waarnemingen. De Statistiek is dan bvb het gemiddelde van alle waarden in het eerste kwartiel."@nl;
+  rdfs:comment "Statistiek die betrekking heeft op een bepaald kwantiel."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/statistiek#Statistiek> .
 
 <https://data.vlaanderen.be/ns/statistiek#Moment> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Om expliciet te maken dat het om een centraal of niet-centraal moment gaat, kan gewerkt worden met de resp. subklassen van Moment."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb de spreiding tov het gemiddelde, uitgedrukt als de standaarddeviatie. De Statistiek is bvb de standaardddeviatie tov het gemiddelde."@nl;
+  rdfs:comment "Statistiek die aangeeft hoe de waarden gespreid zijn tov een centrale maat."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/statistiek#Statistiek> .
 
 <https://data.vlaanderen.be/ns/statistiek#Probabiliteit> a owl:Class;
-  rdfs:comment "Beschrijft hoe waarschijnlijk het is dat een variabele een bepaalde drempelwaarde (al dan niet) overschrijdt."@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb de kans dat het waterpeil 10m overschrijdt."@nl;
+  rdfs:comment "Statistiek die beschrijft hoe waarschijnlijk het is dat een variabele een bepaalde drempelwaarde (al dan niet) overschrijdt."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/statistiek#Statistiek> .
+
+<https://data.vlaanderen.be/ns/statistiek#Drempelwaarde> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek> .
 
 <https://data.vlaanderen.be/ns/statistiek#Statistiek> a owl:Class;
   rdfs:comment "Een stuk informatie dat een kenmerk van een dataset of variable beschrijft."@nl;
@@ -202,6 +187,7 @@ rdf::value a rdf:Property;
   rdfs:seeAlso skos:Concept,
     <https://data.vlaanderen.be/ns/waterkwaliteit#StatistischeObservatie>,
     rdf::value,
+    dc:type,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty>,

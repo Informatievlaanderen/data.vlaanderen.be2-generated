@@ -206,30 +206,31 @@
   "publication-date": "2023-06-01",
   "classes": [
     {
-      "@id": "https://data.vlaanderen.be/ns/statistiek#CentraalMoment",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "definition": {
-        "nl": "Beschrijft het moment van een dataset of variable, ten opzichte van het gemiddelde."
-      },
-      "parents": [
-        "https://data.vlaanderen.be/ns/statistiek#Moment"
-      ]
-    },
-    {
       "@id": "https://data.vlaanderen.be/ns/statistiek#DiscreteProbabiliteit",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Beschrijft hoe waarschijnlijk het is dat een variable binnen een bepaalde categorie valt."
+        "nl": "Statistiek die beschrijft hoe waarschijnlijk het is dat een variable binnen een bepaalde categorie valt."
+      },
+      "usage": {
+        "nl": "Bvb de kans dat de begroeiing uit eik bestaat."
       },
       "parents": [
         "https://data.vlaanderen.be/ns/statistiek#Statistiek"
       ]
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/statistiek#Drempelwaarde",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "parents": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/statistiek#Kwantiel",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Beschrijft voor een gegeven niveau p (gelegen tussen 0 en 1), de waarde w van een variable zodat deze de dataset verdeelt in een deel met grootte p van waarden kleiner dan w, en een deel van grootte 1-p met waarden groter dan w."
+        "nl": "Statistiek die betrekking heeft op een bepaald kwantiel."
+      },
+      "usage": {
+        "nl": "Onder kwantiel verstaan we de subset van data die ontstaat door de volledige set te ordenen en in gelijke aantallen op te delen. Bvb een kwartiel van een set waarnemingen bevat 25% van alle waarnemingen. De Statistiek is dan bvb het gemiddelde van alle waarden in het eerste kwartiel."
       },
       "parents": [
         "https://data.vlaanderen.be/ns/statistiek#Statistiek"
@@ -238,28 +239,24 @@
     {
       "@id": "https://data.vlaanderen.be/ns/statistiek#Moment",
       "@type": "http://www.w3.org/2002/07/owl#Class",
+      "definition": {
+        "nl": "Statistiek die aangeeft hoe de waarden gespreid zijn tov een centrale maat."
+      },
       "usage": {
-        "nl": "Om expliciet te maken dat het om een centraal of niet-centraal moment gaat, kan gewerkt worden met de resp. subklassen van Moment."
+        "nl": "Bvb de spreiding tov het gemiddelde, uitgedrukt als de standaarddeviatie. De Statistiek is bvb de standaardddeviatie tov het gemiddelde."
       },
       "parents": [
         "https://data.vlaanderen.be/ns/statistiek#Statistiek"
       ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/statistiek#NietCentraalMoment",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "definition": {
-        "nl": "Beschrijft het moment van een dataset of variable, ten opzichte van het nulpunt."
-      },
-      "parents": [
-        "https://data.vlaanderen.be/ns/statistiek#Moment"
-      ]
-    },
-    {
       "@id": "https://data.vlaanderen.be/ns/statistiek#Probabiliteit",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "definition": {
-        "nl": "Beschrijft hoe waarschijnlijk het is dat een variabele een bepaalde drempelwaarde (al dan niet) overschrijdt."
+        "nl": "Statistiek die beschrijft hoe waarschijnlijk het is dat een variabele een bepaalde drempelwaarde (al dan niet) overschrijdt."
+      },
+      "usage": {
+        "nl": "Bvb de kans dat het waterpeil 10m overschrijdt."
       },
       "parents": [
         "https://data.vlaanderen.be/ns/statistiek#Statistiek"
@@ -299,19 +296,13 @@
   ],
   "properties": [
     {
-      "@id": "https://data.vlaanderen.be/ns/statistiek#statistiektype",
+      "@id": "https://data.vlaanderen.be/ns/statistiek#waarde",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "definition": {
-        "nl": "Het type Statistiek."
-      },
-      "usage": {
-        "nl": "Bvb gemiddelde, index etc."
-      },
       "domain": [
-        "https://data.vlaanderen.be/ns/statistiek#Statistiek"
+        "https://data.vlaanderen.be/ns/statistiek#Drempelwaarde"
       ],
       "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
+        "http://www.w3.org/2000/01/rdf-schema#Resource"
       ],
       "generalization": []
     },
@@ -319,10 +310,10 @@
       "@id": "https://data.vlaanderen.be/ns/statistiek#orde",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "Een positief geheel getal"
+        "nl": "Orde van het Moment."
       },
       "usage": {
-        "nl": "Het (niet-centale) eerste-ordemoment komt overeen met het gemiddelde, het (centrale) tweede-ordemoment komt overeen met de variantie."
+        "nl": "Het gemiddelde wordt beschouwd als een moment van orde 1, varantie en standaarddeviatie van orde 2, orde 3 voor de scheefheid van de verdeling en orde 4 voor de mate waarin outlierts de verdeling verbreden of versmallen."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/statistiek#Moment"
@@ -342,7 +333,7 @@
         "nl": "Veel voorkomende operators zijn groter dan, kleiner dan, gelijk aan."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/statistiek#Probabiliteit"
+        "https://data.vlaanderen.be/ns/statistiek#Drempelwaarde"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
@@ -353,10 +344,10 @@
       "@id": "https://data.vlaanderen.be/ns/statistiek#niveau",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "definition": {
-        "nl": "Het niveau van een kwantiel wordt gebruikt om de waarde van het kwantiel uit te drukken."
+        "nl": "Nummer van het kwantiel waarvoor de Statistiek geldt."
       },
       "usage": {
-        "nl": "Het niveau ligt tussen 0 en 1."
+        "nl": "Bvb 1 als de Statistiek betrekking heeft op het eerste kwartiel."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/statistiek#Kwantiel"
@@ -368,15 +359,18 @@
     },
     {
       "@id": "https://data.vlaanderen.be/ns/statistiek#drempelwaarde",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De drempelwaarde bepaalt de keuze om een geprojecteerde waarschijnlijkheid of scores toe te kennen of te berekenen."
+        "nl": "De waarde die wordt overschreden."
+      },
+      "usage": {
+        "nl": "Bvb 10m voor voorgaand vb."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/statistiek#Probabiliteit"
       ],
       "range": [
-        "http://www.w3.org/2001/XMLSchema#double"
+        "https://data.vlaanderen.be/ns/statistiek#Drempelwaarde"
       ],
       "generalization": []
     },
@@ -384,50 +378,16 @@
       "@id": "https://data.vlaanderen.be/ns/statistiek#categorie",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "definition": {
-        "nl": "De categorie die gebruikt wordt om de discrete probabiliteit die gebruikt wordt te berekenen."
+        "nl": "De categorie waarvoor de probaliteit bepaald is."
       },
       "usage": {
-        "nl": "Voorbeelden om de discrete probabiliteiten te berekenen zijn binomiaal, Poisson en Bernoulli."
+        "nl": "Bvb eik voor voorgaand vb."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/statistiek#DiscreteProbabiliteit"
       ],
       "range": [
         "http://www.w3.org/2000/01/rdf-schema#Resource"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/statistiek#Probabiliteit.waarde",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "definition": {
-        "nl": "De probabiliteit dat een variabele binnen de opgegeven categorie valt."
-      },
-      "usage": {
-        "nl": "De waarde moet in het interval [0..1] liggen."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/statistiek#Probabiliteit"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#double"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/statistiek#DiscreteProbabiliteit.waarde",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "definition": {
-        "nl": "De probabiliteit dat een variabele binnen de opgegeven categorie valt."
-      },
-      "usage": {
-        "nl": "De waarde moet in het interval [0..1] liggen."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/statistiek#DiscreteProbabiliteit"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#double"
       ],
       "generalization": []
     }
@@ -438,6 +398,13 @@
         "nl": "waarde"
       },
       "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#:value",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "statistiektype"
+      },
+      "@id": "http://purl.org/dc/terms/type",
       "@type": "rdf:Property"
     },
     {

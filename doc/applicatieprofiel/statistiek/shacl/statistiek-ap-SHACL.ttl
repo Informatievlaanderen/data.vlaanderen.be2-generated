@@ -1,50 +1,61 @@
+@prefix dc: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01> <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01shapes> <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#CentraalMomentShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#DiscreteProbabiliteitShape>,
+<https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01> <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01shapes> <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#DiscreteProbabiliteitShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#DrempelwaardeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#KwantielShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#MomentShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#NietCentraalMomentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#ProbabiliteitShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#StatistiekShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#ObservatieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#AnyShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#StatistiekTypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#OperatorTypeShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#WaardeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#StatistischeObservatieShape> .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#CentraalMomentShape> a shacl:NodeShape;
+<https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#AnyShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#CentraalMoment> .
+  shacl:targetClass rdfs:Resource .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#DiscreteProbabiliteitShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class rdfs:Resource;
-    shacl:description "De categorie die gebruikt wordt om de discrete probabiliteit die gebruikt wordt te berekenen."@nl;
+    shacl:description "De categorie waarvoor de probaliteit bepaald is."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "categorie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/statistiek#categorie>
-  ], [
-    shacl:datatype xsd:double;
-    shacl:description "De probabiliteit dat een variabele binnen de opgegeven categorie valt."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "waarde"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/statistiek#DiscreteProbabiliteit.waarde>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#DiscreteProbabiliteit> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#DrempelwaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class skos:Concept;
+    shacl:description "De operator die gebruikt wordt om de probabiliteit te berekenen."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "operator"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/statistiek#operator>
+  ], [
+    shacl:class rdfs:Resource;
+    shacl:description "";
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:path <https://data.vlaanderen.be/ns/statistiek#waarde>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#Drempelwaarde> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#KwantielShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:datatype xsd:double;
-    shacl:description "Het niveau van een kwantiel wordt gebruikt om de waarde van het kwantiel uit te drukken."@nl;
+    shacl:description "Nummer van het kwantiel waarvoor de Statistiek geldt."@nl;
     shacl:maxCount 1;
     shacl:name "niveau"@nl;
     shacl:path <https://data.vlaanderen.be/ns/statistiek#niveau>
@@ -55,17 +66,13 @@
   shacl:closed false;
   shacl:property [
     shacl:datatype xsd:integer;
-    shacl:description "Een positief geheel getal"@nl;
+    shacl:description "Orde van het Moment."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "orde"@nl;
     shacl:path <https://data.vlaanderen.be/ns/statistiek#orde>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#Moment> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#NietCentraalMomentShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#NietCentraalMoment> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#ObservatieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -78,26 +85,11 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#ProbabiliteitShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:datatype xsd:double;
-    shacl:description "De drempelwaarde bepaalt de keuze om een geprojecteerde waarschijnlijkheid of scores toe te kennen of te berekenen."@nl;
-    shacl:maxCount 1;
+    shacl:class <https://data.vlaanderen.be/ns/statistiek#Drempelwaarde>;
+    shacl:description "De waarde die wordt overschreden."@nl;
     shacl:minCount 1;
     shacl:name "drempelwaarde"@nl;
     shacl:path <https://data.vlaanderen.be/ns/statistiek#drempelwaarde>
-  ], [
-    shacl:class skos:Concept;
-    shacl:description "De operator die gebruikt wordt om de probabiliteit te berekenen."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "operator"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/statistiek#operator>
-  ], [
-    shacl:datatype xsd:double;
-    shacl:description "De probabiliteit dat een variabele binnen de opgegeven categorie valt."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "waarde"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/statistiek#Probabiliteit.waarde>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#Probabiliteit> .
 
@@ -109,9 +101,9 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "statistiektype"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/statistiek#statistiektype>
+    shacl:path dc:type
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/generiek#Waarde>;
+    shacl:class rdfs:Resource;
     shacl:description "Omvang van de Statistiek."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -163,7 +155,3 @@
     shacl:path <http://data.vlaanderen.be/ns/statistiek#StatistischeObservatie.resultaat>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/waterkwaliteit#StatistischeObservatie> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01#WaardeShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Waarde> .
