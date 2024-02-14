@@ -96,6 +96,13 @@
       "sh:targetClass": "https://data.vlaanderen.be/ns/lokaleEconomie#Aankooplijn"
     },
     {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#AantalWerknemersShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/lokaleEconomie#AantalWerknemers"
+    },
+    {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#BezoekersgebiedShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -158,9 +165,19 @@
             "nl": "Bezoekersprofiel dat geobserveerd wordt."
           },
           "sh:name": {
-            "nl": "bezoekersProfiel"
+            "nl": "bezoekersprofiel"
           },
           "sh:path": "https://data.vlaanderen.be/ns/lokaleEconomie#bezoekersProfiel"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/lokaleEconomie#Profiel",
+          "sh:description": {
+            "nl": "Socio-demografisch profiel of organisatieprofiel dat geobserveerd wordt."
+          },
+          "sh:name": {
+            "nl": "koperprofiel"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/lokaleEconomie#koperprofiel"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -388,6 +405,7 @@
           "sh:description": {
             "nl": "Een onderdeel van de transactie dat overeenstemt met één aankooplijn op een kassaticket."
           },
+          "sh:minCount": "1",
           "sh:name": {
             "nl": "aankooplijn"
           },
@@ -406,15 +424,15 @@
           "sh:path": "https://schema.org/amount"
         },
         {
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:class": "https://schema.org/MoneyTransfer",
           "sh:description": {
-            "nl": "Betaalmethode van de transactie."
+            "nl": "Betaling waaruit transactie bestaat."
           },
           "sh:minCount": "1",
           "sh:name": {
-            "nl": "betaalmethode"
+            "nl": "betaling"
           },
-          "sh:path": "https://schema.org/paymentMethod"
+          "sh:path": "https://data.vlaanderen.be/ns/lokaleEconomie#betaling"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -431,23 +449,10 @@
           "sh:description": {
             "nl": "Promotie die van toepassing is op de volledige transactie."
           },
-          "sh:maxCount": "1",
           "sh:name": {
             "nl": "promotie"
           },
           "sh:path": "https://schema.org/discount"
-        },
-        {
-          "sh:class": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object",
-          "sh:description": {
-            "nl": "Tijdstip waarop de transactie plaatsvindt."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "tijdstip"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/lokaleEconomie#tijdstip"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -494,12 +499,22 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://data.vlaanderen.be/ns/lokaleEconomie#Profiel",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "nl": "Socio-demografisch profiel van een persoon."
+            "nl": "Bezoekersprofiel dat geobserveerd wordt."
           },
           "sh:name": {
-            "nl": "Koperprofiel"
+            "nl": "bezoekersprofiel"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/lokaleEconomie#bezoekersProfiel"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/lokaleEconomie#Profiel",
+          "sh:description": {
+            "nl": "Socio-demografisch profiel of organisatieprofiel dat geobserveerd wordt."
+          },
+          "sh:name": {
+            "nl": "koperprofiel"
           },
           "sh:path": "https://data.vlaanderen.be/ns/lokaleEconomie#koperprofiel"
         },
@@ -1105,18 +1120,6 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:datatype": "http://www.w3.org/2001/XMLSchema#integer",
-          "sh:description": {
-            "nl": "Aantal werknemers van een organisatie."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "aantalWerknemers"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/organisatie#aantalWerknemers"
-        },
-        {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
             "nl": "Rangschikking van de organisatie in een classificatiesysteem."
@@ -1166,6 +1169,18 @@
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/lokaleEconomie#AantalWerknemers",
+          "sh:description": {
+            "nl": "Aantal personen in dienst op een bepaald moment in een specifieke Vestiging van een Organisatie."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "aantal werknemers"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/lokaleEconomie#aantalWerknemers"
+        },
         {
           "sh:description": {
             "nl": "Specificatie van de dagen en/of periode waarop de openingsuren van toepassing zijn."
@@ -1458,7 +1473,7 @@
           "sh:name": {
             "nl": "tijdstip"
           },
-          "sh:path": "https://data.vlaanderen.be/ns/generiek#tijdstip"
+          "sh:path": "https://data.vlaanderen.be/ns/lokaleEconomie#Gebeurtenis.tijdstip"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -1474,6 +1489,62 @@
         }
       ],
       "sh:targetClass": "https://schema.org/Event"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#BetalingShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/financiele-data#Monetair",
+          "sh:description": {
+            "nl": "Hoeveelheid geld of equivalent die wordt overgemaakt."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "bedrag"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/lokaleEconomie#bedrag"
+        },
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "nl": "Indicatie van het betaalmiddel dat gebruikt werd."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "betaalmethode"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/lokaleEconomie#betaalmethode"
+        },
+        {
+          "sh:datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "sh:description": {
+            "nl": "Tijdstip waarop de betaling plaatsvindt."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "tijdstip"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/lokaleEconomie#Betaling.tijdstip"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/lokaleEconomie#Transactie",
+          "sh:description": {
+            "nl": "Transactie waartoe de betaling behoort."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "transactie"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/lokaleEconomie#transactie"
+        }
+      ],
+      "sh:targetClass": "https://schema.org/MoneyTransfer"
     },
     {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#ProductShape",

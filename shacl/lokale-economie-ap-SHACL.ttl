@@ -13,6 +13,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17> <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17shapes> <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#AankooplijnShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#AantalWerknemersShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#BezoekersgebiedShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#DruktekenmerkShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#DruktemetingShape>,
@@ -67,6 +68,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#VerkeersobjectShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#ObservatieContextShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#GebeurtenisShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#BetalingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#ProductShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#TijdschemaShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#ObservatiecontextShape> .
@@ -102,6 +104,10 @@
     shacl:path <https://data.vlaanderen.be/ns/lokaleEconomie#transactie>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/lokaleEconomie#Aankooplijn> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#AantalWerknemersShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/lokaleEconomie#AantalWerknemers> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#ActiviteitShape> a shacl:NodeShape;
   shacl:closed false;
@@ -153,6 +159,39 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#BetaalmethodeTypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#BetalingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/financiele-data#Monetair>;
+    shacl:description "Hoeveelheid geld of equivalent die wordt overgemaakt."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "bedrag"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokaleEconomie#bedrag>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Indicatie van het betaalmiddel dat gebruikt werd."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "betaalmethode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokaleEconomie#betaalmethode>
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de betaling plaatsvindt."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "tijdstip"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokaleEconomie#Betaling.tijdstip>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/lokaleEconomie#Transactie>;
+    shacl:description "Transactie waartoe de betaling behoort."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "transactie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokaleEconomie#transactie>
+  ];
+  shacl:targetClass schemas:MoneyTransfer .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#BezoekersgebiedShape> a shacl:NodeShape;
   shacl:closed false;
@@ -271,8 +310,13 @@
   ], [
     shacl:class skos:Concept;
     shacl:description "Bezoekersprofiel dat geobserveerd wordt."@nl;
-    shacl:name "bezoekersProfiel"@nl;
+    shacl:name "bezoekersprofiel"@nl;
     shacl:path <https://data.vlaanderen.be/ns/lokaleEconomie#bezoekersProfiel>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/lokaleEconomie#Profiel>;
+    shacl:description "Socio-demografisch profiel of organisatieprofiel dat geobserveerd wordt."@nl;
+    shacl:name "koperprofiel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokaleEconomie#koperprofiel>
   ], [
     shacl:class skos:Concept;
     shacl:description "Type van druktekenmerk."@nl;
@@ -326,7 +370,7 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "tijdstip"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/generiek#tijdstip>
+    shacl:path <https://data.vlaanderen.be/ns/lokaleEconomie#Gebeurtenis.tijdstip>
   ], [
     shacl:class skos:Concept;
     shacl:description "Type van de gebeurtenis."@nl;
@@ -576,13 +620,6 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#OrganisatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:datatype xsd:integer;
-    shacl:description "Aantal werknemers van een organisatie."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "aantalWerknemers"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/organisatie#aantalWerknemers>
-  ], [
     shacl:class skos:Concept;
     shacl:description "Rangschikking van de organisatie in een classificatiesysteem."@nl;
     shacl:name "classificatie"@nl;
@@ -856,6 +893,7 @@
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/lokaleEconomie#Aankooplijn>;
     shacl:description "Een onderdeel van de transactie dat overeenstemt met één aankooplijn op een kassaticket."@nl;
+    shacl:minCount 1;
     shacl:name "aankooplijn"@nl;
     shacl:path <https://data.vlaanderen.be/ns/lokaleEconomie#aankooplijn>
   ], [
@@ -866,11 +904,11 @@
     shacl:name "bedrag"@nl;
     shacl:path schemas:amount
   ], [
-    shacl:class skos:Concept;
-    shacl:description "Betaalmethode van de transactie."@nl;
+    shacl:class schemas:MoneyTransfer;
+    shacl:description "Betaling waaruit transactie bestaat."@nl;
     shacl:minCount 1;
-    shacl:name "betaalmethode"@nl;
-    shacl:path schemas:paymentMethod
+    shacl:name "betaling"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokaleEconomie#betaling>
   ], [
     shacl:class skos:Concept;
     shacl:description "Klantenkaart die gebruikt wordt bij de transactie."@nl;
@@ -879,16 +917,8 @@
   ], [
     shacl:class schemas:QuantitativeValue;
     shacl:description "Promotie die van toepassing is op de volledige transactie."@nl;
-    shacl:maxCount 1;
     shacl:name "promotie"@nl;
     shacl:path schemas:discount
-  ], [
-    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
-    shacl:description "Tijdstip waarop de transactie plaatsvindt."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "tijdstip"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/lokaleEconomie#tijdstip>
   ], [
     shacl:class skos:Concept;
     shacl:description "Type van transactie."@nl;
@@ -935,9 +965,14 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#VerkoopkenmerkShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class skos:Concept;
+    shacl:description "Bezoekersprofiel dat geobserveerd wordt."@nl;
+    shacl:name "bezoekersprofiel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokaleEconomie#bezoekersProfiel>
+  ], [
     shacl:class <https://data.vlaanderen.be/ns/lokaleEconomie#Profiel>;
-    shacl:description "Socio-demografisch profiel van een persoon."@nl;
-    shacl:name "Koperprofiel"@nl;
+    shacl:description "Socio-demografisch profiel of organisatieprofiel dat geobserveerd wordt."@nl;
+    shacl:name "koperprofiel"@nl;
     shacl:path <https://data.vlaanderen.be/ns/lokaleEconomie#koperprofiel>
   ], [
     shacl:class skos:Concept;
@@ -973,6 +1008,13 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17#VestigingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/lokaleEconomie#AantalWerknemers>;
+    shacl:description "Aantal personen in dienst op een bepaald moment in een specifieke Vestiging van een Organisatie."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "aantal werknemers"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokaleEconomie#aantalWerknemers>
+  ], [
     shacl:description "Specificatie van de dagen en/of periode waarop de openingsuren van toepassing zijn."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
