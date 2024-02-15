@@ -11,9 +11,6 @@ skos:Concept a rdfs:Class;
   rdfs:label "StatistiekType"@nl,
     "OperatorType"@nl .
 
-<https://data.vlaanderen.be/ns/waterkwaliteit#StatistischeObservatie> a rdfs:Class;
-  rdfs:label "StatistischeObservatie"@nl .
-
 <https://data.vlaanderen.be/ns/statistiek#categorie> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Bvb eik voor voorgaand vb."@nl;
   rdfs:comment "De categorie waarvoor de probaliteit bepaald is."@nl;
@@ -49,8 +46,11 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
   rdfs:range xsd:integer .
 
-<http://data.vlaanderen.be/ns/statistiek#StatistischeObservatie.resultaat> a rdf:Property;
-  rdfs:label "resultaat"@nl .
+<https://data.vlaanderen.be/ns/statistiek#resultaat> a owl:ObjectProperty;
+  rdfs:comment "De waarde van het geobserveerdeKenmerk als resultaat van de StatistischeObservatie."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/statistiek#StatistischeObservatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
+  rdfs:range <https://data.vlaanderen.be/ns/statistiek#Statistiek> .
 
 <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest> a rdf:Property;
   rdfs:label "geobserveerdObject"@nl .
@@ -93,6 +93,12 @@ rdf:value a rdf:Property;
   rdfs:comment "Statistiek die beschrijft hoe waarschijnlijk het is dat een variabele een bepaalde drempelwaarde (al dan niet) overschrijdt."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/statistiek#Statistiek> .
+
+<https://data.vlaanderen.be/ns/statistiek#StatistischeObservatie> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Bvb een gemiddelde temperatuur."@nl;
+  rdfs:comment "Observatie waarvan het resultaat een Statistiek is."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/statistiek>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
 
 <https://data.vlaanderen.be/ns/statistiek#Drempelwaarde> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Bvb 10m voor een maximaal waterpeil."@nl;
@@ -182,14 +188,12 @@ rdf:value a rdf:Property;
     foaf:name "Data Vlaanderen"
   ];
   rdfs:seeAlso skos:Concept,
-    <https://data.vlaanderen.be/ns/waterkwaliteit#StatistischeObservatie>,
     rdf:value,
     dc:type,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty>,
-    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest>,
-    <http://data.vlaanderen.be/ns/statistiek#StatistischeObservatie.resultaat>;
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [foaf:name "Digitaal Vlaanderen"];
