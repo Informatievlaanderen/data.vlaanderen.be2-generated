@@ -2,6 +2,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -16,7 +17,7 @@ skos:Concept a rdfs:Class;
   rdfs:label "BezoekersprofielType"@nl,
     "BetaalmethodeType"@nl,
     "TransactieType"@nl,
-    "Activiteit type"@nl,
+    "ActiviteitType"@nl,
     "GebeurtenisType"@nl,
     "DruktekenmerkType"@nl,
     "VerkoopkenmerkType"@nl,
@@ -30,7 +31,8 @@ skos:Concept a rdfs:Class;
     "Gezinssamenstelling"@nl,
     "OrganisatieClassificatie"@nl,
     "Klantenkaart"@nl,
-    "ProductcategorieType"@nl .
+    "ProductcategorieType"@nl,
+    "AantalWerknemers"@nl .
 
 <https://data.vlaanderen.be/ns/financiele-data#Monetair> a rdfs:Class;
   rdfs:label "Monetair"@nl .
@@ -50,11 +52,29 @@ schemas:Product a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
   rdfs:range xsd:dateTime .
 
+<https://data.vlaanderen.be/ns/lokaleEconomie#Druktemeting.geobserveerdKenmerk> a owl:ObjectProperty;
+  rdfs:comment "Druktekenmerk dat geobserveerd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokaleEconomie#Druktemeting>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
+  rdfs:range <https://data.vlaanderen.be/ns/lokaleEconomie#Druktekenmerk> .
+
 <https://data.vlaanderen.be/ns/lokaleEconomie#Gebeurtenis.tijdstip> a owl:ObjectProperty;
   rdfs:comment "Tijdstip waarop een gebeurtenis plaatsvindt."@nl;
   rdfs:domain schemas:Event;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
   rdfs:range schemas:Schedule .
+
+<https://data.vlaanderen.be/ns/lokaleEconomie#OmgevingsObservatie.geobserveerdKenmerk> a owl:ObjectProperty;
+  rdfs:comment "Kenmerk van de omgeving dat geobserveerd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokaleEconomie#Omgevingsobservatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
+  rdfs:range <https://data.vlaanderen.be/ns/lokaleEconomie#Omgevingskenmerk> .
+
+<https://data.vlaanderen.be/ns/lokaleEconomie#Verkoopmeting.geobserveerdKenmerk> a owl:ObjectProperty;
+  rdfs:comment "Verkoopkenmerk dat geobserveerd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokaleEconomie#Verkoopmeting>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
+  rdfs:range <https://data.vlaanderen.be/ns/lokaleEconomie#Verkoopkenmerk> .
 
 <https://data.vlaanderen.be/ns/lokaleEconomie#aantal> a owl:DatatypeProperty;
   rdfs:comment "Aantal producten van eenzelfde soort."@nl;
@@ -66,12 +86,13 @@ schemas:Product a rdfs:Class;
   rdfs:comment "Aantal personen in dienst op een bepaald moment in een specifieke Vestiging van een Organisatie."@nl;
   rdfs:domain org:Site;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
-  rdfs:range <https://data.vlaanderen.be/ns/lokaleEconomie#AantalWerknemers> .
+  rdfs:range skos:Concept .
 
-<https://data.vlaanderen.be/ns/lokaleEconomie#affiliatietype> a rdf:Property;
+<https://data.vlaanderen.be/ns/lokaleEconomie#affiliatietype> a owl:ObjectProperty;
   rdfs:comment "Type van affiliatie, i.e., verbondenheid met een moederorganisatie."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/lokaleEconomie#Organisatieprofiel>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie> .
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
+  rdfs:range skos:Concept .
 
 <https://data.vlaanderen.be/ns/lokaleEconomie#bedrag> a owl:ObjectProperty;
   rdfs:comment "Hoeveelheid geld of equivalent die wordt overgemaakt."@nl;
@@ -111,18 +132,6 @@ schemas:Product a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
   rdfs:range <https://data.vlaanderen.be/ns/financiele-data#Monetair> .
 
-<https://data.vlaanderen.be/ns/lokaleEconomie#geobserveerdKenmerk> a owl:ObjectProperty;
-  rdfs:comment "Druktekenmerk dat geobserveerd wordt."@nl,
-    "Verkoopkenmerk dat geobserveerd wordt."@nl,
-    "Kenmerk van de omgeving dat geobserveerd wordt."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/lokaleEconomie#Druktemeting>,
-    <https://data.vlaanderen.be/ns/lokaleEconomie#Verkoopmeting>,
-    <https://data.vlaanderen.be/ns/lokaleEconomie#Omgevingsobservatie>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
-  rdfs:range <https://data.vlaanderen.be/ns/lokaleEconomie#Druktekenmerk>,
-    <https://data.vlaanderen.be/ns/lokaleEconomie#Verkoopkenmerk>,
-    <https://data.vlaanderen.be/ns/lokaleEconomie#Omgevingskenmerk> .
-
 <https://data.vlaanderen.be/ns/lokaleEconomie#gezinstype> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Voorbeelden van gezinstypes zijn kerngezin, een-oudergezin, uitgebreid gezin, alleenwonende, ongehuwd samenwonenden, LAT, LTA, enz."@nl;
   rdfs:comment "Classificatie van de gezinssamenstelling van een persoon of groep van personen."@nl;
@@ -154,14 +163,6 @@ schemas:Product a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/lokaleEconomie#SocioDemografischProfiel>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
   rdfs:range skos:Concept .
-
-<https://data.vlaanderen.be/ns/lokaleEconomie#locatie> a owl:ObjectProperty;
-  rdfs:comment "Precieze locatie van het bezoekersgebied."@nl,
-    "Woonplaats van een persoon of groep van personen."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/lokaleEconomie#Bezoekersgebied>,
-    <https://data.vlaanderen.be/ns/lokaleEconomie#SocioDemografischProfiel>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
-  rdfs:range <https://data.vlaanderen.be/ns/lokaleEconomie#Locatie> .
 
 <https://data.vlaanderen.be/ns/lokaleEconomie#naam> a owl:DatatypeProperty;
   rdfs:comment "Naam van het bezoekersgebied."@nl;
@@ -199,30 +200,23 @@ schemas:Product a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
   rdfs:range skos:Concept .
 
-<https://data.vlaanderen.be/ns/lokaleEconomie#type> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Mogelijke types van transacties zijn online, voor e-commerce, offline, voor fysieke aankopen in de handelszaak of hybride, wanneer een bestelling geplaatst moet worden in de winkel in geval het artikel tijdelijk niet op voorraad is."@nl;
-  rdfs:comment "Type van transactie."@nl,
-    "Type van druktekenmerk."@nl,
-    "Type van verkoopkenmerk dat geobserveerd wordt."@nl,
-    "Type van omgevingskenmerk dat geobserveerd wordt."@nl,
-    "Type van het bezoekersgebied."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/lokaleEconomie#Transactie>,
-    <https://data.vlaanderen.be/ns/lokaleEconomie#Druktekenmerk>,
-    <https://data.vlaanderen.be/ns/lokaleEconomie#Verkoopkenmerk>,
-    <https://data.vlaanderen.be/ns/lokaleEconomie#Omgevingskenmerk>,
-    <https://data.vlaanderen.be/ns/lokaleEconomie#Bezoekersgebied>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
-  rdfs:range skos:Concept .
-
 <http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role> a rdf:Property;
   rdfs:label "rol"@nl .
+
+dc:type a rdf:Property;
+  rdfs:label "type"@nl .
 
 org:siteAddress a rdf:Property;
   rdfs:label "vestigingsadres"@nl .
 
-<https://data.vlaanderen.be/ns/lokaleEconomie#AantalWerknemers> a owl:Class;
-  rdfs:comment "Classificatie van het aantal personen in dienst op een bepaald moment in een specifieke Vestiging van een Organisatie."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie> .
+prov:Location a rdf:Property;
+  rdfs:label "locatie"@nl .
+
+<https://data.vlaanderen.be/ns/lokaleEconomie#Bezoekersgebied> a owl:Class;
+  rdfs:comment "Een specifieke geografische locatie waar verschillende handelszaken en al dan niet commerciële voorzieningen zijn samengebracht om consumenten een gevarieerd aanbod van producten en/of diensten aan te bieden."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature>,
+    <http://fixme.com#RuimtelijkObject> .
 
 <https://data.vlaanderen.be/ns/lokaleEconomie#Druktemeting> a owl:Class;
   rdfs:comment "Het vaststellen van een waarde van een bepaald kenmerk van drukte op een bepaald tijdstip of tussen twee tijdstippen."@nl;
@@ -236,10 +230,19 @@ org:siteAddress a rdf:Property;
     org:Site,
     <http://fixme.com#RuimtelijkObject> .
 
+<https://data.vlaanderen.be/ns/lokaleEconomie#Omgevingskenmerk> a owl:Class;
+  rdfs:comment "Kenmerk van de omgeving dat geobserveerd wordt."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
 <https://data.vlaanderen.be/ns/lokaleEconomie#Omgevingsobservatie> a owl:Class;
   rdfs:comment "Het vaststellen van een kenmerk van de omgeving van een Domeinobject op een bepaald tijdstip of tussen twee tijdstippen."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/ns/lokaleEconomie#Transactie> a owl:Class;
+  rdfs:comment "Een overeenkomst tussen een koper en een verkoper om goederen, diensten of monetaire zaken uit te wisselen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie> .
 
 <https://data.vlaanderen.be/ns/lokaleEconomie#Verkoopmeting> a owl:Class;
   rdfs:comment "Kwantitatieve evaluatie van een individuele transactie of een verzameling van transacties."@nl;
@@ -262,7 +265,7 @@ schemas:category a rdf:Property;
   rdfs:label "productcategorie"@nl .
 
 schemas:customer a rdf:Property;
-  rdfs:label "uitgevoerd door"@nl .
+  rdfs:label "uitgevoerdDoor"@nl .
 
 schemas:description a rdf:Property;
   rdfs:label "productbeschrijving"@nl .
@@ -274,12 +277,10 @@ schemas:productID a rdf:Property;
   rdfs:label "productID"@nl .
 
 schemas:seller a rdf:Property;
-  rdfs:label "uitgevoerd bij"@nl .
+  rdfs:label "uitgevoerdBij"@nl .
 
-<https://data.vlaanderen.be/ns/lokaleEconomie#Omgevingskenmerk> a owl:Class;
-  rdfs:comment "Kenmerk van de omgeving dat geobserveerd wordt."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+<https://www.w3.org/ns/prov#atLocation> a rdf:Property;
+  rdfs:label "locatie"@nl .
 
 <https://data.vlaanderen.be/ns/lokaleEconomie#Organisatieprofiel> a owl:Class;
   rdfs:comment "Verzameling van kenmerken van een Organisatie."@nl;
@@ -290,20 +291,9 @@ schemas:seller a rdf:Property;
   rdfs:comment "Onderdeel van een transactie dat overeenstemt met één aankooplijn op een kassaticket."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie> .
 
-<https://data.vlaanderen.be/ns/lokaleEconomie#Bezoekersgebied> a owl:Class;
-  rdfs:comment "Een specifieke geografische locatie waar verschillende handelszaken en al dan niet commerciële voorzieningen zijn samengebracht om consumenten een gevarieerd aanbod van producten en/of diensten aan te bieden."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature>,
-    <http://fixme.com#RuimtelijkObject> .
-
 <https://data.vlaanderen.be/ns/lokaleEconomie#Profiel> a owl:Class;
   rdfs:comment "Verzameling van kenmerken, gedragingen en voorkeuren van een individuele consument of groep van consumenten die een product of dienst aankoopt."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie> .
-
-<https://data.vlaanderen.be/ns/lokaleEconomie#Transactie> a owl:Class;
-  rdfs:comment "Een overeenkomst tussen een koper en een verkoper om goederen, diensten of monetaire zaken uit te wisselen."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokaleEconomie>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/lokaleEconomie#Transactie> .
 
 <https://data.vlaanderen.be/ns/lokaleEconomie#Druktekenmerk> a owl:Class;
   rdfs:comment "Kenmerk van het Domeinobject dat gemeten wordt en dat betrekking heeft op de drukte binnen, over of langs dat object."@nl;
@@ -586,6 +576,7 @@ schemas:seller a rdf:Property;
     <https://def.isotc211.org/iso19156/2011/Observation#ObservationContext>,
     schemas:MoneyTransfer,
     schemas:Product,
+    <https://www.w3.org/ns/prov#atLocation>,
     schemas:seller,
     schemas:productID,
     schemas:discount,
@@ -596,7 +587,9 @@ schemas:seller a rdf:Property;
     <https://data.vlaanderen.be/ns/lokaleEconomie#transactie>,
     <https://data.vlaanderen.be/ns/lokaleEconomie#betaling>,
     <https://data.vlaanderen.be/ns/lokaleEconomie#aankooplijn>,
+    prov:Location,
     org:siteAddress,
+    dc:type,
     <http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
