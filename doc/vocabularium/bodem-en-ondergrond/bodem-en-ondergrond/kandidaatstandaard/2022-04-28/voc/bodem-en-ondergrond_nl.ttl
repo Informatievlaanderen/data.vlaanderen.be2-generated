@@ -58,12 +58,6 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting.meetwaardeparameter> a owl:ObjectProperty;
-  rdfs:comment "Het geobserveerdKenmerk."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
-
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat.fractiemetingwaarde> a owl:ObjectProperty;
   rdfs:comment "Waarde ve individuele Meting in de Meetreeks.."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat>;
@@ -112,23 +106,11 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:range <https://data.vlaanderen.be/ns/generiek#DirectePositie> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetpuntparameter> a owl:ObjectProperty;
-  rdfs:comment "Het kenmerk in functie waarvan het geobserveerdKenmerk verandert."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
-
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetreeksresultaat> a owl:ObjectProperty;
   rdfs:comment "Het resultaat van de Meetreeks."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetwaardeparameter> a owl:ObjectProperty;
-  rdfs:comment "Het geobserveerdKenmerk."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:range <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde> a owl:ObjectProperty;
   rdfs:comment "Eén waarde in het resultaat van een Meetreeks."@nl;
@@ -160,6 +142,13 @@ skos:Concept a rdfs:Class;
 
 <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value> a rdf:Property;
   rdfs:label "waarde"@nl .
+
+<http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty> a rdf:Property;
+  rdfs:label "meetwaardeparameter"@nl .
+
+<http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter> a rdf:Property;
+  rdfs:label "meetwaardeparameter"@nl,
+    "meetpuntparameter"@nl .
 
 <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingCurve.shape> a rdf:Property;
   rdfs:label "geometrie"@nl .
@@ -194,6 +183,12 @@ dc:type a rdf:Property;
   rdfs:comment "Het grondoppervlak, waarvan de hoogte vaak opgegeven wordt ten opzichte van een nationaal nul-niveau."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond> .
 
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Bv hoe de lengte van een Object verandert met de temperatuur (door uitzetting). We kunnen dit uitdrukken als y=f(x) waarbij in het vb y de lengte is en x de temperatuur. De variabele x noemen we de meetpuntparameter en y is de meetwaardeparameter. De meetwaardeparameter is in feite het geobserveerdKenmerk. Sommige types van Meetreeksen zijn zo specifiek dat we ze apart hebben gemodelleerd, bvb een Bereikobservatie waarbij een geobserveerdKenmerk varieert volgens positie of tijd."@nl;
+  rdfs:comment "Observatie waarbij wordt nagegaan hoe een bepaald kenmerk verandert in functie van een ander kenmerk."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Bv een Laag."@nl;
   rdfs:comment "Onderdeel vh Profiel."@nl;
@@ -211,12 +206,6 @@ dc:type a rdf:Property;
   <http://purl.org/vocab/vann/usageNote> "Concreet een verzameling Meetreekswaarden, ttz waardeparen met een waarde voor de het geobserveerdKenmerk en een waarde voor de parameter."@nl;
   rdfs:comment "Resultaat van een Meetreeksobservatie."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Bv hoe de lengte van een Object verandert met de temperatuur (door uitzetting). We kunnen dit uitdrukken als y=f(x) waarbij in het vb y de lengte is en x de temperatuur. De variabele x noemen we de meetpuntparameter en y is de meetwaardeparameter. De meetwaardeparameter is in feite het geobserveerdKenmerk. Sommige types van Meetreeksen zijn zo specifiek dat we ze apart hebben gemodelleerd, bvb een Bereikobservatie waarbij een geobserveerdKenmerk varieert volgens positie of tijd."@nl;
-  rdfs:comment "Observatie waarbij wordt nagegaan hoe een bepaald kenmerk verandert in functie van een ander kenmerk."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Bv als de Meetreeks observeert hoe de lengte van iets varieert met de temperatuur dan omvat een Meetreekswaarde een waarde voor de lengte en één voor de temeratuur."@nl;
@@ -253,6 +242,8 @@ dc:type a rdf:Property;
   rdfs:seeAlso skos:Concept,
     dc:type,
     <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingCurve.shape>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty>,
     <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value>,
     <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
