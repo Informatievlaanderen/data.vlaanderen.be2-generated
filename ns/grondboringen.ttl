@@ -50,13 +50,6 @@ skos:Concept a rdfs:Class;
   rdfs:comment "Beschrijving van het type Boor voor een bepaald diepte-interval."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen> .
 
-<https://data.vlaanderen.be/ns/grondboringen#Grondboring.identificator> a owl:ObjectProperty;
-  <http://purl.org/vocab/vann/usageNote> "Bv het boornummer."@nl;
-  rdfs:comment "Verwijzing naar de informatie die de activiteit van de Bemonstering uniek identificeert."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/grondboringen#Grondboring>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
-  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
-
 <https://data.vlaanderen.be/ns/grondboringen#Grondmonster> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "In deze context beperken we ons tot Grondmonsters verkregen dmv een Grondboring. De observatie gebeurt doorgaans in een labo."@nl;
   rdfs:comment "Monster genomen uit de grond voor observatie ex situ."@nl;
@@ -182,6 +175,9 @@ skos:Concept a rdfs:Class;
 dc:type a rdf:Property;
   rdfs:label "type"@nl .
 
+<http://www.w3.org/ns/adms#identifier> a rdf:Property;
+  rdfs:label "identificator"@nl .
+
 <http://www.w3.org/ns/sosa/hasResult> a rdf:Property;
   rdfs:label "resultaat"@nl .
 
@@ -227,6 +223,13 @@ dc:type a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
   rdfs:subClassOf <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair> .
 
+<https://data.vlaanderen.be/ns/grondboringen#Grondboring> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Onder \"grond\" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd)."@nl;
+  rdfs:comment "De handeling van het boren van een smalle schacht in de grond."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/Sampling>,
+    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Boring> .
+
 <https://data.vlaanderen.be/ns/grondboringen#WettelijkKaderBoring> a owl:Class;
   rdfs:comment "Beschrijft in welke mate voldaan is aan de wetgeving mbt Boringen."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
@@ -243,13 +246,6 @@ dc:type a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
   rdfs:subClassOf <http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage>,
     <http://www.w3.org/ns/sosa/om#SamplingProcedure> .
-
-<https://data.vlaanderen.be/ns/grondboringen#Grondboring> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Onder \"grond\" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd)."@nl;
-  rdfs:comment "De handeling van het boren van een smalle schacht in de grond."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/grondboringen>;
-  rdfs:subClassOf <http://www.w3.org/ns/sosa/Sampling>,
-    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Boring> .
 
 <https://data.vlaanderen.be/ns/grondboringen> a owl:Ontology;
   rdfs:label "grondboringen"@en,
@@ -281,6 +277,7 @@ dc:type a rdf:Property;
     <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.diepte>,
     <http://www.w3.org/ns/sosa/isresultOf>,
     <http://www.w3.org/ns/sosa/hasResult>,
+    <http://www.w3.org/ns/adms#identifier>,
     dc:type,
     <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType>,
     <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.size>,

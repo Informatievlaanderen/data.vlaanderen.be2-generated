@@ -107,6 +107,11 @@
           </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
+          <rdf:Property rdf:about="http://www.w3.org/ns/adms#identifier">
+            <rdfs:label xml:lang="nl">identificator</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
           <rdf:Property rdf:about="http://purl.org/dc/terms/type">
             <rdfs:label xml:lang="nl">type</rdfs:label>
           </rdf:Property>
@@ -225,21 +230,6 @@
     <rdfs:comment xml:lang="nl">Beschrijving van het type Boor voor een bepaald diepte-interval.</rdfs:comment>
     <ns1:usageNote xml:lang="nl">Specialisatie van een CurveWaardepaar, dit is een Curve en de waarde die eraan is toegekend. De waarde is hier de beschrijving van de Boortype van een Grondboring, terwijl de Curve aangeeft op welke dieptes deze beschrijving geldig is. De Curve van de Grondboring wordt hierbij als referentiesysteem gebruikt. OPGELET: Als de Curve van de Grondboring niet recht in de grond werd geboord zijn de opgegeven dieptes eerder afstanden langs deze Curve.</ns1:usageNote>
   </owl:Class>
-  <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/grondboringen#Grondboring.identificator">
-    <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/grondboringen"/>
-    <rdfs:comment xml:lang="nl">Verwijzing naar de informatie die de activiteit van de Bemonstering uniek identificeert.</rdfs:comment>
-    <ns1:usageNote xml:lang="nl">Bv het boornummer.</ns1:usageNote>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://data.vlaanderen.be/ns/grondboringen#Grondboring">
-        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/grondboringen"/>
-        <rdfs:comment xml:lang="nl">De handeling van het boren van een smalle schacht in de grond.</rdfs:comment>
-        <ns1:usageNote xml:lang="nl">Onder "grond" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd).</ns1:usageNote>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
-        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond#Boring"/>
-      </owl:Class>
-    </rdfs:domain>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
-  </owl:ObjectProperty>
   <owl:Class rdf:about="https://data.vlaanderen.be/ns/grondboringen#Grondmonster">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/grondboringen"/>
     <rdfs:comment xml:lang="nl">Monster genomen uit de grond voor observatie ex situ.</rdfs:comment>
@@ -263,7 +253,15 @@
   <owl:ObjectProperty rdf:about="https://data.vlaanderen.be/ns/grondboringen#boorder">
     <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/grondboringen"/>
     <rdfs:comment xml:lang="nl">Diegene die de Boring heeft uitgevoerd.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/grondboringen#Grondboring"/>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://data.vlaanderen.be/ns/grondboringen#Grondboring">
+        <rdfs:isDefinedBy rdf:resource="https://data.vlaanderen.be/ns/grondboringen"/>
+        <rdfs:comment xml:lang="nl">De handeling van het boren van een smalle schacht in de grond.</rdfs:comment>
+        <ns1:usageNote xml:lang="nl">Onder "grond" verstaan we hier het deel van de aardkorst onder het aardoppervlak. Het slaat zowel op de bodem als op wat zich daaronder bevindt (en hier ondergrond wordt genoemd).</ns1:usageNote>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+        <rdfs:subClassOf rdf:resource="https://data.vlaanderen.be/ns/bodem-en-ondergrond#Boring"/>
+      </owl:Class>
+    </rdfs:domain>
     <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
     <rdfs:subPropertyOf rdf:resource="https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.uitgevoerdDoor"/>
   </owl:ObjectProperty>
