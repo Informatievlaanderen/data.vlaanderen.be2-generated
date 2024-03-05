@@ -52,17 +52,12 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/besluit#Besluit> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting.fractiemetingresultaat> a owl:ObjectProperty;
-  rdfs:comment "Het resultaat van de Fractiemeting."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting>;
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Dat aandeel wordt \"fractie\" genoemd. Vb is de statistische verdeling van onderwijsniveaus over de bevolking of de verdeling van korreldiameters in een bodemstaal."@nl;
+  rdfs:comment "Meetreeks waarbij het aandeel van iets varieert in functie van iets anders."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat.fractiemetingwaarde> a owl:ObjectProperty;
-  rdfs:comment "Waarde ve individuele Meting in de Meetreeks.."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde> .
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
+    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde.meetpunt> a owl:ObjectProperty;
   rdfs:comment "Waarde van het meetpunt."@nl;
@@ -106,17 +101,14 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:range <https://data.vlaanderen.be/ns/generiek#DirectePositie> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetreeksresultaat> a owl:ObjectProperty;
-  rdfs:comment "Het resultaat van de Meetreeks."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat> .
-
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde> a owl:ObjectProperty;
-  rdfs:comment "Eén waarde in het resultaat van een Meetreeks."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat>;
+  rdfs:comment "Eén waarde in het resultaat van een Meetreeks."@nl,
+    "Waarde ve individuele Meting in de Meetreeks.."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat>,
+    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde> .
+  rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde>,
+    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetpunt> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Datatype is te substitueren door het datatype vh meetpunt."@nl;
@@ -150,6 +142,10 @@ skos:Concept a rdfs:Class;
   rdfs:label "meetwaardeparameter"@nl,
     "meetpuntparameter"@nl .
 
+<http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result> a rdf:Property;
+  rdfs:label "meetreeksresultaat"@nl,
+    "fractiemetingresultaat"@nl .
+
 <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingCurve.shape> a rdf:Property;
   rdfs:label "geometrie"@nl .
 
@@ -166,28 +162,26 @@ dc:type a rdf:Property;
   rdfs:comment "Verticale maat naar beneden vanaf het grondoppervlak."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Dat aandeel wordt \"fractie\" genoemd. Vb is de statistische verdeling van onderwijsniveaus over de bevolking of de verdeling van korreldiameters in een bodemstaal."@nl;
-  rdfs:comment "Meetreeks waarbij het aandeel van iets varieert in functie van iets anders."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
-    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks> .
-
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Aangezien de Fractiemeting een Meetreeks is bestaat het resultaat uit een reeks individuele Metingen."@nl;
   rdfs:comment "Resultaat van een Fractiemeting."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld> a owl:Class;
-  rdfs:comment "Het grondoppervlak, waarvan de hoogte vaak opgegeven wordt ten opzichte van een nationaal nul-niveau."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond> .
-
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Bv hoe de lengte van een Object verandert met de temperatuur (door uitzetting). We kunnen dit uitdrukken als y=f(x) waarbij in het vb y de lengte is en x de temperatuur. De variabele x noemen we de meetpuntparameter en y is de meetwaardeparameter. De meetwaardeparameter is in feite het geobserveerdKenmerk. Sommige types van Meetreeksen zijn zo specifiek dat we ze apart hebben gemodelleerd, bvb een Bereikobservatie waarbij een geobserveerdKenmerk varieert volgens positie of tijd."@nl;
   rdfs:comment "Observatie waarbij wordt nagegaan hoe een bepaald kenmerk verandert in functie van een ander kenmerk."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld> a owl:Class;
+  rdfs:comment "Het grondoppervlak, waarvan de hoogte vaak opgegeven wordt ten opzichte van een nationaal nul-niveau."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond> .
+
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Concreet een verzameling Meetreekswaarden, ttz waardeparen met een waarde voor de het geobserveerdKenmerk en een waarde voor de parameter."@nl;
+  rdfs:comment "Resultaat van een Meetreeksobservatie."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Bv een Laag."@nl;
@@ -201,11 +195,6 @@ dc:type a rdf:Property;
   rdfs:comment "RuimtelijkBemonsteringsobject met bijkomende kenmerken relevant voor het domein Bodem en Ondergrond."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Concreet een verzameling Meetreekswaarden, ttz waardeparen met een waarde voor de het geobserveerdKenmerk en een waarde voor de parameter."@nl;
-  rdfs:comment "Resultaat van een Meetreeksobservatie."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Bv als de Meetreeks observeert hoe de lengte van iets varieert met de temperatuur dan omvat een Meetreekswaarde een waarde voor de lengte en één voor de temeratuur."@nl;
@@ -242,6 +231,7 @@ dc:type a rdf:Property;
   rdfs:seeAlso skos:Concept,
     dc:type,
     <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingCurve.shape>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty>,
     <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value>,
