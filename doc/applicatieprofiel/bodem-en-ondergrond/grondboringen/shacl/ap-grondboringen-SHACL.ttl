@@ -77,7 +77,10 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#OpdrachtShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#DirectePositieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#OpmetingShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#StandaardEenheidShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#WettelijkKaderShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#GetalShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#KwantitatieveWaardeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#SysteemShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#BemonsteringsobjectComplexShape> .
 
@@ -110,7 +113,7 @@
     shacl:name "geometrie"@nl;
     shacl:path <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry>
   ], [
-    shacl:datatype xsd:double;
+    shacl:class schemas:QuantitativeValue;
     shacl:description "Dikte van de Bekisting."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
@@ -465,12 +468,12 @@
     shacl:name "geometrie"@nl;
     shacl:path <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry>
   ], [
-    shacl:datatype xsd:double;
+    shacl:class schemas:QuantitativeValue;
     shacl:description "Diameter van het Boorgat."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "diameter"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameterinterval.diameter>
+    shacl:path <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameterinterval> .
 
@@ -489,7 +492,7 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "methode"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/grondboringen#Boormethodeinterval.methode>
+    shacl:path <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/grondboringen#BoormethodeInterval> .
 
@@ -535,7 +538,7 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "type"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/grondboringen#type>
+    shacl:path <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/grondboringen#BoortypeInterval> .
 
@@ -644,6 +647,10 @@
     shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
   ];
   shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#GetalShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass schemas:Number .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#GrondboringShape> a shacl:NodeShape;
   shacl:closed false;
@@ -772,6 +779,30 @@
     shacl:path dc:type
   ];
   shacl:targetClass <http://www.w3.org/ns/ssn/Input> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#KwantitatieveWaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:string;
+    shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount 1;
+    shacl:name "eenheid"@nl;
+    shacl:path schemas:unitText
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/generiek#StandaardEenheid>;
+    shacl:description "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount 1;
+    shacl:name "standaard eenheid"@nl;
+    shacl:path schemas:unitCode
+  ], [
+    shacl:class schemas:Number;
+    shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "waarde"@nl;
+    shacl:path schemas:value
+  ];
+  shacl:targetClass schemas:QuantitativeValue .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#LegaleVerschijningsvormShape> a shacl:NodeShape;
   shacl:closed false;
@@ -915,6 +946,10 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#RechtsgrondShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.europa.eu/eli/ontology#LegalResource> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#StandaardEenheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#StandaardEenheid> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01#SysteemShape> a shacl:NodeShape;
   shacl:closed false;
