@@ -59,6 +59,12 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
     <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks> .
 
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Aangezien de Fractiemeting een Meetreeks is bestaat het resultaat uit een reeks individuele Metingen."@nl;
+  rdfs:comment "Resultaat van een Fractiemeting."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat> .
+
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Interpretatie> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "In de context van Observaties en Metingen is een Interpretatie het resultaat van het toepassen van bestaande kennis op bestaande Observaties. Het onderscheid tussen een Interpretatie en een \"gewone\" Observatie is niet absoluut, in beide gevallen gaat het over het schatten van de waarde van een kenmerk. In het geval van een Interpretatie heeft de Observatie echter meer betekenis (meer \"semantische lading\") omdat er meer theorie en/of verwerking aan te pas kwam."@nl;
   rdfs:comment "Persoonlijk beredeneerd oordeel over de betekenis van iets."@nl;
@@ -78,13 +84,10 @@ skos:Concept a rdfs:Class;
   rdfs:range <https://data.vlaanderen.be/ns/generiek#DirectePositie> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde> a owl:ObjectProperty;
-  rdfs:comment "Eén waarde in het resultaat van een Meetreeks."@nl,
-    "Waarde ve individuele Meting in de Meetreeks.."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat>,
-    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat>;
+  rdfs:comment "Eén waarde in het resultaat van een Meetreeks."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde>,
-    <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde> .
+  rdfs:range <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetwaarde> a owl:ObjectProperty;
   <http://purl.org/vocab/vann/usageNote> "Datatype is te substitueren door het datatype vd meetwaarde."@nl;
@@ -134,12 +137,6 @@ dc:type a rdf:Property;
   rdfs:comment "Verticale maat naar beneden vanaf het grondoppervlak."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond> .
 
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Aangezien de Fractiemeting een Meetreeks is bestaat het resultaat uit een reeks individuele Metingen."@nl;
-  rdfs:comment "Resultaat van een Fractiemeting."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat> .
-
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Bv hoe de lengte van een Object verandert met de temperatuur (door uitzetting). We kunnen dit uitdrukken als y=f(x) waarbij in het vb y de lengte is en x de temperatuur. De variabele x noemen we de meetpuntparameter en y is de meetwaardeparameter. De meetwaardeparameter is in feite het geobserveerdKenmerk. Sommige types van Meetreeksen zijn zo specifiek dat we ze apart hebben gemodelleerd, bvb een Bereikobservatie waarbij een geobserveerdKenmerk varieert volgens positie of tijd."@nl;
   rdfs:comment "Observatie waarbij wordt nagegaan hoe een bepaald kenmerk verandert in functie van een ander kenmerk."@nl;
@@ -157,6 +154,12 @@ dc:type a rdf:Property;
   rdfs:range schemas:QuantitativeValue,
     rdfs:Resource;
   rdfs:subPropertyOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetpunt> .
+
+<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde> a owl:Class;
+  <http://purl.org/vocab/vann/usageNote> "Een fractie (in de betekenis van \"aandeel\") kan enkel bekomen worden als een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. Bv een aandeel van 2% korrels met een diameter tussen 0 en 0.076mm. Doen we dat niet dan is het aandeel cummulatief of degressief en gebruiken we het attribuut meetpunt."@nl;
+  rdfs:comment "Een Meetreekswaarde met een waarde voor de fractie en een waarde voor de parameter."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld> a owl:Class;
   rdfs:comment "Het grondoppervlak, waarvan de hoogte vaak opgegeven wordt ten opzichte van een nationaal nul-niveau."@nl;
@@ -179,12 +182,6 @@ dc:type a rdf:Property;
   rdfs:comment "RuimtelijkBemonsteringsobject met bijkomende kenmerken relevant voor het domein Bodem en Ondergrond."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature> .
-
-<https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde> a owl:Class;
-  <http://purl.org/vocab/vann/usageNote> "Een fractie (in de betekenis van \"aandeel\") kan enkel bekomen worden als een range wordt opgegeven voor de waarde vh meetpunt, vandaar de attributen meetpuntOndergrens en meetpuntBovengrens. Bv een aandeel van 2% korrels met een diameter tussen 0 en 0.076mm. Doen we dat niet dan is het aandeel cummulatief of degressief en gebruiken we het attribuut meetpunt."@nl;
-  rdfs:comment "Een Meetreekswaarde met een waarde voor de fractie en een waarde voor de parameter."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/bodem-en-ondergrond>;
-  rdfs:subClassOf <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde> .
 
 <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde> a owl:Class;
   <http://purl.org/vocab/vann/usageNote> "Bv als de Meetreeks observeert hoe de lengte van iets varieert met de temperatuur dan omvat een Meetreekswaarde een waarde voor de lengte en één voor de temeratuur."@nl;
