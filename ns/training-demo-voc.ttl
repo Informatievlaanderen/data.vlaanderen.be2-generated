@@ -1,0 +1,87 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+foaf:Person a rdfs:Class;
+  rdfs:label "Persoon"@nl .
+
+<https://data.vlaanderen.be/ns/training-demo#behandelendArts> a owl:ObjectProperty;
+  rdfs:label "behandelend arts"@nl;
+  rdfs:comment "Een arts die de patiënt behandelt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/training-demo#Patient>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/training-demo>;
+  rdfs:range <https://data.vlaanderen.be/ns/training-demo#Arts> .
+
+<https://data.vlaanderen.be/ns/training-demo#patient> a owl:ObjectProperty;
+  rdfs:label "patiënt"@nl;
+  rdfs:comment "Een patiënt die door de arts wordt behandeld."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/training-demo#Arts>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/training-demo>;
+  rdfs:range <https://data.vlaanderen.be/ns/training-demo#Patient> .
+
+foaf:familyName a rdf:Property;
+  rdfs:label "familienaam"@nl .
+
+foaf:givenName a rdf:Property;
+  rdfs:label "voornaam"@nl .
+
+<https://data.vlaanderen.be/ns/training-demo#Arts> a owl:Class;
+  rdfs:label "Arts"@nl;
+  rdfs:comment "Een arts die in het ziekenhuis werkt."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/training-demo>;
+  rdfs:subClassOf foaf:Person .
+
+<https://data.vlaanderen.be/ns/training-demo#Patient> a owl:Class;
+  rdfs:label "Patiënt"@nl;
+  rdfs:comment "Een patiënt die in het ziekenhuis is geregistreerd."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/training-demo>;
+  rdfs:subClassOf foaf:Person .
+
+<https://data.vlaanderen.be/ns/training-demo> a owl:Ontology;
+  rdfs:label "training-demo-voc"@en,
+    "training-demo-voc"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://medewerkerwebsiteurl>;
+      foaf:name "MedewerkerAffiliatie"
+    ];
+    foaf:firstName "MedewerkerVoornaam";
+    foaf:lastName "MedewerkerNaam";
+    foaf:mbox <mailto:medewerkervoornaam.medewerkernaam@medewerkerdomein>
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso foaf:Person,
+    foaf:givenName,
+    foaf:familyName;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://editorwebsiteurl>;
+      foaf:name "EditorAffiliatie"
+    ];
+    foaf:firstName "EditorVoornaam";
+    foaf:lastName "EditorNaam";
+    foaf:mbox <mailto:editorvoornaam.editornaam@editordomein>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://auteurwebsiteurl>;
+      foaf:name "AuteurAffiliatie"
+    ];
+    foaf:firstName "AuteurVoornaam";
+    foaf:lastName "AuteurNaam";
+    foaf:mbox <mailto:auteurvoornaam.auteurnaam@auteurdomein>
+  ] .
