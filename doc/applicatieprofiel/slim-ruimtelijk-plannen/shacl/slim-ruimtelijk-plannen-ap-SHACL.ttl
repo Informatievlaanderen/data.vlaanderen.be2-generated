@@ -29,6 +29,9 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#MetingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#ObservatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#WaarheidsObservatieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#DekkingShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#FormaatShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#InformatietypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#AgentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#InputTypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#TaalStringShape>,
@@ -57,9 +60,17 @@
   ];
   shacl:targetClass <http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#DekkingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://fixme.com#Dekking> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#DirecteLocatieAanduidingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/RuimtelijkPlannen#DirecteLocatieAanduiding> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#FormaatShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://fixme.com#Formaat> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#GeometrieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -80,6 +91,31 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#IdentificatorShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    shacl:datatype rdfs:Literal;
+    shacl:description "String gebruikt om het object uniek te identificeren."@nl;
+    shacl:maxCount 1;
+    shacl:name "identificator"@nl;
+    shacl:path skos:notation
+  ], [
+    shacl:class dc:Agent;
+    shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
+    shacl:maxCount 1;
+    shacl:name "toegekendDoor"@nl;
+    shacl:path dc:creator
+  ], [
+    shacl:datatype xsd:string;
+    shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
+    shacl:maxCount 1;
+    shacl:name "toegekendDoorString"@nl;
+    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
+  ], [
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    shacl:maxCount 1;
+    shacl:name "toegekendOp"@nl;
+    shacl:path dc:issued
+  ];
   shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#IndirecteLocatieAanduidingShape> a shacl:NodeShape;
@@ -93,6 +129,10 @@
     shacl:path <https://data.vlaanderen.be/ns/RuimtelijkPlannen#referentie>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/RuimtelijkPlannen#IndirecteLocatieAanduiding> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#InformatietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://fixme.com#Informatietype> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#InputShape> a shacl:NodeShape;
   shacl:closed false;
@@ -164,6 +204,8 @@
   ], [
     shacl:class <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>;
     shacl:description "Data over de observatie."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "metadata"@nl;
     shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.metadata>
   ], [
@@ -232,16 +274,22 @@
   ], [
     shacl:class <http://www.w3.org/ns/sosa/Procedure>;
     shacl:description "Procedure die gebruikt werd bij het observeren."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "gebruikteProcedure"@nl;
     shacl:path <http://www.w3.org/ns/sosa/usedProcedure>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/RuimtelijkPlannen#RuimtelijkeIndicator>;
     shacl:description "Kenmerk dat men observeert vh geobserveerdObject."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "geobserveerdKenmerk"@nl;
     shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/RuimtelijkPlannen#RuimtelijkObject>;
     shacl:description "Object dat men observeert."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "geobserveerdObject"@nl;
     shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest>
   ], [
@@ -476,6 +524,21 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#TaalStringShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    shacl:datatype xsd:string;
+    shacl:description "Reeks van tekens of karakters."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "string"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#string>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "Middel tot communicatie waarmee met een woordenschat en grammaticaregels een boodschap kan worden overgebracht."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "taal"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#taal>
+  ];
   shacl:targetClass rdf:langString .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#TellingShape> a shacl:NodeShape;
