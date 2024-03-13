@@ -23,12 +23,14 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#MomentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#TemporeleEntiteitShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#PeriodeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#KenmerktypeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#MetadataShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#ClassificatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#TellingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#MetingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#ObservatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#WaarheidsObservatieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#DomeinobjectShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#DekkingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#FormaatShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#InformatietypeShape>,
@@ -42,6 +44,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#LocatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#ObservatieverzamelingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#ObservatieprocedureShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#ProcedureShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#InputShape> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#AgentShape> a shacl:NodeShape;
@@ -67,6 +70,10 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#DirecteLocatieAanduidingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/RuimtelijkPlannen#DirecteLocatieAanduiding> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#DomeinobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#FormaatShape> a shacl:NodeShape;
   shacl:closed false;
@@ -155,6 +162,10 @@
   shacl:closed false;
   shacl:targetClass dc:type .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#KenmerktypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#LocatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass prov:Location .
@@ -201,13 +212,6 @@
     shacl:description "Entiteit die tot de data heeft bijgedragen."@nl;
     shacl:name "medeAuteur"@nl;
     shacl:path dc11:contributor
-  ], [
-    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>;
-    shacl:description "Data over de observatie."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "metadata"@nl;
-    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.metadata>
   ], [
     shacl:datatype xsd:anyURI;
     shacl:description "Waarover de data gaat."@nl;
@@ -292,6 +296,12 @@
     shacl:minCount 1;
     shacl:name "geobserveerdObject"@nl;
     shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest>
+  ], [
+    shacl:class <http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata>;
+    shacl:description "Data over de observatie."@nl;
+    shacl:maxCount 1;
+    shacl:name "metadata"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.metadata>
   ], [
     shacl:class <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any>;
     shacl:description "De waarde van het geobserveerdeKenmerk als resultaat van de Observatie."@nl;
@@ -433,6 +443,10 @@
     shacl:path foaf:givenName
   ];
   shacl:targetClass <http://www.w3.org/ns/person#Person> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#ProcedureShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/sosa/Procedure> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/slim-ruimtelijk-plannen/ontwerpstandaard/2024-01-22#RuimtelijkObjectRelatieShape> a shacl:NodeShape;
   shacl:closed false;
