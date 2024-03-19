@@ -28,12 +28,9 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#VaststellingVergundeToestandShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#VerbintenisShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#VergundeToestandShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#ZaakShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#ZaakhandelingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#PubliekeOrganisatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#DateShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#IIOAIndelingShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#VlaremRubriekShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#JuridischeCategorieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#TijdsduurBeschrijvingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#TijdstipShape>,
@@ -46,7 +43,8 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#DocumentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#KadastraalPatrimoniumperceelShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#KadastraalPlanperceelShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#RuimtelijkeEenheidShape> .
+    <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#RuimtelijkeEenheidShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#ZaakShape> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#AanvraagShape> a shacl:NodeShape;
   shacl:closed false;
@@ -54,9 +52,8 @@
     shacl:class <http://fixme.com#Rechtssubject>;
     shacl:description "Rechtssubject of rechtssubjecten die de aanvraag indient(-en) of namens wie deze wordt ingediend."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "aanvrager"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#aanvrager>
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag> .
 
@@ -71,9 +68,8 @@
     shacl:class <http://fixme.com#Rechtssubject>;
     shacl:description "Partij die het Rechtsmiddel aanwendt."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "verzoekende partij"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verzoekendePartij>
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#AanwendingRechtsmiddel> .
 
@@ -81,14 +77,13 @@
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit>;
-    shacl:description "Verband tussen de Omgevingsactiviteit en de Activiteit gedefinieerd in de Prov-Ontology waarbij enkele standaard attributen overgenomen worden zoals de verantwoordelijke en de start van de activiteit."@nl;
+    shacl:description "Verwijzing naar verwante Activiteiten."@nl;
     shacl:name "activiteit"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#activiteit>
   ], [
     shacl:datatype rdf:langString;
-    shacl:description "De beschrijving van het rechtsfeit."@nl;
+    shacl:description "De beschrijving van de Activiteit."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "beschrijving"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#beschrijving>
   ], [
@@ -101,6 +96,10 @@
     shacl:description "Aanduiding van de plaats waar een Activiteit plaatsvindt, zal vinden, of zou hebben gevonden."@nl;
     shacl:name "locatie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#locatie>
+  ], [
+    shacl:class <http://fixme.com#Rechtssubject>;
+    shacl:description "";
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#rechtssubject>
   ], [
     shacl:class <http://www.w3.org/2006/time#Interval>;
     shacl:description "Aanduiding van het tijdsbestek van de Activiteit."@nl;
@@ -118,7 +117,6 @@
   shacl:property [
     shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "verantwoordelijke"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke>
   ];
@@ -133,13 +131,11 @@
   shacl:property [
     shacl:class <http://www.w3.org/2006/time#Instant>;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "begintijdstip"@nl;
     shacl:path <http://www.w3.org/2006/time#hasBeginning>
   ], [
     shacl:class <http://www.w3.org/2006/time#Instant>;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "eindtijdstip"@nl;
     shacl:path <http://www.w3.org/2006/time#End>
   ];
@@ -203,10 +199,6 @@
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Gebeurtenis> .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#IIOAIndelingShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass skos:Concept .
-
 <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#JuridischWerkShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -223,7 +215,6 @@
     shacl:datatype xsd:date;
     shacl:description "Datum vanaf dewelke het Juridisch Werk rechtskracht krijgt."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "ingangsdatum"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum>
   ], [
@@ -259,14 +250,12 @@
     shacl:class skos:Concept;
     shacl:description "De type van de Juridische Kwalificatie."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "kwalificatietype"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#kwalificatietype>
   ], [
     shacl:class <http://fixme.com#JuridischWerk>;
     shacl:description "Verwijzingen naar Juridische Werken die als ankerpunten voor de kwalificatie dienen."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "kwalificatiewaarde"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#kwalificatiewaarde>
   ];
@@ -336,7 +325,6 @@
     shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
     shacl:description "De Publieke Organisatie bevoegd om zich over de Procedure uit te spreken."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "bevoegde overheid"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#bevoegdeOverheid>
   ], [
@@ -353,7 +341,6 @@
     shacl:class <http://www.w3.org/2006/time#Interval>;
     shacl:description "Termijn binnen dewelke de Procedure toegepast mag worden."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "termijn"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#termijn>
   ];
@@ -376,9 +363,8 @@
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtscollege>;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "rechtscollege"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#rechtscollege>
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#RechterlijkeUitspraak> .
 
@@ -415,14 +401,12 @@
     shacl:class <http://www.w3.org/2006/time#Interval>;
     shacl:description "Termijn binnen dewelke het Rechtsmiddel aangewend mag worden."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "aanwendingstermijn"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#aanwendingsermijn>
   ], [
     shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
     shacl:description "De Publieke Organisatie bevoegd om zich over het Rechtsmiddel uit te spreken."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "bevoegde overheid"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#bevoegdeOverheid>
   ], [
@@ -452,8 +436,6 @@
   ], [
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "De identificator van de Ruimtelijke Eenheid."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "identificator"@nl;
     shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
@@ -478,7 +460,6 @@
     shacl:class skos:Concept;
     shacl:description "De aard van een ruimtelijke eenheid."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "type"@nl;
     shacl:path <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.type>
   ];
@@ -493,19 +474,16 @@
   shacl:property [
     shacl:datatype rdf:langString;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "tekstbeschrijving"@nl;
     shacl:path <https://data.vlaanderen.be/ns/generiek#tekstbeschrijving>
   ], [
     shacl:class <http://www.w3.org/2006/time#TemporalUnit>;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "tijdseenheid"@nl;
     shacl:path <http://www.w3.org/2006/time#unitType>
   ], [
     shacl:datatype xsd:integer;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "waarde"@nl;
     shacl:path <http://www.w3.org/2006/time#numericDuration>
   ];
@@ -535,14 +513,12 @@
     shacl:class <http://www.w3.org/2006/time#Instant>;
     shacl:description "Tijdstip van vaststelling."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "vaststellingtijdstip"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#vaststellingTijdstip>
   ], [
     shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
     shacl:description "De Publieke Organisatie verantwoordelijk voor het bepalen van de Vergunde Toestand."@nl;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "verantwoordelijke"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke>
   ];
@@ -554,18 +530,24 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#VergundeToestandShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling>;
+    shacl:name "normatieve bepaling"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#normatieveBepaling>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#VaststellingVergundeToestand>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "vaststelling vergunde toestand"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#vaststellingVergundeToestand>
+  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#VergundeToestand> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#VlaremRubriekShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass skos:Concept .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#ZaakShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     shacl:class <http://fixme.com#JuridischWerk>;
     shacl:maxCount 1;
-    shacl:minCount 1;
     shacl:name "aanleiding"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#aanleiding>
   ], [
@@ -583,12 +565,12 @@
     shacl:name "rechtshandeling"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#rechtshandeling>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaak>;
+    shacl:class <https://dbpedia.org/ontology/Case>;
     shacl:description "Verwijzingen naar verwante Zaken."@nl;
     shacl:name "zaak"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#zaak>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaak> .
+  shacl:targetClass <https://dbpedia.org/ontology/Case> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18#ZaakhandelingShape> a shacl:NodeShape;
   shacl:closed false;
@@ -606,7 +588,7 @@
     shacl:name "verantwoordelijke"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaak>;
+    shacl:class <https://dbpedia.org/ontology/Case>;
     shacl:maxCount 1;
     shacl:name "zaak"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#zaak>
