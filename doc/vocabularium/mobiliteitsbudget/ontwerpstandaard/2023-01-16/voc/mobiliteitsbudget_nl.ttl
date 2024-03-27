@@ -1,7 +1,6 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -9,23 +8,47 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://fixme.com#Segment> a owl:Class;
-  rdfs:label "Segment"@nl;
-  rdfs:comment "Gemeenschappelijke eigenschappen van personen"@nl,
-    "Soorten segment waartoe een agent behoord"@nl;
-  rdfs:isDefinedBy <http://fixme.com> .
+<http://fixme.com#Mobiliteitsbudget.type> a owl:ObjectProperty;
+  rdfs:label "type"@nl;
+  rdfs:comment "Type oorsprong van budget"@nl;
+  rdfs:domain <http://fixme.com#Mobiliteitsbudget>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#MobiliteitsbudgetType> .
 
-<http://fixme.com#aantal> a rdf:Property;
+<http://fixme.com#Segment.type> a owl:ObjectProperty;
+  rdfs:label "type"@nl;
+  rdfs:comment "Het type segment."@nl;
+  rdfs:domain <http://fixme.com#Segment>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#SegmentType> .
+
+<http://fixme.com#Segment.waarde> a owl:DatatypeProperty;
+  rdfs:label "waarde"@nl;
+  rdfs:comment "De invulling van de waarde van het SegmentType."@nl;
+  rdfs:domain <http://fixme.com#Segment>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range xsd:string .
+
+<http://fixme.com#Voorwaarde.segment> a owl:ObjectProperty;
+  rdfs:label "segment"@nl;
+  <http://purl.org/vocab/vann/usageNote> "De segmenten die het mobiliteitsbudget mogen gebruiken"@nl;
+  rdfs:comment "Soorten segment waartoe een agent behoord"@nl;
+  rdfs:domain <http://fixme.com#Voorwaarde>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range schemas:audienceType .
+
+<http://fixme.com#aantal> a owl:DatatypeProperty;
   rdfs:label "aantal"@nl;
   <http://purl.org/vocab/vann/usageNote> "Bepaalde kortingen zijn maar een aantal keer geldig. Deze waarde geeft weer hoeveel keer het gebruikt mag worden"@nl;
   rdfs:comment "Aantal reizen dat men met het Vervoersbewijs kan afleggen."@nl;
-  rdfs:domain <http://fixme.com#Voorwaarden>;
-  rdfs:isDefinedBy <http://fixme.com> .
+  rdfs:domain <http://fixme.com#Voorwaarde>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range xsd:integer .
 
 <http://fixme.com#beschrijving> a owl:DatatypeProperty;
   rdfs:label "beschrijving"@nl;
   rdfs:comment "Beschrijving van de voorwaarde"@nl;
-  rdfs:domain <http://fixme.com#Voorwaarden>;
+  rdfs:domain <http://fixme.com#Voorwaarde>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range rdf:langString .
 
@@ -53,7 +76,7 @@
   rdfs:label "dienstverlenertype"@nl;
   <http://purl.org/vocab/vann/usageNote> "Het mobiliteitsbudget mag maar voor 1 of meerdere dienstverlenertypes gebruikt worden."@nl;
   rdfs:comment "Aard van de dienstverlenertype"@nl;
-  rdfs:domain <http://fixme.com#Voorwaarden>;
+  rdfs:domain <http://fixme.com#Voorwaarde>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range skos:Concept .
 
@@ -65,8 +88,8 @@
 
 <http://fixme.com#mobiliteitsbudget> a owl:ObjectProperty;
   rdfs:label "Mobiliteitsbudget"@nl;
-  rdfs:domain <http://fixme.com#Voorwaarden>,
-    <http://fixme.com#Consumptie>;
+  rdfs:domain <http://fixme.com#Consumptie>,
+    <http://fixme.com#Voorwaarde>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#Mobiliteitsbudget> .
 
@@ -74,7 +97,7 @@
   rdfs:label "mobiliteitsdienst"@nl;
   <http://purl.org/vocab/vann/usageNote> "Enkel deze diensten mogen gebruikt worden met het mobiliteitsbudget."@nl;
   rdfs:comment "Dienstverlening die verplaatsingen van Personen tussen Locaties mogelijk maakt."@nl;
-  rdfs:domain <http://fixme.com#Voorwaarden>;
+  rdfs:domain <http://fixme.com#Voorwaarde>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst> .
 
@@ -85,21 +108,11 @@
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range rdf:langString .
 
-<http://fixme.com#reisweg> a owl:ObjectProperty;
-  rdfs:label "reisweg"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Opvolging van Locaties waarin het mobiliteitsbudget geldig is."@nl;
-  rdfs:comment "Opeenvolging van Locaties die men tijdens de Reis wil aandoen."@nl;
-  rdfs:domain <http://fixme.com#Voorwaarden>;
-  rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range prov:Location .
-
 <http://fixme.com#segment> a owl:ObjectProperty;
   rdfs:label "segment"@nl;
-  <http://purl.org/vocab/vann/usageNote> "De segmenten die het mobiliteitsbudget mogen gebruiken"@nl,
-    "Nog aanvullen, is specifiek voor Mobiliteitsbudget"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Nog aanvullen, is specifiek voor Mobiliteitsbudget"@nl;
   rdfs:comment "Soorten segment waartoe een agent behoord"@nl;
-  rdfs:domain <http://fixme.com#Voorwaarden>,
-    dc:Agent;
+  rdfs:domain dc:Agent;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range schemas:audienceType .
 
@@ -107,15 +120,8 @@
   rdfs:label "specificatie"@nl;
   <http://purl.org/vocab/vann/usageNote> "Voorbeelden zijn: kortingmechanismes"@nl;
   rdfs:comment "Document waar extra specificaties in omschreven staan"@nl;
-  rdfs:domain <http://fixme.com#Voorwaarden>;
+  rdfs:domain <http://fixme.com#Voorwaarde>;
   rdfs:isDefinedBy <http://fixme.com> .
-
-<http://fixme.com#type> a owl:ObjectProperty;
-  rdfs:label "type"@nl;
-  rdfs:comment "Type oorsprong van budget"@nl;
-  rdfs:domain <http://fixme.com#Mobiliteitsbudget>;
-  rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <http://fixme.com#MobiliteitsbudgetType> .
 
 <http://fixme.com#vervoersbewijs> a owl:ObjectProperty;
   rdfs:label "vervoersbewijs"@nl;
@@ -124,11 +130,11 @@
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range schemas:Ticket .
 
-<http://fixme.com#voorwaarden> a owl:ObjectProperty;
-  rdfs:label "Voorwaarden"@nl;
+<http://fixme.com#voorwaarde> a owl:ObjectProperty;
+  rdfs:label "Voorwaarde"@nl;
   rdfs:domain <http://fixme.com#Mobiliteitsbudget>;
   rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <http://fixme.com#Voorwaarden> .
+  rdfs:range <http://fixme.com#Voorwaarde> .
 
 <http://fixme.com#waarde> a owl:ObjectProperty;
   rdfs:label "waarde"@nl;
@@ -154,6 +160,11 @@
   rdfs:comment "Aard van het mobiliteitsbudget"@nl;
   rdfs:isDefinedBy <http://fixme.com> .
 
+<http://fixme.com#SegmentType> a owl:Class;
+  rdfs:label "Segment"@nl;
+  rdfs:comment "Soorten segment waartoe een agent behoord"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
 <http://fixme.com#Waardetype> a owl:Class;
   rdfs:label "Waardetype"@nl;
   rdfs:comment "Soort van waardemiddel om vervoerbewijs te financieren"@nl;
@@ -161,6 +172,9 @@
 
 dc:date a rdf:Property;
   rdfs:label "periode"@nl .
+
+schema:itinerary a rdf:Property;
+  rdfs:label "reisweg"@nl .
 
 schemas:MonetaryAmount a rdf:Property;
   rdfs:label "waarde"@nl .
@@ -174,6 +188,11 @@ schemas:endDate a rdf:Property;
 schemas:startDate a rdf:Property;
   rdfs:label "begindatum"@nl .
 
+<http://fixme.com#Segment> a owl:Class;
+  rdfs:label "Segment"@nl;
+  rdfs:comment "Gemeenschappelijke eigenschappen van personen"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
 schemas:QuantitativeValue a rdf:Property;
   rdfs:label "waardetype"@nl .
 
@@ -181,7 +200,7 @@ schemas:QuantitativeValue a rdf:Property;
   rdfs:label "Mobiliteitsbudget"@nl;
   rdfs:comment "Het budget dat je als organisatie aan een Agent toekent om te besteden aan mobiliteitsdiensten in eender welke vorm."@nl;
   rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:subClassOf <http://fixme.com#Incentive> .
+  rdfs:subClassOf <http://fixme.com#Beloning> .
 
 <http://fixme.com#Consumptie> a owl:Class;
   rdfs:label "Consumptie"@nl;
@@ -189,10 +208,10 @@ schemas:QuantitativeValue a rdf:Property;
   rdfs:comment "Het besteden aan of het gebruik van goederen en diensten voor behoeftebevrediging."@nl;
   rdfs:isDefinedBy <http://fixme.com> .
 
-<http://fixme.com#Voorwaarden> a owl:Class;
-  rdfs:label "Voorwaarden"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Voorwaarden die van toepassing zijn op het mobiliteitsbudget."@nl;
-  rdfs:comment "Voorwaarden verbonden aan het budget"@nl;
+<http://fixme.com#Voorwaarde> a owl:Class;
+  rdfs:label "Voorwaarde"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Voorwaarde die van toepassing zijn op het mobiliteitsbudget."@nl;
+  rdfs:comment "Voorwaarde verbonden aan het budget"@nl;
   rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com> a owl:Ontology;
@@ -200,29 +219,9 @@ schemas:QuantitativeValue a rdf:Property;
     "mobiliteitsbudget"@nl;
   dc:contributor [
     a foaf:Person;
-    schema:affiliation [foaf:name "Stad Hasselt"];
-    foaf:firstName "Bea";
-    foaf:lastName "Cleeren"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Stad Hasselt"];
-    foaf:firstName "Yannick";
-    foaf:lastName "Fabbro"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "MyCSM"];
-    foaf:firstName "Niels";
-    foaf:lastName "Kelchtermans"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Anyways"];
-    foaf:firstName "Wim";
-    foaf:lastName "Michiels"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Stad Leuven"];
-    foaf:firstName "Eli";
-    foaf:lastName "Nomes"
+    schema:affiliation [foaf:name "Departement Mobiliteit & Openbare Werken"];
+    foaf:firstName "Erika";
+    foaf:lastName "Verstrepen"
   ], [
     a foaf:Person;
     schema:affiliation [foaf:name "Groepering Taxi ondernemingen"];
@@ -230,9 +229,29 @@ schemas:QuantitativeValue a rdf:Property;
     foaf:lastName "Steenberghen"
   ], [
     a foaf:Person;
-    schema:affiliation [foaf:name "Departement Mobiliteit & Openbare Werken"];
-    foaf:firstName "Erika";
-    foaf:lastName "Verstrepen"
+    schema:affiliation [foaf:name "Stad Leuven"];
+    foaf:firstName "Eli";
+    foaf:lastName "Nomes"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Anyways"];
+    foaf:firstName "Wim";
+    foaf:lastName "Michiels"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "MyCSM"];
+    foaf:firstName "Niels";
+    foaf:lastName "Kelchtermans"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Stad Hasselt"];
+    foaf:firstName "Yannick";
+    foaf:lastName "Fabbro"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Stad Hasselt"];
+    foaf:firstName "Bea";
+    foaf:lastName "Cleeren"
   ];
   dc:issued "TODO";
   dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
@@ -242,22 +261,23 @@ schemas:QuantitativeValue a rdf:Property;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso dc:date,
-    schemas:MonetaryAmount,
-    schemas:QuantitativeValue,
-    schemas:dateReceived,
+  rdfs:seeAlso schemas:startDate,
     schemas:endDate,
-    schemas:startDate;
+    schemas:dateReceived,
+    schemas:QuantitativeValue,
+    schemas:MonetaryAmount,
+    schema:itinerary,
+    dc:date;
   <http://www.w3.org/2001/02pd/rec54#editor> [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Digitaal Vlaanderen"];
-    foaf:firstName "Yaron";
-    foaf:lastName "Dassonneville";
-    foaf:mbox <mailto:yaron.dassonneville@pwc.com>
-  ], [
     a foaf:Person;
     schema:affiliation [foaf:name "PwC"];
     foaf:firstName "Jef";
     foaf:lastName "Liekens";
     foaf:mbox <mailto:jef.liekens@pwc.com>
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Digitaal Vlaanderen"];
+    foaf:firstName "Yaron";
+    foaf:lastName "Dassonneville";
+    foaf:mbox <mailto:yaron.dassonneville@pwc.com>
   ] .
