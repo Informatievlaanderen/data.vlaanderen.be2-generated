@@ -1,0 +1,119 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.europa.eu/m8g/GenericDate> a rdfs:Class;
+  rdfs:label "Generic Datetime"@nl .
+
+skos:Concept a rdfs:Class;
+  rdfs:label "Contract Type"@nl .
+
+<http://fixme.com#academischeJaar> a owl:DatatypeProperty;
+  rdfs:label "academische jaar"@nl;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <http://fixme.com#Inschrijvingsbewijs>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range xsd:gYear .
+
+<http://fixme.com#contractType> a owl:ObjectProperty;
+  rdfs:label "contract type"@nl;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <http://fixme.com#Inschrijvingsbewijs>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range skos:Concept .
+
+<http://fixme.com#identificator> a owl:ObjectProperty;
+  rdfs:label "identificator"@nl;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <http://fixme.com#Studentenkaart>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
+
+<http://fixme.com#inschrijvingsDatum> a owl:DatatypeProperty;
+  rdfs:label "inschrijvings datum"@nl;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <http://fixme.com#Inschrijvingsbewijs>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range xsd:dateTime .
+
+<http://fixme.com#leeractiviteiten> a owl:ObjectProperty;
+  rdfs:label "leeractiviteiten"@nl;
+  rdfs:comment "Leeractiviteiten waarvoor de student heeft zich ingeschreven"@nl;
+  rdfs:domain <http://fixme.com#Inschrijvingsbewijs>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://data.europa.eu/snb/model/elm/LearningActivity> .
+
+<http://fixme.com#uitgaveDatum> a owl:DatatypeProperty;
+  rdfs:label "uitgavedatum"@nl;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <http://fixme.com#Studentenkaart>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range xsd:dateTime .
+
+<http://fixme.com#vervalDatum> a owl:DatatypeProperty;
+  rdfs:label "vervaldatum"@nl;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <http://fixme.com#Studentenkaart>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range xsd:dateTime .
+
+<http://fixme.com#Studentenkaart> a owl:Class;
+  rdfs:label "Studentenkaart"@nl;
+  rdfs:comment "TODO"@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/leercredential#Leercredential> .
+
+<http://fixme.com#Inschrijvingsbewijs> a owl:Class;
+  rdfs:label "Inschrijvingsbewijs"@nl;
+  rdfs:comment "Een inschrijvingsbewijs van een student"@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/leercredential#Leercredential> .
+
+<http://fixme.com> a owl:Ontology;
+  rdfs:label "studentenattesten-voc"@en,
+    "studentenattesten-voc"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://medewerkerwebsiteurl>;
+      foaf:name "MedewerkerAffiliatie"
+    ];
+    foaf:firstName "MedewerkerVoornaam";
+    foaf:lastName "MedewerkerNaam";
+    foaf:mbox <mailto:medewerkervoornaam.medewerkernaam@medewerkerdomein>
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso <http://data.europa.eu/m8g/GenericDate>,
+    skos:Concept;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://editorwebsiteurl>;
+      foaf:name "EditorAffiliatie"
+    ];
+    foaf:firstName "EditorVoornaam";
+    foaf:lastName "EditorNaam";
+    foaf:mbox <mailto:editorvoornaam.editornaam@editordomein>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://auteurwebsiteurl>;
+      foaf:name "AuteurAffiliatie"
+    ];
+    foaf:firstName "AuteurVoornaam";
+    foaf:lastName "AuteurNaam";
+    foaf:mbox <mailto:auteurvoornaam.auteurnaam@auteurdomein>
+  ] .
