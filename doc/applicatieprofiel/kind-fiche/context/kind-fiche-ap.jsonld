@@ -65,7 +65,6 @@
       "@id": "http://fixme.com#type"
     },
     "BeperkingType": "http://fixme.com#BeperkingType",
-    "BloedgroepType": "http://fixme.com#BloedgroepType",
     "Contactinfo": "http://data.europa.eu/m8g/ContactPoint",
     "Contactinfo.aanschrijfvorm": {
       "@id": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
@@ -178,6 +177,7 @@
       "@type": "@id"
     },
     "GeregistreerdeOrganisatie.registratie": {
+      "@container": "@set",
       "@id": "http://www.w3.org/ns/regorg#registration",
       "@type": "@id"
     },
@@ -186,27 +186,23 @@
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Geslacht": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Inschriijving": "http://fixme.com#Inschriijving",
+    "Inschriijving.dateTime": {
+      "@id": "http://fixme.com#inschrijvingsdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
     "JuridischWerk": "http://fixme.com#JuridischWerk",
+    "JuridischWerk.dateTime": {
+      "@id": "http://fixme.com#ingangsdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
     "JuridischWerk.document": {
       "@container": "@set",
       "@id": "http://fixme.com#document",
       "@type": "@id"
     },
-    "JuridischWerk.einde": {
-      "@id": "http://fixme.com#einde",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "JuridischWerk.start": {
-      "@id": "http://fixme.com#start",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
     "Jurisidictie": "http://fixme.com#Jurisidictie",
     "KenmerkType": "http://fixme.com#KenmerkType",
-    "KindInWording": "http://fixme.com#KindInWording",
-    "KindInWording.geplandeGeboortedatum": {
-      "@id": "http://fixme.com#geplandeGeboortedatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
     "Medicatie": "http://fixme.com#Medicatie",
     "Medicatie.bijwerking": {
       "@id": "http://fixme.com#bijwerking"
@@ -350,14 +346,17 @@
       "@id": "http://purl.org/dc/terms/description",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "Participatie.periode": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/dienst#periode",
+    "Participatie.inschrijving": {
+      "@id": "https://data.vlaanderen.be/ns/dienst#inschrijving",
       "@type": "@id"
     },
     "Participatie.rol": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/role",
+      "@type": "@id"
+    },
+    "Participatie.uitschrijving": {
+      "@id": "https://data.vlaanderen.be/ns/dienst#uitschrijving",
       "@type": "@id"
     },
     "ParticipatieRol": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -381,6 +380,10 @@
     "Persoon.contactinfo": {
       "@id": "http://schema.org/contactPoint",
       "@type": "@id"
+    },
+    "Persoon.geboorteDatum": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#geboorteDatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
     "Persoon.geboortenaam": {
       "@id": "http://www.w3.org/ns/person#birthName",
@@ -407,6 +410,10 @@
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/persoon#socioEconomishKenmerk",
       "@type": "@id"
+    },
+    "Persoon.verwachteGeboortedatum": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#verwachteGeboortedatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
     "Persoon.volledigeNaam": {
       "@id": "https://data.vlaanderen.be/ns/persoon#volledigeNaam",
@@ -443,11 +450,6 @@
       "@type": "@id"
     },
     "SpecifiekeBehoefte": "http://fixme.com#SpecifiekeBehoefte",
-    "SpecifiekeBehoefte.OmgaanMetBehoefte": {
-      "@container": "@set",
-      "@id": "http://fixme.com#OmgaanMetBehoefte",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
     "SpecifiekeBehoefte.dagelijkseRoutines": {
       "@container": "@set",
       "@id": "http://fixme.com#dagelijkseRoutines",
@@ -458,40 +460,91 @@
       "@id": "http://fixme.com#dieetvoorkeuren",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
+    "SpecifiekeBehoefte.omgaanMetBehoefte": {
+      "@container": "@set",
+      "@id": "http://fixme.com#omgaanMetBehoefte",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
     "SpecifiekeBehoefte.zorgnoden": {
       "@container": "@set",
       "@id": "http://fixme.com#zorgnoden",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "Taal": "http://fixme.com#Taal",
-    "Taal.moedertaal": {
-      "@id": "http://fixme.com#moedertaal",
-      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    "Taal.taal": {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "Taal.taalvaardigheid": {
-      "@container": "@set",
-      "@id": "http://fixme.com#taalvaardigheid",
-      "@type": "@id"
-    },
-    "Taal.voorkeurstaal": {
-      "@id": "http://fixme.com#voorkeurstaal",
-      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
+    "Taal": "http://fixme.com#Taalvaardigheid",
     "TaalCode": "http://fixme.com#TaalCode",
+    "TaalGebruikType": "http://fixme.com#TaalGebruikType",
     "TaalNiveauType": "http://fixme.com#TaalNiveauType",
+    "Taalniveau": "http://fixme.com#Taalniveau",
     "Taalvaardigheid": "http://fixme.com#Taalvaardigheid",
     "Taalvaardigheid.niveau": {
       "@id": "http://fixme.com#niveau",
+      "@type": "@id"
+    },
+    "Taalvaardigheid.taal": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Taalvaardigheid.taalvaardigheid": {
+      "@container": "@set",
+      "@id": "http://fixme.com#taalgebruik",
       "@type": "@id"
     },
     "Taalvaardigheid.type": {
       "@id": "http://fixme.com#type",
       "@type": "@id"
     },
-    "TaalvaardigheidType": "http://fixme.com#TaalvaardigheidType",
+    "Tijdschema": "https://schema.org/Schedule",
+    "Tijdschema.aantal": {
+      "@id": "https://schema.org/repeatCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Tijdschema.duur": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#duur",
+      "@type": "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "Tijdschema.einddatum": {
+      "@id": "https://schema.org/endDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Tijdschema.eindtijd": {
+      "@id": "https://schema.org/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "Tijdschema.frequentie": {
+      "@id": "https://schema.org/repeatFrequency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Tijdschema.perDag": {
+      "@container": "@set",
+      "@id": "https://schema.org/byDay",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Tijdschema.perDagVanDeMaand": {
+      "@container": "@set",
+      "@id": "https://schema.org/byMonthDay",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Tijdschema.perMaand": {
+      "@container": "@set",
+      "@id": "https://schema.org/byMonth",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Tijdschema.perSetpositie": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#perSetpositie",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Tijdschema.startdatum": {
+      "@id": "https://schema.org/startDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Tijdschema.starttijd": {
+      "@id": "https://schema.org/startTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "Tijdschema.uitzonderingsdatum": {
+      "@container": "@set",
+      "@id": "https://schema.org/exceptDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
     "ToedieningType": "http://fixme.com#ToedieningType",
     "Uitgangregeling": "http://fixme.com#Uitgangregeling",
     "Uitgangregeling.ophaalregeling": {
@@ -503,6 +556,11 @@
       "@container": "@set",
       "@id": "http://fixme.com#zelfstandigeVerlating",
       "@type": "@id"
+    },
+    "Uitschrijving": "http://fixme.com#Uitschrijving",
+    "Uitschrijving.dateTime": {
+      "@id": "http://fixme.com#uitschrijvingsdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
     "Vestiging": "http://www.w3.org/ns/org#Site",
     "Vestiging.vestigingsadres": {
