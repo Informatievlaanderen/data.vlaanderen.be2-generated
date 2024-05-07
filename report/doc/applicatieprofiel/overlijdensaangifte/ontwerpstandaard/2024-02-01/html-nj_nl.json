@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/742e410bf28774fac97a095d33a90cb5f49749f6",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/742e410bf28774fac97a095d33a90cb5f49749f6/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/tree/76ce9ea2778630717b701afb97eb854c49729a0a",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/blob/76ce9ea2778630717b701afb97eb854c49729a0a/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-overlijdensaangifte/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/standaard-in-ontwikkeling/applicatieprofiel-overlijdensaangifte.html",
     "usesVocs": [],
@@ -215,7 +215,7 @@
               }
             }
           ],
-          "cardinality": "0..1",
+          "cardinality": "0..3",
           "codelist_uri": "",
           "rawTags": {
             "ap-definition-nl": "De oorzaken die niet rechtstreeks tot het Overlijden hebben geleid maar hierbij wel hebben toegedragen.",
@@ -2545,52 +2545,6 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/dienst#Participatie.agent",
-          "name": "agent",
-          "sort": "Agent",
-          "label": {
-            "nl": "Agent"
-          },
-          "description": {
-            "nl": "Referentie naar verbonden klasse."
-          },
-          "usage": {
-            "nl": ""
-          },
-          "domain": [
-            {
-              "EA-Name": "Participatie",
-              "uri": "http://data.europa.eu/m8g/Participation"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "Agent",
-              "range_uri": "http://purl.org/dc/terms/Agent"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Agent",
-              "range_puri": "http://purl.org/dc/terms/Agent",
-              "range_label": {
-                "nl": "Agent"
-              }
-            }
-          ],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "",
-            "ap-label-nl": "",
-            "definition-nl": "",
-            "ap-definition-nl": "",
-            "usageNote-nl": "",
-            "ap-usageNote-nl": "",
-            "package": ""
-          }
-        },
-        {
           "uri": "http://purl.org/dc/terms/description",
           "name": "beschrijving",
           "sort": "beschrijving",
@@ -2828,7 +2782,48 @@
         "ap-label-nl": "Agent",
         "definition-nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."
       },
-      "properties": []
+      "properties": [
+        {
+          "uri": "http://data.europa.eu/m8g/playsRole",
+          "name": "speeltRol",
+          "sort": "speelt rol",
+          "label": {
+            "nl": "speelt rol"
+          },
+          "description": {
+            "nl": "Participatie van de agent (aan een publieke dienstverlening)."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Agent",
+              "uri": "http://purl.org/dc/terms/Agent"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Participatie",
+              "range_uri": "http://data.europa.eu/m8g/Participation"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Participatie",
+              "range_puri": "http://data.europa.eu/m8g/Participation",
+              "range_label": {
+                "nl": "Participatie"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "speelt rol",
+            "ap-definition-nl": "Participatie van de agent (aan een publieke dienstverlening).",
+            "uri": "http://data.europa.eu/m8g/playsRole"
+          }
+        }
+      ]
     },
     {
       "uri": "http://purl.org/vocab/bio/0.1/Event",
@@ -3072,7 +3067,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "ap-definition-nl": "Linkt een bepaalde consumptie van een publieke dienstverlening (een transactie) met het product uit het dienstverleningsregister.",
@@ -3388,7 +3383,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "",
@@ -3480,7 +3475,7 @@
               }
             }
           ],
-          "cardinality": "",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "ap-label-nl": "",
@@ -3761,6 +3756,46 @@
           }
         },
         {
+          "uri": "http://data.europa.eu/m8g/hasParticipation",
+          "name": "heeftParticipatie",
+          "sort": "heeft participatie",
+          "label": {
+            "nl": "heeft participatie"
+          },
+          "description": {
+            "nl": "Participatie (van een agent) aan de publieke dienstverlening."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "PubliekeDienstverlening (Consumptie)",
+              "uri": "http://purl.org/vocab/cpsv#PublicService"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Participatie",
+              "range_uri": "http://data.europa.eu/m8g/Participation"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Participatie",
+              "range_puri": "http://data.europa.eu/m8g/Participation",
+              "range_label": {
+                "nl": "Participatie"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "uri": "http://data.europa.eu/m8g/hasParticipation",
+            "ap-definition-nl": "Participatie (van een agent) aan de publieke dienstverlening.",
+            "ap-label-nl": "heeft participatie"
+          }
+        },
+        {
           "uri": "http://data.europa.eu/m8g/hasCost",
           "name": "kost",
           "sort": "kost",
@@ -4015,6 +4050,49 @@
             "ap-definition-nl": "Verwijst naar de overlijdensgegevens vd persoon.",
             "label-nl": "heeft overlijden",
             "uri": "https://data.vlaanderen.be/ns/persoon#heeftOverlijden"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/persoon#heeftInwonerschap",
+          "name": "heeftInwonerschap",
+          "sort": "heeft inwonerschap",
+          "label": {
+            "nl": "heeft inwonerschap"
+          },
+          "description": {
+            "nl": "Inwonerschap vd persoon."
+          },
+          "usage": {
+            "nl": "De entiteit inwonerschap beschrijft het inwonerschap in meer detail (oa de jurisdictie waarbinnen het gedefinieerd is)."
+          },
+          "domain": [
+            {
+              "EA-Name": "Persoon",
+              "uri": "http://www.w3.org/ns/person#Person"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Inwonerschap",
+              "range_uri": "https://data.vlaanderen.be/ns/persoon#Inwonerschap"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Inwonerschap",
+              "range_puri": "https://data.vlaanderen.be/ns/persoon#Inwonerschap",
+              "range_label": {
+                "nl": "Inwonerschap"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Inwonerschap vd persoon.",
+            "ap-label-nl": "heeft inwonerschap",
+            "ap-usageNote-nl": "De entiteit inwonerschap beschrijft het inwonerschap in meer detail (oa de jurisdictie waarbinnen het gedefinieerd is).",
+            "uri": "https://data.vlaanderen.be/ns/persoon#heeftInwonerschap"
           }
         },
         {
@@ -4361,52 +4439,6 @@
             "ap-definition-nl": "Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie.",
             "definition-nl": "Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie.",
             "usageNote-nl": "Ook wel familienaam genoemd omdat de achternaam een familiale verwantschap aanduidt."
-          }
-        },
-        {
-          "uri": "http://www.w3.org/ns/person#patronymicName",
-          "name": "patroniem",
-          "sort": "patroniem",
-          "label": {
-            "nl": "patroniem"
-          },
-          "description": {
-            "nl": "Achternaam gebaseerd op de voornaam vd vader ve persoon."
-          },
-          "usage": {
-            "nl": "Bv in Ijsland: Magnusdottir (dochter van Magnus)."
-          },
-          "domain": [
-            {
-              "EA-Name": "Persoon",
-              "uri": "http://www.w3.org/ns/person#Person"
-            }
-          ],
-          "range": [
-            {
-              "range_label": "String",
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "http://www.w3.org/2001/XMLSchema#string",
-              "range_puri": "http://www.w3.org/2001/XMLSchema#string",
-              "range_label": {
-                "nl": "String"
-              }
-            }
-          ],
-          "cardinality": "0..1",
-          "codelist_uri": "",
-          "rawTags": {
-            "ap-usageNote-nl": "Bv in Ijsland: Magnusdottir (dochter van Magnus).",
-            "uri": "http://www.w3.org/ns/person#patronymicName",
-            "label-nl": "patroniem",
-            "ap-definition-nl": "Achternaam gebaseerd op de voornaam vd vader ve persoon.",
-            "ap-label-nl": "patroniem",
-            "definition-nl": "Achternaam gebaseerd op de voornaam vd vader ve persoon.",
-            "usageNote-nl": "Bv in Ijsland: Magnusdottir (dochter van Magnus)."
           }
         },
         {
@@ -6573,7 +6605,7 @@
               }
             }
           ],
-          "cardinality": "0..1",
+          "cardinality": "0..*",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "apgarscore",
@@ -7346,6 +7378,67 @@
       ]
     },
     {
+      "uri": "https://data.vlaanderen.be/ns/persoon#Inwonerschap",
+      "name": "Inwonerschap",
+      "label": {
+        "nl": "Inwonerschap"
+      },
+      "sort": "Inwonerschap",
+      "description": {
+        "nl": "Het feit dat een persoon verblijf houdt in een plaats of land."
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Het feit dat een persoon verblijf houdt in een plaats of land.",
+        "definition-nl": "Het feit dat een Persoon verblijf houdt in een plaats of land.",
+        "label-nl": "Inwonerschap",
+        "uri": "https://data.vlaanderen.be/ns/persoon#Inwonerschap"
+      },
+      "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/persoon#heeftVerblijfplaats",
+          "name": "heeftVerblijfplaats",
+          "sort": "heeft verblijfplaats",
+          "label": {
+            "nl": "heeft verblijfplaats"
+          },
+          "description": {
+            "nl": "Plaats waar een persoon verblijft."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Inwonerschap",
+              "uri": "https://data.vlaanderen.be/ns/persoon#Inwonerschap"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Verblijfplaats",
+              "range_uri": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Verblijfplaats",
+              "range_puri": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats",
+              "range_label": {
+                "nl": "Verblijfplaats"
+              }
+            }
+          ],
+          "cardinality": "0..*",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Plaats waar een persoon verblijft.",
+            "definition-nl": "Plaats waar een persoon verblijft.",
+            "label-nl": "heeft verblijfplaats"
+          }
+        }
+      ]
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/persoon#Overlijden",
       "name": "Overlijden",
       "label": {
@@ -7619,6 +7712,89 @@
             "ap-usageNote-nl": "",
             "package": ""
           }
+        }
+      ]
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats",
+      "name": "Verblijfplaats",
+      "label": {
+        "nl": "Verblijfplaats"
+      },
+      "sort": "Verblijfplaats",
+      "description": {
+        "nl": "Plaats waar een persoon al dan niet tijdelijk woont of logeert."
+      },
+      "usage": {},
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Plaats waar een persoon al dan niet tijdelijk woont of logeert.",
+        "definition-nl": "Plaats waar een Persoon al dan niet tijdelijk woont of logeert.",
+        "label-nl": "Verblijfplaats",
+        "uri": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats"
+      },
+      "properties": [
+        {
+          "uri": "https://data.vlaanderen.be/ns/persoon#verblijfsadres",
+          "name": "verblijfsadres",
+          "sort": "verblijfsadres",
+          "label": {
+            "nl": "verblijfsadres"
+          },
+          "description": {
+            "nl": "Plaats waar een persoon al dan niet tijdelijk woont of logeert."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Verblijfplaats",
+              "uri": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats"
+            }
+          ],
+          "range": [],
+          "scopedrange": [],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-definition-nl": "Plaats waar een persoon al dan niet tijdelijk woont of logeert.",
+            "ap-usageNote-nl": " ",
+            "definition-nl": "Adres vd Verblijfplaats.",
+            "label-nl": "verblijfsadres"
+          }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/persoon#type",
+          "name": "",
+          "sort": "",
+          "label": {},
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Verblijfplaats",
+              "uri": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "TaalString",
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_puri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+              "range_label": {
+                "nl": "TaalString"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {}
         }
       ]
     },
@@ -9157,6 +9333,15 @@
     },
     {
       "role": "C",
+      "first_name": "Maarten",
+      "last_name": "Van der Biest",
+      "affiliation": {
+        "name": "Departement Zorg",
+        "website": "https://wegwijs.vlaanderen.be/#/organisations/f81d8b81-985d-4d30-8144-ac66e10d5db0/info"
+      }
+    },
+    {
+      "role": "C",
       "first_name": "Cindy",
       "last_name": "Van Nerom",
       "affiliation": {
@@ -9167,7 +9352,7 @@
     {
       "role": "C",
       "first_name": "Wouter",
-      "last_name": "Van Den Bogaert ",
+      "last_name": "Van Den Bogaert",
       "affiliation": {
         "name": "UZ Leuven",
         "website": "https://www.uzleuven.be/nl"
@@ -9256,8 +9441,26 @@
     },
     {
       "role": "C",
+      "first_name": "Senem",
+      "last_name": "Mavzer",
+      "affiliation": {
+        "name": "CEVI",
+        "website": "https://www.cevi.be/"
+      }
+    },
+    {
+      "role": "C",
+      "first_name": "Fleur",
+      "last_name": "Janssens",
+      "affiliation": {
+        "name": "Stad Aalst",
+        "website": "http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4"
+      }
+    },
+    {
+      "role": "C",
       "first_name": "Yati",
-      "last_name": "Hughe",
+      "last_name": "Huyge",
       "affiliation": {
         "name": "Stad Leuven",
         "website": "http://data.lblod.info/id/bestuurseenheden/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77"
@@ -9277,8 +9480,8 @@
       "first_name": "Seppe",
       "last_name": "Gielen",
       "affiliation": {
-        "name": "De Cronos Groep",
-        "website": "https://cronos-groep.be/"
+        "name": "Kunlabora nv",
+        "website": "https://www.kunlabora.be/nl"
       }
     },
     {
@@ -9334,8 +9537,7 @@
       "affiliation": {
         "name": "Kunlabora nv",
         "website": "https://www.kunlabora.be/nl"
-      },
-      "email": "kun"
+      }
     },
     {
       "role": "C",
@@ -9351,8 +9553,8 @@
       "first_name": "Annelies",
       "last_name": "Crombez",
       "affiliation": {
-        "name": "AML West Ardooie",
-        "website": "https://www.amlwest.be/nl/"
+        "name": "Stad Oostende",
+        "website": "http://data.lblod.info/id/bestuurseenheden/764a0c6bbc866153ae70cf75d745b9477fa010567246cfe6683b7bb8aec541b4"
       }
     },
     {
@@ -9375,7 +9577,7 @@
     },
     {
       "role": "C",
-      "first_name": "Dieter  ",
+      "first_name": "Dieter",
       "last_name": "Andelhofs",
       "affiliation": {
         "name": "UZ Leuven",
