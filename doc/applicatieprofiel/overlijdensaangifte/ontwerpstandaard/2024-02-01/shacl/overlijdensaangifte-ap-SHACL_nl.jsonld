@@ -60,18 +60,18 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
             "nl": "De oorzaken die niet rechtstreeks tot het Overlijden hebben geleid maar hierbij wel hebben toegedragen."
           },
-          "sh:maxCount": "1",
+          "sh:maxCount": "3",
           "sh:name": {
             "nl": "geassocieerde oorzaak"
           },
           "sh:path": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.geassocieerdeOorzaak"
         },
         {
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
             "nl": "De voornaamste oorzaak die het Overlijden van een Persoon teweegbracht."
           },
@@ -284,17 +284,6 @@
           "sh:path": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest.locatie"
         },
         {
-          "sh:class": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRestverwerking",
-          "sh:description": {
-            "nl": "Stoffelijke Restverwerking produceert een Stoffelijke Rest."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "produceert"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest.produceert"
-        },
-        {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
             "nl": "Beschrijving van het lichaam van de overleden Persoon."
@@ -304,6 +293,17 @@
             "nl": "type"
           },
           "sh:path": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest.type"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRestverwerking",
+          "sh:description": {
+            "nl": "Stoffelijke Rest wordt geproduceerd door de Stoffelijke Restverwerking."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "wordt geproduceerd door"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest.wordtGeproduceerdDoor"
         }
       ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest"
@@ -316,13 +316,13 @@
         {
           "sh:class": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest",
           "sh:description": {
-            "nl": "Stoffelijke Rest wordt geproduceerd door de Stoffelijke Restverwerking."
+            "nl": "Stoffelijke Restverwerking produceert een Stoffelijke Rest."
           },
           "sh:maxCount": "1",
           "sh:name": {
-            "nl": "wordt geproduceerd door"
+            "nl": "produceert"
           },
-          "sh:path": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest.wordtGeproduceerdDoor"
+          "sh:path": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest.produceert"
         }
       ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRestverwerking"
@@ -608,16 +608,6 @@
             "nl": "type"
           },
           "sh:path": "http://purl.org/dc/terms/type"
-        },
-        {
-          "sh:class": "http://purl.org/vocab/cpsv#PublicService",
-          "sh:description": {
-            "nl": "Publieke dienstverlening die voorafgaandelijk moet worden uitgevoerd om van de publieke dienstverlening gebruik te kunnen maken."
-          },
-          "sh:name": {
-            "nl": "vereist als input"
-          },
-          "sh:path": "http://purl.org/dc/terms/requires"
         }
       ],
       "sh:targetClass": "http://data.europa.eu/m8g/Evidence"
@@ -688,18 +678,6 @@
       "@type": "sh:NodeShape",
       "sh:closed": false,
       "sh:property": [
-        {
-          "sh:class": "http://purl.org/dc/terms/Agent",
-          "sh:description": {
-            "nl": "Referentie naar verbonden klasse."
-          },
-          "sh:maxCount": "1",
-          "sh:minCount": "1",
-          "sh:name": {
-            "nl": "Agent"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/dienst#Participatie.agent"
-        },
         {
           "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
           "sh:description": {
@@ -787,8 +765,19 @@
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#AgentShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
-      "sh:property": [],
-      "sh:targetClass": "https://data.vlaanderen.be/ns/dienst#Participatie.agent"
+      "sh:property": [
+        {
+          "sh:class": "http://data.europa.eu/m8g/Participation",
+          "sh:description": {
+            "nl": "Participatie van de agent (aan een publieke dienstverlening)."
+          },
+          "sh:name": {
+            "nl": "speelt rol"
+          },
+          "sh:path": "http://data.europa.eu/m8g/playsRole"
+        }
+      ],
+      "sh:targetClass": "http://purl.org/dc/terms/Agent"
     },
     {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#PersoonsgebeurtenisShape",
@@ -885,6 +874,16 @@
             "nl": "dienstverlener"
           },
           "sh:path": "http://data.europa.eu/m8g/serviceProvider"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/Participation",
+          "sh:description": {
+            "nl": "Participatie (van een agent) aan de publieke dienstverlening."
+          },
+          "sh:name": {
+            "nl": "heeft participatie"
+          },
+          "sh:path": "http://data.europa.eu/m8g/hasParticipation"
         },
         {
           "sh:class": "http://purl.org/vocab/cpsv#PublicService",
@@ -1016,6 +1015,16 @@
           },
           "sh:name": {
             "nl": "vereist (source)"
+          },
+          "sh:path": "http://purl.org/dc/terms/requires"
+        },
+        {
+          "sh:class": "http://data.europa.eu/m8g/Evidence",
+          "sh:description": {
+            "nl": "Publieke dienstverlening die voorafgaandelijk moet worden uitgevoerd om van de publieke dienstverlening gebruik te kunnen maken."
+          },
+          "sh:name": {
+            "nl": "vereist als input"
           },
           "sh:path": "http://purl.org/dc/terms/requires"
         },
@@ -1209,6 +1218,13 @@
       "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#VoedingsinnameItemShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [],
+      "sh:targetClass": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#PersoonShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -1290,9 +1306,24 @@
         },
         {
           "sh:class": "https://data.vlaanderen.be/ns/persoon#Geboorte",
-          "sh:description": "",
+          "sh:description": {
+            "nl": "Verwijst naar de geboortegegevens vd persoon."
+          },
           "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "heeft geboorte"
+          },
           "sh:path": "https://data.vlaanderen.be/ns/persoon#heeftGeboorte"
+        },
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/persoon#Inwonerschap",
+          "sh:description": {
+            "nl": "Inwonerschap vd persoon."
+          },
+          "sh:name": {
+            "nl": "heeft inwonerschap"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/persoon#heeftInwonerschap"
         },
         {
           "sh:class": "https://data.vlaanderen.be/ns/persoon#Overlijden",
@@ -1324,17 +1355,6 @@
             "nl": "heeft zwangerschap"
           },
           "sh:path": "https://data.vlaanderen.be/ns/gezondheidstoestand#Persoon.heeftZwangerschap"
-        },
-        {
-          "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
-          "sh:description": {
-            "nl": "Achternaam gebaseerd op de voornaam vd vader ve persoon."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "patroniem"
-          },
-          "sh:path": "http://www.w3.org/ns/person#patronymicName"
         },
         {
           "sh:datatype": "http://www.w3.org/2001/XMLSchema#string",
@@ -1542,16 +1562,6 @@
       "sh:closed": false,
       "sh:property": [
         {
-          "sh:class": "https://www.hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport",
-          "sh:description": {
-            "nl": "Het Medisch Verslag wordt opgesteld door een Arts."
-          },
-          "sh:name": {
-            "nl": "opgesteld door"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischVerslag.opgesteldDoor"
-        },
-        {
           "sh:class": "http://www.w3.org/ns/adms#Identifier",
           "sh:description": {
             "nl": "Een identificatie dat van toepassing is op deze persoon in deze rol."
@@ -1561,6 +1571,16 @@
             "nl": "registratie"
           },
           "sh:path": "https://hl7.org/fhir/practitioner-definitions.html#Practitioner.identifier"
+        },
+        {
+          "sh:class": "https://www.hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport",
+          "sh:description": {
+            "nl": "De Arts stelt een Medisch Verslag op."
+          },
+          "sh:name": {
+            "nl": "stelt op"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/gezondheidstoestand#Arts.steltOp"
         },
         {
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -1648,16 +1668,6 @@
             "nl": "heeft bevallingstoestand"
           },
           "sh:path": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling.heeftBevallingstoestand"
-        },
-        {
-          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
-          "sh:description": {
-            "nl": "De manier waarop de Bevalling plaatsvindt."
-          },
-          "sh:name": {
-            "nl": "wijze"
-          },
-          "sh:path": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling.wijze"
         }
       ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling"
@@ -1751,6 +1761,16 @@
             "nl": "nutritie"
           },
           "sh:path": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand.nutritie"
+        },
+        {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "nl": "De manier waarop de Bevalling plaatsvindt."
+          },
+          "sh:name": {
+            "nl": "wijze"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand.wijze"
         }
       ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand"
@@ -1864,7 +1884,6 @@
           "sh:description": {
             "nl": "Snelle beoordeling die onmiddellijk na de geboorte wordt uitgevoerd om de fysieke conditie van een pasgeborene te evalueren.?"
           },
-          "sh:maxCount": "1",
           "sh:name": {
             "nl": "apgarscore"
           },
@@ -2102,6 +2121,24 @@
       "sh:targetClass": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
     },
     {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#InwonerschapShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:class": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats",
+          "sh:description": {
+            "nl": "Plaats waar een persoon verblijft."
+          },
+          "sh:name": {
+            "nl": "heeft verblijfplaats"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/persoon#heeftVerblijfplaats"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/persoon#Inwonerschap"
+    },
+    {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#OverlijdenShape",
       "@type": "sh:NodeShape",
       "sh:closed": false,
@@ -2172,6 +2209,35 @@
         }
       ],
       "sh:targetClass": "https://data.vlaanderen.be/ns/persoon#Persoonsrelatie"
+    },
+    {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#VerblijfplaatsShape",
+      "@type": "sh:NodeShape",
+      "sh:closed": false,
+      "sh:property": [
+        {
+          "sh:datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+          "sh:description": {
+            "nl": "De typering van de verblijfsplaats."
+          },
+          "sh:name": {
+            "nl": "type"
+          },
+          "sh:path": "http://purl.org/dc/terms/type"
+        },
+        {
+          "sh:description": {
+            "nl": "Plaats waar een persoon al dan niet tijdelijk woont of logeert."
+          },
+          "sh:maxCount": "1",
+          "sh:minCount": "1",
+          "sh:name": {
+            "nl": "verblijfsadres"
+          },
+          "sh:path": "https://data.vlaanderen.be/ns/persoon#verblijfsadres"
+        }
+      ],
+      "sh:targetClass": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats"
     },
     {
       "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#MedicatieShape",
@@ -2397,12 +2463,12 @@
         {
           "sh:class": "https://data.vlaanderen.be/ns/gezondheidstoestand#Arts",
           "sh:description": {
-            "nl": "De Arts stelt een Medisch Verslag op."
+            "nl": "Het Medisch Verslag wordt opgesteld door een Arts."
           },
           "sh:name": {
-            "nl": "stelt op"
+            "nl": "opgesteld door"
           },
-          "sh:path": "https://data.vlaanderen.be/ns/gezondheidstoestand#Arts.steltOp"
+          "sh:path": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischVerslag.opgesteldDoor"
         },
         {
           "sh:class": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand",
@@ -2434,6 +2500,17 @@
           "sh:path": "https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake.occurrence_x_"
         },
         {
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
+          "sh:description": {
+            "nl": "Welk voedsel- of vloeistofproduct of item is geconsumeerd."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "nl": "geconsumeerd item"
+          },
+          "sh:path": "https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake.consumedItem"
+        },
+        {
           "sh:class": "http://purl.org/dc/terms/Agent",
           "sh:description": {
             "nl": "e Persoon die de Voedingsinname heeft verzorgd en de manier waarop."
@@ -2443,14 +2520,6 @@
             "nl": "uitvoerder"
           },
           "sh:path": "https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake.performer"
-        },
-        {
-          "sh:class": "https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake",
-          "sh:maxCount": "1",
-          "sh:name": {
-            "nl": "voedingsinname"
-          },
-          "sh:path": "https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake.consumedItem"
         }
       ],
       "sh:targetClass": "https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake"

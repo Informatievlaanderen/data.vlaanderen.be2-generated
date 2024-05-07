@@ -57,6 +57,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#InkomensniveauShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#NationaliteitscodeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#DosisFormaatShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#VoedingsinnameItemShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#PersoonShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#MedischeObservatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#SociodemografischKenmerkShape>,
@@ -78,8 +79,10 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#ZwangerschapstoestandShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#GeboorteShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#GeregistreerdPersoonShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#InwonerschapShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#OverlijdenShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#PersoonsrelatieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#VerblijfplaatsShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#MedicatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#ZorgverlenerShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#GebeurtenisShape>,
@@ -93,7 +96,13 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#AgentShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/dienst#Participatie.agent> .
+  shacl:property [
+    shacl:class <http://data.europa.eu/m8g/Participation>;
+    shacl:description "Participatie van de agent (aan een publieke dienstverlening)."@nl;
+    shacl:name "speelt rol"@nl;
+    shacl:path <http://data.europa.eu/m8g/playsRole>
+  ];
+  shacl:targetClass dc:Agent .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#ApgarscoreShape> a shacl:NodeShape;
   shacl:closed false;
@@ -115,16 +124,16 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#ArtsShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class <https://www.hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport>;
-    shacl:description "Het Medisch Verslag wordt opgesteld door een Arts."@nl;
-    shacl:name "opgesteld door"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/gezondheidstoestand#MedischVerslag.opgesteldDoor>
-  ], [
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "Een identificatie dat van toepassing is op deze persoon in deze rol."@nl;
     shacl:maxCount 1;
     shacl:name "registratie"@nl;
     shacl:path <https://hl7.org/fhir/practitioner-definitions.html#Practitioner.identifier>
+  ], [
+    shacl:class <https://www.hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport>;
+    shacl:description "De Arts stelt een Medisch Verslag op."@nl;
+    shacl:name "stelt op"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gezondheidstoestand#Arts.steltOp>
   ], [
     shacl:class skos:Concept;
     shacl:description "Het type Arts die betrokken is bij de MedischeObservatie."@nl;
@@ -181,11 +190,6 @@
     shacl:maxCount 1;
     shacl:name "heeft bevallingstoestand"@nl;
     shacl:path <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling.heeftBevallingstoestand>
-  ], [
-    shacl:class skos:Concept;
-    shacl:description "De manier waarop de Bevalling plaatsvindt."@nl;
-    shacl:name "wijze"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling.wijze>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling> .
 
@@ -236,6 +240,11 @@
     shacl:description "Geconsumeerd voedsel- of vloeistofproduct of -item."@nl;
     shacl:name "nutritie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand.nutritie>
+  ], [
+    shacl:class skos:Concept;
+    shacl:description "De manier waarop de Bevalling plaatsvindt."@nl;
+    shacl:name "wijze"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand.wijze>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand> .
 
@@ -279,11 +288,6 @@
     shacl:maxCount 1;
     shacl:name "type"@nl;
     shacl:path dc:type
-  ], [
-    shacl:class <http://purl.org/vocab/cpsv#PublicService>;
-    shacl:description "Publieke dienstverlening die voorafgaandelijk moet worden uitgevoerd om van de publieke dienstverlening gebruik te kunnen maken."@nl;
-    shacl:name "vereist als input"@nl;
-    shacl:path dc:requires
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Evidence> .
 
@@ -331,13 +335,13 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#DoodsoorzaakShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class skos:Concept;
+    shacl:datatype rdf:langString;
     shacl:description "De oorzaken die niet rechtstreeks tot het Overlijden hebben geleid maar hierbij wel hebben toegedragen."@nl;
-    shacl:maxCount 1;
+    shacl:maxCount 3;
     shacl:name "geassocieerde oorzaak"@nl;
     shacl:path <https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.geassocieerdeOorzaak>
   ], [
-    shacl:class skos:Concept;
+    shacl:datatype rdf:langString;
     shacl:description "De voornaamste oorzaak die het Overlijden van een Persoon teweegbracht."@nl;
     shacl:maxCount 1;
     shacl:name "hoofdoorzaak"@nl;
@@ -487,7 +491,6 @@
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/gezondheidstoestand#Apgarscore>;
     shacl:description "Snelle beoordeling die onmiddellijk na de geboorte wordt uitgevoerd om de fysieke conditie van een pasgeborene te evalueren.?"@nl;
-    shacl:maxCount 1;
     shacl:name "apgarscore"@nl;
     shacl:path <https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand.apgarscore>
   ], [
@@ -576,6 +579,16 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#InkomensniveauShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#InwonerschapShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:class <https://data.vlaanderen.be/ns/persoon#Verblijfplaats>;
+    shacl:description "Plaats waar een persoon verblijft."@nl;
+    shacl:name "heeft verblijfplaats"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#heeftVerblijfplaats>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Inwonerschap> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#KwantitatieveWaardeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -678,9 +691,9 @@ Wanneer de opgegeven productcode geen verpakkingsgrootte aangeeft, is dit de spe
     shacl:path <https://hl7.org/fhir/observation-definitions.html#Observation.issued>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/gezondheidstoestand#Arts>;
-    shacl:description "De Arts stelt een Medisch Verslag op."@nl;
-    shacl:name "stelt op"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/gezondheidstoestand#Arts.steltOp>
+    shacl:description "Het Medisch Verslag wordt opgesteld door een Arts."@nl;
+    shacl:name "opgesteld door"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gezondheidstoestand#MedischVerslag.opgesteldDoor>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand>;
     shacl:description "De Medische Toestand van een Persoon voedt een Medisch Verslag van een Persoon."@nl;
@@ -859,13 +872,6 @@ De informatie die is vastgesteld als gevolg van de observatie, indien de informa
 <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#ParticipatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    shacl:class dc:Agent;
-    shacl:description "Referentie naar verbonden klasse."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "Agent"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/dienst#Participatie.agent>
-  ], [
     shacl:datatype rdf:langString;
     shacl:description "Beschrijving van de participatie."@nl;
     shacl:maxCount 1;
@@ -941,9 +947,15 @@ De informatie die is vastgesteld als gevolg van de observatie, indien de informa
     shacl:path <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling.heeftBevalling>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/persoon#Geboorte>;
-    shacl:description "";
+    shacl:description "Verwijst naar de geboortegegevens vd persoon."@nl;
     shacl:maxCount 1;
+    shacl:name "heeft geboorte"@nl;
     shacl:path <https://data.vlaanderen.be/ns/persoon#heeftGeboorte>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/persoon#Inwonerschap>;
+    shacl:description "Inwonerschap vd persoon."@nl;
+    shacl:name "heeft inwonerschap"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#heeftInwonerschap>
   ], [
     shacl:class <https://data.vlaanderen.be/ns/persoon#Overlijden>;
     shacl:description "Verwijst naar de overlijdensgegevens vd persoon."@nl;
@@ -960,12 +972,6 @@ De informatie die is vastgesteld als gevolg van de observatie, indien de informa
     shacl:description "Een Persoon heeft een Zwangerschap"@nl;
     shacl:name "heeft zwangerschap"@nl;
     shacl:path <https://data.vlaanderen.be/ns/gezondheidstoestand#Persoon.heeftZwangerschap>
-  ], [
-    shacl:datatype xsd:string;
-    shacl:description "Achternaam gebaseerd op de voornaam vd vader ve persoon."@nl;
-    shacl:maxCount 1;
-    shacl:name "patroniem"@nl;
-    shacl:path <http://www.w3.org/ns/person#patronymicName>
   ], [
     shacl:datatype xsd:string;
     shacl:description "De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam."@nl;
@@ -1106,17 +1112,17 @@ De informatie die is vastgesteld als gevolg van de observatie, indien de informa
     shacl:name "locatie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest.locatie>
   ], [
-    shacl:class <https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRestverwerking>;
-    shacl:description "Stoffelijke Restverwerking produceert een Stoffelijke Rest."@nl;
-    shacl:maxCount 1;
-    shacl:name "produceert"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest.produceert>
-  ], [
     shacl:class skos:Concept;
     shacl:description "Beschrijving van het lichaam van de overleden Persoon."@nl;
     shacl:maxCount 1;
     shacl:name "type"@nl;
     shacl:path <https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest.type>
+  ], [
+    shacl:class <https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRestverwerking>;
+    shacl:description "Stoffelijke Rest wordt geproduceerd door de Stoffelijke Restverwerking."@nl;
+    shacl:maxCount 1;
+    shacl:name "wordt geproduceerd door"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest.wordtGeproduceerdDoor>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest> .
 
@@ -1124,10 +1130,10 @@ De informatie die is vastgesteld als gevolg van de observatie, indien de informa
   shacl:closed false;
   shacl:property [
     shacl:class <https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest>;
-    shacl:description "Stoffelijke Rest wordt geproduceerd door de Stoffelijke Restverwerking."@nl;
+    shacl:description "Stoffelijke Restverwerking produceert een Stoffelijke Rest."@nl;
     shacl:maxCount 1;
-    shacl:name "wordt geproduceerd door"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest.wordtGeproduceerdDoor>
+    shacl:name "produceert"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest.produceert>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRestverwerking> .
 
@@ -1196,6 +1202,26 @@ De informatie die is vastgesteld als gevolg van de observatie, indien de informa
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/overlijdensaangifte#Uitvaartondernemer> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#VerblijfplaatsShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    shacl:datatype rdf:langString;
+    shacl:description "De typering van de verblijfsplaats."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    shacl:description "Plaats waar een persoon al dan niet tijdelijk woont of logeert."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "verblijfsadres"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#verblijfsadres>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Verblijfplaats> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#VoedingsinnameItemShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/overlijdensaangifte/ontwerpstandaard/2024-02-01#VoedingsinnameShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -1205,16 +1231,17 @@ De informatie die is vastgesteld als gevolg van de observatie, indien de informa
     shacl:name "consumptie interval"@nl;
     shacl:path <https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake.occurrence_x_>
   ], [
+    shacl:class skos:Concept;
+    shacl:description "Welk voedsel- of vloeistofproduct of item is geconsumeerd."@nl;
+    shacl:maxCount 1;
+    shacl:name "geconsumeerd item"@nl;
+    shacl:path <https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake.consumedItem>
+  ], [
     shacl:class dc:Agent;
     shacl:description "e Persoon die de Voedingsinname heeft verzorgd en de manier waarop."@nl;
     shacl:maxCount 1;
     shacl:name "uitvoerder"@nl;
     shacl:path <https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake.performer>
-  ], [
-    shacl:class <https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake>;
-    shacl:maxCount 1;
-    shacl:name "voedingsinname"@nl;
-    shacl:path <https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake.consumedItem>
   ];
   shacl:targetClass <https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake> .
 
@@ -1345,6 +1372,13 @@ De informatie die is vastgesteld als gevolg van de observatie, indien de informa
   ] .
 
  [
+    shacl:class <http://data.europa.eu/m8g/Participation>;
+    shacl:description "Participatie (van een agent) aan de publieke dienstverlening."@nl;
+    shacl:name "heeft participatie"@nl;
+    shacl:path <http://data.europa.eu/m8g/hasParticipation>
+  ] .
+
+ [
     shacl:class <http://purl.org/vocab/cpsv#PublicService>;
     shacl:description "Andere publieke dienstverlening waarmee de publieke dienstverlening gerelateerd is."@nl;
     shacl:name "relatie (target)"@nl;
@@ -1435,6 +1469,13 @@ De informatie die is vastgesteld als gevolg van de observatie, indien de informa
     shacl:class <http://purl.org/vocab/cpsv#PublicService>;
     shacl:description "Publieke dienstverlening die voorafgaandelijk moet worden uitgevoerd om van de publieke dienstverlening gebruik te kunnen maken."@nl;
     shacl:name "vereist (source)"@nl;
+    shacl:path dc:requires
+  ] .
+
+ [
+    shacl:class <http://data.europa.eu/m8g/Evidence>;
+    shacl:description "Publieke dienstverlening die voorafgaandelijk moet worden uitgevoerd om van de publieke dienstverlening gebruik te kunnen maken."@nl;
+    shacl:name "vereist als input"@nl;
     shacl:path dc:requires
   ] .
 
