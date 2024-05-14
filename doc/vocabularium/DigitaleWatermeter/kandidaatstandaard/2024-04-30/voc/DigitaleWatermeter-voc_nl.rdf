@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:schemas="https://schema.org/" xmlns:ns1="http://purl.org/vocab/vann/">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:schemas="https://schema.org/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
   <owl:ObjectProperty rdf:about="http://fixme.com#RuimtelijkRelatie.plaats.source">
     <rdfs:isDefinedBy>
       <owl:Ontology rdf:about="http://fixme.com">
@@ -83,18 +83,8 @@
           </rdfs:Class>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
-          <rdfs:Class rdf:about="https://data.vlaanderen.be/ns/digitalewatermeter#Meter">
-            <rdfs:label xml:lang="nl">Meter</rdfs:label>
-          </rdfs:Class>
-        </rdfs:seeAlso>
-        <rdfs:seeAlso>
           <rdfs:Class rdf:about="https://data.vlaanderen.be/ns/digitalewatermeter#MeterstaatObservatie">
             <rdfs:label xml:lang="nl">MeterstaatObservatie</rdfs:label>
-          </rdfs:Class>
-        </rdfs:seeAlso>
-        <rdfs:seeAlso>
-          <rdfs:Class rdf:about="https://data.vlaanderen.be/ns/digitalewatermeter#Metertype">
-            <rdfs:label xml:lang="nl">Metertype</rdfs:label>
           </rdfs:Class>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
@@ -103,33 +93,8 @@
           </rdfs:Class>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
-          <rdf:Property rdf:about="https://saref.etsi.org/core/hasModel">
-            <rdfs:label xml:lang="nl">model</rdfs:label>
-          </rdf:Property>
-        </rdfs:seeAlso>
-        <rdfs:seeAlso>
-          <rdf:Property rdf:about="https://saref.etsi.org/core/hasManufacturer">
-            <rdfs:label xml:lang="nl">fabrikant</rdfs:label>
-          </rdf:Property>
-        </rdfs:seeAlso>
-        <rdfs:seeAlso>
-          <rdf:Property rdf:about="https://data.vlaanderen.be/ns/digitalewatermeter#verbruiksadres">
-            <rdfs:label xml:lang="nl">verbruiksadres</rdfs:label>
-          </rdf:Property>
-        </rdfs:seeAlso>
-        <rdfs:seeAlso>
           <rdf:Property rdf:about="https://data.vlaanderen.be/ns/digitalewatermeter#resultaat">
             <rdfs:label xml:lang="nl">resultaat</rdfs:label>
-          </rdf:Property>
-        </rdfs:seeAlso>
-        <rdfs:seeAlso>
-          <rdf:Property rdf:about="https://data.vlaanderen.be/ns/digitalewatermeter#metertype">
-            <rdfs:label xml:lang="nl">metertype</rdfs:label>
-          </rdf:Property>
-        </rdfs:seeAlso>
-        <rdfs:seeAlso>
-          <rdf:Property rdf:about="https://data.vlaanderen.be/ns/digitalewatermeter#identificator">
-            <rdfs:label xml:lang="nl">identificator</rdfs:label>
           </rdf:Property>
         </rdfs:seeAlso>
         <rdfs:seeAlso>
@@ -191,10 +156,16 @@ waterstromen permanent bemeterd
 worden.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
   </owl:Class>
-  <rdf:Property rdf:about="http://fixme.com#diameter">
+  <owl:DatatypeProperty rdf:about="http://fixme.com#aantalMeters">
     <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/digitalewatermeter#Meter"/>
-  </rdf:Property>
+    <rdfs:domain>
+      <owl:Class rdf:about="http://fixme.com#Meterzone">
+        <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Location"/>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
   <owl:ObjectProperty rdf:about="http://fixme.com#element">
     <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
     <rdfs:label xml:lang="nl">element</rdfs:label>
@@ -207,20 +178,15 @@ worden.</rdfs:comment>
     </rdfs:domain>
     <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/digitalewatermeter#MomentKwantitatieveWaardepaar"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://fixme.com#identificator">
+  <owl:ObjectProperty rdf:about="http://fixme.com#metertype">
     <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-    <rdfs:label xml:lang="nl">identificator</rdfs:label>
-    <rdfs:comment xml:lang="nl">Identificator van het metertype</rdfs:comment>
-    <ns1:usageNote xml:lang="nl">bv. uniek merkidentificator van de gebruikte watermeter</ns1:usageNote>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/digitalewatermeter#Metertype"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+    <rdfs:domain rdf:resource="http://fixme.com#Meterzone"/>
+    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/digitalewatermeter#Metertype"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://fixme.com#type">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
     <rdfs:label xml:lang="nl">type</rdfs:label>
     <rdfs:domain rdf:resource="http://fixme.com#RuimtelijkRelatie"/>
-    <rdfs:domain rdf:resource="https://data.vlaanderen.be/ns/digitalewatermeter#Metertype"/>
     <rdfs:range rdf:resource="http://fixme.com#RuimtelijkeRelatietype"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://fixme.com#waarde">
