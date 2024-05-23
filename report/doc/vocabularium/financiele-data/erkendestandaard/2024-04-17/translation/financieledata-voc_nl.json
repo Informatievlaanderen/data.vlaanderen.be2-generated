@@ -1,0 +1,1946 @@
+{
+  "classes": [
+    {
+      "EA-Guid": "{23DFB089-CC53-42ee-9ACE-4A2925B8CC9C}",
+      "name": "Aandelen",
+      "label": {
+        "nl": "Aandelen"
+      },
+      "definition": {
+        "nl": "Specialisatie van Decimal waarmee het getal van het AandelenDatatype wordt voorgesteld."
+      }
+    },
+    {
+      "EA-Guid": "{E78F160D-60BB-4ea1-8485-DE5F85F4273A}",
+      "name": "Aandelendatatype",
+      "label": {
+        "nl": "AandelenDatatype"
+      },
+      "definition": {
+        "nl": "NumeriekDatatype bedoeld om waarden die betrekking hebben op aandelen voor te stellen."
+      },
+      "usage": {
+        "nl": "Bvb voor het aantal aandelen."
+      }
+    },
+    {
+      "EA-Guid": "{4AB84C52-0E78-46c4-87A2-F08A266FC036}",
+      "name": "Concept",
+      "label": {
+        "nl": "Concept"
+      },
+      "definition": {
+        "nl": "Definitie van een type Feit."
+      },
+      "usage": {
+        "nl": "Beschrijving van een financieel begrip waarop een Feit betrekking kan hebben, bvb Activa, Omzet, Kosten etc. De beschrijving omvat zaken zoals de definitie van het Concept, het verwachte datatype (bvb Monetair), de relatie met andere Concepten (Omzet is bvb een subtype Inkomsten). OPMERKING: Concept kan beschouwd worden als een metaklasse, een klasse waarmee klassen zoals Omzet, Kosten etc gemaakt kunnen worden. Een mogelijke implementatie is dan om deze klassen te definiëren als subklassen van Feit. De subklassen vormen dan samen een Schema of taxonomie."
+      }
+    },
+    {
+      "EA-Guid": "{997FF324-B600-46b2-8D1B-0C58F9D3A625}",
+      "name": "Conceptrelatie",
+      "label": {
+        "nl": "Conceptrelatie"
+      },
+      "definition": {
+        "nl": "Verband tussen twee Concepten."
+      },
+      "usage": {
+        "nl": "Bvb Omzet is een specialisatie van Opbrengst."
+      }
+    },
+    {
+      "EA-Guid": "{5466E6FA-0990-4bc7-B197-FC1775EA4F01}",
+      "name": "Context",
+      "label": {
+        "nl": "Context"
+      },
+      "definition": {
+        "nl": "Kader waarin een Feit moet geïnterpreteerd worden."
+      },
+      "usage": {
+        "nl": "Bvb de Periode waarin het Feit geldig is (typisch het huidig boekjaar) of andere Dimensies van het Feit zoals het Product of de Regio waarop het Feit van toepassing is, bvb de Omzet van Product X of Y. Slaat op een individueel Feit of is van toepassing op een FinancieelRapport (en dus op de Feiten in dat rapport)."
+      }
+    },
+    {
+      "EA-Guid": "{7BAACBF3-74C3-4b3c-A905-C98BC579DE95}",
+      "name": "Dimensie",
+      "label": {
+        "nl": "Dimensie"
+      },
+      "definition": {
+        "nl": "Onafhankelijk kenmerk waardoor een Feit gekarakteriseerd wordt."
+      },
+      "usage": {
+        "nl": "Bvb Opbrensten kunnen gekenmerkt worden door een Locatie die aangeeft in welke regio de Opbrensten zijn verkregen of een Periode die zegt of het om Opbrensten van het huidig of het vorig boekjaar gaat. Soms zijn meerdere van dergelijke kenmerken tegelijk van toepassing, bvb de Opbrengst voor Product X in Regio Y. Dit laat toe om analyses uit te voeren op het niveau van het FinancieelRapport, bvb door Feiten te aggregeren in een dimensie (bvb de Opbrengst voor alle Producten samen per Regio)."
+      }
+    },
+    {
+      "EA-Guid": "{9992AD8A-F1F5-4990-A70A-5E6FE8C9D617}",
+      "name": "Dimensieconceptrelatie",
+      "label": {
+        "nl": "Dimensieconceptrelatie"
+      },
+      "definition": {
+        "nl": "Verband tussen twee Dimensieconcepten."
+      },
+      "usage": {
+        "nl": "Bvb Regiogrootte is een specialisatie van Regio."
+      }
+    },
+    {
+      "EA-Guid": "{89BA9345-AE13-4a62-903E-788A45B71881}",
+      "name": "Dimensieconcept",
+      "label": {
+        "nl": "Dimensieconcept"
+      },
+      "definition": {
+        "nl": "Definitie van een type Dimensie."
+      },
+      "usage": {
+        "nl": "Beschrijving van een onafhankelijk kenmerk dat een Feit kan karakteriseren, bvb Periode, Locatie etc. Deze beschrijving omvat zaken als de definitie van het Dimensieconcept, het verwacht datatype (bvb DateTime voor Periode, Regio voor Locatie), de relatie met andere Dimensieconcepten etc. OPMERKING: Dimensieconcept kan beschouwd worden als een metaklasse, een klasse waarmee klassen zoals Periode, Product etc gemaakt kunnen worden. Een mogelijke implementatie is dan om deze klassen te definiëren als subklassen van Dimensie. De subklassen vormen dan samen een Dimensieschema of dimensietaxonomie."
+      }
+    },
+    {
+      "EA-Guid": "{DCAB2A25-82CD-40f5-B899-DE53FDC2B986}",
+      "name": "Dimensieschema",
+      "label": {
+        "nl": "Dimensieschema"
+      },
+      "definition": {
+        "nl": "Een samenhangend geheel van Dimensieconcepten die in het FinancieelRapport moeten of kunnen voorkomen."
+      },
+      "usage": {
+        "nl": "Ook wel een dimensietaxonomie genoemd."
+      }
+    },
+    {
+      "EA-Guid": "{8BC6250E-3B18-41ed-98B9-6BB83B7CD3AE}",
+      "name": "Eenheid",
+      "label": {
+        "nl": "Eenheid"
+      },
+      "definition": {
+        "nl": "De eenheid waarin de waarde is uitgedrukt."
+      },
+      "usage": {
+        "nl": "OPMERKING: Te substitueren door een URI of een GetypeerdeString. In het eerste geval als naar een op het web gepubliceerde eenheid kan worden verwezen. De eenheden van qudt zijn op die manier gepubliceerd, bvb http://qudt.org/vocab/uni/M voor meter. In het geval van een GetypeerdeString kunnen bvb de UCUM-codes worden gebruikt, de String is dan bvb km/h en het type http://w3id.org/lindt/custom_datatypes#ucumunit. Voor valuta is de ISO 4217 standaard aanbevolen met bvb EUR als String en ISO-4217 als type."
+      }
+    },
+    {
+      "EA-Guid": "{B479A6FD-56D8-437b-863E-B5004386C724}",
+      "name": "Feit",
+      "label": {
+        "nl": "Feit"
+      },
+      "definition": {
+        "nl": "Een individueel stuk informatie in een FinancieelRapport."
+      },
+      "usage": {
+        "nl": "Typisch  de waarde in valuta van één bepaald  financieel kenmerk van een Organisatie (bv Omzet, Kosten etc) beschouwd in een specifieke Context (bvb het huidig boekjaar en Dimensies zoals het Product en/of de Regio waarop het Feit betrekking heeft). Feiten vormen de atomaire onderdelen van het FinancieelRapport, beschouwen we het rapport als een multidimensionele gegevenskubus (zie Hypercube) dan vertegenwoordigt een individueel Feit één cel in die kubus."
+      }
+    },
+    {
+      "EA-Guid": "{728FFB98-C589-4d65-9981-8CD631D4B736}",
+      "name": "Financieelrapport",
+      "label": {
+        "nl": "FinancieelRapport"
+      },
+      "definition": {
+        "nl": "Rapport over de financiële toestand of economische positie van een Organisatie."
+      },
+      "usage": {
+        "nl": "Concreet gebeurt dit door het opsommen van waarden (de zgn Feiten) die indicatief zijn voor deze toestand of positie."
+      }
+    },
+    {
+      "EA-Guid": "{B30DC12F-9247-4c73-8699-B5F37E6043BE}",
+      "name": "Hypercube",
+      "label": {
+        "nl": "Hypercube"
+      },
+      "definition": {
+        "nl": "Structuur van de gegevenskubus die het FinancieelRaport vormt."
+      },
+      "usage": {
+        "nl": "De Feiten in een FinancieelRapport worden gerangschikt zoals in een datawarehouse, ttz in rijen en kolommen zoals in een tabel maar dan een tabel in meer dan twee dimensies: een zgn n-dimensionele gegevenskubus. Deze dimensies zijn othogonaal (onafhankelijk van elkaar, bvb Concept, Tijd, Regio... ) vandaar de kubusvorm. Concreet wordt hier onder Hypercube een opsomming verstaan van de Dimensies die een Concept kan hebben, het is maw een uitbreiding van het Schema met een Dimensieschema."
+      }
+    },
+    {
+      "EA-Guid": "{10AF61C2-E1E1-4606-B9C9-BFA9DB1D78BA}",
+      "name": "Monetair",
+      "label": {
+        "nl": "Monetair"
+      },
+      "definition": {
+        "nl": "Specialisatie van Decimal waarmee het getal van het MonetairDatatype wordt voorgesteld."
+      }
+    },
+    {
+      "EA-Guid": "{74D4D9A5-2892-4dc0-AE86-AB8C99CB429D}",
+      "name": "Neerlegging",
+      "label": {
+        "nl": "Neerlegging"
+      },
+      "definition": {
+        "nl": "Activiteit waarbij een FinancieelRapport officieel wordt ingediend."
+      },
+      "usage": {
+        "nl": "Het gaat typisch om een wettelijke verplichting, bvb de Neerlegging van een Jaarrekening bij de Nationale Bank van België, bedoeld om inzicht te geven in de financiële positie van de Organisatie waarmee men omgaat."
+      }
+    },
+    {
+      "EA-Guid": "{A93A1571-42FE-429f-859F-21F9171C6E92}",
+      "name": "Opmerking",
+      "label": {
+        "nl": "Opmerking"
+      },
+      "definition": {
+        "nl": "Gedachte of waarneming bij de Validatie van een FinancieelRapport of Dossier."
+      }
+    },
+    {
+      "EA-Guid": "{52B81A19-A232-4af3-933A-47FC8BA51149}",
+      "name": "Puur",
+      "label": {
+        "nl": "Puur"
+      },
+      "definition": {
+        "nl": "Specialisatie van Decimal waarmee het getal van het PuurDatatype wordt voorgesteld."
+      }
+    },
+    {
+      "EA-Guid": "{0C5DDD3D-643D-49bc-BC18-6CEA58AE37B7}",
+      "name": "Puurdatatype",
+      "label": {
+        "nl": "PuurDatatype"
+      },
+      "definition": {
+        "nl": "NumeriekDatatype bedoeld om waarden die betrekking hebben op verhoudingen voor te stellen."
+      },
+      "usage": {
+        "nl": "Bvb procentuele veranderingen, groeipercentages."
+      }
+    },
+    {
+      "EA-Guid": "{6B6F9309-B12C-4799-8B40-A510DBC1FD6C}",
+      "name": "Rapportrelatie",
+      "label": {
+        "nl": "Rapportrelatie"
+      },
+      "definition": {
+        "nl": "Verband tussen twee Financiëlerapporten."
+      },
+      "usage": {
+        "nl": "Bvb een FinancieelRapport bestaat uit een aantal secties die elk op zich beschouwd kunnen worden als een FinancieelRapport."
+      }
+    },
+    {
+      "EA-Guid": "{6B7C8BBD-1CAE-4f43-89BF-0FEA8D5A4103}",
+      "name": "Schema",
+      "label": {
+        "nl": "Schema"
+      },
+      "definition": {
+        "nl": "Een samenhangend geheel van Concepten die in het FinancieelRapport moeten of kunnen voorkomen."
+      },
+      "usage": {
+        "nl": "Ook wel taxonomie genoemd, bvb de taxonomie van de jaarrekeningen van de Nationale Bank van België."
+      }
+    },
+    {
+      "EA-Guid": "{4B8F8ED6-77A2-4cd0-92A7-BDE8CDD66237}",
+      "name": "Validatie",
+      "label": {
+        "nl": "Validatie"
+      },
+      "definition": {
+        "nl": "Activiteit waarbij de geldigheid van een FinancieelRapport of Dossier wordt nagegaan."
+      }
+    }
+  ],
+  "properties": [
+    {
+      "EA-Guid": "{24E1E3E1-BE3B-4d52-B66A-DD44C33BE7C9}",
+      "name": "eenheid",
+      "label": {
+        "nl": "eenheid"
+      }
+    },
+    {
+      "EA-Guid": "{504D145C-46C2-499e-9384-E328278D09B5}",
+      "name": "schema",
+      "label": {
+        "nl": "schema"
+      },
+      "definition": {
+        "nl": "Schema waaraan het rapport voldoet."
+      }
+    },
+    {
+      "EA-Guid": "{D9BDF0F1-7708-4276-8441-667DBEEC23BF}",
+      "name": "bevat",
+      "label": {
+        "nl": "bevat"
+      },
+      "definition": {
+        "nl": "Feit dat in het rapport staat."
+      }
+    },
+    {
+      "EA-Guid": "{0FF543C9-001C-4322-A6CF-BD01D48B0B7F}",
+      "name": "status",
+      "label": {
+        "nl": "status"
+      },
+      "definition": {
+        "nl": "Fase waarin de Validatie zich bevindt of eindoordeel."
+      },
+      "usage": {
+        "nl": "Bvb of de Validatie al gestart is en indien ze is afgerond of het resultaat Voldoende was of niet."
+      }
+    },
+    {
+      "EA-Guid": "{94DA8316-03A1-424e-939E-F3CA7D2E0BEC}",
+      "name": "opmerking",
+      "label": {
+        "nl": "opmerking"
+      },
+      "definition": {
+        "nl": "Opmerking bij de Validatie."
+      }
+    },
+    {
+      "EA-Guid": "{D4BB3B31-F37F-4107-B8A3-EDFE20C8A3BE}",
+      "name": "gevalideerddoor",
+      "label": {
+        "nl": "gevalideerdDoor"
+      },
+      "definition": {
+        "nl": "Agent die de Validatie uitvoert."
+      }
+    },
+    {
+      "EA-Guid": "{3F17EB07-8924-45da-8350-A4F8767A80A5}",
+      "name": "datum",
+      "label": {
+        "nl": "datum"
+      },
+      "definition": {
+        "nl": "Datum waarop de Validatie plaatsvindt."
+      }
+    },
+    {
+      "EA-Guid": "{40A13EBF-E706-4fe5-B24C-9E0505D33247}",
+      "name": "definieert",
+      "label": {
+        "nl": "definieert"
+      },
+      "definition": {
+        "nl": "Concepten die deel uitmaken van het schema."
+      }
+    },
+    {
+      "EA-Guid": "{98FB8408-792A-4d96-8949-BC44296DD0FF}",
+      "name": "rol",
+      "label": {
+        "nl": "rol"
+      },
+      "definition": {
+        "nl": "Aard van de relatie tussen de rapporten."
+      }
+    },
+    {
+      "EA-Guid": "Derived:{6B6F9309-B12C-4799-8B40-A510DBC1FD6C}->{728FFB98-C589-4d65-9981-8CD631D4B736}",
+      "name": "financieelrapport(target)",
+      "label": {
+        "nl": "FinancieelRapport (target)"
+      },
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "usage": {
+        "nl": ""
+      }
+    },
+    {
+      "EA-Guid": "Derived:{6B6F9309-B12C-4799-8B40-A510DBC1FD6C}->{728FFB98-C589-4d65-9981-8CD631D4B736}",
+      "name": "financieelrapport(source)",
+      "label": {
+        "nl": "FinancieelRapport (source)"
+      },
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "usage": {
+        "nl": ""
+      }
+    },
+    {
+      "EA-Guid": "{A0781FF7-B4D3-462e-975C-486B8D4A8F7F}",
+      "name": "opmerking",
+      "label": {
+        "nl": "opmerking"
+      },
+      "definition": {
+        "nl": "Tekstuele weergave van de Opmerking."
+      }
+    },
+    {
+      "EA-Guid": "{2FF12E3C-C8E1-4ec5-81CC-EC8FB30F25CE}",
+      "name": "feit",
+      "label": {
+        "nl": "feit"
+      },
+      "definition": {
+        "nl": "Feit uit het rapport waarop de opmerking betrekking heeft."
+      }
+    },
+    {
+      "EA-Guid": "{6A0B0416-E957-4fc1-9ED3-17247FE31BE0}",
+      "name": "precisie",
+      "label": {
+        "nl": "precisie"
+      },
+      "definition": {
+        "nl": "Geeft aan hoeveel cijfers in het getal accuraat zijn."
+      },
+      "usage": {
+        "nl": "Bvb als het getal 2000 is en de precisie is 2, dan kunnen we hoogstens stellen dat het getal tussen 1950 en 2050 ligt. Is de precisie 4 dan is het getal werkelijk 2000."
+      }
+    },
+    {
+      "EA-Guid": "{1260B6FA-0393-4ac9-AE0F-AD234E25AA50}",
+      "name": "decimalen",
+      "label": {
+        "nl": "decimalen"
+      },
+      "definition": {
+        "nl": "Geeft aan tot hoeveel cijfers na de komma het getal correct is."
+      },
+      "usage": {
+        "nl": "Bvb als het getal 10 is en het aantal decimalen 2 dan mogen we het getal substitueren door 10.00. Het getal 10.001 zou worden afgekapt tot 10.00, 10.0 zou worden vermeerderd tot 10.00 en 10.00 zou 10.00 blijven. OPMERKING: een negatief cijfer is ook mogelijk. Bvb als het getal 11 is en het aantal decimalen -1 dan mogen we het getal substitueren door 10. OPMERKING: Uit de decimalen kan de precisie worden afgeleid. Als bvb het getal 10 is en zijn precisie 2, dan kan 10 gesubstitueerd worden door 10.00 wat een getal is met een precisie 4."
+      }
+    },
+    {
+      "EA-Guid": "{6B563CC4-B9E3-4db5-ACA0-52E46D56539F}",
+      "name": "neergelegdbij",
+      "label": {
+        "nl": "neergelegdBij"
+      },
+      "definition": {
+        "nl": "De Organisatie waarbij het rapport werd neergelegd"
+      }
+    },
+    {
+      "EA-Guid": "{E100F119-57C9-433c-8EE3-71CB2B9A86F9}",
+      "name": "datum",
+      "label": {
+        "nl": "datum"
+      },
+      "definition": {
+        "nl": "De datum waarop het rapport werd neergelegd."
+      }
+    },
+    {
+      "EA-Guid": "{2CE87184-840B-472d-9D27-37386B143D41}",
+      "name": "label",
+      "label": {
+        "nl": "label"
+      },
+      "definition": {
+        "nl": "Sleutelwoord toegekend aan de Hypercube volgens een of ander classificatiesysteem."
+      }
+    },
+    {
+      "EA-Guid": "{5F9AA8D8-46BE-438f-996A-BFDF956A6450}",
+      "name": "dimensie",
+      "label": {
+        "nl": "dimensie"
+      },
+      "definition": {
+        "nl": "Dimensie die deel uitmaakt van de Hypercube."
+      }
+    },
+    {
+      "EA-Guid": "{4268D0C9-4C24-44d2-B66F-062846AABC48}",
+      "name": "definitie",
+      "label": {
+        "nl": "definitie"
+      },
+      "definition": {
+        "nl": "Definitie van de Hypercube."
+      }
+    },
+    {
+      "EA-Guid": "{F842E4FB-3DF2-4b5f-AFBB-F222F4A08499}",
+      "name": "validatiestatus",
+      "label": {
+        "nl": "validatieStatus"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de status van het Rapport met het oog op  de Validatie ervan."
+      }
+    },
+    {
+      "EA-Guid": "{6B0B36A9-9491-459a-BE14-B635D6154742}",
+      "name": "taal",
+      "label": {
+        "nl": "taal"
+      },
+      "definition": {
+        "nl": "De taal waarin het rapport werd opgesteld."
+      },
+      "usage": {
+        "nl": "OPMERKING: Datatype is een Getypeerdestring opdat de taal eenvoudig dmv een String kan worden weergegeven, weliswaar met vermelding van het type String zodat deze correct kan worden geïnterpreteerd. Bvb waarde  \"nl\" en type \"iso 639-1\"."
+      }
+    },
+    {
+      "EA-Guid": "{8AA6FA36-8BE7-4984-A38F-416F259227AC}",
+      "name": "periode",
+      "label": {
+        "nl": "periode"
+      },
+      "definition": {
+        "nl": "Moment of periode waarop het rapport betrekking heeft."
+      },
+      "usage": {
+        "nl": "Typisch volgt de duur uit het opgeven ve begin- en eindtijdstip maar kan hier ook een moment zijn."
+      }
+    },
+    {
+      "EA-Guid": "{ABA81B20-65C6-4beb-B03D-25E958DB41AA}",
+      "name": "neerlegging",
+      "label": {
+        "nl": "neerlegging"
+      },
+      "definition": {
+        "nl": "Verwijst naar de Neerlegging van het rapport."
+      },
+      "usage": {
+        "nl": "Meer bepaald wanneer en bij welke Organisatie het rapport is neergelegd."
+      }
+    },
+    {
+      "EA-Guid": "{A3927EDE-3455-404f-BCB7-4BDAB037BC39}",
+      "name": "geassocieerdmet",
+      "label": {
+        "nl": "geassocieerdMet"
+      },
+      "definition": {
+        "nl": "Ander FinancieelRapport waarmee het rapport geassocieerd is."
+      }
+    },
+    {
+      "EA-Guid": "{24352C62-2F2A-4f25-99BF-22EA5EBB80F4}",
+      "name": "gaatover",
+      "label": {
+        "nl": "gaatOver"
+      },
+      "definition": {
+        "nl": "Een financieel rapport gaat steeds over een specifieke organisatie"
+      }
+    },
+    {
+      "EA-Guid": "{CA4DDADE-7AEB-4546-AE45-AC31FBFFF866}",
+      "name": "dossier",
+      "label": {
+        "nl": "dossier"
+      },
+      "definition": {
+        "nl": "Dossier dat betrekking heeft op het rapport."
+      }
+    },
+    {
+      "EA-Guid": "{B237CAC8-C8F5-48d5-93FB-EE10624DB742}",
+      "name": "context",
+      "label": {
+        "nl": "context"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een Context waarin de Feiten in het rapport worden bekeken."
+      }
+    },
+    {
+      "EA-Guid": "{D9BDF0F1-7708-4276-8441-667DBEEC23BF}",
+      "name": "rapport",
+      "label": {
+        "nl": "rapport"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het financieelRapport waarvan het feit deel uitmaakt."
+      }
+    },
+    {
+      "EA-Guid": "{41FEAD3E-22EF-44b7-823F-479E248637A0}",
+      "name": "context",
+      "label": {
+        "nl": "context"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de Context waarin het Feit moet bekeken worden."
+      },
+      "usage": {
+        "nl": "Met bvb de Periode waarop het Feit betrekking heeft."
+      }
+    },
+    {
+      "EA-Guid": "{330631D3-1D2B-4120-9CA7-FB22D256E6E0}",
+      "name": "concept",
+      "label": {
+        "nl": "concept"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het Concept dat achter het feit zit."
+      },
+      "usage": {
+        "nl": "Bvb om aan te geven dat het een Feit vh type \"Omzet\" betreft. OPMERKING: Concept kan opgevat worden als een metaklasse, dit kan dus ook geïmplementeerd worden dmv subklassen van Feit: als de subklasse bvb Omzet is dan is de verwijzing naar het Concept niet meer nodig."
+      }
+    },
+    {
+      "EA-Guid": "{E4D3A016-2DD4-4023-8708-E32FDB713F87}",
+      "name": "validatiestatus",
+      "label": {
+        "nl": "validatiestatus"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de status van het Dossier met het oog op  de Validatie ervan."
+      }
+    },
+    {
+      "EA-Guid": "{CA4DDADE-7AEB-4546-AE45-AC31FBFFF866}",
+      "name": "rapport",
+      "label": {
+        "nl": "rapport"
+      },
+      "definition": {
+        "nl": "FinancieelRapport dat deel uitmaakt van het Dossier."
+      }
+    },
+    {
+      "EA-Guid": "{BB9C1AB4-304A-487c-8AEE-E5D99C684846}",
+      "name": "definieert",
+      "label": {
+        "nl": "definieert"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een type Dimesie gedefinieerd in het schema."
+      }
+    },
+    {
+      "EA-Guid": "{59C6BE78-03F2-49fe-9FA3-6940AADE0DDB}",
+      "name": "orde",
+      "label": {
+        "nl": "orde"
+      },
+      "definition": {
+        "nl": "Rangschikking van het Dimensieconcept in een bepaalde volgorde."
+      },
+      "usage": {
+        "nl": "Bvb de children van het Dimensieconcept Regio zijn in het FinancieelRapport gerangschikt als volgt: Regiotype op nummer 1, Regiogrootte op nummer 2."
+      }
+    },
+    {
+      "EA-Guid": "{88F9D8E2-2B3E-47ae-8D83-99D852638992}",
+      "name": "rol",
+      "label": {
+        "nl": "rol"
+      },
+      "definition": {
+        "nl": "Aard van de associatie tussen twee Dimensieconcepten."
+      }
+    },
+    {
+      "EA-Guid": "{4674A916-466E-4cda-ADE9-C5981F7C9A63}",
+      "name": "label",
+      "label": {
+        "nl": "label"
+      },
+      "definition": {
+        "nl": "Sleutelwoord toegekend aan het Dimensieconcept volgens een of ander classificatiesysteem."
+      }
+    },
+    {
+      "EA-Guid": "{8DA24CC6-5D46-402f-8CB2-4F6E2E2831F1}",
+      "name": "geassocieerdmet",
+      "label": {
+        "nl": "geassocieerdMet"
+      },
+      "definition": {
+        "nl": "Associatie tussen twee Dimensieconcepten."
+      },
+      "usage": {
+        "nl": "Bvb Regio is de parent van Regiogrootte."
+      }
+    },
+    {
+      "EA-Guid": "{03DF6BD3-FC09-4a01-B84C-6BAFF034746E}",
+      "name": "definitie",
+      "label": {
+        "nl": "definitie"
+      },
+      "definition": {
+        "nl": "Definitie van het Dimensieconcept."
+      }
+    },
+    {
+      "EA-Guid": "{AD2AFD6C-3ED1-468f-B7EA-3CF780755D77}",
+      "name": "abstract",
+      "label": {
+        "nl": "abstract"
+      },
+      "definition": {
+        "nl": "Geeft aan of een Dimensie van dit type geïnstantieerd mag worden."
+      },
+      "usage": {
+        "nl": "Dit is bvb niet het geval voor een Dimensieconcept dat parent is van meerdere andere Dimensieconcepten, bvb als regio wordt opgfesplitst in Regiogrootte en Regiotype."
+      }
+    },
+    {
+      "EA-Guid": "Derived:{9992AD8A-F1F5-4990-A70A-5E6FE8C9D617}->{89BA9345-AE13-4a62-903E-788A45B71881}",
+      "name": "dimensieconcept(target)",
+      "label": {
+        "nl": "Dimensieconcept (target)"
+      },
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "usage": {
+        "nl": ""
+      }
+    },
+    {
+      "EA-Guid": "Derived:{9992AD8A-F1F5-4990-A70A-5E6FE8C9D617}->{89BA9345-AE13-4a62-903E-788A45B71881}",
+      "name": "dimensieconcept(source)",
+      "label": {
+        "nl": "Dimensieconcept (source)"
+      },
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "usage": {
+        "nl": ""
+      }
+    },
+    {
+      "EA-Guid": "{BB6AFEA4-4140-4b06-8ACF-AD1E110E08B5}",
+      "name": "concept",
+      "label": {
+        "nl": "concept"
+      },
+      "definition": {
+        "nl": "Verwijzing naar het dimensieconcept."
+      },
+      "usage": {
+        "nl": "Bvb om aan te geven dat het een Dimensie vh type \"Periode\" betreft. OPMERKING: Dimensieoncept kan opgevat worden als een metaklasse, dit kan dus ook geïmplementeerd worden dmv subklassen van Dimensie: als de subklasse bvb Periode is dan is de verwijzing naar het Dimensieconcept niet meer nodig."
+      }
+    },
+    {
+      "EA-Guid": "{9CD18E4B-1446-44d1-B42B-42BC7FDF0E1A}",
+      "name": "scenario",
+      "label": {
+        "nl": "scenario"
+      },
+      "definition": {
+        "nl": "Aanvullende informatie over het Feit."
+      }
+    },
+    {
+      "EA-Guid": "{B237CAC8-C8F5-48d5-93FB-EE10624DB742}",
+      "name": "rapport",
+      "label": {
+        "nl": "rapport"
+      },
+      "definition": {
+        "nl": "FinancieelRapport waartoe de Context behoort."
+      },
+      "usage": {
+        "nl": "Om aan te geven tot welk rapport de Context behoort zonder de individuele Feiten te moeten raadplegen. Eenzelfde Context kan immers worden herbruikt voor meerdere Feiten of zelfs voor alle Feiten in een bepaald rapport."
+      }
+    },
+    {
+      "EA-Guid": "{C05F169F-C07B-4cca-BBE3-78C121DBB015}",
+      "name": "periode",
+      "label": {
+        "nl": "periode"
+      },
+      "definition": {
+        "nl": "Het moment of de periode waarop het Feit betrekking heeft."
+      }
+    },
+    {
+      "EA-Guid": "{E247F279-2ABE-4172-97FF-9DF736219AF9}",
+      "name": "entiteit",
+      "label": {
+        "nl": "entiteit"
+      },
+      "definition": {
+        "nl": "Organisatie waarop het Feit betrekking heeft."
+      },
+      "usage": {
+        "nl": "In het geval van de jaarrekening gaat het over de onderneming waarvan de jaarrekening wordt neergelegd"
+      }
+    },
+    {
+      "EA-Guid": "{D4E14E89-9414-4e96-870C-109B20C933E9}",
+      "name": "dimensie",
+      "label": {
+        "nl": "dimensie"
+      },
+      "definition": {
+        "nl": "Perpectief van waaruit naar het Feit is gekeken."
+      },
+      "usage": {
+        "nl": "Bvb voor welke periode het Feit geldig is of op welk product het slaat of op welke regio of al deze Dimensies samen. Bvb Omzet123 geldt voor het huidig boekjaar en voor product ABC (Dimensies zijn dus Periode en Product met resp waarde \"huidig boekjaar\" en \"product ABC\").  Omzet 456 in hetzelfde rapport kan bvb gelden voor hetzelfde boekjaar maar voor product DEF."
+      }
+    },
+    {
+      "EA-Guid": "{757CAABC-2822-4df4-82D6-04DF4B872023}",
+      "name": "rol",
+      "label": {
+        "nl": "rol"
+      },
+      "definition": {
+        "nl": "Aard van de associatie tussen de Concepten."
+      }
+    },
+    {
+      "EA-Guid": "{6B2574A0-73EF-427f-A45D-9B9881575F9F}",
+      "name": "orde",
+      "label": {
+        "nl": "orde"
+      },
+      "definition": {
+        "nl": "Rangschikking van het Concept in een bepaalde volgorde."
+      },
+      "usage": {
+        "nl": "Bv de childeren van het Concept Opbrengsten zijn in het FinancieelRapport gerangeschikt als volgt: Omzet op nummer 1, Bestellingen op nummer 2, Voorraad op nummer 3 etc."
+      }
+    },
+    {
+      "EA-Guid": "Derived:{997FF324-B600-46b2-8D1B-0C58F9D3A625}->{4AB84C52-0E78-46c4-87A2-F08A266FC036}",
+      "name": "concept(target)",
+      "label": {
+        "nl": "Concept (target)"
+      },
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "usage": {
+        "nl": ""
+      }
+    },
+    {
+      "EA-Guid": "Derived:{997FF324-B600-46b2-8D1B-0C58F9D3A625}->{4AB84C52-0E78-46c4-87A2-F08A266FC036}",
+      "name": "concept(source)",
+      "label": {
+        "nl": "Concept (source)"
+      },
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "usage": {
+        "nl": ""
+      }
+    },
+    {
+      "EA-Guid": "{D509B373-26C9-49e8-9AD2-3AAA53DFA81B}",
+      "name": "label",
+      "label": {
+        "nl": "label"
+      },
+      "definition": {
+        "nl": "Sleutelwoord toegekend aan het Concept volgens een of ander classificatiesysteem."
+      }
+    },
+    {
+      "EA-Guid": "{46DE6C03-C7E8-41fd-87A4-57CD34287975}",
+      "name": "hypercube",
+      "label": {
+        "nl": "hypercube"
+      },
+      "definition": {
+        "nl": "Hypercube waarmee Feiten van dit type geassocieerd worden."
+      },
+      "usage": {
+        "nl": "Een Hypercube is een set van Dimensies die op een Feit van toepassing kan zijn, bvb Opbrengsten worden uitgesplitst volgens Boekjaar, Product en regio."
+      }
+    },
+    {
+      "EA-Guid": "{70DB7146-4888-4879-92AD-7A1DBC8C2027}",
+      "name": "geassocieerdmet",
+      "label": {
+        "nl": "geassocieerdMet"
+      },
+      "definition": {
+        "nl": "Associatie tussen twee Concepten."
+      },
+      "usage": {
+        "nl": "Bvb Opbrengsten is het parent-Concept van Omzet."
+      }
+    },
+    {
+      "EA-Guid": "{D593974D-B480-4394-84B3-679E8CC189ED}",
+      "name": "definitie",
+      "label": {
+        "nl": "definitie"
+      },
+      "definition": {
+        "nl": "Definitie van het Concept."
+      }
+    },
+    {
+      "EA-Guid": "{2FF2A7BE-EBCE-47fc-B864-A1E75FFC2AE6}",
+      "name": "abstract",
+      "label": {
+        "nl": "abstract"
+      },
+      "definition": {
+        "nl": "Geeft aan of een Feit van dit type geïnstantieerd mag worden."
+      },
+      "usage": {
+        "nl": "Dit is bvb niet het geval voor een Concept dat parent is van meerdere andere Concepten, bvb Bedrijfsopbrengsten dat opgesplitst wordt in Omzet, Bestellingen, Voorraad etc."
+      }
+    }
+  ],
+  "externals": [
+    {
+      "EA-Guid": "{EBD1BA6B-FC13-4797-998A-9E3C3F119EB6}",
+      "name": "Oprichting",
+      "label": {
+        "nl": "Oprichting"
+      },
+      "definition": {
+        "nl": "Gebeurtenis waarbij een organisatie is opgericht."
+      }
+    },
+    {
+      "EA-Guid": "{2E07BA52-FA6C-4089-AC36-F0508B14D4ED}",
+      "name": "Publiekeorganisatie",
+      "label": {
+        "nl": "PubliekeOrganisatie"
+      },
+      "definition": {
+        "nl": "Een Organisatie die volgens een wettelijk kader behoort tot de publieke sector, ongeacht het bestuursniveau waarop dat kader van kracht is."
+      },
+      "usage": {
+        "nl": "De overheids- en semioverheidsorganisaties die tot men zo tot de publieke sector kan rekenen worden in Europese richtlijn 2003/98/EG \"openbaar lichaam\" genoemd en gedefinieerd als: \"de staat, zijn territoriale lichamen, publiekrechtelijke instellingen, en verenigingen gevormd door een of meer van deze lichamen of een of meer van deze publiekrechtelijke instellingen\". En onder een publiekrechtelijke instelling verstaat men \" iedere instelling die a) is opgericht met het specifieke doel te voorzien in behoeften van algemeen belang die niet van industriële of commerciële aard zijn, en b) rechtspersoonlijkheid heeft, en c) waarvan hetzij de activiteiten in hoofdzaak door de staat of zijn territoriale lichamen of andere publiekrechtelijke instellingen worden gefinancierd, hetzij het beheer is onderworpen aan toezicht door deze laatste, hetzij de leden van het bestuursorgaan, het leidinggevend orgaan of het toezichthoudend orgaan voor meer dan de helft door de staat, zijn territoriale lichamen of andere publiekrechtelijke instellingen zijn aangewezen.\"."
+      }
+    },
+    {
+      "EA-Guid": "{0D9C502D-C540-4fab-9A49-DCE05F2F8593}",
+      "name": "Zaak",
+      "label": {
+        "nl": "Zaak"
+      },
+      "definition": {
+        "nl": "Een samenhangende hoeveelheid werk met een aanleiding en een beoogd resultaat."
+      }
+    },
+    {
+      "EA-Guid": "{3C39ABBD-AFFD-483d-9F0D-5E3E0108EE51}",
+      "name": "Moment",
+      "label": {
+        "nl": "Moment"
+      }
+    },
+    {
+      "EA-Guid": "{443B3A4B-38A6-4dca-BBA5-60DC6F1344EE}",
+      "name": "Temporeleentiteit",
+      "label": {
+        "nl": "TemporeleEntiteit"
+      },
+      "definition": {
+        "nl": "Abstracte klasse voor temporele objecten."
+      },
+      "usage": {
+        "nl": "Die temporele objecten zijn temporele geometrische primitieven zoals Moment of Periode. Of het zijn composieten van temporele primitieven, bv om de geschiedenis van een fenomeen weer te geven (bv de opeenvolgende Periodes dat het fenomeen zich voordeed). Te gebruiken wanneer bvb beide temporele geometrische primitieven mogelijk zijn. OPMERKING: Meer info in <a href=\"https://iso.org/standard/26013.html\">ISO 19108 Geographic Information - Temporal schema</a>. Substitutie door een eenvoudiger equivalent bv time:TemporalEntity uit de <a href=\"https://w3.org/TR/owl-time/\">W3C Time Ontology</a> is aanbevolen."
+      }
+    },
+    {
+      "EA-Guid": "{19E24C69-F605-4fc7-A55F-4B2D944F4BFF}",
+      "name": "Periode",
+      "label": {
+        "nl": "Periode"
+      }
+    },
+    {
+      "EA-Guid": "{54A7D4D6-5361-4455-ACCA-15FFF13955E7}",
+      "name": "Agent",
+      "label": {
+        "nl": "Agent"
+      },
+      "definition": {
+        "nl": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."
+      }
+    },
+    {
+      "EA-Guid": "{556645CD-B16D-452f-A1A4-C73F33C01D5B}",
+      "name": "Locatie",
+      "label": {
+        "nl": "Locatie"
+      },
+      "definition": {
+        "nl": "Een ruimtelijk gebied of benoemde plaats."
+      }
+    },
+    {
+      "EA-Guid": "{3019AA6B-D81A-494a-A356-791FD2075262}",
+      "name": "Publiekedienstverlening",
+      "label": {
+        "nl": "PubliekeDienstverlening"
+      },
+      "definition": {
+        "nl": "Een publieke dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een publieke organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen hiervan."
+      },
+      "usage": {
+        "nl": "De dienstverlening vormt een aanbod (dat dus niet noodzakelijk wordt gebruikt). Ze houdt niet noodzakelijk het opnemen van een recht in,de dienstverlening kan de gebruiker ook toelaten een verplichting te vervullen."
+      }
+    },
+    {
+      "EA-Guid": "{923AD7E3-860D-4ffd-9841-3DCC63838CCD}",
+      "name": "Contactinfo",
+      "label": {
+        "nl": "Contactinfo"
+      }
+    },
+    {
+      "EA-Guid": "{63762872-8F69-42fe-BB06-0283EFB2CB65}",
+      "name": "Taalstring",
+      "label": {
+        "nl": "Taalstring"
+      },
+      "definition": {
+        "nl": "Combinatie van een string en de taal waarin de inhoud ervan is gesteld."
+      },
+      "usage": {
+        "nl": "Bvb 'Rue Mercator' als string en 'fr' als taal."
+      }
+    },
+    {
+      "EA-Guid": "{49F20362-686C-41a8-B621-AD51AF6D039E}",
+      "name": "GeografischeNaam",
+      "label": {
+        "nl": "Geografische Naam"
+      }
+    },
+    {
+      "EA-Guid": "{19745BD2-5138-44ef-8587-FAEA8A42F661}",
+      "name": "Anydatatype",
+      "label": {
+        "nl": "AnyDatatype"
+      }
+    },
+    {
+      "EA-Guid": "{80E9CB68-1741-41d1-919F-6D22C9936A71}",
+      "name": "Decimal",
+      "label": {
+        "nl": "Decimal"
+      },
+      "definition": {
+        "nl": "Een getal met een decimaalpunt gevolgd door cijfers die het breukdeel aangeven."
+      }
+    },
+    {
+      "EA-Guid": "{F6AA5937-D226-4630-AA6B-78FD2B0A8F28}",
+      "name": "Rapporttype",
+      "label": {
+        "nl": "RapportType"
+      },
+      "definition": {
+        "nl": "Een niet-exhaustieve lijst van mogelijke rapport types."
+      }
+    },
+    {
+      "EA-Guid": "{F20BAF4B-FC56-4923-8988-FA91F8B43E8C}",
+      "name": "Schematype",
+      "label": {
+        "nl": "SchemaType"
+      },
+      "definition": {
+        "nl": "Een niet-exhaustieve lijst van mogelijke schema types."
+      }
+    },
+    {
+      "EA-Guid": "{4C6F6EE6-A7B1-4dea-8B74-F90B792498D4}",
+      "name": "Periodetype",
+      "label": {
+        "nl": "PeriodeType"
+      },
+      "definition": {
+        "nl": "Het type van de periode. Gaat het om een moment of een duur"
+      }
+    },
+    {
+      "EA-Guid": "{034D4A39-058E-4370-BC2E-753E4FBB8561}",
+      "name": "Balanstype",
+      "label": {
+        "nl": "BalansType"
+      },
+      "definition": {
+        "nl": "Een overzicht van de mogelijke balanstypes zoals debit en credit"
+      }
+    },
+    {
+      "EA-Guid": "{FA4267BF-C11C-49aa-B9E8-B8EAE7F58ED4}",
+      "name": "Validatiestatus",
+      "label": {
+        "nl": "Validatiestatus"
+      },
+      "definition": {
+        "nl": "Een niet-exhaustieve lijst van mogelijke validatiestatussen"
+      }
+    },
+    {
+      "EA-Guid": "{DF17E5FB-F23C-4ac6-A6C4-B02D8D5A35D6}",
+      "name": "Itemtype",
+      "label": {
+        "nl": "Itemtype"
+      },
+      "definition": {
+        "nl": "Een lijst met mogelijke itemtypes"
+      }
+    },
+    {
+      "EA-Guid": "{D5748D67-321E-4041-BE81-85EAC0804FFF}",
+      "name": "Rapportrelatietype",
+      "label": {
+        "nl": "Rapportrelatietype"
+      },
+      "definition": {
+        "nl": "Een type relatie tussen rapporten"
+      }
+    },
+    {
+      "EA-Guid": "{D5C4E510-AB88-40d6-B678-161A777B227F}",
+      "name": "Conceptrelatietype",
+      "label": {
+        "nl": "Conceptrelatietype"
+      },
+      "definition": {
+        "nl": "Een type relatie tussen concepten"
+      }
+    },
+    {
+      "EA-Guid": "{3C27CD24-F337-403c-A863-98BB5D6FD312}",
+      "name": "Informatieclassificatie",
+      "label": {
+        "nl": "Informatieclassificatie"
+      },
+      "definition": {
+        "nl": "Duidt aan welke veiligheidsmaatregelen (waaronder toegangsmaatregelen) genomen moeten worden voor het Dossier."
+      }
+    },
+    {
+      "EA-Guid": "{55621446-5157-4018-8A79-E2AAC6AE7715}",
+      "name": "Rechtsvormtype",
+      "label": {
+        "nl": "Rechtsvormtype"
+      }
+    },
+    {
+      "EA-Guid": "{7E6D34DF-EA3E-4b98-AF95-A32A0890875D}",
+      "name": ""
+    },
+    {
+      "EA-Guid": "{2B33FFB5-1B5D-48ae-97D3-F7A3998F76FF}",
+      "name": ""
+    },
+    {
+      "EA-Guid": "{21D1CAD4-E328-4c04-87A5-99602A94C8C3}",
+      "name": "Identificator",
+      "label": {
+        "nl": "Identificator"
+      },
+      "definition": {
+        "nl": "Informatie gebruikt om een object uniek te identificeren."
+      },
+      "usage": {
+        "nl": "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem."
+      }
+    },
+    {
+      "EA-Guid": "{6756C53F-5815-48bd-B1A9-E21732A39347}",
+      "name": "Adresvoorstelling",
+      "label": {
+        "nl": "Adresvoorstelling"
+      },
+      "definition": {
+        "nl": "Meer leesbare voorstelling met enkel de basisgegevens van het adres, bedoeld voor het gebruik van een adres als attribuut van een ander object."
+      }
+    },
+    {
+      "EA-Guid": "{B76DE990-703E-4049-BA49-73A9B657D878}",
+      "name": "Organisatie",
+      "label": {
+        "nl": "Organisatie"
+      },
+      "definition": {
+        "nl": "Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaansreden die de individuele leden ervan overstijgt en kan handelen als agent. Een organisatie heeft dikwijls een hiërarchische structuur."
+      }
+    },
+    {
+      "EA-Guid": "{C52A7728-2474-4d8a-95F3-57DA30CBD0AD}",
+      "name": "Vestiging",
+      "label": {
+        "nl": "Vestiging"
+      },
+      "definition": {
+        "nl": "Een kantoor of ander pand waar een organisatie gevestigd is. Organisaties kunnen over meerdere vestigingen verspreid zijn en vestigingen kunnen op meerdere locaties slaan."
+      },
+      "usage": {
+        "nl": "Meestal zal de vestiging een fysieke locatie zijn. Niet-fysieke locaties worden echter niet uitgesloten, bv een virtueel kantoor met bijbehorend postnummer en telefonische receptie."
+      }
+    },
+    {
+      "EA-Guid": "{E4E33CC4-F185-478c-946F-837D9A1CF843}",
+      "name": "Persoon",
+      "label": {
+        "nl": "Persoon"
+      }
+    },
+    {
+      "EA-Guid": "{C73D980F-70D7-4f74-AA0D-83ACE74FF463}",
+      "name": "Geregistreerdeorganisatie",
+      "label": {
+        "nl": "GeregistreerdeOrganisatie"
+      },
+      "definition": {
+        "nl": "Organisatie met een juridisch statuut vastgelegd door registratie. Vergelijk met een formele organisatie waarbij dit statuut ook op een andere manier verkregen kan zijn."
+      },
+      "usage": {
+        "nl": "In België moeten oa volgende organisaties zich registreren: vennootschap (nv,bvba etc),eenmanszaak,overheidsorgaan,stichting? Bij registratie krijgt de organisatie een ondernemingsnummer en worden zijn gegevens ingevoerd in de KBO."
+      }
+    },
+    {
+      "EA-Guid": "{7FEB975D-3209-46e9-9BE9-6C48C8814765}",
+      "name": "Feitelijkevereniging",
+      "label": {
+        "nl": "FeitelijkeVereniging"
+      },
+      "definition": {
+        "nl": "Een Vereniging zonder rechtspersoonlijkheid,gebaseerd op een afspraak tussen twee of meerdere personen en/of organisaties om een belangeloos doel na te streven."
+      },
+      "usage": {
+        "nl": "Een Vereniging wordt gedefinieerd als een Organisatie die een belangeloos doel nastreeft. Dat geldt ook voor een FeitelijkeVereniging, alleen heeft deze geen rechtspersoonlijkheid. Daardoor zijn de individuele leden van de FeitelijkeVereniging zelf aansprakelijk voor de activiteiten die ze organiseren. OPMERKING: Van zodra de FeitelijkeVereniging erkend is kan ze bijkomend getypeerd worden als FormeleOrganisatie (zie elders in deze specificatie voor een definitie van deze term)."
+      }
+    },
+    {
+      "EA-Guid": "{5FC45B85-6E11-4970-B4F6-C02CCD74F8CB}",
+      "name": "Vereniging",
+      "label": {
+        "nl": "Vereniging"
+      },
+      "definition": {
+        "nl": "Een Organisatie die een onbaatzuchtig doel nastreeft."
+      }
+    },
+    {
+      "EA-Guid": "{2A68F8B2-290F-491f-A63C-37C39ECDBD02}",
+      "name": "Dossier",
+      "label": {
+        "nl": "Dossier"
+      }
+    },
+    {
+      "EA-Guid": "{B23E0C0A-BABA-4620-8520-C0BDC33821EF}",
+      "name": "Zakelijkrapport",
+      "label": {
+        "nl": "ZakelijkRapport"
+      }
+    },
+    {
+      "EA-Guid": "{657AC06F-F06C-48a5-8E8D-6BFA2AE3542C}",
+      "name": "GeregistreerdPersoon",
+      "label": {
+        "nl": "Geregistreerd Persoon"
+      },
+      "definition": {
+        "nl": "Persoon waarvan de gegevens zijn ingeschreven in een register."
+      },
+      "usage": {
+        "nl": "Doorgaans is dit register een bevolkingsregister maar het kan bv ook een kiesregister zijn. De ingeschreven gegevens hebben betrekking op de identeit (vb Naam en Voornaam) en de Verblijfplaats vd Persoon en op belangrijke levensgebeurtenissen zoals Geboorte, Huwelijk, Overlijden etc. Deze gegevens worden typisch geregistreerd door de overheid, ze bieden de ingeschreven Persoon wettelijke bescherming en laten de overheid toe om basisstatistieken op te stellen over zijn bevolking."
+      }
+    },
+    {
+      "EA-Guid": "{49224169-927A-4460-B3AA-E90B530F87D4}",
+      "name": "Monetairdatatype",
+      "label": {
+        "nl": "MonetairDatatype"
+      }
+    },
+    {
+      "EA-Guid": "{21DBC43E-BDEB-457f-89DB-8A848630205E}",
+      "name": "Getal",
+      "label": {
+        "nl": "Getal"
+      }
+    },
+    {
+      "EA-Guid": "{D9C6A5AB-51C9-4d4e-8EE3-374B632B827F}",
+      "name": "Nietnumeriekdatatype",
+      "label": {
+        "nl": "NietNumeriekDatatype"
+      }
+    },
+    {
+      "EA-Guid": "{4A00F834-400B-4928-886B-E3862E4CCBBF}",
+      "name": "Numeriekdatatype",
+      "label": {
+        "nl": "NumeriekDatatype"
+      }
+    }
+  ],
+  "externalproperties": [
+    {
+      "EA-Guid": "{92E6452C-4DD4-4542-ADB0-29A3984B7348}",
+      "name": "waarde",
+      "label": {
+        "nl": "waarde"
+      }
+    },
+    {
+      "EA-Guid": "{965EC66C-C5BD-438f-A785-3B3A9D910355}",
+      "name": "waarde",
+      "label": {
+        "nl": "waarde"
+      },
+      "definition": {
+        "nl": "De waarde van een feit"
+      }
+    },
+    {
+      "EA-Guid": "{1DED5B5F-043A-4d94-8A6E-FAF770C0DBEB}",
+      "name": "getal",
+      "label": {
+        "nl": "getal"
+      }
+    },
+    {
+      "EA-Guid": "{B03E1732-5714-41ab-AB4B-94C9EE407A35}",
+      "name": "getal",
+      "label": {
+        "nl": "getal"
+      }
+    },
+    {
+      "EA-Guid": "{5910FF07-DE1A-4e3d-BB52-CDB62EF5D65C}",
+      "name": "getal",
+      "label": {
+        "nl": "getal"
+      }
+    },
+    {
+      "EA-Guid": "{51534A72-3639-4901-94F1-57DD93DDCA06}",
+      "name": "getal",
+      "label": {
+        "nl": "getal"
+      }
+    },
+    {
+      "EA-Guid": "{74DE95B8-2225-4904-A7DA-27F6C4AB769E}",
+      "name": "registratie",
+      "label": {
+        "nl": "registratie"
+      },
+      "definition": {
+        "nl": "Identificatiecode vd persoon ih register."
+      }
+    },
+    {
+      "EA-Guid": "{3683E098-4105-4d6c-BDBC-97B061A9A3AE}",
+      "name": "rechtsvorm",
+      "label": {
+        "nl": "rechtsvorm"
+      },
+      "definition": {
+        "nl": "Juridisch statuut van de geregistreerde organisatie."
+      },
+      "usage": {
+        "nl": "Stemt in de KBO overeen met rechtsvorm, bvb NV, VZW, Stad/Gemeente, OCMW etc."
+      }
+    },
+    {
+      "EA-Guid": "{7AA48953-35E9-4460-A004-F4C8994B40B2}",
+      "name": "ingedienddoor",
+      "label": {
+        "nl": "ingediendDoor"
+      },
+      "definition": {
+        "nl": "Organisatie die het Dossier heeft ingediend."
+      }
+    },
+    {
+      "EA-Guid": "{EFAC996D-9317-4a13-A23B-080513DECF83}",
+      "name": "woonplaats",
+      "label": {
+        "nl": "woonplaats"
+      }
+    },
+    {
+      "EA-Guid": "{BA0843BE-50FD-434f-82F4-35815A12FF07}",
+      "name": "sluitingsdatum",
+      "label": {
+        "nl": "sluitingsdatum"
+      }
+    },
+    {
+      "EA-Guid": "{E8FF534A-B479-4a0d-B3C9-40513777D971}",
+      "name": "openingsdatum",
+      "label": {
+        "nl": "openingsdatum"
+      }
+    },
+    {
+      "EA-Guid": "{5C6570DC-E858-44ce-A985-76CFD0322008}",
+      "name": "isneerslagvan",
+      "label": {
+        "nl": "isNeerslagVan"
+      }
+    },
+    {
+      "EA-Guid": "{6C5856FA-6424-46c6-9045-A1B25D7284AA}",
+      "name": "informatieclassificatie",
+      "label": {
+        "nl": "informatieclassificatie"
+      }
+    },
+    {
+      "EA-Guid": "{49872DD4-A320-4900-8B96-85F8BDD45411}",
+      "name": "heeftverantwoordelijke",
+      "label": {
+        "nl": "heeftVerantwoordelijke"
+      },
+      "definition": {
+        "nl": "Publieke organisatie die verantwoordelijk is voor het aanbieden en beheren van de publieke dienstverlening.\t"
+      },
+      "usage": {
+        "nl": "Of de publieke organisatie zelf de dienstverlening aanbiedt of deze uitbesteedt is irrelevant. De publieke organisatie verantwoordelijk voor het aanbieden en beheren van de dienstverlening wordt ook wel de bevoegde Instantie genoemd en wordt in Europese Richtlijn 2006/123/EC gedefinieerd als volgt: \"elk orgaan of autoriteit dat in een lidstaat en toezichthoudende of regelgevende rol vervult ten aanzien van dienstenactiviteiten, met name bestuurlijke instanties, met inbegrip van rechterlijke instanties die als zodanig optreden, beroepsorden en de beroepsverenigingen en -organisaties of andere beroepsorganisaties die in de uitoefening van hun juridisch autonome bevoegdheden de toegang tot of de uitoefening van dienstenactiviteiten collectief reguleren\".\t"
+      }
+    },
+    {
+      "EA-Guid": "{C69751B1-289E-456d-BE14-51F31E62175D}",
+      "name": "land",
+      "label": {
+        "nl": "land"
+      },
+      "definition": {
+        "nl": "Land waarin het adres gelegen is."
+      }
+    },
+    {
+      "EA-Guid": "{DAAA1E65-C72E-46c9-9318-A07D7BB1D168}",
+      "name": "gemeentenaam",
+      "label": {
+        "nl": "gemeentenaam"
+      },
+      "definition": {
+        "nl": "Gemeentenaam vh adres."
+      }
+    },
+    {
+      "EA-Guid": "{FFF684D2-94D5-41d2-AC15-877280C58FFB}",
+      "name": "huisnummer",
+      "label": {
+        "nl": "huisnummer"
+      },
+      "definition": {
+        "nl": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."
+      }
+    },
+    {
+      "EA-Guid": "{E45361C2-0FB8-4480-B2F6-544E771E9EBB}",
+      "name": "busnummer",
+      "label": {
+        "nl": "busnummer"
+      },
+      "definition": {
+        "nl": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."
+      }
+    },
+    {
+      "EA-Guid": "{0BAE0DEB-C558-49d4-A54F-D38331512892}",
+      "name": "page",
+      "label": {
+        "nl": "page"
+      }
+    },
+    {
+      "EA-Guid": "{1B3A3E93-18DA-4775-9C92-A9A7A273FFA4}",
+      "name": "naam",
+      "label": {
+        "nl": "naam"
+      }
+    },
+    {
+      "EA-Guid": "{6FE58658-3229-4aae-A36C-51E1A2DDA288}",
+      "name": "voornaam",
+      "label": {
+        "nl": "voornaam"
+      }
+    },
+    {
+      "EA-Guid": "{808A1A7B-A385-4020-824C-4DFC895FD8FC}",
+      "name": "familienaam",
+      "label": {
+        "nl": "familienaam"
+      }
+    },
+    {
+      "EA-Guid": "{EBFF091A-2426-47e0-B370-E7BD2D092F71}",
+      "name": "geboortedatum",
+      "label": {
+        "nl": "geboortedatum"
+      }
+    },
+    {
+      "EA-Guid": "{60C5FFAF-0E52-45d1-9353-C503D741A6D6}",
+      "name": "registratie",
+      "label": {
+        "nl": "registratie"
+      },
+      "definition": {
+        "nl": "Identificator dat de organisatie verkreeg bij registratie."
+      },
+      "usage": {
+        "nl": "In de KBO is dit het ondernemingsnummer.\t"
+      }
+    },
+    {
+      "EA-Guid": "{C47CF9D3-4442-4c0f-ADFC-83B2A44CA765}",
+      "name": "wettelijkenaam",
+      "label": {
+        "nl": "wettelijkeNaam"
+      },
+      "definition": {
+        "nl": "Wettelijk geregistreerde naam vd organisatie."
+      },
+      "usage": {
+        "nl": "Evt in verschillende talen."
+      }
+    },
+    {
+      "EA-Guid": "{E3D525B0-FA41-4dd7-86E1-E2E80DC6F353}",
+      "name": "vestigingsadres",
+      "label": {
+        "nl": "vestigingsadres"
+      },
+      "definition": {
+        "nl": "Adres vd vestiging."
+      },
+      "usage": {
+        "nl": "Kan email, telefoon en ook adres zijn (in welk geval ook niet-fysieke adressen mogelijk zijn)."
+      }
+    },
+    {
+      "EA-Guid": "{AC19CB8C-D849-4f7c-82EF-B0BEA75F77ED}",
+      "name": "ishetresultaatvan",
+      "label": {
+        "nl": "isHetresultaatVan"
+      },
+      "definition": {
+        "nl": "Verwijst naar het verandersinsmoment dat tot de huidige organisatie heeft geleid."
+      }
+    },
+    {
+      "EA-Guid": "{7C77E0AF-62E7-4c2b-AB51-4E63F45261AF}",
+      "name": "vestiging",
+      "label": {
+        "nl": "vestiging"
+      },
+      "definition": {
+        "nl": "Verwijst naar een plek waar de organisatie op een of andere manier, desnoods indirect, aanwezig is."
+      }
+    },
+    {
+      "EA-Guid": "{938183C3-8447-4726-A040-E521E37EA308}",
+      "name": "straatnaam",
+      "label": {
+        "nl": "straatnaam"
+      },
+      "definition": {
+        "nl": "Straatnaam vh adres."
+      }
+    },
+    {
+      "EA-Guid": "{068CF4F3-F2CF-4e4c-AE32-2892F564764F}",
+      "name": "postcode",
+      "label": {
+        "nl": "postcode"
+      },
+      "definition": {
+        "nl": "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."
+      }
+    },
+    {
+      "EA-Guid": "{4198D2C8-DB76-4e4c-84D0-7F8883C916BA}",
+      "name": "adres",
+      "label": {
+        "nl": "adres"
+      }
+    },
+    {
+      "EA-Guid": "{A2A2CB1B-7E44-4728-921B-B4F1755D4374}",
+      "name": "toegekenddoorstring",
+      "label": {
+        "nl": "toegekendDoorString"
+      }
+    },
+    {
+      "EA-Guid": "{97E3D450-F334-46c8-B052-BB5565717A2A}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator"
+      }
+    },
+    {
+      "EA-Guid": "{CB3997E8-571D-4cb6-A9E0-18EDF21AFB19}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator"
+      }
+    },
+    {
+      "EA-Guid": "{59263B0F-AD0B-4240-8FD0-5F68569E19C2}",
+      "name": "id",
+      "label": {
+        "nl": "id"
+      }
+    },
+    {
+      "EA-Guid": "{76175BB6-6F97-4c37-8D64-B4F7742AAD57}",
+      "name": "id",
+      "label": {
+        "nl": "id"
+      }
+    },
+    {
+      "EA-Guid": "{8A497EE2-0A53-4540-87DD-F29AB53428FB}",
+      "name": "id",
+      "label": {
+        "nl": "id"
+      },
+      "definition": {
+        "nl": "Identificator van het Concept."
+      }
+    },
+    {
+      "EA-Guid": "{1AF3C98E-AE4C-41a8-A480-190AF0035500}",
+      "name": "id",
+      "label": {
+        "nl": "id"
+      }
+    },
+    {
+      "EA-Guid": "{346E8D6A-964F-4078-9157-3897D26CE950}",
+      "name": "id",
+      "label": {
+        "nl": "id"
+      },
+      "definition": {
+        "nl": "De unieke identificator van het schema"
+      }
+    },
+    {
+      "EA-Guid": "{C3FB433D-2E5E-4756-8410-799A30B39476}",
+      "name": "id",
+      "label": {
+        "nl": "id"
+      }
+    },
+    {
+      "EA-Guid": "{0D7312E5-2555-4e7c-B1A0-0414C109A8A2}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator"
+      },
+      "definition": {
+        "nl": "De unieke identificator van een publieke dienstverlening."
+      }
+    },
+    {
+      "EA-Guid": "{D644D456-4089-4e84-BCEF-E3B78C7D6D2F}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator"
+      }
+    },
+    {
+      "EA-Guid": "{C0B93757-3F67-420b-9D64-7D2CEFBF7562}",
+      "name": "voorkeursnaam",
+      "label": {
+        "nl": "voorkeursnaam"
+      },
+      "definition": {
+        "nl": "Naam waarmee de organisatie bij voorkeur wordt aangeduid.\t"
+      }
+    },
+    {
+      "EA-Guid": "{A2C7CD13-B19A-430f-9BC5-7CEEABFA73EE}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator"
+      }
+    },
+    {
+      "EA-Guid": "{9D9AC3C4-5925-4179-B127-F1C943C5CAE8}",
+      "name": "plaatsnaam",
+      "label": {
+        "nl": "plaatsnaam"
+      },
+      "definition": {
+        "nl": "Naam van de plaats of van het gebied."
+      }
+    },
+    {
+      "EA-Guid": "{50B7BA24-4136-4a51-90CA-E19425D62580}",
+      "name": "aanschrijfprefix",
+      "label": {
+        "nl": "aanschrijfprefix"
+      }
+    },
+    {
+      "EA-Guid": "{67F98D96-B30F-44d5-AD96-1ECF159F6941}",
+      "name": "telefoon",
+      "label": {
+        "nl": "telefoon"
+      }
+    },
+    {
+      "EA-Guid": "{71DB0CAD-D0C3-49ba-B078-6FCD6A278C06}",
+      "name": "faxnummer",
+      "label": {
+        "nl": "faxnummer"
+      }
+    },
+    {
+      "EA-Guid": "{03BD873A-5495-4717-8ED7-734B55B4EE13}",
+      "name": "email",
+      "label": {
+        "nl": "email"
+      }
+    },
+    {
+      "EA-Guid": "{B7696BAB-1A2D-47e6-97EB-AFC69E75BFE7}",
+      "name": "contactinfo",
+      "label": {
+        "nl": "contactinfo"
+      },
+      "definition": {
+        "nl": "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."
+      }
+    },
+    {
+      "EA-Guid": "{0799E63C-B118-4d77-8527-85660C1F741D}",
+      "name": "contactinfo",
+      "label": {
+        "nl": "contactinfo"
+      }
+    },
+    {
+      "EA-Guid": "{2EB03039-29E7-40f6-8152-C8BB3893561A}",
+      "name": "naam",
+      "label": {
+        "nl": "naam"
+      }
+    },
+    {
+      "EA-Guid": "{901C609B-DCAF-4a6d-BA03-1E432F070374}",
+      "name": "naam",
+      "label": {
+        "nl": "naam"
+      }
+    },
+    {
+      "EA-Guid": "{65613AD7-E79F-482f-8A88-EB2A8316BFDF}",
+      "name": "naam",
+      "label": {
+        "nl": "naam"
+      },
+      "definition": {
+        "nl": "De naam van het concept zoals gedefinieerd in het schema."
+      }
+    },
+    {
+      "EA-Guid": "{C4062A0B-56D6-454b-A5FB-F76523A004F3}",
+      "name": "naam",
+      "label": {
+        "nl": "naam"
+      }
+    },
+    {
+      "EA-Guid": "{6406D5AD-0D8F-4041-8816-C83B558FDF39}",
+      "name": "naam",
+      "label": {
+        "nl": "naam"
+      },
+      "definition": {
+        "nl": "Officiële naam van de publieke dienstverlening.\t"
+      }
+    },
+    {
+      "EA-Guid": "{FE85C529-DA7D-4467-B973-130B12496F00}",
+      "name": "naam",
+      "label": {
+        "nl": "naam"
+      }
+    },
+    {
+      "EA-Guid": "{A5082F3B-3A05-4417-B5AE-083FF6360C15}",
+      "name": "naam",
+      "label": {
+        "nl": "naam"
+      }
+    },
+    {
+      "EA-Guid": "{F63E3855-91B1-489e-95ED-511D5B70E89E}",
+      "name": "naam",
+      "label": {
+        "nl": "naam"
+      }
+    },
+    {
+      "EA-Guid": "{D13C5598-8C1A-4abd-8B62-7F19F1ACA487}",
+      "name": "naam",
+      "label": {
+        "nl": "naam"
+      }
+    },
+    {
+      "EA-Guid": "{7BE40827-5205-4590-9258-80D319162266}",
+      "name": "werkingsgebied",
+      "label": {
+        "nl": "werkingsgebied"
+      },
+      "definition": {
+        "nl": "Administratief gebied dat de Publieke Organisatie dekt."
+      }
+    },
+    {
+      "EA-Guid": "{6D164723-E518-4c4e-8365-296389DEC5BF}",
+      "name": "ruimtelijkedekking",
+      "label": {
+        "nl": "ruimtelijkeDekking"
+      },
+      "definition": {
+        "nl": "Gebied waarin de publieke dienstverlening beschikbaar is.\t"
+      },
+      "usage": {
+        "nl": "Typisch het werkingsgebied van de verantwoordelijke publieke organisatie.\t"
+      }
+    },
+    {
+      "EA-Guid": "{4D700FF8-FCA9-4bdc-B598-A0A06CC8F8CC}",
+      "name": "toegekendop",
+      "label": {
+        "nl": "toegekendOp"
+      }
+    },
+    {
+      "EA-Guid": "{4AD8F3F5-7DB6-4d1f-B5CC-86F13B4675ED}",
+      "name": "beschrijving",
+      "label": {
+        "nl": "beschrijving"
+      },
+      "definition": {
+        "nl": "Beschrijving vd publieke dienstverlening.\t"
+      }
+    },
+    {
+      "EA-Guid": "{E6C75471-F134-4684-A444-8AF3991BEA1D}",
+      "name": "datum",
+      "label": {
+        "nl": "datum"
+      },
+      "definition": {
+        "nl": "Datum waarop de oprichting plaatsvond."
+      }
+    },
+    {
+      "EA-Guid": "{3859F0EA-80FC-4ef6-8971-163B764F1341}",
+      "name": "toegekenddoor",
+      "label": {
+        "nl": "toegekendDoor"
+      }
+    },
+    {
+      "EA-Guid": "{90085C82-D77E-4b49-9E2D-0E0CD2C8BAFB}",
+      "name": "type",
+      "label": {
+        "nl": "type"
+      },
+      "definition": {
+        "nl": "Het type van het rapport."
+      }
+    },
+    {
+      "EA-Guid": "{9AAFF085-FE80-406d-93A6-279AD0E17FE3}",
+      "name": "type",
+      "label": {
+        "nl": "type"
+      }
+    },
+    {
+      "EA-Guid": "{F22C95A7-E754-42da-AC68-DDCDDF00822A}",
+      "name": "type",
+      "label": {
+        "nl": "type"
+      }
+    },
+    {
+      "EA-Guid": "{0658C742-576B-47de-9B84-22EB5D794598}",
+      "name": "periodetype",
+      "label": {
+        "nl": "periodeType"
+      }
+    },
+    {
+      "EA-Guid": "{BB8493B0-6083-4eb5-B3E4-1D5246054521}",
+      "name": "itemtype",
+      "label": {
+        "nl": "itemtype"
+      }
+    },
+    {
+      "EA-Guid": "{AE74E9D0-7B82-4a7e-85FB-21100EC208CB}",
+      "name": "itemtype",
+      "label": {
+        "nl": "itemtype"
+      }
+    },
+    {
+      "EA-Guid": "{8873C2ED-D0B5-4014-BFAF-38FE3E9F40A0}",
+      "name": "datatype",
+      "label": {
+        "nl": "datatype"
+      }
+    },
+    {
+      "EA-Guid": "{881F10D7-A5B3-477e-8EDA-5D700CB67D42}",
+      "name": "datatype",
+      "label": {
+        "nl": "datatype"
+      }
+    },
+    {
+      "EA-Guid": "{BA046C05-E1C2-496b-B474-345513FE3987}",
+      "name": "balanstype",
+      "label": {
+        "nl": "balansType"
+      }
+    },
+    {
+      "EA-Guid": "{D8BF955D-B068-432d-94BF-91A94C43A28F}",
+      "name": "contactinfo",
+      "label": {
+        "nl": "contactinfo"
+      },
+      "definition": {
+        "nl": "Informatie waarmee de publieke dienstverlening kan worden gecontacteerd.\t"
+      },
+      "usage": {
+        "nl": "Verschillend van de informatie waarmee de publieke organisatie kan worden gecontacteerd.\t"
+      }
+    }
+  ]
+}
