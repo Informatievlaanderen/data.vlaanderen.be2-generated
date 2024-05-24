@@ -8,6 +8,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+schemas:DigitalDocument a rdfs:Class;
+  rdfs:label "Document"@nl .
+
 <https://data.vlaanderen.be/ns/mobiliteitsbudget#Mobiliteitsbudget.type> a owl:ObjectProperty;
   rdfs:label "type"@nl;
   rdfs:comment "Type oorsprong van budget"@nl;
@@ -119,12 +122,13 @@
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/mobiliteitsbudget>;
   rdfs:range schemas:audienceType .
 
-<https://data.vlaanderen.be/ns/mobiliteitsbudget#specificatie> a rdf:Property;
+<https://data.vlaanderen.be/ns/mobiliteitsbudget#specificatie> a owl:ObjectProperty;
   rdfs:label "specificatie"@nl;
   <http://purl.org/vocab/vann/usageNote> "Voorbeelden zijn: kortingmechanismes"@nl;
   rdfs:comment "Document waar extra specificaties in omschreven staan"@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/mobiliteitsbudget#Voorwaarde>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/mobiliteitsbudget> .
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/mobiliteitsbudget>;
+  rdfs:range schemas:DigitalDocument .
 
 <https://data.vlaanderen.be/ns/mobiliteitsbudget#vervoersbewijs> a owl:ObjectProperty;
   rdfs:label "vervoersbewijs"@nl;
@@ -224,27 +228,11 @@ schemas:QuantitativeValue a rdf:Property;
   dc:contributor [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.hasselt.be>;
-      foaf:name "Stad Hasselt"
+      foaf:homepage <https://www.vlaanderen.be/departement-mobiliteit-en-openbare-werken>;
+      foaf:name "Departement Mobiliteit & Openbare Werken"
     ];
-    foaf:firstName "Yannick";
-    foaf:lastName "Fabbro"
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.mycsn.be/>;
-      foaf:name "MyCSM"
-    ];
-    foaf:firstName "Niels";
-    foaf:lastName "Kelchtermans"
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.anyways.eu/>;
-      foaf:name "Anyways"
-    ];
-    foaf:firstName "Wim";
-    foaf:lastName "Michiels"
+    foaf:firstName "Erika";
+    foaf:lastName "Verstrepen"
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -256,11 +244,27 @@ schemas:QuantitativeValue a rdf:Property;
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.vlaanderen.be/departement-mobiliteit-en-openbare-werken>;
-      foaf:name "Departement Mobiliteit & Openbare Werken"
+      foaf:homepage <https://www.anyways.eu/>;
+      foaf:name "Anyways"
     ];
-    foaf:firstName "Erika";
-    foaf:lastName "Verstrepen"
+    foaf:firstName "Wim";
+    foaf:lastName "Michiels"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.mycsn.be/>;
+      foaf:name "MyCSM"
+    ];
+    foaf:firstName "Niels";
+    foaf:lastName "Kelchtermans"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.hasselt.be>;
+      foaf:name "Stad Hasselt"
+    ];
+    foaf:firstName "Yannick";
+    foaf:lastName "Fabbro"
   ];
   dc:issued "TODO";
   dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
@@ -270,85 +274,23 @@ schemas:QuantitativeValue a rdf:Property;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso dc:date,
-    schema:itinerary,
-    schemas:MonetaryAmount,
-    schemas:QuantitativeValue,
-    schemas:dateReceived,
+  rdfs:seeAlso schemas:DigitalDocument,
+    schemas:startDate,
     schemas:endDate,
-    schemas:startDate;
+    schemas:dateReceived,
+    schemas:QuantitativeValue,
+    schemas:MonetaryAmount,
+    schema:itinerary,
+    dc:date;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
       foaf:name "Digitaal Vlaanderen"
     ];
-    foaf:firstName "Veerle";
-    foaf:lastName "Beyaert";
-    foaf:mbox <mailto:veerle.beyaert@vlaanderen.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
-      foaf:name "Digitaal Vlaanderen"
-    ];
-    foaf:firstName "Raf";
-    foaf:lastName "Buyle";
-    foaf:mbox <mailto:raf.buyle@vlaanderen.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
-      foaf:name "Digitaal Vlaanderen"
-    ];
-    foaf:firstName "Yaron";
-    foaf:lastName "Dassonneville";
-    foaf:mbox <mailto:yaron.dassonneville@vlaanderen.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
-      foaf:name "Digitaal Vlaanderen"
-    ];
-    foaf:firstName "Kim";
-    foaf:lastName "Leemans";
-    foaf:mbox <mailto:kim.leemans@vlaanderen.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
-      foaf:name "Digitaal Vlaanderen"
-    ];
-    foaf:firstName "Jef";
-    foaf:lastName "Liekens";
-    foaf:mbox <mailto:jef.liekens@vlaanderen.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
-      foaf:name "Digitaal Vlaanderen"
-    ];
-    foaf:firstName "Geert";
-    foaf:lastName "Thijs";
-    foaf:mbox <mailto:geert.thijs@vlaanderen.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
-      foaf:name "Digitaal Vlaanderen"
-    ];
-    foaf:firstName "Liesbeth";
-    foaf:lastName "Van der Haegen";
-    foaf:mbox <mailto:liesbeth.vanderhaegen@vlaanderen.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
-      foaf:name "Digitaal Vlaanderen"
-    ];
-    foaf:firstName "Ziggy";
-    foaf:lastName "Vanlishout";
-    foaf:mbox <mailto:ziggy.vanlishout@vlaanderen.be>
+    foaf:firstName "Eveline";
+    foaf:lastName "Vlassenroot";
+    foaf:mbox <mailto:eveline.vlassenroot@vlaanderen.be>
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -364,19 +306,74 @@ schemas:QuantitativeValue a rdf:Property;
       foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
       foaf:name "Digitaal Vlaanderen"
     ];
-    foaf:firstName "Eveline";
-    foaf:lastName "Vlassenroot";
-    foaf:mbox <mailto:eveline.vlassenroot@vlaanderen.be>
-  ];
-  foaf:maker [
+    foaf:firstName "Ziggy";
+    foaf:lastName "Vanlishout";
+    foaf:mbox <mailto:ziggy.vanlishout@vlaanderen.be>
+  ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.hasselt.be>;
-      foaf:name "Stad Hasselt"
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
     ];
-    foaf:firstName "Bea";
-    foaf:lastName "Cleeren"
+    foaf:firstName "Liesbeth";
+    foaf:lastName "Van der Haegen";
+    foaf:mbox <mailto:liesbeth.vanderhaegen@vlaanderen.be>
   ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Geert";
+    foaf:lastName "Thijs";
+    foaf:mbox <mailto:geert.thijs@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Jef";
+    foaf:lastName "Liekens";
+    foaf:mbox <mailto:jef.liekens@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Kim";
+    foaf:lastName "Leemans";
+    foaf:mbox <mailto:kim.leemans@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Yaron";
+    foaf:lastName "Dassonneville";
+    foaf:mbox <mailto:yaron.dassonneville@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Raf";
+    foaf:lastName "Buyle";
+    foaf:mbox <mailto:raf.buyle@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Veerle";
+    foaf:lastName "Beyaert";
+    foaf:mbox <mailto:veerle.beyaert@vlaanderen.be>
+  ];
+  foaf:maker [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.leuven.be>;
@@ -384,4 +381,12 @@ schemas:QuantitativeValue a rdf:Property;
     ];
     foaf:firstName "Eli";
     foaf:lastName "Nomes"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.hasselt.be>;
+      foaf:name "Stad Hasselt"
+    ];
+    foaf:firstName "Bea";
+    foaf:lastName "Cleeren"
   ] .
