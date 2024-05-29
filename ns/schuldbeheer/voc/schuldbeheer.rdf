@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:schema="http://schema.org/">
-  <owl:Class rdf:about="http://fixme.com#FinancieleToestand">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:ns0="http://www.w3.org/2001/02pd/rec54#" xmlns:schemas="https://schema.org/" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:ns1="http://purl.org/vocab/vann/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:schema="http://schema.org/">
+  <owl:Class rdf:about="http://fixme.com#Oninbaarheidsverklaring">
     <rdfs:isDefinedBy>
       <owl:Ontology rdf:about="http://fixme.com">
         <dc:license>https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0</dc:license>
@@ -54,103 +54,145 @@
           </foaf:Person>
         </dc:contributor>
         <dc:issued>TODO</dc:issued>
+        <rdfs:seeAlso>
+          <rdfs:Class rdf:about="https://schema.org/MonetaryAmount">
+            <rdfs:label xml:lang="nl">Geldbedrag</rdfs:label>
+          </rdfs:Class>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="https://schema.org/value">
+            <rdfs:label xml:lang="nl">waarde</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
+        <rdfs:seeAlso>
+          <rdf:Property rdf:about="https://schema.org/currency">
+            <rdfs:label xml:lang="nl">valuta</rdfs:label>
+          </rdf:Property>
+        </rdfs:seeAlso>
       </owl:Ontology>
     </rdfs:isDefinedBy>
-    <rdfs:label xml:lang="nl">FinancieleToestand</rdfs:label>
+    <rdfs:label xml:lang="nl">Oninbaarheidsverklaring</rdfs:label>
+    <rdfs:comment xml:lang="nl">Het aangeven dat een bepaalde vordering als oninbaar wordt beschouwd. </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
   </owl:Class>
-  <owl:Class rdf:about="http://fixme.com#Rechtspositie">
+  <owl:ObjectProperty rdf:about="http://fixme.com#antwoording">
     <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-    <rdfs:label xml:lang="nl">Rechtspositie</rdfs:label>
-  </owl:Class>
-  <owl:ObjectProperty rdf:about="http://fixme.com#betalingstermijn">
-    <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-    <rdfs:label xml:lang="nl">betalingstermijn</rdfs:label>
+    <rdfs:label xml:lang="nl">beschrijving</rdfs:label>
+    <rdfs:comment xml:lang="nl">Verwijzing naar de verantwoording van de vordering,</rdfs:comment>
+    <ns1:usageNote xml:lang="nl">Dit kan bijvoorbeeld een geleverder prestatie zijn, of een overtreding die op een bepaald moment is vastgesteld.</ns1:usageNote>
     <rdfs:domain>
-      <owl:Class rdf:about="http://fixme.com#Schuldvordering">
+      <owl:Class rdf:about="http://fixme.com#Grondslag">
         <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-        <rdfs:label xml:lang="nl">Schuldvordering</rdfs:label>
+        <rdfs:label xml:lang="nl">Grondslag</rdfs:label>
+        <rdfs:comment xml:lang="nl">De juridische basis voor een vordering</rdfs:comment>
       </owl:Class>
     </rdfs:domain>
-    <rdfs:range rdf:resource="https://data.vlaanderen.be/ns/generiek#Tijdspanne"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
   </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="http://fixme.com#datum">
+  <owl:DatatypeProperty rdf:about="http://fixme.com#fiscaal">
     <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-    <rdfs:label xml:lang="nl">datum</rdfs:label>
-    <rdfs:domain rdf:resource="http://fixme.com#Schuldvordering"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-  </owl:DatatypeProperty>
-  <owl:ObjectProperty rdf:about="http://fixme.com#hoofdbedrag">
-    <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-    <rdfs:label xml:lang="nl">hoofdbedrag</rdfs:label>
-    <rdfs:domain rdf:resource="http://fixme.com#Schuldvordering"/>
-    <rdfs:range>
-      <owl:Class rdf:about="http://fixme.com#Geldbedrag">
+    <rdfs:label xml:lang="nl">fiscaal</rdfs:label>
+    <rdfs:comment xml:lang="nl">Laat toe om te specifiëren of het een fiscale of niet-fiscale vordering betreft.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="http://fixme.com#Vorderingstype">
         <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-        <rdfs:label xml:lang="nl">Geldbedrag</rdfs:label>
+        <rdfs:label xml:lang="nl">Vorderingstype</rdfs:label>
+        <rdfs:comment xml:lang="nl">Verwijzing naar een Vorderingstype.</rdfs:comment>
       </owl:Class>
-    </rdfs:range>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://fixme.com#grondslag">
+    <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
+    <rdfs:label xml:lang="nl">grondslag</rdfs:label>
+    <rdfs:comment xml:lang="nl">Verwijzing naar de juridische basis voor de vordering</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="http://fixme.com#Vordering">
+        <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
+        <rdfs:label xml:lang="nl">Vordering</rdfs:label>
+        <rdfs:comment xml:lang="nl">Aanspraak van een partij (de schuldeiser) op een bepaalde prestatie vanwege een andere partij (de schuldenaar).</rdfs:comment>
+        <ns1:usageNote xml:lang="nl">Voor de doeleinden van dit applicatieprofiel is de opgelegde prestatie altijd de betaling van een geldsom. </ns1:usageNote>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://fixme.com#Grondslag"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://fixme.com#hoofdsom">
+    <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
+    <rdfs:label xml:lang="nl">hoofdsom</rdfs:label>
+    <rdfs:comment xml:lang="nl">Het totale bedrag dat wordt gevorderd door de schuldeiser, exclusief eventuele wanbetalingskosten.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://fixme.com#Vordering"/>
+    <rdfs:range rdf:resource="http://fixme.com#Geldbedrag"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://fixme.com#identificator">
     <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
     <rdfs:label xml:lang="nl">identificator</rdfs:label>
-    <rdfs:domain rdf:resource="http://fixme.com#Schuldvordering"/>
+    <rdfs:comment xml:lang="nl">Een identificator voor de vordering</rdfs:comment>
+    <rdfs:domain rdf:resource="http://fixme.com#Vordering"/>
     <rdfs:range rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://fixme.com#schuldeiser">
+  <owl:ObjectProperty rdf:about="http://fixme.com#isGerelateerdMet">
     <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-    <rdfs:label xml:lang="nl">schuldeiser</rdfs:label>
-    <rdfs:domain rdf:resource="http://fixme.com#Schuldvordering"/>
-    <rdfs:range>
-      <owl:Class rdf:about="http://fixme.com#Schuldeiser">
-        <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-        <rdfs:label xml:lang="nl">Schuldeiser</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent"/>
-      </owl:Class>
-    </rdfs:range>
+    <rdfs:label xml:lang="nl">isGerelateerdMet</rdfs:label>
+    <rdfs:comment xml:lang="nl">Verwijzing naar een andere vordering die een verband heeft met de eerste vordering.</rdfs:comment>
+    <ns1:usageNote xml:lang="nl">Men kan beslissen om een nieuwe vordering aan te maken voor een wanbetalingskost, in plaats van de wanbetalingskost rechtstreeks aan de vordering toe te voeging.</ns1:usageNote>
+    <rdfs:domain rdf:resource="http://fixme.com#Vordering"/>
+    <rdfs:range rdf:resource="http://fixme.com#Vordering"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://fixme.com#schuldenaar">
+  <owl:ObjectProperty rdf:about="http://fixme.com#label">
     <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-    <rdfs:label xml:lang="nl">schuldenaar</rdfs:label>
-    <rdfs:domain rdf:resource="http://fixme.com#Schuldvordering"/>
-    <rdfs:range>
-      <owl:Class rdf:about="http://fixme.com#Schuldenaar">
-        <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-        <rdfs:label xml:lang="nl">Schuldenaar</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent"/>
-      </owl:Class>
-    </rdfs:range>
+    <rdfs:label xml:lang="nl">label</rdfs:label>
+    <rdfs:comment xml:lang="nl">Het label van het vorderingstype</rdfs:comment>
+    <rdfs:domain rdf:resource="http://fixme.com#Vorderingstype"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://fixme.com#schuldvorderingType">
+  <owl:ObjectProperty rdf:about="http://fixme.com#rechtsgrond">
     <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-    <rdfs:label xml:lang="nl">schuldvorderingType</rdfs:label>
-    <rdfs:domain rdf:resource="http://fixme.com#Schuldvordering"/>
-    <rdfs:range>
-      <owl:Class rdf:about="http://fixme.com#SchuldvorderingType">
-        <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-        <rdfs:label xml:lang="nl">SchuldvorderingType</rdfs:label>
-      </owl:Class>
-    </rdfs:range>
+    <rdfs:label xml:lang="nl">rechtsgrond</rdfs:label>
+    <rdfs:comment xml:lang="nl">Verwijzing naar de rechtsgrond van de vordering</rdfs:comment>
+    <rdfs:domain rdf:resource="http://fixme.com#Grondslag"/>
+    <rdfs:range rdf:resource="http://data.europa.eu/eli/ontology#LegalResource"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://fixme.com#stuk">
+  <owl:ObjectProperty rdf:about="http://fixme.com#toegerekendBedrag">
     <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-    <rdfs:label xml:lang="nl">stuk</rdfs:label>
-    <rdfs:domain rdf:resource="http://fixme.com#Schuldvordering"/>
-    <rdfs:range>
-      <owl:Class rdf:about="http://fixme.com#Document">
+    <rdfs:label xml:lang="nl">toegerekend bedrag</rdfs:label>
+    <rdfs:comment xml:lang="nl">Het geldbedrag dat werd toegerekend aan een vordering.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class rdf:about="http://fixme.com#ToerekeningVanBetaling">
         <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-        <rdfs:label xml:lang="nl">Document</rdfs:label>
+        <rdfs:label xml:lang="nl">Toerekening van Betaling</rdfs:label>
+        <rdfs:comment xml:lang="nl">Het toewijzen van een betaald geldbedrag aan een vordering. </rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
       </owl:Class>
-    </rdfs:range>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://fixme.com#Geldbedrag"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://fixme.com#uitvoerbareTitel">
+  <owl:ObjectProperty rdf:about="http://fixme.com#toerekeningVanBetaling">
     <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-    <rdfs:label xml:lang="nl">uitvoerbareTitel</rdfs:label>
-    <rdfs:domain rdf:resource="http://fixme.com#Schuldvordering"/>
-    <rdfs:range>
-      <owl:Class rdf:about="http://fixme.com#JuridischWerk">
-        <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
-        <rdfs:label xml:lang="nl">JuridischWerk</rdfs:label>
-      </owl:Class>
-    </rdfs:range>
+    <rdfs:label xml:lang="nl">toerekening van Betaling</rdfs:label>
+    <rdfs:comment xml:lang="nl">Het toewijzen van een betaald geldbedrag aan een vordering. </rdfs:comment>
+    <rdfs:domain rdf:resource="http://fixme.com#Vordering"/>
+    <rdfs:range rdf:resource="http://fixme.com#ToerekeningVanBetaling"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://fixme.com#uitersteBetaaldatum">
+    <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
+    <rdfs:label xml:lang="nl">uiterste betaaldatum</rdfs:label>
+    <rdfs:comment xml:lang="nl">De laatst mogelijke datum waarop een betaling moet worden gedaan om te voorkomen dat er eventuele boetes, interesten of andere sancties worden opgelegd.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://fixme.com#Vordering"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://fixme.com#verjaringstermijn">
+    <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
+    <rdfs:label xml:lang="nl">verjaringstermijn</rdfs:label>
+    <rdfs:comment xml:lang="nl">De verjaringstermijn die voor vorderingen van dit type geldt.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://fixme.com#Vorderingstype"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://fixme.com#vorderingstype">
+    <rdfs:isDefinedBy rdf:resource="http://fixme.com"/>
+    <rdfs:label xml:lang="nl">vorderingstype</rdfs:label>
+    <rdfs:comment xml:lang="nl">Verwijzing naar een vorderingstype.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://fixme.com#Vordering"/>
+    <rdfs:range rdf:resource="http://fixme.com#Vorderingstype"/>
   </owl:ObjectProperty>
 </rdf:RDF>
