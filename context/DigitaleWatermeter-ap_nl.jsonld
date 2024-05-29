@@ -1,0 +1,421 @@
+{
+  "@context": {
+    ".observatie(source)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.source",
+      "@type": "@id"
+    },
+    ".observatie(target)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.target",
+      "@type": "@id"
+    },
+    "Aansluiting": "https://vocab.belgif.be/ns/utility-services#Connection",
+    "Aansluiting.adres": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#address",
+      "@type": "@id"
+    },
+    "Aansluiting.afleverpunt": {
+      "@id": "http://fixme.com#afleverpunt",
+      "@type": "@id"
+    },
+    "Aansluiting.geometrie": {
+      "@id": "https://vocab.belgif.be/ns/network#Node.geometry",
+      "@type": "@id"
+    },
+    "Aansluiting.hoofdaansluiting": {
+      "@id": "http://fixme.com#hoofdaansluiting",
+      "@type": "@id"
+    },
+    "Aansluiting.identificator": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#identifier",
+      "@type": "@id"
+    },
+    "Aansluiting.subaansluiting": {
+      "@container": "@set",
+      "@id": "http://fixme.com#subaansluiting",
+      "@type": "@id"
+    },
+    "Aansluiting.toebehorentype": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#Connection.appurtenanceType",
+      "@type": "@id"
+    },
+    "Bevoorradingsgebied": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#Bevoorradingsgebied",
+    "Bevoorradingsgebied.netwerk": {
+      "@id": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#netwerk",
+      "@type": "@id"
+    },
+    "Deployment": "http://fixme.com#Deployment",
+    "Deployment.deploymentTijdstip": {
+      "@id": "http://fixme.com#deploymentTijdstip",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Deployment.gedeployedDoor": {
+      "@id": "http://fixme.com#gedeployedDoor",
+      "@type": "@id"
+    },
+    "Domeinobject": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+    "Domeinobject.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "GeaggregeerdVerbruikObservatie": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#GeaggregeerdVerbruikObservatie",
+    "GeaggregeerdVerbruikObservatie.geobserveerdObject": {
+      "@id": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#Bevoorradingsgebied.geobserveerdKenmerk",
+      "@type": "@id"
+    },
+    "GeaggregeerdVerbruikObservatie.resultaat": {
+      "@id": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#resultaat",
+      "@type": "@id"
+    },
+    "GeaggregeerdVerbruikTijdreeksobservatie": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#GeaggregeerdVerbruikTijdreeksobservatie",
+    "GeaggregeerdVerbruikTijdreeksobservatie.geobserveerdobject": {
+      "@id": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#GeaggregeerdVerbruikTijdreeksobservatie.geobserveerdKenmerk",
+      "@type": "@id"
+    },
+    "GeaggregeerdVerbruikTijdreeksobservatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "IndividueelVerbruikObservatie": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikObservatie",
+    "IndividueelVerbruikObservatie.geobserveerdObject": {
+      "@id": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikObservatie.geobserveerdKenmerk",
+      "@type": "@id"
+    },
+    "IndividueelVerbruikObservatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "IndividueelVerbruikTijdreeksobservatie": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikTijdreeksobservatie",
+    "IndividueelVerbruikTijdreeksobservatie.geobserveerdObject": {
+      "@id": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikTijdreeksobservatie.geobserveerdKenmerk",
+      "@type": "@id"
+    },
+    "IndividueelVerbruikTijdreeksobservatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "Kenmerktype": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+    "Kenmerktype.isGeobserveerdMet": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/isObservedBy",
+      "@type": "@id"
+    },
+    "Meter": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#Meter",
+    "Meter.fabrikant": {
+      "@id": "https://saref.etsi.org/core/hasManufacturer",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Meter.heeftFabrieksnummer": {
+      "@id": "https://w3id.org/def/S4WATR#hasFabricationNumber"
+    },
+    "Meter.heeftFirmwareVersion": {
+      "@id": "https://w3id.org/def/S4WATR#hasFirmwareVersion"
+    },
+    "Meter.heeftHardwareVersie": {
+      "@id": "https://w3id.org/def/S4WATR#hasHardwareVersion"
+    },
+    "Meter.heeftVersie": {
+      "@id": "https://w3id.org/def/S4WATR#hasVersion"
+    },
+    "Meter.identificator": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#identificator",
+      "@type": "@id"
+    },
+    "Meter.model": {
+      "@id": "https://saref.etsi.org/core/hasModel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Meter.verbruiksadres": {
+      "@id": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#verbruiksadres",
+      "@type": "@id"
+    },
+    "Meter.vereistStroom": {
+      "@id": "https://saref.etsi.org/saref4watr/requiresPower"
+    },
+    "Meter.werktopRadiofrequentie": {
+      "@id": "https://saref.etsi.org/saref4watr/operatesAtRadiofrequency"
+    },
+    "MeterstaatObservatie": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#MeterstaatObservatie",
+    "MeterstaatObservatie.geobserveerdObject": {
+      "@id": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#MeterstaatObservatie.geobserveerdKenmerk",
+      "@type": "@id"
+    },
+    "Meterzone": "http://fixme.com#Meterzone",
+    "Meterzone.metertype": {
+      "@id": "http://fixme.com#metertype",
+      "@type": "@id"
+    },
+    "Model": "https://linkedpaperswithcode.com/class/model",
+    "Model.created": {
+      "@id": "https://linkedpaperswithcode.com/created"
+    },
+    "Model.description": {
+      "@id": "http://purl.org/dc/terms/description"
+    },
+    "Model.name": {
+      "@id": "http://purl.org/dc/terms/title"
+    },
+    "Model.type": {
+      "@container": "@set",
+      "@id": "https://linkedpaperswithcode.com/type",
+      "@type": "@id"
+    },
+    "Model.version": {
+      "@id": "http://openml.org/openml#version"
+    },
+    "Moment": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant",
+    "MomentKwantitatieveWaardepaar": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#MomentKwantitatieveWaardepaar",
+    "MomentKwantitatieveWaardepaar.tijdstip": {
+      "@id": "http://fixme.com#^tijdstip",
+      "@type": "@id"
+    },
+    "MomentKwantitatieveWaardepaar.waarde": {
+      "@id": "http://fixme.com#waarde",
+      "@type": "@id"
+    },
+    "Nutsvoorzieningnetwerk": "https://vocab.belgif.be/ns/utility-services#UtilityNetwork",
+    "Nutsvoorzieningnetwerk.bevoegdePartij": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#authorityRole",
+      "@type": "@id"
+    },
+    "Nutsvoorzieningnetwerk.disclaimer": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#disclaimer",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Nutsvoorzieningnetwerk.documentatie": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#documentation",
+      "@type": "@id"
+    },
+    "Nutsvoorzieningnetwerk.geografischeNaam": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#geographicalName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Nutsvoorzieningnetwerk.nutsvoorzieningnetwerktype": {
+      "@id": "http://purl.org/dc/elements/1.1/type",
+      "@type": "@id"
+    },
+    "Nutsvoorzieningnetwerk.standaardVerticalePositiedetail": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#standardVerticalPositionDetail",
+      "@type": "@id"
+    },
+    "Observatie": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+    "Observatie.fenomeentijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+      "@type": "@id"
+    },
+    "Observatie.geassocieerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+      "@type": "@id"
+    },
+    "Observatie.gebruikteProcedure": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "@id"
+    },
+    "Observatie.geldigeTijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime",
+      "@type": "@id"
+    },
+    "Observatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "Observatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "@id"
+    },
+    "Observatie.identificator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "Observatie.parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter",
+      "@type": "@id"
+    },
+    "Observatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "Observatie.resultaatkwaliteit": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
+      "@type": "@id"
+    },
+    "Observatie.resultaattijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
+      "@type": "@id"
+    },
+    "Observatie.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Observatie.uitgevoerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
+      "@type": "@id"
+    },
+    "Observatie.uitgevoerdMetSensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "@id"
+    },
+    "Observatieprocedure": "http://www.w3.org/ns/sosa/Procedure",
+    "Observatieprocedure.geïmplementeerdMet": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/implementedBy",
+      "@type": "@id"
+    },
+    "Observatieprocedure.input": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasInput",
+      "@type": "@id"
+    },
+    "Observatieprocedure.output": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasOutput",
+      "@type": "@id"
+    },
+    "Observatieprocedure.parameter": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.parameter",
+      "@type": "@id"
+    },
+    "Observatieprocedure.specificatie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Observatieprocedure.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Observatieverzameling": "http://www.w3.org/ns/sosa/ObservationCollection",
+    "Observatieverzameling.fenomeentijd": {
+      "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
+      "@type": "@id"
+    },
+    "Observatieverzameling.gebruikteProcedure": {
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "@id"
+    },
+    "Observatieverzameling.geobserveerdKenmerk": {
+      "@id": "http://www.w3.org/ns/sosa/observedProperty",
+      "@type": "@id"
+    },
+    "Observatieverzameling.geobserveerdObject": {
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "Observatieverzameling.heeftLid": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasMember",
+      "@type": "@id"
+    },
+    "Observatieverzameling.parameter": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieverzameling.parameter",
+      "@type": "@id"
+    },
+    "Observatieverzameling.resultaatTijd": {
+      "@id": "http://www.w3.org/ns/sosa/resultTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Observatieverzameling.uitgevoerdMetSensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "@id"
+    },
+    "Plaats": "http://purl.org/dc/terms/Location",
+    "Plaats.geometrie": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "@id"
+    },
+    "Plaats.identificator": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#identificator",
+      "@type": "@id"
+    },
+    "Plaats.plaatsnaam": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Plaats.type": {
+      "@container": "@set",
+      "@id": "http://fixme.com#type",
+      "@type": "@id"
+    },
+    "RuimtelijkRelatie": "http://fixme.com#RuimtelijkRelatie",
+    "RuimtelijkRelatie.plaats(source)": {
+      "@id": "http://fixme.com#RuimtelijkRelatie.plaats.source",
+      "@type": "@id"
+    },
+    "RuimtelijkRelatie.plaats(target)": {
+      "@id": "http://fixme.com#RuimtelijkRelatie.plaats.target",
+      "@type": "@id"
+    },
+    "RuimtelijkRelatie.type": {
+      "@id": "http://fixme.com#type",
+      "@type": "@id"
+    },
+    "Sensor": "https://www.w3.org/ns/sosa/Sensor",
+    "Sensor.implementeert": {
+      "@id": "http://www.w3.org/ns/ssn/implements",
+      "@type": "@id"
+    },
+    "Sensor.observeert": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/observes",
+      "@type": "@id"
+    },
+    "Sensor.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Sensor.uitgevoerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/madeObservation",
+      "@type": "@id"
+    },
+    "Software": "http://fixme.com#Software",
+    "StatistischeObservatie": "https://data.vlaanderen.be/ns/statistiek#StatistischeObservatie",
+    "StatistischeObservatie.fenomeentijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+      "@type": "@id"
+    },
+    "StatistischeObservatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "StatistischeObservatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "@id"
+    },
+    "StatistischeObservatie.resultaat": {
+      "@id": "https://data.vlaanderen.be/ns/statistiek#resultaat",
+      "@type": "@id"
+    },
+    "StatistischeObservatie.resultaattijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
+      "@type": "@id"
+    },
+    "TemporeelMomentKwantitatiefBereik": "http://fixme.com#TemporeelMomentKwantitatiefBereik",
+    "TemporeelMomentKwantitatiefBereik.element": {
+      "@container": "@set",
+      "@id": "http://fixme.com#element",
+      "@type": "@id"
+    },
+    "Verbruikszone": "http://fixme.com#Verbruikszone",
+    "Watermeter": " https://saref.etsi.org/saref4watr/WaterMeter",
+    "Watermeter.diameter": {
+      "@id": "https://data.vlaanderen.be/ns/DigitaleWatermeter/#diameter",
+      "@type": "@id"
+    }
+  }
+}

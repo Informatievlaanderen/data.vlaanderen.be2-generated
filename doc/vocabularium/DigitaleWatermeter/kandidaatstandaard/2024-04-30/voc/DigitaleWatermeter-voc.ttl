@@ -1,0 +1,260 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schemas: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.vlaanderen.be/ns/DigitaleWatermeter/#Bevoorradingsgebied> a rdfs:Class;
+  rdfs:label "Bevoorradingsgebied"@nl .
+
+<https://data.vlaanderen.be/ns/DigitaleWatermeter/#GeaggregeerdVerbruikObservatie> a rdfs:Class;
+  rdfs:label "GeaggregeerdVerbruikObservatie"@nl .
+
+<https://data.vlaanderen.be/ns/DigitaleWatermeter/#GeaggregeerdVerbruikTijdreeksobservatie> a rdfs:Class;
+  rdfs:label "GeaggregeerdVerbruikTijdreeksobservatie"@nl .
+
+<https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikObservatie> a rdfs:Class;
+  rdfs:label "IndividueelVerbruikObservatie"@nl .
+
+<https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikTijdreeksobservatie> a rdfs:Class;
+  rdfs:label "IndividueelVerbruikTijdreeksobservatie"@nl .
+
+<https://data.vlaanderen.be/ns/DigitaleWatermeter/#MeterstaatObservatie> a rdfs:Class;
+  rdfs:label "MeterstaatObservatie"@nl .
+
+<https://data.vlaanderen.be/ns/DigitaleWatermeter/#MomentKwantitatieveWaardepaar> a rdfs:Class;
+  rdfs:label "MomentKwantitatieveWaardepaar"@nl .
+
+<http://fixme.com#RuimtelijkRelatie.plaats.source> a owl:ObjectProperty;
+  rdfs:label "Plaats (source)"@nl;
+  rdfs:comment "Referentie naar verbonden klasse."@nl;
+  rdfs:domain <http://fixme.com#RuimtelijkRelatie>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range dc:Location .
+
+<http://fixme.com#RuimtelijkRelatie.plaats.target> a owl:ObjectProperty;
+  rdfs:label "Plaats (target)"@nl;
+  rdfs:comment "Referentie naar verbonden klasse."@nl;
+  rdfs:domain <http://fixme.com#RuimtelijkRelatie>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range dc:Location .
+
+<http://fixme.com#Software> a owl:Class;
+  rdfs:label "Software"@nl;
+  rdfs:comment "The set of instructions that indicate a machine how to work. In this ontology software is a general concept which acts as a superclass for software versions, docker images, data transformations, etc."@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf <https://www.w3.org/ns/sosa/Sensor> .
+
+<http://fixme.com#Verbruikszone> a owl:Class;
+  rdfs:label "Verbruikszone"@nl;
+  rdfs:comment "Zone binnen het bevoorradingsgebied bestaande uit vaste registreerzones bestaande uit vaste registreerzones waarbinnen de in- en uitgaande waterstromen permanent bemeterd worden."@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf dc:Location .
+
+<http://fixme.com#element> a owl:ObjectProperty;
+  rdfs:label "element"@nl;
+  rdfs:comment "Een element dat gegevens vertegenwoordigt van een specifiek tijdstip of periode."@nl;
+  rdfs:domain <http://fixme.com#TemporeelMomentKwantitatiefBereik>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <https://data.vlaanderen.be/ns/DigitaleWatermeter/#MomentKwantitatieveWaardepaar>;
+  rdfs:subPropertyOf <https://data.vlaanderen.be/ns/DigitaleWatermeter/> .
+
+<http://fixme.com#hoofdaansluiting> a owl:ObjectProperty;
+  rdfs:label "hoofdaansluiting"@nl;
+  rdfs:comment "Aansluiting waarvan deze aansluiting afgetakt is."@nl;
+  rdfs:domain <https://vocab.belgif.be/ns/utility-services#Connection>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <https://vocab.belgif.be/ns/utility-services#Connection> .
+
+<http://fixme.com#metertype> a owl:ObjectProperty;
+  rdfs:label "metertype"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Type kan slaan op watermeter; maar ook op digitaal of analoog."@nl;
+  rdfs:comment "Aard van de meter."@nl;
+  rdfs:domain <http://fixme.com#Meterzone>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <https://data.vlaanderen.be/ns/digitalewatermeter#Metertype>;
+  rdfs:subPropertyOf <https://data.vlaanderen.be/ns/DigitaleWatermeter/> .
+
+<http://fixme.com#subaansluiting> a owl:ObjectProperty;
+  rdfs:label "subaansluiting"@nl;
+  rdfs:comment "Aansluiting die afgetakt is van deze aansluiting."@nl;
+  rdfs:domain <https://vocab.belgif.be/ns/utility-services#Connection>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <https://vocab.belgif.be/ns/utility-services#Connection> .
+
+<http://fixme.com#type> a owl:ObjectProperty;
+  rdfs:label "type"@nl;
+  <http://purl.org/vocab/vann/usageNote> "postcode, gemeente gehucht"@nl;
+  rdfs:comment "Aard van het verband tussen twee Plaatsen."@nl,
+    "Aard van de plaats"@nl;
+  rdfs:domain <http://fixme.com#RuimtelijkRelatie>,
+    dc:Location;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#RuimtelijkeRelatietype>,
+    <http://fixme.com#Plaatstype>;
+  rdfs:subPropertyOf <https://data.vlaanderen.be/ns/DigitaleWatermeter/> .
+
+<http://fixme.com#waarde> a owl:ObjectProperty;
+  rdfs:label "waarde"@nl;
+  rdfs:comment "Waarde van een observatie op een specifieke tijdstip, onderdeel van een kwantitatief waardepaar."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/DigitaleWatermeter/#MomentKwantitatieveWaardepaar>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range schemas:QuantitativeValue;
+  rdfs:subPropertyOf <https://data.vlaanderen.be/ns/DigitaleWatermeter/> .
+
+<http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result> a rdf:Property;
+  rdfs:label "resultaat"@nl .
+
+<http://fixme.com#Meterzone> a owl:Class;
+  rdfs:label "Meterzone"@nl;
+  rdfs:comment "Afgebakend geografisch gebied waarover geaggregeerd statistiek wordt berekend waarbinnen één of meerdere verbruiksobservatie(s) vallen"@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf dc:Location .
+
+<http://fixme.com#TemporeelMomentKwantitatiefBereik> a owl:Class;
+  rdfs:label "TemporeelMomentKwantitatiefBereik"@nl;
+  rdfs:comment "Resultaat van de observatie in de vorm van een tijdreeks."@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/TemporalCoverage#CVT_DiscreteTimeInstantCoverage> .
+
+<https://data.vlaanderen.be/ns/DigitaleWatermeter/#Bevoorradingsgebied.geobserveerdKenmerk> a rdf:Property;
+  rdfs:label "geobserveerdObject"@nl .
+
+<https://data.vlaanderen.be/ns/DigitaleWatermeter/#GeaggregeerdVerbruikTijdreeksobservatie.geobserveerdKenmerk> a rdf:Property;
+  rdfs:label "geobserveerdobject"@nl .
+
+<https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikObservatie.geobserveerdKenmerk> a rdf:Property;
+  rdfs:label "geobserveerdObject"@nl .
+
+<https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikTijdreeksobservatie.geobserveerdKenmerk> a rdf:Property;
+  rdfs:label "geobserveerdObject"@nl .
+
+<https://data.vlaanderen.be/ns/DigitaleWatermeter/#MeterstaatObservatie.geobserveerdKenmerk> a rdf:Property;
+  rdfs:label "geobserveerdObject"@nl .
+
+<https://data.vlaanderen.be/ns/DigitaleWatermeter/#resultaat> a rdf:Property;
+  rdfs:label "resultaat"@nl .
+
+<http://fixme.com#RuimtelijkRelatie> a owl:Class;
+  rdfs:label "RuimtelijkRelatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Zo kan een bevoorradingsgebied ook als Meterzone worden geïnterpreteerd of kan men zones groeperen tot superzone."@nl;
+  rdfs:comment "Onderling verband tussen twee Plaatsen."@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com> a owl:Ontology;
+  rdfs:label "DigitaleWatermeter-voc"@en,
+    "DigitaleWatermeter-voc"@nl;
+  dc:contributor [
+    a foaf:Person;
+    foaf:firstName "Inge";
+    foaf:lastName "Opreel"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Senne";
+    foaf:lastName "Meeusen"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Emilia";
+    foaf:lastName "Liégeois"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Danny";
+    foaf:lastName "Lepomme"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Marco";
+    foaf:lastName "Indigne"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Anke";
+    foaf:lastName "Geudens"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Stefaan";
+    foaf:lastName "Debruyne"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Kevin";
+    foaf:lastName "De Wilde"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Frank";
+    foaf:lastName "Coucke"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Simon";
+    foaf:lastName "Claus"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Annemie";
+    foaf:lastName "Biermans"
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso <https://data.vlaanderen.be/ns/DigitaleWatermeter/#Bevoorradingsgebied>,
+    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#GeaggregeerdVerbruikObservatie>,
+    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#GeaggregeerdVerbruikTijdreeksobservatie>,
+    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikObservatie>,
+    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikTijdreeksobservatie>,
+    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#MeterstaatObservatie>,
+    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#MomentKwantitatieveWaardepaar>,
+    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#resultaat>,
+    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#MeterstaatObservatie.geobserveerdKenmerk>,
+    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikTijdreeksobservatie.geobserveerdKenmerk>,
+    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikObservatie.geobserveerdKenmerk>,
+    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#GeaggregeerdVerbruikTijdreeksobservatie.geobserveerdKenmerk>,
+    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#Bevoorradingsgebied.geobserveerdKenmerk>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    foaf:firstName "William";
+    foaf:lastName "Verbeeck";
+    foaf:mbox <mailto:william.verbeeck@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    foaf:firstName "Samuel";
+    foaf:lastName "Van Ackere";
+    foaf:mbox <mailto:samuel.vanackere@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    foaf:firstName "Geert";
+    foaf:lastName "Thijs";
+    foaf:mbox <mailto:geert.thijs@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    foaf:firstName "Eva";
+    foaf:lastName "Robbrecht";
+    foaf:mbox <mailto:eva.robbrecht@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    foaf:firstName "Isabaut";
+    foaf:lastName "Martens";
+    foaf:mbox <mailto:isabaut.martens@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    foaf:firstName "Ben";
+    foaf:lastName "De Meester";
+    foaf:mbox <mailto:ben.demeester@ugent.be>
+  ], [
+    a foaf:Person;
+    foaf:firstName "Jitse";
+    foaf:lastName "De Cock";
+    foaf:mbox <mailto:jitse.decock@vlaanderen.be>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    foaf:firstName "Peter";
+    foaf:lastName "Pijpops"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Pieter Jan";
+    foaf:lastName "Haest"
+  ] .
