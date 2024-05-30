@@ -18,6 +18,29 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:subClassOf prov:Activity .
 
+<http://fixme.com#aanmaning> a owl:ObjectProperty;
+  rdfs:label "aanmaning"@nl;
+  rdfs:comment "Verwijzing naar een aanmaning  met betrekking tot de vordering."@nl,
+    "Verwijzing naar een aanmaning die waarin de wanbetalingskost wordt gecommuniceerd aan de schuldenaar."@nl;
+  rdfs:domain <http://fixme.com#Vordering>,
+    <http://fixme.com#Wanbetalingskost>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Aanmaning> .
+
+<http://fixme.com#aanmaningsdatum> a owl:DatatypeProperty;
+  rdfs:label "aanmaningsdatum"@nl;
+  rdfs:comment "Datum waarop de aanmaning werd verstuurd. "@nl;
+  rdfs:domain <http://fixme.com#Aanmaning>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range xsd:date .
+
+<http://fixme.com#afbetalingsplan> a owl:ObjectProperty;
+  rdfs:label "afbetalingsplan"@nl;
+  rdfs:comment "Verwijzing naar een afbetalingsplan dat voor de vordering geldt."@nl;
+  rdfs:domain <http://fixme.com#Vordering>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Afbetalingsplan> .
+
 <http://fixme.com#antwoording> a owl:ObjectProperty;
   rdfs:label "beschrijving"@nl;
   <http://purl.org/vocab/vann/usageNote> "Dit kan bijvoorbeeld een geleverder prestatie zijn, of een overtreding die op een bepaald moment is vastgesteld."@nl;
@@ -25,6 +48,41 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:domain <http://fixme.com#Grondslag>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range rdfs:Resource .
+
+<http://fixme.com#bestemming> a owl:ObjectProperty;
+  rdfs:label "bestemming"@nl;
+  rdfs:comment "Verwijzing naar de vordering die de betaler wenst af te lossen met de betaling."@nl;
+  rdfs:domain <http://fixme.com#Betaling>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Vordering> .
+
+<http://fixme.com#betaaldBedrag> a owl:ObjectProperty;
+  rdfs:label "betaald bedrag"@nl;
+  rdfs:comment "Het geldbedrag dat werd betaald."@nl;
+  rdfs:domain <http://fixme.com#Betaling>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Geldbedrag> .
+
+<http://fixme.com#betaling> a owl:ObjectProperty;
+  rdfs:label "betaling"@nl;
+  rdfs:comment "Verwijzing naar de betaling dit werd toegerekend."@nl;
+  rdfs:domain <http://fixme.com#ToerekeningVanBetaling>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Betaling> .
+
+<http://fixme.com#betalingsdatum> a owl:DatatypeProperty;
+  rdfs:label "betalingsdatum"@nl;
+  rdfs:comment "Datum waarop het overgedragen geld werd ontvangen door de ontvanger. "@nl;
+  rdfs:domain <http://fixme.com#Betaling>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range xsd:date .
+
+<http://fixme.com#betwisting> a owl:ObjectProperty;
+  rdfs:label "betwisting"@nl;
+  rdfs:comment "Verwijzing naar een betwisting van de vordering."@nl;
+  rdfs:domain <http://fixme.com#Vordering>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Betwisting> .
 
 <http://fixme.com#fiscaal> a owl:DatatypeProperty;
   rdfs:label "fiscaal"@nl;
@@ -49,10 +107,19 @@ schemas:MonetaryAmount a rdfs:Class;
 
 <http://fixme.com#identificator> a owl:ObjectProperty;
   rdfs:label "identificator"@nl;
-  rdfs:comment "Een identificator voor de vordering"@nl;
-  rdfs:domain <http://fixme.com#Vordering>;
+  rdfs:comment "Een identificator voor de vordering"@nl,
+    "Een identificator voor het betaling"@nl;
+  rdfs:domain <http://fixme.com#Vordering>,
+    <http://fixme.com#Betaling>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://www.w3.org/ns/adms#Identifier> .
+
+<http://fixme.com#interest> a owl:ObjectProperty;
+  rdfs:label "interest"@nl;
+  rdfs:comment "Percentage dat het bedrag van de wanbetalingskost bepaald."@nl;
+  rdfs:domain <http://fixme.com#Wanbetalingskost>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Percentage> .
 
 <http://fixme.com#isGerelateerdMet> a owl:ObjectProperty;
   rdfs:label "isGerelateerdMet"@nl;
@@ -61,6 +128,20 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:domain <http://fixme.com#Vordering>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#Vordering> .
+
+<http://fixme.com#kost> a owl:ObjectProperty;
+  rdfs:label "kost"@nl;
+  rdfs:comment "Kost"@nl;
+  rdfs:domain <http://fixme.com#Wanbetalingskost>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Geldbedrag> .
+
+<http://fixme.com#kwijtgescholdenBedrag> a owl:ObjectProperty;
+  rdfs:label "kwijtgescholden bedrag"@nl;
+  rdfs:comment "Het bedrag dat wordt kwijtgescholden."@nl;
+  rdfs:domain <http://fixme.com#Kwijtschelding>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Geldbedrag> .
 
 <http://fixme.com#label> a owl:ObjectProperty;
   rdfs:label "label"@nl;
@@ -85,8 +166,10 @@ schemas:MonetaryAmount a rdfs:Class;
 
 <http://fixme.com#toerekeningVanBetaling> a owl:ObjectProperty;
   rdfs:label "toerekening van Betaling"@nl;
-  rdfs:comment "Het toewijzen van een betaald geldbedrag aan een vordering. "@nl;
-  rdfs:domain <http://fixme.com#Vordering>;
+  rdfs:comment "Verwijzing naar de activiteit die (een deel van) een  betaald bedrag toewijst aan een vordering."@nl,
+    "Het toewijzen van een betaald geldbedrag aan een vordering. "@nl;
+  rdfs:domain <http://fixme.com#Betaling>,
+    <http://fixme.com#Vordering>;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#ToerekeningVanBetaling> .
 
@@ -104,6 +187,13 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range xsd:duration .
 
+<http://fixme.com#vordering> a owl:ObjectProperty;
+  rdfs:label "vordering"@nl;
+  rdfs:comment "Verwijzing naar een vordering waarop het afbetalingsplan van toepassing is"@nl;
+  rdfs:domain <http://fixme.com#Afbetalingsplan>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Vordering> .
+
 <http://fixme.com#vorderingstype> a owl:ObjectProperty;
   rdfs:label "vorderingstype"@nl;
   rdfs:comment "Verwijzing naar een vorderingstype."@nl;
@@ -111,11 +201,49 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:range <http://fixme.com#Vorderingstype> .
 
+<http://fixme.com#wanbetalingskost> a owl:ObjectProperty;
+  rdfs:label "wanbetalingskost"@nl;
+  rdfs:comment "Verwijzing naar een wanbetalingskost."@nl;
+  rdfs:domain <http://fixme.com#Vordering>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Wanbetalingskost> .
+
+<http://fixme.com#Betwisting> a owl:Class;
+  rdfs:label "Betwisting"@nl;
+  rdfs:comment "Het toewijzen van een betaald geldbedrag aan een vordering. "@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf prov:Activity .
+
+<http://fixme.com#Kwijtschelding> a owl:Class;
+  rdfs:label "Kwijtschelding"@nl;
+  rdfs:comment "Het vrijwillig prijsgeven van (een deel van) een vordering."@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf prov:Activity .
+
+dc:type a rdf:Property;
+  rdfs:label "type"@nl .
+
 schemas:currency a rdf:Property;
   rdfs:label "valuta"@nl .
 
 schemas:value a rdf:Property;
   rdfs:label "waarde"@nl .
+
+<http://fixme.com#Aanmaning> a owl:Class;
+  rdfs:label "Aanmaning"@nl;
+  rdfs:comment "Schriftelijk berichtgeving van een schuldeiser naar een schuldenaar om deze schuldenaar te herinneren aan een vordering die niet is voldaan terwijl de vervaldatum van deze vordering reeds verstreken is.  "@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf prov:Activity .
+
+<http://fixme.com#Afbetalingsplan> a owl:Class;
+  rdfs:label "Afbetalingsplan"@nl;
+  rdfs:comment "Een gestructureerd schema dat wordt gebruikt om een schuld af te lossen. "@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Grondslag> a owl:Class;
+  rdfs:label "Grondslag"@nl;
+  rdfs:comment "De juridische basis voor een vordering"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
 
 <http://fixme.com#ToerekeningVanBetaling> a owl:Class;
   rdfs:label "Toerekening van Betaling"@nl;
@@ -123,15 +251,21 @@ schemas:value a rdf:Property;
   rdfs:isDefinedBy <http://fixme.com>;
   rdfs:subClassOf prov:Activity .
 
-<http://fixme.com#Grondslag> a owl:Class;
-  rdfs:label "Grondslag"@nl;
-  rdfs:comment "De juridische basis voor een vordering"@nl;
-  rdfs:isDefinedBy <http://fixme.com> .
-
 <http://fixme.com#Vorderingstype> a owl:Class;
   rdfs:label "Vorderingstype"@nl;
   rdfs:comment "Verwijzing naar een Vorderingstype."@nl;
   rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Wanbetalingskost> a owl:Class;
+  rdfs:label "Wanbetalingskost"@nl;
+  rdfs:comment "Kost die in rekening worden gebracht als gevolg van een wanbetaling."@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Betaling> a owl:Class;
+  rdfs:label "Betaling"@nl;
+  rdfs:comment "De overdracht van geld van één of meerdere partij(en) naar een andere partij. "@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf prov:Activity .
 
 <http://fixme.com#Vordering> a owl:Class;
   rdfs:label "Vordering"@nl;
@@ -163,7 +297,8 @@ schemas:value a rdf:Property;
   ];
   rdfs:seeAlso schemas:MonetaryAmount,
     schemas:value,
-    schemas:currency;
+    schemas:currency,
+    dc:type;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
