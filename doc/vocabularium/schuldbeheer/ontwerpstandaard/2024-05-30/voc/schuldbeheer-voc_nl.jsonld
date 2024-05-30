@@ -54,6 +54,56 @@
   "publication-date": "2024-05-30",
   "classes": [
     {
+      "@id": "http://fixme.com#Aanmaning",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Aanmaning"
+      },
+      "definition": {
+        "nl": "Schriftelijk berichtgeving van een schuldeiser naar een schuldenaar om deze schuldenaar te herinneren aan een vordering die niet is voldaan terwijl de vervaldatum van deze vordering reeds verstreken is.  "
+      },
+      "parents": [
+        "http://www.w3.org/ns/prov#Activity"
+      ]
+    },
+    {
+      "@id": "http://fixme.com#Afbetalingsplan",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Afbetalingsplan"
+      },
+      "definition": {
+        "nl": "Een gestructureerd schema dat wordt gebruikt om een schuld af te lossen. "
+      },
+      "parents": []
+    },
+    {
+      "@id": "http://fixme.com#Betaling",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Betaling"
+      },
+      "definition": {
+        "nl": "De overdracht van geld van één of meerdere partij(en) naar een andere partij. "
+      },
+      "parents": [
+        "http://www.w3.org/ns/prov#Activity"
+      ]
+    },
+    {
+      "@id": "http://fixme.com#Betwisting",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Betwisting"
+      },
+      "definition": {
+        "nl": "Het toewijzen van een betaald geldbedrag aan een vordering. "
+      },
+      "parents": [
+        "http://www.w3.org/ns/prov#Activity"
+      ]
+    },
+    {
       "@id": "http://fixme.com#Grondslag",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
@@ -129,6 +179,17 @@
         "nl": "Verwijzing naar een Vorderingstype."
       },
       "parents": []
+    },
+    {
+      "@id": "http://fixme.com#Wanbetalingskost",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Wanbetalingskost"
+      },
+      "definition": {
+        "nl": "Kost die in rekening worden gebracht als gevolg van een wanbetaling."
+      },
+      "parents": []
     }
   ],
   "externals": [
@@ -141,6 +202,23 @@
     }
   ],
   "properties": [
+    {
+      "@id": "http://fixme.com#wanbetalingskost",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "wanbetalingskost"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een wanbetalingskost."
+      },
+      "domain": [
+        "http://fixme.com#Vordering"
+      ],
+      "range": [
+        "http://fixme.com#Wanbetalingskost"
+      ],
+      "generalization": []
+    },
     {
       "@id": "http://fixme.com#vorderingstype",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
@@ -155,6 +233,23 @@
       ],
       "range": [
         "http://fixme.com#Vorderingstype"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "http://fixme.com#vordering",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "vordering"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een vordering waarop het afbetalingsplan van toepassing is"
+      },
+      "domain": [
+        "http://fixme.com#Afbetalingsplan"
+      ],
+      "range": [
+        "http://fixme.com#Vordering"
       ],
       "generalization": []
     },
@@ -189,6 +284,23 @@
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#date"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "http://fixme.com#toerekeningVanBetaling",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "toerekening van Betaling"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de activiteit die (een deel van) een  betaald bedrag toewijst aan een vordering."
+      },
+      "domain": [
+        "http://fixme.com#Betaling"
+      ],
+      "range": [
+        "http://fixme.com#ToerekeningVanBetaling"
       ],
       "generalization": []
     },
@@ -278,6 +390,23 @@
       "generalization": []
     },
     {
+      "@id": "http://fixme.com#kost",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "kost"
+      },
+      "definition": {
+        "nl": "Kost"
+      },
+      "domain": [
+        "http://fixme.com#Wanbetalingskost"
+      ],
+      "range": [
+        "http://fixme.com#Geldbedrag"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "http://fixme.com#isGerelateerdMet",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -298,6 +427,23 @@
       "generalization": []
     },
     {
+      "@id": "http://fixme.com#interest",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "interest"
+      },
+      "definition": {
+        "nl": "Percentage dat het bedrag van de wanbetalingskost bepaald."
+      },
+      "domain": [
+        "http://fixme.com#Wanbetalingskost"
+      ],
+      "range": [
+        "http://fixme.com#Percentage"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "http://fixme.com#identificator",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -308,6 +454,23 @@
       },
       "domain": [
         "http://fixme.com#Vordering"
+      ],
+      "range": [
+        "http://www.w3.org/ns/adms#Identifier"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "http://fixme.com#identificator",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "identificator"
+      },
+      "definition": {
+        "nl": "Een identificator voor het betaling"
+      },
+      "domain": [
+        "http://fixme.com#Betaling"
       ],
       "range": [
         "http://www.w3.org/ns/adms#Identifier"
@@ -366,6 +529,91 @@
       "generalization": []
     },
     {
+      "@id": "http://fixme.com#betwisting",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "betwisting"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een betwisting van de vordering."
+      },
+      "domain": [
+        "http://fixme.com#Vordering"
+      ],
+      "range": [
+        "http://fixme.com#Betwisting"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "http://fixme.com#betalingsdatum",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "betalingsdatum"
+      },
+      "definition": {
+        "nl": "Datum waarop het overgedragen geld werd ontvangen door de ontvanger. "
+      },
+      "domain": [
+        "http://fixme.com#Betaling"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#date"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "http://fixme.com#betaling",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "betaling"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de betaling dit werd toegerekend."
+      },
+      "domain": [
+        "http://fixme.com#ToerekeningVanBetaling"
+      ],
+      "range": [
+        "http://fixme.com#Betaling"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "http://fixme.com#betaaldBedrag",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "betaald bedrag"
+      },
+      "definition": {
+        "nl": "Het geldbedrag dat werd betaald."
+      },
+      "domain": [
+        "http://fixme.com#Betaling"
+      ],
+      "range": [
+        "http://fixme.com#Geldbedrag"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "http://fixme.com#bestemming",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "bestemming"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de vordering die de betaler wenst af te lossen met de betaling."
+      },
+      "domain": [
+        "http://fixme.com#Betaling"
+      ],
+      "range": [
+        "http://fixme.com#Vordering"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "http://fixme.com#antwoording",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -384,6 +632,74 @@
         "http://www.w3.org/2000/01/rdf-schema#Resource"
       ],
       "generalization": []
+    },
+    {
+      "@id": "http://fixme.com#afbetalingsplan",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "afbetalingsplan"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een afbetalingsplan dat voor de vordering geldt."
+      },
+      "domain": [
+        "http://fixme.com#Vordering"
+      ],
+      "range": [
+        "http://fixme.com#Afbetalingsplan"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "http://fixme.com#aanmaningsdatum",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "aanmaningsdatum"
+      },
+      "definition": {
+        "nl": "Datum waarop de aanmaning werd verstuurd. "
+      },
+      "domain": [
+        "http://fixme.com#Aanmaning"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#date"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "http://fixme.com#aanmaning",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "aanmaning"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een aanmaning  met betrekking tot de vordering."
+      },
+      "domain": [
+        "http://fixme.com#Vordering"
+      ],
+      "range": [
+        "http://fixme.com#Aanmaning"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "http://fixme.com#aanmaning",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "aanmaning"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een aanmaning die waarin de wanbetalingskost wordt gecommuniceerd aan de schuldenaar."
+      },
+      "domain": [
+        "http://fixme.com#Wanbetalingskost"
+      ],
+      "range": [
+        "http://fixme.com#Aanmaning"
+      ],
+      "generalization": []
     }
   ],
   "externalproperties": [
@@ -399,6 +715,13 @@
         "nl": "valuta"
       },
       "@id": "https://schema.org/currency",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "type"
+      },
+      "@id": "http://purl.org/dc/terms/type",
       "@type": "rdf:Property"
     }
   ],
