@@ -1,0 +1,199 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+schemas:MonetaryAmount a rdfs:Class;
+  rdfs:label "Geldbedrag"@nl .
+
+<http://fixme.com#Oninbaarheidsverklaring> a owl:Class;
+  rdfs:label "Oninbaarheidsverklaring"@nl;
+  rdfs:comment "Het aangeven dat een bepaalde vordering als oninbaar wordt beschouwd. "@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf prov:Activity .
+
+<http://fixme.com#antwoording> a owl:ObjectProperty;
+  rdfs:label "beschrijving"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit kan bijvoorbeeld een geleverder prestatie zijn, of een overtreding die op een bepaald moment is vastgesteld."@nl;
+  rdfs:comment "Verwijzing naar de verantwoording van de vordering,"@nl;
+  rdfs:domain <http://fixme.com#Grondslag>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range rdfs:Resource .
+
+<http://fixme.com#fiscaal> a owl:DatatypeProperty;
+  rdfs:label "fiscaal"@nl;
+  rdfs:comment "Laat toe om te specifiëren of het een fiscale of niet-fiscale vordering betreft."@nl;
+  rdfs:domain <http://fixme.com#Vorderingstype>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range xsd:boolean .
+
+<http://fixme.com#grondslag> a owl:ObjectProperty;
+  rdfs:label "grondslag"@nl;
+  rdfs:comment "Verwijzing naar de juridische basis voor de vordering"@nl;
+  rdfs:domain <http://fixme.com#Vordering>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Grondslag> .
+
+<http://fixme.com#hoofdsom> a owl:ObjectProperty;
+  rdfs:label "hoofdsom"@nl;
+  rdfs:comment "Het totale bedrag dat wordt gevorderd door de schuldeiser, exclusief eventuele wanbetalingskosten."@nl;
+  rdfs:domain <http://fixme.com#Vordering>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Geldbedrag> .
+
+<http://fixme.com#identificator> a owl:ObjectProperty;
+  rdfs:label "identificator"@nl;
+  rdfs:comment "Een identificator voor de vordering"@nl;
+  rdfs:domain <http://fixme.com#Vordering>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
+
+<http://fixme.com#isGerelateerdMet> a owl:ObjectProperty;
+  rdfs:label "isGerelateerdMet"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Men kan beslissen om een nieuwe vordering aan te maken voor een wanbetalingskost, in plaats van de wanbetalingskost rechtstreeks aan de vordering toe te voeging."@nl;
+  rdfs:comment "Verwijzing naar een andere vordering die een verband heeft met de eerste vordering."@nl;
+  rdfs:domain <http://fixme.com#Vordering>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Vordering> .
+
+<http://fixme.com#kwijtgescholdenBedrag> a owl:ObjectProperty;
+  rdfs:label "kwijtgescholden bedrag"@nl;
+  rdfs:comment "Het bedrag dat wordt kwijtgescholden."@nl;
+  rdfs:domain <http://fixme.com#Kwijtschelding>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Geldbedrag> .
+
+<http://fixme.com#label> a owl:ObjectProperty;
+  rdfs:label "label"@nl;
+  rdfs:comment "Het label van het vorderingstype"@nl;
+  rdfs:domain <http://fixme.com#Vorderingstype>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range skos:Concept .
+
+<http://fixme.com#rechtsgrond> a owl:ObjectProperty;
+  rdfs:label "rechtsgrond"@nl;
+  rdfs:comment "Verwijzing naar de rechtsgrond van de vordering"@nl;
+  rdfs:domain <http://fixme.com#Grondslag>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://data.europa.eu/eli/ontology#LegalResource> .
+
+<http://fixme.com#toegerekendBedrag> a owl:ObjectProperty;
+  rdfs:label "toegerekend bedrag"@nl;
+  rdfs:comment "Het geldbedrag dat werd toegerekend aan een vordering."@nl;
+  rdfs:domain <http://fixme.com#ToerekeningVanBetaling>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Geldbedrag> .
+
+<http://fixme.com#toerekeningVanBetaling> a owl:ObjectProperty;
+  rdfs:label "toerekening van Betaling"@nl;
+  rdfs:comment "Het toewijzen van een betaald geldbedrag aan een vordering. "@nl;
+  rdfs:domain <http://fixme.com#Vordering>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#ToerekeningVanBetaling> .
+
+<http://fixme.com#uitersteBetaaldatum> a owl:DatatypeProperty;
+  rdfs:label "uiterste betaaldatum"@nl;
+  rdfs:comment "De laatst mogelijke datum waarop een betaling moet worden gedaan om te voorkomen dat er eventuele boetes, interesten of andere sancties worden opgelegd."@nl;
+  rdfs:domain <http://fixme.com#Vordering>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range xsd:date .
+
+<http://fixme.com#verjaringstermijn> a owl:DatatypeProperty;
+  rdfs:label "verjaringstermijn"@nl;
+  rdfs:comment "De verjaringstermijn die voor vorderingen van dit type geldt."@nl;
+  rdfs:domain <http://fixme.com#Vorderingstype>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range xsd:duration .
+
+<http://fixme.com#vorderingstype> a owl:ObjectProperty;
+  rdfs:label "vorderingstype"@nl;
+  rdfs:comment "Verwijzing naar een vorderingstype."@nl;
+  rdfs:domain <http://fixme.com#Vordering>;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:range <http://fixme.com#Vorderingstype> .
+
+<http://fixme.com#Kwijtschelding> a owl:Class;
+  rdfs:label "Kwijtschelding"@nl;
+  rdfs:comment "Het vrijwillig prijsgeven van (een deel van) een vordering."@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf prov:Activity .
+
+schemas:currency a rdf:Property;
+  rdfs:label "valuta"@nl .
+
+schemas:value a rdf:Property;
+  rdfs:label "waarde"@nl .
+
+<http://fixme.com#ToerekeningVanBetaling> a owl:Class;
+  rdfs:label "Toerekening van Betaling"@nl;
+  rdfs:comment "Het toewijzen van een betaald geldbedrag aan een vordering. "@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf prov:Activity .
+
+<http://fixme.com#Grondslag> a owl:Class;
+  rdfs:label "Grondslag"@nl;
+  rdfs:comment "De juridische basis voor een vordering"@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Vorderingstype> a owl:Class;
+  rdfs:label "Vorderingstype"@nl;
+  rdfs:comment "Verwijzing naar een Vorderingstype."@nl;
+  rdfs:isDefinedBy <http://fixme.com> .
+
+<http://fixme.com#Vordering> a owl:Class;
+  rdfs:label "Vordering"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Voor de doeleinden van dit applicatieprofiel is de opgelegde prestatie altijd de betaling van een geldsom. "@nl;
+  rdfs:comment "Aanspraak van een partij (de schuldeiser) op een bepaalde prestatie vanwege een andere partij (de schuldenaar)."@nl;
+  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:subClassOf prov:Activity .
+
+<http://fixme.com> a owl:Ontology;
+  rdfs:label "schuldbeheer-voc"@en,
+    "schuldbeheer-voc"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://medewerkerwebsiteurl>;
+      foaf:name "MedewerkerAffiliatie"
+    ];
+    foaf:firstName "MedewerkerVoornaam";
+    foaf:lastName "MedewerkerNaam";
+    foaf:mbox <mailto:medewerkervoornaam.medewerkernaam@medewerkerdomein>
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso schemas:MonetaryAmount,
+    schemas:value,
+    schemas:currency;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://editorwebsiteurl>;
+      foaf:name "EditorAffiliatie"
+    ];
+    foaf:firstName "EditorVoornaam";
+    foaf:lastName "EditorNaam";
+    foaf:mbox <mailto:editorvoornaam.editornaam@editordomein>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://auteurwebsiteurl>;
+      foaf:name "AuteurAffiliatie"
+    ];
+    foaf:firstName "AuteurVoornaam";
+    foaf:lastName "AuteurNaam";
+    foaf:mbox <mailto:auteurvoornaam.auteurnaam@auteurdomein>
+  ] .
