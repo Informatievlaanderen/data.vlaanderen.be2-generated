@@ -6,16 +6,15 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+skos:Concept a rdfs:Class;
+  rdfs:label "Wanbetalingsvergoedingstype"@nl,
+    "Vorderingstype"@nl .
 
 schemas:MonetaryAmount a rdfs:Class;
   rdfs:label "Geldbedrag"@nl .
-
-<https://data.vlaanderen.be/ns/schuldbeheer#Vorderingstype> a owl:Class;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
-
-<https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoedingstype> a owl:Class;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#aanmaning> a owl:ObjectProperty;
   rdfs:label "aanmaning"@nl;
@@ -141,12 +140,14 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:range <http://fixme.com#Geldbedrag> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#kwijtschelding> a owl:ObjectProperty;
+  rdfs:label "kwijtschelding"@nl;
   rdfs:comment "Verwijzing naar een kwijtschelding voor de vordering."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Vordering>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Kwijtschelding> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#oninbaarheidsverklaring> a owl:ObjectProperty;
+  rdfs:label "oninbaarheidsverklaring"@nl;
   rdfs:comment "Verwijzing naar een oninbaarheidsverklaring voor de vordering."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Vordering>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
@@ -306,7 +307,8 @@ schemas:value a rdf:Property;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso schemas:MonetaryAmount,
+  rdfs:seeAlso skos:Concept,
+    schemas:MonetaryAmount,
     schemas:value,
     schemas:currency,
     <http://www.w3.org/ns/adms#identifier>,
