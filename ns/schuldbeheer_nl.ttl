@@ -6,24 +6,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
 @prefix schemas: <https://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 schemas:MonetaryAmount a rdfs:Class;
   rdfs:label "Geldbedrag"@nl .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring> a owl:Class;
-  rdfs:label "Oninbaarheidsverklaring"@nl;
-  rdfs:comment "Het aangeven dat een bepaalde vordering als oninbaar wordt beschouwd. "@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
-  rdfs:subClassOf prov:Activity .
+<https://data.vlaanderen.be/ns/schuldbeheer#Vorderingstype> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
+
+<https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoedingstype> a owl:Class;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#aanmaning> a owl:ObjectProperty;
   rdfs:label "aanmaning"@nl;
   rdfs:comment "Verwijzing naar een aanmaning  met betrekking tot de vordering."@nl,
     "Verwijzing naar een aanmaning die waarin de wanbetalingskost wordt gecommuniceerd aan de schuldenaar."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Vordering>,
-    <https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingskost>;
+    <https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Aanmaning> .
 
@@ -41,8 +40,8 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan> .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#antwoording> a owl:ObjectProperty;
-  rdfs:label "beschrijving"@nl;
+<https://data.vlaanderen.be/ns/schuldbeheer#beschrijving> a owl:ObjectProperty;
+  rdfs:label "verantwoording"@nl;
   <http://purl.org/vocab/vann/usageNote> "Dit kan bijvoorbeeld een geleverder prestatie zijn, of een overtreding die op een bepaald moment is vastgesteld."@nl;
   rdfs:comment "Verwijzing naar de verantwoording van de vordering,"@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Grondslag>;
@@ -87,7 +86,7 @@ schemas:MonetaryAmount a rdfs:Class;
 <https://data.vlaanderen.be/ns/schuldbeheer#fiscaal> a owl:DatatypeProperty;
   rdfs:label "fiscaal"@nl;
   rdfs:comment "Laat toe om te specifiëren of het een fiscale of niet-fiscale vordering betreft."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Vorderingstype>;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range xsd:boolean .
 
@@ -107,17 +106,15 @@ schemas:MonetaryAmount a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/schuldbeheer#identificator> a owl:ObjectProperty;
   rdfs:label "identificator"@nl;
-  rdfs:comment "Een identificator voor de vordering"@nl,
-    "Een identificator voor het betaling"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Vordering>,
-    <https://data.vlaanderen.be/ns/schuldbeheer#Betaling>;
+  rdfs:comment "Een identificator voor de vordering"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Vordering>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <http://www.w3.org/ns/adms#Identifier> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#interest> a owl:ObjectProperty;
-  rdfs:label "interest"@nl;
-  rdfs:comment "Percentage dat het bedrag van de wanbetalingskost bepaald."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingskost>;
+  rdfs:label "percentage"@nl;
+  rdfs:comment "De omvang van de wanbetalingsvergoeding kan worden bepaald als een percentage."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <http://fixme.com#Percentage> .
 
@@ -130,9 +127,9 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Vordering> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#kost> a owl:ObjectProperty;
-  rdfs:label "kost"@nl;
-  rdfs:comment "Kost"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingskost>;
+  rdfs:label "bedrag"@nl;
+  rdfs:comment "De omvang van de wanbetalingsvergoeding kan worden bepaald door een bedrag."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <http://fixme.com#Geldbedrag> .
 
@@ -143,17 +140,22 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <http://fixme.com#Geldbedrag> .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#label> a owl:ObjectProperty;
-  rdfs:label "label"@nl;
-  rdfs:comment "Het label van het vorderingstype"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Vorderingstype>;
+<https://data.vlaanderen.be/ns/schuldbeheer#kwijtschelding> a owl:ObjectProperty;
+  rdfs:comment "Verwijzing naar een kwijtschelding voor de vordering."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Vordering>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
-  rdfs:range skos:Concept .
+  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Kwijtschelding> .
+
+<https://data.vlaanderen.be/ns/schuldbeheer#oninbaarheidsverklaring> a owl:ObjectProperty;
+  rdfs:comment "Verwijzing naar een oninbaarheidsverklaring voor de vordering."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Vordering>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#rechtsgrond> a owl:ObjectProperty;
   rdfs:label "rechtsgrond"@nl;
   rdfs:comment "Verwijzing naar de rechtsgrond van de vordering"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Grondslag>;
+  rdfs:domain <http://data.europa.eu/eli/ontology#LegalResource>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <http://data.europa.eu/eli/ontology#LegalResource> .
 
@@ -182,8 +184,8 @@ schemas:MonetaryAmount a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/schuldbeheer#verjaringstermijn> a owl:DatatypeProperty;
   rdfs:label "verjaringstermijn"@nl;
-  rdfs:comment "De verjaringstermijn die voor vorderingen van dit type geldt."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Vorderingstype>;
+  rdfs:comment "De verjaringstermijn die voor vorderingen van dit classificatie geldt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range xsd:duration .
 
@@ -194,22 +196,25 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Vordering> .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#vorderingstype> a owl:ObjectProperty;
+<https://data.vlaanderen.be/ns/schuldbeheer#vorderingsclassificatie> a owl:ObjectProperty;
   rdfs:label "vorderingstype"@nl;
   rdfs:comment "Verwijzing naar een vorderingstype."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Vordering>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
-  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Vorderingstype> .
+  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie> .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#wanbetalingskost> a owl:ObjectProperty;
+<https://data.vlaanderen.be/ns/schuldbeheer#wanbetalingsvergoeding> a owl:ObjectProperty;
   rdfs:label "wanbetalingskost"@nl;
   rdfs:comment "Verwijzing naar een wanbetalingskost."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Vordering>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
-  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingskost> .
+  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding> .
 
 dc:type a rdf:Property;
   rdfs:label "type"@nl .
+
+<http://www.w3.org/ns/adms#identifier> a rdf:Property;
+  rdfs:label "identificator"@nl .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#Betwisting> a owl:Class;
   rdfs:label "Betwisting"@nl;
@@ -217,9 +222,9 @@ dc:type a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf prov:Activity .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#Kwijtschelding> a owl:Class;
-  rdfs:label "Kwijtschelding"@nl;
-  rdfs:comment "Het vrijwillig prijsgeven van (een deel van) een vordering."@nl;
+<https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring> a owl:Class;
+  rdfs:label "Oninbaarheidsverklaring"@nl;
+  rdfs:comment "Het aangeven dat een bepaalde vordering als oninbaar wordt beschouwd. "@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf prov:Activity .
 
@@ -245,20 +250,26 @@ schemas:value a rdf:Property;
   rdfs:comment "De juridische basis voor een vordering"@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
 
+<https://data.vlaanderen.be/ns/schuldbeheer#Kwijtschelding> a owl:Class;
+  rdfs:label "Kwijtschelding"@nl;
+  rdfs:comment "Het vrijwillig prijsgeven van (een deel van) een vordering."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:subClassOf prov:Activity .
+
 <https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling> a owl:Class;
   rdfs:label "Toerekening van Betaling"@nl;
   rdfs:comment "Het toewijzen van een betaald geldbedrag aan een vordering. "@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf prov:Activity .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#Vorderingstype> a owl:Class;
-  rdfs:label "Vorderingstype"@nl;
-  rdfs:comment "Verwijzing naar een Vorderingstype."@nl;
+<https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie> a owl:Class;
+  rdfs:label "Vorderingscategorie"@nl;
+  rdfs:comment "Een soort vordering met bepaalde kenmerken."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingskost> a owl:Class;
-  rdfs:label "Wanbetalingskost"@nl;
-  rdfs:comment "Kost die in rekening worden gebracht als gevolg van een wanbetaling."@nl;
+<https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding> a owl:Class;
+  rdfs:label "Wanbetalingsvergoeding"@nl;
+  rdfs:comment "Vergoeding die in rekening worden gebracht als gevolg van een wanbetaling."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#Betaling> a owl:Class;
@@ -298,6 +309,7 @@ schemas:value a rdf:Property;
   rdfs:seeAlso schemas:MonetaryAmount,
     schemas:value,
     schemas:currency,
+    <http://www.w3.org/ns/adms#identifier>,
     dc:type;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;

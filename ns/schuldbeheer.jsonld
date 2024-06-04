@@ -170,25 +170,35 @@
       ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingstype",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
-        "nl": "Vorderingstype"
+        "nl": "Vorderingscategorie"
       },
       "definition": {
-        "nl": "Verwijzing naar een Vorderingstype."
+        "nl": "Een soort vordering met bepaalde kenmerken."
       },
       "parents": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingskost",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingstype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "parents": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
-        "nl": "Wanbetalingskost"
+        "nl": "Wanbetalingsvergoeding"
       },
       "definition": {
-        "nl": "Kost die in rekening worden gebracht als gevolg van een wanbetaling."
+        "nl": "Vergoeding die in rekening worden gebracht als gevolg van een wanbetaling."
       },
+      "parents": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoedingstype",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
       "parents": []
     }
   ],
@@ -203,7 +213,7 @@
   ],
   "properties": [
     {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetalingskost",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetalingsvergoeding",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "wanbetalingskost"
@@ -215,12 +225,12 @@
         "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingskost"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding"
       ],
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#vorderingstype",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#vorderingsclassificatie",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "vorderingstype"
@@ -232,7 +242,7 @@
         "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingstype"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie"
       ],
       "generalization": []
     },
@@ -260,10 +270,10 @@
         "nl": "verjaringstermijn"
       },
       "definition": {
-        "nl": "De verjaringstermijn die voor vorderingen van dit type geldt."
+        "nl": "De verjaringstermijn die voor vorderingen van dit classificatie geldt."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingstype"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#duration"
@@ -348,7 +358,7 @@
         "nl": "Verwijzing naar de rechtsgrond van de vordering"
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Grondslag"
+        "http://data.europa.eu/eli/ontology#LegalResource"
       ],
       "range": [
         "http://data.europa.eu/eli/ontology#LegalResource"
@@ -356,19 +366,30 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#label",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#oninbaarheidsverklaring",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "label"
-      },
       "definition": {
-        "nl": "Het label van het vorderingstype"
+        "nl": "Verwijzing naar een oninbaarheidsverklaring voor de vordering."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingstype"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
       ],
       "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#kwijtschelding",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "definition": {
+        "nl": "Verwijzing naar een kwijtschelding voor de vordering."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/schuldbeheer#Kwijtschelding"
       ],
       "generalization": []
     },
@@ -393,13 +414,13 @@
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#kost",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "nl": "kost"
+        "nl": "bedrag"
       },
       "definition": {
-        "nl": "Kost"
+        "nl": "De omvang van de wanbetalingsvergoeding kan worden bepaald door een bedrag."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingskost"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding"
       ],
       "range": [
         "http://fixme.com#Geldbedrag"
@@ -430,13 +451,13 @@
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#interest",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "nl": "interest"
+        "nl": "percentage"
       },
       "definition": {
-        "nl": "Percentage dat het bedrag van de wanbetalingskost bepaald."
+        "nl": "De omvang van de wanbetalingsvergoeding kan worden bepaald als een percentage."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingskost"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding"
       ],
       "range": [
         "http://fixme.com#Percentage"
@@ -454,23 +475,6 @@
       },
       "domain": [
         "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
-      ],
-      "range": [
-        "http://www.w3.org/ns/adms#Identifier"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#identificator",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "identificator"
-      },
-      "definition": {
-        "nl": "Een identificator voor het betaling"
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Betaling"
       ],
       "range": [
         "http://www.w3.org/ns/adms#Identifier"
@@ -521,7 +525,7 @@
         "nl": "Laat toe om te specifiëren of het een fiscale of niet-fiscale vordering betreft."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingstype"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#boolean"
@@ -614,10 +618,10 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#antwoording",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#beschrijving",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "nl": "beschrijving"
+        "nl": "verantwoording"
       },
       "definition": {
         "nl": "Verwijzing naar de verantwoording van de vordering,"
@@ -694,7 +698,7 @@
         "nl": "Verwijzing naar een aanmaning die waarin de wanbetalingskost wordt gecommuniceerd aan de schuldenaar."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingskost"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/schuldbeheer#Aanmaning"
@@ -715,6 +719,20 @@
         "nl": "valuta"
       },
       "@id": "https://schema.org/currency",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "identificator"
+      },
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "rdf:Property"
+    },
+    {
+      "name": {
+        "nl": "type"
+      },
+      "@id": "http://purl.org/dc/terms/type",
       "@type": "rdf:Property"
     },
     {
