@@ -104,17 +104,6 @@
       ]
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Grondslag",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "label": {
-        "nl": "Grondslag"
-      },
-      "definition": {
-        "nl": "De juridische basis voor een vordering"
-      },
-      "parents": []
-    },
-    {
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Kwijtschelding",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
@@ -195,6 +184,20 @@
   "externals": [
     {
       "name": {
+        "nl": "Rechtsgrond"
+      },
+      "@id": "http://data.europa.eu/eli/ontology#LegalResource",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "Resource"
+      },
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Resource",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "Wanbetalingsvergoedingstype"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -217,6 +220,23 @@
   ],
   "properties": [
     {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#werdHerschiktDoor",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "afbetalingsplan"
+      },
+      "definition": {
+        "nl": "Verwijzing naar een afbetalingsplan dat voor de vordering geldt."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetalingsvergoeding",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -234,7 +254,7 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#vorderingsclassificatie",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#vorderingscategorie",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
         "nl": "vorderingstype"
@@ -247,23 +267,6 @@
       ],
       "range": [
         "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingscategorie"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#vordering",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "vordering"
-      },
-      "definition": {
-        "nl": "Er kan een afbetalingsplan worden opgemaakt voor een vordering. Dit afbetalingsplan herschikt de modaliteiten van de vordering."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
       ],
       "generalization": []
     },
@@ -281,26 +284,6 @@
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#duration"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#verantwoording",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "verantwoording"
-      },
-      "definition": {
-        "nl": "Verwijzing naar de verantwoording van de vordering,"
-      },
-      "usage": {
-        "nl": "Dit kan bijvoorbeeld een geleverder prestatie zijn, of een overtreding die op een bepaald moment is vastgesteld."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Grondslag"
-      ],
-      "range": [
-        "http://www.w3.org/2000/01/rdf-schema#Resource"
       ],
       "generalization": []
     },
@@ -325,13 +308,13 @@
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#toerekeningVanBetaling",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "nl": "toerekening van Betaling"
+        "nl": "toerekening van betaling"
       },
       "definition": {
-        "nl": "Verwijzing naar de activiteit die (een deel van) een  betaald bedrag toewijst aan een vordering."
+        "nl": "Het toewijzen van een betaald geldbedrag aan een vordering. "
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Betaling"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling"
@@ -342,13 +325,13 @@
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#toerekeningVanBetaling",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "nl": "toerekening van Betaling"
+        "nl": "toerekening van betaling"
       },
       "definition": {
-        "nl": "Het toewijzen van een betaald geldbedrag aan een vordering. "
+        "nl": "Verwijzing naar de activiteit die (een deel van) een  betaald bedrag toewijst aan een vordering."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Betaling"
       ],
       "range": [
         "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling"
@@ -369,23 +352,6 @@
       ],
       "range": [
         "https://schema.org/MonetaryAmount"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#rechtsgrond",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "rechtsgrond"
-      },
-      "definition": {
-        "nl": "Verwijzing naar de rechtsbron voor de vordering."
-      },
-      "domain": [
-        "http://data.europa.eu/eli/ontology#LegalResource"
-      ],
-      "range": [
-        "http://data.europa.eu/eli/ontology#LegalResource"
       ],
       "generalization": []
     },
@@ -461,7 +427,7 @@
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#isGerelateerdMet",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "nl": "isGerelateerdMet"
+        "nl": "is gerelateerd met"
       },
       "definition": {
         "nl": "Verwijzing naar een andere vordering die een verband heeft met de eerste vordering."
@@ -529,6 +495,23 @@
       "generalization": []
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#herschikt",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "herschikt"
+      },
+      "definition": {
+        "nl": "Er kan een afbetalingsplan worden opgemaakt voor een of meerdere vordering. Dit afbetalingsplan herschikt de betaalmodaliteiten van de vordering."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#grondslag",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -541,7 +524,7 @@
         "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Grondslag"
+        "http://data.europa.eu/eli/ontology#LegalResource"
       ],
       "generalization": []
     },
@@ -648,23 +631,6 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplan",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "afbetalingsplan"
-      },
-      "definition": {
-        "nl": "Verwijzing naar een afbetalingsplan dat voor de vordering geldt."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
-      ],
-      "range": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#aanmaningsdatum",
       "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
@@ -712,6 +678,23 @@
       ],
       "range": [
         "https://data.vlaanderen.be/ns/schuldbeheer#Aanmaning"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#aanleiding",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "aanleiding"
+      },
+      "definition": {
+        "nl": "Verwijzing naar de aanleiding voor de vordering."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
+      ],
+      "range": [
+        "http://www.w3.org/2000/01/rdf-schema#Resource"
       ],
       "generalization": []
     }
