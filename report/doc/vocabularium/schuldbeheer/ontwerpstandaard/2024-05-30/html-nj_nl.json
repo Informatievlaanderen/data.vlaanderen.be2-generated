@@ -12,8 +12,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/bbac1aa6071dc2be590bba1b0aa80611c56911bf",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/bbac1aa6071dc2be590bba1b0aa80611c56911bf/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/09467f0c8693fda8b8e1f7ca6dbb978b106f8a69",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/09467f0c8693fda8b8e1f7ca6dbb978b106f8a69/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/TODO/CORRECT-URL/index.html",
     "usesVocs": [],
@@ -163,7 +163,7 @@
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie",
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingscategorie",
       "name": "Vorderingscategorie",
       "label": {
         "nl": "Vorderingscategorie"
@@ -200,7 +200,7 @@
       },
       "sort": "wanbetalingskost",
       "description": {
-        "nl": "Verwijzing naar een wanbetalingskost."
+        "nl": "Een vordering kan verhoogd worden met een wanbetalingsvergoeding."
       },
       "usage": {},
       "domain": [
@@ -212,6 +212,21 @@
       "parents": []
     },
     {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetaling",
+      "name": "",
+      "label": {},
+      "sort": "",
+      "description": {},
+      "usage": {},
+      "domain": [
+        "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#boolean"
+      ],
+      "parents": []
+    },
+    {
       "uri": "https://data.vlaanderen.be/ns/schuldbeheer#vorderingsclassificatie",
       "name": "vorderingstype",
       "label": {
@@ -219,14 +234,14 @@
       },
       "sort": "vorderingstype",
       "description": {
-        "nl": "Verwijzing naar een vorderingstype."
+        "nl": "Een vordering behoort tot een categorie."
       },
       "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingscategorie"
       ],
       "parents": []
     },
@@ -238,7 +253,7 @@
       },
       "sort": "vordering",
       "description": {
-        "nl": "Verwijzing naar een vordering waarop het afbetalingsplan van toepassing is"
+        "nl": "Er kan een afbetalingsplan worden opgemaakt voor een vordering. Dit afbetalingsplan herschikt de modaliteiten van de vordering."
       },
       "usage": {},
       "domain": [
@@ -257,15 +272,34 @@
       },
       "sort": "verjaringstermijn",
       "description": {
-        "nl": "De verjaringstermijn die voor vorderingen van dit classificatie geldt."
+        "nl": "De verjaringstermijn die voor vorderingen van dit categorie geldt."
       },
       "usage": {},
       "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingscategorie"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#duration"
       ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#verantwoording",
+      "name": "verantwoording",
+      "label": {
+        "nl": "verantwoording"
+      },
+      "sort": "verantwoording",
+      "description": {
+        "nl": "Verwijzing naar de verantwoording van de vordering,"
+      },
+      "usage": {
+        "nl": "Dit kan bijvoorbeeld een geleverder prestatie zijn, of een overtreding die op een bepaald moment is vastgesteld."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/schuldbeheer#Grondslag"
+      ],
+      "range": [],
       "parents": []
     },
     {
@@ -339,9 +373,7 @@
       "domain": [
         "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling"
       ],
-      "range": [
-        "http://fixme.com#Geldbedrag"
-      ],
+      "range": [],
       "parents": []
     },
     {
@@ -352,7 +384,7 @@
       },
       "sort": "rechtsgrond",
       "description": {
-        "nl": "Verwijzing naar de rechtsgrond van de vordering"
+        "nl": "Verwijzing naar de rechtsbron voor de vordering."
       },
       "usage": {},
       "domain": [
@@ -413,28 +445,24 @@
       "domain": [
         "https://data.vlaanderen.be/ns/schuldbeheer#Kwijtschelding"
       ],
-      "range": [
-        "http://fixme.com#Geldbedrag"
-      ],
+      "range": [],
       "parents": []
     },
     {
       "uri": "https://data.vlaanderen.be/ns/schuldbeheer#kost",
-      "name": "bedrag",
+      "name": "kost",
       "label": {
-        "nl": "bedrag"
+        "nl": "kost"
       },
-      "sort": "bedrag",
+      "sort": "kost",
       "description": {
-        "nl": "De omvang van de wanbetalingsvergoeding kan worden bepaald door een bedrag."
+        "nl": "De omvang van de wanbetalingsvergoeding kan worden bepaald door een vast geldbedrag."
       },
       "usage": {},
       "domain": [
         "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding"
       ],
-      "range": [
-        "http://fixme.com#Geldbedrag"
-      ],
+      "range": [],
       "parents": []
     },
     {
@@ -460,13 +488,13 @@
     },
     {
       "uri": "https://data.vlaanderen.be/ns/schuldbeheer#interest",
-      "name": "percentage",
+      "name": "interest",
       "label": {
-        "nl": "percentage"
+        "nl": "interest"
       },
-      "sort": "percentage",
+      "sort": "interest",
       "description": {
-        "nl": "De omvang van de wanbetalingsvergoeding kan worden bepaald als een percentage."
+        "nl": "De omvang van de wanbetalingsvergoeding  kan bepaald worden als een percentage op bedrag van de vordering dat nog niet betaald werd."
       },
       "usage": {},
       "domain": [
@@ -510,9 +538,7 @@
       "domain": [
         "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
       ],
-      "range": [
-        "http://fixme.com#Geldbedrag"
-      ],
+      "range": [],
       "parents": []
     },
     {
@@ -542,11 +568,11 @@
       },
       "sort": "fiscaal",
       "description": {
-        "nl": "Laat toe om te specifiëren of het een fiscale of niet-fiscale vordering betreft."
+        "nl": "Laat toe om te specifiëren het om fiscale of niet-fiscale vorderingen gaat."
       },
       "usage": {},
       "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie"
+        "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingscategorie"
       ],
       "range": [
         "http://www.w3.org/2001/XMLSchema#boolean"
@@ -624,9 +650,7 @@
       "domain": [
         "https://data.vlaanderen.be/ns/schuldbeheer#Betaling"
       ],
-      "range": [
-        "http://fixme.com#Geldbedrag"
-      ],
+      "range": [],
       "parents": []
     },
     {
@@ -646,25 +670,6 @@
       "range": [
         "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
       ],
-      "parents": []
-    },
-    {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#beschrijving",
-      "name": "verantwoording",
-      "label": {
-        "nl": "verantwoording"
-      },
-      "sort": "verantwoording",
-      "description": {
-        "nl": "Verwijzing naar de verantwoording van de vordering,"
-      },
-      "usage": {
-        "nl": "Dit kan bijvoorbeeld een geleverder prestatie zijn, of een overtreding die op een bepaald moment is vastgesteld."
-      },
-      "domain": [
-        "https://data.vlaanderen.be/ns/schuldbeheer#Grondslag"
-      ],
-      "range": [],
       "parents": []
     },
     {
@@ -876,7 +881,7 @@
         "nl": "type"
       },
       "description": {
-        "nl": "Laat toe om de aard van de vordering aan te geven."
+        "nl": "De aard van de vorderingen van deze categorie."
       },
       "usage": {
         "nl": "Bijvoorbeeld schoolfactuur, GAS-boete"
@@ -894,7 +899,7 @@
         "nl": "type"
       },
       "description": {
-        "nl": "Laat toe om het type van de wanbetalingskost verder te specifieren"
+        "nl": "Laat toe om de aard van de wanbetalingsvergoeding verder te specifieren"
       },
       "usage": {
         "nl": "Bijvoorbeeld verwijlinterest, aanmaningskost, verzendingskost"

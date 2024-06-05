@@ -13,8 +13,8 @@
     "documentconfig": {},
     "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "statuslabel": "Ontwerp Standaard",
-    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/bbac1aa6071dc2be590bba1b0aa80611c56911bf",
-    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/bbac1aa6071dc2be590bba1b0aa80611c56911bf/CHANGELOG",
+    "repositoryurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/tree/09467f0c8693fda8b8e1f7ca6dbb978b106f8a69",
+    "changelogurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/blob/09467f0c8693fda8b8e1f7ca6dbb978b106f8a69/CHANGELOG",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-schuldbeheer/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/TODO/CORRECT-URL/index.html",
     "usesVocs": [],
@@ -36,7 +36,7 @@
         {
           "label": "Activiteit",
           "name": "Activiteit",
-          "package": "OSLO-Dossier",
+          "package": "visualization",
           "uri": "http://www.w3.org/ns/prov#Activity",
           "scoped_uri": "#Activiteit"
         }
@@ -112,7 +112,7 @@
             "nl": "vordering"
           },
           "description": {
-            "nl": "Verwijzing naar een vordering waarop het afbetalingsplan van toepassing is"
+            "nl": "Er kan een afbetalingsplan worden opgemaakt voor een vordering. Dit afbetalingsplan herschikt de modaliteiten van de vordering."
           },
           "usage": {},
           "domain": [
@@ -139,7 +139,7 @@
           "cardinality": "1..*",
           "codelist_uri": "",
           "rawTags": {
-            "definition-nl": "Verwijzing naar een vordering waarop het afbetalingsplan van toepassing is",
+            "definition-nl": "Er kan een afbetalingsplan worden opgemaakt voor een vordering. Dit afbetalingsplan herschikt de modaliteiten van de vordering.",
             "label-nl": "vordering"
           }
         }
@@ -160,7 +160,7 @@
         {
           "label": "Activiteit",
           "name": "Activiteit",
-          "package": "OSLO-Dossier",
+          "package": "visualization",
           "uri": "http://www.w3.org/ns/prov#Activity",
           "scoped_uri": "#Activiteit"
         }
@@ -265,26 +265,14 @@
               "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Betaling"
             }
           ],
-          "range": [
-            {
-              "range_label": "Geldbedrag",
-              "range_uri": "http://fixme.com#Geldbedrag"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Geldbedrag",
-              "range_puri": "http://fixme.com#Geldbedrag",
-              "range_label": {
-                "nl": "Geldbedrag"
-              }
-            }
-          ],
+          "range": [],
+          "scopedrange": [],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "betaald bedrag",
-            "definition-nl": "Het geldbedrag dat werd betaald."
+            "definition-nl": "Het geldbedrag dat werd betaald.",
+            "range": "https://schema.org/MonetaryAmount"
           }
         },
         {
@@ -351,7 +339,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/ns/adms#Identifier",
+              "range_uri": "#Identificator",
               "range_puri": "http://www.w3.org/ns/adms#Identifier",
               "range_label": {
                 "nl": "Identificator"
@@ -384,7 +372,7 @@
         {
           "label": "Activiteit",
           "name": "Activiteit",
-          "package": "OSLO-Dossier",
+          "package": "visualization",
           "uri": "http://www.w3.org/ns/prov#Activity",
           "scoped_uri": "#Activiteit"
         }
@@ -413,35 +401,7 @@
       },
       "properties": [
         {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#rechtsgrond",
-          "name": "rechtsgrond",
-          "sort": "rechtsgrond",
-          "label": {
-            "nl": "rechtsgrond"
-          },
-          "description": {
-            "nl": "Verwijzing naar de rechtsgrond van de vordering"
-          },
-          "usage": {},
-          "domain": [
-            {
-              "EA-Name": "Grondslag",
-              "uri": "http://data.europa.eu/eli/ontology#LegalResource"
-            }
-          ],
-          "range": [],
-          "scopedrange": [],
-          "cardinality": "1",
-          "codelist_uri": "",
-          "rawTags": {
-            "label-nl": "rechtsgrond",
-            "definition-nl": "Verwijzing naar de rechtsgrond van de vordering",
-            "domain": "http://data.europa.eu/eli/ontology#LegalResource",
-            "range": "http://data.europa.eu/eli/ontology#LegalResource"
-          }
-        },
-        {
-          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#beschrijving",
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#verantwoording",
           "name": "verantwoording",
           "sort": "verantwoording",
           "label": {
@@ -469,6 +429,34 @@
             "usageNote-nl": "Dit kan bijvoorbeeld een geleverder prestatie zijn, of een overtreding die op een bepaald moment is vastgesteld.",
             "range": "http://www.w3.org/2000/01/rdf-schema#Resource"
           }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#rechtsgrond",
+          "name": "rechtsgrond",
+          "sort": "rechtsgrond",
+          "label": {
+            "nl": "rechtsgrond"
+          },
+          "description": {
+            "nl": "Verwijzing naar de rechtsbron voor de vordering."
+          },
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Grondslag",
+              "uri": "http://data.europa.eu/eli/ontology#LegalResource"
+            }
+          ],
+          "range": [],
+          "scopedrange": [],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {
+            "label-nl": "rechtsgrond",
+            "definition-nl": "Verwijzing naar de rechtsbron voor de vordering.",
+            "domain": "http://data.europa.eu/eli/ontology#LegalResource",
+            "range": "http://data.europa.eu/eli/ontology#LegalResource"
+          }
         }
       ]
     },
@@ -487,7 +475,7 @@
         {
           "label": "Activiteit",
           "name": "Activiteit",
-          "package": "OSLO-Dossier",
+          "package": "visualization",
           "uri": "http://www.w3.org/ns/prov#Activity",
           "scoped_uri": "#Activiteit"
         }
@@ -514,26 +502,14 @@
               "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Kwijtschelding"
             }
           ],
-          "range": [
-            {
-              "range_label": "Geldbedrag",
-              "range_uri": "http://fixme.com#Geldbedrag"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Geldbedrag",
-              "range_puri": "http://fixme.com#Geldbedrag",
-              "range_label": {
-                "nl": "Geldbedrag"
-              }
-            }
-          ],
+          "range": [],
+          "scopedrange": [],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "kwijtgescholden bedrag",
-            "definition-nl": "Het bedrag dat wordt kwijtgescholden."
+            "definition-nl": "Het bedrag dat wordt kwijtgescholden.",
+            "range": "https://schema.org/MonetaryAmount"
           }
         }
       ]
@@ -553,7 +529,7 @@
         {
           "label": "Activiteit",
           "name": "Activiteit",
-          "package": "OSLO-Dossier",
+          "package": "visualization",
           "uri": "http://www.w3.org/ns/prov#Activity",
           "scoped_uri": "#Activiteit"
         }
@@ -579,7 +555,7 @@
         {
           "label": "Activiteit",
           "name": "Activiteit",
-          "package": "OSLO-Dossier",
+          "package": "visualization",
           "uri": "http://www.w3.org/ns/prov#Activity",
           "scoped_uri": "#Activiteit"
         }
@@ -606,26 +582,14 @@
               "uri": "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling"
             }
           ],
-          "range": [
-            {
-              "range_label": "Geldbedrag",
-              "range_uri": "http://fixme.com#Geldbedrag"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Geldbedrag",
-              "range_puri": "http://fixme.com#Geldbedrag",
-              "range_label": {
-                "nl": "Geldbedrag"
-              }
-            }
-          ],
+          "range": [],
+          "scopedrange": [],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "toegerekend bedrag",
-            "definition-nl": "Het geldbedrag dat werd toegerekend aan een vordering."
+            "definition-nl": "Het geldbedrag dat werd toegerekend aan een vordering.",
+            "range": "https://schema.org/MonetaryAmount"
           }
         },
         {
@@ -686,7 +650,7 @@
         {
           "label": "Activiteit",
           "name": "Activiteit",
-          "package": "OSLO-Dossier",
+          "package": "visualization",
           "uri": "http://www.w3.org/ns/prov#Activity",
           "scoped_uri": "#Activiteit"
         }
@@ -705,7 +669,7 @@
             "nl": "wanbetalingskost"
           },
           "description": {
-            "nl": "Verwijzing naar een wanbetalingskost."
+            "nl": "Een vordering kan verhoogd worden met een wanbetalingsvergoeding."
           },
           "usage": {},
           "domain": [
@@ -733,8 +697,40 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "wanbetalingskost",
-            "definition-nl": "Verwijzing naar een wanbetalingskost."
+            "definition-nl": "Een vordering kan verhoogd worden met een wanbetalingsvergoeding."
           }
+        },
+        {
+          "uri": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetaling",
+          "name": "",
+          "sort": "",
+          "label": {},
+          "description": {},
+          "usage": {},
+          "domain": [
+            {
+              "EA-Name": "Vordering",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Boolean",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#boolean",
+              "range_label": {
+                "nl": "Boolean"
+              }
+            }
+          ],
+          "cardinality": "1",
+          "codelist_uri": "",
+          "rawTags": {}
         },
         {
           "uri": "https://data.vlaanderen.be/ns/schuldbeheer#vorderingsclassificatie",
@@ -744,7 +740,7 @@
             "nl": "vorderingstype"
           },
           "description": {
-            "nl": "Verwijzing naar een vorderingstype."
+            "nl": "Een vordering behoort tot een categorie."
           },
           "usage": {},
           "domain": [
@@ -755,14 +751,14 @@
           ],
           "range": [
             {
-              "range_label": "Vorderingsclassificatie",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie"
+              "range_label": "Vorderingscategorie",
+              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingscategorie"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Vorderingscategorie",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie",
+              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingscategorie",
               "range_label": {
                 "nl": "Vorderingscategorie"
               }
@@ -772,7 +768,7 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "vorderingstype",
-            "definition-nl": "Verwijzing naar een vorderingstype."
+            "definition-nl": "Een vordering behoort tot een categorie."
           }
         },
         {
@@ -998,7 +994,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/ns/adms#Identifier",
+              "range_uri": "#Identificator",
               "range_puri": "http://www.w3.org/ns/adms#Identifier",
               "range_label": {
                 "nl": "Identificator"
@@ -1029,26 +1025,14 @@
               "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vordering"
             }
           ],
-          "range": [
-            {
-              "range_label": "Geldbedrag",
-              "range_uri": "http://fixme.com#Geldbedrag"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Geldbedrag",
-              "range_puri": "http://fixme.com#Geldbedrag",
-              "range_label": {
-                "nl": "Geldbedrag"
-              }
-            }
-          ],
+          "range": [],
+          "scopedrange": [],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "hoofdsom",
-            "definition-nl": "Het totale bedrag dat wordt gevorderd door de schuldeiser, exclusief eventuele wanbetalingskosten."
+            "definition-nl": "Het totale bedrag dat wordt gevorderd door de schuldeiser, exclusief eventuele wanbetalingskosten.",
+            "range": "https://schema.org/MonetaryAmount"
           }
         },
         {
@@ -1210,7 +1194,7 @@
       ]
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie",
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingscategorie",
       "name": "Vorderingscategorie",
       "label": {
         "nl": "Vorderingscategorie"
@@ -1234,13 +1218,13 @@
             "nl": "verjaringstermijn"
           },
           "description": {
-            "nl": "De verjaringstermijn die voor vorderingen van dit classificatie geldt."
+            "nl": "De verjaringstermijn die voor vorderingen van dit categorie geldt."
           },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "Vorderingsclassificatie",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie"
+              "EA-Name": "Vorderingscategorie",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingscategorie"
             }
           ],
           "range": [
@@ -1262,7 +1246,7 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "verjaringstermijn",
-            "definition-nl": "De verjaringstermijn die voor vorderingen van dit classificatie geldt."
+            "definition-nl": "De verjaringstermijn die voor vorderingen van dit categorie geldt."
           }
         },
         {
@@ -1273,13 +1257,13 @@
             "nl": "fiscaal"
           },
           "description": {
-            "nl": "Laat toe om te specifiëren of het een fiscale of niet-fiscale vordering betreft."
+            "nl": "Laat toe om te specifiëren het om fiscale of niet-fiscale vorderingen gaat."
           },
           "usage": {},
           "domain": [
             {
-              "EA-Name": "Vorderingsclassificatie",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie"
+              "EA-Name": "Vorderingscategorie",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingscategorie"
             }
           ],
           "range": [
@@ -1301,7 +1285,7 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "fiscaal",
-            "definition-nl": "Laat toe om te specifiëren of het een fiscale of niet-fiscale vordering betreft."
+            "definition-nl": "Laat toe om te specifiëren het om fiscale of niet-fiscale vorderingen gaat."
           }
         },
         {
@@ -1319,20 +1303,20 @@
           },
           "domain": [
             {
-              "EA-Name": "Vorderingsclassificatie",
-              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingsclassificatie"
+              "EA-Name": "Vorderingscategorie",
+              "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingscategorie"
             }
           ],
           "range": [
             {
               "range_label": "Vorderingstype",
-              "range_uri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingstype"
+              "range_uri": "http://www.w3.org/2004/02/skos/core#Concept"
             }
           ],
           "scopedrange": [
             {
               "range_uri": "#Vorderingstype",
-              "range_puri": "https://data.vlaanderen.be/ns/schuldbeheer#Vorderingstype",
+              "range_puri": "http://www.w3.org/2004/02/skos/core#Concept",
               "range_label": {
                 "nl": "Vorderingstype"
               }
@@ -1342,7 +1326,7 @@
           "codelist_uri": "",
           "rawTags": {
             "label-nl": "type",
-            "definition-nl": "Laat toe om de aard van de vordering aan te geven.",
+            "definition-nl": "De aard van de vorderingen van deze categorie.",
             "uri": "http://purl.org/dc/terms/type",
             "ap-definition-nl": "Het label van het vorderingstype",
             "usageNote-nl": "Bijvoorbeeld schoolfactuur, GAS-boete"
@@ -1369,13 +1353,13 @@
       "properties": [
         {
           "uri": "https://data.vlaanderen.be/ns/schuldbeheer#kost",
-          "name": "bedrag",
-          "sort": "bedrag",
+          "name": "kost",
+          "sort": "kost",
           "label": {
-            "nl": "bedrag"
+            "nl": "kost"
           },
           "description": {
-            "nl": "De omvang van de wanbetalingsvergoeding kan worden bepaald door een bedrag."
+            "nl": "De omvang van de wanbetalingsvergoeding kan worden bepaald door een vast geldbedrag."
           },
           "usage": {},
           "domain": [
@@ -1384,37 +1368,25 @@
               "uri": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding"
             }
           ],
-          "range": [
-            {
-              "range_label": "Geldbedrag",
-              "range_uri": "http://fixme.com#Geldbedrag"
-            }
-          ],
-          "scopedrange": [
-            {
-              "range_uri": "#Geldbedrag",
-              "range_puri": "http://fixme.com#Geldbedrag",
-              "range_label": {
-                "nl": "Geldbedrag"
-              }
-            }
-          ],
+          "range": [],
+          "scopedrange": [],
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "bedrag",
-            "definition-nl": "De omvang van de wanbetalingsvergoeding kan worden bepaald door een bedrag."
+            "label-nl": "kost",
+            "definition-nl": "De omvang van de wanbetalingsvergoeding kan worden bepaald door een vast geldbedrag.",
+            "range": "https://schema.org/MonetaryAmount"
           }
         },
         {
           "uri": "https://data.vlaanderen.be/ns/schuldbeheer#interest",
-          "name": "percentage",
-          "sort": "percentage",
+          "name": "interest",
+          "sort": "interest",
           "label": {
-            "nl": "percentage"
+            "nl": "interest"
           },
           "description": {
-            "nl": "De omvang van de wanbetalingsvergoeding kan worden bepaald als een percentage."
+            "nl": "De omvang van de wanbetalingsvergoeding  kan bepaald worden als een percentage op bedrag van de vordering dat nog niet betaald werd."
           },
           "usage": {},
           "domain": [
@@ -1441,8 +1413,8 @@
           "cardinality": "1",
           "codelist_uri": "",
           "rawTags": {
-            "label-nl": "percentage",
-            "definition-nl": "De omvang van de wanbetalingsvergoeding kan worden bepaald als een percentage."
+            "label-nl": "interest",
+            "definition-nl": "De omvang van de wanbetalingsvergoeding  kan bepaald worden als een percentage op bedrag van de vordering dat nog niet betaald werd."
           }
         },
         {
@@ -1510,7 +1482,7 @@
           "rawTags": {
             "label-nl": "type",
             "uri": "http://purl.org/dc/terms/type",
-            "definition-nl": "Laat toe om het type van de wanbetalingskost verder te specifieren",
+            "definition-nl": "Laat toe om de aard van de wanbetalingsvergoeding verder te specifieren",
             "usageNote-nl": "Bijvoorbeeld verwijlinterest, aanmaningskost, verzendingskost",
             "ap-definition-nl": "Laat toe om het type van de wanbetalingskost verder te specifieren",
             "ap-usageNote-nl": "Bijvoorbeeld verwijlinterest, aanmaningskost, verzendingskost"
@@ -1990,7 +1962,7 @@
           ],
           "scopedrange": [
             {
-              "range_uri": "http://www.w3.org/ns/adms#Identifier",
+              "range_uri": "#Identificator",
               "range_puri": "http://www.w3.org/ns/adms#Identifier",
               "range_label": {
                 "nl": "Identificator"
@@ -2087,6 +2059,21 @@
       "name": {
         "nl": "vordering",
         "undefined": "vordering"
+      },
+      "description": {},
+      "domain": [
+        null
+      ],
+      "range": [
+        null
+      ],
+      "parents": []
+    },
+    {
+      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#verantwoording",
+      "name": {
+        "nl": "verantwoording",
+        "undefined": "verantwoording"
       },
       "description": {},
       "domain": [
@@ -2205,8 +2192,8 @@
     {
       "uri": "https://data.vlaanderen.be/ns/schuldbeheer#kost",
       "name": {
-        "nl": "bedrag",
-        "undefined": "bedrag"
+        "nl": "kost",
+        "undefined": "kost"
       },
       "description": {},
       "domain": [
@@ -2235,8 +2222,8 @@
     {
       "uri": "https://data.vlaanderen.be/ns/schuldbeheer#interest",
       "name": {
-        "nl": "percentage",
-        "undefined": "percentage"
+        "nl": "interest",
+        "undefined": "interest"
       },
       "description": {},
       "domain": [
@@ -2353,21 +2340,6 @@
       "parents": []
     },
     {
-      "uri": "https://data.vlaanderen.be/ns/schuldbeheer#beschrijving",
-      "name": {
-        "nl": "verantwoording",
-        "undefined": "verantwoording"
-      },
-      "description": {},
-      "domain": [
-        null
-      ],
-      "range": [
-        null
-      ],
-      "parents": []
-    },
-    {
       "uri": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplan",
       "name": {
         "nl": "afbetalingsplan",
@@ -2446,6 +2418,161 @@
     }
   ],
   "datatypes": [
+    {
+      "uri": "http://www.w3.org/ns/adms#Identifier",
+      "name": "Identificator",
+      "label": {
+        "nl": "Identificator"
+      },
+      "sort": "Identificator",
+      "description": {
+        "nl": "Informatie gebruikt om een object uniek te identificeren."
+      },
+      "usage": {
+        "nl": "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem."
+      },
+      "parents": [],
+      "rawTags": {
+        "ap-definition-nl": "Informatie gebruikt om een object uniek te identificeren.",
+        "ap-usageNote-nl": "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem.",
+        "label-nl": "Identificator",
+        "uri": "http://www.w3.org/ns/adms#Identifier"
+      },
+      "properties": [
+        {
+          "uri": "http://www.w3.org/2004/02/skos/core#notation",
+          "name": "identificator",
+          "sort": "identificator",
+          "label": {
+            "nl": "identificator"
+          },
+          "description": {
+            "nl": "String gebruikt om het object uniek te identificeren."
+          },
+          "usage": {
+            "nl": "Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator."
+          },
+          "domain": [
+            {
+              "EA-Name": "Identificator",
+              "uri": "http://www.w3.org/ns/adms#Identifier"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "GetypeerdeString",
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_puri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+              "range_label": {
+                "nl": "GetypeerdeString"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-label-nl": "identificator",
+            "uri": "http://www.w3.org/2004/02/skos/core#notation",
+            "ap-usageNote-nl": "Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator.",
+            "label-nl": "notatie",
+            "ap-definition-nl": "String gebruikt om het object uniek te identificeren."
+          }
+        },
+        {
+          "uri": "http://purl.org/dc/terms/issued",
+          "name": "toegekendOp",
+          "sort": "toegekend op",
+          "label": {
+            "nl": "toegekend op"
+          },
+          "description": {
+            "nl": "Tijdstip waarop de identificator werd uitgegeven."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Identificator",
+              "uri": "http://www.w3.org/ns/adms#Identifier"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "DateTime",
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_puri": "http://www.w3.org/2001/XMLSchema#dateTime",
+              "range_label": {
+                "nl": "DateTime"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-usageNote-nl": " ",
+            "uri": "http://purl.org/dc/terms/issued",
+            "label-nl": "uitgegeven",
+            "ap-label-nl": "toegekend op",
+            "ap-definition-nl": "Tijdstip waarop de identificator werd uitgegeven."
+          }
+        },
+        {
+          "uri": "http://purl.org/dc/terms/creator",
+          "name": "toegekendDoor",
+          "sort": "toegekend door",
+          "label": {
+            "nl": "toegekend door"
+          },
+          "description": {
+            "nl": "Link naar de agent die de identificator heeft uitgegeven."
+          },
+          "usage": {
+            "nl": " "
+          },
+          "domain": [
+            {
+              "EA-Name": "Identificator",
+              "uri": "http://www.w3.org/ns/adms#Identifier"
+            }
+          ],
+          "range": [
+            {
+              "range_label": "Agent",
+              "range_uri": "http://purl.org/dc/terms/Agent"
+            }
+          ],
+          "scopedrange": [
+            {
+              "range_uri": "#Agent",
+              "range_puri": "http://purl.org/dc/terms/Agent",
+              "range_label": {
+                "nl": "Agent"
+              }
+            }
+          ],
+          "cardinality": "0..1",
+          "codelist_uri": "",
+          "rawTags": {
+            "ap-usageNote-nl": " ",
+            "uri": "http://purl.org/dc/terms/creator",
+            "label-nl": "maker",
+            "ap-label-nl": "toegekend door",
+            "ap-definition-nl": "Link naar de agent die de identificator heeft uitgegeven."
+          }
+        }
+      ]
+    },
     {
       "uri": "https://schema.org/MonetaryAmount",
       "name": "Geldbedrag",
