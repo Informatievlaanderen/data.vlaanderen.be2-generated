@@ -52,7 +52,7 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan> .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#bestemming> a owl:ObjectProperty;
+<https://data.vlaanderen.be/ns/schuldbeheer#bedoeldVoor> a owl:ObjectProperty;
   rdfs:label "bestemming"@nl;
   rdfs:comment "Verwijzing naar de vordering die de betaler wenst af te lossen met de betaling."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Betaling>;
@@ -65,13 +65,6 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Betaling>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range schemas:MonetaryAmount .
-
-<https://data.vlaanderen.be/ns/schuldbeheer#betaling> a owl:ObjectProperty;
-  rdfs:label "betaling"@nl;
-  rdfs:comment "Verwijzing naar de betaling dit werd toegerekend."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
-  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Betaling> .
 
 <https://data.vlaanderen.be/ns/schuldbeheer#betalingsdatum> a owl:DatatypeProperty;
   rdfs:label "betalingsdatum"@nl;
@@ -151,6 +144,13 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring> .
 
+<https://data.vlaanderen.be/ns/schuldbeheer#rekentToeAan> a owl:ObjectProperty;
+  rdfs:label "rekentToeAan"@nl;
+  rdfs:comment "Een toerekening van betaling rekent een (deel van het) betaaldebedrag toe aan een vordering."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Vordering> .
+
 <https://data.vlaanderen.be/ns/schuldbeheer#toegerekendBedrag> a owl:ObjectProperty;
   rdfs:label "toegerekend bedrag"@nl;
   rdfs:comment "Het geldbedrag dat werd toegerekend aan een vordering."@nl;
@@ -158,12 +158,17 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range schemas:MonetaryAmount .
 
+<https://data.vlaanderen.be/ns/schuldbeheer#toegerekendeBetaling> a owl:ObjectProperty;
+  rdfs:label "betaling"@nl;
+  rdfs:comment "Verwijzing naar de betaling dit werd toegerekend."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Betaling> .
+
 <https://data.vlaanderen.be/ns/schuldbeheer#toerekeningVanBetaling> a owl:ObjectProperty;
   rdfs:label "toerekening van betaling"@nl;
-  rdfs:comment "Verwijzing naar de activiteit die (een deel van) een  betaald bedrag toewijst aan een vordering."@nl,
-    "Het toewijzen van een betaald geldbedrag aan een vordering. "@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Betaling>,
-    <https://data.vlaanderen.be/ns/schuldbeheer#Vordering>;
+  rdfs:comment "Het toewijzen van een betaald geldbedrag aan een vordering. "@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Vordering>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling> .
 
@@ -209,6 +214,13 @@ schemas:MonetaryAmount a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding> .
 
+<https://data.vlaanderen.be/ns/schuldbeheer#wordtToegerekendDoor> a owl:ObjectProperty;
+  rdfs:label "toerekening van betaling"@nl;
+  rdfs:comment "Verwijzing naar de activiteit die (een deel van) een  betaald bedrag toewijst aan een vordering."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/schuldbeheer#Betaling>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:range <https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling> .
+
 dc:type a rdf:Property;
   rdfs:label "type"@nl .
 
@@ -250,12 +262,6 @@ schemas:value a rdf:Property;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf prov:Activity .
 
-<https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling> a owl:Class;
-  rdfs:label "Toerekening van Betaling"@nl;
-  rdfs:comment "Het toewijzen van een betaald geldbedrag aan een vordering. "@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
-  rdfs:subClassOf prov:Activity .
-
 <https://data.vlaanderen.be/ns/schuldbeheer#Vorderingscategorie> a owl:Class;
   rdfs:label "Vorderingscategorie"@nl;
   rdfs:comment "Een soort vordering met bepaalde kenmerken."@nl;
@@ -269,6 +275,12 @@ schemas:value a rdf:Property;
 <https://data.vlaanderen.be/ns/schuldbeheer#Betaling> a owl:Class;
   rdfs:label "Betaling"@nl;
   rdfs:comment "De overdracht van geld van één of meerdere partij(en) naar een andere partij. "@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
+  rdfs:subClassOf prov:Activity .
+
+<https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling> a owl:Class;
+  rdfs:label "Toerekening van Betaling"@nl;
+  rdfs:comment "Het toewijzen van een betaald geldbedrag aan een vordering. "@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/schuldbeheer>;
   rdfs:subClassOf prov:Activity .
 
