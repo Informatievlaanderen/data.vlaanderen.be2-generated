@@ -1,6 +1,347 @@
 {
-  "baseURI": "https://data.vlaanderen.be/ns/digitaleWatermeter#",
-  "classes": [
+  "baseURI": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#",
+  "classes": [],
+  "properties": [
+    {
+      "EA-Guid": "{7E5C47A5-4522-4c4b-AA0F-AE600C9DD838}",
+      "name": "waarde",
+      "label": {
+        "nl": "waarde"
+      },
+      "definition": {
+        "nl": "Waarde van een observatie op een specifieke tijdstip, onderdeel van een kwantitatief waardepaar."
+      }
+    },
+    {
+      "EA-Guid": "{44002668-16DF-4298-9F14-47D3F5FED096}",
+      "name": "type",
+      "label": {
+        "nl": "type"
+      },
+      "definition": {
+        "nl": "Aard van de plaats"
+      },
+      "usage": {
+        "nl": "postcode, gemeente gehucht"
+      }
+    },
+    {
+      "EA-Guid": "{615A6B73-ED09-4cf2-8567-84F439A0C276}",
+      "name": "subaansluiting",
+      "label": {
+        "nl": "subaansluiting"
+      },
+      "definition": {
+        "nl": "Aansluiting die afgetakt is van deze aansluiting."
+      }
+    },
+    {
+      "EA-Guid": "{DB29F630-4C0B-49bc-B48A-64A7ED0F6AFC}",
+      "name": "metertype",
+      "label": {
+        "nl": "metertype"
+      },
+      "definition": {
+        "nl": "Aard van de meter."
+      },
+      "usage": {
+        "nl": "Type kan slaan op watermeter; maar ook op digitaal of analoog."
+      }
+    },
+    {
+      "EA-Guid": "{615A6B73-ED09-4cf2-8567-84F439A0C276}",
+      "name": "hoofdaansluiting",
+      "label": {
+        "nl": "hoofdaansluiting"
+      },
+      "definition": {
+        "nl": "Aansluiting waarvan deze aansluiting afgetakt is."
+      }
+    },
+    {
+      "EA-Guid": "{38D949D3-76C8-4778-B28B-0792DF957D54}",
+      "name": "afleverpunt",
+      "label": {
+        "nl": "afleverpunt"
+      },
+      "definition": {
+        "nl": "Aard van de aansluiting waar een voorziening (electriciteit, water, ...) of dienst geleverd wordt. Gaat het om een gebouw of gebouweenheid?"
+      },
+      "usage": {
+        "nl": "Gebouweenheid is 1:1 gelinkt aan een meter of verbruiksplaats van de dienst die geleverd wordt en dus aan een individuele observatie. Een gebouw kan gelinkt zijn aan meerdere gebouweenheden, bv bij een appartementsgebouw."
+      }
+    },
+    {
+      "EA-Guid": "{302E3F2D-A20E-4da1-8B82-8641CB71793F}",
+      "name": "aantalmeters",
+      "label": {
+        "nl": "aantalMeters"
+      },
+      "definition": {
+        "nl": "Het aantal meters dat binnen de Meterzone ligt."
+      },
+      "usage": {
+        "nl": "Dit attribuut kan gebruikt worden om zones samen te voegen (mbt GDPR) indien er zich te weinig meters binnen één zone bevinden."
+      }
+    },
+    {
+      "EA-Guid": "{68D122D7-C453-4f99-97A1-640CD8EB3EA5}",
+      "name": "tijdstip",
+      "label": {
+        "nl": "tijdstip"
+      },
+      "definition": {
+        "nl": "Tijdstip van wanneer een waarde is geobserveerd, onderdeel van een kwantitatief waardepaar."
+      },
+      "usage": {
+        "nl": "Tijdstip slaat op de fenomeentijd. Dit kan een punt in de tijd in het verleden of in de toekomst, bv als het over een voorspelling gaat."
+      }
+    },
+    {
+      "EA-Guid": "Derived:{FC90334D-5DD5-4812-A62A-0D3408605049}->{5134254E-B3D2-4471-872A-B3E7FC521472}",
+      "name": "plaats(target)",
+      "label": {
+        "nl": "Plaats (target)"
+      },
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "usage": {
+        "nl": ""
+      }
+    },
+    {
+      "EA-Guid": "Derived:{FC90334D-5DD5-4812-A62A-0D3408605049}->{5134254E-B3D2-4471-872A-B3E7FC521472}",
+      "name": "plaats(source)",
+      "label": {
+        "nl": "Plaats (source)"
+      },
+      "definition": {
+        "nl": "Referentie naar verbonden klasse."
+      },
+      "usage": {
+        "nl": ""
+      }
+    }
+  ],
+  "externals": [
+    {
+      "EA-Guid": "{388B5260-7D3C-4e3e-987D-1B72D7516075}",
+      "name": "Moment",
+      "label": {
+        "nl": "Moment"
+      },
+      "definition": {
+        "nl": "Een 0-dimensionele geometrische primitieve in de tijd."
+      },
+      "usage": {
+        "nl": "Vergelijkbaar met een Punt in de ruimte, maar ipv een positie in een ruimtelijk referentiesysteem gaat het hier over een punt op de tijdsas. OPMERKING: Meer info in <a href=\"https://iso.org/standard/26013.html\">ISO 19108 Geographic Information - Temporal schema</a>. Substitutie door een eenvoudiger equivalent bv time:Instant uit de <a href=\"https://w3.org/TR/owl-time/\">W3C Time Ontology</a> is aanbevolen."
+      }
+    },
+    {
+      "EA-Guid": "{A5D6FD63-C432-4c34-9893-4F97D2B3582F}",
+      "name": "Kenmerktype",
+      "label": {
+        "nl": "Kenmerktype"
+      },
+      "definition": {
+        "nl": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt."
+      },
+      "usage": {
+        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier)."
+      }
+    },
+    {
+      "EA-Guid": "{DD258C34-B88E-49a8-9FCC-E6FB7117FC87}",
+      "name": "Observatie",
+      "label": {
+        "nl": "Observatie"
+      },
+      "definition": {
+        "nl": "Het vaststellen van de waarde van een bepaald kenmerk van een Object op een bepaald tijdstip of tussen twee tijdstippen."
+      },
+      "usage": {
+        "nl": "Het gaat om schattingen van de waarde, maw op de waarde zit een zekere foutmarge. Voorbeelden zijn temperatuur, klasse, kleur. Dit is verschillend van waarden die zijn toegekend en dus geen schattingen zijn zoals naam of prijs."
+      }
+    },
+    {
+      "EA-Guid": "{08B7CB4C-CED2-4c73-8944-3EC8FC6D026F}",
+      "name": "Domeinobject",
+      "label": {
+        "nl": "Domeinobject"
+      },
+      "definition": {
+        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
+      },
+      "usage": {
+        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
+      }
+    },
+    {
+      "EA-Guid": "{5134254E-B3D2-4471-872A-B3E7FC521472}",
+      "name": "Plaats",
+      "label": {
+        "nl": "Plaats"
+      },
+      "definition": {
+        "nl": "Een ruimtelijk gebied of benoemde plaats."
+      }
+    },
+    {
+      "EA-Guid": "{8376B466-75B6-448b-B0EE-71006593F326}",
+      "name": ""
+    },
+    {
+      "EA-Guid": "{6D9A6629-3E58-44da-84E8-98413AFD70CB}",
+      "name": ""
+    },
+    {
+      "EA-Guid": "{640CC7F1-F948-4ed1-8B2D-3786EA730507}",
+      "name": ""
+    },
+    {
+      "EA-Guid": "{ED6424FE-D4CE-4d2a-9511-B5B6F2F28CC2}",
+      "name": ""
+    },
+    {
+      "EA-Guid": "{2434712C-909C-4f9c-937A-2BC35AC7D527}",
+      "name": ""
+    },
+    {
+      "EA-Guid": "{CD0657CE-9729-4dd1-97BF-2CFED87019A0}",
+      "name": "Toebehorentype",
+      "label": {
+        "nl": "Toebehorentype"
+      },
+      "definition": {
+        "nl": "Classificatie van de toebehoren."
+      }
+    },
+    {
+      "EA-Guid": "{A381B7F7-B605-4669-88CA-B6150B6593FE}",
+      "name": "Identificator",
+      "label": {
+        "nl": "Identificator"
+      },
+      "definition": {
+        "nl": "Informatie gebruikt om een object uniek te identificeren."
+      },
+      "usage": {
+        "nl": "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem."
+      }
+    },
+    {
+      "EA-Guid": "{8D5996AF-58E8-448b-A048-3AD7125EA143}",
+      "name": "Adresvoorstelling",
+      "label": {
+        "nl": "Adresvoorstelling"
+      },
+      "definition": {
+        "nl": "Meer leesbare voorstelling met enkel de basisgegevens van het adres,bedoeld voor het gebruik van een adres als attribuut van een ander object."
+      },
+      "usage": {
+        "nl": "Bv als attribuut ve persoon of gebouw. De adresvoorstelling heeft niet enkel betrekking op Belgische adressen, ze kan gebruikt worden om buitenlandse adressen weer te geven (waar mogelijk andere adresaanduidingen dan huisnummer of busnummer worden gebruikt of waar adrescomponenten zoals adresgebieden voorkomen)."
+      }
+    },
+    {
+      "EA-Guid": "{2E0B41FA-C6FA-4169-8D62-C564107ACD8D}",
+      "name": "Geometrie",
+      "label": {
+        "nl": "Geometrie"
+      },
+      "definition": {
+        "nl": "Vorm- en positiekenmerken van een object."
+      },
+      "usage": {
+        "nl": "Beschrijft deze kenmerken dmv punten, lijnen, polygonen etc en coördinaten. OPMERKING: gebruik indien gevraagd de subklassen Punt of Curve. Voor andere gevallen gebruik de types uit uit het <a href=\"\">Simple Features Vocabulary</a>, bvb LineString, Polygon, Surface etc. Of gebruik Geometrie, in de wkt- of gml serialisatie wordt het type geometrie ook vermeld."
+      }
+    },
+    {
+      "EA-Guid": "{87D8B14F-150E-41e7-B725-56A181B056A4}",
+      "name": "Observatieverzameling",
+      "label": {
+        "nl": "Observatieverzameling"
+      },
+      "definition": {
+        "nl": "Collectie van Observaties met dezelfde kenmerken."
+      },
+      "usage": {
+        "nl": "Bv Observaties die op hetzelfde tijdstip plaatsvonden of hetzelfde Object observeren of door dezelfde sensor zijn gemaakt."
+      }
+    },
+    {
+      "EA-Guid": "{3A3DA20A-B8AF-4590-BC68-6DC33B670B0A}",
+      "name": "Observatieprocedure",
+      "label": {
+        "nl": "Observatieprocedure"
+      },
+      "definition": {
+        "nl": "Een workflow, protocol, plan, algoritme of berekeningswijze waarin wordt gespecifieerd hoe een Observatie moet worden uitgevoerd."
+      },
+      "usage": {
+        "nl": "De procedure legt uit welke stappen uitgevoerd moeten worden om een reproduceerbaar resultaat te krijgen. Bv de correcte plaatsing van een windmeter (op een welbepaalde hoogte boven het grondoppervlak, bv 10m voor meteorologische waarnemingen). De procedures zijn doorgaans bedoeld om bij meer dan één Bermonstering te worden toegepast."
+      }
+    },
+    {
+      "EA-Guid": "{F261DE64-1062-4122-8F4A-58B2BF92822F}",
+      "name": "Deployment",
+      "label": {
+        "nl": "Deployment"
+      }
+    },
+    {
+      "EA-Guid": "{6419A98E-955F-4a8b-931B-13F4C5E933F1}",
+      "name": "Meterzone",
+      "label": {
+        "nl": "Meterzone"
+      },
+      "definition": {
+        "nl": "Afgebakend geografisch gebied waarover geaggregeerd statistiek wordt berekend waarbinnen één of meerdere verbruiksobservatie(s) vallen"
+      }
+    },
+    {
+      "EA-Guid": "{FC90334D-5DD5-4812-A62A-0D3408605049}",
+      "name": "Ruimtelijkrelatie",
+      "label": {
+        "nl": "RuimtelijkRelatie"
+      },
+      "definition": {
+        "nl": "Onderling verband tussen twee Plaatsen."
+      },
+      "usage": {
+        "nl": "Zo kan een bevoorradingsgebied ook als Meterzone worden geïnterpreteerd of kan men zones groeperen tot superzone."
+      }
+    },
+    {
+      "EA-Guid": "{5C17FDB7-3019-4e1e-9E6A-6CAA1F3DFFE5}",
+      "name": "Software",
+      "label": {
+        "nl": "Software"
+      },
+      "definition": {
+        "nl": "The set of instructions that indicate a machine how to work. In this ontology software is a general concept which acts as a superclass for software versions, docker images, data transformations, etc."
+      }
+    },
+    {
+      "EA-Guid": "{D689D09B-87D2-43de-90AA-3C0FAA46835B}",
+      "name": "Temporeelmomentkwantitatiefbereik",
+      "label": {
+        "nl": "TemporeelMomentKwantitatiefBereik"
+      },
+      "definition": {
+        "nl": "Resultaat van de observatie in de vorm van een tijdreeks."
+      }
+    },
+    {
+      "EA-Guid": "{1F9B5999-7E68-47ce-9960-F0F0A44F99F8}",
+      "name": "Verbruikszone",
+      "label": {
+        "nl": "Verbruikszone"
+      },
+      "definition": {
+        "nl": "Zone binnen het bevoorradingsgebied bestaande uit vaste registreerzones bestaande uit vaste registreerzones waarbinnen de in- en uitgaande waterstromen permanent bemeterd worden."
+      }
+    },
     {
       "EA-Guid": "{D292665E-A41F-4a0b-8BB9-991DD787BA8E}",
       "name": "Bevoorradingsgebied",
@@ -88,375 +429,6 @@
       },
       "usage": {
         "nl": "Bestaat uit een tijdstip en een waarde voor één of meerdree punten in de tijd. Het kan bijvoorbeeld gebruikt worden om een voorspelling van waterverbruik te doen voor verschillende dagen."
-      }
-    }
-  ],
-  "properties": [
-    {
-      "EA-Guid": "{7E5C47A5-4522-4c4b-AA0F-AE600C9DD838}",
-      "name": "waarde",
-      "label": {
-        "nl": "waarde"
-      },
-      "definition": {
-        "nl": "Waarde van een observatie op een specifieke tijdstip, onderdeel van een kwantitatief waardepaar."
-      }
-    },
-    {
-      "EA-Guid": "{125F5995-BE30-4102-BE25-DBAD33E3E560}",
-      "name": "verbruiksadres",
-      "label": {
-        "nl": "verbruiksadres"
-      },
-      "definition": {
-        "nl": "Adres van de locatie waarvan de meter het verbruik meet"
-      }
-    },
-    {
-      "EA-Guid": "{44002668-16DF-4298-9F14-47D3F5FED096}",
-      "name": "type",
-      "label": {
-        "nl": "type"
-      },
-      "definition": {
-        "nl": "Aard van de plaats"
-      },
-      "usage": {
-        "nl": "postcode, gemeente gehucht"
-      }
-    },
-    {
-      "EA-Guid": "{615A6B73-ED09-4cf2-8567-84F439A0C276}",
-      "name": "subaansluiting",
-      "label": {
-        "nl": "subaansluiting"
-      },
-      "definition": {
-        "nl": "Aansluiting die afgetakt is van deze aansluiting."
-      }
-    },
-    {
-      "EA-Guid": "{A24C1D04-7A37-459c-80C1-88EE7FF61836}",
-      "name": "resultaat",
-      "label": {
-        "nl": "resultaat"
-      },
-      "definition": {
-        "nl": "Totaal waterverbruik (volume) gemeten door of voorspeld voor een groep van meters voor één periode."
-      }
-    },
-    {
-      "EA-Guid": "{DB29F630-4C0B-49bc-B48A-64A7ED0F6AFC}",
-      "name": "metertype",
-      "label": {
-        "nl": "metertype"
-      },
-      "definition": {
-        "nl": "Aard van de meter."
-      },
-      "usage": {
-        "nl": "Type kan slaan op watermeter; maar ook op digitaal of analoog."
-      }
-    },
-    {
-      "EA-Guid": "{E4590732-160E-4e8a-8D37-0C0FA1215B10}",
-      "name": "identificator",
-      "label": {
-        "nl": "identificator"
-      },
-      "definition": {
-        "nl": "Identificator van de meter."
-      },
-      "usage": {
-        "nl": "bv. uniek serienummer van de digitale watermeter"
-      }
-    },
-    {
-      "EA-Guid": "{615A6B73-ED09-4cf2-8567-84F439A0C276}",
-      "name": "hoofdaansluiting",
-      "label": {
-        "nl": "hoofdaansluiting"
-      },
-      "definition": {
-        "nl": "Aansluiting waarvan deze aansluiting afgetakt is."
-      }
-    },
-    {
-      "EA-Guid": "{98B722E2-601F-4006-9ED5-EE7CCD5C245D}",
-      "name": "diameter",
-      "label": {
-        "nl": "diameter"
-      }
-    },
-    {
-      "EA-Guid": "{38D949D3-76C8-4778-B28B-0792DF957D54}",
-      "name": "afleverpunt",
-      "label": {
-        "nl": "afleverpunt"
-      },
-      "definition": {
-        "nl": "Aard van de aansluiting waar een voorziening (electriciteit, water, ...) of dienst geleverd wordt. Gaat het om een gebouw of gebouweenheid?"
-      },
-      "usage": {
-        "nl": "Gebouweenheid is 1:1 gelinkt aan een meter of verbruiksplaats van de dienst die geleverd wordt en dus aan een individuele observatie. Een gebouw kan gelinkt zijn aan meerdere gebouweenheden, bv bij een appartementsgebouw."
-      }
-    },
-    {
-      "EA-Guid": "{302E3F2D-A20E-4da1-8B82-8641CB71793F}",
-      "name": "aantalmeters",
-      "label": {
-        "nl": "aantalMeters"
-      },
-      "definition": {
-        "nl": "Het aantal meters dat binnen de Meterzone ligt."
-      },
-      "usage": {
-        "nl": "Dit attribuut kan gebruikt worden om zones samen te voegen (mbt GDPR) indien er zich te weinig meters binnen één zone bevinden."
-      }
-    },
-    {
-      "EA-Guid": "{68D122D7-C453-4f99-97A1-640CD8EB3EA5}",
-      "name": "tijdstip",
-      "label": {
-        "nl": "tijdstip"
-      },
-      "definition": {
-        "nl": "Tijdstip van wanneer een waarde is geobserveerd, onderdeel van een kwantitatief waardepaar."
-      },
-      "usage": {
-        "nl": "Tijdstip slaat op de fenomeentijd. Dit kan een punt in de tijd in het verleden of in de toekomst, bv als het over een voorspelling gaat."
-      }
-    },
-    {
-      "EA-Guid": "Derived:{FC90334D-5DD5-4812-A62A-0D3408605049}->{5134254E-B3D2-4471-872A-B3E7FC521472}",
-      "name": "plaats(target)",
-      "label": {
-        "nl": "Plaats (target)"
-      },
-      "definition": {
-        "nl": "Referentie naar verbonden klasse."
-      },
-      "usage": {
-        "nl": ""
-      }
-    },
-    {
-      "EA-Guid": "Derived:{FC90334D-5DD5-4812-A62A-0D3408605049}->{5134254E-B3D2-4471-872A-B3E7FC521472}",
-      "name": "plaats(source)",
-      "label": {
-        "nl": "Plaats (source)"
-      },
-      "definition": {
-        "nl": "Referentie naar verbonden klasse."
-      },
-      "usage": {
-        "nl": ""
-      }
-    },
-    {
-      "EA-Guid": "{80275EE5-4677-40ea-BD39-36083AF76F3E}",
-      "name": "geobserveerdobject",
-      "label": {
-        "nl": "geobserveerdObject"
-      },
-      "definition": {
-        "nl": "Het metertoestel"
-      }
-    },
-    {
-      "EA-Guid": "{02883A87-B35E-4202-889B-DB58EF5A2654}",
-      "name": "geobserveerdobject",
-      "label": {
-        "nl": "geobserveerdObject"
-      },
-      "definition": {
-        "nl": "Het aansluitingspunt dat gelinkt is aan het verbruik dat door één watermeter wordt gemeten."
-      }
-    },
-    {
-      "EA-Guid": "{D0F2FC5C-F22A-497a-B348-2181F2A1FB7F}",
-      "name": "geobserveerdobject",
-      "label": {
-        "nl": "geobserveerdObject"
-      },
-      "definition": {
-        "nl": "Het aansluitingspunt dat gelinkt is aan het verbruik dat door één watermeter wordt gemeten."
-      },
-      "usage": {
-        "nl": "Dit kan een vrijstaand huis zijn, of één appartement in een groter gebouw. Er kunnen meerdere aansluitingspunten zitten op één aansluiting (bv. in appartementsgebouw)"
-      }
-    },
-    {
-      "EA-Guid": "{2CDA7370-D651-484c-BF51-BCB84F32112D}",
-      "name": "geobserveerdobject",
-      "label": {
-        "nl": "geobserveerdobject"
-      },
-      "definition": {
-        "nl": "De vooraf gedefinieerde zone, waarin een groep van meters voor een geobserveerde periode zich bevinden."
-      }
-    },
-    {
-      "EA-Guid": "{36FAB652-460C-41cf-A6D8-D803085C4023}",
-      "name": "geobserveerdobject",
-      "label": {
-        "nl": "geobserveerdObject"
-      },
-      "definition": {
-        "nl": "De vooraf gedefinieerde zone, waarin een groep van meters voor een geobserveerde periode zich bevinden."
-      },
-      "usage": {
-        "nl": "Zone kan postcode zijn, maar ook een gehucht of een gebied afgebakend door een polygoon."
-      }
-    }
-  ],
-  "externals": [
-    {
-      "EA-Guid": "{388B5260-7D3C-4e3e-987D-1B72D7516075}",
-      "name": "Moment",
-      "label": {
-        "nl": "Moment"
-      },
-      "definition": {
-        "nl": "Een 0-dimensionele geometrische primitieve in de tijd."
-      },
-      "usage": {
-        "nl": "Vergelijkbaar met een Punt in de ruimte, maar ipv een positie in een ruimtelijk referentiesysteem gaat het hier over een punt op de tijdsas. OPMERKING: Meer info in <a href=\"https://iso.org/standard/26013.html\">ISO 19108 Geographic Information - Temporal schema</a>. Substitutie door een eenvoudiger equivalent bv time:Instant uit de <a href=\"https://w3.org/TR/owl-time/\">W3C Time Ontology</a> is aanbevolen."
-      }
-    },
-    {
-      "EA-Guid": "{A5D6FD63-C432-4c34-9893-4F97D2B3582F}",
-      "name": "Kenmerktype",
-      "label": {
-        "nl": "Kenmerktype"
-      },
-      "definition": {
-        "nl": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt."
-      },
-      "usage": {
-        "nl": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier)."
-      }
-    },
-    {
-      "EA-Guid": "{DD258C34-B88E-49a8-9FCC-E6FB7117FC87}",
-      "name": "Observatie",
-      "label": {
-        "nl": "Observatie"
-      },
-      "definition": {
-        "nl": "Het vaststellen van de waarde van een bepaald kenmerk van een Object op een bepaald tijdstip of tussen twee tijdstippen."
-      },
-      "usage": {
-        "nl": "Het gaat om schattingen van de waarde, maw op de waarde zit een zekere foutmarge. Voorbeelden zijn temperatuur, klasse, kleur. Dit is verschillend van waarden die zijn toegekend en dus geen schattingen zijn zoals naam of prijs."
-      }
-    },
-    {
-      "EA-Guid": "{08B7CB4C-CED2-4c73-8944-3EC8FC6D026F}",
-      "name": "Domeinobject",
-      "label": {
-        "nl": "Domeinobject"
-      },
-      "definition": {
-        "nl": "Object uit de reële wereld dat geen Bemonsteringsobject is."
-      },
-      "usage": {
-        "nl": "Dit is het werkelijk geobserveerdObject. Als rechtstreeks observeren niet kan observeren we een representatief staal, het zgn Bemonsteringsobject. In dat geval is het Domeinobject het bemonsterdObject. OPMERKING: Deze klasse is louter informatief, in praktijk moet ze gesubstitueerd worden door een klasse uit het domein. Bv in het domein Waterkwaliteit zou het domeinobject een instantie vd klasse Rivier kunnen zijn."
-      }
-    },
-    {
-      "EA-Guid": "{5134254E-B3D2-4471-872A-B3E7FC521472}",
-      "name": "Plaats",
-      "label": {
-        "nl": "Plaats"
-      },
-      "definition": {
-        "nl": "Een ruimtelijk gebied of benoemde plaats."
-      }
-    },
-    {
-      "EA-Guid": "{87D8B14F-150E-41e7-B725-56A181B056A4}",
-      "name": "Observatieverzameling",
-      "label": {
-        "nl": "Observatieverzameling"
-      },
-      "definition": {
-        "nl": "Collectie van Observaties met dezelfde kenmerken."
-      },
-      "usage": {
-        "nl": "Bv Observaties die op hetzelfde tijdstip plaatsvonden of hetzelfde Object observeren of door dezelfde sensor zijn gemaakt."
-      }
-    },
-    {
-      "EA-Guid": "{3A3DA20A-B8AF-4590-BC68-6DC33B670B0A}",
-      "name": "Observatieprocedure",
-      "label": {
-        "nl": "Observatieprocedure"
-      },
-      "definition": {
-        "nl": "Een workflow, protocol, plan, algoritme of berekeningswijze waarin wordt gespecifieerd hoe een Observatie moet worden uitgevoerd."
-      },
-      "usage": {
-        "nl": "De procedure legt uit welke stappen uitgevoerd moeten worden om een reproduceerbaar resultaat te krijgen. Bv de correcte plaatsing van een windmeter (op een welbepaalde hoogte boven het grondoppervlak, bv 10m voor meteorologische waarnemingen). De procedures zijn doorgaans bedoeld om bij meer dan één Bermonstering te worden toegepast."
-      }
-    },
-    {
-      "EA-Guid": "{F261DE64-1062-4122-8F4A-58B2BF92822F}",
-      "name": "Deployment",
-      "label": {
-        "nl": "Deployment"
-      }
-    },
-    {
-      "EA-Guid": "{6419A98E-955F-4a8b-931B-13F4C5E933F1}",
-      "name": "Meterzone",
-      "label": {
-        "nl": "Meterzone"
-      },
-      "definition": {
-        "nl": "Afgebakend geografisch gebied waarover geaggregeerd statistiek wordt berekend waarbinnen één of meerdere verbruiksobservatie(s) vallen"
-      }
-    },
-    {
-      "EA-Guid": "{FC90334D-5DD5-4812-A62A-0D3408605049}",
-      "name": "Ruimtelijkrelatie",
-      "label": {
-        "nl": "RuimtelijkRelatie"
-      },
-      "definition": {
-        "nl": "Onderling verband tussen twee Plaatsen."
-      },
-      "usage": {
-        "nl": "Zo kan een bevoorradingsgebied ook als Meterzone worden geïnterpreteerd of kan men zones groeperen tot superzone."
-      }
-    },
-    {
-      "EA-Guid": "{5C17FDB7-3019-4e1e-9E6A-6CAA1F3DFFE5}",
-      "name": "Software",
-      "label": {
-        "nl": "Software"
-      },
-      "definition": {
-        "nl": "The set of instructions that indicate a machine how to work. In this ontology software is a general concept which acts as a superclass for software versions, docker images, data transformations, etc."
-      }
-    },
-    {
-      "EA-Guid": "{D689D09B-87D2-43de-90AA-3C0FAA46835B}",
-      "name": "Temporeelmomentkwantitatiefbereik",
-      "label": {
-        "nl": "TemporeelMomentKwantitatiefBereik"
-      },
-      "definition": {
-        "nl": "Resultaat van de observatie in de vorm van een tijdreeks."
-      }
-    },
-    {
-      "EA-Guid": "{1F9B5999-7E68-47ce-9960-F0F0A44F99F8}",
-      "name": "Verbruikszone",
-      "label": {
-        "nl": "Verbruikszone"
-      },
-      "definition": {
-        "nl": "Zone binnen het bevoorradingsgebied bestaande uit vaste registreerzones bestaande uit vaste registreerzones waarbinnen de in- en uitgaande waterstromen permanent bemeterd worden."
       }
     },
     {
@@ -667,6 +639,81 @@
       }
     },
     {
+      "EA-Guid": "{5CF8A777-FCD5-4a5b-BD7B-5B0371EBD359}",
+      "name": "opmeting",
+      "label": {
+        "nl": "opmeting"
+      },
+      "definition": {
+        "nl": "De manier waarop de geometrie werd bepaald."
+      }
+    },
+    {
+      "EA-Guid": "{3453FD7C-7237-4db9-880E-3F624BE11758}",
+      "name": "verwijstNaar",
+      "label": {
+        "nl": "verwijst Naar"
+      },
+      "definition": {
+        "nl": "Adres waarvan de adresvoorstelling is afgeleid."
+      },
+      "usage": {
+        "nl": "Dit kan enkel voor Belgische adressen aangezien onder adres een Belgisch adres wordt verstaan."
+      }
+    },
+    {
+      "EA-Guid": "{E31F2E53-0294-4400-87DA-A418D8AEDBFC}",
+      "name": "gemeentenaam",
+      "label": {
+        "nl": "gemeentenaam"
+      },
+      "definition": {
+        "nl": "Gemeentenaam van het adres."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{98E72E03-5C89-4bab-B4A1-69A130EF85D0}",
+      "name": "land",
+      "label": {
+        "nl": "land"
+      },
+      "definition": {
+        "nl": "Land waarin het adres gelegen is."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{0D15076C-6B4F-4b27-85F0-4B8DD3CAC9C0}",
+      "name": "huisnummer",
+      "label": {
+        "nl": "huisnummer"
+      },
+      "definition": {
+        "nl": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."
+      },
+      "usage": {
+        "nl": "Specialisatie van Adresvoorstelling:locatieaanduiding tbv Belgische adressen."
+      }
+    },
+    {
+      "EA-Guid": "{7419D8FC-4ABB-4c4e-B752-50E01F574573}",
+      "name": "busnummer",
+      "label": {
+        "nl": "busnummer"
+      },
+      "definition": {
+        "nl": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."
+      },
+      "usage": {
+        "nl": "Specialisatie van Adresvoorstelling.locatieaanduiding tbv Belgische adressen."
+      }
+    },
+    {
       "EA-Guid": "{8F30EC87-5498-4cca-9AFA-2E9CCBA46164}",
       "name": "vereiststroom",
       "label": {
@@ -816,6 +863,26 @@
       }
     },
     {
+      "EA-Guid": "{125F5995-BE30-4102-BE25-DBAD33E3E560}",
+      "name": "verbruiksadres",
+      "label": {
+        "nl": "verbruiksadres"
+      },
+      "definition": {
+        "nl": "Adres van de locatie waarvan de meter het verbruik meet"
+      }
+    },
+    {
+      "EA-Guid": "{A24C1D04-7A37-459c-80C1-88EE7FF61836}",
+      "name": "resultaat",
+      "label": {
+        "nl": "resultaat"
+      },
+      "definition": {
+        "nl": "Totaal waterverbruik (volume) gemeten door of voorspeld voor een groep van meters voor één periode."
+      }
+    },
+    {
       "EA-Guid": "{ADB71529-FC4C-49fb-A717-531DFFD54DBB}",
       "name": "netwerk",
       "label": {
@@ -826,10 +893,86 @@
       }
     },
     {
+      "EA-Guid": "{E4590732-160E-4e8a-8D37-0C0FA1215B10}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator"
+      },
+      "definition": {
+        "nl": "Identificator van de meter."
+      },
+      "usage": {
+        "nl": "bv. uniek serienummer van de digitale watermeter"
+      }
+    },
+    {
+      "EA-Guid": "{98B722E2-601F-4006-9ED5-EE7CCD5C245D}",
+      "name": "diameter",
+      "label": {
+        "nl": "diameter"
+      }
+    },
+    {
       "EA-Guid": "{B023ABCA-3B00-400c-B32F-6C572DBF57E6}",
       "name": "deployedop",
       "label": {
         "nl": "deployedOp"
+      }
+    },
+    {
+      "EA-Guid": "{80275EE5-4677-40ea-BD39-36083AF76F3E}",
+      "name": "geobserveerdobject",
+      "label": {
+        "nl": "geobserveerdObject"
+      },
+      "definition": {
+        "nl": "Het metertoestel"
+      }
+    },
+    {
+      "EA-Guid": "{02883A87-B35E-4202-889B-DB58EF5A2654}",
+      "name": "geobserveerdobject",
+      "label": {
+        "nl": "geobserveerdObject"
+      },
+      "definition": {
+        "nl": "Het aansluitingspunt dat gelinkt is aan het verbruik dat door één watermeter wordt gemeten."
+      }
+    },
+    {
+      "EA-Guid": "{D0F2FC5C-F22A-497a-B348-2181F2A1FB7F}",
+      "name": "geobserveerdobject",
+      "label": {
+        "nl": "geobserveerdObject"
+      },
+      "definition": {
+        "nl": "Het aansluitingspunt dat gelinkt is aan het verbruik dat door één watermeter wordt gemeten."
+      },
+      "usage": {
+        "nl": "Dit kan een vrijstaand huis zijn, of één appartement in een groter gebouw. Er kunnen meerdere aansluitingspunten zitten op één aansluiting (bv. in appartementsgebouw)"
+      }
+    },
+    {
+      "EA-Guid": "{2CDA7370-D651-484c-BF51-BCB84F32112D}",
+      "name": "geobserveerdobject",
+      "label": {
+        "nl": "geobserveerdobject"
+      },
+      "definition": {
+        "nl": "De vooraf gedefinieerde zone, waarin een groep van meters voor een geobserveerde periode zich bevinden."
+      }
+    },
+    {
+      "EA-Guid": "{36FAB652-460C-41cf-A6D8-D803085C4023}",
+      "name": "geobserveerdobject",
+      "label": {
+        "nl": "geobserveerdObject"
+      },
+      "definition": {
+        "nl": "De vooraf gedefinieerde zone, waarin een groep van meters voor een geobserveerde periode zich bevinden."
+      },
+      "usage": {
+        "nl": "Zone kan postcode zijn, maar ook een gehucht of een gebied afgebakend door een polygoon."
       }
     },
     {
@@ -1013,6 +1156,84 @@
       }
     },
     {
+      "EA-Guid": "{969239E1-0B60-4cd6-B4D6-FF2939175954}",
+      "name": "straatnaam",
+      "label": {
+        "nl": "straatnaam"
+      },
+      "definition": {
+        "nl": "Straatnaam van het adres."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{7535BFAF-317C-4f08-8CCF-F522614B5897}",
+      "name": "postnaam",
+      "label": {
+        "nl": "postnaam"
+      },
+      "definition": {
+        "nl": "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{6D70F293-3944-43ee-8351-CE1312C05F7F}",
+      "name": "postcode",
+      "label": {
+        "nl": "postcode"
+      },
+      "definition": {
+        "nl": "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{BF4A92CE-A75B-4887-A353-1C4275568044}",
+      "name": "postbus",
+      "label": {
+        "nl": "postbus"
+      },
+      "definition": {
+        "nl": "Postbusnummer in een postkantoor."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{D1763AD1-0064-4cb7-A781-3E8EA6FE569A}",
+      "name": "locatienaam",
+      "label": {
+        "nl": "locatienaam"
+      },
+      "definition": {
+        "nl": "Naam of omschrijving van het het geografisch object dat de adreslocator aanduidt."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{0C8E298C-5FA6-4738-A827-3E09EDD00559}",
+      "name": "locatieaanduiding",
+      "label": {
+        "nl": "locatieaanduiding"
+      },
+      "definition": {
+        "nl": "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
       "EA-Guid": "{DB06CC23-D17A-4f83-8D22-397E4DE99006}",
       "name": "geometrie",
       "label": {
@@ -1020,6 +1241,71 @@
       },
       "definition": {
         "nl": "Geometrie van de plaats of het gebied."
+      }
+    },
+    {
+      "EA-Guid": "{8F059ED0-246E-4f11-B157-72ABA46978AE}",
+      "name": "volledigAdres",
+      "label": {
+        "nl": "volledig Adres"
+      },
+      "definition": {
+        "nl": "Het complete adres in één string, al dan niet geformatteerd."
+      },
+      "usage": {
+        "nl": "Vermijdt fouten tgv het opsplitsen ve adres in zijn onderdelen. Geeft de voorgeschreven volgorde vd verschillende onderdelen weer."
+      }
+    },
+    {
+      "EA-Guid": "{9E4F5A8C-3017-4822-AEF0-3EAC604CDEC2}",
+      "name": "administratieveEenheidNiveau2",
+      "label": {
+        "nl": "administratieve eenheid niveau 2"
+      },
+      "definition": {
+        "nl": "De regio van het adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{537211F3-A6A4-407f-9626-368183511360}",
+      "name": "administratieveEenheidNiveau1",
+      "label": {
+        "nl": "administratieve eenheid niveau 1"
+      },
+      "definition": {
+        "nl": "Hoogste Administratieve eenheid van het adres, doorgaans een land."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
+      "EA-Guid": "{EAAB3DC7-DE14-4d37-8BEB-5CCA1D4BDDA6}",
+      "name": "adresgebied",
+      "label": {
+        "nl": "adresgebied"
+      },
+      "definition": {
+        "nl": "Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is"
+      },
+      "usage": {
+        "nl": "Bvb de naam van het gehucht waarin het adres ligt."
+      }
+    },
+    {
+      "EA-Guid": "{CE5D596C-9CE2-4cb8-B6CD-02BB58B47975}",
+      "name": "toegekendDoor(string)",
+      "label": {
+        "nl": "toegekend door (String)"
+      },
+      "definition": {
+        "nl": "Naam vd agent die de identificator heeft toegekend."
+      },
+      "usage": {
+        "nl": " "
       }
     },
     {
@@ -1033,6 +1319,19 @@
       }
     },
     {
+      "EA-Guid": "{DA431D8F-0C87-4dea-BC43-B259B2DDA9EC}",
+      "name": "identificator",
+      "label": {
+        "nl": "identificator"
+      },
+      "definition": {
+        "nl": "String gebruikt om het object uniek te identificeren."
+      },
+      "usage": {
+        "nl": "Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator."
+      }
+    },
+    {
       "EA-Guid": "{0BD88679-A67F-47f7-BE79-D994A4419AA3}",
       "name": "plaatsnaam",
       "label": {
@@ -1040,6 +1339,32 @@
       },
       "definition": {
         "nl": "Naam van de plaats of van het gebied."
+      }
+    },
+    {
+      "EA-Guid": "{C158617B-2F8F-41d5-9BB6-832EF023482C}",
+      "name": "alsWkt",
+      "label": {
+        "nl": "als WKT"
+      },
+      "definition": {
+        "nl": "Geometrie uitgedrukt in wkt-formaat."
+      },
+      "usage": {
+        "nl": "Gebruik <a href=\\\"http://www.opengis.net/ont/geosparql#wktLiteral\\\">wktliteral</a> als datatype."
+      }
+    },
+    {
+      "EA-Guid": "{E350A8ED-130B-4b05-A6C4-7EF89A4065F3}",
+      "name": "alsGml",
+      "label": {
+        "nl": "als GML"
+      },
+      "definition": {
+        "nl": "Geometrie uitgedrukt in gml-formaat."
+      },
+      "usage": {
+        "nl": "Use <a href='http://www.opengis.net/ont/geosparql#gmlLiteral'>gmlliteral</a> as datatype."
       }
     },
     {
@@ -1093,6 +1418,19 @@
       }
     },
     {
+      "EA-Guid": "{18823DC4-3947-49d1-A3D8-0C697334CE75}",
+      "name": "toegekendOp",
+      "label": {
+        "nl": "toegekend op"
+      },
+      "definition": {
+        "nl": "Tijdstip waarop de identificator werd uitgegeven."
+      },
+      "usage": {
+        "nl": " "
+      }
+    },
+    {
       "EA-Guid": "{D8776725-82F2-4f28-B68E-42D3F4BE04D3}",
       "name": "description",
       "label": {
@@ -1100,6 +1438,19 @@
       },
       "definition": {
         "nl": "Beschrijving van de werking van het model."
+      }
+    },
+    {
+      "EA-Guid": "{D1384573-644C-47d9-8253-0F49C0811DC3}",
+      "name": "toegekendDoor",
+      "label": {
+        "nl": "toegekend door"
+      },
+      "definition": {
+        "nl": "Link naar de agent die de identificator heeft uitgegeven."
+      },
+      "usage": {
+        "nl": " "
       }
     },
     {
