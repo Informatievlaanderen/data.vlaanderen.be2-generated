@@ -126,13 +126,6 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range <https://vocab.belgif.be/ns/utility-services#Connection> .
 
-<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#identificator> a owl:ObjectProperty;
-  rdfs:label "identificator"@nl;
-  rdfs:comment "Identificator van de plaats"@nl;
-  rdfs:domain dc:Location;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
-  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
-
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#metertype> a owl:ObjectProperty;
   rdfs:label "metertype"@nl;
   <http://purl.org/vocab/vann/usageNote> "Type kan slaan op watermeter; maar ook op digitaal of analoog."@nl;
@@ -148,15 +141,13 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range <https://vocab.belgif.be/ns/utility-services#Connection> .
 
-<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#type> a owl:ObjectProperty;
-  rdfs:label "type"@nl;
-  <http://purl.org/vocab/vann/usageNote> "postcode, gemeente gehucht"@nl;
-  rdfs:comment "Aard van het verband tussen twee Plaatsen."@nl,
-    "Aard van de plaats"@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#RuimtelijkRelatie>,
-    dc:Location;
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#tijdstip> a owl:ObjectProperty;
+  rdfs:label "tijdstip"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Tijdstip slaat op de fenomeentijd. Dit kan een punt in de tijd in het verleden of in de toekomst, bv als het over een voorspelling gaat."@nl;
+  rdfs:comment "Tijdstip van wanneer een waarde is geobserveerd, onderdeel van een kwantitatief waardepaar."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
-  rdfs:range skos:Concept .
+  rdfs:range <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#waarde> a owl:ObjectProperty;
   rdfs:label "waarde"@nl;
@@ -172,6 +163,12 @@ skos:Concept a rdfs:Class;
 <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result> a rdf:Property;
   rdfs:label "resultaat"@nl .
 
+dc:type a rdf:Property;
+  rdfs:label "type"@nl .
+
+<http://www.w3.org/ns/adms#identifier> a rdf:Property;
+  rdfs:label "identificator"@nl .
+
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#TemporeelMomentKwantitatiefBereik> a owl:Class;
   rdfs:label "TemporeelMomentKwantitatiefBereik"@nl;
   rdfs:comment "Resultaat van de observatie in de vorm van een tijdreeks."@nl;
@@ -184,18 +181,18 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:subClassOf dc:Location .
 
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#RuimtelijkRelatie> a owl:Class;
+  rdfs:label "RuimtelijkRelatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Zo kan een bevoorradingsgebied ook als Meterzone worden geïnterpreteerd of kan men zones groeperen tot superzone."@nl;
+  rdfs:comment "Onderling verband tussen twee Plaatsen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters> .
+
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar> a owl:Class;
   rdfs:label "MomentKwantitatieveWaardepaar"@nl;
   <http://purl.org/vocab/vann/usageNote> "Bestaat uit een tijdstip en een waarde voor één of meerdree punten in de tijd. Het kan bijvoorbeeld gebruikt worden om een voorspelling van waterverbruik te doen voor verschillende dagen."@nl;
   rdfs:comment "Een kwantitatief waardepaar dat onderdeel is van een tijdreeks"@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentWaardepaar> .
-
-<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#RuimtelijkRelatie> a owl:Class;
-  rdfs:label "RuimtelijkRelatie"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Zo kan een bevoorradingsgebied ook als Meterzone worden geïnterpreteerd of kan men zones groeperen tot superzone."@nl;
-  rdfs:comment "Onderling verband tussen twee Plaatsen."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters> a owl:Ontology;
   rdfs:label "DigitaleWatermeter-voc"@en,
@@ -265,6 +262,8 @@ skos:Concept a rdfs:Class;
     foaf:name "Data Vlaanderen"
   ];
   rdfs:seeAlso skos:Concept,
+    <http://www.w3.org/ns/adms#identifier>,
+    dc:type,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
