@@ -3,186 +3,253 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schemas: <https://schema.org/> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant> a rdfs:Class;
-  rdfs:label "Moment"@nl .
+skos:Concept a rdfs:Class;
+  rdfs:label "Metertype"@nl,
+    "Plaatstype"@nl,
+    "RuimtelijkeRelatieType"@nl,
+    "RuimtelijkObjecttype"@nl,
+    "Afleverpunttype"@nl .
 
-<https://data.vlaanderen.be/ns/DigitaleWatermeter#Meterzone> a rdfs:Class;
-  rdfs:label "Meterzone"@nl .
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Bevoorradingsgebied> a owl:Class;
+  rdfs:label "Bevoorradingsgebied"@nl;
+  rdfs:comment "Afgebakend geografisch gebied voor waterbevoorrading."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:subClassOf dc:Location .
 
-<https://data.vlaanderen.be/ns/DigitaleWatermeter#RuimtelijkeRelatie> a rdfs:Class;
-  rdfs:label "RuimtelijkRelatie"@nl .
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#GeaggregeerdVerbruikObservatie> a owl:Class;
+  rdfs:label "GeaggregeerdVerbruikObservatie"@nl;
+  rdfs:comment "Waterverbruik geaggregeerd  over een specifiek vooraf gedefinieerde regio of groep van watermeters."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
+    <http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement> .
 
-<https://data.vlaanderen.be/ns/DigitaleWatermeter#Software> a rdfs:Class;
-  rdfs:label "Software"@nl .
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#GeaggregeerdVerbruikTijdreeksobservatie> a owl:Class;
+  rdfs:label "GeaggregeerdVerbruikTijdreeksobservatie"@nl;
+  rdfs:comment "Waterverbruik op verschillende tijdstippen of periodes, geaggregeerd  over een specifiek vooraf gedefinieerde regio of groep van watermeters."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
+    <http://def.isotc211.org/iso19156/2011/TimeSeriesObservation#OM_TimeSeriesObservation> .
 
-<https://data.vlaanderen.be/ns/DigitaleWatermeter#TemporeelMomentKwantitatiefBereik> a rdfs:Class;
-  rdfs:label "TemporeelMomentKwantitatiefBereik"@nl .
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#IndividueelVerbruikObservatie> a owl:Class;
+  rdfs:label "IndividueelVerbruikObservatie"@nl;
+  rdfs:comment "Individueel waterverbruik op één aansluitingspunt gerelateerd aan één meter."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>,
+    <http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement> .
 
-<https://data.vlaanderen.be/ns/DigitaleWatermeter/#Bevoorradingsgebied> a rdfs:Class;
-  rdfs:label "Bevoorradingsgebied"@nl .
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#IndividueelVerbruikTijdreeksobservatie> a owl:Class;
+  rdfs:label "IndividueelVerbruikTijdreeksobservatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "bv. voorspelling van waterverbruik voor de komende 7 dagen."@nl;
+  rdfs:comment "Het waterverbruik gemeten of voorspeld op één aansluitingspunt gerelateerd aan meerdere tijdstippen (index) of periodes (volume)."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/TimeSeriesObservation#OM_TimeSeriesObservation>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
 
-<https://data.vlaanderen.be/ns/DigitaleWatermeter/#GeaggregeerdVerbruikObservatie> a rdfs:Class;
-  rdfs:label "GeaggregeerdVerbruikObservatie"@nl .
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MeterstaatObservatie> a owl:Class;
+  rdfs:label "MeterstaatObservatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld batterijstatus of tijdstip laatste contact."@nl;
+  rdfs:comment "Observatie gerelateerd aan de staat van het metertoestel."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
 
-<https://data.vlaanderen.be/ns/DigitaleWatermeter/#GeaggregeerdVerbruikTijdreeksobservatie> a rdfs:Class;
-  rdfs:label "GeaggregeerdVerbruikTijdreeksobservatie"@nl .
-
-<https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikObservatie> a rdfs:Class;
-  rdfs:label "IndividueelVerbruikObservatie"@nl .
-
-<https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikTijdreeksobservatie> a rdfs:Class;
-  rdfs:label "IndividueelVerbruikTijdreeksobservatie"@nl .
-
-<https://data.vlaanderen.be/ns/DigitaleWatermeter/#MeterstaatObservatie> a rdfs:Class;
-  rdfs:label "MeterstaatObservatie"@nl .
-
-<https://data.vlaanderen.be/ns/DigitaleWatermeter/#MomentKwantitatieveWaardepaar> a rdfs:Class;
-  rdfs:label "MomentKwantitatieveWaardepaar"@nl .
-
-<https://data.vlaanderen.be/ns/DigitaleWatermeter/#Verbruikszone> a rdfs:Class;
-  rdfs:label "Verbruikszone"@nl .
-
-<http://fixme.com#RuimtelijkRelatie.plaats.source> a owl:ObjectProperty;
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#RuimtelijkRelatie.plaats.source> a owl:ObjectProperty;
   rdfs:label "Plaats (source)"@nl;
   rdfs:comment "Referentie naar verbonden klasse."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/DigitaleWatermeter#RuimtelijkeRelatie>;
-  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#RuimtelijkRelatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range dc:Location .
 
-<http://fixme.com#RuimtelijkRelatie.plaats.target> a owl:ObjectProperty;
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#RuimtelijkRelatie.plaats.target> a owl:ObjectProperty;
   rdfs:label "Plaats (target)"@nl;
   rdfs:comment "Referentie naar verbonden klasse."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/DigitaleWatermeter#RuimtelijkeRelatie>;
-  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#RuimtelijkRelatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range dc:Location .
 
-<http://fixme.com#aantalMeters> a owl:DatatypeProperty;
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Software> a owl:Class;
+  rdfs:label "Software"@nl;
+  rdfs:comment "The set of instructions that indicate a machine how to work. In this ontology software is a general concept which acts as a superclass for software versions, docker images, data transformations, etc."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:subClassOf <https://www.w3.org/ns/sosa/Sensor> .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Verbruikszone> a owl:Class;
+  rdfs:label "Verbruikszone"@nl;
+  rdfs:comment "Zone binnen het bevoorradingsgebied bestaande uit vaste registreerzones bestaande uit vaste registreerzones waarbinnen de in- en uitgaande waterstromen permanent bemeterd worden."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:subClassOf dc:Location .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#aantalMeters> a owl:DatatypeProperty;
   rdfs:label "aantalMeters"@nl;
   <http://purl.org/vocab/vann/usageNote> "Dit attribuut kan gebruikt worden om zones samen te voegen (mbt GDPR) indien er zich te weinig meters binnen één zone bevinden."@nl;
   rdfs:comment "Het aantal meters dat binnen de Meterzone ligt."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/DigitaleWatermeter#Meterzone>;
-  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Meterzone>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range xsd:integer .
 
-<http://fixme.com#afleverpunt> a owl:ObjectProperty;
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#afleverpunt> a owl:ObjectProperty;
   rdfs:label "afleverpunt"@nl;
   <http://purl.org/vocab/vann/usageNote> "Gebouweenheid is 1:1 gelinkt aan een meter of verbruiksplaats van de dienst die geleverd wordt en dus aan een individuele observatie. Een gebouw kan gelinkt zijn aan meerdere gebouweenheden, bv bij een appartementsgebouw."@nl;
   rdfs:comment "Aard van de aansluiting waar een voorziening (electriciteit, water, ...) of dienst geleverd wordt. Gaat het om een gebouw of gebouweenheid?"@nl;
   rdfs:domain <https://vocab.belgif.be/ns/utility-services#Connection>;
-  rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <http://fixme.com#Afleverpunttype> .
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:range skos:Concept .
 
-<http://fixme.com#hoofdaansluiting> a owl:ObjectProperty;
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#deploymentTijdstip> a owl:DatatypeProperty;
+  rdfs:label "deploymentTijdstip"@nl;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <http://www.w3.org/ns/ssn/#Deployment>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:range xsd:dateTime .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#element> a owl:ObjectProperty;
+  rdfs:label "element"@nl;
+  rdfs:comment "Een element dat gegevens vertegenwoordigt van een specifiek tijdstip of periode."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#TemporeelMomentKwantitatiefBereik>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:range <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar> .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#gedeployedDoor> a owl:ObjectProperty;
+  rdfs:label "gedeployedDoor"@nl;
+  rdfs:comment "TODO"@nl;
+  rdfs:domain <http://www.w3.org/ns/ssn/#Deployment>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:range dc:Agent .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#hoofdaansluiting> a owl:ObjectProperty;
   rdfs:label "hoofdaansluiting"@nl;
   rdfs:comment "Aansluiting waarvan deze aansluiting afgetakt is."@nl;
   rdfs:domain <https://vocab.belgif.be/ns/utility-services#Connection>;
-  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range <https://vocab.belgif.be/ns/utility-services#Connection> .
 
-<http://fixme.com#subaansluiting> a owl:ObjectProperty;
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#metertype> a owl:ObjectProperty;
+  rdfs:label "metertype"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Type kan slaan op watermeter; maar ook op digitaal of analoog."@nl;
+  rdfs:comment "Aard van de meter."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Meterzone>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#subaansluiting> a owl:ObjectProperty;
   rdfs:label "subaansluiting"@nl;
   rdfs:comment "Aansluiting die afgetakt is van deze aansluiting."@nl;
   rdfs:domain <https://vocab.belgif.be/ns/utility-services#Connection>;
-  rdfs:isDefinedBy <http://fixme.com>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range <https://vocab.belgif.be/ns/utility-services#Connection> .
 
-<http://fixme.com#type> a owl:ObjectProperty;
-  rdfs:label "type"@nl;
-  <http://purl.org/vocab/vann/usageNote> "postcode, gemeente gehucht"@nl;
-  rdfs:comment "Aard van de plaats"@nl;
-  rdfs:domain dc:Location;
-  rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range <http://fixme.com#Plaatstype> .
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#tijdstip> a owl:ObjectProperty;
+  rdfs:label "tijdstip"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Tijdstip slaat op de fenomeentijd. Dit kan een punt in de tijd in het verleden of in de toekomst, bv als het over een voorspelling gaat."@nl;
+  rdfs:comment "Tijdstip van wanneer een waarde is geobserveerd, onderdeel van een kwantitatief waardepaar."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:range <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant> .
 
-<http://fixme.com#waarde> a owl:ObjectProperty;
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#waarde> a owl:ObjectProperty;
   rdfs:label "waarde"@nl;
   rdfs:comment "Waarde van een observatie op een specifieke tijdstip, onderdeel van een kwantitatief waardepaar."@nl;
-  rdfs:domain <https://data.vlaanderen.be/ns/DigitaleWatermeter/#MomentKwantitatieveWaardepaar>;
-  rdfs:isDefinedBy <http://fixme.com>;
-  rdfs:range schemas:QuantitativeValue;
-  rdfs:subPropertyOf <https://data.vlaanderen.be/ns/DigitaleWatermeter/> .
+  rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:range <https://qudt.org/schema/qudt/QuantityValue> .
+
+<http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest> a rdf:Property;
+  rdfs:label "geobserveerdobject"@nl,
+    "geobserveerdObject"@nl .
 
 <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result> a rdf:Property;
   rdfs:label "resultaat"@nl .
 
-<https://data.vlaanderen.be/ns/DigitaleWatermeter#element> a rdf:Property;
-  rdfs:label "element"@nl .
-
-<https://data.vlaanderen.be/ns/DigitaleWatermeter#metertype> a rdf:Property;
-  rdfs:label "metertype"@nl .
-
-<https://data.vlaanderen.be/ns/DigitaleWatermeter#type> a rdf:Property;
+dc:type a rdf:Property;
   rdfs:label "type"@nl .
 
-<https://data.vlaanderen.be/ns/DigitaleWatermeter/#Bevoorradingsgebied.geobserveerdKenmerk> a rdf:Property;
-  rdfs:label "geobserveerdObject"@nl .
+<http://www.w3.org/ns/adms#identifier> a rdf:Property;
+  rdfs:label "identificator"@nl .
 
-<https://data.vlaanderen.be/ns/DigitaleWatermeter/#GeaggregeerdVerbruikTijdreeksobservatie.geobserveerdKenmerk> a rdf:Property;
-  rdfs:label "geobserveerdobject"@nl .
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#TemporeelMomentKwantitatiefBereik> a owl:Class;
+  rdfs:label "TemporeelMomentKwantitatiefBereik"@nl;
+  rdfs:comment "Resultaat van de observatie in de vorm van een tijdreeks."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/TemporalCoverage#CVT_DiscreteTimeInstantCoverage> .
 
-<https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikObservatie.geobserveerdKenmerk> a rdf:Property;
-  rdfs:label "geobserveerdObject"@nl .
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Meterzone> a owl:Class;
+  rdfs:label "Meterzone"@nl;
+  rdfs:comment "Afgebakend geografisch gebied waarover geaggregeerd statistiek wordt berekend waarbinnen één of meerdere verbruiksobservatie(s) vallen"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:subClassOf dc:Location .
 
-<https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikTijdreeksobservatie.geobserveerdKenmerk> a rdf:Property;
-  rdfs:label "geobserveerdObject"@nl .
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#RuimtelijkRelatie> a owl:Class;
+  rdfs:label "RuimtelijkRelatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Zo kan een bevoorradingsgebied ook als Meterzone worden geïnterpreteerd of kan men zones groeperen tot superzone."@nl;
+  rdfs:comment "Onderling verband tussen twee Plaatsen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters> .
 
-<https://data.vlaanderen.be/ns/DigitaleWatermeter/#MeterstaatObservatie.geobserveerdKenmerk> a rdf:Property;
-  rdfs:label "geobserveerdObject"@nl .
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar> a owl:Class;
+  rdfs:label "MomentKwantitatieveWaardepaar"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bestaat uit een tijdstip en een waarde voor één of meerdree punten in de tijd. Het kan bijvoorbeeld gebruikt worden om een voorspelling van waterverbruik te doen voor verschillende dagen."@nl;
+  rdfs:comment "Een kwantitatief waardepaar dat onderdeel is van een tijdreeks"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentWaardepaar> .
 
-<https://data.vlaanderen.be/ns/DigitaleWatermeter/#netwerk> a rdf:Property;
-  rdfs:label "netwerk"@nl .
-
-<https://data.vlaanderen.be/ns/DigitaleWatermeter/#resultaat> a rdf:Property;
-  rdfs:label "resultaat"@nl .
-
-<http://fixme.com> a owl:Ontology;
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters> a owl:Ontology;
   rdfs:label "DigitaleWatermeter-voc"@en,
     "DigitaleWatermeter-voc"@nl;
   dc:contributor [
     a foaf:Person;
+    schema:affiliation [foaf:name "Farys"];
     foaf:firstName "Inge";
     foaf:lastName "Opreel"
   ], [
     a foaf:Person;
+    schema:affiliation [foaf:name "Farys"];
     foaf:firstName "Senne";
     foaf:lastName "Meeusen"
   ], [
     a foaf:Person;
+    schema:affiliation [foaf:name "VITO"];
     foaf:firstName "Emilia";
     foaf:lastName "Liégeois"
   ], [
     a foaf:Person;
+    schema:affiliation [foaf:name "Pidpa"];
     foaf:firstName "Danny";
     foaf:lastName "Lepomme"
   ], [
     a foaf:Person;
+    schema:affiliation [foaf:name "Hydroko"];
     foaf:firstName "Marco";
     foaf:lastName "Indigne"
   ], [
     a foaf:Person;
+    schema:affiliation [foaf:name "Pidpa"];
     foaf:firstName "Anke";
     foaf:lastName "Geudens"
   ], [
     a foaf:Person;
+    schema:affiliation [foaf:name "De Watergroep"];
     foaf:firstName "Stefaan";
     foaf:lastName "Debruyne"
   ], [
     a foaf:Person;
+    schema:affiliation [foaf:name "Capgemini"];
     foaf:firstName "Kevin";
     foaf:lastName "De Wilde"
   ], [
     a foaf:Person;
+    schema:affiliation [foaf:name "De Watergroep"];
     foaf:firstName "Frank";
     foaf:lastName "Coucke"
   ], [
     a foaf:Person;
+    schema:affiliation [foaf:name "Vlaamse Smart Data Space"];
     foaf:firstName "Simon";
     foaf:lastName "Claus"
   ], [
     a foaf:Person;
+    schema:affiliation [foaf:name "Pidpa"];
     foaf:firstName "Annemie";
     foaf:lastName "Biermans"
   ];
@@ -194,30 +261,11 @@
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter#Meterzone>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter#RuimtelijkeRelatie>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter#Software>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter#TemporeelMomentKwantitatiefBereik>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#Bevoorradingsgebied>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#GeaggregeerdVerbruikObservatie>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#GeaggregeerdVerbruikTijdreeksobservatie>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikObservatie>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikTijdreeksobservatie>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#MeterstaatObservatie>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#MomentKwantitatieveWaardepaar>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#Verbruikszone>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#resultaat>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#netwerk>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#MeterstaatObservatie.geobserveerdKenmerk>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikTijdreeksobservatie.geobserveerdKenmerk>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#IndividueelVerbruikObservatie.geobserveerdKenmerk>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#GeaggregeerdVerbruikTijdreeksobservatie.geobserveerdKenmerk>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter/#Bevoorradingsgebied.geobserveerdKenmerk>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter#type>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter#metertype>,
-    <https://data.vlaanderen.be/ns/DigitaleWatermeter#element>,
-    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>;
+  rdfs:seeAlso skos:Concept,
+    <http://www.w3.org/ns/adms#identifier>,
+    dc:type,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     foaf:firstName "William";
