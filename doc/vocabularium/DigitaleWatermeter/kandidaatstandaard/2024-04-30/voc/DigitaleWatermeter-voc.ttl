@@ -14,6 +14,12 @@ skos:Concept a rdfs:Class;
     "RuimtelijkObjecttype"@nl,
     "Afleverpunttype"@nl .
 
+<https://saref.etsi.org/core/Device> a rdfs:Class;
+  rdfs:label "Toestel"@nl .
+
+<https://w3id.org/okn/o/sd#Software> a rdfs:Class;
+  rdfs:label "Systeem"@nl .
+
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Bevoorradingsgebied> a owl:Class;
   rdfs:label "Bevoorradingsgebied"@nl;
   rdfs:comment "Afgebakend geografisch gebied voor waterbevoorrading."@nl;
@@ -49,6 +55,13 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/TimeSeriesObservation#OM_TimeSeriesObservation>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
 
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Meter.verbruiksadres> a owl:ObjectProperty;
+  rdfs:label "verbruiksadres"@nl;
+  rdfs:comment "Adres van de locatie waarvan de meter het verbruik meet"@nl;
+  rdfs:domain <https://saref.etsi.org/core/Meter>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:range <http://www.w3.org/ns/locn#Address> .
+
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MeterstaatObservatie> a owl:Class;
   rdfs:label "MeterstaatObservatie"@nl;
   <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld batterijstatus of tijdstip laatste contact."@nl;
@@ -78,7 +91,7 @@ skos:Concept a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Verbruikszone> a owl:Class;
   rdfs:label "Verbruikszone"@nl;
-  rdfs:comment "Zone binnen het bevoorradingsgebied bestaande uit vaste registreerzones bestaande uit vaste registreerzones waarbinnen de in- en uitgaande waterstromen permanent bemeterd worden."@nl;
+  rdfs:comment "Taak die met het Toestel kan worden uitgevoerd waarvoor het Toestel ontworpen is."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:subClassOf dc:Location .
 
@@ -100,21 +113,21 @@ skos:Concept a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#deploymentTijdstip> a owl:DatatypeProperty;
   rdfs:label "deploymentTijdstip"@nl;
-  rdfs:comment "TODO"@nl;
+  rdfs:comment "Het tijdstip dat een meter wordt gedeployed."@nl;
   rdfs:domain <http://www.w3.org/ns/ssn/#Deployment>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range xsd:dateTime .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#element> a owl:ObjectProperty;
   rdfs:label "element"@nl;
-  rdfs:comment "Een element dat gegevens vertegenwoordigt van een specifiek tijdstip of periode."@nl;
+  rdfs:comment "Resultaat van de observatie in de vorm van een tijdreeks."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#TemporeelMomentKwantitatiefBereik>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#gedeployedDoor> a owl:ObjectProperty;
   rdfs:label "gedeployedDoor"@nl;
-  rdfs:comment "TODO"@nl;
+  rdfs:comment "Agent die de Meter deployed."@nl;
   rdfs:domain <http://www.w3.org/ns/ssn/#Deployment>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range dc:Agent .
@@ -166,14 +179,32 @@ skos:Concept a rdfs:Class;
 dc:type a rdf:Property;
   rdfs:label "type"@nl .
 
+skos:notation a rdf:Property;
+  rdfs:label "identificator"@nl .
+
 <http://www.w3.org/ns/adms#identifier> a rdf:Property;
   rdfs:label "identificator"@nl .
 
+<http://www.w3.org/ns/ssn/systems/hasOperatingRange> a rdf:Property;
+  rdfs:label "werkingsbereik"@nl .
+
+<http://www.w3.org/ns/ssn/systems/hasSurvivalRange> a rdf:Property;
+  rdfs:label "overlevingsbereik"@nl .
+
+<http://www.w3.org/ns/ssn/systems/hasSystemCapability> a rdf:Property;
+  rdfs:label "capaciteit"@nl .
+
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#TemporeelMomentKwantitatiefBereik> a owl:Class;
   rdfs:label "TemporeelMomentKwantitatiefBereik"@nl;
-  rdfs:comment "Resultaat van de observatie in de vorm van een tijdreeks."@nl;
+  rdfs:comment "In welk bereik het Systeem afdoende werkt."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/TemporalCoverage#CVT_DiscreteTimeInstantCoverage> .
+
+<https://saref.etsi.org/core/accomplishes> a rdf:Property;
+  rdfs:label "taak"@nl .
+
+<https://saref.etsi.org/core/hasFunction> a rdf:Property;
+  rdfs:label "functie"@nl .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Meterzone> a owl:Class;
   rdfs:label "Meterzone"@nl;
@@ -189,8 +220,8 @@ dc:type a rdf:Property;
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar> a owl:Class;
   rdfs:label "MomentKwantitatieveWaardepaar"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Bestaat uit een tijdstip en een waarde voor één of meerdree punten in de tijd. Het kan bijvoorbeeld gebruikt worden om een voorspelling van waterverbruik te doen voor verschillende dagen."@nl;
-  rdfs:comment "Een kwantitatief waardepaar dat onderdeel is van een tijdreeks"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Een kwantitatief waardepaar dat onderdeel is van een tijdreeks."@nl;
+  rdfs:comment "Een kwantitatief waardepaar dat onderdeel is van een tijdreeks."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentWaardepaar> .
 
@@ -262,10 +293,18 @@ dc:type a rdf:Property;
     foaf:name "Data Vlaanderen"
   ];
   rdfs:seeAlso skos:Concept,
+    <https://saref.etsi.org/core/Device>,
+    <https://w3id.org/okn/o/sd#Software>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>,
     dc:type,
-    <http://www.w3.org/ns/adms#identifier>;
+    skos:notation,
+    <http://www.w3.org/ns/adms#identifier>,
+    <http://www.w3.org/ns/ssn/systems/hasOperatingRange>,
+    <http://www.w3.org/ns/ssn/systems/hasSurvivalRange>,
+    <http://www.w3.org/ns/ssn/systems/hasSystemCapability>,
+    <https://saref.etsi.org/core/accomplishes>,
+    <https://saref.etsi.org/core/hasFunction>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     foaf:firstName "Jitse";
