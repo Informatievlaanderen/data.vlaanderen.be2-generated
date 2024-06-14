@@ -14,6 +14,12 @@ skos:Concept a rdfs:Class;
     "RuimtelijkObjecttype"@nl,
     "Afleverpunttype"@nl .
 
+<https://saref.etsi.org/core/Device> a rdfs:Class;
+  rdfs:label "Toestel"@nl .
+
+<https://w3id.org/okn/o/sd#Software> a rdfs:Class;
+  rdfs:label "Systeem"@nl .
+
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Bevoorradingsgebied> a owl:Class;
   rdfs:label "Bevoorradingsgebied"@nl;
   rdfs:comment "Afgebakend geografisch gebied voor waterbevoorrading."@nl;
@@ -49,6 +55,13 @@ skos:Concept a rdfs:Class;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/TimeSeriesObservation#OM_TimeSeriesObservation>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
 
+<https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Meter.verbruiksadres> a owl:ObjectProperty;
+  rdfs:label "verbruiksadres"@nl;
+  rdfs:comment "Adres van de locatie waarvan de meter het verbruik meet"@nl;
+  rdfs:domain <https://saref.etsi.org/core/Meter>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
+  rdfs:range <http://www.w3.org/ns/locn#Address> .
+
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MeterstaatObservatie> a owl:Class;
   rdfs:label "MeterstaatObservatie"@nl;
   <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld batterijstatus of tijdstip laatste contact."@nl;
@@ -78,7 +91,7 @@ skos:Concept a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Verbruikszone> a owl:Class;
   rdfs:label "Verbruikszone"@nl;
-  rdfs:comment "Zone binnen het bevoorradingsgebied bestaande uit vaste registreerzones bestaande uit vaste registreerzones waarbinnen de in- en uitgaande waterstromen permanent bemeterd worden."@nl;
+  rdfs:comment "Taak die met het Toestel kan worden uitgevoerd waarvoor het Toestel ontworpen is."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:subClassOf dc:Location .
 
@@ -100,21 +113,21 @@ skos:Concept a rdfs:Class;
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#deploymentTijdstip> a owl:DatatypeProperty;
   rdfs:label "deploymentTijdstip"@nl;
-  rdfs:comment "TODO"@nl;
+  rdfs:comment "Het tijdstip dat een meter wordt gedeployed."@nl;
   rdfs:domain <http://www.w3.org/ns/ssn/#Deployment>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range xsd:dateTime .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#element> a owl:ObjectProperty;
   rdfs:label "element"@nl;
-  rdfs:comment "Een element dat gegevens vertegenwoordigt van een specifiek tijdstip of periode."@nl;
+  rdfs:comment "Resultaat van de observatie in de vorm van een tijdreeks."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#TemporeelMomentKwantitatiefBereik>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar> .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#gedeployedDoor> a owl:ObjectProperty;
   rdfs:label "gedeployedDoor"@nl;
-  rdfs:comment "TODO"@nl;
+  rdfs:comment "Agent die de Meter deployed."@nl;
   rdfs:domain <http://www.w3.org/ns/ssn/#Deployment>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:range dc:Agent .
@@ -166,14 +179,32 @@ skos:Concept a rdfs:Class;
 dc:type a rdf:Property;
   rdfs:label "type"@nl .
 
+skos:notation a rdf:Property;
+  rdfs:label "identificator"@nl .
+
 <http://www.w3.org/ns/adms#identifier> a rdf:Property;
   rdfs:label "identificator"@nl .
 
+<http://www.w3.org/ns/ssn/systems/hasOperatingRange> a rdf:Property;
+  rdfs:label "werkingsbereik"@nl .
+
+<http://www.w3.org/ns/ssn/systems/hasSurvivalRange> a rdf:Property;
+  rdfs:label "overlevingsbereik"@nl .
+
+<http://www.w3.org/ns/ssn/systems/hasSystemCapability> a rdf:Property;
+  rdfs:label "capaciteit"@nl .
+
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#TemporeelMomentKwantitatiefBereik> a owl:Class;
   rdfs:label "TemporeelMomentKwantitatiefBereik"@nl;
-  rdfs:comment "Resultaat van de observatie in de vorm van een tijdreeks."@nl;
+  rdfs:comment "In welk bereik het Systeem afdoende werkt."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/TemporalCoverage#CVT_DiscreteTimeInstantCoverage> .
+
+<https://saref.etsi.org/core/accomplishes> a rdf:Property;
+  rdfs:label "taak"@nl .
+
+<https://saref.etsi.org/core/hasFunction> a rdf:Property;
+  rdfs:label "functie"@nl .
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Meterzone> a owl:Class;
   rdfs:label "Meterzone"@nl;
@@ -189,8 +220,8 @@ dc:type a rdf:Property;
 
 <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar> a owl:Class;
   rdfs:label "MomentKwantitatieveWaardepaar"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Bestaat uit een tijdstip en een waarde voor één of meerdree punten in de tijd. Het kan bijvoorbeeld gebruikt worden om een voorspelling van waterverbruik te doen voor verschillende dagen."@nl;
-  rdfs:comment "Een kwantitatief waardepaar dat onderdeel is van een tijdreeks"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Een kwantitatief waardepaar dat onderdeel is van een tijdreeks."@nl;
+  rdfs:comment "Een kwantitatief waardepaar dat onderdeel is van een tijdreeks."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentWaardepaar> .
 
@@ -199,39 +230,19 @@ dc:type a rdf:Property;
     "DigitaleWatermeter-voc"@nl;
   dc:contributor [
     a foaf:Person;
-    schema:affiliation [foaf:name "Farys"];
-    foaf:firstName "Inge";
-    foaf:lastName "Opreel"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Farys"];
-    foaf:firstName "Senne";
-    foaf:lastName "Meeusen"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "VITO"];
-    foaf:firstName "Emilia";
-    foaf:lastName "Liégeois"
-  ], [
-    a foaf:Person;
     schema:affiliation [foaf:name "Pidpa"];
-    foaf:firstName "Danny";
-    foaf:lastName "Lepomme"
+    foaf:firstName "Annemie";
+    foaf:lastName "Biermans"
   ], [
     a foaf:Person;
-    schema:affiliation [foaf:name "Hydroko"];
-    foaf:firstName "Marco";
-    foaf:lastName "Indigne"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Pidpa"];
-    foaf:firstName "Anke";
-    foaf:lastName "Geudens"
+    schema:affiliation [foaf:name "Vlaamse Smart Data Space"];
+    foaf:firstName "Simon";
+    foaf:lastName "Claus"
   ], [
     a foaf:Person;
     schema:affiliation [foaf:name "De Watergroep"];
-    foaf:firstName "Stefaan";
-    foaf:lastName "Debruyne"
+    foaf:firstName "Frank";
+    foaf:lastName "Coucke"
   ], [
     a foaf:Person;
     schema:affiliation [foaf:name "Capgemini"];
@@ -240,18 +251,38 @@ dc:type a rdf:Property;
   ], [
     a foaf:Person;
     schema:affiliation [foaf:name "De Watergroep"];
-    foaf:firstName "Frank";
-    foaf:lastName "Coucke"
-  ], [
-    a foaf:Person;
-    schema:affiliation [foaf:name "Vlaamse Smart Data Space"];
-    foaf:firstName "Simon";
-    foaf:lastName "Claus"
+    foaf:firstName "Stefaan";
+    foaf:lastName "Debruyne"
   ], [
     a foaf:Person;
     schema:affiliation [foaf:name "Pidpa"];
-    foaf:firstName "Annemie";
-    foaf:lastName "Biermans"
+    foaf:firstName "Anke";
+    foaf:lastName "Geudens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Hydroko"];
+    foaf:firstName "Marco";
+    foaf:lastName "Indigne"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Pidpa"];
+    foaf:firstName "Danny";
+    foaf:lastName "Lepomme"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "VITO"];
+    foaf:firstName "Emilia";
+    foaf:lastName "Liégeois"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Farys"];
+    foaf:firstName "Senne";
+    foaf:lastName "Meeusen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Farys"];
+    foaf:firstName "Inge";
+    foaf:lastName "Opreel"
   ];
   dc:issued "TODO";
   dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
@@ -262,35 +293,23 @@ dc:type a rdf:Property;
     foaf:name "Data Vlaanderen"
   ];
   rdfs:seeAlso skos:Concept,
-    <http://www.w3.org/ns/adms#identifier>,
-    dc:type,
+    <https://saref.etsi.org/core/Device>,
+    <https://w3id.org/okn/o/sd#Software>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest>,
     <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>,
-    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest>;
+    dc:type,
+    skos:notation,
+    <http://www.w3.org/ns/adms#identifier>,
+    <http://www.w3.org/ns/ssn/systems/hasOperatingRange>,
+    <http://www.w3.org/ns/ssn/systems/hasSurvivalRange>,
+    <http://www.w3.org/ns/ssn/systems/hasSystemCapability>,
+    <https://saref.etsi.org/core/accomplishes>,
+    <https://saref.etsi.org/core/hasFunction>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
-    foaf:firstName "William";
-    foaf:lastName "Verbeeck";
-    foaf:mbox <mailto:william.verbeeck@vlaanderen.be>
-  ], [
-    a foaf:Person;
-    foaf:firstName "Samuel";
-    foaf:lastName "Van Ackere";
-    foaf:mbox <mailto:samuel.vanackere@vlaanderen.be>
-  ], [
-    a foaf:Person;
-    foaf:firstName "Geert";
-    foaf:lastName "Thijs";
-    foaf:mbox <mailto:geert.thijs@vlaanderen.be>
-  ], [
-    a foaf:Person;
-    foaf:firstName "Eva";
-    foaf:lastName "Robbrecht";
-    foaf:mbox <mailto:eva.robbrecht@vlaanderen.be>
-  ], [
-    a foaf:Person;
-    foaf:firstName "Isabaut";
-    foaf:lastName "Martens";
-    foaf:mbox <mailto:isabaut.martens@vlaanderen.be>
+    foaf:firstName "Jitse";
+    foaf:lastName "De Cock";
+    foaf:mbox <mailto:jitse.decock@vlaanderen.be>
   ], [
     a foaf:Person;
     foaf:firstName "Ben";
@@ -298,16 +317,36 @@ dc:type a rdf:Property;
     foaf:mbox <mailto:ben.demeester@ugent.be>
   ], [
     a foaf:Person;
-    foaf:firstName "Jitse";
-    foaf:lastName "De Cock";
-    foaf:mbox <mailto:jitse.decock@vlaanderen.be>
+    foaf:firstName "Isabaut";
+    foaf:lastName "Martens";
+    foaf:mbox <mailto:isabaut.martens@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    foaf:firstName "Eva";
+    foaf:lastName "Robbrecht";
+    foaf:mbox <mailto:eva.robbrecht@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    foaf:firstName "Geert";
+    foaf:lastName "Thijs";
+    foaf:mbox <mailto:geert.thijs@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    foaf:firstName "Samuel";
+    foaf:lastName "Van Ackere";
+    foaf:mbox <mailto:samuel.vanackere@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    foaf:firstName "William";
+    foaf:lastName "Verbeeck";
+    foaf:mbox <mailto:william.verbeeck@vlaanderen.be>
   ];
   foaf:maker [
     a foaf:Person;
-    foaf:firstName "Peter";
-    foaf:lastName "Pijpops"
-  ], [
-    a foaf:Person;
     foaf:firstName "Pieter Jan";
     foaf:lastName "Haest"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Peter";
+    foaf:lastName "Pijpops"
   ] .
