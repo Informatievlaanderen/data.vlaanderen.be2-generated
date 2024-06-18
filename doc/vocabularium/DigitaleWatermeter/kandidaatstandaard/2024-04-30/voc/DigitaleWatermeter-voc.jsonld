@@ -236,6 +236,19 @@
       ]
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MachineLearning Input",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "MachineLearning Input"
+      },
+      "definition": {
+        "nl": "Machine learning input die door een Procedure wordt gebruikt."
+      },
+      "parents": [
+        "http://www.w3.org/ns/ssn/Input"
+      ]
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MeterstaatObservatie",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
@@ -295,19 +308,6 @@
       "parents": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Software",
-      "@type": "http://www.w3.org/2002/07/owl#Class",
-      "label": {
-        "nl": "Software"
-      },
-      "definition": {
-        "nl": "The set of instructions that indicate a machine how to work. In this ontology software is a general concept which acts as a superclass for software versions, docker images, data transformations, etc."
-      },
-      "parents": [
-        "https://www.w3.org/ns/sosa/Sensor"
-      ]
-    },
-    {
       "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#TemporeelMomentKwantitatiefBereik",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
@@ -335,6 +335,13 @@
     }
   ],
   "externals": [
+    {
+      "name": {
+        "nl": "Collectie"
+      },
+      "@id": "TODO",
+      "@type": "rdfs:Class"
+    },
     {
       "name": {
         "nl": "Metertype"
@@ -386,6 +393,40 @@
     }
   ],
   "properties": [
+    {
+      "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#InbouwDoor",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "gedeployedDoor"
+      },
+      "definition": {
+        "nl": "Agent die de Meter deployed."
+      },
+      "domain": [
+        "http://www.w3.org/ns/ssn/#Deployment"
+      ],
+      "range": [
+        "http://purl.org/dc/terms/Agent"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#InbouwTijdstip",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "InbouwTijdstip"
+      },
+      "definition": {
+        "nl": "Het tijdstip dat een meter wordt gedeployed."
+      },
+      "domain": [
+        "http://www.w3.org/ns/ssn/#Deployment"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
+      ],
+      "generalization": []
+    },
     {
       "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Meter.verbruiksadres",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
@@ -478,23 +519,6 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#deploymentTijdstip",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
-      "label": {
-        "nl": "deploymentTijdstip"
-      },
-      "definition": {
-        "nl": "Het tijdstip dat een meter wordt gedeployed."
-      },
-      "domain": [
-        "http://www.w3.org/ns/ssn/#Deployment"
-      ],
-      "range": [
-        "http://www.w3.org/2001/XMLSchema#dateTime"
-      ],
-      "generalization": []
-    },
-    {
       "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#element",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -508,23 +532,6 @@
       ],
       "range": [
         "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MomentKwantitatieveWaardepaar"
-      ],
-      "generalization": []
-    },
-    {
-      "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#gedeployedDoor",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "label": {
-        "nl": "gedeployedDoor"
-      },
-      "definition": {
-        "nl": "Agent die de Meter deployed."
-      },
-      "domain": [
-        "http://www.w3.org/ns/ssn/#Deployment"
-      ],
-      "range": [
-        "http://purl.org/dc/terms/Agent"
       ],
       "generalization": []
     },
@@ -562,6 +569,43 @@
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#model",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "model"
+      },
+      "definition": {
+        "nl": "Machine learning model die door een Procedure wordt gebruikt."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MachineLearning Input"
+      ],
+      "range": [
+        "http://data.europa.eu/m8g/model"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#observaties",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "observaties"
+      },
+      "definition": {
+        "nl": "Machine learning observaties die door een Procedure wordt gebruikt."
+      },
+      "usage": {
+        "nl": "Naast observaties is het ook mogelijk om Datasets te gebruiken als input. Om te aligneren met MLDCAT 2.0 (<a href=https://semiceu.github.io/MLDCAT-AP/releases/2.0.0/\">) wordt aangeraden om gebruik te maken van double typing ([Observatie, Dataset])."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MachineLearning Input"
+      ],
+      "range": [
+        "http://www.w3.org/ns/sosa/ObservationCollection"
       ],
       "generalization": []
     },
