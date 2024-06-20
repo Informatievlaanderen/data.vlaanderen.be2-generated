@@ -49,6 +49,13 @@ skos:Concept a rdfs:Class;
 schemas:PriceSpecification a rdfs:Class;
   rdfs:label "Prijsinfo"@nl .
 
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.beperktTot> a owl:ObjectProperty;
+  rdfs:label "beperkt tot"@nl;
+  rdfs:comment "Een beperking opgelegd aan de Activiteit op basis van het ParticipantProfiel."@nl;
+  rdfs:domain crm:E7_Activity;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel> .
+
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.berichtgeving> a owl:ObjectProperty;
   rdfs:label "berichtgeving"@nl;
   rdfs:comment "Berichtgeving rond de Activiteit."@nl;
@@ -167,6 +174,13 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:domain crm:E7_Activity;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range schemas:Schedule .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.ruimtetijd> a owl:ObjectProperty;
+  rdfs:label "ruimtetijd"@nl;
+  rdfs:comment "Een vierdimensionele puntenreeks in de fysieke ruimtetijd waarbij er een intersectie kan zijn van een plaats en tijdsaanduiding."@nl;
+  rdfs:domain crm:E7_Activity;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range <http://cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume> .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.status> a owl:ObjectProperty;
   rdfs:label "status"@nl;
@@ -411,6 +425,13 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantkenmerk> .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel.bepaaltBeperking> a owl:ObjectProperty;
+  rdfs:label "bepaalt beperking"@nl;
+  rdfs:comment "Een beperking die wordt opgelegd aan de Activiteit op basis van het ParticipantProfiel."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range crm:E7_Activity .
 
 <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel.cultureel> a owl:ObjectProperty;
   rdfs:label "cultureel"@nl;
@@ -747,13 +768,6 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator> .
 
-<https://data.vlaanderen.be/ns/cultuurparticipatie#ruimtetijd> a owl:ObjectProperty;
-  rdfs:label "ruimtetijd"@nl;
-  rdfs:comment "Een vierdimensionele puntenreeks in de fysieke ruimtetijd waarbij er een intersectie kan zijn van een plaats en tijdsaanduiding."@nl;
-  rdfs:domain crm:E7_Activity;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
-  rdfs:range <http://cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume> .
-
 <https://data.vlaanderen.be/ns/cultuurparticipatie#thema> a owl:ObjectProperty;
   rdfs:label "thema"@nl;
   rdfs:comment "Waar de Activiteit inhoudelijk over gaat."@nl;
@@ -774,6 +788,11 @@ schemas:PriceSpecification a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
   rdfs:range crm:E70_Thing .
+
+<https://data.vlaanderen.be/ns/cultuurparticipatie#verhoudtZichTot> a owl:ObjectProperty;
+  rdfs:domain crm:E7_Activity;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/cultuurparticipatie>;
+  rdfs:range crm:E7_Activity .
 
 <http://cidoc-crm.org/cidoc-crm/P14_carried_out_by> a rdf:Property;
   rdfs:label "gerealiseerd door"@nl .
@@ -963,219 +982,156 @@ schemas:valueAddedTaxIncluded a rdf:Property;
   dc:contributor [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://vlaamsekunstcollectie.be/>;
-      foaf:name "Vlaamse Kunstcollectie"
-    ];
-    foaf:firstName "Rob";
-    foaf:lastName "Wyse";
-    foaf:mbox <mailto:rob.wyse@vlaamsekunstcollectie.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://faro.be/>;
-      foaf:name "FARO"
-    ];
-    foaf:firstName "Bram";
-    foaf:lastName "Wiercx";
-    foaf:mbox <mailto:bram.wiercx@faro.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://toerismevlaanderen.be/nl>;
-      foaf:name "Toerisme Vlaanderen"
-    ];
-    foaf:firstName "Sofie";
-    foaf:lastName "Wauters";
-    foaf:mbox <mailto:sofie.wauters@toerismevlaanderen.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
       foaf:homepage <https://www.publiq.be/>;
       foaf:name "publiq"
     ];
-    foaf:firstName "Stan";
-    foaf:lastName "Vertessen";
-    foaf:mbox <mailto:stan@publiq.be>
+    foaf:firstName "Frederik";
+    foaf:lastName "Bastiaensen";
+    foaf:mbox <mailto:frederik@publiq.be>
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.ugent.be/>;
-      foaf:name "Universiteit Gent"
+      foaf:homepage <https://ambrassade.be/nl>;
+      foaf:name "De Ambrassade"
     ];
-    foaf:firstName "Melanie ";
-    foaf:lastName "Verstraete";
-    foaf:mbox <mailto:melanie.verstraete@ugent.be>
+    foaf:firstName "Peter";
+    foaf:lastName "Bosschaert";
+    foaf:mbox <mailto:peter.bosschaert@ambrassade.be>
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.cultuurconnect.be/>;
-      foaf:name "Cultuurconnect"
+      foaf:homepage <https://www.cult.be/>;
+      foaf:name "Cult! netwerk cultuurhuizen"
     ];
-    foaf:firstName "Ellen";
-    foaf:lastName "Vanmaele";
-    foaf:mbox <mailto:ellen.vanmaele@cultuurconnect.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.cultuurconnect.be/>;
-      foaf:name "Cultuurconnect"
-    ];
-    foaf:firstName "Steven";
-    foaf:lastName "Vandenoortgaete";
-    foaf:mbox <mailto:steven.vandenoortgaete@cultuurconnect.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://redpencil.io/>;
-      foaf:name "Redpencil"
-    ];
-    foaf:firstName "Niels";
-    foaf:lastName "Vandekeybus";
-    foaf:mbox <mailto:niels.vandekeybus@redpencil.io>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.ksz-bcss.fgov.be/nl>;
-      foaf:name "Kruispuntbank van de Sociale Zekerheid"
-    ];
-    foaf:firstName "Lies";
-    foaf:lastName "Vandecasteele";
-    foaf:mbox <mailto:lies.vandecasteele@ksz-bcss.fgov.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://stad.gent/nl>;
-      foaf:name "Stad Gent"
-    ];
-    foaf:firstName "Olivier ";
-    foaf:lastName "Van D'huynslager";
-    foaf:mbox <mailto:olivier.vandhuynslager@stad.gent>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://stad.gent/nl>;
-      foaf:name "Stad Gent"
-    ];
-    foaf:firstName "Sofie";
-    foaf:lastName "Teugels";
-    foaf:mbox <mailto:sofie.teugels@stad.gent>
+    foaf:firstName "Fien";
+    foaf:lastName "Bracke";
+    foaf:mbox <mailto:fien@cult.be>
   ], [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.podiumkunsten.be/>;
       foaf:name "Sociaal Fonds voor de Podiumkunsten"
     ];
-    foaf:firstName "Sam";
-    foaf:lastName "Stobbelaar";
-    foaf:mbox <mailto:sam@podiumkunsten.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.ugent.be/>;
-      foaf:name "Universiteit Gent"
-    ];
-    foaf:firstName "Jessy";
-    foaf:lastName "Siongers";
-    foaf:mbox <mailto:Jessy.Siongers@UGent.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.ugent.be/>;
-      foaf:name "Universiteit Gent"
-    ];
-    foaf:firstName "Jessy";
-    foaf:lastName "Siongers";
-    foaf:mbox <mailto:Jessy.Siongers@UGent.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.kunsten.be/>;
-      foaf:name "Kunstenpunt"
-    ];
-    foaf:firstName "Tom";
-    foaf:lastName "Ruette";
-    foaf:mbox <mailto:tom.ruette@kunsten.be>
+    foaf:firstName "Maarten";
+    foaf:lastName "Bresseleers";
+    foaf:mbox <mailto:maarten@podiumkunsten.be>
   ], [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.vlaanderen.be/cjm/nl>;
       foaf:name "Departement Cultuur, Jeugd en Media"
     ];
-    foaf:firstName "Jose";
-    foaf:lastName "Rotsaert";
-    foaf:mbox <mailto:jose.rotsaert@vlaanderen.be>
+    foaf:firstName "Thomas";
+    foaf:lastName "Buijs";
+    foaf:mbox <mailto:thomas.buijs@vlaanderen.be>
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.defederatie.org/>;
-      foaf:name "De Federatie Sociaal-Cultureel Werk"
+      foaf:homepage <https://www.circuscentrum.be/>;
+      foaf:name "Vlaams Centrum voor Circuskunsten"
     ];
-    foaf:firstName "Hannes";
-    foaf:lastName "Rengle";
-    foaf:mbox <mailto:hannesrengle@defederatie.org>
+    foaf:firstName "Anne";
+    foaf:lastName "Ceulebrouck";
+    foaf:mbox <mailto:anne@circuscentrum.be>
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.literatuurvlaanderen.be/>;
-      foaf:name "Literatuur Vlaanderen"
+      foaf:homepage <https://www.dominionexperts.be/>;
+      foaf:name "Dominion Experts"
     ];
-    foaf:firstName "Lore";
-    foaf:lastName "Piers";
-    foaf:mbox <mailto:lore@literatuurvlaanderen.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://vi.be/>;
-      foaf:name "VI.BE"
-    ];
-    foaf:firstName "Jan";
-    foaf:lastName "Pauly";
-    foaf:mbox <mailto:jan@vi.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.cultuurconnect.be/>;
-      foaf:name "Cultuurconnect"
-    ];
-    foaf:firstName "Johan";
-    foaf:lastName "Mijs";
-    foaf:mbox <mailto:johan.mijs@cultuurconnect.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://toerismevlaanderen.be/nl>;
-      foaf:name "Toerisme Vlaanderen"
-    ];
-    foaf:firstName "Rein";
-    foaf:lastName "Meus";
-    foaf:mbox <mailto:rein.meus@toerismevlaanderen.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.digipolisantwerpen.be/>;
-      foaf:name "Digipolis"
-    ];
-    foaf:firstName "Michael";
-    foaf:lastName "Meersmans";
-    foaf:mbox <mailto:michael.meersmans@digipolis.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://socialsecurity.belgium.be/nl>;
-      foaf:name "Federale Overheidsdienst Sociale Zekerheid"
-    ];
-    foaf:firstName "Gineke";
-    foaf:lastName "Mampaey";
-    foaf:mbox <mailto:Gineke.Mampaey@minsoc.fed.be>
+    foaf:firstName "Sammey";
+    foaf:lastName "De Mulder";
+    foaf:mbox <mailto:sammey.demulder@vlaanderen.be>
   ], [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.publiq.be/>;
       foaf:name "publiq"
     ];
-    foaf:firstName "Sven";
-    foaf:lastName "Houtmeyers";
-    foaf:mbox <mailto:sven.houtmeyers@publiq.be>
+    foaf:firstName "Karel";
+    foaf:lastName "De Rudder";
+    foaf:mbox <mailto:karel.derudder@publiq.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.acagroup.be/nl/>;
+      foaf:name "ACA IT-Solutions"
+    ];
+    foaf:firstName "Tom";
+    foaf:lastName "De Wolf";
+    foaf:mbox <mailto:tom.dewolf@aca-it.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://redpencil.io/>;
+      foaf:name "Redpencil"
+    ];
+    foaf:firstName "Johan";
+    foaf:lastName "Delaure";
+    foaf:mbox <mailto:johan.delaure@redpencil.io>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.defederatie.org/>;
+      foaf:name "De Federatie Sociaal-Cultureel Werk"
+    ];
+    foaf:firstName "Barbara";
+    foaf:lastName "Delft";
+    foaf:mbox <mailto:barbara@defederatie.org>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.so-lva.be/>;
+      foaf:name "SOLvA"
+    ];
+    foaf:firstName "Ewout";
+    foaf:lastName "Depauw";
+    foaf:mbox <mailto:ewout.depauw@so-lva.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.parcum.be/nl/>;
+      foaf:name "Parcum"
+    ];
+    foaf:firstName "Ellen";
+    foaf:lastName "Descamps";
+    foaf:mbox <mailto:ellen.descamps@parcum.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://stad.gent/nl>;
+      foaf:name "Stad Gent"
+    ];
+    foaf:firstName "Thomas";
+    foaf:lastName "Desmedt";
+    foaf:mbox <mailto:thomas.desmedt@stad.gent>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vaf.be/>;
+      foaf:name "Vlaams Audiovisueel Fonds"
+    ];
+    foaf:firstName "Matthias";
+    foaf:lastName "Dillen";
+    foaf:mbox <mailto:mdillen@vaf.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://vlaamsekunstcollectie.be/>;
+      foaf:name "Vlaamse Kunstcollectie"
+    ];
+    foaf:firstName "Pascal";
+    foaf:lastName "Ennaert";
+    foaf:mbox <mailto:pascal.ennaert@vlaamsekunstcollectie.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.publiq.be/>;
+      foaf:name "publiq"
+    ];
+    foaf:firstName "Hans";
+    foaf:lastName "Henderickx";
+    foaf:mbox <mailto:hans@publiq.be>
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1191,153 +1147,216 @@ schemas:valueAddedTaxIncluded a rdf:Property;
       foaf:homepage <https://www.publiq.be/>;
       foaf:name "publiq"
     ];
-    foaf:firstName "Hans";
-    foaf:lastName "Henderickx";
-    foaf:mbox <mailto:hans@publiq.be>
+    foaf:firstName "Sven";
+    foaf:lastName "Houtmeyers";
+    foaf:mbox <mailto:sven.houtmeyers@publiq.be>
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://vlaamsekunstcollectie.be/>;
-      foaf:name "Vlaamse Kunstcollectie"
+      foaf:homepage <https://socialsecurity.belgium.be/nl>;
+      foaf:name "Federale Overheidsdienst Sociale Zekerheid"
     ];
-    foaf:firstName "Pascal";
-    foaf:lastName "Ennaert";
-    foaf:mbox <mailto:pascal.ennaert@vlaamsekunstcollectie.be>
+    foaf:firstName "Gineke";
+    foaf:lastName "Mampaey";
+    foaf:mbox <mailto:Gineke.Mampaey@minsoc.fed.be>
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.vaf.be/>;
-      foaf:name "Vlaams Audiovisueel Fonds"
+      foaf:homepage <https://www.digipolisantwerpen.be/>;
+      foaf:name "Digipolis"
     ];
-    foaf:firstName "Matthias";
-    foaf:lastName "Dillen";
-    foaf:mbox <mailto:mdillen@vaf.be>
+    foaf:firstName "Michael";
+    foaf:lastName "Meersmans";
+    foaf:mbox <mailto:michael.meersmans@digipolis.be>
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://stad.gent/nl>;
-      foaf:name "Stad Gent"
+      foaf:homepage <https://toerismevlaanderen.be/nl>;
+      foaf:name "Toerisme Vlaanderen"
     ];
-    foaf:firstName "Thomas";
-    foaf:lastName "Desmedt";
-    foaf:mbox <mailto:thomas.desmedt@stad.gent>
+    foaf:firstName "Rein";
+    foaf:lastName "Meus";
+    foaf:mbox <mailto:rein.meus@toerismevlaanderen.be>
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.parcum.be/nl/>;
-      foaf:name "Parcum"
+      foaf:homepage <https://www.cultuurconnect.be/>;
+      foaf:name "Cultuurconnect"
     ];
-    foaf:firstName "Ellen";
-    foaf:lastName "Descamps";
-    foaf:mbox <mailto:ellen.descamps@parcum.be>
+    foaf:firstName "Johan";
+    foaf:lastName "Mijs";
+    foaf:mbox <mailto:johan.mijs@cultuurconnect.be>
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.so-lva.be/>;
-      foaf:name "SOLvA"
+      foaf:homepage <https://vi.be/>;
+      foaf:name "VI.BE"
     ];
-    foaf:firstName "Ewout";
-    foaf:lastName "Depauw";
-    foaf:mbox <mailto:ewout.depauw@so-lva.be>
+    foaf:firstName "Jan";
+    foaf:lastName "Pauly";
+    foaf:mbox <mailto:jan@vi.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.literatuurvlaanderen.be/>;
+      foaf:name "Literatuur Vlaanderen"
+    ];
+    foaf:firstName "Lore";
+    foaf:lastName "Piers";
+    foaf:mbox <mailto:lore@literatuurvlaanderen.be>
   ], [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.defederatie.org/>;
       foaf:name "De Federatie Sociaal-Cultureel Werk"
     ];
-    foaf:firstName "Barbara";
-    foaf:lastName "Delft";
-    foaf:mbox <mailto:barbara@defederatie.org>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://redpencil.io/>;
-      foaf:name "Redpencil"
-    ];
-    foaf:firstName "Johan";
-    foaf:lastName "Delaure";
-    foaf:mbox <mailto:johan.delaure@redpencil.io>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.acagroup.be/nl/>;
-      foaf:name "ACA IT-Solutions"
-    ];
-    foaf:firstName "Tom";
-    foaf:lastName "De Wolf";
-    foaf:mbox <mailto:tom.dewolf@aca-it.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.publiq.be/>;
-      foaf:name "publiq"
-    ];
-    foaf:firstName "Karel";
-    foaf:lastName "De Rudder";
-    foaf:mbox <mailto:karel.derudder@publiq.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.dominionexperts.be/>;
-      foaf:name "Dominion Experts"
-    ];
-    foaf:firstName "Sammey";
-    foaf:lastName "De Mulder";
-    foaf:mbox <mailto:sammey.demulder@vlaanderen.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://www.circuscentrum.be/>;
-      foaf:name "Vlaams Centrum voor Circuskunsten"
-    ];
-    foaf:firstName "Anne";
-    foaf:lastName "Ceulebrouck";
-    foaf:mbox <mailto:anne@circuscentrum.be>
+    foaf:firstName "Hannes";
+    foaf:lastName "Rengle";
+    foaf:mbox <mailto:hannesrengle@defederatie.org>
   ], [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.vlaanderen.be/cjm/nl>;
       foaf:name "Departement Cultuur, Jeugd en Media"
     ];
-    foaf:firstName "Thomas";
-    foaf:lastName "Buijs";
-    foaf:mbox <mailto:thomas.buijs@vlaanderen.be>
+    foaf:firstName "Jose";
+    foaf:lastName "Rotsaert";
+    foaf:mbox <mailto:jose.rotsaert@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.kunsten.be/>;
+      foaf:name "Kunstenpunt"
+    ];
+    foaf:firstName "Tom";
+    foaf:lastName "Ruette";
+    foaf:mbox <mailto:tom.ruette@kunsten.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.ugent.be/>;
+      foaf:name "Universiteit Gent"
+    ];
+    foaf:firstName "Jessy";
+    foaf:lastName "Siongers";
+    foaf:mbox <mailto:Jessy.Siongers@UGent.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.ugent.be/>;
+      foaf:name "Universiteit Gent"
+    ];
+    foaf:firstName "Jessy";
+    foaf:lastName "Siongers";
+    foaf:mbox <mailto:Jessy.Siongers@UGent.be>
   ], [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.podiumkunsten.be/>;
       foaf:name "Sociaal Fonds voor de Podiumkunsten"
     ];
-    foaf:firstName "Maarten";
-    foaf:lastName "Bresseleers";
-    foaf:mbox <mailto:maarten@podiumkunsten.be>
+    foaf:firstName "Sam";
+    foaf:lastName "Stobbelaar";
+    foaf:mbox <mailto:sam@podiumkunsten.be>
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.cult.be/>;
-      foaf:name "Cult! netwerk cultuurhuizen"
+      foaf:homepage <https://stad.gent/nl>;
+      foaf:name "Stad Gent"
     ];
-    foaf:firstName "Fien";
-    foaf:lastName "Bracke";
-    foaf:mbox <mailto:fien@cult.be>
+    foaf:firstName "Sofie";
+    foaf:lastName "Teugels";
+    foaf:mbox <mailto:sofie.teugels@stad.gent>
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://ambrassade.be/nl>;
-      foaf:name "De Ambrassade"
+      foaf:homepage <https://stad.gent/nl>;
+      foaf:name "Stad Gent"
     ];
-    foaf:firstName "Peter";
-    foaf:lastName "Bosschaert";
-    foaf:mbox <mailto:peter.bosschaert@ambrassade.be>
+    foaf:firstName "Olivier ";
+    foaf:lastName "Van D'huynslager";
+    foaf:mbox <mailto:olivier.vandhuynslager@stad.gent>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.ksz-bcss.fgov.be/nl>;
+      foaf:name "Kruispuntbank van de Sociale Zekerheid"
+    ];
+    foaf:firstName "Lies";
+    foaf:lastName "Vandecasteele";
+    foaf:mbox <mailto:lies.vandecasteele@ksz-bcss.fgov.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://redpencil.io/>;
+      foaf:name "Redpencil"
+    ];
+    foaf:firstName "Niels";
+    foaf:lastName "Vandekeybus";
+    foaf:mbox <mailto:niels.vandekeybus@redpencil.io>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.cultuurconnect.be/>;
+      foaf:name "Cultuurconnect"
+    ];
+    foaf:firstName "Steven";
+    foaf:lastName "Vandenoortgaete";
+    foaf:mbox <mailto:steven.vandenoortgaete@cultuurconnect.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.cultuurconnect.be/>;
+      foaf:name "Cultuurconnect"
+    ];
+    foaf:firstName "Ellen";
+    foaf:lastName "Vanmaele";
+    foaf:mbox <mailto:ellen.vanmaele@cultuurconnect.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.ugent.be/>;
+      foaf:name "Universiteit Gent"
+    ];
+    foaf:firstName "Melanie ";
+    foaf:lastName "Verstraete";
+    foaf:mbox <mailto:melanie.verstraete@ugent.be>
   ], [
     a foaf:Person;
     schema:affiliation [
       foaf:homepage <https://www.publiq.be/>;
       foaf:name "publiq"
     ];
-    foaf:firstName "Frederik";
-    foaf:lastName "Bastiaensen";
-    foaf:mbox <mailto:frederik@publiq.be>
+    foaf:firstName "Stan";
+    foaf:lastName "Vertessen";
+    foaf:mbox <mailto:stan@publiq.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://toerismevlaanderen.be/nl>;
+      foaf:name "Toerisme Vlaanderen"
+    ];
+    foaf:firstName "Sofie";
+    foaf:lastName "Wauters";
+    foaf:mbox <mailto:sofie.wauters@toerismevlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://faro.be/>;
+      foaf:name "FARO"
+    ];
+    foaf:firstName "Bram";
+    foaf:lastName "Wiercx";
+    foaf:mbox <mailto:bram.wiercx@faro.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://vlaamsekunstcollectie.be/>;
+      foaf:name "Vlaamse Kunstcollectie"
+    ];
+    foaf:firstName "Rob";
+    foaf:lastName "Wyse";
+    foaf:mbox <mailto:rob.wyse@vlaamsekunstcollectie.be>
   ];
   dc:issued "TODO";
   dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
@@ -1351,47 +1370,38 @@ schemas:valueAddedTaxIncluded a rdf:Property;
     crm:E7_Activity,
     skos:Concept,
     schemas:PriceSpecification,
-    <https://www.w3.org/ns/prov#atLocation>,
-    <https://www.w3.org/ns/adms#identifier>,
-    <https://www.w3.org/2000/01/rdf-schema#label>,
-    schemas:valueAddedTaxIncluded,
-    schemas:typicalAgeRange,
-    schemas:price,
-    schemas:inLanguage,
-    schemas:eligibleQuantity,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#transactie>,
-    <https://data.vlaanderen.be/ns/cultuurparticipatie#geefrechtop>,
-    <https://cidoc-crm.org/html/cidoc_crm_v7.1.2.html#P161>,
-    <https://cidoc-crm.org/html/cidoc_crm_v7.1.2.html#P160>,
-    skos:altLabel,
-    crm:P32_used_general_technique,
-    schema:contactPoint,
-    dc:type,
-    dc:title,
-    dc:format,
-    dc:description,
-    <http://data.europa.eu/m8g/hasPreviousEvent>,
-    <http://data.europa.eu/m8g/hasNextEvent>,
+    <http://cidoc-crm.org/cidoc-crm/P14_carried_out_by>,
     <http://cidoc-crm.org/cidoc-crm/P4_has_time-span>,
-    <http://cidoc-crm.org/cidoc-crm/P14_carried_out_by>;
+    <http://data.europa.eu/m8g/hasNextEvent>,
+    <http://data.europa.eu/m8g/hasPreviousEvent>,
+    dc:description,
+    dc:format,
+    dc:title,
+    dc:type,
+    schema:contactPoint,
+    crm:P32_used_general_technique,
+    skos:altLabel,
+    <https://cidoc-crm.org/html/cidoc_crm_v7.1.2.html#P160>,
+    <https://cidoc-crm.org/html/cidoc_crm_v7.1.2.html#P161>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#geefrechtop>,
+    <https://data.vlaanderen.be/ns/cultuurparticipatie#transactie>,
+    schemas:eligibleQuantity,
+    schemas:inLanguage,
+    schemas:price,
+    schemas:typicalAgeRange,
+    schemas:valueAddedTaxIncluded,
+    <https://www.w3.org/2000/01/rdf-schema#label>,
+    <https://www.w3.org/ns/adms#identifier>,
+    <https://www.w3.org/ns/prov#atLocation>;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.vlaanderen.be/intern>;
-      foaf:name "Digitaal Vlaanderen"
+      foaf:homepage <https://www.pwc.be/>;
+      foaf:name "PwC"
     ];
-    foaf:firstName "Geert";
-    foaf:lastName "Thijs";
-    foaf:mbox <mailto:geert.thijs@vlaanderen.be>
-  ], [
-    a foaf:Person;
-    schema:affiliation [
-      foaf:homepage <https://normalizedsystems.org/>;
-      foaf:name "NSX"
-    ];
-    foaf:firstName "Michael";
-    foaf:lastName "Mampaey";
-    foaf:mbox <mailto:michael.mampaey@nsx.normalizedsystems.org>
+    foaf:firstName "Jitse";
+    foaf:lastName "De Cock";
+    foaf:mbox <mailto:jitse.c.cock@pwc.com>
   ], [
     a foaf:Person;
     schema:affiliation [
@@ -1404,12 +1414,21 @@ schemas:valueAddedTaxIncluded a rdf:Property;
   ], [
     a foaf:Person;
     schema:affiliation [
-      foaf:homepage <https://www.pwc.be/>;
-      foaf:name "PwC"
+      foaf:homepage <https://normalizedsystems.org/>;
+      foaf:name "NSX"
     ];
-    foaf:firstName "Jitse";
-    foaf:lastName "De Cock";
-    foaf:mbox <mailto:jitse.c.cock@pwc.com>
+    foaf:firstName "Michael";
+    foaf:lastName "Mampaey";
+    foaf:mbox <mailto:michael.mampaey@nsx.normalizedsystems.org>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/intern>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Geert";
+    foaf:lastName "Thijs";
+    foaf:mbox <mailto:geert.thijs@vlaanderen.be>
   ];
   foaf:maker [
     a foaf:Person;
