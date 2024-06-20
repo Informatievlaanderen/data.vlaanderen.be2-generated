@@ -472,6 +472,19 @@
       ]
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Geassocieerde Oorzaak"
+      },
+      "definition": {
+        "nl": "De geassocieerde oorzaak van een overlijden dat onrechtstreeks mee tot het Overlijden heeft geleid."
+      },
+      "parents": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak"
+      ]
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslagOverlijden",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
@@ -624,6 +637,11 @@
   ],
   "externals": [
     {
+      "name": {},
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
+      "@type": "rdfs:Class"
+    },
+    {
       "name": {
         "nl": "StoffelijkeRestType"
       },
@@ -688,7 +706,7 @@
     },
     {
       "name": {
-        "nl": "TypeZorg"
+        "nl": "ProcedureZorgType"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -776,9 +794,44 @@
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "StatusMedischVerslag"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "StatusZwangerschap"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "MaatregelMedischVerslag"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
     }
   ],
   "properties": [
+    {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#gelinkt aan",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "gelinkt aan"
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
+      ],
+      "generalization": []
+    },
     {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking.wordtBepaaldDoor",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
@@ -1256,6 +1309,23 @@
       "generalization": []
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslagOverlijden",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "maatregel"
+      },
+      "definition": {
+        "nl": "De maatregel die moet genomen worden als gevolg van het risico."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslagOverlijden"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslag.risico",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -1381,7 +1451,7 @@
         "nl": "hoofdoorzaak"
       },
       "definition": {
-        "nl": "De voornaamste oorzaak die het Overlijden van een Persoon teweegbracht."
+        "nl": "Beschrijving van de oorzaak die het Overlijden van een Persoon teweegbracht."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak"
@@ -1392,19 +1462,36 @@
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.geassocieerdeOorzaak",
-      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.duur",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "nl": "geassocieerde oorzaak"
+        "nl": "duur"
       },
       "definition": {
-        "nl": "De oorzaken die niet rechtstreeks tot het Overlijden hebben geleid maar hierbij wel hebben toegedragen."
+        "nl": "De afbakening in tijd van de Doodsoorzaak."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak"
       ],
       "range": [
-        "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        "http://data.europa.eu/m8g/PeriodOfTime"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Bewijs.datum",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "datum"
+      },
+      "definition": {
+        "nl": "Het moment in tijd wanneer het Bewijs werd geproduceerd."
+      },
+      "domain": [
+        "http://data.europa.eu/m8g/Evidence"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
       "generalization": []
     }

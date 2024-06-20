@@ -66,12 +66,26 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
   rdfs:range <https://data.vlaanderen.be/ns/gezondheidstoestand#AssistentieBevalling> .
 
+<https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling.heeftBevalling> a owl:ObjectProperty;
+  rdfs:label "heeft bevalling"@nl;
+  rdfs:comment "Verwijst naar de bevallingsgegevens van de Persoon."@nl;
+  rdfs:domain <http://www.w3.org/ns/person#Person>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
+  rdfs:range <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling> .
+
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling.heeftBevallingstoestand> a owl:ObjectProperty;
   rdfs:label "heeft bevallingstoestand"@nl;
   rdfs:comment "De Bevallingstoestand die bij de Bevalling hoort van een Persoon."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
   rdfs:range <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand> .
+
+<https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling.volgtOp> a owl:ObjectProperty;
+  rdfs:label "volgt op"@nl;
+  rdfs:comment "De Bevalling volgt op een Zwangerschap."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschap>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
+  rdfs:range <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling> .
 
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand.foetaleBewaking> a owl:ObjectProperty;
   rdfs:label "foetale bewaking"@nl;
@@ -94,9 +108,9 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
   rdfs:range schemas:QuantitativeValue .
 
-<https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand.indicatieKeizersnede> a owl:ObjectProperty;
-  rdfs:label "indicatie keizersnede"@nl;
-  rdfs:comment "De medische reden of een situatie waarin een keizersnede wordt aanbevolen of noodzakelijk geacht voor de Geboorte van een baby."@nl;
+<https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand.indicatieAssistentie> a owl:ObjectProperty;
+  rdfs:label "indicatie assistentie"@nl;
+  rdfs:comment "De medische reden of een situatie waarin een assistentie wordt aanbevolen of noodzakelijk geacht voor de Geboorte van een baby."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
   rdfs:range skos:Concept .
@@ -194,12 +208,10 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
   rdfs:range <https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake> .
 
-<https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand.zorgen> a owl:ObjectProperty;
-  rdfs:label "zorgen"@nl;
-  rdfs:comment "Tijdens de neonatale periode kunnen verschillende types zorg verleend worden zowel aan de baby als aan de Persoon die de baby ter wereld gebracht heeft."@nl;
+<https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand.rang> a rdf:Property;
+  rdfs:label "rang"@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand>;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
-  rdfs:range skos:Concept .
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand> .
 
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.aandoening> a owl:ObjectProperty;
   rdfs:label "aandoening"@nl;
@@ -221,6 +233,13 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
   rdfs:range <http://purl.org/vocab/bio/0.1/Event> .
+
+<https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.zorg> a owl:ObjectProperty;
+  rdfs:label "zorg"@nl;
+  rdfs:comment "Tijdens een periode kunnen verschillende types zorg verleend worden zowel aan een Persoon."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
+  rdfs:range <http://purl.org/vocab/cpsv#Rule> .
 
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondsheidstoestand.gewicht> a owl:ObjectProperty;
   rdfs:label "gewicht"@nl;
@@ -286,6 +305,20 @@ skos:Concept a rdfs:Class;
   rdfs:comment "De informatie die wordt bepaald als gevolg van het maken van de observatie, indien de informatie een eenvoudige waarde heeft."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand> .
 
+<https://data.vlaanderen.be/ns/gezondheidstoestand#Persoon.heeftZwangerschap> a owl:ObjectProperty;
+  rdfs:label "heeft zwangerschap"@nl;
+  rdfs:comment "Een Persoon heeft een Zwangerschap"@nl;
+  rdfs:domain <http://www.w3.org/ns/person#Person>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
+  rdfs:range <https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschap> .
+
+<https://data.vlaanderen.be/ns/gezondheidstoestand#Persoon.toestandVan> a owl:ObjectProperty;
+  rdfs:label "toestand van"@nl;
+  rdfs:comment "De Medische Toestand van een Persoon."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
+  rdfs:range <http://www.w3.org/ns/person#Person> .
+
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschap.heeftFoetus> a owl:ObjectProperty;
   rdfs:label "heeft foetus"@nl;
   rdfs:comment "Een Zwangerschap heeft een of meerdere Foetussen."@nl;
@@ -299,6 +332,13 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschap>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
   rdfs:range <https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschapstoestand> .
+
+<https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschap.wordtGevolgdDoor> a owl:ObjectProperty;
+  rdfs:label "wordt gevolgd door"@nl;
+  rdfs:comment "De Zwangerschap wordt gevolgd door een Bevalling."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
+  rdfs:range <https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschap> .
 
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschapstoestand.duur> a owl:ObjectProperty;
   rdfs:label "duur"@nl;
@@ -328,6 +368,14 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
   rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
 
+<https://data.vlaanderen.be/ns/gezondheidstoestand#statusZwangerschap> a owl:ObjectProperty;
+  rdfs:label "status zwangerschap"@nl;
+  rdfs:comment "Gesimplificeerde informatie rond de status van de Zwangerschapstoestand."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand>,
+    <https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschapstoestand>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
+  rdfs:range skos:Concept .
+
 <https://data.vlaanderen.be/ns/gezondheidstoestand#wordtGeobserveerdDoor> a owl:ObjectProperty;
   rdfs:label "wordt geobserveerd door"@nl;
   rdfs:comment "Wie was verantwoordelijk voor het vaststellen van de waargenomen waarde als \"waar\"?"@nl;
@@ -343,6 +391,9 @@ dc:type a rdf:Property;
   rdfs:comment "Proces waarbij de baby gevoed wordt met melk na de Bevalling."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
   rdfs:subClassOf <https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake> .
+
+<https://hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport.status> a rdf:Property;
+  rdfs:label "status"@nl .
 
 <https://hl7.org/fhir/medication-definitions.html#Medication.batch> a rdf:Property;
   rdfs:label "batch"@nl .
@@ -395,12 +446,6 @@ dc:type a rdf:Property;
 <https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake.performer> a rdf:Property;
   rdfs:label "uitvoerder"@nl .
 
-<https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling> a owl:Class;
-  rdfs:label "Bevalling"@nl;
-  rdfs:comment "Het proces waarbij een baby de baarmoeder van de Persoon verlaat en de buitenwereld binnengaat. De Bevalling leidt tot de Geboorte."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
-  rdfs:subClassOf <http://fixme.com#Persoonsgebeurtenis> .
-
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Apgarscore> a owl:Class;
   rdfs:label "Apgarscore"@nl;
   rdfs:comment "Snelle beoordeling die onmiddellijk na de geboorte wordt uitgevoerd om de fysieke conditie van een pasgeborene te evalueren."@nl;
@@ -424,23 +469,29 @@ dc:type a rdf:Property;
   rdfs:comment "De bevruchting van de eicel door een zaadcel, het begin van de Zwangerschap."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand> .
 
-<https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschap> a owl:Class;
-  rdfs:label "Zwangerschap"@nl;
-  rdfs:comment "De staat waarin een Persoon een of meerdere embryos of foetussen draagt in de baarmoeder, wat leidt tot de ontwikkeling van een nieuw natuurlijk Persoon."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
-  rdfs:subClassOf <http://fixme.com#Persoonsgebeurtenis> .
-
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschapstoestand> a owl:Class;
   rdfs:label "Zwangerschapstoestand"@nl;
   rdfs:comment "De medische toestand bij een Zwangerschap van de Persoon"@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand> .
 
+<https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling> a owl:Class;
+  rdfs:label "Bevalling"@nl;
+  rdfs:comment "Het proces waarbij een baby de baarmoeder van de Persoon verlaat en de buitenwereld binnengaat. De Bevalling leidt tot de Geboorte."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
+  rdfs:subClassOf <http://fixme.com#Persoonsgebeurtenis> .
+
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand> a owl:Class;
   rdfs:label "Geboortetoestand"@nl;
   rdfs:comment "De situatie of conditie rondom de Geboorte van een Persoon. Dit kan verschillende aspecten omvatten, zoals de omstandigheden van de geboorte, de gezondheidstoestand, de locatie, en andere relevante factoren."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand> .
+
+<https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschap> a owl:Class;
+  rdfs:label "Zwangerschap"@nl;
+  rdfs:comment "De staat waarin een Persoon een of meerdere embryos of foetussen draagt in de baarmoeder, wat leidt tot de ontwikkeling van een nieuw natuurlijk Persoon."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/gezondheidstoestand>;
+  rdfs:subClassOf <http://fixme.com#Persoonsgebeurtenis> .
 
 <https://data.vlaanderen.be/ns/gezondheidstoestand#Foetus> a owl:Class;
   rdfs:label "Foetus"@nl;
@@ -751,6 +802,7 @@ dc:type a rdf:Property;
     <https://hl7.org/fhir/medication-definitions.html#Medication.identifier>,
     <https://hl7.org/fhir/medication-definitions.html#Medication.doseForm>,
     <https://hl7.org/fhir/medication-definitions.html#Medication.batch>,
+    <https://hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport.status>,
     dc:type;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;

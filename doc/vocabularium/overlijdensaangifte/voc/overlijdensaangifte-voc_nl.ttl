@@ -1,3 +1,4 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -7,6 +8,8 @@
 @prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+crm:E52_Time-Span a rdfs:Class .
 
 skos:Concept a rdfs:Class;
   rdfs:label "StoffelijkeRestType"@nl,
@@ -18,7 +21,7 @@ skos:Concept a rdfs:Class;
     "ObservatieCategorie"@nl,
     "ICD"@nl,
     "AardOverlijden"@nl,
-    "TypeZorg"@nl,
+    "ProcedureZorgType"@nl,
     "MedischVerslagOverlijdenType"@nl,
     "Conceptietechniek"@nl,
     "DoodgeboorteType"@nl,
@@ -30,7 +33,17 @@ skos:Concept a rdfs:Class;
     "FoetaleBewakingType"@nl,
     "IndicatieKeizersnedeType"@nl,
     "ArtsType"@nl,
-    "VoedingsinnameItem"@nl .
+    "VoedingsinnameItem"@nl,
+    "StatusMedischVerslag"@nl,
+    "StatusZwangerschap"@nl,
+    "MaatregelMedischVerslag"@nl .
+
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Bewijs.datum> a owl:DatatypeProperty;
+  rdfs:label "datum"@nl;
+  rdfs:comment "Het moment in tijd wanneer het Bewijs werd geproduceerd."@nl;
+  rdfs:domain <http://data.europa.eu/m8g/Evidence>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
+  rdfs:range xsd:dateTime .
 
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Crematie> a owl:Class;
   rdfs:label "Crematie"@nl;
@@ -44,16 +57,16 @@ skos:Concept a rdfs:Class;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
   rdfs:subClassOf <https://data.vlaanderen.be/ns/persoon#Overlijden> .
 
-<https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.geassocieerdeOorzaak> a owl:DatatypeProperty;
-  rdfs:label "geassocieerde oorzaak"@nl;
-  rdfs:comment "De oorzaken die niet rechtstreeks tot het Overlijden hebben geleid maar hierbij wel hebben toegedragen."@nl;
+<https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.duur> a owl:ObjectProperty;
+  rdfs:label "duur"@nl;
+  rdfs:comment "De afbakening in tijd van de Doodsoorzaak."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
-  rdfs:range rdf:langString .
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
 
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.hoofdoorzaak> a owl:DatatypeProperty;
   rdfs:label "hoofdoorzaak"@nl;
-  rdfs:comment "De voornaamste oorzaak die het Overlijden van een Persoon teweegbracht."@nl;
+  rdfs:comment "Beschrijving van de oorzaak die het Overlijden van een Persoon teweegbracht."@nl;
   rdfs:domain <https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
   rdfs:range rdf:langString .
@@ -92,6 +105,12 @@ skos:Concept a rdfs:Class;
   rdfs:domain <https://data.vlaanderen.be/ns/overlijdensaangifte#FoetaalOverlijden>;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
   rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak> a owl:Class;
+  rdfs:label "Geassocieerde Oorzaak"@nl;
+  rdfs:comment "De geassocieerde oorzaak van een overlijden dat onrechtstreeks mee tot het Overlijden heeft geleid."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak> .
 
 <https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslag.bezwaar> a owl:ObjectProperty;
   rdfs:label "bezwaar"@nl;
@@ -323,12 +342,6 @@ dc:type a rdf:Property;
   rdfs:comment "Orgaandonatie is het proces waarbij een Persoon toestemming geeft om een orgaan op legale wijze te verwijderen en te transplanteren naar een andere Persoon."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte> .
 
-<https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslagOverlijden> a owl:Class;
-  rdfs:label "Medisch Verslag Overlijden"@nl;
-  rdfs:comment "Specifiek Medisch Verslag opgesteld door een Arts om de details en omstandigheden van het Overlijden van een Persoon vast te leggen."@nl;
-  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
-  rdfs:subClassOf <https://www.hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport> .
-
 <https://data.vlaanderen.be/ns/overlijdensaangifte#OverlijdensfhandelingOutput> a owl:Class;
   rdfs:label "Overlijdensafhandeling Output"@nl;
   rdfs:comment "De Output van het afhandelen van administratieve taken, procedures en formaliteiten rond het Overlijden van een Persoon."@nl;
@@ -341,6 +354,17 @@ dc:type a rdf:Property;
   rdfs:comment "Een professioneel Persoon of organisatie die gespecialiseerd is in het regelen en begeleiden van uitvaarten."@nl;
   rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
   rdfs:subClassOf <http://fixme.com#Agent> .
+
+<https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslagOverlijden> a owl:Class,
+    owl:ObjectProperty;
+  rdfs:label "Medisch Verslag Overlijden"@nl,
+    "maatregel"@nl;
+  rdfs:comment "Specifiek Medisch Verslag opgesteld door een Arts om de details en omstandigheden van het Overlijden van een Persoon vast te leggen."@nl,
+    "De maatregel die moet genomen worden als gevolg van het risico."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslagOverlijden>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/overlijdensaangifte>;
+  rdfs:range skos:Concept;
+  rdfs:subClassOf <https://www.hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport> .
 
 <https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand> a owl:Class;
   rdfs:label "Overlijdenstoestand"@nl;
@@ -656,7 +680,8 @@ dc:type a rdf:Property;
     foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
     foaf:name "Data Vlaanderen"
   ];
-  rdfs:seeAlso skos:Concept,
+  rdfs:seeAlso crm:E52_Time-Span,
+    skos:Concept,
     dc:type;
   <http://www.w3.org/2001/02pd/rec54#editor> [
     a foaf:Person;
