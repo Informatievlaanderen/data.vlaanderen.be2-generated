@@ -128,6 +128,15 @@
     {
       "@type": "foaf:Person",
       "affiliation": {
+        "foaf:homepage": "https://www.bredene.be/",
+        "foaf:name": "Gemeente Bredene"
+      },
+      "foaf:firstName": "Yasmina",
+      "foaf:lastName": "Youmni"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
         "foaf:homepage": "http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4",
         "foaf:name": "Stad Aalst"
       },
@@ -151,6 +160,15 @@
       },
       "foaf:firstName": "Maarten",
       "foaf:lastName": "Van der Biest"
+    },
+    {
+      "@type": "foaf:Person",
+      "affiliation": {
+        "foaf:homepage": "https://www.wingene.be/",
+        "foaf:name": "Gemeente Wingene"
+      },
+      "foaf:firstName": "Annelies",
+      "foaf:lastName": "Van Tomme"
     },
     {
       "@type": "foaf:Person",
@@ -400,8 +418,8 @@
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "issued": "TODO",
   "navigation": {},
-  "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-  "publication-date": "2024-02-01",
+  "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard",
+  "publication-date": "2024-05-23",
   "classes": [
     {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Crematie",
@@ -454,6 +472,19 @@
       ]
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Geassocieerde Oorzaak"
+      },
+      "definition": {
+        "nl": "De geassocieerde oorzaak van een overlijden dat onrechtstreeks mee tot het Overlijden heeft geleid."
+      },
+      "parents": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak"
+      ]
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslagOverlijden",
       "@type": "http://www.w3.org/2002/07/owl#Class",
       "label": {
@@ -465,6 +496,17 @@
       "parents": [
         "https://www.hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport"
       ]
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval",
+      "@type": "http://www.w3.org/2002/07/owl#Class",
+      "label": {
+        "nl": "Ongeval"
+      },
+      "definition": {
+        "nl": "Een plotseling optredende, ongewilde en onvoorziene gebeurtenis, waarbij de inwerking van een externe oorzaak leidt tot fysiek letsel en waarbij geen sprake is van opzettelijk geweld of voedselvergiftiging."
+      },
+      "parents": []
     },
     {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Orgaandonatie",
@@ -607,6 +649,13 @@
   "externals": [
     {
       "name": {
+        "nl": "Tijdspanne"
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
         "nl": "StoffelijkeRestType"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
@@ -670,7 +719,7 @@
     },
     {
       "name": {
-        "nl": "TypeZorg"
+        "nl": "ProcedureZorgType"
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
@@ -751,9 +800,59 @@
       },
       "@id": "http://www.w3.org/2004/02/skos/core#Concept",
       "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "VoedingsinnameItem"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "StatusMedischVerslag"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "StatusZwangerschap"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {
+        "nl": "MaatregelMedischVerslag"
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
+    },
+    {
+      "name": {},
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "rdfs:Class"
     }
   ],
   "properties": [
+    {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#gelinkt aan",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "gelinkt aan"
+      },
+      "definition": {
+        "nl": "De Geassocieerde oorzaak gelinkt aan een oorzaak."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
+      ],
+      "generalization": []
+    },
     {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking.wordtBepaaldDoor",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
@@ -1036,10 +1135,10 @@
         "nl": "Stoffelijke Rest wordt geproduceerd door de Stoffelijke Restverwerking."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRestverwerking"
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest"
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRestverwerking"
       ],
       "generalization": []
     },
@@ -1070,10 +1169,10 @@
         "nl": "Stoffelijke Restverwerking produceert een Stoffelijke Rest."
       },
       "domain": [
-        "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest"
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRestverwerking"
       ],
       "range": [
-        "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRestverwerking"
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest"
       ],
       "generalization": []
     },
@@ -1163,6 +1262,23 @@
       "generalization": []
     },
     {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.veroorzaaktDoor",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "veroorzaakt door"
+      },
+      "definition": {
+        "nl": "De Overlijdenstoestand kan veroorzaakt worden door een Ongeval."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand"
+      ],
+      "generalization": []
+    },
+    {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.doodsoorzaak",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
@@ -1224,6 +1340,74 @@
       },
       "domain": [
         "https://data.vlaanderen.be/ns/overlijdensaangifte#OverlijdensfhandelingOutput"
+      ],
+      "range": [
+        "http://www.w3.org/2004/02/skos/core#Concept"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.veroorzaakt",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "veroorzaakt"
+      },
+      "definition": {
+        "nl": "Het ongeval veroorzaakt de Overlijdenstoestand."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand"
+      ],
+      "range": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.omstandigheden",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "omstandigheden"
+      },
+      "definition": {
+        "nl": "De beschrijving van specifieke zaken rond het Ongeval."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
+      ],
+      "range": [
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval.locatie",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "locatie"
+      },
+      "definition": {
+        "nl": "De locatie van het Ongeval."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
+      ],
+      "range": [
+        "http://www.w3.org/ns/prov#Location"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslagOverlijden",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "label": {
+        "nl": "maatregel"
+      },
+      "definition": {
+        "nl": "De maatregel die moet genomen worden als gevolg van het risico."
+      },
+      "domain": [
+        "https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslagOverlijden"
       ],
       "range": [
         "http://www.w3.org/2004/02/skos/core#Concept"
@@ -1351,35 +1535,52 @@
     },
     {
       "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.hoofdoorzaak",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
       "label": {
         "nl": "hoofdoorzaak"
       },
       "definition": {
-        "nl": "De voornaamste oorzaak die het Overlijden van een Persoon teweegbracht."
+        "nl": "Beschrijving van de oorzaak die het Overlijden van een Persoon teweegbracht."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak"
       ],
       "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
       ],
       "generalization": []
     },
     {
-      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.geassocieerdeOorzaak",
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.duur",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "label": {
-        "nl": "geassocieerde oorzaak"
+        "nl": "duur"
       },
       "definition": {
-        "nl": "De oorzaken die niet rechtstreeks tot het Overlijden hebben geleid maar hierbij wel hebben toegedragen."
+        "nl": "De afbakening in tijd van de Doodsoorzaak."
       },
       "domain": [
         "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak"
       ],
       "range": [
-        "http://www.w3.org/2004/02/skos/core#Concept"
+        "http://data.europa.eu/m8g/PeriodOfTime"
+      ],
+      "generalization": []
+    },
+    {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Bewijs.datum",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "label": {
+        "nl": "datum"
+      },
+      "definition": {
+        "nl": "Het moment in tijd wanneer het Bewijs werd geproduceerd."
+      },
+      "domain": [
+        "http://data.europa.eu/m8g/Evidence"
+      ],
+      "range": [
+        "http://www.w3.org/2001/XMLSchema#dateTime"
       ],
       "generalization": []
     }
