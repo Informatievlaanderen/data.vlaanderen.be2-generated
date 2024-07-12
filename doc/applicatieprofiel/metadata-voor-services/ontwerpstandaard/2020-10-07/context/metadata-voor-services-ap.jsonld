@@ -1,481 +1,524 @@
 {
   "@context": {
-    "Agent": "http://purl.org/dc/terms/Agent",
-    "Agent.naam": {
-      "@container": "@set",
-      "@id": "http://xmlns.com/foaf/0.1/name",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    "Agent": {
+      "@context": {
+        "naam": {
+          "@container": "@set",
+          "@id": "http://xmlns.com/foaf/0.1/name",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://purl.org/dc/terms/Agent"
     },
-    "Catalogus": "http://www.w3.org/ns/dcat#Catalog",
-    "Catalogus.alternatieveIdentificator": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "@id"
+    "Catalogus": {
+      "@context": {
+        "alternatieveIdentificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "@id"
+        },
+        "beschrijving": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "contactinformatie": {
+          "@id": "http://www.w3.org/ns/dcat#contactPoint",
+          "@type": "@id"
+        },
+        "heeftDataService": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#service",
+          "@type": "@id"
+        },
+        "heeftDataset": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#dataset",
+          "@type": "@id"
+        },
+        "identificator": {
+          "@id": "http://purl.org/dc/terms/identifier"
+        },
+        "licentie": {
+          "@id": "http://purl.org/dc/terms/license",
+          "@type": "@id"
+        },
+        "record": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#record",
+          "@type": "@id"
+        },
+        "titel": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "uitgever": {
+          "@id": "http://purl.org/dc/terms/publisher",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://www.w3.org/ns/dcat#Catalog"
     },
-    "Catalogus.beschrijving": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/description",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    "CatalogusRecord": {
+      "@context": {
+        "aanmaakdatum": {
+          "@id": "http://purl.org/dc/terms/issued",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "alternatieveIdentificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "@id"
+        },
+        "bronMetadataRecordLandingspagina": {
+          "@id": "https://data.vlaanderen.be/ns/metadata-dcat#bronMetadataRecordLandingspagina",
+          "@type": "@id"
+        },
+        "bronMetadatarecord": {
+          "@id": "http://purl.org/dc/terms/source",
+          "@type": "@id"
+        },
+        "conform": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/conformsTo",
+          "@type": "@id"
+        },
+        "hoofdonderwerp": {
+          "@id": "http://xmlns.com/foaf/0.1/primaryTopic",
+          "@type": "@id"
+        },
+        "identificator": {
+          "@id": "http://purl.org/dc/terms/identifier"
+        },
+        "titel": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "wijzigingsdatum": {
+          "@id": "http://purl.org/dc/terms/modified",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "http://www.w3.org/ns/dcat#CatalogRecord"
     },
-    "Catalogus.contactinformatie": {
-      "@id": "http://www.w3.org/ns/dcat#contactPoint",
-      "@type": "@id"
+    "CatalogusResource": {
+      "@context": {
+        "relatie": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/relation",
+          "@type": "@id"
+        },
+        "uitgever": {
+          "@id": "http://purl.org/dc/terms/publisher",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://www.w3.org/ns/dcat#Resource"
     },
-    "Catalogus.heeftDataService": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#service",
-      "@type": "@id"
-    },
-    "Catalogus.heeftDataset": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#dataset",
-      "@type": "@id"
-    },
-    "Catalogus.identificator": {
-      "@id": "http://purl.org/dc/terms/identifier",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "Catalogus.licentie": {
-      "@id": "http://purl.org/dc/terms/license",
-      "@type": "@id"
-    },
-    "Catalogus.record": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#record",
-      "@type": "@id"
-    },
-    "Catalogus.titel": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Catalogus.uitgever": {
-      "@id": "http://purl.org/dc/terms/publisher",
-      "@type": "@id"
-    },
-    "CatalogusRecord": "http://www.w3.org/ns/dcat#CatalogRecord",
-    "CatalogusRecord.aanmaakdatum": {
-      "@id": "http://purl.org/dc/terms/issued",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "CatalogusRecord.alternatieveIdentificator": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "@id"
-    },
-    "CatalogusRecord.bronMetadataRecordLandingspagina": {
-      "@id": "https://data.vlaanderen.be/ns/metadata-dcat#bronMetadataRecordLandingspagina",
-      "@type": "@id"
-    },
-    "CatalogusRecord.bronMetadatarecord": {
-      "@id": "http://purl.org/dc/terms/source",
-      "@type": "@id"
-    },
-    "CatalogusRecord.conform": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/conformsTo",
-      "@type": "@id"
-    },
-    "CatalogusRecord.hoofdonderwerp": {
-      "@id": "http://xmlns.com/foaf/0.1/primaryTopic",
-      "@type": "@id"
-    },
-    "CatalogusRecord.identificator": {
-      "@id": "http://purl.org/dc/terms/identifier",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "CatalogusRecord.titel": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "CatalogusRecord.wijzigingsdatum": {
-      "@id": "http://purl.org/dc/terms/modified",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "CatalogusResource": "http://www.w3.org/ns/dcat#Resource",
-    "CatalogusResource.relatie": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/relation",
-      "@type": "@id"
-    },
-    "CatalogusResource.uitgever": {
-      "@id": "http://purl.org/dc/terms/publisher",
-      "@type": "@id"
-    },
-    "Contactinfo": "http://www.w3.org/2006/vcard/ns#Kind",
-    "Contactinfo.contactpagina": {
-      "@id": "http://xmlns.com/foaf/0.1/page",
-      "@type": "@id"
-    },
-    "Contactinfo.eMail": {
-      "@id": "http://www.w3.org/2006/vcard/ns#hasEmail",
-      "@type": "@id"
+    "Contactinfo": {
+      "@context": {
+        "contactpagina": {
+          "@id": "http://xmlns.com/foaf/0.1/page",
+          "@type": "@id"
+        },
+        "eMail": {
+          "@id": "http://www.w3.org/2006/vcard/ns#hasEmail",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://www.w3.org/2006/vcard/ns#Kind"
     },
     "Contactpunt": "http://schema.org/ContactPoint",
-    "Dataservice": "http://www.w3.org/ns/dcat#DataService",
-    "Dataservice.alternatieveIdentificator": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "@id"
+    "Dataservice": {
+      "@context": {
+        "alternatieveIdentificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "@id"
+        },
+        "beschrijving": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "biedtInformatieAanOver": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#servesdataset",
+          "@type": "@id"
+        },
+        "conformAanProtocol": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/conformsTo",
+          "@type": "@id"
+        },
+        "contactinformatie": {
+          "@id": "http://www.w3.org/ns/dcat#contactPoint",
+          "@type": "@id"
+        },
+        "creatiedatum": {
+          "@id": "http://purl.org/dc/terms/created",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "endpointUrl": {
+          "@id": "http://www.w3.org/ns/dcat#endpointURL",
+          "@type": "@id"
+        },
+        "endpointbeschrijving": {
+          "@id": "http://www.w3.org/ns/dcat#endpointDescription",
+          "@type": "@id"
+        },
+        "identificator": {
+          "@id": "http://purl.org/dc/terms/identifier"
+        },
+        "landingspagina": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#landingPage",
+          "@type": "@id"
+        },
+        "landingspaginaVoorAuthenticatie": {
+          "@id": "https://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorAuthenticatie",
+          "@type": "@id"
+        },
+        "landingspaginaVoorGebruiksinformatie": {
+          "@id": "https://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorGebruiksinformatie",
+          "@type": "@id"
+        },
+        "landingspaginaVoorStatusinformatie": {
+          "@id": "https://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorStatusinformatie",
+          "@type": "@id"
+        },
+        "levensfase": {
+          "@id": "https://data.vlaanderen.be/ns/metadata-dcat#levensfase",
+          "@type": "@id"
+        },
+        "licentie": {
+          "@id": "http://purl.org/dc/terms/license",
+          "@type": "@id"
+        },
+        "ontwikkelingstoestand": {
+          "@id": "https://data.vlaanderen.be/ns/metadata-dcat#ontwikkelingstoestand",
+          "@type": "@id"
+        },
+        "publicatiedatum": {
+          "@id": "http://purl.org/dc/terms/issued",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "rechten": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/rights",
+          "@type": "@id"
+        },
+        "statuut": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/metadata-dcat#statuut",
+          "@type": "@id"
+        },
+        "thema": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#theme",
+          "@type": "@id"
+        },
+        "titel": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "toegankelijkheid": {
+          "@id": "http://purl.org/dc/terms/accessRights",
+          "@type": "@id"
+        },
+        "trefwoord": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#keyword",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "versie": {
+          "@id": "http://www.w3.org/2002/07/owl#versionInfo",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "wijzigingsdatum": {
+          "@id": "http://purl.org/dc/terms/modified",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "http://www.w3.org/ns/dcat#DataService"
     },
-    "Dataservice.beschrijving": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/description",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    "Dataset": {
+      "@context": {
+        "alternatieveIdentificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "@id"
+        },
+        "beschrijving": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "conform": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/conformsTo",
+          "@type": "@id"
+        },
+        "contactinformatie": {
+          "@id": "http://www.w3.org/ns/dcat#contactPoint",
+          "@type": "@id"
+        },
+        "creatiedatum": {
+          "@id": "http://purl.org/dc/terms/created",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "distributie": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#distribution",
+          "@type": "@id"
+        },
+        "eigenaar": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/rightsHolder",
+          "@type": "@id"
+        },
+        "geografischeDekking": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/spatial",
+          "@type": "@id"
+        },
+        "herkomst": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/provenance",
+          "@type": "@id"
+        },
+        "identificator": {
+          "@id": "http://purl.org/dc/terms/identifier"
+        },
+        "landingspagina": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#landingPage",
+          "@type": "@id"
+        },
+        "publicatiedatum": {
+          "@id": "http://purl.org/dc/terms/issued",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "statuut": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/metadata-dcat#statuut",
+          "@type": "@id"
+        },
+        "thema": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#theme",
+          "@type": "@id"
+        },
+        "titel": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "toegankelijkheid": {
+          "@id": "http://purl.org/dc/terms/accessRights",
+          "@type": "@id"
+        },
+        "trefwoord": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#keyword",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "versie": {
+          "@id": "http://www.w3.org/2002/07/owl#versionInfo",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "voorbeeldweergave": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#sample",
+          "@type": "@id"
+        },
+        "wijzigingsdatum": {
+          "@id": "http://purl.org/dc/terms/modified",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "http://www.w3.org/ns/dcat#Dataset"
     },
-    "Dataservice.biedtInformatieAanOver": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#servesdataset",
-      "@type": "@id"
-    },
-    "Dataservice.conformAanProtocol": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/conformsTo",
-      "@type": "@id"
-    },
-    "Dataservice.contactinformatie": {
-      "@id": "http://www.w3.org/ns/dcat#contactPoint",
-      "@type": "@id"
-    },
-    "Dataservice.creatiedatum": {
-      "@id": "http://purl.org/dc/terms/created",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Dataservice.endpointUrl": {
-      "@id": "http://www.w3.org/ns/dcat#endpointURL",
-      "@type": "@id"
-    },
-    "Dataservice.endpointbeschrijving": {
-      "@id": "http://www.w3.org/ns/dcat#endpointDescription",
-      "@type": "@id"
-    },
-    "Dataservice.identificator": {
-      "@id": "http://purl.org/dc/terms/identifier",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "Dataservice.landingspagina": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#landingPage",
-      "@type": "@id"
-    },
-    "Dataservice.landingspaginaVoorAuthenticatie": {
-      "@id": "https://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorAuthenticatie",
-      "@type": "@id"
-    },
-    "Dataservice.landingspaginaVoorGebruiksinformatie": {
-      "@id": "https://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorGebruiksinformatie",
-      "@type": "@id"
-    },
-    "Dataservice.landingspaginaVoorStatusinformatie": {
-      "@id": "https://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorStatusinformatie",
-      "@type": "@id"
-    },
-    "Dataservice.levensfase": {
-      "@id": "https://data.vlaanderen.be/ns/metadata-dcat#levensfase",
-      "@type": "@id"
-    },
-    "Dataservice.licentie": {
-      "@id": "http://purl.org/dc/terms/license",
-      "@type": "@id"
-    },
-    "Dataservice.ontwikkelingstoestand": {
-      "@id": "https://data.vlaanderen.be/ns/metadata-dcat#ontwikkelingstoestand",
-      "@type": "@id"
-    },
-    "Dataservice.publicatiedatum": {
-      "@id": "http://purl.org/dc/terms/issued",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Dataservice.rechten": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/rights",
-      "@type": "@id"
-    },
-    "Dataservice.statuut": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/metadata-dcat#statuut",
-      "@type": "@id"
-    },
-    "Dataservice.thema": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#theme",
-      "@type": "@id"
-    },
-    "Dataservice.titel": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Dataservice.toegankelijkheid": {
-      "@id": "http://purl.org/dc/terms/accessRights",
-      "@type": "@id"
-    },
-    "Dataservice.trefwoord": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#keyword",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Dataservice.versie": {
-      "@id": "http://www.w3.org/2002/07/owl#versionInfo",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Dataservice.wijzigingsdatum": {
-      "@id": "http://purl.org/dc/terms/modified",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Dataset": "http://www.w3.org/ns/dcat#Dataset",
-    "Dataset.alternatieveIdentificator": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "@id"
-    },
-    "Dataset.beschrijving": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/description",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Dataset.conform": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/conformsTo",
-      "@type": "@id"
-    },
-    "Dataset.contactinformatie": {
-      "@id": "http://www.w3.org/ns/dcat#contactPoint",
-      "@type": "@id"
-    },
-    "Dataset.creatiedatum": {
-      "@id": "http://purl.org/dc/terms/created",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Dataset.distributie": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#distribution",
-      "@type": "@id"
-    },
-    "Dataset.eigenaar": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/rightsHolder",
-      "@type": "@id"
-    },
-    "Dataset.geografischeDekking": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/spatial",
-      "@type": "@id"
-    },
-    "Dataset.herkomst": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/provenance",
-      "@type": "@id"
-    },
-    "Dataset.identificator": {
-      "@id": "http://purl.org/dc/terms/identifier",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "Dataset.landingspagina": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#landingPage",
-      "@type": "@id"
-    },
-    "Dataset.publicatiedatum": {
-      "@id": "http://purl.org/dc/terms/issued",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Dataset.statuut": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/metadata-dcat#statuut",
-      "@type": "@id"
-    },
-    "Dataset.thema": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#theme",
-      "@type": "@id"
-    },
-    "Dataset.titel": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Dataset.toegankelijkheid": {
-      "@id": "http://purl.org/dc/terms/accessRights",
-      "@type": "@id"
-    },
-    "Dataset.trefwoord": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#keyword",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Dataset.versie": {
-      "@id": "http://www.w3.org/2002/07/owl#versionInfo",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Dataset.voorbeeldweergave": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/adms#sample",
-      "@type": "@id"
-    },
-    "Dataset.wijzigingsdatum": {
-      "@id": "http://purl.org/dc/terms/modified",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Distributie": "http://www.w3.org/ns/dcat#Distribution",
-    "Distributie.alternatieveIdentificator": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "@id"
-    },
-    "Distributie.conform": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/conformsTo",
-      "@type": "@id"
-    },
-    "Distributie.downloadUrl": {
-      "@id": "http://www.w3.org/ns/dcat#downloadURL",
-      "@type": "@id"
-    },
-    "Distributie.formaat": {
-      "@id": "http://purl.org/dc/terms/format",
-      "@type": "@id"
-    },
-    "Distributie.identificator": {
-      "@id": "http://purl.org/dc/terms/identifier",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "Distributie.licentie": {
-      "@id": "http://purl.org/dc/terms/license",
-      "@type": "@id"
-    },
-    "Distributie.rechten": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/rights",
-      "@type": "@id"
-    },
-    "Distributie.titel": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Distributie.toegangsUrl": {
-      "@id": "http://www.w3.org/ns/dcat#accessURL",
-      "@type": "@id"
-    },
-    "Distributie.verdeler": {
-      "@id": "http://data.europa.eu/930/distributor",
-      "@type": "@id"
-    },
-    "Distributie.wordtAangebodenDoor": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#accessService",
-      "@type": "@id"
+    "Distributie": {
+      "@context": {
+        "alternatieveIdentificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "@id"
+        },
+        "conform": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/conformsTo",
+          "@type": "@id"
+        },
+        "downloadUrl": {
+          "@id": "http://www.w3.org/ns/dcat#downloadURL",
+          "@type": "@id"
+        },
+        "formaat": {
+          "@id": "http://purl.org/dc/terms/format",
+          "@type": "@id"
+        },
+        "identificator": {
+          "@id": "http://purl.org/dc/terms/identifier"
+        },
+        "licentie": {
+          "@id": "http://purl.org/dc/terms/license",
+          "@type": "@id"
+        },
+        "rechten": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/rights",
+          "@type": "@id"
+        },
+        "titel": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "toegangsUrl": {
+          "@id": "http://www.w3.org/ns/dcat#accessURL",
+          "@type": "@id"
+        },
+        "verdeler": {
+          "@id": "http://data.europa.eu/930/distributor",
+          "@type": "@id"
+        },
+        "wordtAangebodenDoor": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#accessService",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://www.w3.org/ns/dcat#Distribution"
     },
     "HerkomstVerklaring": "http://purl.org/dc/terms/ProvenanceStatement",
-    "Identificator": "http://www.w3.org/ns/adms#Identifier",
-    "Identificator.gestructureerdeIdentificator": {
-      "@id": "http://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator",
-      "@type": "@id"
-    },
-    "Identificator.notatie": {
-      "@id": "http://www.w3.org/2004/02/skos/core#notation",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "Identificator.toegekendDoor": {
-      "@id": "http://purl.org/dc/terms/creator",
-      "@type": "@id"
-    },
-    "Identificator.toegekendDoor (string)": {
-      "@id": "http://www.w3.org/ns/adms#schemaAgency",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Identificator.toegekendOp": {
-      "@id": "http://purl.org/dc/terms/issued",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    "Identificator": {
+      "@context": {
+        "gestructureerdeIdentificator": {
+          "@id": "http://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator",
+          "@type": "@id"
+        },
+        "notatie": {
+          "@id": "http://www.w3.org/2004/02/skos/core#notation"
+        },
+        "toegekendDoor": {
+          "@id": "http://purl.org/dc/terms/creator",
+          "@type": "@id"
+        },
+        "toegekendDoor (string)": {
+          "@id": "http://www.w3.org/ns/adms#schemaAgency",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "toegekendOp": {
+          "@id": "http://purl.org/dc/terms/issued",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "http://www.w3.org/ns/adms#Identifier"
     },
     "JuridischeBepaling": "http://purl.org/dc/terms/RightsStatement",
     "LicentieDocument": "http://purl.org/dc/terms/LicenseDocument",
-    "Plaats": "http://purl.org/dc/terms/Location",
-    "Plaats.boundingBox": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#bbox",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "Plaats": {
+      "@context": {
+        "boundingBox": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#bbox"
+        },
+        "centroïde": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#centroid"
+        },
+        "geometrie": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#geometry"
+        },
+        "plaatsnaam": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://purl.org/dc/terms/Location"
     },
-    "Plaats.centroïde": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#centroid",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "RelatieQualificatie": {
+      "@context": {
+        "catalogusResource(source)": {
+          "@id": "https://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.source",
+          "@type": "@id"
+        },
+        "catalogusResource(target)": {
+          "@id": "https://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.target",
+          "@type": "@id"
+        },
+        "rol": {
+          "@id": "http://www.w3.org/ns/dcat#hadRole",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://www.w3.org/ns/dcat#Relationship"
     },
-    "Plaats.geometrie": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/locn#geometry",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "Standaard": {
+      "@context": {
+        "beschrijving": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "publicatiedatum": {
+          "@id": "http://purl.org/dc/terms/issued",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "specificatieUrl": {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "@type": "@id"
+        },
+        "titel": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "@id"
+        },
+        "versie": {
+          "@id": "http://www.w3.org/2002/07/owl#versionInfo",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "voorkeurslabel": {
+          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      "@id": "http://purl.org/dc/terms/Standard"
     },
-    "Plaats.plaatsnaam": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "RelatieQualificatie": "http://www.w3.org/ns/dcat#Relationship",
-    "RelatieQualificatie.catalogusResource(source)": {
-      "@id": "https://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.source",
-      "@type": "@id"
-    },
-    "RelatieQualificatie.catalogusResource(target)": {
-      "@id": "https://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.target",
-      "@type": "@id"
-    },
-    "RelatieQualificatie.rol": {
-      "@id": "http://www.w3.org/ns/dcat#hadRole",
-      "@type": "@id"
-    },
-    "Standaard": "http://purl.org/dc/terms/Standard",
-    "Standaard.beschrijving": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/description",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Standaard.publicatiedatum": {
-      "@id": "http://purl.org/dc/terms/issued",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Standaard.specificatieUrl": {
-      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-      "@type": "@id"
-    },
-    "Standaard.titel": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Standaard.type": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/type",
-      "@type": "@id"
-    },
-    "Standaard.versie": {
-      "@id": "http://www.w3.org/2002/07/owl#versionInfo",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Standaard.voorkeurslabel": {
-      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Voorbeeldweergave": "http://www.w3.org/ns/dcat#Distribution",
-    "Voorbeeldweergave.beschrijving": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/description",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Voorbeeldweergave.downloadUrl": {
-      "@id": "http://www.w3.org/ns/dcat#downloadURL",
-      "@type": "@id"
-    },
-    "Voorbeeldweergave.mediatype": {
-      "@id": "http://www.w3.org/ns/dcat#mediatype",
-      "@type": "@id"
-    },
-    "Voorbeeldweergave.titel": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    "Voorbeeldweergave": {
+      "@context": {
+        "beschrijving": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "downloadUrl": {
+          "@id": "http://www.w3.org/ns/dcat#downloadURL",
+          "@type": "@id"
+        },
+        "mediatype": {
+          "@id": "http://www.w3.org/ns/dcat#mediatype",
+          "@type": "@id"
+        },
+        "titel": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.w3.org/ns/dcat#Distribution"
     }
   }
 }
