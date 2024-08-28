@@ -1,0 +1,704 @@
+{
+  "@context": {
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "AnnularSpace.material": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#materiaal",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Opvulling"
+    },
+    "Benchmark": "https://data.vlaanderen.be/ns/grondwatermeetnet#Referentiepunt",
+    "Benchmark.reference": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#referentie",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Referentiepunttype"
+    },
+    "ClosedPiezometer": "https://data.vlaanderen.be/ns/grondwatermeetnet#GeslotenPi%C3%ABZometer",
+    "Commission": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht",
+    "Coverage": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
+    "CurveValuePair.geometry": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry",
+      "@type": "http://www.opengis.net/ont/sf#Curve"
+    },
+    "Diphole Finishing Material Type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Peilputafwerkingmateriaaltype",
+    "DirectPosition.gML": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "DirectPosition.measurement": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#DirectePositie.opmeting",
+      "@type": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+    },
+    "DirectPosition.wKT": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Fill": "https://data.vlaanderen.be/ns/grondwatermeetnet#Opvulling",
+    "Geometry.gML": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Geometry.measurement": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting",
+      "@type": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+    },
+    "Geometry.wKT": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "GeometryValuePair.geometry": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.geometry",
+      "@type": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject"
+    },
+    "GeometryValuePair.value": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record"
+    },
+    "Ground level type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "GroundLevel.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "GroundWater Sample": "https://data.vlaanderen.be/ns/grondwatermeetnet#GrondWaterMonster",
+    "Groundwater object": "https://data.vlaanderen.be/ns/grondwatermeetnet#Grondwaterobject",
+    "Groundwater object type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Grondwaterobjecttype",
+    "GroundwaterObject.type": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#type",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Grondwaterobjecttype"
+    },
+    "Identifier.identifier": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Input": "http://www.w3.org/ns/ssn/Input",
+    "Input.reference": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Input.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "InputType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Lawsuit": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
+    "Legal Framework": "https://data.vlaanderen.be/ns/generiek#WettelijkKader",
+    "Level measurement": "https://data.vlaanderen.be/ns/grondwatermeetnet#Peilmeting",
+    "LevelMeasurement.benchmark": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#referentiepunt",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Referentiepunt"
+    },
+    "Material": "https://data.vlaanderen.be/ns/grondwatermeetnet#Materiaal",
+    "Material class": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Measuring level processing method": "https://data.vlaanderen.be/ns/grondwatermeetnet#Meetpeilverwerkingsmethode",
+    "Monitoring network": "https://data.vlaanderen.be/ns/grondwatermeetnet#Meetnet",
+    "Monitoring network type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Meetnettype",
+    "Monitoring well": "https://data.vlaanderen.be/ns/grondwatermeetnet#Peilput",
+    "MonitoringNetwork.administrator": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#beheerder",
+      "@type": "http://todo.com/Organisatie"
+    },
+    "MonitoringNetwork.identifier": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#identificator",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "MonitoringNetwork.name": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#naam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "MonitoringNetwork.type": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#type",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Meetnettype"
+    },
+    "MonitoringWell.^Geometry": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve.shape",
+      "@type": "http://www.opengis.net/ont/sf#Curve"
+    },
+    "MonitoringWell.^HostPlatform": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process"
+    },
+    "MonitoringWell.^PositionalAccuracy": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.positionalAccuracy",
+      "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy"
+    },
+    "MonitoringWell.administrator": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#beheerder",
+      "@type": "http://todo.com/Organisatie"
+    },
+    "MonitoringWell.depth": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#diepte",
+      "@type": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Diepte"
+    },
+    "MonitoringWell.groundLevel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#maaiveld",
+      "@type": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld"
+    },
+    "MonitoringWell.location": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#ligging",
+      "@type": "http://www.w3.org/ns/prov#Location"
+    },
+    "NamedValue.name": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name",
+      "@type": "http://def.isotc211.org/iso19103/2005/Names#GenericName"
+    },
+    "NamedValue.value": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    "Observation": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+    "Observation Procedure Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Observation procedure": "http://www.w3.org/ns/sosa/Procedure",
+    "Observation type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Observation.carriedOutBy": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "Observation.commission": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.opdracht",
+      "@type": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht"
+    },
+    "Observation.identifier": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Observation.parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+    },
+    "Observation.procedureUsed": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "http://www.w3.org/ns/sosa/Procedure"
+    },
+    "Observation.result": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    "Observation.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "ObservationProcedure.input": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasInput",
+      "@type": "http://www.w3.org/ns/ssn/Input"
+    },
+    "ObservationProcedure.output": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasOutput",
+      "@type": "http://www.w3.org/ns/ssn/Output"
+    },
+    "ObservationProcedure.parameter": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.parameter",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+    },
+    "ObservationProcedure.specification": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "ObservationProcedure.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "OpenPiezometer": "https://data.vlaanderen.be/ns/grondwatermeetnet#OpenPi%C3%ABZometer",
+    "Organization": "http://todo.com/Organisatie",
+    "Output": "http://www.w3.org/ns/ssn/Output",
+    "Output.reference": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Output.referentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Output.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "OutputType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "PaddingInterval.material": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#materiaal",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Opvulling"
+    },
+    "PiezeometerPart.material": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#materiaal",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Materiaal"
+    },
+    "Piezometer": "https://data.vlaanderen.be/ns/grondwatermeetnet#Pi%C3%ABZometer",
+    "Piezometer Condition": "https://data.vlaanderen.be/ns/grondwatermeetnet#Pi%C3%ABZometertoestand",
+    "Piezometer Part Type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Pi%C3%ABZometeronderdeeltype",
+    "Piezometer structure": "https://data.vlaanderen.be/ns/grondwatermeetnet#Pi%C3%ABZometeropbouw",
+    "Piezometer type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Pi%C3%ABZometertype",
+    "Piezometer.^Geometry": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve.shape",
+      "@type": "http://www.opengis.net/ont/sf#Curve"
+    },
+    "Piezometer.^HostPlatform": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process"
+    },
+    "Piezometer.^PositionalAccuracy": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.positionalAccuracy",
+      "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy"
+    },
+    "Piezometer.administrator": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#beheerder",
+      "@type": "http://todo.com/Organisatie"
+    },
+    "Piezometer.benchmark": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#referentiepunt",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Referentiepunt"
+    },
+    "Piezometer.depth": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#diepte",
+      "@type": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Diepte"
+    },
+    "Piezometer.groundLevel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#maaiveld",
+      "@type": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld"
+    },
+    "Piezometer.location": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#ligging",
+      "@type": "http://www.w3.org/ns/prov#Location"
+    },
+    "Piezometer.type": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#type",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Pi%C3%ABZometertype"
+    },
+    "PiezometerMeasurement Frequency": "https://data.vlaanderen.be/ns/grondwatermeetnet#Pi%C3%ABZometerMeetfrequentie",
+    "ProtectiveTube.material": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#materiaal",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Materiaal"
+    },
+    "Pump Status": "https://data.vlaanderen.be/ns/grondwatermeetnet#Pompstatus",
+    "PutAfterDestination": "https://data.vlaanderen.be/ns/grondwatermeetnet#PutNaBestemming",
+    "QuantitativeValue.value": {
+      "@id": "https://schema.org/value",
+      "@type": "https://schema.org/Number"
+    },
+    "QuantityFinishing.material": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#materiaal",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Peilputafwerkingmateriaaltype"
+    },
+    "Record": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record",
+    "Reference point type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Referentiepunttype",
+    "Sampler": "http://www.w3.org/ns/sosa/Sampler",
+    "Sampler Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Sampler.implements": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/implements",
+      "@type": "http://www.w3.org/ns/sosa/om#SamplingProcedure"
+    },
+    "Sampler.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Sampling": "http://www.w3.org/ns/sosa/Sampling",
+    "Sampling Object Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Sampling ObjectComplex": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex",
+    "Sampling Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Sampling object": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
+    "Sampling procedure": "http://www.w3.org/ns/sosa/om#SamplingProcedure",
+    "Sampling procedure type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Sampling target": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Sampling.carriedOutBy": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.uitgevoerdDoor",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "Sampling.commission": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.opdracht",
+      "@type": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht"
+    },
+    "Sampling.procedureUsed": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "http://www.w3.org/ns/sosa/om#SamplingProcedure"
+    },
+    "Sampling.result": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasResult",
+      "@type": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+    },
+    "Sampling.sampledObject": {
+      "@id": "http://fixme.com/",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Grondwaterobject"
+    },
+    "Sampling.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "SamplingObject.identifier": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "SamplingObject.parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+    },
+    "SamplingObject.sampledObject": {
+      "@id": "http://fixme.com/",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Grondwaterobject"
+    },
+    "SamplingObject.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "SamplingProcedure.input": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasInput",
+      "@type": "http://www.w3.org/ns/ssn/Input"
+    },
+    "SamplingProcedure.output": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasOutput",
+      "@type": "http://www.w3.org/ns/ssn/Output"
+    },
+    "SamplingProcedure.parameter": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsprocedure.parameter",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+    },
+    "SamplingProcedure.specification": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsprocedure.specificatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "SamplingProcedure.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Sensor": "https://www.w3.org/ns/sosa/Sensor",
+    "Sensor.implements": {
+      "@id": "http://www.w3.org/ns/ssn/implements",
+      "@type": "http://www.w3.org/ns/sosa/Procedure"
+    },
+    "StartTovGround level": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#StartTovMaaiveld",
+    "Well Type": "https://data.vlaanderen.be/ns/grondwatermeetnet#PutSoort",
+    "Well completion": "https://data.vlaanderen.be/ns/grondwatermeetnet#Peilputafwerking",
+    "Well wrench": "https://data.vlaanderen.be/ns/grondwatermeetnet#Putsleutel",
+    "^ObservedObject": {
+      "@id": "http://fixme.com/",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Grondwaterobject"
+    },
+    "^SamplingMethod": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#bemonsteringsmethode",
+      "@type": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process"
+    },
+    "^SamplingSite": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#bemonsteringsplaats",
+      "@type": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "^SamplingTime": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#bemonsteringstijdstip",
+      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
+    },
+    "acidification": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#aanzuring",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "annulaireSpace": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#annulaireRuimte",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#AnnulaireRuimte"
+    },
+    "associatedObservation": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+    },
+    "associatedSamplingObject": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature",
+      "@type": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+    },
+    "awardedBy": {
+      "@id": "http://purl.org/dc/terms/creator",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "awardedBy(String)": {
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "awardedOn": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "beginning": {
+      "@id": "http://data.europa.eu/m8g/startTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "bemonsteringsobject(Source)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.source",
+      "@type": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+    },
+    "bemonsteringsobject(Target)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.target",
+      "@type": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+    },
+    "bottomMonitoringWell": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#onderkantPeilbuis",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+    },
+    "carriedOutWith": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySampler",
+      "@type": "http://www.w3.org/ns/sosa/Sampler"
+    },
+    "condition": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.conditie",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+    },
+    "construction": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#opbouw",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Pi%C3%ABZometeropbouw"
+    },
+    "date": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#datum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "depthTovReferencePoint": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#diepteTovReferentiepunt",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "design": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19150/-2/2012/base#Design",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+    },
+    "diameter": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#diameter",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "element": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#element",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Pi%C3%ABZometeronderdeeltype"
+    },
+    "elevationDifference": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#hoogteverschil",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "end": {
+      "@id": "http://data.europa.eu/m8g/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "fill": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#opvulling",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#OpvullingInterval"
+    },
+    "finishing": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#afwerking",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Peilputafwerking"
+    },
+    "gauge": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#opmeter",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "height": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld.hoogte",
+      "@type": "https://data.vlaanderen.be/ns/generiek#DirectePositie"
+    },
+    "implementedBy": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/implementedBy",
+      "@type": "http://www.w3.org/ns/sosa/Sampler"
+    },
+    "implementedWith": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/implementedBy",
+      "@type": "https://www.w3.org/ns/sosa/Sensor"
+    },
+    "inUse": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#inGebruik",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "innerDiameter": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#binnendiameter",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "isResultFrom": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/isResultOf",
+      "@type": "http://www.w3.org/ns/sosa/Sampling"
+    },
+    "keyType": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#sleuteltype",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Putsleutel"
+    },
+    "kind": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#soort",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "legalFramework": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.wettelijkKader",
+      "@type": "https://data.vlaanderen.be/ns/generiek#WettelijkKader"
+    },
+    "level": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#peil",
+      "@type": "https://data.vlaanderen.be/ns/generiek#DirectePositie"
+    },
+    "materialClass": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#materiaalKlasse",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "measurementFrequency": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#meetfrequentie",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Pi%C3%ABZometerMeetfrequentie"
+    },
+    "measuringPoint": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#meetpunt",
+      "@type": "http://www.opengis.net/ont/sf#Point"
+    },
+    "member": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#lid",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Pi%C3%ABZometer"
+    },
+    "memberFrom": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#lidVan",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Meetnet"
+    },
+    "numberLevelMeasurements": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#aantalPeilmetingen",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "numberRefreshes": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#aantalVerversingen",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "observationCarriedOut": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/madeObservation",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+    },
+    "origin": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage",
+      "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage"
+    },
+    "outerDiameter": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#buitendiameter",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "part": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#onderdeel",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Pi%C3%ABZeometeronderdeel"
+    },
+    "performWithSensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "https://www.w3.org/ns/sosa/Sensor"
+    },
+    "phenomenonTime": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
+    },
+    "piezometerCondition": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#pi%C3%ABZometertoestand",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Pi%C3%ABZometertoestand"
+    },
+    "protectiveTube": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#beschermbuis",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Beschermbuis"
+    },
+    "pumpStatus": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#pompstatus",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#Pompstatus"
+    },
+    "purpose": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.doel",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "putAfterDestination": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#putNaBestemming",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#PutNaBestemming"
+    },
+    "puttingIntoUse": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#ingebruik",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "quantity": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#hoeveelheid",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "quantityFinishing": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#hoeveelheidAfwerking",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#HoeveelheidAfwerking"
+    },
+    "quantityQualityMeasurements": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#aantalKwaliteitsmetingen",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "reportsTo": {
+      "@container": "@set",
+      "@id": "https://www.w3.org/ns/org#reportsTo",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "resultQuality": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
+      "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element"
+    },
+    "resultTime": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
+      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant"
+    },
+    "role": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.role",
+      "@type": "http://def.isotc211.org/iso19103/2005/Names#GenericName"
+    },
+    "samplingCarriedOut": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/madeSampling",
+      "@type": "http://www.w3.org/ns/sosa/Sampling"
+    },
+    "samplingTime": {
+      "@id": "http://www.w3.org/ns/sosa/resultTime",
+      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
+    },
+    "sensor": {
+      "@id": "http://todo.com/sensor",
+      "@type": "https://www.w3.org/ns/sosa/Sensor"
+    },
+    "standardUnit": {
+      "@id": "https://schema.org/unitCode",
+      "@type": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid"
+    },
+    "topMonitoringWell": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#bovenkantPeilbuis",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+    },
+    "unit": {
+      "@id": "https://schema.org/unitText",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "validTime": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime",
+      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period"
+    },
+    "wellType": {
+      "@id": "https://data.vlaanderen.be/ns/grondwatermeetnet#putsoort",
+      "@type": "https://data.vlaanderen.be/ns/grondwatermeetnet#PutSoort"
+    }
+  }
+}

@@ -1,0 +1,997 @@
+{
+  "@context": {
+    "AardOverlijden": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Apgarscore": "https://data.vlaanderen.be/ns/gezondheidstoestand#Apgarscore",
+    "Arts": "https://data.vlaanderen.be/ns/gezondheidstoestand#Arts",
+    "Arts.registratie": {
+      "@id": "https://hl7.org/fhir/practitioner-definitions.html#Practitioner.identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Arts.steltOp": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#steltOp",
+      "@type": "https://www.hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport"
+    },
+    "Arts.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "ArtsType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Assistentie Bevalling": "https://data.vlaanderen.be/ns/gezondheidstoestand#AssistentieBevalling",
+    "AssistentieBevalling.heeftAssistentie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#heeftAssistentie",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand"
+    },
+    "AssistentieBevalling.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "AssistentieBevallingType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Batch": "https://data.vlaanderen.be/ns/gezondheidstoestand#Batch",
+    "Bevalling": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling",
+    "Bevalling.heeftAssistentie": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling.heeftAssistentie",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#AssistentieBevalling"
+    },
+    "Bevalling.heeftBevallingstoestand": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling.heeftBevallingstoestand",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand"
+    },
+    "Bevallingstoestand": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand",
+    "Bevallingstoestand.heeftBevallingstoestand": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#heeftBevallingstoestand",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#AssistentieBevalling"
+    },
+    "Bevallingstoestand.nutritie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand.nutritie",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Borstvoeding"
+    },
+    "Bevallingswijze": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bewijs.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Bewijs.datum": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Bewijs.datum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Bewijs.taal": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/language",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Bewijs.titel": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Bewijs.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "BezwaarType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Borstvoeding": "https://data.vlaanderen.be/ns/gezondheidstoestand#Borstvoeding",
+    "Conceptie": "https://data.vlaanderen.be/ns/gezondheidstoestand#Conceptie",
+    "Conceptietechniek": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Crematie": "https://data.vlaanderen.be/ns/overlijdensaangifte#Crematie",
+    "Doodgeboorte": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodgeboorte",
+    "DoodgeboorteType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Doodsoorzaak": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak",
+    "Doodsoorzaak.duur": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.duur",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "Doodsoorzaak.hoofdoorzaak": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak.hoofdoorzaak",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Doodsoorzaak.volgtOp": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#volgtOp",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak"
+    },
+    "DosisFormaat": "http://www.w3.org/2004/02/skos/core#Concept",
+    "FoetaalOverlijden": "https://data.vlaanderen.be/ns/overlijdensaangifte#FoetaalOverlijden",
+    "FoetaalOverlijden.gedocumenteerdDoor": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#FoetaalOverlijden.gedocumenteerdDoor",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#OverlijdensfhandelingOutput"
+    },
+    "FoetaalOverlijden.hoofdoorzaak": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#FoetaalOverlijden.hoofdoorzaak",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak"
+    },
+    "FoetaleBewakingType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Foetus": "https://data.vlaanderen.be/ns/gezondheidstoestand#Foetus",
+    "Foetus.gewicht": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Foetus.gewicht",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "Geassocieerde Oorzaak": "https://data.vlaanderen.be/ns/overlijdensaangifte#GeassocieerdeOorzaak",
+    "Gebeurtenis.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Gebeurtenis.duur": {
+      "@id": "https://schema.org/duration",
+      "@type": "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "Geboorte": "https://data.vlaanderen.be/ns/persoon#Geboorte",
+    "Geboorte.leidtTot": {
+      "@container": "@set",
+      "@id": "http://todo.com/leidtTot",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling"
+    },
+    "Geboortetoestand": "https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand",
+    "Geboortetoestand.nutritie": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand.nutritie",
+      "@type": "https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake"
+    },
+    "Geboortetoestand.statusZwangerschap": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#statusZwangerschap",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Geregistreerd Persoon": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon",
+    "GeregistreerdPersoon.registratie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#Identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Gezondheidstoestand": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand",
+    "Gezondheidstoestand.gewicht": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondsheidstoestand.gewicht",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "Gezondheidstoestand.risico": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeToestand.risico",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "ICD": "http://www.w3.org/2004/02/skos/core#Concept",
+    "IndicatieKeizersnedeType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Ingrediënt": "https://data.vlaanderen.be/ns/gezondheidstoestand#Ingredient",
+    "Inkomensniveau": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Inwonerschap": "https://data.vlaanderen.be/ns/persoon#Inwonerschap",
+    "KwantitatieveWaarde.waarde": {
+      "@id": "https://schema.org/value",
+      "@type": "https://schema.org/Number"
+    },
+    "LiggingKindType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "LijkbezorgingType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Locatie.type": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#type",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "MaatregelMedischVerslag": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Medicatie": "https://hl7.org/fhir/medication-definitions.html#Medication",
+    "Medisch Verslag": "https://www.hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport",
+    "Medisch Verslag Overlijden": "https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslagOverlijden",
+    "MedischVerslag.opgesteldDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#opgesteldDoor",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Arts"
+    },
+    "MedischVerslag.status": {
+      "@id": "https://hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport.status",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "MedischVerslagOverlijden.risico": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslag.risico",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "MedischVerslagOverlijden.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "MedischVerslagOverlijdenType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Medische Observatie": "https://build.fhir.org/observation-definitions.html#Observation",
+    "MedischeObservatie.gedocumenteerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#gedocumenteerdDoor",
+      "@type": "https://www.hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport"
+    },
+    "MedischeObservatie.status": {
+      "@id": "https://hl7.org/fhir/observation-definitions.html#Observation.status",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "MedischeObservatie.uitvoerder": {
+      "@id": "https://hl7.org/fhir/observation-definitions.html#Observation.performer",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Arts"
+    },
+    "MedischeObservatie.waarde": {
+      "@id": "https://hl7.org/fhir/observation-definitions.html#Observation.value_x_",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Observatiewaarde"
+    },
+    "Nationaliteitscode": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Natuurlijke Entiteit": "https://data.vlaanderen.be/ns/gezondheidstoestand#NatuurlijkeEntiteit",
+    "NatuurlijkeEntiteit": "http://todo.com/NatuurlijkeEntiteit",
+    "OSLO-Gezondheidstoestand::Observatiewaarde": "https://hl7.org/fhir/observation-definitions.html#Observation",
+    "ObservatieCategorie": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Observatiestatus": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Observatiewaarde": "https://data.vlaanderen.be/ns/gezondheidstoestand#Observatiewaarde",
+    "Onderwijsniveau": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Ongeval": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval",
+    "Ongeval.locatie": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#locatie",
+      "@type": "http://www.w3.org/ns/prov#Location"
+    },
+    "Orgaandonatie": "https://data.vlaanderen.be/ns/overlijdensaangifte#Orgaandonatie",
+    "Output.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Output.produceert": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/cpsv#produces",
+      "@type": "http://purl.org/vocab/cpsv#PublicService"
+    },
+    "Output.titel": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Output.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Overlijden": "https://data.vlaanderen.be/ns/persoon#Overlijden",
+    "OverlijdenAfhandelingDienst": "http://www.w3.org/2004/02/skos/core#Concept",
+    "OverlijdenAfhandelingenOutput": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Overlijdensafhandeling Dienst": "https://data.vlaanderen.be/ns/overlijdensaangifte#OverlijdensafhandelingDienst",
+    "Overlijdensafhandeling Output": "https://data.vlaanderen.be/ns/overlijdensaangifte#OverlijdensfhandelingOutput",
+    "OverlijdensafhandelingDienst.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "OverlijdensafhandelingOutput.type": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#OverlijdensafhandelingOutput.type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Overlijdenstoestand": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand",
+    "Overlijdenstoestand.beschrijving": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.beschrijving",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Participatie": "http://data.europa.eu/m8g/Participation",
+    "Participatie.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Persoon": "http://www.w3.org/ns/person#Person",
+    "Persoon.opgesteldDoor": {
+      "@id": "http://todo.com/opgesteldDoor",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking"
+    },
+    "Persoonsgebeurtenis.datum": {
+      "@id": "http://purl.org/vocab/bio/0.1/date",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "Persoonsrelatie": "https://data.vlaanderen.be/ns/persoon#Persoonsrelatie",
+    "Persoonsrelatie.datum": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Persoonsrelatie.datum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Procedure": "https://hl7.org/fhir/procedure-definitions.html#Procedure",
+    "ProcedureZorgType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Publieke Dienstverlening": "http://purl.org/vocab/cpsv#PublicService",
+    "Publieke Dienstverlening (Aanbod)": "http://purl.org/vocab/cpsv#PublicService",
+    "Publieke Organisatie": "http://data.europa.eu/m8g/PublicOrganisation",
+    "PubliekeDienstverlening.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "PubliekeDienstverlening.produceert": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/cpsv#produces",
+      "@type": "http://data.europa.eu/m8g/Output"
+    },
+    "PubliekeDienstverlening.relatie": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/relation",
+      "@type": "http://purl.org/vocab/cpsv#PublicService"
+    },
+    "PubliekeDienstverlening.status": {
+      "@id": "http://www.w3.org/ns/adms#status",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "PubliekeDienstverlening.taal": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/language",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "PubliekeDienstverlening.titel": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "PubliekeDienstverlening.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "PubliekeDienstverlening.vereist": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/requires",
+      "@type": "http://purl.org/vocab/cpsv#PublicService"
+    },
+    "RisicoType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "RitueelType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "SociodemografischKenmerk": "https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk",
+    "StatusMedischVerslag": "http://www.w3.org/2004/02/skos/core#Concept",
+    "StatusZwangerschap": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Stoffelijke Rest": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest",
+    "Stoffelijke Restverwerking": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRestverwerking",
+    "StoffelijkeRest.locatie": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest.locatie",
+      "@type": "http://www.w3.org/ns/prov#Location"
+    },
+    "StoffelijkeRest.type": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest.type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "StoffelijkeRestType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "StoffelijkeRestverwerking.produceert": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#produceert",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRest"
+    },
+    "Teraardestelling": "https://data.vlaanderen.be/ns/overlijdensaangifte#Teraardestelling",
+    "Tijdspanne": "http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span",
+    "Uitvaart": "https://data.vlaanderen.be/ns/overlijdensaangifte#Uitvaart",
+    "Uitvaart.leidtTot": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#leidtTot",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRestverwerking"
+    },
+    "Uitvaartcontract": "https://data.vlaanderen.be/ns/overlijdensaangifte#Uitvaartcontract",
+    "Uitvaartcontract.datum": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Uitvaartcontract.datum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Uitvaartondernemer": "https://data.vlaanderen.be/ns/overlijdensaangifte#Uitvaartondernemer",
+    "Verblijfplaats": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats",
+    "Verblijfplaats.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Voedingsinname": "https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake",
+    "Voedingsinname.uitvoerder": {
+      "@id": "https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake.performer",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "VoedingsinnameItem": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Wilsbeschikking": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking",
+    "Wilsbeschikking.steltOp": {
+      "@id": "http://todo.com/steltOp",
+      "@type": "http://www.w3.org/ns/person#Person"
+    },
+    "Zorgverlener": "https://hl7.org/fhir/practitioner-definitions.html#Practitioner",
+    "Zwangerschap": "https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschap",
+    "Zwangerschap.volgtOp": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#volgtOp",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling"
+    },
+    "Zwangerschapstoestand": "https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschapstoestand",
+    "Zwangerschapstoestand.duur": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschapstoestand.duur",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "Zwangerschapstoestand.statusZwangerschap": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#statusZwangerschap",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "aandoening": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.aandoening",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "aard": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.aard",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "alternatieveLabel": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "alternatieveNaam": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#alternatieveNaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "apgarscore": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand.apgarscore",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Apgarscore"
+    },
+    "batch": {
+      "@id": "https://hl7.org/fhir/medication-definitions.html#Medication.batch",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Batch"
+    },
+    "begin": {
+      "@id": "http://data.europa.eu/m8g/startTime",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "begindatum": {
+      "@id": "https://schema.org/startDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "begintijd": {
+      "@id": "https://schema.org/startTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "bepaalt": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#bepaalt",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#Uitvaart"
+    },
+    "beroep": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#SociodemografischKenmerk.beroep",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "bewijst": {
+      "@container": "@set",
+      "@id": "http://todo.com/bewijst",
+      "@type": "http://data.europa.eu/m8g/Output"
+    },
+    "bezwaar": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#MedischVerslag.bezwaar",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "beëIndigt": {
+      "@id": "http://todo.com/beeindigt",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschap"
+    },
+    "bijbegraving": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking.bijbegraving",
+      "@type": "http://www.w3.org/ns/person#Person"
+    },
+    "categorie": {
+      "@container": "@set",
+      "@id": "https://hl7.org/fhir/observation-definitions.html#Observation.category",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "code": {
+      "@container": "@set",
+      "@id": "https://hl7.org/fhir/procedure-definitions.html#Procedure.code",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "consumptieInterval": {
+      "@id": "https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake.occurrence_x_",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "contactinfo": {
+      "@id": "http://data.europa.eu/m8g/hasContactPoint",
+      "@type": "http://schema.org/ContactPoint"
+    },
+    "contactpunt": {
+      "@id": "http://schema.org/contactPoint",
+      "@type": "http://schema.org/ContactPoint"
+    },
+    "contractnummer": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Uitvaartcontract.contractnummer",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "deelVan": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#deelVan",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschap"
+    },
+    "dienstverlener": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/serviceProvider",
+      "@type": "http://data.europa.eu/m8g/PublicOrganisation"
+    },
+    "documentatie": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "documenteert": {
+      "@container": "@set",
+      "@id": "https://hl7.org/fhir/observation-definitions.html#Observation.issued",
+      "@type": "https://build.fhir.org/observation-definitions.html#Observation"
+    },
+    "doetOntstaan": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#doetOntstaan",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Foetus"
+    },
+    "doodsoorzaak": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand.doodsoorzaak",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#Doodsoorzaak"
+    },
+    "dosisFormaat": {
+      "@id": "https://hl7.org/fhir/medication-definitions.html#Medication.doseForm",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "eenheid": {
+      "@id": "https://schema.org/unitText",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "eenheidcode": {
+      "@id": "https://schema.org/unitCode",
+      "@type": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid"
+    },
+    "effectiefTijdstip": {
+      "@id": "https://hl7.org/fhir/observation-definitions.html#Observation.effective",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "einddatum": {
+      "@id": "https://schema.org/endDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "einde": {
+      "@id": "http://data.europa.eu/m8g/endTime",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "eindtijd": {
+      "@id": "https://schema.org/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "familienaam": {
+      "@id": "http://xmlns.com/foaf/0.1/familyName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "firma": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Uitvaartcontract.firma",
+      "@type": "http://www.w3.org/ns/regorg#RegisteredOrganization"
+    },
+    "foetaleBewaking": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand.foetaleBewaking",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "geboortenaam": {
+      "@id": "http://www.w3.org/ns/person#birthName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gebruikteMedicatie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.gebruikteMedicatie",
+      "@type": "https://hl7.org/fhir/medication-definitions.html#Medication"
+    },
+    "gebruikteVoornaam": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#gebruikteVoornaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "geconsumeerdItem": {
+      "@id": "https://www.hl7.org/fhir/nutritionintake-definitions.html#NutritionIntake.consumedItem",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "gegevenNaam": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/givenName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gelinktAan": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#gelinktAan",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
+    },
+    "gemeente": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking.gemeente",
+      "@type": "http://purl.org/dc/terms/Location"
+    },
+    "geslacht": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#geslacht",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "gevolgVan": {
+      "@id": "http://todo.com/gevolgVan",
+      "@type": "https://data.vlaanderen.be/ns/persoon#Geboorte"
+    },
+    "gewichtPersoonBevalling": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand.gewichtPersoonBevalling",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "gewichtPersoonVoorBevalling": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand.gewichtPersoonVoorBevalling",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "heeftBevalling": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#heeftBevalling",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevalling"
+    },
+    "heeftFoetus": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#heeftFoetus",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Foetus"
+    },
+    "heeftGebeurtenis": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.heeftGebeurtenis",
+      "@type": "http://purl.org/vocab/bio/0.1/Event"
+    },
+    "heeftGeboorte": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#heeftGeboorte",
+      "@type": "https://data.vlaanderen.be/ns/persoon#Geboorte"
+    },
+    "heeftInBezit": {
+      "@id": "http://todo.com/heeftInBezit",
+      "@type": "http://www.w3.org/ns/person#Person"
+    },
+    "heeftInput": {
+      "@container": "@set",
+      "@id": "http://todo.com/heeftInput",
+      "@type": "http://purl.org/vocab/cpsv#PublicService"
+    },
+    "heeftInwonerschap": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#heeftInwonerschap",
+      "@type": "https://data.vlaanderen.be/ns/persoon#Inwonerschap"
+    },
+    "heeftKenmerk": {
+      "@container": "@set",
+      "@id": "http://todo.com/heeftKenmerk",
+      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk"
+    },
+    "heeftMedischeToestand": {
+      "@container": "@set",
+      "@id": "http://todo.com/heeftMedischeToestand",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
+    },
+    "heeftOverlijden": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#heeftOverlijden",
+      "@type": "https://data.vlaanderen.be/ns/persoon#Overlijden"
+    },
+    "heeftParticipatie": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasParticipation",
+      "@type": "http://data.europa.eu/m8g/Participation"
+    },
+    "heeftRelatieMet": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#isRelatieMet",
+      "@type": "http://www.w3.org/ns/person#Person"
+    },
+    "heeftToestand": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Geboorte.heeftToestand",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand"
+    },
+    "heeftVerblijfplaats": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#heeftVerblijfplaats",
+      "@type": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats"
+    },
+    "heeftZwangerschap": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#heeftZwangerschap",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschap"
+    },
+    "identificator": {
+      "@id": "https://hl7.org/fhir/medication-definitions.html#Medication.identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "identifier": {
+      "@container": "@set",
+      "@id": "https://hl7.org/fhir/observation-definitions.html#Observation.identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "indicatieAssistentie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand.indicatieAssistentie",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "ingrediëNt": {
+      "@container": "@set",
+      "@id": "https://hl7.org/fhir/medication-definitions.html#Medication.ingredient",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Ingredient"
+    },
+    "inkomensniveau": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk.inkomensniveau",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "intrapartale": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand.intrapartale",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "isInBezitVan": {
+      "@id": "http://todo.com/isInBezitVan",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking"
+    },
+    "isInstantieVan": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/transactie#isInstantieVan",
+      "@type": "http://purl.org/vocab/cpsv#PublicService"
+    },
+    "komtVoortUit": {
+      "@container": "@set",
+      "@id": "http://todo.com/komtVoortUit",
+      "@type": "http://www.w3.org/ns/person#Person"
+    },
+    "kost": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasCost",
+      "@type": "http://data.europa.eu/m8g/Cost"
+    },
+    "land": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#land",
+      "@type": "http://purl.org/dc/terms/Location"
+    },
+    "leeftijd": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Foetus.leeftijd",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "leeftijdsgroep": {
+      "@id": "https://schema.org/typicalAgeRange",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "lengte": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeToestand.lengte",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "liggingKind": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschapstoestand.liggingKind",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "liggingKindBevalling": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand.liggingKindBevalling",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "lijkbezorging": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking.lijkbezorging",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "maatregel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#medischVerslagOverlijden",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "naam": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "neonatale": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand.neonatale",
+      "@type": "http://www.w3.org/ns/prov#Location"
+    },
+    "omschrijving": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Persoonsrelatie.omschrijving",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "ondertekening": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking.ondertekening",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "onderwijsniveau": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk.onderwijsniveau",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "ontstaatDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#ontstaatDoor",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Conceptie"
+    },
+    "ontwikkelingStoptDoor": {
+      "@id": "http://todo.com/ontwikkelingStoptDoor",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Foetus"
+    },
+    "opgesteldBij": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking.opgesteldBij",
+      "@type": "http://data.europa.eu/m8g/PublicOrganisation"
+    },
+    "orgaandonatie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking.orgaandonatie",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#Orgaandonatie"
+    },
+    "organiseert": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#organiseert",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#Uitvaart"
+    },
+    "periode": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#periode",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "persoon(Source)": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#Persoonsrelatie.persoon.source",
+      "@type": "http://www.w3.org/ns/person#Person"
+    },
+    "persoon(Target)": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#Persoonsrelatie.persoon.target",
+      "@type": "http://www.w3.org/ns/person#Person"
+    },
+    "plaats": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#plaats",
+      "@type": "http://purl.org/dc/terms/Location"
+    },
+    "rang": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Geboortetoestand.rang",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "rangnummer": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Persoonsrelatie.rangnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "referentie": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "ritueel": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking.ritueel",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "rol": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/role",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "ruimtelijkeDekking": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/spatial",
+      "@type": "http://purl.org/dc/terms/Location"
+    },
+    "score": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Apgarscore.score",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "sector": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/sector",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "spatiaal": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/spatial",
+      "@type": "http://purl.org/dc/terms/Location"
+    },
+    "speeltRol": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/playsRole",
+      "@type": "http://data.europa.eu/m8g/Participation"
+    },
+    "stoptOntwikkeling": {
+      "@id": "http://todo.com/stoptOntwikkeling",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#FoetaalOverlijden"
+    },
+    "techniek": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Conceptie.techniek",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "tijdschema": {
+      "@container": "@set",
+      "@id": "https://schema.org/eventSchedule",
+      "@type": "https://schema.org/Schedule"
+    },
+    "toestand": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschap.toestand",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschapstoestand"
+    },
+    "toestandVan": {
+      "@container": "@set",
+      "@id": "http://todo.com/toestandVan",
+      "@type": "http://www.w3.org/ns/person#Person"
+    },
+    "totaleVolume": {
+      "@id": "https://hl7.org/fhir/medication-definitions.html#Medication.totalVolume",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "trefwoord": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/dcat#keyword",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "uitgevoerdOp": {
+      "@id": "https://hl7.org/fhir/observation-definitions.html#Observation.subject",
+      "@type": "http://www.w3.org/ns/person#Person"
+    },
+    "uitvaartcontract": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking.uitvaartcontract",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#Uitvaartcontract"
+    },
+    "vastgesteld": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#vastgesteld",
+      "@type": "https://build.fhir.org/observation-definitions.html#Observation"
+    },
+    "vastgesteldDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#vastgesteldDoor",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
+    },
+    "vaststelling": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#FoetaalOverlijden.vaststelling",
+      "@type": "https://build.fhir.org/observation-definitions.html#Observation"
+    },
+    "verblijfsadres": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#verblijfsadres",
+      "@type": "http://www.w3.org/ns/locn#Address"
+    },
+    "vereistAlsInput": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/requires",
+      "@type": "http://data.europa.eu/m8g/Evidence"
+    },
+    "veroorzaakt": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#veroorzaakt",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#Ongeval"
+    },
+    "veroorzaaktDoor": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#veroorzaaktDoor",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#Overlijdenstoestand"
+    },
+    "verwerking": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#FoetaalOverlijden.verwerking",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "verwerkingstijd": {
+      "@id": "http://data.europa.eu/m8g/processingTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "voedt": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#voedt",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand"
+    },
+    "volledigeNaam": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#volledigeNaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wijze": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Bevallingstoestand.wijze",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "wordt": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Foetus.wordt",
+      "@type": "http://www.w3.org/ns/person#Person"
+    },
+    "wordtBepaaldDoor": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#wordtBepaaldDoor",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#Wilsbeschikking"
+    },
+    "wordtBewezenDoor": {
+      "@id": "http://todo.com/wordtBewezenDoor",
+      "@type": "https://data.vlaanderen.be/ns/persoon#Overlijden"
+    },
+    "wordtBeëIndigdDoor": {
+      "@container": "@set",
+      "@id": "http://todo.com/wordtBeeindigdDoor",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#FoetaalOverlijden"
+    },
+    "wordtGeobserveerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#wordtGeobserveerdDoor",
+      "@type": "https://build.fhir.org/observation-definitions.html#Observation"
+    },
+    "wordtGeorganiseerdDoor": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#wordtGeorganiseerdDoor",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#Uitvaartondernemer"
+    },
+    "wordtGeproduceerdDoor": {
+      "@id": "https://data.vlaanderen.be/ns/overlijdensaangifte#wordtGeproduceerdDoor",
+      "@type": "https://data.vlaanderen.be/ns/overlijdensaangifte#StoffelijkeRestverwerking"
+    },
+    "wordtGevoedDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#wordtGevoedDoor",
+      "@type": "https://www.hl7.org/fhir/diagnosticreport-definitions.html#DiagnosticReport"
+    },
+    "wordtGevolgdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#wordtGevolgdDoor",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand#Zwangerschap"
+    },
+    "wordtUitgevoerdDoor": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/serviceProvider",
+      "@type": "http://purl.org/vocab/cpsv#PublicService"
+    },
+    "zorg": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.zorg",
+      "@type": "https://hl7.org/fhir/procedure-definitions.html#Procedure"
+    }
+  }
+}

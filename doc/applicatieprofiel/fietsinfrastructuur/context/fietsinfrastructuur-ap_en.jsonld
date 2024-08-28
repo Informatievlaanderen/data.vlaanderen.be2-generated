@@ -1,0 +1,668 @@
+{
+  "@context": {
+    "Accident type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Air quality": "https://data.vlaanderen.be/ns/fiets#Luchtkwaliteit",
+    "AirQuality.frame": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#Luchtkwaliteit.kader",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "AirQuality.value": {
+      "@id": "https://schema.org/value",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Waarde"
+    },
+    "Appliance": "https://saref.etsi.org/core/Device",
+    "Bicycle Link Sequence": "https://data.vlaanderen.be/ns/fiets#Fietslinksequentie",
+    "Bicycle Network Feature": "https://data.vlaanderen.be/ns/fiets#Fietsnetwerkeigenschap",
+    "Bicycle Segment": "https://data.vlaanderen.be/ns/fiets#Fietssegment",
+    "Bicycle buffer": "https://data.vlaanderen.be/ns/fiets#Fietsbuffer",
+    "Bicycle counting pole": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Fietstelpaal",
+    "Bicycle equipment": "https://data.vlaanderen.be/ns/fiets#Fietsinrichting",
+    "Bicycle equipment type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bicycle infrastructure object": "https://data.vlaanderen.be/ns/fiets#Fietsinfrastructuurobject",
+    "Bicycle knot": "https://data.vlaanderen.be/ns/fiets#Fietsknoop",
+    "Bicycle network element": "https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelement",
+    "Bicycle parking": "http://schema.mobivoc.org/#BicycleParkingStation",
+    "Bicycle pavement": "https://data.vlaanderen.be/ns/fiets#Fietsverharding",
+    "Bicycle road sign": "https://data.vlaanderen.be/ns/fiets#Fietsverkeersteken",
+    "Bicycle storage": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Fietsstalling",
+    "Bicycle winter service type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "BicycleBuffer.height": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#hoogte",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "BicycleBuffer.side": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#Fietsbuffer.kant",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "BicycleBuffer.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "BicycleBuffer.width": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#breedte",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "BicycleEquipment.roadSign": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/fiets#Fietsinrichting.verkeersteken",
+      "@type": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken"
+    },
+    "BicycleEquipment.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "BicycleInfrastructureObject.administrator": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/fiets#Fietsinfrastructuurobject.beheerder",
+      "@type": "http://www.w3.org/ns/org#Organization"
+    },
+    "BicycleInfrastructureObject.identifier": {
+      "@id": "http://www.w3.org/ns/adms#Identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "BicycleKnot.geometry": {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Knoop.geometrie",
+      "@type": "http://www.opengis.net/ont/sf#Point"
+    },
+    "BicycleKnot.identifier": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "BicycleLinkSequence.dangerous": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Linksequentie.link",
+      "@type": "https://data.vlaanderen.be/ns/fiets#GerichteFietslink"
+    },
+    "BicycleLinkSequence.identifier": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "BicycleNetworkElement.administrator": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelelment.beheerder",
+      "@type": "http://www.w3.org/ns/org#Organization"
+    },
+    "BicycleRoadSign.direction": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#Fietsverkeersteken.richting",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "BicycleSegment.identifier": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "BicycleWinter Service": "https://data.vlaanderen.be/ns/fiets#FietsWinterdienst",
+    "BicycleWinterService.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Bike Link Set": "https://data.vlaanderen.be/ns/fiets#Fietslinkset",
+    "Bike Link SetType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bike width": "https://data.vlaanderen.be/ns/fiets#Fietsbreedte",
+    "BikeLinkSet.dangerous": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Linkset.link",
+      "@type": "https://data.vlaanderen.be/ns/fiets#GeneriekeFietslink"
+    },
+    "BikeLinkSet.identifier": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "BikeLinkSet.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "BikeWidth.width": {
+      "@id": "https://fixme.com/",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "BufferzoneType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Counting method": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Counting pile type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Cycling comfort": "https://data.vlaanderen.be/ns/fiets#Fietscomfort",
+    "Cycling network": "https://data.vlaanderen.be/ns/fiets#Fietsnetwerk",
+    "CyclingComfort.frame": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#kader",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "CyclingComfort.value": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#waarde",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Waarde"
+    },
+    "CyclingNetwork.element": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/fiets#element",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelement"
+    },
+    "CyclingNetwork.geographicName": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#Netwerk.geografischeNaam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Dangerous": "https://data.vlaanderen.be/ns/netwerk#Link",
+    "DirectionBicycle traffic": "https://data.vlaanderen.be/ns/fiets#RichtingFietsverkeer",
+    "DirectionBicycleTraffic.direction": {
+      "@id": "https://data.vlaanderen.be/ns/weg#rijrichting",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "DirectionBicycleTraffic.roadSign": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/fiets#RichtingFietsverkeer.verkeersteken",
+      "@type": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken"
+    },
+    "Document": "http://xmlns.com/foaf/0.1/Document",
+    "Element": "http://todo.com/Element",
+    "GenericFietslink": "https://data.vlaanderen.be/ns/fiets#GeneriekeFietslink",
+    "Grade-SeparatedIntersection.identifier": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Grade-separated intersection": "https://data.vlaanderen.be/ns/netwerk#OngelijkgrondseKruising",
+    "Identifier.identifier": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Infrastructure element": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Infrastructuurelement",
+    "InfrastructureElement.geometry": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "Kant": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Land use": "https://data.vlaanderen.be/ns/fiets#Landgebruik",
+    "Land use type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "LandUse.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Link Direction Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Measured bike part": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Mode of transport": "http://www.w3.org/2004/02/skos/core#Concept",
+    "NetworkReference.element": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie.element",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelement"
+    },
+    "Obstacle type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Organization": "http://www.w3.org/ns/org#Organization",
+    "Parkeerfaciliteit": "http://todo.com/Parkeerfaciliteit",
+    "Parking facility": "http://schema.mobivoc.org/#ParkingFacility",
+    "Permissible speed": "https://data.vlaanderen.be/ns/weg#Snelheidsbeperking",
+    "PermissibleSpeed.direction": {
+      "@id": "https://data.vlaanderen.be/ns/weg#richting",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "PermissibleSpeed.roadSign": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/fiets#verkeersteken",
+      "@type": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken"
+    },
+    "PermissibleSpeed.vehicle": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/fiets#Snelheidsbeperking.voertuigtype",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "QuantitativeValue.value": {
+      "@id": "https://schema.org/value",
+      "@type": "https://schema.org/Number"
+    },
+    "Registered Organization": "http://www.w3.org/ns/regorg#RegisteredOrganization",
+    "Road Lighting Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Road PavementType:": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Road lighting": "https://data.vlaanderen.be/ns/fiets#Wegverlichting.Kader",
+    "Road marking type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Road marking-Traffic sign": "https://fixme.com/",
+    "Road markings": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Wegmarkering",
+    "Road sign concept": "https://fixme.com/",
+    "Road signs": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Wegsignalisatie",
+    "RoadLighting.frame": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#kader",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "RoadLighting.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "RoadLighting.value": {
+      "@id": "https://schema.org/value",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Waarde"
+    },
+    "RoadMarkings.realize": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit#realiseert",
+      "@type": "https://fixme.com/"
+    },
+    "Sign": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Sound": "https://data.vlaanderen.be/ns/fiets#Geluid",
+    "Sound.frame": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#Geluid.kader",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "Sound.value": {
+      "@id": "https://schema.org/value",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Waarde"
+    },
+    "Source": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TargetedBikeLink.dangerous": {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#GerichteLink.link",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Fietssegment"
+    },
+    "TargetedBikeLink.direction": {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#richting",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Toestel": "https://saref.etsi.org/core/Device",
+    "Traffic Light-Traffic Sign": "https://fixme.com/",
+    "Traffic Sign-Traffic Sign": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersbord-Verkeersteken",
+    "Traffic Type Value": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Traffic accident": "https://data.vlaanderen.be/ns/fiets#Verkeersongeval",
+    "Traffic count": "https://data.vlaanderen.be/ns/fiets#Verkeerstelling",
+    "Traffic intensity": "https://data.vlaanderen.be/ns/fiets#Verkeersintensiteit",
+    "Traffic lightPedestrianCyclist": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#VerkeerslichtVoetgangerFietser",
+    "Traffic participation": "https://data.vlaanderen.be/ns/fiets#Verkeersdeelname",
+    "Traffic sign": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Verkeersbord",
+    "Traffic sign concept": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept",
+    "Traffic type": "https://data.vlaanderen.be/ns/fiets#Verkeerstype",
+    "TrafficAccident.number": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#Verkeersongeval.aantal",
+      "@type": "https://schema.org/Number"
+    },
+    "TrafficAccident.period": {
+      "@id": "http://purl.org/dc/terms/date",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "TrafficAccident.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "TrafficCount.direction": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#Verkeerstelling.richting",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "TrafficCount.number": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#Verkeerstelling.aantal",
+      "@type": "https://schema.org/Number"
+    },
+    "TrafficCount.period": {
+      "@id": "http://purl.org/dc/terms/date",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "TrafficCount.vehicle": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/fiets#Verkeerstelling.voertuigtype",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "TrafficIntensity.frame": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#Verkeersintensiteit.kader",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "TrafficIntensity.vehicle": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/fiets#Verkeersintensiteit.voertuigtype",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "TrafficLightPedestrianCyclist.realize": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit#realiseert",
+      "@type": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken"
+    },
+    "TrafficParticipation.roadSign": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/fiets#Verkeersdeelname.verkeersteken",
+      "@type": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken"
+    },
+    "TrafficParticipation.vehicle": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/fiets#Verkeersdeelname.voertuigtype",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "TrafficSign.height": {
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit#hoogte",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "TrafficSign.image": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit#grafischeWeergave",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "TrafficSign.realize": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit#realiseert",
+      "@type": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken"
+    },
+    "TrafficSign.width": {
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit#breedte",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "TrafficSignConcept.image": {
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit#grafischeWeergave",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "TrafficType.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Transport hub": "https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#Vervoersknooppunt",
+    "Transport type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Transportation Feature": "https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap",
+    "Transportation network": "https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk",
+    "TransportationNetwork.geographicName": {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Netwerk.geografischeNaam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "UsableBike width": "https://data.vlaanderen.be/ns/fiets#BruikbareFietsbreedte",
+    "UsableBikeWidth.side": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#BruikbareFietsbreedte.kant",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "UsableWidth ReductionType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Vehicle": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Vibration": "https://data.vlaanderen.be/ns/fiets#Trillingen",
+    "Vibration.frame": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#Trillingen.kader",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "Vibration.value": {
+      "@id": "https://schema.org/value",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Waarde"
+    },
+    "Wegsignalisatie": "http://todo.com/Wegsignalisatie",
+    "appearance": {
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit#aanzicht",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "applicationDirection": {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#toepassingsrichting",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "arrivalButton": {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#eindknoop",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Fietsknoop"
+    },
+    "awardedBy": {
+      "@id": "http://purl.org/dc/terms/creator",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "awardedBy(String)": {
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "awardedOn": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "beginning": {
+      "@id": "http://data.europa.eu/m8g/startTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "bicycleInfrastructureObject": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/fiets#fietsinfrastructuurobject",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Fietsinfrastructuurobject"
+    },
+    "bicycleNetworkElement": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/fiets#fietsnetwerkelement",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelement"
+    },
+    "bikeSharing": {
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#fietsdelen",
+      "@type": "http://www.w3.org/2001/XMLSchema#xboolean"
+    },
+    "busNumber": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "capacity": {
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#capaciteit",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "commissioning": {
+      "@id": "http://purl.org/dc/terms/date",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "concept": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#concept",
+      "@type": "https://fixme.com/"
+    },
+    "contactInfo": {
+      "@container": "@set",
+      "@id": "http://schema.org/contactPoint",
+      "@type": "http://schema.org/ContactPoint"
+    },
+    "countingMethod": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#telmethode",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "countingPostType": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "crossingFrom": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/netwerk#kruisingVan",
+      "@type": "https://data.vlaanderen.be/ns/netwerk#Link"
+    },
+    "cyclingNetwork": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/fiets#fietsnetwerk",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Fietsnetwerk"
+    },
+    "departureNode": {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#beginknoop",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Fietsknoop"
+    },
+    "distance": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#afstand",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "end": {
+      "@id": "http://data.europa.eu/m8g/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "endButton": {
+      "@id": "https://fixme.com/",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Fietsknoop"
+    },
+    "fullAddress": {
+      "@id": "http://www.w3.org/ns/locn#fullAddress",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "gML": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "geographicalName": {
+      "@id": "https://data.vlaanderen.be/ns/transportnetwerk#geografischeNaam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "geometryCenterLine": {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#geometriemiddellijn",
+      "@type": "http://www.opengis.net/ont/sf#LineString"
+    },
+    "hasSub-Organization": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#hasSubOrganization",
+      "@type": "http://www.w3.org/ns/org#Organization"
+    },
+    "houseNumber": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "indoor": {
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#overdekt",
+      "@type": "http://www.w3.org/2001/XMLSchema#xboolean"
+    },
+    "instrument": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#instrument",
+      "@type": "https://saref.etsi.org/core/Device"
+    },
+    "intensity": {
+      "@id": "https://schema.org/value",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Waarde"
+    },
+    "isASub-OrganisationOf": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#subOrganizationOf",
+      "@type": "http://www.w3.org/ns/org#Organization"
+    },
+    "isAssociatedWith": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#linkedTo",
+      "@type": "http://www.w3.org/ns/org#Organization"
+    },
+    "land": {
+      "@id": "https://data.vlaanderen.be/ns/adres#land",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "lockable": {
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#afsluitbaar",
+      "@type": "http://www.w3.org/2001/XMLSchema#xboolean"
+    },
+    "mailbox": {
+      "@id": "http://www.w3.org/ns/locn#poBox",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "maintenance": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#onderhoud",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Onderhoud"
+    },
+    "maintenanceType": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "meaning": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#betekenis",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "measuredShare": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#opgemetenDeel",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "measurement": {
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersbord.afmeting",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "modeOfTransport": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#vervoersmodus",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "municipalityName": {
+      "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "network": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/netwerk#inNetwerk",
+      "@type": "https://data.vlaanderen.be/ns/transportnetwerk#Transportnetwerk"
+    },
+    "networkReference": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/netwerk#netwerkreferentie",
+      "@type": "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie"
+    },
+    "obstacle": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#obstakel",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "ofPosition": {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#LineaireReferentie.vanPositie",
+      "@type": "https://schema.org/Distance"
+    },
+    "operationalStatus": {
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit#Verkeersbord.operationeleStatus",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "opposition": {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Puntreferentie.opPositie",
+      "@type": "https://schema.org/Distance"
+    },
+    "preferredName": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "registration": {
+      "@id": "http://www.w3.org/ns/regorg#registration",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "removable": {
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#verplaatsbaar",
+      "@type": "http://www.w3.org/2001/XMLSchema#xboolean"
+    },
+    "roadMarkings": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "roadSurfacing": {
+      "@id": "https://data.vlaanderen.be/ns/weg#verharding",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "serviceDate": {
+      "@id": "http://purl.org/dc/terms/date",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "source": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/fiets#bron",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "speedLimit": {
+      "@id": "https://data.vlaanderen.be/ns/weg#snelheidsbeperkingWaarde",
+      "@type": "https://schema.org/speed"
+    },
+    "standardUnit": {
+      "@id": "https://schema.org/unitCode",
+      "@type": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid"
+    },
+    "startButton": {
+      "@id": "https://fixme.com/",
+      "@type": "https://data.vlaanderen.be/ns/fiets#Fietsknoop"
+    },
+    "streetName": {
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "supplier": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#leverancier",
+      "@type": "http://www.w3.org/ns/org#Organization"
+    },
+    "toPosition": {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#LineaireReferentie.totPositie",
+      "@type": "https://schema.org/Distance"
+    },
+    "trafficSignCode": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#verkeersbordcode",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "transportObject": {
+      "@id": "https://data.vlaanderen.be/ns/fiets#transportobject",
+      "@type": "https://data.vlaanderen.be/ns/transportnetwerk#Transportobject"
+    },
+    "transportType": {
+      "@id": "https://data.vlaanderen.be/ns/transportnetwerk#transporttype",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "unit": {
+      "@id": "https://schema.org/unitText",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "validityPeriod": {
+      "@id": "http://purl.org/dc/terms/date",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "vehicleAffected": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/fiets#betrokkenVoertuig",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "wKT": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "zipCode": {
+      "@id": "http://www.w3.org/ns/locn#postCode",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  }
+}
