@@ -1,0 +1,460 @@
+{
+  "@context": {
+    "Activity": "http://www.w3.org/ns/prov#Activity",
+    "Administrative Dismissal Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Administrative decision": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BestuurlijkeBeslissing",
+    "Administrative fine": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BestuurlijkeGeldboete",
+    "Administrative sanction": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BestuurlijkeSanctie",
+    "AdministrativeDecision.date": {
+      "@id": "http://purl.org/dc/terms/date",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "AdministrativeFine.dateOfPayment": {
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#datumBetaling",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "AdministrativeFine.paymentStatus": {
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#betalingsstatus",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "AdministrativeSanction.definition": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Agent": "http://www.w3.org/ns/prov#Agent",
+    "Alternative Sanction Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Belgian Address": "https://data.vlaanderen.be/ns/adres#Adres",
+    "Birth": "https://data.vlaanderen.be/ns/persoon#Geboorte",
+    "Building": "https://data.vlaanderen.be/ns/gebouw#Gebouw",
+    "Building unit": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid",
+    "Cadastral plan plot": "https://data.vlaanderen.be/ns/perceel#KadastraalPlanperceel",
+    "Committed Crime Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Confiscation": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#Verbeurdverklaring",
+    "Confiscation.amount": {
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#bedrag",
+      "@type": "https://schema.org/MonetaryAmount"
+    },
+    "Confiscation.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Decision of the fining authority result": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Decision to Administrative Prosecution": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingTotBestuurlijkeVervolging",
+    "Decision to conduct an Administrative Investigation": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingTotBestuurlijkOpsporingsonderzoek",
+    "Decision to dismiss the case": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingTotBestuurlijkSepot",
+    "DecisionToAdministrativeProsecution.result": {
+      "@id": "http://www.w3.org/ns/prov#generated",
+      "@type": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#VervalSanctiemogelijkheidDoorBetalingGeldsom"
+    },
+    "DecisionToDismissTheCase.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Domicile": "https://data.vlaanderen.be/ns/persoon#Domicilie",
+    "Entity": "http://www.w3.org/ns/prov#Entity",
+    "Establishment": "http://www.w3.org/ns/org#Site",
+    "Exclusion Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Exclusion from Aid": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#UitsluitingVanSteun",
+    "ExclusionFromAid.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Expiry of the Sanction Possibility by Payment of a Sum of Money": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#VervalSanctiemogelijkheidDoorBetalingGeldsom",
+    "ExpiryOfTheSanctionPossibilityByPaymentOfASumOfMoney.dateOfPayment": {
+      "@id": "http://purl.org/dc/terms/date",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ExpiryOfTheSanctionPossibilityByPaymentOfASumOfMoney.paymentStatus": {
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#betalingsstatus",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Fact": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#Feit",
+    "Fact.date": {
+      "@id": "http://purl.org/dc/terms/date",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Fact.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Forfeiture Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Formal Organization": "http://www.w3.org/ns/org#FormalOrganization",
+    "Immediate Collection": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#OnmiddellijkeInning",
+    "ImmediateCollection.amount": {
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#bedrag",
+      "@type": "https://schema.org/MonetaryAmount"
+    },
+    "ImmediateCollection.dateOfPayment": {
+      "@id": "http://purl.org/dc/terms/date",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ImmediateCollection.paymentStatus": {
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#betalingsstatus",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Jurisdiction": "http://purl.org/dc/terms/Jurisdiction",
+    "Law": "http://data.europa.eu/eli/ontology#LegalResource",
+    "Location.definition": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Organization": "http://www.w3.org/ns/org#Organization",
+    "Organization.contactInfo": {
+      "@container": "@set",
+      "@id": "http://schema.org/contactPoint",
+      "@type": "http://schema.org/ContactPoint"
+    },
+    "Payment Status": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Person": "http://www.w3.org/ns/person#Person",
+    "Person event": "https://data.vlaanderen.be/ns/persoon#Persoonsgebeurtenis",
+    "Person.contactInfo": {
+      "@id": "http://schema.org/contactPoint",
+      "@type": "http://schema.org/ContactPoint"
+    },
+    "Piece": "https://data.vlaanderen.be/ns/dossier/#Stuk",
+    "Place": "http://purl.org/dc/terms/Location",
+    "Place.geometry": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "Registered Organization": "http://www.w3.org/ns/regorg#RegisteredOrganization",
+    "Registered Person": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon",
+    "RegisteredOrganization.legalStatus": {
+      "@id": "https://data.vlaanderen.be/ns/organisatie#rechtsvorm",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "RegisteredOrganization.registration": {
+      "@id": "http://www.w3.org/ns/regorg#registration",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "RegisteredPerson.registration": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#registratie",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Residency": "https://data.vlaanderen.be/ns/persoon#Inwonerschap",
+    "Road segment": "https://data.vlaanderen.be/ns/weg#Wegsegment",
+    "Sanction decision": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#SanctieBeslissing",
+    "Source of law": "http://data.europa.eu/eli/ontology#LegalResourceSubdivision",
+    "SourceOfLaw.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Spatial unit": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid",
+    "SpatialUnitGeometry.geometry": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheidGeometrie.geometrie",
+      "@type": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "Whereabouts": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats",
+    "about": {
+      "@container": "@set",
+      "@id": "https://schema.org/about",
+      "@type": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#Feit"
+    },
+    "address": {
+      "@id": "http://www.w3.org/ns/locn#address",
+      "@type": "http://www.w3.org/ns/locn#Address"
+    },
+    "addressArea": {
+      "@id": "http://www.w3.org/ns/locn#addressArea",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "alternativeName": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#alternatieveNaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "asAResultOf": {
+      "@id": "http://www.w3.org/ns/prov#wasGeneratedBy",
+      "@type": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BeslissingTotBestuurlijkeVervolging"
+    },
+    "awardedBy": {
+      "@id": "http://purl.org/dc/terms/creator",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "beginning": {
+      "@id": "http://data.europa.eu/m8g/startTime",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "birthName": {
+      "@id": "http://www.w3.org/ns/person#birthName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "busNumber": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "businessAddress": {
+      "@id": "http://www.w3.org/ns/org#siteAddress",
+      "@type": "http://schema.org/ContactPoint"
+    },
+    "contactName": {
+      "@id": "http://xmlns.com/foaf/0.1/name",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "currency": {
+      "@id": "https://schema.org/currency",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "default": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#default",
+      "@type": "http://www.w3.org/2001/XMLSchema#xboolean"
+    },
+    "deferralPeriod": {
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#uitstelperiode",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "description": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "enamel": {
+      "@id": "http://schema.org/email",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "end": {
+      "@id": "http://data.europa.eu/m8g/endTime",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "fax": {
+      "@id": "http://schema.org/faxNumber",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "findsPrecipitationIn": {
+      "@container": "@set",
+      "@id": "http://todo.com/vindtNeerslagIn",
+      "@type": "https://data.vlaanderen.be/ns/dossier/#Stuk"
+    },
+    "fine": {
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#boete",
+      "@type": "https://schema.org/MonetaryAmount"
+    },
+    "firstName": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/givenName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "firstNameUsed": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#gebruikteVoornaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fullAddress": {
+      "@id": "http://www.w3.org/ns/locn#fullAddress",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "fullName": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#volledigeNaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gML": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "gender": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#geslacht",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "hasBirth": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#heeftGeboorte",
+      "@type": "https://data.vlaanderen.be/ns/persoon#Geboorte"
+    },
+    "hasRegisteredEstablishment": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#hasRegisteredSite",
+      "@type": "http://www.w3.org/ns/org#Site"
+    },
+    "hasResidency": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#heeftVerblijfplaats",
+      "@type": "https://data.vlaanderen.be/ns/persoon#Domicilie"
+    },
+    "houseNumber": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "identifier": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "imposes": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#legtOp",
+      "@type": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#BestuurlijkeSanctie"
+    },
+    "includedIn": {
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#opgenomenIn",
+      "@type": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#SanctieBeslissing"
+    },
+    "inwonerschap.GeregistreerdPersoon": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#Inwonerschap.geregistreerdPersoon",
+      "@type": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
+    },
+    "inwonerschap.Jurisdictie": {
+      "@id": "http://todo.com/Inwonerschap.jurisdictie",
+      "@type": "http://purl.org/dc/terms/Jurisdiction"
+    },
+    "land": {
+      "@id": "https://data.vlaanderen.be/ns/adres#land",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "law": {
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#rechtsbron",
+      "@type": "http://data.europa.eu/eli/ontology#LegalResourceSubdivision"
+    },
+    "legalName": {
+      "@id": "http://www.w3.org/ns/regorg#legalName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "legalPersonality": {
+      "@id": "https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "location": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#atLocation",
+      "@type": "http://www.w3.org/ns/prov#Location"
+    },
+    "locationIndication": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorDesignator",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "locationName": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "mailbox": {
+      "@id": "http://www.w3.org/ns/locn#poBox",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "method": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#methode",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "municipalityName": {
+      "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "openingHours": {
+      "@id": "http://schema.org/openingHours",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "patronymic": {
+      "@id": "http://www.w3.org/ns/person#patronymicName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "period": {
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#periode",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "personConcerned": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#betrokkene",
+      "@type": "http://www.w3.org/ns/prov#Agent"
+    },
+    "place": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#plaats",
+      "@type": "http://purl.org/dc/terms/Location"
+    },
+    "postalName": {
+      "@id": "http://www.w3.org/ns/locn#postName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "postponement": {
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#uitstel",
+      "@type": "http://www.w3.org/2001/XMLSchema#xboolean"
+    },
+    "preferredName": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "related": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#gerelateerd",
+      "@type": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#Feit"
+    },
+    "reportingOfficer": {
+      "@id": "http://todo.com/verbalisant",
+      "@type": "http://www.w3.org/ns/regorg#RegisteredOrganization"
+    },
+    "residency": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/person#residency",
+      "@type": "http://purl.org/dc/terms/Jurisdiction"
+    },
+    "result": {
+      "@id": "https://data.vlaanderen.be/ns/besluitvorming#resultaat",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "streetName": {
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "sumOfMoney": {
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#geldsom",
+      "@type": "https://schema.org/MonetaryAmount"
+    },
+    "surname": {
+      "@id": "http://xmlns.com/foaf/0.1/familyName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "suspension": {
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#opschorting",
+      "@type": "http://www.w3.org/2001/XMLSchema#xboolean"
+    },
+    "suspensionOfTrialPeriod": {
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#opschortingProefperiode",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "takenBy": {
+      "@id": "http://todo.com/genomenDoor",
+      "@type": "http://www.w3.org/ns/regorg#RegisteredOrganization"
+    },
+    "telephone": {
+      "@id": "http://schema.org/telephone",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "toponym": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "unitLevel1": {
+      "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "unitLevel2": {
+      "@id": "http://www.w3.org/ns/locn#adminUnitL2",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "value": {
+      "@id": "https://schema.org/value",
+      "@type": "http://www.w3.org/2001/XMLSchema#xdouble"
+    },
+    "verwijstNaar": {
+      "@id": "https://data.vlaanderen.be/ns/adres#verwijstNaar",
+      "@type": "https://data.vlaanderen.be/ns/adres#Adres"
+    },
+    "violates": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#overtreedt",
+      "@type": "http://data.europa.eu/eli/ontology#LegalResourceSubdivision"
+    },
+    "wKT": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "website": {
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "writingForm": {
+      "@id": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "zipCode": {
+      "@id": "http://www.w3.org/ns/locn#postCode",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  }
+}

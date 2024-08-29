@@ -1,0 +1,470 @@
+{
+  "@context": {
+    "Acknowledgment type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Bore Inclination Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Borehole": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole",
+    "Borehole diameter": "https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameter",
+    "Borehole.formwork": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#bekisting",
+      "@type": "https://data.vlaanderen.be/ns/grondboringen#Bekisting"
+    },
+    "Borehole.geometry": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape",
+      "@type": "http://www.opengis.net/ont/sf#Curve"
+    },
+    "Borehole.isResultFrom": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#isResultaatVan",
+      "@type": "https://data.vlaanderen.be/ns/grondboringen#Grondboring"
+    },
+    "BoreholeDiameter.diameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element",
+      "@type": "https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameterinterval"
+    },
+    "BoreholeDiameterInterval.diameter": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+    },
+    "BoreholeDiameterInterval.geometry": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry",
+      "@type": "http://www.opengis.net/ont/sf#Curve"
+    },
+    "Boron": "https://data.vlaanderen.be/ns/grondboringen#Boor",
+    "Boron.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "https://data.vlaanderen.be/ns/grondboringen#BoortypeInterval"
+    },
+    "Commission": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht",
+    "Coverage": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
+    "CurveValue Pair": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair",
+    "DirectPosition.gML": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "DirectPosition.measurement": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#DirectePositie.opmeting",
+      "@type": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+    },
+    "DirectPosition.wKT": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Domain Object": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+    "DomainObject.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Drill type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "DrillTypeInterval.geometry": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry",
+      "@type": "http://www.opengis.net/ont/sf#Curve"
+    },
+    "DrillTypeInterval.type": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Drilling MethodType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Drilling Target Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Drilling method": "https://data.vlaanderen.be/ns/grondboringen#Boormethode",
+    "Drilling starting point type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "DrillingMethod.method": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#Boormethode.methode",
+      "@type": "https://data.vlaanderen.be/ns/grondboringen#BoormethodeInterval"
+    },
+    "DrillingMethodInterval.geometry": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry",
+      "@type": "http://www.opengis.net/ont/sf#Curve"
+    },
+    "DrillingMethodInterval.method": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Formwork": "https://data.vlaanderen.be/ns/grondboringen#Bekisting",
+    "Formwork.formwork": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element",
+      "@type": "https://data.vlaanderen.be/ns/grondboringen#Bekistinginterval"
+    },
+    "FormworkInterval.geometry": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry",
+      "@type": "http://www.opengis.net/ont/sf#Curve"
+    },
+    "Geometry.gML": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Geometry.measurement": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting",
+      "@type": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+    },
+    "Geometry.wKT": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Ground level type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Ground object": "https://data.vlaanderen.be/ns/grondboringen#Grondobject",
+    "Ground object type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "GroundLevel.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "GroundObject.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Identifier.identifier": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Input": "http://www.w3.org/ns/ssn/Input",
+    "Input.reference": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Input.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Lawsuit": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
+    "Legal Appearance": "https://data.europa.eu/eli/ontology#LegalExpression",
+    "Legal Appearance Shape Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Legal Framework": "https://data.vlaanderen.be/ns/generiek#WettelijkKader",
+    "Legal Framework Drilling": "https://data.vlaanderen.be/ns/grondboringen#WettelijkKaderBoring",
+    "Legal basis": "https://data.europa.eu/eli/ontology#LegalResource",
+    "LegalAppearance.identifier": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Material class": "http://www.w3.org/2004/02/skos/core#Concept",
+    "MaterialFormwork Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Measure": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
+    "Measurement method": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Measurement.carriedOutBy": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "Measurement.method": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Object": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+    "Output": "http://www.w3.org/ns/ssn/Output",
+    "Output.reference": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Output.referentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Output.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Recognition": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Erkenning",
+    "Recognition.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Sampler": "http://www.w3.org/ns/sosa/Sampler",
+    "Sampler Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Sampler.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Sampling": "http://www.w3.org/ns/sosa/Sampling",
+    "Sampling Object Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Sampling Type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Sampling object": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
+    "Sampling procedure": "http://www.w3.org/ns/sosa/om#SamplingProcedure",
+    "Sampling procedure type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Sampling target": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Sampling.carriedOutBy": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.uitgevoerdDoor",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "Sampling.legalFramework": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.wettelijkKader",
+      "@type": "https://data.vlaanderen.be/ns/generiek#WettelijkKader"
+    },
+    "Sampling.purpose": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.doel",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Sampling.result": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasResult",
+      "@type": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+    },
+    "Sampling.sampledObject": {
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "https://data.vlaanderen.be/ns/grondboringen#Grondobject"
+    },
+    "Sampling.samplingTime": {
+      "@id": "http://www.w3.org/ns/sosa/resultTime",
+      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
+    },
+    "Sampling.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "SamplingObject.identifier": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "SamplingObject.isResultFrom": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/isResultOf",
+      "@type": "http://www.w3.org/ns/sosa/Sampling"
+    },
+    "SamplingObject.parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+    },
+    "SamplingObject.sampledObject": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature",
+      "@type": "https://data.vlaanderen.be/ns/grondboringen#Grondobject"
+    },
+    "SamplingObject.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "SamplingProcedure.parameter": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsprocedure.parameter",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+    },
+    "SamplingProcedure.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Soil drilling": "https://data.vlaanderen.be/ns/grondboringen#Grondboring",
+    "Soil sample": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster",
+    "Soil sample type": "http://www.w3.org/2004/02/skos/core#Concept",
+    "SoilDrilling.identifier": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "SoilDrilling.legalFramework": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.wettelijkKader",
+      "@type": "https://data.vlaanderen.be/ns/grondboringen#WettelijkKaderBoring"
+    },
+    "SoilDrilling.purpose": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.doel",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "SoilDrilling.result": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#resultaat",
+      "@type": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole"
+    },
+    "SoilSample.samplingTime": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime",
+      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period"
+    },
+    "adoptedGroundwaterLevel": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#aangenomenGrondwaterstand",
+      "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+    },
+    "associatedSamplingObject": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature",
+      "@type": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+    },
+    "awardedBy": {
+      "@id": "http://purl.org/dc/terms/creator",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "awardedBy(String)": {
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "awardedOn": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "boreLength": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#boringLengte",
+      "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+    },
+    "borer": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#boorder",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "carriedOutWith": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySampler",
+      "@type": "http://www.w3.org/ns/sosa/Sampler"
+    },
+    "category": {
+      "@id": "http://purl.org/dc/terms/subject",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "commission": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.opdracht",
+      "@type": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht"
+    },
+    "condition": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.conditie",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+    },
+    "currentLocation": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation",
+      "@type": "http://www.w3.org/ns/prov#Location"
+    },
+    "depth": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.diepte",
+      "@type": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Diepte"
+    },
+    "description": {
+      "@id": "http://purl.org/dc/elements/1.1/description",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "driller": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#boormeester",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "drillingDiameter": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#boordiameter",
+      "@type": "https://data.vlaanderen.be/ns/grondboringen#Boorgatdiameter"
+    },
+    "groundLevel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.maaiveld",
+      "@type": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld"
+    },
+    "height": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld.hoogte",
+      "@type": "https://data.vlaanderen.be/ns/generiek#DirectePositie"
+    },
+    "hostPlatform": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process"
+    },
+    "implementedBy": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/implementedBy",
+      "@type": "http://www.w3.org/ns/sosa/Sampler"
+    },
+    "implements": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/implements",
+      "@type": "http://www.w3.org/ns/sosa/om#SamplingProcedure"
+    },
+    "inclinationType": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#inclinatietype",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "input": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasInput",
+      "@type": "http://www.w3.org/ns/ssn/Input"
+    },
+    "intention": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19150/-2/2012/base#Intention",
+      "@type": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+    },
+    "legalFrameworkDriller": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#wettelijkKaderBoorder",
+      "@type": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Erkenning"
+    },
+    "legalFrameworkDrilling": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#wettelijkKaderBoring",
+      "@type": "https://data.europa.eu/eli/ontology#LegalExpression"
+    },
+    "location": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.ligging",
+      "@type": "http://www.w3.org/ns/prov#Location"
+    },
+    "material": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#materiaal",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "materialClass": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.materialClass",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "name": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name",
+      "@type": "http://def.isotc211.org/iso19103/2005/Names#GenericName"
+    },
+    "origin": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage",
+      "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage"
+    },
+    "output": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasOutput",
+      "@type": "http://www.w3.org/ns/ssn/Output"
+    },
+    "positionalAccuracy": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.positionalAccuracy",
+      "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy"
+    },
+    "procedureUsed": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "http://www.w3.org/ns/sosa/om#SamplingProcedure"
+    },
+    "realize": {
+      "@id": "https://data.europa.eu/eli/ontology#realizes",
+      "@type": "https://data.europa.eu/eli/ontology#LegalResource"
+    },
+    "reportsTo": {
+      "@container": "@set",
+      "@id": "https://www.w3.org/ns/org#reportsTo",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "sampleType": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "samplingCarriedOut": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/madeSampling",
+      "@type": "http://www.w3.org/ns/sosa/Sampling"
+    },
+    "samplingSite": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation",
+      "@type": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "size": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.size",
+      "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+    },
+    "soilDrilling": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#grondboring",
+      "@type": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole"
+    },
+    "specification": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsprocedure.specificatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "startingPoint": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#startpunt",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "thickness": {
+      "@id": "https://data.vlaanderen.be/ns/grondboringen#dikte",
+      "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+    },
+    "value": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+    }
+  }
+}
