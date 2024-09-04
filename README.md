@@ -1,1 +1,1 @@
-Deze repository bevat de gegenereerde artifacten voor data.vlaanderen.be
+Deze repository bevat de gegenereerde artifacten voor data.vlaanderen.be (English version)
