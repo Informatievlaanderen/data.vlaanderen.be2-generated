@@ -1,20 +1,20 @@
 #||# oslo-shacl-template-generator for language nl
 #||# -------------------------------------
-2024-09-09T09:18:55.184Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:c17f79376b45c43d2a90a6dde622b8f8ade2385daea3b7d251d1b43eb6b400f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2964)".
-2024-09-09T09:18:55.186Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:a8710628e3b032c5e9d7781213d90bce924c9217fa3b84f2d0dd7b45c0fd9c8b](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2995)".
-2024-09-09T09:18:55.239Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:12df0742a2601744ba4aa9e4a6364c992cadec9836cfb9221541af3fc8c5a5f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L8260)".
+2024-09-10T09:23:38.254Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:c17f79376b45c43d2a90a6dde622b8f8ade2385daea3b7d251d1b43eb6b400f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2964)".
+2024-09-10T09:23:38.256Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:a8710628e3b032c5e9d7781213d90bce924c9217fa3b84f2d0dd7b45c0fd9c8b](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2995)".
+2024-09-10T09:23:38.309Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:12df0742a2601744ba4aa9e4a6364c992cadec9836cfb9221541af3fc8c5a5f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L8260)".
 #||# oslo-shacl-template-generator for language en
 #||# -------------------------------------
-2024-09-09T09:18:56.229Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:c17f79376b45c43d2a90a6dde622b8f8ade2385daea3b7d251d1b43eb6b400f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2964)".
-2024-09-09T09:18:56.232Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:a8710628e3b032c5e9d7781213d90bce924c9217fa3b84f2d0dd7b45c0fd9c8b](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2995)".
-2024-09-09T09:18:56.283Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:12df0742a2601744ba4aa9e4a6364c992cadec9836cfb9221541af3fc8c5a5f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L8260)".
+2024-09-10T09:23:39.395Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:c17f79376b45c43d2a90a6dde622b8f8ade2385daea3b7d251d1b43eb6b400f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2964)".
+2024-09-10T09:23:39.397Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:a8710628e3b032c5e9d7781213d90bce924c9217fa3b84f2d0dd7b45c0fd9c8b](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2995)".
+2024-09-10T09:23:39.443Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:12df0742a2601744ba4aa9e4a6364c992cadec9836cfb9221541af3fc8c5a5f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L8260)".
 #||# oslo-shacl-template-generator for language fr
 #||# -------------------------------------
-2024-09-09T09:18:57.267Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:c17f79376b45c43d2a90a6dde622b8f8ade2385daea3b7d251d1b43eb6b400f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2964)".
-2024-09-09T09:18:57.269Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:a8710628e3b032c5e9d7781213d90bce924c9217fa3b84f2d0dd7b45c0fd9c8b](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2995)".
-2024-09-09T09:18:57.319Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:12df0742a2601744ba4aa9e4a6364c992cadec9836cfb9221541af3fc8c5a5f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L8260)".
+2024-09-10T09:23:40.537Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:c17f79376b45c43d2a90a6dde622b8f8ade2385daea3b7d251d1b43eb6b400f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2964)".
+2024-09-10T09:23:40.539Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:a8710628e3b032c5e9d7781213d90bce924c9217fa3b84f2d0dd7b45c0fd9c8b](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2995)".
+2024-09-10T09:23:40.594Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:12df0742a2601744ba4aa9e4a6364c992cadec9836cfb9221541af3fc8c5a5f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L8260)".
 #||# oslo-shacl-template-generator for language de
 #||# -------------------------------------
-2024-09-09T09:18:58.359Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:c17f79376b45c43d2a90a6dde622b8f8ade2385daea3b7d251d1b43eb6b400f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2964)".
-2024-09-09T09:18:58.360Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:a8710628e3b032c5e9d7781213d90bce924c9217fa3b84f2d0dd7b45c0fd9c8b](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2995)".
-2024-09-09T09:18:58.407Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:12df0742a2601744ba4aa9e4a6364c992cadec9836cfb9221541af3fc8c5a5f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L8260)".
+2024-09-10T09:23:41.657Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:c17f79376b45c43d2a90a6dde622b8f8ade2385daea3b7d251d1b43eb6b400f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2964)".
+2024-09-10T09:23:41.659Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:a8710628e3b032c5e9d7781213d90bce924c9217fa3b84f2d0dd7b45c0fd9c8b](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2995)".
+2024-09-10T09:23:41.703Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:12df0742a2601744ba4aa9e4a6364c992cadec9836cfb9221541af3fc8c5a5f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L8260)".

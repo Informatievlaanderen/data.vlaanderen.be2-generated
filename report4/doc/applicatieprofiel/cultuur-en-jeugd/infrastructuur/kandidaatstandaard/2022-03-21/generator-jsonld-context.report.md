@@ -1,29 +1,28 @@
 #||# oslo-jsonld-context-generator for language nl
 #||# -------------------------------------
-2024-09-09T09:18:53.317Z [31merror[39m: Found [urn:oslo-toolchain:a74208acf398ce56d01a67b145e20fd527a471826c603928c3d89516006cbba0 in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"Output" is used multiple times as label.
-2024-09-09T09:18:53.319Z [31merror[39m: Found [urn:oslo-toolchain:9f8df25eabb29dd9cfa0052270b55d1565a78898dae54e01a7c2e98432928566 in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"Ruimte" is used multiple times as label.
-2024-09-09T09:18:53.320Z [31merror[39m: Found [urn:oslo-toolchain:ed9ea6813494500408c3ac27a369b235e90f454c0864b72de0910be4f3e69dbd in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"Ruimte" is used multiple times as label.
-2024-09-09T09:18:53.320Z [31merror[39m: Found [urn:oslo-toolchain:d4dfaf5f4726546836e694498a98f8d18d9f205d260e803333475dbac8bbbd16 in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"Output" is used multiple times as label.
-2024-09-09T09:18:53.343Z [33mwarn[39m: Unable to retrieve max cardinality of property [[urn:oslo-toolchain:dcd1e80fd5d6f83437733d545d64517549715aa40b58019c9772c9cf0eb2897c.
-](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)#||# oslo-jsonld-context-generator for language en
+2024-09-10T09:23:29.137Z [31merror[39m: Found [urn:oslo-toolchain:a74208acf398ce56d01a67b145e20fd527a471826c603928c3d89516006cbba0](all-cultuurenjeugdinfrastructuur-ap.jsonld#L157) in duplicates, meaning "Output" is used multiple times as label.
+2024-09-10T09:23:29.139Z [31merror[39m: Found [urn:oslo-toolchain:9f8df25eabb29dd9cfa0052270b55d1565a78898dae54e01a7c2e98432928566](all-cultuurenjeugdinfrastructuur-ap.jsonld#L478) in duplicates, meaning "Ruimte" is used multiple times as label.
+2024-09-10T09:23:29.140Z [31merror[39m: Found [urn:oslo-toolchain:ed9ea6813494500408c3ac27a369b235e90f454c0864b72de0910be4f3e69dbd](all-cultuurenjeugdinfrastructuur-ap.jsonld#L1718) in duplicates, meaning "Ruimte" is used multiple times as label.
+2024-09-10T09:23:29.140Z [31merror[39m: Found [urn:oslo-toolchain:d4dfaf5f4726546836e694498a98f8d18d9f205d260e803333475dbac8bbbd16](all-cultuurenjeugdinfrastructuur-ap.jsonld#L1753) in duplicates, meaning "Output" is used multiple times as label.
+2024-09-10T09:23:29.163Z [33mwarn[39m: Unable to retrieve max cardinality of property urn:oslo-toolchain:dcd1e80fd5d6f83437733d545d64517549715aa40b58019c9772c9cf0eb2897c.
+#||# oslo-jsonld-context-generator for language en
 #||# -------------------------------------
-2024-09-09T09:18:54.314Z [31merror[39m: Found urn:oslo-toolchain:36a4456dcd87a46910b0233019b9a1455d8733ab4ea839ba24684d2435becb8b in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"License" is used multiple times as label.
-2024-09-09T09:18:54.316Z [31merror[39m: Found [urn:oslo-toolchain:f3b5f47f71587b6bf859e99efbbf75fe2cc91d85d8fd6d04fafe02423931a8de in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"License" is used multiple times as label.
-2024-09-09T09:18:54.316Z [31merror[39m: Found [urn:oslo-toolchain:a74208acf398ce56d01a67b145e20fd527a471826c603928c3d89516006cbba0 in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"Output" is used multiple times as label.
-2024-09-09T09:18:54.317Z [31merror[39m: Found [urn:oslo-toolchain:d4dfaf5f4726546836e694498a98f8d18d9f205d260e803333475dbac8bbbd16 in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"Output" is used multiple times as label.
-2024-09-09T09:18:54.337Z [33mwarn[39m: Unable to retrieve max cardinality of property [[urn:oslo-toolchain:dcd1e80fd5d6f83437733d545d64517549715aa40b58019c9772c9cf0eb2897c.
-](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)#||# oslo-jsonld-context-generator for language fr
+2024-09-10T09:23:29.982Z [31merror[39m: Found [urn:oslo-toolchain:36a4456dcd87a46910b0233019b9a1455d8733ab4ea839ba24684d2435becb8b](all-cultuurenjeugdinfrastructuur-ap.jsonld#L1231) in duplicates, meaning "License" is used multiple times as label.
+2024-09-10T09:23:29.985Z [31merror[39m: Found [urn:oslo-toolchain:f3b5f47f71587b6bf859e99efbbf75fe2cc91d85d8fd6d04fafe02423931a8de](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2247) in duplicates, meaning "License" is used multiple times as label.
+2024-09-10T09:23:29.985Z [31merror[39m: Found [urn:oslo-toolchain:a74208acf398ce56d01a67b145e20fd527a471826c603928c3d89516006cbba0](all-cultuurenjeugdinfrastructuur-ap.jsonld#L157) in duplicates, meaning "Output" is used multiple times as label.
+2024-09-10T09:23:29.985Z [31merror[39m: Found [urn:oslo-toolchain:d4dfaf5f4726546836e694498a98f8d18d9f205d260e803333475dbac8bbbd16](all-cultuurenjeugdinfrastructuur-ap.jsonld#L1753) in duplicates, meaning "Output" is used multiple times as label.
+2024-09-10T09:23:30.005Z [33mwarn[39m: Unable to retrieve max cardinality of property urn:oslo-toolchain:dcd1e80fd5d6f83437733d545d64517549715aa40b58019c9772c9cf0eb2897c.
+#||# oslo-jsonld-context-generator for language fr
 #||# -------------------------------------
-2024-09-09T09:18:55.310Z [31merror[39m: Found urn:oslo-toolchain:36a4456dcd87a46910b0233019b9a1455d8733ab4ea839ba24684d2435becb8b in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"Licence" is used multiple times as label.
-2024-09-09T09:18:55.313Z [31merror[39m: Found [urn:oslo-toolchain:f3b5f47f71587b6bf859e99efbbf75fe2cc91d85d8fd6d04fafe02423931a8de in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"Licence" is used multiple times as label.
-2024-09-09T09:18:55.314Z [31merror[39m: Found [urn:oslo-toolchain:a74208acf398ce56d01a67b145e20fd527a471826c603928c3d89516006cbba0 in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"Sortie" is used multiple times as label.
-2024-09-09T09:18:55.314Z [31merror[39m: Found [urn:oslo-toolchain:d4dfaf5f4726546836e694498a98f8d18d9f205d260e803333475dbac8bbbd16 in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"Sortie" is used multiple times as label.
-2024-09-09T09:18:55.340Z [33mwarn[39m: Unable to retrieve max cardinality of property [[urn:oslo-toolchain:dcd1e80fd5d6f83437733d545d64517549715aa40b58019c9772c9cf0eb2897c.
-](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)#||# oslo-jsonld-context-generator for language de
+2024-09-10T09:23:30.841Z [31merror[39m: Found [urn:oslo-toolchain:36a4456dcd87a46910b0233019b9a1455d8733ab4ea839ba24684d2435becb8b](all-cultuurenjeugdinfrastructuur-ap.jsonld#L1231) in duplicates, meaning "Licence" is used multiple times as label.
+2024-09-10T09:23:30.843Z [31merror[39m: Found [urn:oslo-toolchain:f3b5f47f71587b6bf859e99efbbf75fe2cc91d85d8fd6d04fafe02423931a8de](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2247) in duplicates, meaning "Licence" is used multiple times as label.
+2024-09-10T09:23:30.844Z [31merror[39m: Found [urn:oslo-toolchain:a74208acf398ce56d01a67b145e20fd527a471826c603928c3d89516006cbba0](all-cultuurenjeugdinfrastructuur-ap.jsonld#L157) in duplicates, meaning "Sortie" is used multiple times as label.
+2024-09-10T09:23:30.844Z [31merror[39m: Found [urn:oslo-toolchain:d4dfaf5f4726546836e694498a98f8d18d9f205d260e803333475dbac8bbbd16](all-cultuurenjeugdinfrastructuur-ap.jsonld#L1753) in duplicates, meaning "Sortie" is used multiple times as label.
+2024-09-10T09:23:30.864Z [33mwarn[39m: Unable to retrieve max cardinality of property urn:oslo-toolchain:dcd1e80fd5d6f83437733d545d64517549715aa40b58019c9772c9cf0eb2897c.
+#||# oslo-jsonld-context-generator for language de
 #||# -------------------------------------
-2024-09-09T09:18:56.307Z [31merror[39m: Found urn:oslo-toolchain:36a4456dcd87a46910b0233019b9a1455d8733ab4ea839ba24684d2435becb8b in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"Lizenz" is used multiple times as label.
-2024-09-09T09:18:56.310Z [31merror[39m: Found [urn:oslo-toolchain:f3b5f47f71587b6bf859e99efbbf75fe2cc91d85d8fd6d04fafe02423931a8de in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"Lizenz" is used multiple times as label.
-2024-09-09T09:18:56.311Z [31merror[39m: Found [urn:oslo-toolchain:a74208acf398ce56d01a67b145e20fd527a471826c603928c3d89516006cbba0 in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"Ausgabe" is used multiple times as label.
-2024-09-09T09:18:56.311Z [31merror[39m: Found [urn:oslo-toolchain:d4dfaf5f4726546836e694498a98f8d18d9f205d260e803333475dbac8bbbd16 in duplicates, meaning ](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)"Ausgabe" is used multiple times as label.
-2024-09-09T09:18:56.340Z [33mwarn[39m: Unable to retrieve max cardinality of property [urn:oslo-toolchain:dcd1e80fd5d6f83437733d545d64517549715aa40b58019c9772c9cf0eb2897c.
-](all-cultuurenjeugdinfrastructuur-ap.jsonld#L0)
+2024-09-10T09:23:31.682Z [31merror[39m: Found [urn:oslo-toolchain:36a4456dcd87a46910b0233019b9a1455d8733ab4ea839ba24684d2435becb8b](all-cultuurenjeugdinfrastructuur-ap.jsonld#L1231) in duplicates, meaning "Lizenz" is used multiple times as label.
+2024-09-10T09:23:31.685Z [31merror[39m: Found [urn:oslo-toolchain:f3b5f47f71587b6bf859e99efbbf75fe2cc91d85d8fd6d04fafe02423931a8de](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2247) in duplicates, meaning "Lizenz" is used multiple times as label.
+2024-09-10T09:23:31.685Z [31merror[39m: Found [urn:oslo-toolchain:a74208acf398ce56d01a67b145e20fd527a471826c603928c3d89516006cbba0](all-cultuurenjeugdinfrastructuur-ap.jsonld#L157) in duplicates, meaning "Ausgabe" is used multiple times as label.
+2024-09-10T09:23:31.685Z [31merror[39m: Found [urn:oslo-toolchain:d4dfaf5f4726546836e694498a98f8d18d9f205d260e803333475dbac8bbbd16](all-cultuurenjeugdinfrastructuur-ap.jsonld#L1753) in duplicates, meaning "Ausgabe" is used multiple times as label.
+2024-09-10T09:23:31.705Z [33mwarn[39m: Unable to retrieve max cardinality of property urn:oslo-toolchain:dcd1e80fd5d6f83437733d545d64517549715aa40b58019c9772c9cf0eb2897c.
