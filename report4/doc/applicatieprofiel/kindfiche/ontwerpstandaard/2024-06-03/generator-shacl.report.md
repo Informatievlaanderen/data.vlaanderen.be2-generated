@@ -1,16 +1,16 @@
 #||# oslo-shacl-template-generator for language nl  
 #||# -------------------------------------  
-2024-09-10T14:56:57.448Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3276)".
-2024-09-10T14:56:57.451Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3425)".
+2024-09-11T09:00:08.865Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3276)".
+2024-09-11T09:00:08.868Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3425)".
 #||# oslo-shacl-template-generator for language en  
 #||# -------------------------------------  
-2024-09-10T14:56:58.367Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3276)".
-2024-09-10T14:56:58.370Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3425)".
+2024-09-11T09:00:09.821Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3276)".
+2024-09-11T09:00:09.823Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3425)".
 #||# oslo-shacl-template-generator for language fr  
 #||# -------------------------------------  
-2024-09-10T14:56:59.222Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3276)".
-2024-09-10T14:56:59.224Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3425)".
+2024-09-11T09:00:10.744Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3276)".
+2024-09-11T09:00:10.747Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3425)".
 #||# oslo-shacl-template-generator for language de  
 #||# -------------------------------------  
-2024-09-10T14:57:00.073Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3276)".
-2024-09-10T14:57:00.076Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3425)".
+2024-09-11T09:00:11.676Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3276)".
+2024-09-11T09:00:11.679Z [31merror[39m: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3425)".
