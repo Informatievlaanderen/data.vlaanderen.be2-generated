@@ -1,0 +1,686 @@
+{
+  "@context": {
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Aktivität": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+    "Art der Aktivität": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art der Ausbeutung": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art der Eigentumsverhältnisse": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art der Einrichtung": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art der Exklusivität": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art der Infrastruktur": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art der Kapazität": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art der Stromquelle": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art der Vereinbarung": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art der Versicherung": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art der Verwaltung": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art der Verwendung": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art der Öffnung": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art des Außenbereichs": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art des Einkommens": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art des Innenraums": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Art des Verbrauchs": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Ausbeutung": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie",
+    "Ausbeutung.art": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Ausbeutung.periode": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie.periode",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "Befreiung": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Vrijstelling",
+    "Beobachtung": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+    "Bühne Technische Einrichtung": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#PodiumtechnischeFaciliteit",
+    "DatumDerVeranstaltung.anfang": {
+      "@id": "https://schema.org/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "DatumDerVeranstaltung.ende": {
+      "@id": "https://schema.org/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Dimension.art": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Dimension.beschreibung": {
+      "@container": "@set",
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Dimension.einheit": {
+      "@id": "https://schema.org/unitText",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Dimension.standard-Einheit": {
+      "@id": "https://schema.org/unitCode",
+      "@type": "http://todo.com/StandaardEenheid"
+    },
+    "Dimension.wert": {
+      "@id": "https://schema.org/value",
+      "@type": "https://schema.org/Number"
+    },
+    "Ding": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing",
+    "Dokument": "http://xmlns.com/foaf/0.1/Document",
+    "Eigentum": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Eigenaarschap",
+    "Eigentum.art": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Eigentum.eigentüMer": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Eigenaarschap.eigenaar",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "Einkommen.art": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Einkommen.menge": {
+      "@id": "https://schema.org/MonetaryAmount",
+      "@type": "https://schema.org/MonetaryAmount"
+    },
+    "Energie": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Energie",
+    "Erkennung": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning",
+    "FassungsvermöGen.art": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "FassungsvermöGen.beschreibung": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Capaciteit.beschrijving",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "FassungsvermöGen.einheit": {
+      "@id": "https://schema.org/unitText",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "FassungsvermöGen.standard-Einheit": {
+      "@id": "https://schema.org/unitCode",
+      "@type": "http://todo.com/StandaardEenheid"
+    },
+    "FassungsvermöGen.wert": {
+      "@id": "https://schema.org/value",
+      "@type": "https://schema.org/Number"
+    },
+    "Gebrauchen": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik",
+    "Gebrauchen.benutzer": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik.gebruiker",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "Gebrauchen.periode": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik.periode",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "Gebrauchen.preis": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik.prijs",
+      "@type": "https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Prijsinfo"
+    },
+    "Gebrauchen.zustand": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik.voorwaarde",
+      "@type": "http://data.europa.eu/m8g/#Criterion"
+    },
+    "Gebäude": "https://data.vlaanderen.be/ns/gebouw#Gebouw",
+    "Hochbau": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Bouwtechniek",
+    "Im Freien": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Buitenruimte",
+    "ImFreien.art": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Infrastruktur": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur",
+    "Infrastruktur.art": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Infrastruktur.beschreibung": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.beschrijving",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "Infrastruktur.eigentüMer": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.eigenaar",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Eigenaarschap"
+    },
+    "Infrastruktur.lizenz": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.licentie",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Licentie"
+    },
+    "Infrastruktur.zugäNglichkeit": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.toegankelijkheid",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Toegankelijkheid"
+    },
+    "Infrastruktur.zustand": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.staat",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Staat"
+    },
+    "Innenraum": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Binnenruimte",
+    "Innenraum.art": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Binnenruimtetype"
+    },
+    "Komponente \"Barrierefreiheit\"": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Kostenart": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Kriterium": "http://data.europa.eu/m8g/#Criterion",
+    "Leichtigkeit": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Faciliteit",
+    "Leichtigkeit.art": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Leichtigkeit.benutzer": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Faciliteit.gebruiker",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Leichtigkeit.beschreibung": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Leichtigkeit.dokument": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Faciliteit.document",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "Lizenz.art": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Lizenz.periode": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Licentie.periode",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "Lizenztyp": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Management": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Beheer",
+    "Management.art": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Nahrung.art": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Nahrung.menge": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Kost.bedrag",
+      "@type": "https://schema.org/MonetaryAmount"
+    },
+    "NationalitäT.nationalitäT": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#nationaliteit",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Nationalität": "https://data.vlaanderen.be/ns/persoon#Nationaliteit",
+    "Organisation": "http://www.w3.org/ns/org#Organization",
+    "Organisation.beschreibung": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Organisation.kontaktdaten": {
+      "@container": "@set",
+      "@id": "http://schema.org/contactPoint",
+      "@type": "http://schema.org/ContactPoint"
+    },
+    "Periode.anfang": {
+      "@id": "http://data.europa.eu/m8g/startTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Periode.ende": {
+      "@id": "http://data.europa.eu/m8g/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Permanenz-Typ": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Person": "http://www.w3.org/ns/person#Person",
+    "Person.kontaktdaten": {
+      "@id": "http://schema.org/contactPoint",
+      "@type": "http://schema.org/ContactPoint"
+    },
+    "Person.nationalitäT": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#nationaliteit",
+      "@type": "https://data.vlaanderen.be/ns/persoon#Nationaliteit"
+    },
+    "Preisinfo": "https://schema.org/PriceSpecification",
+    "Preisinfo.preis": {
+      "@id": "https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#prijs",
+      "@type": "https://schema.org/MonetaryAmount"
+    },
+    "QuantitativerWert.einheit": {
+      "@id": "https://schema.org/unitText",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "QuantitativerWert.standard-Einheit": {
+      "@id": "https://schema.org/unitCode",
+      "@type": "http://todo.com/StandaardEenheid"
+    },
+    "QuantitativerWert.wert": {
+      "@id": "https://schema.org/value",
+      "@type": "https://schema.org/Number"
+    },
+    "Raum": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Ruimte",
+    "Regierung": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#OfficieleStatus",
+    "Regierung.lizenz": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overheid.vergunning",
+      "@type": "https://schema.org/Permit"
+    },
+    "Reservierung": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Reservatie",
+    "Reservierung.periode": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Reservatie.periode",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "Ruimte": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Ruimte",
+    "Sicherheit": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Veiligheid",
+    "Staatsangehörigkeitscode": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Statusbildender Wert": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Subvention": "http://data.vlaanderen.be/ns/subsidie#SubsidiemaatregelConsumptie",
+    "Typ Menge": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Verbrauch": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Verbruik",
+    "Verbrauch.art": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Verbrauch.periode": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Verbruik.periode",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "Verbrauch.verbrauch": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Verbruik.verbruik",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "Vereinbarung": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overeenkomst",
+    "Vereinbarung.art": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Vereinbarung.dokument": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overeenkomst.document",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "VerfüGbarkeit.benutzer": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Beschikbaarheid.gebruiker",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "VerfüGbarkeit.periode": {
+      "@id": "http://data.europa.eu/m8g/PeriodOfTime",
+      "@type": "http://schema.org/OpeningHoursSpecification"
+    },
+    "Versicherung": "https://schema.org/FinancialProduct",
+    "Versicherung.art": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Zustand": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Staat",
+    "Zustand.verbrauch": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Staat.verbruik",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Verbruik"
+    },
+    "administrator": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Beheer.beheerder",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "aktivitäT": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik.activiteit",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "aktuellRenovation": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#laatsteRenovatie",
+      "@type": "https://schema.org/endDate"
+    },
+    "aktuelleöFfentlicheVerkehrsmittel": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Bereikbaarheid.laasteOpenbaarVervoer",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "alsGML": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "alsWKT": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "alternativerName": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "architekt": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebouw.bouwmeester",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "ausbeutung": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.exploitatie",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie"
+    },
+    "availableTransaktionVolumen": {
+      "@id": "https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#beschikbaarTransactieVolume",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "befreiung": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overheid.vrijstelling",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Vrijstelling"
+    },
+    "beobachtung": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.observatie",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+    },
+    "beraterFüRPräVention": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Veiligheid.preventieAdviseur",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "berichtetAn": {
+      "@container": "@set",
+      "@id": "https://www.w3.org/ns/org#reportsTo",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "bevorzugterName": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "bezeichner": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Ding.identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "dauer": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#permanentie",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "dimension": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.dimensie",
+      "@type": "http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"
+    },
+    "einkommen": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie.inkomen",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Inkomst"
+    },
+    "energie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Staat.energie",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Energie"
+    },
+    "erkennung": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overheid.erkenning",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Erkenning"
+    },
+    "exklusivitäT": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik.exclusiviteit",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "familienname": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/familyName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fassungsvermöGen": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.capaciteit",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Capaciteit"
+    },
+    "gaatDoorIn": {
+      "@container": "@set",
+      "@id": "http://todo.com/gaatDoorIn",
+      "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+    },
+    "gebrauchen": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.gebruik",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik"
+    },
+    "geburtsdatum": {
+      "@id": "http://todo.com/Persoon.geboortedatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "geometrie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#geometrie",
+      "@type": "https://data.vlaanderen.be/ns/gebouw#2DGebouwgeometrie"
+    },
+    "geschlecht": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#geslacht",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "hochbau": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Staat.bouwtechniek",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Bouwtechniek"
+    },
+    "infrastruktur": {
+      "@container": "@set",
+      "@id": "http://todo.com/opgesteldIn",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur"
+    },
+    "inkl.MwSt.": {
+      "@id": "https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#inclusiefBTW",
+      "@type": "http://www.w3.org/2001/XMLSchema#xboolean"
+    },
+    "jahr": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#bouwjaar",
+      "@type": "https://schema.org/endDate"
+    },
+    "kontakt": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.contactpersoon",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "leichtigkeit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.faciliteit",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Faciliteit"
+    },
+    "management": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.beheer",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Beheer"
+    },
+    "mieter": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie.huurder",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "mobiscore": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Bereikbaarheid.mobiscore",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "nahestehend": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Buitenruimte.verbondenAan",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur"
+    },
+    "nahrung": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie.kost",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Kost"
+    },
+    "name": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.naam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "nettonutzfläChe": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebouw.nettoBruikbareOppervlakte",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "niveau": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Toegankelijkheid.niveau",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "notfall-Kontakt": {
+      "@container": "@set",
+      "@id": "http://schema.org/contactPoint",
+      "@type": "http://schema.org/ContactPoint"
+    },
+    "operator": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie.exploitant",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "ort": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.locatie",
+      "@type": "http://www.w3.org/ns/prov#Location"
+    },
+    "parkplatz": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Bereikbaarheid.parkeerplaats",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "partei": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overeenkomst.partij",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "pech": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Ding.standplaats",
+      "@type": "http://www.w3.org/ns/prov#Location"
+    },
+    "priceCategory": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Prijsinfo.prijscategorie",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "protectedVolume(GeschüTztesVolumen)": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebouw.beschermdVolume",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "punktzahl": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Energie.score",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "quelle": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Energie.bron",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "raum": {
+      "@id": "http://todo.com/ruimte",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Binnenruimte"
+    },
+    "regierung": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.overheid",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#OfficieleStatus"
+    },
+    "reserviertFüR": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Reservatie.gereserveerdVoor",
+      "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+    },
+    "reserviertVon": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Reservatie.gereserveerdDoor",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "reservierung": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.reservatie",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Reservatie"
+    },
+    "residenz": {
+      "@id": "http://todo.com/Persoon.woonplaats",
+      "@type": "http://www.w3.org/ns/prov#Location"
+    },
+    "risikoanalyse": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Veiligheid.risicoanalyse",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "sicherheit": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Staat.veiligheid",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Veiligheid"
+    },
+    "spitzenverbrauch": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Verbruik.piekverbruik",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "status": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.status",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "sub-Infrastruktur": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#subInfrastructuur",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur"
+    },
+    "subvention": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overheid.subsidie",
+      "@type": "http://data.vlaanderen.be/ns/subsidie#SubsidiemaatregelConsumptie"
+    },
+    "superInfrastruktur": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#superInfrastructuur",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur"
+    },
+    "teil": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#onderdeel",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "vereinbarung": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie.overeenkomst",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overeenkomst"
+    },
+    "verfüGbar": {
+      "@id": "https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#beschikbaar",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "verfüGbarMenge": {
+      "@id": "https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#beschikbareHoeveelheid",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "verfüGbarkeit": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.beschikbaarheid",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Beschikbaarheid"
+    },
+    "versicherer": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Verzekering.verzekeraar",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "versicherung": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Veiligheid.verzekering",
+      "@type": "https://schema.org/FinancialProduct"
+    },
+    "verwendeterVorname": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#gebruikteVoornaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "zwischenzeit": {
+      "@id": "https://schema.org/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "ÖFfnung": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.openstelling",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "ÖFfnungszeiten": {
+      "@id": "http://schema.org/openingHours",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "ÖKologie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Staat.ecologie",
+      "@type": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Ecologie"
+    },
+    "Ökologie": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Ecologie"
+  }
+}

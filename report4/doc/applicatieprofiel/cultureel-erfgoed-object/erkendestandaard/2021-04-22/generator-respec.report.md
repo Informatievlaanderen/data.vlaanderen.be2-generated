@@ -1,16 +1,16 @@
 #||# oslo-generator-respec for language nl  
 #||# -------------------------------------  
-2024-09-11T11:26:14.372Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
-2024-09-11T11:26:14.374Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
+2024-09-11T12:11:59.441Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
+2024-09-11T12:11:59.443Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
 #||# oslo-generator-respec for language en  
 #||# -------------------------------------  
-2024-09-11T11:26:15.198Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
-2024-09-11T11:26:15.199Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
+2024-09-11T12:12:00.287Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
+2024-09-11T12:12:00.288Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
 #||# oslo-generator-respec for language fr  
 #||# -------------------------------------  
-2024-09-11T11:26:16.012Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
-2024-09-11T11:26:16.014Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
+2024-09-11T12:12:01.139Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
+2024-09-11T12:12:01.141Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
 #||# oslo-generator-respec for language de  
 #||# -------------------------------------  
-2024-09-11T11:26:16.829Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
-2024-09-11T11:26:16.830Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
+2024-09-11T12:12:01.978Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
+2024-09-11T12:12:01.980Z [31merror[39m: Unable to find a related class object for domain https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving of property undefined.
