@@ -2,19 +2,19 @@
 #||# -------------------------------------  
 #||# merge for language en   
 #||# -------------------------------------  
-#||# start reading
-#||# done
-#||# start processing
-#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/applicatieprofiel/cultureel-erfgoed-object/erkendestandaard/2021-04-22/merged/merged_cultureel-erfgoed-object-ap_en.jsonld
+#||# start reading  
+#||# done  
+#||# start processing  
+#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/applicatieprofiel/cultureel-erfgoed-object/erkendestandaard/2021-04-22/merged/merged_cultureel-erfgoed-object-ap_en.jsonld  
 #||# merge for language fr   
 #||# -------------------------------------  
-#||# start reading
-#||# done
-#||# start processing
-#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/applicatieprofiel/cultureel-erfgoed-object/erkendestandaard/2021-04-22/merged/merged_cultureel-erfgoed-object-ap_fr.jsonld
+#||# start reading  
+#||# done  
+#||# start processing  
+#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/applicatieprofiel/cultureel-erfgoed-object/erkendestandaard/2021-04-22/merged/merged_cultureel-erfgoed-object-ap_fr.jsonld  
 #||# merge for language de   
 #||# -------------------------------------  
-#||# start reading
-#||# done
-#||# start processing
-#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/applicatieprofiel/cultureel-erfgoed-object/erkendestandaard/2021-04-22/merged/merged_cultureel-erfgoed-object-ap_de.jsonld
+#||# start reading  
+#||# done  
+#||# start processing  
+#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/applicatieprofiel/cultureel-erfgoed-object/erkendestandaard/2021-04-22/merged/merged_cultureel-erfgoed-object-ap_de.jsonld  

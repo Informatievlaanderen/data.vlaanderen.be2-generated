@@ -1,29 +1,29 @@
 #||# translate for language nl  
 #||# -------------------------------------  
-#||# start reading
-#||# done
-#||# start processing
-WARNING The entered language values are the same!
-#||# Write complete
-#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/fietsinfrastructuur/kandidaatstandaard/2021-12-17/translation/fietsinfrastructuur-voc_nl.json
+#||# start reading  
+#||# done  
+#||# start processing  
+WARNING The entered language values are the same!  
+#||# Write complete  
+#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/fietsinfrastructuur/kandidaatstandaard/2021-12-17/translation/fietsinfrastructuur-voc_nl.json  
 #||# translate for language en  
 #||# -------------------------------------  
-#||# start reading
-#||# done
-#||# start processing
-#||# Write complete
-#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/fietsinfrastructuur/kandidaatstandaard/2021-12-17/translation/fietsinfrastructuur-voc_en.json
+#||# start reading  
+#||# done  
+#||# start processing  
+#||# Write complete  
+#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/fietsinfrastructuur/kandidaatstandaard/2021-12-17/translation/fietsinfrastructuur-voc_en.json  
 #||# translate for language fr  
 #||# -------------------------------------  
-#||# start reading
-#||# done
-#||# start processing
-#||# Write complete
-#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/fietsinfrastructuur/kandidaatstandaard/2021-12-17/translation/fietsinfrastructuur-voc_fr.json
+#||# start reading  
+#||# done  
+#||# start processing  
+#||# Write complete  
+#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/fietsinfrastructuur/kandidaatstandaard/2021-12-17/translation/fietsinfrastructuur-voc_fr.json  
 #||# translate for language de  
 #||# -------------------------------------  
-#||# start reading
-#||# done
-#||# start processing
-#||# Write complete
-#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/fietsinfrastructuur/kandidaatstandaard/2021-12-17/translation/fietsinfrastructuur-voc_de.json
+#||# start reading  
+#||# done  
+#||# start processing  
+#||# Write complete  
+#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/fietsinfrastructuur/kandidaatstandaard/2021-12-17/translation/fietsinfrastructuur-voc_de.json  
