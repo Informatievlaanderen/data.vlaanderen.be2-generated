@@ -2,43 +2,43 @@
 
 #||# -------------------------------------  
 
-2024-09-12T08:19:55.581Z error: Found [urn:oslo-toolchain:b90c7b70c0fcb5d62c4dd14f1f26591f38e67934112e79b473155efd365a3cb7](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L10693) in duplicates, meaning "Agent" is used multiple times as label.
+2024-09-12T12:31:49.054Z error: Found [urn:oslo-toolchain:b90c7b70c0fcb5d62c4dd14f1f26591f38e67934112e79b473155efd365a3cb7](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L10693) in duplicates, meaning "Agent" is used multiple times as label.
 
-2024-09-12T08:19:55.584Z error: Found [urn:oslo-toolchain:faca5abc63a8e703ebc1957718f1b66e49cda3e15d312c90c1d3b54383e8db93](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L532) in duplicates, meaning "Agent" is used multiple times as label.
+2024-09-12T12:31:49.056Z error: Found [urn:oslo-toolchain:faca5abc63a8e703ebc1957718f1b66e49cda3e15d312c90c1d3b54383e8db93](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L532) in duplicates, meaning "Agent" is used multiple times as label.
 
 #||# oslo-jsonld-context-generator for language en  
 
 #||# -------------------------------------  
 
-2024-09-12T08:19:56.570Z error: Found [urn:oslo-toolchain:faca5abc63a8e703ebc1957718f1b66e49cda3e15d312c90c1d3b54383e8db93](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L532) in duplicates, meaning "Agent" is used multiple times as label.
+2024-09-12T12:31:50.015Z error: Found [urn:oslo-toolchain:faca5abc63a8e703ebc1957718f1b66e49cda3e15d312c90c1d3b54383e8db93](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L532) in duplicates, meaning "Agent" is used multiple times as label.
 
-2024-09-12T08:19:56.572Z error: Found [urn:oslo-toolchain:eec318866853391c8139933cf2a915a5e228a226796727e192aa79fc1701bd8f](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L1545) in duplicates, meaning "Object" is used multiple times as label.
+2024-09-12T12:31:50.016Z error: Found [urn:oslo-toolchain:eec318866853391c8139933cf2a915a5e228a226796727e192aa79fc1701bd8f](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L1545) in duplicates, meaning "Object" is used multiple times as label.
 
-2024-09-12T08:19:56.575Z error: Found [urn:oslo-toolchain:e48c1b6cb14a2bee26ef1fd75395eee5ebd302c014d720dbeb1c30aad0f95577](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L1205) in duplicates, meaning "Object" is used multiple times as label.
+2024-09-12T12:31:50.018Z error: Found [urn:oslo-toolchain:e48c1b6cb14a2bee26ef1fd75395eee5ebd302c014d720dbeb1c30aad0f95577](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L1205) in duplicates, meaning "Object" is used multiple times as label.
 
-2024-09-12T08:19:56.576Z error: Found [urn:oslo-toolchain:b90c7b70c0fcb5d62c4dd14f1f26591f38e67934112e79b473155efd365a3cb7](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L10693) in duplicates, meaning "Agent" is used multiple times as label.
+2024-09-12T12:31:50.019Z error: Found [urn:oslo-toolchain:b90c7b70c0fcb5d62c4dd14f1f26591f38e67934112e79b473155efd365a3cb7](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L10693) in duplicates, meaning "Agent" is used multiple times as label.
 
 #||# oslo-jsonld-context-generator for language fr  
 
 #||# -------------------------------------  
 
-2024-09-12T08:19:57.555Z error: Found [urn:oslo-toolchain:faca5abc63a8e703ebc1957718f1b66e49cda3e15d312c90c1d3b54383e8db93](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L532) in duplicates, meaning "Agent" is used multiple times as label.
+2024-09-12T12:31:50.944Z error: Found [urn:oslo-toolchain:faca5abc63a8e703ebc1957718f1b66e49cda3e15d312c90c1d3b54383e8db93](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L532) in duplicates, meaning "Agent" is used multiple times as label.
 
-2024-09-12T08:19:57.557Z error: Found [urn:oslo-toolchain:eec318866853391c8139933cf2a915a5e228a226796727e192aa79fc1701bd8f](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L1545) in duplicates, meaning "Objet" is used multiple times as label.
+2024-09-12T12:31:50.946Z error: Found [urn:oslo-toolchain:eec318866853391c8139933cf2a915a5e228a226796727e192aa79fc1701bd8f](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L1545) in duplicates, meaning "Objet" is used multiple times as label.
 
-2024-09-12T08:19:57.559Z error: Found [urn:oslo-toolchain:e48c1b6cb14a2bee26ef1fd75395eee5ebd302c014d720dbeb1c30aad0f95577](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L1205) in duplicates, meaning "Objet" is used multiple times as label.
+2024-09-12T12:31:50.948Z error: Found [urn:oslo-toolchain:e48c1b6cb14a2bee26ef1fd75395eee5ebd302c014d720dbeb1c30aad0f95577](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L1205) in duplicates, meaning "Objet" is used multiple times as label.
 
-2024-09-12T08:19:57.559Z error: Found [urn:oslo-toolchain:b90c7b70c0fcb5d62c4dd14f1f26591f38e67934112e79b473155efd365a3cb7](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L10693) in duplicates, meaning "Agent" is used multiple times as label.
+2024-09-12T12:31:50.948Z error: Found [urn:oslo-toolchain:b90c7b70c0fcb5d62c4dd14f1f26591f38e67934112e79b473155efd365a3cb7](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L10693) in duplicates, meaning "Agent" is used multiple times as label.
 
 #||# oslo-jsonld-context-generator for language de  
 
 #||# -------------------------------------  
 
-2024-09-12T08:19:58.574Z error: Found [urn:oslo-toolchain:faca5abc63a8e703ebc1957718f1b66e49cda3e15d312c90c1d3b54383e8db93](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L532) in duplicates, meaning "Agent" is used multiple times as label.
+2024-09-12T12:31:51.865Z error: Found [urn:oslo-toolchain:faca5abc63a8e703ebc1957718f1b66e49cda3e15d312c90c1d3b54383e8db93](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L532) in duplicates, meaning "Agent" is used multiple times as label.
 
-2024-09-12T08:19:58.576Z error: Found [urn:oslo-toolchain:eec318866853391c8139933cf2a915a5e228a226796727e192aa79fc1701bd8f](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L1545) in duplicates, meaning "Objekt" is used multiple times as label.
+2024-09-12T12:31:51.867Z error: Found [urn:oslo-toolchain:eec318866853391c8139933cf2a915a5e228a226796727e192aa79fc1701bd8f](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L1545) in duplicates, meaning "Objekt" is used multiple times as label.
 
-2024-09-12T08:19:58.577Z error: Found [urn:oslo-toolchain:e48c1b6cb14a2bee26ef1fd75395eee5ebd302c014d720dbeb1c30aad0f95577](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L1205) in duplicates, meaning "Objekt" is used multiple times as label.
+2024-09-12T12:31:51.870Z error: Found [urn:oslo-toolchain:e48c1b6cb14a2bee26ef1fd75395eee5ebd302c014d720dbeb1c30aad0f95577](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L1205) in duplicates, meaning "Objekt" is used multiple times as label.
 
-2024-09-12T08:19:58.577Z error: Found [urn:oslo-toolchain:b90c7b70c0fcb5d62c4dd14f1f26591f38e67934112e79b473155efd365a3cb7](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L10693) in duplicates, meaning "Agent" is used multiple times as label.
+2024-09-12T12:31:51.870Z error: Found [urn:oslo-toolchain:b90c7b70c0fcb5d62c4dd14f1f26591f38e67934112e79b473155efd365a3cb7](all-DoelgerichtDigitaalTransformeren-ap.jsonld#L10693) in duplicates, meaning "Agent" is used multiple times as label.
 
