@@ -1,148 +1,148 @@
-2024-09-12T12:29:16.089Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.912Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.091Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.913Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.091Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.913Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.091Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:Hulppakket) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.913Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:Hulppakket) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.091Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.914Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.091Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.914Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.091Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODactiviteit) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.914Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODactiviteit) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.091Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:OSLO-CultureelErfgoed) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.914Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:OSLO-CultureelErfgoed) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.091Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:OSLO-Consent) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.914Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:OSLO-Consent) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.092Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODDeelname) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.914Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODDeelname) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.092Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODPromotie) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.914Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODPromotie) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.092Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODAlbumRelease) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.914Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODAlbumRelease) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.092Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODInternPodiumProductie) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.914Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODInternPodiumProductie) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.092Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODAanbevelingenGent) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.914Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODAanbevelingenGent) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.092Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODTransacties) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.914Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODTransacties) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.092Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:OSLO-C&JI) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.914Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:OSLO-C&JI) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.092Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODCultuurreis) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.915Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODCultuurreis) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.092Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:OSLO-FeitelijkeVerenigingen) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.915Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:OSLO-FeitelijkeVerenigingen) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.092Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODKMSKAOpening) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.915Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:ObjectDiagrammen:ODKMSKAOpening) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.092Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.915Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-DDT-globaal:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.095Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (gebruiktObject) and the fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.917Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (gebruiktObject) and the fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.095Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (voertUit) and the fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.917Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (voertUit) and the fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.095Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Agent (source)) and the fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.918Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Agent (source)) and the fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.096Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Agent (target)) and the fallback URI (http://todo.com/) will be assigned.
+2024-09-12T13:52:36.918Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Agent (target)) and the fallback URI (http://todo.com/) will be assigned.
 
-2024-09-12T12:29:16.098Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit has an empty value for tag usageNote-nl.
+2024-09-12T13:52:36.920Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit has an empty value for tag usageNote-nl.
 
-2024-09-12T12:29:16.098Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Organisator has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.920Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Organisator has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.099Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Boekingsinfo has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.921Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Boekingsinfo has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.099Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Kanaal has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.921Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Kanaal has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.100Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Persoon:Persoon has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.922Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Persoon:Persoon has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.100Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.922Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.100Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Berichtgeving has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.922Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Berichtgeving has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.101Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Persoon:GeregistreerdPersoon has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.923Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Persoon:GeregistreerdPersoon has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.101Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Persoon:GeregistreerdPersoon has an empty value for tag usageNote-nl.
+2024-09-12T13:52:36.923Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Persoon:GeregistreerdPersoon has an empty value for tag usageNote-nl.
 
-2024-09-12T12:29:16.102Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Persoon:Nationaliteit has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.924Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Persoon:Nationaliteit has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.102Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Persoon:Nationaliteit has an empty value for tag usageNote-nl.
+2024-09-12T13:52:36.924Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Persoon:Nationaliteit has an empty value for tag usageNote-nl.
 
-2024-09-12T12:29:16.102Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:OrganisatieActiviteit has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.924Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:OrganisatieActiviteit has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.102Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:OrganisatieClassificatie has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.924Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:OrganisatieClassificatie has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.102Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:OrganisatieStatus has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.924Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:OrganisatieStatus has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.102Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:OrganisatieType has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.924Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:OrganisatieType has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.103Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Realisator has an empty value for tag definition-nl.
+2024-09-12T13:52:36.925Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Realisator has an empty value for tag definition-nl.
 
-2024-09-12T12:29:16.108Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit:beschrijving has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.930Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit:beschrijving has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.108Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit:taal has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.930Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit:taal has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.109Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit:duur has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.930Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit:duur has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.109Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit:contactinfo has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.931Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit:contactinfo has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.109Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:Organisatie:classificatie has an empty value for tag ap-label-nl.
+2024-09-12T13:52:36.931Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:Organisatie:classificatie has an empty value for tag ap-label-nl.
 
-2024-09-12T12:29:16.110Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Realisator:alternatieveNaam has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.932Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Realisator:alternatieveNaam has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.110Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Kanaal:medium has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.932Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Kanaal:medium has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.111Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Kanaal:naam has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.932Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Kanaal:naam has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.111Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Realisator:dienst has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.933Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Realisator:dienst has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.112Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Feedback:content has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.933Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Feedback:content has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.112Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:AlgemeenParticipantKenmerk:type has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.934Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:AlgemeenParticipantKenmerk:type has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.118Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Realisator:themaActiviteit has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.939Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Realisator:themaActiviteit has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.119Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:Organisatie:voorkeursnaam has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.940Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:Organisatie:voorkeursnaam has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.119Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Realisator:typeActiviteit has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.940Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Realisator:typeActiviteit has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.119Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Persoon:Persoon:woonplaats has already a value for ap-definition-nl in language nl, but will be overwritten.
+2024-09-12T13:52:36.940Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Persoon:Persoon:woonplaats has already a value for ap-definition-nl in language nl, but will be overwritten.
 
-2024-09-12T12:29:16.120Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:GeregistreerdeOrganisatie:rechtspersoonlijkheid has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.941Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:GeregistreerdeOrganisatie:rechtspersoonlijkheid has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.120Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:GeregistreerdeOrganisatie:rechtspersoonlijkheid has an empty value for tag usageNote-nl.
+2024-09-12T13:52:36.941Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-Organisatie:GeregistreerdeOrganisatie:rechtspersoonlijkheid has an empty value for tag usageNote-nl.
 
-2024-09-12T12:29:16.121Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit:identificator has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.941Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit:identificator has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.122Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Prijsinfo:beschikbareHoeveelheid has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.942Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Prijsinfo:beschikbareHoeveelheid has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.122Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Realisator:infrastructuur has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.943Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Realisator:infrastructuur has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.133Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Prijsinfo:beschikbaarTransactievolume has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.950Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Prijsinfo:beschikbaarTransactievolume has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.133Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Prijsinfo:prijs has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.951Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Prijsinfo:prijs has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.134Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Boekingsinfo:contactinfo has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.951Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Boekingsinfo:contactinfo has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.135Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Promotie:documentatie has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.951Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Promotie:documentatie has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.135Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Prijsinfo:beschikbaar has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.952Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Prijsinfo:beschikbaar has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.136Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Prijsinfo:inclusiefBTW has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.952Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Prijsinfo:inclusiefBTW has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.137Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Prijsinfo:prijsCategorie has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.952Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Prijsinfo:prijsCategorie has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.137Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Transactie:betaaltermijn has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.953Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Transactie:betaaltermijn has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.138Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Boekingsinfo:beschikbaar has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.953Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Boekingsinfo:beschikbaar has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.138Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit:locatieType has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.953Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit:locatieType has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.140Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit:documentatie has an empty value for tag ap-usageNote-nl.
+2024-09-12T13:52:36.955Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Activiteit:documentatie has an empty value for tag ap-usageNote-nl.
 
-2024-09-12T12:29:16.151Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Ruimtetijd:tijd has an empty value for tag usageNote-nl.
+2024-09-12T13:52:36.969Z warn: [ConverterHandler]: Entity with path Model:OSLO-DDT-globaal:OSLO-DDT:Ruimtetijd:tijd has an empty value for tag usageNote-nl.
 
-2024-09-12T12:29:16.155Z warn: [ConverterHandler]: Entity with path beperktTot has an empty value for tag definition-nl.
+2024-09-12T13:52:36.973Z warn: [ConverterHandler]: Entity with path beperktTot has an empty value for tag definition-nl.
 
-2024-09-12T12:29:16.155Z warn: [ConverterHandler]: Entity with path beperktTot has an empty value for tag ap-label-nl.
+2024-09-12T13:52:36.973Z warn: [ConverterHandler]: Entity with path beperktTot has an empty value for tag ap-label-nl.
 
