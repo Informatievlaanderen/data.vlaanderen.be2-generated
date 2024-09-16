@@ -8,7 +8,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 176  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2021-12-17/autotranslation/fietsinfrastructuur-ap_en.json  
 
@@ -22,7 +22,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 176  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2021-12-17/autotranslation/fietsinfrastructuur-ap_fr.json  
 
@@ -36,7 +36,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 176  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2021-12-17/autotranslation/fietsinfrastructuur-ap_de.json  
 

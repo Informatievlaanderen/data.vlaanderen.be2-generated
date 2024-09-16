@@ -8,7 +8,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 63  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/FeitelijkeVerenigingen/kandidaatstandaard/2021-06-22/autotranslation/Feitelijke-Verenigingen-ap_en.json  
 
@@ -22,7 +22,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 63  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/FeitelijkeVerenigingen/kandidaatstandaard/2021-06-22/autotranslation/Feitelijke-Verenigingen-ap_fr.json  
 
@@ -36,7 +36,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 63  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/FeitelijkeVerenigingen/kandidaatstandaard/2021-06-22/autotranslation/Feitelijke-Verenigingen-ap_de.json  
 

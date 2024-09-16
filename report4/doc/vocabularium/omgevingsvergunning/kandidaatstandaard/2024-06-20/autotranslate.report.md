@@ -8,7 +8,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 99  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/omgevingsvergunning/kandidaatstandaard/2024-06-20/autotranslation/omgevingsvergunning_en.json  
 
@@ -22,7 +22,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 99  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/omgevingsvergunning/kandidaatstandaard/2024-06-20/autotranslation/omgevingsvergunning_fr.json  
 
@@ -36,7 +36,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 99  
+#||# Number of calls: 0  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/omgevingsvergunning/kandidaatstandaard/2024-06-20/autotranslation/omgevingsvergunning_de.json  
 
