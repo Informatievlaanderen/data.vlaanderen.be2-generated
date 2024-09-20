@@ -2,31 +2,49 @@
 
 #||# -------------------------------------  
 
-2024-09-16T12:36:52.419Z error: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3276)".
+2024-09-20T12:35:53.076Z error: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3270)".
 
-2024-09-16T12:36:52.423Z error: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3425)".
+2024-09-20T12:35:53.078Z error: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3419)".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2024-09-16T12:36:53.410Z error: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3276)".
+Error: Unable to find a label for subject "[urn:oslo-toolchain:fa806997c8f7d84df9514209987e6d4dd1e3dd34b47e84c377779c08bacd0596](all-kindfiche-ap.jsonld#L122)".
 
-2024-09-16T12:36:53.414Z error: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3425)".
+    at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:23)
+
+    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:39:42)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
 #||# oslo-shacl-template-generator for language fr  
 
 #||# -------------------------------------  
 
-2024-09-16T12:36:54.335Z error: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3276)".
+Error: Unable to find a label for subject "[urn:oslo-toolchain:fa806997c8f7d84df9514209987e6d4dd1e3dd34b47e84c377779c08bacd0596](all-kindfiche-ap.jsonld#L122)".
 
-2024-09-16T12:36:54.339Z error: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3425)".
+    at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:23)
+
+    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:39:42)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
 #||# oslo-shacl-template-generator for language de  
 
 #||# -------------------------------------  
 
-2024-09-16T12:36:55.371Z error: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3276)".
+Error: Unable to find a label for subject "[urn:oslo-toolchain:fa806997c8f7d84df9514209987e6d4dd1e3dd34b47e84c377779c08bacd0596](all-kindfiche-ap.jsonld#L122)".
 
-2024-09-16T12:36:55.374Z error: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3425)".
+    at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:23)
+
+    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:39:42)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
