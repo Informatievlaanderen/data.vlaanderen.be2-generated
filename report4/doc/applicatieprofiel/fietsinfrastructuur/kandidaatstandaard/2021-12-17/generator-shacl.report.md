@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2024-09-23T15:06:14.706Z error: Unable to find the description for subject "[urn:oslo-toolchain:9fd8fcece7b8a03379034107e6636d59ddd144d1d1d66c63d0afe92086492f5a](all-fietsinfrastructuur-ap.jsonld#L4194)".
+2024-09-23T15:34:51.503Z error: Unable to find the description for subject "[urn:oslo-toolchain:9fd8fcece7b8a03379034107e6636d59ddd144d1d1d66c63d0afe92086492f5a](all-fietsinfrastructuur-ap.jsonld#L4194)".
 
 #||# oslo-shacl-template-generator for language en  
 

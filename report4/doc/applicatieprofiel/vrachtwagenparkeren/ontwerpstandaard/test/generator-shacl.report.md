@@ -2,9 +2,9 @@
 
 #||# -------------------------------------  
 
-2024-09-23T15:06:27.176Z error: Unable to find the description for subject "[urn:oslo-toolchain:5f8f6e2666c8bda03b509a0d3456e58c5774880ca349e040483883cafaf9cf4c](all-vrachtwagenParkeren-ap.jsonld#L5054)".
+2024-09-23T15:35:06.848Z error: Unable to find the description for subject "[urn:oslo-toolchain:5f8f6e2666c8bda03b509a0d3456e58c5774880ca349e040483883cafaf9cf4c](all-vrachtwagenParkeren-ap.jsonld#L5054)".
 
-2024-09-23T15:06:27.178Z error: Unable to find the description for subject "[urn:oslo-toolchain:cad28bd76b1538e0283b69a40923f268dea1b5b081da04ba32d3de2fabf15564](all-vrachtwagenParkeren-ap.jsonld#L5073)".
+2024-09-23T15:35:06.850Z error: Unable to find the description for subject "[urn:oslo-toolchain:cad28bd76b1538e0283b69a40923f268dea1b5b081da04ba32d3de2fabf15564](all-vrachtwagenParkeren-ap.jsonld#L5073)".
 
 #||# oslo-shacl-template-generator for language en  
 
