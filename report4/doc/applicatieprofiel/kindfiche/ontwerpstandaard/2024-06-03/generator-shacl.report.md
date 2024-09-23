@@ -2,9 +2,9 @@
 
 #||# -------------------------------------  
 
-2024-09-20T14:56:24.382Z error: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3270)".
+2024-09-23T12:52:05.832Z error: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3270)".
 
-2024-09-20T14:56:24.385Z error: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3419)".
+2024-09-23T12:52:05.834Z error: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3419)".
 
 #||# oslo-shacl-template-generator for language en  
 
