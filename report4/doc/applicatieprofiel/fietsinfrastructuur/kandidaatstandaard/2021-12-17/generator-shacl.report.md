@@ -2,13 +2,13 @@
 
 #||# -------------------------------------  
 
-2024-09-23T15:34:51.503Z error: Unable to find the description for subject "[urn:oslo-toolchain:9fd8fcece7b8a03379034107e6636d59ddd144d1d1d66c63d0afe92086492f5a](all-fietsinfrastructuur-ap.jsonld#L4194)".
+2024-09-25T10:07:12.243Z error: Unable to find the description for subject "[urn:oslo-toolchain:9fd8fcece7b8a03379034107e6636d59ddd144d1d1d66c63d0afe92086492f5a](all-fietsinfrastructuur-ap.jsonld#L4198)".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-Error: Unable to find a label for subject "[urn:oslo-toolchain:98099f58865e20a18b05db30d7b3a846d8415da920a3413a5d37dd3ff7dc3a2b](all-fietsinfrastructuur-ap.jsonld#L122)".
+Error: Unable to find a label for subject "[urn:oslo-toolchain:98099f58865e20a18b05db30d7b3a846d8415da920a3413a5d37dd3ff7dc3a2b](all-fietsinfrastructuur-ap.jsonld#L126)".
 
     at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:23)
 
@@ -22,7 +22,7 @@ Error: Unable to find a label for subject "[urn:oslo-toolchain:98099f58865e20a18
 
 #||# -------------------------------------  
 
-Error: Unable to find a label for subject "[urn:oslo-toolchain:98099f58865e20a18b05db30d7b3a846d8415da920a3413a5d37dd3ff7dc3a2b](all-fietsinfrastructuur-ap.jsonld#L122)".
+Error: Unable to find a label for subject "[urn:oslo-toolchain:98099f58865e20a18b05db30d7b3a846d8415da920a3413a5d37dd3ff7dc3a2b](all-fietsinfrastructuur-ap.jsonld#L126)".
 
     at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:23)
 
@@ -36,7 +36,7 @@ Error: Unable to find a label for subject "[urn:oslo-toolchain:98099f58865e20a18
 
 #||# -------------------------------------  
 
-Error: Unable to find a label for subject "[urn:oslo-toolchain:98099f58865e20a18b05db30d7b3a846d8415da920a3413a5d37dd3ff7dc3a2b](all-fietsinfrastructuur-ap.jsonld#L122)".
+Error: Unable to find a label for subject "[urn:oslo-toolchain:98099f58865e20a18b05db30d7b3a846d8415da920a3413a5d37dd3ff7dc3a2b](all-fietsinfrastructuur-ap.jsonld#L126)".
 
     at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:23)
 

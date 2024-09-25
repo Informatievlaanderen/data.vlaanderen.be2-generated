@@ -2,15 +2,15 @@
 
 #||# -------------------------------------  
 
-2024-09-23T15:34:48.308Z error: Unable to find the description for subject "[urn:oslo-toolchain:65d8c8f7b9533b5eaf2c01f1f490f5d323e01e6873a98072b75ca8a59717291b](all-Feitelijke-Verenigingen-ap.jsonld#L3883)".
+2024-09-25T10:07:09.140Z error: Unable to find the description for subject "[urn:oslo-toolchain:65d8c8f7b9533b5eaf2c01f1f490f5d323e01e6873a98072b75ca8a59717291b](all-Feitelijke-Verenigingen-ap.jsonld#L3887)".
 
-2024-09-23T15:34:48.311Z error: Unable to find the description for subject "[urn:oslo-toolchain:bd12c90ac83597f37682a42b021ff0f06f56b9ae21f18fedd1f0081f80236f57](all-Feitelijke-Verenigingen-ap.jsonld#L3986)".
+2024-09-25T10:07:09.143Z error: Unable to find the description for subject "[urn:oslo-toolchain:bd12c90ac83597f37682a42b021ff0f06f56b9ae21f18fedd1f0081f80236f57](all-Feitelijke-Verenigingen-ap.jsonld#L3990)".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-Error: Unable to find a label for subject "[urn:oslo-toolchain:cb6be7640818ad816be45bda5d6f27fe839876efa2e884cf665baad3e9469270](all-Feitelijke-Verenigingen-ap.jsonld#L122)".
+Error: Unable to find a label for subject "[urn:oslo-toolchain:cb6be7640818ad816be45bda5d6f27fe839876efa2e884cf665baad3e9469270](all-Feitelijke-Verenigingen-ap.jsonld#L126)".
 
     at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:23)
 
@@ -24,7 +24,7 @@ Error: Unable to find a label for subject "[urn:oslo-toolchain:cb6be7640818ad816
 
 #||# -------------------------------------  
 
-Error: Unable to find a label for subject "[urn:oslo-toolchain:cb6be7640818ad816be45bda5d6f27fe839876efa2e884cf665baad3e9469270](all-Feitelijke-Verenigingen-ap.jsonld#L122)".
+Error: Unable to find a label for subject "[urn:oslo-toolchain:cb6be7640818ad816be45bda5d6f27fe839876efa2e884cf665baad3e9469270](all-Feitelijke-Verenigingen-ap.jsonld#L126)".
 
     at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:23)
 
@@ -38,7 +38,7 @@ Error: Unable to find a label for subject "[urn:oslo-toolchain:cb6be7640818ad816
 
 #||# -------------------------------------  
 
-Error: Unable to find a label for subject "[urn:oslo-toolchain:cb6be7640818ad816be45bda5d6f27fe839876efa2e884cf665baad3e9469270](all-Feitelijke-Verenigingen-ap.jsonld#L122)".
+Error: Unable to find a label for subject "[urn:oslo-toolchain:cb6be7640818ad816be45bda5d6f27fe839876efa2e884cf665baad3e9469270](all-Feitelijke-Verenigingen-ap.jsonld#L126)".
 
     at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:23)
 
