@@ -6,13 +6,11 @@
 
 #||# done  
 
-#||# start processing  
+SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
 
-WARNING The entered language values are the same!  
+    at JSON.parse (<anonymous>)
 
-#||# Write complete  
-
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/translation/omgevingsvergunning-ap_nl.json  
+    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
 
 #||# translate for language en  
 
@@ -22,11 +20,11 @@ WARNING The entered language values are the same!
 
 #||# done  
 
-#||# start processing  
+SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
 
-#||# Write complete  
+    at JSON.parse (<anonymous>)
 
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/translation/omgevingsvergunning-ap_en.json  
+    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
 
 #||# translate for language fr  
 
@@ -36,11 +34,11 @@ WARNING The entered language values are the same!
 
 #||# done  
 
-#||# start processing  
+SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
 
-#||# Write complete  
+    at JSON.parse (<anonymous>)
 
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/translation/omgevingsvergunning-ap_fr.json  
+    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
 
 #||# translate for language de  
 
@@ -50,9 +48,9 @@ WARNING The entered language values are the same!
 
 #||# done  
 
-#||# start processing  
+SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
 
-#||# Write complete  
+    at JSON.parse (<anonymous>)
 
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/translation/omgevingsvergunning-ap_de.json  
+    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
 

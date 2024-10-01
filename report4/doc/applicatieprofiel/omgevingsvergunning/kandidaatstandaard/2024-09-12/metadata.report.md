@@ -6,15 +6,11 @@
 
 #||# done  
 
-#||# start processing  
+SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
 
-#||# Checking Namespaces  
+    at JSON.parse (<anonymous>)
 
-#||# Finished  
-
-#||# start writing  
-
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/html/meta_omgevingsvergunning-ap_nl.json  
+    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
 
 #||# metadata for language en   
 
@@ -24,15 +20,11 @@
 
 #||# done  
 
-#||# start processing  
+SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
 
-#||# Checking Namespaces  
+    at JSON.parse (<anonymous>)
 
-#||# Finished  
-
-#||# start writing  
-
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/html/meta_omgevingsvergunning-ap_en.json  
+    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
 
 #||# metadata for language fr   
 
@@ -42,15 +34,11 @@
 
 #||# done  
 
-#||# start processing  
+SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
 
-#||# Checking Namespaces  
+    at JSON.parse (<anonymous>)
 
-#||# Finished  
-
-#||# start writing  
-
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/html/meta_omgevingsvergunning-ap_fr.json  
+    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
 
 #||# metadata for language de   
 
@@ -60,13 +48,9 @@
 
 #||# done  
 
-#||# start processing  
+SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
 
-#||# Checking Namespaces  
+    at JSON.parse (<anonymous>)
 
-#||# Finished  
-
-#||# start writing  
-
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/html/meta_omgevingsvergunning-ap_de.json  
+    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
 
