@@ -6,11 +6,15 @@
 
 #||# done  
 
-SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
+#||# start processing  
 
-    at JSON.parse (<anonymous>)
+#||# Checking Namespaces  
 
-    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
+#||# Finished  
+
+#||# start writing  
+
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/html/meta_omgevingsvergunning-ap_nl.json  
 
 #||# metadata for language en   
 
@@ -20,11 +24,15 @@ SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/ka
 
 #||# done  
 
-SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
+#||# start processing  
 
-    at JSON.parse (<anonymous>)
+#||# Checking Namespaces  
 
-    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
+#||# Finished  
+
+#||# start writing  
+
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/html/meta_omgevingsvergunning-ap_en.json  
 
 #||# metadata for language fr   
 
@@ -34,11 +42,15 @@ SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/ka
 
 #||# done  
 
-SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
+#||# start processing  
 
-    at JSON.parse (<anonymous>)
+#||# Checking Namespaces  
 
-    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
+#||# Finished  
+
+#||# start writing  
+
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/html/meta_omgevingsvergunning-ap_fr.json  
 
 #||# metadata for language de   
 
@@ -48,9 +60,13 @@ SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/ka
 
 #||# done  
 
-SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
+#||# start processing  
 
-    at JSON.parse (<anonymous>)
+#||# Checking Namespaces  
 
-    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
+#||# Finished  
+
+#||# start writing  
+
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12/html/meta_omgevingsvergunning-ap_de.json  
 
