@@ -2,71 +2,127 @@
 
 #||# -------------------------------------  
 
-#||# start reading  
+/app/html-metadata-generator.js:243
 
-#||# done  
+    repositoryurl: json.repository + '/tree/' + json.documentcommit,
 
-#||# start processing  
+    ^^^^^^^^^^^^^
 
-#||# Checking Namespaces  
 
-#||# Finished  
 
-#||# start writing  
+SyntaxError: Unexpected identifier 'repositoryurl'
 
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/kindfiche/ontwerpstandaard/2024-06-03/html/meta_kindfiche-ap_nl.json  
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+
+    at node:internal/main/run_main_module:28:49
+
+
+
+Node.js v20.15.1
 
 #||# metadata for language en   
 
 #||# -------------------------------------  
 
-#||# start reading  
+/app/html-metadata-generator.js:243
 
-#||# done  
+    repositoryurl: json.repository + '/tree/' + json.documentcommit,
 
-#||# start processing  
+    ^^^^^^^^^^^^^
 
-#||# Checking Namespaces  
 
-#||# Finished  
 
-#||# start writing  
+SyntaxError: Unexpected identifier 'repositoryurl'
 
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/kindfiche/ontwerpstandaard/2024-06-03/html/meta_kindfiche-ap_en.json  
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+
+    at node:internal/main/run_main_module:28:49
+
+
+
+Node.js v20.15.1
 
 #||# metadata for language fr   
 
 #||# -------------------------------------  
 
-#||# start reading  
+/app/html-metadata-generator.js:243
 
-#||# done  
+    repositoryurl: json.repository + '/tree/' + json.documentcommit,
 
-#||# start processing  
+    ^^^^^^^^^^^^^
 
-#||# Checking Namespaces  
 
-#||# Finished  
 
-#||# start writing  
+SyntaxError: Unexpected identifier 'repositoryurl'
 
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/kindfiche/ontwerpstandaard/2024-06-03/html/meta_kindfiche-ap_fr.json  
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+
+    at node:internal/main/run_main_module:28:49
+
+
+
+Node.js v20.15.1
 
 #||# metadata for language de   
 
 #||# -------------------------------------  
 
-#||# start reading  
+/app/html-metadata-generator.js:243
 
-#||# done  
+    repositoryurl: json.repository + '/tree/' + json.documentcommit,
 
-#||# start processing  
+    ^^^^^^^^^^^^^
 
-#||# Checking Namespaces  
 
-#||# Finished  
 
-#||# start writing  
+SyntaxError: Unexpected identifier 'repositoryurl'
 
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/kindfiche/ontwerpstandaard/2024-06-03/html/meta_kindfiche-ap_de.json  
+    at wrapSafe (node:internal/modules/cjs/loader:1281:20)
+
+    at Module._compile (node:internal/modules/cjs/loader:1321:27)
+
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+
+    at Module._load (node:internal/modules/cjs/loader:1024:12)
+
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+
+    at node:internal/main/run_main_module:28:49
+
+
+
+Node.js v20.15.1
 
