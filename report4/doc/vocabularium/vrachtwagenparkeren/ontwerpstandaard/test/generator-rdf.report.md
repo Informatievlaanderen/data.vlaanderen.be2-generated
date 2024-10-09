@@ -6,83 +6,83 @@
 
 #||# -------------------------------------  
 
-2024-10-09T11:33:06.063Z error: Unable to find the definition for class [urn:oslo-toolchain:836fd2793090527f9b6faaefef2f57f31a31ba24b36f13bf6474c383060f6fd1](all-Vrachtwagenparkeren.jsonld#L126).
+2024-10-09T11:43:15.565Z error: Unable to find the definition for class [urn:oslo-toolchain:836fd2793090527f9b6faaefef2f57f31a31ba24b36f13bf6474c383060f6fd1](all-Vrachtwagenparkeren.jsonld#L126).
 
-2024-10-09T11:33:06.066Z error: Unable to find the definition for class [urn:oslo-toolchain:cef8855ac50f742e259ad45b2c31d40665349b32863aaad20a43105257564480](all-Vrachtwagenparkeren.jsonld#L161).
+2024-10-09T11:43:15.567Z error: Unable to find the definition for class [urn:oslo-toolchain:cef8855ac50f742e259ad45b2c31d40665349b32863aaad20a43105257564480](all-Vrachtwagenparkeren.jsonld#L161).
 
-2024-10-09T11:33:06.066Z error: Unable to find the definition for class [urn:oslo-toolchain:87b369b10db6e1d04cf8c4a7126ffa85c5a80dfe53e9dbcdae20d048517f4b26](all-Vrachtwagenparkeren.jsonld#L250).
+2024-10-09T11:43:15.567Z error: Unable to find the definition for class [urn:oslo-toolchain:87b369b10db6e1d04cf8c4a7126ffa85c5a80dfe53e9dbcdae20d048517f4b26](all-Vrachtwagenparkeren.jsonld#L250).
 
-2024-10-09T11:33:06.067Z error: Unable to find the definition for class [urn:oslo-toolchain:918ba8087e2ee0a49ae134ec9856af54c3714872c57b7a46647ba576ceb6a8af](all-Vrachtwagenparkeren.jsonld#L302).
+2024-10-09T11:43:15.567Z error: Unable to find the definition for class [urn:oslo-toolchain:918ba8087e2ee0a49ae134ec9856af54c3714872c57b7a46647ba576ceb6a8af](all-Vrachtwagenparkeren.jsonld#L302).
 
-2024-10-09T11:33:06.068Z error: Unable to find the definition for property [urn:oslo-toolchain:155d617556dd877c42b7c6c9a6c2f6092412553d711f9a3b5955687fd5ecbf2d](all-Vrachtwagenparkeren.jsonld#L1177).
+2024-10-09T11:43:15.568Z error: Unable to find the definition for property [urn:oslo-toolchain:155d617556dd877c42b7c6c9a6c2f6092412553d711f9a3b5955687fd5ecbf2d](all-Vrachtwagenparkeren.jsonld#L1177).
 
-2024-10-09T11:33:06.069Z error: Unable to find the definition for property [urn:oslo-toolchain:9af3f9aa65e6beed55e8b46babd1add8b537cac13064aca0fb3ccaca25bce29c](all-Vrachtwagenparkeren.jsonld#L1220).
+2024-10-09T11:43:15.568Z error: Unable to find the definition for property [urn:oslo-toolchain:9af3f9aa65e6beed55e8b46babd1add8b537cac13064aca0fb3ccaca25bce29c](all-Vrachtwagenparkeren.jsonld#L1220).
 
-2024-10-09T11:33:06.069Z error: Unable to find the definition for property [urn:oslo-toolchain:ebd9e5d8848ab99a1664c04c7927f1d3f4e12e331a6c44336f055c57d6fb8c7a](all-Vrachtwagenparkeren.jsonld#L2241).
+2024-10-09T11:43:15.568Z error: Unable to find the definition for property [urn:oslo-toolchain:ebd9e5d8848ab99a1664c04c7927f1d3f4e12e331a6c44336f055c57d6fb8c7a](all-Vrachtwagenparkeren.jsonld#L2241).
 
-2024-10-09T11:33:06.069Z error: Unable to find the definition for property [urn:oslo-toolchain:19f820218bc8e63c2ff14d60ab0cf203385cd6813c0939f646cceabad5a316eb](all-Vrachtwagenparkeren.jsonld#L2284).
+2024-10-09T11:43:15.569Z error: Unable to find the definition for property [urn:oslo-toolchain:19f820218bc8e63c2ff14d60ab0cf203385cd6813c0939f646cceabad5a316eb](all-Vrachtwagenparkeren.jsonld#L2284).
 
-2024-10-09T11:33:06.070Z error: Unable to find the definition for property [urn:oslo-toolchain:13570e64bc7698df722d016bf1f0d955da9fe5bf6c90a7339e29865b4bb146be](all-Vrachtwagenparkeren.jsonld#L2339).
+2024-10-09T11:43:15.569Z error: Unable to find the definition for property [urn:oslo-toolchain:13570e64bc7698df722d016bf1f0d955da9fe5bf6c90a7339e29865b4bb146be](all-Vrachtwagenparkeren.jsonld#L2339).
 
-2024-10-09T11:33:06.070Z error: Unable to find the definition for property [urn:oslo-toolchain:c4c72dd34e1abfa21964e7b73f2839435315c72bee4116fd0c6eba8c58fd812f](all-Vrachtwagenparkeren.jsonld#L2437).
+2024-10-09T11:43:15.569Z error: Unable to find the definition for property [urn:oslo-toolchain:c4c72dd34e1abfa21964e7b73f2839435315c72bee4116fd0c6eba8c58fd812f](all-Vrachtwagenparkeren.jsonld#L2437).
 
-2024-10-09T11:33:06.070Z error: Unable to find the definition for property [urn:oslo-toolchain:a8bdf91e45edc85779e7d696a4ba10e51ace54381860db658963e8818993f800](all-Vrachtwagenparkeren.jsonld#L2480).
+2024-10-09T11:43:15.569Z error: Unable to find the definition for property [urn:oslo-toolchain:a8bdf91e45edc85779e7d696a4ba10e51ace54381860db658963e8818993f800](all-Vrachtwagenparkeren.jsonld#L2480).
 
-2024-10-09T11:33:06.071Z error: Unable to find the definition for property [urn:oslo-toolchain:fe2e4fe185ee403591eeb5ada852fe8a90757e9fa712968bcc2bd52b885dbb80](all-Vrachtwagenparkeren.jsonld#L5275).
+2024-10-09T11:43:15.569Z error: Unable to find the definition for property [urn:oslo-toolchain:fe2e4fe185ee403591eeb5ada852fe8a90757e9fa712968bcc2bd52b885dbb80](all-Vrachtwagenparkeren.jsonld#L5275).
 
 #||# oslo-generator-rdf for language fr  
 
 #||# -------------------------------------  
 
-2024-10-09T11:33:06.836Z error: Unable to find the definition for class [urn:oslo-toolchain:836fd2793090527f9b6faaefef2f57f31a31ba24b36f13bf6474c383060f6fd1](all-Vrachtwagenparkeren.jsonld#L126).
+2024-10-09T11:43:16.416Z error: Unable to find the definition for class [urn:oslo-toolchain:836fd2793090527f9b6faaefef2f57f31a31ba24b36f13bf6474c383060f6fd1](all-Vrachtwagenparkeren.jsonld#L126).
 
-2024-10-09T11:33:06.837Z error: Unable to find the definition for class [urn:oslo-toolchain:cef8855ac50f742e259ad45b2c31d40665349b32863aaad20a43105257564480](all-Vrachtwagenparkeren.jsonld#L161).
+2024-10-09T11:43:16.418Z error: Unable to find the definition for class [urn:oslo-toolchain:cef8855ac50f742e259ad45b2c31d40665349b32863aaad20a43105257564480](all-Vrachtwagenparkeren.jsonld#L161).
 
-2024-10-09T11:33:06.837Z error: Unable to find the definition for class [urn:oslo-toolchain:87b369b10db6e1d04cf8c4a7126ffa85c5a80dfe53e9dbcdae20d048517f4b26](all-Vrachtwagenparkeren.jsonld#L250).
+2024-10-09T11:43:16.419Z error: Unable to find the definition for class [urn:oslo-toolchain:87b369b10db6e1d04cf8c4a7126ffa85c5a80dfe53e9dbcdae20d048517f4b26](all-Vrachtwagenparkeren.jsonld#L250).
 
-2024-10-09T11:33:06.838Z error: Unable to find the definition for class [urn:oslo-toolchain:918ba8087e2ee0a49ae134ec9856af54c3714872c57b7a46647ba576ceb6a8af](all-Vrachtwagenparkeren.jsonld#L302).
+2024-10-09T11:43:16.419Z error: Unable to find the definition for class [urn:oslo-toolchain:918ba8087e2ee0a49ae134ec9856af54c3714872c57b7a46647ba576ceb6a8af](all-Vrachtwagenparkeren.jsonld#L302).
 
-2024-10-09T11:33:06.839Z error: Unable to find the definition for property [urn:oslo-toolchain:155d617556dd877c42b7c6c9a6c2f6092412553d711f9a3b5955687fd5ecbf2d](all-Vrachtwagenparkeren.jsonld#L1177).
+2024-10-09T11:43:16.421Z error: Unable to find the definition for property [urn:oslo-toolchain:155d617556dd877c42b7c6c9a6c2f6092412553d711f9a3b5955687fd5ecbf2d](all-Vrachtwagenparkeren.jsonld#L1177).
 
-2024-10-09T11:33:06.839Z error: Unable to find the definition for property [urn:oslo-toolchain:9af3f9aa65e6beed55e8b46babd1add8b537cac13064aca0fb3ccaca25bce29c](all-Vrachtwagenparkeren.jsonld#L1220).
+2024-10-09T11:43:16.421Z error: Unable to find the definition for property [urn:oslo-toolchain:9af3f9aa65e6beed55e8b46babd1add8b537cac13064aca0fb3ccaca25bce29c](all-Vrachtwagenparkeren.jsonld#L1220).
 
-2024-10-09T11:33:06.839Z error: Unable to find the definition for property [urn:oslo-toolchain:ebd9e5d8848ab99a1664c04c7927f1d3f4e12e331a6c44336f055c57d6fb8c7a](all-Vrachtwagenparkeren.jsonld#L2241).
+2024-10-09T11:43:16.421Z error: Unable to find the definition for property [urn:oslo-toolchain:ebd9e5d8848ab99a1664c04c7927f1d3f4e12e331a6c44336f055c57d6fb8c7a](all-Vrachtwagenparkeren.jsonld#L2241).
 
-2024-10-09T11:33:06.839Z error: Unable to find the definition for property [urn:oslo-toolchain:19f820218bc8e63c2ff14d60ab0cf203385cd6813c0939f646cceabad5a316eb](all-Vrachtwagenparkeren.jsonld#L2284).
+2024-10-09T11:43:16.422Z error: Unable to find the definition for property [urn:oslo-toolchain:19f820218bc8e63c2ff14d60ab0cf203385cd6813c0939f646cceabad5a316eb](all-Vrachtwagenparkeren.jsonld#L2284).
 
-2024-10-09T11:33:06.839Z error: Unable to find the definition for property [urn:oslo-toolchain:13570e64bc7698df722d016bf1f0d955da9fe5bf6c90a7339e29865b4bb146be](all-Vrachtwagenparkeren.jsonld#L2339).
+2024-10-09T11:43:16.423Z error: Unable to find the definition for property [urn:oslo-toolchain:13570e64bc7698df722d016bf1f0d955da9fe5bf6c90a7339e29865b4bb146be](all-Vrachtwagenparkeren.jsonld#L2339).
 
-2024-10-09T11:33:06.840Z error: Unable to find the definition for property [urn:oslo-toolchain:c4c72dd34e1abfa21964e7b73f2839435315c72bee4116fd0c6eba8c58fd812f](all-Vrachtwagenparkeren.jsonld#L2437).
+2024-10-09T11:43:16.423Z error: Unable to find the definition for property [urn:oslo-toolchain:c4c72dd34e1abfa21964e7b73f2839435315c72bee4116fd0c6eba8c58fd812f](all-Vrachtwagenparkeren.jsonld#L2437).
 
-2024-10-09T11:33:06.840Z error: Unable to find the definition for property [urn:oslo-toolchain:a8bdf91e45edc85779e7d696a4ba10e51ace54381860db658963e8818993f800](all-Vrachtwagenparkeren.jsonld#L2480).
+2024-10-09T11:43:16.423Z error: Unable to find the definition for property [urn:oslo-toolchain:a8bdf91e45edc85779e7d696a4ba10e51ace54381860db658963e8818993f800](all-Vrachtwagenparkeren.jsonld#L2480).
 
-2024-10-09T11:33:06.840Z error: Unable to find the definition for property [urn:oslo-toolchain:fe2e4fe185ee403591eeb5ada852fe8a90757e9fa712968bcc2bd52b885dbb80](all-Vrachtwagenparkeren.jsonld#L5275).
+2024-10-09T11:43:16.424Z error: Unable to find the definition for property [urn:oslo-toolchain:fe2e4fe185ee403591eeb5ada852fe8a90757e9fa712968bcc2bd52b885dbb80](all-Vrachtwagenparkeren.jsonld#L5275).
 
 #||# oslo-generator-rdf for language de  
 
 #||# -------------------------------------  
 
-2024-10-09T11:33:07.575Z error: Unable to find the definition for class [urn:oslo-toolchain:836fd2793090527f9b6faaefef2f57f31a31ba24b36f13bf6474c383060f6fd1](all-Vrachtwagenparkeren.jsonld#L126).
+2024-10-09T11:43:17.270Z error: Unable to find the definition for class [urn:oslo-toolchain:836fd2793090527f9b6faaefef2f57f31a31ba24b36f13bf6474c383060f6fd1](all-Vrachtwagenparkeren.jsonld#L126).
 
-2024-10-09T11:33:07.577Z error: Unable to find the definition for class [urn:oslo-toolchain:cef8855ac50f742e259ad45b2c31d40665349b32863aaad20a43105257564480](all-Vrachtwagenparkeren.jsonld#L161).
+2024-10-09T11:43:17.272Z error: Unable to find the definition for class [urn:oslo-toolchain:cef8855ac50f742e259ad45b2c31d40665349b32863aaad20a43105257564480](all-Vrachtwagenparkeren.jsonld#L161).
 
-2024-10-09T11:33:07.578Z error: Unable to find the definition for class [urn:oslo-toolchain:87b369b10db6e1d04cf8c4a7126ffa85c5a80dfe53e9dbcdae20d048517f4b26](all-Vrachtwagenparkeren.jsonld#L250).
+2024-10-09T11:43:17.272Z error: Unable to find the definition for class [urn:oslo-toolchain:87b369b10db6e1d04cf8c4a7126ffa85c5a80dfe53e9dbcdae20d048517f4b26](all-Vrachtwagenparkeren.jsonld#L250).
 
-2024-10-09T11:33:07.578Z error: Unable to find the definition for class [urn:oslo-toolchain:918ba8087e2ee0a49ae134ec9856af54c3714872c57b7a46647ba576ceb6a8af](all-Vrachtwagenparkeren.jsonld#L302).
+2024-10-09T11:43:17.272Z error: Unable to find the definition for class [urn:oslo-toolchain:918ba8087e2ee0a49ae134ec9856af54c3714872c57b7a46647ba576ceb6a8af](all-Vrachtwagenparkeren.jsonld#L302).
 
-2024-10-09T11:33:07.579Z error: Unable to find the definition for property [urn:oslo-toolchain:155d617556dd877c42b7c6c9a6c2f6092412553d711f9a3b5955687fd5ecbf2d](all-Vrachtwagenparkeren.jsonld#L1177).
+2024-10-09T11:43:17.273Z error: Unable to find the definition for property [urn:oslo-toolchain:155d617556dd877c42b7c6c9a6c2f6092412553d711f9a3b5955687fd5ecbf2d](all-Vrachtwagenparkeren.jsonld#L1177).
 
-2024-10-09T11:33:07.580Z error: Unable to find the definition for property [urn:oslo-toolchain:9af3f9aa65e6beed55e8b46babd1add8b537cac13064aca0fb3ccaca25bce29c](all-Vrachtwagenparkeren.jsonld#L1220).
+2024-10-09T11:43:17.273Z error: Unable to find the definition for property [urn:oslo-toolchain:9af3f9aa65e6beed55e8b46babd1add8b537cac13064aca0fb3ccaca25bce29c](all-Vrachtwagenparkeren.jsonld#L1220).
 
-2024-10-09T11:33:07.580Z error: Unable to find the definition for property [urn:oslo-toolchain:ebd9e5d8848ab99a1664c04c7927f1d3f4e12e331a6c44336f055c57d6fb8c7a](all-Vrachtwagenparkeren.jsonld#L2241).
+2024-10-09T11:43:17.273Z error: Unable to find the definition for property [urn:oslo-toolchain:ebd9e5d8848ab99a1664c04c7927f1d3f4e12e331a6c44336f055c57d6fb8c7a](all-Vrachtwagenparkeren.jsonld#L2241).
 
-2024-10-09T11:33:07.580Z error: Unable to find the definition for property [urn:oslo-toolchain:19f820218bc8e63c2ff14d60ab0cf203385cd6813c0939f646cceabad5a316eb](all-Vrachtwagenparkeren.jsonld#L2284).
+2024-10-09T11:43:17.274Z error: Unable to find the definition for property [urn:oslo-toolchain:19f820218bc8e63c2ff14d60ab0cf203385cd6813c0939f646cceabad5a316eb](all-Vrachtwagenparkeren.jsonld#L2284).
 
-2024-10-09T11:33:07.581Z error: Unable to find the definition for property [urn:oslo-toolchain:13570e64bc7698df722d016bf1f0d955da9fe5bf6c90a7339e29865b4bb146be](all-Vrachtwagenparkeren.jsonld#L2339).
+2024-10-09T11:43:17.274Z error: Unable to find the definition for property [urn:oslo-toolchain:13570e64bc7698df722d016bf1f0d955da9fe5bf6c90a7339e29865b4bb146be](all-Vrachtwagenparkeren.jsonld#L2339).
 
-2024-10-09T11:33:07.581Z error: Unable to find the definition for property [urn:oslo-toolchain:c4c72dd34e1abfa21964e7b73f2839435315c72bee4116fd0c6eba8c58fd812f](all-Vrachtwagenparkeren.jsonld#L2437).
+2024-10-09T11:43:17.274Z error: Unable to find the definition for property [urn:oslo-toolchain:c4c72dd34e1abfa21964e7b73f2839435315c72bee4116fd0c6eba8c58fd812f](all-Vrachtwagenparkeren.jsonld#L2437).
 
-2024-10-09T11:33:07.581Z error: Unable to find the definition for property [urn:oslo-toolchain:a8bdf91e45edc85779e7d696a4ba10e51ace54381860db658963e8818993f800](all-Vrachtwagenparkeren.jsonld#L2480).
+2024-10-09T11:43:17.274Z error: Unable to find the definition for property [urn:oslo-toolchain:a8bdf91e45edc85779e7d696a4ba10e51ace54381860db658963e8818993f800](all-Vrachtwagenparkeren.jsonld#L2480).
 
-2024-10-09T11:33:07.581Z error: Unable to find the definition for property [urn:oslo-toolchain:fe2e4fe185ee403591eeb5ada852fe8a90757e9fa712968bcc2bd52b885dbb80](all-Vrachtwagenparkeren.jsonld#L5275).
+2024-10-09T11:43:17.274Z error: Unable to find the definition for property [urn:oslo-toolchain:fe2e4fe185ee403591eeb5ada852fe8a90757e9fa712968bcc2bd52b885dbb80](all-Vrachtwagenparkeren.jsonld#L5275).
 
