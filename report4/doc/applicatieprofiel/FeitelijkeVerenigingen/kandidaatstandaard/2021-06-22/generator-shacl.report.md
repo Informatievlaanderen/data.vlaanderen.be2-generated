@@ -2,9 +2,9 @@
 
 #||# -------------------------------------  
 
-2024-10-03T09:34:41.440Z error: Unable to find the description for subject "[urn:oslo-toolchain:65d8c8f7b9533b5eaf2c01f1f490f5d323e01e6873a98072b75ca8a59717291b](all-Feitelijke-Verenigingen-ap.jsonld#L3887)".
+2024-10-09T09:57:48.546Z error: Unable to find the description for subject "[urn:oslo-toolchain:65d8c8f7b9533b5eaf2c01f1f490f5d323e01e6873a98072b75ca8a59717291b](all-Feitelijke-Verenigingen-ap.jsonld#L3887)".
 
-2024-10-03T09:34:41.442Z error: Unable to find the description for subject "[urn:oslo-toolchain:bd12c90ac83597f37682a42b021ff0f06f56b9ae21f18fedd1f0081f80236f57](all-Feitelijke-Verenigingen-ap.jsonld#L3990)".
+2024-10-09T09:57:48.548Z error: Unable to find the description for subject "[urn:oslo-toolchain:bd12c90ac83597f37682a42b021ff0f06f56b9ae21f18fedd1f0081f80236f57](all-Feitelijke-Verenigingen-ap.jsonld#L3990)".
 
 #||# oslo-shacl-template-generator for language en  
 
