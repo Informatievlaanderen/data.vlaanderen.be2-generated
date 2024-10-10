@@ -2,33 +2,33 @@
 
 #||# -------------------------------------  
 
-2024-10-10T11:02:46.835Z error: Unable to find the description for subject "[urn:oslo-toolchain:2da91f427bea5c0cf55360f86f73e69e70274485bfb31da077d9d5d9808dfd01](all-omgevingsvergunning-ap.jsonld#L1590)".
+2024-10-10T11:23:30.710Z error: Unable to find the description for subject "[urn:oslo-toolchain:2da91f427bea5c0cf55360f86f73e69e70274485bfb31da077d9d5d9808dfd01](all-omgevingsvergunning-ap.jsonld#L1590)".
 
-2024-10-10T11:02:46.837Z error: Unable to find the description for subject "[urn:oslo-toolchain:2d325c7df0aff7e85cb79f939803f71ceed7a1463b7c469a267d34e10a32b347](all-omgevingsvergunning-ap.jsonld#L1627)".
+2024-10-10T11:23:30.712Z error: Unable to find the description for subject "[urn:oslo-toolchain:2d325c7df0aff7e85cb79f939803f71ceed7a1463b7c469a267d34e10a32b347](all-omgevingsvergunning-ap.jsonld#L1627)".
 
-2024-10-10T11:02:46.841Z error: Unable to find the description for subject "[urn:oslo-toolchain:8d7fd29784cdae8a512425cb920cfe146d7f017e759b403990d5fe7e1564b514](all-omgevingsvergunning-ap.jsonld#L2026)".
+2024-10-10T11:23:30.716Z error: Unable to find the description for subject "[urn:oslo-toolchain:8d7fd29784cdae8a512425cb920cfe146d7f017e759b403990d5fe7e1564b514](all-omgevingsvergunning-ap.jsonld#L2026)".
 
-2024-10-10T11:02:46.842Z error: Unable to find the description for subject "[urn:oslo-toolchain:09f2e5b0270709240c9ffd464957b245db6349a87c4988cffa279f27dbd8be51](all-omgevingsvergunning-ap.jsonld#L2175)".
+2024-10-10T11:23:30.717Z error: Unable to find the description for subject "[urn:oslo-toolchain:09f2e5b0270709240c9ffd464957b245db6349a87c4988cffa279f27dbd8be51](all-omgevingsvergunning-ap.jsonld#L2175)".
 
-2024-10-10T11:02:46.842Z error: Unable to find the description for subject "[urn:oslo-toolchain:170a6b087f468ad425567496d206b5ff1099cae2c3efb23fd27f1b6d21795d1b](all-omgevingsvergunning-ap.jsonld#L2231)".
+2024-10-10T11:23:30.717Z error: Unable to find the description for subject "[urn:oslo-toolchain:170a6b087f468ad425567496d206b5ff1099cae2c3efb23fd27f1b6d21795d1b](all-omgevingsvergunning-ap.jsonld#L2231)".
 
-2024-10-10T11:02:46.842Z error: Unable to find the description for subject "[urn:oslo-toolchain:0404c7221f0a5ebeb9833b203dd1b9084aaf66851d0d014c6a3580f2efb5d0e9](all-omgevingsvergunning-ap.jsonld#L2256)".
+2024-10-10T11:23:30.718Z error: Unable to find the description for subject "[urn:oslo-toolchain:0404c7221f0a5ebeb9833b203dd1b9084aaf66851d0d014c6a3580f2efb5d0e9](all-omgevingsvergunning-ap.jsonld#L2256)".
 
-2024-10-10T11:02:46.845Z error: Unable to find the description for subject "[urn:oslo-toolchain:490dedf9ac42c33721186cdff4c022d61939c408d0e54a4ceddc894f1cd72d4f](all-omgevingsvergunning-ap.jsonld#L2634)".
+2024-10-10T11:23:30.719Z error: Unable to find the description for subject "[urn:oslo-toolchain:490dedf9ac42c33721186cdff4c022d61939c408d0e54a4ceddc894f1cd72d4f](all-omgevingsvergunning-ap.jsonld#L2634)".
 
-2024-10-10T11:02:46.845Z error: Unable to find the description for subject "[urn:oslo-toolchain:a78b0cc6a0ad5c030318b6fd96773c6238a4ac04ea92ee408c33f7895df8786c](all-omgevingsvergunning-ap.jsonld#L2721)".
+2024-10-10T11:23:30.720Z error: Unable to find the description for subject "[urn:oslo-toolchain:a78b0cc6a0ad5c030318b6fd96773c6238a4ac04ea92ee408c33f7895df8786c](all-omgevingsvergunning-ap.jsonld#L2721)".
 
-2024-10-10T11:02:46.846Z error: Unable to find the description for subject "[urn:oslo-toolchain:96e1e4e6637c2bf33f82e04bf8ef1ebeb5c800124824c486bf81a37586382fc2](all-omgevingsvergunning-ap.jsonld#L2749)".
+2024-10-10T11:23:30.720Z error: Unable to find the description for subject "[urn:oslo-toolchain:96e1e4e6637c2bf33f82e04bf8ef1ebeb5c800124824c486bf81a37586382fc2](all-omgevingsvergunning-ap.jsonld#L2749)".
 
-2024-10-10T11:02:46.846Z error: Unable to find the description for subject "[urn:oslo-toolchain:b635aeceda523aaf79567071218147694ead557f0f130548a1d4d5aa16dff131](all-omgevingsvergunning-ap.jsonld#L2777)".
+2024-10-10T11:23:30.721Z error: Unable to find the description for subject "[urn:oslo-toolchain:b635aeceda523aaf79567071218147694ead557f0f130548a1d4d5aa16dff131](all-omgevingsvergunning-ap.jsonld#L2777)".
 
-2024-10-10T11:02:46.847Z error: Unable to find the description for subject "[urn:oslo-toolchain:569901d1881f42e5607e895ad8207832a25c722268cadeecb4fe89e311746cba](all-omgevingsvergunning-ap.jsonld#L2805)".
+2024-10-10T11:23:30.721Z error: Unable to find the description for subject "[urn:oslo-toolchain:569901d1881f42e5607e895ad8207832a25c722268cadeecb4fe89e311746cba](all-omgevingsvergunning-ap.jsonld#L2805)".
 
-2024-10-10T11:02:46.847Z error: Unable to find the description for subject "[urn:oslo-toolchain:22c41ca7f92d4577a57d764a8c39c638c5713682666fb8724a3688cd515985ac](all-omgevingsvergunning-ap.jsonld#L2867)".
+2024-10-10T11:23:30.721Z error: Unable to find the description for subject "[urn:oslo-toolchain:22c41ca7f92d4577a57d764a8c39c638c5713682666fb8724a3688cd515985ac](all-omgevingsvergunning-ap.jsonld#L2867)".
 
-2024-10-10T11:02:46.848Z error: Unable to find the description for subject "[urn:oslo-toolchain:ac2b528cf3d96ebf688cbc869f5b3a3fca8301a463b2affee748c8d8116d3720](all-omgevingsvergunning-ap.jsonld#L2892)".
+2024-10-10T11:23:30.722Z error: Unable to find the description for subject "[urn:oslo-toolchain:ac2b528cf3d96ebf688cbc869f5b3a3fca8301a463b2affee748c8d8116d3720](all-omgevingsvergunning-ap.jsonld#L2892)".
 
-2024-10-10T11:02:46.849Z error: Unable to find the description for subject "[urn:oslo-toolchain:e523c3a330a5fd11eccc0da20f61c9437c711a75caa63df5dd2fb0df12fab8b9](all-omgevingsvergunning-ap.jsonld#L3012)".
+2024-10-10T11:23:30.722Z error: Unable to find the description for subject "[urn:oslo-toolchain:e523c3a330a5fd11eccc0da20f61c9437c711a75caa63df5dd2fb0df12fab8b9](all-omgevingsvergunning-ap.jsonld#L3012)".
 
 Error: Unable to find a label for the domain "urn:oslo-toolchain:441dcaaa603009db05330085069a3c6eb81324b27eb04e36f1dc604fd10e4568" of subject "[urn:oslo-toolchain:e523c3a330a5fd11eccc0da20f61c9437c711a75caa63df5dd2fb0df12fab8b9](all-omgevingsvergunning-ap.jsonld#L3012)".
 
@@ -46,33 +46,33 @@ Error: Unable to find a label for the domain "urn:oslo-toolchain:441dcaaa603009d
 
 #||# -------------------------------------  
 
-2024-10-10T11:02:47.548Z error: Unable to find the description for subject "[urn:oslo-toolchain:2da91f427bea5c0cf55360f86f73e69e70274485bfb31da077d9d5d9808dfd01](all-omgevingsvergunning-ap.jsonld#L1590)".
+2024-10-10T11:23:31.416Z error: Unable to find the description for subject "[urn:oslo-toolchain:2da91f427bea5c0cf55360f86f73e69e70274485bfb31da077d9d5d9808dfd01](all-omgevingsvergunning-ap.jsonld#L1590)".
 
-2024-10-10T11:02:47.550Z error: Unable to find the description for subject "[urn:oslo-toolchain:2d325c7df0aff7e85cb79f939803f71ceed7a1463b7c469a267d34e10a32b347](all-omgevingsvergunning-ap.jsonld#L1627)".
+2024-10-10T11:23:31.417Z error: Unable to find the description for subject "[urn:oslo-toolchain:2d325c7df0aff7e85cb79f939803f71ceed7a1463b7c469a267d34e10a32b347](all-omgevingsvergunning-ap.jsonld#L1627)".
 
-2024-10-10T11:02:47.553Z error: Unable to find the description for subject "[urn:oslo-toolchain:8d7fd29784cdae8a512425cb920cfe146d7f017e759b403990d5fe7e1564b514](all-omgevingsvergunning-ap.jsonld#L2026)".
+2024-10-10T11:23:31.420Z error: Unable to find the description for subject "[urn:oslo-toolchain:8d7fd29784cdae8a512425cb920cfe146d7f017e759b403990d5fe7e1564b514](all-omgevingsvergunning-ap.jsonld#L2026)".
 
-2024-10-10T11:02:47.555Z error: Unable to find the description for subject "[urn:oslo-toolchain:09f2e5b0270709240c9ffd464957b245db6349a87c4988cffa279f27dbd8be51](all-omgevingsvergunning-ap.jsonld#L2175)".
+2024-10-10T11:23:31.421Z error: Unable to find the description for subject "[urn:oslo-toolchain:09f2e5b0270709240c9ffd464957b245db6349a87c4988cffa279f27dbd8be51](all-omgevingsvergunning-ap.jsonld#L2175)".
 
-2024-10-10T11:02:47.556Z error: Unable to find the description for subject "[urn:oslo-toolchain:170a6b087f468ad425567496d206b5ff1099cae2c3efb23fd27f1b6d21795d1b](all-omgevingsvergunning-ap.jsonld#L2231)".
+2024-10-10T11:23:31.421Z error: Unable to find the description for subject "[urn:oslo-toolchain:170a6b087f468ad425567496d206b5ff1099cae2c3efb23fd27f1b6d21795d1b](all-omgevingsvergunning-ap.jsonld#L2231)".
 
-2024-10-10T11:02:47.556Z error: Unable to find the description for subject "[urn:oslo-toolchain:0404c7221f0a5ebeb9833b203dd1b9084aaf66851d0d014c6a3580f2efb5d0e9](all-omgevingsvergunning-ap.jsonld#L2256)".
+2024-10-10T11:23:31.421Z error: Unable to find the description for subject "[urn:oslo-toolchain:0404c7221f0a5ebeb9833b203dd1b9084aaf66851d0d014c6a3580f2efb5d0e9](all-omgevingsvergunning-ap.jsonld#L2256)".
 
-2024-10-10T11:02:47.559Z error: Unable to find the description for subject "[urn:oslo-toolchain:490dedf9ac42c33721186cdff4c022d61939c408d0e54a4ceddc894f1cd72d4f](all-omgevingsvergunning-ap.jsonld#L2634)".
+2024-10-10T11:23:31.424Z error: Unable to find the description for subject "[urn:oslo-toolchain:490dedf9ac42c33721186cdff4c022d61939c408d0e54a4ceddc894f1cd72d4f](all-omgevingsvergunning-ap.jsonld#L2634)".
 
-2024-10-10T11:02:47.560Z error: Unable to find the description for subject "[urn:oslo-toolchain:a78b0cc6a0ad5c030318b6fd96773c6238a4ac04ea92ee408c33f7895df8786c](all-omgevingsvergunning-ap.jsonld#L2721)".
+2024-10-10T11:23:31.424Z error: Unable to find the description for subject "[urn:oslo-toolchain:a78b0cc6a0ad5c030318b6fd96773c6238a4ac04ea92ee408c33f7895df8786c](all-omgevingsvergunning-ap.jsonld#L2721)".
 
-2024-10-10T11:02:47.560Z error: Unable to find the description for subject "[urn:oslo-toolchain:96e1e4e6637c2bf33f82e04bf8ef1ebeb5c800124824c486bf81a37586382fc2](all-omgevingsvergunning-ap.jsonld#L2749)".
+2024-10-10T11:23:31.425Z error: Unable to find the description for subject "[urn:oslo-toolchain:96e1e4e6637c2bf33f82e04bf8ef1ebeb5c800124824c486bf81a37586382fc2](all-omgevingsvergunning-ap.jsonld#L2749)".
 
-2024-10-10T11:02:47.561Z error: Unable to find the description for subject "[urn:oslo-toolchain:b635aeceda523aaf79567071218147694ead557f0f130548a1d4d5aa16dff131](all-omgevingsvergunning-ap.jsonld#L2777)".
+2024-10-10T11:23:31.425Z error: Unable to find the description for subject "[urn:oslo-toolchain:b635aeceda523aaf79567071218147694ead557f0f130548a1d4d5aa16dff131](all-omgevingsvergunning-ap.jsonld#L2777)".
 
-2024-10-10T11:02:47.561Z error: Unable to find the description for subject "[urn:oslo-toolchain:569901d1881f42e5607e895ad8207832a25c722268cadeecb4fe89e311746cba](all-omgevingsvergunning-ap.jsonld#L2805)".
+2024-10-10T11:23:31.425Z error: Unable to find the description for subject "[urn:oslo-toolchain:569901d1881f42e5607e895ad8207832a25c722268cadeecb4fe89e311746cba](all-omgevingsvergunning-ap.jsonld#L2805)".
 
-2024-10-10T11:02:47.562Z error: Unable to find the description for subject "[urn:oslo-toolchain:22c41ca7f92d4577a57d764a8c39c638c5713682666fb8724a3688cd515985ac](all-omgevingsvergunning-ap.jsonld#L2867)".
+2024-10-10T11:23:31.426Z error: Unable to find the description for subject "[urn:oslo-toolchain:22c41ca7f92d4577a57d764a8c39c638c5713682666fb8724a3688cd515985ac](all-omgevingsvergunning-ap.jsonld#L2867)".
 
-2024-10-10T11:02:47.562Z error: Unable to find the description for subject "[urn:oslo-toolchain:ac2b528cf3d96ebf688cbc869f5b3a3fca8301a463b2affee748c8d8116d3720](all-omgevingsvergunning-ap.jsonld#L2892)".
+2024-10-10T11:23:31.426Z error: Unable to find the description for subject "[urn:oslo-toolchain:ac2b528cf3d96ebf688cbc869f5b3a3fca8301a463b2affee748c8d8116d3720](all-omgevingsvergunning-ap.jsonld#L2892)".
 
-2024-10-10T11:02:47.563Z error: Unable to find the description for subject "[urn:oslo-toolchain:e523c3a330a5fd11eccc0da20f61c9437c711a75caa63df5dd2fb0df12fab8b9](all-omgevingsvergunning-ap.jsonld#L3012)".
+2024-10-10T11:23:31.427Z error: Unable to find the description for subject "[urn:oslo-toolchain:e523c3a330a5fd11eccc0da20f61c9437c711a75caa63df5dd2fb0df12fab8b9](all-omgevingsvergunning-ap.jsonld#L3012)".
 
 Error: Unable to find a label for the domain "urn:oslo-toolchain:441dcaaa603009db05330085069a3c6eb81324b27eb04e36f1dc604fd10e4568" of subject "[urn:oslo-toolchain:e523c3a330a5fd11eccc0da20f61c9437c711a75caa63df5dd2fb0df12fab8b9](all-omgevingsvergunning-ap.jsonld#L3012)".
 
@@ -90,33 +90,33 @@ Error: Unable to find a label for the domain "urn:oslo-toolchain:441dcaaa603009d
 
 #||# -------------------------------------  
 
-2024-10-10T11:02:48.271Z error: Unable to find the description for subject "[urn:oslo-toolchain:2da91f427bea5c0cf55360f86f73e69e70274485bfb31da077d9d5d9808dfd01](all-omgevingsvergunning-ap.jsonld#L1590)".
+2024-10-10T11:23:32.108Z error: Unable to find the description for subject "[urn:oslo-toolchain:2da91f427bea5c0cf55360f86f73e69e70274485bfb31da077d9d5d9808dfd01](all-omgevingsvergunning-ap.jsonld#L1590)".
 
-2024-10-10T11:02:48.273Z error: Unable to find the description for subject "[urn:oslo-toolchain:2d325c7df0aff7e85cb79f939803f71ceed7a1463b7c469a267d34e10a32b347](all-omgevingsvergunning-ap.jsonld#L1627)".
+2024-10-10T11:23:32.110Z error: Unable to find the description for subject "[urn:oslo-toolchain:2d325c7df0aff7e85cb79f939803f71ceed7a1463b7c469a267d34e10a32b347](all-omgevingsvergunning-ap.jsonld#L1627)".
 
-2024-10-10T11:02:48.275Z error: Unable to find the description for subject "[urn:oslo-toolchain:8d7fd29784cdae8a512425cb920cfe146d7f017e759b403990d5fe7e1564b514](all-omgevingsvergunning-ap.jsonld#L2026)".
+2024-10-10T11:23:32.112Z error: Unable to find the description for subject "[urn:oslo-toolchain:8d7fd29784cdae8a512425cb920cfe146d7f017e759b403990d5fe7e1564b514](all-omgevingsvergunning-ap.jsonld#L2026)".
 
-2024-10-10T11:02:48.276Z error: Unable to find the description for subject "[urn:oslo-toolchain:09f2e5b0270709240c9ffd464957b245db6349a87c4988cffa279f27dbd8be51](all-omgevingsvergunning-ap.jsonld#L2175)".
+2024-10-10T11:23:32.113Z error: Unable to find the description for subject "[urn:oslo-toolchain:09f2e5b0270709240c9ffd464957b245db6349a87c4988cffa279f27dbd8be51](all-omgevingsvergunning-ap.jsonld#L2175)".
 
-2024-10-10T11:02:48.277Z error: Unable to find the description for subject "[urn:oslo-toolchain:170a6b087f468ad425567496d206b5ff1099cae2c3efb23fd27f1b6d21795d1b](all-omgevingsvergunning-ap.jsonld#L2231)".
+2024-10-10T11:23:32.114Z error: Unable to find the description for subject "[urn:oslo-toolchain:170a6b087f468ad425567496d206b5ff1099cae2c3efb23fd27f1b6d21795d1b](all-omgevingsvergunning-ap.jsonld#L2231)".
 
-2024-10-10T11:02:48.277Z error: Unable to find the description for subject "[urn:oslo-toolchain:0404c7221f0a5ebeb9833b203dd1b9084aaf66851d0d014c6a3580f2efb5d0e9](all-omgevingsvergunning-ap.jsonld#L2256)".
+2024-10-10T11:23:32.114Z error: Unable to find the description for subject "[urn:oslo-toolchain:0404c7221f0a5ebeb9833b203dd1b9084aaf66851d0d014c6a3580f2efb5d0e9](all-omgevingsvergunning-ap.jsonld#L2256)".
 
-2024-10-10T11:02:48.280Z error: Unable to find the description for subject "[urn:oslo-toolchain:490dedf9ac42c33721186cdff4c022d61939c408d0e54a4ceddc894f1cd72d4f](all-omgevingsvergunning-ap.jsonld#L2634)".
+2024-10-10T11:23:32.116Z error: Unable to find the description for subject "[urn:oslo-toolchain:490dedf9ac42c33721186cdff4c022d61939c408d0e54a4ceddc894f1cd72d4f](all-omgevingsvergunning-ap.jsonld#L2634)".
 
-2024-10-10T11:02:48.280Z error: Unable to find the description for subject "[urn:oslo-toolchain:a78b0cc6a0ad5c030318b6fd96773c6238a4ac04ea92ee408c33f7895df8786c](all-omgevingsvergunning-ap.jsonld#L2721)".
+2024-10-10T11:23:32.117Z error: Unable to find the description for subject "[urn:oslo-toolchain:a78b0cc6a0ad5c030318b6fd96773c6238a4ac04ea92ee408c33f7895df8786c](all-omgevingsvergunning-ap.jsonld#L2721)".
 
-2024-10-10T11:02:48.280Z error: Unable to find the description for subject "[urn:oslo-toolchain:96e1e4e6637c2bf33f82e04bf8ef1ebeb5c800124824c486bf81a37586382fc2](all-omgevingsvergunning-ap.jsonld#L2749)".
+2024-10-10T11:23:32.117Z error: Unable to find the description for subject "[urn:oslo-toolchain:96e1e4e6637c2bf33f82e04bf8ef1ebeb5c800124824c486bf81a37586382fc2](all-omgevingsvergunning-ap.jsonld#L2749)".
 
-2024-10-10T11:02:48.281Z error: Unable to find the description for subject "[urn:oslo-toolchain:b635aeceda523aaf79567071218147694ead557f0f130548a1d4d5aa16dff131](all-omgevingsvergunning-ap.jsonld#L2777)".
+2024-10-10T11:23:32.118Z error: Unable to find the description for subject "[urn:oslo-toolchain:b635aeceda523aaf79567071218147694ead557f0f130548a1d4d5aa16dff131](all-omgevingsvergunning-ap.jsonld#L2777)".
 
-2024-10-10T11:02:48.281Z error: Unable to find the description for subject "[urn:oslo-toolchain:569901d1881f42e5607e895ad8207832a25c722268cadeecb4fe89e311746cba](all-omgevingsvergunning-ap.jsonld#L2805)".
+2024-10-10T11:23:32.118Z error: Unable to find the description for subject "[urn:oslo-toolchain:569901d1881f42e5607e895ad8207832a25c722268cadeecb4fe89e311746cba](all-omgevingsvergunning-ap.jsonld#L2805)".
 
-2024-10-10T11:02:48.281Z error: Unable to find the description for subject "[urn:oslo-toolchain:22c41ca7f92d4577a57d764a8c39c638c5713682666fb8724a3688cd515985ac](all-omgevingsvergunning-ap.jsonld#L2867)".
+2024-10-10T11:23:32.118Z error: Unable to find the description for subject "[urn:oslo-toolchain:22c41ca7f92d4577a57d764a8c39c638c5713682666fb8724a3688cd515985ac](all-omgevingsvergunning-ap.jsonld#L2867)".
 
-2024-10-10T11:02:48.282Z error: Unable to find the description for subject "[urn:oslo-toolchain:ac2b528cf3d96ebf688cbc869f5b3a3fca8301a463b2affee748c8d8116d3720](all-omgevingsvergunning-ap.jsonld#L2892)".
+2024-10-10T11:23:32.119Z error: Unable to find the description for subject "[urn:oslo-toolchain:ac2b528cf3d96ebf688cbc869f5b3a3fca8301a463b2affee748c8d8116d3720](all-omgevingsvergunning-ap.jsonld#L2892)".
 
-2024-10-10T11:02:48.282Z error: Unable to find the description for subject "[urn:oslo-toolchain:e523c3a330a5fd11eccc0da20f61c9437c711a75caa63df5dd2fb0df12fab8b9](all-omgevingsvergunning-ap.jsonld#L3012)".
+2024-10-10T11:23:32.120Z error: Unable to find the description for subject "[urn:oslo-toolchain:e523c3a330a5fd11eccc0da20f61c9437c711a75caa63df5dd2fb0df12fab8b9](all-omgevingsvergunning-ap.jsonld#L3012)".
 
 Error: Unable to find a label for the domain "urn:oslo-toolchain:441dcaaa603009db05330085069a3c6eb81324b27eb04e36f1dc604fd10e4568" of subject "[urn:oslo-toolchain:e523c3a330a5fd11eccc0da20f61c9437c711a75caa63df5dd2fb0df12fab8b9](all-omgevingsvergunning-ap.jsonld#L3012)".
 
@@ -134,33 +134,33 @@ Error: Unable to find a label for the domain "urn:oslo-toolchain:441dcaaa603009d
 
 #||# -------------------------------------  
 
-2024-10-10T11:02:49.002Z error: Unable to find the description for subject "[urn:oslo-toolchain:2da91f427bea5c0cf55360f86f73e69e70274485bfb31da077d9d5d9808dfd01](all-omgevingsvergunning-ap.jsonld#L1590)".
+2024-10-10T11:23:32.843Z error: Unable to find the description for subject "[urn:oslo-toolchain:2da91f427bea5c0cf55360f86f73e69e70274485bfb31da077d9d5d9808dfd01](all-omgevingsvergunning-ap.jsonld#L1590)".
 
-2024-10-10T11:02:49.004Z error: Unable to find the description for subject "[urn:oslo-toolchain:2d325c7df0aff7e85cb79f939803f71ceed7a1463b7c469a267d34e10a32b347](all-omgevingsvergunning-ap.jsonld#L1627)".
+2024-10-10T11:23:32.845Z error: Unable to find the description for subject "[urn:oslo-toolchain:2d325c7df0aff7e85cb79f939803f71ceed7a1463b7c469a267d34e10a32b347](all-omgevingsvergunning-ap.jsonld#L1627)".
 
-2024-10-10T11:02:49.006Z error: Unable to find the description for subject "[urn:oslo-toolchain:8d7fd29784cdae8a512425cb920cfe146d7f017e759b403990d5fe7e1564b514](all-omgevingsvergunning-ap.jsonld#L2026)".
+2024-10-10T11:23:32.847Z error: Unable to find the description for subject "[urn:oslo-toolchain:8d7fd29784cdae8a512425cb920cfe146d7f017e759b403990d5fe7e1564b514](all-omgevingsvergunning-ap.jsonld#L2026)".
 
-2024-10-10T11:02:49.007Z error: Unable to find the description for subject "[urn:oslo-toolchain:09f2e5b0270709240c9ffd464957b245db6349a87c4988cffa279f27dbd8be51](all-omgevingsvergunning-ap.jsonld#L2175)".
+2024-10-10T11:23:32.849Z error: Unable to find the description for subject "[urn:oslo-toolchain:09f2e5b0270709240c9ffd464957b245db6349a87c4988cffa279f27dbd8be51](all-omgevingsvergunning-ap.jsonld#L2175)".
 
-2024-10-10T11:02:49.008Z error: Unable to find the description for subject "[urn:oslo-toolchain:170a6b087f468ad425567496d206b5ff1099cae2c3efb23fd27f1b6d21795d1b](all-omgevingsvergunning-ap.jsonld#L2231)".
+2024-10-10T11:23:32.849Z error: Unable to find the description for subject "[urn:oslo-toolchain:170a6b087f468ad425567496d206b5ff1099cae2c3efb23fd27f1b6d21795d1b](all-omgevingsvergunning-ap.jsonld#L2231)".
 
-2024-10-10T11:02:49.008Z error: Unable to find the description for subject "[urn:oslo-toolchain:0404c7221f0a5ebeb9833b203dd1b9084aaf66851d0d014c6a3580f2efb5d0e9](all-omgevingsvergunning-ap.jsonld#L2256)".
+2024-10-10T11:23:32.850Z error: Unable to find the description for subject "[urn:oslo-toolchain:0404c7221f0a5ebeb9833b203dd1b9084aaf66851d0d014c6a3580f2efb5d0e9](all-omgevingsvergunning-ap.jsonld#L2256)".
 
-2024-10-10T11:02:49.010Z error: Unable to find the description for subject "[urn:oslo-toolchain:490dedf9ac42c33721186cdff4c022d61939c408d0e54a4ceddc894f1cd72d4f](all-omgevingsvergunning-ap.jsonld#L2634)".
+2024-10-10T11:23:32.853Z error: Unable to find the description for subject "[urn:oslo-toolchain:490dedf9ac42c33721186cdff4c022d61939c408d0e54a4ceddc894f1cd72d4f](all-omgevingsvergunning-ap.jsonld#L2634)".
 
-2024-10-10T11:02:49.010Z error: Unable to find the description for subject "[urn:oslo-toolchain:a78b0cc6a0ad5c030318b6fd96773c6238a4ac04ea92ee408c33f7895df8786c](all-omgevingsvergunning-ap.jsonld#L2721)".
+2024-10-10T11:23:32.853Z error: Unable to find the description for subject "[urn:oslo-toolchain:a78b0cc6a0ad5c030318b6fd96773c6238a4ac04ea92ee408c33f7895df8786c](all-omgevingsvergunning-ap.jsonld#L2721)".
 
-2024-10-10T11:02:49.011Z error: Unable to find the description for subject "[urn:oslo-toolchain:96e1e4e6637c2bf33f82e04bf8ef1ebeb5c800124824c486bf81a37586382fc2](all-omgevingsvergunning-ap.jsonld#L2749)".
+2024-10-10T11:23:32.854Z error: Unable to find the description for subject "[urn:oslo-toolchain:96e1e4e6637c2bf33f82e04bf8ef1ebeb5c800124824c486bf81a37586382fc2](all-omgevingsvergunning-ap.jsonld#L2749)".
 
-2024-10-10T11:02:49.011Z error: Unable to find the description for subject "[urn:oslo-toolchain:b635aeceda523aaf79567071218147694ead557f0f130548a1d4d5aa16dff131](all-omgevingsvergunning-ap.jsonld#L2777)".
+2024-10-10T11:23:32.854Z error: Unable to find the description for subject "[urn:oslo-toolchain:b635aeceda523aaf79567071218147694ead557f0f130548a1d4d5aa16dff131](all-omgevingsvergunning-ap.jsonld#L2777)".
 
-2024-10-10T11:02:49.011Z error: Unable to find the description for subject "[urn:oslo-toolchain:569901d1881f42e5607e895ad8207832a25c722268cadeecb4fe89e311746cba](all-omgevingsvergunning-ap.jsonld#L2805)".
+2024-10-10T11:23:32.855Z error: Unable to find the description for subject "[urn:oslo-toolchain:569901d1881f42e5607e895ad8207832a25c722268cadeecb4fe89e311746cba](all-omgevingsvergunning-ap.jsonld#L2805)".
 
-2024-10-10T11:02:49.012Z error: Unable to find the description for subject "[urn:oslo-toolchain:22c41ca7f92d4577a57d764a8c39c638c5713682666fb8724a3688cd515985ac](all-omgevingsvergunning-ap.jsonld#L2867)".
+2024-10-10T11:23:32.855Z error: Unable to find the description for subject "[urn:oslo-toolchain:22c41ca7f92d4577a57d764a8c39c638c5713682666fb8724a3688cd515985ac](all-omgevingsvergunning-ap.jsonld#L2867)".
 
-2024-10-10T11:02:49.012Z error: Unable to find the description for subject "[urn:oslo-toolchain:ac2b528cf3d96ebf688cbc869f5b3a3fca8301a463b2affee748c8d8116d3720](all-omgevingsvergunning-ap.jsonld#L2892)".
+2024-10-10T11:23:32.856Z error: Unable to find the description for subject "[urn:oslo-toolchain:ac2b528cf3d96ebf688cbc869f5b3a3fca8301a463b2affee748c8d8116d3720](all-omgevingsvergunning-ap.jsonld#L2892)".
 
-2024-10-10T11:02:49.013Z error: Unable to find the description for subject "[urn:oslo-toolchain:e523c3a330a5fd11eccc0da20f61c9437c711a75caa63df5dd2fb0df12fab8b9](all-omgevingsvergunning-ap.jsonld#L3012)".
+2024-10-10T11:23:32.857Z error: Unable to find the description for subject "[urn:oslo-toolchain:e523c3a330a5fd11eccc0da20f61c9437c711a75caa63df5dd2fb0df12fab8b9](all-omgevingsvergunning-ap.jsonld#L3012)".
 
 Error: Unable to find a label for the domain "urn:oslo-toolchain:441dcaaa603009db05330085069a3c6eb81324b27eb04e36f1dc604fd10e4568" of subject "[urn:oslo-toolchain:e523c3a330a5fd11eccc0da20f61c9437c711a75caa63df5dd2fb0df12fab8b9](all-omgevingsvergunning-ap.jsonld#L3012)".
 
