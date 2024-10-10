@@ -1,176 +1,176 @@
-2024-10-10T11:26:58.854Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:FietspadRechts) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.177Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:FietspadRechts) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.856Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:FietspadApartSegment) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.179Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:FietspadApartSegment) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.856Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Verkeerstelling-correct) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.179Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Verkeerstelling-correct) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.856Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Verkeersbord) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.179Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Verkeersbord) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.857Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Fietsstraat) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.179Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Fietsstraat) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.857Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:LineaireReferentie-alternatief) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.179Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:LineaireReferentie-alternatief) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.857Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Kruising) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.179Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Kruising) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.857Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.179Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.857Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.179Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.857Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Weg) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.179Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Weg) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.857Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-ObservatiesEnMetingen) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.179Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-ObservatiesEnMetingen) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.857Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (OpenVeloPark:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.179Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (OpenVeloPark:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.857Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-OpenbaarDomein) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.179Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-OpenbaarDomein) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.857Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Infrastructuurelementen) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.179Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Infrastructuurelementen) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.857Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Besluit) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Besluit) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.858Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Verkeersborden) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Verkeersborden) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.858Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Schema.org) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Schema.org) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.858Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Mobivoc) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Mobivoc) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.858Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OpenVeloPark) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OpenVeloPark) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.858Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Vervoersknooppunten) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Vervoersknooppunten) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.858Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.858Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:MeervoudigeClassificatie) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:MeervoudigeClassificatie) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.858Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:MeervoudigeClassificatie2) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:MeervoudigeClassificatie2) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.858Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:OngelijkgrondseKruising) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:OngelijkgrondseKruising) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.858Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Transportobject) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Transportobject) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.858Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Fietstalling) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Fietstalling) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.858Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.858Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:VerkeersbordCombinatie) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:VerkeersbordCombinatie) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.858Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.858Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Fietskenmerk) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Fietskenmerk) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:MeervoudigeClassificatie3) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:MeervoudigeClassificatie3) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Fietskenmerk2) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Fietskenmerk2) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:ETSI-Toestellen) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.180Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:ETSI-Toestellen) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Transporteigenschap) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.181Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Transporteigenschap) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:BFF) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.181Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:BFF) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:fietspad_twee_kanten) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.181Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:fietspad_twee_kanten) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:fietspad_eenkant_tweerichtingen) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.181Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:fietspad_eenkant_tweerichtingen) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:fietspad_twee_kanten_apart_opgemeten) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.181Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:fietspad_twee_kanten_apart_opgemeten) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:verkeerstelling) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.181Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:verkeerstelling) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:lineaireRefBreedte) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.181Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:lineaireRefBreedte) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Fietsparking) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.181Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Fietsparking) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Verkeersteken) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.181Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Verkeersteken) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:GemengdVerkeer) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.181Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:GemengdVerkeer) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:GemengdVerkeer-alternatief1) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.181Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:GemengdVerkeer-alternatief1) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:EnkeleRichtingAutos) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.181Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:EnkeleRichtingAutos) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.859Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Fietssugestiestroken) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T12:22:26.181Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:Objectdiagrammen:Fietssugestiestroken) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:26:58.867Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportobject has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.188Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportobject has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.867Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportknoop has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.188Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportknoop has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.868Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportlink has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.188Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportlink has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.868Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportlinksequentie has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.188Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportlinksequentie has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.869Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Netwerk:Netwerkreferentie has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.188Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Netwerk:Netwerkreferentie has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.869Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Netwerk:LineaireReferentie has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.189Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Netwerk:LineaireReferentie has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.870Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportnetwerk has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.189Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportnetwerk has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.870Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Netwerk:Netwerkeigenschap has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.189Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Netwerk:Netwerkeigenschap has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.870Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transporttype has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.189Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transporttype has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.871Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:GerichteFietslink has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.190Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:GerichteFietslink has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.871Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportlinkset has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.190Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportlinkset has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.872Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Netwerk:Teken has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.190Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Netwerk:Teken has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.874Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:RichtingVerkeer has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.191Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:RichtingVerkeer has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.880Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:Transportobject has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.197Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:Transportobject has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.880Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:Transportknoop has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.197Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:Transportknoop has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.880Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:Transportlink has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.197Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:Transportlink has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.880Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:Transportlinksequentie has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.197Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:Transportlinksequentie has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.881Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:Transportlinkset has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.197Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:Transportlinkset has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.881Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:Netwerkelement has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.197Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:Netwerkelement has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.881Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:GeneriekeLink has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.197Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:GeneriekeLink has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.881Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.198Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.882Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:RichtingVerkeer has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.199Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:Hulppakket:RichtingVerkeer has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.884Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportnetwerk:transporttype has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.200Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportnetwerk:transporttype has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.884Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:Fietsnetwerkelement:^geografischeNaam has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.201Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:Fietsnetwerkelement:^geografischeNaam has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.884Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:Fietssegment:^geometriemiddenlijn has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.201Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:Fietssegment:^geometriemiddenlijn has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.885Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:Fietsknoop:^geometrie has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.201Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:Fietsknoop:^geometrie has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.885Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:Fietslinksequentie:^link has an empty value for tag ap-definition-nl.
+2024-10-10T12:22:26.202Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:Fietslinksequentie:^link has an empty value for tag ap-definition-nl.
 
-2024-10-10T11:26:58.885Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:Fietslinksequentie:^link has an empty value for tag definition-nl.
+2024-10-10T12:22:26.202Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:Fietslinksequentie:^link has an empty value for tag definition-nl.
 
-2024-10-10T11:26:58.885Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:Fietslinksequentie:^link has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.202Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:Fietslinksequentie:^link has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.885Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:GerichteFietslink:^richting has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.202Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:GerichteFietslink:^richting has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.886Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:Fietsnetwerk:geografischeNaam has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.202Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:Fietsnetwerk:geografischeNaam has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.886Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportnetwerk:^geografischeNaam has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.202Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportnetwerk:^geografischeNaam has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.886Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Netwerk:Linkreferentie:toepassingsRichting has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.202Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Netwerk:Linkreferentie:toepassingsRichting has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.893Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Generiek:Identificator:toegekendDoor has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.209Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Generiek:Identificator:toegekendDoor has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.893Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Generiek:Identificator:toegekendDoorString has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.209Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Generiek:Identificator:toegekendDoorString has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.893Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Generiek:Identificator:toegekendOp has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.209Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Generiek:Identificator:toegekendOp has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.894Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Generiek:Periode:begin has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.209Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Generiek:Periode:begin has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.894Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Generiek:Periode:einde has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.210Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Generiek:Periode:einde has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.894Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:BruikbareFietsbreedte:obstakel has an empty value for tag usageNote-nl.
+2024-10-10T12:22:26.210Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Fietsinfrastructuur:BruikbareFietsbreedte:obstakel has an empty value for tag usageNote-nl.
 
-2024-10-10T11:26:58.921Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportobject has an empty value for tag ap-usageNote-nl.
+2024-10-10T12:22:26.238Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:INSPIRE-Transportnetwerk:Transportobject has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:26:58.932Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (beginknoop).
+2024-10-10T12:22:26.249Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (beginknoop).
 
-2024-10-10T11:26:58.932Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (eindknoop).
+2024-10-10T12:22:26.249Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (eindknoop).
 
