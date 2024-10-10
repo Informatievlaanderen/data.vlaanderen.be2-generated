@@ -1,6 +1,6 @@
-2024-10-10T14:38:55.047Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T14:52:26.958Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T14:38:55.049Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T14:52:26.959Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T14:38:55.063Z warn: [ConverterHandler]: Entity with path Model:OSLO:OSLO-Generiek:Tijdschema:perSetpositie has an empty value for tag usageNote-nl.
+2024-10-10T14:52:26.974Z warn: [ConverterHandler]: Entity with path Model:OSLO:OSLO-Generiek:Tijdschema:perSetpositie has an empty value for tag usageNote-nl.
 
