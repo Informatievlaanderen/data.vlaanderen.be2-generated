@@ -1,44 +1,44 @@
-2024-10-10T11:21:36.551Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T11:26:55.318Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:21:36.553Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
+2024-10-10T11:26:55.320Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-10T11:21:36.562Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger has an empty value for tag usageNote-nl.
+2024-10-10T11:26:55.325Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger has an empty value for tag usageNote-nl.
 
-2024-10-10T11:21:36.563Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger has an empty value for tag usageNote-nl.
+2024-10-10T11:26:55.326Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger has an empty value for tag usageNote-nl.
 
-2024-10-10T11:21:36.564Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route has an empty value for tag usageNote-nl.
+2024-10-10T11:26:55.327Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route has an empty value for tag usageNote-nl.
 
-2024-10-10T11:21:36.564Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment has an empty value for tag usageNote-nl.
+2024-10-10T11:26:55.327Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment has an empty value for tag usageNote-nl.
 
-2024-10-10T11:21:36.565Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
+2024-10-10T11:26:55.327Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:21:36.565Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Dienstverleningtype has an empty value for tag usageNote-nl.
+2024-10-10T11:26:55.328Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Dienstverleningtype has an empty value for tag usageNote-nl.
 
-2024-10-10T11:21:36.566Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:ParkeerfaciliteitKenmerktype has an empty value for tag ap-usageNote-nl.
+2024-10-10T11:26:55.328Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:ParkeerfaciliteitKenmerktype has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:21:36.566Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:ParkeerplaatsKenmerktype has an empty value for tag ap-usageNote-nl.
+2024-10-10T11:26:55.328Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:ParkeerplaatsKenmerktype has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:21:36.566Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:AanvullendeDiensttype has an empty value for tag ap-usageNote-nl.
+2024-10-10T11:26:55.328Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:AanvullendeDiensttype has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:21:36.570Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcetype has an empty value for tag usageNote-nl.
+2024-10-10T11:26:55.331Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcetype has an empty value for tag usageNote-nl.
 
-2024-10-10T11:21:36.570Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcestatus has an empty value for tag usageNote-nl.
+2024-10-10T11:26:55.332Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcestatus has an empty value for tag usageNote-nl.
 
-2024-10-10T11:21:36.571Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:vervoermiddel has an empty value for tag usageNote-nl.
+2024-10-10T11:26:55.333Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:vervoermiddel has an empty value for tag usageNote-nl.
 
-2024-10-10T11:21:36.571Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Beschikbaarheid:dienstregeling has an empty value for tag usageNote-nl.
+2024-10-10T11:26:55.333Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Beschikbaarheid:dienstregeling has an empty value for tag usageNote-nl.
 
-2024-10-10T11:21:36.573Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:vertrektijdstip has an empty value for tag usageNote-nl.
+2024-10-10T11:26:55.334Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:vertrektijdstip has an empty value for tag usageNote-nl.
 
-2024-10-10T11:21:36.573Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:aankomsttijdstip has an empty value for tag usageNote-nl.
+2024-10-10T11:26:55.334Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:aankomsttijdstip has an empty value for tag usageNote-nl.
 
-2024-10-10T11:21:36.574Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieClassificatie has an empty value for tag ap-usageNote-nl.
+2024-10-10T11:26:55.335Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieClassificatie has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:21:36.575Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieActiviteit has an empty value for tag ap-usageNote-nl.
+2024-10-10T11:26:55.336Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieActiviteit has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:21:36.576Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieType has an empty value for tag ap-usageNote-nl.
+2024-10-10T11:26:55.336Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieType has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:21:36.576Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieStatus has an empty value for tag ap-usageNote-nl.
+2024-10-10T11:26:55.336Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieStatus has an empty value for tag ap-usageNote-nl.
 
-2024-10-10T11:21:36.577Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:AanvullendeDienst:naam has an empty value for tag ap-usageNote-nl.
+2024-10-10T11:26:55.339Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:AanvullendeDienst:naam has an empty value for tag ap-usageNote-nl.
 
