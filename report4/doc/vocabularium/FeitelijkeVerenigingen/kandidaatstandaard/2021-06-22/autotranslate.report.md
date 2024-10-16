@@ -8,7 +8,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 58  
+#||# Number of calls: 5  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/FeitelijkeVerenigingen/kandidaatstandaard/2021-06-22/autotranslation/feitelijke-verenigingen_en.json  
 
@@ -22,7 +22,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 58  
+#||# Number of calls: 5  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/FeitelijkeVerenigingen/kandidaatstandaard/2021-06-22/autotranslation/feitelijke-verenigingen_fr.json  
 
@@ -36,7 +36,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 58  
+#||# Number of calls: 5  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/FeitelijkeVerenigingen/kandidaatstandaard/2021-06-22/autotranslation/feitelijke-verenigingen_de.json  
 

@@ -8,7 +8,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 68  
+#||# Number of calls: 1  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/2023-11-30/autotranslation/Vrachtwagenparkeren_en.json  
 
@@ -22,7 +22,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 68  
+#||# Number of calls: 1  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/2023-11-30/autotranslation/Vrachtwagenparkeren_fr.json  
 
@@ -36,7 +36,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 68  
+#||# Number of calls: 1  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/2023-11-30/autotranslation/Vrachtwagenparkeren_de.json  
 

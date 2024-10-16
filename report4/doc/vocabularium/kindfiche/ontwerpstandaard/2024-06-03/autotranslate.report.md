@@ -8,7 +8,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 70  
+#||# Number of calls: 3  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/kindfiche/ontwerpstandaard/2024-06-03/autotranslation/kindfiche-voc_en.json  
 
@@ -22,7 +22,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 70  
+#||# Number of calls: 3  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/kindfiche/ontwerpstandaard/2024-06-03/autotranslation/kindfiche-voc_fr.json  
 
@@ -36,7 +36,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 70  
+#||# Number of calls: 3  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/kindfiche/ontwerpstandaard/2024-06-03/autotranslation/kindfiche-voc_de.json  
 
