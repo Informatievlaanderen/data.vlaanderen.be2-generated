@@ -6,11 +6,35 @@
 
 #||# -------------------------------------  
 
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/applicatieprofiel/FeitelijkeVerenigingen/kandidaatstandaard/2021-06-22/merged/merged_Feitelijke-Verenigingen-ap_en.jsonld  
+
 #||# merge for language fr   
 
 #||# -------------------------------------  
 
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/applicatieprofiel/FeitelijkeVerenigingen/kandidaatstandaard/2021-06-22/merged/merged_Feitelijke-Verenigingen-ap_fr.jsonld  
+
 #||# merge for language de   
 
 #||# -------------------------------------  
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/applicatieprofiel/FeitelijkeVerenigingen/kandidaatstandaard/2021-06-22/merged/merged_Feitelijke-Verenigingen-ap_de.jsonld  
 

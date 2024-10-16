@@ -6,11 +6,35 @@
 
 #||# -------------------------------------  
 
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/vocabularium/kindfiche/ontwerpstandaard/2024-06-03/merged/merged_kindfiche-voc_en.jsonld  
+
 #||# merge for language fr   
 
 #||# -------------------------------------  
 
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/vocabularium/kindfiche/ontwerpstandaard/2024-06-03/merged/merged_kindfiche-voc_fr.jsonld  
+
 #||# merge for language de   
 
 #||# -------------------------------------  
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/vocabularium/kindfiche/ontwerpstandaard/2024-06-03/merged/merged_kindfiche-voc_de.jsonld  
 

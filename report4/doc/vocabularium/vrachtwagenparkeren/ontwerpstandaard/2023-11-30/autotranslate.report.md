@@ -2,11 +2,41 @@
 
 #||# -------------------------------------  
 
+#||# start translating  
+
+#||# start reading file /tmp/workspace/report4/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/2023-11-30/translation_input/Vrachtwagenparkeren_en.json  
+
+#||# start translating json  
+
+#||# Number of calls: 68  
+
+#||# start writing file /tmp/workspace/report4/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/2023-11-30/autotranslation/Vrachtwagenparkeren_en.json  
+
 #||# autotranslate for language fr  
 
 #||# -------------------------------------  
 
+#||# start translating  
+
+#||# start reading file /tmp/workspace/report4/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/2023-11-30/translation_input/Vrachtwagenparkeren_fr.json  
+
+#||# start translating json  
+
+#||# Number of calls: 68  
+
+#||# start writing file /tmp/workspace/report4/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/2023-11-30/autotranslation/Vrachtwagenparkeren_fr.json  
+
 #||# autotranslate for language de  
 
 #||# -------------------------------------  
+
+#||# start translating  
+
+#||# start reading file /tmp/workspace/report4/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/2023-11-30/translation_input/Vrachtwagenparkeren_de.json  
+
+#||# start translating json  
+
+#||# Number of calls: 68  
+
+#||# start writing file /tmp/workspace/report4/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/2023-11-30/autotranslation/Vrachtwagenparkeren_de.json  
 
