@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the range for subject "[urn:oslo-toolchain:1dd9bb236c6852c1102b2d79022cba32ec08dbd18ab8ade1840fc050415954a4](all-omgevingsvergunning-ap.jsonld#L2574)".
+Error: Unable to find the range for subject "[urn:oslo-toolchain:1dd9bb236c6852c1102b2d79022cba32ec08dbd18ab8ade1840fc050415954a4](all-omgevingsvergunning-ap.jsonld#L2506)".
 
     at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:45:19)
 
@@ -18,7 +18,7 @@ Error: Unable to find the range for subject "[urn:oslo-toolchain:1dd9bb236c6852c
 
 #||# -------------------------------------  
 
-Error: Unable to find the range for subject "[urn:oslo-toolchain:1dd9bb236c6852c1102b2d79022cba32ec08dbd18ab8ade1840fc050415954a4](all-omgevingsvergunning-ap.jsonld#L2574)".
+Error: Unable to find the range for subject "[urn:oslo-toolchain:1dd9bb236c6852c1102b2d79022cba32ec08dbd18ab8ade1840fc050415954a4](all-omgevingsvergunning-ap.jsonld#L2506)".
 
     at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:45:19)
 
@@ -34,7 +34,7 @@ Error: Unable to find the range for subject "[urn:oslo-toolchain:1dd9bb236c6852c
 
 #||# -------------------------------------  
 
-Error: Unable to find the range for subject "[urn:oslo-toolchain:1dd9bb236c6852c1102b2d79022cba32ec08dbd18ab8ade1840fc050415954a4](all-omgevingsvergunning-ap.jsonld#L2574)".
+Error: Unable to find the range for subject "[urn:oslo-toolchain:1dd9bb236c6852c1102b2d79022cba32ec08dbd18ab8ade1840fc050415954a4](all-omgevingsvergunning-ap.jsonld#L2506)".
 
     at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:45:19)
 
@@ -50,7 +50,7 @@ Error: Unable to find the range for subject "[urn:oslo-toolchain:1dd9bb236c6852c
 
 #||# -------------------------------------  
 
-Error: Unable to find the range for subject "[urn:oslo-toolchain:1dd9bb236c6852c1102b2d79022cba32ec08dbd18ab8ade1840fc050415954a4](all-omgevingsvergunning-ap.jsonld#L2574)".
+Error: Unable to find the range for subject "[urn:oslo-toolchain:1dd9bb236c6852c1102b2d79022cba32ec08dbd18ab8ade1840fc050415954a4](all-omgevingsvergunning-ap.jsonld#L2506)".
 
     at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:45:19)
 
