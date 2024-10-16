@@ -6,11 +6,13 @@
 
 #||# done  
 
-SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/latestbert/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
+#||# start processing  
 
-    at JSON.parse (<anonymous>)
+WARNING The entered language values are the same!  
 
-    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/latestbert/translation/omgevingsvergunning-ap_nl.json  
 
 #||# translate for language en  
 
@@ -20,11 +22,11 @@ SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/ka
 
 #||# done  
 
-SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/latestbert/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
+#||# start processing  
 
-    at JSON.parse (<anonymous>)
+#||# Write complete  
 
-    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/latestbert/translation/omgevingsvergunning-ap_en.json  
 
 #||# translate for language fr  
 
@@ -34,11 +36,11 @@ SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/ka
 
 #||# done  
 
-SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/latestbert/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
+#||# start processing  
 
-    at JSON.parse (<anonymous>)
+#||# Write complete  
 
-    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/latestbert/translation/omgevingsvergunning-ap_fr.json  
 
 #||# translate for language de  
 
@@ -48,9 +50,9 @@ SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/ka
 
 #||# done  
 
-SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/latestbert/all-omgevingsvergunning-ap.jsonld: Unexpected end of JSON input
+#||# start processing  
 
-    at JSON.parse (<anonymous>)
+#||# Write complete  
 
-    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/latestbert/translation/omgevingsvergunning-ap_de.json  
 

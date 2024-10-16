@@ -2,11 +2,23 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the subject for the package.
+Error: Unable to find the assigned URI for class http://www.w3.org/2004/02/skos/core#Concept which acts as a parent.
 
-    at JsonWebuniversumGenerationService.getBaseURI (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:90:19)
+    at JsonWebuniversumGenerationService.createParentObject (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:212:19)
 
-    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:44:30)
+    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:116:65
+
+    at Array.map (<anonymous>)
+
+    at JsonWebuniversumGenerationService.generateEntityData (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:116:42)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:33:36
+
+    at Array.map (<anonymous>)
+
+    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:33:14)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
 
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
@@ -14,11 +26,23 @@ Error: Unable to find the subject for the package.
 
 #||# -------------------------------------  
 
-Error: Unable to find the subject for the package.
+Error: Unable to find the assigned URI for class http://www.w3.org/2004/02/skos/core#Concept which acts as a parent.
 
-    at JsonWebuniversumGenerationService.getBaseURI (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:90:19)
+    at JsonWebuniversumGenerationService.createParentObject (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:212:19)
 
-    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:44:30)
+    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:116:65
+
+    at Array.map (<anonymous>)
+
+    at JsonWebuniversumGenerationService.generateEntityData (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:116:42)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:33:36
+
+    at Array.map (<anonymous>)
+
+    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:33:14)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
 
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
@@ -26,11 +50,23 @@ Error: Unable to find the subject for the package.
 
 #||# -------------------------------------  
 
-Error: Unable to find the subject for the package.
+Error: Unable to find the assigned URI for class http://www.w3.org/2004/02/skos/core#Concept which acts as a parent.
 
-    at JsonWebuniversumGenerationService.getBaseURI (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:90:19)
+    at JsonWebuniversumGenerationService.createParentObject (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:212:19)
 
-    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:44:30)
+    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:116:65
+
+    at Array.map (<anonymous>)
+
+    at JsonWebuniversumGenerationService.generateEntityData (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:116:42)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:33:36
+
+    at Array.map (<anonymous>)
+
+    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:33:14)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
 
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
@@ -38,11 +74,23 @@ Error: Unable to find the subject for the package.
 
 #||# -------------------------------------  
 
-Error: Unable to find the subject for the package.
+Error: Unable to find the assigned URI for class http://www.w3.org/2004/02/skos/core#Concept which acts as a parent.
 
-    at JsonWebuniversumGenerationService.getBaseURI (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:90:19)
+    at JsonWebuniversumGenerationService.createParentObject (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:212:19)
 
-    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:44:30)
+    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:116:65
+
+    at Array.map (<anonymous>)
+
+    at JsonWebuniversumGenerationService.generateEntityData (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:116:42)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:33:36
+
+    at Array.map (<anonymous>)
+
+    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:33:14)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
 
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
