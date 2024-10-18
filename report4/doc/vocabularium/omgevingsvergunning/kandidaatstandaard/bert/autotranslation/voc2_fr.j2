@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTDXHTML1.0Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="{{ language }}" lang="{{ language }}" dir="ltr" typeof="bibo:Document " about="" property="dcterms:language" content="{{ language }}" prefix="dcterms: http://purl.org/dc/terms/ bibo: http://purl.org/ontology/bibo/ schema: http://schema.org/ w3p:
+          http://www.w3.org/2001/02pd/rec54#" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>{{ data.metadata.title }}</title>
+    <meta charset='utf-8'/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui.css"/>
+    <link rel="stylesheet" href="https://dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui-corporate.css"/>
+    <link rel="stylesheet" href="https://dev.w3.org/2009/dap/ReSpec.js/css/respec.css"/>
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="https://dij151upo6vad.cloudfront.net/2.latest/icons/app-icon/icon-highres-precomposed.png"/>
+    <link
+      rel="apple-touch-icon"
+      href="https://dij151upo6vad.cloudfront.net/2.latest/icons/app-icon/touch-icon-iphone-precomposed.png"/>
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="https://dij151upo6vad.cloudfront.net/2.latest/icons/app-icon/touch-icon-ipad-precomposed.png"/>
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="https://dij151upo6vad.cloudfront.net/2.latest/icons/app-icon/touch-icon-iphone-retina-precomposed.png"/>
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="https://dij151upo6vad.cloudfront.net/2.latest/icons/app-icon/touch-icon-ipad-retina-precomposed.png"/>
+    <meta
+      name="msapplication-square70x70logo"
+      content="https://dij151upo6vad.cloudfront.net/2.latest/icons/app-icon/tile-small.png"/>
+    <meta
+      name="msapplication-square150x150logo"
+      content="https://dij151upo6vad.cloudfront.net/2.latest/icons/app-icon/tile-medium.png"/>
+    <meta
+      name="msapplication-wide310x150logo"
+      content="https://dij151upo6vad.cloudfront.net/2.latest/icons/app-icon/tile-wide.png"/>
+    <meta
+      name="msapplication-square310x310logo"
+      content="https://dij151upo6vad.cloudfront.net/2.latest/icons/app-icon/tile-large.png"/>
+    <meta name="msapplication-TileColor" content="#FFE615"/>
+    <script src="https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1/node_modules/@govflanders/vl-widget-polyfill/dist/index.js"></script>
+    <!--[if lt IE 9]><script src='https://www.w3.org/2008/site/js/html5shiv.js'></script><![endif]-->
+  </head>
+  <body class="h-entry" role="document" id="respecDocument">
+    <div
+      style="min-height:44px;;" id="vlaanderen-header">
+      <!-- insert your global header here -->
+      <script src="https://prod.widgets.burgerprofiel.vlaanderen.be/api/v1/widget/b0dae312-e7a6-4612-978a-f0e3b2d975bf/embed"></script>
+      <!-- end global header-->
+    </div>
+    <div class="page">
+      <div class="layout layout--wide">
+        <div class="grid u-hr">
+          <div class="col--9-12 col--1-1--s">
+            <div class="head" role="contentinfo" id="respecHeader">
+              <h1 class="h1 title p-name" property="dcterms:title" id="title">{{ data.metadata.title }}</h1>
+              {% if data.metadata.autotranslate %}
+                <div class="disclaimer">
+                  <p>Dit document is een vertaling van het {{ data.metadata.primaryLanguage }} naar het Nederlands.</p>
+                  <br></div>
+                {% endif %}
+                {% if data.metadata.prefix %}
+                  <h2 class="h2" id="subtitle" property="bibo:subtitle">Specificatie van
+                    <em>{{ data.metadata.prefix }}</em>
+                  </h2>
+                {% endif %}
+                <dl>
+                  <dt>Auteurs</dt>
+                  {% set sortedAuthors = (data.stakeholders.authors | sort(attribute='lastName')) %}
+                  {% for author in sortedAuthors %}
+                    <dd inlist="" rel="foaf:maker" class="p-author h-card vcard">
+                      <span typeof="foaf:Person">
+                        <span class="p-name fn" property="foaf:lastName">
+                          {{ author.lastName }}</span>,
+                        <span class="p-name fn" property="foaf:firstName">
+                          {{ author.firstName }}</span>
+                        {% if author.affiliation.homepage and author.affiliation.affiliationName %}
+                          -
+                          <a href="{{ author.affiliation.homepage }}" class="p-org org h-org h-card" rel="foaf:workplaceHomepage">
+                            {{ author.affiliation.affiliationName }}</a>
+                        {% elif author.affiliation.affiliationName %}
+                          -
+                          <span class="p-org org h-org h-card">
+                            {{ author.affiliation.affiliationName }}</span>
+                        {% endif %}
+                      </span>
+                    </dd>
+                  {% endfor %}
+                  <dt>Editors</dt>
+                  {% set sortedEditors = (data.stakeholders.editors | sort(attribute='lastName')) %}
+                  {% for editor in sortedEditors %}
+                    <dd inlist="" rel="foaf:maker" class="p-author h-card vcard">
+                      <span typeof="foaf:Person">
+                        <span class="p-name fn" property="foaf:lastName">
+                          {{ editor.lastName }}</span>,
+                        <span class="p-name fn" property="foaf:firstName">
+                          {{ editor.firstName }}</span>
+                        {% if editor.affiliation.homepage and editor.affiliation.affiliationName %}
+                          -
+                          <a href="{{ editor.affiliation.homepage }}" class="p-org org h-org h-card" rel="foaf:workplaceHomepage">
+                            {{ editor.affiliation.affiliationName }}</a>
+                        {% elif editor.affiliation.affiliationName %}
+                          -
+                          <span class="p-org org h-org h-card">
+                            {{ editor.affiliation.affiliationName }}</span>
+                        {% endif %}
+                      </span>
+                    </dd>
+                  {% endfor %}
+                  <dt>Medewerkers</dt>
+                  {% set sortedContributors = (data.stakeholders.contributors | sort(attribute='lastName')) %}
+                  {% for contributor in sortedContributors %}
+                    <dd inlist="" rel="foaf:maker" class="p-author h-card vcard">
+                      <span typeof="foaf:Person">
+                        <span class="p-name fn" property="foaf:lastName">
+                          {{ contributor.lastName }}</span>,
+                        <span class="p-name fn" property="foaf:firstName">
+                          {{ contributor.firstName }}</span>
+                        {% if contributor.affiliation.homepage and contributor.affiliation.affiliationName %}
+                          -
+                          <a href="{{ contributor.affiliation.homepage }}" class="p-org org h-org h-card" rel="foaf:workplaceHomepage">
+                            {{ contributor.affiliation.affiliationName }}</a>
+                        {% elif contributor.affiliation.affiliationName %}
+                          -
+                          <span class="p-org org h-org h-card">
+                            {{ contributor.affiliation.affiliationName }}</span>
+                        {% endif %}
+                      </span>
+                    </dd>
+                  {% endfor %}
+                </dl>
+              </div>
+            </div>
+            <div class="head" role="metainfo" id="metainfo">
+              <dl>
+                <dt>Brondata</dt>
+                <dd>
+                  <a href="{{ data.metadata.repositoryurl }}">{{ data.metadata.repositoryurl }}</a>
+                </dd>
+                <dt>Changelog</dt>
+                <dd>
+                  <a href="{{ data.metadata.changelogurl }}">{{ data.metadata.changelogurl }}</a>
+                </dd>
+                <dt id="feedbackurl">Opmerkingen en feedback</dt>
+                <dd>
+                  <a href="{{ data.metadata.feedbackurl }}">{{ data.metadata.feedbackurl }}</a>
+                </dd>
+                <dt>Standaardenregister</dt>
+                <dd>
+                  <a href="{{ data.metadata.standaardregisterurl }}">{{ data.metadata.standaardregisterurl }}</a>
+                </dd>
+                <dt>Afhankelijkheden</dt>
+                <dd>
+                  {% for dep in data.metadata.dependencies %}
+                    <a href="{{ dep.packageurl }}">{{ dep.packagelabel }}</a>
+                  {% endfor %}
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <!-- <p class="copyright">{{ metadata.rights }}</p> -->
+        </div>
+      </div>
+      <div id="main" itemprop="mainContentOfPage" role="main" tabindex="-1" class="main-content">
+        <div class="region region--no-space-top">
+          <div class="layout layout--wide">
+            <div class="grid">
+              <div class="col--8-12 col--12-12--s">
+                <div class="region" id="introduction">
+                  <div class="introduction typography">
+                    {% block introduction %}
+                      <p>Ce document décrit un
+                        <strong>vocabulaire</strong>, dans ce cas
+                        <strong>Un</strong> vocabulaire est une collection de termes réutilisables, à savoir
+                          classes et propriétés, dont la signification est enregistrée au moyen d’une étiquette et d’une définition. Pour les termes
+                          Des ententes formelles supplémentaires sont disponibles dans ce domaine. Pour les termes externes, le
+                          Accords copiés à partir de la source externe.                      </p>
+                    {% endblock %}
+                  </div>
+                </div>
+                <div class="region region">
+                  <section
+                    id="abstract"
+                    class="introductory"
+                    property="dcterms:abstract"
+                    datatype=""
+                    typeof="bibo:Chapter"
+                    resource="#ref"
+                    rel="bibo:Chapter">
+                    <h2 class="h2" aria-level="1" role="heading" id="h2_abstract">Samenvatting</h2>
+                    <div class="region region--no-space-top typography" id="summary">
+                      {{ block.super }}
+                      {% block summary %}
+                        <p>Le vocabulaire {{ data.metadata.title }} spécifie un certain nombre de classes et de propriétés pour créer un
+                          {{ data.metadata.title | inférieur }}.                        </p>
+                        <p>{{ data.metadata.abstract[langue] }}                        </p>
+                      {% endblock %}
+                    </div>
+                  </section>
+                </div>
+                <div class="region region--no-space-top">
+                  <section class="introductory" id="sotd" typeof="bibo:Chapter" resource="#ref" rel="bibo:Chapter">
+                    <h2 class="h2" aria-level="1" role="heading" id="h2_sotd">Status van dit document</h2>
+                    <div class="region region--no-space-top typography" id="status">
+                      {% block status %}
+                        <p>
+                          <em>Cette section décrit l’état d’avancement de ce document au moment de sa publication. Il se peut qu’entre-temps, il y ait déjà
+                            De nouvelles versions ont été publiées.</em>
+                        </p>
+                        <p>Ce vocabulaire a un statut
+                          <a href="{{ data.metadata.status }}">
+                            {{ data.metadata.statuslabel }}</a>
+                          et a été publié le {{ data.metadata.issued }}.                        </p>
+                        <p>Le présent document est une spécification officielle d’un vocabulaire et fournit un cadre conceptuel commun pour
+                          certains concepts. Cette spécification sert à définir la définition, l’utilisation, le domaine et la portée des termes RDF dans cette
+                          domaine. Les termes définis dans ce vocabulaire sont persistants et ne seront donc jamais utilisés.
+                          Les définitions ne changeront pas non plus, sauf pour clarifier davantage une définition existante. Petits caractères
+                          cependant, peut être étiqueté comme obsolète et remplacé dans les versions plus récentes de cette spécification.</p>{% si data.metadata.comment[language] %}                          <p>{{ data.metadata.comment[langue] }}                          </p>{% endif %}                      {% endblock %}
+                    </div>
+                  </section>
+                </div>
+                <div class="region region--no-space-top">
+                  <section typeof="bibo:Chapter" resource="#ref" rel="bibo:Chapter" id="license-and-liability">
+                    <h2 class="h2" id="licenseandliability" aria-level="1" role="heading">
+                      <span class="secno">1.
+                      </span>Licentie</h2>
+                    {% block license %}
+                      <p>
+                        <span rel="dct:type" property="dct:title" href="http://purl.org/dc/dcmitype/Text" xmlns:dct="http://purl.org/dc/terms/">
+                          Cette spécification</span>
+                        De
+                        <a rel="cc:attributionURL" property="cc:attributionName" href="http://vlaanderen.be/informatievlaanderen" xmlns:cc="http://creativecommons.org/ns#">Informations Flandre</a>
+                        est publié sous le
+                        <a href="{{ data.metadata.license }}" rel="license">« Modèle de licence libre de réutilisation - v1.0 ».</a></p>
+                    {% endblock %}
+                  </section>
+                </div>
+                <div class="region region--no-space-top">
+                  <section typeof="bibo:Chapter" resource="#ref" rel="bibo:Chapter" id="conformance-statement">
+                    <h2 class="h2" id="conformance" aria-level="1" role="heading">
+                      <span class="secno">2.
+                      </span>Conformiteit</h2>
+                    {% block conformance %}
+                      <p>Un échange d’informations, de quelque manière qu’il se déroule, est conforme à ce vocabulaire lorsque
+                        Il utilise la terminologie (classes et propriétés) d’une manière cohérente avec la sémantique telle qu’établie
+                        dans la dernière version de la spécification (domaine, portée, définition et utilisation) et qu’elle n’utilise pas la terminologie de
+                        d’autres vocabulaires comme alternative à la terminologie proposée incluse dans ce vocabulaire.</p>
+                    {% endblock %}

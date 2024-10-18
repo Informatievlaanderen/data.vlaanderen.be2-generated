@@ -2,51 +2,51 @@
 
 #||# -------------------------------------  
 
-2024-10-16T23:06:03.305Z error: Found [urn:oslo-toolchain:155baccb2adcb64ef61ff76ae475d973e938975e020bfcc578c5aa4ec2f76bb7](all-Feitelijke-Verenigingen-ap.jsonld#L4427) in duplicates, meaning "Hoedanigheid" is used multiple times as label.
+2024-10-18T11:16:59.721Z error: Found [urn:oslo-toolchain:155baccb2adcb64ef61ff76ae475d973e938975e020bfcc578c5aa4ec2f76bb7](all-Feitelijke-Verenigingen-ap.jsonld#L4427) in duplicates, meaning "Hoedanigheid" is used multiple times as label.
 
-2024-10-16T23:06:03.306Z error: Found [urn:oslo-toolchain:1649671b8e8f11926ad9219a9e9b162aa280cbb3d608790028788c5418378a98](all-Feitelijke-Verenigingen-ap.jsonld#L889) in duplicates, meaning "Hoedanigheid" is used multiple times as label.
+2024-10-18T11:16:59.722Z error: Found [urn:oslo-toolchain:1649671b8e8f11926ad9219a9e9b162aa280cbb3d608790028788c5418378a98](all-Feitelijke-Verenigingen-ap.jsonld#L889) in duplicates, meaning "Hoedanigheid" is used multiple times as label.
 
-2024-10-16T23:06:03.318Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:071e6886035d91b45770ef8800a8f12255950165636c0cb8eb524952935ecdbc](all-Feitelijke-Verenigingen-ap.jsonld#L3949).
+2024-10-18T11:16:59.736Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:071e6886035d91b45770ef8800a8f12255950165636c0cb8eb524952935ecdbc](all-Feitelijke-Verenigingen-ap.jsonld#L3949).
 
 #||# oslo-jsonld-context-generator for language en  
 
 #||# -------------------------------------  
 
-2024-10-16T23:06:04.045Z error: Found [urn:oslo-toolchain:87b5813ba3fea2e2de900d1ac6c10db2ee7eddaa0d3a7a0b0ec78fe181fa08e4](all-Feitelijke-Verenigingen-ap.jsonld#L528) in duplicates, meaning "Establishment" is used multiple times as label.
+2024-10-18T11:17:00.401Z error: Found [urn:oslo-toolchain:87b5813ba3fea2e2de900d1ac6c10db2ee7eddaa0d3a7a0b0ec78fe181fa08e4](all-Feitelijke-Verenigingen-ap.jsonld#L528) in duplicates, meaning "Establishment" is used multiple times as label.
 
-2024-10-16T23:06:04.047Z error: Found [urn:oslo-toolchain:7b0e96586a9c6040951726fb5749f94c53f64accc2f6a3771e93e5c9736af7ec](all-Feitelijke-Verenigingen-ap.jsonld#L817) in duplicates, meaning "Establishment" is used multiple times as label.
+2024-10-18T11:17:00.403Z error: Found [urn:oslo-toolchain:7b0e96586a9c6040951726fb5749f94c53f64accc2f6a3771e93e5c9736af7ec](all-Feitelijke-Verenigingen-ap.jsonld#L817) in duplicates, meaning "Establishment" is used multiple times as label.
 
-2024-10-16T23:06:04.048Z error: Found [urn:oslo-toolchain:155baccb2adcb64ef61ff76ae475d973e938975e020bfcc578c5aa4ec2f76bb7](all-Feitelijke-Verenigingen-ap.jsonld#L4427) in duplicates, meaning "Capacity" is used multiple times as label.
+2024-10-18T11:17:00.404Z error: Found [urn:oslo-toolchain:155baccb2adcb64ef61ff76ae475d973e938975e020bfcc578c5aa4ec2f76bb7](all-Feitelijke-Verenigingen-ap.jsonld#L4427) in duplicates, meaning "Capacity" is used multiple times as label.
 
-2024-10-16T23:06:04.048Z error: Found [urn:oslo-toolchain:1649671b8e8f11926ad9219a9e9b162aa280cbb3d608790028788c5418378a98](all-Feitelijke-Verenigingen-ap.jsonld#L889) in duplicates, meaning "Capacity" is used multiple times as label.
+2024-10-18T11:17:00.404Z error: Found [urn:oslo-toolchain:1649671b8e8f11926ad9219a9e9b162aa280cbb3d608790028788c5418378a98](all-Feitelijke-Verenigingen-ap.jsonld#L889) in duplicates, meaning "Capacity" is used multiple times as label.
 
-2024-10-16T23:06:04.061Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:071e6886035d91b45770ef8800a8f12255950165636c0cb8eb524952935ecdbc](all-Feitelijke-Verenigingen-ap.jsonld#L3949).
+2024-10-18T11:17:00.416Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:071e6886035d91b45770ef8800a8f12255950165636c0cb8eb524952935ecdbc](all-Feitelijke-Verenigingen-ap.jsonld#L3949).
 
 #||# oslo-jsonld-context-generator for language fr  
 
 #||# -------------------------------------  
 
-2024-10-16T23:06:04.897Z error: Found [urn:oslo-toolchain:87b5813ba3fea2e2de900d1ac6c10db2ee7eddaa0d3a7a0b0ec78fe181fa08e4](all-Feitelijke-Verenigingen-ap.jsonld#L528) in duplicates, meaning "Établissement" is used multiple times as label.
+2024-10-18T11:17:01.072Z error: Found [urn:oslo-toolchain:87b5813ba3fea2e2de900d1ac6c10db2ee7eddaa0d3a7a0b0ec78fe181fa08e4](all-Feitelijke-Verenigingen-ap.jsonld#L528) in duplicates, meaning "Établissement" is used multiple times as label.
 
-2024-10-16T23:06:04.900Z error: Found [urn:oslo-toolchain:7b0e96586a9c6040951726fb5749f94c53f64accc2f6a3771e93e5c9736af7ec](all-Feitelijke-Verenigingen-ap.jsonld#L817) in duplicates, meaning "Établissement" is used multiple times as label.
+2024-10-18T11:17:01.073Z error: Found [urn:oslo-toolchain:7b0e96586a9c6040951726fb5749f94c53f64accc2f6a3771e93e5c9736af7ec](all-Feitelijke-Verenigingen-ap.jsonld#L817) in duplicates, meaning "Établissement" is used multiple times as label.
 
-2024-10-16T23:06:04.902Z error: Found [urn:oslo-toolchain:155baccb2adcb64ef61ff76ae475d973e938975e020bfcc578c5aa4ec2f76bb7](all-Feitelijke-Verenigingen-ap.jsonld#L4427) in duplicates, meaning "Capacité" is used multiple times as label.
+2024-10-18T11:17:01.074Z error: Found [urn:oslo-toolchain:155baccb2adcb64ef61ff76ae475d973e938975e020bfcc578c5aa4ec2f76bb7](all-Feitelijke-Verenigingen-ap.jsonld#L4427) in duplicates, meaning "Capacité" is used multiple times as label.
 
-2024-10-16T23:06:04.902Z error: Found [urn:oslo-toolchain:1649671b8e8f11926ad9219a9e9b162aa280cbb3d608790028788c5418378a98](all-Feitelijke-Verenigingen-ap.jsonld#L889) in duplicates, meaning "Capacité" is used multiple times as label.
+2024-10-18T11:17:01.075Z error: Found [urn:oslo-toolchain:1649671b8e8f11926ad9219a9e9b162aa280cbb3d608790028788c5418378a98](all-Feitelijke-Verenigingen-ap.jsonld#L889) in duplicates, meaning "Capacité" is used multiple times as label.
 
-2024-10-16T23:06:04.921Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:071e6886035d91b45770ef8800a8f12255950165636c0cb8eb524952935ecdbc](all-Feitelijke-Verenigingen-ap.jsonld#L3949).
+2024-10-18T11:17:01.086Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:071e6886035d91b45770ef8800a8f12255950165636c0cb8eb524952935ecdbc](all-Feitelijke-Verenigingen-ap.jsonld#L3949).
 
 #||# oslo-jsonld-context-generator for language de  
 
 #||# -------------------------------------  
 
-2024-10-16T23:06:05.630Z error: Found [urn:oslo-toolchain:87b5813ba3fea2e2de900d1ac6c10db2ee7eddaa0d3a7a0b0ec78fe181fa08e4](all-Feitelijke-Verenigingen-ap.jsonld#L528) in duplicates, meaning "Einrichtung" is used multiple times as label.
+2024-10-18T11:17:01.774Z error: Found [urn:oslo-toolchain:87b5813ba3fea2e2de900d1ac6c10db2ee7eddaa0d3a7a0b0ec78fe181fa08e4](all-Feitelijke-Verenigingen-ap.jsonld#L528) in duplicates, meaning "Einrichtung" is used multiple times as label.
 
-2024-10-16T23:06:05.632Z error: Found [urn:oslo-toolchain:7b0e96586a9c6040951726fb5749f94c53f64accc2f6a3771e93e5c9736af7ec](all-Feitelijke-Verenigingen-ap.jsonld#L817) in duplicates, meaning "Einrichtung" is used multiple times as label.
+2024-10-18T11:17:01.776Z error: Found [urn:oslo-toolchain:7b0e96586a9c6040951726fb5749f94c53f64accc2f6a3771e93e5c9736af7ec](all-Feitelijke-Verenigingen-ap.jsonld#L817) in duplicates, meaning "Einrichtung" is used multiple times as label.
 
-2024-10-16T23:06:05.633Z error: Found [urn:oslo-toolchain:155baccb2adcb64ef61ff76ae475d973e938975e020bfcc578c5aa4ec2f76bb7](all-Feitelijke-Verenigingen-ap.jsonld#L4427) in duplicates, meaning "Fassungsvermögen" is used multiple times as label.
+2024-10-18T11:17:01.777Z error: Found [urn:oslo-toolchain:155baccb2adcb64ef61ff76ae475d973e938975e020bfcc578c5aa4ec2f76bb7](all-Feitelijke-Verenigingen-ap.jsonld#L4427) in duplicates, meaning "Fassungsvermögen" is used multiple times as label.
 
-2024-10-16T23:06:05.633Z error: Found [urn:oslo-toolchain:1649671b8e8f11926ad9219a9e9b162aa280cbb3d608790028788c5418378a98](all-Feitelijke-Verenigingen-ap.jsonld#L889) in duplicates, meaning "Fassungsvermögen" is used multiple times as label.
+2024-10-18T11:17:01.777Z error: Found [urn:oslo-toolchain:1649671b8e8f11926ad9219a9e9b162aa280cbb3d608790028788c5418378a98](all-Feitelijke-Verenigingen-ap.jsonld#L889) in duplicates, meaning "Fassungsvermögen" is used multiple times as label.
 
-2024-10-16T23:06:05.645Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:071e6886035d91b45770ef8800a8f12255950165636c0cb8eb524952935ecdbc](all-Feitelijke-Verenigingen-ap.jsonld#L3949).
+2024-10-18T11:17:01.790Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:071e6886035d91b45770ef8800a8f12255950165636c0cb8eb524952935ecdbc](all-Feitelijke-Verenigingen-ap.jsonld#L3949).
 

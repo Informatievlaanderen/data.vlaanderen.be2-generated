@@ -2,39 +2,39 @@
 
 #||# -------------------------------------  
 
-2024-10-16T23:06:27.299Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
+2024-10-18T11:17:15.654Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
 
-2024-10-16T23:06:27.300Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
+2024-10-18T11:17:15.656Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
 
-2024-10-16T23:06:27.300Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
+2024-10-18T11:17:15.657Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
 
 #||# oslo-generator-respec for language en  
 
 #||# -------------------------------------  
 
-2024-10-16T23:06:28.014Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
+2024-10-18T11:17:16.424Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
 
-2024-10-16T23:06:28.015Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
+2024-10-18T11:17:16.425Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
 
-2024-10-16T23:06:28.015Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
+2024-10-18T11:17:16.425Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
 
 #||# oslo-generator-respec for language fr  
 
 #||# -------------------------------------  
 
-2024-10-16T23:06:28.726Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
+2024-10-18T11:17:17.182Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
 
-2024-10-16T23:06:28.727Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
+2024-10-18T11:17:17.183Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
 
-2024-10-16T23:06:28.727Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
+2024-10-18T11:17:17.183Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
 
 #||# oslo-generator-respec for language de  
 
 #||# -------------------------------------  
 
-2024-10-16T23:06:29.444Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
+2024-10-18T11:17:17.940Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
 
-2024-10-16T23:06:29.445Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
+2024-10-18T11:17:17.941Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
 
-2024-10-16T23:06:29.445Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
+2024-10-18T11:17:17.941Z error: Unable to find a related class object for domain https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie of property undefined.
 
