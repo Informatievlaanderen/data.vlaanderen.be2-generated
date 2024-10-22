@@ -1,50 +1,50 @@
-2024-10-21T15:10:18.944Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.941Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:W3C) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.942Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:W3C) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:W3C:PROV) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.942Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:W3C:PROV) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:W3C:xsd) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.942Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:W3C:xsd) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OGC) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.942Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OGC) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (SEMIC:CPSV) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.942Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (SEMIC:CPSV) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (EUPO:CDM) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.943Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (EUPO:CDM) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Omgevingsvergunning:visualization) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.943Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Omgevingsvergunning:visualization) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OGC:geosparql) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.943Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OGC:geosparql) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (OSLO:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.943Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (OSLO:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.947Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:EUPO) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.943Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:EUPO) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.947Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:EUPO:ELI) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.943Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:EUPO:ELI) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.947Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:W3C:SKOS) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.943Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:W3C:SKOS) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.947Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.943Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.947Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:W3C:time) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.943Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:W3C:time) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.947Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:OSLO-Recht) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.943Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:OSLO-Recht) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.947Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:SEMIC) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.943Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:SEMIC) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.947Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:SEMIC:ADMS) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.943Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:SEMIC:ADMS) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.947Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:OSLO-Slim-Ruimtelijk-Plannen) and fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.943Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:OSLO-Slim-Ruimtelijk-Plannen) and fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.953Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dossier) and the fallback URI (http://todo.com/) will be assigned.
+2024-10-22T09:24:03.948Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dossier) and the fallback URI (http://todo.com/) will be assigned.
 
-2024-10-21T15:10:18.957Z warn: [ElementConverterHandler]: Unable to find parent object for class (Model:OSLO-Omgevingsvergunning:Rechtshandeling) with path Model:OSLO-Omgevingsvergunning:Rechtshandeling:(Rechtshandeling -> JuridischWerk).
+2024-10-22T09:24:03.952Z warn: [ElementConverterHandler]: Unable to find parent object for class (Model:OSLO-Omgevingsvergunning:Rechtshandeling) with path Model:OSLO-Omgevingsvergunning:Rechtshandeling:(Rechtshandeling -> JuridischWerk).
 
-2024-10-21T15:10:18.958Z warn: [ElementConverterHandler]: Unable to find parent object for class (Model:OSLO-Omgevingsvergunning:Inhoud) with path Model:OSLO-Omgevingsvergunning:Inhoud:(Inhoud -> JuridischWerk).
+2024-10-22T09:24:03.953Z warn: [ElementConverterHandler]: Unable to find parent object for class (Model:OSLO-Omgevingsvergunning:Inhoud) with path Model:OSLO-Omgevingsvergunning:Inhoud:(Inhoud -> JuridischWerk).
 
-2024-10-21T15:10:18.968Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (isDeelVan).
+2024-10-22T09:24:03.961Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (isDeelVan).
 
-2024-10-21T15:10:18.968Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (heeftDeel).
+2024-10-22T09:24:03.961Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (heeftDeel).
 
-2024-10-21T15:10:18.969Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (ingesteld rechtsmiddel).
+2024-10-22T09:24:03.963Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (ingesteld rechtsmiddel).
 
