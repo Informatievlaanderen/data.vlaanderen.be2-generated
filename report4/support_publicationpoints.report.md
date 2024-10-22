@@ -12,5 +12,6 @@
 #||#  
 Error: the following directories are unsupported
 [
-  "/tmp/generated/doc/applicatieprofiel/FeitelijkeVerenigingen"
+  "/tmp/generated/doc/applicatieprofiel/FeitelijkeVerenigingen",
+  "/tmp/generated/ns/FeitelijkeVerenigingen"
 ]
