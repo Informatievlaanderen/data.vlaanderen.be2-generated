@@ -26,6 +26,10 @@ WARNING The entered language values are the same!
 
 #||# create new translation file with existing translations included  
 
+http://www.w3.org/2001/XMLSchema#boolean
+
+new term introduced, no translation found
+
 #||# Write complete  
 
 #||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/kindfiche/ontwerpstandaard/2024-06-03/translation/kindfiche-ap_en.json  
