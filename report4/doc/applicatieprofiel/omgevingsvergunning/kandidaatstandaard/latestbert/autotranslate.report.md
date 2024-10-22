@@ -8,7 +8,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 0  
+#||# Number of calls: 85  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/latestbert/autotranslation/omgevingsvergunning-ap_en.json  
 
@@ -22,7 +22,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 0  
+#||# Number of calls: 85  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/latestbert/autotranslation/omgevingsvergunning-ap_fr.json  
 
@@ -36,7 +36,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 0  
+#||# Number of calls: 85  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/latestbert/autotranslation/omgevingsvergunning-ap_de.json  
 
