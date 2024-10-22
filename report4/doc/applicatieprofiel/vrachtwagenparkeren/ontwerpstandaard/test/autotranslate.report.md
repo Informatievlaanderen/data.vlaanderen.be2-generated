@@ -8,7 +8,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 66  
+#||# Number of calls: 4  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/vrachtwagenparkeren/ontwerpstandaard/test/autotranslation/vrachtwagenParkeren-ap_en.json  
 
@@ -22,7 +22,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 66  
+#||# Number of calls: 4  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/vrachtwagenparkeren/ontwerpstandaard/test/autotranslation/vrachtwagenParkeren-ap_fr.json  
 
@@ -36,7 +36,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 66  
+#||# Number of calls: 4  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/vrachtwagenparkeren/ontwerpstandaard/test/autotranslation/vrachtwagenParkeren-ap_de.json  
 
