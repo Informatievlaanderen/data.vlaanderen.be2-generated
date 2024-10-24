@@ -8,7 +8,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 4  
+#||# Number of calls: 66  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/test/autotranslation/Vrachtwagenparkeren_en.json  
 
@@ -22,13 +22,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 4  
-
-An error occured while translating text  
-
-error TypeError: fetch failed  
-
-#||# Retry translation  
+#||# Number of calls: 66  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/test/autotranslation/Vrachtwagenparkeren_fr.json  
 
@@ -42,7 +36,7 @@ error TypeError: fetch failed
 
 #||# start translating json  
 
-#||# Number of calls: 4  
+#||# Number of calls: 66  
 
 #||# start writing file /tmp/workspace/report4/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/test/autotranslation/Vrachtwagenparkeren_de.json  
 
