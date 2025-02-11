@@ -1,0 +1,677 @@
+{
+  "@context": {
+    ".observatie(source)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.source",
+      "@type": "@id"
+    },
+    ".observatie(target)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.target",
+      "@type": "@id"
+    },
+    "Ader": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#Ader",
+    "Ader.kenmerk": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#Ader.kenmerk",
+      "@type": "@id"
+    },
+    "Adertype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Antropogeenkenmerktype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "AntropogeneKenmerkenBereik": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#AntropogeneKenmerkenBereik",
+    "AntropogeneKenmerkenBereik.laag": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element",
+      "@type": "@id"
+    },
+    "AntropogeneKenmerkenBereikInterpretatie": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#AntropogeneKenmerkenBereikInterpretatie",
+    "AntropogeneKenmerkenBereikInterpretatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "AntropogeneKenmerkenBereikInterpretatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "@id"
+    },
+    "AntropogeneKenmerkenBereikInterpretatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "AntropogeneKenmerkenlaag": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#AntropogeneKenmerkenlaag",
+    "AntropogeneKenmerkenlaag.waarde": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "@id"
+    },
+    "AntropogeneKenmerkenwaarde": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#AntropogeneKenmerkenWaarde",
+    "AntropogeneKenmerkenwaarde.antropogeenkenmerktype": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#antropogeenkenmerktype",
+      "@type": "@id"
+    },
+    "AntropogeneKenmerkenwaarde.antropogeenkenmerkwaarde": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#antropogeenkenmerkwaarde",
+      "@type": "@id"
+    },
+    "Any": "http://www.w3.org/2000/01/rdf-schema#Resource",
+    "AquiferType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bemonsteringscurve": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve",
+    "BenoemdeWaarde": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
+    "BenoemdeWaarde.naam": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name"
+    },
+    "BenoemdeWaarde.waarde": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value",
+      "@type": "@id"
+    },
+    "BetrouwbaarheidType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "BoCurveWaardepaar": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_CurveWaardepaar",
+    "BoCurveWaardepaar.geometrie": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry",
+      "@type": "@id"
+    },
+    "BoCurveWaardepaar.laag": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_Curvewaardepaar.laag",
+      "@type": "@id"
+    },
+    "BoCurveWaardepaar.waarde": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "@id"
+    },
+    "Curve": "http://www.opengis.net/ont/sf#Curve",
+    "CurveWaardepaar": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair",
+    "DirectePositie": "https://data.vlaanderen.be/ns/generiek#DirectePositie",
+    "DirectePositie.gml": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML"
+    },
+    "DirectePositie.opmeting": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#DirectePositie.opmeting",
+      "@type": "@id"
+    },
+    "DirectePositie.wkt": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT"
+    },
+    "DiscreetBereikObservatie": "http://def.isotc211.org/iso19156/2011/CoverageObservation#OM_DiscreteCoverageObservation",
+    "DiscreetCurvebereik": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage",
+    "FormeleStratigrafieBereik": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#FormeleStratigrafieBereik",
+    "FormeleStratigrafieBereik.laag": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element",
+      "@type": "@id"
+    },
+    "FormeleStratigrafieBereikInterpretatie": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#FormeleStratigrafieBereikInterpretatie",
+    "FormeleStratigrafieBereikInterpretatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "FormeleStratigrafieBereikInterpretatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "@id"
+    },
+    "FormeleStratigrafieBereikInterpretatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "FormeleStratigrafieLid": "http://www.w3.org/2004/02/skos/core#Concept",
+    "FormeleStratigrafielaag": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#FormeleStratigrafielaag",
+    "FormeleStratigrafielaag.waarde": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "@id"
+    },
+    "FormeleStratigrafiewaarde": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#FormeleStratigrafieWaarde",
+    "FormeleStratigrafiewaarde.betrouwbaarheid": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#FormeleStratigrafieWaarde.betrouwbaarheid",
+      "@type": "@id"
+    },
+    "FormeleStratigrafiewaarde.pakket": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#FormeleStratigrafieWaarde.pakket",
+      "@type": "@id"
+    },
+    "FormeleStratigrafiewaarde.pakketrelatie": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#FormeleStratigrafieWaarde.pakketrelatie",
+      "@type": "@id"
+    },
+    "Fossiel": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#Fossiel",
+    "Fossiel.aard": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#aard",
+      "@type": "@id"
+    },
+    "Fossiel.diepte": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#diepte",
+      "@type": "@id"
+    },
+    "Fossiel.naam": {
+      "@id": "http://purl.org/dc/elements/1.1/title",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Fossiel.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Fossielaard": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Fossieltype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "GecodeerdeBijmenginghoeveelheid": "http://www.w3.org/2004/02/skos/core#Concept",
+    "GecodeerdeBijnaam": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeBijnaam",
+    "GecodeerdeBijnaam.grondsoort": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeBijnaam.grondsoort",
+      "@type": "@id"
+    },
+    "GecodeerdeBijnaam.hoeveelheid": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeBijnaam.hoeveelheid",
+      "@type": "@id"
+    },
+    "GecodeerdeBijnaam.plaatselijk": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeBijnaam.plaatselijk",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "GecodeerdeHoofdnaam": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeHoofdnaam",
+    "GecodeerdeHoofdnaam.grondsoort": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeHoofdnaam.grondsoort",
+      "@type": "@id"
+    },
+    "GecodeerdeHoofdnaamcode": "http://www.w3.org/2004/02/skos/core#Concept",
+    "GecodeerdeKleur": "http://www.w3.org/2004/02/skos/core#Concept",
+    "GecodeerdeLithologieBereik": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeLithologieBereik",
+    "GecodeerdeLithologieBereik.laag": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element",
+      "@type": "@id"
+    },
+    "GecodeerdeLithologieBereikInterpretatie": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeLithologieBereikInterpretatie",
+    "GecodeerdeLithologieBereikInterpretatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "GecodeerdeLithologieBereikInterpretatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "@id"
+    },
+    "GecodeerdeLithologieBereikInterpretatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "GecodeerdeLithologielaag": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeLithologielaag",
+    "GecodeerdeLithologielaag.waarde": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "@id"
+    },
+    "GecodeerdeLithologiewaarde": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeLithologieWaarde",
+    "GecodeerdeLithologiewaarde.ader": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#ader",
+      "@type": "@id"
+    },
+    "GecodeerdeLithologiewaarde.bijmenging": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeLithologiewaarde.bijmenging",
+      "@type": "@id"
+    },
+    "GecodeerdeLithologiewaarde.fossiel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#fossiel",
+      "@type": "@id"
+    },
+    "GecodeerdeLithologiewaarde.hoofdnaam": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GecodeerdeLithologiewaarde.hoofdnaam",
+      "@type": "@id"
+    },
+    "GecodeerdeLithologiewaarde.kleur": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#kleur",
+      "@type": "@id"
+    },
+    "GecodeerdeLithologiewaarde.kleurMunsell": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#kleurMunsell",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "GecodeerdeLithologiewaarde.secundairKenmerk": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#secundairKenmerk",
+      "@type": "@id"
+    },
+    "GecodeerdeLithologiewaarde.sedimentaireStructuur": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#sedimentaireStructuur",
+      "@type": "@id"
+    },
+    "GecodeerdeLithologiewaarde.tektoniek": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#tektoniek",
+      "@type": "@id"
+    },
+    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
+    "Geometrie.gml": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML"
+    },
+    "Geometrie.opmeting": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting",
+      "@type": "@id"
+    },
+    "Geometrie.wkt": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT"
+    },
+    "GeotechnischeCoderingBereik": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GeotechnischeCoderingBereik",
+    "GeotechnischeCoderingBereik.laag": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element",
+      "@type": "@id"
+    },
+    "GeotechnischeCoderingBereikInterpretatie": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GeotechnischeCoderingBereikInterpretatie",
+    "GeotechnischeCoderingBereikInterpretatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "GeotechnischeCoderingBereikInterpretatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "@id"
+    },
+    "GeotechnischeCoderingBereikInterpretatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "GeotechnischeCoderingBijmengingHoeveelheidType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "GeotechnischeCoderingBijnaam": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GeotechnischeCoderingBijnaam",
+    "GeotechnischeCoderingBijnaam.grondsoort": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GeotechnischeCoderingBijnaam.grondsoort",
+      "@type": "@id"
+    },
+    "GeotechnischeCoderingBijnaam.hoeveelheid": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GeotechnischeCoderingBijnaam.hoeveelheid",
+      "@type": "@id"
+    },
+    "GeotechnischeCoderingBijnaam.plaatselijk": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GeotechnischeCoderingBijnaam.plaatselijk",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "GeotechnischeCoderingHoofdnaam": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GeotechnischeCoderingHoofdnaam",
+    "GeotechnischeCoderingHoofdnaam.grondsoort": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GeotechnischeCoderingHoofdnaam.grondsoort",
+      "@type": "@id"
+    },
+    "GeotechnischeCoderingHoofdnaamCodeType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "GeotechnischeCoderinglaag": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GeotechnischeCoderinglaag",
+    "GeotechnischeCoderinglaag.waarde": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "@id"
+    },
+    "GeotechnischeCoderingwaarde": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GeotechnischeCoderingWaarde",
+    "GeotechnischeCoderingwaarde.bijmenging": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GeotechnischeCoderingWaarde.bijmenging",
+      "@type": "@id"
+    },
+    "GeotechnischeCoderingwaarde.hoofdnaam": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#GeotechnischeCoderingWaarde.hoofdnaam",
+      "@type": "@id"
+    },
+    "Geursoorttype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Geursterktetype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "HydrostratigrafieBereik": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#HydrostratigrafieBereik",
+    "HydrostratigrafieBereik.laag": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element",
+      "@type": "@id"
+    },
+    "HydrostratigrafieBereikInterpretatie": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#HydrostratigrafieBereikInterpretatie",
+    "HydrostratigrafieBereikInterpretatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "HydrostratigrafieBereikInterpretatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "@id"
+    },
+    "HydrostratigrafieBereikInterpretatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "Hydrostratigrafielaag": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#Hydrostratigrafielaag",
+    "Hydrostratigrafielaag.waarde": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "@id"
+    },
+    "Hydrostratigrafiewaarde": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#HydrostratigrafieWaarde",
+    "Hydrostratigrafiewaarde.aquifer": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#aquifer",
+      "@type": "@id"
+    },
+    "Hydrostratigrafiewaarde.regime": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#regime",
+      "@type": "@id"
+    },
+    "Identificator": "http://www.w3.org/ns/adms#Identifier",
+    "Identificator.identificator": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation"
+    },
+    "Identificator.toegekendDoor": {
+      "@id": "http://purl.org/dc/terms/creator",
+      "@type": "@id"
+    },
+    "Identificator.toegekendDoor (string)": {
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Identificator.toegekendOp": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "InformeleHydrostratigrafieBereik": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#InformeleHydrostratigrafieBereik",
+    "InformeleHydrostratigrafieBereik.laag": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element",
+      "@type": "@id"
+    },
+    "InformeleHydrostratigrafieBereikInterpretatie": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#InformeleHydrostratigrafieBereikInterpretatie",
+    "InformeleHydrostratigrafieBereikInterpretatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "InformeleHydrostratigrafieBereikInterpretatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "@id"
+    },
+    "InformeleHydrostratigrafieBereikInterpretatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "InformeleHydrostratigrafielaag": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#InformeleHydrostratigrafielaag",
+    "InformeleHydrostratigrafielaag.waarde": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "@id"
+    },
+    "InformeleHydrostratigrafiewaarde": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#InformeleHydrostratigrafieWaarde",
+    "InformeleHydrostratigrafiewaarde.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "InformeleStratigrafieBereik": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#InformeleStratigrafieBereik",
+    "InformeleStratigrafieBereik.laag": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element",
+      "@type": "@id"
+    },
+    "InformeleStratigrafieBereikInterpretatie": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#InformeleStratigrafieBereikInterpretatie",
+    "InformeleStratigrafieBereikInterpretatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "InformeleStratigrafieBereikInterpretatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "@id"
+    },
+    "InformeleStratigrafieBereikInterpretatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "InformeleStratigrafielaag": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#InformeleStratigrafielaag",
+    "InformeleStratigrafielaag.waarde": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "@id"
+    },
+    "InformeleStratigrafiewaarde": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#InformeleStratigrafieWaarde",
+    "InformeleStratigrafiewaarde.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Input": "http://www.w3.org/ns/ssn/Input",
+    "Input.referentie": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Input.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "InputType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Interpretatie": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Interpretatie",
+    "Kenmerktype": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+    "Kenmerktype.isGeobserveerdMet": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/isObservedBy",
+      "@type": "@id"
+    },
+    "Kwaliteitselement": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element",
+    "LithologischeBeschrijvingBereik": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#LithologischeBeschrijvingBereik",
+    "LithologischeBeschrijvingBereik.laag": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element",
+      "@type": "@id"
+    },
+    "LithologischeBeschrijvingBereikInterpretatie": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#LithologischeBeschrijvingBereikInterpretatie",
+    "LithologischeBeschrijvingBereikInterpretatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "LithologischeBeschrijvingBereikInterpretatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "@id"
+    },
+    "LithologischeBeschrijvingBereikInterpretatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "LithologischeBeschrijvinglaag": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#LithologischeBeschrijvinglaag",
+    "LithologischeBeschrijvinglaag.waarde": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "@id"
+    },
+    "LithologischeBeschrijvingwaarde": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#LithologischeBeschrijvingWaarde",
+    "LithologischeBeschrijvingwaarde.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "LithostratigrafischeEenheidtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Maat": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
+    "Moment": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant",
+    "Object": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+    "Object.waardeverschaffer": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Object.waardeverschaffer",
+      "@type": "@id"
+    },
+    "Observatie": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+    "Observatie.fenomeentijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+      "@type": "@id"
+    },
+    "Observatie.geassocieerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+      "@type": "@id"
+    },
+    "Observatie.gebruikteProcedure": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "@id"
+    },
+    "Observatie.geldigeTijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime",
+      "@type": "@id"
+    },
+    "Observatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "Observatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "@id"
+    },
+    "Observatie.identificator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "Observatie.opdracht": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.opdracht",
+      "@type": "@id"
+    },
+    "Observatie.parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter",
+      "@type": "@id"
+    },
+    "Observatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "Observatie.resultaatkwaliteit": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
+      "@type": "@id"
+    },
+    "Observatie.resultaattijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
+      "@type": "@id"
+    },
+    "Observatie.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Observatie.uitgevoerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
+      "@type": "@id"
+    },
+    "Observatie.uitgevoerdMetSensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "@id"
+    },
+    "Observatieprocedure": "http://www.w3.org/ns/sosa/om#ObservationProcedure",
+    "Observatieprocedure.geïmplementeerdMet": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/implementedBy",
+      "@type": "@id"
+    },
+    "Observatieprocedure.input": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasInput",
+      "@type": "@id"
+    },
+    "Observatieprocedure.output": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasOutput",
+      "@type": "@id"
+    },
+    "Observatieprocedure.parameter": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.parameter",
+      "@type": "@id"
+    },
+    "Observatieprocedure.specificatie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Observatieprocedure.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Observatieproceduretype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Observatietype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Olietype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Opdracht": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht",
+    "Output": "http://www.w3.org/ns/ssn/Output",
+    "Output.referentie": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Output.referentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Output.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "OutputType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Periode": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period",
+    "PidType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Procedure": "http://www.w3.org/ns/sosa/Procedure",
+    "Proces": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
+    "Profielelement": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement",
+    "QuartairStratigrafieBereik": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#QuartairStratigrafieBereik",
+    "QuartairStratigrafieBereik.laag": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element",
+      "@type": "@id"
+    },
+    "QuartairStratigrafieBereikInterpretatie": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#QuartairStratigrafieBereikInterpretatie",
+    "QuartairStratigrafieBereikInterpretatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "QuartairStratigrafieBereikInterpretatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "@id"
+    },
+    "QuartairStratigrafieBereikInterpretatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "QuartairStratigrafieLid": "http://www.w3.org/2004/02/skos/core#Concept",
+    "QuartairStratigrafielaag": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#QuartairStratigrafielaag",
+    "QuartairStratigrafielaag.waarde": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "@id"
+    },
+    "QuartairStratigrafiewaarde": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#QuartairStratigrafieWaarde",
+    "QuartairStratigrafiewaarde.betrouwbaarheid": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#QuartairStratigrafieWaarde.betrouwbaarheid",
+      "@type": "@id"
+    },
+    "QuartairStratigrafiewaarde.pakket": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#QuartairStratigrafieWaarde.pakket",
+      "@type": "@id"
+    },
+    "QuartairStratigrafiewaarde.pakketrelatie": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#QuartairStratigrafieWaarde.pakketrelatie",
+      "@type": "@id"
+    },
+    "Record": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record",
+    "RegimeType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "RelatieLedenType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "SecundairKenmerk": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#SecundairKenmerk",
+    "SecundairKenmerk.kenmerk": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#SecundairKenmerk.kenmerk",
+      "@type": "@id"
+    },
+    "SecundairKenmerkType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "SedimentaireStructuur": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#SedimentaireStructuur",
+    "SedimentaireStructuur.kenmerk": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#SedimentaireStructuur.kenmerk",
+      "@type": "@id"
+    },
+    "SedimentaireStructuurType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Sensor": "https://www.w3.org/ns/sosa/Sensor",
+    "Sensor.implementeert": {
+      "@id": "http://www.w3.org/ns/ssn/implements",
+      "@type": "@id"
+    },
+    "Sensor.observeert": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/observes",
+      "@type": "@id"
+    },
+    "Sensor.uitgevoerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/madeObservation",
+      "@type": "@id"
+    },
+    "Systeem": "https://www.w3.org/TR/vocab-ssn/#ssn-system",
+    "Tektoniek": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#Tektoniek",
+    "Tektoniek.afstand": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#afstand",
+      "@type": "@id"
+    },
+    "Tektoniek.helling": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#helling",
+      "@type": "@id"
+    },
+    "Tektoniek.kenmerk": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond/interpretaties#Tektoniek.kenmerk",
+      "@type": "@id"
+    },
+    "Tektoniektype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TemporeleEntiteit": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object",
+    "Vochtgehaltetype": "http://www.w3.org/2004/02/skos/core#Concept"
+  }
+}

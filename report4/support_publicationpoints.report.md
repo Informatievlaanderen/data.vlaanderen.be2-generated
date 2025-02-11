@@ -1,5 +1,36 @@
 #||# checking publication points in directory /home/circleci/project/config/dev
 #||# 
+#||#   + adding supporting /home/circleci/project/config/dev/adres.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/air-and-water.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/bedrijventerrein.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/begraafplaats.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/besluit-mobiliteit.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/besluit-publicatie.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/besluit.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/bestuur.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/bestuurlijk-sanctieregister.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/bodem-en-ondergrond.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/toolchaintestbed.publication.json
 #||#  
-#||#  All directories are supported
+Error: the following directories are unsupported
+[
+  "/tmp/generated/doc/applicatieprofiel/begraafplaatsenbeheer",
+  "/tmp/generated/doc/applicatieprofiel/besluitvorming",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/interpretaties",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/observaties",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/ruimtelijke-bereiken",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/ruimtelijke-bereiken/ontwerpstandaard/2021-08-01/i",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen",
+  "/tmp/generated/doc/applicatieprofiel/begraafplaatsen"
+]
