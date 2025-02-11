@@ -8,9 +8,6 @@ jobs:
       - checkout
       - attach_workspace:
           at: /tmp/workspace
-      - add_ssh_keys:
-          fingerprints:
-            - "9c:16:8f:4a:b7:2c:b4:c1:ec:b8:68:03:99:10:17:a8"
       - run:
           name: build the statistics per specifications
           command: |
@@ -94,7 +91,7 @@ workflows:
     jobs:
       - build-stats
       - create-artifact:
-          repository:  $$STATISTICSREPO
-          statisticsRepoFingerprint: $$STATISTICSREPOFINGERPRINT
+          repository:   git@github.com:Informatievlaanderen/data.vlaanderen.be-statistics.git
+          statisticsRepoFingerprint: "SHA256:1CElGS66sWs0RoZ/i6GA1PaY+6McAwA/HMc458nowzw"
           requires:
             - build-stats
