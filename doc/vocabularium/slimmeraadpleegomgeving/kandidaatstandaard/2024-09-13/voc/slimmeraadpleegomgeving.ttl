@@ -1,0 +1,582 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rdfs:Resource a rdfs:Class .
+
+skos:Concept a rdfs:Class .
+
+oa:Annotation a rdfs:Class .
+
+oa:FragmentSelector a rdfs:Class .
+
+oa:Selector a rdfs:Class .
+
+oa:SpecificResource a rdfs:Class .
+
+oa:TextPositionSelector a rdfs:Class .
+
+oa:TextQuoteSelector a rdfs:Class .
+
+oa:TextualBody a rdfs:Class .
+
+prov:Agent a rdfs:Class .
+
+prov:Location a rdfs:Class .
+
+schemas:WebSite a rdfs:Class;
+  rdfs:label "Website"@nl .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Activiteit.genereertAnnotatie> a owl:ObjectProperty;
+  rdfs:label "genereert"@nl;
+  rdfs:comment "De annotatie die werd aangemaakt als gevolg van de activiteit."@nl;
+  rdfs:domain prov:Activity;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range oa:Annotation;
+  rdfs:subPropertyOf prov:generates .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftLocatie> a owl:ObjectProperty;
+  rdfs:label "heeft locatie"@nl;
+  rdfs:comment "Locatie dat de annotatie gebruikt als inhoud voor een resource."@nl;
+  rdfs:domain oa:Annotation;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range prov:Location;
+  rdfs:subPropertyOf oa:hasBody .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftObject> a owl:ObjectProperty;
+  rdfs:label "heeft object"@nl;
+  rdfs:comment "Object dat de annotatie gebruikt als inhoud voor een resource."@nl;
+  rdfs:domain oa:Annotation;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range prov:Entity;
+  rdfs:subPropertyOf oa:hasBody .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftTekstueleInhoud> a owl:ObjectProperty;
+  rdfs:label "heeft tekstuele inhoud"@nl;
+  rdfs:comment "Tekst dat de annotatie gebruikt als inhoud voor een resource."@nl;
+  rdfs:domain oa:Annotation;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range oa:TextualBody;
+  rdfs:subPropertyOf oa:hasBody .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Annotatie.heeftThema> a owl:ObjectProperty;
+  rdfs:label "heeft thema"@nl;
+  rdfs:comment "Thema-code dat de annotatie gebruikt als inhoud voor een resource."@nl;
+  rdfs:domain oa:Annotation;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range skos:Concept;
+  rdfs:subPropertyOf oa:hasBody .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.beeindigtNormatieveBepaling> a owl:ObjectProperty;
+  rdfs:label "beeindigt"@nl;
+  rdfs:comment "Normatieve bepaling dat werd beeindigd door de beslissing dat werd genomen tijdens de behandeling van agendapunt."@nl;
+  rdfs:domain <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling>;
+  rdfs:subPropertyOf prov:invalidated .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitBeslissingsactiviteit> a owl:ObjectProperty;
+  rdfs:label "bestaat uit"@nl;
+  rdfs:comment "Geeft een Beslissingsactiviteit aan die binnen deze Behandeling Van Agendapunt plaatsvindt."@nl;
+  rdfs:domain <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range <https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit>;
+  rdfs:subPropertyOf <http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of> .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitInitiatiefrechtantwoord> a owl:ObjectProperty;
+  rdfs:label "bestaat uit"@nl;
+  rdfs:comment "Geeft een Initiatiefrechtantwoord aan die binnen deze Behandeling Van Agendapunt plaatsvindt."@nl;
+  rdfs:domain <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord>;
+  rdfs:subPropertyOf <http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of> .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.bestaatUitInitiatiefrechtvraag> a owl:ObjectProperty;
+  rdfs:label "bestaat uit"@nl;
+  rdfs:comment "Geeft een Initiatiefrechtvraag aan die binnen deze Behandeling Van Agendapunt plaatsvindt."@nl;
+  rdfs:domain <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag>;
+  rdfs:subPropertyOf <http://data.europa.eu/eli/eli-draft-legislation-ontology#consists_of> .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#BehandelingVanAgendapunt.creeertNormatieveBepaling> a owl:ObjectProperty;
+  rdfs:label "creeert"@nl;
+  rdfs:comment "Normatieve bepaling dat werd gecreeerd door de beslissing tijdens de behandeling van agendapunt."@nl;
+  rdfs:domain <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling>;
+  rdfs:subPropertyOf prov:generated .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Initiatiefrechtvraag.datumAntwoordVerwacht> a owl:DatatypeProperty;
+  rdfs:label "datum antwoord verwacht"@nl;
+  rdfs:comment "Datum waartegen het antwoord op de initiatiefrechtvraag verwacht wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range xsd:dateTime .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Initiatiefrechtvraag.heeftOntwerpbesluit> a owl:ObjectProperty;
+  rdfs:label "heeft ontwerp besluit"@nl;
+  rdfs:comment "Ontwerpbesluit dat voorgesteld wordt bij de initiatiefrechtvraag."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range <https://data.vlaanderen.be/ns/dossier#Stuk> .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Initiatiefrechtvraag.indieningsdatum> a owl:DatatypeProperty;
+  rdfs:label "indieningsdatum"@nl;
+  rdfs:comment "Datum waarop de initiatiefrechtvraag ingediend werd."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range xsd:dateTime .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Initiatiefrechtvraag.motivering> a owl:DatatypeProperty;
+  rdfs:label "motivering"@nl;
+  rdfs:comment """Beschrijving van de juridische en feitelijke motivering achter de initiatiefrechtvraag.	"""@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range rdf:langString .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#LegaleVerschijningsvorm.realiseertNormatieveBepaling> a owl:ObjectProperty;
+  rdfs:label "realiseert"@nl;
+  rdfs:comment """Normatieve bepaling die door de legale verschijningsvorm wordt gerealiseerd.	"""@nl;
+  rdfs:domain <https://data.europa.eu/eli/ontology#LegalExpression>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range <https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling>;
+  rdfs:subPropertyOf <http://data.europa.eu/eli/ontology#realizes> .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Recht.begunstigde> a owl:ObjectProperty;
+  rdfs:label "begunstigde"@nl;
+  rdfs:comment "Agent die het recht mag uitoefenen."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#Recht>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range prov:Agent .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#ShaclPathSelector> a owl:Class;
+  rdfs:label "Shaclpathselector"@nl;
+  rdfs:comment "Afbakening van een resource met behulp van een SHACL property path."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:subClassOf oa:Selector .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverAdviesantwoord> a owl:ObjectProperty;
+  rdfs:label "gaat over adviesantwoord"@nl;
+  rdfs:comment "Adviesantwoord waarover het stuk gaat."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/dossier#Stuk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Advies>;
+  rdfs:subPropertyOf dc:subject .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverAdviesvraag> a owl:ObjectProperty;
+  rdfs:label "gaat over adviesvraag"@nl;
+  rdfs:comment "Adviesvraag waarover het stuk gaat."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/dossier#Stuk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag>;
+  rdfs:subPropertyOf dc:subject .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverInitiatiefrechtantwoord> a owl:ObjectProperty;
+  rdfs:label "gaat over initiatiefrechtantwoord"@nl;
+  rdfs:comment "Initiatiefrechtantwoord waarover het stuk gaat."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/dossier#Stuk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord>;
+  rdfs:subPropertyOf dc:subject .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.gaatOverInitiatiefrechtvraag> a owl:ObjectProperty;
+  rdfs:label "gaat over initiatiefrechtvraag"@nl;
+  rdfs:comment "Initiatiefrechtvraag waarover het stuk gaat."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/dossier#Stuk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag>;
+  rdfs:subPropertyOf dc:subject .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Stuk.thema> a owl:ObjectProperty;
+  rdfs:label "thema"@nl;
+  rdfs:comment "Thema waarover dit Stuk gaat."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/dossier#Stuk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Thema>;
+  rdfs:subPropertyOf dc:subject .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Verbintenis.eiser> a owl:ObjectProperty;
+  rdfs:label "eiser"@nl;
+  rdfs:comment "De agent die de vordering van de verbintenis eist."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range prov:Agent .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Verbintenis.rechthebbende> a owl:ObjectProperty;
+  rdfs:label "rechthebbende"@nl;
+  rdfs:comment "De agent die rechthebbende is van de verbintenis."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range prov:Agent .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#gebruikte> a owl:ObjectProperty;
+  rdfs:label "gebruikte"@nl;
+  rdfs:comment "Stuk dat werd gebruikt voor de behandeling van de agendapunt."@nl;
+  rdfs:domain <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:range <https://data.vlaanderen.be/ns/dossier#Stuk>;
+  rdfs:subPropertyOf prov:used .
+
+<http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by> a rdf:Property .
+
+dc11:format a rdf:Property .
+
+dc11:language a rdf:Property .
+
+dc:description a rdf:Property;
+  rdfs:label "beschrijving"@nl .
+
+dc:relation a rdf:Property;
+  rdfs:label "heeft relatie tot"@nl .
+
+dc:title a rdf:Property;
+  rdfs:label "naam"@nl .
+
+rdf:value a rdf:Property .
+
+skos:broadMatch a rdf:Property .
+
+skos:broader a rdf:Property .
+
+oa:end a rdf:Property .
+
+oa:exact a rdf:Property .
+
+oa:hasSelector a rdf:Property .
+
+oa:hasSource a rdf:Property .
+
+oa:hasTarget a rdf:Property .
+
+oa:motivatedBy a rdf:Property .
+
+oa:prefix a rdf:Property .
+
+oa:refinedBy a rdf:Property .
+
+oa:start a rdf:Property .
+
+oa:suffix a rdf:Property .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Advies> a owl:Class;
+  rdfs:label "Advies"@nl;
+  rdfs:comment "Input van een organisatie of persoon die bijdraagt aan het beslissingsproces."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:subClassOf <http://data.europa.eu/eli/eli-draft-legislation-ontology#LegislativeActivity> .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag> a owl:Class;
+  rdfs:label "Adviesvraag"@nl;
+  rdfs:comment "Vraag aan een organisatie of persoon om een raadgeving die bijdraagt aan het beslissingsproces"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:subClassOf <http://data.europa.eu/eli/eli-draft-legislation-ontology#LegislativeActivity> .
+
+schemas:url a rdf:Property;
+  rdfs:label "locatie"@nl .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord> a owl:Class;
+  rdfs:label "Initiatiefrechtantwoord"@nl;
+  rdfs:comment "Antwoord van de bevoegde mandataris op een initiatiefrechtVraag"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:subClassOf <http://data.europa.eu/eli/eli-draft-legislation-ontology#LegislativeActivity> .
+
+oa:hasBody a rdf:Property .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag> a owl:Class;
+  rdfs:label "Initiatiefrechtvraag"@nl;
+  rdfs:comment "Uitoefening van de bevoegdheden van de mandataris om informatie te bekomen die toegankelijk is via het inzage- en controlerecht, alsook het maken van voorstellen met het oog op uitlokken van besluitvorming."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving>;
+  rdfs:subClassOf <http://data.europa.eu/eli/eli-draft-legislation-ontology#LegislativeActivity> .
+
+<https://data.vlaanderen.be/ns/slimmeraadpleegomgeving> a owl:Ontology;
+  rdfs:label "slimmeraadpleegomgeving"@en,
+    "slimmeraadpleegomgeving"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/5116efa8-e96e-46a2-aba6-c077e9056a96>;
+      foaf:name "Gemeente Aalter"
+    ];
+    foaf:firstName "Katia";
+    foaf:lastName "Willems"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/929c049597e4961ea84051927af6be67062da4fc8ed9b755fc33b1597b8cdc7c>;
+      foaf:name "Gemeente Opwijk"
+    ];
+    foaf:firstName "Luc";
+    foaf:lastName "Wijns"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.greenvalleybelgium.be/>;
+      foaf:name "Green Valley"
+    ];
+    foaf:firstName "Sander";
+    foaf:lastName "Vliegen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/1490ca18f894573f76065dc4fdfa2f9c0bcb00964a6af2e21ff8a81e9f1d1198>;
+      foaf:name "Gemeente Beringen"
+    ];
+    foaf:firstName "Sabrina";
+    foaf:lastName "Vanderheyden"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/b4ff2bb483e5a18fed7b115a2da7af8447e1a3bec4283fb5cf480810608a1e76>;
+      foaf:name "Gemeente Diest"
+    ];
+    foaf:firstName "Norah";
+    foaf:lastName "Thaens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.cipalschaubroeck.be/>;
+      foaf:name "CIPAL Schaubroeck"
+    ];
+    foaf:firstName "Jonas";
+    foaf:lastName "Tamsyn"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.resa.be/fr/>;
+      foaf:name "RESA"
+    ];
+    foaf:firstName "Adrien";
+    foaf:lastName "Legat"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/d8247b68bb62c768c36308fbd7203c58038e249b8363da29d223aa6cd97cf242>;
+      foaf:name "Gemeente Lommel"
+    ];
+    foaf:firstName "Heidi";
+    foaf:lastName "Hurkmans"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.cipalschaubroeck.be/>;
+      foaf:name "CIPAL Schaubroeck"
+    ];
+    foaf:firstName "Elke";
+    foaf:lastName "Godefroid"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
+      foaf:name "Stad Gent"
+    ];
+    foaf:firstName "Jan";
+    foaf:lastName "Godderis"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/fb4ab93def093fcefdcbafe1055941c02bb109290fffb9cd9012d549aed480b8>;
+      foaf:name "Gemeente Nijlen"
+    ];
+    foaf:firstName "Margot";
+    foaf:lastName "Geuens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://omgeving.vlaanderen.be/>;
+      foaf:name "Departement Omgeving"
+    ];
+    foaf:firstName "Virgini";
+    foaf:lastName "Geranios"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/18eb574437cc9fa5af24990f495aaed7af868d33341faf60cffa2ee0e57dc914>;
+      foaf:name "Gemeente Berlaar"
+    ];
+    foaf:firstName "Eveline";
+    foaf:lastName "Engels"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Loes";
+    foaf:lastName "Deventer"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/2ad0d123f4a81787572342c394a1917b81752f42d802d1e013941f56b53bdd2a>;
+      foaf:name "Gemeente Haacht"
+    ];
+    foaf:firstName "Johan";
+    foaf:lastName "Artois"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
+      foaf:name "Stad Gent"
+    ];
+    foaf:firstName "Ines";
+    foaf:lastName "Acke"
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso rdfs:Resource,
+    skos:Concept,
+    oa:Annotation,
+    oa:FragmentSelector,
+    oa:Selector,
+    oa:SpecificResource,
+    oa:TextPositionSelector,
+    oa:TextQuoteSelector,
+    oa:TextualBody,
+    prov:Agent,
+    prov:Location,
+    schemas:WebSite,
+    schemas:url,
+    oa:suffix,
+    oa:start,
+    oa:refinedBy,
+    oa:prefix,
+    oa:motivatedBy,
+    oa:hasTarget,
+    oa:hasSource,
+    oa:hasSelector,
+    oa:hasBody,
+    oa:exact,
+    oa:end,
+    skos:broader,
+    skos:broadMatch,
+    rdf:value,
+    dc:title,
+    dc:relation,
+    dc:description,
+    dc11:language,
+    dc11:format,
+    <http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by>;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Eveline";
+    foaf:lastName "Vlassenroot";
+    foaf:mbox <mailto:eveline.vlassenroot@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Laurens";
+    foaf:lastName "Vercauteren";
+    foaf:mbox <mailto:laurens.vercauteren@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "William";
+    foaf:lastName "Verbeeck";
+    foaf:mbox <mailto:william.verbeeck@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Ziggy";
+    foaf:lastName "Vanlishout";
+    foaf:mbox <mailto:ziggy.vanlishout@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/doc/organisatie/OVO001835>;
+      foaf:name "Red pencil"
+    ];
+    foaf:firstName "Niels";
+    foaf:lastName "Vandekeybus";
+    foaf:mbox <mailto:niels.vandekeybus@redpencil.io>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Liesbeth";
+    foaf:lastName "Van der Haegen";
+    foaf:mbox <mailto:liesbeth.vanderhaegen@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Agentschap Binnenlands Bestuur"
+    ];
+    foaf:firstName "Brecht";
+    foaf:lastName "Van de Vyvere";
+    foaf:mbox <mailto:brecht.vandevyvere@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Jitse";
+    foaf:lastName "De Cock";
+    foaf:mbox <mailto:jitse.decock@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Raf";
+    foaf:lastName "Buyle";
+    foaf:mbox <mailto:raf.buyle@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Veerle";
+    foaf:lastName "Beyaert";
+    foaf:mbox <mailto:veerle.beyaert@vlaanderen.be>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/doc/organisatie/OVO001835>;
+      foaf:name "Agentschap Binnenlands Bestuur"
+    ];
+    foaf:firstName "Bart";
+    foaf:lastName "Stichelmans";
+    foaf:mbox <mailto:bart.stichelmans@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/5116efa8-e96e-46a2-aba6-c077e9056a96>;
+      foaf:name "Gemeente Aalter"
+    ];
+    foaf:firstName "Nancy";
+    foaf:lastName "Nimmegeers";
+    foaf:mbox <mailto:nancy.nimmegeers@aalter.be>
+  ] .

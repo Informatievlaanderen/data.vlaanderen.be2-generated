@@ -2,31 +2,31 @@
 
 #||# -------------------------------------
 
-2025-02-11T14:58:48.370Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-02-11T16:27:31.582Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T14:58:48.371Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-02-11T16:27:31.583Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T14:58:48.371Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
+2025-02-11T16:27:31.584Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T14:58:48.376Z warn: [ConnectorConverterHandler]: Connector (dataSubject) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-11T16:27:31.591Z warn: [ConnectorConverterHandler]: Connector (dataSubject) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T14:58:48.376Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dataSubject) and the fallback URI (http://todo.com/) will be assigned.
+2025-02-11T16:27:31.591Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dataSubject) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T14:58:48.376Z warn: [ConnectorConverterHandler]: Connector (dataSubject) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-11T16:27:31.591Z warn: [ConnectorConverterHandler]: Connector (dataSubject) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T14:58:48.376Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dataSubject) and the fallback URI (http://todo.com/) will be assigned.
+2025-02-11T16:27:31.592Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dataSubject) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T14:58:48.376Z warn: [ConnectorConverterHandler]: Connector (verwerker) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-11T16:27:31.592Z warn: [ConnectorConverterHandler]: Connector (verwerker) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T14:58:48.376Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verwerker) and the fallback URI (http://todo.com/) will be assigned.
+2025-02-11T16:27:31.592Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verwerker) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T14:58:48.377Z warn: [ConnectorConverterHandler]: Connector (verwerkingsverantwoordelijke) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-11T16:27:31.592Z warn: [ConnectorConverterHandler]: Connector (verwerkingsverantwoordelijke) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T14:58:48.377Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verwerkingsverantwoordelijke) and the fallback URI (http://todo.com/) will be assigned.
+2025-02-11T16:27:31.593Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verwerkingsverantwoordelijke) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T14:58:48.377Z warn: [ConnectorConverterHandler]: Connector (extraInformatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-11T16:27:31.593Z warn: [ConnectorConverterHandler]: Connector (extraInformatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T14:58:48.377Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (extraInformatie) and the fallback URI (http://todo.com/) will be assigned.
+2025-02-11T16:27:31.593Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (extraInformatie) and the fallback URI (http://todo.com/) will be assigned.
 
 Error: [AttributeConverterHandler]: Unable to find domain object for attribute (Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:Lidmaatschap:lidVanTot).
 

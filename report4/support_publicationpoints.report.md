@@ -120,6 +120,26 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/perceel.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/persoon.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/publicatie-advertentie.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/ruimtelijkebereiken.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/sb.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/schuldbeheer.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/slim-ruimtelijk-plannen.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/slimme-raadpleegomgeving.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/slimme-stadsdistributie.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/subsidie.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/toestemming.publication.json
+#||#  
 Error: the following directories are unsupported
 [
   "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL",
@@ -133,6 +153,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/FeitelijkeVerenigingen",
   "/tmp/generated/doc/applicatieprofiel/begraafplaatsen",
   "/tmp/generated/doc/applicatieprofiel/begraafplaatsenbeheer",
+  "/tmp/generated/doc/applicatieprofiel/begroeid-voorkomen",
   "/tmp/generated/doc/applicatieprofiel/besluitvorming",
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond",
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen",
@@ -157,13 +178,12 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/metadata-dcat",
   "/tmp/generated/doc/applicatieprofiel/mobiliteitsbudget/ontwerpstandaard/2023-01-16",
   "/tmp/generated/doc/applicatieprofiel/notificatie-basis",
-  "/tmp/generated/doc/applicatieprofiel/begroeid-voorkomen",
   "/tmp/generated/doc/applicatieprofiel/observaties-en-metingen",
   "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18",
-  "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-08-30",
-  "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-11",
   "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-06-20",
+  "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-08-30",
   "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-09",
+  "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-11",
   "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12",
   "/tmp/generated/doc/applicatieprofiel/onbegroeid-voorkomen",
   "/tmp/generated/doc/applicatieprofiel/organisatie-basis",
@@ -171,24 +191,39 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/vegetatie-elementen",
   "/tmp/generated/doc/applicatieprofiel/waterdelen",
   "/tmp/generated/doc/applicatieprofiel/watervoorkomen",
+  "/tmp/generated/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2024-07-08",
+  "/tmp/generated/doc/applicatieprofiel/slimmeraadpleegomgeving/kandidaatstandaard/2024-10-15",
+  "/tmp/generated/doc/applicatieprofiel/slimmeraadpleegomgeving/kandidaatstandaard/2024-09-12",
+  "/tmp/generated/doc/applicatieprofiel/slimmeraadpleegomgeving/kandidaatstandaard/2024-10-14",
+  "/tmp/generated/doc/applicatieprofiel/persoon-basis",
+  "/tmp/generated/doc/applicatieprofiel/ruimtelijke-bereiken",
+  "/tmp/generated/doc/applicatieprofiel/schuldbeheer/ontwerpstandaard/2024-07-23",
+  "/tmp/generated/doc/applicatieprofiel/sensoren-en-bemonstering",
+  "/tmp/generated/doc/applicatieprofiel/subsidieregister",
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
   "/tmp/generated/doc/vocabularium/mobiliteit/Hoppinpunten/kandidaatstandaard/2022-04-01",
   "/tmp/generated/doc/vocabularium/mobiliteit/vervoersknooppunten/erkendestandaard/2022-12-01",
   "/tmp/generated/doc/vocabularium/mobiliteit/vervoersknooppunten/kandidaatstandaard/2022-04-01",
-  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/terreindeel",
-  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/infrastructuur",
-  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/vegetatie",
-  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/begroeid-voorkomen",
-  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/watervoorkomen",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/begraafplaats",
+  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/begroeid-voorkomen",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/gebied",
+  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/infrastructuur",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/onbegroeid-voorkomen",
+  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/terreindeel",
+  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/vegetatie",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/waterdeel",
+  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/watervoorkomen",
+  "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/ontwerpstandaard/2024-07-08",
+  "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-09-12",
+  "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-10-15",
+  "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-07-12",
+  "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-10-14",
   "/tmp/generated/ns/FeitelijkeVerenigingen",
   "/tmp/generated/ns/bodem-en-ondergrond",
   "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
   "/tmp/generated/ns/grondboringen",
   "/tmp/generated/ns/leercredential",
   "/tmp/generated/ns/metadata-dcat",
-  "/tmp/generated/ns/observaties-en-metingen"
+  "/tmp/generated/ns/observaties-en-metingen",
+  "/tmp/generated/ns/sensoren-en-bemonstering"
 ]

@@ -1,0 +1,589 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/BooleanShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:boolean .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/ClassificatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Classificatie.Resultaat>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/Names#ScopedName>;
+    shacl:description "Resultaat van de Classificatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resultaat"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation.result>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/DatetimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/DekkingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/DirectelocatieaanduidingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#DirecteLocatieAanduiding> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/DomeinobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/FormaatShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Formaat> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/GeometrieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Geometrie.Gml>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "gml"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Geometrie.Wkt>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "wkt"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/IdentificatorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Identificator.Identificator>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "String gebruikt om het object uniek te identificeren."@nl;
+    shacl:maxCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path skos:notation
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Identificator.Toegekenddoorstring>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekendDoorString"@nl;
+    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Identificator.Toegekendop>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekendOp"@nl;
+    shacl:path dc:issued
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Identificator.Toegekenddoor>;
+    shacl:class dc:Agent;
+    shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekendDoor"@nl;
+    shacl:path dc:creator
+  ];
+  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/IndirectelocatieaanduidingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Indirectelocatieaanduiding.Referentie>;
+    shacl:class <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObject>;
+    shacl:description "Referentie naar het ruimtelijk object (plaats of adres) dat gebruikt wordt als indirecte locatie aanduiding."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "referentie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#referentie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#IndirecteLocatieAanduiding> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/InformatietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/#Informatietype> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/InputShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Input.Referentie>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Verwijzing naar originele Input."@nl;
+    shacl:maxCount "1";
+    shacl:name "referentie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Input.Type>;
+    shacl:class dc:type;
+    shacl:description "Aard van de input."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://www.w3.org/ns/ssn/Input> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/InputtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:type .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/IntegerShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:integer .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/KenmerktypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/LangstringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/LocatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass prov:Location .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/MetadataShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Metadata.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Verdere uitleg over de data."@nl;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc11:description
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Metadata.Bron>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Andere data waarvan deze data zijn afgeleid."@nl;
+    shacl:name "bron"@nl;
+    shacl:path dc11:source
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Metadata.Onderwerp>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Waarover de data gaat."@nl;
+    shacl:name "onderwerp"@nl;
+    shacl:path dc11:subject
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Metadata.Rechten>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Informatie over de rechten inherent of van toepassing op de data."@nl;
+    shacl:name "rechten"@nl;
+    shacl:path dc11:rights
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Metadata.Relatie>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Andere data waarmee deze data geassocieerd zijn."@nl;
+    shacl:name "relatie"@nl;
+    shacl:path dc11:relation
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Metadata.Titel>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam gegeven aan de data."@nl;
+    shacl:name "titel"@nl;
+    shacl:path dc11:title
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Metadata.Auteur>;
+    shacl:class dc:Agent;
+    shacl:description "Entiteit die in de eerste plaats verantwoordelijk is voor het onstaan van de data."@nl;
+    shacl:name "auteur"@nl;
+    shacl:path dc11:creator
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Metadata.Datum>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
+    shacl:description "Moment of periode geassocieerd met een gebeurtenis in de levensloop vd data."@nl;
+    shacl:name "datum"@nl;
+    shacl:path dc11:date
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Metadata.Dekking>;
+    shacl:class <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking>;
+    shacl:description "Gebied of periode waarop de data betrekking heeft"@nl;
+    shacl:name "dekking"@nl;
+    shacl:path dc11:coverage
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Metadata.Formaat>;
+    shacl:class <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Formaat>;
+    shacl:description "Het bestandsformaat, fysiek medium of de dimensies van de data."@nl;
+    shacl:name "formaat"@nl;
+    shacl:path dc11:format
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Metadata.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Unieke referentie naar de data."@nl;
+    shacl:name "identificator"@nl;
+    shacl:path dc11:identifier
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Metadata.Medeauteur>;
+    shacl:class dc:Agent;
+    shacl:description "Entiteit die tot de data heeft bijgedragen."@nl;
+    shacl:name "medeAuteur"@nl;
+    shacl:path dc11:contributor
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Metadata.Taal>;
+    shacl:class skos:Concept;
+    shacl:description "Taal waarin de data zijn gesteld."@nl;
+    shacl:name "taal"@nl;
+    shacl:path dc11:language
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Metadata.Type>;
+    shacl:class <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/#Informatietype>;
+    shacl:description "Aard van de data."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc11:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Metadata.Uitgever>;
+    shacl:class dc:Agent;
+    shacl:description "Entiteit verantwoordelijk voor het publiek maken van de data."@nl;
+    shacl:name "uitgever"@nl;
+    shacl:path dc11:publisher
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/MetingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Meting.Resultaat>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>;
+    shacl:description "Resultaat van de Meting."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resultaat"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement.result>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/MomentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/ObservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Observatie.Resultaat>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any>;
+    shacl:description "De waarde van het geobserveerdeKenmerk als resultaat van de Observatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resultaat"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Observatie.Resultaatkwaliteit>;
+    shacl:class <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element>;
+    shacl:description "Mate waarin het resultaat van de Observatie voldoet aan de vereisten of verwachtingen."@nl;
+    shacl:name "resultaatkwaliteit"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Observatie.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Het type van observatie."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Observatie.Uitgevoerddoor>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die de Observatie heeft uitgevoerd."@nl;
+    shacl:name "uitgevoerdDoor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Observatie.Fenomeentijd>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
+    shacl:description "Het moment waarop het resultaat van de Observatie van toepassing was."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "fenomeentijd"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Observatie.Resultaattijd>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>;
+    shacl:description "Tijdstip waarop het resultaat van de Observatie werd bekomen."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resultaattijd"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Observatie.Geobserveerdkenmerk>;
+    shacl:class <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkeIndicator>;
+    shacl:description "Kenmerk dat men observeert vh geobserveerdObject."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geobserveerdKenmerk"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/ObservatieprocedureShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Observatieprocedure.Specificatie>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Verwijzing naar een document dat de Observatieprocedure beschrijft."@nl;
+    shacl:name "specificatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Observatieprocedure.Input>;
+    shacl:class <http://www.w3.org/ns/ssn/Input>;
+    shacl:description "Verwijzing naar de Input die de procedure vereist."@nl;
+    shacl:name "input"@nl;
+    shacl:path <http://www.w3.org/ns/ssn/hasInput>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Observatieprocedure.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de Observatieprocedure."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://www.w3.org/ns/sosa/Procedure> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/ObservatieverzamelingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Observatieverzameling.Geobserveerdobject>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature>;
+    shacl:description "Het Object dat werd geobserveerd."@nl;
+    shacl:maxCount "1";
+    shacl:name "geobserveerdObject"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/hasFeatureOfInterest>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Observatieverzameling.Fenomeentijd>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
+    shacl:description "De fenomeentijd vd Observaties."@nl;
+    shacl:maxCount "1";
+    shacl:name "fenomeentijd"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/phenomenonTime>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Observatieverzameling.Gebruikteprocedure>;
+    shacl:class <http://www.w3.org/ns/sosa/Procedure>;
+    shacl:description "De Procedure die de Observaties gebruikten."@nl;
+    shacl:maxCount "1";
+    shacl:name "gebruikteProcedure"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/usedProcedure>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Observatieverzameling.Geobserveerdkenmerk>;
+    shacl:class <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>;
+    shacl:description "Het Kenmerk dat de Observaties observeerden."@nl;
+    shacl:maxCount "1";
+    shacl:name "geobserveerdKenmerk"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/observedProperty>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/sosa/ObservationCollection> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/OrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Organisatie.Voorkeursnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam waarmee de organisatie bij voorkeur wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "voorkeursnaam"@nl;
+    shacl:path skos:prefLabel
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Organisatie.Activiteit>;
+    shacl:class skos:Concept;
+    shacl:description "Type activiteit die door de organisatie wordt uitgeoefend."@nl;
+    shacl:maxCount "1";
+    shacl:name "activiteit"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#orgActivity>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Organisatie.Contactinfo>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."@nl;
+    shacl:name "contactinfo"@nl;
+    shacl:path schema:contactPoint
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Organisatie.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Soort organisatie."@nl;
+    shacl:name "type"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#orgType>
+  ];
+  shacl:targetClass org:Organization .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/PeriodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/PersoonShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Persoon.Achternaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "achternaam"@nl;
+    shacl:path foaf:familyName
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Persoon.Voornaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam die een kind bij geboorte wordt gegeven. Onderscheidt het kind van de andere kinderen in de familie."@nl;
+    shacl:minCount "1";
+    shacl:name "voornaam"@nl;
+    shacl:path foaf:givenName
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Persoon.Contactinfo>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon... die toelaat de Persoon te contacteren."@nl;
+    shacl:maxCount "1";
+    shacl:name "contactinfo"@nl;
+    shacl:path schema:contactPoint
+  ];
+  shacl:targetClass <http://www.w3.org/ns/person#Person> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/ProcedureShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/sosa/Procedure> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/RuimtelijkeindicatorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Ruimtelijkeindicator.RuimtelijkeIndicatortype>;
+    shacl:class <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkeIndicatorType>;
+    shacl:description "Aanduiding van de ruimtelijke indicator die bestudeerd wordt."@nl;
+    shacl:maxCount "1";
+    shacl:name "ruimtelijke indicatortype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#ruimtelijkeIndicatorType>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Ruimtelijkeindicator.Toetsingtype>;
+    shacl:class <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#ToetsingType>;
+    shacl:description "Vergelijking van twee ruimtelijke indicatoren."@nl;
+    shacl:maxCount "1";
+    shacl:name "toetsingtype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#toetsingType>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkeIndicator> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/RuimtelijkeindicatortypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkeIndicatorType> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/RuimtelijkobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Ruimtelijkobject.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Benaming van het ruimtelijk object."@nl;
+    shacl:maxCount "1";
+    shacl:name "naam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#naam>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Ruimtelijkobject.Geldigheid>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "Periode waarin de grenzen van een ruimtelijk object ongewijzigd bleven."@nl;
+    shacl:minCount "1";
+    shacl:name "geldigheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#geldigheid>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Ruimtelijkobject.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Unieke identificator van een ruimtelijk object."@nl;
+    shacl:maxCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path schemas:identifier
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Ruimtelijkobject.Locatie>;
+    shacl:class prov:Location;
+    shacl:description "Geografische positie van het ruimtelijk object."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "locatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#locatie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Ruimtelijkobject.Type>;
+    shacl:class <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObjectType>;
+    shacl:description "Typering van het ruimtelijk object, i.e., schaalniveau."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObject.type>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Ruimtelijkobject.Source>;
+    shacl:class <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObject>;
+    shacl:description "Ruimtelijk object dat als bron van de ruimtelijk object relatie beschouwd wordt."@nl;
+    shacl:name "source"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#source>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Ruimtelijkobject.Target>;
+    shacl:class <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObject>;
+    shacl:description "Ruimtelijk object dat als eindpunt van de ruimtelijk object relatie beschouwd wordt."@nl;
+    shacl:name "target"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#target>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObject> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/RuimtelijkobjectrelatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Ruimtelijkobjectrelatie.Relatietype>;
+    shacl:class <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObjectRelatieType>;
+    shacl:description "Typering van de relatie tussen twee ruimtelijke objecten."@nl;
+    shacl:name "relatietype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#relatieType>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObjectRelatie> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/RuimtelijkobjectrelatietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObjectRelatieType> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/RuimtelijkobjecttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#RuimtelijkObjectType> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/StringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/TellingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Telling.Resultaat>;
+    shacl:datatype xsd:integer;
+    shacl:description "Resultaat van de Telling."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resultaat"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/CountObservation#OM_CountObservation.result>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/CountObservation#OM_CountObservation> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/TemporeleentiteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/ToetsingtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/ruimtelijke-indicatoren/#ToetsingType> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/UriShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:anyURI .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4/WaarheidsobservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ruimtelijke-indicatoren/ontwerpstandaard/toolchain4#Waarheidsobservatie.Resultaat>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Resultaat van de Waarheidsobservatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resultaat"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/TruthObservation#OM_TruthObservation.result>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/TruthObservation#OM_TruthObservation> .

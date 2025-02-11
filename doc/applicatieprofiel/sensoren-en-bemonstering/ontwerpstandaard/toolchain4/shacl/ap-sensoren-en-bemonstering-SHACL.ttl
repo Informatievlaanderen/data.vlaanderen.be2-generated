@@ -1,0 +1,1256 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/3dobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.opengis.net/ont/gml#Solid> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/AnyShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Resource .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BemonsteraarShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonsteraar.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de Bemonsteraar."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://www.w3.org/ns/sosa/Sampler> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BemonsteraartypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BemonsteringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonstering.Conditie>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:description "Omstandigheden waarin de Bemonstering plaatsvond."@nl;
+    shacl:name "conditie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.conditie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonstering.Wettelijkkader>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#WettelijkKader>;
+    shacl:description "WettelijkKader waarbinnen de Bemonstering plaatsvindt."@nl;
+    shacl:maxCount "1";
+    shacl:name "wettelijkKader"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.wettelijkKader>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonstering.Opdracht>;
+    shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht>;
+    shacl:description "Opdracht in het kader waarvan de Bemonstering plaatsvindt."@nl;
+    shacl:name "opdracht"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.opdracht>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonstering.Bemonsteringstijdstip>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
+    shacl:description "Moment waarop de Bemonstering werd afgerond."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "bemonsteringstijdstip"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/resultTime>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonstering.Uitgevoerddoor>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die de Bemonstering heeft uitgevoerd."@nl;
+    shacl:name "uitgevoerdDoor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.uitgevoerdDoor>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonstering.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de Bemonstering."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonstering.Doel>;
+    shacl:class skos:Concept;
+    shacl:description "Reden waarom de Bemonstering wordt uitgevoerd."@nl;
+    shacl:name "doel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.doel>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/sosa/Sampling> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/Bemonsterings3dobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SamplingSolid#SF_SamplingSolid> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BemonsteringscurveShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BemonsteringsdoelShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BemonsteringsobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonsteringsobject.Herkomst>;
+    shacl:class <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage>;
+    shacl:description "Verwijzing naar de Herkomst van een Bemonsteringsobject."@nl;
+    shacl:maxCount "1";
+    shacl:name "herkomst"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonsteringsobject.Parameter>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:description "Willekeurig gegeven gassocieerd met het Bemonsteringsobject."@nl;
+    shacl:name "parameter"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonsteringsobject.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Verwijzing naar de informatie die het Bemonsteringsobject uniek identificeert."@nl;
+    shacl:minCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonsteringsobject.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van het Bemonsteringsobject."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BemonsteringsobjecttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BemonsteringsobjectverzamelingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BemonsteringsprocedureShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonsteringsprocedure.Specificatie>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Verwijzing naar een document dat de Bemonsteringsprocedure beschrijft."@nl;
+    shacl:name "specificatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsprocedure.specificatie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonsteringsprocedure.Input>;
+    shacl:class <http://www.w3.org/ns/ssn/Input>;
+    shacl:description "Verwijzing naar de Input die de procedure vereist."@nl;
+    shacl:name "input"@nl;
+    shacl:path <http://www.w3.org/ns/ssn/hasInput>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonsteringsprocedure.Output>;
+    shacl:class <http://www.w3.org/ns/ssn/Output>;
+    shacl:description "Verwijzing naar de Output die de Procedure genereert."@nl;
+    shacl:name "output"@nl;
+    shacl:path <http://www.w3.org/ns/ssn/hasOutput>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonsteringsprocedure.Parameter>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:description "Willekeurig gegeven gassocieerd met de Bemonsteringsprocedure."@nl;
+    shacl:name "parameter"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsprocedure.parameter>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Bemonsteringsprocedure.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de Bemonsteringsprocedure."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://www.w3.org/ns/sosa/om#SamplingProcedure> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BemonsteringsproceduretypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BemonsteringsprocesShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Specimen#SF_Process> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BemonsteringspuntShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BemonsteringstypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BemonsteringsvlakShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BenoemdewaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Benoemdewaarde.Naam>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Naam vh type van de waarde."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Benoemdewaarde.Waarde>;
+    shacl:class rdfs:Resource;
+    shacl:description "Kwalitatieve of kwantitatieve invulling van de waarde."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#NamedValue> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BestandsformaatShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:FileFormat .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/BoorgatShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Boorgat.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/sf#Curve>;
+    shacl:description "Geometrie van het Boorgat."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/ConditieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/ssn/systems/Condition> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/CurveShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.opengis.net/ont/sf#Curve> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/DatetimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/DekkingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc11:coverage .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/DimensieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Dimensie> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/DomeinobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Domeinobject.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van het Domeinobject."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/DomeinobjecttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/DoorsnedeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Doorsnede.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/geosparql#Surface>;
+    shacl:description "Geometrie van de Doorsnede."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Section> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/FormaatShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Formaat> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/FunctieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://saref.etsi.org/core/Function> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/GegevensdragerShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:PhysicalMedium .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/GeometrieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Geometrie.Wkt>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "wkt"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Geometrie.Gml>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "gml"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Geometrie.Opmeting>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#Opmeting>;
+    shacl:description "De manier waarop de geometrie werd bepaald."@nl;
+    shacl:maxCount "1";
+    shacl:name "opmeting"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/HerkomstShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/IdentificatorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Identificator.Identificator>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "String gebruikt om het object uniek te identificeren."@nl;
+    shacl:maxCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path skos:notation
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Identificator.ToegekendDoor(string)>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend door (String)"@nl;
+    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Identificator.ToegekendOp>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend op"@nl;
+    shacl:path dc:issued
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Identificator.ToegekendDoor>;
+    shacl:class dc:Agent;
+    shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend door"@nl;
+    shacl:path dc:creator
+  ];
+  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/InformatietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/InputShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Input.Referentie>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Verwijzing naar originele Input."@nl;
+    shacl:maxCount "1";
+    shacl:name "referentie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Input.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de input."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://www.w3.org/ns/ssn/Input> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/InputtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/IntervalShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Interval.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/sf#Curve>;
+    shacl:description "Geometrie van het Interval."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Interval> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/KaarthorizonShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Kaarthorizon.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/geosparql#Surface>;
+    shacl:description "Geometrie van de Kaarthorizon."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#MapHorizon> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/KenmerktypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/KwadraatShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Kwadraat.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/geosparql#Surface>;
+    shacl:description "Geometrie vh Kwadraat."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Quadrat> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/KwaliteitselementShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/LangstringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/LidarpuntenwolkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Lidarpuntenwolk.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/gml#Solid>;
+    shacl:description "geometrie vd LIDARpuntenwolk"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#LidarCloud> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/LiteralShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Literal .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/LocatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass prov:Location .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/MaatShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/MateriaalklasseShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/MetadataShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Metadata.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Verdere uitleg over de data."@nl;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc11:description
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Metadata.Rechten>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Informatie over de rechten inherent of van toepassing op de data."@nl;
+    shacl:name "rechten"@nl;
+    shacl:path dc11:rights
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Metadata.Onderwerp>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Waarover de data gaat."@nl;
+    shacl:name "onderwerp"@nl;
+    shacl:path dc11:subject
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Metadata.Titel>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam gegeven aan de data."@nl;
+    shacl:name "titel"@nl;
+    shacl:path dc11:title
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Metadata.Bron>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Andere data waarvan deze data zijn afgeleid."@nl;
+    shacl:name "bron"@nl;
+    shacl:path dc11:source
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Metadata.Relatie>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Andere data waarmee deze data geassocieerd zijn."@nl;
+    shacl:name "relatie"@nl;
+    shacl:path dc11:relation
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Metadata.Medeauteur>;
+    shacl:class dc:Agent;
+    shacl:description "Entiteit die tot de data heeft bijgedragen."@nl;
+    shacl:name "medeAuteur"@nl;
+    shacl:path dc11:contributor
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Metadata.Auteur>;
+    shacl:class dc:Agent;
+    shacl:description "Entiteit die in de eerste plaats verantwoordelijk is voor het onstaan van de data."@nl;
+    shacl:name "auteur"@nl;
+    shacl:path dc11:creator
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Metadata.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Unieke referentie naar de data."@nl;
+    shacl:name "identificator"@nl;
+    shacl:path dc11:identifier
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Metadata.Uitgever>;
+    shacl:class dc:Agent;
+    shacl:description "Entiteit verantwoordelijk voor het publiek maken van de data."@nl;
+    shacl:name "uitgever"@nl;
+    shacl:path dc11:publisher
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Metadata.Dekking>;
+    shacl:class dc11:coverage;
+    shacl:description "Gebied of periode waarop de data betrekking heeft"@nl;
+    shacl:name "dekking"@nl;
+    shacl:path dc11:coverage
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Metadata.Formaat>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#Formaat>;
+    shacl:description "Het bestandsformaat, fysiek medium of de dimensies van de data."@nl;
+    shacl:name "formaat"@nl;
+    shacl:path dc11:format
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Metadata.Taal>;
+    shacl:class skos:Concept;
+    shacl:description "Taal waarin de data zijn gesteld."@nl;
+    shacl:name "taal"@nl;
+    shacl:path dc11:language
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Metadata.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de data."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc11:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Metadata.Datum>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
+    shacl:description "Moment of periode geassocieerd met een gebeurtenis in de levensloop vd data."@nl;
+    shacl:name "datum"@nl;
+    shacl:path dc11:date
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/MijnShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Mijn.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/gml#Solid>;
+    shacl:description "Geometrie van de Mijn."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Mine> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/MijnniveauShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Mijnniveau.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/geosparql#Surface>;
+    shacl:description "Geometrie van het mijnniveau."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#MineLevel> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/MomentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/MonsterShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Monster.Materiaalklasse>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van het materiaal waaruit het Monster bestaat."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "materiaalklasse"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.materialClass>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Monster.Bemonsteringstijdstip>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
+    shacl:description "Tijdstip waarop het monster werd verkregen uit het bemonsterdObject."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "bemonsteringstijdstip"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Monster.Bemonsteringsplaats>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "Locatie waar het Monster werd genomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "bemonsteringsplaats"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Monster.Huidigelocatie>;
+    shacl:class prov:Location;
+    shacl:description "Locatie vh Monster."@nl;
+    shacl:maxCount "1";
+    shacl:name "huidigeLocatie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Monster.Monstertype>;
+    shacl:class skos:Concept;
+    shacl:description "Vorm waarin het Monster werd bekomen;"@nl;
+    shacl:maxCount "1";
+    shacl:name "monstertype"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Monster.Grootte>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>;
+    shacl:description "Fysieke omvang van het Monster."@nl;
+    shacl:maxCount "1";
+    shacl:name "grootte"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.size>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Monster.Bemonsteringsmethode>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Specimen#SF_Process>;
+    shacl:description "Manier waarop het Monster is verkregen uit het bemonsterd Object."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "bemonsteringsmethode"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/MonstertypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/MonstervoorbereidingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Monstervoorbereiding.Tijdstip>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
+    shacl:description "Moment waarop de voorbereiding gebeurt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "tijdstip"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Monstervoorbereiding.Procesoperator>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die de voorbereiding uitvoert."@nl;
+    shacl:maxCount "1";
+    shacl:name "procesoperator"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processOperator>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/ObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/ObservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatie.Parameter>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:description "Willekeurig gegeven gassocieerd met het gebeuren van de Observatie."@nl;
+    shacl:name "parameter"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatie.Fenomeentijd>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
+    shacl:description "Het moment waarop het resultaat van de Observatie van toepassing was."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "fenomeentijd"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatie.Resultaattijd>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>;
+    shacl:description "Tijdstip waarop het resultaat van de Observatie werd bekomen."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resultaattijd"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatie.Geldigetijd>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period>;
+    shacl:description "Periode waarvoor het resultaat van de Observatie geldt."@nl;
+    shacl:maxCount "1";
+    shacl:name "geldigeTijd"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatie.Resultaatkwaliteit>;
+    shacl:class <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element>;
+    shacl:description "Mate waarin het resultaat van de Observatie voldoet aan de vereisten of verwachtingen."@nl;
+    shacl:name "resultaatkwaliteit"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatie.Resultaat>;
+    shacl:class rdfs:Resource;
+    shacl:description "De waarde van het geobserveerdeKenmerk als resultaat van de Observatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resultaat"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatie.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Het type van observatie."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatie.Opdracht>;
+    shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht>;
+    shacl:description "Opdracht in het kader waarvan de Observatie plaatsvindt."@nl;
+    shacl:name "opdracht"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.opdracht>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatie.Uitgevoerddoor>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die de Observatie heeft uitgevoerd."@nl;
+    shacl:name "uitgevoerdDoor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatie.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "De persoon of het ding dat dient om de observatie vast te stellen."@nl;
+    shacl:name "identificator"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/ObservatiecontextShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatiecontext.Rol>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de samenhang."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "rol"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#ObservationContext> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/ObservatiecontexttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/ObservatieprocedureShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatieprocedure.Specificatie>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Verwijzing naar een document dat de Observatieprocedure beschrijft."@nl;
+    shacl:name "specificatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatieprocedure.Input>;
+    shacl:class <http://www.w3.org/ns/ssn/Input>;
+    shacl:description "Verwijzing naar de Input die de procedure vereist."@nl;
+    shacl:name "input"@nl;
+    shacl:path <http://www.w3.org/ns/ssn/hasInput>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatieprocedure.Output>;
+    shacl:class <http://www.w3.org/ns/ssn/Output>;
+    shacl:description "Verwijzing naar de Output die de Procedure genereert."@nl;
+    shacl:name "output"@nl;
+    shacl:path <http://www.w3.org/ns/ssn/hasOutput>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatieprocedure.Parameter>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:description "Willekeurig gegeven gassocieerd met de Observatieprocedure."@nl;
+    shacl:name "parameter"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.parameter>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatieprocedure.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de Observatieprocedure."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://www.w3.org/ns/sosa/om#ObservationProcedure> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/ObservatieproceduretypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/ObservatieputShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatieput.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/sf#Curve>;
+    shacl:description "Geometrie vd Observatieput."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#ObservationWell> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/ObservatietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/ObservatieverzamelingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatieverzameling.Resultaattijd>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "De resultaattijd van de Observaties."@nl;
+    shacl:maxCount "1";
+    shacl:name "resultaattijd"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/resultTime>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatieverzameling.Geobserveerdobject>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature>;
+    shacl:description "Het Object dat werd geobserveerd."@nl;
+    shacl:maxCount "1";
+    shacl:name "geobserveerdObject"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/hasFeatureOfInterest>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatieverzameling.Uitgevoerdmetsensor>;
+    shacl:class <https://www.w3.org/ns/sosa/Sensor>;
+    shacl:description "De sensor waarmee de Observaties in de collectie zijn uitgevoerd."@nl;
+    shacl:maxCount "1";
+    shacl:name "uitgevoerdMetsensor"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/madeBySensor>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatieverzameling.Geobserveerdkenmerk>;
+    shacl:class <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>;
+    shacl:description "Het Kenmerk dat de Observaties observeerden."@nl;
+    shacl:maxCount "1";
+    shacl:name "geobserveerdKenmerk"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/observedProperty>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatieverzameling.Fenomeentijd>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
+    shacl:description "De fenomeentijd vd Observaties."@nl;
+    shacl:maxCount "1";
+    shacl:name "fenomeentijd"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/phenomenonTime>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatieverzameling.Gebruikteprocedure>;
+    shacl:class <http://www.w3.org/ns/sosa/om#ObservationProcedure>;
+    shacl:description "De Procedure die de Observaties gebruikten."@nl;
+    shacl:maxCount "1";
+    shacl:name "gebruikteProcedure"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/usedProcedure>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Observatieverzameling.Parameter>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:description "Parameter van de Observaties in de collectie."@nl;
+    shacl:maxCount "1";
+    shacl:name "parameter"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieverzameling.parameter>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/sosa/ObservationCollection> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/OntsluitingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Outcrop> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/OpdrachtShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/OpmetingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Opmeting.Opnamedatum>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum waarop de Opmeting plaatsvond."@nl;
+    shacl:maxCount "1";
+    shacl:name "opnamedatum"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#opnamedatum>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Opmeting.Methode>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de gebruikte methode."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "methode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.methode>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Opmeting.Uitgevoerddoor>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die de Opmeting heeft uitgevoerd."@nl;
+    shacl:maxCount "1";
+    shacl:name "uitgevoerdDoor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Opmeting> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/OpmetingmethodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/OutputShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Output.Referentie>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Verwijzing naar originele Output."@nl;
+    shacl:maxCount "1";
+    shacl:name "referentie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Output.referentie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Output.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de Output."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://www.w3.org/ns/ssn/Output> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/OutputtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/OverlevingscapaciteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Overlevingscapaciteit.Conditie>;
+    shacl:class <http://www.w3.org/ns/ssn/systems/Condition>;
+    shacl:description "Voorwaarde waaronder de opgegeven levensduur geldt."@nl;
+    shacl:minCount "1";
+    shacl:name "conditie"@nl;
+    shacl:path <http://www.w3.org/ns/ssn/systems/inCondition>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Overlevingscapaciteit.Kenmerk>;
+    shacl:class <http://www.w3.org/ns/ssn/systems/SurvivalProperty>;
+    shacl:description "Aspect van de Overlevingscapaciteit dat wordt beschouwd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "kenmerk"@nl;
+    shacl:path <http://www.w3.org/ns/ssn/systems/hasSurvivalProperty>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/ssn/systems/SurvivalRange> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/OverlevingskenmerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/ssn/systems/SurvivalProperty> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/PeilpuntShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Peilpunt.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/sf#Point>;
+    shacl:description "Geometrie vh Peilpunt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Sounding> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/PeriodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/PlatformShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Platform.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard vh Platform."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <https://www.w3.org/ns/sosa/Platform> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/PlatformtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/PositionelenauwkeurigheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/ProcedureShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/sosa/Procedure> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/ProcesShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#OM_Process> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/ProfielShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Profiel.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/sf#Curve>;
+    shacl:description "Geometrie vh Profiel."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingCurve.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Profile> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/PuntShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.opengis.net/ont/sf#Point> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/RuimtelijkbemonsteringsobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Ruimtelijkbemonsteringsobject.Geometrie>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "Geometrie van het RuimtelijkBemonsteringsobject."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Ruimtelijkbemonsteringsobject.Positionelenauwkeurigheid>;
+    shacl:class <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy>;
+    shacl:description "Nauwkeurigheid waarmee de geometrie is bepaald."@nl;
+    shacl:maxCount "2";
+    shacl:name "positioneleNauwkeurigheid"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.positionalAccuracy>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Ruimtelijkbemonsteringsobject.Gehostplatform>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#OM_Process>;
+    shacl:description "Procedure die of instrument dat in of op het RuimtelijkBemonsteringsobject is geïnstalleerd."@nl;
+    shacl:name "gehostPlatform"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/SceneShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Scene.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/geosparql#Surface>;
+    shacl:description "Geometrie vd Scene."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Scene> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/SensorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://www.w3.org/ns/sosa/Sensor> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/StationShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Station.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/sf#Point>;
+    shacl:description "Geometrie vh Station."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Station> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/StringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/SysteemShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Systeem.Capaciteit>;
+    shacl:class <http://www.w3.org/ns/ssn/systems/SystemCapacity>;
+    shacl:description "Capaciteit vh Systeem."@nl;
+    shacl:name "capaciteit"@nl;
+    shacl:path <http://www.w3.org/ns/ssn/systems/hasSystemCapability>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Systeem.Werkingsbereik>;
+    shacl:class <http://www.w3.org/ns/ssn/systems/OperatingRange>;
+    shacl:description "Werking vh Systeem."@nl;
+    shacl:name "werkingsbereik"@nl;
+    shacl:path <http://www.w3.org/ns/ssn/systems/hasOperatingRange>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Systeem.Overlevingsbereik>;
+    shacl:class <http://www.w3.org/ns/ssn/systems/SurvivalRange>;
+    shacl:description "Levensduur vh Systeem."@nl;
+    shacl:name "overlevingsbereik"@nl;
+    shacl:path <http://www.w3.org/ns/ssn/systems/hasSurvivalRange>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Systeem.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard vh Systeem."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://www.w3.org/ns/ssn/System> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/SysteemkenmerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/SysteemtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/SysteemvermogenShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Systeemvermogen.Kenmerk>;
+    shacl:class <http://www.w3.org/ns/ssn/systems/SystemProperty>;
+    shacl:description "Aspect van het Systeemvermogen dat wordt beschouwd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "kenmerk"@nl;
+    shacl:path <http://www.w3.org/ns/ssn/systems/hasSystemProperty>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Systeemvermogen.Conditie>;
+    shacl:class <http://www.w3.org/ns/ssn/systems/Condition>;
+    shacl:description "Voorwaarde waaronder de opgegeven capaciteit geldt."@nl;
+    shacl:minCount "1";
+    shacl:name "conditie"@nl;
+    shacl:path <http://www.w3.org/ns/ssn/systems/inCondition>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/ssn/systems/SystemCapacity> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/TaakShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://saref.etsi.org/core/Task> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/TaalcodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/TemporeleentiteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/ToestelShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Toestel.Fabrikant>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de fabrikant."@nl;
+    shacl:maxCount "1";
+    shacl:name "fabrikant"@nl;
+    shacl:path <https://saref.etsi.org/core/hasManufacturer>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Toestel.Model>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam vh model vh Toestel."@nl;
+    shacl:maxCount "1";
+    shacl:name "model"@nl;
+    shacl:path <https://saref.etsi.org/core/hasModel>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Toestel.Functie>;
+    shacl:class <https://saref.etsi.org/core/Function>;
+    shacl:description "Functie die het Toestel kan uitvoeren met het oog op het uitvoeren van een taak."@nl;
+    shacl:minCount "1";
+    shacl:name "functie"@nl;
+    shacl:path <https://saref.etsi.org/core/hasFunction>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Toestel.Taak>;
+    shacl:class <https://saref.etsi.org/core/Task>;
+    shacl:description "Taak die met het Toestel kan worden uitgevoerd waarvoor het Toestel ontworpen is."@nl;
+    shacl:minCount "1";
+    shacl:name "taak"@nl;
+    shacl:path <https://saref.etsi.org/core/accomplishes>
+  ];
+  shacl:targetClass <https://saref.etsi.org/core/Device> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/TrajectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Traject.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/sf#Curve>;
+    shacl:description "Geometrie van het Traject."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Trajectory> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/TraverseShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Traverse.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/sf#Curve>;
+    shacl:description "Geometrie vd Traverse."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Traverse> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/UriShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:anyURI .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/VlakShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.opengis.net/ont/geosparql#Surface> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/WerkingsbereikShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Werkingsbereik.Conditie>;
+    shacl:class <http://www.w3.org/ns/ssn/systems/Condition>;
+    shacl:description "Voorwaarde waaronder het normaal functioneren geldt."@nl;
+    shacl:minCount "1";
+    shacl:name "conditie"@nl;
+    shacl:path <http://www.w3.org/ns/ssn/systems/inCondition>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Werkingsbereik.Kenmerk>;
+    shacl:class <http://www.w3.org/ns/ssn/systems/OperatingProperty>;
+    shacl:description "Aspect van het Werkingsbereik dat wordt beschouwd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "kenmerk"@nl;
+    shacl:path <http://www.w3.org/ns/ssn/systems/hasOperatingProperty>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/ssn/systems/OperatingRange> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/WerkingskenmerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/ssn/systems/OperatingProperty> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/WettelijkkaderShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#WettelijkKader> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/ZwadShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4#Zwad.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/geosparql#Surface>;
+    shacl:description "Geometrie vh Zwad."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Swath> .
