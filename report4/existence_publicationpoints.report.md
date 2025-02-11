@@ -26,10 +26,8 @@ index.html check
 #||#    + checking /home/circleci/project/config/dev/begraafplaats.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/ns/openbaardomein/begraafplaats'
 
 index.html check
-error: missing '/tmp/generated/ns/openbaardomein/begraafplaats/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/besluit-mobiliteit.publication.json
 #||# 
@@ -78,16 +76,8 @@ error: missing '/tmp/generated/ns/bestuurlijk-sanctieregister/index.html'
 #||#    + checking /home/circleci/project/config/dev/bodem-en-ondergrond.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/ns/bodem-en-ondergrond/'
-error: missing '/tmp/generated/ns/grondboringen/'
-error: missing '/tmp/generated/ns/bodem-en-ondergrond/observaties'
-error: missing '/tmp/generated/ns/bodem-en-ondergrond/interpretaties/'
 
 index.html check
-error: missing '/tmp/generated/ns/bodem-en-ondergrond//index.html'
-error: missing '/tmp/generated/ns/grondboringen//index.html'
-error: missing '/tmp/generated/ns/bodem-en-ondergrond/observaties/index.html'
-error: missing '/tmp/generated/ns/bodem-en-ondergrond/interpretaties//index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bodem-en-ondergrond/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/toolchain4/index.html'
