@@ -453,3 +453,66 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/dev/persoon.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/persoon/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/dev/publicatie-advertentie.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/ruimtelijkebereiken.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/sb.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/schuldbeheer.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/slim-ruimtelijk-plannen.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/slimme-raadpleegomgeving.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/slimme-stadsdistributie.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/subsidie.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/toestemming.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/toestemming/ontwerpstandaard/toolchain4/index.html'
+

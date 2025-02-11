@@ -1,0 +1,1191 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/AanbiederShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Aanbieder.Voorkeursnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam waarmee de Organisatie bij voorkeur wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "voorkeursnaam"@nl;
+    shacl:path skos:prefLabel
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Aanbieder.Contactinfo>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."@nl;
+    shacl:name "contactinfo"@nl;
+    shacl:path schema:contactPoint
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Aanbieder.Registratie>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificator die de organisatie verkreeg bij registratie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "registratie"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#registration>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Aanbieder> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/AandrijftypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/AfmetingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Afmeting.Type>;
+    shacl:class <https://data.vlaanderen.be/ns/slimme-stadsdistributie#AfmetingType>;
+    shacl:description "Het type dimensie waarop de afmeting van toepassing is"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#type>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Afmeting.Waarde>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "De waarde van de afmeting"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#waarde>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Afmeting> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/AfmetingtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#AfmetingType> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/BedieningswijzeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Bedieningswijze> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/BeladingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Belading.Afmeting>;
+    shacl:class <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Afmeting>;
+    shacl:description "De fysieke dimensies van de totale lading die in een voertuig is geplaatst."@nl;
+    shacl:name "afmeting"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Belading.afmeting>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Belading> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/BenoemdewaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Benoemdewaarde.Naam>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/Names#GenericName>;
+    shacl:description "Naam vh type van de waarde."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Benoemdewaarde.Waarde>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any>;
+    shacl:description "Kwalitatieve of kwantitatieve invulling van de waarde."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#NamedValue> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/BeschikbaarheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Beschikbaarheid.Openingsurenstring>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Uren waarop iets beschikbaar is."@nl;
+    shacl:maxCount "1";
+    shacl:name "openingsurenString"@nl;
+    shacl:path schema:openingHours
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Beschikbaarheid.Dienstregeling>;
+    shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Dienstregeling>;
+    shacl:description "Schema met tijdstippen waarop iets wordt aangeboden."@nl;
+    shacl:maxCount "1";
+    shacl:name "dienstregeling"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#dienstregeling>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Beschikbaarheid.Gebruiker>;
+    shacl:class skos:Concept;
+    shacl:description "Type gebruiker waarvoor de beschikbaarheid geldt."@nl;
+    shacl:maxCount "1";
+    shacl:name "gebruiker"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#gebruiker>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Beschikbaarheid.Openingsuren>;
+    shacl:class schema:OpeningHoursSpecification;
+    shacl:description "Uren waarop iets beschikbaar is."@nl;
+    shacl:maxCount "1";
+    shacl:name "openingsuren"@nl;
+    shacl:path schemas:hoursAvailable
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Beschikbaarheid.Periode>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "Periode waarin iets beschikbaar is."@nl;
+    shacl:maxCount "1";
+    shacl:name "periode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#periode>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#StandaardEenheid> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/BewegingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Beweging> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/ContactinfoShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Contactinfo.Aanschrijfvorm>;
+    shacl:datatype rdf:langString;
+    shacl:description "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen."@nl;
+    shacl:maxCount "1";
+    shacl:name "aanschrijfvorm"@nl;
+    shacl:path vcard:honorific-prefix
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Contactinfo.Contactnaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam van bvb de persoon die men kan contacteren."@nl;
+    shacl:maxCount "1";
+    shacl:name "contactnaam"@nl;
+    shacl:path foaf:name
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Contactinfo.Email>;
+    shacl:datatype xsd:string;
+    shacl:description "Email-adres waarnaar men kan mailen."@nl;
+    shacl:maxCount "1";
+    shacl:name "email"@nl;
+    shacl:path schema:email
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Contactinfo.Fax>;
+    shacl:datatype xsd:string;
+    shacl:description "Faxnummer waarnaar men kan faxen."@nl;
+    shacl:maxCount "1";
+    shacl:name "fax"@nl;
+    shacl:path schema:faxNumber
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Contactinfo.Openingsuren>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Uren waarbinnen contact kan worden opgenomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "openingsuren"@nl;
+    shacl:path schema:openingHours
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Contactinfo.Telefoon>;
+    shacl:datatype xsd:string;
+    shacl:description "Telefoonnummer waarop men kan bellen."@nl;
+    shacl:maxCount "1";
+    shacl:name "telefoon"@nl;
+    shacl:path schema:telephone
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Contactinfo.Website>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Website waarnaar men kan surfen."@nl;
+    shacl:maxCount "1";
+    shacl:name "website"@nl;
+    shacl:path foaf:page
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Contactinfo.Adres>;
+    shacl:class <http://www.w3.org/ns/locn#Address>;
+    shacl:description "Adres dat men kan aanschrijven of bezoeken."@nl;
+    shacl:maxCount "1";
+    shacl:name "adres"@nl;
+    shacl:path <http://www.w3.org/ns/locn#address>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Contactinfo.Beschikbaarheid>;
+    shacl:class schema:OpeningHoursSpecification;
+    shacl:description "Periode waarin contact kan worden opgenomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschikbaarheid"@nl;
+    shacl:path schema:hoursAvailable
+  ];
+  shacl:targetClass schema:ContactPoint .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/DatetimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/DecimalShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Decimal> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/DienstverleningtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/DurationShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:duration .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/FormeleOrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass org:FormalOrganization .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/GeografischeNaamShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/GeometrieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Geometrie.Gml>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "gml"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Geometrie.Wkt>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "wkt"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/GeregistreerdeOrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#GeregistreerdeOrganisatie.WettelijkeNaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Wettelijk geregistreerde naam vd organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "wettelijke naam"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#legalName>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#GeregistreerdeOrganisatie.Rechtspersoonlijkheid>;
+    shacl:class <https://data.vlaanderen.be/ns/organisatie#Rechtspersoonlijkheidtype>;
+    shacl:description "Geeft aan of de rechtspersoonlijkheid van de Geregistreerde Organisatie deze is van een natuurlijk persoon of van een rechtspersoon."@nl;
+    shacl:maxCount "1";
+    shacl:name "rechtspersoonlijkheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#GeregistreerdeOrganisatie.Rechtstoestand>;
+    shacl:class <https://data.vlaanderen.be/ns/organisatie#Rechtstoestandtype>;
+    shacl:description "Status van de Geregistreerde Organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "rechtstoestand"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#rechtstoestand>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#GeregistreerdeOrganisatie.Rechtsvorm>;
+    shacl:class <https://data.vlaanderen.be/ns/organisatie#Rechtsvormtype>;
+    shacl:description "Juridisch statuut van de Geregistreerde Organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "rechtsvorm"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#rechtsvorm>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#GeregistreerdeOrganisatie.Organisatieregistratie>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificator dat de organisatie verkreeg bij registratie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "organisatieregistratie"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#registration>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/regorg#RegisteredOrganization> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/GerichteLinkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#GerichteLink.Richting>;
+    shacl:class skos:Concept;
+    shacl:description "Geeft aan of de richting van de link overeenstemt met zijn positieve of zijn negatieve richting."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "richting"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#richting>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#GerichteLink> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/GeslachtShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/GetypeerdeStringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Literal .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/GewichtsklasseShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Gewichtsklasse> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/IdentificatorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Identificator.Identificator>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "String gebruikt om het object uniek te identificeren."@nl;
+    shacl:maxCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path skos:notation
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Identificator.ToegekendOp>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend op"@nl;
+    shacl:path dc:issued
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Identificator.GestructureerdeIdentificator>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator>;
+    shacl:description "Identificator vh object opgesplitst in zijn onderdelen."@nl;
+    shacl:maxCount "1";
+    shacl:name "gestructureerde identificator"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Identificator.ToegekendDoor>;
+    shacl:class dc:Agent;
+    shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend door"@nl;
+    shacl:path dc:creator
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Identificator.ToegekendDoor(string)>;
+    shacl:class dc:Agent;
+    shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend door (String)"@nl;
+    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/InfrastructuurelementShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Infrastructuurelement.Type>;
+    shacl:class <https://data.vlaanderen.be/ns/slimme-stadsdistributie#TypeInfrastructuurelement>;
+    shacl:description "Het type beschrijft de specifieke categorie of variant waartoe een infrastructuurelement behoort, gebaseerd op zijn functionele kenmerken, ontwerp of gebruiksdoel."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Infrastrcutuurelement.type>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Infrastructuurelement.Bedieningswijze>;
+    shacl:class <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Bedieningswijze>;
+    shacl:description "De bedieningswijze beschrijft de methode of het mechanisme waarmee een infrastructuurelement wordt bestuurd, gecontroleerd of bediend."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "bedieningswijze"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Infrastrcutuurelement.bedieningswijze>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Infrastructuurelement.Locatie>;
+    shacl:class prov:Location;
+    shacl:description "De locatie beschrijft de geografische positie of plaats waar een infrastructuurelement zich bevindt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "locatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Infrastrcutuurelement.locatie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Infrastructuurelement> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/IntegerShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:integer .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/KenmerktypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/KwaliteitselementShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/KwantitatieveWaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#KwantitatieveWaarde.Eenheid>;
+    shacl:datatype xsd:string;
+    shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "eenheid"@nl;
+    shacl:path schemas:unitText
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#KwantitatieveWaarde.StandaardEenheid>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#StandaardEenheid>;
+    shacl:description "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "standaard eenheid"@nl;
+    shacl:path schemas:unitCode
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#KwantitatieveWaarde.Waarde>;
+    shacl:class schemas:Number;
+    shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path schemas:value
+  ];
+  shacl:targetClass schemas:QuantitativeValue .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/LeveringsvergunningShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Leveringsvergunning> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/LijnstringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.opengis.net/ont/sf#LineString> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/LocatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass prov:Location .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/MilieuklasseShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Milieuklasse> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/MobiliteitsdienstShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsdienst.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de Mobiliteitsdienst."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path dc:title
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsdienst.Aandrijving>;
+    shacl:class skos:Concept;
+    shacl:description "Aandrijving van het vervoermiddel waarmee of waarvoor de Mobiliteitsdienst doorgaans wordt georganiseerd."@nl;
+    shacl:name "aandrijving"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst.aandrijving>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsdienst.Beschikbaarheid>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#StandaardEenheid>;
+    shacl:description "Beschikbaarheid van de Mobiliteitsdienst."@nl;
+    shacl:name "beschikbaarheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst.beschikbaarheid>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsdienst.RuimtelijkeDekking>;
+    shacl:class dc:Location;
+    shacl:description "Gebied of Plaats waarbinnen de Mobiliteitsdienst wordt aangeboden."@nl;
+    shacl:name "ruimtelijke dekking"@nl;
+    shacl:path dc:spatial
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsdienst.Toegankelijkheid>;
+    shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Toegankelijkheid>;
+    shacl:description "Toegankelijkheid van de Mobiliteitsdienst."@nl;
+    shacl:name "toegankelijkheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst.toegankelijkheid>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsdienst.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de mobiliteitsdienst."@nl;
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsdienst.Vervoermiddel>;
+    shacl:class skos:Concept;
+    shacl:description "Vervoermiddel waarmee of waarvoor de Mobiliteitsdienst doorgaans wordt georganiseerd."@nl;
+    shacl:name "vervoermiddel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst.vervoermiddel>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/MobiliteitsvergunningShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsvergunning.Status>;
+    shacl:class <https://data.vlaanderen.be/ns/slimme-stadsdistributie#VergunningsStatus>;
+    shacl:description "De status van een vergunning"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "status";
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#status>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsvergunning.Werkingsgebied>;
+    shacl:class dc:Location;
+    shacl:description "Het specifieke geografische gebied of de zones waarin de vergunning geldig is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "werkingsgebied"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Mobiliteitsvergunning.werkingsgebied>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsvergunning.Vrijgesteldvan>;
+    shacl:class <https://datexbrowserv34.tamtamresearch.com/#/class/ns/TrafficRegulation/pkg/Classes.TrafficRegulation/cls/TrafficRegulation>;
+    shacl:description "De specifieke uitzonderingen of ontheffingen die aan een vergunning zijn verleend, waardoor bepaalde regels of beperkingen niet van toepassing zijn"@nl;
+    shacl:name "vrijgesteldVan"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Mobiliteitsvergunning.vrijgesteldVan>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsvergunning.AfgeleverdDoor>;
+    shacl:class dc:Agent;
+    shacl:description "De Agent die de vergunning afgeleverd heeft."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "afgeleverd door"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Mobiliteitsvergunning.afgeleverdDoor>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsvergunning.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Een unieke code die specifiek wordt toegewezen aan een mobiliteitsvergunning om deze te identificeren."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Mobiliteitsvergunning.identificator>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsvergunning.Beweging>;
+    shacl:class <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Beweging>;
+    shacl:description "De dynamische activiteit die plaatsvindt tijdens het transportproces van goederen binnen een stedelijk distributienetwerk."@nl;
+    shacl:maxCount "1";
+    shacl:name "beweging"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Mobiliteitsvergunning.beweging>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsvergunning.Periode>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
+    shacl:description "Moment of periode waar de vergunning van toepassing is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "periode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Mobiliteitsvergunning.periode>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsvergunning.AfgeleverdAan>;
+    shacl:class dc:Agent;
+    shacl:description "De Agent waar de vergunning aan werd afgeleverd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "afgeleverd aan"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Mobiliteitsvergunning.afgeleverdAan>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsvergunning.Voertuig>;
+    shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Resource>;
+    shacl:description "Het transportmiddel dat onder de vergunning is goedgekeurd."@nl;
+    shacl:name "voertuig"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Mobiliteitsvergunning.voertuig>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsvergunning.TypeVracht>;
+    shacl:class <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Vrachttype>;
+    shacl:description "De specifieke categorie of aard van de goederen die onder de vergunning mogen worden vervoerd"@nl;
+    shacl:name "type vracht"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Mobiliteitsvergunning.typeVracht>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsvergunning.Mobiliteitsdienst>;
+    shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst>;
+    shacl:description "Het specifieke type dienst of activiteit waarvoor de vergunning is verleend"@nl;
+    shacl:name "mobiliteitsdienst"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Mobiliteitsvergunning.mobiliteitsdienst>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Mobiliteitsvergunning.OnderhevigAan>;
+    shacl:class <https://datexbrowserv34.tamtamresearch.com/#/class/ns/TrafficRegulation/pkg/Classes.TrafficRegulation/cls/TrafficRegulation>;
+    shacl:description "De specifieke verkeersregelingen en -voorschriften waaraan de houder van een mobiliteitsvergunning zich moet blijven houden, ondanks de verleende vergunning."@nl;
+    shacl:name "onderhevig aan"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Mobiliteitsvergunning.onderhevigAan>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Mobiliteitsvergunning> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/MomentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/ObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/ObservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Observatie.Fenomeentijd>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
+    shacl:description "Het moment waarop het resultaat van de Observatie van toepassing was."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "fenomeentijd"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Observatie.Geldigetijd>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "Periode waarvoor het resultaat van de Observatie geldt."@nl;
+    shacl:maxCount "1";
+    shacl:name "geldigeTijd"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Observatie.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "De persoon of het ding dat dient om de observatie vast te stellen."@nl;
+    shacl:name "identificator"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Observatie.Opdracht>;
+    shacl:class <https://data.vlaanderen.be/ns/observaties-en-metingen#Opdracht>;
+    shacl:description "Opdracht in het kader waarvan de Observatie plaatsvindt."@nl;
+    shacl:name "opdracht"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.opdracht>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Observatie.Parameter>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:description "Willekeurig gegeven gassocieerd met het gebeuren van de Observatie."@nl;
+    shacl:name "parameter"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Observatie.Resultaat>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any>;
+    shacl:description "De waarde van het geobserveerdeKenmerk als resultaat van de Observatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resultaat"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Observatie.Resultaatkwaliteit>;
+    shacl:class <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element>;
+    shacl:description "Mate waarin het resultaat van de Observatie voldoet aan de vereisten of verwachtingen."@nl;
+    shacl:name "resultaatkwaliteit"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Observatie.Resultaattijd>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>;
+    shacl:description "Tijdstip waarop het resultaat van de Observatie werd bekomen."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resultaattijd"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Observatie.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Het type van observatie."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Observatie.Uitgevoerddoor>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die de Observatie heeft uitgevoerd."@nl;
+    shacl:name "uitgevoerdDoor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/ObservatietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/OpeningsurenspecificatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass schema:OpeningHoursSpecification .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/OrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass org:Organization .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/OrganisatieactiviteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#OrganisatieActiviteit> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/OrganisatieclassificatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#OrganisatieClassificatie> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/OrganisatiestatusShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#OrganisatieStatus> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/OrganisatietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#OrganisatieType> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/ParkeervergunningShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Parkeervergunning> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/PeriodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/PersoonShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/person#Person> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/PlaatsShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Plaats.Plaatsnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de plaats of van het gebied."@nl;
+    shacl:minCount "1";
+    shacl:name "plaatsnaam"@nl;
+    shacl:path rdfs:label
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Plaats.Geometrie>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "Geometrie van de plaats of het gebied."@nl;
+    shacl:maxCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://www.w3.org/ns/locn#geometry>
+  ];
+  shacl:targetClass dc:Location .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/PolygoonShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.opengis.net/ont/sf#Polygon> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/PuntShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Punt.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/sf#Point>;
+    shacl:description "De ruimtelijke aanduiding van het punt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Punt.geometrie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Punt>,
+    <http://www.opengis.net/ont/sf#Point> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/RechtspersoonlijkheidtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#Rechtspersoonlijkheidtype> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/RechtstoestandtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#Rechtstoestandtype> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/RechtsvormtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#Rechtsvormtype> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/RegeltypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#RegelType> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/ReisShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Reis.Aankomsttijdstip>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de Reis afgelopen is of waarop de Reiziger zou willen dat ze is afgelopen."@nl;
+    shacl:maxCount "1";
+    shacl:name "aankomsttijdstip"@nl;
+    shacl:path schemas:arrivalTime
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Reis.Vertrektijdstip>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de Reis aanvangt of waarop de Reiziger zou willen dat ze aanvangt."@nl;
+    shacl:maxCount "1";
+    shacl:name "vertrektijdstip"@nl;
+    shacl:path schemas:departureTime
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Reis.Reisweg>;
+    shacl:class prov:Location;
+    shacl:description "Opeenvolging van Locaties die men tijdens de Reis wil aandoen."@nl;
+    shacl:minCount "2";
+    shacl:name "reisweg"@nl;
+    shacl:path schema:itinerary
+  ];
+  shacl:targetClass schemas:Trip .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/ResourceShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Resource.Identificator>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Identificator van de Resource."@nl;
+    shacl:maxCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#identificator>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Resource.MaximaalToegelatenMassa>;
+    shacl:datatype xsd:integer;
+    shacl:description "Het hoogste gewicht dat een voertuig inclusief lading wettelijk mag hebben."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "maximaal toegelaten massa"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Resource.maximaaltoegelatenmassa>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Resource.StartGewicht>;
+    shacl:datatype xsd:integer;
+    shacl:description "Het gewicht van een Resource zonder lading, passagiers of brandstof."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "start gewicht"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Resource.startgewicht>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Resource.Aandrijving>;
+    shacl:class skos:Concept;
+    shacl:description "Aandrijving van het vervoermiddel."@nl;
+    shacl:maxCount "1";
+    shacl:name "aandrijving"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Resource.aandrijving>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Resource.RuimtelijkeDekking>;
+    shacl:class prov:Location;
+    shacl:description "Plaats waar de Resource zich bevindt."@nl;
+    shacl:maxCount "1";
+    shacl:name "ruimtelijke dekking"@nl;
+    shacl:path dc:spatial
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Resource.Status>;
+    shacl:class skos:Concept;
+    shacl:description "Toestand waarin een Resource zich bevindt."@nl;
+    shacl:maxCount "1";
+    shacl:name "status"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Resource.status>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Resource.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de Resource."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Resource.Vervoermiddel>;
+    shacl:class skos:Concept;
+    shacl:description "Het type vervoermiddel van de Resource."@nl;
+    shacl:maxCount "1";
+    shacl:name "vervoermiddel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Resource.vervoermiddel>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Resource.Gewichtsklasse>;
+    shacl:class <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Gewichtsklasse>;
+    shacl:description "Classificatie van een voertuig op basis van gewicht."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "gewichtsklasse"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Resource.gewichtsklasse>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Resource.Milieuklasse>;
+    shacl:class <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Milieuklasse>;
+    shacl:description "Classificatie van een voertuig op basis van milieunorm."@nl;
+    shacl:maxCount "1";
+    shacl:name "milieuklasse"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Resource.milieuklasse>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Resource> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/ResourcestatusShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/ResourcetypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/RouteShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Route.Aankomsttijdstip>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de Route eindigt."@nl;
+    shacl:maxCount "1";
+    shacl:name "aankomsttijdstip"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Route.aankomsttijdstip>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Route.Reisduur>;
+    shacl:datatype xsd:duration;
+    shacl:description "Tijd waarin de Route wordt afgelegd."@nl;
+    shacl:maxCount "1";
+    shacl:name "reisduur"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#reisduur>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Route.Vertrektijdstip>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de Route begint."@nl;
+    shacl:maxCount "1";
+    shacl:name "vertrektijdstip"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Route.vertrektijdstip>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Route.Aankomstpunt>;
+    shacl:class prov:Location;
+    shacl:description "Locatie waar de Route eindigt."@nl;
+    shacl:maxCount "1";
+    shacl:name "aankomstpunt"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#aankomstpunt>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Route.Afstand>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:maxCount "1";
+    shacl:name "afstand"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Route.afstand>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Route.Kostprijs>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "Prijs van de Route."@nl;
+    shacl:maxCount "1";
+    shacl:name "kostprijs"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#kostprijs>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Route.Routebeschrijving>;
+    shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routebeschrijving>;
+    shacl:description "Beschrijving van de Route."@nl;
+    shacl:maxCount "1";
+    shacl:name "routebeschrijving"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#routebeschrijving>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Route.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de Route."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Route.Vertrekpunt>;
+    shacl:class prov:Location;
+    shacl:description "Locatie waar de Route begint."@nl;
+    shacl:maxCount "1";
+    shacl:name "vertrekpunt"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#vertrekpunt>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Route> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/RoutebeschrijvingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routebeschrijving> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/RouteknoopShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Routeknoop.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/sf#Point>;
+    shacl:description "Locatie van de Routeknoop."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://www.w3.org/ns/locn#geometry>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Routeknoop.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de Routeknoop."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routeknoop> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/RoutesegmentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Routesegment.Aankomsttijdstip>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop het Routesegment eindigt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "aankomsttijdstip"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment.aankomsttijdstip>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Routesegment.Vertrektijdstip>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop het Routesegment begint."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "vertrektijdstip"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment.vertrektijdstip>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Routesegment.Aandrijving>;
+    shacl:class skos:Concept;
+    shacl:description "Aandrijving van het vervoermiddel waarmee het Routesegment is afgelegd."@nl;
+    shacl:maxCount "1";
+    shacl:name "aandrijving"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment.aandrijving>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Routesegment.Link>;
+    shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#GerichteLink>;
+    shacl:description "Opeenvolging van Gerichte Links waaruit het Routesegment bestaat."@nl;
+    shacl:minCount "1";
+    shacl:name "link"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#link>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Routesegment.Vervoermiddel>;
+    shacl:class skos:Concept;
+    shacl:description "Type vervoermiddel waarmee het Routesegment is afgelegd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "vervoermiddel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment.vervoermiddel>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/SensorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://www.w3.org/ns/sosa/Sensor> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/StandaardEenheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#StandaardEenheid> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/StringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/SysteemShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://www.w3.org/TR/vocab-ssn/#ssn-system> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/TaalstringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/TekenShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/TemporeleentiteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/ToegangsvergunningShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Toegangsvergunning> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/ToegankelijkheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Toegankelijkheid.Niveau>;
+    shacl:class skos:Concept;
+    shacl:description "Niveau van toegankelijkheid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "niveau"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#niveau>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Toegankelijkheid.Onderdeel>;
+    shacl:class skos:Concept;
+    shacl:description "Deel van de dienst of infrastructuur waarop de Toegankelijkheid betrekking heeft.."@nl;
+    shacl:maxCount "1";
+    shacl:name "onderdeel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#onderdeel>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Toegankelijkheid.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de Toegankelijkheid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Toegankelijkheid> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/ToegankelijkheidsniveauShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/ToegankelijkheidsonderdeelShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/ToegankelijkheidstypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/TypeInfrastructuurElementShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#TypeInfrastructuurelement> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/UriShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:anyURI .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/VergunningShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Vergunning> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/VergunningsstatusShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#VergunningsStatus> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/VerkeersregelShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://datexbrowserv34.tamtamresearch.com/#/class/ns/TrafficRegulation/pkg/Classes.TrafficRegulation/cls/TrafficRegulation> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/VerpakkingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Verpakking> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/VervoermiddelShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/VrachtShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Vracht.Beweging>;
+    shacl:class <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Beweging>;
+    shacl:description "Het type van beweging van de vracht gedurende de mobiliteitsdienst"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "beweging"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Vracht.beweging>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Vracht.Afzender>;
+    shacl:class dc:Agent;
+    shacl:description "De agent die de vracht heeft verzonden."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "afzender"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Vracht.afzender>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Vracht.Verpakking>;
+    shacl:class <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Verpakking>;
+    shacl:description "De verpakking waar de vracht in opgeborgen zit."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "verpakking"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Vracht.verpakking>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Vracht.Gewicht>;
+    shacl:class <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Decimal>;
+    shacl:description "Het gewicht van de vracht."@nl;
+    shacl:maxCount "1";
+    shacl:name "gewicht"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Vracht.gewicht>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Vracht.Afmetingen>;
+    shacl:class <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Afmeting>;
+    shacl:description "De afmetingen van de vracht."@nl;
+    shacl:name "afmetingen"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Vracht.afmetingen>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Vracht.Vrachttype>;
+    shacl:class <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Vrachttype>;
+    shacl:description "Het type goed waar de vracht uit bestaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "vrachttype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Vracht.vrachttype>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Vracht.Status>;
+    shacl:class <https://data.vlaanderen.be/ns/slimme-stadsdistributie#VrachtStatus>;
+    shacl:description "Status van de vracht binnen een belading."@nl;
+    shacl:maxCount "1";
+    shacl:name "status"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Vracht.status>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Vracht> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/VrachtstatusShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#VrachtStatus> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/VrachttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Vrachttype> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie/ZoneShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/slimme-stadsdistributie#Zone.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/sf#Polygon>;
+    shacl:description "De ruimtelijke afbakening van een zone."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Zone.geometrie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimme-stadsdistributie#Zone> .
