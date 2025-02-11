@@ -20,11 +20,8 @@ error: missing '/tmp/generated/doc/applicatieprofiel/AirAndWater/Water/ontwerpst
 #||#    + checking /home/circleci/project/config/dev/bedrijventerrein.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/ns/bedrijventerrein'
 
 index.html check
-error: missing '/tmp/generated/ns/bedrijventerrein/index.html'
-error: missing '/tmp/generated/doc/implementatiemodel/bedrijventerrein/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/begraafplaats.publication.json
 #||# 
@@ -53,11 +50,9 @@ error: missing '/tmp/generated/doc/applicatieprofiel/besluit-publicatie/ontwerps
 #||# 
 Directory check
 error: missing '/tmp/generated/ns/besluitvorming'
-error: missing '/tmp/generated/ns/besluit'
 
 index.html check
 error: missing '/tmp/generated/ns/besluitvorming/index.html'
-error: missing '/tmp/generated/ns/besluit/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/besluitvorming/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/besluitvorming/ontwerpstandaard/toolchain4/index.html'
 
@@ -167,10 +162,8 @@ index.html check
 #||#    + checking /home/circleci/project/config/dev/doelgericht-digitaal-transformeren.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/vocabularium/cultuurparticipatie/ontwerpstandaard/2021-10-01'
 
 index.html check
-error: missing '/tmp/generated/doc/vocabularium/cultuurparticipatie/ontwerpstandaard/2021-10-01/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/dossier.publication.json
 #||# 

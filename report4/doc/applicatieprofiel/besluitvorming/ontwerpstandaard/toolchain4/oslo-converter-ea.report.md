@@ -2,13 +2,13 @@
 
 #||# -------------------------------------
 
-2025-02-11T10:11:15.181Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-02-11T13:04:49.220Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T10:11:15.182Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
+2025-02-11T13:04:49.222Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T10:11:15.187Z warn: [ConnectorConverterHandler]: Connector (beschrijft) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-11T13:04:49.226Z warn: [ConnectorConverterHandler]: Connector (beschrijft) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T10:11:15.187Z warn: [ConnectorConverterHandler]: Connector (beschrijft) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-11T13:04:49.227Z warn: [ConnectorConverterHandler]: Connector (beschrijft) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 Error: [AttributeConverterHandler]: Unable to find domain object for attribute (Model:OSLO²_vocabularium:OSLO-Notificatie:Notificatiekanaal:Passief).
 
