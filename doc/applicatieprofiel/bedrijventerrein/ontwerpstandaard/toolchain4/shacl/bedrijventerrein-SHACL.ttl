@@ -1,0 +1,870 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Agent.Contactinfo>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon, adres die toelaat om iemand of iets te contacteren."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "contactinfo"@nl;
+    shacl:path schema:contactPoint
+  ];
+  shacl:targetClass dc:Agent .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/BebouwingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/BedrijventerreinShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerrein.BeschikbareKavels>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Deze eigenschap geeft aan of er al dan niet beschikbare kavels aanwezig zijn op het bedrijventerrein."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschikbare kavels"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#beschikbareKavels>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerrein.AlternatieveNaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Andere naam waaronder het bedrijventerrein bekend is."@nl;
+    shacl:maxCount "1";
+    shacl:name "alternatieve naam"@nl;
+    shacl:path skos:altLabel
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerrein.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Voorkeursnaam van het Bedrijventerrein."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path skos:prefLabel
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerrein.BeschikbareOppervlakte>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "Deze eigenschap geeft aan hoeveel oppervlakte nog beschikbaar is op het bedrijventerrein."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschikbare oppervlakte"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#beschikbareOppervlakte>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerrein.IsDeelVan>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#OntwikkelbareBedrijvenzone>;
+    shacl:description "Geeft aan tot welk Bedrijventerrein de Ontwikkelbare Bedrijvenzone behoort."@nl;
+    shacl:name "is deel van"@nl;
+    shacl:path dc:isPartOf
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerrein.IsDeelVan>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#Bedrijventerreinperceel>;
+    shacl:description "Geeft aan tot welk Bedrijventerrein het Bedrijventerreinperceel behoort."@nl;
+    shacl:minCount "1";
+    shacl:name "is deel van"@nl;
+    shacl:path dc:isPartOf
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerrein.IsGerelateerdAanEconomischGebied>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#EconomischGebied>;
+    shacl:description "Economisch Gebied waarmee het bedrijventerrein kan geassocieerd worden."@nl;
+    shacl:maxCount "1";
+    shacl:name "is gerelateerd aan economisch gebied"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#Bedrijventerrein.isGerelateerdAanEconomischGebied>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerrein.IsDeelVan>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#BeheerdeBedrijvenzone>;
+    shacl:description "Geeft aan tot welk Bedrijventerrein de Beheerde Bedrijvenzone behoort."@nl;
+    shacl:name "is deel van"@nl;
+    shacl:path dc:isPartOf
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerrein.IsGerelateerdAan>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#Planningszone>;
+    shacl:description "Planningszone waarmee het bedrijventerrein kan geassocieerd worden."@nl;
+    shacl:minCount "1";
+    shacl:name "is gerelateerd aan"@nl;
+    shacl:path dc:relation
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bedrijventerrein#Bedrijventerrein> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/BedrijventerreinperceelShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerreinperceel.Bebouwing>;
+    shacl:class skos:Concept;
+    shacl:description "Deze eigenschap geeft de aanwezigheid van bebouwing aan op het Bedrijventerreinperceel."@nl;
+    shacl:maxCount "1";
+    shacl:name "bebouwing"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#bebouwing>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerreinperceel.Beperking>;
+    shacl:class skos:Concept;
+    shacl:description "Deze eigenschap geeft aan welke mogelijke beperking(en) een bepaald bedrijventerreinperceel momenteel ondervindt."@nl;
+    shacl:name "beperking"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#beperking>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerreinperceel.Beschikbaarheid>;
+    shacl:class skos:Concept;
+    shacl:description "Deze eigenschap geeft de beschikbaarheid aan van een Bedrijventerreinperceel."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschikbaarheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#beschikbaarheid>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerreinperceel.Functie>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#Functiewaarde>;
+    shacl:description "De functie geeft de (verschillende) functies aan die men kan terugvinden op het Bedrijventerreinperceel en het percentage van het perceel dat gedekt wordt door elke functie."@nl;
+    shacl:minCount "1";
+    shacl:name "functie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#functie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerreinperceel.InGebruik>;
+    shacl:class skos:Concept;
+    shacl:description "Dit attribuut geeft aan in welke mate een Bedrijventerreinperceel in gebruik is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "in gebruik"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#inGebruik>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerreinperceel.IsDeelVan>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#Bedrijventerrein>;
+    shacl:description "Geeft aan tot welk Bedrijventerrein het Bedrijventerreinperceel behoort."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "is deel van"@nl;
+    shacl:path dc:isPartOf
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Bedrijventerreinperceel.IsGerelateerdAan>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#OntwikkelbareBedrijvenzone>;
+    shacl:description "Bedrijventerreinperceel waarmee de ontwikkelbare bedrijvenzone kan geassocieerd worden."@nl;
+    shacl:name "is gerelateerd aan"@nl;
+    shacl:path dc:relation
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bedrijventerrein#Bedrijventerreinperceel> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/BeheerdeBedrijvenzoneShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#BeheerdeBedrijvenzone.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Voorkeursnaam van de Beheerde bedrijvenzone"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path skos:prefLabel
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#BeheerdeBedrijvenzone.IsDeelVan>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#Bedrijventerrein>;
+    shacl:description "Geeft aan tot welk Bedrijventerrein de Beheerde Bedrijvenzone behoort."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "is deel van"@nl;
+    shacl:path dc:isPartOf
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bedrijventerrein#BeheerdeBedrijvenzone> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/BeperkingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/BeschikbaarheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/BestemmingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/BooleanShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:boolean .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/ContactinfoShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Contactinfo.Aanschrijfvorm>;
+    shacl:datatype rdf:langString;
+    shacl:description "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen."@nl;
+    shacl:maxCount "1";
+    shacl:name "aanschrijfvorm"@nl;
+    shacl:path vcard:honorific-prefix
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Contactinfo.Contactnaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam van bvb de persoon die men kan contacteren."@nl;
+    shacl:maxCount "1";
+    shacl:name "contactnaam"@nl;
+    shacl:path foaf:name
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Contactinfo.Email>;
+    shacl:datatype xsd:string;
+    shacl:description "Email-adres waarnaar men kan mailen."@nl;
+    shacl:maxCount "1";
+    shacl:name "email"@nl;
+    shacl:path schema:email
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Contactinfo.Fax>;
+    shacl:datatype xsd:string;
+    shacl:description "Faxnummer waarnaar men kan faxen."@nl;
+    shacl:maxCount "1";
+    shacl:name "fax"@nl;
+    shacl:path schema:faxNumber
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Contactinfo.Openingsuren>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Uren waarbinnen contact kan worden opgenomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "openingsuren"@nl;
+    shacl:path schema:openingHours
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Contactinfo.Telefoon>;
+    shacl:datatype xsd:string;
+    shacl:description "Telefoonnummer waarop men kan bellen."@nl;
+    shacl:maxCount "1";
+    shacl:name "telefoon"@nl;
+    shacl:path schema:telephone
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Contactinfo.Website>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Website waarnaar men kan surfen."@nl;
+    shacl:maxCount "1";
+    shacl:name "website"@nl;
+    shacl:path foaf:page
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Contactinfo.Adres>;
+    shacl:class <http://www.w3.org/ns/locn#Address>;
+    shacl:description "Adres dat men kan aanschrijven of bezoeken."@nl;
+    shacl:maxCount "1";
+    shacl:name "adres"@nl;
+    shacl:path <http://www.w3.org/ns/locn#address>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Contactinfo.Beschikbaarheid>;
+    shacl:class schema:OpeningHoursSpecification;
+    shacl:description "Periode waarin contact kan worden opgenomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschikbaarheid"@nl;
+    shacl:path schema:hoursAvailable
+  ];
+  shacl:targetClass schema:ContactPoint .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/DateShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:date .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/DatetimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/DominanteeconomischeactiviteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/DossierfaseShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/EconomischGebiedShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#EconomischGebied.DominanteEconomischeActiviteit>;
+    shacl:class skos:Concept;
+    shacl:description "De voornaamste economische activiteit dat geassocieerd kan worden met het Economisch Gebied"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "dominante economische activiteit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#dominanteEconomischeActiviteit>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#EconomischGebied.IsGerelateerdAanEconomischGebied>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#Bedrijventerrein>;
+    shacl:description "Economisch Gebied waarmee het bedrijventerrein kan geassocieerd worden."@nl;
+    shacl:name "is gerelateerd aan economisch gebied"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#EconomischGebied.isGerelateerdAanEconomischGebied>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bedrijventerrein#EconomischGebied> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/FunctietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/FunctiewaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Functiewaarde.Percentage>;
+    shacl:datatype xsd:integer;
+    shacl:description "Percentage van het perceel dat gedekt wordt door de functie."@nl;
+    shacl:maxCount "1";
+    shacl:name "percentage"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#percentage>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Functiewaarde.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aanduiding van het functietype."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#Functiewaarde.type>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bedrijventerrein#Functiewaarde> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/GebruikShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/GeometrieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Geometrie.Gml>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "gml"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Geometrie.Wkt>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "wkt"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/GeometriemethodewaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/GestructureerdeIdentificatorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#GestructureerdeIdentificator.LokaleIdentificator>;
+    shacl:datatype xsd:string;
+    shacl:description "String gebruikt om het object uniek te identificeren binnen de naamruimte."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "lokale identificator"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#lokaleIdentificator>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#GestructureerdeIdentificator.Naamruimte>;
+    shacl:datatype xsd:string;
+    shacl:description "String die toegvoegd wordt aan de lokaleidentificator om deze globaal uniek te maken."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naamruimte"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#naamruimte>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#GestructureerdeIdentificator.Versie-identificator>;
+    shacl:datatype xsd:string;
+    shacl:description "Identificator van de specifieke versie van een object."@nl;
+    shacl:maxCount "1";
+    shacl:name "versie-identificator"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#versieIdentificator>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/GetalShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass schemas:Number .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/IdentificatorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Identificator.ToegekendOp>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend op"@nl;
+    shacl:path dc:issued
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Identificator.Identificator>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "String gebruikt om het object uniek te identificeren."@nl;
+    shacl:maxCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path skos:notation
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Identificator.GestructureerdeIdentificator>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator>;
+    shacl:description "Identificator vh object opgesplitst in zijn onderdelen."@nl;
+    shacl:maxCount "1";
+    shacl:name "gestructureerde identificator"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Identificator.ToegekendDoor>;
+    shacl:class dc:Agent;
+    shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend door"@nl;
+    shacl:path dc:creator
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Identificator.ToegekendDoor(string)>;
+    shacl:class dc:Agent;
+    shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend door (String)"@nl;
+    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/IntegerShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:integer .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/KadastraalPlanperceelShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#KadastraalPlanperceel.DatumBijwerking>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum van de laatste bijwerking."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "datum bijwerking"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#datumbijwerking>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/perceel#KadastraalPlanperceel> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/KwantitatieveWaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#KwantitatieveWaarde.Eenheid>;
+    shacl:datatype xsd:string;
+    shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "eenheid"@nl;
+    shacl:path schemas:unitText
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#KwantitatieveWaarde.StandaardEenheid>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#StandaardEenheid>;
+    shacl:description "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "standaard eenheid"@nl;
+    shacl:path schemas:unitCode
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#KwantitatieveWaarde.Waarde>;
+    shacl:class schemas:Number;
+    shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path schemas:value
+  ];
+  shacl:targetClass schemas:QuantitativeValue .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/LandgebruikShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/OntwikkelbareBedrijvenzoneShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#OntwikkelbareBedrijvenzone.Homepage>;
+    shacl:datatype xsd:string;
+    shacl:description "Adres van de homepage van de website van de ontwikkelbare bedrijvenzone of ontwikkelaar."@nl;
+    shacl:maxCount "1";
+    shacl:name "homepage"@nl;
+    shacl:path foaf:homepage
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#OntwikkelbareBedrijvenzone.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Voorkeursnaam van de Ontwikkelbare Bedrijvenzone."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path skos:prefLabel
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#OntwikkelbareBedrijvenzone.VoorzieneUitgifte>;
+    shacl:datatype xsd:date;
+    shacl:description "Het voorziene tijdstip waarop het eerste Bedrijventerreinperceel binnen een ontwikkelbare zone in verkoop zal gaan."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "voorziene uitgifte"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#voorzieneUitgifte>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#OntwikkelbareBedrijvenzone.StatusOntwikkeling>;
+    shacl:class skos:Concept;
+    shacl:description "Geeft de status aan van de Ontwikkelbare Bedrijvezone."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "status ontwikkeling"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#statusOntwikkeling>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#OntwikkelbareBedrijvenzone.IsDeelVan>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#Bedrijventerrein>;
+    shacl:description "Geeft aan tot welk Bedrijventerrein de Ontwikkelbare Bedrijvenzone behoort."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "is deel van"@nl;
+    shacl:path dc:isPartOf
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#OntwikkelbareBedrijvenzone.IsGerelateerdAan>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#Bedrijventerreinperceel>;
+    shacl:description "Bedrijventerreinperceel waarmee de ontwikkelbare bedrijvenzone kan geassocieerd worden."@nl;
+    shacl:name "is gerelateerd aan"@nl;
+    shacl:path dc:relation
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bedrijventerrein#OntwikkelbareBedrijvenzone> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/OpmetingtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/OppervlaktetypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/PeriodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Periode.Einde>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Einde vd tijdsduur."@nl;
+    shacl:maxCount "1";
+    shacl:name "einde"@nl;
+    shacl:path <http://data.europa.eu/m8g/endTime>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Periode.Begin>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Aanvang van de tijdsduur."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "begin"@nl;
+    shacl:path <http://data.europa.eu/m8g/startTime>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/PlanShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Plan.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Voorkeursnaam van het plan."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path skos:prefLabel
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Plan.Publicatiedatum>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Publicatiedatum van de dossierfase in het Belgische Staatsblad."@nl;
+    shacl:maxCount "1";
+    shacl:name "publicatiedatum"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#publicatiedatum>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Plan.Startdatum>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum van de start van het plan."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "startdatum"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#startdatum>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Plan.StedenbouwkundigeVoorschriften>;
+    shacl:datatype xsd:string;
+    shacl:description "Link naar de tekst met het stedenbouwkundige voorschrift van het plan."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "stedenbouwkundige voorschriften"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#stedenbouwkundigeVoorschriften>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Plan.Toelichtingsnota>;
+    shacl:datatype xsd:string;
+    shacl:description "Link naar de tekst met de toelichtingsnota van het plan."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "toelichtingsnota"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#toelichtingsnota>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Plan.Bestemming>;
+    shacl:class skos:Concept;
+    shacl:description "Geeft de geplande bestemming aan van de planningszone."@nl;
+    shacl:maxCount "1";
+    shacl:name "bestemming"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#bestemming>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Plan.Dossierfase>;
+    shacl:class skos:Concept;
+    shacl:description "De dossierfase geeft aan in welke procedurefase het plan zich bevindt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "dossierfase"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#dossierfase>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Plan.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "De identificator van het plan."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Plan.Planningsniveau>;
+    shacl:class skos:Concept;
+    shacl:description "Geeft het planningsniveau aan van het plan."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "planningsniveau"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#planningsNiveau>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Plan.Schorsing>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#SchorsingInfo>;
+    shacl:description "De schorsing geeft aan of het plan al dan niet geschorst is en bijhorende metadata over de schorsing."@nl;
+    shacl:maxCount "1";
+    shacl:name "schorsing"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#schorsing>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Plan.Status>;
+    shacl:class skos:Concept;
+    shacl:description "Geeft de status aan waarin het plan zich bevindt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "status"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#status>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Plan.IsGerelateerdAan>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#Planningszone>;
+    shacl:description "Plan waarmee de planningszone kan geassocieerd worden."@nl;
+    shacl:minCount "1";
+    shacl:name "is gerelateerd aan"@nl;
+    shacl:path dc:relation
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bedrijventerrein#Plan> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/PlanningsniveauShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/PlanningszoneShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Planningszone.IsGerelateerdAan>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#Bedrijventerrein>;
+    shacl:description "Planningszone waarmee het bedrijventerrein kan geassocieerd worden."@nl;
+    shacl:name "is gerelateerd aan"@nl;
+    shacl:path dc:relation
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Planningszone.IsGerelateerdAan>;
+    shacl:class <https://data.vlaanderen.be/ns/bedrijventerrein#Plan>;
+    shacl:description "Plan waarmee de planningszone kan geassocieerd worden."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "is gerelateerd aan"@nl;
+    shacl:path dc:relation
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bedrijventerrein#Planningszone> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/RechtShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Recht.Type>;
+    shacl:class skos:Concept;
+    shacl:description "De aard van het recht dat een agent heeft ten opzichte van een ruimtelijke eenheid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#Recht.type>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/perceel#Recht> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/RechttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/RuimtelijkeEenheidGeometrieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#RuimtelijkeEenheidGeometrie.Default>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Geometrie die moet worden gebruikt bv bij voorstelling op kaart."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "default"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#default>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#RuimtelijkeEenheidGeometrie.Methode>;
+    shacl:class skos:Concept;
+    shacl:description "De methode geeft aan op welke manier de geometrie tot stand is gekomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "methode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#methode>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#RuimtelijkeEenheidGeometrie.Geometrie>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "Geometrische voorstelling van een ruimtelijke eenheid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheidGeometrie.geometrie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheidGeometrie> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/RuimtelijkeEenheidOppervlakteShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#RuimtelijkeEenheidOppervlakte.OfficiëleOppervlakte>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Geeft aan of de oppervlakte al dan niet officieel is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "officiële oppervlakte"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#officieleOppervlakte>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#RuimtelijkeEenheidOppervlakte.Oppervlakte>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "Afmeting van een twee-dimensionaal gebied."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "oppervlakte"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheidOppervlakte.oppervlakte>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#RuimtelijkeEenheidOppervlakte.Type>;
+    shacl:class skos:Concept;
+    shacl:description "De methode waarop de oppervlakte bepaald werd;"@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#oppervlaktetype>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheidOppervlakte> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/RuimtelijkeEenheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#RuimtelijkeEenheid.Niveau>;
+    shacl:datatype xsd:integer;
+    shacl:description "Het niveau waarop het object zich bevindt, relatief ten opzichte van andere objecten."@nl;
+    shacl:maxCount "1";
+    shacl:name "niveau"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#niveau>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#RuimtelijkeEenheid.Geldigheidsperiode>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "Tijdsinterval waarbinnen de ruimtelijke eenheid van toepassing is."@nl;
+    shacl:maxCount "1";
+    shacl:name "geldigheidsperiode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#geldigheidsperiode>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#RuimtelijkeEenheid.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "De identificator van de Ruimtelijke Eenheid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#RuimtelijkeEenheid.Dimensie>;
+    shacl:class skos:Concept;
+    shacl:description "De dimensie van de ruimtelijke eenheid."@nl;
+    shacl:maxCount "1";
+    shacl:name "dimensie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#dimensie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#RuimtelijkeEenheid.Geometrie>;
+    shacl:class <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheidGeometrie>;
+    shacl:description "Geometrie van de ruimtelijke eenheid en metadata over hoe deze werd bepaald."@nl;
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.geometrie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#RuimtelijkeEenheid.Landgebruik>;
+    shacl:class skos:Concept;
+    shacl:description "Geeft het gebruik aan van de ruimtelijke eenheid."@nl;
+    shacl:maxCount "1";
+    shacl:name "landgebruik"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#landgebruik>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#RuimtelijkeEenheid.Oppervlakte>;
+    shacl:class <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheidOppervlakte>;
+    shacl:description "Oppervlakte van de ruimtelijke eenheid en metadata over de manier waarop deze bepaald werd."@nl;
+    shacl:name "oppervlakte"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.oppervlakte>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#RuimtelijkeEenheid.Type>;
+    shacl:class skos:Concept;
+    shacl:description "De aard van een ruimtelijke eenheid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.type>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/RuimtelijkeeenheidtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/SchorsinginfoShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Schorsinginfo.DatumSchorsing>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Geeft de datum weer waarop het plan werd geschorst."@nl;
+    shacl:maxCount "1";
+    shacl:name "datum schorsing"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#datumSchorsing>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Schorsinginfo.LinkSchorsing>;
+    shacl:datatype xsd:string;
+    shacl:description "Link naar het arrest van de schorsing"@nl;
+    shacl:maxCount "1";
+    shacl:name "link schorsing"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#linkSchorsing>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Schorsinginfo.Geschorst>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Geeft aan of het plan al dan niet geschorst is."@nl;
+    shacl:maxCount "1";
+    shacl:name "geschorst"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#geschorst>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Schorsinginfo.SchorsingOpmerking>;
+    shacl:datatype rdf:langString;
+    shacl:description "Opmerkingen in het kader van de schorsing."@nl;
+    shacl:maxCount "1";
+    shacl:name "schorsing opmerking"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bedrijventerrein#schorsingOpmerking>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bedrijventerrein#SchorsingInfo> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/StandaardEenheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#StandaardEenheid> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/StatusShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/StatusontwikkelingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/StringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/SubsidietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/UriShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:anyURI .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/VerantwoordelijkheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4#Verantwoordelijkheid.Type>;
+    shacl:class skos:Concept;
+    shacl:description "De aard van de verantwoordelijkheid die een agent heeft ten opzichte van een ruimtelijke eenheid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#Verantwoordelijkheid.type>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/perceel#Verantwoordelijkheid> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bedrijventerrein/ontwerpstandaard/toolchain4/VerantwoordelijkheidtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
