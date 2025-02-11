@@ -246,7 +246,68 @@ Directory check
 
 index.html check
 
-#||#    + checking /home/circleci/project/config/dev/toolchaintestbed.publication.json
+#||#    + checking /home/circleci/project/config/dev/infrastructuur.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/inname-openbaar-domein.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/kabels-en-leidingen.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/nutsvoorzieningen/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/dev/kindfiche.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/kindfiche/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/kindfiche/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/dev/kwaliteit-wegen-en-markeringen.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/ldes.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/leercredential.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/leercredential/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/dev/leerinschrijfcredential.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/logies.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/logies/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/logies-basis/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/dev/lokale-economie.publication.json
 #||# 
 Directory check
 

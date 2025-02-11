@@ -60,7 +60,25 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/incentiveringsplatform.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/dev/toolchaintestbed.publication.json
+#||#   + adding supporting /home/circleci/project/config/dev/infrastructuur.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/inname-openbaar-domein.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/kabels-en-leidingen.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/kindfiche.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/kwaliteit-wegen-en-markeringen.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/ldes.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/leercredential.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/leerinschrijfcredential.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/logies.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/lokale-economie.publication.json
 #||#  
 Error: the following directories are unsupported
 [
@@ -71,6 +89,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-12-05",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-12-17",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/latest",
+  "/tmp/generated/doc/applicatieprofiel/FeitelijkeVerenigingen",
   "/tmp/generated/doc/applicatieprofiel/begraafplaatsen",
   "/tmp/generated/doc/applicatieprofiel/begraafplaatsenbeheer",
   "/tmp/generated/doc/applicatieprofiel/besluitvorming",
@@ -84,11 +103,16 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/kandidaatstandaard/2022-03-21",
   "/tmp/generated/doc/applicatieprofiel/dienst-transactiemodel",
   "/tmp/generated/doc/applicatieprofiel/dienstencataloog",
-  "/tmp/generated/doc/applicatieprofiel/FeitelijkeVerenigingen",
+  "/tmp/generated/doc/applicatieprofiel/documentatie/associaties",
   "/tmp/generated/doc/applicatieprofiel/energiehuis",
   "/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17",
   "/tmp/generated/doc/applicatieprofiel/gebieden",
   "/tmp/generated/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
+  "/tmp/generated/doc/applicatieprofiel/inname-openbaar-domein",
+  "/tmp/generated/doc/applicatieprofiel/infrastructuurelementen",
+  "/tmp/generated/doc/applicatieprofiel/leerinschrijfcredential/kandidaatstandaard/2024-05-16",
+  "/tmp/generated/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17",
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
-  "/tmp/generated/ns/FeitelijkeVerenigingen"
+  "/tmp/generated/ns/FeitelijkeVerenigingen",
+  "/tmp/generated/ns/leercredential"
 ]
