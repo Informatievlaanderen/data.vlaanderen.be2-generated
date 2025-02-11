@@ -14,3 +14,17 @@ WARNING The entered language values are the same!
 
 #||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/documentatie/associaties-voc/translation/associaties-voc_nl.json  
 
+#||# translate for language fr  
+
+#||# -------------------------------------  
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/documentatie/associaties-voc/translation/associaties-voc_fr.json  
+

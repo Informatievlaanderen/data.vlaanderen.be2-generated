@@ -2,43 +2,87 @@
 
 #||# -------------------------------------  
 
-2025-02-11T09:28:55.228Z error: Unable to find the description for subject "[urn:oslo-toolchain:16ec592d2cf979c2a946f3f5bd56c1ac89019c811238c71a41e219825378d334](all-associaties.jsonld#L1684)".
+2025-02-11T09:39:27.347Z error: Unable to find the description for subject "[urn:oslo-toolchain:16ec592d2cf979c2a946f3f5bd56c1ac89019c811238c71a41e219825378d334](all-associaties.jsonld#L1684)".
 
-2025-02-11T09:28:55.230Z error: Unable to find the description for subject "[urn:oslo-toolchain:88f6d48169855dc00b5298f71040bf44edab4436235304f531fa87ce6e2f6677](all-associaties.jsonld#L1704)".
+2025-02-11T09:39:27.349Z error: Unable to find the description for subject "[urn:oslo-toolchain:88f6d48169855dc00b5298f71040bf44edab4436235304f531fa87ce6e2f6677](all-associaties.jsonld#L1704)".
 
-2025-02-11T09:28:55.230Z error: Unable to find the description for subject "[urn:oslo-toolchain:485aeff851e934cb10d240db522cdc594e599a9f59441153e8e65c0e167d6451](all-associaties.jsonld#L1724)".
+2025-02-11T09:39:27.349Z error: Unable to find the description for subject "[urn:oslo-toolchain:485aeff851e934cb10d240db522cdc594e599a9f59441153e8e65c0e167d6451](all-associaties.jsonld#L1724)".
 
-2025-02-11T09:28:55.231Z error: Unable to find the description for subject "[urn:oslo-toolchain:5bc0d2838bbbf5217441f51dc60527f741bae3f61978f38715a1b54af12bcdb4](all-associaties.jsonld#L1744)".
+2025-02-11T09:39:27.349Z error: Unable to find the description for subject "[urn:oslo-toolchain:5bc0d2838bbbf5217441f51dc60527f741bae3f61978f38715a1b54af12bcdb4](all-associaties.jsonld#L1744)".
 
-2025-02-11T09:28:55.231Z error: Unable to find the description for subject "[urn:oslo-toolchain:f3bbff33faacc30517f2bca681ef4f04e6bdef0ea7333fac1054ae8ab667499e](all-associaties.jsonld#L1764)".
+2025-02-11T09:39:27.349Z error: Unable to find the description for subject "[urn:oslo-toolchain:f3bbff33faacc30517f2bca681ef4f04e6bdef0ea7333fac1054ae8ab667499e](all-associaties.jsonld#L1764)".
 
-2025-02-11T09:28:55.231Z error: Unable to find the description for subject "[urn:oslo-toolchain:1de9f2eb39df58d2b5bdbd089070a4f174bec216019743ebb95273c4c22838d8](all-associaties.jsonld#L1784)".
+2025-02-11T09:39:27.350Z error: Unable to find the description for subject "[urn:oslo-toolchain:1de9f2eb39df58d2b5bdbd089070a4f174bec216019743ebb95273c4c22838d8](all-associaties.jsonld#L1784)".
 
-2025-02-11T09:28:55.231Z error: Unable to find the description for subject "[urn:oslo-toolchain:0988452985581b312dbc6bcae5e29fdd212096104b0342bcd0c7b0fef78b11a4](all-associaties.jsonld#L1880)".
+2025-02-11T09:39:27.350Z error: Unable to find the description for subject "[urn:oslo-toolchain:0988452985581b312dbc6bcae5e29fdd212096104b0342bcd0c7b0fef78b11a4](all-associaties.jsonld#L1880)".
 
-2025-02-11T09:28:55.232Z error: Unable to find the description for subject "[urn:oslo-toolchain:9d47a082663aa52e60149b8c42e4f102337f07e7af8da2e5b7684fbc4f50a297](all-associaties.jsonld#L1900)".
+2025-02-11T09:39:27.350Z error: Unable to find the description for subject "[urn:oslo-toolchain:9d47a082663aa52e60149b8c42e4f102337f07e7af8da2e5b7684fbc4f50a297](all-associaties.jsonld#L1900)".
 
-2025-02-11T09:28:55.232Z error: Unable to find the description for subject "[urn:oslo-toolchain:77df3553b0335046d535169416dcb5e2b9cf7561d45feeae1f9a19590f6703ac](all-associaties.jsonld#L1996)".
+2025-02-11T09:39:27.351Z error: Unable to find the description for subject "[urn:oslo-toolchain:77df3553b0335046d535169416dcb5e2b9cf7561d45feeae1f9a19590f6703ac](all-associaties.jsonld#L1996)".
 
-2025-02-11T09:28:55.233Z error: Unable to find the description for subject "[urn:oslo-toolchain:fd76c24758ebf6d9c0d96676a9ff567721775f1db0c060cb5786569a8194a221](all-associaties.jsonld#L2016)".
+2025-02-11T09:39:27.352Z error: Unable to find the description for subject "[urn:oslo-toolchain:fd76c24758ebf6d9c0d96676a9ff567721775f1db0c060cb5786569a8194a221](all-associaties.jsonld#L2016)".
 
-2025-02-11T09:28:55.234Z error: Unable to find the description for subject "[urn:oslo-toolchain:441322448841e133e1f635bd3ceb7e82f93c738c1bf63c347339df3124dc7106](all-associaties.jsonld#L2226)".
+2025-02-11T09:39:27.353Z error: Unable to find the description for subject "[urn:oslo-toolchain:441322448841e133e1f635bd3ceb7e82f93c738c1bf63c347339df3124dc7106](all-associaties.jsonld#L2226)".
 
-2025-02-11T09:28:55.234Z error: Unable to find the description for subject "[urn:oslo-toolchain:54ef6b2ac3d8a0427f94e797b40403abbb8e974c5babfa28654fda14f9fb6a6c](all-associaties.jsonld#L2246)".
+2025-02-11T09:39:27.353Z error: Unable to find the description for subject "[urn:oslo-toolchain:54ef6b2ac3d8a0427f94e797b40403abbb8e974c5babfa28654fda14f9fb6a6c](all-associaties.jsonld#L2246)".
 
-2025-02-11T09:28:55.234Z error: Unable to find the description for subject "[urn:oslo-toolchain:0ec88fb1e7a89546555a69b69adf9d29e4dd19b521bfc57b52cb4353241cfe43](all-associaties.jsonld#L2304)".
+2025-02-11T09:39:27.353Z error: Unable to find the description for subject "[urn:oslo-toolchain:0ec88fb1e7a89546555a69b69adf9d29e4dd19b521bfc57b52cb4353241cfe43](all-associaties.jsonld#L2304)".
 
-2025-02-11T09:28:55.235Z error: Unable to find the description for subject "[urn:oslo-toolchain:fd13c3d857de3d90039f6ae2bd4d73d7d8717379d7825af1408c42a9bd6305f5](all-associaties.jsonld#L2324)".
+2025-02-11T09:39:27.354Z error: Unable to find the description for subject "[urn:oslo-toolchain:fd13c3d857de3d90039f6ae2bd4d73d7d8717379d7825af1408c42a9bd6305f5](all-associaties.jsonld#L2324)".
 
-2025-02-11T09:28:55.235Z error: Unable to find the description for subject "[urn:oslo-toolchain:bd941e9eae14d1df420667321a719f84cb20e386257c0f56a291059c7c1a8f49](all-associaties.jsonld#L2382)".
+2025-02-11T09:39:27.354Z error: Unable to find the description for subject "[urn:oslo-toolchain:bd941e9eae14d1df420667321a719f84cb20e386257c0f56a291059c7c1a8f49](all-associaties.jsonld#L2382)".
 
-2025-02-11T09:28:55.235Z error: Unable to find the description for subject "[urn:oslo-toolchain:789b2b57ad0f0a329175eda0774f82ff92e8744518e79bc523f3eb556ee4369f](all-associaties.jsonld#L2402)".
+2025-02-11T09:39:27.354Z error: Unable to find the description for subject "[urn:oslo-toolchain:789b2b57ad0f0a329175eda0774f82ff92e8744518e79bc523f3eb556ee4369f](all-associaties.jsonld#L2402)".
 
-2025-02-11T09:28:55.238Z error: Unable to find the description for subject "[urn:oslo-toolchain:7ee119c61eb5fddb5bd1a6c05ca2310ff2279f5ee8c80eb0a126e3ca5967d786](all-associaties.jsonld#L2536)".
+2025-02-11T09:39:27.355Z error: Unable to find the description for subject "[urn:oslo-toolchain:7ee119c61eb5fddb5bd1a6c05ca2310ff2279f5ee8c80eb0a126e3ca5967d786](all-associaties.jsonld#L2536)".
 
-2025-02-11T09:28:55.238Z error: Unable to find the description for subject "[urn:oslo-toolchain:ae39c987421f8ff570968a11dbb57983c279a80b42c85c188bde18111e638de7](all-associaties.jsonld#L2556)".
+2025-02-11T09:39:27.357Z error: Unable to find the description for subject "[urn:oslo-toolchain:ae39c987421f8ff570968a11dbb57983c279a80b42c85c188bde18111e638de7](all-associaties.jsonld#L2556)".
 
-2025-02-11T09:28:55.238Z error: Unable to find the description for subject "[urn:oslo-toolchain:c2b568b161485ed48ed09e9f4bbc26aba5b4f5f1d3966a3105326da46c12aa12](all-associaties.jsonld#L2652)".
+2025-02-11T09:39:27.357Z error: Unable to find the description for subject "[urn:oslo-toolchain:c2b568b161485ed48ed09e9f4bbc26aba5b4f5f1d3966a3105326da46c12aa12](all-associaties.jsonld#L2652)".
 
-2025-02-11T09:28:55.239Z error: Unable to find the description for subject "[urn:oslo-toolchain:4824fc3add4d2b34152c9c5cf1ff3055336dcd70b65b0a043f1c1252bc9654bc](all-associaties.jsonld#L2672)".
+2025-02-11T09:39:27.357Z error: Unable to find the description for subject "[urn:oslo-toolchain:4824fc3add4d2b34152c9c5cf1ff3055336dcd70b65b0a043f1c1252bc9654bc](all-associaties.jsonld#L2672)".
+
+#||# oslo-shacl-template-generator for language fr  
+
+#||# -------------------------------------  
+
+2025-02-11T09:39:28.127Z error: Unable to find the description for subject "[urn:oslo-toolchain:16ec592d2cf979c2a946f3f5bd56c1ac89019c811238c71a41e219825378d334](all-associaties.jsonld#L1684)".
+
+2025-02-11T09:39:28.128Z error: Unable to find the description for subject "[urn:oslo-toolchain:88f6d48169855dc00b5298f71040bf44edab4436235304f531fa87ce6e2f6677](all-associaties.jsonld#L1704)".
+
+2025-02-11T09:39:28.129Z error: Unable to find the description for subject "[urn:oslo-toolchain:485aeff851e934cb10d240db522cdc594e599a9f59441153e8e65c0e167d6451](all-associaties.jsonld#L1724)".
+
+2025-02-11T09:39:28.129Z error: Unable to find the description for subject "[urn:oslo-toolchain:5bc0d2838bbbf5217441f51dc60527f741bae3f61978f38715a1b54af12bcdb4](all-associaties.jsonld#L1744)".
+
+2025-02-11T09:39:28.129Z error: Unable to find the description for subject "[urn:oslo-toolchain:f3bbff33faacc30517f2bca681ef4f04e6bdef0ea7333fac1054ae8ab667499e](all-associaties.jsonld#L1764)".
+
+2025-02-11T09:39:28.129Z error: Unable to find the description for subject "[urn:oslo-toolchain:1de9f2eb39df58d2b5bdbd089070a4f174bec216019743ebb95273c4c22838d8](all-associaties.jsonld#L1784)".
+
+2025-02-11T09:39:28.130Z error: Unable to find the description for subject "[urn:oslo-toolchain:0988452985581b312dbc6bcae5e29fdd212096104b0342bcd0c7b0fef78b11a4](all-associaties.jsonld#L1880)".
+
+2025-02-11T09:39:28.130Z error: Unable to find the description for subject "[urn:oslo-toolchain:9d47a082663aa52e60149b8c42e4f102337f07e7af8da2e5b7684fbc4f50a297](all-associaties.jsonld#L1900)".
+
+2025-02-11T09:39:28.131Z error: Unable to find the description for subject "[urn:oslo-toolchain:77df3553b0335046d535169416dcb5e2b9cf7561d45feeae1f9a19590f6703ac](all-associaties.jsonld#L1996)".
+
+2025-02-11T09:39:28.131Z error: Unable to find the description for subject "[urn:oslo-toolchain:fd76c24758ebf6d9c0d96676a9ff567721775f1db0c060cb5786569a8194a221](all-associaties.jsonld#L2016)".
+
+2025-02-11T09:39:28.132Z error: Unable to find the description for subject "[urn:oslo-toolchain:441322448841e133e1f635bd3ceb7e82f93c738c1bf63c347339df3124dc7106](all-associaties.jsonld#L2226)".
+
+2025-02-11T09:39:28.132Z error: Unable to find the description for subject "[urn:oslo-toolchain:54ef6b2ac3d8a0427f94e797b40403abbb8e974c5babfa28654fda14f9fb6a6c](all-associaties.jsonld#L2246)".
+
+2025-02-11T09:39:28.132Z error: Unable to find the description for subject "[urn:oslo-toolchain:0ec88fb1e7a89546555a69b69adf9d29e4dd19b521bfc57b52cb4353241cfe43](all-associaties.jsonld#L2304)".
+
+2025-02-11T09:39:28.132Z error: Unable to find the description for subject "[urn:oslo-toolchain:fd13c3d857de3d90039f6ae2bd4d73d7d8717379d7825af1408c42a9bd6305f5](all-associaties.jsonld#L2324)".
+
+2025-02-11T09:39:28.133Z error: Unable to find the description for subject "[urn:oslo-toolchain:bd941e9eae14d1df420667321a719f84cb20e386257c0f56a291059c7c1a8f49](all-associaties.jsonld#L2382)".
+
+2025-02-11T09:39:28.133Z error: Unable to find the description for subject "[urn:oslo-toolchain:789b2b57ad0f0a329175eda0774f82ff92e8744518e79bc523f3eb556ee4369f](all-associaties.jsonld#L2402)".
+
+2025-02-11T09:39:28.134Z error: Unable to find the description for subject "[urn:oslo-toolchain:7ee119c61eb5fddb5bd1a6c05ca2310ff2279f5ee8c80eb0a126e3ca5967d786](all-associaties.jsonld#L2536)".
+
+2025-02-11T09:39:28.134Z error: Unable to find the description for subject "[urn:oslo-toolchain:ae39c987421f8ff570968a11dbb57983c279a80b42c85c188bde18111e638de7](all-associaties.jsonld#L2556)".
+
+2025-02-11T09:39:28.134Z error: Unable to find the description for subject "[urn:oslo-toolchain:c2b568b161485ed48ed09e9f4bbc26aba5b4f5f1d3966a3105326da46c12aa12](all-associaties.jsonld#L2652)".
+
+2025-02-11T09:39:28.134Z error: Unable to find the description for subject "[urn:oslo-toolchain:4824fc3add4d2b34152c9c5cf1ff3055336dcd70b65b0a043f1c1252bc9654bc](all-associaties.jsonld#L2672)".
 
