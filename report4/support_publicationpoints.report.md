@@ -100,8 +100,29 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/notificatie.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/od-terrein.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/od-voorkomen.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/od-waterdeel.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/om.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/omgevingsvergunning.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/oms.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/openbaar-domein.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/organisatie.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/overlijdensaangifte.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/perceel.publication.json
+#||#  
 Error: the following directories are unsupported
 [
+  "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-04-30",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-08-30",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-11-28",
@@ -126,25 +147,48 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/energiehuis",
   "/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17",
   "/tmp/generated/doc/applicatieprofiel/gebieden",
+  "/tmp/generated/doc/applicatieprofiel/generieke-terugmeldfaciliteit",
   "/tmp/generated/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
   "/tmp/generated/doc/applicatieprofiel/infrastructuurelementen",
   "/tmp/generated/doc/applicatieprofiel/inname-openbaar-domein",
+  "/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties",
   "/tmp/generated/doc/applicatieprofiel/leerinschrijfcredential/kandidaatstandaard/2024-05-16",
   "/tmp/generated/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17",
-  "/tmp/generated/doc/applicatieprofiel/generieke-terugmeldfaciliteit",
   "/tmp/generated/doc/applicatieprofiel/metadata-dcat",
-  "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL",
-  "/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties",
   "/tmp/generated/doc/applicatieprofiel/mobiliteitsbudget/ontwerpstandaard/2023-01-16",
   "/tmp/generated/doc/applicatieprofiel/notificatie-basis",
+  "/tmp/generated/doc/applicatieprofiel/begroeid-voorkomen",
+  "/tmp/generated/doc/applicatieprofiel/observaties-en-metingen",
+  "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18",
+  "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-08-30",
+  "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-11",
+  "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-06-20",
+  "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-09",
+  "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12",
+  "/tmp/generated/doc/applicatieprofiel/onbegroeid-voorkomen",
+  "/tmp/generated/doc/applicatieprofiel/organisatie-basis",
+  "/tmp/generated/doc/applicatieprofiel/terreindelen",
+  "/tmp/generated/doc/applicatieprofiel/vegetatie-elementen",
+  "/tmp/generated/doc/applicatieprofiel/waterdelen",
+  "/tmp/generated/doc/applicatieprofiel/watervoorkomen",
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
+  "/tmp/generated/doc/vocabularium/mobiliteit/Hoppinpunten/kandidaatstandaard/2022-04-01",
   "/tmp/generated/doc/vocabularium/mobiliteit/vervoersknooppunten/erkendestandaard/2022-12-01",
   "/tmp/generated/doc/vocabularium/mobiliteit/vervoersknooppunten/kandidaatstandaard/2022-04-01",
-  "/tmp/generated/doc/vocabularium/mobiliteit/Hoppinpunten/kandidaatstandaard/2022-04-01",
+  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/terreindeel",
+  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/infrastructuur",
+  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/vegetatie",
+  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/begroeid-voorkomen",
+  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/watervoorkomen",
+  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/begraafplaats",
+  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/gebied",
+  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/onbegroeid-voorkomen",
+  "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/waterdeel",
   "/tmp/generated/ns/FeitelijkeVerenigingen",
   "/tmp/generated/ns/bodem-en-ondergrond",
   "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
   "/tmp/generated/ns/grondboringen",
   "/tmp/generated/ns/leercredential",
-  "/tmp/generated/ns/metadata-dcat"
+  "/tmp/generated/ns/metadata-dcat",
+  "/tmp/generated/ns/observaties-en-metingen"
 ]
