@@ -1,0 +1,593 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+skos:Concept a rdfs:Class;
+  rdfs:label "ErnstType"@nl,
+    "Allergeentype"@nl,
+    "Dieetvoorkeurtype"@nl,
+    "Kenmerktype"@nl,
+    "Persoonsrelatietype"@nl,
+    "Reactietype"@nl,
+    "Aandoeningtype"@nl,
+    "Beperkingtype"@nl,
+    "Medicatietype"@nl,
+    "Toedieningtype"@nl,
+    "Allergietype"@nl,
+    "Relatietype"@nl .
+
+prov:Association a rdfs:Class;
+  rdfs:label "Uitgangregeling"@nl .
+
+prov:Start a rdfs:Class;
+  rdfs:label "Inschrijving"@nl .
+
+<https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand> a rdfs:Class;
+  rdfs:label "Gezondheidstoestand"@nl .
+
+<https://data.vlaanderen.be/ns/statistiek#Statistiek> a rdfs:Class;
+  rdfs:label "Socio Economisch Kenmerk"@nl .
+
+<https://hl7.org/fhir/R5/allergyintolerance-definitions.html#AllergyIntolerance> a rdfs:Class;
+  rdfs:label "Allergie"@nl .
+
+<https://hl7.org/fhir/medication-definitions.html#Medication> a rdfs:Class;
+  rdfs:label "Medicatie"@nl .
+
+<https://data.vlaanderen.be/ns/kindfiche#actief> a owl:DatatypeProperty;
+  rdfs:label "actief"@nl;
+  rdfs:comment "Mate waarin de Aandoening al dan niet aanwezig is."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/kindfiche#Aandoening>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range xsd:boolean .
+
+<https://data.vlaanderen.be/ns/kindfiche#allergeen> a owl:ObjectProperty;
+  rdfs:label "allergeen"@nl;
+  rdfs:comment "Een allergeen is een stof die een allergische reactie kan uitlokken bij mensen die daar gevoelig voor zijn."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range <https://data.vlaanderen.be/ns/kindfiche#Allergeen> .
+
+<https://data.vlaanderen.be/ns/kindfiche#allergie> a owl:ObjectProperty;
+  rdfs:label "allergie"@nl;
+  rdfs:comment "Abnormale reacties van het lichaam op de inname van een bepaalde stof"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range <https://hl7.org/fhir/R5/allergyintolerance-definitions.html#AllergyIntolerance> .
+
+<https://data.vlaanderen.be/ns/kindfiche#behandeling> a owl:DatatypeProperty;
+  rdfs:label "behandeling"@nl;
+  rdfs:comment "Soort verzorging nodig om de desbetreffende allergie te verhelpen of helpen verminderen."@nl;
+  rdfs:domain <https://hl7.org/fhir/R5/allergyintolerance-definitions.html#AllergyIntolerance>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/kindfiche#beperking> a owl:ObjectProperty;
+  rdfs:label "beperking"@nl;
+  rdfs:comment "Moeilijkheden die iemand heeft met het uitvoeren van activiteiten als gevolg van een afwijking in of verlies van functies of anatomische eigenschappen (ten gevolge van ziekte, ongeval, )"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range <https://data.vlaanderen.be/ns/kindfiche#Beperking> .
+
+<https://data.vlaanderen.be/ns/kindfiche#beschrijving> a owl:DatatypeProperty;
+  rdfs:label "beschrijving"@nl;
+  rdfs:comment "De beschrijving van het specifieke allergeen bij de Persoon."@nl,
+    "De beschrijving van de specifieke dieetvoorkeur van de Persoon."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/kindfiche#Allergeen>,
+    <https://data.vlaanderen.be/ns/kindfiche#Dieetvoorkeur>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/kindfiche#bijwerking> a owl:DatatypeProperty;
+  rdfs:label "bijwerking"@nl;
+  rdfs:comment "Extra, onbedoeld effect dat plaatsvindt na het innemen van bepaalde medicatie."@nl;
+  rdfs:domain <https://hl7.org/fhir/medication-definitions.html#Medication>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/kindfiche#dagelijkseRoutine> a owl:DatatypeProperty;
+  rdfs:label "dagelijkse routine"@nl;
+  rdfs:comment "Patroon van gebruikelijke handelingen die op een dagelijkse basis plaatsvinden."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/kindfiche#SpecifiekeBehoefte>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/kindfiche#diagnosedatum> a owl:DatatypeProperty;
+  rdfs:label "diagnosedatum"@nl;
+  rdfs:comment "Datum waarop de aandoening is vastgesteld."@nl,
+    "Datum waarop de allergie is vastgesteld."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/kindfiche#Aandoening>,
+    <https://hl7.org/fhir/R5/allergyintolerance-definitions.html#AllergyIntolerance>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range xsd:dateTime .
+
+<https://data.vlaanderen.be/ns/kindfiche#dieetvoorkeur> a owl:ObjectProperty;
+  rdfs:label "dieetvoorkeur"@nl;
+  rdfs:comment "Voedingspatroon dat om specifieke reden afwijkt van gewone voeding."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/kindfiche#SpecifiekeBehoefte>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range <https://data.vlaanderen.be/ns/kindfiche#Dieetvoorkeur> .
+
+<https://data.vlaanderen.be/ns/kindfiche#dosering> a owl:DatatypeProperty;
+  rdfs:label "dosering"@nl;
+  rdfs:comment "De hoeveelheid medicatie dat ingenomen moet worden."@nl;
+  rdfs:domain <https://hl7.org/fhir/medication-definitions.html#Medication>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range xsd:integer .
+
+<https://data.vlaanderen.be/ns/kindfiche#einddatum> a owl:DatatypeProperty;
+  rdfs:label "einddatum"@nl;
+  rdfs:comment "Datum waarop het innemen van medicatie is gestopt."@nl;
+  rdfs:domain <https://hl7.org/fhir/medication-definitions.html#Medication>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range xsd:dateTime .
+
+<https://data.vlaanderen.be/ns/kindfiche#ernst> a owl:ObjectProperty,
+    owl:DatatypeProperty;
+  rdfs:label "ernst"@nl;
+  rdfs:comment "De hevigheid waarmee een persoon reageert op een allergeen."@nl,
+    "De hevigheid waarmee een persoon reageert op een allergie."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/kindfiche#Allergeen>,
+    <https://hl7.org/fhir/R5/allergyintolerance-definitions.html#AllergyIntolerance>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range skos:Concept,
+    xsd:string .
+
+<https://data.vlaanderen.be/ns/kindfiche#frequentie> a owl:DatatypeProperty;
+  rdfs:label "frequentie"@nl;
+  rdfs:comment "De frequentie waarmee medicatie ingenomen moet worden."@nl;
+  rdfs:domain <https://hl7.org/fhir/medication-definitions.html#Medication>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/kindfiche#gebruikteMedicatie> a owl:ObjectProperty;
+  rdfs:label "gebruikte medicatie"@nl;
+  rdfs:comment "De Medicatie die wordt toegediend aan een Persoon."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range <https://hl7.org/fhir/medication-definitions.html#Medication> .
+
+<https://data.vlaanderen.be/ns/kindfiche#omgaanMetBehoefte> a owl:DatatypeProperty;
+  rdfs:label "omgaan met behoefte"@nl;
+  rdfs:comment "De manier waarop met een specifieke behoefte omgegaan wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/kindfiche#SpecifiekeBehoefte>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/kindfiche#oorzaak> a owl:DatatypeProperty;
+  rdfs:label "oorzaak"@nl;
+  rdfs:comment "Reden waarbij de allergie plaatsvindt."@nl;
+  rdfs:domain <https://hl7.org/fhir/R5/allergyintolerance-definitions.html#AllergyIntolerance>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/kindfiche#reactie> a owl:ObjectProperty;
+  rdfs:label "reactie"@nl;
+  rdfs:comment "Reactie dat het lichaam heeft op de allergeen."@nl,
+    "Reactie dat het lichaam heeft op de allergie."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/kindfiche#Allergeen>,
+    <https://hl7.org/fhir/R5/allergyintolerance-definitions.html#AllergyIntolerance>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/kindfiche#reden> a owl:DatatypeProperty;
+  rdfs:label "reden"@nl;
+  rdfs:comment "Reden waarom iemand bepaalde medicatie moet innemen."@nl;
+  rdfs:domain <https://hl7.org/fhir/medication-definitions.html#Medication>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/kindfiche#startdatum> a owl:DatatypeProperty;
+  rdfs:label "startdatum"@nl;
+  rdfs:comment "Datum waarop het innemen van medicatie is gestart."@nl;
+  rdfs:domain <https://hl7.org/fhir/medication-definitions.html#Medication>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range xsd:dateTime .
+
+<https://data.vlaanderen.be/ns/kindfiche#toediening> a owl:ObjectProperty;
+  rdfs:label "toediening"@nl;
+  rdfs:comment "De wijze waarop de medicatie aan een persoon toegediend wordt."@nl;
+  rdfs:domain <https://hl7.org/fhir/medication-definitions.html#Medication>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/kindfiche#zorgnood> a owl:DatatypeProperty;
+  rdfs:label "zorgnood"@nl;
+  rdfs:comment "De individuele vereisten voor zorg, ondersteuning en hulpverlening die nodig zijn om het welzijn en de gezondheid van een persoon te bevorderen."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/kindfiche#SpecifiekeBehoefte>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche>;
+  rdfs:range xsd:string .
+
+<http://data.europa.eu/m8g/hasSupportingEvidence> a rdf:Property;
+  rdfs:label "juridisch werk"@nl .
+
+dc11:type a rdf:Property;
+  rdfs:label "type"@nl .
+
+dc:title a rdf:Property;
+  rdfs:label "naam"@nl .
+
+dc:type a rdf:Property;
+  rdfs:label "statistiektype"@nl,
+    "reden van beëindiging"@nl .
+
+rdf:subject a rdf:Property .
+
+rdf:value a rdf:Property;
+  rdfs:label "waarde"@nl .
+
+prov:agent a rdf:Property;
+  rdfs:label "organisatie"@nl,
+    "ophaler"@nl .
+
+prov:atLocation a rdf:Property .
+
+prov:atTime a rdf:Property;
+  rdfs:label "plan"@nl,
+    "inschrijvingsdatum"@nl,
+    "beeindigingsdatum"@nl .
+
+prov:qualifiedAssociation a rdf:Property .
+
+<https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.aandoening> a rdf:Property;
+  rdfs:label "aandoening"@nl .
+
+<https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeObservatie.gedocumenteerdDoor> a rdf:Property;
+  rdfs:label "attest"@nl .
+
+<https://data.vlaanderen.be/ns/kindfiche#Beperking> a owl:Class;
+  rdfs:label "Beperking"@nl;
+  rdfs:comment "Moeilijkheden die iemand heeft met het uitvoeren van activiteiten als gevolg van een afwijking in of verlies van functies of anatomische eigenschappen (ten gevolge van ziekte, ongeval, )"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche> .
+
+<https://data.vlaanderen.be/ns/transactie#isInstantieVan> a rdf:Property .
+
+<https://data.vlaanderen.be/ns/kindfiche#Aandoening> a owl:Class;
+  rdfs:label "Aandoening"@nl;
+  rdfs:comment "Toestand waarbij het lichaam afwijkt van zijn gezonde toestand. Dit kan zowel lichamelijk of psychisch zijn."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche> .
+
+<https://data.vlaanderen.be/ns/kindfiche#Dieetvoorkeur> a owl:Class;
+  rdfs:label "Dieetvoorkeur"@nl;
+  rdfs:comment "Voedingspatroon dat om specifieke reden afwijkt van gewone voeding."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche> .
+
+<https://data.vlaanderen.be/ns/kindfiche#Allergeen> a owl:Class;
+  rdfs:label "Allergeen"@nl;
+  rdfs:comment "Een allergeen is een stof die een allergische reactie kan uitlokken bij mensen die daar gevoelig voor zijn."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche> .
+
+<https://data.vlaanderen.be/ns/kindfiche#SpecifiekeBehoefte> a owl:Class;
+  rdfs:label "Specifieke Behoefte"@nl;
+  rdfs:comment "Classificatie die bijzondere vereisten of voorkeuren van een persoon identificeert die aandacht nodig hebben in bepaalde situaties zoals educatieve settings of zorginstellingen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/kindfiche> .
+
+<https://data.vlaanderen.be/ns/kindfiche> a owl:Ontology;
+  rdfs:label "kindfiche"@en,
+    "kindfiche"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Koning Apestaart"];
+    foaf:firstName "Kevin";
+    foaf:lastName "backer"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "DEONA - KidsConnect"];
+    foaf:firstName "Patrick";
+    foaf:lastName "Vrydaghs"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Stad Herentals"];
+    foaf:firstName "Jan";
+    foaf:lastName "Vrij"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "DEONA - KidsConnect"];
+    foaf:firstName "Gunther";
+    foaf:lastName "Vrancken"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Vereniging van Vlaamse Steden en Gemeenten"];
+    foaf:firstName "Rika";
+    foaf:lastName "Verpoorten"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen/onze-oplossingen/lokaal-digitaal>;
+      foaf:name "Lokaal Digitaal"
+    ];
+    foaf:firstName "Simon";
+    foaf:lastName "Vander Elst";
+    foaf:mbox <mailto:simon.vanderelst@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Daycare Solutions"];
+    foaf:firstName "Bart";
+    foaf:lastName "Vandendriessche"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Tactics"];
+    foaf:firstName "Bart";
+    foaf:lastName "Van Herck"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Tactics"];
+    foaf:firstName "Gert";
+    foaf:lastName "Van Den Buijs"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Vlaams Welzijnsverbond"];
+    foaf:firstName "Ann ";
+    foaf:lastName "Van Den Brande"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Gemeente Stekene"];
+    foaf:firstName "Joanne";
+    foaf:lastName "Uvin"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Gemeente Stekene"];
+    foaf:firstName "Gertie";
+    foaf:lastName "Thielman"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Cubitex BVBA"];
+    foaf:firstName "Michiel";
+    foaf:lastName "Steegmans"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "i-Active ISB"];
+    foaf:firstName "Laurens";
+    foaf:lastName "Stanssens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://stad.gent/nl>;
+      foaf:name "Stad Gent"
+    ];
+    foaf:firstName "Hanne";
+    foaf:lastName "Smet"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Agentschap Binnenlands Bestuur"];
+    foaf:firstName "Janis";
+    foaf:lastName "Sevens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Vereniging van Vlaamse Steden en Gemeenten"];
+    foaf:firstName "Griet";
+    foaf:lastName "Serroels"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Tactics"];
+    foaf:firstName "Taco";
+    foaf:lastName "Orens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Gemeente Temse"];
+    foaf:firstName "Joke";
+    foaf:lastName "Maes"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Agentschap Binnenlands Bestuur"];
+    foaf:firstName "Danny";
+    foaf:lastName "Lievens";
+    foaf:mbox <mailto:danny.lievens@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.antwerpen.be/>;
+      foaf:name "Stad Antwerpen"
+    ];
+    foaf:firstName "Sabine";
+    foaf:lastName "Lefever"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Arteveldehogeschool"];
+    foaf:firstName "Karolien";
+    foaf:lastName "Huylebroek"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Agentschap Opgroeien"];
+    foaf:firstName "Erwin";
+    foaf:lastName "Hermans"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "BKO Sint-Niklaas"];
+    foaf:firstName "Britt ";
+    foaf:lastName "Gogol"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.groeipakket.be/>;
+      foaf:name "Agentschap uitbetaling Groeipakket"
+    ];
+    foaf:firstName "Sara";
+    foaf:lastName "Franqui"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Tactics"];
+    foaf:firstName "Jan";
+    foaf:lastName "Dries"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Vereniging van Vlaamse Steden en Gemeenten"];
+    foaf:firstName "Lisse";
+    foaf:lastName "De Witte"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://i-active.be/ords/f?p=167%3A101%3A%3A%3A%3A%3AP101_KLANT%3A344>;
+      foaf:name "i-Active ISB"
+    ];
+    foaf:firstName "Ilke";
+    foaf:lastName "Cuelenaere"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Agentschap Opgroeien"];
+    foaf:firstName "Johan";
+    foaf:lastName "Buyc"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Gemeente Temse"];
+    foaf:firstName "Angelique";
+    foaf:lastName "Bombeke De Meyer"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://huisvanhetkindstekene.be/>;
+      foaf:name "Huis van het Kind Stekene"
+    ];
+    foaf:firstName "Gina";
+    foaf:lastName "Blommaert"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Vlaamse Dienst Speelpleinwerking"];
+    foaf:firstName "Tine ";
+    foaf:lastName "Bergiers"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Agentschap Opgroeien"];
+    foaf:firstName "Stijn";
+    foaf:lastName "Beirens"
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso skos:Concept,
+    prov:Association,
+    prov:Start,
+    <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand>,
+    <https://data.vlaanderen.be/ns/statistiek#Statistiek>,
+    <https://hl7.org/fhir/R5/allergyintolerance-definitions.html#AllergyIntolerance>,
+    <https://hl7.org/fhir/medication-definitions.html#Medication>,
+    <https://data.vlaanderen.be/ns/transactie#isInstantieVan>,
+    <https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeObservatie.gedocumenteerdDoor>,
+    <https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.aandoening>,
+    prov:qualifiedAssociation,
+    prov:atTime,
+    prov:atLocation,
+    prov:agent,
+    rdf:value,
+    rdf:subject,
+    dc:type,
+    dc:title,
+    dc11:type,
+    <http://data.europa.eu/m8g/hasSupportingEvidence>;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/doc/organisatie/OVO002954>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Eveline";
+    foaf:lastName "Vlassenroot"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/doc/organisatie/OVO002951>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Laurens";
+    foaf:lastName "Vercauteren"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Ziggy";
+    foaf:lastName "Vanlishout";
+    foaf:mbox <mailto:ziggy.vanlishout@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/doc/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Sam";
+    foaf:lastName "Vangramberen";
+    foaf:mbox <mailto:sam.vangramberen@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/doc/organisatie/OVO002952>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Liesbeth";
+    foaf:lastName "Van der Haegen";
+    foaf:mbox <mailto:liesbeth.vanderhaegen@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Geert";
+    foaf:lastName "Thijs";
+    foaf:mbox <mailto:geert.thijs@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Kim";
+    foaf:lastName "Leemans";
+    foaf:mbox <mailto:kim.leemans@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/doc/organisatie/OVO002950>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Yaron";
+    foaf:lastName "Dassonneville";
+    foaf:mbox <mailto:yaron.dassonneville@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/doc/organisatie/OVO002953>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Raf";
+    foaf:lastName "Buyle"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Veerle";
+    foaf:lastName "Beyaert";
+    foaf:mbox <mailto:veerle.beyaert@vlaanderen.be>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Agentschap Binnenlands Bestuur"];
+    foaf:firstName "Tina";
+    foaf:lastName "Tyteca";
+    foaf:mbox <mailto:tina.tyteca@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Gemeente Bornem"];
+    foaf:firstName "Annelies";
+    foaf:lastName "Hautekeete"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Agentschap Opgroeien"];
+    foaf:firstName "Riet";
+    foaf:lastName "Debondt"
+  ] .
