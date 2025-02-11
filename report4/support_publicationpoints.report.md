@@ -30,5 +30,8 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/interpretaties",
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/observaties",
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/ruimtelijke-bereiken",
-  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/ruimtelijke-bereiken/ontwerpstandaard/2021-08-01/i"
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/ruimtelijke-bereiken/ontwerpstandaard/2021-08-01/i",
+  "/tmp/generated/ns/grondboringen",
+  "/tmp/generated/ns/bodem-en-ondergrond",
+  "/tmp/generated/ns/bodem-en-ondergrond/interpretaties"
 ]
