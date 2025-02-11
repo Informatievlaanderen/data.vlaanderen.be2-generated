@@ -1,0 +1,1270 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/AankooplijnShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Aankooplijn.Aantal>;
+    shacl:datatype xsd:integer;
+    shacl:description "Aantal producten van eenzelfde soort."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "aantal"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#aantal>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Aankooplijn.Product>;
+    shacl:class schemas:Product;
+    shacl:description "Product dat het onderwerp vormt van de aankooplijn."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "product"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#product>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Aankooplijn.Promotie>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "Promotie die van toepassing is op een specifiek product."@nl;
+    shacl:maxCount "1";
+    shacl:name "promotie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#promotie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Aankooplijn.Transactie>;
+    shacl:class <https://data.vlaanderen.be/ns/lokale-economie#Transactie>;
+    shacl:description "Transactie waartoe de aankooplijn behoort."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "transactie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#transactie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/lokale-economie#Aankooplijn> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/AantalwerknemersShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/ActiviteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Activiteit.Contactinfo>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon... die toelaat de aanbieder te contacteren."@nl;
+    shacl:name "contactinfo"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.contactinfo>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Activiteit.Doelgroep>;
+    shacl:class skos:Concept;
+    shacl:description "Het bedoelde of verwachte publiek van een Activiteit."@nl;
+    shacl:name "doelgroep"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.doelgroep>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Activiteit.Ingerichtdoor>;
+    shacl:class dc:Agent;
+    shacl:description "De inrichter van de activiteit."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "ingerichtDoor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#ingerichtDoor>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Activiteit.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Het type van activiteit."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass crm:E7_Activity .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/ActiviteittypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/AdresvoorstellingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Adresvoorstelling.Busnummer>;
+    shacl:datatype xsd:string;
+    shacl:description "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."@nl;
+    shacl:maxCount "1";
+    shacl:name "busnummer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Adresvoorstelling.Gemeentenaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Gemeentenaam vh adres."@nl;
+    shacl:maxCount "1";
+    shacl:name "gemeentenaam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#gemeentenaam>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Adresvoorstelling.Huisnummer>;
+    shacl:datatype xsd:string;
+    shacl:description "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."@nl;
+    shacl:maxCount "1";
+    shacl:name "huisnummer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Adresvoorstelling.Land>;
+    shacl:datatype rdf:langString;
+    shacl:description "Land waarin het adres gelegen is."@nl;
+    shacl:maxCount "1";
+    shacl:name "land"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#land>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Adresvoorstelling.Postcode>;
+    shacl:datatype xsd:string;
+    shacl:description "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:name "postcode"@nl;
+    shacl:path <http://www.w3.org/ns/locn#postCode>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Adresvoorstelling.Straatnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Straatnaam vh adres."@nl;
+    shacl:maxCount "1";
+    shacl:name "straatnaam"@nl;
+    shacl:path <http://www.w3.org/ns/locn#thoroughfare>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Address> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/AffilatietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/BedrijfsgrootteShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/BelgischAdresShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/adres#Adres> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/BetaalmethodetypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/BetalingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Betaling.Tijdstip>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de betaling plaatsvindt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "tijdstip"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#Betaling.tijdstip>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Betaling.Bedrag>;
+    shacl:class <https://data.vlaanderen.be/ns/financiele-data#Monetair>;
+    shacl:description "Hoeveelheid geld of equivalent die wordt overgemaakt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "bedrag"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#bedrag>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Betaling.Betaalmethode>;
+    shacl:class skos:Concept;
+    shacl:description "Indicatie van het betaalmiddel dat gebruikt werd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "betaalmethode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#betaalmethode>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Betaling.Transactie>;
+    shacl:class <https://data.vlaanderen.be/ns/lokale-economie#Transactie>;
+    shacl:description "Transactie waartoe de betaling behoort."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "transactie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#transactie>
+  ];
+  shacl:targetClass schemas:MoneyTransfer .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/BezoekersgebiedShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Bezoekersgebied.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van het bezoekersgebied."@nl;
+    shacl:maxCount "1";
+    shacl:name "naam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#naam>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Bezoekersgebied.Locatie>;
+    shacl:class <https://data.vlaanderen.be/ns/lokale-economie#Locatie>;
+    shacl:description "Precieze locatie van het bezoekersgebied."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "locatie"@nl;
+    shacl:path <https://www.w3.org/ns/prov#atLocation>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Bezoekersgebied.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Type van het bezoekersgebied."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/lokale-economie#Bezoekersgebied> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/BezoekersgebiedtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/BezoekersprofieltypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/ContactinfoShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Contactinfo.Aanschrijfprefix>;
+    shacl:datatype rdf:langString;
+    shacl:description "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen."@nl;
+    shacl:maxCount "1";
+    shacl:name "aanschrijfprefix"@nl;
+    shacl:path vcard:honorific-prefix
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Contactinfo.Naam>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam van bvb de persoon die men kan contacteren."@nl;
+    shacl:maxCount "1";
+    shacl:name "naam"@nl;
+    shacl:path foaf:name
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Contactinfo.Email>;
+    shacl:datatype xsd:string;
+    shacl:description "Email-adres waarnaar men kan mailen."@nl;
+    shacl:maxCount "1";
+    shacl:name "email"@nl;
+    shacl:path schema:email
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Contactinfo.Faxnummer>;
+    shacl:datatype xsd:string;
+    shacl:description "Faxnummer waarnaar men kan faxen."@nl;
+    shacl:maxCount "1";
+    shacl:name "faxnummer"@nl;
+    shacl:path schema:faxNumber
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Contactinfo.Openingsuren>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Uren waarbinnen contact kan worden opgenomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "openingsuren"@nl;
+    shacl:path schema:openingHours
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Contactinfo.Telefoon>;
+    shacl:datatype xsd:string;
+    shacl:description "Telefoonnummer waarop men kan bellen."@nl;
+    shacl:maxCount "1";
+    shacl:name "telefoon"@nl;
+    shacl:path schema:telephone
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Contactinfo.Pagina>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Website waarnaar men kan surfen."@nl;
+    shacl:maxCount "1";
+    shacl:name "pagina"@nl;
+    shacl:path foaf:page
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Contactinfo.Adres>;
+    shacl:class <http://www.w3.org/ns/locn#Address>;
+    shacl:description "Adres dat men kan aanschrijven of bezoeken."@nl;
+    shacl:maxCount "1";
+    shacl:name "adres"@nl;
+    shacl:path <http://www.w3.org/ns/locn#address>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Contactinfo.Urenbeschikbaarheid>;
+    shacl:class schema:OpeningHoursSpecification;
+    shacl:description "Periode waarin contact kan worden opgenomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "urenBeschikbaarheid"@nl;
+    shacl:path schema:hoursAvailable
+  ];
+  shacl:targetClass schema:ContactPoint .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/DateShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:date .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/DatetimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/DirectelocatieaanduidingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/RuimtelijkPlannen#DirecteLocatieAanduiding> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/DoelgroeptypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/DomeinobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Domeinobject.Waardeverschaffer>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>;
+    shacl:description "Observatie waarvan het domeinobject het onderwerp is."@nl;
+    shacl:name "waardeverschaffer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Object.waardeverschaffer>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/DruktekenmerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Druktekenmerk.Bezoekersprofiel>;
+    shacl:class skos:Concept;
+    shacl:description "Bezoekersprofiel dat geobserveerd wordt."@nl;
+    shacl:name "bezoekersprofiel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#bezoekersProfiel>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Druktekenmerk.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Type van druktekenmerk."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Druktekenmerk.Bezoekherkomst>;
+    shacl:class prov:Location;
+    shacl:description "Bepaalde herkomst van bezoekers die geobserveerd wordt."@nl;
+    shacl:name "bezoekHerkomst"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#bezoekHerkomst>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Druktekenmerk.Koperprofiel>;
+    shacl:class <https://data.vlaanderen.be/ns/lokale-economie#Profiel>;
+    shacl:description "Socio-demografisch profiel of organisatieprofiel dat geobserveerd wordt."@nl;
+    shacl:name "koperprofiel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#koperprofiel>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Druktekenmerk.Herkomsttype>;
+    shacl:class <https://data.vlaanderen.be/ns/lokale-economie#HerkomstType>;
+    shacl:description "Categorisering van het gebied waarvan de bezoekers afkomstig zijn."@nl;
+    shacl:name "herkomsttype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#herkomstType>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/lokale-economie#Druktekenmerk> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/DruktekenmerktypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/DruktemetingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Druktemeting.Geobserveerdkenmerk>;
+    shacl:class <https://data.vlaanderen.be/ns/lokale-economie#Druktekenmerk>;
+    shacl:description "Druktekenmerk dat geobserveerd wordt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geobserveerdKenmerk"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#Druktemeting.geobserveerdKenmerk>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/lokale-economie#Druktemeting> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/DurationShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:duration .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/GebeurtenisShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Gebeurtenis.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de gebeurtenis."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Gebeurtenis.Titel>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de gebeurtenis."@nl;
+    shacl:maxCount "1";
+    shacl:name "titel"@nl;
+    shacl:path dc:title
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Gebeurtenis.Locatie>;
+    shacl:class prov:Location;
+    shacl:description "Locatie waarop een gebeurtenis plaatsvindt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "locatie"@nl;
+    shacl:path <https://www.w3.org/ns/prov#atLocation>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Gebeurtenis.Tijdstip>;
+    shacl:class schemas:Schedule;
+    shacl:description "Tijdstip waarop een gebeurtenis plaatsvindt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "tijdstip"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#Gebeurtenis.tijdstip>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Gebeurtenis.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Type van de gebeurtenis."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass schemas:Event .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/GebeurtenistypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/GeometrieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Geometrie.AlsGml>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "als GML"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Geometrie.AlsWkt>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "als WKT"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/GetalShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass schemas:Number .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/GezinssamenstellingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/HandelszaakShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Handelszaak.Publiekeverkoopvloeroppervlakte>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "Publiek toegankelijke oppervlakte van de winkel."@nl;
+    shacl:maxCount "1";
+    shacl:name "publiekeVerkoopVloeroppervlakte"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#publiekeVerkoopVloeroppervlakte>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Handelszaak.Vestigingsadres>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Adres vd vestiging."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "vestigingsadres"@nl;
+    shacl:path org:siteAddress
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Handelszaak.Organisatie>;
+    shacl:class org:Organization;
+    shacl:description "Organisatie waar de handelszaak zich mee associeert."@nl;
+    shacl:maxCount "1";
+    shacl:name "organisatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#organisatie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/lokale-economie#Handelszaak> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/HerkomsttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/lokale-economie#HerkomstType> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/IdentificatorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Identificator.Notatie>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "String gebruikt om het object uniek te identificeren."@nl;
+    shacl:maxCount "1";
+    shacl:name "notatie"@nl;
+    shacl:path skos:notation
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Identificator.Uitgegeven>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "uitgegeven"@nl;
+    shacl:path dc:issued
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Identificator.Gestructureerdeidentificator>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator>;
+    shacl:description "Identificator vh object opgesplitst in zijn onderdelen."@nl;
+    shacl:maxCount "1";
+    shacl:name "gestructureerdeIdentificator"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Identificator.Maker>;
+    shacl:class dc:Agent;
+    shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "maker"@nl;
+    shacl:path dc:creator
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Identificator.Toegekenddoor>;
+    shacl:class dc:Agent;
+    shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekendDoor"@nl;
+    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/IndirectelocatieaanduidingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Indirectelocatieaanduiding.Referentie>;
+    shacl:class <https://data.vlaanderen.be/ns/RuimtelijkPlannen#RuimtelijkObject>;
+    shacl:description "Referentie naar het ruimtelijk object (plaats of adres) dat gebruikt wordt als indirecte locatie aanduiding."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "referentie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#referentie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/RuimtelijkPlannen#IndirecteLocatieAanduiding> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/InkomensklasseShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/IntegerShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:integer .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/KenmerktypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/KlantenkaartShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/KwantitatieveWaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#KwantitatieveWaarde.Eenheid>;
+    shacl:datatype xsd:string;
+    shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "eenheid"@nl;
+    shacl:path schemas:unitText
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#KwantitatieveWaarde.StandaardEenheid>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#StandaardEenheid>;
+    shacl:description "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "standaard eenheid"@nl;
+    shacl:path schemas:unitCode
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#KwantitatieveWaarde.Waarde>;
+    shacl:class schemas:Number;
+    shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path schemas:value
+  ];
+  shacl:targetClass schemas:QuantitativeValue .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/LeeftijdsgroepShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/LiteralShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Literal .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/LocatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass prov:Location .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/MomentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Moment.Inxsddatetime>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Positie in de tijd uitgedrukt dmv xsd:dateTime."@nl;
+    shacl:maxCount "1";
+    shacl:name "inXSDDateTime"@nl;
+    shacl:path <http://www.w3.org/2006/time#inXSDDateTime>
+  ];
+  shacl:targetClass <http://www.w3.org/2006/time#Instant> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/MonetairShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/financiele-data#Monetair> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/ObservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Observatie.Fenomeentijd>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
+    shacl:description "Het moment waarop het resultaat van de Observatie van toepassing was."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "fenomeentijd"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Observatie.Parameter>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:description "Willekeurig gegeven gassocieerd met het gebeuren van de Observatie."@nl;
+    shacl:name "parameter"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Observatie.Resultaat>;
+    shacl:class rdfs:Resource;
+    shacl:description "De waarde van het geobserveerdeKenmerk als resultaat van de Observatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resultaat"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Observatie.Resultaatkwaliteit>;
+    shacl:class <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element>;
+    shacl:description "Mate waarin het resultaat van de Observatie voldoet aan de vereisten of verwachtingen."@nl;
+    shacl:name "resultaatkwaliteit"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Observatie.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Het type van observatie."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Observatie.Uitgevoerddoor>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die de Observatie heeft uitgevoerd."@nl;
+    shacl:name "uitgevoerdDoor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Observatie.Geobserveerdobject>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature>;
+    shacl:description "Object dat men observeert."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geobserveerdObject"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/ObservatiecontextShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Observatiecontext.Rol>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/Names#GenericName>;
+    shacl:description "Rol die één observatie speelt bij het verklaren van een andere observatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "rol"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role>
+  ];
+  shacl:targetClass <https://def.isotc211.org/iso19156/2011/Observation#ObservationContext> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/OmgevingskenmerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Omgevingskenmerk.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Type van omgevingskenmerk dat geobserveerd wordt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/lokale-economie#Omgevingskenmerk> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/OmgevingskenmerktypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/OmgevingsobservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Omgevingsobservatie.Geobserveerdkenmerk>;
+    shacl:class <https://data.vlaanderen.be/ns/lokale-economie#Omgevingskenmerk>;
+    shacl:description "Kenmerk van de omgeving dat geobserveerd wordt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geobserveerdKenmerk"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#OmgevingsObservatie.geobserveerdKenmerk>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/lokale-economie#Omgevingsobservatie> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/OnderwijsniveauShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/OpeningsurenspecificatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Openingsurenspecificatie.GeldigTot>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum tot wanneer de opgegeven openingsuren gelden."@nl;
+    shacl:maxCount "1";
+    shacl:name "geldig tot"@nl;
+    shacl:path schema:validThrough
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Openingsurenspecificatie.GeldigVan>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum vanaf wanneer de opgegeven openingsuren gelden."@nl;
+    shacl:maxCount "1";
+    shacl:name "geldig van"@nl;
+    shacl:path schema:validFrom
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Openingsurenspecificatie.Gesloten>;
+    shacl:datatype xsd:time;
+    shacl:description "Sluitingsuur vd plaats of dienst op de opgegeven dag vd week."@nl;
+    shacl:maxCount "1";
+    shacl:name "gesloten"@nl;
+    shacl:path schema:closes
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Openingsurenspecificatie.Open>;
+    shacl:datatype xsd:time;
+    shacl:description "Openingsuur vd plaats of dienst op de opgegeven dag vd week."@nl;
+    shacl:maxCount "1";
+    shacl:name "open"@nl;
+    shacl:path schema:opens
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Openingsurenspecificatie.DagVanDeWeek>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Dag van de week waarvoor de openingsuren geldig zijn."@nl;
+    shacl:maxCount "1";
+    shacl:name "dag van de week"@nl;
+    shacl:path schema:dayOfWeek
+  ];
+  shacl:targetClass schema:OpeningHoursSpecification .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/OrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Organisatie.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "De naam van een organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#voorkeursnaam>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Organisatie.Classificatie>;
+    shacl:class skos:Concept;
+    shacl:description "Rangschikking van de organisatie in een classificatiesysteem."@nl;
+    shacl:name "classificatie"@nl;
+    shacl:path org:classification
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Organisatie.Profielinfo>;
+    shacl:class <https://data.vlaanderen.be/ns/lokale-economie#Organisatieprofiel>;
+    shacl:description "Profiel van een organisatie."@nl;
+    shacl:name "profielinfo"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#profielinfo>
+  ];
+  shacl:targetClass org:Organization .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/OrganisatieclassificatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/OrganisatieprofielShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Organisatieprofiel.Bedrijfsgrootte>;
+    shacl:class skos:Concept;
+    shacl:description "Classificatie van de grootte van een organisatie volgens een bepaald kenmerk."@nl;
+    shacl:maxCount "1";
+    shacl:name "bedrijfsgrootte"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#bedrijfsgrootte>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Organisatieprofiel.Affiliatietype>;
+    shacl:class skos:Concept;
+    shacl:description "Type van affiliatie, i.e., verbondenheid met een moederorganisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "affiliatietype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#affiliatietype>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/lokale-economie#Organisatieprofiel> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/PeriodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Periode.Tot>;
+    shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:description "Einde ve TemporeleEntiteit."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "tot"@nl;
+    shacl:path <http://www.w3.org/2006/time#hasEnd>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Periode.Van>;
+    shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:description "Start ve TemporeleEntiteit."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "van"@nl;
+    shacl:path <http://www.w3.org/2006/time#hasBeginning>
+  ];
+  shacl:targetClass <http://www.w3.org/2006/time#ProperInterval> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/PersoonShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Persoon.Familienaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "familienaam"@nl;
+    shacl:path foaf:familyName
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Persoon.Geboortejaar>;
+    shacl:datatype xsd:integer;
+    shacl:description "Geboortejaar van een persoon."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geboortejaar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#/Geboortejaar>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Persoon.Gegevennaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam die een kind bij geboorte wordt gegeven. Onderscheidt het kind van de andere kinderen in de familie."@nl;
+    shacl:minCount "1";
+    shacl:name "gegevenNaam"@nl;
+    shacl:path foaf:givenName
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Persoon.Contactpunt>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon... die toelaat de Persoon te contacteren."@nl;
+    shacl:maxCount "1";
+    shacl:name "contactpunt"@nl;
+    shacl:path schema:contactPoint
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Persoon.Geslacht>;
+    shacl:class skos:Concept;
+    shacl:description "Het feit of de persoon een man of een vrouw is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geslacht"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#geslacht>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Persoon.Verblijfplaats>;
+    shacl:class <https://data.vlaanderen.be/ns/persoon#Verblijfplaats>;
+    shacl:description "Verblijfplaats van een persoon."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "verblijfplaats"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#/Verblijfplaats>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Persoon.Domicilie>;
+    shacl:class <https://data.vlaanderen.be/ns/persoon#Domicilie>;
+    shacl:description "Hoofdverblijfplaats van een persoon."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "domicilie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#/Domicilie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Persoon.Profiel>;
+    shacl:class <https://data.vlaanderen.be/ns/lokale-economie#SocioDemografischProfiel>;
+    shacl:description "Socio-demografisch profiel van een persoon."@nl;
+    shacl:name "profiel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#profiel>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/person#Person> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/PlaatsShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Plaats.Plaatsnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de plaats of van het gebied."@nl;
+    shacl:minCount "1";
+    shacl:name "plaatsnaam"@nl;
+    shacl:path rdfs:label
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Plaats.Geometrie>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "Geometrie van de plaats of het gebied."@nl;
+    shacl:maxCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://www.w3.org/ns/locn#geometry>
+  ];
+  shacl:targetClass dc:Location .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/ProductShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Product.Productbeschrijving>;
+    shacl:datatype xsd:string;
+    shacl:description "Beschrijving van het product."@nl;
+    shacl:maxCount "1";
+    shacl:name "productbeschrijving"@nl;
+    shacl:path schemas:description
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Product.Eenheidsprijs>;
+    shacl:class <https://data.vlaanderen.be/ns/financiele-data#Monetair>;
+    shacl:description "Prijs van één eenheid van het product."@nl;
+    shacl:minCount "1";
+    shacl:name "eenheidsprijs"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#eenheidsprijs>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Product.Productcategorie>;
+    shacl:class skos:Concept;
+    shacl:description "Categorie van het product."@nl;
+    shacl:name "productcategorie"@nl;
+    shacl:path schemas:category
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Product.Productid>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Unieke identificator van het product."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "productID"@nl;
+    shacl:path schemas:productID
+  ];
+  shacl:targetClass schemas:Product .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/ProductcategorietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/ProfielShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/lokale-economie#Profiel> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/RuimtelijkobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/RuimtelijkPlannen#RuimtelijkObject> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/SociodemografischprofielShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Sociodemografischprofiel.Gezinstype>;
+    shacl:class skos:Concept;
+    shacl:description "Classificatie van de gezinssamenstelling van een persoon of groep van personen."@nl;
+    shacl:maxCount "1";
+    shacl:name "gezinstype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#gezinstype>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Sociodemografischprofiel.Inkomensklasse>;
+    shacl:class skos:Concept;
+    shacl:description "Inkomensklasse van een persoon of groep van personen."@nl;
+    shacl:maxCount "1";
+    shacl:name "inkomensklasse"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#inkomensklasse>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Sociodemografischprofiel.Leeftijdsgroep>;
+    shacl:class skos:Concept;
+    shacl:description "Leeftijdsgroep van een persoon of groep van personen."@nl;
+    shacl:maxCount "1";
+    shacl:name "leeftijdsgroep"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#leeftijdsgroep>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Sociodemografischprofiel.Onderwijsniveau>;
+    shacl:class skos:Concept;
+    shacl:description "Onderwijsniveau van een persoon of groep van personen."@nl;
+    shacl:maxCount "1";
+    shacl:name "onderwijsniveau"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#onderwijsniveau>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Sociodemografischprofiel.Locatie>;
+    shacl:class <https://data.vlaanderen.be/ns/lokale-economie#Locatie>;
+    shacl:description "Woonplaats van een persoon of groep van personen."@nl;
+    shacl:maxCount "1";
+    shacl:name "locatie"@nl;
+    shacl:path prov:Location
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/lokale-economie#SocioDemografischProfiel> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/StandaardEenheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#StandaardEenheid> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/StringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/TaalstringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/TemporeleentiteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/2006/time#TemporalEntity> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/TijdschemaShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Tijdschema.Aantalherhalingen>;
+    shacl:datatype xsd:integer;
+    shacl:description "Aantal keer dat het plaatsvindt."@nl;
+    shacl:maxCount "1";
+    shacl:name "aantalHerhalingen"@nl;
+    shacl:path schemas:repeatCount
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Tijdschema.Duur>;
+    shacl:datatype xsd:duration;
+    shacl:description "De tijdsduur van iets."@nl;
+    shacl:maxCount "1";
+    shacl:name "duur"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#duur>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Tijdschema.Einddatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum tot wanneer het plaatsvindt."@nl;
+    shacl:maxCount "1";
+    shacl:name "einddatum"@nl;
+    shacl:path schemas:endDate
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Tijdschema.Eindtijd>;
+    shacl:datatype xsd:time;
+    shacl:description "Tijdstip waarop het eindigt."@nl;
+    shacl:maxCount "1";
+    shacl:name "eindtijd"@nl;
+    shacl:path schemas:endTime
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Tijdschema.Frequentie>;
+    shacl:datatype xsd:string;
+    shacl:description "Frequentie waarmee het plaatsvindt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "frequentie"@nl;
+    shacl:path schemas:repeatFrequency
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Tijdschema.Perdag>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Dagen van de week waarop het plaatsvindt."@nl;
+    shacl:name "perDag"@nl;
+    shacl:path schemas:byDay
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Tijdschema.Perdagvandemaand>;
+    shacl:datatype xsd:integer;
+    shacl:description "Dagen van de maand waarop het plaatsvindt."@nl;
+    shacl:name "perDagVanDeMaand"@nl;
+    shacl:path schemas:byMonthDay
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Tijdschema.Permaand>;
+    shacl:datatype xsd:integer;
+    shacl:description "Maanden van het jaar waarop het plaatsvindt."@nl;
+    shacl:name "perMaand"@nl;
+    shacl:path schemas:byMonth
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Tijdschema.Persetpositie>;
+    shacl:datatype xsd:integer;
+    shacl:description "Specificatie van de dag(en) binnen een periode waarop het plaatsvindt."@nl;
+    shacl:maxCount "1";
+    shacl:name "perSetpositie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#perSetpositie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Tijdschema.Startdatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum vanaf wanneer het plaatsvindt."@nl;
+    shacl:maxCount "1";
+    shacl:name "startdatum"@nl;
+    shacl:path schemas:startDate
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Tijdschema.Starttijd>;
+    shacl:datatype xsd:time;
+    shacl:description "Tijdstip waarop het start."@nl;
+    shacl:maxCount "1";
+    shacl:name "starttijd"@nl;
+    shacl:path schemas:startTime
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Tijdschema.Uitzonderingsdatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datums waarop het uitzonderlijk niet plaatsvindt."@nl;
+    shacl:name "uitzonderingsdatum"@nl;
+    shacl:path schemas:exceptDate
+  ];
+  shacl:targetClass schemas:Schedule .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/TimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:time .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/TransactieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Transactie.Bedrag>;
+    shacl:class <https://data.vlaanderen.be/ns/financiele-data#Monetair>;
+    shacl:description "Totale waarde van de transactie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "bedrag"@nl;
+    shacl:path schemas:amount
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Transactie.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Type van transactie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Transactie.Klantenkaart>;
+    shacl:class skos:Concept;
+    shacl:description "Klantenkaart die gebruikt wordt bij de transactie."@nl;
+    shacl:name "klantenkaart"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#klantenkaart>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Transactie.Uitgevoerddoor>;
+    shacl:class dc:Agent;
+    shacl:description "Persoon of organisatie door wie de transactie werd uitgevoerd, i.e., de koper."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "uitgevoerdDoor"@nl;
+    shacl:path schemas:customer
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Transactie.Uitgevoerdbij>;
+    shacl:class org:Organization;
+    shacl:description "Organisatie waarbij de transactie werd uitgevoerd, i.e., de verkoper."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "uitgevoerdBij"@nl;
+    shacl:path schemas:seller
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Transactie.Promotie>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "Promotie die van toepassing is op de volledige transactie."@nl;
+    shacl:name "promotie"@nl;
+    shacl:path schemas:discount
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Transactie.Betaling>;
+    shacl:class schemas:MoneyTransfer;
+    shacl:description "Betaling waaruit transactie bestaat."@nl;
+    shacl:minCount "1";
+    shacl:name "betaling"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#betaling>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Transactie.Aankooplijn>;
+    shacl:class <https://data.vlaanderen.be/ns/lokale-economie#Aankooplijn>;
+    shacl:description "Een onderdeel van de transactie dat overeenstemt met één aankooplijn op een kassaticket."@nl;
+    shacl:minCount "1";
+    shacl:name "aankooplijn"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#aankooplijn>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/lokale-economie#Transactie> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/TransactietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/UriShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:anyURI .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/VerblijfplaatsShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Verblijfplaats.Verblijfsadres>;
+    shacl:class <http://www.w3.org/ns/locn#Address>;
+    shacl:description "Plaats waar een persoon al dan niet tijdelijk woont of logeert."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "verblijfsadres"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#verblijfsadres>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Verblijfplaats> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/VerkeersobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/VerkoopkenmerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Verkoopkenmerk.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Type van verkoopkenmerk dat geobserveerd wordt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Verkoopkenmerk.Koperprofiel>;
+    shacl:class <https://data.vlaanderen.be/ns/lokale-economie#Profiel>;
+    shacl:description "Socio-demografisch profiel of organisatieprofiel dat geobserveerd wordt."@nl;
+    shacl:name "koperprofiel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#koperprofiel>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Verkoopkenmerk.Sector>;
+    shacl:class skos:Concept;
+    shacl:description "Sector die geobserveerd wordt."@nl;
+    shacl:name "sector"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#sector>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Verkoopkenmerk.Bezoekersprofiel>;
+    shacl:class skos:Concept;
+    shacl:description "Bezoekersprofiel dat geobserveerd wordt."@nl;
+    shacl:name "bezoekersprofiel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#bezoekersProfiel>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Verkoopkenmerk.Herkomsttype>;
+    shacl:class <https://data.vlaanderen.be/ns/lokale-economie#HerkomstType>;
+    shacl:description "Categorisering van het gebied waarvan de bezoekers afkomstig zijn."@nl;
+    shacl:name "herkomsttype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#herkomstType>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/lokale-economie#Verkoopkenmerk> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/VerkoopkenmerktypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/VerkoopmetingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Verkoopmeting.Geobserveerdkenmerk>;
+    shacl:class <https://data.vlaanderen.be/ns/lokale-economie#Verkoopkenmerk>;
+    shacl:description "Verkoopkenmerk dat geobserveerd wordt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geobserveerdKenmerk"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#Verkoopmeting.geobserveerdKenmerk>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/lokale-economie#Verkoopmeting> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4/VestigingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Vestiging.Openingsuren>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Openingsuren van de vestiging."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "openingsuren"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#openingsuren>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Vestiging.Aantalwerknemers>;
+    shacl:class skos:Concept;
+    shacl:description "Aantal personen in dienst op een bepaald moment in een specifieke Vestiging van een Organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "aantalWerknemers"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/lokale-economie#aantalWerknemers>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Vestiging.Vestigingsadres>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Adres vd vestiging."@nl;
+    shacl:maxCount "1";
+    shacl:name "vestigingsadres"@nl;
+    shacl:path org:siteAddress
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4#Vestiging.Karakter>;
+    shacl:class schema:OpeningHoursSpecification;
+    shacl:description "Specificatie van de dagen en/of periode waarop de openingsuren van toepassing zijn."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "karakter"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#beschikbaarheid>
+  ];
+  shacl:targetClass org:Site .

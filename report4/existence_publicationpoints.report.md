@@ -216,3 +216,70 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/production/infrastructuur.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/inname-openbaar-domein.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/kabels-en-leidingen.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/nutsvoorzieningen/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/production/kindfiche.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/kindfiche/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/kindfiche/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/production/kwaliteit-wegen-en-markeringen.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/ldes.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/leercredential.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/leercredential/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/production/leerinschrijfcredential.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/logies.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/logies/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/logies-basis/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/production/lokale-economie.publication.json
+#||# 
+Directory check
+
+index.html check
+
