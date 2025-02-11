@@ -1,0 +1,331 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+skos:Concept a rdfs:Class;
+  rdfs:label "Aanvraagtype"@nl .
+
+schemas:Vehicle a rdfs:Class .
+
+<https://www.w3.org/2004/02/skos/core#Concept> a rdfs:Class;
+  rdfs:label "Logische operatie"@nl,
+    "Toegangstype"@nl .
+
+<https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Weigering> a owl:Class;
+  rdfs:label "Weigering"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Deze Activiteit kan de inhoud zijn van een Aanvraag."@nl;
+  rdfs:comment "Rechtshandeling, zijnde een beslissing, die een Activiteit niet toelaat."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/omgevingsvergunning#Zaakhandeling>,
+    <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtshandeling> .
+
+<https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#heeftOutputtype> a owl:ObjectProperty;
+  rdfs:label "heeft outputtype"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit kunnen meerdere types zijn omdat een Publieke Dienstverlening verschillende soorten Output kan produceren. Deze types kunnen vergeleken worden met de Bewijstypes van een Voorwaarde. Op die manier kan bepaald worden welke Publieke Dienstverlening Bewijzen levert die gebruikt kunnen worden door een andere Publieke Dienstverlening."@nl;
+  rdfs:comment "De types die de Output van de Publieke Dienstverlening heeft. "@nl;
+  rdfs:domain <http://purl.org/vocab/cpsv#PublicService>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#operatie> a owl:ObjectProperty;
+  rdfs:label "operatie"@nl;
+  rdfs:comment "Logische operatie die toegepast wordt op de Voorwaarden."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Voorwaardecollectie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang>;
+  rdfs:range <https://www.w3.org/2004/02/skos/core#Concept> .
+
+<https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#toegang> a owl:ObjectProperty;
+  rdfs:label "toegang"@nl;
+  rdfs:comment "Rechten voor toegang dewelke het Voertuig heeft."@nl;
+  rdfs:domain schemas:Vehicle;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang>;
+  rdfs:range <https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang> .
+
+<https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#voertuig> a owl:ObjectProperty;
+  rdfs:label "voertuig"@nl;
+  rdfs:comment "Voertuig waarvoor de Toegang geldt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang>;
+  rdfs:range schemas:Vehicle .
+
+dc:extent a rdf:Property .
+
+dc:type a rdf:Property .
+
+<http://www.w3.org/ns/adms#identifier> a rdf:Property .
+
+<https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Voorwaardecollectie> a owl:Class;
+  rdfs:label "Voorwaardecollectie"@nl;
+  rdfs:comment "Voorwaarde die andere Voorwaarden verbindt via operaties, zoals AND en OR."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang>;
+  rdfs:subClassOf <http://data.europa.eu/m8g/Requirement> .
+
+<https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum> a rdf:Property .
+
+<https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud> a rdf:Property .
+
+<https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang> a owl:Class;
+  rdfs:label "Toegang"@nl;
+  rdfs:comment "Recht om een bepaalde zone binnen te mogen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/omgevingsvergunning#Recht>,
+    <http://data.europa.eu/m8g/Output> .
+
+<https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang> a owl:Ontology;
+  rdfs:label "mobiliteit-intelligente-toegang-voc"@en,
+    "mobiliteit-intelligente-toegang-voc"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.be-mobile.com/>;
+      foaf:name "Be-Mobile"
+    ];
+    foaf:firstName "Wouter";
+    foaf:lastName "Van de Wiele"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/agentschap-binnenlands-bestuur>;
+      foaf:name "Agentschap Binnenlands Bestuur"
+    ];
+    foaf:firstName "Brecht";
+    foaf:lastName "Van de Vyvere"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77>;
+      foaf:name "Stad Leuven"
+    ];
+    foaf:firstName "Meredith";
+    foaf:lastName "Van Hove"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.imec.be/nl>;
+      foaf:name "IMEC"
+    ];
+    foaf:firstName "Dries";
+    foaf:lastName "Van Bever"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77>;
+      foaf:name "Stad Leuven"
+    ];
+    foaf:firstName "Katrijn";
+    foaf:lastName "Pipijn"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
+      foaf:name "Stad Gent"
+    ];
+    foaf:firstName "Joris";
+    foaf:lastName "Pieters"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/670db1d66c0de3b931962e1044033ccfa9d6e3023aa9828a5f252c3bc69bd32c>;
+      foaf:name "Stad Antwerpen"
+    ];
+    foaf:firstName "Stef";
+    foaf:lastName "Nielandt"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.be-mobile.com/>;
+      foaf:name "Be-Mobile"
+    ];
+    foaf:firstName "Simon";
+    foaf:lastName "Michels"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.genetec.com/>;
+      foaf:name "GENETEC"
+    ];
+    foaf:firstName "Lieven";
+    foaf:lastName "Mattheeuws"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.be-mobile.com/>;
+      foaf:name "Be-Mobile"
+    ];
+    foaf:firstName "Miroslav";
+    foaf:lastName "Kovalenko"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.be-mobile.com/>;
+      foaf:name "Be-Mobile"
+    ];
+    foaf:firstName "Jeroen";
+    foaf:lastName "De Wilde"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.geosparc.com/nl/about>;
+      foaf:name "Geosparc"
+    ];
+    foaf:firstName "Berdien";
+    foaf:lastName "De Roo"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://mobilite-mobiliteit.brussels/nl>;
+      foaf:name "Mobiliteit Brussel"
+    ];
+    foaf:firstName "Paul";
+    foaf:lastName "David"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/670db1d66c0de3b931962e1044033ccfa9d6e3023aa9828a5f252c3bc69bd32c>;
+      foaf:name "Stad Antwerpen"
+    ];
+    foaf:firstName "Kristof";
+    foaf:lastName "Daenen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.polisnetwork.eu/>;
+      foaf:name "Polis Network"
+    ];
+    foaf:firstName "Ivo";
+    foaf:lastName "Cré"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://overheidsdienst.brussels/>;
+      foaf:name "Gewestelijke Overheidsdienst Brussel"
+    ];
+    foaf:firstName "Chris";
+    foaf:lastName "Ceustermans"
+  ], [
+    a foaf:Person;
+    schema:affiliation [foaf:name "Stad Kortrijk"];
+    foaf:firstName "Claudia";
+    foaf:lastName "Carrissemoux"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://cronos-groep.be/>;
+      foaf:name "Cronos"
+    ];
+    foaf:firstName "Peter";
+    foaf:lastName "Buytaert"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://data.lblod.info/id/bestuurseenheden/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77>;
+      foaf:name "Stad Leuven"
+    ];
+    foaf:firstName "Sophie";
+    foaf:lastName "Adriaens"
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso skos:Concept,
+    schemas:Vehicle,
+    <https://www.w3.org/2004/02/skos/core#Concept>,
+    <https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud>,
+    <https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum>,
+    <http://www.w3.org/ns/adms#identifier>,
+    dc:type,
+    dc:extent;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Eveline";
+    foaf:lastName "Vlassenroot";
+    foaf:mbox <mailto:eveline.vlassenroot@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Laurens";
+    foaf:lastName "Vercauteren";
+    foaf:mbox <mailto:laurens.vercauteren@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Aline";
+    foaf:lastName "Verbrugge";
+    foaf:mbox <mailto:aline.verbrugge@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Ziggy";
+    foaf:lastName "Vanlishout";
+    foaf:mbox <mailto:ziggy.vanlishout@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Geert";
+    foaf:lastName "Thijs";
+    foaf:mbox <mailto:geert.thijs@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Pieter";
+    foaf:lastName "Heyvaert";
+    foaf:mbox <mailto:pieter.heyvaert@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://data.vlaanderen.be/id/organisatie/OVO002949>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Yaron";
+    foaf:lastName "Dassonneville";
+    foaf:mbox <mailto:yaron.dassonneville@vlaanderen.be>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://movias.eu/>;
+      foaf:name "Movias"
+    ];
+    foaf:firstName "Koenraad";
+    foaf:lastName "Verduyn";
+    foaf:mbox <mailto:koenraad.verduyn@movias.eu>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://digipolisantwerpen.be/>;
+      foaf:name "Digipolis"
+    ];
+    foaf:firstName "Daniel";
+    foaf:lastName "Sevenhans";
+    foaf:mbox <mailto:daniel.sevenhans@digipolis.be>
+  ] .
