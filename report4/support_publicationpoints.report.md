@@ -1678,11 +1678,11 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/verkeersmetingen/ontwerpstandaard/2023-03-14/ns/weg",
   "/tmp/generated/doc/vocabularium/verkeersmetingen/ontwerpstandaard/2023-03-14/ns/wetgeving",
   "/tmp/generated/ns/FeitelijkeVerenigingen",
+  "/tmp/generated/ns/bodem-en-ondergrond",
+  "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
+  "/tmp/generated/ns/grondboringen",
   "/tmp/generated/ns/leercredential",
   "/tmp/generated/ns/metadata-dcat",
   "/tmp/generated/ns/observaties-en-metingen",
-  "/tmp/generated/ns/sensoren-en-bemonstering",
-  "/tmp/generated/ns/grondboringen",
-  "/tmp/generated/ns/bodem-en-ondergrond",
-  "/tmp/generated/ns/bodem-en-ondergrond/interpretaties"
+  "/tmp/generated/ns/sensoren-en-bemonstering"
 ]

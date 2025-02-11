@@ -3,10 +3,8 @@
 #||#    + checking /home/circleci/project/config/dev/adres.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/ns/adres'
 
 index.html check
-error: missing '/tmp/generated/ns/adres/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/air-and-water.publication.json
 #||# 
@@ -47,31 +45,23 @@ error: missing '/tmp/generated/doc/applicatieprofiel/besluit-publicatie/ontwerps
 #||#    + checking /home/circleci/project/config/dev/besluit.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/ns/besluitvorming'
 
 index.html check
-error: missing '/tmp/generated/ns/besluitvorming/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/besluitvorming/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/besluitvorming/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/bestuur.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/ns/bestuur'
-error: missing '/tmp/generated/ns/bestuur'
 
 index.html check
-error: missing '/tmp/generated/ns/bestuur/index.html'
-error: missing '/tmp/generated/ns/bestuur/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bestuur/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/bestuurlijk-sanctieregister.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/ns/bestuurlijk-sanctieregister'
 
 index.html check
-error: missing '/tmp/generated/ns/bestuurlijk-sanctieregister/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/bodem-en-ondergrond.publication.json
 #||# 
