@@ -1,0 +1,667 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/AgensShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/waterkwaliteit#Agens> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/AnyShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Resource .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/BemonsteringsobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Bemonsteringsobject.Herkomst>;
+    shacl:class <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage>;
+    shacl:description "Verwijzing naar de Herkomst van een Bemonsteringsobject."@nl;
+    shacl:maxCount "1";
+    shacl:name "herkomst"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Bemonsteringsobject.Parameter>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:description "Willekeurig gegeven gassocieerd met het Bemonsteringsobject."@nl;
+    shacl:name "parameter"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Bemonsteringsobject.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Verwijzing naar de informatie die het Bemonsteringsobject uniek identificeert."@nl;
+    shacl:minCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringsobject.identificator>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Bemonsteringsobject.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van het Bemonsteringsobject."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/BemonsteringsobjecttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/BemonsteringsobjectverzamelingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/BenoemdewaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Benoemdewaarde.Naam>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/Names#GenericName>;
+    shacl:description "Naam van het type van de waarde."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Benoemdewaarde.Waarde>;
+    shacl:class rdfs:Resource;
+    shacl:description "Kwalitatieve of kwantitatieve invulling van de waarde."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#NamedValue> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/BioindicatorobservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Bioindicatorobservatie.Geobserveerdkenmerk>;
+    shacl:class skos:Concept;
+    shacl:description "Type van het geobserveerdKenmerk."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geobserveerdKenmerk"@nl;
+    shacl:path <https://purl.eu/ns/air-and-water/water#BioIndicatorObservation.observedProperty>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Bioindicatorobservatie.Bioindicator>;
+    shacl:class rdfs:Resource;
+    shacl:description "Resultaat van de BioIndicatorObservatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "bioIndicator"@nl;
+    shacl:path <https://purl.eu/ns/air-and-water/water#BioIndicatorObservation.bioIndicator>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Bioindicatorobservatie.Soort>;
+    shacl:class <https://data.vlaanderen.be/ns/waterkwaliteit#Soort>;
+    shacl:description "De bioindicator soort die bij de observatie geobserveerd wordt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "soort"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/waterkwaliteit#soort>
+  ];
+  shacl:targetClass <https://purl.eu/ns/air-and-water/water#BioIndicatorObservation> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/BioindicatortypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/BiotischeindexobservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Biotischeindexobservatie.Geobserveerdkenmerk>;
+    shacl:class skos:Concept;
+    shacl:description "Type van het geobserveerdKenmerk."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geobserveerdKenmerk"@nl;
+    shacl:path <https://purl.eu/ns/air-and-water/water#BioticIndexObservation.observedProperty>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Biotischeindexobservatie.Biotischeindex>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>;
+    shacl:description "Resultaat van de BiotischeIndexObservatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "biotischeIndex"@nl;
+    shacl:path <https://purl.eu/ns/air-and-water/water#BioticIndexObservation.bioticIndex>
+  ];
+  shacl:targetClass <https://purl.eu/ns/air-and-water/water#BioticIndexObservation> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/BiotischeindextypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/ChemischagensconcentratieobservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Chemischagensconcentratieobservatie.Geobserveerdkenmerk>;
+    shacl:class skos:Concept;
+    shacl:description "Type van het geobserveerdKenmerk."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geobserveerdKenmerk"@nl;
+    shacl:path <https://purl.eu/ns/air-and-water/water#ChemicalAgentConcentrationObservation.observedProperty>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Chemischagensconcentratieobservatie.Chemischagensconcentratie>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>;
+    shacl:description "Resultaat van de ChemischAgensConcentratieObservatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "chemischAgensConcentratie"@nl;
+    shacl:path <https://purl.eu/ns/air-and-water/water#ChemicalAgentConcentrationObservation.chemicalAgentConcentration>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Chemischagensconcentratieobservatie.Agens>;
+    shacl:class <https://data.vlaanderen.be/ns/waterkwaliteit#Agens>;
+    shacl:description "Het agens dat bij de observatie geobserveerd wordt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "agens"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensConcentratieObservatie.agens>
+  ];
+  shacl:targetClass <https://purl.eu/ns/air-and-water/water#ChemicalAgentConcentrationObservation> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/ChemischagenskenmerktypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/ChemischagensvrachtobservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Chemischagensvrachtobservatie.Chemischagensvracht>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>;
+    shacl:description "De afgemeten hoeveelheid vracht die van het chemisch Agens werd geloosd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "chemischAgensVracht"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/waterkwaliteit#chemischAgensVracht>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Chemischagensvrachtobservatie.Geobserveerdkenmerk>;
+    shacl:class skos:Concept;
+    shacl:description "Type van het geobserveerdKenmerk."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geobserveerdKenmerk"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensVrachtObservatie.geobserveerdKenmerk>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Chemischagensvrachtobservatie.Agens>;
+    shacl:class <https://data.vlaanderen.be/ns/waterkwaliteit#Agens>;
+    shacl:description "Het agens dat bij de observatie geobserveerd wordt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "agens"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensVrachtObservatie.agens>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensVrachtObservatie> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/DekkingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:coverage .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/EmissieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Emissie.Periode>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period>;
+    shacl:description "Periode waarin de Emissie plaatsvond."@nl;
+    shacl:name "periode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/waterkwaliteit#periode>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Emissie.Matrix>;
+    shacl:class skos:Concept;
+    shacl:description "De matrix (omgeving) waarin de emissie zich voordoet."@nl;
+    shacl:name "matrix"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/waterkwaliteit#matrix>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Emissie.Type>;
+    shacl:class skos:Concept;
+    shacl:description "De aard van de emissie."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Emissie.Emissiewijze>;
+    shacl:class skos:Concept;
+    shacl:description "Manier waarop de emissie plaatsvindt."@nl;
+    shacl:name "emissiewijze"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Emissie.Uitgestotendoor>;
+    shacl:class <https://data.vlaanderen.be/ns/waterkwaliteit#Emissiebron>;
+    shacl:description "Relateert de emissie aan de emissiebron waarvan deze afkomstig is."@nl;
+    shacl:name "uitgestotenDoor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/waterkwaliteit#uitgestotenDoor>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/waterkwaliteit#Emissie> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/EmissiebronShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Emissiebron.Ontvanger>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature>;
+    shacl:description "Het object waarin de emissie van de Emissiebron terecht komt."@nl;
+    shacl:name "ontvanger"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/waterkwaliteit#ontvanger>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Emissiebron.Locatie>;
+    shacl:class prov:Location;
+    shacl:description "De locatie van de emissiebron."@nl;
+    shacl:name "locatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/waterkwaliteit#locatie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Emissiebron.Verantwoordelijke>;
+    shacl:class dc:Agent;
+    shacl:description "Persoon of Organisatie die verantwoordelijk is voor de Emissiebron."@nl;
+    shacl:name "verantwoordelijke"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/waterkwaliteit#verantwoordelijke>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Emissiebron.Wettelijkkader>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#WettelijkKader>;
+    shacl:description "De wetgeving die van toepassing is op de Emissiebron."@nl;
+    shacl:name "wettelijkKader"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/waterkwaliteit#wettelijkkader>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Emissiebron.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificator van de Emissiebron."@nl;
+    shacl:name "identificator"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/waterkwaliteit#identificator>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Emissiebron.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de Emissiebron."@nl;
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/waterkwaliteit#Emissiebron> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/EmissiebrontypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/EmissietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/EmissiewijzetypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/GeneriekenaamShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19103/2005/Names#GenericName> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/GeobserveerdweerShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/waterkwaliteit#GeobserveerdWeer> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/GeometrieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Geometrie.Wkt>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "wkt"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Geometrie.Gml>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "gml"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Geometrie.Opmeting>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#Opmeting>;
+    shacl:description "De manier waarop de Geometrie werd bepaald."@nl;
+    shacl:maxCount "1";
+    shacl:name "opmeting"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#opmeting>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/HerkomstShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/HydromorfologischeindexobservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Hydromorfologischeindexobservatie.Geobserveerdkenmerk>;
+    shacl:class skos:Concept;
+    shacl:description "Type van het geobserveerdKenmerk."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geobserveerdKenmerk"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/waterkwaliteit#HydromorfologischeIndexObservatie.geobserveerdKenmerk>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Hydromorfologischeindexobservatie.Hydromorfologischeindex>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>;
+    shacl:description "Resultaat van de HydromorfologischeObservatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "hydromorfologischeIndex"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/waterkwaliteit#hydromorfologischeIndex>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/waterkwaliteit#HydromorfologischeIndexObservatie> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/HydromorfologischindextypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/IdentificatorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/KenmerktypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/KwaliteitselementShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/LocatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass prov:Location .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/MaatShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/MatrixtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/MeetnetShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Meetnet.Lid>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature>;
+    shacl:description "RuimtelijkBemonsteringsobject dat deel uitmaakt van een Meetnet."@nl;
+    shacl:minCount "1";
+    shacl:name "lid"@nl;
+    shacl:path <http://todo.com/lid>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/waterkwaliteit#Meetnet> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/MeetpuntShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/waterkwaliteit#Meetpunt> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/MetadataShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/MetingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/MomentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/ObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/ObservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Observatie.Parameter>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:description "Willekeurig gegeven gassocieerd met het gebeuren van de Observatie."@nl;
+    shacl:name "parameter"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Observatie.Fenomeentijd>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
+    shacl:description "Het moment waarop het resultaat van de Observatie van toepassing was."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "fenomeentijd"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Observatie.Resultaattijd>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>;
+    shacl:description "Tijdstip waarop het resultaat van de Observatie werd bekomen."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resultaattijd"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Observatie.Geldigetijd>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period>;
+    shacl:description "Periode waarvoor het resultaat van de Observatie geldt."@nl;
+    shacl:maxCount "1";
+    shacl:name "geldigeTijd"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Observatie.Resultaatkwaliteit>;
+    shacl:class <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element>;
+    shacl:description "Mate waarin het resultaat van de Observatie voldoet aan de vereisten of verwachtingen."@nl;
+    shacl:name "resultaatkwaliteit"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Observatie.Resultaat>;
+    shacl:class rdfs:Resource;
+    shacl:description "De waarde van het geobserveerdeKenmerk als resultaat van de Observatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resultaat"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Observatie.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Het type van observatie."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Observatie.Uitgevoerddoor>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die de Observatie heeft uitgevoerd."@nl;
+    shacl:name "uitgevoerdDoor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Observatie.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Verwijzing naar de informatie die de Observatie uniek identificeert."@nl;
+    shacl:name "identificator"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.identificator>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/ObservatiecontextShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Observatiecontext.Rol>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/Names#GenericName>;
+    shacl:description "Aard van de samenhang."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "rol"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#ObservationContext> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/ObservatieprocedureShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/sosa/Procedure> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/ObservatietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/ObservatieverzamelingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://www.w3.org/TR/vocab-ssn-ext/#sosa:ObservationCollection>,
+    <http://www.w3.org/ns/sosa/ObservationCollection> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/OpmetingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Opmeting.Methode>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de gebruikte methode."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "methode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.methode>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Opmeting.Uitgevoerddoor>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die de Opmeting heeft uitgevoerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "uitgevoerdDoor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Opmeting> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/OpmetingtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/PeriodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/PositionelenauwkeurigheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/ProcedureShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/sosa/Procedure>,
+    <http://todo.com/Procedure> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/ProcesShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/RuimtelijkbemonsteringsobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Ruimtelijkbemonsteringsobject.Geometrie>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "Geometrie van het RuimtelijkBemonsteringsobject."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Ruimtelijkbemonsteringsobject.Positionelenauwkeurigheid>;
+    shacl:class <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy>;
+    shacl:description "Nauwkeurigheid waarmee de geometrie is bepaald."@nl;
+    shacl:maxCount "2";
+    shacl:name "positioneleNauwkeurigheid"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.positionalAccuracy>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Ruimtelijkbemonsteringsobject.Gehostplatform>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process>;
+    shacl:description "Procedure die of instrument dat in of op het RuimtelijkBemonsteringsobject is geïnstalleerd."@nl;
+    shacl:name "gehostPlatform"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/SensorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/sosa/Sensor> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/SoortShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/waterkwaliteit#Soort> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/StatistischeobservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#StatistischeObservatie>,
+    <https://data.vlaanderen.be/ns/waterkwaliteit#StatistischeObservatie> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/SysteemShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://www.w3.org/TR/vocab-ssn/#ssn-system>,
+    <http://www.w3.org/ns/ssn/System> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/TemporeleentiteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/WaterkwaliteitobservatieverzamelingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Waterkwaliteitobservatieverzameling.Geobserveerdobject>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature>;
+    shacl:description "Een referentie naar het object dat geobserveerd werd tijdens de observaties in de collectie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geobserveerdObject"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/hasFeatureOfInterest>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Waterkwaliteitobservatieverzameling.Fenomeentijd>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
+    shacl:description "Het moment waarop het resultaat van de observatie in de collectie toepasbaar was."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "fenomeentijd"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/phenomenonTime>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Waterkwaliteitobservatieverzameling.Refgeobserveerdweer>;
+    shacl:class <https://data.vlaanderen.be/ns/waterkwaliteit#GeobserveerdWeer>;
+    shacl:description "Een beschrijving van de weersomstandigheden tijdens de Observaties in de Collectie."@nl;
+    shacl:maxCount "1";
+    shacl:name "refGeobserveerdWeer"@nl;
+    shacl:path <https://purl.eu/ns/air-and-water/water#WaterQualityObservationCollection.refWeatherObserved>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/waterkwaliteit#WaterkwaliteitObservatieVerzameling> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/WaterkwaliteitparameterobservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Waterkwaliteitparameterobservatie.Geobserveerdkenmerk>;
+    shacl:class skos:Concept;
+    shacl:description "Type van het geobserveerdKenmerk."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geobserveerdKenmerk"@nl;
+    shacl:path <https://purl.eu/ns/air-and-water/water#WaterQualityParameterObservation.observedProperty>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Waterkwaliteitparameterobservatie.Waterkwaliteitparameterresultaat>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>;
+    shacl:description "Resultaat van de WaterkwaliteitParameterObservatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waterkwaliteitParameterResultaat"@nl;
+    shacl:path <https://purl.eu/ns/air-and-water/water#WaterQualityParameterObservation.waterQualityParameterResult>
+  ];
+  shacl:targetClass <https://purl.eu/ns/air-and-water/water#WaterQualityParameterObservation> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/WaterkwaliteitparametertypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/WaterobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4#Waterobject.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Type WaterObject."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path <https://purl.eu/ns/air-and-water/water#Waterfeature.type>
+  ];
+  shacl:targetClass <https://purl.eu/ns/air-and-water/water#WaterFeature> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/WaterobjecttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/WettelijkkaderShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#WettelijkKader> .
