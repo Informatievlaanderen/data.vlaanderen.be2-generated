@@ -80,6 +80,26 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/lokale-economie.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/loongegevens.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/mandaat.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/melding.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/metadata-dcat-vl.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/metadata-dcat.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/metadata-geo-dcat-vl.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/mobiliteit-intelligente-toegang.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/mobiliteit.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/mobiliteitsbudget.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/notificatie.publication.json
+#||#  
 Error: the following directories are unsupported
 [
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-04-30",
@@ -107,14 +127,24 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17",
   "/tmp/generated/doc/applicatieprofiel/gebieden",
   "/tmp/generated/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
-  "/tmp/generated/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17",
   "/tmp/generated/doc/applicatieprofiel/infrastructuurelementen",
   "/tmp/generated/doc/applicatieprofiel/inname-openbaar-domein",
   "/tmp/generated/doc/applicatieprofiel/leerinschrijfcredential/kandidaatstandaard/2024-05-16",
+  "/tmp/generated/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17",
+  "/tmp/generated/doc/applicatieprofiel/generieke-terugmeldfaciliteit",
+  "/tmp/generated/doc/applicatieprofiel/metadata-dcat",
+  "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL",
+  "/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteitsbudget/ontwerpstandaard/2023-01-16",
+  "/tmp/generated/doc/applicatieprofiel/notificatie-basis",
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
+  "/tmp/generated/doc/vocabularium/mobiliteit/vervoersknooppunten/erkendestandaard/2022-12-01",
+  "/tmp/generated/doc/vocabularium/mobiliteit/vervoersknooppunten/kandidaatstandaard/2022-04-01",
+  "/tmp/generated/doc/vocabularium/mobiliteit/Hoppinpunten/kandidaatstandaard/2022-04-01",
   "/tmp/generated/ns/FeitelijkeVerenigingen",
   "/tmp/generated/ns/bodem-en-ondergrond",
   "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
   "/tmp/generated/ns/grondboringen",
-  "/tmp/generated/ns/leercredential"
+  "/tmp/generated/ns/leercredential",
+  "/tmp/generated/ns/metadata-dcat"
 ]
