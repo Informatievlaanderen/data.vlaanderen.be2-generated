@@ -170,11 +170,77 @@ index.html check
 #||#    + checking /home/circleci/project/config/dev/doelgericht-digitaal-transformeren.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated/doc/vocabularium/cultuurparticipatie/ontwerpstandaard/2021-10-01'
 
 index.html check
 error: missing '/tmp/generated/doc/vocabularium/cultuurparticipatie/ontwerpstandaard/2021-10-01/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/dossier.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/energiehuis.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/erosiepoel.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/feitelijke-verenigingen.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/fietsinfrastructuur.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/financiele-rapportering.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/gebieden.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/gebouw.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/dev/generiek.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/generiek/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/dev/hulp-dienst-verlening-gedetineerden.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/dev/incentiveringsplatform.publication.json
 #||# 
 Directory check
 
