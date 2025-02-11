@@ -151,3 +151,68 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/production/energiehuis.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/erosiepoel.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/feitelijke-verenigingen.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/fietsinfrastructuur.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/financiele-rapportering.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/gebieden.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/gebouw.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/production/generiek.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/generiek/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/production/hulp-dienst-verlening-gedetineerden.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/production/incentiveringsplatform.publication.json
+#||# 
+Directory check
+
+index.html check
+
