@@ -1,0 +1,1113 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/AdresvoorstellingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Adresvoorstelling.VolledigAdres>;
+    shacl:datatype rdf:langString;
+    shacl:description "Het complete adres in één string, al dan niet geformatteerd."@nl;
+    shacl:maxCount "1";
+    shacl:name "volledig adres"@nl;
+    shacl:path <http://www.w3.org/ns/locn#fullAddress>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Address> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Agent.OefentRechtUitOp>;
+    shacl:class crm:E72_Legal_Object;
+    shacl:description "WettelijkObject waarop een Agent een Recht bezit."@nl;
+    shacl:name "oefent recht uit op"@nl;
+    shacl:path crm:P105i_has_right_on
+  ];
+  shacl:targetClass dc:Agent .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/AggregatiewerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F17> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/BeschrijvingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Beschrijving.Tekst>;
+    shacl:datatype rdf:langString;
+    shacl:description "Tekst van de beschrijving."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "tekst"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultureel-erfgoed#tekst>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Beschrijving.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de beschrijving."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultureel-erfgoed#type>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/BewaringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E10_Transfer_of_Custody .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/ClassificatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E17_Type_Assignment .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/CollectieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Collectie.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Benaming die aan de Collectie wordt gegeven."@nl;
+    shacl:name "naam"@nl;
+    shacl:path dc11:title
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Collectie.BestaatUit>;
+    shacl:class crm:E1_CRM_Entity;
+    shacl:description "Entiteit die deel uitmaakt van de Collectie."@nl;
+    shacl:name "bestaat uit"@nl;
+    shacl:path dc:hasPart
+  ];
+  shacl:targetClass dcmitype:Collection .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/ComplexWerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#ComplexWerk.HeeftComponent>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F1>;
+    shacl:description "Werk dat deel uitmaakt van het ComplexWerk."@nl;
+    shacl:minCount "2";
+    shacl:name "heeft component"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R10>
+  ];
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F15> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/ConceptieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F27> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/ConceptueelDingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#ConceptueelDing.Creatie>;
+    shacl:class crm:E65_Creation;
+    shacl:description "De Activiteit waarbij het ConceptueelDing werd gecreëerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "creatie"@nl;
+    shacl:path crm:P94i_was_created_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#ConceptueelDing.HeeftComponent>;
+    shacl:class crm:E28_Conceptual_Object;
+    shacl:description "Structureel onderdeel van het ConceptueelDing."@nl;
+    shacl:name "heeft component"@nl;
+    shacl:path crm:P148_has_component
+  ];
+  shacl:targetClass crm:E28_Conceptual_Object .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/ConceptueeldingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://todo.com/ConceptueelDing> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/ConditieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Conditie.Periode>;
+    shacl:datatype <http://id.loc.gov/datatypes/edtf/EDTF>;
+    shacl:description "Tijdspanne waarin het object zich in deze Conditie bevindt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "periode"@nl;
+    shacl:path crm:P4_has_time-span
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Conditie.Beschrijving>;
+    shacl:class <https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving>;
+    shacl:description "Beschrijving van de Conditie."@nl;
+    shacl:name "beschrijving"@nl;
+    shacl:path crm:P3_has_note
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Conditie.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de Conditie waarin het object zich bevindt."@nl;
+    shacl:name "type"@nl;
+    shacl:path crm:P2_has_type
+  ];
+  shacl:targetClass crm:E3_Condition_State .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/ConditiebeoordelingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E14_Condition_Assessment .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/ContactinfoShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Contactinfo.Contactnaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam van bvb de persoon die men kan contacteren."@nl;
+    shacl:maxCount "1";
+    shacl:name "contactnaam"@nl;
+    shacl:path foaf:name
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Contactinfo.Email>;
+    shacl:datatype xsd:string;
+    shacl:description "Email-adres waarnaar men kan mailen."@nl;
+    shacl:maxCount "1";
+    shacl:name "email"@nl;
+    shacl:path schema:email
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Contactinfo.Telefoon>;
+    shacl:datatype xsd:string;
+    shacl:description "Telefoonnummer waarop men kan bellen."@nl;
+    shacl:maxCount "1";
+    shacl:name "telefoon"@nl;
+    shacl:path schema:telephone
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Contactinfo.Fax>;
+    shacl:datatype xsd:string;
+    shacl:description "Faxnummer waarnaar men kan faxen."@nl;
+    shacl:maxCount "1";
+    shacl:name "fax"@nl;
+    shacl:path schema:faxNumber
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Contactinfo.Website>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Website waarnaar men kan surfen."@nl;
+    shacl:maxCount "1";
+    shacl:name "website"@nl;
+    shacl:path foaf:page
+  ];
+  shacl:targetClass schema:ContactPoint .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/CreatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E65_Creation .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/CuratieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E87_Curation_Activity .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/DatetimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/DimensieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Dimensie.Eenheid>;
+    shacl:datatype xsd:string;
+    shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "eenheid"@nl;
+    shacl:path schemas:unitText
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Dimensie.Beschrijving>;
+    shacl:class <https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving>;
+    shacl:description "Beschrijving van de Dimensie."@nl;
+    shacl:name "beschrijving"@nl;
+    shacl:path crm:P3_has_note
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Dimensie.StandaardEenheid>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#StandaardEenheid>;
+    shacl:description "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "standaard eenheid"@nl;
+    shacl:path schemas:unitCode
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Dimensie.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Grootheid van de Dimensie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path crm:P2_has_type
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Dimensie.Waarde>;
+    shacl:class schemas:Number;
+    shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path schemas:value
+  ];
+  shacl:targetClass crm:E54_Dimension .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/DingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E70_Thing .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/DocumentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Document.Documenteert>;
+    shacl:class <https://wherever/TODO>;
+    shacl:description "Entiteit die wordt gedocumenteerd."@nl;
+    shacl:minCount "1";
+    shacl:name "documenteert"@nl;
+    shacl:path crm:P70_documents
+  ];
+  shacl:targetClass crm:E31_Document .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/EntiteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Entiteit.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de Entiteit."@nl;
+    shacl:name "beschrijving"@nl;
+    shacl:path crm:P3_has_note
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Entiteit.Classificatie>;
+    shacl:class crm:E17_Type_Assignment;
+    shacl:description "De Activiteit waarbij de Entiteit werd geklassificeerd."@nl;
+    shacl:name "classificatie"@nl;
+    shacl:path crm:P41i_was_classified_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Entiteit.IsHetOnderwerpVan>;
+    shacl:class crm:E28_Conceptual_Object;
+    shacl:description "Werk of Informatieobject of ander Conceptueel Ding dat gaat over deze Entiteit."@nl;
+    shacl:name "is het onderwerp van"@nl;
+    shacl:path crm:P129i_is_subject_of
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Entiteit.Meting>;
+    shacl:class crm:E16_Measurement;
+    shacl:description "De Activiteit waarbij deze Entiteit werd gemeten."@nl;
+    shacl:name "meting"@nl;
+    shacl:path crm:P39i_was_measured_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Entiteit.Toekenning>;
+    shacl:class crm:E13_Attribute_Assignment;
+    shacl:description "De Activiteit waarbij een kenmerk aan deze Entiteit werd toegekend."@nl;
+    shacl:name "toekenning"@nl;
+    shacl:path crm:P140i_was_attributed_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Entiteit.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Type van de Entiteit."@nl;
+    shacl:name "type"@nl;
+    shacl:path crm:P2_has_type
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Entiteit.WordtGedocumenteerdDoor>;
+    shacl:class crm:E31_Document;
+    shacl:description "Document dat deze Entiteit documenteert."@nl;
+    shacl:name "wordt gedocumenteerd door"@nl;
+    shacl:path crm:P70i_is_documented_in
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Entiteit.WordtNaarVerwezenDoor>;
+    shacl:class crm:E28_Conceptual_Object;
+    shacl:description "Werk of Informatieobject of ander ConceptueelDing waarin naar de Entiteit wordt verwezen."@nl;
+    shacl:name "wordt naar verwezen door"@nl;
+    shacl:path crm:P67i_is_referred_to_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Entiteit.WordtUitgebeeldDoor>;
+    shacl:class crm:E18_Physical_Thing;
+    shacl:description "MaterieelDing (bv een schilderij) dat de Entiteit uitbeeldt."@nl;
+    shacl:name "wordt uitgebeeld door"@nl;
+    shacl:path crm:P62i_is_depicted_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Entiteit.WordtVoorgesteldDoor>;
+    shacl:class crm:E36_Visual_Item;
+    shacl:description "VisueelItem dat de Entiteit voorstelt."@nl;
+    shacl:name "wordt voorgesteld door"@nl;
+    shacl:path crm:P138i_has_representation
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Entiteit.MaaktDeelUitVan>;
+    shacl:class dcmitype:Collection;
+    shacl:description "De Collectie waar de Entiteit deel van uitmaakt."@nl;
+    shacl:name "maakt deel uit van"@nl;
+    shacl:path dc:isPartOf
+  ];
+  shacl:targetClass <https://wherever/TODO>,
+    crm:E1_CRM_Entity .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/ExpressieCreatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F28> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/GecureerdeCollectieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#GecureerdeCollectie.Dimensie>;
+    shacl:class crm:E54_Dimension;
+    shacl:description "Beschrijft een Dimensie van de GecureerdeCollectie."@nl;
+    shacl:name "dimensie"@nl;
+    shacl:path crm:P43_has_dimension
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#GecureerdeCollectie.GecureerdBij>;
+    shacl:class crm:E87_Curation_Activity;
+    shacl:description "Activiteit waarbij de GecureerdeCollectie gecureerd is."@nl;
+    shacl:name "gecureerd bij"@nl;
+    shacl:path crm:P147i_was_curated_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#GecureerdeCollectie.Locatie>;
+    shacl:class prov:Location;
+    shacl:description "Beschrijft de huidige locatie van de GecureerdeCollectie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "locatie"@nl;
+    shacl:path crm:P53_has_former_or_current_location
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#GecureerdeCollectie.Rechtenhouder>;
+    shacl:class dc:Agent;
+    shacl:description "TO DO"@nl;
+    shacl:name "rechtenhouder"@nl;
+    shacl:path <https://wherever/TODO>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#GecureerdeCollectie.Beheerder>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die de GecureerdeCollectie bewaart."@nl;
+    shacl:name "beheerder"@nl;
+    shacl:path crm:P50_has_current_keeper
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#GecureerdeCollectie.Curator>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die de verantwoordelijkheid van curator van de GecureerdeCollectie aanneemt."@nl;
+    shacl:minCount "1";
+    shacl:name "curator"@nl;
+    shacl:path crm:P109_has_current_or_former_curator
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#GecureerdeCollectie.IsSamengesteldUit>;
+    shacl:class crm:E22_Man-Made_Object;
+    shacl:description "TO DO"@nl;
+    shacl:name "is samengesteld uit"@nl;
+    shacl:path <https://wherever/TODO>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#GecureerdeCollectie.Eigenaar>;
+    shacl:class dc:Agent;
+    shacl:description "TO DO"@nl;
+    shacl:name "eigenaar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultureel-erfgoed#eigenaar>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#GecureerdeCollectie.BestaatUit>;
+    shacl:class crm:E22_Man-Made_Object;
+    shacl:description "Het MensgemaaktObject dat deel uitmaakt van de GecureerdeCollectie."@nl;
+    shacl:name "bestaat uit"@nl;
+    shacl:path crm:P46_is_composed_of
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#GecureerdeCollectie.Draagt>;
+    shacl:class crm:E73_Information_Object;
+    shacl:description "TO DO"@nl;
+    shacl:name "draagt"@nl;
+    shacl:path <https://wherever/TODO>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#GecureerdeCollectie.BestaatUit>;
+    shacl:class crm:E25_Man-Made_Feature;
+    shacl:description "Het MensgemaaktKenmerk dat deel uitmaakt van de GecureerdeCollectie."@nl;
+    shacl:name "bestaat uit"@nl;
+    shacl:path crm:P46_is_composed_of
+  ];
+  shacl:targetClass crm:E78_Collection .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/GetalShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass schemas:Number .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/IdentificatorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Identificator.Identificator>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "String gebruikt om het object uniek te identificeren."@nl;
+    shacl:maxCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path skos:notation
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Identificator.ToegekendDoor(string)>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend door (String)"@nl;
+    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Identificator.ToegekendOp>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend op"@nl;
+    shacl:path dc:issued
+  ];
+  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/IndividueelWerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#IndividueelWerk.IsGerealiseerdIn>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F22>;
+    shacl:description "ZelfstandigeExpressie die uniek en volledig het IndividueelWerk uitdrukt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "is gerealiseerd in"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R9>
+  ];
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F14> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/InformatieObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#InformatieObject.Inhoud>;
+    shacl:datatype xsd:string;
+    shacl:description "De symbolen of aggregaties daarvan die de inhoud van het InformatieObject uitmaken."@nl;
+    shacl:name "inhoud"@nl;
+    shacl:path crm:P190_has_symbolic_content
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#InformatieObject.GaatOver>;
+    shacl:class <https://wherever/TODO>;
+    shacl:description "Het onderwerp van het InformatieObject."@nl;
+    shacl:name "gaat over"@nl;
+    shacl:path crm:P129_is_about
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#InformatieObject.VerwijstNaar>;
+    shacl:class <https://wherever/TODO>;
+    shacl:description "Entiteit waarnaar het InformatieObject verwijst."@nl;
+    shacl:name "verwijst naar"@nl;
+    shacl:path crm:P67_refers_to
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#InformatieObject.OnderworpenAan>;
+    shacl:class crm:E30_Right;
+    shacl:description "Het Recht waaraan de InformatieObject is onderworpen."@nl;
+    shacl:name "onderworpen aan"@nl;
+    shacl:path crm:P104_is_subject_to
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#InformatieObject.Omvat>;
+    shacl:class crm:E73_Information_Object;
+    shacl:description "Zelfstandig onderdeel van het InformatieObject."@nl;
+    shacl:name "omvat"@nl;
+    shacl:path crm:P165_incorporates
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#InformatieObject.Rechtenhouder>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die een recht bezit op het InformatieObject."@nl;
+    shacl:name "rechtenhouder"@nl;
+    shacl:path <https://wherever/TODO>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#InformatieObject.Drager>;
+    shacl:class crm:E22_Man-Made_Object;
+    shacl:description "Het MensgemaaktObject dat het InformatieObject draagt."@nl;
+    shacl:name "drager"@nl;
+    shacl:path crm:P128i_is_carried_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#InformatieObject.Drager>;
+    shacl:class crm:E78_Collection;
+    shacl:description "TO DO"@nl;
+    shacl:name "drager"@nl;
+    shacl:path <https://wherever/TODO>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#InformatieObject.Drager>;
+    shacl:class crm:E25_Man-Made_Feature;
+    shacl:description "Het MensgemaaktKenmerk dat het InformatieObject draagt."@nl;
+    shacl:name "drager"@nl;
+    shacl:path crm:P128i_is_carried_by
+  ];
+  shacl:targetClass crm:E73_Information_Object .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/LocatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass prov:Location .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/MaterieelDingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MaterieelDing.Conditiebeoordeling>;
+    shacl:class crm:E14_Condition_Assessment;
+    shacl:description "De Activiteit waarbij de Conditie van het MaterieelDing werd beoordeeld."@nl;
+    shacl:name "conditiebeoordeling"@nl;
+    shacl:path crm:P34i_was_assessed_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MaterieelDing.IsIngekrompenBij>;
+    shacl:class crm:E80_Part_Removal;
+    shacl:description "De Activiteit waarbij een deel van het MaterieelDing werd verwijderd."@nl;
+    shacl:name "is ingekrompen bij"@nl;
+    shacl:path crm:P113i_was_removed_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MaterieelDing.IsOvergedragenBijVerwerving>;
+    shacl:class crm:E8_Acquisition;
+    shacl:description "De Activiteit waarbij de eigendomstitel van het MaterieelDing werd overgedragen."@nl;
+    shacl:name "is overgedragen bij verwerving"@nl;
+    shacl:path crm:P24i_changed_ownership_through
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MaterieelDing.IsToegevoegdBij>;
+    shacl:class crm:E79_Part_Addition;
+    shacl:description "De Activiteit waarbij het MaterieelDing werd toegevoegd."@nl;
+    shacl:name "is toegevoegd bij"@nl;
+    shacl:path crm:P111i_was_added_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MaterieelDing.IsUitgebreidBij>;
+    shacl:class crm:E79_Part_Addition;
+    shacl:description "De Activiteit waarbij een deel aan het MaterieelDing werd toegevoegd."@nl;
+    shacl:name "is uitgebreid bij"@nl;
+    shacl:path crm:P110i_was_augmented_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MaterieelDing.IsVerwijderdBij>;
+    shacl:class crm:E80_Part_Removal;
+    shacl:description "De Activiteit waarbij het MaterieelDing werd verwijderd."@nl;
+    shacl:name "is verwijderd bij"@nl;
+    shacl:path crm:P112i_was_diminished_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MaterieelDing.Productie>;
+    shacl:class crm:E12_Production;
+    shacl:description "De Activiteit waarbij het MaterieelDing werd geproduceerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "productie"@nl;
+    shacl:path crm:P108i_was_produced_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MaterieelDing.Vernietiging>;
+    shacl:class crm:E6_Destruction;
+    shacl:description "De Activiteit waarbij het MaterieelDing werd vernietigd."@nl;
+    shacl:maxCount "1";
+    shacl:name "vernietiging"@nl;
+    shacl:path crm:P13i_was_destroyed_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MaterieelDing.Wijziging>;
+    shacl:class crm:E11_Modification;
+    shacl:description "De Activiteit waarbij het MaterieelDing werd gewijzigd."@nl;
+    shacl:name "wijziging"@nl;
+    shacl:path crm:P31i_was_modified_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MaterieelDing.IsOvergedragenBijBewaring>;
+    shacl:class crm:E10_Transfer_of_Custody;
+    shacl:description "De Activiteit waarbij de bewaring van het MaterieelDing werd overgedragen."@nl;
+    shacl:name "is overgedragen bij bewaring"@nl;
+    shacl:path crm:P30i_custody_transferred_through
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MaterieelDing.Eigenaar>;
+    shacl:class dc:Agent;
+    shacl:description "De Agent die het MaterieelDing bezit."@nl;
+    shacl:name "eigenaar"@nl;
+    shacl:path crm:P52_has_current_owner
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MaterieelDing.BestaatUit>;
+    shacl:class crm:E18_Physical_Thing;
+    shacl:description "Component van het MaterieelDing."@nl;
+    shacl:name "bestaat uit"@nl;
+    shacl:path crm:P46_is_composed_of
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MaterieelDing.Beheerder>;
+    shacl:class dc:Agent;
+    shacl:description "De Agent die het MaterieelDing bewaart."@nl;
+    shacl:name "beheerder"@nl;
+    shacl:path crm:P50_has_current_keeper
+  ];
+  shacl:targetClass crm:E18_Physical_Thing .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/MaterieeldingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://todo.com/MaterieelDing> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/MensgemaaktKenmerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktKenmerk.Titel>;
+    shacl:datatype rdf:langString;
+    shacl:description "Titel van het MensgemaaktKenmerk."@nl;
+    shacl:name "titel"@nl;
+    shacl:path crm:P102_has_title
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktKenmerk.BeeldtUit>;
+    shacl:class <https://wherever/TODO>;
+    shacl:description "Entiteit die door het MensgemaaktKenmerk wordt uitgebeeld."@nl;
+    shacl:name "beeldt uit"@nl;
+    shacl:path crm:P62_depicts
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktKenmerk.Conditie>;
+    shacl:class crm:E3_Condition_State;
+    shacl:description "Beschrijft de Conditie waarin het MensgemaaktKenmerk zich bevindt."@nl;
+    shacl:name "conditie"@nl;
+    shacl:path crm:P44_has_condition
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktKenmerk.Dimensie>;
+    shacl:class crm:E54_Dimension;
+    shacl:description "Beschrijft een Dimensie van het MensgemaaktKenmerk."@nl;
+    shacl:name "dimensie"@nl;
+    shacl:path crm:P43_has_dimension
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktKenmerk.Materiaal>;
+    shacl:class skos:Concept;
+    shacl:description "Beschrijft het Materiaal waaruit het MensgemaaktKenmerk bestaat."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "materiaal"@nl;
+    shacl:path crm:P45_consists_of
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktKenmerk.BestaatUit>;
+    shacl:class crm:E22_Man-Made_Object;
+    shacl:description "MensgemaaktObject dat deel uitmaakt van het MensgemaaktKenmerk."@nl;
+    shacl:name "bestaat uit"@nl;
+    shacl:path crm:P46_is_composed_of
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktKenmerk.Draagt>;
+    shacl:class crm:E73_Information_Object;
+    shacl:description "InformatieObject dat gedragen wordt door het MensgemaaktKenmerk."@nl;
+    shacl:name "draagt"@nl;
+    shacl:path crm:P128_carries
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktKenmerk.MaaktDeelUitVan>;
+    shacl:class crm:E78_Collection;
+    shacl:description "De GecureerdeCollectie waarvan het MensgemaaktKenmerk deel uitmaakt."@nl;
+    shacl:name "maakt deel uit van"@nl;
+    shacl:path crm:P46i_forms_part_of
+  ];
+  shacl:targetClass crm:E25_Man-Made_Feature .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/MensgemaaktObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.Dimensie>;
+    shacl:class crm:E54_Dimension;
+    shacl:description "Beschrijft een Dimensie van het MensgemaaktObject."@nl;
+    shacl:name "dimensie"@nl;
+    shacl:path crm:P43_has_dimension
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.Locatie>;
+    shacl:class <https://wherever/TODO>;
+    shacl:description "Beschrijft de huidige locatie van het MensgemaaktObject."@nl;
+    shacl:maxCount "1";
+    shacl:name "locatie"@nl;
+    shacl:path crm:P55_has_current_location
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.Materiaal>;
+    shacl:class skos:Concept;
+    shacl:description "Beschrijft het Materiaal waaruit het MensgemaaktKenmerk bestaat."@nl;
+    shacl:minCount "1";
+    shacl:name "materiaal"@nl;
+    shacl:path crm:P45_consists_of
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.PermanenteLocatie>;
+    shacl:class <https://wherever/TODO>;
+    shacl:description "Beschrijft de permanente locatie van het MensgemaaktObject."@nl;
+    shacl:maxCount "1";
+    shacl:name "permanente locatie"@nl;
+    shacl:path crm:P54_has_current_permanent_location
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.Verhuis>;
+    shacl:class crm:E9_Move;
+    shacl:description "Activiteit waarbij het MensgemaaktObject werd verhuisd."@nl;
+    shacl:name "verhuis"@nl;
+    shacl:path crm:P25i_moved_by
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.BeeldtUit>;
+    shacl:class <https://wherever/TODO>;
+    shacl:description "Entiteit die door het MensgemaaktObject wordt uitgebeeld."@nl;
+    shacl:name "beeldt uit"@nl;
+    shacl:path crm:P62_depicts
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.Conditie>;
+    shacl:class crm:E3_Condition_State;
+    shacl:description "Beschrijft de Conditie waarin het MensgemaaktKenmerk zich bevindt."@nl;
+    shacl:name "conditie"@nl;
+    shacl:path crm:P44_has_condition
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.Beheerder>;
+    shacl:class dc:Agent;
+    shacl:description "TO DO"@nl;
+    shacl:name "beheerder"@nl;
+    shacl:path <https://wherever/TODO>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.Eigenaar>;
+    shacl:class dc:Agent;
+    shacl:description "TO DO"@nl;
+    shacl:name "eigenaar"@nl;
+    shacl:path <https://wherever/TODO>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.Rechtenhouder>;
+    shacl:class dc:Agent;
+    shacl:description "TO DO"@nl;
+    shacl:name "rechtenhouder"@nl;
+    shacl:path <https://wherever/TODO>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.BestaatUit>;
+    shacl:class crm:E78_Collection;
+    shacl:description "Het MensgemaaktObject dat deel uitmaakt van dit MensgemaaktObject."@nl;
+    shacl:name "bestaat uit"@nl;
+    shacl:path crm:P46_is_composed_of
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.MaaktDeelUitVan>;
+    shacl:class crm:E78_Collection;
+    shacl:description "De GecureerdeCollectie waarvan het MensgemaaktObject deel uitmaakt."@nl;
+    shacl:name "maakt deel uit van"@nl;
+    shacl:path crm:P46i_forms_part_of
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.Toont>;
+    shacl:class crm:E36_Visual_Item;
+    shacl:description "TO DO"@nl;
+    shacl:name "toont"@nl;
+    shacl:path <https://wherever/TODO>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.Draagt>;
+    shacl:class crm:E73_Information_Object;
+    shacl:description "InformatieObject dat gedragen wordt door het MensgemaaktObject."@nl;
+    shacl:name "draagt"@nl;
+    shacl:path crm:P128_carries
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.MaaktDeelUitVan>;
+    shacl:class crm:E25_Man-Made_Feature;
+    shacl:description "Het Mensgemaakt Object waar het Mensgemaatk Object deel van uitmaakt."@nl;
+    shacl:name "maakt deel uit van"@nl;
+    shacl:path crm:P46i_forms_part_of
+  ];
+  shacl:targetClass crm:E22_Man-Made_Object .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/MetingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E16_Measurement .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/OntwerpOfProcedureShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#OntwerpOfProcedure.IsGeassocieerdMet>;
+    shacl:class crm:E29_Design_or_Procedure;
+    shacl:description "Associatie met een ander OntwerpOfProcedure."@nl;
+    shacl:name "is geassocieerd met"@nl;
+    shacl:path crm:P69_is_associated_with
+  ];
+  shacl:targetClass crm:E29_Design_or_Procedure .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/OpnameShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Opname.Creatie>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F29>;
+    shacl:description "Activiteit waarbij de Opname werd gecreëerd."@nl;
+    shacl:minCount "1";
+    shacl:name "creatie"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R21i>
+  ];
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F26> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/OpnamesessieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F29> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/OpnamewerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Opnamewerk.Realisatie>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F29>;
+    shacl:description "Activiteit waarbij het Opnamewerk werd gerealiseerd."@nl;
+    shacl:name "realisatie"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R22i>
+  ];
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F21> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/OrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass org:Organization .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/PeriodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://id.loc.gov/datatypes/edtf/EDTF> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/PersoonShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Persoon.Achternaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "achternaam"@nl;
+    shacl:path foaf:familyName
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Persoon.Voornaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam die een kind bij geboorte wordt gegeven. Onderscheidt het kind van de andere kinderen in de familie."@nl;
+    shacl:minCount "1";
+    shacl:name "voornaam"@nl;
+    shacl:path foaf:givenName
+  ];
+  shacl:targetClass <http://www.w3.org/ns/person#Person> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/ProductieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E12_Production .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/PublicatieExpressieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#PublicatieExpressie.Creatie>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F30>;
+    shacl:description "Activiteit waarbij de PublicatieExpressie werd gecreëerd."@nl;
+    shacl:minCount "1";
+    shacl:name "creatie"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R24i>
+  ];
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F24> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/PublicatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F30> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/PublicatiewerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Publicatiewerk.Realisatie>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F30>;
+    shacl:description "Activiteit waarbij het Publicatiewerk werd gerealiseerd."@nl;
+    shacl:name "realisatie"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R23i>
+  ];
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F19> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/RechtShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Recht.Beschrijving>;
+    shacl:class <https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving>;
+    shacl:description "Beschrijving van het Recht."@nl;
+    shacl:name "beschrijving"@nl;
+    shacl:path crm:P3_has_note
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Recht.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Soort Recht."@nl;
+    shacl:name "type"@nl;
+    shacl:path crm:P2_has_type
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Recht.GebaseerdOp>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description "Rechtsgrond van het Recht."@nl;
+    shacl:maxCount "1";
+    shacl:name "gebaseerd op"@nl;
+    shacl:path <http://todo.com/gebaseerdOp>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Recht.IsVanToepassingOp>;
+    shacl:class crm:E72_Legal_Object;
+    shacl:description "WettelijkObject waarop het recht van toepassing is."@nl;
+    shacl:name "is van toepassing op"@nl;
+    shacl:path crm:P104i_applies_to
+  ];
+  shacl:targetClass crm:E30_Right .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/RechtsgrondShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResource> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/SerieelWerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#SerieelWerk.Uitgaveregel>;
+    shacl:class crm:E29_Design_or_Procedure;
+    shacl:description "Patroon, frequentie en/of regelmaat waarmee het wordt uitgegeven."@nl;
+    shacl:name "uitgaveregel"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R11>
+  ];
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F18> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/StandaardEenheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#StandaardEenheid> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/StringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/TaalobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Taalobject.IsVertalingVan>;
+    shacl:class crm:E33_Linguistic_Object;
+    shacl:description "Taalobject dat de vertaling is van een het Taalobject."@nl;
+    shacl:name "is vertaling van"@nl;
+    shacl:path crm:P73i_is_translation_of
+  ];
+  shacl:targetClass crm:E33_Linguistic_Object .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/ToekenningShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E13_Attribute_Assignment .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/ToevoegingDeelShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E79_Part_Addition .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/TypeBeschrijvingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/TypeConditieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/TypeEntiteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/TypeGrootheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/TypeMateriaalShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/TypeRechtShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/UriShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:anyURI .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/VerhuisShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E9_Move .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/VernietigingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E6_Destruction .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/VerwervingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E8_Acquisition .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/VerwijderingDeelShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E80_Part_Removal .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/VisueelItemShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#VisueelItem.SteltVoor>;
+    shacl:class <https://wherever/TODO>;
+    shacl:description "Entiteit die door het VisueelItem wordt voorgesteld."@nl;
+    shacl:name "stelt voor"@nl;
+    shacl:path crm:P138_represents
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#VisueelItem.WordtGetoondOp>;
+    shacl:class crm:E22_Man-Made_Object;
+    shacl:description "TO DO"@nl;
+    shacl:name "wordt getoond op"@nl;
+    shacl:path <https://wherever/TODO>
+  ];
+  shacl:targetClass crm:E36_Visual_Item .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/VoorstellingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F31> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/VoorstellingsplanShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Voorstellingsplan.Uitvoering>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F31>;
+    shacl:description "De Voorstelling waarop het uitvoeringsplan is uitgevoerd."@nl;
+    shacl:name "uitvoering"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R25i>
+  ];
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F25> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/VoorstellingswerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F20> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/WerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Werk.Conceptie>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F27>;
+    shacl:description "Activiteit die het onstaan van het Werk in gang heeft gezet."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "conceptie"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R16i>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Werk.GaatOver>;
+    shacl:class <https://wherever/TODO>;
+    shacl:description "Het onderwerp van het Werk."@nl;
+    shacl:name "gaat over"@nl;
+    shacl:path crm:P129_is_about
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Werk.Realisatie>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F28>;
+    shacl:description "De Activiteit waarbij het werk werd gerealiseerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "realisatie"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R19i>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Werk.VerwijstNaar>;
+    shacl:class <https://wherever/TODO>;
+    shacl:description "Entiteit waarnaar het Werk verwijst."@nl;
+    shacl:name "verwijst naar"@nl;
+    shacl:path crm:P67_refers_to
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Werk.AfgeleidVan>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F1>;
+    shacl:description "Werk waarvan dit Werk is afgeleid."@nl;
+    shacl:name "afgeleid van"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R2>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Werk.IsGerealiseerdIn>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F22>;
+    shacl:description "De ZelfstandigeExpressie die uitdrukking geeft aan het Werk."@nl;
+    shacl:name "is gerealiseerd in"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R3>
+  ];
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F1> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/WettelijkObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#WettelijkObject.IsOnderworpenAan>;
+    shacl:class crm:E30_Right;
+    shacl:description "Recht waaraan het WettelijkObject is onderworpen."@nl;
+    shacl:name "is onderworpen aan"@nl;
+    shacl:path crm:P104_is_subject_to
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#WettelijkObject.Rechtenhouder>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die een Recht bezit op het WettelijkObject."@nl;
+    shacl:name "rechtenhouder"@nl;
+    shacl:path crm:P105_right_held_by
+  ];
+  shacl:targetClass crm:E72_Legal_Object .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/WettelijkobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://todo.com/WettelijkObject> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/WijzigingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E11_Modification .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4/ZelfstandigeExpressieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#ZelfstandigeExpressie.Creatie>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F28>;
+    shacl:description "Activiteit waaropvoor de expressie ontstond."@nl;
+    shacl:minCount "1";
+    shacl:name "creatie"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R17i>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#ZelfstandigeExpressie.Realiseert>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F1>;
+    shacl:description "Werk dat door de ZelfstandigeExpressie wordt gerealiseerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "realiseert"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R3i>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#ZelfstandigeExpressie.Realiseert>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F14>;
+    shacl:description "IndividueelWerk dat door de ZelfstandigeExpressie wordt gerealiseerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "realiseert"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R9i>
+  ];
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F22> .
