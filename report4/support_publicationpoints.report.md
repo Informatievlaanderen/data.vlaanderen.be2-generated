@@ -40,10 +40,37 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/dossier.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/energiehuis.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/erosiepoel.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/feitelijke-verenigingen.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/fietsinfrastructuur.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/financiele-rapportering.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/gebieden.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/gebouw.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/generiek.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/hulp-dienst-verlening-gedetineerden.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/incentiveringsplatform.publication.json
+#||#  
 #||# checking publication points in directory /home/circleci/project/config/production
 #||# 
 Error: the following directories are unsupported
 [
+  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-04-30",
+  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-08-30",
+  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-11-28",
+  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-12-02",
+  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-12-05",
+  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-12-17",
+  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/latest",
   "/tmp/generated/doc/applicatieprofiel/begraafplaatsen",
   "/tmp/generated/doc/applicatieprofiel/begraafplaatsenbeheer",
   "/tmp/generated/doc/applicatieprofiel/besluitvorming",
@@ -53,18 +80,18 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/observaties",
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/ruimtelijke-bereiken",
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/ruimtelijke-bereiken/ontwerpstandaard/2021-08-01/i",
-  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/latest",
-  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-04-30",
-  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-08-30",
-  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-11-28",
-  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-12-02",
-  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-12-05",
-  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-12-17",
   "/tmp/generated/doc/applicatieprofiel/contactvoorkeuren",
   "/tmp/generated/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/kandidaatstandaard/2022-03-21",
   "/tmp/generated/doc/applicatieprofiel/dienst-transactiemodel",
   "/tmp/generated/doc/applicatieprofiel/dienstencataloog",
-  "/tmp/generated/ns/grondboringen",
+  "/tmp/generated/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
+  "/tmp/generated/doc/applicatieprofiel/FeitelijkeVerenigingen",
+  "/tmp/generated/doc/applicatieprofiel/energiehuis",
+  "/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17",
+  "/tmp/generated/doc/applicatieprofiel/gebieden",
+  "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
   "/tmp/generated/ns/bodem-en-ondergrond",
-  "/tmp/generated/ns/bodem-en-ondergrond/interpretaties"
+  "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
+  "/tmp/generated/ns/grondboringen",
+  "/tmp/generated/ns/FeitelijkeVerenigingen"
 ]
