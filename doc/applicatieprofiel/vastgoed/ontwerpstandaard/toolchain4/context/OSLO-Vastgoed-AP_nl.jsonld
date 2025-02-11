@@ -1,0 +1,612 @@
+{
+  "@context": {
+    "Aanvraag": "https://data.vlaanderen.be/ns/vastgoed#Aanvraag",
+    "Aanvraagstatus": "https://data.vlaanderen.be/ns/vastgoed#Aanvraagstatus",
+    "Aanvrager": "https://data.vlaanderen.be/ns/vastgoed#Aanvrager",
+    "Aanvrager.type": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#type",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#TypeAanvrager"
+    },
+    "Aard Perceel": "https://data.vlaanderen.be/ns/vastgoed#AardPerceel",
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Attest Inlichting": "https://data.vlaanderen.be/ns/vastgoed#AttestInlichting",
+    "Beheerinlichting": "https://data.vlaanderen.be/ns/vastgoed#Beheerinlichting",
+    "Beheertype": "https://data.vlaanderen.be/ns/vastgoed#Beheertype",
+    "Belasting Of Heffing Inlichting": "https://data.vlaanderen.be/ns/vastgoed#BelastingOfHeffingInlichting",
+    "Belastingtype": "https://data.vlaanderen.be/ns/vastgoed#BelastingType",
+    "Bescherminginlichting": "https://data.vlaanderen.be/ns/vastgoed#Bescherminginlichting",
+    "Beschermingtype": "https://data.vlaanderen.be/ns/vastgoed#Beschermingtype",
+    "Besluitinlichting": "https://data.vlaanderen.be/ns/vastgoed#Besluitinlichting",
+    "Besluittype": "https://data.vlaanderen.be/ns/vastgoed#Besluittype",
+    "Code": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Contactinfo.adres": {
+      "@id": "http://www.w3.org/ns/locn#address",
+      "@type": "http://www.w3.org/ns/locn#Address"
+    },
+    "Document": "http://xmlns.com/foaf/0.1/Document",
+    "Doel Aanvraag": "https://data.vlaanderen.be/ns/vastgoed#DoelAanvraag",
+    "Dossierstatus": "https://data.vlaanderen.be/ns/vastgoed#DossierStatus",
+    "Erfdienstbaarheid Van Openbaar Nut": "https://data.vlaanderen.be/ns/vastgoed#ErfdienstbaarheidVanOpenbaarNut",
+    "ErfdienstbaarheidVanOpenbaarNut.geometrie": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geometrie",
+      "@type": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "Erfdienstbaarheidtype": "https://data.vlaanderen.be/ns/vastgoed#ErfdienstbaarheidType",
+    "Geassocieerde Inlichting": "https://data.vlaanderen.be/ns/vastgoed#GeassocieerdeInlichting",
+    "Gebouw": "https://data.vlaanderen.be/ns/gebouw#Gebouw",
+    "Gebouweenheid": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid",
+    "GeometrieMethodeWaarde": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Geregistreerd Persoon": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon",
+    "Geregistreerde Organisatie": "http://www.w3.org/ns/regorg#RegisteredOrganization",
+    "Identificator.identificator": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Inbreuk Of Misdrijf Type": "https://data.vlaanderen.be/ns/vastgoed#InbreukOfMisdrijfType",
+    "Inlichting": "https://data.vlaanderen.be/ns/vastgoed#Inlichting",
+    "Inlichtingstatus": "https://data.vlaanderen.be/ns/vastgoed#Inlichtingstatus",
+    "Inrichting Of Activiteit Type": "https://data.vlaanderen.be/ns/vastgoed#InrichtingOfActiviteitType",
+    "Inventaris Inlichting": "https://data.vlaanderen.be/ns/vastgoed#InventarisInlichting",
+    "Inventaristype": "https://data.vlaanderen.be/ns/vastgoed#Inventaristype",
+    "Kadastraal Patrimoniumperceel": "https://data.vlaanderen.be/ns/perceel#KadastraalPatrimoniumperceel",
+    "Kadastraal Planperceel": "https://data.vlaanderen.be/ns/perceel#KadastraalPlanperceel",
+    "KadastraalPlanperceel.identificator": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#identificator",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Meldinginlichting": "https://data.vlaanderen.be/ns/vastgoed#Meldinginlichting",
+    "Meldingtype": "https://data.vlaanderen.be/ns/vastgoed#Meldingtype",
+    "Motivatietype": "https://data.vlaanderen.be/ns/vastgoed#Motivatietype",
+    "Oppervlaktetype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Organisatie": "http://www.w3.org/ns/org#Organization",
+    "Overtredinginlichting": "https://data.vlaanderen.be/ns/vastgoed#OvertredingInlichting",
+    "Overtredingstatus": "https://data.vlaanderen.be/ns/vastgoed#Overtredingstatus",
+    "Overtredingstype": "https://data.vlaanderen.be/ns/vastgoed#Overtredingtype",
+    "Persoon": "http://www.w3.org/ns/person#Person",
+    "PlanInlichting": "https://data.vlaanderen.be/ns/vastgoed#PlanInlichting",
+    "Planstatus": "https://data.vlaanderen.be/ns/vastgoed#Planstatus",
+    "Plantype": "https://data.vlaanderen.be/ns/vastgoed#Plantype",
+    "Publieke Organisatie": "http://data.europa.eu/m8g/PublicOrganisation",
+    "Rechtinlichting": "https://data.vlaanderen.be/ns/vastgoed#Rechtinlichting",
+    "Reden Risico Type": "https://data.vlaanderen.be/ns/vastgoed#RedenRisicoType",
+    "Relatie Type": "https://data.vlaanderen.be/ns/vastgoed#RelatieType",
+    "Risico Inlichting": "https://data.vlaanderen.be/ns/vastgoed#RisicoInlichting",
+    "Risico Type": "https://data.vlaanderen.be/ns/vastgoed#RisicoType",
+    "Ruimtelijke Eenheid": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid",
+    "RuimtelijkeEenheidGeometrie.geometrie": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheidGeometrie.geometrie",
+      "@type": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "RuimtelijkeEenheidOppervlakte.oppervlakte": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheidOppervlakte.oppervlakte",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "RuimtelijkeEenheidOppervlakte.type": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#oppervlaktetype",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Subsidieinlichting": "https://data.vlaanderen.be/ns/vastgoed#Subsidieinlichting",
+    "Subsidietype": "https://data.vlaanderen.be/ns/vastgoed#Subsidietype",
+    "Terugmelding": "https://data.vlaanderen.be/ns/melding#Terugmelding",
+    "Type Aanvrager": "https://data.vlaanderen.be/ns/vastgoed#TypeAanvrager",
+    "Type Eigenaar": "https://data.vlaanderen.be/ns/vastgoed#TypeEigenaar",
+    "Type Inlichting": "https://data.vlaanderen.be/ns/vastgoed#TypeInlichting",
+    "Type Verstrekker": "https://data.vlaanderen.be/ns/vastgoed#TypeVerstrekker",
+    "Type Wettelijk Kader": "https://data.vlaanderen.be/ns/vastgoed#TypeWettelijkKader",
+    "TypeVastgoed": "https://data.vlaanderen.be/ns/vastgoed#TypeVastgoed",
+    "Vastgoed": "https://data.vlaanderen.be/ns/vastgoed#Vastgoed",
+    "Vastgoed.adres": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#adres",
+      "@type": "http://www.w3.org/ns/locn#Address"
+    },
+    "Vastgoed.oppervlakte": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#oppervlakte",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "Vastgoeddetail": "https://data.vlaanderen.be/ns/vastgoed#VastgoedDetail",
+    "Vastgoeddossier": "https://data.vlaanderen.be/ns/vastgoed#Vastgoeddossier",
+    "Vastgoeddossier.identificator": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#identificator",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Vergunninginlichting": "https://data.vlaanderen.be/ns/vastgoed#VergunningInlichting",
+    "Vergunningstatus": "https://data.vlaanderen.be/ns/vastgoed#Vergunningstatus",
+    "Vergunningtype": "https://data.vlaanderen.be/ns/vastgoed#Vergunningtype",
+    "Veroordelingstype": "https://data.vlaanderen.be/ns/vastgoed#Veroordelingtype",
+    "Verordeninginlichting": "https://data.vlaanderen.be/ns/vastgoed#VerordeningInlichting",
+    "Verordeningstype": "https://data.vlaanderen.be/ns/vastgoed#Verordeningtype",
+    "Verstrekker": "https://data.vlaanderen.be/ns/vastgoed#Verstrekker",
+    "Voorschriftinlichting": "https://data.vlaanderen.be/ns/vastgoed#Voorschriftinlichting",
+    "Voorschrifttype": "https://data.vlaanderen.be/ns/vastgoed#Voorschrifttype",
+    "Vorderinginlichting": "https://data.vlaanderen.be/ns/vastgoed#Vorderinginlichting",
+    "Vorderingstatus": "https://data.vlaanderen.be/ns/vastgoed#Vorderingstatus",
+    "Vorderingtype": "https://data.vlaanderen.be/ns/vastgoed#Vorderingtype",
+    "Zakelijk Recht": "https://data.vlaanderen.be/ns/perceel#ZakelijkRecht",
+    "ZakelijkRecht.type": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#ZakelijkRecht.type",
+      "@type": "https://data.vlaanderen.be/ns/perceel#Zakelijkrechttype"
+    },
+    "Zakelijkrechttype": "https://data.vlaanderen.be/ns/perceel#Zakelijkrechttype",
+    "aandeel": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#aandeel",
+      "@type": "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "aanschrijfvorm": {
+      "@id": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "aanvrager": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#aanvrager",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Aanvrager"
+    },
+    "afgeleverd": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#afgeleverd",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "agent": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#agent",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "attestType": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#attestType",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#AttestType"
+    },
+    "attesttype": "https://data.vlaanderen.be/ns/vastgoed#AttestType",
+    "begin": {
+      "@id": "http://data.europa.eu/m8g/startTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "behandelaar": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#behandelaar",
+      "@type": "http://data.europa.eu/m8g/PublicOrganisation"
+    },
+    "beheertype": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#beheertype",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Beheertype"
+    },
+    "beschermingsmaatregel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#beschermingsmaatregel",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "beschermingtype": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#beschermingtype",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Beschermingtype"
+    },
+    "beschrijving": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#beschrijving",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "besluitinlichting": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#besluit",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Besluitinlichting"
+    },
+    "bijlage": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#bijlage",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "bron": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#bron",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#LI_Citation"
+    },
+    "busnummer": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "code": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#code",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "contactinfo": {
+      "@container": "@set",
+      "@id": "http://schema.org/contactPoint",
+      "@type": "http://schema.org/ContactPoint"
+    },
+    "contactnaam": {
+      "@id": "http://xmlns.com/foaf/0.1/name",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "dagvaarding": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#dagvaarding",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "datum": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#datum",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "default": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#default",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "detail": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#detail",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#VastgoedDetail"
+    },
+    "doel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#doel",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#DoelAanvraag"
+    },
+    "eenheid": {
+      "@id": "https://schema.org/unitText",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "eigenaar": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#eigenaar",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "einddatum": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#einddatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "einde": {
+      "@id": "http://data.europa.eu/m8g/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "email": {
+      "@id": "http://schema.org/email",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fax": {
+      "@id": "http://schema.org/faxNumber",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "functioneelEigenaar": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#functioneelEigenaar",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "geassocieerdeInlichting": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geassocieerdeInlichting",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
+    },
+    "gebouw": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#gebouw",
+      "@type": "https://data.vlaanderen.be/ns/gebouw#Gebouw"
+    },
+    "gebouweenheid": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#gebouweenheid",
+      "@type": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid"
+    },
+    "geldigheid": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geldigheid",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "gemeentenaam": {
+      "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "geschraptSinds": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geschraptSinds",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "geweigerd": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#geweigerd",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gewijzigd": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#gewijzigd",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gml": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "goedgekeurd": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#goedgekeurd",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "heeftBurgerlijkeStaat": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#heeftBurgerlijkeStaat",
+      "@type": "https://data.vlaanderen.be/ns/persoon#BurgerlijkeStaat"
+    },
+    "heeftGeboorte": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#heeftGeboorte",
+      "@type": "https://data.vlaanderen.be/ns/persoon#Geboorte"
+    },
+    "houder": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#houder",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "huisnummer": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "inlichting": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#inlichting",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
+    },
+    "inlichting(Source)": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#GeassocieerdeInlichting.inlichting.source",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
+    },
+    "inlichting(Target)": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#GeassocieerdeInlichting.inlichting.target",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Inlichting"
+    },
+    "inlichtingenOver": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#inlichtingenOver",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Vastgoed"
+    },
+    "inventarisType": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#inventarisType",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Inventaristype"
+    },
+    "kadastraalInkomen": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#kadastraalInkomen",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Bedrag"
+    },
+    "kwaliteit": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#kwaliteit",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#DQ-Dataquality"
+    },
+    "land": {
+      "@id": "https://data.vlaanderen.be/ns/adres#land",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "ligging": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#ligging",
+      "@type": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "lotnummer": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#lotnummer",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "melding": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#melding",
+      "@type": "https://data.vlaanderen.be/ns/melding#Terugmelding"
+    },
+    "meldingtype": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#meldingtype",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Meldingtype"
+    },
+    "methode": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#methode",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "motivatie": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#motivatie",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Motivatietype"
+    },
+    "naam": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#naam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "officiëLeOppervlakte": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#officieleOppervlakte",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "omschrijving": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#omschrijving",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "opgenomenSinds": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#opgenomenSinds",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "opmaakdatum": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#opmaakdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "over": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#over",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Vastgoed"
+    },
+    "overtreding": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#overtreding",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#InbreukOfMisdrijf"
+    },
+    "overtredingstatus": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#overtredingstatus",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Overtredingstatus"
+    },
+    "overtredingtype": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#overtredingType",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Overtredingtype"
+    },
+    "perceel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#perceel",
+      "@type": "https://data.vlaanderen.be/ns/perceel#KadastraalPatrimoniumperceel"
+    },
+    "planstatus": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#planstatus",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Planstatus"
+    },
+    "postbus": {
+      "@id": "http://www.w3.org/ns/locn#poBox",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "postcode": {
+      "@id": "http://www.w3.org/ns/locn#postCode",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "prijs": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#prijs",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Bedrag"
+    },
+    "procesVerbaal": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#procesVerbaal",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "rechtstoestand": {
+      "@id": "https://data.vlaanderen.be/ns/organisatie#rechtstoestand",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "redenSchrapping": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#redenSchrapping",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "referentie": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#referentie",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "relatie": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#relatie",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#RelatieType"
+    },
+    "resultaat": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#resultaat",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Vastgoeddossier"
+    },
+    "rol": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#rol",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#RelatieType"
+    },
+    "standaardEenheid": {
+      "@id": "https://schema.org/unitCode",
+      "@type": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid"
+    },
+    "status": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#status",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#DossierStatus"
+    },
+    "straatnaam": {
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "string": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#string",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "subsidietype": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#subsidietype",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Subsidietype"
+    },
+    "telefoon": {
+      "@id": "http://schema.org/telephone",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tijdstip": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#tijdstip",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "toegekendDoor(String)": {
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "toegekendOp": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "toekomstigEigenaar": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#toekomstigEigenaar",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "type": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#type",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#InbreukOfMisdrijfType"
+    },
+    "typeBesluit": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#typeBesluit",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Besluittype"
+    },
+    "typeInlichting": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#typeInlichting",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#TypeInlichting"
+    },
+    "vaststellingsdatum": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#vaststellingsdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "verblijfplaats": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#verblijfplaats",
+      "@type": "https://data.vlaanderen.be/ns/persoon#Domicilie"
+    },
+    "vergunning": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#vergunning",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#InrichtingOfActiviteit"
+    },
+    "vergunningstatus": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#vergunningstatus",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Vergunningstatus"
+    },
+    "veroordeling": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#veroordeling",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "veroordelingtype": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#veroordelingtype",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Veroordelingtype"
+    },
+    "verordeningType": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#verordeningType",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Verordeningtype"
+    },
+    "verstrekker": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#verstrekker",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Verstrekker"
+    },
+    "volledigAdres": {
+      "@id": "http://www.w3.org/ns/locn#fullAddress",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "volledigeNaam": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#volledigeNaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "voorschriften": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#voorschrift",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "voorschrifttype": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#voorschrifttype",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Voorschrifttype"
+    },
+    "voorwaarde": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#voorwaarde",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "voorwaarden": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#voorwaarden",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "vordering": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#vordering",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Vorderinginlichting"
+    },
+    "vorderingStatus": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#vorderingStatus",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "vorderingtype": {
+      "@id": "https://data.vlaanderen.be/ns/vastgoed#vorderingtype",
+      "@type": "https://data.vlaanderen.be/ns/vastgoed#Vorderingtype"
+    },
+    "waarde": {
+      "@id": "https://schema.org/value",
+      "@type": "https://schema.org/Number"
+    },
+    "website": {
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "wkt": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    }
+  }
+}

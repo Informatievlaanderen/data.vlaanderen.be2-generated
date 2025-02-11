@@ -1,0 +1,746 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature> a rdfs:Class;
+  rdfs:label "Domeinobject"@nl .
+
+skos:Concept a rdfs:Class;
+  rdfs:label "BezoekersprofielType"@nl,
+    "BetaalmethodeType"@nl,
+    "TransactieType"@nl,
+    "ActiviteitType"@nl,
+    "GebeurtenisType"@nl,
+    "DruktekenmerkType"@nl,
+    "VerkoopkenmerkType"@nl,
+    "Bedrijfsgrootte"@nl,
+    "Affilatietype"@nl,
+    "Inkomensklasse"@nl,
+    "Leeftijdsgroep"@nl,
+    "Onderwijsniveau"@nl,
+    "OmgevingskenmerkType"@nl,
+    "BezoekersgebiedType"@nl,
+    "Gezinssamenstelling"@nl,
+    "OrganisatieClassificatie"@nl,
+    "Klantenkaart"@nl,
+    "ProductcategorieType"@nl,
+    "AantalWerknemers"@nl .
+
+<https://data.vlaanderen.be/ns/financiele-data#Monetair> a rdfs:Class;
+  rdfs:label "Monetair"@nl .
+
+<https://def.isotc211.org/iso19156/2011/Observation#ObservationContext> a rdfs:Class;
+  rdfs:label "ObservatieContext"@nl .
+
+schemas:MoneyTransfer a rdfs:Class;
+  rdfs:label "Betaling"@nl .
+
+schemas:Product a rdfs:Class;
+  rdfs:label "Product"@nl .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Betaling.tijdstip> a owl:DatatypeProperty;
+  rdfs:label "tijdstip"@nl;
+  rdfs:comment "Tijdstip waarop de betaling plaatsvindt."@nl;
+  rdfs:domain schemas:MoneyTransfer;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range xsd:dateTime .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Druktemeting.geobserveerdKenmerk> a owl:ObjectProperty;
+  rdfs:label "geobserveerdKenmerk"@nl;
+  rdfs:comment "Druktekenmerk dat geobserveerd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Druktemeting>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range <https://data.vlaanderen.be/ns/lokale-economie#Druktekenmerk> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Gebeurtenis.tijdstip> a owl:ObjectProperty;
+  rdfs:label "tijdstip"@nl;
+  rdfs:comment "Tijdstip waarop een gebeurtenis plaatsvindt."@nl;
+  rdfs:domain schemas:Event;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range schemas:Schedule .
+
+<https://data.vlaanderen.be/ns/lokale-economie#OmgevingsObservatie.geobserveerdKenmerk> a owl:ObjectProperty;
+  rdfs:label "geobserveerdKenmerk"@nl;
+  rdfs:comment "Kenmerk van de omgeving dat geobserveerd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Omgevingsobservatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range <https://data.vlaanderen.be/ns/lokale-economie#Omgevingskenmerk> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Verkoopmeting.geobserveerdKenmerk> a owl:ObjectProperty;
+  rdfs:label "geobserveerdKenmerk"@nl;
+  rdfs:comment "Verkoopkenmerk dat geobserveerd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Verkoopmeting>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range <https://data.vlaanderen.be/ns/lokale-economie#Verkoopkenmerk> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#aantal> a owl:DatatypeProperty;
+  rdfs:label "aantal"@nl;
+  rdfs:comment "Aantal producten van eenzelfde soort."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Aankooplijn>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range xsd:integer .
+
+<https://data.vlaanderen.be/ns/lokale-economie#aantalWerknemers> a owl:ObjectProperty;
+  rdfs:label "aantalWerknemers"@nl;
+  rdfs:comment "Aantal personen in dienst op een bepaald moment in een specifieke Vestiging van een Organisatie."@nl;
+  rdfs:domain org:Site;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/lokale-economie#affiliatietype> a owl:ObjectProperty;
+  rdfs:label "affiliatietype"@nl;
+  rdfs:comment "Type van affiliatie, i.e., verbondenheid met een moederorganisatie."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Organisatieprofiel>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/lokale-economie#bedrag> a owl:ObjectProperty;
+  rdfs:label "bedrag"@nl;
+  rdfs:comment "Hoeveelheid geld of equivalent die wordt overgemaakt."@nl;
+  rdfs:domain schemas:MoneyTransfer;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range <https://data.vlaanderen.be/ns/financiele-data#Monetair> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#bedrijfsgrootte> a owl:ObjectProperty;
+  rdfs:label "bedrijfsgrootte"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Mogelijke kenmerken zijn omzet, aantal werknemers of een combinatie daarvan."@nl;
+  rdfs:comment "Classificatie van de grootte van een organisatie volgens een bepaald kenmerk."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Organisatieprofiel>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/lokale-economie#betaalmethode> a owl:ObjectProperty;
+  rdfs:label "betaalmethode"@nl;
+  rdfs:comment "Indicatie van het betaalmiddel dat gebruikt werd."@nl;
+  rdfs:domain schemas:MoneyTransfer;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/lokale-economie#bezoekHerkomst> a owl:ObjectProperty;
+  rdfs:label "bezoekHerkomst"@nl;
+  rdfs:comment "Bepaalde herkomst van bezoekers die geobserveerd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Druktekenmerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range <https://data.vlaanderen.be/ns/lokale-economie#Locatie> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#bezoekersProfiel> a owl:ObjectProperty;
+  rdfs:label "bezoekersprofiel"@nl;
+  rdfs:comment "Bezoekersprofiel dat geobserveerd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Druktekenmerk>,
+    <https://data.vlaanderen.be/ns/lokale-economie#Verkoopkenmerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/lokale-economie#eenheidsprijs> a owl:ObjectProperty;
+  rdfs:label "eenheidsprijs"@nl;
+  rdfs:comment "Prijs van één eenheid van het product."@nl;
+  rdfs:domain schemas:Product;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range <https://data.vlaanderen.be/ns/financiele-data#Monetair> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#gezinstype> a owl:ObjectProperty;
+  rdfs:label "gezinstype"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Voorbeelden van gezinstypes zijn kerngezin, een-oudergezin, uitgebreid gezin, alleenwonende, ongehuwd samenwonenden, LAT, LTA, enz."@nl;
+  rdfs:comment "Classificatie van de gezinssamenstelling van een persoon of groep van personen."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#SocioDemografischProfiel>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/lokale-economie#herkomstType> a owl:ObjectProperty;
+  rdfs:label "herkomsttype"@nl;
+  rdfs:comment "Categorisering van het gebied waarvan de bezoekers afkomstig zijn."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Druktekenmerk>,
+    <https://data.vlaanderen.be/ns/lokale-economie#Verkoopkenmerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range <https://data.vlaanderen.be/ns/lokale-economie#HerkomstType> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#inkomensklasse> a owl:ObjectProperty;
+  rdfs:label "inkomensklasse"@nl;
+  rdfs:comment "Inkomensklasse van een persoon of groep van personen."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#SocioDemografischProfiel>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/lokale-economie#klantenkaart> a owl:ObjectProperty;
+  rdfs:label "klantenkaart"@nl;
+  rdfs:comment "Klantenkaart die gebruikt wordt bij de transactie."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Transactie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/lokale-economie#koperprofiel> a owl:ObjectProperty;
+  rdfs:label "koperprofiel"@nl;
+  rdfs:comment "Socio-demografisch profiel of organisatieprofiel dat geobserveerd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Druktekenmerk>,
+    <https://data.vlaanderen.be/ns/lokale-economie#Verkoopkenmerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range <https://data.vlaanderen.be/ns/lokale-economie#Profiel> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#leeftijdsgroep> a owl:ObjectProperty;
+  rdfs:label "leeftijdsgroep"@nl;
+  rdfs:comment "Leeftijdsgroep van een persoon of groep van personen."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#SocioDemografischProfiel>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/lokale-economie#naam> a owl:DatatypeProperty;
+  rdfs:label "naam"@nl;
+  rdfs:comment "Naam van het bezoekersgebied."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Bezoekersgebied>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range rdf:langString .
+
+<https://data.vlaanderen.be/ns/lokale-economie#onderwijsniveau> a owl:ObjectProperty;
+  rdfs:label "onderwijsniveau"@nl;
+  rdfs:comment "Onderwijsniveau van een persoon of groep van personen."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#SocioDemografischProfiel>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/lokale-economie#product> a owl:ObjectProperty;
+  rdfs:label "product"@nl;
+  rdfs:comment "Product dat het onderwerp vormt van de aankooplijn."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Aankooplijn>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range schemas:Product .
+
+<https://data.vlaanderen.be/ns/lokale-economie#promotie> a owl:ObjectProperty;
+  rdfs:label "promotie"@nl;
+  rdfs:comment "Promotie die van toepassing is op een specifiek product."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Aankooplijn>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range schemas:QuantitativeValue .
+
+<https://data.vlaanderen.be/ns/lokale-economie#publiekeVerkoopVloeroppervlakte> a owl:ObjectProperty;
+  rdfs:label "publiekeVerkoopVloeroppervlakte"@nl;
+  rdfs:comment "Publiek toegankelijke oppervlakte van de winkel."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Handelszaak>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range schemas:QuantitativeValue .
+
+<https://data.vlaanderen.be/ns/lokale-economie#sector> a owl:ObjectProperty;
+  rdfs:label "sector"@nl;
+  rdfs:comment "Sector die geobserveerd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/lokale-economie#Verkoopkenmerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:range skos:Concept .
+
+<http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role> a rdf:Property;
+  rdfs:label "rol"@nl .
+
+dc:type a rdf:Property;
+  rdfs:label "type"@nl .
+
+org:siteAddress a rdf:Property;
+  rdfs:label "vestigingsadres"@nl .
+
+prov:Location a rdf:Property;
+  rdfs:label "locatie"@nl .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Bezoekersgebied> a owl:Class;
+  rdfs:label "Bezoekersgebied"@nl;
+  rdfs:comment "Een specifieke geografische locatie waar verschillende handelszaken en al dan niet commerciële voorzieningen zijn samengebracht om consumenten een gevarieerd aanbod van producten en/of diensten aan te bieden."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Druktemeting> a owl:Class;
+  rdfs:label "Druktemeting"@nl;
+  rdfs:comment "Het vaststellen van een waarde van een bepaald kenmerk van drukte op een bepaald tijdstip of tussen twee tijdstippen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Handelszaak> a owl:Class;
+  rdfs:label "Handelszaak"@nl;
+  rdfs:comment "Een plaats waar koopwaar wordt aangeboden en verkocht en/of waar diensten worden geleverd."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#HerkomstType> a owl:Class;
+  rdfs:label "HerkomstType"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Omgevingskenmerk> a owl:Class;
+  rdfs:label "Omgevingskenmerk"@nl;
+  rdfs:comment "Kenmerk van de omgeving dat geobserveerd wordt."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Omgevingsobservatie> a owl:Class;
+  rdfs:label "OmgevingsObservatie"@nl;
+  rdfs:comment "Het vaststellen van een kenmerk van de omgeving van een Domeinobject op een bepaald tijdstip of tussen twee tijdstippen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Transactie> a owl:Class;
+  rdfs:label "Transactie"@nl;
+  rdfs:comment "Een overeenkomst tussen een koper en een verkoper om goederen, diensten of monetaire zaken uit te wisselen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Verkoopmeting> a owl:Class;
+  rdfs:label "Verkoopmeting"@nl;
+  rdfs:comment "Kwantitatieve evaluatie van een individuele transactie of een verzameling van transacties."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#aankooplijn> a rdf:Property;
+  rdfs:label "aankooplijn"@nl .
+
+<https://data.vlaanderen.be/ns/lokale-economie#betaling> a rdf:Property;
+  rdfs:label "betaling"@nl .
+
+<https://data.vlaanderen.be/ns/lokale-economie#transactie> a rdf:Property;
+  rdfs:label "transactie"@nl .
+
+schemas:amount a rdf:Property;
+  rdfs:label "bedrag"@nl .
+
+schemas:category a rdf:Property;
+  rdfs:label "productcategorie"@nl .
+
+schemas:customer a rdf:Property;
+  rdfs:label "uitgevoerdDoor"@nl .
+
+schemas:description a rdf:Property;
+  rdfs:label "productbeschrijving"@nl .
+
+schemas:discount a rdf:Property;
+  rdfs:label "promotie"@nl .
+
+schemas:productID a rdf:Property;
+  rdfs:label "productID"@nl .
+
+schemas:seller a rdf:Property;
+  rdfs:label "uitgevoerdBij"@nl .
+
+<https://www.w3.org/ns/prov#atLocation> a rdf:Property;
+  rdfs:label "locatie"@nl .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Organisatieprofiel> a owl:Class;
+  rdfs:label "Organisatieprofiel"@nl;
+  rdfs:comment "Verzameling van kenmerken van een Organisatie."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/lokale-economie#Profiel> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Aankooplijn> a owl:Class;
+  rdfs:label "Aankooplijn"@nl;
+  rdfs:comment "Onderdeel van een transactie dat overeenstemt met één aankooplijn op een kassaticket."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Profiel> a owl:Class;
+  rdfs:label "Profiel"@nl;
+  rdfs:comment "Verzameling van kenmerken, gedragingen en voorkeuren van een individuele consument of groep van consumenten die een product of dienst aankoopt."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#SocioDemografischProfiel> a owl:Class;
+  rdfs:label "SocioDemografischProfiel"@nl;
+  rdfs:comment "Verzameling van kenmerken, eigenschappen en achtergrond van een persoon."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/lokale-economie#Profiel> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Druktekenmerk> a owl:Class;
+  rdfs:label "Druktekenmerk"@nl;
+  rdfs:comment "Kenmerk van het Domeinobject dat gemeten wordt en dat betrekking heeft op de drukte binnen, over of langs dat object."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/lokale-economie#Verkoopkenmerk> a owl:Class;
+  rdfs:label "Verkoopkenmerk"@nl;
+  rdfs:comment "Kenmerk van de Transactie(s) dat gemeten wordt."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/lokale-economie>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/lokale-economie> a owl:Ontology;
+  rdfs:label "lokale-economie"@en,
+    "lokale-economie"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.citymesh.com/>;
+      foaf:name "Citymesh NV"
+    ];
+    foaf:firstName "Pim";
+    foaf:lastName "Wittesaele"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaio.be/en>;
+      foaf:name "Agentschap innoveren en ondernemen"
+    ];
+    foaf:firstName "Nils";
+    foaf:lastName "Walravens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.kernpunt.be/>;
+      foaf:name "KERNpunt"
+    ];
+    foaf:firstName "Justine";
+    foaf:lastName "Vanneste"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://thomasmore.be/nl>;
+      foaf:name "Thomas More Mechelen/Antwerpen"
+    ];
+    foaf:firstName "Ferre";
+    foaf:lastName "Vandervreken"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.geosolutions.be/>;
+      foaf:name "Geo Solutions"
+    ];
+    foaf:firstName "Sven";
+    foaf:lastName "Vanderhaegen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.brugge.be/>;
+      foaf:name "Stad Brugge"
+    ];
+    foaf:firstName "Ide";
+    foaf:lastName "Vandenbroucke"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.oost-vlaanderen.be/>;
+      foaf:name "Provincie Oost-Vlaanderen"
+    ];
+    foaf:firstName "Joachim";
+    foaf:lastName "Van den Bergh"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.antwerpen.be/>;
+      foaf:name "Stad Antwerpen"
+    ];
+    foaf:firstName "Jessy";
+    foaf:lastName "Van Strydonck"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.theretailfactory.be/>;
+      foaf:name "The Retail Factory"
+    ];
+    foaf:firstName "Luc";
+    foaf:lastName "Van Rompaey"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.provincieantwerpen.be/>;
+      foaf:name "Provincie Antwerpen"
+    ];
+    foaf:firstName "Senne";
+    foaf:lastName "Van Hoof"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.oostkamp.be/>;
+      foaf:name "Gemeente Oostkamp"
+    ];
+    foaf:firstName "Fabienne";
+    foaf:lastName "Valcke"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.cropland.be/>;
+      foaf:name "CROPLAND"
+    ];
+    foaf:firstName "Vincent";
+    foaf:lastName "Thielman"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://thomasmore.be/nl>;
+      foaf:name "Thomas More Mechelen/Antwerpen"
+    ];
+    foaf:firstName "Eveline";
+    foaf:lastName "Smolders"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.provincieantwerpen.be/>;
+      foaf:name "Provincie Antwerpen"
+    ];
+    foaf:firstName "Kristof";
+    foaf:lastName "Schroons"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://toerismevlaanderen.be/nl>;
+      foaf:name "Toerisme Vlaanderen"
+    ];
+    foaf:firstName "Jos";
+    foaf:lastName "Pyck"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Justine";
+    foaf:lastName "Ottevaere"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.proximus.be/>;
+      foaf:name "Proximus"
+    ];
+    foaf:firstName "Joshua";
+    foaf:lastName "Moerman"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://toerismevlaanderen.be/nl>;
+      foaf:name "Toerisme Vlaanderen"
+    ];
+    foaf:firstName "Mia";
+    foaf:lastName "Lammens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://vinotion.com/nl/>;
+      foaf:name "ViNotion B.V."
+    ];
+    foaf:firstName "Azem";
+    foaf:lastName "Kariman"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.menen.be/>;
+      foaf:name "Stad Menen"
+    ];
+    foaf:firstName "Roeland";
+    foaf:lastName "Houttekiet"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.diksmuide.be/>;
+      foaf:name "Stad Diksmuide"
+    ];
+    foaf:firstName "Laurens";
+    foaf:lastName "Hooghe"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://leuven.be/>;
+      foaf:name "Stad Leuven"
+    ];
+    foaf:firstName "Tim";
+    foaf:lastName "Guily"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://stad.gent/nl>;
+      foaf:name "Stad Gent"
+    ];
+    foaf:firstName "Christophe";
+    foaf:lastName "Geernaert"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.oost-vlaanderen.be/>;
+      foaf:name "Provincie Oost-Vlaanderen"
+    ];
+    foaf:firstName "Pieter-Jan";
+    foaf:lastName "Fieremans"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.limburg.be/>;
+      foaf:name "Provincie Limburg"
+    ];
+    foaf:firstName "Céline";
+    foaf:lastName "Dirickx"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://leuven.be/>;
+      foaf:name "Stad Leuven"
+    ];
+    foaf:firstName "Dries";
+    foaf:lastName "Desagher"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.pomwvl.be/>;
+      foaf:name "Provinciale Ontwikkelingsmaatschappij West-Vlaanderen"
+    ];
+    foaf:firstName "Annelies";
+    foaf:lastName "Demeyere"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.citymesh.com/>;
+      foaf:name "Citymesh NV"
+    ];
+    foaf:firstName "Bart";
+    foaf:lastName "Couvreur"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://thomasmore.be/nl>;
+      foaf:name "Thomas More Kempen vzw (CEBUD)"
+    ];
+    foaf:firstName "Marijke";
+    foaf:lastName "Brants"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.proximus.be/>;
+      foaf:name "Proximus"
+    ];
+    foaf:firstName "Jasper";
+    foaf:lastName "Botterman"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.crowdscan.be/>;
+      foaf:name "CrowdScan"
+    ];
+    foaf:firstName "Ben";
+    foaf:lastName "Bellekens"
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature>,
+    skos:Concept,
+    <https://data.vlaanderen.be/ns/financiele-data#Monetair>,
+    <https://def.isotc211.org/iso19156/2011/Observation#ObservationContext>,
+    schemas:MoneyTransfer,
+    schemas:Product,
+    <https://www.w3.org/ns/prov#atLocation>,
+    schemas:seller,
+    schemas:productID,
+    schemas:discount,
+    schemas:description,
+    schemas:customer,
+    schemas:category,
+    schemas:amount,
+    <https://data.vlaanderen.be/ns/lokale-economie#transactie>,
+    <https://data.vlaanderen.be/ns/lokale-economie#betaling>,
+    <https://data.vlaanderen.be/ns/lokale-economie#aankooplijn>,
+    prov:Location,
+    org:siteAddress,
+    dc:type,
+    <http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role>;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Louise";
+    foaf:lastName "Ysewijn"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Eveline";
+    foaf:lastName "Vlassenroot"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Laurens";
+    foaf:lastName "Vercauteren"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Liesbeth";
+    foaf:lastName "Van der Haegen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Geert";
+    foaf:lastName "Thijs"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Yaron";
+    foaf:lastName "Dassonneville"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Raf";
+    foaf:lastName "Buylle"
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.economischhuis.be/>;
+      foaf:name "Economisch Huis Oostende"
+    ];
+    foaf:firstName "Joke";
+    foaf:lastName "Van Gheluwe"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.pomwvl.be/>;
+      foaf:name "Provinciale Ontwikkelingsmaatschappij West-Vlaanderen"
+    ];
+    foaf:firstName "Frederik";
+    foaf:lastName "Sack"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.mechelen.be/>;
+      foaf:name "Stad Mechelen"
+    ];
+    foaf:firstName "Sandrine";
+    foaf:lastName "Raskin"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.economischhuis.be/>;
+      foaf:name "Economisch Huis Oostende"
+    ];
+    foaf:firstName "Bjorn";
+    foaf:lastName "Pintelon"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://leuven.be/>;
+      foaf:name "Stad Leuven"
+    ];
+    foaf:firstName "Bo";
+    foaf:lastName "Peeters"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.kernpunt.be/>;
+      foaf:name "KERNpunt"
+    ];
+    foaf:firstName "Liederik";
+    foaf:lastName "Cordonni"
+  ] .

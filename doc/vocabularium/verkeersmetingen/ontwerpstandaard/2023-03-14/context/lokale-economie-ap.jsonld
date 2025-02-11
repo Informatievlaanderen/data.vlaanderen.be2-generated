@@ -1,0 +1,635 @@
+{
+  "@context": {
+    ".observatie(source)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.source",
+      "@type": "@id"
+    },
+    ".observatie(target)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.target",
+      "@type": "@id"
+    },
+    "Aankooplijn": "https://data.vlaanderen.be/ns/lokale-economie#Aankooplijn",
+    "Aankooplijn.aantal": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#aantal",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Aankooplijn.product": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#product",
+      "@type": "@id"
+    },
+    "Aankooplijn.promotie": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#promotie",
+      "@type": "@id"
+    },
+    "Aankooplijn.transactie": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#transactie",
+      "@type": "@id"
+    },
+    "AantalWerknemers": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Activiteit": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+    "Activiteit.contactinfo": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.contactinfo",
+      "@type": "@id"
+    },
+    "Activiteit.doelgroep": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.doelgroep",
+      "@type": "@id"
+    },
+    "Activiteit.ingerichtDoor": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#ingerichtDoor",
+      "@type": "@id"
+    },
+    "Activiteit.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "ActiviteitType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Adresvoorstelling": "http://www.w3.org/ns/locn#Address",
+    "Adresvoorstelling.busnummer": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Adresvoorstelling.gemeentenaam": {
+      "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Adresvoorstelling.huisnummer": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Adresvoorstelling.land": {
+      "@id": "https://data.vlaanderen.be/ns/adres#land",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Adresvoorstelling.postcode": {
+      "@id": "http://www.w3.org/ns/locn#postCode",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Adresvoorstelling.straatnaam": {
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Affilatietype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Bedrijfsgrootte": "http://www.w3.org/2004/02/skos/core#Concept",
+    "BelgischAdres": "https://data.vlaanderen.be/ns/adres#Adres",
+    "BetaalmethodeType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Betaling": "https://schema.org/MoneyTransfer",
+    "Betaling.bedrag": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#bedrag",
+      "@type": "@id"
+    },
+    "Betaling.betaalmethode": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#betaalmethode",
+      "@type": "@id"
+    },
+    "Betaling.tijdstip": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#Betaling.tijdstip",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Betaling.transactie": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#transactie",
+      "@type": "@id"
+    },
+    "Bezoekersgebied": "https://data.vlaanderen.be/ns/lokale-economie#Bezoekersgebied",
+    "Bezoekersgebied.locatie": {
+      "@id": "https://www.w3.org/ns/prov#atLocation",
+      "@type": "@id"
+    },
+    "Bezoekersgebied.naam": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#naam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Bezoekersgebied.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "BezoekersgebiedType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "BezoekersprofielType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Contactinfo": "http://schema.org/ContactPoint",
+    "Contactinfo.aanschrijfprefix": {
+      "@id": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Contactinfo.adres": {
+      "@id": "http://www.w3.org/ns/locn#address",
+      "@type": "@id"
+    },
+    "Contactinfo.email": {
+      "@id": "http://schema.org/email",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactinfo.faxnummer": {
+      "@id": "http://schema.org/faxNumber",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactinfo.naam": {
+      "@id": "http://xmlns.com/foaf/0.1/name",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactinfo.openingsuren": {
+      "@id": "http://schema.org/openingHours"
+    },
+    "Contactinfo.pagina": {
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Contactinfo.telefoon": {
+      "@id": "http://schema.org/telephone",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactinfo.urenBeschikbaarheid": {
+      "@id": "http://schema.org/hoursAvailable",
+      "@type": "@id"
+    },
+    "DirecteLocatieAanduiding": "https://data.vlaanderen.be/ns/RuimtelijkPlannen#DirecteLocatieAanduiding",
+    "DoelgroepType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Domeinobject": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature",
+    "Domeinobject.waardeverschaffer": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Object.waardeverschaffer",
+      "@type": "@id"
+    },
+    "Druktekenmerk": "https://data.vlaanderen.be/ns/lokale-economie#Druktekenmerk",
+    "Druktekenmerk.bezoekHerkomst": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#bezoekHerkomst",
+      "@type": "@id"
+    },
+    "Druktekenmerk.bezoekersprofiel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#bezoekersProfiel",
+      "@type": "@id"
+    },
+    "Druktekenmerk.herkomsttype": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#herkomstType",
+      "@type": "@id"
+    },
+    "Druktekenmerk.koperprofiel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#koperprofiel",
+      "@type": "@id"
+    },
+    "Druktekenmerk.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "DruktekenmerkType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Druktemeting": "https://data.vlaanderen.be/ns/lokale-economie#Druktemeting",
+    "Druktemeting.geobserveerdKenmerk": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#Druktemeting.geobserveerdKenmerk",
+      "@type": "@id"
+    },
+    "Gebeurtenis": "https://schema.org/Event",
+    "Gebeurtenis.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Gebeurtenis.locatie": {
+      "@id": "https://www.w3.org/ns/prov#atLocation",
+      "@type": "@id"
+    },
+    "Gebeurtenis.tijdstip": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#Gebeurtenis.tijdstip",
+      "@type": "@id"
+    },
+    "Gebeurtenis.titel": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Gebeurtenis.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "GebeurtenisType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
+    "Geometrie.alsGml": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML"
+    },
+    "Geometrie.alsWkt": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT"
+    },
+    "Getal": "https://schema.org/Number",
+    "Gezinssamenstelling": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Handelszaak": "https://data.vlaanderen.be/ns/lokale-economie#Handelszaak",
+    "Handelszaak.organisatie": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#^organisatie",
+      "@type": "@id"
+    },
+    "Handelszaak.publiekeVerkoopVloeroppervlakte": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#publiekeVerkoopVloeroppervlakte",
+      "@type": "@id"
+    },
+    "Handelszaak.vestigingsadres": {
+      "@id": "http://www.w3.org/ns/org#siteAddress",
+      "@type": "@id"
+    },
+    "HerkomstType": "https://data.vlaanderen.be/ns/lokale-economie#HerkomstType",
+    "Identificator": "http://www.w3.org/ns/adms#Identifier",
+    "Identificator.gestructureerdeIdentificator": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator",
+      "@type": "@id"
+    },
+    "Identificator.maker": {
+      "@id": "http://purl.org/dc/terms/creator",
+      "@type": "@id"
+    },
+    "Identificator.notatie": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation"
+    },
+    "Identificator.toegekendDoor": {
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Identificator.uitgegeven": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "IndirecteLocatieAanduiding": "https://data.vlaanderen.be/ns/RuimtelijkPlannen#IndirecteLocatieAanduiding",
+    "IndirecteLocatieAanduiding.referentie": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#referentie",
+      "@type": "@id"
+    },
+    "Inkomensklasse": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Kenmerktype": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+    "Klantenkaart": "http://www.w3.org/2004/02/skos/core#Concept",
+    "KwantitatieveWaarde": "https://schema.org/QuantitativeValue",
+    "KwantitatieveWaarde.eenheid": {
+      "@id": "https://schema.org/unitText",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "KwantitatieveWaarde.standaardEenheid": {
+      "@id": "https://schema.org/unitCode",
+      "@type": "@id"
+    },
+    "KwantitatieveWaarde.waarde": {
+      "@id": "https://schema.org/value",
+      "@type": "@id"
+    },
+    "Leeftijdsgroep": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Locatie": "http://www.w3.org/ns/prov#Location",
+    "Moment": "http://www.w3.org/2006/time#Instant",
+    "Moment.inXsdDateTime": {
+      "@id": "http://www.w3.org/2006/time#inXSDDateTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Monetair": "https://data.vlaanderen.be/ns/financiele-data#Monetair",
+    "Observatie": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+    "Observatie.fenomeentijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+      "@type": "@id"
+    },
+    "Observatie.geassocieerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+      "@type": "@id"
+    },
+    "Observatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "@id"
+    },
+    "Observatie.parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter",
+      "@type": "@id"
+    },
+    "Observatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "Observatie.resultaatkwaliteit": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
+      "@type": "@id"
+    },
+    "Observatie.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Observatie.uitgevoerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
+      "@type": "@id"
+    },
+    "ObservatieContext": "https://def.isotc211.org/iso19156/2011/Observation#ObservationContext",
+    "ObservatieContext.rol": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role",
+      "@type": "@id"
+    },
+    "OmgevingsObservatie": "https://data.vlaanderen.be/ns/lokale-economie#Omgevingsobservatie",
+    "OmgevingsObservatie.geobserveerdKenmerk": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#OmgevingsObservatie.geobserveerdKenmerk",
+      "@type": "@id"
+    },
+    "Omgevingskenmerk": "https://data.vlaanderen.be/ns/lokale-economie#Omgevingskenmerk",
+    "Omgevingskenmerk.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "OmgevingskenmerkType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Onderwijsniveau": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Openingsurenspecificatie": "http://schema.org/OpeningHoursSpecification",
+    "Openingsurenspecificatie.dagVanDeWeek": {
+      "@id": "http://schema.org/dayOfWeek",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Openingsurenspecificatie.geldigTot": {
+      "@id": "http://schema.org/validThrough",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Openingsurenspecificatie.geldigVan": {
+      "@id": "http://schema.org/validFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Openingsurenspecificatie.gesloten": {
+      "@id": "http://schema.org/closes",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "Openingsurenspecificatie.open": {
+      "@id": "http://schema.org/opens",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "Organisatie": "http://www.w3.org/ns/org#Organization",
+    "Organisatie.classificatie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#classification",
+      "@type": "@id"
+    },
+    "Organisatie.heeftVestiging": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/organisatie#heeftVestiging",
+      "@type": "@id"
+    },
+    "Organisatie.naam": {
+      "@id": "https://data.vlaanderen.be/ns/organisatie#voorkeursnaam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Organisatie.profielinfo": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/organisatie#profielinfo",
+      "@type": "@id"
+    },
+    "OrganisatieClassificatie": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Organisatieprofiel": "https://data.vlaanderen.be/ns/lokale-economie#Organisatieprofiel",
+    "Organisatieprofiel.affiliatietype": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#affiliatietype",
+      "@type": "@id"
+    },
+    "Organisatieprofiel.bedrijfsgrootte": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#bedrijfsgrootte",
+      "@type": "@id"
+    },
+    "Periode": "http://www.w3.org/2006/time#ProperInterval",
+    "Periode.tot": {
+      "@id": "http://www.w3.org/2006/time#hasEnd",
+      "@type": "@id"
+    },
+    "Periode.van": {
+      "@id": "http://www.w3.org/2006/time#hasBeginning",
+      "@type": "@id"
+    },
+    "Persoon": "http://www.w3.org/ns/person#Person",
+    "Persoon.contactpunt": {
+      "@id": "http://schema.org/contactPoint",
+      "@type": "@id"
+    },
+    "Persoon.domicilie": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#/domicilie",
+      "@type": "@id"
+    },
+    "Persoon.familienaam": {
+      "@id": "http://xmlns.com/foaf/0.1/familyName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Persoon.geboortejaar": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#/geboortejaar",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Persoon.gegevenNaam": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/givenName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Persoon.geslacht": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#geslacht",
+      "@type": "@id"
+    },
+    "Persoon.profiel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#profiel",
+      "@type": "@id"
+    },
+    "Persoon.verblijfplaats": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#/verblijfplaats",
+      "@type": "@id"
+    },
+    "Plaats": "http://purl.org/dc/terms/Location",
+    "Plaats.geometrie": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "@id"
+    },
+    "Plaats.plaatsnaam": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Product": "https://schema.org/Product",
+    "Product.eenheidsprijs": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#eenheidsprijs",
+      "@type": "@id"
+    },
+    "Product.productId": {
+      "@id": "https://schema.org/productID",
+      "@type": "@id"
+    },
+    "Product.productbeschrijving": {
+      "@id": "https://schema.org/description",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Product.productcategorie": {
+      "@container": "@set",
+      "@id": "https://schema.org/category",
+      "@type": "@id"
+    },
+    "ProductcategorieType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Profiel": "https://data.vlaanderen.be/ns/lokale-economie#Profiel",
+    "SocioDemografischProfiel": "https://data.vlaanderen.be/ns/lokale-economie#SocioDemografischProfiel",
+    "SocioDemografischProfiel.gezinstype": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#gezinstype",
+      "@type": "@id"
+    },
+    "SocioDemografischProfiel.inkomensklasse": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#inkomensklasse",
+      "@type": "@id"
+    },
+    "SocioDemografischProfiel.leeftijdsgroep": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#leeftijdsgroep",
+      "@type": "@id"
+    },
+    "SocioDemografischProfiel.locatie": {
+      "@id": "http://www.w3.org/ns/prov#Location",
+      "@type": "@id"
+    },
+    "SocioDemografischProfiel.onderwijsniveau": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#onderwijsniveau",
+      "@type": "@id"
+    },
+    "StandaardEenheid": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid",
+    "Taalstring": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "TemporeleEntiteit": "http://www.w3.org/2006/time#TemporalEntity",
+    "Tijdschema": "https://schema.org/Schedule",
+    "Tijdschema.aantalHerhalingen": {
+      "@id": "https://schema.org/repeatCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Tijdschema.duur": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#duur",
+      "@type": "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "Tijdschema.einddatum": {
+      "@id": "https://schema.org/endDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Tijdschema.eindtijd": {
+      "@id": "https://schema.org/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "Tijdschema.frequentie": {
+      "@id": "https://schema.org/repeatFrequency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Tijdschema.perDag": {
+      "@container": "@set",
+      "@id": "https://schema.org/byDay",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Tijdschema.perDagVanDeMaand": {
+      "@container": "@set",
+      "@id": "https://schema.org/byMonthDay",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Tijdschema.perMaand": {
+      "@container": "@set",
+      "@id": "https://schema.org/byMonth",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Tijdschema.perSetpositie": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#perSetpositie",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Tijdschema.startdatum": {
+      "@id": "https://schema.org/startDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Tijdschema.starttijd": {
+      "@id": "https://schema.org/startTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "Tijdschema.uitzonderingsdatum": {
+      "@container": "@set",
+      "@id": "https://schema.org/exceptDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Transactie": "https://data.vlaanderen.be/ns/lokale-economie#Transactie",
+    "Transactie.aankooplijn": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#aankooplijn",
+      "@type": "@id"
+    },
+    "Transactie.bedrag": {
+      "@id": "https://schema.org/amount",
+      "@type": "@id"
+    },
+    "Transactie.betaling": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#betaling",
+      "@type": "@id"
+    },
+    "Transactie.klantenkaart": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#klantenkaart",
+      "@type": "@id"
+    },
+    "Transactie.promotie": {
+      "@container": "@set",
+      "@id": "https://schema.org/discount",
+      "@type": "@id"
+    },
+    "Transactie.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Transactie.uitgevoerdBij": {
+      "@id": "https://schema.org/seller",
+      "@type": "@id"
+    },
+    "Transactie.uitgevoerdDoor": {
+      "@id": "https://schema.org/customer",
+      "@type": "@id"
+    },
+    "TransactieType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Verblijfplaats": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats",
+    "Verblijfplaats.verblijfsadres": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#verblijfsadres",
+      "@type": "@id"
+    },
+    "Verkeersobject": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject",
+    "Verkoopkenmerk": "https://data.vlaanderen.be/ns/lokale-economie#Verkoopkenmerk",
+    "Verkoopkenmerk.bezoekersprofiel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#bezoekersProfiel",
+      "@type": "@id"
+    },
+    "Verkoopkenmerk.herkomsttype": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#herkomstType",
+      "@type": "@id"
+    },
+    "Verkoopkenmerk.koperprofiel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#koperprofiel",
+      "@type": "@id"
+    },
+    "Verkoopkenmerk.sector": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#sector",
+      "@type": "@id"
+    },
+    "Verkoopkenmerk.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "VerkoopkenmerkType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Verkoopmeting": "https://data.vlaanderen.be/ns/lokale-economie#Verkoopmeting",
+    "Verkoopmeting.geobserveerdKenmerk": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#Verkoopmeting.geobserveerdKenmerk",
+      "@type": "@id"
+    },
+    "Vestiging": "http://www.w3.org/ns/org#Site",
+    "Vestiging.aantalWerknemers": {
+      "@id": "https://data.vlaanderen.be/ns/lokale-economie#aantalWerknemers",
+      "@type": "@id"
+    },
+    "Vestiging.karakter": {
+      "@id": "https://data.vlaanderen.be/ns/organisatie#beschikbaarheid",
+      "@type": "@id"
+    },
+    "Vestiging.openingsuren": {
+      "@id": "https://data.vlaanderen.be/ns/organisatie#openingsuren"
+    },
+    "Vestiging.organisatie": {
+      "@id": "https://data.vlaanderen.be/ns/organisatie#organisatie",
+      "@type": "@id"
+    },
+    "Vestiging.vestigingsadres": {
+      "@id": "http://www.w3.org/ns/org#siteAddress",
+      "@type": "@id"
+    }
+  }
+}
