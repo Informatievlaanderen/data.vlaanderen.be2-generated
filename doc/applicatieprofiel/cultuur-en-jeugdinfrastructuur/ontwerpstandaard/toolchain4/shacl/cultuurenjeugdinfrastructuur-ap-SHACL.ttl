@@ -1,0 +1,1283 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/2dgebouwgeometrieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/gebouw#2DGebouwgeometrie> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/ActiviteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass crm:E7_Activity .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/ActiviteittypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/BeheerShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Beheer.Beheerder>;
+    shacl:class dc:Agent;
+    shacl:description "De Agent die instaat voor de zorg en verantwoordelijkheid van de Infrastructuur."@nl;
+    shacl:name "beheerder"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Beheer.beheerder>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Beheer.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Het type beheer van toepassing bij de Infrastructuur."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Beheer> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/BeheertypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/BereikbaarheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Bereikbaarheid.Mobiscore>;
+    shacl:datatype xsd:integer;
+    shacl:description "Een index die aangeeft hoe goed een locatie scoort op vlak van mobiliteit."@nl;
+    shacl:maxCount "1";
+    shacl:name "mobiscore"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Bereikbaarheid.mobiscore>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Bereikbaarheid.LaatsteOpenbaarVervoer>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Het tijdstip waarop het openbaar vervoer ten laatste gebruikt kan worden op de bestemming."@nl;
+    shacl:maxCount "1";
+    shacl:name "laatste openbaar vervoer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Bereikbaarheid.laasteOpenbaarVervoer>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Bereikbaarheid.Parkeerplaats>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "De parkeergelegenheid op een locatie."@nl;
+    shacl:name "parkeerplaats"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Bereikbaarheid.parkeerplaats>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Bereikbaarheid> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/BeschikbaarheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Beschikbaarheid.Openingsuren>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Het tijdstip waarop de infrastructuur beschikbaar is."@nl;
+    shacl:maxCount "1";
+    shacl:name "openingsuren"@nl;
+    shacl:path schema:openingHours
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Beschikbaarheid.Periode>;
+    shacl:class schema:OpeningHoursSpecification;
+    shacl:description "Het tijdsinterval waarin een infrastructuur beschikbaar is."@nl;
+    shacl:maxCount "1";
+    shacl:name "periode"@nl;
+    shacl:path <http://data.europa.eu/m8g/PeriodOfTime>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Beschikbaarheid.Gebruiker>;
+    shacl:class skos:Concept;
+    shacl:description "Het type gebruiker dat over de infrastructuur mag beschikken."@nl;
+    shacl:maxCount "1";
+    shacl:name "gebruiker"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Beschikbaarheid.gebruiker>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Beschikbaarheid> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/BinnenruimteShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Binnenruimte.Type>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Binnenruimtetype>;
+    shacl:description "Het type Binnenruimte verbonden aan de Infrastructuur."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Binnenruimte> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/BinnenruimtetypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/BooleanShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:boolean .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/BouwtechniekShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Bouwtechniek> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/BuitenruimteShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Buitenruimte.Type>;
+    shacl:class skos:Concept;
+    shacl:description "De soort Buitenruimte verbonden aan de infrastructuur."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Buitenruimte.VerbondenAan>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur>;
+    shacl:description "De Buitenruimte gelinkt aan de Infrastructuur."@nl;
+    shacl:maxCount "1";
+    shacl:name "verbonden aan"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Buitenruimte.verbondenAan>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Buitenruimte> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/BuitenruimtetypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/CapaciteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Capaciteit.Eenheid>;
+    shacl:datatype xsd:string;
+    shacl:description "De hoeveelheid waarin de capaciteit wordt uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "eenheid"@nl;
+    shacl:path schemas:unitText
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Capaciteit.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "De omschrijving van de capaciteit van een infrastructuur."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Capaciteit.beschrijving>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Capaciteit.Type>;
+    shacl:class skos:Concept;
+    shacl:description "De soort capaciteit."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Capaciteit.Waarde>;
+    shacl:class schemas:Number;
+    shacl:description "De numerieke hoeveelheid waarop de capaciteit betrekking heeft."@nl;
+    shacl:maxCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path schemas:value
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Capaciteit.Standaardeenheid>;
+    shacl:class <http://todo.com/StandaardEenheid>;
+    shacl:description "De standaard maat waarin de capaciteit wordt uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "standaardeenheid"@nl;
+    shacl:path schemas:unitCode
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Capaciteit> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/CapaciteittypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/ContactinfoShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass schema:ContactPoint .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/CriteriumShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/m8g/#Criterion> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/DatetimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/DimensieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Dimensie.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de Dimensie."@nl;
+    shacl:name "beschrijving"@nl;
+    shacl:path crm:P3_has_note
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Dimensie.Eenheid>;
+    shacl:datatype xsd:string;
+    shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "eenheid"@nl;
+    shacl:path schemas:unitText
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Dimensie.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Grootheid van de Dimensie."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path crm:P2_has_type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Dimensie.Waarde>;
+    shacl:class schemas:Number;
+    shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path schemas:value
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Dimensie.Standaardeenheid>;
+    shacl:class <http://todo.com/StandaardEenheid>;
+    shacl:description "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "standaardeenheid"@nl;
+    shacl:path schemas:unitCode
+  ];
+  shacl:targetClass crm:E54_Dimension .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/DingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Ding.Identifier>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "De identificator die het Ding heeft verkregen."@nl;
+    shacl:name "identifier"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Ding.identifier>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Ding.Standplaats>;
+    shacl:class prov:Location;
+    shacl:description "De plaats binnen de Infrastructuur waar het Ding is opgesteld."@nl;
+    shacl:maxCount "1";
+    shacl:name "standplaats"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Ding.standplaats>
+  ];
+  shacl:targetClass crm:E70_Thing .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/DocumentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass foaf:Document .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/EcologieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Ecologie> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/EigenaarschapShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Eigenaarschap.Eigenaar>;
+    shacl:class dc:Agent;
+    shacl:description "De Agent aan wie de Infrastructuur toebehoort."@nl;
+    shacl:name "eigenaar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Eigenaarschap.eigenaar>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Eigenaarschap.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Het type van eigenaarschap verbonden aan de infrastructuur."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Eigenaarschap> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/EigenaarschapstypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/EnergieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Energie.Bron>;
+    shacl:class skos:Concept;
+    shacl:description "De oorzaak die de energie genereert."@nl;
+    shacl:name "bron"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Energie.bron>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Energie.Score>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "Een getal dat aangeeft hoeveel het energieverbruik per vierkante mete vloeropperlak bedraagt."@nl;
+    shacl:maxCount "1";
+    shacl:name "score"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Energie.score>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Energie> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/EnergiebrontypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/ErkenningShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenning> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/ExclusiviteitstypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/ExploitatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Exploitatie.Kost>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Kost>;
+    shacl:description "Geldbedrag dat moet betaald worden om de Exploitatie te kunnen doen."@nl;
+    shacl:name "kost"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie.kost>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Exploitatie.Type>;
+    shacl:class skos:Concept;
+    shacl:description "De soort Exploitatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Exploitatie.Inkomen>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Inkomst>;
+    shacl:description "Geldbedrag dat uit de Exploitatie voortkomt."@nl;
+    shacl:name "inkomen"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie.inkomen>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Exploitatie.Exploitant>;
+    shacl:class dc:Agent;
+    shacl:description "De uitbater van de Infrastructuur."@nl;
+    shacl:name "exploitant"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie.exploitant>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Exploitatie.Periode>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "De hoeveelheid tijd waarop de Exploitatie betrekking heeft."@nl;
+    shacl:maxCount "1";
+    shacl:name "periode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie.periode>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Exploitatie.Huurder>;
+    shacl:class dc:Agent;
+    shacl:description "De Agent die geld betaalt voor het gebruik van de Infrastructuur."@nl;
+    shacl:name "huurder"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie.huurder>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Exploitatie.Overeenkomst>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overeenkomst>;
+    shacl:description "Een al dan niet schriftelijke afspraak, contract, etc."@nl;
+    shacl:name "overeenkomst"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie.overeenkomst>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/ExploitatietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/FaciliteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Faciliteit.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "De omschrijving van de Faciliteit."@nl;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Faciliteit.Type>;
+    shacl:class skos:Concept;
+    shacl:description "De soort Faciliteit."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Faciliteit.Gebruiker>;
+    shacl:class skos:Concept;
+    shacl:description "Het type gebruiker en reden waarom er beroep wordt gedaan op de Faciliteit."@nl;
+    shacl:name "gebruiker"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Faciliteit.gebruiker>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Faciliteit.Document>;
+    shacl:class foaf:Document;
+    shacl:description "Het geschrift dat de Faciliteit beschrijft."@nl;
+    shacl:name "document"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Faciliteit.document>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Faciliteit> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/FaciliteittypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/GebeurtenisdatumShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebeurtenisdatum.Begin>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum en tijd waarop de gebeurtenis startte."@nl;
+    shacl:maxCount "1";
+    shacl:name "begin"@nl;
+    shacl:path schemas:endTime
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebeurtenisdatum.Einde>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum en tijd waarop de gebeurtenis eindigde."@nl;
+    shacl:maxCount "1";
+    shacl:name "einde"@nl;
+    shacl:path schemas:endTime
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebeurtenisdatum.Tussentijdstip>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum en tijd van een moment tussen begin en einde."@nl;
+    shacl:maxCount "1";
+    shacl:name "tussentijdstip"@nl;
+    shacl:path schemas:endTime
+  ];
+  shacl:targetClass schemas:endDate .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/GebouwShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebouw.Bouwmeester>;
+    shacl:class dc:Agent;
+    shacl:description "De ontwerper van het Gebouw"@nl;
+    shacl:name "bouwmeester"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebouw.bouwmeester>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebouw.Laatsterenovatie>;
+    shacl:class schemas:endDate;
+    shacl:description "Datum waarop het gebouw het laatst gerenoveerd werd."@nl;
+    shacl:name "laatsteRenovatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#laatsteRenovatie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebouw.Geometrie>;
+    shacl:class <https://data.vlaanderen.be/ns/gebouw#2DGebouwgeometrie>;
+    shacl:description "Vorm- en positiekenmerken van een object."@nl;
+    shacl:name "geometrie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#geometrie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebouw.Status>;
+    shacl:class skos:Concept;
+    shacl:description "Fase van de levensloop waarin het gebouw zich bevindt."@nl;
+    shacl:name "status"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouw.status>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebouw.Bouwjaar>;
+    shacl:class schemas:endDate;
+    shacl:description "Datum waarop het gebouw voltooid werd."@nl;
+    shacl:maxCount "1";
+    shacl:name "bouwjaar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#bouwjaar>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebouw.Beschermdvolume>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "Volume van alle ruimten in een gebouw dat thermisch afgeschermd wordt van de buitenomgeving (lucht of water)."@nl;
+    shacl:name "beschermdVolume"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebouw.beschermdVolume>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebouw.NettoBruikbareOppervlakte>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "De uitdrukking van het aantal oppervlakte binnen een Gebouw die bruikbaar is."@nl;
+    shacl:name "netto bruikbare oppervlakte"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebouw.nettoBruikbareOppervlakte>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebouw.Ruimte>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Binnenruimte>;
+    shacl:description "Een gebouw heeft een Binnenruimte"@nl;
+    shacl:name "ruimte"@nl;
+    shacl:path <http://todo.com/ruimte>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/gebouw#Gebouw> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/GebruikShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebruik.Exclusiviteit>;
+    shacl:class skos:Concept;
+    shacl:description "De mate waarin het gebruik van de Infrastructuur beperkt is."@nl;
+    shacl:maxCount "1";
+    shacl:name "exclusiviteit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik.exclusiviteit>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebruik.Gebruiker>;
+    shacl:class dc:Agent;
+    shacl:description "De Agent die gebruik maakt van de Infrastructuur."@nl;
+    shacl:name "gebruiker"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik.gebruiker>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebruik.Activiteit>;
+    shacl:class skos:Concept;
+    shacl:description "De gelegenheid of bezigheid waarvoor de Infrastructuur wordt gebruikt."@nl;
+    shacl:name "activiteit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik.activiteit>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebruik.Prijs>;
+    shacl:class <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Prijsinfo>;
+    shacl:description "Het bedrag dat verbonden is aan het gebruik van de Infrastructuur."@nl;
+    shacl:maxCount "1";
+    shacl:name "prijs"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik.prijs>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebruik.Periode>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "Een bepaald tijdsbestek waarin een Infrastructuur wordt gebruikt."@nl;
+    shacl:maxCount "1";
+    shacl:name "periode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik.periode>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Gebruik.Voorwaarde>;
+    shacl:class <http://data.europa.eu/m8g/#Criterion>;
+    shacl:description "Het criterium verbonden aan het gebruik van de infrastructuur."@nl;
+    shacl:name "voorwaarde"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik.voorwaarde>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/GebruiktypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/GeldbedragShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass schemas:MonetaryAmount .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/GeometrieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Geometrie.AlsGml>;
+    shacl:datatype rdfs:Literal;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "als GML"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Geometrie.AlsWkt>;
+    shacl:datatype rdfs:Literal;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "als WKT"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/GetalShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass schemas:Number .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/IdentificatorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/InfrastructuurShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "De benaming verbonden aan een Infrastructuur."@nl;
+    shacl:name "naam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.naam>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Openstelling>;
+    shacl:class skos:Concept;
+    shacl:description "De mate van toegankelijkheid van een infrastructuur."@nl;
+    shacl:maxCount "1";
+    shacl:name "openstelling"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.openstelling>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Gebruik>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik>;
+    shacl:description "Het benutten van een Infrastructuur."@nl;
+    shacl:name "gebruik"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.gebruik>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Bereikbaarheid>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Bereikbaarheid>;
+    shacl:description "De mate waarin een Infrastructuur te bereiken is."@nl;
+    shacl:maxCount "1";
+    shacl:name "bereikbaarheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.bereikbaarheid>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Locatie>;
+    shacl:class prov:Location;
+    shacl:description "De ligging van een Infrastructuur."@nl;
+    shacl:minCount "1";
+    shacl:name "locatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.locatie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Type>;
+    shacl:class skos:Concept;
+    shacl:description "De soort infrastructuur."@nl;
+    shacl:name "type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.type>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Beschikbaarheid>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Beschikbaarheid>;
+    shacl:description "De mate waarin een Infrastructuur gebruikt kan worden."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschikbaarheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.beschikbaarheid>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Toegankelijkheid>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Toegankelijkheid>;
+    shacl:description "De mate waarin een infrastructuur open of benaderbaar is."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegankelijkheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.toegankelijkheid>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Reservatie>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Reservatie>;
+    shacl:description "Het voorbehouden van een infrastructuur."@nl;
+    shacl:name "reservatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.reservatie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Exploitatie>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Exploitatie>;
+    shacl:description "Het uitbaten van Infrastructuur."@nl;
+    shacl:maxCount "1";
+    shacl:name "exploitatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.exploitatie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Eigenaar>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Eigenaarschap>;
+    shacl:description "De Agent die de Infrastructuur bezit."@nl;
+    shacl:maxCount "1";
+    shacl:name "eigenaar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.eigenaar>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Faciliteit>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Faciliteit>;
+    shacl:description "De voorziening van een Infrastructuur."@nl;
+    shacl:name "faciliteit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.faciliteit>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Dimensie>;
+    shacl:class crm:E54_Dimension;
+    shacl:description "De afmetingen in iedere richting van een Infrastructuur."@nl;
+    shacl:name "dimensie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.dimensie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Capaciteit>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Capaciteit>;
+    shacl:description "Het bevattingsvermogen of de bezetting van een Infrastructuur."@nl;
+    shacl:name "capaciteit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.capaciteit>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Observatie>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>;
+    shacl:description "Waarneming."@nl;
+    shacl:name "observatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.observatie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Beschrijving>;
+    shacl:class foaf:Document;
+    shacl:description "De tekstuele omschrijving van de Infrastructuur."@nl;
+    shacl:name "beschrijving"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.beschrijving>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Beheer>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Beheer>;
+    shacl:description "Het bestuur, toezicht, de zorg ofverantwoordelijkheid, over een Infrastructuur."@nl;
+    shacl:maxCount "1";
+    shacl:name "beheer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.beheer>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Overheid>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#OfficieleStatus>;
+    shacl:description "De manier waarop de overheid betrokken is in de infrastructuur."@nl;
+    shacl:maxCount "1";
+    shacl:name "overheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.overheid>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Staat>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Staat>;
+    shacl:description "De toestand van een infrastructuur."@nl;
+    shacl:maxCount "1";
+    shacl:name "staat"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.staat>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Contactpersoon>;
+    shacl:class dc:Agent;
+    shacl:description "De te raadplegen Agent verbonden aan een Infrastructuur."@nl;
+    shacl:name "contactpersoon"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.contactpersoon>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Permanentie>;
+    shacl:class skos:Concept;
+    shacl:description "Het feit of de infrastructuur tijdelijk of permanent is."@nl;
+    shacl:maxCount "1";
+    shacl:name "permanentie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#permanentie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Licentie>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Licentie>;
+    shacl:description "Het recht of de toestemming voor iets."@nl;
+    shacl:name "licentie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.licentie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Superinfrastructuur>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur>;
+    shacl:description "De infrastructuur die het groter geheel van infrastructuur vormt."@nl;
+    shacl:name "superinfrastructuur"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#superInfrastructuur>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Infrastructuur.Subinfrastructuur>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur>;
+    shacl:description "De infrastructuur die onderdeel is van een groter geheel van infrastructuur."@nl;
+    shacl:name "subinfrastructuur"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#subInfrastructuur>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/InfrastructuurtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/InkomstShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Inkomst.Type>;
+    shacl:class skos:Concept;
+    shacl:description "De soort activeit waaruit de inkomst wordt geïnd/verkregen."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Inkomst.Bedrag>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "De hoeveelheid geld."@nl;
+    shacl:maxCount "1";
+    shacl:name "bedrag"@nl;
+    shacl:path schemas:MonetaryAmount
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Inkomst> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/InkomsttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/IntegerShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:integer .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/KostShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Kost.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Het soort kost die wordt betaald."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Kost.Bedrag>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "De hoeveelheid geld."@nl;
+    shacl:maxCount "1";
+    shacl:name "bedrag"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Kost.bedrag>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Kost> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/KosttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/KwantitatieveWaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#KwantitatieveWaarde.Eenheid>;
+    shacl:datatype xsd:string;
+    shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "eenheid"@nl;
+    shacl:path schemas:unitText
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#KwantitatieveWaarde.Waarde>;
+    shacl:class schemas:Number;
+    shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path schemas:value
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#KwantitatieveWaarde.StandaardEenheid>;
+    shacl:class <http://todo.com/StandaardEenheid>;
+    shacl:description "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "standaard eenheid"@nl;
+    shacl:path schemas:unitCode
+  ];
+  shacl:targetClass schemas:QuantitativeValue .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/LicentieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Licentie.Periode>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "De hoeveelheid tijd waarin de licentie geldig is."@nl;
+    shacl:maxCount "1";
+    shacl:name "periode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Licentie.periode>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Licentie.Type>;
+    shacl:class skos:Concept;
+    shacl:description "De soort licentie."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Licentie> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/LicentietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/LocatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass prov:Location .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/NationaliteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Nationaliteit.Nationaliteit>;
+    shacl:class skos:Concept;
+    shacl:description "De nationaliteit vd persoon."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "nationaliteit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#nationaliteit>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Nationaliteit> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/NationaliteitscodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/ObservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/OpeningsurenspecificatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass schema:OpeningHoursSpecification .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/OpenstellingtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/OrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Organisatie.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Organisatie.Voorkeursnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam waarmee de organisatie bij voorkeur wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:name "voorkeursnaam"@nl;
+    shacl:path skos:prefLabel
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Organisatie.AlternatieveNaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Andere naam waaronder de organisatie bekend is."@nl;
+    shacl:name "alternatieve naam"@nl;
+    shacl:path skos:altLabel
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Organisatie.Contactinfo>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."@nl;
+    shacl:name "contactinfo"@nl;
+    shacl:path schema:contactPoint
+  ];
+  shacl:targetClass org:Organization .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/OutputShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/m8g/Output> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/OvereenkomstShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Overeenkomst.Partij>;
+    shacl:class dc:Agent;
+    shacl:description "Een persoon of groep die een rechtsdaad stelt."@nl;
+    shacl:name "partij"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overeenkomst.partij>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Overeenkomst.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Het type van overeenkomst."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Overeenkomst.Document>;
+    shacl:class foaf:Document;
+    shacl:description "Het geschrift van de overeenkomst."@nl;
+    shacl:name "document"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overeenkomst.document>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overeenkomst> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/OvereenkomsttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/OverheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Overheid.Erkenning>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Erkenning>;
+    shacl:description "Een authentieke akte, een officiële goedkeuring."@nl;
+    shacl:name "erkenning"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overheid.erkenning>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Overheid.Subsidie>;
+    shacl:class <http://data.vlaanderen.be/ns/subsidie#SubsidiemaatregelConsumptie>;
+    shacl:description "Financiële steun van de overheid."@nl;
+    shacl:name "subsidie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overheid.subsidie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Overheid.Vergunning>;
+    shacl:class schemas:Permit;
+    shacl:description "Officiële toestemming."@nl;
+    shacl:name "vergunning"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overheid.vergunning>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Overheid.Vrijstelling>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Vrijstelling>;
+    shacl:description "Ontheffing van iets."@nl;
+    shacl:name "vrijstelling"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Overheid.vrijstelling>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#OfficieleStatus> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/PeriodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Periode.Begin>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Aanvang van de tijdsduur."@nl;
+    shacl:maxCount "1";
+    shacl:name "begin"@nl;
+    shacl:path <http://data.europa.eu/m8g/startTime>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Periode.Einde>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Einde van de tijdsduur"@nl;
+    shacl:maxCount "1";
+    shacl:name "einde"@nl;
+    shacl:path <http://data.europa.eu/m8g/endTime>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/PermanentietypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/PersoonShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Persoon.Achternaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Ook wel familienaam genoemd omdat de achternaam een familiale verwantschap aanduidt."@nl;
+    shacl:name "achternaam"@nl;
+    shacl:path foaf:familyName
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Persoon.GebruikteVoornaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Belangrijkste vd voornamen ve persoon."@nl;
+    shacl:maxCount "1";
+    shacl:name "gebruikte voornaam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#gebruikteVoornaam>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Persoon.Geboortedatum>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum waarop persoon geboren werd."@nl;
+    shacl:maxCount "1";
+    shacl:name "geboortedatum"@nl;
+    shacl:path <http://todo.com/Persoon.geboortedatum>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Persoon.Geslacht>;
+    shacl:class skos:Concept;
+    shacl:description "Het feit of men een man of een vrouw is."@nl;
+    shacl:maxCount "1";
+    shacl:name "geslacht"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#geslacht>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Persoon.Contactinfo>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon? die toelaat de Persoon te contacteren."@nl;
+    shacl:maxCount "1";
+    shacl:name "contactinfo"@nl;
+    shacl:path schema:contactPoint
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Persoon.Woonplaats>;
+    shacl:class prov:Location;
+    shacl:description "Plaats waar persoon woont."@nl;
+    shacl:maxCount "1";
+    shacl:name "woonplaats"@nl;
+    shacl:path <http://todo.com/Persoon.woonplaats>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Persoon.Nationaliteit>;
+    shacl:class <https://data.vlaanderen.be/ns/persoon#Nationaliteit>;
+    shacl:description "De relatie tussen een persoon en een staat, cultuur of loyaliteit."@nl;
+    shacl:name "nationaliteit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#nationaliteit>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/person#Person> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/PodiumtechnischeFaciliteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#PodiumtechnischeFaciliteit> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/PrijsinfoShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Prijsinfo.Inclusiefbtw>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Geeft aan of de toepasselijke belasting over de toegevoegde waarde (BTW) al dan niet in de prijsinfo is opgenomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "inclusiefBTW"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#inclusiefBTW>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Prijsinfo.Beschikbaar>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "De periode waarin de prijsinfo van een activiteit beschikbaar is."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschikbaar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#beschikbaar>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Prijsinfo.Beschikbaartransactievolume>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "Het interval en de meeteenheid van de bestelhoeveelheden voor een activiteit of transactie."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschikbaarTransactieVolume"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#beschikbaarTransactieVolume>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Prijsinfo.Beschikbarehoeveelheid>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "Het interval en de meeteenheid van de bestelhoeveelheden waarvoor de prijsinfo geldt."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschikbareHoeveelheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#beschikbareHoeveelheid>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Prijsinfo.Prijs>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "De aanbiedingsprijs van een activiteit."@nl;
+    shacl:maxCount "1";
+    shacl:name "prijs"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#prijs>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Prijsinfo.Prijscategorie>;
+    shacl:class skos:Concept;
+    shacl:description "De categorie van de prijs zoals een jongerentarief of seniorentarief."@nl;
+    shacl:name "prijsCategorie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/doelgericht-digitaal-transformeren#Prijsinfo.prijscategorie>
+  ];
+  shacl:targetClass schemas:PriceSpecification .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/ReservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Reservatie.GereserveerdDoor>;
+    shacl:class dc:Agent;
+    shacl:description "De Agent door wie de Infrastructuur is voorbehouden."@nl;
+    shacl:name "gereserveerd door"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Reservatie.gereserveerdDoor>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Reservatie.GereserveerdVoor>;
+    shacl:class crm:E7_Activity;
+    shacl:description "De Activiteit voor wie de infrastructuur is voorbehouden."@nl;
+    shacl:name "gereserveerd voor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Reservatie.gereserveerdVoor>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Reservatie.Periode>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "De hoeveelheid tijd waarvoor de Reservatie geldt."@nl;
+    shacl:name "periode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Reservatie.periode>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Reservatie> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/RuimteShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Ruimte> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/StaatShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Staat.Bouwtechniek>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Bouwtechniek>;
+    shacl:description "De bouwtechnische toestand van een infrastructuur."@nl;
+    shacl:name "bouwtechniek"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Staat.bouwtechniek>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Staat.Ecologie>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Ecologie>;
+    shacl:description "De milieuvriendelijkheid van een Infrastructuur."@nl;
+    shacl:name "ecologie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Staat.ecologie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Staat.Veiligheid>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Veiligheid>;
+    shacl:description "De beveiligingsinrichting van een infrastructuur."@nl;
+    shacl:maxCount "1";
+    shacl:name "veiligheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Staat.veiligheid>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Staat.Energie>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Energie>;
+    shacl:description "De energie die gebruikt wordt in een Infrastructuur."@nl;
+    shacl:name "energie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Staat.energie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Staat.Verbruik>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Verbruik>;
+    shacl:description "Het verbruik van een Infrastructuur."@nl;
+    shacl:name "verbruik"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Staat.verbruik>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Staat> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/StandaardEenheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://todo.com/StandaardEenheid> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/StatusgebouwwaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/StringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/SubsidieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.vlaanderen.be/ns/subsidie#SubsidiemaatregelConsumptie> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/TaalstringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/ToegankelijkheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Toegankelijkheid.Niveau>;
+    shacl:class skos:Concept;
+    shacl:description "De graad van toegankelijkheid van een infrastructuur."@nl;
+    shacl:maxCount "1";
+    shacl:name "niveau"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Toegankelijkheid.niveau>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Toegankelijkheid.Onderdeel>;
+    shacl:class skos:Concept;
+    shacl:description "Deel van de dienst of infrastructuur waarop de Toegankelijkheid betrekking heeft.."@nl;
+    shacl:name "onderdeel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#onderdeel>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Toegankelijkheid> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/ToegankelijkheidsonderdeelShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/TypeGrootheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/VeiligheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Veiligheid.PreventieAdviseur>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die risico's analyseert en maatregelen ontwikkelt om die risico's te voorkomen."@nl;
+    shacl:name "preventie adviseur"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Veiligheid.preventieAdviseur>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Veiligheid.Verzekering>;
+    shacl:class schemas:FinancialProduct;
+    shacl:description "Een overeenkomst waarbij de verzekerde zich afschermt tegen bepaalde risico's."@nl;
+    shacl:name "verzekering"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Veiligheid.verzekering>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Veiligheid.Noodcontact>;
+    shacl:class schema:ContactPoint;
+    shacl:description "De contactgegevens die in geval van nood gebruikt kunnen worden."@nl;
+    shacl:name "noodcontact"@nl;
+    shacl:path schema:contactPoint
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Veiligheid.Risicoanalyse>;
+    shacl:class foaf:Document;
+    shacl:description "Methode om risico's te bestuderen."@nl;
+    shacl:name "risicoanalyse"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Veiligheid.risicoanalyse>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Veiligheid> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/VerbruikShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Verbruik.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Het type van verbruik waarvan de infrastructuur gebruik maakt."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Verbruik.Piekverbruik>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "Moment of tijdsspanne waarop het meeste energie wordt verbruikt."@nl;
+    shacl:maxCount "1";
+    shacl:name "piekverbruik"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Verbruik.piekverbruik>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Verbruik.Verbruik>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "Het opmaken van iets door het te gebruiken, consumptie."@nl;
+    shacl:maxCount "1";
+    shacl:name "verbruik"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Verbruik.verbruik>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Verbruik.Periode>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "De hoeveelheid tijd waarin het verbruik zich voordoet."@nl;
+    shacl:maxCount "1";
+    shacl:name "periode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Verbruik.periode>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Verbruik> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/VerbruiktypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/VergunningShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass schemas:Permit .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/VerzekeringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Verzekering.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Het type verzekeirng waarover een infrastructuur beschikt."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4#Verzekering.Verzekeraar>;
+    shacl:class dc:Agent;
+    shacl:description "Onderneming of instantie die risico's van anderen overneemt, en daarvoor een vergoeding ontvangt."@nl;
+    shacl:maxCount "1";
+    shacl:name "verzekeraar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Verzekering.verzekeraar>
+  ];
+  shacl:targetClass schemas:FinancialProduct .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/VerzekeringtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/VrijstellingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Vrijstelling> .

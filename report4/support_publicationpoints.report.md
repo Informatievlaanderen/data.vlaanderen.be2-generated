@@ -20,6 +20,26 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/bodem-en-ondergrond.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/contactvoorkeuren.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/cultureel-erfgoed-basisregistratie.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/cultureel-erfgoed.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/cultuur-en-jeugdinfrastructuur.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/cultuurenjeugdinfrastructuur.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/dienst.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/digitalewatermeter.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/divrest.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/doelgericht-digitaal-transformeren.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/dossier.publication.json
+#||#  
 Error: the following directories are unsupported
 [
   "/tmp/generated/doc/applicatieprofiel/begraafplaatsen",
@@ -31,7 +51,18 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/observaties",
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/ruimtelijke-bereiken",
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/ruimtelijke-bereiken/ontwerpstandaard/2021-08-01/i",
-  "/tmp/generated/ns/grondboringen",
+  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-11-28",
+  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-12-02",
+  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-12-17",
+  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-08-30",
+  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/latest",
+  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-12-05",
+  "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-04-30",
+  "/tmp/generated/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/kandidaatstandaard/2022-03-21",
+  "/tmp/generated/doc/applicatieprofiel/contactvoorkeuren",
+  "/tmp/generated/doc/applicatieprofiel/dienst-transactiemodel",
+  "/tmp/generated/doc/applicatieprofiel/dienstencataloog",
   "/tmp/generated/ns/bodem-en-ondergrond",
-  "/tmp/generated/ns/bodem-en-ondergrond/interpretaties"
+  "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
+  "/tmp/generated/ns/grondboringen"
 ]
