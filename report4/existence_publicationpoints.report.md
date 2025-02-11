@@ -356,5 +356,92 @@ index.html check
 error: missing '/tmp/generated/doc/vocabularium/notificatie/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/index.html'
 
+#||#    + checking /home/circleci/project/config/test/od-terrein.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/vegetatie-elementen/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/terreindelen/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/test/od-voorkomen.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/begroeid-voorkomen/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/onbegroeid-voorkomen/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/watervoorkomen/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/test/od-waterdeel.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/test/om.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/omgevingsvergunning.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/oms.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/openbaar-domein.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/organisatie.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/organisatie/ontwerpdocument/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/test/overlijdensaangifte.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/perceel.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/persoon.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/persoon/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/test/publicatie-advertentie.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/ruimtelijkebereiken.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||# checking publication points in directory /home/circleci/project/config/production
 #||# 
