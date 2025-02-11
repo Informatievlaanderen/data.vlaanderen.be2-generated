@@ -1,0 +1,581 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/3dobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.opengis.net/ont/gml#Solid> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/AnyShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Resource .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/BemonsteringscurveShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/BemonsteringsobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Bemonsteringsobject.Herkomst>;
+    shacl:class <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage>;
+    shacl:description "Verwijzing naar de Herkomst van een Bemonsteringsobject."@nl;
+    shacl:maxCount "1";
+    shacl:name "herkomst"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Bemonsteringsobject.Parameter>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:description "Willekeurig gegeven gassocieerd met het Bemonsteringsobject."@nl;
+    shacl:name "parameter"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Bemonsteringsobject.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Verwijzing naar de informatie die het Bemonsteringsobject uniek identificeert."@nl;
+    shacl:minCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Bemonsteringsobject.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van het Bemonsteringsobject."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/BemonsteringsobjecttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/BenoemdewaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Benoemdewaarde.Naam>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Naam vh type van de waarde."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Benoemdewaarde.Waarde>;
+    shacl:class rdfs:Resource;
+    shacl:description "Kwalitatieve of kwantitatieve invulling van de waarde."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#NamedValue> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/BesluitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/besluit#Besluit> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/Bo_curvewaardepaarShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Bo_curvewaardepaar.Waarde>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record>;
+    shacl:description "Waarde van het element."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Bo_curvewaardepaar.Laag>;
+    shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement>;
+    shacl:description "Overeenstemmend Profielelement."@nl;
+    shacl:maxCount "1";
+    shacl:name "laag"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_Curvewaardepaar.laag>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Bo_curvewaardepaar.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/sf#Curve>;
+    shacl:description "Geometrie van het element."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_CurveWaardepaar> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/Bo_ruimtelijkbemonsteringsobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Bo_ruimtelijkbemonsteringsobject.Ligging>;
+    shacl:class prov:Location;
+    shacl:description "De ligging vh Bemonsteringsobject."@nl;
+    shacl:name "ligging"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.ligging>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Bo_ruimtelijkbemonsteringsobject.Maaiveld>;
+    shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld>;
+    shacl:description "Ligging van het grondoppervlak."@nl;
+    shacl:name "maaiveld"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.maaiveld>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Bo_ruimtelijkbemonsteringsobject.Diepte>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>;
+    shacl:description "Geeft aan tot welke Diepte het Bemonsteringsobject reikt."@nl;
+    shacl:maxCount "1";
+    shacl:name "diepte"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.diepte>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Bo_ruimtelijkbemonsteringsobject.Aanvangspeil>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>;
+    shacl:description "Geeft aan waar tov het Maaiveld het Bemonsteringsobject start."@nl;
+    shacl:maxCount "1";
+    shacl:name "aanvangspeil"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#aanvangspeil>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/BoringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Boring> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/CurveShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.opengis.net/ont/sf#Curve> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/CurvewaardepaarShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/DatetimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/DekkingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc11:coverage .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/DirectepositieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Directepositie.Wkt>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Directe positie uitgedrukt in wkt-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "wkt"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Directepositie.Gml>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Directe positie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "gml"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Directepositie.Opmeting>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#Opmeting>;
+    shacl:description "De manier waarop de positie werd bepaald."@nl;
+    shacl:maxCount "1";
+    shacl:name "opmeting"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#DirectePositie.opmeting>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#DirectePositie> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/ErkenningShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Erkenning.Type>;
+    shacl:class skos:Concept;
+    shacl:description "et soort activiteit dat mag worden uitgevoerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Erkenning> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/ErkenningtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/FractiemetingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Fractiemeting.Meetwaardeparameter>;
+    shacl:class <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>;
+    shacl:description "Het geobserveerdKenmerk."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "meetwaardeparameter"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Fractiemeting.Fractiemetingresultaat>;
+    shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat>;
+    shacl:description "Het resultaat van de Fractiemeting."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "fractiemetingresultaat"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/FractiemetingresultaatShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Fractiemetingresultaat.Fractiemetingwaarde>;
+    shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde>;
+    shacl:description "Waarde ve individuele Meting in de Meetreeks.."@nl;
+    shacl:minCount "1";
+    shacl:name "fractiemetingwaarde"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/FractiemetingwaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Fractiemetingwaarde.Meetpuntondergrens>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>;
+    shacl:description "Ondergrens van een klasse van waarden van meetpunten."@nl;
+    shacl:maxCount "1";
+    shacl:name "meetpuntOndergrens"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetpuntOndergrens>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Fractiemetingwaarde.Meetpuntbovengrens>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>;
+    shacl:description "Bovengrens van een klasse van waarden van meetpunten."@nl;
+    shacl:maxCount "1";
+    shacl:name "meetpuntBovengrens"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetpuntBovengrens>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Fractiemetingwaarde.Meetwaarde>;
+    shacl:class <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure>;
+    shacl:description "Waarde van de fractie."@nl;
+    shacl:maxCount "1";
+    shacl:name "meetwaarde"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetwaarde>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/GeometrieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Geometrie.Wkt>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "wkt"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Geometrie.Gml>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "gml"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Geometrie.Opmeting>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#Opmeting>;
+    shacl:description "De manier waarop de geometrie werd bepaald."@nl;
+    shacl:maxCount "1";
+    shacl:name "opmeting"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/HerkomstShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/IdentificatorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Identificator.Identificator>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "String gebruikt om het object uniek te identificeren."@nl;
+    shacl:maxCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path skos:notation
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Identificator.ToegekendDoor(string)>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend door (String)"@nl;
+    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Identificator.ToegekendOp>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend op"@nl;
+    shacl:path dc:issued
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Identificator.ToegekendDoor>;
+    shacl:class dc:Agent;
+    shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend door"@nl;
+    shacl:path dc:creator
+  ];
+  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/InterpretatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Interpretatie> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/IntervalShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Interval> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/KenmerktypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/LaagShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Laag.Waarde>;
+    shacl:class rdfs:Resource;
+    shacl:description "Verwijzing naar een record dat de laal beschrijft."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag.waarde>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/LiteralShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Literal .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/LocatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass prov:Location .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/MaaiveldShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Maaiveld.Hoogte>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#DirectePositie>;
+    shacl:description "Verticale maat naar boven vanaf het grondoppervlak van het maaiveld."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "hoogte"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld.hoogte>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Maaiveld.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Het type Maaiveld."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/MaaiveldtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/MaatShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/MateriaalklasseShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/MeetreeksShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Meetreeks.Meetwaardeparameter>;
+    shacl:class <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>;
+    shacl:description "Het geobserveerdKenmerk."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "meetwaardeparameter"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Meetreeks.Meetpuntparameter>;
+    shacl:class <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>;
+    shacl:description "Het kenmerk in functie waarvan het geobserveerdKenmerk verandert."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "meetpuntparameter"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetpuntparameter>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Meetreeks.Meetreeksresultaat>;
+    shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat>;
+    shacl:description "Het resultaat van de Meetreeks."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "meetreeksresultaat"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/MeetreeksresultaatShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Meetreeksresultaat.Meetreekswaarde>;
+    shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde>;
+    shacl:description "Eén waarde in het resultaat van een Meetreeks."@nl;
+    shacl:minCount "1";
+    shacl:name "meetreekswaarde"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/MeetreekswaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Meetreekswaarde.Meetpunt>;
+    shacl:class rdfs:Resource;
+    shacl:description "Waarde van het meetpunt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "meetpunt"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetpunt>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Meetreekswaarde.Meetwaarde>;
+    shacl:class rdfs:Resource;
+    shacl:description "Waarde van het geobserveerdKenmerk."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "meetwaarde"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetwaarde>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/ObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/ObservatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/OpdrachtShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/OpmetingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Opmeting.Opnamedatum>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum waarop de Opmeting plaatsvond."@nl;
+    shacl:maxCount "1";
+    shacl:name "opnamedatum"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#opnamedatum>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Opmeting.Methode>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de gebruikte methode."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "methode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.methode>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Opmeting.Uitgevoerddoor>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die de Opmeting heeft uitgevoerd."@nl;
+    shacl:maxCount "1";
+    shacl:name "uitgevoerdDoor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Opmeting> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/OpmetingmethodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/PositionelenauwkeurigheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/ProcesShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#OM_Process> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/ProfielShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Profiel.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/sf#Curve>;
+    shacl:description "Geometrie vh Profiel."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingCurve.shape>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Profiel.Profielelement>;
+    shacl:class <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement>;
+    shacl:description "TODO"@nl;
+    shacl:name "Profielelement"@nl;
+    shacl:path <http://todo.com/element>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Profile> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/ProfielelementShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Profielelement.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/sf#Curve>;
+    shacl:description "Geometrie vh Profielelement."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingCurve.shape>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/PuntShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.opengis.net/ont/sf#Point> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/RecordShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/RuimtelijkbemonsteringsobjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Ruimtelijkbemonsteringsobject.Geometrie>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "Geometrie van het RuimtelijkBemonsteringsobject."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Ruimtelijkbemonsteringsobject.Positionelenauwkeurigheid>;
+    shacl:class <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy>;
+    shacl:description "Nauwkeurigheid waarmee de geometrie is bepaald."@nl;
+    shacl:maxCount "2";
+    shacl:name "positioneleNauwkeurigheid"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.positionalAccuracy>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01#Ruimtelijkbemonsteringsobject.Gehostplatform>;
+    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#OM_Process>;
+    shacl:description "Procedure die of instrument dat in of op het RuimtelijkBemonsteringsobject is geïnstalleerd."@nl;
+    shacl:name "gehostPlatform"@nl;
+    shacl:path <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure>
+  ];
+  shacl:targetClass <http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/StringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01/VlakShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.opengis.net/ont/geosparql#Surface> .
