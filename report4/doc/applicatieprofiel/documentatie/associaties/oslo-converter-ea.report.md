@@ -1,0 +1,102 @@
+#||# oslo-converter-ea for diagram MijnDomein
+
+#||# -------------------------------------
+
+2025-02-11T09:18:29.170Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+
+2025-02-11T09:18:29.172Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+
+2025-02-11T09:18:29.175Z warn: [ConnectorConverterHandler]: Connector (Heeft01) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.175Z warn: [ConnectorConverterHandler]: Connector (Heeft02) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.176Z warn: [ConnectorConverterHandler]: Connector (Heeft02) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.176Z warn: [ConnectorConverterHandler]: Connector (k03Brol) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.176Z warn: [ConnectorConverterHandler]: Connector (k03Arol) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.176Z warn: [ConnectorConverterHandler]: Connector (k03ArolTweede) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.176Z warn: [ConnectorConverterHandler]: Connector (k03BrolTweede) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.176Z warn: [ConnectorConverterHandler]: Connector (Heeft05) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.176Z warn: [ConnectorConverterHandler]: Connector (Heeft05.K05A) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.176Z warn: [ConnectorConverterHandler]: Connector (Heeft05.K05B) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.177Z warn: [ConnectorConverterHandler]: Connector (Heeft04) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.177Z warn: [ConnectorConverterHandler]: Connector (Heeft04) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.177Z warn: [ConnectorConverterHandler]: Connector (Heeft04.K04A) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.177Z warn: [ConnectorConverterHandler]: Connector (Heeft04.K04B) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.177Z warn: [ConnectorConverterHandler]: Connector (Heeft06) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.177Z warn: [ConnectorConverterHandler]: Connector (Heeft06) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.177Z warn: [ConnectorConverterHandler]: Connector (Heeft06.K06A) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.177Z warn: [ConnectorConverterHandler]: Connector (Heeft06.K06B) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (k07Arol) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (k07Brol) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (Heeft07.K07A) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (Heeft07.K07B) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (Heeft22 (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (Heeft22 (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (k23ArolTweede) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (k23BrolTweede) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (k23Arol) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (k23Brol) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (k27Arol) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (k27Brol) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (K27 (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (K27 (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (Heeft25) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.178Z warn: [ConnectorConverterHandler]: Connector (K25 (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.179Z warn: [ConnectorConverterHandler]: Connector (K25 (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.179Z warn: [ConnectorConverterHandler]: Connector (Heeft26 (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.179Z warn: [ConnectorConverterHandler]: Connector (Heeft26 (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.179Z warn: [ConnectorConverterHandler]: Connector (K26 (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.179Z warn: [ConnectorConverterHandler]: Connector (K26 (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.179Z warn: [ConnectorConverterHandler]: Connector (Heeft21) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.179Z warn: [ConnectorConverterHandler]: Connector (k07BrolTweede) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.179Z warn: [ConnectorConverterHandler]: Connector (Heeft07b.K07A) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.179Z warn: [ConnectorConverterHandler]: Connector (Heeft07b.K07B) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.179Z warn: [ConnectorConverterHandler]: Connector (k27BrolTweede) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.179Z warn: [ConnectorConverterHandler]: Connector (K27 (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-02-11T09:18:29.179Z warn: [ConnectorConverterHandler]: Connector (K27 (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+#||# -------------------------------------
+
