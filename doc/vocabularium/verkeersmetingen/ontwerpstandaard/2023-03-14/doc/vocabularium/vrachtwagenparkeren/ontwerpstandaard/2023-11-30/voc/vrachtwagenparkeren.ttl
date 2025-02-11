@@ -1,0 +1,311 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+skos:Concept a rdfs:Class;
+  rdfs:label "Vrachtwagentype"@nl,
+    "Dimensietype"@nl,
+    "Lading"@nl .
+
+<https://data.vlaanderen.be/ns/vrachtwagenparkeren#Opdrachtgever> a owl:ObjectProperty;
+  rdfs:label "opdrachtgever"@nl;
+  <http://purl.org/vocab/vann/usageNote> "De organisatie waarvoor een chauffeur de route doet"@nl;
+  rdfs:comment "De opdrachtgever van de bestuurder"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/vrachtwagenparkeren#Bestuurder>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/vrachtwagenparkeren>;
+  rdfs:range org:Organization .
+
+<https://data.vlaanderen.be/ns/vrachtwagenparkeren#Oplegger> a owl:Class;
+  rdfs:label "Oplegger"@nl;
+  rdfs:comment "Voertuig voor goederenvervoer zonder vooras en aandrijving."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/vrachtwagenparkeren>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/vrachtwagenparkeren#Voertuig> .
+
+<https://data.vlaanderen.be/ns/vrachtwagenparkeren#Vrachtwagen> a owl:Class;
+  rdfs:label "Vrachtwagen"@nl;
+  rdfs:comment "Voertuig voorzien voor goederenvervoer."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/vrachtwagenparkeren>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/vrachtwagenparkeren#Voertuig> .
+
+<https://data.vlaanderen.be/ns/vrachtwagenparkeren#aantalAssen> a owl:DatatypeProperty;
+  rdfs:label "aantalAssen"@nl;
+  rdfs:comment "Het aantal assen waar het voertuig op rust."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/vrachtwagenparkeren#Voertuig>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/vrachtwagenparkeren>;
+  rdfs:range xsd:integer .
+
+<https://data.vlaanderen.be/ns/vrachtwagenparkeren#beschrijving> a rdf:Property;
+  rdfs:label "beschrijving"@nl;
+  rdfs:comment "De beschrijving van de opgemeten dimensie"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/vrachtwagenparkeren> .
+
+<https://data.vlaanderen.be/ns/vrachtwagenparkeren#dimensie> a owl:ObjectProperty;
+  rdfs:label "dimensie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "bv lengte, breedte, "@nl;
+  rdfs:comment "De dimensie(s) van het voertuig"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/vrachtwagenparkeren#Voertuig>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/vrachtwagenparkeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie> .
+
+<https://data.vlaanderen.be/ns/vrachtwagenparkeren#eenheid> a owl:DatatypeProperty;
+  rdfs:label "eenheid"@nl;
+  rdfs:comment "De eenheid waarin de waarde wordt uitgedrukt"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/vrachtwagenparkeren>;
+  rdfs:range xsd:string .
+
+<https://data.vlaanderen.be/ns/vrachtwagenparkeren#heeftBestuurder> a owl:ObjectProperty;
+  rdfs:label "heeftBestuurder"@nl;
+  rdfs:comment "De bestuurder van het voertuig"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/vrachtwagenparkeren#Voertuig>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/vrachtwagenparkeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/vrachtwagenparkeren#Bestuurder> .
+
+<https://data.vlaanderen.be/ns/vrachtwagenparkeren#lading> a owl:ObjectProperty;
+  rdfs:label "lading"@nl;
+  rdfs:comment "De lading van een voertuig"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/vrachtwagenparkeren#Voertuig>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/vrachtwagenparkeren>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/vrachtwagenparkeren#standaardEenheid> a owl:ObjectProperty;
+  rdfs:label "standaardEenheid"@nl;
+  <http://purl.org/vocab/vann/usageNote> "bijvoorbeeld meter"@nl;
+  rdfs:comment "De standaardeenheid waarin de waarde wordt uitgedrukt"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/vrachtwagenparkeren>;
+  rdfs:range <https://data.vlaanderen.be/ns/generiek#StandaardEenheid> .
+
+<https://data.vlaanderen.be/ns/vrachtwagenparkeren#waarde> a owl:ObjectProperty;
+  rdfs:label "waarde"@nl;
+  rdfs:comment "De numerieke waarde voor een dimensie"@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/vrachtwagenparkeren>;
+  rdfs:range schemas:Number .
+
+dc:type a rdf:Property;
+  rdfs:label "vrachtwagentype"@nl,
+    "type"@nl,
+    "opleggertype"@nl,
+    "aandrijvingstype"@nl .
+
+<https://data.vlaanderen.be/ns/vrachtwagenparkeren#Bestuurder> a owl:Class;
+  rdfs:label "Bestuurder"@nl;
+  rdfs:comment "De agent die het voertuig opereert."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/vrachtwagenparkeren>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Reiziger> .
+
+<https://data.vlaanderen.be/ns/vrachtwagenparkeren#Dimensie> a owl:Class;
+  rdfs:label "Dimensie"@nl;
+  rdfs:comment "De dimensie(s) van een vrachtwagen"@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/vrachtwagenparkeren> .
+
+<https://data.vlaanderen.be/ns/vrachtwagenparkeren#Voertuig> a owl:Class;
+  rdfs:label "Voertuig"@nl;
+  rdfs:comment "Middel om personen of goederen te vervoeren."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/vrachtwagenparkeren>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Reiziger>,
+    <https://data.vlaanderen.be/ns/verkeersmetingen#Voertuig> .
+
+<https://data.vlaanderen.be/ns/vrachtwagenparkeren> a owl:Ontology;
+  rdfs:label "vrachtwagenparkeren"@en,
+    "vrachtwagenparkeren"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.tractebel-engie.be>;
+      foaf:name "Tractebel"
+    ];
+    foaf:firstName "Gwynne";
+    foaf:lastName "van Kaauwen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.mechelen.be>;
+      foaf:name "Stad Mechelen"
+    ];
+    foaf:firstName "Benjamin";
+    foaf:lastName "Vermeulen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vloca.vlaanderen.be>;
+      foaf:name "VLOCA"
+    ];
+    foaf:firstName "Mieke";
+    foaf:lastName "Van Cauwenberghe"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.stad.gent>;
+      foaf:name "Stad Gent"
+    ];
+    foaf:firstName "Dries";
+    foaf:lastName "Meers"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.tmleuven.be/en>;
+      foaf:name "Transport & Mobility Leuven"
+    ];
+    foaf:firstName "Sven";
+    foaf:lastName "Maerivoet"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.tlv.be/nl>;
+      foaf:name "Transport en Logistiek Vlaanderen"
+    ];
+    foaf:firstName "Frederic";
+    foaf:lastName "Keymeulen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vloca.vlaanderen.be>;
+      foaf:name "VLOCA"
+    ];
+    foaf:firstName "Alain";
+    foaf:lastName "Glickman"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.dbt-logistics.com>;
+      foaf:name "DBT"
+    ];
+    foaf:firstName "Chris";
+    foaf:lastName "Delcroix"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.febetra.be>;
+      foaf:name "FEBETRA"
+    ];
+    foaf:firstName "Isabelle";
+    foaf:lastName "De Maegt"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.intrabel.be>;
+      foaf:name "Intrabel"
+    ];
+    foaf:firstName "Gert";
+    foaf:lastName "Bellekens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.greenyard.group>;
+      foaf:name "Greenyard"
+    ];
+    foaf:firstName "Marc";
+    foaf:lastName "Bax"
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso skos:Concept,
+    dc:type;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Lorenzo";
+    foaf:lastName "Vylders";
+    foaf:mbox <mailto:lorenzo.vylders@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Eveline";
+    foaf:lastName "Vlassenroot";
+    foaf:mbox <mailto:eveline.vlassenroot@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Laurens";
+    foaf:lastName "Vercauteren";
+    foaf:mbox <mailto:laurens.vercauteren@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Liesbeth";
+    foaf:lastName "Van der Haegen";
+    foaf:mbox <mailto:liesbeth.vanderhaegen@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Jef";
+    foaf:lastName "Liekens";
+    foaf:mbox <mailto:jef.liekens@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Raf";
+    foaf:lastName "Buyle";
+    foaf:mbox <mailto:raf.buyle@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Veerle";
+    foaf:lastName "Beyaert";
+    foaf:mbox <mailto:veerle.beyaert@vlaanderen.be>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.igemo.be/>;
+      foaf:name "IGEMO"
+    ];
+    foaf:firstName "Emmi";
+    foaf:lastName "Suvaal";
+    foaf:mbox <mailto:emmi.suvaal@igemo.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.igemo.be/>;
+      foaf:name "IGEMO"
+    ];
+    foaf:firstName "Felipe";
+    foaf:lastName "Garcia Del Pino";
+    foaf:mbox <mailto:felipe.garciadelpino@igemo.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.igemo.be/>;
+      foaf:name "IGEMO"
+    ];
+    foaf:firstName "Pieter";
+    foaf:lastName "Dresselaers";
+    foaf:mbox <mailto:pieter.dresselaers@igemo.be>
+  ] .

@@ -1,0 +1,779 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schemas: <https://schema.org/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/ActiviteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "De beschrijving van de Activiteit."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#beschrijving>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Specialisatie van het type activiteit zoals bepaald in W3C Activity Streams."@nl;
+    shacl:name "type"@nl;
+    shacl:path rdf:type
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit.Locatie>;
+    shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#RuimtelijkeEenheid>;
+    shacl:description "Aanduiding van de plaats waar een Activiteit plaatsvindt, zal vinden, of zou hebben gevonden."@nl;
+    shacl:name "locatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#locatie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit.JuridischeKwalificatie>;
+    shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeKwalificatie>;
+    shacl:description "De Juridische Kwalificatie van de Activiteit."@nl;
+    shacl:name "juridische kwalificatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#juridischeKwalificatie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit.Tijdsbestek>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "Aanduiding van het tijdsbestek van de Activiteit."@nl;
+    shacl:name "tijdsbestek"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#tijdsbestek>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit.Rechtssubject>;
+    shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject>;
+    shacl:name "rechtssubject"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#rechtssubject>
+  ];
+  shacl:targetClass prov:Activity,
+    <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/ActiviteitstypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/AdministratieveEenheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#AdministratieveEenheid> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/AdviesantwoordShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Adviesantwoord.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van het antwoord."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Adviesantwoord.WasGemotiveerdDoor>;
+    shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag>;
+    shacl:description "Een Adviesvraag die ¨logischerwijs¨ voorafging aan deze AdviesAntwoord"@nl;
+    shacl:name "was gemotiveerd door"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/AdviesvraagShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Adviesvraag.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de adviesvraag."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Adviesvraag.Motiveerde>;
+    shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesAntwoord>;
+    shacl:description "Een AdviesAntwoord die logisch volgde op deze AdviesVraag."@nl;
+    shacl:name "motiveerde"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#motivated>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#AdviesVraag> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass prov:Agent .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/AnnotatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Annotatie.IsGemotiveerdDoor>;
+    shacl:class skos:Concept;
+    shacl:description "Beschrijft de reden voor het aanmaken van de Annotatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "is gemotiveerd door"@nl;
+    shacl:path oa:motivatedBy
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Annotatie.HeeftTekstueleInhoud>;
+    shacl:class oa:TextualBody;
+    shacl:description "Tekst dat de annotatie gebruikt als inhoud voor een resource."@nl;
+    shacl:maxCount "1";
+    shacl:name "heeft tekstuele inhoud"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftTekstueleInhoud>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Annotatie.HeeftThema>;
+    shacl:class skos:Concept;
+    shacl:description "Thema-code dat de annotatie gebruikt als inhoud voor een resource."@nl;
+    shacl:name "heeft thema"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftThema>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Annotatie.HeeftObject>;
+    shacl:class prov:Entity;
+    shacl:description "Object dat de annotatie gebruikt als inhoud voor een resource."@nl;
+    shacl:name "heeft object"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftObject>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Annotatie.HeeftLocatie>;
+    shacl:class prov:Location;
+    shacl:description "Locatie dat de annotatie gebruikt als inhoud voor een resource."@nl;
+    shacl:name "heeft locatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#heeftLocatie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Annotatie.GaatOver>;
+    shacl:class rdfs:Resource;
+    shacl:description "De resource waarover de annotatie meer informatie geeft."@nl;
+    shacl:minCount "1";
+    shacl:name "gaat over"@nl;
+    shacl:path oa:hasTarget
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Annotatie.HeeftInhoud>;
+    shacl:class rdfs:Resource;
+    shacl:description "Resource dat een Annotatie gebruikt om inhoudelijke kennis toe te voegen aan een andere Resource."@nl;
+    shacl:name "heeft inhoud"@nl;
+    shacl:path oa:hasBody
+  ];
+  shacl:targetClass oa:Annotation .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/ArtikelShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Artikel> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/BehandelingVanAgendapuntShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#BehandelingVanAgendapunt.Openbaar>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Geeft aan of de bespreking effectief openbaar verlopen is."@nl;
+    shacl:maxCount "1";
+    shacl:name "openbaar"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#openbaar>
+  ];
+  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/BeslissingsactiviteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Beslissingsactiviteit.Resultaat>;
+    shacl:class <http://data.vlaanderen.be/ns/mandaat#Verkiezingsresultaat>;
+    shacl:description "Eindoordeel van de beoordeling."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resultaat"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/besluitvorming#resultaat>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/besluitvorming#Beslissingsactiviteit> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/BesluitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Besluit> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/BooleanShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:boolean .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/CodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Code.HeeftBredereMatch>;
+    shacl:class skos:Concept;
+    shacl:description "skos:broadMatch wordt gebruikt om een hiërarchische koppeling tussen twee conceptuele bronnen in verschillende begrippenschema's aan te geven."@nl;
+    shacl:name "heeft bredere match"@nl;
+    shacl:path skos:broadMatch
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Code.HeeftBreder>;
+    shacl:class skos:Concept;
+    shacl:description "Relateert een concept aan een concept met een algemenere betekenis."@nl;
+    shacl:name "heeft breder"@nl;
+    shacl:path skos:broader
+  ];
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/ConceptueelPubliekeDienstverleningShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/DateShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:date .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/DatetimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/DocumentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass foaf:Document .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/EntiteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass prov:Entity .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/FeitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://ontology.tno.nl/normengineering/flint#Fact> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/FormeelKaderShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://purl.org/vocab/cpsv#FormalFramework> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/FragmentselectorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass oa:FragmentSelector .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/HandelingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://ontology.tno.nl/normengineering/flint#Act> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/IdentificatorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Identificator.Notatie>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "String gebruikt om het object uniek te identificeren."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "notatie"@nl;
+    shacl:path skos:notation
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Identificator.ToegekendOp>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "toegekend op"@nl;
+    shacl:path dc:issued
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Identificator.GestructureerdeIdentificator>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator>;
+    shacl:description "Identificator vh object opgesplitst in zijn onderdelen."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "gestructureerde identificator"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Identificator.ToegekendDoor>;
+    shacl:class dc:Agent;
+    shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "toegekend door"@nl;
+    shacl:path dc:creator
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Identificator.ToegekendDoor>;
+    shacl:class dc:Agent;
+    shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "toegekend door"@nl;
+    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/InhoudShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Inhoud> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/InitiatiefrechtantwoordShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Initiatiefrechtantwoord.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de initiatiefrechtantwoord."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Initiatiefrechtantwoord.WasGemotiveerdDoor>;
+    shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag>;
+    shacl:description "Een InitiatiefrechtVraag die ¨logischerwijs¨ voorafging aan dit InitiatiefrechtAntwoord."@nl;
+    shacl:name "was gemotiveerd door"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#was_motivated_by>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/InitiatiefrechtvraagShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Initiatiefrechtvraag.Indieningsdatum>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum waarop de initiatiefrechtvraag ingediend werd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "indieningsdatum"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#indieningsdatum>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Initiatiefrechtvraag.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de initiatiefrechtvraag."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Initiatiefrechtvraag.Motivering>;
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de juridische en feitelijke motivering achter de initiatiefrechtvraag."@nl;
+    shacl:maxCount "1";
+    shacl:name "motivering"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#motivering>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Initiatiefrechtvraag.DatumAntwoordVerwacht>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum waartegen het antwoord op de initiatiefrechtvraag verwacht wordt."@nl;
+    shacl:maxCount "1";
+    shacl:name "datum antwoord verwacht"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#datumAntwoordVerwacht>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Initiatiefrechtvraag.Motiveerde>;
+    shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtAntwoord>;
+    shacl:description "Een InitiatiefrechtAntwoord die logisch volgde op deze InitiatiefrechtVraag."@nl;
+    shacl:name "motiveerde"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#motivated>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Initiatiefrechtvraag.HeeftOntwerpBesluit>;
+    shacl:class <https://data.vlaanderen.be/ns/dossier#Stuk>;
+    shacl:name "heeft ontwerp besluit"@nl;
+    shacl:path <http://todo.com/heeftOntwerpbesluit>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#InitiatiefrechtVraag> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/InstantiePubliekeDienstverleningShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/IntegerShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:integer .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/LangstringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/LegaalProcesShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/eli/eli-draft-legislation-ontology#LegislativeProcess> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/LegaleActiviteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#LegaleActiviteit.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Korte beschrijving van de legale activiteit."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#LegaleActiviteit.Titel>;
+    shacl:datatype xsd:string;
+    shacl:description "De naam van de legale activiteit."@nl;
+    shacl:maxCount "1";
+    shacl:name "titel"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#activity_label>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#LegaleActiviteit.Type>;
+    shacl:class skos:Concept;
+    shacl:description "De soort of categorie van de activiteit."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#had_activity_type>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#LegaleActiviteit.HeeftOrganisatieAlsParticipant>;
+    shacl:class org:Organization;
+    shacl:description "Een organisatie die deelneemt aan een activiteit, maar er niet noodzakelijk verantwoordelijk voor is."@nl;
+    shacl:name "heeft organisatie als participant"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#had_participant_organization>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#LegaleActiviteit.HeeftPersoonAlsParticipant>;
+    shacl:class <http://www.w3.org/ns/person#Person>;
+    shacl:description "Een persoon die deelneemt aan een activiteit. Een preciezere eigenschap bestaat om de verantwoordelijke persoon van een activiteit aan te duiden."@nl;
+    shacl:name "heeft persoon als participant"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#had_participant_person>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#LegaleActiviteit.HeeftVerantwoordelijkeOrganisatie>;
+    shacl:class org:Organization;
+    shacl:description "De organisatie verantwoordelijk voor de activiteit."@nl;
+    shacl:name "heeft verantwoordelijke organisatie"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#had_responsible_organization>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#LegaleActiviteit.HeeftVerantwoordelijkePersoon>;
+    shacl:class <http://www.w3.org/ns/person#Person>;
+    shacl:description "De persoon verantwoordelijk voor de activiteit."@nl;
+    shacl:name "heeft verantwoordelijke persoon"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#had_responsible_person>
+  ];
+  shacl:targetClass <http://data.europa.eu/eli/eli-draft-legislation-ontology#LegislativeActivity> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/LegaleverschijningsvormShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Legaleverschijningsvorm.Besluittype>;
+    shacl:class rdfs:Resource;
+    shacl:description "Type van het besluit."@nl;
+    shacl:name "besluittype"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#type_document>
+  ];
+  shacl:targetClass <https://data.europa.eu/eli/ontology#LegalExpression> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/LiteralShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Literal .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/LocatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass prov:Location .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/MotivatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/NormatieveBepalingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#NormatieveBepaling.Tijdsbestek>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "Aanduiding van het tijdsbestek van de Normatieve Bepaling."@nl;
+    shacl:name "tijdsbestek"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#tijdsbestek>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#NormatieveBepaling> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/NotificatieberichtShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Notificatiebericht.Url>;
+    shacl:class rdfs:Resource;
+    shacl:description "Een url voor het Notificatiebericht."@nl;
+    shacl:maxCount "1";
+    shacl:name "url"@nl;
+    shacl:path schemas:url
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/notificatie#Notificatiebericht> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/ParticipatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Participatie.Rol>;
+    shacl:class skos:Concept;
+    shacl:description "De rol van de Agent in een Participatie"@nl;
+    shacl:maxCount "1";
+    shacl:name "rol"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#participation_role>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Participatie.HeeftVerantwoordelijkeOrganisatie>;
+    shacl:class org:Organization;
+    shacl:description "De organisatie verantwoordelijk voor de activiteit."@nl;
+    shacl:name "heeft verantwoordelijke organisatie"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#had_responsible_organization>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Participatie.HeeftVerantwoordelijkePersoon>;
+    shacl:class <http://www.w3.org/ns/person#Person>;
+    shacl:description "De persoon verantwoordelijk voor de activiteit."@nl;
+    shacl:name "heeft verantwoordelijke persoon"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#had_responsible_person>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Participatie.HeeftPersoonAlsParticipant>;
+    shacl:class <http://www.w3.org/ns/person#Person>;
+    shacl:description "Een persoon die deelneemt aan een activiteit. Een preciezere eigenschap bestaat om de verantwoordelijke persoon van een activiteit aan te duiden."@nl;
+    shacl:name "heeft persoon als participant"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#had_participant_person>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Participatie.HeeftOrganisatieAlsParticipant>;
+    shacl:class org:Organization;
+    shacl:description "Een organisatie die deelneemt aan een activiteit, maar er niet noodzakelijk verantwoordelijk voor is."@nl;
+    shacl:name "heeft organisatie als participant"@nl;
+    shacl:path <http://data.europa.eu/eli/eli-draft-legislation-ontology#had_participant_organization>
+  ];
+  shacl:targetClass <http://data.europa.eu/eli/eli-draft-legislation-ontology#Participation> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/PeriodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Periode.Begin>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Aanvang van de tijdsduur."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "begin"@nl;
+    shacl:path <http://data.europa.eu/m8g/startTime>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Periode.Einde>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Einde vd tijdsduur."@nl;
+    shacl:maxCount "1";
+    shacl:name "einde"@nl;
+    shacl:path <http://data.europa.eu/m8g/endTime>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/RechtShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Recht> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/RechtsgrondShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResource> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/ResourceOnderdeelShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#ResourceOnderdeel.HeeftSelector>;
+    shacl:class oa:Selector;
+    shacl:description "Een Selector die het segment of de regio van belang binnen de bron resource beschrijft."@nl;
+    shacl:name "heeft selector"@nl;
+    shacl:path oa:hasSelector
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#ResourceOnderdeel.Isonderdeelvan>;
+    shacl:class rdfs:Resource;
+    shacl:description "De bron waaruit ResourceOnderdeel is verfijnd of specifieker is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "isOnderdeelVan"@nl;
+    shacl:path oa:hasSource
+  ];
+  shacl:targetClass oa:SpecificResource .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/ResourceShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Resource .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/RolShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/SelectorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Selector.VerfijndDoor>;
+    shacl:class oa:Selector;
+    shacl:description "Een Selector die moet worden toegepast op de resultaten van de vorige selector"@nl;
+    shacl:name "verfijnd door"@nl;
+    shacl:path oa:refinedBy
+  ];
+  shacl:targetClass oa:Selector .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/ShaclpathselectorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Shaclpathselector.Waarde>;
+    shacl:class rdfs:Resource;
+    shacl:description "SHACL property path dat door de selector op een resource wordt toegepast om een waarde te bekomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path rdf:value
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#ShaclPathSelector> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/StringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/StukShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Stuk.Trefwoord>;
+    shacl:datatype rdf:langString;
+    shacl:description "Trefwoorden of tags die worden gebruikt om een Stuk te beschrijven."@nl;
+    shacl:name "trefwoord"@nl;
+    shacl:path schemas:keywords
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Stuk.Datum>;
+    shacl:datatype xsd:date;
+    shacl:description "De datum van het stuk."@nl;
+    shacl:minCount "1";
+    shacl:name "datum"@nl;
+    shacl:path dc:date
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Stuk.Inhoud>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Een waarde die een directe representatie is van de entiteit."@nl;
+    shacl:maxCount "1";
+    shacl:name "inhoud"@nl;
+    shacl:path prov:value
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Stuk.Naam>;
+    shacl:datatype xsd:string;
+    shacl:description "De naam van het stuk."@nl;
+    shacl:maxCount "1";
+    shacl:name "naam"@nl;
+    shacl:path dc:title
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Stuk.Onderwerp>;
+    shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#Thema>;
+    shacl:description "Onderwerp van dit Stuk."@nl;
+    shacl:name "onderwerp"@nl;
+    shacl:path dc:subject
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Stuk.GeografischeDekking>;
+    shacl:class prov:Location;
+    shacl:description "Plaats of gebied waarover dit Stuk gaat."@nl;
+    shacl:name "geografische dekking"@nl;
+    shacl:path prov:atLocation
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Stuk.Auteur>;
+    shacl:class dc:Agent;
+    shacl:description "De auteur van het stuk."@nl;
+    shacl:name "auteur"@nl;
+    shacl:path <http://todo.com/auteur>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Stuk.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Een identificator voor het stuk."@nl;
+    shacl:name "identificator"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Stuk.Informatieclassificatie>;
+    shacl:class skos:Concept;
+    shacl:description "Duidt aan welke veiligheidsmaatregelen (waaronder toegangsmaatregelen) genomen moeten worden voor het Stuk."@nl;
+    shacl:maxCount "1";
+    shacl:name "informatieclassificatie"@nl;
+    shacl:path <http://todo.com/informatieclassificatie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Stuk.Taal>;
+    shacl:class skos:Concept;
+    shacl:description "De taal van het stuk."@nl;
+    shacl:name "taal"@nl;
+    shacl:path dc:language
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/dossier#Stuk> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/TekstpositieselectorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Tekstpositieselector.Start>;
+    shacl:datatype xsd:integer;
+    shacl:description "De startpositie in een op 0 gebaseerde index waarop een inhoudsbereik wordt geselecteerd uit de gegevens in de bron."@nl;
+    shacl:maxCount "1";
+    shacl:name "start"@nl;
+    shacl:path oa:start
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Tekstpositieselector.Einde>;
+    shacl:datatype xsd:integer;
+    shacl:description "De eigenschap einde wordt gebruikt om de op 0 gebaseerde index van de eindpositie van een inhoudsbereik over te brengen."@nl;
+    shacl:maxCount "1";
+    shacl:name "einde"@nl;
+    shacl:path oa:end
+  ];
+  shacl:targetClass oa:TextPositionSelector .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/TekstquoteselectorShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Tekstquoteselector.Exact>;
+    shacl:datatype xsd:string;
+    shacl:description "kopie van de tekst die wordt geselecteerd, na normalisatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "exact"@nl;
+    shacl:path oa:exact
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Tekstquoteselector.Prefix>;
+    shacl:datatype xsd:string;
+    shacl:description "Een stukje inhoud dat onmiddellijk voorafgaat aan de inhoud die wordt geselecteerd door de Selector."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "prefix"@nl;
+    shacl:path oa:prefix
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Tekstquoteselector.Suffix>;
+    shacl:datatype xsd:string;
+    shacl:description "Het stukje tekst dat direct volgt op de tekst die wordt geselecteerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "suffix"@nl;
+    shacl:path oa:suffix
+  ];
+  shacl:targetClass oa:TextQuoteSelector .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/TekstueleInhoudShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#TekstueleInhoud.Waarde>;
+    shacl:datatype rdf:langString;
+    shacl:description "De tekst zelf."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path rdf:value
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#TekstueleInhoud.Taal>;
+    shacl:datatype xsd:string;
+    shacl:description "Taal van de tekst."@nl;
+    shacl:maxCount "1";
+    shacl:name "taal"@nl;
+    shacl:path dc11:language
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#TekstueleInhoud.Formaat>;
+    shacl:class skos:Concept;
+    shacl:description "Formaat van de inhoud."@nl;
+    shacl:maxCount "1";
+    shacl:name "formaat"@nl;
+    shacl:path dc11:format
+  ];
+  shacl:targetClass oa:TextualBody .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/ThemaShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/UnieRgLvShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/wetgeving#UnieRGLV> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/VerbintenisShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Verbintenis> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/VergaderactiviteitShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Vergaderactiviteit> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/WebsiteShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Website.Naam>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam van de website."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path dc:title
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Website.HeeftMeerInfo>;
+    shacl:class <https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving>;
+    shacl:description "Beschrijving van de website."@nl;
+    shacl:maxCount "1";
+    shacl:name "heeft meer info"@nl;
+    shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Website.Locatie>;
+    shacl:class rdfs:Resource;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "locatie"@nl;
+    shacl:path schemas:url
+  ];
+  shacl:targetClass schemas:WebSite .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/WerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F1> .

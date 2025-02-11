@@ -443,5 +443,67 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/test/sb.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/schuldbeheer.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/slim-ruimtelijk-plannen.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/slimme-raadpleegomgeving.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/slimme-stadsdistributie.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/subsidie.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/toestemming.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/toestemming/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/test/vastgoed.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/verkeersborden.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/verkeersborden/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/test/verkeersmetingen.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||# checking publication points in directory /home/circleci/project/config/production
 #||# 

@@ -1,0 +1,818 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant> a rdfs:Class;
+  rdfs:label "Moment"@nl .
+
+<http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object> a rdfs:Class;
+  rdfs:label "TemporeleEntiteit"@nl .
+
+<http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element> a rdfs:Class;
+  rdfs:label "Kwaliteitselement"@nl .
+
+skos:Concept a rdfs:Class;
+  rdfs:label "Verkeerskenmerktype"@nl,
+    "Voertuigtype"@nl,
+    "Verkeersdeelnemertype"@nl,
+    "Rijstrooktype"@nl .
+
+prov:Location a rdfs:Class;
+  rdfs:label "Locatie"@nl .
+
+<https://data.vlaanderen.be/ns/weg#Rijrichting> a rdfs:Class;
+  rdfs:label "Rijrichting"@nl .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Fietspad> a owl:Class;
+  rdfs:label "Fietspad"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Maakt geen deel uit vd rijbaan (deel van de wegbaan ingericht voor het verkeer van Voertuigen), bvb auto's mogen niet op een Fietspad rijden of stationeren. OPGELET: Niet te verwarren met fietssuggestiestroken (wel deel vd rijbaan) of met de zijstroken ve middenrijbaan (geen deel vd rijbaan maar waarop mag gereden worden door auto's om tegenliggers te ontwijken). Fietspaden kunnen aanliggend zijn aan de rijbaan of vrijliggend of zelfs een eigen wegbaan hebben (in dat laatste geval worden ze door een eigen Wegsegment voorgesteld)."@nl;
+  rdfs:comment "Deel van de wegbaan uitsluitend bedoeld voor fietsverkeer."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject>,
+    <https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap>,
+    <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdeelnemer> a owl:Class;
+  rdfs:label "Verkeersdeelnemer"@nl;
+  rdfs:comment "Deelnemer aan het verkeer, als bestuurder of passagier van een Voertuig of zonder Voertuig, bvb als voetganger."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt.netwerkreferentie> a owl:ObjectProperty;
+  rdfs:label "netwerkreferentie"@nl;
+  <http://purl.org/vocab/vann/usageNote> """Nuttig als men weet langs welk Wegsegment het punt ligt en aan welke kant van de weg en op welke afstand van het beginpunt. Alternatief voor of aanvulling op coördinaten. Ook noodzakelijk om aan te geven over welk Wegsegment en aan welke kant ervan de Voertuigen rijden waarvan men bvb de snelheid meet.
+"""@nl;
+  rdfs:comment "Referentie naar het Netwerkelement waarop of waarlangs het Verkeersmeetpunt ligt of dat door dat punt bemonsterd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt.rijrichting> a owl:ObjectProperty;
+  rdfs:label "rijrichting"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Alternatief voor of aanvulling op geometrie of netwerkreferentie. Ook noodzakelijk om aan te geven in welke richting de Voertuigen rijden waarvan men bvb de snelheid meet."@nl;
+  rdfs:comment "Geeft aan welke op welke Rijrichting het Verkeersmeetpunt gelegen is of betrekking heeft."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/weg#Rijrichting> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt.wegdeel> a owl:ObjectProperty;
+  rdfs:label "wegdeel"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Alternatief voor of aanvulling op geometrie of netwerkreferentie. Ook noodzakelijk om aan te geven op welk deel van de weg de Voertuigen of Verkeersdeelnemers waarvan men een kenmerk meet zich bevinden, bvb op een bepaalde Rijstrook of op het Fietspad of het Voetpad."@nl;
+  rdfs:comment "Geeft aan welke op welk Wegdeel het Verkeersmeetpunt gelegen is of betrekking heeft."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject.netwerkreferentie> a owl:ObjectProperty;
+  rdfs:label "netwerkReferentie"@nl;
+  <http://purl.org/vocab/vann/usageNote> """Nuttig als men weet langs welk Wegsegment het traject loopt en aan welke kant van de weg en op welke afstand van het beginpunt. Alternatief voor of aanvulling op coördinaten. Ook noodzakelijk om aan te geven over welk Wegsegment en aan welke kant ervan de Voertuigen rijden waarvan men bvb de snelheid meet.
+"""@nl;
+  rdfs:comment "Referentie naar het Netwerkelement waarlangs het Verkeersmeettraject loopt of dat door dat traject bemonsterd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject.rijrichting> a owl:ObjectProperty;
+  rdfs:label "rijrichting"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Alternatief voor of aanvulling op geometrie of netwerkreferentie.  Ook noodzakelijk om aan te geven in welke richting de Voertuigen rijden waarvan men bvb de gemiddelde snelheid meet."@nl;
+  rdfs:comment "Geeft aan welke op welke Rijrichting het Verkeersmeettraject ligt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/weg#Rijrichting> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject.wegdeel> a owl:ObjectProperty;
+  rdfs:label "wegdeel"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Alternatief voor of aanvulling op geometrie of netwerkreferentie. Ook noodzakelijk om aan te geven op welk deel van de weg de Voertuigen of Verkeersdeelnemers waarvan men een kenmerk meet zich bevinden, bvb op een bepaalde Rijstrook of op het Fietspad of het Voetpad."@nl;
+  rdfs:comment "Geeft aan welke langs welk Wegdeel het traject loopt of betrekking heeft."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling.geobserveerdKenmerk> a owl:ObjectProperty;
+  rdfs:label "geobserveerdKenmerk"@nl;
+  rdfs:comment "Kenmerk dat de Verkeersmetingen in de verzameling meten."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk>;
+  rdfs:subPropertyOf <http://www.w3.org/ns/sosa/observedProperty> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling.geobserveerdObject> a owl:ObjectProperty;
+  rdfs:label "geobserveerdObject"@nl;
+  rdfs:comment "Object dat door de Verkeersmetingen wordt geobserveerd."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject>;
+  rdfs:subPropertyOf <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Voertuig> a owl:Class;
+  rdfs:label "Voertuig"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb auto, fiets, vrachtwagen, bus, trein, tram, schip, boot, vliegtuig etc."@nl;
+  rdfs:comment "Middel om personen of goederen te vervoeren."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Voetpad> a owl:Class;
+  rdfs:label "Voetpad"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Is per defintie afgescheiden van de rijbaan, typisch via een boordsteen en verhoogde ligging."@nl;
+  rdfs:comment "Deel van de wegbaan bedoeld voor voetgangers."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject>,
+    <https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap>,
+    <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#bemonsterdObject> a owl:ObjectProperty;
+  rdfs:label "bemonsterdObject"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb het Voertuig of het Wegsegment waarvan men een Verkeerskenmerk bepaalt."@nl;
+  rdfs:comment "Verwijzing naar het Verkeersdomeinobject waarop de meting betrekking heeft en waarvoor het Verkeersbemonsteringsobject representatief is."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersbemonsteringsobject>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject>;
+  rdfs:subPropertyOf <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdKenmerk> a owl:ObjectProperty;
+  rdfs:label "geobserveerdKenmerk"@nl;
+  <http://purl.org/vocab/vann/usageNote> "CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Soms is de procedure waarmee de waarden vh kenmerk worden bekomen indirect, ttz men meet om praktische reden een ander kenmerk dat een proxy is voor het kenmerk dat men werkelijk wil observeren. Bv om de Verkeersintensiteit op een Wegsegment te bepalen telt men individuele doorkomsten van Voertuigen in een Verkeersmeetpunt."@nl;
+  rdfs:comment "Kenmerk van het Verkeersobject dat geobserveerd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk>;
+  rdfs:subPropertyOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdObject> a owl:ObjectProperty;
+  rdfs:label "geobserveerdObject"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dat kan het Verkeersdomeinobject zelf zijn of een proxy ervan, ttz een Verkeersbemonsteringsobject. OPMERKING: In dat laatste geval weet men soms pas na het observeren welk real-world Object men juist geobserveerd heeft. Bvb in een Verkeersmeetpunt weet men niet op voorhand welke de objecten zullen zijn waarvan men de snelheid wil vaststellen."@nl;
+  rdfs:comment "Het Verkeersobject dat geobserveerd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject>;
+  rdfs:subPropertyOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#heeftLid> a owl:ObjectProperty;
+  rdfs:label "heeftLid"@nl;
+  rdfs:comment "Verkeersmeting die tot de verzameling behoort."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting>;
+  rdfs:subPropertyOf <http://www.w3.org/ns/sosa/hasMember> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#ligging> a owl:ObjectProperty;
+  rdfs:label "ligging"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb de coördinaten of het adres of een verwijzing naar een meetpunt of ander Bemonsteringsobject. Meerdere verschillende types van locaties kunnen worden opgegeven (bvb adres èn coördinaten). Als de Sensor een meetinstallatie is evt de verschillende meetpunten die worden omvat of een omschrijvende polygoon. OPGELET: De locatie van de Sensor is niet noodzakelijk de positie waar de Observatie gebeurt, die wordt in de eerste plaats gegeven door de ligging vh Bemonsteringsobject. Dit attribuut laat vooral toe om posities van Sensoren te beschrijven los vd metingen die er gebeuren."@nl;
+  rdfs:comment "Locatie van de Sensor."@nl;
+  rdfs:domain <http://www.w3.org/ns/sosa/Sensor>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range prov:Location .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#rijstrook> a owl:ObjectProperty;
+  rdfs:label "rijstrook"@nl;
+  <http://purl.org/vocab/vann/usageNote> "De identificator moet getypeerd worden bvb volgens het systeem dat werd gehanteerd om de Rijstroken te nummeren. Bvb het schema van DATEX II waar over de volledige breedte van de weg van links naar rechts wordt genummerd."@nl;
+  rdfs:comment "Identificator van de Rijstrook."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#verkeersdeelnemerType> a owl:ObjectProperty;
+  rdfs:label "verkeersdeelnemertype"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb \"Voetganger\" als men enkel het aantal Voertgangers wil tellen in een Meetpunt. Enkel noodzakelijk voor Verkeersdomeinobjecten die zelf geen Verkeersdeelnemer zijn maar bvb een Wegsegment of Rijstrook etc."@nl;
+  rdfs:comment "Soort Verkeersdeelnemer waarvan men het Verkeerskenmerk meet."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range skos:Concept .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType> a owl:ObjectProperty;
+  rdfs:label "voertuigType"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb \"Fiets\" als men enkel het aantal fietsen wil tellen in een Meetpunt. Enkel noodzakelijk voor Verkeersdomeinobjecten die zelf geen Voertuig zijn maar bvb een Wegsegment of Rijstrook etc."@nl;
+  rdfs:comment "Soort Voertuig waarvan men het Verkeerskenmerk meet."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/transportnetwerk#Voertuigtype> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#waardeverschaffer> a owl:ObjectProperty;
+  rdfs:label "waardeverschaffer"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Die meting verschaft ahw een waarde voor het Verkeerskenmerk dat van het Verkeersobject wordt gemeten."@nl;
+  rdfs:comment "Verwijzing naar een Verkeersmeting die op het geobserveerdObject plaatsvondt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:range <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting>;
+  rdfs:subPropertyOf <https://data.vlaanderen.be/ns/observaties-en-metingen#Object.waardeverschaffer> .
+
+<http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result> a rdf:Property;
+  rdfs:label "resultaat"@nl .
+
+<http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality> a rdf:Property;
+  rdfs:label "resultaatkwaliteit"@nl .
+
+<http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime> a rdf:Property;
+  rdfs:label "resultaattijd"@nl .
+
+<http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve.shape> a rdf:Property;
+  rdfs:label "geometrie"@nl .
+
+<http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape> a rdf:Property;
+  rdfs:label "geometrie"@nl .
+
+dc11:type a rdf:Property;
+  rdfs:label "verkeersdeelnemertype"@nl,
+    "type"@nl,
+    "rijstrooktype"@nl .
+
+<http://www.w3.org/ns/sosa/madeBySensor> a rdf:Property;
+  rdfs:label "uitgevoerdMet"@nl .
+
+<http://www.w3.org/ns/sosa/phenomenonTime> a rdf:Property;
+  rdfs:label "fenomeentijd"@nl .
+
+<https://data.vlaanderen.be/ns/netwerk#netwerkreferentie> a rdf:Property;
+  rdfs:label "netwerkreferentie"@nl .
+
+<https://data.vlaanderen.be/ns/observaties-en-metingen/#Observatie.uitgevoerdDoor> a rdf:Property;
+  rdfs:label "uitgevoerd door"@nl .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook> a owl:Class;
+  rdfs:label "Rijstrook"@nl;
+  <http://purl.org/vocab/vann/usageNote> """Onder rijbaan verstaan we dat deel van de wegbaan ingericht om met een Voertuig over te rijden. Door de rijbaan op te splitsen krijgt men een meer gecontroleerde verkeersstroom, in de eerste plaats omdat de rijrichtingen of bvb doorgaand en afslaand verkeer gescheiden worden en ook door de breedte te beperken zodat er maar één Voertuig tegelijk doorkan. Rijstroken worden typisch afgebakend dmv wegmarkeringen, bvb een witte doorlopende of onderbroken streep. OPMERKING: Voetpaden of Fietspaden zijn geen Rijstroken aangezien ze niet bedoeld zijn om met een auto over te rijden en dus geen deel zijn van de rijbaan.
+"""@nl;
+  rdfs:comment "In de langsrichting begrensd deel van de rijbaan, bedoeld om de verkeersstroom te geleiden in een bepaalde richting en met doorgaans de breedte van één Voertuig."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject>,
+    <https://data.vlaanderen.be/ns/transportnetwerk#Transporteigenschap>,
+    <https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel> .
+
+<https://data.vlaanderen.be/ns/weg#rijrichting> a rdf:Property;
+  rdfs:label "rijrichting"@nl .
+
+<https://data.vlaanderen.be/ns/weg#voertuigtype> a rdf:Property;
+  rdfs:label "voertuigtype"@nl .
+
+<https://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime> a rdf:Property;
+  rdfs:label "fenomeenTijd"@nl .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersbemonsteringsobject> a owl:Class;
+  rdfs:label "Verkeersbemonsteringsobject"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Van belang als men dit object niet rechtstreeks kan observeren. Bvb om de snelheid ve Voertuig te bepalen kan men moeilijk dat Voertuig gaan volgen, in plaats daarvan zet men een meetpunt op langs de weg om te zien hoe snel passerende Voertuigen rijden. Gelijkaardig voor bvb verkeersintensiteit: men telt in een meetpunt langs de weg doorkomsten van Voertuigen en gaat ervan uit dat dit cijfer representatief is voor  het Wegsegment (deel van de weg tussen twee opeenvolgende kruispunten). OPGELET: Deze klasse is abstract, ze mag niet geinstantieerd worden. Gebruik in de plaats de subklassen Verkeersmeetpunt of Verkeersmeettraject"@nl;
+  rdfs:comment "Object dat representatief is voor het object waarvan men het Verkeerskenmerk meet."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject>,
+    <http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt> a owl:Class;
+  rdfs:label "Verkeersmeetpunt"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit is het punt langs de weg waar bvb doorkomsten van Voertuigen worden geteld en/of hun snelheid wordt gemeten of waarvoor enig ander Verkeerskenmerk wordt vastgesteld dat op het bemonsterd Verkeerdomeinobject betrekking heeft."@nl;
+  rdfs:comment "Punt waarlangs men kenmerken van het voorbijkomend verkeer meet."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersbemonsteringsobject>,
+    <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeettraject> a owl:Class;
+  rdfs:label "Verkeersmeettraject"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit is een afstand langs de weg waar bvb de snelheid van Voertuigen wordt gemeten (een zgn trajectcontrole) of waarvoor enig ander Verkeerskenmerk wordt vastgesteld dat op het bemonsterd Verkeerdomeinobject betrekking heeft."@nl;
+  rdfs:comment "Traject waarlangs men kenmerken van het voorbijkomend verkeer meet.."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersbemonsteringsobject>,
+    <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling> a owl:Class;
+  rdfs:label "Verkeersmetingverzameling"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bv metingen die op hetzelfde tijdstip plaatsvonden of hetzelfde Object of kenmerk observeren of door dezelfde Sensor zijn gemaakt. Bvb de metingen in eenzelfde Verkeersmeetpunt of de metingen op dezelfde infrastructuur etc."@nl;
+  rdfs:comment "Collectie van Verkeersmetingen met dezelfde kenmerken."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservationCollection> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk> a owl:Class;
+  rdfs:label "Verkeerskenmerk"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb de gemiddelde snelheid van auto's langs een Meetpunt of de verkeersIntensiteit van fietsen op een Wegsegment bvb uitgedrukt in aantal voertuigen of de snelheid van een individueel Voertuig etc."@nl;
+  rdfs:comment "Kenmerk van het Verkeersdomeinobject of het Verkeersbemonsteringsobject dat gemeten wordt en dat betrekking heeft op het verkeer over of langs dat object of op zijn deelname aan het verkeer."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting> a owl:Class;
+  rdfs:label "Verkeersmeting"@nl;
+  <http://purl.org/vocab/vann/usageNote> """Verkeer wordt gedefinieerd als de verplaatsing van objecten zoals personen, vracht, data etc over media zoals land, water, lucht, kabels. Verkeer kan betrekking hebben op objecten die zichzelf verplaatsen (al dan niet met een vervoermiddel) of objecten die vervoerd worden, maar ook op objecten waarover verkeer plaatsvindt. De meting kan het vaststellen van de waarde van een kenmerk van een individueel object tijdens zijn verplaatsing zijn (bvb zijn snelheid) of van een kenmerk van de infrastructuur waarover het verkeer zich beweegt (bv de verkeersintensiteit). Verkeersmetingen  zijn Observaties, maw op de waarde zit een zekere foutmarge door de gebruikte meettechniek.
+"""@nl;
+  rdfs:comment "Het vaststellen van de waarde van een bepaald kenmerk van het verkeer op een bepaald tijdstip of tussen twee tijdstippen."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject> a owl:Class;
+  rdfs:label "Verkeersobject"@nl;
+  <http://purl.org/vocab/vann/usageNote> "OPGELET: Deze klasse is abstract, ze moet gespecialiseerd worden als Verkeersdomeinobject of als Verkeersbemonsteringsobject. Als Verkeersdomeinobject als de meting direct betrekking heeft op het object dat men wil observeren of als Verkeersbemonsteringsobject als de meting onrechtstreeks gebeurt (bvb via een Verkeersmeetpunt)."@nl;
+  rdfs:comment "Object waarop of waarlangs zich verkeer voordoet of dat deel uitmaakt vh verkeer."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject> a owl:Class;
+  rdfs:label "Verkeersdomeinobject"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Hieronder verstaan we een real-world object uit het verkeer, ttz een Voertuig of Verkeersdeelnemer of een Wegsegment of gelijkaardig waarover verkeer plaatsvindt. Vallen hier niet onder: Verkeersbemonsteringsobjecten zoals Verkeersmeetpunten of Verkeersmeettrajecten, dat zijn de objecten die het Verkeersdomein bemonsteren. OPGELET: Deze klasse is abstract, ze mag maw niet geinstantieerd worden. Gebruik in de plaats subklassen zoal Wegsegment, Rijstrook, Voertuig etc."@nl;
+  rdfs:comment "Object uit het verkeersdomein waarvan men een Verkeerskenmerk meet."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/verkeersmetingen>;
+  rdfs:subClassOf <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject>,
+    <http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature> .
+
+<https://data.vlaanderen.be/ns/verkeersmetingen> a owl:Ontology;
+  rdfs:label "Verkeersmetingen"@en,
+    "Verkeersmetingen"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.limburg.be/>;
+      foaf:name "Provincie Limburg"
+    ];
+    foaf:firstName "Els";
+    foaf:lastName "Windmolders"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.kenniscentrumvlaamsesteden.be/>;
+      foaf:name "Kenniscentrum Vlaamse Steden"
+    ];
+    foaf:firstName "Joris";
+    foaf:lastName "Voets"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://wegenenverkeer.be/>;
+      foaf:name "Agentschap Wegen en Verkeer - Afdeling Planning en Coördinatie"
+    ];
+    foaf:firstName "David";
+    foaf:lastName "Vlaminck"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.antwerpen.be/>;
+      foaf:name "Stad Antwerpen"
+    ];
+    foaf:firstName "Stijn";
+    foaf:lastName "Vernaillen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.provincieantwerpen.be/>;
+      foaf:name "Provincie Antwerpen"
+    ];
+    foaf:firstName "Thomas";
+    foaf:lastName "Verlinden"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Joren";
+    foaf:lastName "Verleyen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.antwerpen.be/nl/overzicht/brandweer>;
+      foaf:name "Brandweer Zone Antwerpen"
+    ];
+    foaf:firstName "Laura";
+    foaf:lastName "Verhulst"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://telraam.net/>;
+      foaf:name "Rear Window BV"
+    ];
+    foaf:firstName "Kris";
+    foaf:lastName "Verherle"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://movias.eu/>;
+      foaf:name "Movias"
+    ];
+    foaf:firstName "Koenraad";
+    foaf:lastName "Verduyn"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.provincieantwerpen.be/>;
+      foaf:name "Provincie Antwerpen"
+    ];
+    foaf:firstName "Kim";
+    foaf:lastName "Verbeeck"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaamsbrabant.be/nl>;
+      foaf:name "Provincie Vlaams-Brabant"
+    ];
+    foaf:firstName "Ruth";
+    foaf:lastName "Vandoren"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Dwight";
+    foaf:lastName "Van Lancker"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.lantis.be/>;
+      foaf:name "Lantis"
+    ];
+    foaf:firstName "Jeroen";
+    foaf:lastName "Van Houtte"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Samuel";
+    foaf:lastName "Van Ackere"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.s-lim.be/>;
+      foaf:name "s-Lim"
+    ];
+    foaf:firstName "Geert";
+    foaf:lastName "Thoelen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.kortrijk.be/>;
+      foaf:name "Stad Kortrijk"
+    ];
+    foaf:firstName "Simon";
+    foaf:lastName "Stock"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.provincieantwerpen.be/>;
+      foaf:name "Provincie Antwerpen"
+    ];
+    foaf:firstName "Steven";
+    foaf:lastName "Soetens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/agentschap-binnenlands-bestuur>;
+      foaf:name "Agentschap Binnenlands Bestuur"
+    ];
+    foaf:firstName "Emilie";
+    foaf:lastName "Sion"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Dany";
+    foaf:lastName "Sevenhans"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://wegenenverkeer.be/>;
+      foaf:name "Agentschap Wegen en Verkeer"
+    ];
+    foaf:firstName "Viki";
+    foaf:lastName "Schillemans"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://stad.gent/nl>;
+      foaf:name "Stad Gent"
+    ];
+    foaf:firstName "Dries";
+    foaf:lastName "Meers"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <http://its.be/>;
+      foaf:name "ITS BELGIUM"
+    ];
+    foaf:firstName "Kurt";
+    foaf:lastName "Marquet"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.geomobility.eu/>;
+      foaf:name "Geomobility"
+    ];
+    foaf:firstName "Pierre";
+    foaf:lastName "Maere"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.antwerpen.be/nl/overzicht/brandweer>;
+      foaf:name "Brandweer Zone Antwerpen"
+    ];
+    foaf:firstName "Glen";
+    foaf:lastName "Joris"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.signco.be/>;
+      foaf:name "Signco"
+    ];
+    foaf:firstName "Gert";
+    foaf:lastName "Janssens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.signco.be/>;
+      foaf:name "Signco"
+    ];
+    foaf:firstName "Stijn";
+    foaf:lastName "Goossens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://wegenenverkeer.be/>;
+      foaf:name "Agentschap Wegen en Verkeer"
+    ];
+    foaf:firstName "Abdel";
+    foaf:lastName "Ghoula"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.mycsn.be/>;
+      foaf:name "myCSN"
+    ];
+    foaf:firstName "Jan";
+    foaf:lastName "Geukens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://wegenenverkeer.be/>;
+      foaf:name "Agentschap Wegen en Verkeer"
+    ];
+    foaf:firstName "Patrick";
+    foaf:lastName "Deknudt"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/agentschap-binnenlands-bestuur>;
+      foaf:name "Agentschap Binnenlands Bestuur"
+    ];
+    foaf:firstName "Steven";
+    foaf:lastName "Degelaen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.cyclomedia.com/>;
+      foaf:name "CycloMedia Technology B.V."
+    ];
+    foaf:firstName "Joachim";
+    foaf:lastName "De Wilde"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://be-mobile.com/>;
+      foaf:name "Be-Mobile"
+    ];
+    foaf:firstName "Wannes";
+    foaf:lastName "De Smet"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/departement-mobiliteit-en-openbare-werken>;
+      foaf:name "Departement Mobiliteit en Openbare Werken"
+    ];
+    foaf:firstName "Bart";
+    foaf:lastName "De Proost"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.geosparc.com/>;
+      foaf:name "Geosparc"
+    ];
+    foaf:firstName "Kris";
+    foaf:lastName "De Pril"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Annelies";
+    foaf:lastName "De Craene"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vmm.be/>;
+      foaf:name "Vlaamse Milieumaatschappij"
+    ];
+    foaf:firstName "Caroline";
+    foaf:lastName "De Bosscher"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://wegenenverkeer.be/>;
+      foaf:name "Agentschap Wegen en Verkeer - Afdeling Elektromechanica en Telematica"
+    ];
+    foaf:firstName "Koen";
+    foaf:lastName "Cuypers"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://wegenenverkeer.be/>;
+      foaf:name "Agentschap Wegen en Verkeer"
+    ];
+    foaf:firstName "Dietger";
+    foaf:lastName "Cleuren"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Simon";
+    foaf:lastName "Claus"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.cropland.be/>;
+      foaf:name "CROPLAND"
+    ];
+    foaf:firstName "Jeroen";
+    foaf:lastName "Claes"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://krycer.be/>;
+      foaf:name "KRYCER bvba"
+    ];
+    foaf:firstName "Kristoff";
+    foaf:lastName "Certyn"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://servicepublic.brussels/>;
+      foaf:name "Gewestelijke Overheidsdienst Brussel"
+    ];
+    foaf:firstName "Ruben";
+    foaf:lastName "Cappelle"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Tom";
+    foaf:lastName "Callens"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.signco.be/>;
+      foaf:name "Signco"
+    ];
+    foaf:firstName "Gert";
+    foaf:lastName "Brackman"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Veerle";
+    foaf:lastName "Beyaert"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.ngi.be/website/>;
+      foaf:name "Nationaal Geografisch Instituut"
+    ];
+    foaf:firstName "Jasper";
+    foaf:lastName "Beernaerts"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.icomsdetections.com/nl/home/>;
+      foaf:name "Icoms Detections"
+    ];
+    foaf:firstName "Cécile";
+    foaf:lastName "Bauvin"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.swarco.com/>;
+      foaf:name "SWARCO Belgium"
+    ];
+    foaf:firstName "Danny";
+    foaf:lastName "Asselman"
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>,
+    <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>,
+    <http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element>,
+    skos:Concept,
+    prov:Location,
+    <https://data.vlaanderen.be/ns/weg#Rijrichting>,
+    <https://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime>,
+    <https://data.vlaanderen.be/ns/weg#voertuigtype>,
+    <https://data.vlaanderen.be/ns/weg#rijrichting>,
+    <https://data.vlaanderen.be/ns/observaties-en-metingen/#Observatie.uitgevoerdDoor>,
+    <https://data.vlaanderen.be/ns/netwerk#netwerkreferentie>,
+    <http://www.w3.org/ns/sosa/phenomenonTime>,
+    <http://www.w3.org/ns/sosa/madeBySensor>,
+    dc11:type,
+    <http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape>,
+    <http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve.shape>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality>,
+    <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result>;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Eveline";
+    foaf:lastName "Vlassenroot"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Laurens";
+    foaf:lastName "Vercauteren"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Ziggy";
+    foaf:lastName "Vanlishout"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Liesbeth";
+    foaf:lastName "Van der Haegen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Geert";
+    foaf:lastName "Thijs"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Pieter";
+    foaf:lastName "Desmijter"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Yaron";
+    foaf:lastName "Dassonneville"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Raf";
+    foaf:lastName "Buylle"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Veerle";
+    foaf:lastName "Beyaert"
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.imec.be/nl>;
+      foaf:name "IMEC"
+    ];
+    foaf:firstName "Yanick";
+    foaf:lastName "Van Hoeymissen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Steven";
+    foaf:lastName "Logghe"
+  ] .

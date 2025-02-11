@@ -1,0 +1,387 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dc:type a rdfs:Class;
+  rdfs:label "InputType"@nl .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#DirecteLocatieAanduiding> a owl:Class;
+  rdfs:label "DirecteLocatieAanduiding"@nl;
+  rdfs:comment "Een specifieke plaats wordt aangeduid door middel van coördinaten,zoals breedte- en lengtegraden."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren>;
+  rdfs:subClassOf prov:Location .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObject.type> a owl:ObjectProperty;
+  rdfs:label "type"@nl;
+  rdfs:comment "Typering van het ruimtelijk object, i.e., schaalniveau."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObject>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren>;
+  rdfs:range <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObjectType> .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#geldigheid> a owl:ObjectProperty;
+  rdfs:label "geldigheid"@nl;
+  rdfs:comment "Periode waarin de grenzen van een ruimtelijk object ongewijzigd bleven."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObject>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren>;
+  rdfs:range <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#locatie> a owl:ObjectProperty;
+  rdfs:label "locatie"@nl;
+  rdfs:comment "Geografische positie van het ruimtelijk object."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObject>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren>;
+  rdfs:range prov:Location .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#naam> a owl:DatatypeProperty;
+  rdfs:label "naam"@nl;
+  rdfs:comment "Benaming van het ruimtelijk object."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObject>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren>;
+  rdfs:range rdf:langString .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#referentie> a owl:ObjectProperty;
+  rdfs:label "referentie"@nl;
+  rdfs:comment "Referentie naar het ruimtelijk object (plaats of adres) dat gebruikt wordt als indirecte locatie aanduiding."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#IndirecteLocatieAanduiding>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren>;
+  rdfs:range <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObject> .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#relatieType> a owl:ObjectProperty;
+  rdfs:label "relatietype"@nl;
+  rdfs:comment "Typering van de relatie tussen twee ruimtelijke objecten."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObjectRelatie>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren>;
+  rdfs:range <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObjectRelatieType> .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#ruimtelijkeIndicatorType> a owl:ObjectProperty;
+  rdfs:label "ruimtelijke indicatortype"@nl;
+  rdfs:comment "Aanduiding van de ruimtelijke indicator die bestudeerd wordt."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkeIndicator>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren>;
+  rdfs:range <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkeIndicatorType> .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#toetsingType> a owl:ObjectProperty;
+  rdfs:label "toetsingtype"@nl;
+  rdfs:comment "Vergelijking van twee ruimtelijke indicatoren."@nl;
+  rdfs:domain <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkeIndicator>;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren>;
+  rdfs:range <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#ToetsingType> .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#IndirecteLocatieAanduiding> a owl:Class;
+  rdfs:label "IndirecteLocatieAanduiding"@nl;
+  rdfs:comment "Een specifieke plaats wordt beschreven aan de hand van een herkenbare plaatsnaam of adres, waarbij de geografische ligging impliciet wordt weergegeven."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren>;
+  rdfs:subClassOf prov:Location .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObjectRelatie> a owl:Class;
+  rdfs:label "RuimtelijkObjectRelatie"@nl;
+  rdfs:comment "De geometrische en topologische verbindingen tussen geografische entiteiten."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren> .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObjectRelatieType> a owl:Class;
+  rdfs:label "RuimtelijkObjectRelatieType"@nl;
+  rdfs:comment "Classificatie van relaties tussen ruimtelijke objecten."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren> .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObjectType> a owl:Class;
+  rdfs:label "RuimtelijkObjectType"@nl;
+  rdfs:comment "Classificatie van ruimtelijke objecten."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren> .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkeIndicatorType> a owl:Class;
+  rdfs:label "RuimtelijkeIndicatorType"@nl;
+  rdfs:comment "Classificatie van ruimtelijke indicatoren."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren> .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#ToetsingType> a owl:Class;
+  rdfs:label "ToetsingType"@nl;
+  rdfs:comment "Aard van de toetsing van twee resultaten ten opzichte van elkaar."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren> .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#source> a rdf:Property;
+  rdfs:label "source"@nl .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#target> a rdf:Property;
+  rdfs:label "target"@nl .
+
+schemas:identifier a rdf:Property;
+  rdfs:label "identificator"@nl .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkeIndicator> a owl:Class;
+  rdfs:label "RuimtelijkeIndicator"@nl;
+  rdfs:comment "Kenmerk die één/meerdere aspecten gerelateerd aan de private of openbare ruimte in beeld brengt."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#RuimtelijkObject> a owl:Class;
+  rdfs:label "RuimtelijkObject"@nl;
+  rdfs:comment "Een entiteit met ruimtelijke kenmerken en een vaste geografische ligging."@nl;
+  rdfs:isDefinedBy <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren>;
+  rdfs:subClassOf <http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature> .
+
+<https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren> a owl:Ontology;
+  rdfs:label "ruimtelijke-indicatoren-voc"@en,
+    "ruimtelijke-indicatoren-voc"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://omgeving.vlaanderen.be/>;
+      foaf:name "Departement Omgeving"
+    ];
+    foaf:firstName "Peter";
+    foaf:lastName "Willems"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.kenniscentrumvlaamsesteden.be/Paginas/home.aspx>;
+      foaf:name "Kenniscentrum Vlaamse Steden"
+    ];
+    foaf:firstName "Joris";
+    foaf:lastName "Voets"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.antwerpen.be/>;
+      foaf:name "Stad Antwerpen"
+    ];
+    foaf:firstName "Heidi";
+    foaf:lastName "Vandenbroecke"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.antwerpen.be/>;
+      foaf:name "Stad Antwerpen"
+    ];
+    foaf:firstName "Gert";
+    foaf:lastName "Van Oost"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://omgeving.vlaanderen.be/>;
+      foaf:name "Departement Omgeving"
+    ];
+    foaf:firstName "Hans";
+    foaf:lastName "Van Den Berg"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.antwerpen.be/>;
+      foaf:name "Stad Antwerpen"
+    ];
+    foaf:firstName "Virge";
+    foaf:lastName "Smets"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://vito.be/en>;
+      foaf:name "VITO"
+    ];
+    foaf:firstName "Lien";
+    foaf:lastName "Poelmans"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.leiedal.be/>;
+      foaf:name "Intercommunale Leiedal"
+    ];
+    foaf:firstName "David";
+    foaf:lastName "Lingier"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://lv.vlaanderen.be/>;
+      foaf:name "Agentschap Landbouw en Visserij"
+    ];
+    foaf:firstName "Bart";
+    foaf:lastName "Laridon"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.mechelen.be/>;
+      foaf:name "Stad Mechelen"
+    ];
+    foaf:firstName "Stephanie";
+    foaf:lastName "De Deken"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaamsbrabant.be/nl>;
+      foaf:name "Provincie Vlaams-Brabant"
+    ];
+    foaf:firstName "Tom";
+    foaf:lastName "De Bruyn"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.west-vlaanderen.be/>;
+      foaf:name "Provincie West-Vlaanderen"
+    ];
+    foaf:firstName "Hilde";
+    foaf:lastName "Coudenys"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://omgeving.vlaanderen.be/>;
+      foaf:name "Departement Omgeving"
+    ];
+    foaf:firstName "Wouter";
+    foaf:lastName "Brems"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://district09.gent/nl>;
+      foaf:name "District09"
+    ];
+    foaf:firstName "An";
+    foaf:lastName "Bernaert"
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso dc:type,
+    schemas:identifier,
+    <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#target>,
+    <https://data.vlaanderen.be/ns/RuimtelijkeIndicatoren#source>;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Eveline";
+    foaf:lastName "Vlassenroot"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Laurens";
+    foaf:lastName "Vercauteren"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Ziggy";
+    foaf:lastName "Vanlishout"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Liesbeth";
+    foaf:lastName "Van der Haegen"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Geert";
+    foaf:lastName "Thijs"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Vincent";
+    foaf:lastName "Feremans";
+    foaf:mbox <mailto:vincent.feremans@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Raf";
+    foaf:lastName "Buyle"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Veerle";
+    foaf:lastName "Beyaert"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Louise";
+    foaf:lastName " Ysewijn";
+    foaf:mbox <mailto:louise.ysewijn@vlaanderen.be>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.leiedal.be/>;
+      foaf:name "Intercommunale Leiedal"
+    ];
+    foaf:firstName "Inge";
+    foaf:lastName "Wydhooge"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.leiedal.be/>;
+      foaf:name "Intercommunale Leiedal"
+    ];
+    foaf:firstName "Lucas";
+    foaf:lastName "Verbanck"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.leiedal.be/>;
+      foaf:name "Intercommunale Leiedal"
+    ];
+    foaf:firstName "Bram";
+    foaf:lastName "Tack"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://stad.gent/nl>;
+      foaf:name "Stad Gent"
+    ];
+    foaf:firstName "Kim";
+    foaf:lastName "Paduwat"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://stad.gent/nl>;
+      foaf:name "Stad Gent"
+    ];
+    foaf:firstName "Dieter";
+    foaf:lastName "Nieuwborg"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.leiedal.be/>;
+      foaf:name "Intercommunale Leiedal"
+    ];
+    foaf:firstName "Thomas";
+    foaf:lastName "Goemaere"
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://stad.gent/nl>;
+      foaf:name "Stad Gent"
+    ];
+    foaf:firstName "Jan";
+    foaf:lastName "Godderis"
+  ] .
