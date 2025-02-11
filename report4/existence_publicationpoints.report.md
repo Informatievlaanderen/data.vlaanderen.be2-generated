@@ -313,3 +313,76 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/dev/loongegevens.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/loongegevens/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/dev/mandaat.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/mandaat/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/dev/melding.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/melding/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/generieke-terugmeldfaciliteit/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/dev/metadata-dcat-vl.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/metadata-dcat.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/metadata-dcat/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/dev/metadata-geo-dcat-vl.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/mobiliteit-intelligente-toegang.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/mobiliteit-intelligente-toegang/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/mobiliteit-intelligente-toegang/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/dev/mobiliteit.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/mobiliteitsbudget.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/notificatie.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/notificatie/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/index.html'
+

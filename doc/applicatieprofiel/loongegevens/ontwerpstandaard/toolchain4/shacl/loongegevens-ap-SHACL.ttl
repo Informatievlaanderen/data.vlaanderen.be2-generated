@@ -1,0 +1,474 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schemas: <https://schema.org/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/AdresvoorstellingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Adresvoorstelling.Huisnummer>;
+    shacl:datatype xsd:string;
+    shacl:description "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."@nl;
+    shacl:maxCount "1";
+    shacl:name "huisnummer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Adresvoorstelling.Busnummer>;
+    shacl:datatype xsd:string;
+    shacl:description "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."@nl;
+    shacl:maxCount "1";
+    shacl:name "busnummer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Adresvoorstelling.Postcode>;
+    shacl:datatype xsd:string;
+    shacl:description "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:name "postcode"@nl;
+    shacl:path <http://www.w3.org/ns/locn#postCode>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Adresvoorstelling.Straatnaam>;
+    shacl:class <https://w3.org/1999/02/22-rdf-syntax-ns#langString>;
+    shacl:description "Straatnaam vh adres."@nl;
+    shacl:maxCount "1";
+    shacl:name "straatnaam"@nl;
+    shacl:path <http://www.w3.org/ns/locn#thoroughfare>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Adresvoorstelling.Gemeentenaam>;
+    shacl:class <https://w3.org/1999/02/22-rdf-syntax-ns#langString>;
+    shacl:description "Gemeentenaam vh adres."@nl;
+    shacl:maxCount "1";
+    shacl:name "gemeentenaam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#gemeentenaam>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Adresvoorstelling.Land>;
+    shacl:class <https://w3.org/1999/02/22-rdf-syntax-ns#langString>;
+    shacl:description "Land waarin het adres gelegen is."@nl;
+    shacl:maxCount "1";
+    shacl:name "land"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#land>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Address> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/ArbeidsloonShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Bedrijfswagen>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Een voertuig dat door de werkgever aan de werknemer ter beschikking wordt gesteld, als onderdeel van het loonpakket."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "bedrijfswagen"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#bedrijfswagen>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Maaltijdcheques>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Een maaltijdcheque is een extralegaal voordeel dat een werknemer van zijn/haar werkgever krijgt. Het is een bijdrage van de werkgever voor de kosten van de werknemer voor maaltijden."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "maaltijdcheques"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#maaltijdcheques>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Vakantiegeld>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "Dit is een jaarlijkse toelage die een werknemer krijgt om de extra kosten van vakantie te dekken."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "vakantiegeld"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#vakantiegeld>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Supplementairebelastbarebedragen>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "Bijkomende sommen die aan het brutoloon toegevoegd worden. Deze zijn vrijgesteld van inhoudingen voor de sociale zekerheid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "supplementaireBelastbareBedragen"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#supplementaireBelastbareBedragen>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Verloningsperiode>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "Een bepaalde tijdsduur met een start- en eindmoment die dient als referentie voor de bepaling van het brutoloon."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "verloningsperiode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#verloningsperiode>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Brutoloon>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "De som van alle loonelementen voor sociale en fiscale inhoudingen."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "brutoloon"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#brutoloon>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Nettoloon>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "Het nettoloon is het brutoloon waar de sociale zekerheidsbijdrage en de bedrijfsvoorheffing van afgetrokken zijn."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "nettoloon"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#nettoloon>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Inhoudingenvoordesocialezekerheid>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "Dit is een bedrag van het arbeidsloon dat wordt ingehouden om de sociale zekerheid te financieren."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "inhoudingenVoorDeSocialeZekerheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#inhoudingenVoorDeSocialeZekerheid>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Supplementairenettobedragen>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "Bijkomende netto sommen die aan het nettoloon toegevoegd worden. Deze zijn vrijgesteld van belastingen en RSZ."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "supplementaireNettoBedragen"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#supplementaireNettoBedragen>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Bedrijfsvoorheffing>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "Voorschot op de definitieve inkomstenbelasting."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "bedrijfsvoorheffing"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#bedrijfsvoorheffing>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Aftetrekkennettobedragen>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "Verplichte inhoudingen door de werkgever."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "afTeTrekkenNettoBedragen"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#afTeTrekkenNettoBedragen>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Periodiciteitverloning>;
+    shacl:class skos:Concept;
+    shacl:description "Heeft betrekking op het verschil tussen een éénmalige verloning en een periodieke verloning."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "periodiciteitVerloning"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#periodiciteitVerloning>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Collectieveschuldenregeling>;
+    shacl:class skos:Concept;
+    shacl:description "Bij collectieve schuldenregeling wordt een afbetalingsplan opgestelt voor het betalen van schulden aan de schuldeisers. Het loon van een persoon wordt gestort en volgens de opgestelde regeling verdeelt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "collectieveSchuldenregeling"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#collectieveSchuldenregeling>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Nettogestortloon>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "Het werkelijk gestorte loon op de rekening van de persoon."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "nettoGestortLoon"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#nettoGestortLoon>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Eindejaarstoelage>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "Een eindejaarstoelage is een financiële bonus die een persoon krijgt van zijn/haar werkgever op het einde van het jaar. Er moeten sociale zekerheidsbijdragen en belastingen op betaald worden."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "eindejaarstoelage"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#eindejaarstoelage>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Premie>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "Dit is een deel van het loon dat afhankelijk is van geleverde prestaties."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "premie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#premie>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Belastbaremaaltijdcheques>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "Een belastbare maaltijdcheque is een maaltijdchecque met een bedrag boven het wettelijk plafond voor belastingvrije maaltijdcheques. Ze worden apart vermeld op de loonbrief."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "belastbareMaaltijdcheques"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#belastbareMaaltijdcheques>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Cheques>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "Een cheque bevat een bepaalde som geld. Bv.Ecocheques"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "cheques"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#cheques>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Arbeidsrelatie>;
+    shacl:class <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie>;
+    shacl:description "De betrekking tussen werkgevers en werknemers die ontstaat bij loonarbeid na afsluiting van een arbeidsovereenkomst."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "arbeidsrelatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#arbeidsrelatie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/ArbeidsrelatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsrelatie.Bankrekeningnummer>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Een rekeningnummer dat gelinkt is aan de arbeidsrelatie. Op dit rekeningnummer wordt het arbeidsloon van de persoon gestort."@nl;
+    shacl:maxCount "1";
+    shacl:name "bankrekeningnummer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#bankrekeningnummer>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsrelatie.Contractperiode>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "Periode waarover in een arbeidscontract een overeenkomst is afgesloten. Een contractperiode heeft een begindatum, en in sommige gevallen een einddatum. Dat is dan de uitdienstdatum."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "contractperiode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#contractperiode>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsrelatie.Overeenkomst>;
+    shacl:class skos:Concept;
+    shacl:description "Voltijds of deeltijds."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "overeenkomst"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#overeenkomst>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsrelatie.Tewerkstellingsbreuk>;
+    shacl:class <https://data.vlaanderen.be/ns/loongegevens#Tewerkstellingsbreuk>;
+    shacl:description "Het gemiddeld aantal uren per week waarin de werknemer geacht wordt te werken op basis van zijn contract, gedeeld door het gemiddeld aantal uren per week waarin een modelpersoon geacht wordt te werken."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "tewerkstellingsbreuk"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#tewerkstellingsbreuk>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsrelatie.Statuut>;
+    shacl:class skos:Concept;
+    shacl:description "Werknemer, ambtenaar, student, ..."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "statuut"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#statuut>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsrelatie.Arbeidsloon>;
+    shacl:class <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon>;
+    shacl:description "Het bedrag dat een persoon ontvangt voor geleverde prestaties in arbeidsverband. Het kan gaan om een financieel bedrag, een bedrag in natura, vergoedingen, etc."@nl;
+    shacl:name "arbeidsloon"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#arbeidsloon>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/BankrekeningShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Bankrekening.Bankrekeningnummer>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Een uniek nummer dat wordt toegekend aan een rekening bij een bank."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "bankrekeningnummer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#bankrekeningnummer>
+  ];
+  shacl:targetClass schemas:BankAccount .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/BooleanShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:boolean .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/DateShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:date .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/DatetimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/GeldbedragShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Geldbedrag.Valuta>;
+    shacl:class skos:Concept;
+    shacl:description "Munteenheid waarin het geldbedrag is gedefinieerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "valuta"@nl;
+    shacl:path schemas:currency
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Geldbedrag.Waarde>;
+    shacl:class schemas:Number;
+    shacl:description "Getal dat de waarde van het geldbedrag uitdrukt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path schemas:value
+  ];
+  shacl:targetClass schemas:MonetaryAmount .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/GeregistreerdPersoonShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#GeregistreerdPersoon.Registratie>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificatiecode vd persoon ih register."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "registratie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#registratie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/GeregistreerdeorganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Geregistreerdeorganisatie.Registratie>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificator dat de organisatie verkreeg bij registratie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "registratie"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#registration>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Geregistreerdeorganisatie.Rechtsvorm>;
+    shacl:class skos:Concept;
+    shacl:description "Juridisch statuut van de geregistreerde organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "rechtsvorm"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#rechtsvorm>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/regorg#RegisteredOrganization> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/GetypeerdeStringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Literal .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/GezinShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Gezin> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/InkomstShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/loongegevens#Inkomst> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/IntegerShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:integer .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/Nal_currencyShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/OrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Organisatie.Voorkeursnaam>;
+    shacl:class <https://w3.org/1999/02/22-rdf-syntax-ns#langString>;
+    shacl:description "Naam waarmee de organisatie bij voorkeur wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "voorkeursnaam"@nl;
+    shacl:path skos:prefLabel
+  ];
+  shacl:targetClass org:Organization .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/OvereenkomsttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/PeriodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Periode.Begin>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Aanvaang van dae tijdsduur."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "begin"@nl;
+    shacl:path <http://data.europa.eu/m8g/startTime>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Periode.Einde>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Einde vd tijdsduur."@nl;
+    shacl:maxCount "1";
+    shacl:name "einde"@nl;
+    shacl:path <http://data.europa.eu/m8g/endTime>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/PersoonShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Persoon.Volledigenaam>;
+    shacl:datatype xsd:string;
+    shacl:description "De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "volledigeNaam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#volledigeNaam>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Persoon.Geboortedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de Geboorte plaatsvond."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geboortedatum"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#Persoon.geboortedatum>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Persoon.Personenfiscaaltenlaste>;
+    shacl:datatype xsd:integer;
+    shacl:description "Personen die niet over een inkomen beschikken, of een netto jaarinkomen hebben dat lager is dan wettelijk vastgelegd voor deze regeling, en onder hetzelfde dak wonen als de persoon die voor hen moet voorzien."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "personenFiscaalTenLaste"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#personenFiscaalTenLaste>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Persoon.Verblijfplaats>;
+    shacl:class <https://data.vlaanderen.be/ns/persoon#Verblijfplaats>;
+    shacl:description "Plaats waar een persoon verblijft."@nl;
+    shacl:name "verblijfplaats"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#Persoon.verblijfplaats>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/person#Person> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/RechtsvormtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/SchuldbemiddelingstypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/StatuuttypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/StringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/TewerkstellingsbreukShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/loongegevens#Tewerkstellingsbreuk> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/VerblijfplaatsShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Verblijfplaats.Verblijfsadres>;
+    shacl:class <http://www.w3.org/ns/locn#Address>;
+    shacl:description "Plaats waar een persoon al dan niet tijdelijk woont of logeert."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "verblijfsadres"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#verblijfsadres>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Verblijfplaats> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/VerloningstypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
