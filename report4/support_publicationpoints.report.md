@@ -80,6 +80,26 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/lokale-economie.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/loongegevens.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/mandaat.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/melding.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/metadata-dcat-vl.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/metadata-dcat.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/metadata-geo-dcat-vl.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/mobiliteit-intelligente-toegang.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/mobiliteit.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/mobiliteitsbudget.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/notificatie.publication.json
+#||#  
 #||# checking publication points in directory /home/circleci/project/config/production
 #||# 
 Error: the following directories are unsupported
@@ -110,13 +130,23 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/gebieden",
   "/tmp/generated/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
   "/tmp/generated/doc/applicatieprofiel/infrastructuurelementen",
+  "/tmp/generated/doc/applicatieprofiel/inname-openbaar-domein",
   "/tmp/generated/doc/applicatieprofiel/leerinschrijfcredential/kandidaatstandaard/2024-05-16",
   "/tmp/generated/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17",
-  "/tmp/generated/doc/applicatieprofiel/inname-openbaar-domein",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteitsbudget/ontwerpstandaard/2023-01-16",
+  "/tmp/generated/doc/applicatieprofiel/notificatie-basis",
+  "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL",
+  "/tmp/generated/doc/applicatieprofiel/generieke-terugmeldfaciliteit",
+  "/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties",
+  "/tmp/generated/doc/applicatieprofiel/metadata-dcat",
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
+  "/tmp/generated/doc/vocabularium/mobiliteit/Hoppinpunten/kandidaatstandaard/2022-04-01",
+  "/tmp/generated/doc/vocabularium/mobiliteit/vervoersknooppunten/kandidaatstandaard/2022-04-01",
+  "/tmp/generated/doc/vocabularium/mobiliteit/vervoersknooppunten/erkendestandaard/2022-12-01",
   "/tmp/generated/ns/FeitelijkeVerenigingen",
   "/tmp/generated/ns/bodem-en-ondergrond",
   "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
   "/tmp/generated/ns/grondboringen",
-  "/tmp/generated/ns/leercredential"
+  "/tmp/generated/ns/leercredential",
+  "/tmp/generated/ns/metadata-dcat"
 ]
