@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-02-11T15:25:28.340Z error: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3436)".
+2025-02-12T14:52:09.373Z error: Unable to find the description for subject "[urn:oslo-toolchain:cd4b3e1f5a983b27d13278fc576b806ac2c9ab043cb746cabc4eaeda491eb9aa](all-kindfiche-ap.jsonld#L3436)".
 
-2025-02-11T15:25:28.343Z error: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3590)".
+2025-02-12T14:52:09.376Z error: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-kindfiche-ap.jsonld#L3590)".
 
