@@ -508,8 +508,10 @@ error: missing '/tmp/generated/doc/applicatieprofiel/verkeersborden/ontwerpstand
 #||#    + checking /home/circleci/project/config/production/verkeersmetingen.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated/doc/vocabularium/verkeersmetingen/erkendestandaard/2024-04-17'
 
 index.html check
+error: missing '/tmp/generated/doc/vocabularium/verkeersmetingen/erkendestandaard/2024-04-17/index.html'
 
 #||#    + checking /home/circleci/project/config/production/vervoersknooppunten.publication.json
 #||# 
