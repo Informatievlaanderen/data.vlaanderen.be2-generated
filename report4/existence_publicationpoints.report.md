@@ -71,6 +71,14 @@ index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bodem/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bodem/ontwerpstandaard/toolchain4/index.html'
 
+#||#    + checking /home/circleci/project/config/dev/bo-grondwatermeetnet.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondwatermeetnet/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/grondwatermeetnet/ontwerpstandaard/toolchain4/index.html'
+
 #||#    + checking /home/circleci/project/config/dev/bo-interpretaties.publication.json
 #||# 
 Directory check
@@ -80,6 +88,16 @@ error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bo-inte
 error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/interpretaties/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/interpretaties/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/dev/bo-observaties.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/observaties/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/observaties/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/bo-sonderingen.publication.json
 #||# 
@@ -98,12 +116,6 @@ error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bodem-e
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bodem-en-ondergrond/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/grondboringen/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/observaties/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/observaties/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondwatermeetnet/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/grondwatermeetnet/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/contactvoorkeuren.publication.json
 #||# 
