@@ -20,6 +20,10 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/bo-bodem.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/dev/bo-interpretaties.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/bo-sonderingen.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/bodem-en-ondergrond.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/contactvoorkeuren.publication.json
