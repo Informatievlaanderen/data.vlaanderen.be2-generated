@@ -20,6 +20,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/bo-bodem.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/dev/bo-grondboringen.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/bo-grondwatermeetnet.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/bo-interpretaties.publication.json

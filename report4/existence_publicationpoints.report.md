@@ -71,6 +71,14 @@ index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bodem/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bodem/ontwerpstandaard/toolchain4/index.html'
 
+#||#    + checking /home/circleci/project/config/dev/bo-grondboringen.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/grondboringen/ontwerpstandaard/toolchain4/index.html'
+
 #||#    + checking /home/circleci/project/config/dev/bo-grondwatermeetnet.publication.json
 #||# 
 Directory check
@@ -114,8 +122,6 @@ Directory check
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bodem-en-ondergrond/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/grondboringen/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/contactvoorkeuren.publication.json
 #||# 
