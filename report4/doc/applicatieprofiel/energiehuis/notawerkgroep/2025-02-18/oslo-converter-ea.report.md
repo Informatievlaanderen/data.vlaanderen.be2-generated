@@ -2,63 +2,63 @@
 
 #||# -------------------------------------
 
-2025-02-18T20:00:05.959Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-02-18T20:28:23.451Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-18T20:00:05.961Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO) and fallback URI (http://todo.com/) will be assigned.
+2025-02-18T20:28:23.452Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-18T20:00:05.961Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-02-18T20:28:23.452Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-18T20:00:05.961Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:IPDC-LPDC:classes) and fallback URI (http://todo.com/) will be assigned.
+2025-02-18T20:28:23.453Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:IPDC-LPDC:classes) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-18T20:00:05.961Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:IPDC-LPDC:codelijsten) and fallback URI (http://todo.com/) will be assigned.
+2025-02-18T20:28:23.453Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:IPDC-LPDC:codelijsten) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-18T20:00:05.961Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:IPDC-LPDC:data types) and fallback URI (http://todo.com/) will be assigned.
+2025-02-18T20:28:23.453Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:IPDC-LPDC:data types) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-18T20:00:05.961Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:schema-org) and fallback URI (http://todo.com/) will be assigned.
+2025-02-18T20:28:23.453Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:schema-org) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-18T20:00:05.961Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
+2025-02-18T20:28:23.453Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-18T20:00:05.961Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-02-18T20:28:23.453Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-18T20:00:05.961Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:W3C-Time) and fallback URI (http://todo.com/) will be assigned.
+2025-02-18T20:28:23.453Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:W3C-Time) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-18T20:00:05.961Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon) and fallback URI (http://todo.com/) will be assigned.
+2025-02-18T20:28:23.453Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-18T20:00:05.962Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:QUDT) and fallback URI (http://todo.com/) will be assigned.
+2025-02-18T20:28:23.453Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:QUDT) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-18T20:00:05.962Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:skos) and fallback URI (http://todo.com/) will be assigned.
+2025-02-18T20:28:23.453Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:skos) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-18T20:00:05.962Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:Schema.org) and fallback URI (http://todo.com/) will be assigned.
+2025-02-18T20:28:23.454Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:Schema.org) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-18T20:00:05.962Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:FOAF) and fallback URI (http://todo.com/) will be assigned.
+2025-02-18T20:28:23.454Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:FOAF) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-18T20:00:05.974Z warn: [ConverterHandler]: Entity with path Model:Model:Schema.org:OpeningsurenSpecificatie has an empty value for tag ap-usageNote-nl.
+2025-02-18T20:28:23.472Z warn: [ConverterHandler]: Entity with path Model:Model:Schema.org:OpeningsurenSpecificatie has an empty value for tag ap-usageNote-nl.
 
-2025-02-18T20:00:05.983Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Dienst:PubliekeDienstverlening:naam).
+2025-02-18T20:28:23.480Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Dienst:PubliekeDienstverlening:naam).
 
-2025-02-18T20:00:05.983Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Dienst:PubliekeDienstverlening:beschrijving has already a value for ap-usageNote-nl in language nl, but will be overwritten.
+2025-02-18T20:28:23.481Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Dienst:PubliekeDienstverlening:beschrijving has already a value for ap-usageNote-nl in language nl, but will be overwritten.
 
-2025-02-18T20:00:05.983Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Dienst:PubliekeDienstverlening:taal).
+2025-02-18T20:28:23.481Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Dienst:PubliekeDienstverlening:taal).
 
-2025-02-18T20:00:05.984Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Dienst:PubliekeDienstverlening:contactinfo).
+2025-02-18T20:28:23.481Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Dienst:PubliekeDienstverlening:contactinfo).
 
-2025-02-18T20:00:05.984Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Energiehuis:Geldbedrag:valuta).
+2025-02-18T20:28:23.481Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Energiehuis:Geldbedrag:valuta).
 
-2025-02-18T20:00:05.986Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Organisatie:Organisatie:contactinfo).
+2025-02-18T20:28:23.484Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Organisatie:Organisatie:contactinfo).
 
-2025-02-18T20:00:05.992Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Generiek:ContactInfo:beschikbaarheid).
+2025-02-18T20:28:23.487Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Generiek:ContactInfo:beschikbaarheid).
 
-2025-02-18T20:00:05.992Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Generiek:ContactInfo:adres).
+2025-02-18T20:28:23.487Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Generiek:ContactInfo:adres).
 
-2025-02-18T20:00:05.993Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Gebouw:Gebouw:adres).
+2025-02-18T20:28:23.489Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Gebouw:Gebouw:adres).
 
-2025-02-18T20:00:05.993Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Gebouw:Gebouweenheid:adres).
+2025-02-18T20:28:23.493Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Gebouw:Gebouweenheid:adres).
 
-2025-02-18T20:00:05.994Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:W3C-Time:Periode:^inEDTF).
+2025-02-18T20:28:23.495Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:W3C-Time:Periode:^inEDTF).
 
-2025-02-18T20:00:05.994Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:W3C-Time:Moment:inEDTF).
+2025-02-18T20:28:23.495Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:W3C-Time:Moment:inEDTF).
 
-2025-02-18T20:00:06.009Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Persoon:Persoon:contactinfo).
+2025-02-18T20:28:23.504Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Persoon:Persoon:contactinfo).
 
 #||# -------------------------------------
 
