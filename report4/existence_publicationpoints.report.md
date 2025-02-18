@@ -102,8 +102,6 @@ error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/interpretati
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/bo-sonderingen.publication.json
 #||# 
