@@ -2,111 +2,63 @@
 
 #||# -------------------------------------
 
-2025-02-20T17:07:41.392Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-02-24T10:26:46.904Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-20T17:07:41.394Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
+2025-02-24T10:26:46.906Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-20T17:07:41.394Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-02-24T10:26:46.906Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-20T17:07:41.394Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:W3C-Time) and fallback URI (http://todo.com/) will be assigned.
+2025-02-24T10:26:46.906Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:W3C-Time) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-20T17:07:41.394Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon) and fallback URI (http://todo.com/) will be assigned.
+2025-02-24T10:26:46.906Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-20T17:07:41.394Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:QUDT) and fallback URI (http://todo.com/) will be assigned.
+2025-02-24T10:26:46.907Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:QUDT) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-20T17:07:41.394Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:skos) and fallback URI (http://todo.com/) will be assigned.
+2025-02-24T10:26:46.907Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:skos) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-20T17:07:41.394Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:Schema.org) and fallback URI (http://todo.com/) will be assigned.
+2025-02-24T10:26:46.907Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:Schema.org) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-20T17:07:41.394Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:FOAF) and fallback URI (http://todo.com/) will be assigned.
+2025-02-24T10:26:46.907Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:FOAF) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-20T17:07:41.398Z warn: [ConnectorConverterHandler]: Connector (isSuborganisatieVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-24T10:26:46.913Z warn: [ConnectorConverterHandler]: Connector (verrichtDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-20T17:07:41.398Z warn: [ConnectorConverterHandler]: Connector (heeftVerantwoordelijke) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-24T10:26:46.913Z warn: [ConnectorConverterHandler]: Connector (verricht) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-20T17:07:41.398Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftVerantwoordelijke) and the fallback URI (http://todo.com/) will be assigned.
+2025-02-24T10:26:46.914Z warn: [ConnectorConverterHandler]: Connector (gerenoveerdGebouw) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-20T17:07:41.398Z warn: [ConnectorConverterHandler]: Connector (produceert) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-24T10:26:46.914Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (gerenoveerdGebouw) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-02-20T17:07:41.398Z warn: [ConnectorConverterHandler]: Connector (participeertIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-24T10:26:46.914Z warn: [ConnectorConverterHandler]: Connector (gerenoveerdeGebouweenheid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-20T17:07:41.398Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (participeertIn) and the fallback URI (http://todo.com/) will be assigned.
+2025-02-24T10:26:46.914Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (gerenoveerdeGebouweenheid) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-02-20T17:07:41.398Z warn: [ConnectorConverterHandler]: Connector (heeftParticipant) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-24T10:26:46.919Z warn: [ConverterHandler]: Entity with path Model:Model:Schema.org:OpeningsurenSpecificatie has an empty value for tag ap-usageNote-nl.
 
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftParticipant) and the fallback URI (http://todo.com/) will be assigned.
+2025-02-24T10:26:46.932Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Dienst:PubliekeDienstverlening:beschrijving has already a value for ap-usageNote-nl in language nl, but will be overwritten.
 
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Connector (Participatie.PubliekeDienstverlening) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-24T10:26:46.932Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Dienst:PubliekeDienstverlening:taal).
 
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Connector (Participatie.Agent) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-24T10:26:46.932Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Dienst:PubliekeDienstverlening:contactinfo).
 
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Participatie.Agent) and the fallback URI (http://todo.com/) will be assigned.
+2025-02-24T10:26:46.933Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:Schema.org:Geldbedrag:valuta).
 
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Connector (teConsumerenVia) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-24T10:26:46.935Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Organisatie:Organisatie:contactinfo).
 
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Connector (verrichtDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-24T10:26:46.935Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Energiehuis:Financieringsoutput:gefinancierdDoor).
 
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Connector (verricht) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-24T10:26:46.938Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Generiek:ContactInfo:beschikbaarheid).
 
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Connector (gerenoveerdGebouw) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-24T10:26:46.938Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Generiek:ContactInfo:adres).
 
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (gerenoveerdGebouw) and the fallback URI (http://todo.com/) will be assigned.
+2025-02-24T10:26:46.939Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Gebouw:Gebouw:adres).
 
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Connector (bestaatUit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-24T10:26:46.940Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Gebouw:Gebouweenheid:adres).
 
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Connector (gerenoveerdeGebouweenheid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-02-24T10:26:46.940Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:W3C-Time:Periode:^inEDTF).
 
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (gerenoveerdeGebouweenheid) and the fallback URI (http://todo.com/) will be assigned.
+2025-02-24T10:26:46.941Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:W3C-Time:Moment:inEDTF).
 
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Connector (financieringVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (financieringVan) and the fallback URI (http://todo.com/) will be assigned.
-
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Connector (financiering) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (financiering) and the fallback URI (http://todo.com/) will be assigned.
-
-2025-02-20T17:07:41.399Z warn: [ConnectorConverterHandler]: Connector (begeleidingVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-20T17:07:41.400Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (begeleidingVan) and the fallback URI (http://todo.com/) will be assigned.
-
-2025-02-20T17:07:41.400Z warn: [ConnectorConverterHandler]: Connector (verwijstNaar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-20T17:07:41.400Z warn: [ConnectorConverterHandler]: Connector (heeftRelatieMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-20T17:07:41.400Z warn: [ConnectorConverterHandler]: Connector (Persoon (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-20T17:07:41.400Z warn: [ConnectorConverterHandler]: Connector (Persoon (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-20T17:07:41.402Z warn: [ConverterHandler]: Entity with path Model:Model:Schema.org:OpeningsurenSpecificatie has an empty value for tag ap-usageNote-nl.
-
-2025-02-20T17:07:41.408Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Dienst:PubliekeDienstverlening:naam).
-
-2025-02-20T17:07:41.408Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Dienst:PubliekeDienstverlening:beschrijving has already a value for ap-usageNote-nl in language nl, but will be overwritten.
-
-2025-02-20T17:07:41.408Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Dienst:PubliekeDienstverlening:taal).
-
-2025-02-20T17:07:41.408Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Dienst:PubliekeDienstverlening:contactinfo).
-
-2025-02-20T17:07:41.408Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:Schema.org:Geldbedrag:valuta).
-
-2025-02-20T17:07:41.413Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Organisatie:Organisatie:contactinfo).
-
-2025-02-20T17:07:41.414Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Energiehuis:Financieringsoutput:gefinancierdDoor).
-
-2025-02-20T17:07:41.415Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Generiek:ContactInfo:beschikbaarheid).
-
-2025-02-20T17:07:41.415Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Generiek:ContactInfo:adres).
-
-2025-02-20T17:07:41.416Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Gebouw:Gebouw:adres).
-
-2025-02-20T17:07:41.416Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Gebouw:Gebouweenheid:adres).
-
-2025-02-20T17:07:41.417Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:W3C-Time:Periode:^inEDTF).
-
-2025-02-20T17:07:41.417Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:W3C-Time:Moment:inEDTF).
-
-2025-02-20T17:07:41.424Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Persoon:Persoon:contactinfo).
+2025-02-24T10:26:46.948Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Persoon:Persoon:contactinfo).
 
 #||# -------------------------------------
 
