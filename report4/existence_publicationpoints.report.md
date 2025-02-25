@@ -269,6 +269,15 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/test/leermiddelen.publication.json
+#||# 
+Directory check
+error: missing '/tmp/generated/doc/vocabularium/leermiddelen/ontwerpstandaard/toolchain4'
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/leermiddelen/ontwerpstandaard/toolchain4/index.html'
+
 #||#    + checking /home/circleci/project/config/test/logies.publication.json
 #||# 
 Directory check

@@ -76,6 +76,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/leerinschrijfcredential.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/leermiddelen.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/logies.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/lokale-economie.publication.json
