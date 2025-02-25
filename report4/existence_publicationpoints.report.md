@@ -274,7 +274,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24/index.html'
 
 #||#    + checking /home/circleci/project/config/test/logies.publication.json
 #||# 

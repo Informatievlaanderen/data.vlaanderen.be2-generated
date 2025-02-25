@@ -1,3 +1,163 @@
 {
-  "@context": {}
+  "@context": {
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "CreatiefWerk": "https://schema.org/CreativeWork",
+    "Doel": "https://data.vlaanderen.be/ns/leermiddelen#Doel",
+    "Doelgroep": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Doeltype": "https://data.vlaanderen.be/ns/leermiddelen#DoelType",
+    "FormaatType": "https://data.vlaanderen.be/ns/leermiddelen#FormaatType",
+    "InteractieType": "https://data.vlaanderen.be/ns/leermiddelen#InteractieType",
+    "Leeractiviteit": "http://data.europa.eu/snb/model/elm/LearningActivity",
+    "Leeractiviteitspecificatie": "http://data.europa.eu/snb/model/elm/LearningActivitySpecification",
+    "Leermiddel": "https://data.vlaanderen.be/ns/leermiddelen#Leermiddel",
+    "LeermiddelType": "https://data.vlaanderen.be/ns/leermiddelen#LeermiddelType",
+    "LeermiddelVerzameling": "https://data.vlaanderen.be/ns/leermiddelen#LeermiddelVerzameling",
+    "Licentie": "https://data.vlaanderen.be/ns/leermiddelen#Licentie",
+    "MethodeType": "https://data.vlaanderen.be/ns/leermiddelen#MethodeType",
+    "OnderwerpType": "https://data.vlaanderen.be/ns/leermiddelen#OnderwerpType",
+    "Onderwijsniveau": "https://data.vlaanderen.be/ns/leermiddelen#Onderwijsniveau",
+    "ResultaatType": "https://data.vlaanderen.be/ns/leermiddelen#ResultaatType",
+    "Taal": "http://www.w3.org/2004/02/skos/core#Concept",
+    "auteursrechtJaar": {
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#auteursrechtJaar",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "begin": {
+      "@id": "http://data.europa.eu/m8g/startTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "behoortTot": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#behoortTot",
+      "@type": "https://data.vlaanderen.be/ns/leermiddelen#LeermiddelVerzameling"
+    },
+    "benodigdMateriaal": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#benodigdMateriaal",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "beschrijving": {
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#beschrijving",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "bestaatUit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#bestaatUit",
+      "@type": "https://data.vlaanderen.be/ns/leermiddelen#Doel"
+    },
+    "contacturen": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/snb/model/elm/contactHour",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "dient": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#dient",
+      "@type": "https://data.vlaanderen.be/ns/leermiddelen#Doel"
+    },
+    "einde": {
+      "@id": "http://data.europa.eu/m8g/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gedefinieerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#gedefinieerdDoor",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "generalisatieVan": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/snb/model/elm/generalisationOf",
+      "@type": "http://data.europa.eu/snb/model/elm/LearningActivitySpecification"
+    },
+    "geproduceerdDoor": {
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#geproduceerdDoor",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "gerelateerdAan": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#gerelateerdAan",
+      "@type": "https://data.vlaanderen.be/ns/leermiddelen#Doel"
+    },
+    "heeft": {
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#heeft",
+      "@type": "https://data.vlaanderen.be/ns/leermiddelen#Licentie"
+    },
+    "heeftDeel": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/snb/model/elm/hasPart",
+      "@type": "http://data.europa.eu/snb/model/elm/LearningActivitySpecification"
+    },
+    "instructie": {
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#instructie",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "isBrederDan": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#isBrederDan",
+      "@type": "https://data.vlaanderen.be/ns/leermiddelen#Doel"
+    },
+    "isDeelVan": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/snb/model/elm/isPartOf",
+      "@type": "http://data.europa.eu/snb/model/elm/LearningActivitySpecification"
+    },
+    "isSpecialisatieVan": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#isSpecialisatieVan",
+      "@type": "https://data.vlaanderen.be/ns/leermiddelen#Doel"
+    },
+    "naam": {
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#naam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "omvat": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#omvat",
+      "@type": "https://data.vlaanderen.be/ns/leermiddelen#Leermiddel"
+    },
+    "publicatieDatum": {
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#publicatieDatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "referentie": {
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#referentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "resultaatType": {
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#resultaatType",
+      "@type": "https://data.vlaanderen.be/ns/leermiddelen#ResultaatType"
+    },
+    "sleutelwoord": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#sleutelwoord",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "specialisatieVan": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/snb/model/elm/specialisationOf",
+      "@type": "http://data.europa.eu/snb/model/elm/LearningActivitySpecification"
+    },
+    "specificatie": {
+      "@id": "http://data.europa.eu/snb/model/elm/specifiedBy",
+      "@type": "http://data.europa.eu/snb/model/elm/LearningActivitySpecification"
+    },
+    "type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "vereiste": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#vereiste",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "versie": {
+      "@id": "https://data.vlaanderen.be/ns/leermiddelen#versie",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "workload": {
+      "@id": "http://data.europa.eu/snb/model/elm/workload",
+      "@type": "https://www.w3.org/TR/owl-time/#time:Duration"
+    }
+  }
 }
