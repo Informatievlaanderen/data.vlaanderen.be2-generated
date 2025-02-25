@@ -2,13 +2,13 @@
 
 #||# -------------------------------------
 
-2025-02-25T09:32:23.639Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-02-25T09:50:28.965Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-25T09:32:23.640Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
+2025-02-25T09:50:28.966Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-25T09:32:23.640Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen) and fallback URI (http://todo.com/) will be assigned.
+2025-02-25T09:50:28.966Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-25T09:32:23.640Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO Generiek) and fallback URI (http://todo.com/) will be assigned.
+2025-02-25T09:50:28.966Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO Generiek) and fallback URI (http://todo.com/) will be assigned.
 
 Error: [AttributeConverterHandler]: Invalid URL (validation date) for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leercredential:Accreditatie:validatieDatum)
 
