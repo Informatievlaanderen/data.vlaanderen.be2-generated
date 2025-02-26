@@ -194,6 +194,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17",
   "/tmp/generated/doc/applicatieprofiel/metadata-dcat",
   "/tmp/generated/doc/applicatieprofiel/mobiliteitsbudget/ontwerpstandaard/2023-01-16",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteitsbudget/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/notificatie-basis",
   "/tmp/generated/doc/applicatieprofiel/observaties-en-metingen",
   "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-03-18",
