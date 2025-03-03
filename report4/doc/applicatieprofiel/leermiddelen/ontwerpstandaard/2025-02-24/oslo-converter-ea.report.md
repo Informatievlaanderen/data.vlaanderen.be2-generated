@@ -2,85 +2,85 @@
 
 #||# -------------------------------------
 
-2025-03-03T15:52:57.234Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-03T15:54:38.631Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-03T15:52:57.235Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
+2025-03-03T15:54:38.632Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-03T15:52:57.235Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen) and fallback URI (http://todo.com/) will be assigned.
+2025-03-03T15:54:38.632Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-03T15:52:57.235Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO Generiek) and fallback URI (http://todo.com/) will be assigned.
+2025-03-03T15:54:38.632Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO Generiek) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-03T15:52:57.243Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doel:geldigheid).
+2025-03-03T15:54:38.640Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doel:geldigheid).
 
-2025-03-03T15:52:57.243Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:onderwerp).
+2025-03-03T15:54:38.640Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:onderwerp).
 
-2025-03-03T15:52:57.243Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doel:identificator).
+2025-03-03T15:54:38.640Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doel:identificator).
 
-2025-03-03T15:52:57.243Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doel:competentie).
+2025-03-03T15:54:38.640Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doel:competentie).
 
-2025-03-03T15:52:57.243Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:toegankelijkheid).
+2025-03-03T15:54:38.640Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:toegankelijkheid).
 
-2025-03-03T15:52:57.243Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doelgroep:leeftijdstype).
+2025-03-03T15:54:38.640Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doelgroep:leeftijdstype).
 
-2025-03-03T15:52:57.243Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doelgroep:doelgroep).
+2025-03-03T15:54:38.640Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doelgroep:doelgroep).
 
-2025-03-03T15:52:57.244Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doelgroep:onderwijsniveau).
+2025-03-03T15:54:38.640Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doelgroep:onderwijsniveau).
 
-2025-03-03T15:52:57.244Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:leermiddelType).
+2025-03-03T15:54:38.641Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:leermiddelType).
 
-2025-03-03T15:52:57.244Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doel:niveau).
+2025-03-03T15:54:38.641Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doel:niveau).
 
-2025-03-03T15:52:57.244Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:interactieType).
+2025-03-03T15:54:38.641Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:interactieType).
 
-2025-03-03T15:52:57.244Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leercredential:Leeractiviteit:ingerichtDoor).
+2025-03-03T15:54:38.641Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leercredential:Leeractiviteit:ingerichtDoor).
 
-2025-03-03T15:52:57.244Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leercredential:Leeractiviteit:locatie).
+2025-03-03T15:54:38.641Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leercredential:Leeractiviteit:locatie).
 
-2025-03-03T15:52:57.244Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:instructieTaal).
+2025-03-03T15:54:38.641Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:instructieTaal).
 
-2025-03-03T15:52:57.244Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leercredential:Leeractiviteit:periode).
+2025-03-03T15:54:38.641Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leercredential:Leeractiviteit:periode).
 
-2025-03-03T15:52:57.245Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:CreatiefWerk:auteur).
+2025-03-03T15:54:38.642Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:CreatiefWerk:auteur).
 
-2025-03-03T15:52:57.245Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Competentie:naam).
+2025-03-03T15:54:38.642Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Competentie:naam).
 
-2025-03-03T15:52:57.245Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Competentie:type).
+2025-03-03T15:54:38.642Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Competentie:type).
 
-2025-03-03T15:52:57.246Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doel:onderwerp).
+2025-03-03T15:54:38.642Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doel:onderwerp).
 
-2025-03-03T15:52:57.246Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:niveau).
+2025-03-03T15:54:38.643Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:niveau).
 
-2025-03-03T15:52:57.246Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:CreatiefWerk:auteursrechtHouder).
+2025-03-03T15:54:38.643Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:CreatiefWerk:auteursrechtHouder).
 
-2025-03-03T15:52:57.246Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:CreatiefWerk:taal).
+2025-03-03T15:54:38.643Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:CreatiefWerk:taal).
 
-2025-03-03T15:52:57.246Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leercredential:Leeractiviteitspecificatie:instructietaal).
+2025-03-03T15:54:38.643Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leercredential:Leeractiviteitspecificatie:instructietaal).
 
-2025-03-03T15:52:57.246Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leercredential:Leeractiviteitspecificatie:leervolume).
+2025-03-03T15:54:38.643Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leercredential:Leeractiviteitspecificatie:leervolume).
 
-2025-03-03T15:52:57.247Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doel:doelType).
+2025-03-03T15:54:38.644Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doel:doelType).
 
-2025-03-03T15:52:57.247Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doel:bron).
+2025-03-03T15:54:38.644Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Doel:bron).
 
-2025-03-03T15:52:57.247Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:CreatiefWerk:vereisteTijd).
+2025-03-03T15:54:38.644Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:CreatiefWerk:vereisteTijd).
 
-2025-03-03T15:52:57.247Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Referentie:eigenaar).
+2025-03-03T15:54:38.644Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Referentie:eigenaar).
 
-2025-03-03T15:52:57.248Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:kost).
+2025-03-03T15:54:38.644Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:kost).
 
-2025-03-03T15:52:57.248Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:formaat).
+2025-03-03T15:54:38.645Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:formaat).
 
-2025-03-03T15:52:57.248Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leercredential:Leeractiviteit:typeLeeractiviteit).
+2025-03-03T15:54:38.645Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leercredential:Leeractiviteit:typeLeeractiviteit).
 
-2025-03-03T15:52:57.248Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:competentie).
+2025-03-03T15:54:38.645Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:competentie).
 
-2025-03-03T15:52:57.248Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:bron).
+2025-03-03T15:54:38.645Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Leermiddelen:Leermiddel:bron).
 
-2025-03-03T15:52:57.249Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (heeft).
+2025-03-03T15:54:38.646Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (heeft).
 
-2025-03-03T15:52:57.249Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (geproduceerdDoor).
+2025-03-03T15:54:38.646Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (geproduceerdDoor).
 
-2025-03-03T15:52:57.250Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (gedeeldDoor).
+2025-03-03T15:54:38.646Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (gedeeldDoor).
 
 #||# -------------------------------------
 

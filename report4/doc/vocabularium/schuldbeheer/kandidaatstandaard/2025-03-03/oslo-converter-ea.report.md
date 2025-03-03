@@ -2,77 +2,91 @@
 
 #||# -------------------------------------
 
-2025-03-03T10:33:30.167Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-03T15:54:43.921Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-03T10:33:30.168Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO) and fallback URI (http://todo.com/) will be assigned.
+2025-03-03T15:54:43.923Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-03T10:33:30.168Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:playground) and fallback URI (http://todo.com/) will be assigned.
+2025-03-03T15:54:43.923Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:playground) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-03T10:33:30.168Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:FIBO) and fallback URI (http://todo.com/) will be assigned.
+2025-03-03T15:54:43.923Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:FIBO) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-03T10:33:30.168Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OMG) and fallback URI (http://todo.com/) will be assigned.
+2025-03-03T15:54:43.923Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OMG) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-03T10:33:30.168Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-03-03T15:54:43.923Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-03T10:33:30.168Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Schuldbeheer-master:visualization) and fallback URI (http://todo.com/) will be assigned.
+2025-03-03T15:54:43.923Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Schuldbeheer-master:visualization) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-03T10:33:30.173Z warn: [ConnectorConverterHandler]: Connector (afgeleidVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.927Z warn: [ConnectorConverterHandler]: Connector (afgeleidVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.173Z warn: [ConnectorConverterHandler]: Connector (vermindering) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.928Z warn: [ConnectorConverterHandler]: Connector (vermindering) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.173Z warn: [ConnectorConverterHandler]: Connector (grondslag) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.928Z warn: [ConnectorConverterHandler]: Connector (grondslag) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.173Z warn: [ConnectorConverterHandler]: Connector (wanbetalingsvergoeding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.928Z warn: [ConnectorConverterHandler]: Connector (wanbetalingsvergoeding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.173Z warn: [ConnectorConverterHandler]: Connector (betwisting) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.928Z warn: [ConnectorConverterHandler]: Connector (betwisting) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.173Z warn: [ConnectorConverterHandler]: Connector (rekentToeAan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.928Z warn: [ConnectorConverterHandler]: Connector (rekentToeAan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.173Z warn: [ConnectorConverterHandler]: Connector (toerekeningVanBetaling) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.928Z warn: [ConnectorConverterHandler]: Connector (toerekeningVanBetaling) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.173Z warn: [ConnectorConverterHandler]: Connector (aanmaning) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.928Z warn: [ConnectorConverterHandler]: Connector (aanmaning) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.174Z warn: [ConnectorConverterHandler]: Connector (oninbaarheidsverklaring) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.929Z warn: [ConnectorConverterHandler]: Connector (oninbaarheidsverklaring) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.174Z warn: [ConnectorConverterHandler]: Connector (wordtToegerekendDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.929Z warn: [ConnectorConverterHandler]: Connector (wordtToegerekendDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.174Z warn: [ConnectorConverterHandler]: Connector (toegerekendeBetaling) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.929Z warn: [ConnectorConverterHandler]: Connector (toegerekendeBetaling) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.174Z warn: [ConnectorConverterHandler]: Connector (herschikteSchuldvordering) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.929Z warn: [ConnectorConverterHandler]: Connector (herschikteSchuldvordering) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.174Z warn: [ConnectorConverterHandler]: Connector (afbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.929Z warn: [ConnectorConverterHandler]: Connector (afbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.174Z warn: [ConnectorConverterHandler]: Connector (schuldvorderingscategorie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.929Z warn: [ConnectorConverterHandler]: Connector (schuldvorderingscategorie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.174Z warn: [ConnectorConverterHandler]: Connector (genereertWanbetalingsvergoeding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.929Z warn: [ConnectorConverterHandler]: Connector (genereertWanbetalingsvergoeding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.174Z warn: [ConnectorConverterHandler]: Connector (isGerelateerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.929Z warn: [ConnectorConverterHandler]: Connector (isGerelateerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.174Z warn: [ConnectorConverterHandler]: Connector (bedoeldVoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.929Z warn: [ConnectorConverterHandler]: Connector (bedoeldVoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.174Z warn: [ConnectorConverterHandler]: Connector (aanleiding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.929Z warn: [ConnectorConverterHandler]: Connector (aanleiding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.174Z warn: [ConnectorConverterHandler]: Connector (voorstel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.929Z warn: [ConnectorConverterHandler]: Connector (heeftRelatieMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.174Z warn: [ConnectorConverterHandler]: Connector (voorgesteldAfbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.929Z warn: [ConnectorConverterHandler]: Connector (Persoon (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.175Z warn: [ConnectorConverterHandler]: Connector (aanvaarding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.929Z warn: [ConnectorConverterHandler]: Connector (Persoon (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.175Z warn: [ConnectorConverterHandler]: Connector (aanvaardAfbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.930Z warn: [ConnectorConverterHandler]: Connector (gezinshoofd) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.175Z warn: [ConnectorConverterHandler]: Connector (isDeelVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.930Z warn: [ConnectorConverterHandler]: Connector (isHoofdVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.175Z warn: [ConnectorConverterHandler]: Connector (afbetalingsplanonderdeel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.930Z warn: [ConnectorConverterHandler]: Connector (gezinslid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.175Z warn: [ConnectorConverterHandler]: Connector (gevolgdAfbetalingsplanonderdeel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.930Z warn: [ConnectorConverterHandler]: Connector (isLidVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.175Z warn: [ConnectorConverterHandler]: Connector (schrapping) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.930Z warn: [ConnectorConverterHandler]: Connector (voorstel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.175Z warn: [ConnectorConverterHandler]: Connector (geschraptAfbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.930Z warn: [ConnectorConverterHandler]: Connector (voorgesteldAfbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.175Z warn: [ConnectorConverterHandler]: Connector (afbetalingsplansaldo) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.930Z warn: [ConnectorConverterHandler]: Connector (aanvaarding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-03T10:33:30.175Z warn: [ConnectorConverterHandler]: Connector (schuldvordingssaldo) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-03T15:54:43.930Z warn: [ConnectorConverterHandler]: Connector (aanvaardAfbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-03T15:54:43.930Z warn: [ConnectorConverterHandler]: Connector (isDeelVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-03T15:54:43.930Z warn: [ConnectorConverterHandler]: Connector (afbetalingsplanonderdeel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-03T15:54:43.930Z warn: [ConnectorConverterHandler]: Connector (gevolgdAfbetalingsplanonderdeel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-03T15:54:43.930Z warn: [ConnectorConverterHandler]: Connector (schrapping) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-03T15:54:43.930Z warn: [ConnectorConverterHandler]: Connector (geschraptAfbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-03T15:54:43.930Z warn: [ConnectorConverterHandler]: Connector (afbetalingsplansaldo) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-03T15:54:43.930Z warn: [ConnectorConverterHandler]: Connector (schuldvordingssaldo) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 #||# -------------------------------------
 
