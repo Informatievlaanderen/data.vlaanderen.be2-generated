@@ -2,13 +2,13 @@
 
 #||# -------------------------------------  
 
-2025-03-04T12:05:10.121Z error: Unable to find the description for subject "[urn:oslo-toolchain:8fdf235d1a5b33f444ec609955b9ab4541562f635937153ed4625022ce274f11](all-energiehuis.jsonld#L5816)".
+2025-03-04T12:58:57.921Z error: Unable to find the description for subject "[urn:oslo-toolchain:8fdf235d1a5b33f444ec609955b9ab4541562f635937153ed4625022ce274f11](all-energiehuis.jsonld#L5848)".
 
-2025-03-04T12:05:10.123Z error: Unable to find the description for subject "[urn:oslo-toolchain:9164ef5057eebd6d5c44317b1f0c528b4d07f59c0dc4ed1680bfa2ea5170f67d](all-energiehuis.jsonld#L5836)".
+2025-03-04T12:58:57.923Z error: Unable to find the description for subject "[urn:oslo-toolchain:9164ef5057eebd6d5c44317b1f0c528b4d07f59c0dc4ed1680bfa2ea5170f67d](all-energiehuis.jsonld#L5868)".
 
-2025-03-04T12:05:10.124Z error: Unable to find the description for subject "[urn:oslo-toolchain:9b2f8b8fd9d54fb4c95812a22a3487a9f71c241fd7b358b71f826c4c712a40cf](all-energiehuis.jsonld#L6034)".
+2025-03-04T12:58:57.925Z error: Unable to find the description for subject "[urn:oslo-toolchain:9b2f8b8fd9d54fb4c95812a22a3487a9f71c241fd7b358b71f826c4c712a40cf](all-energiehuis.jsonld#L6066)".
 
-Error: Unable to find a label for the domain "urn:oslo-toolchain:58e222a6c65ad1f2128fe64d850daf4b51020ce78922abb2e2b1c68a131c6294" of subject "[urn:oslo-toolchain:9b2f8b8fd9d54fb4c95812a22a3487a9f71c241fd7b358b71f826c4c712a40cf](all-energiehuis.jsonld#L6034)".
+Error: Unable to find a label for the domain "urn:oslo-toolchain:58e222a6c65ad1f2128fe64d850daf4b51020ce78922abb2e2b1c68a131c6294" of subject "[urn:oslo-toolchain:9b2f8b8fd9d54fb4c95812a22a3487a9f71c241fd7b358b71f826c4c712a40cf](all-energiehuis.jsonld#L6066)".
 
     at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:77:23)
 
