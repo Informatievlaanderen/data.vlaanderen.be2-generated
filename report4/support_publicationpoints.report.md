@@ -1,5 +1,7 @@
 #||# checking publication points in directory /home/circleci/project/config/test
 #||# 
+#||#   + adding supporting /home/circleci/project/config/test/Vrachtwagenparkeren.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/adres.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/air-and-water.publication.json
@@ -150,6 +152,16 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/vervoersknooppunten.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/vlaamsecodex.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/voorwaarden-dienstverlening.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/waterkwaliteit.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/weg.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/wetgeving.publication.json
+#||#  
 #||# checking publication points in directory /home/circleci/project/config/production
 #||# 
 Error: the following directories are unsupported
@@ -175,11 +187,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/ruimtelijke-bereiken/ontwerpstandaard/2021-08-01/i",
   "/tmp/generated/doc/applicatieprofiel/contactvoorkeuren",
   "/tmp/generated/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/kandidaatstandaard/2022-03-21",
-  "/tmp/generated/doc/applicatieprofiel/datakwaliteit",
-  "/tmp/generated/doc/applicatieprofiel/datakwaliteit/kandidaatstandaard/2022-10-17",
-  "/tmp/generated/doc/applicatieprofiel/datakwaliteit/kandidaatstandaard/2023-06-01",
-  "/tmp/generated/doc/applicatieprofiel/datakwaliteit/ontwerpstandaard/2022-03-15",
-  "/tmp/generated/doc/applicatieprofiel/datakwaliteit/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/dienst-transactiemodel",
   "/tmp/generated/doc/applicatieprofiel/dienstencataloog",
   "/tmp/generated/doc/applicatieprofiel/energiehuis",
@@ -214,38 +221,15 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/slimmeraadpleegomgeving/kandidaatstandaard/2024-10-14",
   "/tmp/generated/doc/applicatieprofiel/slimmeraadpleegomgeving/kandidaatstandaard/2024-10-15",
   "/tmp/generated/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2024-07-08",
-  "/tmp/generated/doc/applicatieprofiel/statistiek",
-  "/tmp/generated/doc/applicatieprofiel/statistiek/kandidaatstandaard/2022-10-17",
-  "/tmp/generated/doc/applicatieprofiel/statistiek/kandidaatstandaard/2023-06-01",
-  "/tmp/generated/doc/applicatieprofiel/statistiek/ontwerpstandaard/2022-03-15",
-  "/tmp/generated/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/subsidieregister",
   "/tmp/generated/doc/applicatieprofiel/terreindelen",
   "/tmp/generated/doc/applicatieprofiel/vegetatie-elementen",
   "/tmp/generated/doc/applicatieprofiel/verkeersborden",
   "/tmp/generated/doc/applicatieprofiel/vlaamse-codex",
-  "/tmp/generated/doc/applicatieprofiel/vlaamse-codex/ontwerpdocument/2020-01-06",
-  "/tmp/generated/doc/applicatieprofiel/vlaamse-codex/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/applicatieprofiel/vlaamse-codex/standaard/2019-02-07",
-  "/tmp/generated/doc/applicatieprofiel/voorwaarden-dienstverlening",
-  "/tmp/generated/doc/applicatieprofiel/voorwaarden-dienstverlening/kandidaatstandaard/2023-07-11",
-  "/tmp/generated/doc/applicatieprofiel/voorwaarden-dienstverlening/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/applicatieprofiel/vrachtwagenparkeren",
   "/tmp/generated/doc/applicatieprofiel/vrachtwagenparkeren/ontwerpstandaard/2023-11-30",
-  "/tmp/generated/doc/applicatieprofiel/vrachtwagenparkeren/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/waterdelen",
-  "/tmp/generated/doc/applicatieprofiel/waterkwaliteit",
-  "/tmp/generated/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2022-10-17",
-  "/tmp/generated/doc/applicatieprofiel/waterkwaliteit/kandidaatstandaard/2023-06-01",
-  "/tmp/generated/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/2022-05-24",
   "/tmp/generated/doc/applicatieprofiel/watervoorkomen",
   "/tmp/generated/doc/applicatieprofiel/wegenregister",
-  "/tmp/generated/doc/applicatieprofiel/wegenregister/kandidaatstandaard/2018-10-04",
-  "/tmp/generated/doc/applicatieprofiel/wegenregister/ontwerpdocument/2020-01-06",
-  "/tmp/generated/doc/vocabularium/datakwaliteit/kandidaatstandaard/2022-10-17",
-  "/tmp/generated/doc/vocabularium/datakwaliteit/kandidaatstandaard/2023-06-01",
-  "/tmp/generated/doc/vocabularium/datakwaliteit/ontwerpstandaard/2022-03-15",
-  "/tmp/generated/doc/vocabularium/datakwaliteit/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
   "/tmp/generated/doc/vocabularium/mobiliteit/Hoppinpunten/kandidaatstandaard/2022-04-01",
   "/tmp/generated/doc/vocabularium/mobiliteitsbudget/ontwerpstandaard/toolchain4",
@@ -264,34 +248,12 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-10-14",
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-10-15",
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/ontwerpstandaard/2024-07-08",
-  "/tmp/generated/doc/vocabularium/statistiek/kandidaatstandaard/2022-10-17",
-  "/tmp/generated/doc/vocabularium/statistiek/kandidaatstandaard/2023-06-01",
-  "/tmp/generated/doc/vocabularium/statistiek/ontwerpstandaard/2022-03-15",
-  "/tmp/generated/doc/vocabularium/statistiek/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/2023-11-30",
-  "/tmp/generated/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/waterkwaliteit/kandidaatstandaard/2022-10-17",
-  "/tmp/generated/doc/vocabularium/waterkwaliteit/kandidaatstandaard/2023-06-01",
-  "/tmp/generated/doc/vocabularium/waterkwaliteit/ontwerpstandaard/2022-05-24",
-  "/tmp/generated/doc/vocabularium/waterkwaliteit/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/weg",
-  "/tmp/generated/doc/vocabularium/weg/ontwerpdocument/2020-01-06",
-  "/tmp/generated/doc/vocabularium/weg/standaard/2018-11-27",
-  "/tmp/generated/doc/vocabularium/wetgeving",
-  "/tmp/generated/doc/vocabularium/wetgeving/ontwerpdocument/niet-bepaald",
-  "/tmp/generated/doc/vocabularium/wetgeving/ontwerpstandaard/toolchain4",
   "/tmp/generated/ns/FeitelijkeVerenigingen",
   "/tmp/generated/ns/bodem-en-ondergrond",
   "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
-  "/tmp/generated/ns/datakwaliteit",
   "/tmp/generated/ns/grondboringen",
   "/tmp/generated/ns/leercredential",
   "/tmp/generated/ns/metadata-dcat",
   "/tmp/generated/ns/observaties-en-metingen",
-  "/tmp/generated/ns/sensoren-en-bemonstering",
-  "/tmp/generated/ns/statistiek",
-  "/tmp/generated/ns/vrachtwagenparkeren",
-  "/tmp/generated/ns/waterkwaliteit",
-  "/tmp/generated/ns/weg",
-  "/tmp/generated/ns/wetgeving"
+  "/tmp/generated/ns/sensoren-en-bemonstering"
 ]

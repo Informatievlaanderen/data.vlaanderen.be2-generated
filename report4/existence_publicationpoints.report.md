@@ -1,5 +1,11 @@
 #||# checking publication points in directory /home/circleci/project/config/test
 #||# 
+#||#    + checking /home/circleci/project/config/test/Vrachtwagenparkeren.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/test/adres.publication.json
 #||# 
 Directory check
@@ -511,6 +517,39 @@ Directory check
 index.html check
 
 #||#    + checking /home/circleci/project/config/test/vervoersknooppunten.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/vlaamsecodex.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/voorwaarden-dienstverlening.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/waterkwaliteit.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/test/weg.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/weg/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/wegenregister/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/test/wetgeving.publication.json
 #||# 
 Directory check
 
