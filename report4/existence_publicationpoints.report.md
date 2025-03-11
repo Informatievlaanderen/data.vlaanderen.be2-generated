@@ -508,7 +508,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/verkeersborden/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/test/verkeersmetingen.publication.json
 #||# 
