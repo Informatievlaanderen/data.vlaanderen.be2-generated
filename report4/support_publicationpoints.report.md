@@ -193,7 +193,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/infrastructuurelementen",
   "/tmp/generated/doc/applicatieprofiel/inname-openbaar-domein",
   "/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties",
-  "/tmp/generated/doc/applicatieprofiel/kindfiche",
   "/tmp/generated/doc/applicatieprofiel/kindfiche/ontwerpstandaard/2024-06-03",
   "/tmp/generated/doc/applicatieprofiel/leerinschrijfcredential/kandidaatstandaard/2024-05-16",
   "/tmp/generated/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17",

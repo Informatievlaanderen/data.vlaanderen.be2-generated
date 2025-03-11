@@ -245,10 +245,10 @@ error: missing '/tmp/generated/doc/vocabularium/nutsvoorzieningen/ontwerpstandaa
 #||#    + checking /home/circleci/project/config/production/kindfiche.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated/doc/vocabularium/dienstverlening-aan-personen/ontwerpstandaard/2024-06-03'
 
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/2024-06-03/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/dienstverlening-aan-personen/index.html'
 error: missing '/tmp/generated/doc/vocabularium/dienstverlening-aan-personen/ontwerpstandaard/2024-06-03/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/kindfiche/ontwerpstandaard/toolchain4/index.html'
