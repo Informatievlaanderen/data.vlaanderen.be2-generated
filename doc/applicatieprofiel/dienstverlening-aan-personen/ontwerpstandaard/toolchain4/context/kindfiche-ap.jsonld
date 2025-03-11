@@ -1,0 +1,464 @@
+{
+  "@context": {
+    "Aandoening": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Aandoening",
+    "Aandoening.diagnosedatum": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Aandoening.diagnosedatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Aandoeningtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Agentrelatie": "https://data.vlaanderen.be/ns/generiek#Agentrelatie",
+    "Agentrelatie.agent": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#agent",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "Allergeen": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Allergeen",
+    "Allergeen.beschrijving": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Allergeen.beschrijving",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Allergeen.ernst": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Allergeen.ernst",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Allergeen.reactie": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Allergeen.reactie",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Allergeentype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Allergie": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
+    "Allergie.diagnosedatum": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Allergie.diagnosedatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Allergie.ernst": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Allergie.ernst",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Allergie.reactie": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Allergie.reactie",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Allergietype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Beperking": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Beperking",
+    "Beperkingtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "BeëIndiging": "http://www.w3.org/ns/prov#End",
+    "Boolean": "http://www.w3.org/2001/XMLSchema#boolean",
+    "ContactInfo": "http://data.europa.eu/m8g/ContactPoint",
+    "Date": "http://www.w3.org/2001/XMLSchema#date",
+    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "Dieetvoorkeur": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Dieetvoorkeur",
+    "Dieetvoorkeur.beschrijving": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Dieetvoorkeur.beschrijving",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Dieetvoorkeurtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Dienstaanbod": "http://purl.org/vocab/cpsv#PublicService",
+    "Dienstaanbod.organisatie": {
+      "@id": "http://www.w3.org/ns/prov#agent",
+      "@type": "http://www.w3.org/ns/org#Organization"
+    },
+    "Dienstaanbod.status": {
+      "@id": "http://www.w3.org/ns/adms#status",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Dienstconsumptie": "http://purl.org/vocab/cpsv#PublicService",
+    "Duration": "http://www.w3.org/2001/XMLSchema#duration",
+    "ErnstType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "GeregistreerdPersoon": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon",
+    "GeregistreerdPersoon.registratie": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "GeregistreerdeOrganisatie": "http://www.w3.org/ns/regorg#RegisteredOrganization",
+    "GeregistreerdeOrganisatie.registratie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/regorg#registration",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Geslacht": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Gezondheidstoestand": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand",
+    "Gezondheidstoestand.persoon": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+      "@type": "http://www.w3.org/ns/person#Person"
+    },
+    "Inschrijving": "http://www.w3.org/ns/prov#Start",
+    "Integer": "http://www.w3.org/2001/XMLSchema#integer",
+    "JuridischWerk": "https://data.vlaanderen.be/ns/wetgeving#JuridischWerk",
+    "Kenmerktype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Medicatie": "http://hl7.org/fhir/StructureDefinition/Medication",
+    "Medicatie.einddatum": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Medicatie.einddatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Medicatie.frequentie": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Medicatie.frequentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Medicatie.startdatum": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Medicatie.startdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Medicatietype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Organisatie": "http://www.w3.org/ns/org#Organization",
+    "Organisatie.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Organisatie.status": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/regorg#orgStatus",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Participatie": "http://data.europa.eu/m8g/Participation",
+    "Participatie.agent": {
+      "@id": "http://www.w3.org/ns/prov#agent",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "Participatierol": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Periode": "http://data.europa.eu/m8g/PeriodOfTime",
+    "Persoon": "http://www.w3.org/ns/person#Person",
+    "Persoonsrelatie": "https://data.vlaanderen.be/ns/persoon#Persoonsrelatie",
+    "Persoonsrelatie.persoon": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#persoon",
+      "@type": "http://www.w3.org/ns/person#Person"
+    },
+    "Persoonsrelatietype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Reactietype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Relatietype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "SocioEconomischKenmerk": "https://data.vlaanderen.be/ns/statistiek#Statistiek",
+    "SpecifiekeBehoefte": "https://data.vlaanderen.be/ns/gezondheidstoestand/#SpecifiekeBehoefte",
+    "String": "http://www.w3.org/2001/XMLSchema#string",
+    "TaalCode": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Tijdschema": "https://schema.org/Schedule",
+    "Tijdschema.einddatum": {
+      "@id": "https://schema.org/endDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Tijdschema.frequentie": {
+      "@id": "https://schema.org/repeatFrequency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Tijdschema.startdatum": {
+      "@id": "https://schema.org/startDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Time": "http://www.w3.org/2001/XMLSchema#time",
+    "Toedieningtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "Uitgangregeling": "http://www.w3.org/ns/prov#Association",
+    "Vestiging": "http://www.w3.org/ns/org#Site",
+    "Vestiging.organisatie": {
+      "@id": "http://www.w3.org/ns/org#siteOf",
+      "@type": "http://www.w3.org/ns/org#Organization"
+    },
+    "aandoening": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#Gezondheidstoestand.aandoening",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Aandoening"
+    },
+    "aantal": {
+      "@id": "https://schema.org/repeatCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "achternaam": {
+      "@id": "http://xmlns.com/foaf/0.1/familyName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "actief": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Aandoening.actief",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "adres": {
+      "@id": "http://www.w3.org/ns/locn#address",
+      "@type": "http://www.w3.org/ns/locn#Address"
+    },
+    "allergeen": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/kindfiche#allergeen",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Allergeen"
+    },
+    "allergie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/kindfiche#allergie",
+      "@type": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"
+    },
+    "attest": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand#MedischeObservatie.gedocumenteerdDoor",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "beeindigingsdatum": {
+      "@id": "http://www.w3.org/ns/prov#atTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "begin": {
+      "@id": "http://data.europa.eu/m8g/startTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "behandeling": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Allergie.behandeling",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "beperking": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/kindfiche#beperking",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Beperking"
+    },
+    "beschikbaarheid": {
+      "@id": "http://schema.org/hoursAvailable",
+      "@type": "https://schema.org/Schedule"
+    },
+    "beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "beëIndiging": {
+      "@id": "https://data.vlaanderen.be/ns/dienst#beeindiging",
+      "@type": "http://www.w3.org/ns/prov#End"
+    },
+    "bijwerking": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Medicatie.bijwerking",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "contactinfo": {
+      "@id": "http://data.europa.eu/m8g/contactPoint",
+      "@type": "http://data.europa.eu/m8g/ContactPoint"
+    },
+    "dagelijkseRoutine": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#SpecifiekeBehoefte.dagelijkseRoutine",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "dieetvoorkeur": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#SpecifiekeBehoefte.dieetvoorkeur",
+      "@type": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Dieetvoorkeur"
+    },
+    "dienstaanbod": {
+      "@id": "https://data.vlaanderen.be/ns/transactie#isInstantieVan",
+      "@type": "http://purl.org/vocab/cpsv#PublicService"
+    },
+    "diensttype": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "dosering": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Medicatie.dosering",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "duur": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#duur",
+      "@type": "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "einde": {
+      "@id": "http://data.europa.eu/m8g/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "eindtijd": {
+      "@id": "https://schema.org/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "email": {
+      "@id": "http://schema.org/email",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "geboortedatum": {
+      "@id": "http://data.europa.eu/m8g/birthDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "gebruikteMedicatie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/kindfiche#gebruikteMedicatie",
+      "@type": "http://hl7.org/fhir/StructureDefinition/Medication"
+    },
+    "gebruikteVoornaam": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#gebruikteVoornaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gekendeTaal": {
+      "@container": "@set",
+      "@id": "https://schema.org/knowsLanguage",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "geslacht": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#geslacht",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "heeftRelatieMet": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#qualifiedAssociation",
+      "@type": "https://data.vlaanderen.be/ns/persoon#Persoonsrelatie"
+    },
+    "ingangsdatum": {
+      "@id": "https://data.vlaanderen.be/ns/wetgeving#ingangsdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "inschrijving": {
+      "@id": "http://www.w3.org/ns/prov#qualifiedStart",
+      "@type": "http://www.w3.org/ns/prov#Start"
+    },
+    "inschrijvingsdatum": {
+      "@id": "http://www.w3.org/ns/prov#atTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "juridischWerk": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasSupportingEvidence",
+      "@type": "https://data.vlaanderen.be/ns/wetgeving#JuridischWerk"
+    },
+    "naam": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "omgaanMetBehoefte": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#SpecifiekeBehoefte.omgaanMetBehoefte",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "oorzaak": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Allergie.oorzaak",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "openingsuren": {
+      "@id": "http://schema.org/openingHours",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "ophaler": {
+      "@id": "http://www.w3.org/ns/prov#agent",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "organisatietype": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/regorg#orgType",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "participatie": {
+      "@id": "http://www.w3.org/ns/prov#qualifiedAssociation",
+      "@type": "http://data.europa.eu/m8g/Participation"
+    },
+    "perDag": {
+      "@container": "@set",
+      "@id": "https://schema.org/byDay",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "perDagVanDeMaand": {
+      "@container": "@set",
+      "@id": "https://schema.org/byMonthDay",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "perMaand": {
+      "@container": "@set",
+      "@id": "https://schema.org/byMonth",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "perSetpositie": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#perSetpositie",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "periode": {
+      "@id": "http://purl.org/dc/terms/available",
+      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "persoon": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+      "@type": "http://www.w3.org/ns/person#Person"
+    },
+    "plan": {
+      "@id": "http://www.w3.org/ns/prov#atTime",
+      "@type": "https://schema.org/Schedule"
+    },
+    "reden": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Medicatie.reden",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "redenVanBeëIndiging": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "relatietype": {
+      "@id": "http://purl.org/dc/elements/1.1/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "rol": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "starttijd": {
+      "@id": "https://schema.org/startTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "statistiektype": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "suborganisatieVan": {
+      "@id": "http://www.w3.org/ns/org#subOrganizationOf",
+      "@type": "http://www.w3.org/ns/org#Organization"
+    },
+    "taal": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/language",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "telefoon": {
+      "@id": "http://schema.org/telephone",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "toediening": {
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#Medicatie.toediening",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "type": {
+      "@id": "http://purl.org/dc/elements/1.1/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "uitzonderingsdatum": {
+      "@container": "@set",
+      "@id": "https://schema.org/exceptDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "verwachteGeboortedatum": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#verwachteGeboortedatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "vestiging": {
+      "@id": "http://www.w3.org/ns/prov#atLocation",
+      "@type": "http://www.w3.org/ns/org#Site"
+    },
+    "volledigeNaam": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#volledigeNaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "voorkeursnaam": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "voorkeurstaal": {
+      "@id": "http://purl.org/dc/terms/language",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "voornaam": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/givenName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "waarde": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    "website": {
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "zorgnood": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gezondheidstoestand/#SpecifiekeBehoefte.zorgnood",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  }
+}
