@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for class http://www.w3.org/2004/02/skos/core#Concept which acts as a parent.
+Error: Unable to find the assigned URI for class https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Steun which acts as a parent.
 
     at JsonWebuniversumGenerationService.createParentObject (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:237:19)
 
