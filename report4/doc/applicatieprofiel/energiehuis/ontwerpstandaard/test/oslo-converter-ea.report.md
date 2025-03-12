@@ -2,59 +2,61 @@
 
 #||# -------------------------------------
 
-2025-03-12T14:05:23.404Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
+2025-03-12T14:50:49.697Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
 
-2025-03-12T14:05:23.406Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+2025-03-12T14:50:49.698Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-03-12T14:05:23.407Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie))
+2025-03-12T14:50:49.698Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie))
 
-2025-03-12T14:05:23.407Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Dienst:PubliekeDienstverlening:vereist)
+2025-03-12T14:50:49.698Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Dienst:PubliekeDienstverlening:vereist)
 
-2025-03-12T14:05:23.407Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Dienst:PubliekeDienstverlening:(PubliekeDienstverlening -> PubliekeDienstverlening))
+2025-03-12T14:50:49.698Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Dienst:PubliekeDienstverlening:(PubliekeDienstverlening -> PubliekeDienstverlening))
 
-2025-03-12T14:05:23.407Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> PubliekeOrganisatie))
+2025-03-12T14:50:49.698Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> PubliekeOrganisatie))
 
-2025-03-12T14:05:23.407Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Generiek:Gemeente:(Gemeente -> Object))
+2025-03-12T14:50:49.698Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2025-03-12T14:05:23.407Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2025-03-12T14:50:49.698Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-03-12T14:05:23.407Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Generiek:Agent:rapporteertAan)
+2025-03-12T14:50:49.698Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-03-12T14:05:23.407Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Energiehuis:Plaatsbezoek:(Plaatsbezoek -> Basistaak))
+2025-03-12T14:50:49.699Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Energiehuis:Plaatsbezoek:(Plaatsbezoek -> Basistaak))
 
-2025-03-12T14:05:23.408Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Persoon:Persoon:(Persoon -> Persoon))
+2025-03-12T14:50:49.699Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Persoon:Persoon:(Persoon -> Persoon))
 
-2025-03-12T14:05:23.414Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-12T14:50:49.703Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-12T14:05:23.414Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-12T14:50:49.703Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-12T14:05:23.414Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-03-12T14:50:49.703Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-12T14:05:23.414Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:RDFS) and fallback URI (http://todo.com/) will be assigned.
+2025-03-12T14:50:49.703Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:RDFS) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-12T14:05:23.415Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:EDTF) and fallback URI (http://todo.com/) will be assigned.
+2025-03-12T14:50:49.703Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:EDTF) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-12T14:05:23.415Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:W3C-Time) and fallback URI (http://todo.com/) will be assigned.
+2025-03-12T14:50:49.703Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:W3C-Time) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-12T14:05:23.415Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon) and fallback URI (http://todo.com/) will be assigned.
+2025-03-12T14:50:49.703Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-12T14:05:23.415Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:QUDT) and fallback URI (http://todo.com/) will be assigned.
+2025-03-12T14:50:49.703Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:QUDT) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-12T14:05:23.415Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:skos) and fallback URI (http://todo.com/) will be assigned.
+2025-03-12T14:50:49.704Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:skos) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-12T14:05:23.415Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:Schema.org) and fallback URI (http://todo.com/) will be assigned.
+2025-03-12T14:50:49.704Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:Schema.org) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-12T14:05:23.416Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:FOAF) and fallback URI (http://todo.com/) will be assigned.
+2025-03-12T14:50:49.704Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:FOAF) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-12T14:05:23.422Z warn: [ConnectorConverterHandler]: Connector (verrichtDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-12T14:50:49.707Z warn: [ConnectorConverterHandler]: Connector (verrichtDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-12T14:05:23.422Z warn: [ConnectorConverterHandler]: Connector (verricht) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-12T14:50:49.708Z warn: [ConnectorConverterHandler]: Connector (verricht) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-12T14:05:23.422Z warn: [ConnectorConverterHandler]: Connector (verwijstNaar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-12T14:50:49.708Z warn: [ConnectorConverterHandler]: Connector (verwijstNaar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-12T14:05:23.422Z warn: [ConnectorConverterHandler]: Connector (test) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-12T14:50:49.708Z warn: [ConnectorConverterHandler]: Connector (test) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-12T14:05:23.470Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (test).
+2025-03-12T14:50:49.742Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (test).
+
+2025-03-12T14:50:49.745Z warn: [ConverterHandler]: Entity with path Participatie.Agent has already a value for label-nl in language nl, but will be overwritten.
 
 #||# -------------------------------------
 
