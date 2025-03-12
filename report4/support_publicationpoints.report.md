@@ -230,6 +230,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/waterdelen",
   "/tmp/generated/doc/applicatieprofiel/watervoorkomen",
   "/tmp/generated/doc/applicatieprofiel/wegenregister",
+  "/tmp/generated/doc/vocabularium/gezondheidstoestand/ontwerpstandaard/test",
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
   "/tmp/generated/doc/vocabularium/mobiliteit/Hoppinpunten/kandidaatstandaard/2022-04-01",
   "/tmp/generated/doc/vocabularium/mobiliteitsbudget/ontwerpstandaard/toolchain4",
