@@ -8,14 +8,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/ActiviteitShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass prov:Activity .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/AgentShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass dc:Agent .
-
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/BestuurseenheidShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -83,6 +75,14 @@
     shacl:minCount "1";
     shacl:name "classificatie"@nl;
     shacl:path org:classification
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4#Bestuursorgaan.Bestuurt>;
+    shacl:class <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid>;
+    shacl:description "De bestuurseenheid die door het orgaan bestuurd wordt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "bestuurt"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#bestuurt>
   ];
   shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Bestuursorgaan> .
 
@@ -106,14 +106,6 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/DatetimeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass xsd:dateTime .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/EntiteitShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass prov:Entity .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/FormeelKaderShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <http://purl.org/vocab/cpsv#FormalFramework> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/FractieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -209,6 +201,7 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4#Lidmaatschap.Lidmaatschap.mandataris>;
     shacl:class <http://data.vlaanderen.be/ns/mandaat#Mandataris>;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "Lidmaatschap.Mandataris";
@@ -216,6 +209,7 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4#Lidmaatschap.Lidmaatschap.fractie>;
     shacl:class <http://data.vlaanderen.be/ns/mandaat#Fractie>;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "Lidmaatschap.Fractie";
@@ -341,10 +335,6 @@
   ];
   shacl:targetClass prov:Invalidation .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/OrganisatieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass org:Organization .
-
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/PersoonShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -386,20 +376,23 @@
     shacl:minCount "1";
     shacl:name "identificator"@nl;
     shacl:path <http://www.w3.org/ns/adms#identifier>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4#Persoon.HeeftGeboorte>;
+    shacl:class <https://data.vlaanderen.be/ns/persoon#Geboorte>;
+    shacl:description "Duidt de geboorte van de persoon aan."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "heeft geboorte"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#heeftGeboorte>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4#Persoon.IsAangesteldAls>;
+    shacl:class <http://data.vlaanderen.be/ns/mandaat#Mandataris>;
+    shacl:description "Een mandatarisrol die eigen is aan de persoon."@nl;
+    shacl:minCount "1";
+    shacl:name "is aangesteld als"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/mandaat#isAangesteldAls>
   ];
   shacl:targetClass <http://www.w3.org/ns/person#Person> .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/PersoonsgebeurtenisShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Persoonsgebeurtenis> .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/PositieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass org:Post .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/PubliekeOrganisatieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/RechtsgrondAanstellingShape> a shacl:NodeShape;
   shacl:closed false;
@@ -492,10 +485,6 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/StringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass xsd:string .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/UnieRgLvShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/wetgeving#UnieRGLV> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/VerkiezingsresultaatShape> a shacl:NodeShape;
   shacl:closed false;
