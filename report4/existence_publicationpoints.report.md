@@ -213,8 +213,6 @@ error: missing '/tmp/generated/doc/vocabularium/generiek/ontwerpstandaard/toolch
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/test/incentiveringsplatform.publication.json
 #||# 
