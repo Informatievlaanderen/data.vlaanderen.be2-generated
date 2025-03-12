@@ -305,7 +305,6 @@ error: missing '/tmp/generated/doc/vocabularium/loongegevens/ontwerpstandaard/to
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/vocabularium/mandaat/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/test/melding.publication.json
 #||# 
