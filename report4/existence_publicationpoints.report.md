@@ -43,7 +43,6 @@ error: missing '/tmp/generated/doc/applicatieprofiel/besluit-mobiliteit/ontwerps
 #||#    + checking /home/circleci/project/config/test/besluit-publicatie.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/applicatieprofiel/besluit-publicatie/ontwerpstandaard/toolchain4'
 
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/besluit-publicatie/ontwerpstandaard/toolchain4/index.html'
