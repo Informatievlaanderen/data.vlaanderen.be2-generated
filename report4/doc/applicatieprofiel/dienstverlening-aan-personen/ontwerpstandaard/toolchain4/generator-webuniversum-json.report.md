@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for class http://www.w3.org/ns/prov#Association which acts as a parent.
+Error: Unable to find the assigned URI for class http://www.w3.org/ns/prov#Plan which acts as a parent.
 
     at JsonWebuniversumGenerationService.createParentObject (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:237:19)
 
