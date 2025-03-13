@@ -45,7 +45,6 @@ error: missing '/tmp/generated/doc/applicatieprofiel/besluit-mobiliteit/ontwerps
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/besluit-publicatie/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/test/besluit.publication.json
 #||# 
