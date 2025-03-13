@@ -51,7 +51,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/vocabularium/besluit/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/besluitvorming/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/besluitvorming/ontwerpstandaard/toolchain4/index.html'
 
