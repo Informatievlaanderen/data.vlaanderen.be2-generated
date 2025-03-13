@@ -245,7 +245,7 @@ error: missing '/tmp/generated/doc/vocabularium/nutsvoorzieningen/ontwerpstandaa
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/kindfiche/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/test/kwaliteit-wegen-en-markeringen.publication.json
 #||# 
