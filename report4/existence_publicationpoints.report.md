@@ -59,7 +59,6 @@ error: missing '/tmp/generated/doc/vocabularium/besluitvorming/ontwerpstandaard/
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/vocabularium/bestuur/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/test/bestuurlijk-sanctieregister.publication.json
 #||# 
