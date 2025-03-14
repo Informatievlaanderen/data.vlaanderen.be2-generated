@@ -2,21 +2,21 @@
 
 #||# -------------------------------------  
 
-2025-03-14T08:02:12.831Z error: Unable to find the description for subject "[urn:oslo-toolchain:0933a528049dfa2889b7be79d1ce729ede4d6b6c842c25610920d2f2f5d10315](all-besluit-mobiliteit-ap.jsonld#L2451)".
+2025-03-14T08:30:17.537Z error: Unable to find the description for subject "[urn:oslo-toolchain:0933a528049dfa2889b7be79d1ce729ede4d6b6c842c25610920d2f2f5d10315](all-besluit-mobiliteit-ap.jsonld#L2451)".
 
-2025-03-14T08:02:12.833Z error: Unable to find the description for subject "[urn:oslo-toolchain:214b4c0401685ef11c7cf41f4a115d4135238817ecd69c0ccc93148f6e49ed06](all-besluit-mobiliteit-ap.jsonld#L2477)".
+2025-03-14T08:30:17.540Z error: Unable to find the description for subject "[urn:oslo-toolchain:214b4c0401685ef11c7cf41f4a115d4135238817ecd69c0ccc93148f6e49ed06](all-besluit-mobiliteit-ap.jsonld#L2477)".
 
-2025-03-14T08:02:12.833Z error: Unable to find the description for subject "[urn:oslo-toolchain:1ffe9ae3116aa65b4077588c9b2b70bed58ae044ac6fa376f3d3b253c7e6a88a](all-besluit-mobiliteit-ap.jsonld#L2535)".
+2025-03-14T08:30:17.541Z error: Unable to find the description for subject "[urn:oslo-toolchain:1ffe9ae3116aa65b4077588c9b2b70bed58ae044ac6fa376f3d3b253c7e6a88a](all-besluit-mobiliteit-ap.jsonld#L2567)".
 
-2025-03-14T08:02:12.833Z error: Unable to find the description for subject "[urn:oslo-toolchain:0f6a570caaaa94cf11cf9a6916c64a28f486b8b25227e38e652747e69792059e](all-besluit-mobiliteit-ap.jsonld#L2561)".
+2025-03-14T08:30:17.541Z error: Unable to find the description for subject "[urn:oslo-toolchain:0f6a570caaaa94cf11cf9a6916c64a28f486b8b25227e38e652747e69792059e](all-besluit-mobiliteit-ap.jsonld#L2593)".
 
-2025-03-14T08:02:12.834Z error: Unable to find the description for subject "[urn:oslo-toolchain:11a156a2aff75eed899d629a05e2cc2d8fd797b8f5ce09a0634f5b33d2f4f514](all-besluit-mobiliteit-ap.jsonld#L2587)".
+2025-03-14T08:30:17.542Z error: Unable to find the description for subject "[urn:oslo-toolchain:11a156a2aff75eed899d629a05e2cc2d8fd797b8f5ce09a0634f5b33d2f4f514](all-besluit-mobiliteit-ap.jsonld#L2619)".
 
-2025-03-14T08:02:12.834Z error: Unable to find the description for subject "[urn:oslo-toolchain:d78caceb13e9e20401248c77f457257294ed63987324dfd757b003c778d6a9b7](all-besluit-mobiliteit-ap.jsonld#L2733)".
+2025-03-14T08:30:17.543Z error: Unable to find the description for subject "[urn:oslo-toolchain:d78caceb13e9e20401248c77f457257294ed63987324dfd757b003c778d6a9b7](all-besluit-mobiliteit-ap.jsonld#L2765)".
 
-2025-03-14T08:02:12.846Z error: Unable to find the description for subject "[urn:oslo-toolchain:c6e8f3ed7fd3b167310556ec7196ba5129d80f39cb4fa852b91e7071d5e00b5f](all-besluit-mobiliteit-ap.jsonld#L4348)".
+2025-03-14T08:30:17.552Z error: Unable to find the description for subject "[urn:oslo-toolchain:c6e8f3ed7fd3b167310556ec7196ba5129d80f39cb4fa852b91e7071d5e00b5f](all-besluit-mobiliteit-ap.jsonld#L4380)".
 
-2025-03-14T08:02:12.847Z error: Unable to find the description for subject "[urn:oslo-toolchain:22f78e195aef2704ee9e006e0c6f5e29581add7914f4d0c751ed4a318c5f18cb](all-besluit-mobiliteit-ap.jsonld#L4444)".
+2025-03-14T08:30:17.553Z error: Unable to find the description for subject "[urn:oslo-toolchain:22f78e195aef2704ee9e006e0c6f5e29581add7914f4d0c751ed4a318c5f18cb](all-besluit-mobiliteit-ap.jsonld#L4476)".
 
 Error: Unable to find the assigned URI for range "http://www.w3.org/2001/XMLSchema#boolean".
 
