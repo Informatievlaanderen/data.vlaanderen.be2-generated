@@ -2,3 +2,11 @@
 
 #||# -------------------------------------  
 
+Error: Unable to find the subject for the package.
+
+    at JsonWebuniversumGenerationService.getBaseURI (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:111:19)
+
+    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:45:30)
+
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
