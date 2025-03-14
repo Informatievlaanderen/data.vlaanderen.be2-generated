@@ -12,5 +12,5 @@ WARNING The entered language values are the same!
 
 #||# Write complete  
 
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/toolchain4/translation/openbaardomein_nl.json  
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/toolchain4/translation/begraafplaatsen-ap_nl.json  
 
