@@ -126,23 +126,11 @@
     shacl:name "dienst"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.dienst>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Activiteit.Deelnemer>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant>;
-    shacl:description "Participant die deelneemt aan een Activiteit."@nl;
-    shacl:name "deelnemer"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#deelnemer>
-  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Activiteit.VerhoudtZichTot>;
     shacl:class crm:E7_Activity;
     shacl:description "De relatie tussen twee of meerdere Activiteiten waarbij de ene een typering op zich neemt ten opzichte van een andere."@nl;
     shacl:name "verhoudt zich tot"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#verhoudtZichTot>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Activiteit.Superactiviteit>;
-    shacl:class crm:E7_Activity;
-    shacl:description "De Activiteit heeft één of meerdere Subactiviteiten."@nl;
-    shacl:name "superactiviteit"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#superactiviteit>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Activiteit.Subactiviteit>;
     shacl:class crm:E7_Activity;
@@ -167,24 +155,6 @@
     shacl:description "Activiteit die wordt gepromoot aan de hand van een Promotie."@nl;
     shacl:name "is gepromoot"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#isGepromoot>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Activiteit.BeperktTot>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel>;
-    shacl:description "Een beperking opgelegd aan de Activiteit op basis van het ParticipantProfiel."@nl;
-    shacl:name "beperkt tot"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#beperktTot>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Activiteit.GerealiseerdDoor>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator>;
-    shacl:description "De Activiteit wordt uitgevoerd door een Realisator.."@nl;
-    shacl:name "gerealiseerd door"@nl;
-    shacl:path <http://cidoc-crm.org/cidoc-crm/P14_carried_out_by>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Activiteit.HeeftVolgendeActiviteit>;
-    shacl:class crm:E7_Activity;
-    shacl:description "De Activiteit die volgt op deze."@nl;
-    shacl:name "heeft volgende Activiteit"@nl;
-    shacl:path <http://data.europa.eu/m8g/hasNextEvent>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Activiteit.HeeftVorigeActiviteit>;
     shacl:class crm:E7_Activity;
@@ -237,6 +207,13 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4/AgentShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Agent.WerktSamenMet>;
+    shacl:class dc:Agent;
+    shacl:description "De Agent die samenwerkt met een andere Agent."@nl;
+    shacl:name "werkt samen met"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#werktSamenMet>
+  ];
   shacl:targetClass dc:Agent .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4/AlgemeenparticipantkenmerkShape> a shacl:NodeShape;
@@ -342,6 +319,7 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Deelname.Deelname.participant>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant>;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "Deelname.Participant";
@@ -349,6 +327,7 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Deelname.Deelname.activiteit>;
     shacl:class crm:E7_Activity;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "Deelname.Activiteit";
@@ -365,12 +344,6 @@
     shacl:description "Feedback van de Participant op de Deelname."@nl;
     shacl:name "feedback op deelname"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#feedbackopDeelname>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Deelname.Transactie>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie>;
-    shacl:description "Transactie die eventueel nodig is om deel te nemen aan een Activiteit"@nl;
-    shacl:name "transactie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#transactie>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname> .
 
@@ -384,13 +357,6 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4/DingShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Ding.VoertUit>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
-    shacl:description "De Uitvoerder voert het Ding uit."@nl;
-    shacl:name "voert uit"@nl;
-    shacl:path <http://todo.com/ding.UitgevoerdDoor>
-  ];
   shacl:targetClass crm:E70_Thing .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4/DisciplinetypeShape> a shacl:NodeShape;
@@ -444,12 +410,6 @@
     shacl:maxCount "1";
     shacl:name "type"@nl;
     shacl:path dc:type
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Feedback.VanDeelname>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname>;
-    shacl:description "Feedback die gegeven wordt door de Participant rond de Deelname aan een Activiteit."@nl;
-    shacl:name "van deelname"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#vanDeelname>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#Feedback> .
 
@@ -609,6 +569,24 @@
     shacl:maxCount "1";
     shacl:name "homepage"@nl;
     shacl:path foaf:homepage
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Organisatie.HeeftSuborganisatie>;
+    shacl:class org:Organization;
+    shacl:description "Organisatie die dochter of onderdeel is van de organisatie."@nl;
+    shacl:name "heeft suborganisatie"@nl;
+    shacl:path org:hasSubOrganization
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Organisatie.IsGeassocieerdMet>;
+    shacl:class org:Organization;
+    shacl:description "Niet nader bepaalde relatie met een andere organisatie."@nl;
+    shacl:name "is geassocieerd met"@nl;
+    shacl:path org:linkedTo
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Organisatie.SuborganisatieVan>;
+    shacl:class org:Organization;
+    shacl:description "Andere organisatie die deze organisatie omvat."@nl;
+    shacl:name "suborganisatie van"@nl;
+    shacl:path org:subOrganizationOf
   ];
   shacl:targetClass org:Organization .
 
@@ -665,12 +643,6 @@
     shacl:name "heeft profiel"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#heeftProfiel>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Participant.HeeftRelatieMet>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant>;
-    shacl:description "De Participant heeft een relatie met een andere Participant."@nl;
-    shacl:name "heeft relatie met"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#heeftRelatieMet>
-  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Participant.HeeftPersoonlijkProfiel>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel>;
     shacl:description "Het persoonlijk profiel van de Participant. dat meer info geeft rond de specifieke cultuurparticipatie van een Participant."@nl;
@@ -683,36 +655,6 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4/ParticipantprofielShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Participantprofiel.ProfielVan>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant>;
-    shacl:description "Generiek profiel van de Participant dat slaat op een algemenere invulling van een Participant."@nl;
-    shacl:name "profiel van"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#profielVan>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Participantprofiel.Sociodemografisch>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk>;
-    shacl:description "Sociodemografisch kenmerk over de participant"@nl;
-    shacl:name "sociodemografisch"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#sociodemografisch>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Participantprofiel.Cultureel>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname>;
-    shacl:description "Een ParticipantProfiel heeft een Cultuurdeelname van de Participant."@nl;
-    shacl:name "cultureel"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#cultureel>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Participantprofiel.AfgeleidVan>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname>;
-    shacl:description "Het ParticipantProfiel wordt afgeleid van de Deelname van de Participant aan een Activiteit."@nl;
-    shacl:name "afgeleid van"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#afgeleidVan>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Participantprofiel.AlgemeenKenmerk>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantkenmerk>;
-    shacl:description "Een ParticipantProfiel heeft een AlgemeenKenmerk."@nl;
-    shacl:name "algemeen kenmerk"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#algemeenKenmerk>
-  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Participantprofiel.BepaaltBeperking>;
     shacl:class crm:E7_Activity;
     shacl:description "Een beperking die wordt opgelegd aan de Activiteit op basis van het ParticipantProfiel."@nl;
@@ -724,13 +666,6 @@
     shacl:description "De doelgroep van de Activiteit die bepaald wordt aan de hand van het ParticipantProfiel."@nl;
     shacl:name "gerichte doelgroep"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#gerichteDoelgroep>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Participantprofiel.PersoonlijkProfielVan>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant>;
-    shacl:description "Het persoonlijk profiel van de Participant. dat meer info geeft rond de specifieke cultuurparticipatie van een Participant."@nl;
-    shacl:maxCount "1";
-    shacl:name "persoonlijk profiel van"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#persoonlijkProfielVan>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel> .
 
@@ -853,12 +788,6 @@
     shacl:name "kanaal"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.kanaal>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Promotie.Activiteit>;
-    shacl:class crm:E7_Activity;
-    shacl:description "De Activiteit kan een Promotie hebben."@nl;
-    shacl:name "activiteit"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#activiteit>
-  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Promotie.DoelProfiel>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel>;
     shacl:description "Het doel van het ParticipantProfiel is om Promotie te kunnen voeren."@nl;
@@ -870,12 +799,6 @@
     shacl:description "Het doel van de Promotie is om de Participant te bereiken."@nl;
     shacl:name "doel participant"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#doelParticipant>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Promotie.UitgevoerdDoor>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator>;
-    shacl:description "De Promotie wordt uitgevoerd door een Realisator."@nl;
-    shacl:name "uitgevoerd door"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#uitgevoerdDoor>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie> .
 
@@ -911,6 +834,7 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Realisatie.Realisatie.realisator>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator>;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "Realisatie.Realisator";
@@ -918,6 +842,7 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Realisatie.Realisatie.activiteit>;
     shacl:class crm:E7_Activity;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "Realisatie.Activiteit";
@@ -951,12 +876,6 @@
     shacl:description "Het type van Activiteit verbonden aan de Realisator."@nl;
     shacl:name "type activiteit"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.typeActiviteit>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Realisator.Subrealisator>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator>;
-    shacl:description "De Realisator heeft één of meerdere Superrealisators."@nl;
-    shacl:name "subrealisator"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#subrealisator>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Realisator.Superrealisator>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator>;
@@ -1035,6 +954,20 @@
     shacl:description "De typering van de Samenwerking."@nl;
     shacl:name "type"@nl;
     shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Samenwerking.Agent(source)>;
+    shacl:class dc:Agent;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Agent (source)";
+    shacl:path <http://todo.com/Samenwerking.agent.source>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Samenwerking.Agent(target)>;
+    shacl:class dc:Agent;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Agent (target)";
+    shacl:path <http://todo.com/Samenwerking.agent.target>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking> .
 
@@ -1146,12 +1079,6 @@
     shacl:maxCount "1";
     shacl:name "betaaltermijn"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.betaaltermijn>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Transactie.Ticket>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Ticket>;
-    shacl:description "Het Ticket komt voort uit een Transactie."@nl;
-    shacl:name "ticket"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#ticket>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/doelgericht-digitaal-transformeren/ontwerpstandaard/toolchain4#Transactie.GeeftRechtOp>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname>;
