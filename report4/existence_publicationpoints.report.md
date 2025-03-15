@@ -93,7 +93,6 @@ error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/sonderingen/
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/vocabularium/toestemming/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/contactvoorkeuren/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/test/cultureel-erfgoed-basisregistratie.publication.json
