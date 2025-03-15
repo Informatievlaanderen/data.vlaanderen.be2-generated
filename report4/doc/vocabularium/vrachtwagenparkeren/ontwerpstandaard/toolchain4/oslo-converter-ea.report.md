@@ -2,115 +2,115 @@
 
 #||# -------------------------------------
 
-2025-03-15T21:54:27.156Z info: Connector Model:Model:Mobivoc:Parkeerfaciliteit:(Parkeerfaciliteit -> Parkeerplaats) is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.233Z info: Connector Model:Model:Mobivoc:Parkeerfaciliteit:(Parkeerfaciliteit -> Parkeerplaats) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.158Z info: Connector Model:Model:OSLO-Organisatie:Organisatie:isGeassocieerdMet is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.235Z info: Connector Model:Model:OSLO-Organisatie:Organisatie:isGeassocieerdMet is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.158Z info: Connector Model:Model:OSLO-Organisatie:Organisatie:heeftSuborganisatie is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.236Z info: Connector Model:Model:OSLO-Organisatie:Organisatie:heeftSuborganisatie is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.159Z info: Connector Model:Model:OSLO-Organisatie:Organisatie:isSuborganisatieVan is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.236Z info: Connector Model:Model:OSLO-Organisatie:Organisatie:isSuborganisatieVan is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.159Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Aanbieder:(Aanbieder -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.236Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Aanbieder:(Aanbieder -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.159Z info: Connector Model:Model:OSLO-Vervoersknooppunten:AanvullendeDienst:(AanvullendeDienst -> Aanbieder) is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.236Z info: Connector Model:Model:OSLO-Vervoersknooppunten:AanvullendeDienst:(AanvullendeDienst -> Aanbieder) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.159Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:Omvat is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.236Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:Omvat is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.159Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Aanbieder:(Aanbieder -> Mobiliteitsdienst) has no name. Ignoring this connector.
+2025-03-15T22:40:10.237Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Aanbieder:(Aanbieder -> Mobiliteitsdienst) has no name. Ignoring this connector.
 
-2025-03-15T21:54:27.159Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Boeking:(Boeking -> Reis) is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.237Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Boeking:(Boeking -> Reis) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.159Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Boeking) is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.237Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Boeking) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.160Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:IsDeelVan is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.237Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:IsDeelVan is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.160Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:BestaatUit is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.238Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:BestaatUit is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.160Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:BerekendMet is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.238Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:BerekendMet is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.160Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.238Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.160Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.238Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.160Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.239Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.161Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Route) is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.239Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.161Z info: Connector Model:Model:Mobivoc:Parkeerplaats:(Parkeerplaats -> Resource) is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.239Z info: Connector Model:Model:Mobivoc:Parkeerplaats:(Parkeerplaats -> Resource) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.161Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:(Mobiliteitsdienst -> Resource) has no name. Ignoring this connector.
+2025-03-15T22:40:10.239Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:(Mobiliteitsdienst -> Resource) has no name. Ignoring this connector.
 
-2025-03-15T21:54:27.161Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:GerealiseerdMet is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.239Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:GerealiseerdMet is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.161Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Boeking:(Boeking -> Resource) is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.240Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Boeking:(Boeking -> Resource) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.161Z info: Connector Model:Model:OSLO-Vervoersknooppunten:AanvullendeDienst:(AanvullendeDienst -> Infrastructuurelement) has no name. Ignoring this connector.
+2025-03-15T22:40:10.240Z info: Connector Model:Model:OSLO-Vervoersknooppunten:AanvullendeDienst:(AanvullendeDienst -> Infrastructuurelement) has no name. Ignoring this connector.
 
-2025-03-15T21:54:27.161Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:(Mobiliteitsdienst -> Infrastructuurelement) has no name. Ignoring this connector.
+2025-03-15T22:40:10.241Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:(Mobiliteitsdienst -> Infrastructuurelement) has no name. Ignoring this connector.
 
-2025-03-15T21:54:27.162Z info: Connector Model:Model:Mobivoc:Parkeerfaciliteit:(Parkeerfaciliteit -> Infrastructuurelement) is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.241Z info: Connector Model:Model:Mobivoc:Parkeerfaciliteit:(Parkeerfaciliteit -> Infrastructuurelement) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.162Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Voertuig) has no name. Ignoring this connector.
+2025-03-15T22:40:10.241Z info: Connector Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Voertuig) has no name. Ignoring this connector.
 
-2025-03-15T21:54:27.162Z info: Connector Model:Model:Vrachtwagenparkeren:Bestuurder:(Bestuurder -> Voertuig) has no name. Ignoring this connector.
+2025-03-15T22:40:10.241Z info: Connector Model:Model:Vrachtwagenparkeren:Bestuurder:(Bestuurder -> Voertuig) has no name. Ignoring this connector.
 
-2025-03-15T21:54:27.162Z info: Connector Model:Model:Vrachtwagenparkeren:Vrachtwagen:(Vrachtwagen -> Voertuig) is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.241Z info: Connector Model:Model:Vrachtwagenparkeren:Vrachtwagen:(Vrachtwagen -> Voertuig) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.162Z info: Connector Model:Model:Vrachtwagenparkeren:Oplegger:(Oplegger -> Vrachtwagen) is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.241Z info: Connector Model:Model:Vrachtwagenparkeren:Oplegger:(Oplegger -> Vrachtwagen) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.162Z info: Connector Model:Model:Vrachtwagenparkeren:Oplegger:(Oplegger -> Voertuig) is not an association with a source role. Ignoring this connector.
+2025-03-15T22:40:10.241Z info: Connector Model:Model:Vrachtwagenparkeren:Oplegger:(Oplegger -> Voertuig) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:54:27.162Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-15T22:40:10.242Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-15T21:54:27.162Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-15T22:40:10.242Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-15T21:54:27.166Z warn: [ConnectorConverterHandler]: Connector (Reservatie.Boeking) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-15T22:40:10.248Z warn: [ConnectorConverterHandler]: Connector (Reservatie.Boeking) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-15T21:54:27.166Z warn: [ConnectorConverterHandler]: Connector (Reservatie.Resource) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-15T22:40:10.248Z warn: [ConnectorConverterHandler]: Connector (Reservatie.Resource) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-15T21:54:27.168Z warn: [ConverterHandler]: Entity with path Model:Model:Vrachtwagenparkeren:Vrachtwagen has an empty value for tag usageNote-nl.
+2025-03-15T22:40:10.252Z warn: [ConverterHandler]: Entity with path Model:Model:Vrachtwagenparkeren:Vrachtwagen has an empty value for tag usageNote-nl.
 
-2025-03-15T21:54:27.169Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger has an empty value for tag usageNote-nl.
+2025-03-15T22:40:10.253Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger has an empty value for tag usageNote-nl.
 
-2025-03-15T21:54:27.169Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger has an empty value for tag usageNote-nl.
+2025-03-15T22:40:10.253Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger has an empty value for tag usageNote-nl.
 
-2025-03-15T21:54:27.170Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route has an empty value for tag usageNote-nl.
+2025-03-15T22:40:10.256Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route has an empty value for tag usageNote-nl.
 
-2025-03-15T21:54:27.170Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment has an empty value for tag usageNote-nl.
+2025-03-15T22:40:10.256Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment has an empty value for tag usageNote-nl.
 
-2025-03-15T21:54:27.171Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
+2025-03-15T22:40:10.257Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
 
-2025-03-15T21:54:27.171Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Dienstverleningtype has an empty value for tag usageNote-nl.
+2025-03-15T22:40:10.257Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Dienstverleningtype has an empty value for tag usageNote-nl.
 
-2025-03-15T21:54:27.172Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:ParkeerfaciliteitKenmerktype has an empty value for tag ap-usageNote-nl.
+2025-03-15T22:40:10.258Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:ParkeerfaciliteitKenmerktype has an empty value for tag ap-usageNote-nl.
 
-2025-03-15T21:54:27.172Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:ParkeerplaatsKenmerktype has an empty value for tag ap-usageNote-nl.
+2025-03-15T22:40:10.258Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:ParkeerplaatsKenmerktype has an empty value for tag ap-usageNote-nl.
 
-2025-03-15T21:54:27.174Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:AanvullendeDiensttype has an empty value for tag ap-usageNote-nl.
+2025-03-15T22:40:10.259Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:AanvullendeDiensttype has an empty value for tag ap-usageNote-nl.
 
-2025-03-15T21:54:27.176Z warn: [ConverterHandler]: Entity with path Model:Model:Vrachtwagenparkeren:Bestuurder:Opdrachtgever has already a value for status in language nl, but will be overwritten.
+2025-03-15T22:40:10.262Z warn: [ConverterHandler]: Entity with path Model:Model:Vrachtwagenparkeren:Bestuurder:Opdrachtgever has already a value for status in language nl, but will be overwritten.
 
-2025-03-15T21:54:27.178Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcetype has an empty value for tag usageNote-nl.
+2025-03-15T22:40:10.268Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcetype has an empty value for tag usageNote-nl.
 
-2025-03-15T21:54:27.178Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcestatus has an empty value for tag usageNote-nl.
+2025-03-15T22:40:10.269Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcestatus has an empty value for tag usageNote-nl.
 
-2025-03-15T21:54:27.179Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:vervoermiddel has an empty value for tag usageNote-nl.
+2025-03-15T22:40:10.269Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:vervoermiddel has an empty value for tag usageNote-nl.
 
-2025-03-15T21:54:27.179Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Beschikbaarheid:dienstregeling has an empty value for tag usageNote-nl.
+2025-03-15T22:40:10.270Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Beschikbaarheid:dienstregeling has an empty value for tag usageNote-nl.
 
-2025-03-15T21:54:27.180Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:vertrektijdstip has an empty value for tag usageNote-nl.
+2025-03-15T22:40:10.271Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:vertrektijdstip has an empty value for tag usageNote-nl.
 
-2025-03-15T21:54:27.180Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:aankomsttijdstip has an empty value for tag usageNote-nl.
+2025-03-15T22:40:10.271Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:aankomsttijdstip has an empty value for tag usageNote-nl.
 
-2025-03-15T21:54:27.182Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieClassificatie has an empty value for tag ap-usageNote-nl.
+2025-03-15T22:40:10.273Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieClassificatie has an empty value for tag ap-usageNote-nl.
 
-2025-03-15T21:54:27.182Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieActiviteit has an empty value for tag ap-usageNote-nl.
+2025-03-15T22:40:10.273Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieActiviteit has an empty value for tag ap-usageNote-nl.
 
-2025-03-15T21:54:27.182Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieType has an empty value for tag ap-usageNote-nl.
+2025-03-15T22:40:10.274Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieType has an empty value for tag ap-usageNote-nl.
 
-2025-03-15T21:54:27.183Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieStatus has an empty value for tag ap-usageNote-nl.
+2025-03-15T22:40:10.274Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieStatus has an empty value for tag ap-usageNote-nl.
 
-2025-03-15T21:54:27.183Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:AanvullendeDienst:naam has an empty value for tag ap-usageNote-nl.
+2025-03-15T22:40:10.275Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Vervoersknooppunten:AanvullendeDienst:naam has an empty value for tag ap-usageNote-nl.
 
 #||# -------------------------------------
 
