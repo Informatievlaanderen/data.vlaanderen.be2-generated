@@ -2,45 +2,127 @@
 
 #||# -------------------------------------
 
-2025-02-11T16:25:45.048Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-15T21:54:25.492Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):isGerelateerdMet)
 
-2025-02-11T16:25:45.050Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-15T21:54:25.493Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):vereist)
 
-2025-02-11T16:25:45.050Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
+2025-03-15T21:54:25.493Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftRelatieMet)
 
-2025-02-11T16:25:45.054Z warn: [ConnectorConverterHandler]: Connector (dataSubject) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-15T21:54:25.493Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
 
-2025-02-11T16:25:45.055Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dataSubject) and the fallback URI (http://todo.com/) will be assigned.
+2025-03-15T21:54:25.493Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
 
-2025-02-11T16:25:45.055Z warn: [ConnectorConverterHandler]: Connector (dataSubject) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-15T21:54:25.493Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-02-11T16:25:45.055Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dataSubject) and the fallback URI (http://todo.com/) will be assigned.
+2025-03-15T21:54:25.494Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersmaatregel:verwijstNaar)
 
-2025-02-11T16:25:45.055Z warn: [ConnectorConverterHandler]: Connector (verwerker) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-15T21:54:25.494Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):wordtUitgevoerdDoor)
 
-2025-02-11T16:25:45.055Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verwerker) and the fallback URI (http://todo.com/) will be assigned.
+2025-03-15T21:54:25.494Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isHoofdVan)
 
-2025-02-11T16:25:45.055Z warn: [ConnectorConverterHandler]: Connector (verwerkingsverantwoordelijke) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-15T21:54:25.494Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-02-11T16:25:45.055Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verwerkingsverantwoordelijke) and the fallback URI (http://todo.com/) will be assigned.
+2025-03-15T21:54:25.494Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
 
-2025-02-11T16:25:45.056Z warn: [ConnectorConverterHandler]: Connector (extraInformatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-15T21:54:25.494Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:PubliekeOrganisatie:heeftVerwerkersovereenkomstMet)
 
-2025-02-11T16:25:45.056Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (extraInformatie) and the fallback URI (http://todo.com/) will be assigned.
+2025-03-15T21:54:25.494Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersbordbasis:(Verkeersbordbasis -> OSLO-OpenbaarDomein::Verkeersbord))
+
+2025-03-15T21:54:25.494Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
+
+2025-03-15T21:54:25.494Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Object))
+
+2025-03-15T21:54:25.494Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+
+2025-03-15T21:54:25.494Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:isGerelateerdAan)
+
+2025-03-15T21:54:25.494Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
+
+2025-03-15T21:54:25.494Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Gemeente:(Gemeente -> Object))
+
+2025-03-15T21:54:25.494Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftParticiperende)
+
+2025-03-15T21:54:25.494Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke)
+
+2025-03-15T21:54:25.495Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:vereist)
+
+2025-03-15T21:54:25.495Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet)
+
+2025-03-15T21:54:25.495Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:aangenomenDoor)
+
+2025-03-15T21:54:25.495Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:Kost:isGedefinieerdDoor)
+
+2025-03-15T21:54:25.495Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:wordtUitgevoerdDoor)
+
+2025-03-15T21:54:25.497Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Toestemming:Toestemming:gegevenVoor is not an association with a source role. Ignoring this connector.
+
+2025-03-15T21:54:25.497Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Toestemming:Verwerkingsactiviteit:verwerker is not an association with a source role. Ignoring this connector.
+
+2025-03-15T21:54:25.498Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+
+2025-03-15T21:54:25.498Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Hoedanigheid:(Hoedanigheid -> Agent) is not an association with a source role. Ignoring this connector.
+
+2025-03-15T21:54:25.498Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Toestemming:Toestemming:dataSubject is not an association with a source role. Ignoring this connector.
+
+2025-03-15T21:54:25.498Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+
+2025-03-15T21:54:25.498Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Toestemming:Verwerkingsactiviteit:verwerkingsverantwoordelijke is not an association with a source role. Ignoring this connector.
+
+2025-03-15T21:54:25.498Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+
+2025-03-15T21:54:25.498Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Toestemming:Cookieverklaring:(Cookieverklaring -> Document) is not an association with a source role. Ignoring this connector.
+
+2025-03-15T21:54:25.498Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Toestemming:AlgemeneVoorwaarden:(AlgemeneVoorwaarden -> Document) is not an association with a source role. Ignoring this connector.
+
+2025-03-15T21:54:25.498Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Toestemming:Verwerkingsactiviteit:extraInformatie is not an association with a source role. Ignoring this connector.
+
+2025-03-15T21:54:25.498Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Toestemming:Privacyverklaring:(Privacyverklaring -> Document) is not an association with a source role. Ignoring this connector.
+
+2025-03-15T21:54:25.498Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Toestemming:Verwerkersovereenkomst:(Verwerkersovereenkomst -> Document) is not an association with a source role. Ignoring this connector.
+
+2025-03-15T21:54:25.498Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Toestemming:Verwerkingsactiviteit:isGerelateerdMet is not an association with a source role. Ignoring this connector.
+
+2025-03-15T21:54:25.499Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:PubliekeOrganisatie:isVerantwoordelijkVoor is not an association with a source role. Ignoring this connector.
+
+2025-03-15T21:54:25.499Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-15T21:54:25.499Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-15T21:54:25.499Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-15T21:54:25.504Z warn: [ConnectorConverterHandler]: Connector (dataSubject) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-15T21:54:25.504Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dataSubject) and the fallback URI (http://todo.com/) will be assigned.
+
+2025-03-15T21:54:25.504Z warn: [ConnectorConverterHandler]: Connector (dataSubject) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-15T21:54:25.504Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dataSubject) and the fallback URI (http://todo.com/) will be assigned.
+
+2025-03-15T21:54:25.504Z warn: [ConnectorConverterHandler]: Connector (verwerker) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-15T21:54:25.504Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verwerker) and the fallback URI (http://todo.com/) will be assigned.
+
+2025-03-15T21:54:25.504Z warn: [ConnectorConverterHandler]: Connector (verwerkingsverantwoordelijke) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-15T21:54:25.504Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verwerkingsverantwoordelijke) and the fallback URI (http://todo.com/) will be assigned.
+
+2025-03-15T21:54:25.504Z warn: [ConnectorConverterHandler]: Connector (extraInformatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-15T21:54:25.504Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (extraInformatie) and the fallback URI (http://todo.com/) will be assigned.
 
 Error: [AttributeConverterHandler]: Unable to find domain object for attribute (Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:Lidmaatschap:lidVanTot).
 
-    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/converter-handlers/AttributeConverterHandler.js:46:23
+    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/converter-handlers/AttributeConverterHandler.js:51:23
 
     at Array.forEach (<anonymous>)
 
-    at AttributeConverterHandler.assignUris (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/converter-handlers/AttributeConverterHandler.js:43:26)
+    at AttributeConverterHandler.assignUris (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/converter-handlers/AttributeConverterHandler.js:48:26)
 
-    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConverterHandlerService.js:31:50
+    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConverterHandlerService.js:38:50
 
     at Array.map (<anonymous>)
 
-    at ConverterHandlerService.assignUris (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConverterHandlerService.js:31:37)
+    at ConverterHandlerService.assignUris (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConverterHandlerService.js:38:37)
 
 #||# -------------------------------------
 
