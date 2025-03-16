@@ -14,5 +14,5 @@
 
 #||# start writing  
 
-#||# The file has been saved to /tmp/workspace/report4/doc/vocabularium/openbaardomein/gebied/ontwerpstandaard/toolchain4/html/meta_openbaardomein_nl.json  
+#||# The file has been saved to /tmp/workspace/report4/doc/vocabularium/openbaardomein/gebied/ontwerpstandaard/toolchain4/html/meta_gebied_nl.json  
 

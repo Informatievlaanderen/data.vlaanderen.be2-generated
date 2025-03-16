@@ -362,16 +362,12 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/begroeid-voorkomen/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/onbegroeid-voorkomen/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/watervoorkomen/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/test/od-waterdeel.publication.json
 #||# 
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/test/om.publication.json
 #||# 
