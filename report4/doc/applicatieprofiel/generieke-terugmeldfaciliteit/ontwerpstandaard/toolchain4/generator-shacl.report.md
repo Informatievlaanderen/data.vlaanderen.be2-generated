@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for range "http://www.w3.org/2004/02/skos/core#Concept".
+Error: Unable to find the assigned URI for range "http://www.w3.org/ns/adms#Identifier".
 
     at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:49:19)
 
