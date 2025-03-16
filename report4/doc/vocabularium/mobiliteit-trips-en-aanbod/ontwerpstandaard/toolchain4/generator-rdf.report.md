@@ -2,13 +2,13 @@
 
 #||# -------------------------------------  
 
-2025-02-11T15:44:11.996Z error: Unable to find the definition for property [urn:oslo-toolchain:41b3a0db6dd10537c535a75f996793967257fc089e4a1a034b296127d1c8039a](all-trips-en-aanbod.jsonld#L4442).
+2025-03-16T21:23:34.215Z error: Unable to find the definition for property [urn:oslo-toolchain:41b3a0db6dd10537c535a75f996793967257fc089e4a1a034b296127d1c8039a](all-trips-en-aanbod.jsonld#L4431).
 
-2025-02-11T15:44:11.998Z error: Unable to find the definition for property [urn:oslo-toolchain:e51ed4a9ded70c512394e08f685d2613187edfa7ea419744d5d9c46c49482dbd](all-trips-en-aanbod.jsonld#L4812).
+2025-03-16T21:23:34.217Z error: Unable to find the definition for property [urn:oslo-toolchain:e51ed4a9ded70c512394e08f685d2613187edfa7ea419744d5d9c46c49482dbd](all-trips-en-aanbod.jsonld#L4769).
 
-2025-02-11T15:44:11.998Z error: Unable to find the definition for property [urn:oslo-toolchain:b98903d2278a3540cc01b7e3021a410086f4f98d6cb736d6adf577e3ff830dba](all-trips-en-aanbod.jsonld#L4832).
+2025-03-16T21:23:34.217Z error: Unable to find the definition for property [urn:oslo-toolchain:b98903d2278a3540cc01b7e3021a410086f4f98d6cb736d6adf577e3ff830dba](all-trips-en-aanbod.jsonld#L4789).
 
-2025-02-11T15:44:11.999Z error: Unable to find the definition for property [urn:oslo-toolchain:d7221f1862899f5cf9d4fe0d388fa0ca01ae36698bf8f0e96d99b88a54fe75a0](all-trips-en-aanbod.jsonld#L5196).
+2025-03-16T21:23:34.218Z error: Unable to find the definition for property [urn:oslo-toolchain:d7221f1862899f5cf9d4fe0d388fa0ca01ae36698bf8f0e96d99b88a54fe75a0](all-trips-en-aanbod.jsonld#L5153).
 
-2025-02-11T15:44:11.999Z error: Unable to find the definition for property [urn:oslo-toolchain:8b896ae18df50c81f1af132ed89b3fa9deff3cc5957db331196c10782b3338ed](all-trips-en-aanbod.jsonld#L5216).
+2025-03-16T21:23:34.218Z error: Unable to find the definition for property [urn:oslo-toolchain:8b896ae18df50c81f1af132ed89b3fa9deff3cc5957db331196c10782b3338ed](all-trips-en-aanbod.jsonld#L5179).
 

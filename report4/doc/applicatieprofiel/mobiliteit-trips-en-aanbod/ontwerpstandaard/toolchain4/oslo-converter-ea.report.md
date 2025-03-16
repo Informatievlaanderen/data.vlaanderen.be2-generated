@@ -2,167 +2,267 @@
 
 #||# -------------------------------------
 
-2025-02-11T15:42:36.662Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-16T21:20:29.185Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Aanbieder:(Aanbieder -> Mobiliteitsdienst) has no name. Ignoring this connector.
 
-2025-02-11T15:42:36.664Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-16T21:20:29.187Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Boeking:(Boeking -> Reis) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.664Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
+2025-03-16T21:20:29.188Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:(Reiziger -> Kenmerk) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.664Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:ObjectdiagramStory2) and fallback URI (http://todo.com/) will be assigned.
+2025-03-16T21:20:29.189Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportnetwerk:^BestaatUit is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.665Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:ObjectdiagramStory1) and fallback URI (http://todo.com/) will be assigned.
+2025-03-16T21:20:29.189Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Boeking:(Boeking -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.665Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:StoryAutodelen) and fallback URI (http://todo.com/) will be assigned.
+2025-03-16T21:20:29.189Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:(Mobiliteitsdienst -> Prijsplan) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.670Z warn: [ConnectorConverterHandler]: Connector (Onderneemt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.189Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:UitgevoerdDoor is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.670Z warn: [ConnectorConverterHandler]: Connector (BestaatUit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.189Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:(Mobiliteitsdienst -> Resource) has no name. Ignoring this connector.
 
-2025-02-11T15:42:36.670Z warn: [ConnectorConverterHandler]: Connector (vertrekknoop) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.190Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportconnectie:^Verbindt is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.670Z warn: [ConnectorConverterHandler]: Connector (aankomstknoop) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.190Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:Overstap is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.671Z warn: [ConnectorConverterHandler]: Connector (mogelijkeRoute) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.190Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.671Z warn: [ConnectorConverterHandler]: Connector (gekozenRoute) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.191Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:Onderneemt is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.671Z warn: [ConnectorConverterHandler]: Connector (aanbieder) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.191Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:BestaatUit is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.671Z warn: [ConnectorConverterHandler]: Connector (Omvat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.191Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:IsDeelVan is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.671Z warn: [ConnectorConverterHandler]: Connector (UitgevoerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.191Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:Omvat is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.671Z warn: [ConnectorConverterHandler]: Connector (Overstap) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.191Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Routeknoop) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.671Z warn: [ConnectorConverterHandler]: Connector (Routeknoop (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.192Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Routeknoop) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.672Z warn: [ConnectorConverterHandler]: Connector (Routeknoop (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.192Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.672Z warn: [ConnectorConverterHandler]: Connector (uitgevoerdeRoute) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.192Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Boeking) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.672Z warn: [ConnectorConverterHandler]: Connector (dienst) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.192Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.672Z warn: [ConnectorConverterHandler]: Connector (resource) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.192Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Boeking:(Boeking -> Resource) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.672Z warn: [ConnectorConverterHandler]: Connector (kenmerk) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.193Z info: Connector Model:Domain Model:OSLO-Generiek:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.672Z warn: [ConnectorConverterHandler]: Connector (BerekendMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.193Z info: Connector Model:Domain Model:OSLO-Generiek:Polygoon:(Polygoon -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.672Z warn: [ConnectorConverterHandler]: Connector (reis) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.193Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.672Z warn: [ConnectorConverterHandler]: Connector (boeking) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.193Z info: Connector Model:Domain Model:OSLO-Generiek:LijnString:(LijnString -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (voorkeur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.193Z info: Connector Model:Domain Model:OSLO-Netwerk:GerichteLink:(GerichteLink -> Link) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (IsMedereizigerVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.194Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportgebied:(Transportgebied -> Transportobject) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.194Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportknoop:(Transportknoop -> Transportobject) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.194Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:GerealiseerdOp is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.194Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeplanner:IntegreertInfoOver is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.194Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (licentie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.194Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:BerekendMet is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (uitvoerder) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.194Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:(Reiziger -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.194Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Vervoersbewijs:(Vervoersbewijs -> Mobiliteitsdienst) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.195Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Overstap:GerealiseerdOp is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (dienst) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.195Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:(Reiziger -> Voorkeur) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.195Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:IsMedereizigerVan is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (prijsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.195Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:GerealiseerdMet is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (resource) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.195Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:BeschikbaarOp is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (Reservatie.Boeking) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.195Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.673Z warn: [ConnectorConverterHandler]: Connector (Reservatie.Resource) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.195Z info: Connector Model:Domain Model:OSLO-Generiek:FormeelKader:isGerelateerdAan is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.674Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.196Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:AangebodenBinnen is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.674Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-16T21:20:29.196Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:(Mobiliteitsdienst -> Licentie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.676Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.196Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Licentie:VerkregenBinnen is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.677Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.196Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:GerealiseerdMet is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.678Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.196Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:GerealiseerdDoor is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.678Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcetype has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.196Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:GerealiseerdDoor is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.679Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Vervoermiddel has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.196Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Uitvoerder) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.679Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.196Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:(Routeknoop -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.680Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Uitvoerder has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.196Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportconnectie:(Transportconnectie -> Transportobject) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T15:42:36.680Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Teken has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.197Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T15:42:36.680Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Dienstverleningtype has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.198Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T15:42:36.681Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Link has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.198Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T15:42:36.681Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:GeneriekeLink has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.198Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:ObjectdiagramStory2) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T15:42:36.682Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Netwerkelement has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.198Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:ObjectdiagramStory1) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T15:42:36.682Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Netwerkgebied has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.198Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:StoryAutodelen) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T15:42:36.683Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Knoop has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.203Z warn: [ConnectorConverterHandler]: Connector (Onderneemt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.683Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Connectietype has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.203Z warn: [ConnectorConverterHandler]: Connector (BestaatUit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.683Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Transportnetwerk:Transporttype has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.203Z warn: [ConnectorConverterHandler]: Connector (vertrekknoop) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.684Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcestatus has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.203Z warn: [ConnectorConverterHandler]: Connector (aankomstknoop) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.684Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reizigerskenmerk has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.203Z warn: [ConnectorConverterHandler]: Connector (mogelijkeRoute) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.684Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reizigersvoorkeur has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.203Z warn: [ConnectorConverterHandler]: Connector (gekozenRoute) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.685Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Licentie has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.203Z warn: [ConnectorConverterHandler]: Connector (Omvat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.685Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportgebiedtype has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.203Z warn: [ConnectorConverterHandler]: Connector (UitgevoerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.685Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportknooptype has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.203Z warn: [ConnectorConverterHandler]: Connector (Overstap) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.688Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:vertrektijdstip has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.203Z warn: [ConnectorConverterHandler]: Connector (Routeknoop (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.689Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:aankomsttijdstip has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.204Z warn: [ConnectorConverterHandler]: Connector (Routeknoop (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.689Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:vervoermiddel has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.204Z warn: [ConnectorConverterHandler]: Connector (uitgevoerdeRoute) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.691Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Beschikbaarheid:dienstregeling has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.204Z warn: [ConnectorConverterHandler]: Connector (resource) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.698Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Overstap:overstaptijd has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.204Z warn: [ConnectorConverterHandler]: Connector (kenmerk) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.698Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:FormeelKader:naam has an empty value for tag ap-usageNote-nl.
+2025-03-16T21:20:29.204Z warn: [ConnectorConverterHandler]: Connector (BerekendMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.699Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:FormeelKader:beschrijving has an empty value for tag ap-usageNote-nl.
+2025-03-16T21:20:29.204Z warn: [ConnectorConverterHandler]: Connector (reis) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.700Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:Periode:begin has an empty value for tag ap-usageNote-nl.
+2025-03-16T21:20:29.204Z warn: [ConnectorConverterHandler]: Connector (boeking) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.701Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:Periode:einde has an empty value for tag ap-usageNote-nl.
+2025-03-16T21:20:29.204Z warn: [ConnectorConverterHandler]: Connector (voorkeur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.719Z warn: [ConverterHandler]: Entity with path Omvat has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.204Z warn: [ConnectorConverterHandler]: Connector (IsMedereizigerVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.720Z warn: [ConverterHandler]: Entity with path GerealiseerdOp has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.204Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.720Z warn: [ConverterHandler]: Entity with path IntegreertInfoOver has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.204Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.731Z warn: [ConverterHandler]: Entity with path GerealiseerdOp has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.204Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.732Z warn: [ConverterHandler]: Entity with path IsMedereizigerVan has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.204Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.733Z warn: [ConverterHandler]: Entity with path GerealiseerdMet has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.204Z warn: [ConnectorConverterHandler]: Connector (licentie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T15:42:36.735Z warn: [ConverterHandler]: Entity with path GerealiseerdDoor has an empty value for tag usageNote-nl.
+2025-03-16T21:20:29.204Z warn: [ConnectorConverterHandler]: Connector (uitvoerder) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-16T21:20:29.205Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-16T21:20:29.205Z warn: [ConnectorConverterHandler]: Connector (link) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-16T21:20:29.205Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-16T21:20:29.205Z warn: [ConnectorConverterHandler]: Connector (dienst) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-16T21:20:29.205Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-16T21:20:29.205Z warn: [ConnectorConverterHandler]: Connector (prijsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-16T21:20:29.205Z warn: [ConnectorConverterHandler]: Connector (resource) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-16T21:20:29.205Z warn: [ConnectorConverterHandler]: Connector (Reservatie.Boeking) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-16T21:20:29.205Z warn: [ConnectorConverterHandler]: Connector (Reservatie.Resource) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-16T21:20:29.205Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-16T21:20:29.205Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-16T21:20:29.207Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.208Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.209Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.210Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcetype has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.210Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Vervoermiddel has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.211Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.211Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Uitvoerder has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.211Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Teken has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.212Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Dienstverleningtype has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.212Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Link has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.212Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:GeneriekeLink has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.213Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Netwerkelement has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.213Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Netwerkgebied has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.214Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Knoop has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.214Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Connectietype has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.214Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Transportnetwerk:Transporttype has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.215Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcestatus has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.215Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reizigerskenmerk has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.215Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reizigersvoorkeur has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.216Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Licentie has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.216Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportgebiedtype has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.216Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportknooptype has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.219Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:vertrektijdstip has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.220Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:aankomsttijdstip has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.220Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:vervoermiddel has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.222Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Beschikbaarheid:dienstregeling has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.229Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Overstap:overstaptijd has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.230Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:FormeelKader:naam has an empty value for tag ap-usageNote-nl.
+
+2025-03-16T21:20:29.230Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:FormeelKader:beschrijving has an empty value for tag ap-usageNote-nl.
+
+2025-03-16T21:20:29.232Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:Periode:begin has an empty value for tag ap-usageNote-nl.
+
+2025-03-16T21:20:29.232Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:Periode:einde has an empty value for tag ap-usageNote-nl.
+
+2025-03-16T21:20:29.248Z warn: [ConverterHandler]: Entity with path Omvat has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.250Z warn: [ConverterHandler]: Entity with path GerealiseerdOp has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.250Z warn: [ConverterHandler]: Entity with path IntegreertInfoOver has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.260Z warn: [ConverterHandler]: Entity with path GerealiseerdOp has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.261Z warn: [ConverterHandler]: Entity with path IsMedereizigerVan has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.262Z warn: [ConverterHandler]: Entity with path GerealiseerdMet has an empty value for tag usageNote-nl.
+
+2025-03-16T21:20:29.264Z warn: [ConverterHandler]: Entity with path isGerelateerdAan has an empty value for tag ap-usageNote-nl.
+
+2025-03-16T21:20:29.265Z warn: [ConverterHandler]: Entity with path GerealiseerdDoor has an empty value for tag usageNote-nl.
 
 #||# -------------------------------------
 
