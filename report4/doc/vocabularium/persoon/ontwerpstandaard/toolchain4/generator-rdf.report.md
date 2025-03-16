@@ -2,13 +2,13 @@
 
 #||# -------------------------------------  
 
-2025-02-11T16:05:18.660Z error: Unable to find the definition for property [urn:oslo-toolchain:d7bcee83db15807df93cda8e68ed7dcae39ba1cba226acd2a6ae1b79adf71c3b](all-persoon.jsonld#L2578).
+2025-03-16T07:40:06.983Z error: Unable to find the definition for property [urn:oslo-toolchain:da502946222ac640fadb9045afce5920ec2e6d8177518b007ac591b9c0da9cb7](all-persoon.jsonld#L2539).
 
-2025-02-11T16:05:18.661Z error: Unable to find the definition for property [urn:oslo-toolchain:576bda286e984a8c49f4b712b36ba125e33cce8666de892f39c4092f881508ab](all-persoon.jsonld#L2598).
+2025-03-16T07:40:06.984Z error: Unable to find the definition for property [urn:oslo-toolchain:ca0c7fee7f9cd2b0ee2e235f71d2243a527bd6228c8ef36b577787fdd3cba561](all-persoon.jsonld#L2557).
 
-2025-02-11T16:05:18.661Z error: Unable to find the definition for property [urn:oslo-toolchain:467eb0825741914aff842bc4c672bb10046bfc7c055b138d87c26a6407188061](all-persoon.jsonld#L2618).
+2025-03-16T07:40:06.985Z error: Unable to find the definition for property [urn:oslo-toolchain:467eb0825741914aff842bc4c672bb10046bfc7c055b138d87c26a6407188061](all-persoon.jsonld#L2575).
 
-2025-02-11T16:05:18.662Z error: Unable to find the definition for property [urn:oslo-toolchain:2f76e29e16e612969b7255486139795da7207f171d89a5c5ea443b591e00e2d5](all-persoon.jsonld#L2658).
+2025-03-16T07:40:06.985Z error: Unable to find the definition for property [urn:oslo-toolchain:2f76e29e16e612969b7255486139795da7207f171d89a5c5ea443b591e00e2d5](all-persoon.jsonld#L2627).
 
 Error: Unable to find the assigned URI for parent http://purl.org/vocab/bio/0.1/Event of class [urn:oslo-toolchain:ffdb0735c6d0999365b95cf6d02241c13516354b185b8727b91cd1cb98c46595](all-persoon.jsonld#L417).
 
