@@ -356,8 +356,6 @@ error: missing '/tmp/generated/doc/applicatieprofiel/notificatie-basis/ontwerpst
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/vegetatie-elementen/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/terreindelen/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/test/od-voorkomen.publication.json
 #||# 
