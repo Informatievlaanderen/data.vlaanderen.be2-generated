@@ -78,13 +78,6 @@
     shacl:name "gevoerd door"@nl;
     shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#gevoerdDoor>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4#Campagne.BestaatUit>;
-    shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent>;
-    shacl:description "De verschillende onderdelen van een campagne."@nl;
-    shacl:minCount "1";
-    shacl:name "bestaat uit"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#bestaatUit>
-  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4#Campagne.Product>;
     shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#Product>;
     shacl:description "Het product of producten die verbonden zijn aan de campagne."@nl;
@@ -234,10 +227,6 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4/DragerTypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4/ExpressiecreatieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/campagne/publicatie#ExpressieCreatie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4/FormeleOrganisatieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -395,6 +384,20 @@
     shacl:description "De inhoud van het object."@nl;
     shacl:name "inhoud"@nl;
     shacl:path crm:P190_has_symbolic_content
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4#InformatieObject.Omvat>;
+    shacl:class crm:E73_Information_Object;
+    shacl:description "Een object kan een ander object omvatten."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "omvat"@nl;
+    shacl:path crm:P165_incorporates
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4#InformatieObject.Omvat>;
+    shacl:class crm:E73_Information_Object;
+    shacl:description "Een object kan een ander object omvatten."@nl;
+    shacl:name "omvat"@nl;
+    shacl:path crm:P165_incorporates
   ];
   shacl:targetClass crm:E73_Information_Object .
 
@@ -601,6 +604,34 @@
     shacl:description "Soort organisatie."@nl;
     shacl:name "type"@nl;
     shacl:path <http://www.w3.org/ns/regorg#orgType>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4#Organisatie.HeeftSuborganisatie>;
+    shacl:class org:Organization;
+    shacl:description "Suborganisatie van de organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "heeft Suborganisatie"@nl;
+    shacl:path org:hasSubOrganization
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4#Organisatie.HeeftSuborganisatie>;
+    shacl:class org:Organization;
+    shacl:description "Suborganisatie van de organisatie."@nl;
+    shacl:name "heeft Suborganisatie"@nl;
+    shacl:path org:hasSubOrganization
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4#Organisatie.IsSuborganisatieVan>;
+    shacl:class org:Organization;
+    shacl:description "Is zelf suborganisatie van een andere organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "is Suborganisatie van"@nl;
+    shacl:path org:subOrganizationOf
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4#Organisatie.IsSuborganisatieVan>;
+    shacl:class org:Organization;
+    shacl:description "Is zelf suborganisatie van een andere organisatie."@nl;
+    shacl:name "is Suborganisatie van"@nl;
+    shacl:path org:subOrganizationOf
   ];
   shacl:targetClass org:Organization .
 
@@ -707,10 +738,6 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/campagne/publicatie#Product> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4/ProductieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/campagne/publicatie#Productie> .
-
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4/ProducttypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
@@ -774,11 +801,24 @@
     shacl:description "De variabelen om de publicatie correct te verspreiden en de resultatenmetingen te bekomen."@nl;
     shacl:name "marketing"@nl;
     shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#marketing>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4#PublicatieEvent.Distributie>;
+    shacl:class <https://data.vlaanderen.be/ns/campagne/publicatie#Distributie>;
+    shacl:description "Verbindt de creatie van de publicatie met de distributie ervan."@nl;
+    shacl:name "Distributie"@nl;
+    shacl:path <http://todo.com/distributie>
   ];
   shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F30> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4/PublicatieExpressieShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4#PublicatieExpressie.Publicatieevent>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F30>;
+    shacl:description "Linkt de inhoud van de publicatie met de creatie van de publicatie."@nl;
+    shacl:name "publicatieEvent"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/campagne/publicatie#publicatieEvent>
+  ];
   shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F24> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4/PublicatieKanaalTypeShape> a shacl:NodeShape;

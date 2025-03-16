@@ -2,17 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-02-11T15:44:10.432Z error: Unable to find the description for subject "[urn:oslo-toolchain:043a0d2630a424238d06f7ae4fe692cd2c75e0a53a71f82950d27352c305e421](all-DCAT-AP-VL-20.jsonld#L4093)".
+2025-03-16T10:04:15.483Z error: Unable to find the description for subject "[urn:oslo-toolchain:b13fb05ecc6c48ae66e55570adcfce4d67d7e400e75fa3a1e7526c617d9bf497](all-DCAT-AP-VL-20.jsonld#L4267)".
 
-Error: Unable to find a label for the domain "urn:oslo-toolchain:c1297bb3b49a7a533b0982fc1e017d94be021dcf383925d93d6c7b4127a5c491" of subject "[urn:oslo-toolchain:043a0d2630a424238d06f7ae4fe692cd2c75e0a53a71f82950d27352c305e421](all-DCAT-AP-VL-20.jsonld#L4093)".
-
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:77:23)
-
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
-
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:51)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-16T10:04:15.485Z error: Unable to find the description for subject "[urn:oslo-toolchain:441482222127cc2b1c5ea440bf8d1a5231ec7fe575b0f337bd172ae01fc66eef](all-DCAT-AP-VL-20.jsonld#L4287)".
 
