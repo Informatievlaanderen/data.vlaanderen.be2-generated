@@ -2,5 +2,5 @@
 
 #||# -------------------------------------
 
-2025-03-16T10:03:21.670Z error: [CsvConverterHandler] Unable to convert the provided csv into a stakeholders-file. Error: Invalid Record Length: columns length is 7, got 6 on line 17 for record Ine,Kolb,RSZ,ine.kolb@onssrszlss.fgov.be,https://www.rsz.be,C
+2025-03-16T10:22:02.490Z error: [CsvConverterHandler] Unable to convert the provided csv into a stakeholders-file. Error: Invalid Record Length: columns length is 7, got 6 on line 19 for record Wim,Van Acker,Cipal Schaubroeck,https://www.cipalschaubroeck.be/,C,
 
