@@ -302,8 +302,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/vocabularium/melding/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/test/metadata-dcat-vl.publication.json
 #||# 

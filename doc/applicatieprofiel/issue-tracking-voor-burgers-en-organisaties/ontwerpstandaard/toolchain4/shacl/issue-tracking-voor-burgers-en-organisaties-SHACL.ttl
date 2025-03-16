@@ -1,0 +1,275 @@
+@prefix as: <https://www.w3.org/ns/activitystreams#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/ApplicatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Applicatie.Meldingsapplicatie>;
+    shacl:class <https://data.vlaanderen.be/ns/melding#Melding>;
+    shacl:description "De applicatie dat de Melding creëerde."@nl;
+    shacl:name "meldingsapplicatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#Applicatie.meldingsapplicatie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/melding#Applicatie> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/DatetimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/GeometrieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Geometrie.Gml>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "gml"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Geometrie.Wkt>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "wkt"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/GeregistreerdPersoonShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#GeregistreerdPersoon.Registratie>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificatiecode van de persoon in het register."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "registratie"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/persoon#registratie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/HoedanigheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#Hoedanigheid> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/LiteralShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Literal .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/MeldingBodyShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#MeldingBody.Beschrijving>;
+    shacl:datatype xsd:string;
+    shacl:description "Een tekstuele beschrijving van de melding."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#MeldingBody.Bijlage>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Identificeert een resource die aan de MeldingsBody verbonden is en mogelijks speciale verwerking vraagt."@nl;
+    shacl:maxCount "1";
+    shacl:name "bijlage"@nl;
+    shacl:path as:attachment
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#MeldingBody.Geometrie>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "De relatie tussen de MeldingBody en een geometrie."@nl;
+    shacl:maxCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://www.w3.org/ns/locn#geometry>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/melding#MeldingBody> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/MeldingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Samenvatting>;
+    shacl:datatype xsd:string;
+    shacl:description "Een samenvatting van de Melding."@nl;
+    shacl:maxCount "1";
+    shacl:name "samenvatting"@nl;
+    shacl:path as:summary
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Titel>;
+    shacl:datatype xsd:string;
+    shacl:description "De titel van de Melding."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "titel"@nl;
+    shacl:path dc:title
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Webpagina>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Een doorverwijzing naar een webpagina over deze Melding."@nl;
+    shacl:maxCount "1";
+    shacl:name "webpagina"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#webpagina>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.HeeftBody>;
+    shacl:class <https://data.vlaanderen.be/ns/melding#MeldingBody>;
+    shacl:description "Het object van deze associatie is een resource die de body van de Melding beschrijft (MeldingBody)."@nl;
+    shacl:name "heeft body"@nl;
+    shacl:path oa:hasBody
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.HeeftStatus>;
+    shacl:class <https://data.vlaanderen.be/ns/melding#Meldingstatus>;
+    shacl:description "De Status verbonden aan de Melding."@nl;
+    shacl:name "heeft status"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#heeftStatus>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Meldingstype>;
+    shacl:class skos:Concept;
+    shacl:description "De relatie tussen de Melding en het Meldingstype dat gebruikt worden om de melding te categoriseren."@nl;
+    shacl:minCount "1";
+    shacl:name "meldingstype"@nl;
+    shacl:path oa:motivatedBy
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Meldingsorganisatie>;
+    shacl:class <https://www.w3.org/ns/org#Organization>;
+    shacl:description "De organisatie die verantwoordelijk is voor de applicatie die werd gebruikt voor de creatie van de melding."@nl;
+    shacl:maxCount "1";
+    shacl:name "meldingsorganisatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#Melding.meldingsorganisatie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Meldingsapplicatie>;
+    shacl:class <https://data.vlaanderen.be/ns/melding#Applicatie>;
+    shacl:description "De applicatie dat de Melding creëerde."@nl;
+    shacl:maxCount "1";
+    shacl:name "meldingsapplicatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#Melding.meldingsapplicatie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Indiener>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die de Melding heeft aangemaakt en/of ingediend."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "indiener"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#indiener>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Betrokkene>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die belang heeft bij de Melding of geïmpacteerd is door de behandeling ervan."@nl;
+    shacl:name "betrokkene"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#betrokkene>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Behandelaar>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die werd aangewezen om de melding op te volgen en af te handelen."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "behandelaar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#behandelaar>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/melding#Melding> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/MeldingstatusShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Meldingstatus.Beschrijving>;
+    shacl:datatype xsd:string;
+    shacl:description "Een beschrijving van de Status."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Meldingstatus.Statusdatum>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "De datum van een Status."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "statusdatum"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#statusdatum>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Meldingstatus.StatusType>;
+    shacl:class skos:Concept;
+    shacl:description "Het type van de Status."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "status type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#statuswaarde>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Meldingstatus.StatuswijzigingDoor>;
+    shacl:class dc:Agent;
+    shacl:description "De Agent die deze status heeft geactiveerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "statuswijziging door"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#statuswijzigingDoor>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/melding#Meldingstatus> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/Organisatie-eenheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Organisatie-eenheid.IsEenheidVan>;
+    shacl:class <https://www.w3.org/ns/org#Organization>;
+    shacl:description "Organisatie waarvan de organisatie-eenheid deel uitmaakt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "is eenheid van"@nl;
+    shacl:path org:unitOf
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Organisatie-eenheid.HeeftEenheid>;
+    shacl:class <https://www.w3.org/ns/org#Organization>;
+    shacl:description "Verwijst naar een organisatie-eenheid die deel uitmaakt van de organisatie, bv een afdeling."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "heeft eenheid"@nl;
+    shacl:path org:hasUnit
+  ];
+  shacl:targetClass org:OrganizationalUnit .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/OrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Organisatie.IsEenheidVan>;
+    shacl:class org:OrganizationalUnit;
+    shacl:description "Organisatie waarvan de organisatie-eenheid deel uitmaakt."@nl;
+    shacl:name "is eenheid van"@nl;
+    shacl:path org:unitOf
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Organisatie.HeeftEenheid>;
+    shacl:class org:OrganizationalUnit;
+    shacl:description "Verwijst naar een organisatie-eenheid die deel uitmaakt van de organisatie, bv een afdeling."@nl;
+    shacl:name "heeft eenheid"@nl;
+    shacl:path org:hasUnit
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Organisatie.Meldingsorganisatie>;
+    shacl:class <https://data.vlaanderen.be/ns/melding#Melding>;
+    shacl:description "De organisatie die verantwoordelijk is voor de applicatie die werd gebruikt voor de creatie van de melding."@nl;
+    shacl:name "meldingsorganisatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#Organisatie.meldingsorganisatie>
+  ];
+  shacl:targetClass <https://www.w3.org/ns/org#Organization> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/PersoonShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/person#Person> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/PubliekeOrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/StringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4/UriShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:anyURI .
