@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-03-04T11:33:23.807Z error: Unable to find the description for subject "[urn:oslo-toolchain:04329207cde850a7cb78f702f7436c14d5c5c841c6d16e3f459357f076d844a5](all-schuldbeheer-ap.jsonld#L3210)".
+2025-03-17T17:18:39.236Z error: Unable to find the description for subject "[urn:oslo-toolchain:04329207cde850a7cb78f702f7436c14d5c5c841c6d16e3f459357f076d844a5](all-schuldbeheer-ap.jsonld#L3210)".
 
 Error: Unable to find a label for the domain "urn:oslo-toolchain:0c80b1909d1450803ff64fbec230e753347ab06ee1ae1b2136db8ba32827d7f5" of subject "[urn:oslo-toolchain:04329207cde850a7cb78f702f7436c14d5c5c841c6d16e3f459357f076d844a5](all-schuldbeheer-ap.jsonld#L3210)".
 

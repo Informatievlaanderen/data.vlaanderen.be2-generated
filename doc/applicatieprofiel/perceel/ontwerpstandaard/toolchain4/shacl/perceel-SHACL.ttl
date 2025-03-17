@@ -1,5 +1,4 @@
 @prefix dc: <http://purl.org/dc/terms/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schemas: <https://schema.org/> .
@@ -27,12 +26,15 @@
   shacl:closed false;
   shacl:targetClass xsd:double .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4/EntiteitShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Object> .
-
 <https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4/GebouwShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4#Gebouw.LigtOp>;
+    shacl:class <https://data.vlaanderen.be/ns/perceel#KadastraalPlanperceel>;
+    shacl:description "De kadastrale planpercelen waarmee het gebouw officieel geassocieerd is."@nl;
+    shacl:name "ligt op"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#ligtOp>
+  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/gebouw#Gebouw> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4/GeometrieShape> a shacl:NodeShape;
@@ -174,6 +176,12 @@
     shacl:name "datum bijwerking"@nl;
     shacl:path <https://data.vlaanderen.be/ns/perceel#datumbijwerking>
   ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4#KadastraalPlanperceel.LigtOp>;
+    shacl:class <https://data.vlaanderen.be/ns/gebouw#Gebouw>;
+    shacl:description "De kadastrale planpercelen waarmee het gebouw officieel geassocieerd is."@nl;
+    shacl:name "ligt op"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#ligtOp>
+  ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4#KadastraalPlanperceel.IsGerelateerdAan>;
     shacl:class <https://data.vlaanderen.be/ns/perceel#KadastraalPatrimoniumperceel>;
     shacl:description "Duidt het kadastraal planperceel aan waaraan het patrimoniumperceel gekoppeld kan worden."@nl;
@@ -213,10 +221,6 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4/LandgebruikShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4/ObjectShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass prov:Entity .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4/OppervlaktetypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -273,6 +277,22 @@
     shacl:minCount "1";
     shacl:name "type"@nl;
     shacl:path <https://data.vlaanderen.be/ns/perceel#Recht.type>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4#Recht.Recht.agent>;
+    shacl:class dc:Agent;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Recht.Agent";
+    shacl:path <https://data.vlaanderen.be/ns/perceel#Recht.agent>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4#Recht.Recht.ruimtelijkeeenheid>;
+    shacl:class <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid>;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Recht.RuimtelijkeEenheid";
+    shacl:path <https://data.vlaanderen.be/ns/perceel#Recht.ruimtelijkeEenheid>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/perceel#Recht> .
 
@@ -311,6 +331,22 @@
     shacl:minCount "1";
     shacl:name "type"@nl;
     shacl:path <https://data.vlaanderen.be/ns/perceel#Restrictie.type>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4#Restrictie.Restrictie.agent>;
+    shacl:class dc:Agent;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Restrictie.Agent";
+    shacl:path <https://data.vlaanderen.be/ns/perceel#Restrictie.agent>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4#Restrictie.Restrictie.ruimtelijkeeenheid>;
+    shacl:class <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid>;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Restrictie.RuimtelijkeEenheid";
+    shacl:path <https://data.vlaanderen.be/ns/perceel#Restrictie.ruimtelijkeEenheid>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/perceel#Restrictie> .
 
@@ -493,6 +529,22 @@
     shacl:minCount "1";
     shacl:name "type"@nl;
     shacl:path <https://data.vlaanderen.be/ns/perceel#Verantwoordelijkheid.type>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4#Verantwoordelijkheid.Verantwoordelijkheid.agent>;
+    shacl:class dc:Agent;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Verantwoordelijkheid.Agent";
+    shacl:path <https://data.vlaanderen.be/ns/perceel#Verantwoordelijkheid.agent>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4#Verantwoordelijkheid.Verantwoordelijkheid.ruimtelijkeeenheid>;
+    shacl:class <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid>;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Verantwoordelijkheid.RuimtelijkeEenheid";
+    shacl:path <https://data.vlaanderen.be/ns/perceel#Verantwoordelijkheid.ruimtelijkeEenheid>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/perceel#Verantwoordelijkheid> .
 
@@ -524,6 +576,22 @@
     shacl:minCount "1";
     shacl:name "type"@nl;
     shacl:path <https://data.vlaanderen.be/ns/perceel#ZakelijkRecht.type>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4#ZakelijkRecht.Zakelijkrecht.agent>;
+    shacl:class dc:Agent;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "ZakelijkRecht.Agent";
+    shacl:path <https://data.vlaanderen.be/ns/perceel#ZakelijkRecht.agent>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4#ZakelijkRecht.Zakelijkrecht.kadastraalpatrimoniumperceel>;
+    shacl:class <https://data.vlaanderen.be/ns/perceel#KadastraalPatrimoniumperceel>;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "ZakelijkRecht.KadastraalPatrimoniumperceel";
+    shacl:path <https://data.vlaanderen.be/ns/perceel#ZakelijkRecht.kadastraalPatrimoniumperceel>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/perceel#ZakelijkRecht> .
 

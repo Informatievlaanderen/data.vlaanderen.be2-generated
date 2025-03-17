@@ -2,49 +2,133 @@
 
 #||# -------------------------------------
 
-2025-02-11T16:27:08.386Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T17:15:23.462Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:Overstap)
 
-2025-02-11T16:27:08.387Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T17:15:23.463Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-ObservatiesEnMetingen:Monster:(Monster -> BemonsteringsProces))
 
-2025-02-11T16:27:08.387Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:SSN/SOSA) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T17:15:23.463Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2025-02-11T16:27:08.387Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Voorbeelden) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T17:15:23.463Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-02-11T16:27:08.387Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Voorbeelden:bpost) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T17:15:23.465Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Resource:(Resource -> Routesegment) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T16:27:08.388Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Voorbeelden:overzicht_stromen) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T17:15:23.466Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:Omvat is not an association with a source role. Ignoring this connector.
 
-2025-02-11T16:27:08.388Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Voorbeelden:particulier) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T17:15:23.467Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:(Mobiliteitsdienst -> Resource) has no name. Ignoring this connector.
 
-2025-02-11T16:27:08.388Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Datex II) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T17:15:23.467Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:IsDeelVan is not an association with a source role. Ignoring this connector.
 
-2025-02-11T16:27:08.399Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Route has an empty value for tag usageNote-nl.
+2025-03-17T17:15:23.467Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Routeknoop) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T16:27:08.400Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcetype has an empty value for tag usageNote-nl.
+2025-03-17T17:15:23.467Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Routeknoop) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T16:27:08.401Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop has an empty value for tag usageNote-nl.
+2025-03-17T17:15:23.467Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Aanbieder:(Aanbieder -> Mobiliteitsdienst) has no name. Ignoring this connector.
 
-2025-02-11T16:27:08.402Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Vervoermiddel has an empty value for tag usageNote-nl.
+2025-03-17T17:15:23.468Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Route:BestaatUit is not an association with a source role. Ignoring this connector.
 
-2025-02-11T16:27:08.402Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcestatus has an empty value for tag usageNote-nl.
+2025-03-17T17:15:23.468Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T16:27:08.402Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment has an empty value for tag usageNote-nl.
+2025-03-17T17:15:23.468Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T16:27:08.402Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Route has an empty value for tag usageNote-nl.
+2025-03-17T17:15:23.468Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T16:27:08.403Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Dienstverleningtype has an empty value for tag usageNote-nl.
+2025-03-17T17:15:23.468Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T16:27:08.406Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Teken has an empty value for tag usageNote-nl.
+2025-03-17T17:15:23.468Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-ObservatiesEnMetingen:Observatie:Fenomeen is not an association with a source role. Ignoring this connector.
 
-2025-02-11T16:27:08.409Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Route:aankomsttijdstip has an empty value for tag usageNote-nl.
+2025-03-17T17:15:23.468Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Vracht:(Vracht -> Belading) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T16:27:08.410Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Route:vertrektijdstip has an empty value for tag usageNote-nl.
+2025-03-17T17:15:23.469Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Generiek:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T16:27:08.411Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Transportknooptype has an empty value for tag usageNote-nl.
+2025-03-17T17:15:23.469Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Generiek:LijnString:(LijnString -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T16:27:08.413Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:vervoermiddel has an empty value for tag usageNote-nl.
+2025-03-17T17:15:23.469Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Generiek:Polygoon:(Polygoon -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T16:27:08.414Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Beschikbaarheid:dienstregeling has an empty value for tag usageNote-nl.
+2025-03-17T17:15:23.469Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Organisatie:Organisatie:isGeassocieerdMet is not an association with a source role. Ignoring this connector.
+
+2025-03-17T17:15:23.469Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Organisatie:Organisatie:isSuborganisatieVan is not an association with a source role. Ignoring this connector.
+
+2025-03-17T17:15:23.469Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Organisatie:Organisatie:heeftSuborganisatie is not an association with a source role. Ignoring this connector.
+
+2025-03-17T17:15:23.469Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T17:15:23.469Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T17:15:23.469Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Persoon:Persoon:heeftrelatieMet is not an association with a source role. Ignoring this connector.
+
+2025-03-17T17:15:23.469Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T17:15:23.469Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Aanbieder:(Aanbieder -> GeregistreerdeOrganisatie) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T17:15:23.469Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-ObservatiesEnMetingen:Observatie:(Observatie -> Sensor) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T17:15:23.469Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Zone:(Zone -> Plaats) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T17:15:23.469Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Punt:(Punt -> Plaats) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T17:15:23.470Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Mobiliteitsvergunning:(Mobiliteitsvergunning -> Leveringsvergunning) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T17:15:23.470Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Mobiliteitsvergunning:(Mobiliteitsvergunning -> Toegangsvergunning) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T17:15:23.470Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Mobiliteitsvergunning:(Mobiliteitsvergunning -> Parkeervergunning) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T17:15:23.470Z info: Connector Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-ObservatiesEnMetingen:Observatie:(Observatie -> Observatie) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T17:15:23.470Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T17:15:23.470Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T17:15:23.470Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:SSN/SOSA) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T17:15:23.470Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Voorbeelden) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T17:15:23.470Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Voorbeelden:bpost) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T17:15:23.471Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Voorbeelden:overzicht_stromen) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T17:15:23.471Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Voorbeelden:particulier) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T17:15:23.471Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:Datex II) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T17:15:23.477Z warn: [ConnectorConverterHandler]: Connector (Belading.Resource) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T17:15:23.478Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Belading.Resource) and the fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T17:15:23.478Z warn: [ConnectorConverterHandler]: Connector (Belading.Routesegment) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T17:15:23.478Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Belading.Routesegment) and the fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T17:15:23.478Z warn: [ConnectorConverterHandler]: Connector (Persoon (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T17:15:23.478Z warn: [ConnectorConverterHandler]: Connector (Persoon (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T17:15:23.479Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Route has an empty value for tag usageNote-nl.
+
+2025-03-17T17:15:23.480Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcetype has an empty value for tag usageNote-nl.
+
+2025-03-17T17:15:23.484Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop has an empty value for tag usageNote-nl.
+
+2025-03-17T17:15:23.485Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Vervoermiddel has an empty value for tag usageNote-nl.
+
+2025-03-17T17:15:23.485Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcestatus has an empty value for tag usageNote-nl.
+
+2025-03-17T17:15:23.485Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment has an empty value for tag usageNote-nl.
+
+2025-03-17T17:15:23.486Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Dienstverleningtype has an empty value for tag usageNote-nl.
+
+2025-03-17T17:15:23.489Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Teken has an empty value for tag usageNote-nl.
+
+2025-03-17T17:15:23.491Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Route:aankomsttijdstip has an empty value for tag usageNote-nl.
+
+2025-03-17T17:15:23.492Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Route:vertrektijdstip has an empty value for tag usageNote-nl.
+
+2025-03-17T17:15:23.493Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Transportknooptype has an empty value for tag usageNote-nl.
+
+2025-03-17T17:15:23.494Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:vervoermiddel has an empty value for tag usageNote-nl.
+
+2025-03-17T17:15:23.495Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_MijnApplicatieprofiel:OSLO-Slimmestadsdistributie:OSLO-Mobiliteit-Trips-En-Aanbod:Beschikbaarheid:dienstregeling has an empty value for tag usageNote-nl.
+
+2025-03-17T17:15:23.541Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (heeftSuborganisatie).
 
 #||# -------------------------------------
 

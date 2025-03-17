@@ -523,11 +523,12 @@
     shacl:name "ligging"@nl;
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#ligging>
   ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/erkendestandaard/2024-04-17#Sensor.Uitgevoerdeobservatie>;
-    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting>;
-    shacl:description "Verkeersmeting die met de Sensor is uitgevoerd."@nl;
-    shacl:name "uitgevoerdeObservatie"@nl;
-    shacl:path <http://todo.com/uitgevoerdeObservatie>
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/erkendestandaard/2024-04-17#Sensor.Implementeert>;
+    shacl:class <http://www.w3.org/ns/sosa/Procedure>;
+    shacl:description "Observatieprocedure die door de Sensor wordt toegepast."@nl;
+    shacl:maxCount "1";
+    shacl:name "implementeert"@nl;
+    shacl:path <http://www.w3.org/ns/ssn/implements>
   ];
   shacl:targetClass <http://www.w3.org/ns/sosa/Sensor> .
 
@@ -581,6 +582,12 @@
     shacl:minCount "1";
     shacl:name "taak"@nl;
     shacl:path <https://saref.etsi.org/core/accomplishes>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/erkendestandaard/2024-04-17#Toestel.HostVan>;
+    shacl:class <http://www.w3.org/ns/sosa/Sensor>;
+    shacl:description "Sensor door het Toestel gehost."@nl;
+    shacl:name "host van"@nl;
+    shacl:path <https://www.w3.org/ns/sosa/hosts>
   ];
   shacl:targetClass <https://saref.etsi.org/core/Device> .
 
@@ -853,13 +860,6 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/erkendestandaard/2024-04-17/VerkeersobjectShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/erkendestandaard/2024-04-17#Verkeersobject.Waardeverschaffer>;
-    shacl:class <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeting>;
-    shacl:description "Verwijzing naar een Verkeersmeting die op het geobserveerdObject plaatsvondt."@nl;
-    shacl:name "waardeverschaffer"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#waardeverschaffer>
-  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/erkendestandaard/2024-04-17/VoertuigShape> a shacl:NodeShape;
@@ -935,5 +935,17 @@
     shacl:minCount "1";
     shacl:name "geometriemiddenlijn"@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#Link.geometriemiddellijn>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/erkendestandaard/2024-04-17#Wegsegment.Eindknoop>;
+    shacl:class <https://data.vlaanderen.be/ns/weg#Wegknoop>;
+    shacl:description "Knoop die het einde is van het Wegsegment."@nl;
+    shacl:name "eindknoop"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/netwerk#eindknoop>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen/erkendestandaard/2024-04-17#Wegsegment.Beginknoop>;
+    shacl:class <https://data.vlaanderen.be/ns/weg#Wegknoop>;
+    shacl:description "Knoop die het begin is van het Wegsegment."@nl;
+    shacl:name "beginknoop"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/netwerk/#beginknoop>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#Wegsegment> .

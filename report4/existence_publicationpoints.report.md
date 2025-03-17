@@ -1,5 +1,11 @@
 #||# checking publication points in directory /home/circleci/project/config/production
 #||# 
+#||#    + checking /home/circleci/project/config/production/Vrachtwagenparkeren.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/production/adres.publication.json
 #||# 
 Directory check
@@ -390,4 +396,122 @@ Directory check
 
 index.html check
 error: missing '/tmp/generated/doc/vocabularium/organisatie/ontwerpdocument/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/production/overlijdensaangifte.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/perceel.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/persoon.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/persoon/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/production/publicatie-advertentie.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/ruimtelijkebereiken.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/sb.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/schuldbeheer.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/slim-ruimtelijk-plannen.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/slimme-raadpleegomgeving.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/slimme-stadsdistributie.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/subsidie.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/toestemming.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/toestemming/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/production/vastgoed.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/verkeersborden.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/verkeersmetingen.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/vervoersknooppunten.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/vlaamsecodex.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/voorwaarden-dienstverlening.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/waterkwaliteit.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/index.html'
 
