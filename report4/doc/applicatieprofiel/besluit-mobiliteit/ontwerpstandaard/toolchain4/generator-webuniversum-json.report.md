@@ -2,13 +2,13 @@
 
 #||# -------------------------------------  
 
-2025-03-17T21:23:41.342Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#Activity which acts as a parent. Using original URI as fallback.
+2025-03-17T21:34:42.376Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#Activity which acts as a parent. Using original URI as fallback.
 
-2025-03-17T21:23:41.353Z warn: Unable to find the assigned URI for external class http://www.w3.org/2004/02/skos/core#Concept which acts as a parent. Using original URI as fallback.
+2025-03-17T21:34:42.384Z warn: Unable to find the assigned URI for external class http://www.w3.org/2004/02/skos/core#Concept which acts as a parent. Using original URI as fallback.
 
-2025-03-17T21:23:41.379Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/Document which acts as a parent. Using original URI as fallback.
+2025-03-17T21:34:42.402Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/Document which acts as a parent. Using original URI as fallback.
 
-Error: Unable to find the assigned URI for range http://xmlns.com/foaf/0.1/Image of attribute [urn:oslo-toolchain:68ceb62b666bffbfa4be817520f43d2f003f22fce05fd1d28254fc8414d85ecf](all-besluit-mobiliteit-ap.jsonld#L4888).
+Error: Unable to find the assigned URI for range http://www.w3.org/ns/prov#Agent of attribute [urn:oslo-toolchain:962906ff0232ddc7dc094edf07fba9d438ce968e3f0b7825d3fcbe177ddf05b5](all-besluit-mobiliteit-ap.jsonld#L4914).
 
     at JsonWebuniversumGenerationService.addPropertySpecificInformation (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:202:19)
 
