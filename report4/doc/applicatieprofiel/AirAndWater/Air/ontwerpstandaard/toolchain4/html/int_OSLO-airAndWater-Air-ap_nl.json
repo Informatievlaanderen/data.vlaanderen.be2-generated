@@ -2,15 +2,335 @@
   "baseURI": "https://purl.eu/ns/air-and-water/air#",
   "classes": [
     {
-      "id": "https://purl.eu/ns/air-and-water/air#AirFeature",
+      "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
       "vocabularyLabel": {
-        "nl": "AirFeature"
+        "nl": "Observation"
       },
       "vocabularyDefinition": {
-        "nl": "Real-world Object related to Air."
+        "nl": "The determination of the value of a particular characteristic of an Object at a given time or between two times."
       },
-      "vocabularyUsageNote": {
-        "nl": "It is the featureOfInterest, the Object of which some property is observed to assess AirQuality. This can be the Air in a certain place (eg \"the Air in Brussels\") or an organism that breathes the Air, etc. The AirFeature can be typed via the \"type\" attribute, but  substitution by a typed instance (eg an instance of type \"Animal\" in the example with the organism) is also allowed. In either case, the observedProperty must be a phenomenon related to the Airfeature type. If the AirFeature is not observed directly, but rather indirectly by sampling it, the Airfeature is the sampledObject and the Sample assumes the role of featureOfInterest."
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "http://www.w3.org/ns/sosa/hasSimpleResult",
+          "vocabularyLabel": {
+            "nl": "hasSimpleResult"
+          },
+          "applicationProfileLabel": {
+            "nl": "hasSimpleResult"
+          },
+          "vocabularyDefinition": {
+            "nl": "The simple value of an Observation or Actuation."
+          },
+          "applicationProfileDefinition": {
+            "nl": "The simple value of an Observation or Actuation."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+          "range": {
+            "id": "http://www.w3.org/2000/01/rdf-schema#Literal",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Literal"
+            },
+            "applicationProfileLabel": {
+              "nl": "Literal"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest",
+          "vocabularyLabel": {
+            "nl": "hasUltimateFeatureOfInterest"
+          },
+          "applicationProfileLabel": {
+            "nl": "hasUltimateFeatureOfInterest"
+          },
+          "vocabularyDefinition": {
+            "nl": "Link to the ultimate feature of interest of an observation or act of sampling. This is useful when the proximate feature of interest is a sample of the ultimate feature of interest, directly or transitively."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Link to the ultimate feature of interest of an observation or act of sampling. This is useful when the proximate feature of interest is a sample of the ultimate feature of interest, directly or transitively."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+          "range": {
+            "id": "https://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Feature"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "*"
+        },
+        {
+          "id": "http://www.w3.org/ns/sosa/madeBySensor",
+          "vocabularyLabel": {
+            "nl": "madeBySensor"
+          },
+          "applicationProfileLabel": {
+            "nl": "madeBySensor"
+          },
+          "vocabularyDefinition": {
+            "nl": "Relation between an Observation and the Sensor which made the Observations."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Relation between an Observation and the Sensor which made the Observations."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+          "range": {
+            "id": "https://www.w3.org/TR/vocab-ssn/#SOSASensor",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Sensor"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.metadata",
+          "vocabularyLabel": {
+            "nl": "metadata"
+          },
+          "applicationProfileLabel": {
+            "nl": "metadata"
+          },
+          "vocabularyDefinition": {
+            "nl": "Link to the metadata of the observation."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Link to the metadata of the observation."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+          "range": {
+            "id": "http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Metadata"
+            }
+          },
+          "minCount": "0",
+          "maxCount": "1"
+        },
+        {
+          "id": "http://www.w3.org/ns/sosa/observedProperty",
+          "vocabularyLabel": {
+            "nl": "observedProperty"
+          },
+          "applicationProfileLabel": {
+            "nl": "observedProperty"
+          },
+          "vocabularyDefinition": {
+            "nl": "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+          "range": {
+            "id": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "PropertyType"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+          "vocabularyLabel": {
+            "nl": "phenomenonTime"
+          },
+          "applicationProfileLabel": {
+            "nl": "phenomenonTime"
+          },
+          "vocabularyDefinition": {
+            "nl": "Phenomenon time describes the time that the result applies to the property of the feature of interest. This is often the time of interaction by a sampling procedure or observation procedure with a real-world feature."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Phenomenon time describes the time that the result applies to the property of the feature of interest. This is often the time of interaction by a sampling procedure or observation procedure with a real-world feature."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+          "range": {
+            "id": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "TM_Object"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+          "vocabularyLabel": {
+            "nl": "relatedObservation"
+          },
+          "applicationProfileLabel": {
+            "nl": "relatedObservation"
+          },
+          "vocabularyDefinition": {
+            "nl": "Observations of which the results are related in one way or another"
+          },
+          "applicationProfileDefinition": {
+            "nl": "Observations of which the results are related in one way or another"
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+          "range": {
+            "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Observation"
+            }
+          },
+          "minCount": "0",
+          "maxCount": "*"
+        },
+        {
+          "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+          "vocabularyLabel": {
+            "nl": "result"
+          },
+          "applicationProfileLabel": {
+            "nl": "result"
+          },
+          "vocabularyDefinition": {
+            "nl": "Estimate of the value of a property determined through a known observation procedure"
+          },
+          "applicationProfileDefinition": {
+            "nl": "Estimate of the value of a property determined through a known observation procedure"
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+          "range": {
+            "id": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Any"
+            },
+            "applicationProfileLabel": {
+              "nl": "Any"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
+          "vocabularyLabel": {
+            "nl": "resultTime"
+          },
+          "applicationProfileLabel": {
+            "nl": "resultTime"
+          },
+          "vocabularyDefinition": {
+            "nl": "The resultTime describes the time when the result became available, typically when the procedure associated wit hthe observation was completed. For some observations this is identical to the phenomenonTime. Howevere there are important cases where they differ."
+          },
+          "applicationProfileDefinition": {
+            "nl": "The resultTime describes the time when the result became available, typically when the procedure associated wit hthe observation was completed. For some observations this is identical to the phenomenonTime. Howevere there are important cases where they differ."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+          "range": {
+            "id": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "DateTime"
+            },
+            "applicationProfileLabel": {
+              "nl": "DateTime"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
+          "id": "http://www.w3.org/ns/sosa/usedProcedure",
+          "vocabularyLabel": {
+            "nl": "usedProcedure"
+          },
+          "applicationProfileLabel": {
+            "nl": "usedProcedure"
+          },
+          "vocabularyDefinition": {
+            "nl": "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
+          },
+          "applicationProfileDefinition": {
+            "nl": "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+          "range": {
+            "id": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "ObservationProcedure"
+            }
+          },
+          "minCount": "0",
+          "maxCount": "*"
+        }
+      ]
+    },
+    {
+      "id": "https://www.w3.org/TR/vocab-ssn/#SOSASensor",
+      "vocabularyLabel": {
+        "nl": "Sensor"
+      },
+      "vocabularyDefinition": {
+        "nl": "Device, agent (including humans), or software (simulation) involved in, or implementing, a procedure. Sensors respond to a stimulus, e.e., a change in the environment, or Input data composed from the Results of prior observations, and generate a result. Sensors can be hosted by platforms."
+      },
+      "parents": [
+        {
+          "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
+          "vocabularyLabel": {
+            "nl": "Process"
+          },
+          "applicationProfileLabel": {
+            "nl": "Process"
+          }
+        },
+        {
+          "id": "https://www.w3.org/TR/vocab-ssn/#ssn-system",
+          "vocabularyLabel": {
+            "nl": "System"
+          },
+          "applicationProfileLabel": {
+            "nl": "System"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
+      "vocabularyLabel": {
+        "nl": "SamplingFeature"
+      },
+      "vocabularyDefinition": {
+        "nl": "Feature, such as a station, transect, section or specimen, which is involved in making observations concerning a domain feature"
       },
       "parents": [
         {
@@ -20,111 +340,95 @@
           }
         }
       ],
-      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+      "vocabularyLabel": {
+        "nl": "Feature"
+      },
+      "vocabularyDefinition": {
+        "nl": "Features are abstractions of real-world phenomena."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
       "properties": [
         {
-          "id": "https://purl.eu/ns/air-and-water/air#Airfeature.type",
+          "id": "http://todo/",
           "vocabularyLabel": {
-            "nl": "type"
+            "nl": "propertyValueProviider"
           },
           "applicationProfileLabel": {
-            "nl": "type"
+            "nl": "propertyValueProviider"
           },
           "vocabularyDefinition": {
-            "nl": "Type of Airfeature."
+            "nl": "Observations that provide the observedProperty with a value."
           },
           "applicationProfileDefinition": {
-            "nl": "Type of Airfeature."
+            "nl": "Observations that provide the observedProperty with a value."
           },
-          "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+          "vocabularyUsageNote": {
+            "nl": "TODO"
+          },
+          "applicationProfileUsageNote": {
+            "nl": "TODO"
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
           "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-          "domain": "https://purl.eu/ns/air-and-water/air#AirFeature",
+          "domain": "https://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
           "range": {
-            "id": "https://purl.eu/ns/air-and-water/air#AirFeatureType",
+            "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
             "listedInDocument": true,
             "vocabularyLabel": {
-              "nl": "AirFeatureType"
-            },
-            "applicationProfileLabel": {
-              "nl": "AirFeatureType"
+              "nl": "Observation"
             }
           },
           "minCount": "0",
-          "maxCount": "1"
+          "maxCount": "*"
         }
       ]
     },
     {
-      "id": "https://purl.eu/ns/air-and-water/air#AirFeatureType",
+      "id": "https://uri.fiware.org/ns/data-models#WeatherObserved",
       "vocabularyLabel": {
-        "nl": "AirFeatureType"
+        "nl": "WeatherObserved"
       },
-      "applicationProfileLabel": {
-        "nl": "AirFeatureType"
+      "vocabularyDefinition": {
+        "nl": "An Observation of weather conditions at a certain place or time."
       },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
     },
     {
-      "id": "https://purl.eu/ns/air-and-water/air#AirPollutantLevelObservation",
+      "id": "https://purl.eu/ns/air-and-water/air#AirQualityObservation",
       "vocabularyLabel": {
-        "nl": "AirPollutantLevelObservation"
+        "nl": "AirQualityObservation"
       },
       "vocabularyDefinition": {
-        "nl": "AirPollutantObservation where the concentration in the Air of a harmful or unsuitable substance is expressed as a level."
-      },
-      "vocabularyUsageNote": {
-        "nl": "Basically a Classification of concentration measurements (see AirPollutantObservation) according to certain threshold values. For example if the concentration exceeds a certain number, the AirPollutant concentration could be labeled as \"dangerous\"."
+        "nl": "Observation intended to estimate the overall quality of the Air."
       },
       "parents": [
         {
-          "id": "https://purl.eu/ns/air-and-water/air#AirPollutantObservation",
+          "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
           "vocabularyLabel": {
-            "nl": "AirPollutantObservation"
-          }
-        },
-        {
-          "id": "https://def.isotc211.org/iso19156/2011/Observation#CategoryObservation",
-          "vocabularyLabel": {
-            "nl": "CategoryObservation"
-          },
-          "applicationProfileLabel": {
-            "nl": "CategoryObservation"
+            "nl": "Observation"
           }
         }
       ],
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-      "properties": [
-        {
-          "id": "https://purl.eu/ns/air-and-water/air#AirPollutantLevelObservation.airPollutantLevel",
-          "vocabularyLabel": {
-            "nl": "airPollutantLevel"
-          },
-          "applicationProfileLabel": {
-            "nl": "airPollutantLevel"
-          },
-          "vocabularyDefinition": {
-            "nl": "Result of the AirPollutantLevelObservation."
-          },
-          "applicationProfileDefinition": {
-            "nl": "Result of the AirPollutantLevelObservation."
-          },
-          "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
-          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-          "domain": "https://purl.eu/ns/air-and-water/air#AirPollutantLevelObservation",
-          "range": {
-            "id": "http://def.isotc211.org/iso19103/2005/Names#ScopedName",
-            "listedInDocument": true,
-            "vocabularyLabel": {
-              "nl": "ScopedName"
-            }
-          },
-          "minCount": "1",
-          "maxCount": "1"
-        }
-      ]
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata",
+      "vocabularyLabel": {
+        "nl": "Metadata"
+      },
+      "vocabularyDefinition": {
+        "nl": "Metadata is data that contains information about data."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
     },
     {
       "id": "https://purl.eu/ns/air-and-water/air#AirPollutantObservation",
@@ -184,30 +488,85 @@
       ]
     },
     {
-      "id": "https://purl.eu/ns/air-and-water/air#AirPollutantValueObservation",
+      "id": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
       "vocabularyLabel": {
-        "nl": "AirPollutantValueObservation"
+        "nl": "ObservationProcedure"
       },
       "vocabularyDefinition": {
-        "nl": "AirPollutantObservation where the concentration in the Air of a harmful or unsuitable substance is expressed as a number."
-      },
-      "vocabularyUsageNote": {
-        "nl": "Actually the Measurement of the amount of the substance in the Air, usually over some averaging period. Result is how much of the substance is found eg in parts-per-million."
+        "nl": "A workflow, protocol, plan, algorithm, or computational method specifying how to make an observation, create a sample, or make a change to the state of the world (via an actuator). A procedure is re-usable, and might be involved in many observations, samplings or actuations. It explains the steps to be carried out to arrived at reproducible results."
       },
       "parents": [
         {
-          "id": "https://purl.eu/ns/air-and-water/air#AirPollutantObservation",
+          "id": "http://www.w3.org/ns/sosa/Procedure",
           "vocabularyLabel": {
-            "nl": "AirPollutantObservation"
+            "nl": "Procedure"
+          },
+          "applicationProfileLabel": {
+            "nl": "Procedure"
           }
         },
         {
-          "id": "https://def.isotc211.org/iso19156/2011/Observation#Measurement",
+          "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
           "vocabularyLabel": {
-            "nl": "Measurement"
+            "nl": "Process"
           },
           "applicationProfileLabel": {
-            "nl": "Measurement"
+            "nl": "Process"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+      "vocabularyLabel": {
+        "nl": "PropertyType"
+      },
+      "vocabularyDefinition": {
+        "nl": "Characteristic of a feature type"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://def.isotc211.org/iso19156/2011/Observation#CategoryObservation",
+      "vocabularyLabel": {
+        "nl": "CategoryObservation"
+      },
+      "vocabularyDefinition": {
+        "nl": "Observation of a class an Object belongs to."
+      },
+      "vocabularyUsageNote": {
+        "nl": "Eg the taxon of a Plant. Result is a ScopedName. For a more detailed description see ISO 19156."
+      },
+      "parents": [
+        {
+          "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+          "vocabularyLabel": {
+            "nl": "Observation"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://purl.eu/ns/air-and-water/air#AirFeature",
+      "vocabularyLabel": {
+        "nl": "AirFeature"
+      },
+      "vocabularyDefinition": {
+        "nl": "Real-world Object related to Air."
+      },
+      "vocabularyUsageNote": {
+        "nl": "It is the featureOfInterest, the Object of which some property is observed to assess AirQuality. This can be the Air in a certain place (eg \"the Air in Brussels\") or an organism that breathes the Air, etc. The AirFeature can be typed via the \"type\" attribute, but  substitution by a typed instance (eg an instance of type \"Animal\" in the example with the organism) is also allowed. In either case, the observedProperty must be a phenomenon related to the Airfeature type. If the AirFeature is not observed directly, but rather indirectly by sampling it, the Airfeature is the sampledObject and the Sample assumes the role of featureOfInterest."
+      },
+      "parents": [
+        {
+          "id": "https://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+          "vocabularyLabel": {
+            "nl": "Feature"
           }
         }
       ],
@@ -215,27 +574,141 @@
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
       "properties": [
         {
-          "id": "https://purl.eu/ns/air-and-water/air#AirPollutantValueObservation.airPollutantValue",
+          "id": "https://purl.eu/ns/air-and-water/air#Airfeature.type",
           "vocabularyLabel": {
-            "nl": "airpollutantValue"
+            "nl": "type"
           },
           "applicationProfileLabel": {
-            "nl": "airpollutantValue"
+            "nl": "type"
           },
           "vocabularyDefinition": {
-            "nl": "Result of the AirPollutantValueObservation."
+            "nl": "Type of Airfeature."
           },
           "applicationProfileDefinition": {
-            "nl": "Result of the AirPollutantValueObservation."
+            "nl": "Type of Airfeature."
           },
           "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
           "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-          "domain": "https://purl.eu/ns/air-and-water/air#AirPollutantValueObservation",
+          "domain": "https://purl.eu/ns/air-and-water/air#AirFeature",
           "range": {
-            "id": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
+            "id": "https://purl.eu/ns/air-and-water/air#AirFeatureType",
             "listedInDocument": true,
             "vocabularyLabel": {
-              "nl": "Measure"
+              "nl": "AirFeatureType"
+            },
+            "applicationProfileLabel": {
+              "nl": "AirFeatureType"
+            }
+          },
+          "minCount": "0",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
+      "vocabularyLabel": {
+        "nl": "Process"
+      },
+      "vocabularyDefinition": {
+        "nl": "A series of actions or steps leading to some result."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
+      "vocabularyLabel": {
+        "nl": "Measure"
+      },
+      "vocabularyDefinition": {
+        "nl": "A measured amount of a particular quantity, expressed in a paricular unit of measure."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure.value",
+          "vocabularyLabel": {
+            "nl": "measure"
+          },
+          "applicationProfileLabel": {
+            "nl": "measure"
+          },
+          "vocabularyDefinition": {
+            "nl": "The amount."
+          },
+          "applicationProfileDefinition": {
+            "nl": "The amount."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
+          "range": {
+            "id": "https://schema.org/QuantitativeValue",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "QuantitativeValue"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "https://purl.eu/ns/air-and-water/air#AirQualityLevelObservation",
+      "vocabularyLabel": {
+        "nl": "AirQualityLevelObservation"
+      },
+      "vocabularyDefinition": {
+        "nl": "Observation intended to estimate the overall quality of the Air, expressed as a level."
+      },
+      "vocabularyUsageNote": {
+        "nl": "Basically a Classification of the result of an AirQualityIndexObservation according to certain threshold values. For example if the index exceeds a certain value, the AirQuality could be labeled as \"unhealthy\"."
+      },
+      "parents": [
+        {
+          "id": "https://purl.eu/ns/air-and-water/air#AirQualityObservation",
+          "vocabularyLabel": {
+            "nl": "AirQualityObservation"
+          }
+        },
+        {
+          "id": "https://def.isotc211.org/iso19156/2011/Observation#CategoryObservation",
+          "vocabularyLabel": {
+            "nl": "CategoryObservation"
+          },
+          "applicationProfileLabel": {
+            "nl": "CategoryObservation"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://purl.eu/ns/air-and-water/air#AirQualityLevelObservation.airQualityLevel",
+          "vocabularyLabel": {
+            "nl": "airQualityLevel"
+          },
+          "applicationProfileLabel": {
+            "nl": "airQualityLevel"
+          },
+          "vocabularyDefinition": {
+            "nl": "Result of the AirQualityLevelObservation."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Result of the AirQualityLevelObservation."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://purl.eu/ns/air-and-water/air#AirQualityLevelObservation",
+          "range": {
+            "id": "http://def.isotc211.org/iso19103/2005/Names#ScopedName",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "ScopedName"
             }
           },
           "minCount": "1",
@@ -331,96 +804,6 @@
       ]
     },
     {
-      "id": "https://purl.eu/ns/air-and-water/air#AirQualityLevelObservation",
-      "vocabularyLabel": {
-        "nl": "AirQualityLevelObservation"
-      },
-      "vocabularyDefinition": {
-        "nl": "Observation intended to estimate the overall quality of the Air, expressed as a level."
-      },
-      "vocabularyUsageNote": {
-        "nl": "Basically a Classification of the result of an AirQualityIndexObservation according to certain threshold values. For example if the index exceeds a certain value, the AirQuality could be labeled as \"unhealthy\"."
-      },
-      "parents": [
-        {
-          "id": "https://purl.eu/ns/air-and-water/air#AirQualityObservation",
-          "vocabularyLabel": {
-            "nl": "AirQualityObservation"
-          }
-        },
-        {
-          "id": "https://def.isotc211.org/iso19156/2011/Observation#CategoryObservation",
-          "vocabularyLabel": {
-            "nl": "CategoryObservation"
-          },
-          "applicationProfileLabel": {
-            "nl": "CategoryObservation"
-          }
-        }
-      ],
-      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-      "properties": [
-        {
-          "id": "https://purl.eu/ns/air-and-water/air#AirQualityLevelObservation.airQualityLevel",
-          "vocabularyLabel": {
-            "nl": "airQualityLevel"
-          },
-          "applicationProfileLabel": {
-            "nl": "airQualityLevel"
-          },
-          "vocabularyDefinition": {
-            "nl": "Result of the AirQualityLevelObservation."
-          },
-          "applicationProfileDefinition": {
-            "nl": "Result of the AirQualityLevelObservation."
-          },
-          "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
-          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-          "domain": "https://purl.eu/ns/air-and-water/air#AirQualityLevelObservation",
-          "range": {
-            "id": "http://def.isotc211.org/iso19103/2005/Names#ScopedName",
-            "listedInDocument": true,
-            "vocabularyLabel": {
-              "nl": "ScopedName"
-            }
-          },
-          "minCount": "1",
-          "maxCount": "1"
-        }
-      ]
-    },
-    {
-      "id": "https://purl.eu/ns/air-and-water/air#AirQualityLevelValue",
-      "vocabularyLabel": {
-        "nl": "AirQualityLevelValue"
-      },
-      "applicationProfileLabel": {
-        "nl": "AirQualityLevelValue"
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "https://purl.eu/ns/air-and-water/air#AirQualityObservation",
-      "vocabularyLabel": {
-        "nl": "AirQualityObservation"
-      },
-      "vocabularyDefinition": {
-        "nl": "Observation intended to estimate the overall quality of the Air."
-      },
-      "parents": [
-        {
-          "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-          "vocabularyLabel": {
-            "nl": "Observation"
-          }
-        }
-      ],
-      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
       "id": "https://purl.eu/ns/air-and-water/air#AirQualityObservationCollection",
       "vocabularyLabel": {
         "nl": "AirQualityObservationCollection"
@@ -499,6 +882,195 @@
       ]
     },
     {
+      "id": "https://purl.eu/ns/air-and-water/air#AirPollutantValueObservation",
+      "vocabularyLabel": {
+        "nl": "AirPollutantValueObservation"
+      },
+      "vocabularyDefinition": {
+        "nl": "AirPollutantObservation where the concentration in the Air of a harmful or unsuitable substance is expressed as a number."
+      },
+      "vocabularyUsageNote": {
+        "nl": "Actually the Measurement of the amount of the substance in the Air, usually over some averaging period. Result is how much of the substance is found eg in parts-per-million."
+      },
+      "parents": [
+        {
+          "id": "https://purl.eu/ns/air-and-water/air#AirPollutantObservation",
+          "vocabularyLabel": {
+            "nl": "AirPollutantObservation"
+          }
+        },
+        {
+          "id": "https://def.isotc211.org/iso19156/2011/Observation#Measurement",
+          "vocabularyLabel": {
+            "nl": "Measurement"
+          },
+          "applicationProfileLabel": {
+            "nl": "Measurement"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://purl.eu/ns/air-and-water/air#AirPollutantValueObservation.airPollutantValue",
+          "vocabularyLabel": {
+            "nl": "airpollutantValue"
+          },
+          "applicationProfileLabel": {
+            "nl": "airpollutantValue"
+          },
+          "vocabularyDefinition": {
+            "nl": "Result of the AirPollutantValueObservation."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Result of the AirPollutantValueObservation."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://purl.eu/ns/air-and-water/air#AirPollutantValueObservation",
+          "range": {
+            "id": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Measure"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "https://purl.eu/ns/air-and-water/air#AirPollutantLevelObservation",
+      "vocabularyLabel": {
+        "nl": "AirPollutantLevelObservation"
+      },
+      "vocabularyDefinition": {
+        "nl": "AirPollutantObservation where the concentration in the Air of a harmful or unsuitable substance is expressed as a level."
+      },
+      "vocabularyUsageNote": {
+        "nl": "Basically a Classification of concentration measurements (see AirPollutantObservation) according to certain threshold values. For example if the concentration exceeds a certain number, the AirPollutant concentration could be labeled as \"dangerous\"."
+      },
+      "parents": [
+        {
+          "id": "https://purl.eu/ns/air-and-water/air#AirPollutantObservation",
+          "vocabularyLabel": {
+            "nl": "AirPollutantObservation"
+          }
+        },
+        {
+          "id": "https://def.isotc211.org/iso19156/2011/Observation#CategoryObservation",
+          "vocabularyLabel": {
+            "nl": "CategoryObservation"
+          },
+          "applicationProfileLabel": {
+            "nl": "CategoryObservation"
+          }
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+      "properties": [
+        {
+          "id": "https://purl.eu/ns/air-and-water/air#AirPollutantLevelObservation.airPollutantLevel",
+          "vocabularyLabel": {
+            "nl": "airPollutantLevel"
+          },
+          "applicationProfileLabel": {
+            "nl": "airPollutantLevel"
+          },
+          "vocabularyDefinition": {
+            "nl": "Result of the AirPollutantLevelObservation."
+          },
+          "applicationProfileDefinition": {
+            "nl": "Result of the AirPollutantLevelObservation."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "https://purl.eu/ns/air-and-water/air#AirPollutantLevelObservation",
+          "range": {
+            "id": "http://def.isotc211.org/iso19103/2005/Names#ScopedName",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "ScopedName"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        }
+      ]
+    },
+    {
+      "id": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element",
+      "vocabularyLabel": {
+        "nl": "DQ_Element"
+      },
+      "vocabularyDefinition": {
+        "nl": "Abstract class of all possible tests to assess the quality of a dataset."
+      },
+      "vocabularyUsageNote": {
+        "nl": "this means a test to assess Completeness, LogicalConsistency, PositionalAccuracy, thematicAccuracy or TemporalAccuracy."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://www.w3.org/TR/vocab-ssn-ext/#sosa:ObservationCollection",
+      "vocabularyLabel": {
+        "nl": "ObservationCollection"
+      },
+      "vocabularyDefinition": {
+        "nl": "A collection of one or more observations,whose members share a common value for one or more properties."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://www.w3.org/TR/vocab-ssn/#ssn-system",
+      "vocabularyLabel": {
+        "nl": "System"
+      },
+      "vocabularyDefinition": {
+        "nl": "System is a unit of abstraction for pieces of infrastructure that implment Procedures. A system may have components,it's subsystems,which are other Systems."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "http://www.w3.org/ns/sosa/Procedure",
+      "vocabularyLabel": {
+        "nl": "Procedure"
+      },
+      "vocabularyDefinition": {
+        "nl": "An established or official way of doing something."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://purl.eu/ns/air-and-water/air#AirFeatureType",
+      "vocabularyLabel": {
+        "nl": "AirFeatureType"
+      },
+      "applicationProfileLabel": {
+        "nl": "AirFeatureType"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://purl.eu/ns/air-and-water/air#AirQualityLevelValue",
+      "vocabularyLabel": {
+        "nl": "AirQualityLevelValue"
+      },
+      "applicationProfileLabel": {
+        "nl": "AirQualityLevelValue"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
       "id": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any",
       "vocabularyLabel": {
         "nl": "Any"
@@ -516,104 +1088,6 @@
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
     },
     {
-      "id": "https://def.isotc211.org/iso19156/2011/Observation#CategoryObservation",
-      "vocabularyLabel": {
-        "nl": "CategoryObservation"
-      },
-      "vocabularyDefinition": {
-        "nl": "Observation of a class an Object belongs to."
-      },
-      "vocabularyUsageNote": {
-        "nl": "Eg the taxon of a Plant. Result is a ScopedName. For a more detailed description see ISO 19156."
-      },
-      "parents": [
-        {
-          "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-          "vocabularyLabel": {
-            "nl": "Observation"
-          }
-        }
-      ],
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "https://def.isotc211.org/iso19156/2011/Observation#CategoryObservation",
-      "vocabularyLabel": {
-        "nl": "CategoryObservation"
-      },
-      "applicationProfileLabel": {
-        "nl": "CategoryObservation"
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element",
-      "vocabularyLabel": {
-        "nl": "DQ_Element"
-      },
-      "vocabularyDefinition": {
-        "nl": "Abstract class of all possible tests to assess the quality of a dataset."
-      },
-      "vocabularyUsageNote": {
-        "nl": "this means a test to assess Completeness, LogicalConsistency, PositionalAccuracy, thematicAccuracy or TemporalAccuracy."
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "https://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
-      "vocabularyLabel": {
-        "nl": "Feature"
-      },
-      "vocabularyDefinition": {
-        "nl": "Features are abstractions of real-world phenomena."
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
-      "vocabularyLabel": {
-        "nl": "Measure"
-      },
-      "vocabularyDefinition": {
-        "nl": "A measured amount of a particular quantity, expressed in a paricular unit of measure."
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-      "properties": [
-        {
-          "id": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure.value",
-          "vocabularyLabel": {
-            "nl": "measure"
-          },
-          "applicationProfileLabel": {
-            "nl": "measure"
-          },
-          "vocabularyDefinition": {
-            "nl": "The amount."
-          },
-          "applicationProfileDefinition": {
-            "nl": "The amount."
-          },
-          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-          "domain": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
-          "range": {
-            "id": "https://schema.org/QuantitativeValue",
-            "listedInDocument": true,
-            "vocabularyLabel": {
-              "nl": "QuantitativeValue"
-            }
-          },
-          "minCount": "1",
-          "maxCount": "1"
-        }
-      ]
-    },
-    {
       "id": "https://def.isotc211.org/iso19156/2011/Observation#Measurement",
       "vocabularyLabel": {
         "nl": "Measurement"
@@ -645,255 +1119,6 @@
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
     },
     {
-      "id": "https://def.isotc211.org/iso19156/2011/Observation#Measurement",
-      "vocabularyLabel": {
-        "nl": "Measurement"
-      },
-      "applicationProfileLabel": {
-        "nl": "Measurement"
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata",
-      "vocabularyLabel": {
-        "nl": "Metadata"
-      },
-      "vocabularyDefinition": {
-        "nl": "Metadata is data that contains information about data."
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-      "vocabularyLabel": {
-        "nl": "Observation"
-      },
-      "vocabularyDefinition": {
-        "nl": "The determination of the value of a particular characteristic of an Object at a given time or between two times."
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-      "properties": [
-        {
-          "id": "http://www.w3.org/ns/sosa/hasSimpleResult",
-          "vocabularyLabel": {
-            "nl": "hasSimpleResult"
-          },
-          "applicationProfileLabel": {
-            "nl": "hasSimpleResult"
-          },
-          "vocabularyDefinition": {
-            "nl": "The simple value of an Observation or Actuation."
-          },
-          "applicationProfileDefinition": {
-            "nl": "The simple value of an Observation or Actuation."
-          },
-          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-          "domain": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-          "range": {
-            "id": "http://www.w3.org/2000/01/rdf-schema#Literal",
-            "listedInDocument": true,
-            "vocabularyLabel": {
-              "nl": "Literal"
-            },
-            "applicationProfileLabel": {
-              "nl": "Literal"
-            }
-          },
-          "minCount": "1",
-          "maxCount": "1"
-        },
-        {
-          "id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest",
-          "vocabularyLabel": {
-            "nl": "hasUltimateFeatureOfInterest"
-          },
-          "applicationProfileLabel": {
-            "nl": "hasUltimateFeatureOfInterest"
-          },
-          "vocabularyDefinition": {
-            "nl": "Link to the ultimate feature of interest of an observation or act of sampling. This is useful when the proximate feature of interest is a sample of the ultimate feature of interest, directly or transitively."
-          },
-          "applicationProfileDefinition": {
-            "nl": "Link to the ultimate feature of interest of an observation or act of sampling. This is useful when the proximate feature of interest is a sample of the ultimate feature of interest, directly or transitively."
-          },
-          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-          "domain": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-          "range": {
-            "id": "https://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
-            "listedInDocument": true,
-            "vocabularyLabel": {
-              "nl": "Feature"
-            }
-          },
-          "minCount": "1",
-          "maxCount": "*"
-        },
-        {
-          "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
-          "vocabularyLabel": {
-            "nl": "phenomenonTime"
-          },
-          "applicationProfileLabel": {
-            "nl": "phenomenonTime"
-          },
-          "vocabularyDefinition": {
-            "nl": "Phenomenon time describes the time that the result applies to the property of the feature of interest. This is often the time of interaction by a sampling procedure or observation procedure with a real-world feature."
-          },
-          "applicationProfileDefinition": {
-            "nl": "Phenomenon time describes the time that the result applies to the property of the feature of interest. This is often the time of interaction by a sampling procedure or observation procedure with a real-world feature."
-          },
-          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-          "domain": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-          "range": {
-            "id": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object",
-            "listedInDocument": true,
-            "vocabularyLabel": {
-              "nl": "TM_Object"
-            }
-          },
-          "minCount": "1",
-          "maxCount": "1"
-        },
-        {
-          "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
-          "vocabularyLabel": {
-            "nl": "result"
-          },
-          "applicationProfileLabel": {
-            "nl": "result"
-          },
-          "vocabularyDefinition": {
-            "nl": "Estimate of the value of a property determined through a known observation procedure"
-          },
-          "applicationProfileDefinition": {
-            "nl": "Estimate of the value of a property determined through a known observation procedure"
-          },
-          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-          "domain": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-          "range": {
-            "id": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any",
-            "listedInDocument": true,
-            "vocabularyLabel": {
-              "nl": "Any"
-            },
-            "applicationProfileLabel": {
-              "nl": "Any"
-            }
-          },
-          "minCount": "1",
-          "maxCount": "1"
-        },
-        {
-          "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
-          "vocabularyLabel": {
-            "nl": "resultTime"
-          },
-          "applicationProfileLabel": {
-            "nl": "resultTime"
-          },
-          "vocabularyDefinition": {
-            "nl": "The resultTime describes the time when the result became available, typically when the procedure associated wit hthe observation was completed. For some observations this is identical to the phenomenonTime. Howevere there are important cases where they differ."
-          },
-          "applicationProfileDefinition": {
-            "nl": "The resultTime describes the time when the result became available, typically when the procedure associated wit hthe observation was completed. For some observations this is identical to the phenomenonTime. Howevere there are important cases where they differ."
-          },
-          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
-          "domain": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-          "range": {
-            "id": "http://www.w3.org/2001/XMLSchema#dateTime",
-            "listedInDocument": true,
-            "vocabularyLabel": {
-              "nl": "DateTime"
-            },
-            "applicationProfileLabel": {
-              "nl": "DateTime"
-            }
-          },
-          "minCount": "1",
-          "maxCount": "1"
-        }
-      ]
-    },
-    {
-      "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-      "vocabularyLabel": {
-        "nl": "Observation"
-      },
-      "vocabularyDefinition": {
-        "nl": "The determination of the value of a particular characteristic of an Object at a given time or between two times."
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "https://www.w3.org/TR/vocab-ssn-ext/#sosa:ObservationCollection",
-      "vocabularyLabel": {
-        "nl": "ObservationCollection"
-      },
-      "applicationProfileLabel": {
-        "nl": "ObservationCollection"
-      },
-      "vocabularyDefinition": {
-        "nl": "A collection of one or more observations, whose members share a common value for one or more properties."
-      },
-      "applicationProfileDefinition": {
-        "nl": "A collection of one or more observations, whose members share a common value for one or more properties."
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "https://www.w3.org/TR/vocab-ssn-ext/#sosa:ObservationCollection",
-      "vocabularyLabel": {
-        "nl": "ObservationCollection"
-      },
-      "vocabularyDefinition": {
-        "nl": "A collection of one or more observations,whose members share a common value for one or more properties."
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
-      "vocabularyLabel": {
-        "nl": "ObservationProcedure"
-      },
-      "vocabularyDefinition": {
-        "nl": "A workflow, protocol, plan, algorithm, or computational method specifying how to make an observation, create a sample, or make a change to the state of the world (via an actuator). A procedure is re-usable, and might be involved in many observations, samplings or actuations. It explains the steps to be carried out to arrived at reproducible results."
-      },
-      "parents": [
-        {
-          "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
-          "vocabularyLabel": {
-            "nl": "Process"
-          },
-          "applicationProfileLabel": {
-            "nl": "Process"
-          }
-        },
-        {
-          "id": "http://www.w3.org/ns/sosa/Procedure",
-          "vocabularyLabel": {
-            "nl": "Procedure"
-          },
-          "applicationProfileLabel": {
-            "nl": "Procedure"
-          }
-        }
-      ],
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
       "id": "https://purl.eu/ns/air-and-water/air#PollutantType",
       "vocabularyLabel": {
         "nl": "PollutantType"
@@ -903,178 +1128,9 @@
       },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "http://www.w3.org/ns/sosa/Procedure",
-      "vocabularyLabel": {
-        "nl": "Procedure"
-      },
-      "applicationProfileLabel": {
-        "nl": "Procedure"
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "http://www.w3.org/ns/sosa/Procedure",
-      "vocabularyLabel": {
-        "nl": "Procedure"
-      },
-      "vocabularyDefinition": {
-        "nl": "An established or official way of doing something."
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
-      "vocabularyLabel": {
-        "nl": "Process"
-      },
-      "applicationProfileLabel": {
-        "nl": "Process"
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
-      "vocabularyLabel": {
-        "nl": "Process"
-      },
-      "vocabularyDefinition": {
-        "nl": "A series of actions or steps leading to some result."
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
-      "vocabularyLabel": {
-        "nl": "PropertyType"
-      },
-      "vocabularyDefinition": {
-        "nl": "Characteristic of a feature type"
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
-      "vocabularyLabel": {
-        "nl": "SamplingFeature"
-      },
-      "vocabularyDefinition": {
-        "nl": "Feature, such as a station, transect, section or specimen, which is involved in making observations concerning a domain feature"
-      },
-      "parents": [
-        {
-          "id": "https://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
-          "vocabularyLabel": {
-            "nl": "Feature"
-          }
-        }
-      ],
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "https://www.w3.org/TR/vocab-ssn/#SOSASensor",
-      "vocabularyLabel": {
-        "nl": "Sensor"
-      },
-      "vocabularyDefinition": {
-        "nl": "Device, agent (including humans), or software (simulation) involved in, or implementing, a procedure. Sensors respond to a stimulus, e.e., a change in the environment, or Input data composed from the Results of prior observations, and generate a result. Sensors can be hosted by platforms."
-      },
-      "parents": [
-        {
-          "id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
-          "vocabularyLabel": {
-            "nl": "Process"
-          },
-          "applicationProfileLabel": {
-            "nl": "Process"
-          }
-        },
-        {
-          "id": "https://www.w3.org/TR/vocab-ssn/#ssn-system",
-          "vocabularyLabel": {
-            "nl": "System"
-          },
-          "applicationProfileLabel": {
-            "nl": "System"
-          }
-        }
-      ],
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "https://www.w3.org/TR/vocab-ssn/#ssn-system",
-      "vocabularyLabel": {
-        "nl": "System"
-      },
-      "applicationProfileLabel": {
-        "nl": "System"
-      },
-      "vocabularyDefinition": {
-        "nl": "System is a unit of abstraction for pieces of infrastructure that implment Procedures. A system may have components, it's subsystems, which are other Systems."
-      },
-      "applicationProfileDefinition": {
-        "nl": "System is a unit of abstraction for pieces of infrastructure that implment Procedures. A system may have components, it's subsystems, which are other Systems."
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "https://www.w3.org/TR/vocab-ssn/#ssn-system",
-      "vocabularyLabel": {
-        "nl": "System"
-      },
-      "vocabularyDefinition": {
-        "nl": "System is a unit of abstraction for pieces of infrastructure that implment Procedures. A system may have components,it's subsystems,which are other Systems."
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "https://uri.fiware.org/ns/data-models#WeatherObserved",
-      "vocabularyLabel": {
-        "nl": "WeatherObserved"
-      },
-      "vocabularyDefinition": {
-        "nl": "An Observation of weather conditions at a certain place or time."
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
     }
   ],
   "dataTypes": [
-    {
-      "id": "https://def.isotc211.org/iso19156/2011/Observation#NamedValue",
-      "vocabularyLabel": {
-        "nl": "NamedValue"
-      },
-      "vocabularyDefinition": {
-        "nl": "The class NamedValue provides for a generic soft-typed parameter value."
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "id": "https://schema.org/Number",
-      "vocabularyLabel": {
-        "nl": "Number"
-      },
-      "vocabularyDefinition": {
-        "nl": "Indication of a quantity."
-      },
-      "vocabularyUsageNote": {
-        "nl": "Actually the primitive datatypes with which a quantity can be indicated, see xsd datatypes like Float, Double, Decimal, Integer etc."
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
     {
       "id": "https://schema.org/QuantitativeValue",
       "vocabularyLabel": {
@@ -1146,12 +1202,37 @@
       ]
     },
     {
+      "id": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object",
+      "vocabularyLabel": {
+        "nl": "TM_Object"
+      },
+      "vocabularyDefinition": {
+        "nl": "TM_Object is a temporal object."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
       "id": "http://def.isotc211.org/iso19103/2005/Names#ScopedName",
       "vocabularyLabel": {
         "nl": "ScopedName"
       },
       "vocabularyDefinition": {
         "nl": "Composition of the name of a Namespace and a LocalName in that Namespace."
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "id": "https://schema.org/Number",
+      "vocabularyLabel": {
+        "nl": "Number"
+      },
+      "vocabularyDefinition": {
+        "nl": "Indication of a quantity."
+      },
+      "vocabularyUsageNote": {
+        "nl": "Actually the primitive datatypes with which a quantity can be indicated, see xsd datatypes like Float, Double, Decimal, Integer etc."
       },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
@@ -1171,12 +1252,12 @@
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
     },
     {
-      "id": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object",
+      "id": "https://def.isotc211.org/iso19156/2011/Observation#NamedValue",
       "vocabularyLabel": {
-        "nl": "TM_Object"
+        "nl": "NamedValue"
       },
       "vocabularyDefinition": {
-        "nl": "TM_Object is a temporal object."
+        "nl": "The class NamedValue provides for a generic soft-typed parameter value."
       },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
