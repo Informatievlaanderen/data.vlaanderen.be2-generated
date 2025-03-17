@@ -11,10 +11,6 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/ActivityShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass prov:Activity .
-
 <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/AdresvoorstellingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -113,6 +109,11 @@
     shacl:maxCount "1";
     shacl:name "volledig adres"@nl;
     shacl:path <http://www.w3.org/ns/locn#fullAddress>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4#Adresvoorstelling.Verwijstnaar>;
+    shacl:class <https://data.vlaanderen.be/ns/adres#Adres>;
+    shacl:name "verwijstNaar";
+    shacl:path <https://data.vlaanderen.be/ns/adres#verwijstNaar>
   ];
   shacl:targetClass <http://www.w3.org/ns/locn#Address> .
 
@@ -359,10 +360,6 @@
   shacl:closed false;
   shacl:targetClass xsd:double .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/EntiteitShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass prov:Entity .
-
 <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/FeitShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -430,10 +427,6 @@
     shacl:path <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#betrokkene>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/bestuurlijk-sanctieregister#Feit> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/FormeleOrganisatieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass org:FormalOrganization .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/GeboorteShape> a shacl:NodeShape;
   shacl:closed false;
@@ -505,6 +498,12 @@
     shacl:minCount "1";
     shacl:name "registratie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/persoon#registratie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4#GeregistreerdPersoon.Inwonerschap>;
+    shacl:class dc:Jurisdiction;
+    shacl:description "Jurisdictie waarbinnen het Inwonerschap vd persoon is gedefinieerd."@nl;
+    shacl:name "inwonerschap"@nl;
+    shacl:path <http://www.w3.org/ns/person#residency>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon> .
 
@@ -547,6 +546,12 @@
     shacl:minCount "1";
     shacl:name "registratie"@nl;
     shacl:path <http://www.w3.org/ns/regorg#registration>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4#GeregistreerdeOrganisatie.HeeftGeregistreerdeVestiging>;
+    shacl:class org:Site;
+    shacl:description "Verwijst naar de wettelijk geregistreerde vestiging van de organisatie. Is voor een formele organisatie doorgaans verplicht."@nl;
+    shacl:name "heeft geregistreerde vestiging"@nl;
+    shacl:path org:hasRegisteredSite
   ];
   shacl:targetClass <http://www.w3.org/ns/regorg#RegisteredOrganization> .
 
@@ -575,6 +580,30 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/InwonerschapShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4#Inwonerschap.Inwonerschap.geregistreerdpersoon>;
+    shacl:class <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon>;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Inwonerschap.GeregistreerdPersoon";
+    shacl:path <https://data.vlaanderen.be/ns/persoon#Inwonerschap.geregistreerdPersoon>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4#Inwonerschap.Inwonerschap.jurisdictie>;
+    shacl:class dc:Jurisdiction;
+    shacl:description "Verwijzing naar de verbonden klasse"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Inwonerschap.Jurisdictie";
+    shacl:path <https://data.vlaanderen.be/ns/persoon#Inwonerschap.jurisdictie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4#Inwonerschap.HeeftVerblijfplaats>;
+    shacl:class <https://data.vlaanderen.be/ns/persoon#Domicilie>;
+    shacl:description "Plaats waar een persoon verblijft."@nl;
+    shacl:maxCount "1";
+    shacl:name "heeft verblijfplaats"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#heeftVerblijfplaats>
+  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Inwonerschap> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/JurisdictieShape> a shacl:NodeShape;
@@ -739,12 +768,16 @@
     shacl:minCount "1";
     shacl:name "geslacht"@nl;
     shacl:path <https://data.vlaanderen.be/ns/persoon#geslacht>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4#Persoon.HeeftGeboorte>;
+    shacl:class <https://data.vlaanderen.be/ns/persoon#Geboorte>;
+    shacl:description "Verwijst naar de geboortegegevens vd persoon."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "heeft geboorte"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#heeftGeboorte>
   ];
   shacl:targetClass <http://www.w3.org/ns/person#Person> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/PersoonsgebeurtenisShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Persoonsgebeurtenis> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/PlaatsShape> a shacl:NodeShape;
   shacl:closed false;
@@ -764,10 +797,6 @@
     shacl:path <http://www.w3.org/ns/locn#geometry>
   ];
   shacl:targetClass dc:Location .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/RechtsbronShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResource> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/RechtsbrononderdeelShape> a shacl:NodeShape;
   shacl:closed false;
@@ -809,10 +838,6 @@
     shacl:path <https://data.vlaanderen.be/ns/perceel#methode>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheidGeometrie> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/RuimtelijkeEenheidShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/SanctiebeslissingShape> a shacl:NodeShape;
   shacl:closed false;
@@ -908,10 +933,6 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/VerbeurdverklaringTypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/VerblijfplaatsShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Verblijfplaats> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/bestuurlijk-sanctieregister/ontwerpstandaard/toolchain4/VervalVanDeSanctiemogelijkheidDoorBetalingVanEenGeldsomShape> a shacl:NodeShape;
   shacl:closed false;
