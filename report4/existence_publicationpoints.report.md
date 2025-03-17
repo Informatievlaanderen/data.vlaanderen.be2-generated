@@ -162,7 +162,6 @@ Directory check
 
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/erosiepoel/ontwerpstandaard/2024-07-22/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/erosiepoel/ontwerpstandaard/2024-10-07/index.html'
 error: missing '/tmp/generated/doc/vocabularium/erosiepoel/ontwerpstandaard/2024-07-22/index.html'
 error: missing '/tmp/generated/doc/vocabularium/erosiepoel/ontwerpstandaard/2024-10-07/index.html'
 
