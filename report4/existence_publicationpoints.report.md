@@ -515,3 +515,15 @@ Directory check
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/index.html'
 
+#||#    + checking /home/circleci/project/config/production/weg.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/wetgeving.publication.json
+#||# 
+Directory check
+
+index.html check
+

@@ -158,6 +158,10 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/waterkwaliteit.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/weg.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/wetgeving.publication.json
+#||#  
 Error: the following directories are unsupported
 [
   "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL",
@@ -227,8 +231,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/waterdelen",
   "/tmp/generated/doc/applicatieprofiel/watervoorkomen",
   "/tmp/generated/doc/applicatieprofiel/wegenregister",
-  "/tmp/generated/doc/applicatieprofiel/wegenregister/kandidaatstandaard/2018-10-04",
-  "/tmp/generated/doc/applicatieprofiel/wegenregister/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/besluit/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/bestuur/ontwerpdocument/2020-01-06",
@@ -255,12 +257,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/ontwerpstandaard/2024-07-08",
   "/tmp/generated/doc/vocabularium/toestemming",
   "/tmp/generated/doc/vocabularium/toestemming/ontwerpdocument/2020-01-06",
-  "/tmp/generated/doc/vocabularium/weg",
-  "/tmp/generated/doc/vocabularium/weg/ontwerpdocument/2020-01-06",
-  "/tmp/generated/doc/vocabularium/weg/standaard/2018-11-27",
-  "/tmp/generated/doc/vocabularium/wetgeving",
-  "/tmp/generated/doc/vocabularium/wetgeving/ontwerpdocument/niet-bepaald",
-  "/tmp/generated/doc/vocabularium/wetgeving/ontwerpstandaard/toolchain4",
   "/tmp/generated/ns/FeitelijkeVerenigingen",
   "/tmp/generated/ns/bodem-en-ondergrond",
   "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
@@ -269,7 +265,5 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/leercredential",
   "/tmp/generated/ns/metadata-dcat",
   "/tmp/generated/ns/observaties-en-metingen",
-  "/tmp/generated/ns/sensoren-en-bemonstering",
-  "/tmp/generated/ns/weg",
-  "/tmp/generated/ns/wetgeving"
+  "/tmp/generated/ns/sensoren-en-bemonstering"
 ]
