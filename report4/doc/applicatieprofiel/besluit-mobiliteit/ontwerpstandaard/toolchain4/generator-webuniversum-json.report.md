@@ -2,51 +2,33 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for class http://www.w3.org/ns/prov#Activity which acts as a parent.
+2025-03-17T20:54:55.351Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#Activity which acts as a parent. Using original URI as fallback.
 
-    at JsonWebuniversumGenerationService.createParentObject (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:237:19)
+2025-03-17T20:54:55.358Z warn: Unable to find the assigned URI for external class http://www.w3.org/2004/02/skos/core#Concept which acts as a parent. Using original URI as fallback.
 
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:137:65
+2025-03-17T20:54:55.377Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/Document which acts as a parent. Using original URI as fallback.
 
-    at Array.map (<anonymous>)
+Error: Unable to find the assigned URI for range http://www.w3.org/2001/XMLSchema#boolean of attribute [urn:oslo-toolchain:22f78e195aef2704ee9e006e0c6f5e29581add7914f4d0c751ed4a318c5f18cb](all-besluit-mobiliteit-ap.jsonld#L4476).
 
-    at JsonWebuniversumGenerationService.generateEntityData (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:137:42)
+    at JsonWebuniversumGenerationService.addPropertySpecificInformation (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:202:19)
 
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:33:36
-
-    at Array.map (<anonymous>)
-
-    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:33:14)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:181:96
 
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
-/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:237
+/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:202
 
-            throw new Error(`Unable to find the assigned URI for class ${subject.value} which acts as a parent.`);
+            throw new Error(`Unable to find the assigned URI for range ${range.value} of attribute ${subject.value}.`);
 
                   ^
 
 
 
-Error: Unable to find the assigned URI for class http://xmlns.com/foaf/0.1/Document which acts as a parent.
+Error: Unable to find the assigned URI for range http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML of attribute [urn:oslo-toolchain:60a9371b838d44ad996c4c0da2424a832424e2e87339dd16689930c297912464](all-besluit-mobiliteit-ap.jsonld#L4508).
 
-    at JsonWebuniversumGenerationService.createParentObject (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:237:19)
+    at JsonWebuniversumGenerationService.addPropertySpecificInformation (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:202:19)
 
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:137:65
-
-    at Array.map (<anonymous>)
-
-    at JsonWebuniversumGenerationService.generateEntityData (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:137:42)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:36:39
-
-    at Array.map (<anonymous>)
-
-    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:36:14)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:181:96
 
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
