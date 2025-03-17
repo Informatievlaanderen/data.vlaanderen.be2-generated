@@ -267,3 +267,66 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/production/mandaat.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/melding.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/metadata-dcat-vl.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/metadata-dcat.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/production/metadata-geo-dcat-vl.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/mobiliteit-intelligente-toegang.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/mobiliteit.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/mobiliteitsbudget.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/notificatie.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/notificatie/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/production/od-begraafplaats.publication.json
+#||# 
+Directory check
+
+index.html check
+

@@ -2,29 +2,121 @@
 
 #||# -------------------------------------
 
-2025-02-11T15:45:18.714Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T16:27:38.736Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftRelatieMet)
 
-2025-02-11T15:45:18.716Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T16:27:38.738Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):isGerelateerdMet)
 
-2025-02-11T15:45:18.716Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T16:27:38.738Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):vereist)
 
-2025-02-11T15:45:18.721Z warn: [ConnectorConverterHandler]: Connector (isTijdelijkVervangenDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T16:27:38.738Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
 
-Error: [AttributeConverterHandler]: Unable to find domain object for attribute (Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:Lidmaatschap:lidVanTot).
+2025-03-17T16:27:38.738Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
 
-    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/converter-handlers/AttributeConverterHandler.js:46:23
+2025-03-17T16:27:38.738Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-    at Array.forEach (<anonymous>)
+2025-03-17T16:27:38.738Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersbordbasis:(Verkeersbordbasis -> OSLO-OpenbaarDomein::Verkeersbord))
 
-    at AttributeConverterHandler.assignUris (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/converter-handlers/AttributeConverterHandler.js:43:26)
+2025-03-17T16:27:38.738Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersmaatregel:verwijstNaar)
 
-    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConverterHandlerService.js:31:50
+2025-03-17T16:27:38.738Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
 
-    at Array.map (<anonymous>)
+2025-03-17T16:27:38.738Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Object))
 
-    at ConverterHandlerService.assignUris (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConverterHandlerService.js:31:37)
+2025-03-17T16:27:38.738Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+
+2025-03-17T16:27:38.738Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:isGerelateerdAan)
+
+2025-03-17T16:27:38.739Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
+
+2025-03-17T16:27:38.739Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):wordtUitgevoerdDoor)
+
+2025-03-17T16:27:38.739Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
+
+2025-03-17T16:27:38.739Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke)
+
+2025-03-17T16:27:38.739Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:vereist)
+
+2025-03-17T16:27:38.739Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet)
+
+2025-03-17T16:27:38.739Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:aangenomenDoor)
+
+2025-03-17T16:27:38.739Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:Kost:isGedefinieerdDoor)
+
+2025-03-17T16:27:38.741Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:Bestuursorgaan (in bestuursperiode):bevat is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.742Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:RechtstreekseVerkiezing:steltSamen is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.742Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:Mandataris:isAangesteldDoor is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.742Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:Mandataris:isTijdelijkVervangenDoor is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.742Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:RechtsgrondAanstelling:bekrachtigtAanstellingVan is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.743Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:isDeelVan is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.743Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:RechtsgrondAanstelling:(RechtsgrondAanstelling -> Rechtsgrond) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.743Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:heeftDeel is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.743Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:RechtsgrondBeeindiging:(RechtsgrondBeeindiging -> Rechtsgrond) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.743Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:Verkiezingsresultaat:isResultaatVan is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.743Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:Mandataris:isBestuurlijkeAliasVan is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.743Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:Kandidatenlijst:heeftKandidaat is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.743Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:isAangesteldAls is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.743Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftGeboorte is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.743Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:RechtsgrondBeeindiging:bekrachtigtOntslagVan is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.743Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:Mandataris:isOntslagenDoor is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.743Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:Mandataris:bekleedt is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.744Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:Kandidatenlijst:behoortTot is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.744Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:Verkiezingsresultaat:isResultaatVoor is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.744Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Versie:(Versie -> Object) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.744Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Versie:isTijdspecialisatieVan is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.744Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:VersieVolgensGeldigeTijd:(VersieVolgensGeldigeTijd -> Versie) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.744Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:Bestuursorgaan (in bestuursperiode):(Bestuursorgaan (in bestuursperiode) -> VersieVolgensGeldigeTijd) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.744Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Besluit:Bestuursorgaan:bestuurt is not an association with a source role. Ignoring this connector.
+
+2025-03-17T16:27:38.744Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T16:27:38.745Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T16:27:38.745Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T16:27:38.750Z warn: [ConnectorConverterHandler]: Connector (steltSamen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T16:27:38.750Z warn: [ConnectorConverterHandler]: Connector (isAangesteldDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T16:27:38.750Z warn: [ConnectorConverterHandler]: Connector (isTijdelijkVervangenDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T16:27:38.750Z warn: [ConnectorConverterHandler]: Connector (bekrachtigtAanstellingVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T16:27:38.750Z warn: [ConnectorConverterHandler]: Connector (bekrachtigtOntslagVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T16:27:38.750Z warn: [ConnectorConverterHandler]: Connector (isOntslagenDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T16:27:38.750Z warn: [ConnectorConverterHandler]: Connector (behoortTot) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T16:27:38.750Z warn: [ConnectorConverterHandler]: Connector (isResultaatVoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T16:27:38.750Z warn: [ConnectorConverterHandler]: Connector (bestuurt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T16:27:38.764Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (isDeelVan).
+
+2025-03-17T16:27:38.764Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (heeftDeel).
 
 #||# -------------------------------------
-
-file mandaat.jsonld does not exist
 

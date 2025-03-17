@@ -2,7 +2,5 @@
 
 #||# -------------------------------------  
 
-2025-02-11T15:46:49.857Z error: Unable to find the description for subject "[urn:oslo-toolchain:0dd08ae7b9b478c365d368e2e1d2c755645ad2385a9d562d6824a86810c085cb](all-mandatendatabank.jsonld#L2546)".
-
-2025-02-11T15:46:49.859Z error: Unable to find the description for subject "[urn:oslo-toolchain:ae8d6bfda2b145d8465c332a2d995a783be4189d90713f89d8a3e9e54f4f7009](all-mandatendatabank.jsonld#L2566)".
+2025-03-17T16:30:14.483Z error: Unable to find the description for subject "[urn:oslo-toolchain:45c454341f7625c66dc57c4c126bfe61ba8945f933edba6733b2edd20c3a7fd1](all-mandatendatabank.jsonld#L2529)".
 
