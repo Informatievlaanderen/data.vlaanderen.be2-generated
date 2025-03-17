@@ -34,6 +34,12 @@
     shacl:description "Object dat deel uitmaakt van de collectie."@nl;
     shacl:name "lid"@nl;
     shacl:path <https://w3id.org/tree#member>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Collectie.View>;
+    shacl:class <https://data.vlaanderen.be/ns/ldes#RootNode>;
+    shacl:description "Een view is de index/ invariant/ organisatie waarmee doorheen de collectie (LDES) kan worden genavigeerd."@nl;
+    shacl:name "view"@nl;
+    shacl:path <https://w3id.org/tree#view>
   ];
   shacl:targetClass <https://w3id.org/tree#Collection> .
 
@@ -59,6 +65,12 @@
     shacl:minCount "1";
     shacl:name "conformAanProtocol"@nl;
     shacl:path dc:conformsTo
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Dataservice.Biedtinformatieaanover>;
+    shacl:class <https://www.w3.org/ns/dcat#Dataset>;
+    shacl:description "De data die via deze dataservice worden aangeboden."@nl;
+    shacl:name "biedtInformatieAanOver"@nl;
+    shacl:path dcat:servesdataset
   ];
   shacl:targetClass dcat:DataService .
 
@@ -149,17 +161,23 @@
     shacl:name "shape"@nl;
     shacl:path <https://w3id.org/tree#shape>
   ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Eventstream.View>;
+    shacl:class <https://data.vlaanderen.be/ns/ldes#RootNode>;
+    shacl:description "Een view is de index/invariant/organisatie waarmee doorheen de collectie/ Linked Data Event Stream kan worden genavigeerd."@nl;
+    shacl:name "view"@nl;
+    shacl:path <https://w3id.org/tree#view>
+  ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Eventstream.Lid>;
     shacl:class <https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject>;
-    shacl:description "Een lid maakt deel uit van de collectie."@nl;
+    shacl:description "Onveranderlijk object dat deel uitmaakt van de collectie."@nl;
     shacl:name "lid"@nl;
     shacl:path <https://w3id.org/tree#member>
   ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Eventstream.Rootnode>;
-    shacl:class <https://data.vlaanderen.be/ns/ldes#RootNode>;
-    shacl:description "Een rootnode is de beginpagina van een Linked Data Event Stream, die zelf al leden ervan kan bevatten, en via wiens gelinkte pagina’s alle leden kunnen gevonden worden."@nl;
-    shacl:name "rootNode"@nl;
-    shacl:path <http://todo.com/rootNode>
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Eventstream.Eventstreamview>;
+    shacl:class <https://data.vlaanderen.be/ns/ldes#EventstreamView>;
+    shacl:description "De event stream view connecteert de collectie met de rootnode zodanig dat alle leden van de collectie gevonden kunnen worden."@nl;
+    shacl:name "eventstreamView"@nl;
+    shacl:path <http://todo.com/eventStreamView>
   ];
   shacl:targetClass <https://w3id.org/ldes#EventStream> .
 
@@ -240,11 +258,11 @@
     shacl:name "lid"@nl;
     shacl:path <https://w3id.org/tree#member>
   ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Node.Heeftlid>;
-    shacl:class <https://data.vlaanderen.be/ns/ldes#OnveranderlijkObject>;
-    shacl:description "Een onveranderlijkObject wordt weergegeven op een node."@nl;
-    shacl:name "heeftlid"@nl;
-    shacl:path <http://todo.com/heeftLid>
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Node.Relatie>;
+    shacl:class <https://w3id.org/tree#Relation>;
+    shacl:description "Een klasse die de relatie tussen twee nodes beschrijft."@nl;
+    shacl:name "relatie"@nl;
+    shacl:path <http://todo.com/relatie>
   ];
   shacl:targetClass <https://w3id.org/tree#Node> .
 
@@ -278,6 +296,13 @@
     shacl:minCount "1";
     shacl:name "pad"@nl;
     shacl:path <https://w3id.org/tree#path>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Relatie.Node>;
+    shacl:class <https://w3id.org/tree#Node>;
+    shacl:description "Een node is een pagina die relaties naar andere nodes kan bevatten."@nl;
+    shacl:maxCount "1";
+    shacl:name "node"@nl;
+    shacl:path <https://w3id.org/tree#Node>
   ];
   shacl:targetClass <https://w3id.org/tree#Relation> .
 
@@ -287,22 +312,6 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4/RootnodeShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Rootnode.Rootnodevan>;
-    shacl:class <https://w3id.org/ldes#EventStream>;
-    shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "rootNodeVan"@nl;
-    shacl:path <http://todo.com/rootNodeVan>
-  ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Rootnode.Eventstreamview>;
-    shacl:class <https://data.vlaanderen.be/ns/ldes#EventstreamView>;
-    shacl:description "De event stream view connecteert de collectie met de rootnode zodanig dat alle leden van de collectie gevonden kunnen worden."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "eventstreamView"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/ldes#eventstreamView>
-  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/ldes#RootNode> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4/ShapeShape> a shacl:NodeShape;
@@ -396,12 +405,5 @@
     shacl:description "Een lid maakt deel uit van de collectie."@nl;
     shacl:name "lid"@nl;
     shacl:path <https://data.vlaanderen.be/ns/ldes#lid>
-  ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Versiematerialisatie.Versiematerialisatievan>;
-    shacl:class <https://data.vlaanderen.be/ns/ldes#Snapshot>;
-    shacl:description "Verwijst naar de originele Linked Data Event Stream."@nl;
-    shacl:maxCount "1";
-    shacl:name "versieMaterialisatieVan"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/ldes#versiematerialisatieVan>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/ldes#VersieMaterialisatie> .

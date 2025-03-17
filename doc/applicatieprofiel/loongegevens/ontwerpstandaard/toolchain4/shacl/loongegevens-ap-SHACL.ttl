@@ -1,4 +1,3 @@
-@prefix dc: <http://purl.org/dc/terms/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -53,10 +52,6 @@
     shacl:path <https://data.vlaanderen.be/ns/adres#land>
   ];
   shacl:targetClass <http://www.w3.org/ns/locn#Address> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/AgentShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass dc:Agent .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/ArbeidsloonShape> a shacl:NodeShape;
   shacl:closed false;
@@ -204,14 +199,6 @@
     shacl:minCount "1";
     shacl:name "cheques"@nl;
     shacl:path <https://data.vlaanderen.be/ns/loongegevens#cheques>
-  ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Arbeidsloon.Arbeidsrelatie>;
-    shacl:class <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie>;
-    shacl:description "De betrekking tussen werkgevers en werknemers die ontstaat bij loonarbeid na afsluiting van een arbeidsovereenkomst."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "arbeidsrelatie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/loongegevens#arbeidsrelatie>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/loongegevens#Arbeidsloon> .
 
@@ -350,6 +337,37 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/GezinShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Gezin.Ishoofdvan>;
+    shacl:class <http://www.w3.org/ns/person#Person>;
+    shacl:description "Gezin waarvan de persoon het gezinshoofd is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "isHoofdVan"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#isHoofdVan>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Gezin.Gezinshoofd>;
+    shacl:class <http://www.w3.org/ns/person#Person>;
+    shacl:description "Persoon die standaard het gezin vertegenwoordigt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "gezinshoofd"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#gezinshoofd>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Gezin.Gezinslid>;
+    shacl:class <http://www.w3.org/ns/person#Person>;
+    shacl:description "Gezin waartoe een persoon behoort."@nl;
+    shacl:minCount "1";
+    shacl:name "gezinslid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#isLidVan>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Gezin.Gezinslid>;
+    shacl:class <http://www.w3.org/ns/person#Person>;
+    shacl:description "gezinslid"@nl;
+    shacl:minCount "1";
+    shacl:name "gezinslid"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/persoon#gezinslid>
+  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Gezin> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4/InkomstShape> a shacl:NodeShape;
@@ -374,6 +392,11 @@
     shacl:minCount "1";
     shacl:name "voorkeursnaam"@nl;
     shacl:path skos:prefLabel
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Organisatie.Arbeidsrelatie>;
+    shacl:class <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie>;
+    shacl:name "arbeidsrelatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#arbeidsrelatie>
   ];
   shacl:targetClass org:Organization .
 
@@ -433,6 +456,29 @@
     shacl:description "Plaats waar een persoon verblijft."@nl;
     shacl:name "verblijfplaats"@nl;
     shacl:path <https://data.vlaanderen.be/ns/loongegevens#Persoon.verblijfplaats>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Persoon.Arbeidsrelatie>;
+    shacl:class <https://data.vlaanderen.be/ns/loongegevens#Arbeidsrelatie>;
+    shacl:name "arbeidsrelatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#arbeidsrelatie>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Persoon.Inkomsten>;
+    shacl:class <https://data.vlaanderen.be/ns/loongegevens#Inkomst>;
+    shacl:name "inkomsten"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/loongegevens#inkomsten>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Persoon.Ishoofdvan>;
+    shacl:class <https://data.vlaanderen.be/ns/persoon#Gezin>;
+    shacl:description "Gezin waarvan de persoon het gezinshoofd is."@nl;
+    shacl:maxCount "1";
+    shacl:name "isHoofdVan"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#isHoofdVan>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/loongegevens/ontwerpstandaard/toolchain4#Persoon.Gezinslid>;
+    shacl:class <https://data.vlaanderen.be/ns/persoon#Gezin>;
+    shacl:description "Gezin waartoe een persoon behoort."@nl;
+    shacl:name "gezinslid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#isLidVan>
   ];
   shacl:targetClass <http://www.w3.org/ns/person#Person> .
 

@@ -60,6 +60,24 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/kabels-en-leidingen.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/kindfiche.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/kwaliteit-wegen-en-markeringen.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/ldes.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/leercredential.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/leerinschrijfcredential.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/leermiddelen.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/logies.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/lokale-economie.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/loongegevens.publication.json
+#||#  
 Error: the following directories are unsupported
 [
   "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL",
@@ -138,39 +156,8 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties",
   "/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/standaard/2019-02-07",
-  "/tmp/generated/doc/applicatieprofiel/kindfiche",
-  "/tmp/generated/doc/applicatieprofiel/kindfiche/ontwerpstandaard/2024-06-03",
-  "/tmp/generated/doc/applicatieprofiel/kwaliteit-wegen-en-wegmarkeringen",
-  "/tmp/generated/doc/applicatieprofiel/kwaliteit-wegen-en-wegmarkeringen/erkendestandaard/2024-12-05",
-  "/tmp/generated/doc/applicatieprofiel/kwaliteit-wegen-en-wegmarkeringen/ontwerpstandaard/2023-05-05",
-  "/tmp/generated/doc/applicatieprofiel/kwaliteit-wegen-en-wegmarkeringen/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/applicatieprofiel/ldes",
-  "/tmp/generated/doc/applicatieprofiel/ldes/erkendestandaard/2022-12-01",
-  "/tmp/generated/doc/applicatieprofiel/ldes/kandidaatstandaard/2022-06-13",
-  "/tmp/generated/doc/applicatieprofiel/ldes/ontwerpstandaard/2022-05-17",
-  "/tmp/generated/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/applicatieprofiel/leercredential/ontwerpstandaard/2022-07-26",
-  "/tmp/generated/doc/applicatieprofiel/leercredential/ontwerpstandaard/2023-01-11",
-  "/tmp/generated/doc/applicatieprofiel/leercredential/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/applicatieprofiel/leerinschrijfcredential",
-  "/tmp/generated/doc/applicatieprofiel/leerinschrijfcredential/erkendestandaard/2024-12-05",
   "/tmp/generated/doc/applicatieprofiel/leerinschrijfcredential/kandidaatstandaard/2024-05-16",
-  "/tmp/generated/doc/applicatieprofiel/leerinschrijfcredential/kandidaatstandaard/2024-05-22",
-  "/tmp/generated/doc/applicatieprofiel/leerinschrijfcredential/kandidaatstandaard/2024-07-02",
-  "/tmp/generated/doc/applicatieprofiel/leerinschrijfcredential/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/applicatieprofiel/leerprestatiecredential",
-  "/tmp/generated/doc/applicatieprofiel/leerprestatiecredential/kandidaatstandaard/2023-12-21",
-  "/tmp/generated/doc/applicatieprofiel/leerprestatiecredential/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/applicatieprofiel/logies-basis",
-  "/tmp/generated/doc/applicatieprofiel/logies-basis/erkendestandaard/2019-03-14",
-  "/tmp/generated/doc/applicatieprofiel/logies-basis/ontwerpstandaard/2019-03-14",
-  "/tmp/generated/doc/applicatieprofiel/lokale-economie",
-  "/tmp/generated/doc/applicatieprofiel/lokale-economie/erkendestandaard/2024-12-05",
-  "/tmp/generated/doc/applicatieprofiel/lokale-economie/kandidaatstandaard/2024-03-21",
   "/tmp/generated/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17",
-  "/tmp/generated/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/applicatieprofiel/loongegevens",
-  "/tmp/generated/doc/applicatieprofiel/loongegevens/kandidaatstandaard/2022-03-17",
   "/tmp/generated/doc/applicatieprofiel/mandatendatabank",
   "/tmp/generated/doc/applicatieprofiel/mandatendatabank/erkendestandaard/2018-07-20",
   "/tmp/generated/doc/applicatieprofiel/mandatendatabank/ontwerpdocument/2018-07-20",
@@ -352,24 +339,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/gezondheidstoestand/erkendestandaard/2024-12-05",
   "/tmp/generated/doc/vocabularium/gezondheidstoestand/kandidaatstandaard/2024-10-23",
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
-  "/tmp/generated/doc/vocabularium/kindfiche/ontwerpstandaard/2024-06-03",
-  "/tmp/generated/doc/vocabularium/kwaliteit-wegen-en-wegmarkeringen/erkendestandaard/2024-12-05",
-  "/tmp/generated/doc/vocabularium/kwaliteit-wegen-en-wegmarkeringen/ontwerpstandaard/2023-05-05",
-  "/tmp/generated/doc/vocabularium/kwaliteit-wegen-en-wegmarkeringen/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/ldes/erkendestandaard/2022-12-01",
-  "/tmp/generated/doc/vocabularium/ldes/kandidaatstandaard/2022-06-13",
-  "/tmp/generated/doc/vocabularium/ldes/ontwerpstandaard/2022-05-17",
-  "/tmp/generated/doc/vocabularium/ldes/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/leercredential/kandidaatstandaard/2023-12-21",
-  "/tmp/generated/doc/vocabularium/leercredential/kandidaatstandaard/2024-07-02",
-  "/tmp/generated/doc/vocabularium/leercredential/ontwerpstandaard/2023-01-11",
-  "/tmp/generated/doc/vocabularium/logies",
-  "/tmp/generated/doc/vocabularium/logies/erkendestandaard/2019-03-14",
-  "/tmp/generated/doc/vocabularium/logies/ontwerpstandaard/2019-03-14",
-  "/tmp/generated/doc/vocabularium/lokale-economie/erkendestandaard/2024-12-05",
-  "/tmp/generated/doc/vocabularium/lokale-economie/kandidaatstandaard/2024-03-21",
-  "/tmp/generated/doc/vocabularium/lokale-economie/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/loongegevens/kandidaatstandaard/2022-03-17",
   "/tmp/generated/doc/vocabularium/mandaat",
   "/tmp/generated/doc/vocabularium/mandaat/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/mandaat/standaard/2018-07-20",
@@ -558,12 +527,7 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/gezondheidstoestand",
   "/tmp/generated/ns/grondboringen",
   "/tmp/generated/ns/kindfiche",
-  "/tmp/generated/ns/kwaliteit-wegen-en-wegmarkeringen",
-  "/tmp/generated/ns/ldes",
   "/tmp/generated/ns/leercredential",
-  "/tmp/generated/ns/logies",
-  "/tmp/generated/ns/lokale-economie",
-  "/tmp/generated/ns/loongegevens",
   "/tmp/generated/ns/mandaat",
   "/tmp/generated/ns/melding",
   "/tmp/generated/ns/metadata-dcat",
