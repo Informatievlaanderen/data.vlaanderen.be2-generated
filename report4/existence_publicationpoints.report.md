@@ -78,7 +78,6 @@ error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/observa
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/observaties/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/interpretaties/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/interpretaties/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bodem/ontwerpstandaard/toolchain4/index.html'
