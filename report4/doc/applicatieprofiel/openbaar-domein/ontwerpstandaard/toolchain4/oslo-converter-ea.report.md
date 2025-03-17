@@ -2,67 +2,67 @@
 
 #||# -------------------------------------
 
-2025-03-16T21:44:55.821Z info: Connector Model:OSLO-OpenbaarDomein:OSLO-Generiek:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.936Z info: Connector Model:OSLO-OpenbaarDomein:OSLO-Generiek:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.822Z info: Connector Model:OSLO-OpenbaarDomein:OSLO-Generiek:Lijnstring:(Lijnstring -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.937Z info: Connector Model:OSLO-OpenbaarDomein:OSLO-Generiek:Lijnstring:(Lijnstring -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.823Z info: Connector Model:OSLO-OpenbaarDomein:OSLO-Generiek:Polygoon:(Polygoon -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.938Z info: Connector Model:OSLO-OpenbaarDomein:OSLO-Generiek:Polygoon:(Polygoon -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.823Z info: Connector Applicatieprofiel:InfrastructuurElement:Infrastructuurelement:(Infrastructuurelement -> Element) is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.938Z info: Connector Applicatieprofiel:InfrastructuurElement:Infrastructuurelement:(Infrastructuurelement -> Element) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.823Z info: Connector Applicatieprofiel:Terreindeel:TerreinVoorkomen:(TerreinVoorkomen -> FysiekVoorkomen) is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.938Z info: Connector Applicatieprofiel:Terreindeel:TerreinVoorkomen:(TerreinVoorkomen -> FysiekVoorkomen) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.823Z info: Connector Model:OSLO-OpenbaarDomein:Model:Deel:voorkomen is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.938Z info: Connector Model:OSLO-OpenbaarDomein:Model:Deel:voorkomen is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.823Z info: Connector Applicatieprofiel:BegroeidVoorkomen:BegroeidVoorkomen:(BegroeidVoorkomen -> TerreinVoorkomen) is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.938Z info: Connector Applicatieprofiel:BegroeidVoorkomen:BegroeidVoorkomen:(BegroeidVoorkomen -> TerreinVoorkomen) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.824Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:(Waterdeel -> Deel) is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.939Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:(Waterdeel -> Deel) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.824Z info: Connector Applicatieprofiel:VegetatieElement:VegetatieElement:(VegetatieElement -> Element) is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.939Z info: Connector Applicatieprofiel:VegetatieElement:VegetatieElement:(VegetatieElement -> Element) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.824Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Gebied:beheerder is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.939Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Gebied:beheerder is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.824Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:(Terreindeel -> Deel) is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.939Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:(Terreindeel -> Deel) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.824Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:voorkomen is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.939Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:voorkomen is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.824Z info: Connector Applicatieprofiel:WaterVoorkomen:WaterVoorkomen:(WaterVoorkomen -> FysiekVoorkomen) is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.939Z info: Connector Applicatieprofiel:WaterVoorkomen:WaterVoorkomen:(WaterVoorkomen -> FysiekVoorkomen) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.824Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:voorkomen is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.939Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:voorkomen is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.825Z info: Connector Model:OSLO-OpenbaarDomein:Model:Deel:(Deel -> FysiekObject) is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.939Z info: Connector Model:OSLO-OpenbaarDomein:Model:Deel:(Deel -> FysiekObject) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.825Z info: Connector Model:OSLO-OpenbaarDomein:Model:FysiekObject:beheerder is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.940Z info: Connector Model:OSLO-OpenbaarDomein:Model:FysiekObject:beheerder is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.825Z info: Connector Model:OSLO-OpenbaarDomein:Model:Element:(Element -> FysiekObject) is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.940Z info: Connector Model:OSLO-OpenbaarDomein:Model:Element:(Element -> FysiekObject) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.825Z info: Connector Model:OSLO-OpenbaarDomein:Model:FysiekObject:eigenaar is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.940Z info: Connector Model:OSLO-OpenbaarDomein:Model:FysiekObject:eigenaar is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.825Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Gebied:eigenaar is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.940Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Gebied:eigenaar is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.825Z info: Connector Model:OSLO-OpenbaarDomein:Model:Collectie:bevat is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.940Z info: Connector Model:OSLO-OpenbaarDomein:Model:Collectie:bevat is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.826Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:heeftObstakel is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.940Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:heeftObstakel is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.826Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:OnbegroeidVoorkomen:OnbegroeidVoorkomen:(OnbegroeidVoorkomen -> TerreinVoorkomen) is not an association with a source role. Ignoring this connector.
+2025-03-17T09:46:53.941Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:OnbegroeidVoorkomen:OnbegroeidVoorkomen:(OnbegroeidVoorkomen -> TerreinVoorkomen) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:55.826Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T09:46:53.941Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:44:55.826Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T09:46:53.941Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:44:55.827Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T09:46:53.941Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:44:55.827Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T09:46:53.942Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:44:55.827Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T09:46:53.942Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:44:55.831Z warn: [ConnectorConverterHandler]: Connector (voorkomen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T09:46:53.946Z warn: [ConnectorConverterHandler]: Connector (voorkomen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-16T21:44:55.832Z warn: [ConnectorConverterHandler]: Connector (voorkomen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T09:46:53.946Z warn: [ConnectorConverterHandler]: Connector (voorkomen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-16T21:44:55.832Z warn: [ConnectorConverterHandler]: Connector (bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T09:46:53.946Z warn: [ConnectorConverterHandler]: Connector (bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-16T21:44:55.832Z warn: [ConnectorConverterHandler]: Connector (bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T09:46:53.946Z warn: [ConnectorConverterHandler]: Connector (bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 #||# -------------------------------------
 
