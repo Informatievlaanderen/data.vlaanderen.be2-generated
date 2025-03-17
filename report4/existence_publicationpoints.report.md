@@ -145,3 +145,34 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/production/erosiepoel.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/feitelijke-verenigingen.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/fietsinfrastructuur.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/financiele-rapportering.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/gebouw.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/index.html'
+

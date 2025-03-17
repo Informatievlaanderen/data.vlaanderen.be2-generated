@@ -40,6 +40,16 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/energiehuis.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/erosiepoel.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/feitelijke-verenigingen.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/fietsinfrastructuur.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/financiele-rapportering.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/gebouw.publication.json
+#||#  
 Error: the following directories are unsupported
 [
   "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL",
@@ -62,9 +72,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-12-17",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/latest",
   "/tmp/generated/doc/applicatieprofiel/FeitelijkeVerenigingen",
-  "/tmp/generated/doc/applicatieprofiel/FeitelijkeVerenigingen/kandidaatstandaard/2021-06-22",
-  "/tmp/generated/doc/applicatieprofiel/FeitelijkeVerenigingen/ontwerpstandaard/2021-06-22",
-  "/tmp/generated/doc/applicatieprofiel/FeitelijkeVerenigingen/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/GEODCAT-AP-VL",
   "/tmp/generated/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21",
   "/tmp/generated/doc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2022-02-03",
@@ -102,24 +109,12 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/dienst-transactiemodel",
   "/tmp/generated/doc/applicatieprofiel/dienstencataloog",
   "/tmp/generated/doc/applicatieprofiel/energiehuis",
-  "/tmp/generated/doc/applicatieprofiel/erosiepoel",
-  "/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur",
-  "/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2021-12-17",
   "/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17",
-  "/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/applicatieprofiel/financiele-rapportering",
-  "/tmp/generated/doc/applicatieprofiel/financiele-rapportering/erkendestandaard/2024-04-17",
-  "/tmp/generated/doc/applicatieprofiel/financiele-rapportering/kandidaatstandaard/2022-06-23",
-  "/tmp/generated/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/2020-01-31",
-  "/tmp/generated/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/gebieden",
   "/tmp/generated/doc/applicatieprofiel/gebieden/erkendestandaard/2021-09-30",
   "/tmp/generated/doc/applicatieprofiel/gebieden/kandidaatstandaard/2020-06-18",
   "/tmp/generated/doc/applicatieprofiel/gebieden/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/gebieden/standaard/2018-11-27",
-  "/tmp/generated/doc/applicatieprofiel/gebouwenregister",
-  "/tmp/generated/doc/applicatieprofiel/gebouwenregister/kandidaatstandaard/niet-bepaald",
-  "/tmp/generated/doc/applicatieprofiel/gebouwenregister/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/applicatieprofiel/generiek-basis",
   "/tmp/generated/doc/applicatieprofiel/generiek-basis/zonderstatus/2018-10-04",
   "/tmp/generated/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01",
@@ -347,9 +342,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/wegenregister/kandidaatstandaard/2018-10-04",
   "/tmp/generated/doc/applicatieprofiel/wegenregister/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/FeitelijkeVerenigingen/kandidaatstandaard/2021-06-22",
-  "/tmp/generated/doc/vocabularium/FeitelijkeVerenigingen/ontwerpstandaard/2021-06-22",
-  "/tmp/generated/doc/vocabularium/FeitelijkeVerenigingen/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/Persoon/ontwerpstandaard/2023-06-01",
   "/tmp/generated/doc/vocabularium/besluit/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/bestuur/ontwerpdocument/2020-01-06",
@@ -357,21 +349,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/datakwaliteit/kandidaatstandaard/2023-06-01",
   "/tmp/generated/doc/vocabularium/datakwaliteit/ontwerpstandaard/2022-03-15",
   "/tmp/generated/doc/vocabularium/datakwaliteit/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/erosiepoel",
-  "/tmp/generated/doc/vocabularium/fietsinfrastructuur/kandidaatstandaard/2021-12-17",
-  "/tmp/generated/doc/vocabularium/fietsinfrastructuur/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/financiele-rapportering/erkendestandaard/2024-04-17",
-  "/tmp/generated/doc/vocabularium/financiele-rapportering/kandidaatstandaard/2022-06-23",
-  "/tmp/generated/doc/vocabularium/financiele-rapportering/ontwerpstandaard/2020-01-31",
-  "/tmp/generated/doc/vocabularium/financiele-rapportering/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/financiele-rapportering/taxonomie-dcjm/erkendestandaard/2024-04-17",
-  "/tmp/generated/doc/vocabularium/financiele-rapportering/taxonomie-dcjm/kandidaatstandaard/2022-06-23",
-  "/tmp/generated/doc/vocabularium/financiele-rapportering/taxonomie-dcjm/ontwerpstandaard/2022-05-01",
-  "/tmp/generated/doc/vocabularium/financiele-rapportering/taxonomie-dcjm/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/gebouw",
-  "/tmp/generated/doc/vocabularium/gebouw/kandidaatstandaard/niet-bepaald",
-  "/tmp/generated/doc/vocabularium/gebouw/ontwerpdocument/2020-01-06",
-  "/tmp/generated/doc/vocabularium/gebouw/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/generiek/zonderstatus/2018-10-04",
   "/tmp/generated/doc/vocabularium/generiek/zonderstatus/2019-07-01",
   "/tmp/generated/doc/vocabularium/gezondheidstoestand",
@@ -586,11 +563,6 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
   "/tmp/generated/ns/campagne/publicatie",
   "/tmp/generated/ns/datakwaliteit",
-  "/tmp/generated/ns/erosiepoel",
-  "/tmp/generated/ns/fiets",
-  "/tmp/generated/ns/financiele-rapportering",
-  "/tmp/generated/ns/financiele-rapportering/taxonomie-dcjm",
-  "/tmp/generated/ns/gebouw",
   "/tmp/generated/ns/generiek",
   "/tmp/generated/ns/gezondheidstoestand",
   "/tmp/generated/ns/grondboringen",

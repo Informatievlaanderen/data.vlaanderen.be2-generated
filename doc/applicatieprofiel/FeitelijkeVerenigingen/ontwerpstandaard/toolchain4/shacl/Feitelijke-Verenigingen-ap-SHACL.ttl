@@ -309,47 +309,17 @@
     shacl:name "heeftErkenning"@nl;
     shacl:path <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#heeftErkenning>
   ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/FeitelijkeVerenigingen/ontwerpstandaard/toolchain4#Feitelijkevereniging.Dientin>;
-    shacl:class <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Erkenningsaanvraag>;
-    shacl:description "De erkenningsaanvraag die ingediend wordt door de feitelijke vereninging."@nl;
-    shacl:name "dientIn"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#dientIn>
-  ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/FeitelijkeVerenigingen/ontwerpstandaard/toolchain4#Feitelijkevereniging.Issuborganisatievan>;
-    shacl:class <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#FeitelijkeVereniging>;
-    shacl:description "De feitelijke vereniging is een suborganisatie van een andere feitelijke vereniging."@nl;
-    shacl:name "isSuborganisatieVan"@nl;
-    shacl:path org:subOrganizationOf
-  ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/FeitelijkeVerenigingen/ontwerpstandaard/toolchain4#Feitelijkevereniging.Heeftsuborganisatie>;
     shacl:class <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#FeitelijkeVereniging>;
     shacl:description "De feitelijke vereniging heeft een suborganisatie."@nl;
     shacl:name "heeftSuborganisatie"@nl;
     shacl:path org:hasSubOrganization
   ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/FeitelijkeVerenigingen/ontwerpstandaard/toolchain4#Feitelijkevereniging.Isgelinktaan>;
-    shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>;
-    shacl:name "isGelinktAan";
-    shacl:path <http://todo.com/isGelinktAan>
-  ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/FeitelijkeVerenigingen/ontwerpstandaard/toolchain4#Feitelijkevereniging.Vraagtaan>;
     shacl:class <http://purl.org/vocab/cpsv#PublicService>;
     shacl:description "Verwijzing naar de publieke dienstverlening die de feitelijke vereniging aanvraagt."@nl;
     shacl:name "vraagtAan"@nl;
     shacl:path <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#vraagtAan>
-  ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/FeitelijkeVerenigingen/ontwerpstandaard/toolchain4#Feitelijkevereniging.Heeftlid>;
-    shacl:class dc:Agent;
-    shacl:description "Verwijzing naar de leden die deel uitmaken van de feitelijke vereniging."@nl;
-    shacl:minCount "2";
-    shacl:name "heeftLid"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#heeftLid>
-  ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/FeitelijkeVerenigingen/ontwerpstandaard/toolchain4#Feitelijkevereniging.Heeftvertegenwoordiger>;
-    shacl:class dc:Agent;
-    shacl:description "Verwijzing naar de vertegenwoordiger van de feitelijke vereniging."@nl;
-    shacl:name "heeftVertegenwoordiger"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#heeftVertegenwoordiger>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#FeitelijkeVereniging> .
 
@@ -501,6 +471,12 @@
     shacl:description "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."@nl;
     shacl:name "contactinfo"@nl;
     shacl:path schema:contactPoint
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/FeitelijkeVerenigingen/ontwerpstandaard/toolchain4#Organisatie.HeeftSuborganisatie>;
+    shacl:class org:Organization;
+    shacl:description "Organisatie die deze organisatie omvat."@nl;
+    shacl:name "heeft suborganisatie"@nl;
+    shacl:path org:hasSubOrganization
   ];
   shacl:targetClass org:Organization .
 
@@ -613,6 +589,13 @@
     shacl:minCount "1";
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/FeitelijkeVerenigingen/ontwerpstandaard/toolchain4#Publiekedienstverlening.Heeftverantwoordelijke>;
+    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+    shacl:description "Publieke organisatie die verantwoordelijk is voor het aanbieden en beheren van de publieke dienstverlening."@nl;
+    shacl:minCount "1";
+    shacl:name "heeftVerantwoordelijke"@nl;
+    shacl:path <http://data.europa.eu/m8g/hasCompetentAuthority>
   ];
   shacl:targetClass <http://purl.org/vocab/cpsv#PublicService> .
 
@@ -654,10 +637,6 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/FeitelijkeVerenigingen/ontwerpstandaard/toolchain4/UriShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass xsd:anyURI .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/FeitelijkeVerenigingen/ontwerpstandaard/toolchain4/VeranderingsgebeurtenisShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass org:ChangeEvent .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/FeitelijkeVerenigingen/ontwerpstandaard/toolchain4/VerenigingShape> a shacl:NodeShape;
   shacl:closed false;
