@@ -115,3 +115,33 @@ index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/dienst-transactiemodel/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/transactie/ontwerpstandaard/toolchain4/index.html'
 
+#||#    + checking /home/circleci/project/config/production/digitalewatermeter.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/divrest.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/doelgericht-digitaal-transformeren.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/dossier.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/energiehuis.publication.json
+#||# 
+Directory check
+
+index.html check
+

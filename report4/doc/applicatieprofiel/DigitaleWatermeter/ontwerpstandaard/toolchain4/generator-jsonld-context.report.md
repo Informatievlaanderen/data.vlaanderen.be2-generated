@@ -2,11 +2,13 @@
 
 #||# -------------------------------------  
 
-2025-02-11T14:59:48.798Z error: Found [urn:oslo-toolchain:28436ca796dc7b47d128ca145c32da19b0da42134c61e10b67d1acbccd9d294e](all-DigitaleWatermeter-ap.jsonld#L8524) in duplicates, meaning "Object" is used multiple times as label.
+2025-03-17T15:13:33.418Z error: Found [urn:oslo-toolchain:ddaaeafb8fd309be336f0885520c8be9541c1aa00ce895ce9d806ef5d9906e2a](all-DigitaleWatermeter-ap.jsonld#L823) in duplicates, meaning "Object" is used multiple times as label.
 
-2025-02-11T14:59:48.801Z error: Found [urn:oslo-toolchain:493ee4e854d9838456475a944184338c908b9bddd82eae6790398fcf4b58fcee](all-DigitaleWatermeter-ap.jsonld#L8662) in duplicates, meaning "Systeem" is used multiple times as label.
+2025-03-17T15:13:33.419Z error: Found [urn:oslo-toolchain:90f1ded85d0f51ab093d911880d4cf4f639f8f94d80aa912db0e9959c3b95812](all-DigitaleWatermeter-ap.jsonld#L1193) in duplicates, meaning "Object" is used multiple times as label.
 
-2025-02-11T14:59:48.801Z error: Found [urn:oslo-toolchain:40d71dee7b7ecc565c844965b32ef53f723996e8414d8e15c8de9a19c0a00c29](all-DigitaleWatermeter-ap.jsonld#L1222) in duplicates, meaning "Systeem" is used multiple times as label.
+2025-03-17T15:13:33.441Z error: No label found for domain urn:oslo-toolchain:047ecd14c046206c3e6122bd67238ae4d2e39eb4fc2774eb7c9664970ed7483c of attribute [urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-DigitaleWatermeter-ap.jsonld#L7483).
 
-2025-02-11T14:59:48.801Z error: Found [urn:oslo-toolchain:90f1ded85d0f51ab093d911880d4cf4f639f8f94d80aa912db0e9959c3b95812](all-DigitaleWatermeter-ap.jsonld#L1300) in duplicates, meaning "Object" is used multiple times as label.
+2025-03-17T15:13:33.442Z error: No label found for domain urn:oslo-toolchain:047ecd14c046206c3e6122bd67238ae4d2e39eb4fc2774eb7c9664970ed7483c of attribute [urn:oslo-toolchain:5d7518db4509aefc3135b19b233e3c4c8166f2d44618b8be66ab096d5bea2d8d](all-DigitaleWatermeter-ap.jsonld#L7503).
+
+2025-03-17T15:13:33.443Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:342522c70e6e00a831d88bbae127a67ba46a67f7bf27029e6509683b63b06275](all-DigitaleWatermeter-ap.jsonld#L8053).
 
