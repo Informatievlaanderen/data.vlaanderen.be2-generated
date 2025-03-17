@@ -2,39 +2,79 @@
 
 #||# -------------------------------------
 
-2025-02-11T15:16:30.523Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T15:36:11.920Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Persoon:Persoon:heeftrelatieMet)
 
-2025-02-11T15:16:30.524Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T15:36:11.921Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-02-11T15:16:30.527Z warn: [ConnectorConverterHandler]: Connector (isTijdspecialisatieVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T15:36:11.921Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
 
-2025-02-11T15:16:30.527Z warn: [ConnectorConverterHandler]: Connector (isTijdspecialisatieVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T15:36:11.921Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
 
-2025-02-11T15:16:30.527Z warn: [ConnectorConverterHandler]: Connector (lid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T15:36:11.921Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Persoon:Persoon:inwonerschap)
 
-2025-02-11T15:16:30.527Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (lid) and the fallback URI (http://todo.com/) will be assigned.
+2025-03-17T15:36:11.921Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Persoon:Persoon:staatburgerschap)
 
-2025-02-11T15:16:30.527Z warn: [ConnectorConverterHandler]: Connector (Lidmaatschap.Agent) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T15:36:11.921Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Persoon:Persoon:inwonerschap)
 
-2025-02-11T15:16:30.527Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Lidmaatschap.Agent) and the fallback URI (http://todo.com/) will be assigned.
+2025-03-17T15:36:11.921Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Persoon:Persoon:staatsburgerschap)
 
-2025-02-11T15:16:30.528Z warn: [ConnectorConverterHandler]: Connector (Lidmaatschap.Organisatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T15:36:11.921Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-02-11T15:16:30.528Z warn: [ConnectorConverterHandler]: Connector (isLidVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T15:36:11.922Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:Agent:isLidVan)
 
-2025-02-11T15:16:30.528Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (isLidVan) and the fallback URI (http://todo.com/) will be assigned.
+2025-03-17T15:36:11.922Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:Agent:(Agent -> Organisatie))
 
-2025-02-11T15:16:30.528Z warn: [ConnectorConverterHandler]: Connector (isLidVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T15:36:11.922Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:Agent:isHoofdVan)
 
-2025-02-11T15:16:30.528Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (isLidVan) and the fallback URI (http://todo.com/) will be assigned.
+2025-03-17T15:36:11.922Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:Agent:isLidVan)
 
-2025-02-11T15:16:30.528Z warn: [ConnectorConverterHandler]: Connector (Lidmaatschap.Agent) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T15:36:11.922Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2025-02-11T15:16:30.528Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Lidmaatschap.Agent) and the fallback URI (http://todo.com/) will be assigned.
+2025-03-17T15:36:11.922Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-02-11T15:16:30.528Z warn: [ConnectorConverterHandler]: Connector (Lidmaatschap.Organisatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T15:36:11.922Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
 
-2025-02-11T15:16:30.543Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (isDeelVan).
+2025-03-17T15:36:11.922Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Persoon:Persoon:(Persoon -> Object))
+
+2025-03-17T15:36:11.924Z info: Connector Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:DocumentOnderdeel:isDeelVan is not an association with a source role. Ignoring this connector.
+
+2025-03-17T15:36:11.924Z info: Connector Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T15:36:11.924Z info: Connector Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:DocumentOnderdeel:isOnderdeelVan is not an association with a source role. Ignoring this connector.
+
+2025-03-17T15:36:11.925Z info: Connector Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:VersieVolgensTransactietijd:(VersieVolgensTransactietijd -> Versie) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T15:36:11.925Z info: Connector Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:VersieVolgensGeldigeTijd:(VersieVolgensGeldigeTijd -> Versie) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T15:36:11.925Z info: Connector Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:LijnString:(LijnString -> Geometrie) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T15:36:11.925Z info: Connector Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:FormeelKader:isGerelateerdAan is not an association with a source role. Ignoring this connector.
+
+2025-03-17T15:36:11.925Z info: Connector Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:AdministratieveEenheid:(AdministratieveEenheid -> Plaats) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T15:36:11.925Z info: Connector Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T15:36:11.925Z info: Connector Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T15:36:11.925Z info: Connector Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Organisatie:Hoedanigheid:(Hoedanigheid -> Agent) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T15:36:11.925Z info: Connector Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:Herkomstagent:handeldeInOpdrachtVan is not an association with a source role. Ignoring this connector.
+
+2025-03-17T15:36:11.925Z info: Connector Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:Versie:isTijdspecialisatieVan is not an association with a source role. Ignoring this connector.
+
+2025-03-17T15:36:11.925Z info: Connector Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:Versie:(Versie -> Object) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T15:36:11.926Z info: Connector Model:OSLO²_applicatieprofiel_Generiek_basisprofiel:OSLO-Generiek:Polygoon:(Polygoon -> Geometrie) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T15:36:11.926Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T15:36:11.926Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_applicatieprofiel_Generiek_basisprofiel) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T15:36:11.929Z warn: [ConnectorConverterHandler]: Connector (isTijdspecialisatieVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T15:36:11.929Z warn: [ConnectorConverterHandler]: Connector (isTijdspecialisatieVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T15:36:11.943Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (isDeelVan).
 
 #||# -------------------------------------
 

@@ -50,6 +50,16 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/gebouw.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/generiek.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/hulp-dienst-verlening-gedetineerden.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/incentiveringsplatform.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/inname-openbaar-domein.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/kabels-en-leidingen.publication.json
+#||#  
 Error: the following directories are unsupported
 [
   "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL",
@@ -115,30 +125,19 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/gebieden/kandidaatstandaard/2020-06-18",
   "/tmp/generated/doc/applicatieprofiel/gebieden/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/gebieden/standaard/2018-11-27",
-  "/tmp/generated/doc/applicatieprofiel/generiek-basis",
-  "/tmp/generated/doc/applicatieprofiel/generiek-basis/zonderstatus/2018-10-04",
-  "/tmp/generated/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01",
   "/tmp/generated/doc/applicatieprofiel/generieke-terugmeldfaciliteit",
   "/tmp/generated/doc/applicatieprofiel/generieke-terugmeldfaciliteit/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/applicatieprofiel/generieke-terugmeldfaciliteit/standaard/2019-02-07",
-  "/tmp/generated/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden",
   "/tmp/generated/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
-  "/tmp/generated/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-12-18",
-  "/tmp/generated/doc/applicatieprofiel/incentiveringsplatform",
-  "/tmp/generated/doc/applicatieprofiel/incentiveringsplatform/erkendestandaard/2024-10-03",
-  "/tmp/generated/doc/applicatieprofiel/incentiveringsplatform/kandidaatstandaard/2023-11-09",
   "/tmp/generated/doc/applicatieprofiel/infrastructuurelementen",
   "/tmp/generated/doc/applicatieprofiel/infrastructuurelementen/erkendestandaard/2021-09-30",
   "/tmp/generated/doc/applicatieprofiel/infrastructuurelementen/kandidaatstandaard/2020-06-18",
   "/tmp/generated/doc/applicatieprofiel/infrastructuurelementen/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/infrastructuurelementen/standaard/2018-11-27",
   "/tmp/generated/doc/applicatieprofiel/inname-openbaar-domein",
-  "/tmp/generated/doc/applicatieprofiel/inname-openbaar-domein/ontwerpdocument/2018-05-10",
   "/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties",
   "/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/standaard/2019-02-07",
-  "/tmp/generated/doc/applicatieprofiel/kabels-en-leidingen",
-  "/tmp/generated/doc/applicatieprofiel/kabels-en-leidingen/kandidaatstandaard/2023-12-19",
   "/tmp/generated/doc/applicatieprofiel/kindfiche",
   "/tmp/generated/doc/applicatieprofiel/kindfiche/ontwerpstandaard/2024-06-03",
   "/tmp/generated/doc/applicatieprofiel/kwaliteit-wegen-en-wegmarkeringen",
@@ -349,16 +348,10 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/datakwaliteit/kandidaatstandaard/2023-06-01",
   "/tmp/generated/doc/vocabularium/datakwaliteit/ontwerpstandaard/2022-03-15",
   "/tmp/generated/doc/vocabularium/datakwaliteit/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/generiek/zonderstatus/2018-10-04",
-  "/tmp/generated/doc/vocabularium/generiek/zonderstatus/2019-07-01",
   "/tmp/generated/doc/vocabularium/gezondheidstoestand",
   "/tmp/generated/doc/vocabularium/gezondheidstoestand/erkendestandaard/2024-12-05",
   "/tmp/generated/doc/vocabularium/gezondheidstoestand/kandidaatstandaard/2024-10-23",
-  "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden",
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
-  "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-12-18",
-  "/tmp/generated/doc/vocabularium/incentiveringsplatform/erkendestandaard/2024-10-03",
-  "/tmp/generated/doc/vocabularium/incentiveringsplatform/kandidaatstandaard/2023-11-09",
   "/tmp/generated/doc/vocabularium/kindfiche/ontwerpstandaard/2024-06-03",
   "/tmp/generated/doc/vocabularium/kwaliteit-wegen-en-wegmarkeringen/erkendestandaard/2024-12-05",
   "/tmp/generated/doc/vocabularium/kwaliteit-wegen-en-wegmarkeringen/ontwerpstandaard/2023-05-05",
@@ -417,7 +410,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/notificatie",
   "/tmp/generated/doc/vocabularium/notificatie/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/notificatie/standaard/2019-02-07",
-  "/tmp/generated/doc/vocabularium/nutsvoorzieningen/kandidaatstandaard/2023-12-19",
   "/tmp/generated/doc/vocabularium/observaties-en-metingen/kandidaatstandaard/2022-04-28",
   "/tmp/generated/doc/vocabularium/observaties-en-metingen/kandidaatstandaard/2024-04-15",
   "/tmp/generated/doc/vocabularium/observaties-en-metingen/kandidaatstandaard/2024-10-01",
@@ -563,11 +555,8 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
   "/tmp/generated/ns/campagne/publicatie",
   "/tmp/generated/ns/datakwaliteit",
-  "/tmp/generated/ns/generiek",
   "/tmp/generated/ns/gezondheidstoestand",
   "/tmp/generated/ns/grondboringen",
-  "/tmp/generated/ns/hulp-dienstverlening-gedetineerden",
-  "/tmp/generated/ns/incentiveringsplatform",
   "/tmp/generated/ns/kindfiche",
   "/tmp/generated/ns/kwaliteit-wegen-en-wegmarkeringen",
   "/tmp/generated/ns/ldes",
@@ -586,7 +575,6 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/mobiliteitsbudget",
   "/tmp/generated/ns/netwerk",
   "/tmp/generated/ns/notificatie",
-  "/tmp/generated/ns/nutsvoorzieningen",
   "/tmp/generated/ns/observaties-en-metingen",
   "/tmp/generated/ns/omgevingsvergunning",
   "/tmp/generated/ns/openbaardomein",
