@@ -70,15 +70,10 @@ Directory check
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bodem-en-ondergrond/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/grondboringen/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/observaties/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/observaties/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/grondwatermeetnet/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/sonderingen/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/sonderingen/ontwerpstandaard/toolchain4/index.html'
 

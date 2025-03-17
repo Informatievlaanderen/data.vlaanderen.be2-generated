@@ -2,89 +2,175 @@
 
 #||# -------------------------------------
 
-2025-03-15T21:53:26.829Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Grondboringen:Boorgat:(Boorgat -> Grondmonster))
+2025-03-17T22:48:55.023Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Grondboringen:Boorgat:(Boorgat -> Grondmonster))
 
-2025-03-15T21:53:26.831Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Generiek:Agent:rapporteertAan)
+2025-03-17T22:48:55.024Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-03-15T21:53:26.831Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-BO_Observaties:Schuifweerstandproef:(Schuifweerstandproef -> Schuifweerstandproef))
+2025-03-17T22:48:55.024Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-BO_Observaties:Schuifweerstandproef:(Schuifweerstandproef -> Schuifweerstandproef))
 
-2025-03-15T21:53:26.831Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-BO_Observaties:Schuifweerstandskarakteristieken:(Schuifweerstandskarakteristieken -> Schuifweerstandproef))
+2025-03-17T22:48:55.024Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-BO_Observaties:Schuifweerstandskarakteristieken:(Schuifweerstandskarakteristieken -> Schuifweerstandproef))
 
-2025-03-15T21:53:26.831Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-ObservatiesEnMetingen:Monster:(Monster -> BemonsteringsProces))
+2025-03-17T22:48:55.024Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-ObservatiesEnMetingen:Monster:(Monster -> BemonsteringsProces))
 
-2025-03-15T21:53:26.831Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:SSN/SOSA:Bemonstering:(Bemonstering -> Grondobject))
+2025-03-17T22:48:55.025Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:SSN/SOSA:Bemonstering:(Bemonstering -> Grondobject))
 
-2025-03-15T21:53:26.831Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-ObservatiesEnMetingen:Bemonsteringsobject:(Bemonsteringsobject -> Grondobject))
+2025-03-17T22:48:55.025Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-ObservatiesEnMetingen:Bemonsteringsobject:(Bemonsteringsobject -> Grondobject))
 
-2025-03-15T21:53:26.835Z info: Connector Model:Domain Model:Hulppakket:Bemonsteringsobject:Intentie is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.029Z info: Connector Model:Domain Model:Hulppakket:Bemonsteringsobject:Intentie is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:26.836Z info: Connector Model:Domain Model:OSLO-ObservatiesEnMetingen:Bemonsteringsobject:(Bemonsteringsobject -> Bemonsteringsobject) is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.030Z info: Connector Model:Domain Model:Hulppakket:Bemonsteringsobject:(Bemonsteringsobject -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:26.836Z info: Connector Model:Domain Model:Hulppakket:Bemonsteringsobject:(Bemonsteringsobject -> Object) is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.030Z info: Connector Model:Domain Model:OSLO-Grondboringen:Grondmonster:(Grondmonster -> Bemonsteringsobject) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:26.836Z info: Connector Model:Domain Model:OSLO-Grondboringen:Grondmonster:(Grondmonster -> Bemonsteringsobject) is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.030Z info: Connector Model:Domain Model:OSLO-Grondboringen:Grondboring:(Grondboring -> Bemonstering) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:26.836Z info: Connector Model:Domain Model:OSLO-Grondboringen:Grondboring:(Grondboring -> Bemonstering) is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.030Z info: Connector Model:Domain Model:OSLO-Besluit:LegaleVerschijningsvorm:(LegaleVerschijningsvorm -> Rechtsgrond) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:26.836Z info: Connector Model:Domain Model:OSLO-Besluit:LegaleVerschijningsvorm:(LegaleVerschijningsvorm -> Rechtsgrond) is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.030Z info: Connector Model:Domain Model:OSLO-Generiek:Curve:(Curve -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:26.837Z info: Connector Model:Domain Model:OSLO-Generiek:Curve:(Curve -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.030Z info: Connector Model:Domain Model:OSLO-Grondboringen:Boorgatdiameter:(Boorgatdiameter -> Boorgat) has no name. Ignoring this connector.
 
-2025-03-15T21:53:26.837Z info: Connector Model:Domain Model:OSLO-Grondboringen:Boorgatdiameter:(Boorgatdiameter -> Boorgat) has no name. Ignoring this connector.
+2025-03-17T22:48:55.030Z info: Connector Model:Domain Model:OSLO-Grondboringen:Bekisting:(Bekisting -> Boorgat) has no name. Ignoring this connector.
 
-2025-03-15T21:53:26.837Z info: Connector Model:Domain Model:OSLO-Grondboringen:Bekisting:(Bekisting -> Boorgat) has no name. Ignoring this connector.
+2025-03-17T22:48:55.030Z info: Connector Model:Domain Model:OSLO-ObservatiesEnMetingen:Domeinobject:(Domeinobject -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:26.837Z info: Connector Model:Domain Model:OSLO-ObservatiesEnMetingen:Domeinobject:(Domeinobject -> Object) is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.031Z info: Connector Model:Domain Model:SSN/SOSA:Bemonstering:(Bemonstering -> Bemonsteringsprocedure) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:26.837Z info: Connector Model:Domain Model:SSN/SOSA:Bemonstering:(Bemonstering -> Bemonsteringsprocedure) is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.031Z info: Connector Model:Domain Model:SSN/SOSA:Bemonstering:(Bemonstering -> Bemonsteraar) has no name. Ignoring this connector.
 
-2025-03-15T21:53:26.837Z info: Connector Model:Domain Model:SSN/SOSA:Bemonstering:(Bemonstering -> Bemonsteraar) has no name. Ignoring this connector.
+2025-03-17T22:48:55.031Z info: Connector Model:Domain Model:OSLO-Grondboringen:Boorgat:(Boorgat -> Bemonsteringsobject) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:26.837Z info: Connector Model:Domain Model:OSLO-Grondboringen:Boorgat:(Boorgat -> Bemonsteringsobject) is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.031Z info: Connector Model:Domain Model:SSN/SOSA:Bemonsteraar:(Bemonsteraar -> Bemonsteringsprocedure) has no name. Ignoring this connector.
 
-2025-03-15T21:53:26.837Z info: Connector Model:Domain Model:SSN/SOSA:Bemonsteraar:(Bemonsteraar -> Bemonsteringsprocedure) has no name. Ignoring this connector.
+2025-03-17T22:48:55.031Z info: Connector Model:Domain Model:SSN/SOSA:Bemonstering:(Bemonstering -> Bemonsteringsobject) has no name. Ignoring this connector.
 
-2025-03-15T21:53:26.837Z info: Connector Model:Domain Model:SSN/SOSA:Bemonstering:(Bemonstering -> Bemonsteringsobject) has no name. Ignoring this connector.
+2025-03-17T22:48:55.031Z info: Connector Model:Domain Model:SSN/SOSA:Bemonstering:(Bemonstering -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:26.837Z info: Connector Model:Domain Model:SSN/SOSA:Bemonstering:(Bemonstering -> Object) is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.031Z info: Connector Model:Domain Model:OSLO-Grondboringen:Boorgat:(Boorgat -> Grondboring) has no name. Ignoring this connector.
 
-2025-03-15T21:53:26.838Z info: Connector Model:Domain Model:OSLO-Grondboringen:Boorgat:(Boorgat -> Grondboring) has no name. Ignoring this connector.
+2025-03-17T22:48:55.031Z info: Connector Model:Domain Model:OSLO-Grondboringen:Boormethode:(Boormethode -> Bemonsteringsprocedure) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:26.838Z info: Connector Model:Domain Model:OSLO-Grondboringen:Boormethode:(Boormethode -> Bemonsteringsprocedure) is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.032Z info: Connector Model:Domain Model:OSLO-Grondboringen:Boor:(Boor -> Bemonsteraar) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:26.838Z info: Connector Model:Domain Model:OSLO-Grondboringen:Boor:(Boor -> Bemonsteraar) is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.032Z info: Connector Model:Domain Model:OSLO-Grondboringen:WettelijkKaderBoring:(WettelijkKaderBoring -> WettelijkKader) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:26.838Z info: Connector Model:Domain Model:OSLO-Grondboringen:WettelijkKaderBoring:(WettelijkKaderBoring -> WettelijkKader) is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.032Z info: Connector Model:Domain Model:OSLO-Grondboringen:Grondobject:(Grondobject -> Domeinobject) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:26.838Z info: Connector Model:Domain Model:OSLO-Grondboringen:Grondobject:(Grondobject -> Domeinobject) is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.032Z info: Connector Model:Domain Model:OSLO-ObservatiesEnMetingen:Bemonsteringsobject:(Bemonsteringsobject -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:26.838Z info: Connector Model:Domain Model:OSLO-ObservatiesEnMetingen:Bemonsteringsobject:(Bemonsteringsobject -> Object) is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.032Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-15T21:53:26.838Z info: Connector Model:Domain Model:OSLO-ObservatiesEnMetingen:Bemonsteringsobject:Intentie is not an association with a source role. Ignoring this connector.
+2025-03-17T22:48:55.032Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
 
-Error: Unable to find the association class object for connector with path Model:Domain Model:OSLO-ObservatiesEnMetingen:Bemonsteringsobject:(Bemonsteringsobject -> Bemonsteringsobject).
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Hulppakket) and fallback URI (http://todo.com/) will be assigned.
 
-    at SelfAssociationWithAssociationClassConnectorCase.normalise (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/connector-normalisation-cases/SelfAssociationWithAssociationClassConnectorCase.js:52:19)
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-Grondboringen:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
 
-    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConnectorNormalisationService.js:21:54
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-Grondboringen:Objectdiagrammen:BoringMetMonster) and fallback URI (http://todo.com/) will be assigned.
 
-    at Array.map (<anonymous>)
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-Besluit) and fallback URI (http://todo.com/) will be assigned.
 
-    at ConnectorNormalisationService.normalise (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConnectorNormalisationService.js:21:41)
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (OSLO-Grondwatermeetnet:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
 
-    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/converter-handlers/ConnectorConverterHandler.js:48:68
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:SSN/SOSA) and fallback URI (http://todo.com/) will be assigned.
 
-    at Array.map (<anonymous>)
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:SSN/SOSA-extensies) and fallback URI (http://todo.com/) will be assigned.
 
-    at ConnectorConverterHandler.normalize (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/converter-handlers/ConnectorConverterHandler.js:48:14)
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:DublinCore) and fallback URI (http://todo.com/) will be assigned.
 
-    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConverterHandlerService.js:27:39
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:FIWARE) and fallback URI (http://todo.com/) will be assigned.
 
-    at Array.map (<anonymous>)
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:pH-Meting) and fallback URI (http://todo.com/) will be assigned.
 
-    at ConverterHandlerService.normalize (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConverterHandlerService.js:27:14)
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen-2021:Korrelverdeling) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen-2021:Consistentie) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen-2021:Doorlaatbaarheid) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen-2021:Korrelverdeling-generiek) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (OSLO-Grondwatermeetnet:Objectdiagrammen-NEW) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (OSLO-Grondwatermeetnet:Objectdiagrammen-NEW:OpenPiëzometer) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (OSLO-Grondwatermeetnet:Objectdiagrammen-NEW:PeilmetingOpenPiëzometer) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (OSLO-Grondwatermeetnet:Objectdiagrammen-NEW:KwaliteitsmetingGrondwatermonster) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-Bodem:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-Bodem:Objectdiagrammen:Bodemlocatie) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-Bodem:Objectdiagrammen:Profielput) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (OSLO-Grondwatermeetnet:Objectdiagrammen:BeschrijvingPutEnFilters) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (OSLO-Grondwatermeetnet:Objectdiagrammen:PeilmetingenEnMonster) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen-2021:TijdelijkeOntsluiting) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen-2021:LithologieBereik (generiek)) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen-2021:LithologieBereik) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Humusgehalte) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-Bodem:Objectdiagrammen NEW) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.033Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-Bodem:Objectdiagrammen NEW:Bodemprofiel) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-Bodem:Objectdiagrammen NEW:Mengmonster) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-Bodem:Objectdiagrammen NEW:Bodemobservaties) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-Bodem:Objectdiagrammen NEW:Bodemclassificatie) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:SAREF) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-BO_Observaties:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-BO_Observaties:Objectdiagrammen:Doorlatendheidsproef) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-BO_Observaties:Objectdiagrammen:Boorgatmeting) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-BO_Observaties:Objectdiagrammen:Korrelverdeling) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-ObservatiesEnMetingen:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-SensorenEnBemonstering:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-SensorenEnBemonstering:Objectdiagrammen:InwinningEnVoorbereidingMonster) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Objectdiagrammen-2021) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Objectdiagrammen-2021:Grondboring) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-ObservatiesEnMetingen:Objectdiagrammen:DrogeMaterie) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-ObservatiesEnMetingen:Objectdiagrammen:FietsersWegsegment) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagrammen-2024-webinar) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagrammen-2024-webinar:SterkVervuildPerceel) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagrammen-2024-webinar:ArseengehalteMonster) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagrammen-2024-webinar:BemonsterdObject) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagrammen-2024-webinar:Grondmonster) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagrammen-2024-webinar:Grondboring) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.034Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagrammen-2024-webinar:GeotechnischeCodering) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T22:48:55.052Z warn: [ConnectorConverterHandler]: Connector (isResultaatVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T22:48:55.058Z warn: [ConverterHandler]: Entity with path Model:Domain Model:Hulppakket:Boring has already a value for label-nl in language nl, but will be overwritten.
 
 #||# -------------------------------------
-
-file ap-grondboringen.jsonld does not exist
 
