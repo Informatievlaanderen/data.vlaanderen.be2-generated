@@ -1,8 +1,8 @@
-#||# oslo-converter-ea for diagram NEW OSLO-Grondwatermeetnet
+#||# oslo-converter-ea for diagram NEW_OSLO-Grondwatermeetnet
 
 #||# -------------------------------------
 
-Error: UML model does not contain a diagram with name NEW.
+Error: UML model does not contain a diagram with name NEW_OSLO-Grondwatermeetnet.
 
     at DataRegistry.setTargetDiagram (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/ea-uml-extractor/lib/DataRegistry.js:33:19)
 
