@@ -1,3 +1,502 @@
 {
-  "@context": {}
+  "@context": {
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "BO_RuimtelijkBemonsteringsobject": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject",
+    "BelgischeBodemClassificatie": "https://data.vlaanderen.be/ns/bodem#BelgischeBodemClassificatie",
+    "BelgischeBodemClassificatie.resultaat": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#resultaat",
+      "@type": "https://data.vlaanderen.be/ns/bodem#BelgischeBodemklasse"
+    },
+    "BelgischeBodemklasse": "https://data.vlaanderen.be/ns/bodem#BelgischeBodemklasse",
+    "Bemonsteraar": "http://www.w3.org/ns/sosa/Sampler",
+    "Bemonsteraartype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bemonstering": "http://www.w3.org/ns/sosa/Sampling",
+    "Bemonstering.bemonsteringstijdstip": {
+      "@id": "http://www.w3.org/ns/sosa/resultTime",
+      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
+    },
+    "Bemonstering.opdracht": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.opdracht",
+      "@type": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht"
+    },
+    "Bemonstering.resultaat": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasResult",
+      "@type": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+    },
+    "Bemonstering.uitgevoerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.uitgevoerdDoor",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "BemonsteringsProces": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process",
+    "Bemonsteringsdoel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bemonsteringsobject": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
+    "Bemonsteringsobject.identificator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Bemonsteringsobject.parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+    },
+    "Bemonsteringsobjecttype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bemonsteringsprocedure": "http://www.w3.org/ns/sosa/om#SamplingProcedure",
+    "Bemonsteringsprocedure.parameter": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsprocedure.parameter",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+    },
+    "Bemonsteringsprocedure.specificatie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsprocedure.specificatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Bemonsteringsproceduretype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bemonsteringstype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "BenoemdeWaarde": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
+    "BenoemdeWaarde.naam": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "BenoemdeWaarde.waarde": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    "Bodemboorgat": "https://data.vlaanderen.be/ns/bodem#Bodemboorgat",
+    "Bodemclassificatie": "https://data.vlaanderen.be/ns/bodem#Bodemclassificatie",
+    "Bodemhorizont": "https://data.vlaanderen.be/ns/bodem#Bodemhorizont",
+    "Bodemlaag": "https://data.vlaanderen.be/ns/bodem#Bodemlaag",
+    "Bodemlocatie": "https://data.vlaanderen.be/ns/bodem#Bodemlocatie",
+    "Bodemmonster": "https://data.vlaanderen.be/ns/bodem#Bodemmonster",
+    "Bodemmonster.bemonsteringstijdstip": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#bemonsteringstijdstip",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Bodemmonstertype": "https://data.vlaanderen.be/ns/bodem#BodemmonsterType",
+    "Bodemobject": "https://data.vlaanderen.be/ns/bodem#Bodemobject",
+    "Bodemobjecttype": "https://data.vlaanderen.be/ns/bodem#Bodemobjecttype",
+    "Bodemprofiel": "https://data.vlaanderen.be/ns/bodem#Bodemprofiel",
+    "Bodemprofielelement": "https://data.vlaanderen.be/ns/bodem#BodemprofielElement",
+    "Bodemprofielobservatie": "https://data.vlaanderen.be/ns/bodem#BodemprofielObservatie",
+    "Bodemsite": "https://data.vlaanderen.be/ns/bodem#Bodemsite",
+    "Boolean": "http://www.w3.org/2001/XMLSchema#boolean",
+    "Classificatie": "http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation",
+    "ClassificatieKunstmatigeGronden": "https://data.vlaanderen.be/ns/bodem#ClassificatieKunstmatigeGronden",
+    "Curve": "http://www.opengis.net/ont/sf#Curve",
+    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "Diepte": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Diepte",
+    "DiepteIntervalGrensDuidelijkheid": "https://data.vlaanderen.be/ns/bodem#DiepteIntervalGrensDuidelijkheid",
+    "DiepteIntervalGrensregelmatigheid": "https://data.vlaanderen.be/ns/bodem#DiepteIntervalGrensregelmatigheid",
+    "DirectePositie": "https://data.vlaanderen.be/ns/generiek#DirectePositie",
+    "DirectePositie.opmeting": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#DirectePositie.opmeting",
+      "@type": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+    },
+    "Domeinobject": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+    "Double": "http://www.w3.org/2001/XMLSchema#double",
+    "Drainageklasse": "https://data.vlaanderen.be/ns/bodem#DrainageKlasse",
+    "ExtraBodemClassificatie": "https://data.vlaanderen.be/ns/bodem#ExtraBodemClassificatie",
+    "ExtraBodemklasse": "https://data.vlaanderen.be/ns/bodem#ExtraBodemklasse",
+    "ExtraClassificatieAfgeleidType": "https://data.vlaanderen.be/ns/bodem#ExtraClassificatieAfgeleidType",
+    "ExtraClassificatieType": "https://data.vlaanderen.be/ns/bodem#ExtraClassificatieType",
+    "Fase": "https://data.vlaanderen.be/ns/bodem#Fase",
+    "GeneriekDatatype": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any",
+    "GeneriekeNaam": "http://def.isotc211.org/iso19103/2005/Names#GenericName",
+    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
+    "Geometrie.opmeting": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting",
+      "@type": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+    },
+    "Getal": "https://schema.org/Number",
+    "Grondmonster": "https://data.vlaanderen.be/ns/grondboringen#Grondmonster",
+    "Herkomst": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage",
+    "Identificator": "http://www.w3.org/ns/adms#Identifier",
+    "Identificator.identificator": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Input": "http://www.w3.org/ns/ssn/Input",
+    "Input.referentie": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Input.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "InputType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Kwaliteitselement": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element",
+    "KwantitatieveWaarde": "https://schema.org/QuantitativeValue",
+    "KwantitatieveWaarde.waarde": {
+      "@id": "https://schema.org/value",
+      "@type": "https://schema.org/Number"
+    },
+    "Laag": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag",
+    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "Locatie": "http://www.w3.org/ns/prov#Location",
+    "Maaiveld": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld",
+    "Maaiveldtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Moment": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant",
+    "Observatie": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+    "Observatie.opdracht": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.opdracht",
+      "@type": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht"
+    },
+    "Observatie.parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+    },
+    "Observatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    "Observatie.uitgevoerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "Observatieprocedure": "http://www.w3.org/ns/sosa/om#ObservationProcedure",
+    "Observatieprocedure.parameter": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.parameter",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+    },
+    "Observatieprocedure.specificatie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Observatieproceduretype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Observatietype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Opdracht": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht",
+    "Output": "http://www.w3.org/ns/ssn/Output",
+    "Output.referentie": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Output.referentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "OutputType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Periode": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period",
+    "Polygoon": "http://www.opengis.net/ont/sf#Polygon",
+    "PositioneleNauwkeurigheid": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy",
+    "Procedure": "http://www.w3.org/ns/sosa/Procedure",
+    "Proces": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
+    "Profielelement": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement",
+    "Profielontwikkelingsgroep": "https://data.vlaanderen.be/ns/bodem#Profielontwikkelingsgroep",
+    "Profielput": "https://data.vlaanderen.be/ns/bodem#Profielput",
+    "Punt": "http://www.opengis.net/ont/sf#Point",
+    "RuimtelijkBemonsteringsobject": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+    "Sensor": "https://www.w3.org/ns/sosa/Sensor",
+    "StandaardEenheid": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid",
+    "String": "http://www.w3.org/2001/XMLSchema#string",
+    "Substraat": "https://data.vlaanderen.be/ns/bodem#Substraat",
+    "Systeem": "https://www.w3.org/TR/vocab-ssn/#ssn-system",
+    "Systeemtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TemporeleEntiteit": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object",
+    "Textuurklasse": "https://data.vlaanderen.be/ns/bodem#Textuurklasse",
+    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "VarianteMoedermateriaal": "https://data.vlaanderen.be/ns/bodem#VarianteMoedermateriaal",
+    "VarianteProfielontwikkeling": "https://data.vlaanderen.be/ns/bodem#VarianteProfielontwikkeling",
+    "WRBVersie": "https://data.vlaanderen.be/ns/bodem#WRBVersie",
+    "WettelijkKader": "https://data.vlaanderen.be/ns/generiek#WettelijkKader",
+    "WrbBodemClassificatie": "https://data.vlaanderen.be/ns/bodem#WrbBodemClassificatie",
+    "WrbBodemklasse": "https://data.vlaanderen.be/ns/bodem#WrbBodemklasse",
+    "WrbBodemklasse.naam": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#naam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "WrbQualifier": "https://data.vlaanderen.be/ns/bodem#WrbQualifier",
+    "WrbQualifier.type": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#type",
+      "@type": "https://data.vlaanderen.be/ns/bodem#WrbQualifierType"
+    },
+    "WrbQualifierType": "https://data.vlaanderen.be/ns/bodem#WrbQualifierType",
+    "WrbReferenceSoilGroup": "https://data.vlaanderen.be/ns/bodem#WrbReferenceSoilGroup",
+    "^GeobserveerdObject": {
+      "@id": "http://fixme.com/",
+      "@type": "https://data.vlaanderen.be/ns/bodem#Bodemobject"
+    },
+    "afgeleid": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#afgeleid",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "afgeleidVan": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#afgeleidVan",
+      "@type": "https://data.vlaanderen.be/ns/bodem#ExtraClassificatieAfgeleidType"
+    },
+    "begrenzing": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#begrenzing",
+      "@type": "http://www.opengis.net/ont/sf#Polygon"
+    },
+    "bemonsterdObject": {
+      "@id": "http://fixme.com/",
+      "@type": "https://data.vlaanderen.be/ns/bodem#Bodemobject"
+    },
+    "bemonsteringsplaats": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#bemonsteringsplaats",
+      "@type": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "beschrijving": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#beschrijving",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "bodemsite": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#bodemsite",
+      "@type": "https://data.vlaanderen.be/ns/bodem#Bodemsite"
+    },
+    "bodemtype": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#bodemtype",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "bovengrens2": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#bovengrens2",
+      "@type": "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "conditie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.conditie",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+    },
+    "diepte": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#diepte",
+      "@type": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Diepte"
+    },
+    "doel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.doel",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "drainageKlasse": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#drainageKlasse",
+      "@type": "https://data.vlaanderen.be/ns/bodem#DrainageKlasse"
+    },
+    "eenheid": {
+      "@id": "https://schema.org/unitText",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "fase": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#fase",
+      "@type": "https://data.vlaanderen.be/ns/bodem#Fase"
+    },
+    "fenomeentijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
+    },
+    "geassocieerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+    },
+    "gebruikteProcedure": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "http://www.w3.org/ns/sosa/om#ObservationProcedure"
+    },
+    "gehostPlatform": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem#gehostPlatform",
+      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process"
+    },
+    "geldigeTijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime",
+      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period"
+    },
+    "geobserveerdObject": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#geobserveerdObject",
+      "@type": "https://data.vlaanderen.be/ns/bodem#Bodemlocatie"
+    },
+    "geometrie": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#geometrie",
+      "@type": "http://www.opengis.net/ont/sf#Curve"
+    },
+    "gml": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "grensduidelijkheid": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#grensduidelijkheid",
+      "@type": "https://data.vlaanderen.be/ns/bodem#DiepteIntervalGrensDuidelijkheid"
+    },
+    "grensregelmatigheid": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#grensregelmatigheid",
+      "@type": "https://data.vlaanderen.be/ns/bodem#DiepteIntervalGrensregelmatigheid"
+    },
+    "grootte": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#grootte",
+      "@type": "https://schema.org/QuantitativeValue"
+    },
+    "herkomst": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage",
+      "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage"
+    },
+    "hoogte": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld.hoogte",
+      "@type": "https://data.vlaanderen.be/ns/generiek#DirectePositie"
+    },
+    "huidigeLocatie": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#huidigeLocatie",
+      "@type": "http://www.w3.org/ns/prov#Location"
+    },
+    "identificator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "implementeert": {
+      "@id": "http://www.w3.org/ns/ssn/implements",
+      "@type": "http://www.w3.org/ns/sosa/om#ObservationProcedure"
+    },
+    "input": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasInput",
+      "@type": "http://www.w3.org/ns/ssn/Input"
+    },
+    "kunstmatigeGronden": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#kunstmatigeGronden",
+      "@type": "https://data.vlaanderen.be/ns/bodem#ClassificatieKunstmatigeGronden"
+    },
+    "kuststreek": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#kuststreek",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "laag": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#laag",
+      "@type": "https://data.vlaanderen.be/ns/bodem#Bodemlaag"
+    },
+    "ligging": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem#ligging",
+      "@type": "http://www.w3.org/ns/prov#Location"
+    },
+    "maaiveld": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem#maaiveld",
+      "@type": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld"
+    },
+    "monstertype": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#monstertype",
+      "@type": "https://data.vlaanderen.be/ns/bodem#BodemmonsterType"
+    },
+    "naam": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#naam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ondergrens2": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#ondergrens2",
+      "@type": "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "output": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasOutput",
+      "@type": "http://www.w3.org/ns/ssn/Output"
+    },
+    "positie": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#positie",
+      "@type": "http://www.opengis.net/ont/sf#Point"
+    },
+    "positioneleNauwkeurigheid": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#positioneleNauwkeurigheid",
+      "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy"
+    },
+    "profielontwikkelingsgroep": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#profielontwikkelingsgroep",
+      "@type": "https://data.vlaanderen.be/ns/bodem#Profielontwikkelingsgroep"
+    },
+    "qualifierBeschrijving": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#qualifierBeschrijving",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "qualifierFull": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#qualifierFull",
+      "@type": "https://data.vlaanderen.be/ns/bodem#WrbQualifier"
+    },
+    "referenceSoilGroupBeschrijving": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#referenceSoilGroupBeschrijving",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "referenceSoilGroupFull": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#referenceSoilGroupFull",
+      "@type": "https://data.vlaanderen.be/ns/bodem#WrbReferenceSoilGroup"
+    },
+    "resultaat": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#resultaat",
+      "@type": "https://data.vlaanderen.be/ns/bodem#Bodemprofiel"
+    },
+    "resultaatkwaliteit": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
+      "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element"
+    },
+    "resultaattijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
+      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant"
+    },
+    "standaardEenheid": {
+      "@id": "https://schema.org/unitCode",
+      "@type": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid"
+    },
+    "substraat": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#substraat",
+      "@type": "https://data.vlaanderen.be/ns/bodem#Substraat"
+    },
+    "textuurKlasse": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#textuurKlasse",
+      "@type": "https://data.vlaanderen.be/ns/bodem#Textuurklasse"
+    },
+    "toegekendDoor": {
+      "@id": "http://purl.org/dc/terms/creator",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "toegekendDoor(String)": {
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "toegekendOp": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "uitgevoerdMet": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySampler",
+      "@type": "http://www.w3.org/ns/sosa/Sampler"
+    },
+    "uitgevoerdMetSensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "https://www.w3.org/ns/sosa/Sensor"
+    },
+    "varianteMoedermateriaal": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#varianteMoedermateriaal",
+      "@type": "https://data.vlaanderen.be/ns/bodem#VarianteMoedermateriaal"
+    },
+    "varianteProfielontwikkeling": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#varianteProfielontwikkeling",
+      "@type": "https://data.vlaanderen.be/ns/bodem#VarianteProfielontwikkeling"
+    },
+    "versie": {
+      "@id": "https://data.vlaanderen.be/ns/bodem#versie",
+      "@type": "https://data.vlaanderen.be/ns/bodem#WRBVersie"
+    },
+    "wettelijkKader": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.wettelijkKader",
+      "@type": "https://data.vlaanderen.be/ns/generiek#WettelijkKader"
+    },
+    "wkt": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "wrbQualifier": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem#wrbQualifier",
+      "@type": "https://data.vlaanderen.be/ns/bodem#WrbQualifier"
+    }
+  }
 }
