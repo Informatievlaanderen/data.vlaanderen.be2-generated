@@ -83,3 +83,35 @@ Directory check
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/contactvoorkeuren/ontwerpstandaard/toolchain4/index.html'
 
+#||#    + checking /home/circleci/project/config/production/cultureel-erfgoed-basisregistratie.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/cultureel-erfgoed.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/cultuur-en-jeugdinfrastructuur.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/cultuurenjeugdinfrastructuur.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/dienst.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/dienst-transactiemodel/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/vocabularium/transactie/ontwerpstandaard/toolchain4/index.html'
+

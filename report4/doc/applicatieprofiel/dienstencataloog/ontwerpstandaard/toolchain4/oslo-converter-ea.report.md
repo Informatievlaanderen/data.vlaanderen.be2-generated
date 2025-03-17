@@ -2,33 +2,93 @@
 
 #||# -------------------------------------
 
-2025-02-11T14:58:23.220Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T14:57:20.980Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
 
-2025-02-11T14:58:23.221Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T14:57:20.982Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-02-11T14:58:23.221Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Placeholder) and fallback URI (http://todo.com/) will be assigned.
+2025-03-17T14:57:20.982Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Organisatie:PubliekeOrganisatie:opeenvolging)
 
-2025-02-11T14:58:23.226Z warn: [ConnectorConverterHandler]: Connector (heeftParticiperende) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T14:57:20.982Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:Agent:isLidVan)
 
-2025-02-11T14:58:23.226Z warn: [ConnectorConverterHandler]: Connector (heeftParticiperende) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T14:57:20.982Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-02-11T14:58:23.226Z warn: [ConnectorConverterHandler]: Connector (Participatie.PubliekeDienstverlening) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T14:57:20.982Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:Agent:isHoofdVan)
 
-2025-02-11T14:58:23.226Z warn: [ConnectorConverterHandler]: Connector (Participatie.AgentDienstencataloog) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-17T14:57:20.982Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:Agent:isLidVan)
 
-2025-02-11T14:58:23.233Z warn: [ConverterHandler]: Entity with path Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:beschrijving has already a value for ap-usageNote in language nl, but will be overwritten.
+2025-03-17T14:57:20.984Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T14:58:23.247Z warn: [ConverterHandler]: Entity with path heeftVerantwoordelijke has an empty value for tag ap-usageNote-nl.
+2025-03-17T14:57:20.984Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T14:58:23.247Z warn: [ConverterHandler]: Entity with path heeftVerantwoordelijke has an empty value for tag ap-usageNote-nl.
+2025-03-17T14:57:20.985Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:FormeelKader:isGerelateerdAan is not an association with a source role. Ignoring this connector.
 
-2025-02-11T14:58:23.248Z warn: [ConverterHandler]: Entity with path heeftParticiperende has an empty value for tag ap-usageNote-nl.
+2025-03-17T14:57:20.985Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Procedure:implementeert is not an association with a source role. Ignoring this connector.
 
-2025-02-11T14:58:23.248Z warn: [ConverterHandler]: Entity with path heeftParticiperende has an empty value for tag ap-usageNote-nl.
+2025-03-17T14:57:20.986Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kanaal:isBezitVan is not an association with a source role. Ignoring this connector.
 
-2025-02-11T14:58:23.248Z warn: [ConverterHandler]: Entity with path aangebodenBinnen has already a value for ap-definition-nl in language nl, but will be overwritten.
+2025-03-17T14:57:20.986Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kost:indienBenaderdVia is not an association with a source role. Ignoring this connector.
 
-2025-02-11T14:58:23.249Z warn: [ConverterHandler]: Entity with path aangebodenBinnen has already a value for ap-definition-nl in language nl, but will be overwritten.
+2025-03-17T14:57:20.986Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kost:isGedefinieerdDoor is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.986Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:LevensGebeurtenis:(LevensGebeurtenis -> Gebeurtenis) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.986Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kanaal:vereistAlsInput is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.986Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:BedrijfsGebeurtenis:(BedrijfsGebeurtenis -> Gebeurtenis) is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.987Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:produceert is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.987Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:wordtUitgevoerdDoor is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.987Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:vereist is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.987Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.987Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:heeftParticiperende is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.988Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:isGegroepeerdVolgens is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.988Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:aangebodenBinnen is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.988Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:teConsumerenVia is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.988Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Gebeurtenis:isGerelateerdMet is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.988Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:heeftCriterium is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.988Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:vereistAlsInput is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.988Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:volgt is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.988Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet is not an association with a source role. Ignoring this connector.
+
+2025-03-17T14:57:20.989Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T14:57:20.989Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T14:57:20.989Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Placeholder) and fallback URI (http://todo.com/) will be assigned.
+
+2025-03-17T14:57:20.992Z warn: [ConnectorConverterHandler]: Connector (heeftParticiperende) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T14:57:20.992Z warn: [ConnectorConverterHandler]: Connector (heeftParticiperende) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T14:57:20.992Z warn: [ConnectorConverterHandler]: Connector (Participatie.PubliekeDienstverlening) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T14:57:20.992Z warn: [ConnectorConverterHandler]: Connector (Participatie.AgentDienstencataloog) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-03-17T14:57:20.998Z warn: [ConverterHandler]: Entity with path Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:beschrijving has already a value for ap-usageNote in language nl, but will be overwritten.
+
+2025-03-17T14:57:21.004Z warn: [ConverterHandler]: Entity with path heeftVerantwoordelijke has an empty value for tag ap-usageNote-nl.
+
+2025-03-17T14:57:21.004Z warn: [ConverterHandler]: Entity with path heeftVerantwoordelijke has an empty value for tag ap-usageNote-nl.
+
+2025-03-17T14:57:21.007Z warn: [ConverterHandler]: Entity with path heeftParticiperende has an empty value for tag ap-usageNote-nl.
+
+2025-03-17T14:57:21.007Z warn: [ConverterHandler]: Entity with path heeftParticiperende has an empty value for tag ap-usageNote-nl.
+
+2025-03-17T14:57:21.008Z warn: [ConverterHandler]: Entity with path aangebodenBinnen has already a value for ap-definition-nl in language nl, but will be overwritten.
+
+2025-03-17T14:57:21.008Z warn: [ConverterHandler]: Entity with path aangebodenBinnen has already a value for ap-definition-nl in language nl, but will be overwritten.
 
 #||# -------------------------------------
 
