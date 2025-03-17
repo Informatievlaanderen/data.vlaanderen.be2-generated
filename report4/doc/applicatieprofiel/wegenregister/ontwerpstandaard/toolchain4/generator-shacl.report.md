@@ -2,15 +2,7 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for range "http://www.w3.org/2001/XMLSchema#decimal".
+2025-03-17T06:31:58.559Z error: Unable to find the description for subject "[urn:oslo-toolchain:1c90cc50243b317820dcb80d64dc314901bee049f9069dd875914bb1fc93b273](all-wegenregister.jsonld#L3976)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:49:19)
-
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
-
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:51)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-03-17T06:31:58.561Z error: Unable to find the description for subject "[urn:oslo-toolchain:f061c1df13dd720d8f7ff06ff6f7391fba9c62176473fb9b0599d09c8cb71bd3](all-wegenregister.jsonld#L3996)".
 
