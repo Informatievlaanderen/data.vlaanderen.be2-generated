@@ -225,6 +225,7 @@ Directory check
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/vocabularium/nutsvoorzieningen/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/kristof/index.html'
 
 #||#    + checking /home/circleci/project/config/test/kindfiche.publication.json
 #||# 
