@@ -1,3 +1,614 @@
 {
-  "@context": {}
+  "@context": {
+    "Aansluiting": "https://vocab.belgif.be/ns/utility-services#Connection",
+    "Aansluiting.toebehorentype": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#Connection.appurtenanceType",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Activiteitencomplex": "https://vocab.belgif.be/ns/generic#ActivityComplex",
+    "Activiteitencomplex.geometrie": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "Activiteitencomplex.identificator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Activiteitencomplex.naam": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Adres": "https://vocab.belgif.be/ns/address#Adress",
+    "Adresvoorstelling": "http://www.w3.org/ns/locn#Address",
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Annotatie": "https://vocab.belgif.be/ns/utility-services#Annotation",
+    "Annotatietype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "BeschermdGebied": "https://vocab.belgif.be/ns/utility-services#ProtectedArea",
+    "BeschermdGebied.ligging": {
+      "@id": "http://www.w3.org/ns/prov#atLocation",
+      "@type": "http://www.w3.org/ns/prov#Location"
+    },
+    "BeschermdGebied.naam": {
+      "@id": "http://purl.org/dc/elements/1.1/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "BeschermdGebiedtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Containertype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Curve": "http://www.opengis.net/ont/geosparql#Curve",
+    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "Diepte": "https://vocab.belgif.be/ns/utility-services#Depth",
+    "DirectePositie": "https://vocab.belgif.be/ns/generic#DirectPosition",
+    "DirectePositie.opmeting": {
+      "@id": "https://vocab.belgif.be/ns/generic#DirectPosition.survey",
+      "@type": "https://vocab.belgif.be/ns/generic#Survey"
+    },
+    "Document": "http://xmlns.com/foaf/0.1/Document",
+    "Documentmediumtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Documenttype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "EconomischeActiviteittype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Electriciteitskabel": "https://vocab.belgif.be/ns/utility-services#ElectricityCable",
+    "Faciliteitstatus": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Functie": "https://vocab.belgif.be/ns/generic#Function",
+    "GeneriekeLink": "https://vocab.belgif.be/ns/network#GenericLink",
+    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
+    "Geometrie.opmeting": {
+      "@id": "https://vocab.belgif.be/ns/generic#Geometry.survey",
+      "@type": "https://vocab.belgif.be/ns/generic#Survey"
+    },
+    "GerichteLink": "https://vocab.belgif.be/ns/network#DirectedLink",
+    "GerichteLink.link": {
+      "@id": "https://vocab.belgif.be/ns/network#DirectedLink.link",
+      "@type": "https://data.vlaanderen.be/ns/netwerk#Link"
+    },
+    "Getal": "https://schema.org/Number",
+    "Hoogte": "https://vocab.belgif.be/ns/utility-services#Height",
+    "Identificator": "http://www.w3.org/ns/adms#Identifier",
+    "Identificator.identificator": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Inputoutputtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Kabel": "https://vocab.belgif.be/ns/utility-services#Cable",
+    "Kabel.subthema": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#Cable.subtheme",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "KabelEnLeidingContainer": "https://vocab.belgif.be/ns/utility-services#CableAndPipeContainer",
+    "Kanaal": "https://vocab.belgif.be/ns/utility-services#Duct",
+    "Kanaal.containertype": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#Duct.containerType",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Kast": "https://vocab.belgif.be/ns/utility-services#Cabinet",
+    "Kleur": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Knoop": "https://vocab.belgif.be/ns/network#Node",
+    "LangString": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "Lengte": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Length",
+    "Lengte.eenheid": {
+      "@id": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Length.uom",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#UomLength"
+    },
+    "LengteëEnheid": "http://def.isotc211.org/iso19103/2015/MeasureTypes#UomLength",
+    "Link": "https://vocab.belgif.be/ns/network#Link",
+    "Linksequentie": "https://vocab.belgif.be/ns/network#LinkSequence",
+    "Linkset": "https://vocab.belgif.be/ns/network#LinkSet",
+    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "Locatie": "http://www.w3.org/ns/prov#Location",
+    "Maat": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure",
+    "Maat.eenheid": {
+      "@id": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure.uom",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#UnitOfMeasure"
+    },
+    "Maataanduiding": "https://vocab.belgif.be/ns/utility-services#Dimension",
+    "Mangat": "https://vocab.belgif.be/ns/utility-services#Manhole",
+    "MateriaalType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Meeteenheid": "http://def.isotc211.org/iso19103/2015/MeasureTypes#UnitOfMeasure",
+    "Netwerk": "https://vocab.belgif.be/ns/network#Network",
+    "Nustvoorzieningnetwerkelement": "https://vocab.belgif.be/ns/utility-services#UtilityNetworkElement",
+    "Nustvoorzieningnetwerkelement.documentatie": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/relation",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "Nustvoorzieningnetwerkelement.identificator": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Nustvoorzieningnetwerkelement.verticalePositie": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNetworkElement.verticalPosition",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Nutsvoorzieningknoop": "https://vocab.belgif.be/ns/utility-services#UtilityNode",
+    "Nutsvoorzieningknoop.geometrie": {
+      "@id": "https://vocab.belgif.be/ns/network#Node.geometry",
+      "@type": "http://www.opengis.net/ont/sf#Point"
+    },
+    "Nutsvoorzieningknoop.oriëNtatie": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNode.orientation",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure"
+    },
+    "Nutsvoorzieningknoop.risico": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNode.risk",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Nutsvoorzieningknoop.uiterlijk": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNode.appearance",
+      "@type": "https://vocab.belgif.be/ns/utility-services#Appearance"
+    },
+    "Nutsvoorzieningknoop.zichtbaarheid": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNode.visibility",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Nutsvoorzieningknoopcontainer": "https://vocab.belgif.be/ns/utility-services#UtilityNodeContainer",
+    "Nutsvoorzieningknoopcontainer.oriëNtatie": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNodeContainer.orientation",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure"
+    },
+    "Nutsvoorzieningknoopcontainer.risico": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNodeContainer.risk",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Nutsvoorzieningknoopcontainer.uiterlijk": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNodeContainer.appearance",
+      "@type": "https://vocab.belgif.be/ns/utility-services#Appearance"
+    },
+    "Nutsvoorzieningknoopcontainer.zichtbaarheid": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNodeContainer.visibility",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Nutsvoorzieningleveringstype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Nutsvoorzieninglink": "https://vocab.belgif.be/ns/utility-services#UtilityLink",
+    "Nutsvoorzieninglinksequentie": "https://vocab.belgif.be/ns/utility-services#UtilityLinkSequence",
+    "Nutsvoorzieninglinksequentie.link": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/network#LinkSequence.link",
+      "@type": "https://vocab.belgif.be/ns/network#DirectedLink"
+    },
+    "Nutsvoorzieninglinkset": "https://vocab.belgif.be/ns/utility-services#UtilityLinkSet",
+    "Nutsvoorzieninglinkset.link": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/network#LinkSet.link",
+      "@type": "https://data.vlaanderen.be/ns/netwerk#GeneriekeLink"
+    },
+    "Nutsvoorzieninglinkset.risico": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#UtilityLinkSet.risk",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Nutsvoorzieninglinkset.uiterlijk": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#UtilityLinkSet.appearance",
+      "@type": "https://vocab.belgif.be/ns/utility-services#Appearance"
+    },
+    "Nutsvoorzieninglinkset.zichtbaarheid": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#UtilityLinkSet.visibility",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Nutsvoorzieningnetwerk": "https://vocab.belgif.be/ns/utility-services#UtilityNetwork",
+    "Nutsvoorzieningnetwerk.documentatie": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#documentation",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "Nutsvoorzieningnetwerktype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Object": "http://www.w3.org/ns/prov#Entity",
+    "OlieGasChemicalientype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "OlieGasChemicaliëNPijp": "https://vocab.belgif.be/ns/utility-services#OilGasChemicalsPipe",
+    "Opmeting": "https://vocab.belgif.be/ns/generic#Survey",
+    "Opmetingsmethode": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Paal": "https://vocab.belgif.be/ns/utility-services#Pole",
+    "Pijp": "https://vocab.belgif.be/ns/utility-services#Pipe",
+    "Pijp.containertype": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#Pipe.containerType",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Pijp.subthema": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#Pipe.subtheme",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Plan": "https://vocab.belgif.be/ns/utility-services#Plan",
+    "PositioneleNauwkeurigheid": "http://def.isotc211.org/iso19157/2013/DataQuality_2#DQ_PositionalAccuracy",
+    "Punt": "http://www.opengis.net/ont/sf#Point",
+    "Referentieoppervlak": "https://vocab.belgif.be/ns/utility-services#ReferenceSurface",
+    "Referentieoppervlaktype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Rioolpijp": "https://vocab.belgif.be/ns/utility-services#SewerPipe",
+    "Rioolwatertype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "RisicoType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "String": "http://www.w3.org/2001/XMLSchema#string",
+    "Subthema": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Teken": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Telecommunicatiekabel": "https://vocab.belgif.be/ns/utility-services#TelecommunicationsCable",
+    "Telecommunicatiekabelmateriaaltype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "ThermischProducttype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "ThermischePijp": "https://vocab.belgif.be/ns/utility-services#ThermalPipe",
+    "Toebehoren": "https://vocab.belgif.be/ns/utility-services#Appurtenance",
+    "Toebehoren.subthema": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#Appurtenance.subtheme",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Toebehoren.toebehorentype": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#Appurtenance.appurtenanceType",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Toebehorentype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TopografischElement": "https://vocab.belgif.be/ns/utility-services#TopographicalElement",
+    "TopografischElementtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Toren": "https://vocab.belgif.be/ns/utility-services#Tower",
+    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "Uiterlijk": "https://vocab.belgif.be/ns/utility-services#Appearance",
+    "VerticalePositie": "https://vocab.belgif.be/ns/utility-services#VerticalPosition",
+    "VerticalePositie.ligging": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "VerticalePositie.verticalePositie": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#VerticalPosition.verticalPosition",
+      "@type": "https://vocab.belgif.be/ns/generic#DirectPosition"
+    },
+    "VerticalePositietype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Waarschuwingstype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Waterleiding": "https://vocab.belgif.be/ns/utility-services#WaterPipe",
+    "Watertype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Zichtbaarheidstype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "activiteit": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/generic#activity",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "administratieveEenheidNiveau1": {
+      "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "administratieveEenheidNiveau2": {
+      "@id": "http://www.w3.org/ns/locn#adminUnitL2",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "adres": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#address",
+      "@type": "http://www.w3.org/ns/locn#Address"
+    },
+    "adresgebied": {
+      "@id": "http://www.w3.org/ns/locn#addressArea",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "afstand": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#distance",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure"
+    },
+    "alsGML": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "alsWKT": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "annotatietype": {
+      "@id": "http://purl.org/dc/elements/1.1/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "beginlink": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/network#beginLink",
+      "@type": "https://data.vlaanderen.be/ns/netwerk#Link"
+    },
+    "beschermdGebied": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#ProtectedArea",
+      "@type": "https://vocab.belgif.be/ns/utility-services#ProtectedArea"
+    },
+    "beschrijving": {
+      "@id": "http://purl.org/dc/elements/1.1/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "bevoegdePartij": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#authorityRole",
+      "@type": "http://purl.org/dc/terms/Agent"
+    },
+    "busnummer": {
+      "@id": "https://vocab.belgif.be/ns/address#AddressRepresentation.boxNumber",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "datum": {
+      "@id": "http://purl.org/dc/elements/1.1/date",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "diepte": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#depth",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure"
+    },
+    "disclaimer": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#disclaimer",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "documentType": {
+      "@id": "http://purl.org/dc/elements/1.1/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "documentatie": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#documentation",
+      "@type": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "documentidentificator": {
+      "@id": "http://www.w3.org/ns/adms#Identifier",
+      "@type": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "documentlocatie": {
+      "@id": "http://www.w3.org/ns/dcat#accessURL",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "documentmediumtype": {
+      "@id": "http://purl.org/dc/elements/1.1/format",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "druk": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#pressure",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure"
+    },
+    "eenheidsidentificator": {
+      "@id": "http://def.isotc211.org/iso19103/2015/MeasureTypes#UnitOfMeasure.uomIdentifier",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "eindknoop": {
+      "@id": "https://vocab.belgif.be/ns/network#endNode",
+      "@type": "https://data.vlaanderen.be/ns/netwerk#Knoop"
+    },
+    "eindlink": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/network#endLink",
+      "@type": "https://data.vlaanderen.be/ns/netwerk#Link"
+    },
+    "functie": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#function",
+      "@type": "https://vocab.belgif.be/ns/generic#Function"
+    },
+    "geassocieerdMet": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#associatedWith",
+      "@type": "http://www.w3.org/ns/prov#Entity"
+    },
+    "geldigTot": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#validTo",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "geldigVan": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#validFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gemeentenaam": {
+      "@id": "https://vocab.belgif.be/ns/address#municipalityName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "geografischeNaam": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#geographicalName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "geometrie": {
+      "@id": "https://vocab.belgif.be/ns/network#Node.geometry",
+      "@type": "http://www.opengis.net/ont/sf#Point"
+    },
+    "gml": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "hoogte": {
+      "@id": "https://schema.org/height",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure"
+    },
+    "huidigeStatus": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#currentStatus",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "huisnummer": {
+      "@id": "https://vocab.belgif.be/ns/address#AddressRepresentation.houseNumber",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "inNetwerk": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#inNetwork",
+      "@type": "https://vocab.belgif.be/ns/utility-services#UtilityNetwork"
+    },
+    "input": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/generic#input",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "kabeldiameter": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#cableDiameter",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure"
+    },
+    "kanaalbreedte": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#ductWidth",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Length"
+    },
+    "kleur": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#color",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "land": {
+      "@id": "https://vocab.belgif.be/ns/address#country",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "locatie": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "locatieaanduiding": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorDesignator",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "locatienaam": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "materiaaltype": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#materialType",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "methode": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#Survey.method",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "middelijngeometrie": {
+      "@id": "https://vocab.belgif.be/ns/network#Link.centrelineGeometry",
+      "@type": "http://www.opengis.net/ont/geosparql#Curve"
+    },
+    "nominaleSpanning": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#nominalVoltage",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure"
+    },
+    "nutsvoorzieningInrichtingReferentie": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#nutsvoorzieningInrichtingReferentie",
+      "@type": "https://vocab.belgif.be/ns/generic#ActivityComplex"
+    },
+    "nutsvoorzieningleveringstype": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#utilityDeliveryType",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "nutsvoorzieningnetwerktype": {
+      "@id": "http://purl.org/dc/elements/1.1/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "olieGasChemicaliëNProducttype": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#oilGasChemicalsProductType",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "output": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/generic#output",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "paalhoogte": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#poleHeight",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Length"
+    },
+    "pijpdiameter": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#pipeDiameter",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure"
+    },
+    "postbus": {
+      "@id": "http://www.w3.org/ns/locn#poBox",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "postcode": {
+      "@id": "http://www.w3.org/ns/locn#postCode",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "postnaam": {
+      "@id": "http://www.w3.org/ns/locn#postName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "referentieOppervlak": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#referenceSurface",
+      "@type": "https://vocab.belgif.be/ns/utility-services#ReferenceSurface"
+    },
+    "richting": {
+      "@id": "https://vocab.belgif.be/ns/network#direction",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "rioolwatertype": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#sewerWaterType",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "rotatiehoek": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#rotationAngle",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure"
+    },
+    "standaardVerticalePositiedetail": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#standardVerticalPositionDetail",
+      "@type": "https://vocab.belgif.be/ns/utility-services#VerticalPosition"
+    },
+    "startknoop": {
+      "@id": "https://vocab.belgif.be/ns/network#beginNode",
+      "@type": "https://data.vlaanderen.be/ns/netwerk#Knoop"
+    },
+    "straatnaam": {
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "technischeSpecificatie": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#technicalSpecification",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "tekst": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#text",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "telecommunicatiekabelmateriaaltype": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#telecommunicationsCableMaterialType",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "temperatuur": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#temperature",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure"
+    },
+    "thermischProducttype": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#thermalProductType",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "toegekendDoor(String)": {
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "toegekendOp": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "topografischElementtype": {
+      "@id": "http://purl.org/dc/elements/1.1/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "torenhoogte": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#towerHeight",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Length"
+    },
+    "type": {
+      "@id": "http://purl.org/dc/elements/1.1/type",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "verticalePositiedetail": {
+      "@container": "@set",
+      "@id": "https://vocab.belgif.be/ns/utility-services#verticalPositionDetail",
+      "@type": "https://vocab.belgif.be/ns/utility-services#VerticalPosition"
+    },
+    "verwijstNaar": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/relation",
+      "@type": "http://www.w3.org/ns/prov#Entity"
+    },
+    "volledigAdres": {
+      "@id": "http://www.w3.org/ns/locn#fullAddress",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "waarde": {
+      "@id": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure.value",
+      "@type": "https://schema.org/Number"
+    },
+    "waarschuwingstype": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#warningType",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "watertype": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#waterPipe",
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "werkspanning": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#operatingVoltage",
+      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Measure"
+    },
+    "wkt": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    }
+  }
 }
