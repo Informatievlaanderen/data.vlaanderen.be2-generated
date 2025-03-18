@@ -1,24 +1,16 @@
-#||# oslo-converter-ea for diagram OSLO-OpenbaarDomein-Model
+#||# oslo-converter-ea for diagram OSLO-OpenbaarDomein-Taxonomie-Begraafplaatsen
 
 #||# -------------------------------------
 
-2025-02-11T10:12:05.903Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-18T11:07:03.578Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T10:12:05.904Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
+2025-03-18T11:07:03.580Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T10:12:05.905Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
+2025-03-18T11:07:03.580Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T10:12:05.905Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated) and fallback URI (http://todo.com/) will be assigned.
+2025-03-18T11:07:03.580Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T10:12:05.905Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
-
-2025-02-11T10:12:05.909Z warn: [ConnectorConverterHandler]: Connector (voorkomen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-11T10:12:05.910Z warn: [ConnectorConverterHandler]: Connector (voorkomen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-11T10:12:05.910Z warn: [ConnectorConverterHandler]: Connector (bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-11T10:12:05.910Z warn: [ConnectorConverterHandler]: Connector (bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-18T11:07:03.580Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
 
 #||# -------------------------------------
 
