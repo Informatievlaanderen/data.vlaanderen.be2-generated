@@ -1,0 +1,428 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/AdministratieveEenheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#AdministratieveEenheid.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de Administratieve Eenheid."@nl;
+    shacl:maxCount "1";
+    shacl:name "naam"@nl;
+    shacl:path schemas:name
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#AdministratieveEenheid.Geometrie>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "De geometrische voorstelling van het object."@nl;
+    shacl:maxCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://www.w3.org/ns/locn#geometry>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#AdministratieveEenheid.GeografischGebied>;
+    shacl:class schemas:Audience;
+    shacl:description "Het geografisch gebied geassocieerd met de doelgroep."@nl;
+    shacl:name "geografisch gebied"@nl;
+    shacl:path schemas:geographicArea
+  ];
+  shacl:targetClass schemas:AdministrativeArea .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/AgentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/ContactinfoShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Aanschrijfvorm>;
+    shacl:datatype rdf:langString;
+    shacl:description "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen."@nl;
+    shacl:maxCount "1";
+    shacl:name "aanschrijfvorm"@nl;
+    shacl:path vcard:honorific-prefix
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Contactnaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam van bvb de persoon die men kan contacteren."@nl;
+    shacl:maxCount "1";
+    shacl:name "contactnaam"@nl;
+    shacl:path foaf:name
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Email>;
+    shacl:datatype xsd:string;
+    shacl:description "Email-adres waarnaar men kan mailen."@nl;
+    shacl:maxCount "1";
+    shacl:name "email"@nl;
+    shacl:path schema:email
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Fax>;
+    shacl:datatype xsd:string;
+    shacl:description "Faxnummer waarnaar men kan faxen."@nl;
+    shacl:maxCount "1";
+    shacl:name "fax"@nl;
+    shacl:path schema:faxNumber
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Openingsuren>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Uren waarbinnen contact kan worden opgenomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "openingsuren"@nl;
+    shacl:path schema:openingHours
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Telefoon>;
+    shacl:datatype xsd:string;
+    shacl:description "Telefoonnummer waarop men kan bellen."@nl;
+    shacl:maxCount "1";
+    shacl:name "telefoon"@nl;
+    shacl:path schema:telephone
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Website>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Website waarnaar men kan surfen."@nl;
+    shacl:maxCount "1";
+    shacl:name "website"@nl;
+    shacl:path foaf:page
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Adres>;
+    shacl:class <http://www.w3.org/ns/locn#Address>;
+    shacl:description "Adres dat men kan aanschrijven of bezoeken."@nl;
+    shacl:maxCount "1";
+    shacl:name "adres"@nl;
+    shacl:path <http://www.w3.org/ns/locn#address>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Beschikbaarheid>;
+    shacl:class schema:OpeningHoursSpecification;
+    shacl:description "Periode waarin contact kan worden opgenomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschikbaarheid"@nl;
+    shacl:path schema:hoursAvailable
+  ];
+  shacl:targetClass schema:ContactPoint .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/DatetimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/DoelgroepShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Doelgroep.DoelgroepType>;
+    shacl:datatype xsd:string;
+    shacl:description "Een typering van de doelgroep."@nl;
+    shacl:maxCount "1";
+    shacl:name "doelgroep type"@nl;
+    shacl:path schemas:audienceType
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Doelgroep.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Een identificator voor de doelgroep."@nl;
+    shacl:maxCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Doelgroep.GeografischGebied>;
+    shacl:class schemas:AdministrativeArea;
+    shacl:description "Het geografisch gebied geassocieerd met de doelgroep."@nl;
+    shacl:name "geografisch gebied"@nl;
+    shacl:path schemas:geographicArea
+  ];
+  shacl:targetClass schemas:Audience .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/GeografischeNaamShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/GeometrieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Geometrie.Gml>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "gml"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Geometrie.Wkt>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "wkt"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/GetypeerdeStringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Literal .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/InformeerActieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.Doelgroep>;
+    shacl:class schemas:Audience;
+    shacl:description "De bestemmeling(en) die de informatie dien(t)(en) te ontvangen."@nl;
+    shacl:minCount "1";
+    shacl:name "doelgroep"@nl;
+    shacl:path schema:recipient
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.Inhoud>;
+    shacl:class schemas:PropertyValue;
+    shacl:description "De inhoud van een Notificatiebericht."@nl;
+    shacl:name "inhoud"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/notificatie#inhoud>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.Notificatiekanaal>;
+    shacl:class skos:Concept;
+    shacl:description "Het notificatiekanaal duidt het technisch medium aan waarlangs het Notificatiebericht wordt verzonden."@nl;
+    shacl:minCount "1";
+    shacl:name "notificatiekanaal"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/notificatie#notificatiekanaal>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.Onderwerp>;
+    shacl:class skos:Concept;
+    shacl:description "Het onderwerp van de informeer actie."@nl;
+    shacl:minCount "1";
+    shacl:name "onderwerp"@nl;
+    shacl:path schemas:about
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.PeriodeVerzending>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "Het tijdsinterval waarbinnen de Informeer Actie relevant is en bijgevolg kan resulteren in de verzending van notificatieberichten."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "periode verzending"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/notificatie#periodeVerzending>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.IsGerelateerdMet>;
+    shacl:class schemas:InformAction;
+    shacl:description "Een relatie tussen twee Informeer Acties."@nl;
+    shacl:name "is gerelateerd met"@nl;
+    shacl:path dc:relation
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.ResulteertIn>;
+    shacl:class <https://data.vlaanderen.be/ns/notificatie#Notificatiebericht>;
+    shacl:description "De relatie tussen een Informeer Actie en het (de) Notificatiebericht(en) die hier uit voortkomen."@nl;
+    shacl:name "resulteert in"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/notificatie#InformeerActie.resulteertIn>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.Agent>;
+    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+    shacl:description "Duidt de agent aan die aanleiding gaf tot de InformeerActie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "agent"@nl;
+    shacl:path schemas:agent
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.KadertBinnen>;
+    shacl:class <http://purl.org/vocab/cpsv#PublicService>;
+    shacl:description "Verwijst naar de publieke dienstverlening in de context waarvan de Informeer Actie plaatsvindt."@nl;
+    shacl:name "kadert binnen"@nl;
+    shacl:path <http://todo.com/kadertBinnen>
+  ];
+  shacl:targetClass schemas:InformAction .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/MerkShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Merk.Naam>;
+    shacl:datatype xsd:string;
+    shacl:description "De naam van het Merk."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path schema:name
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Merk.Contactinfo>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon... die toelaat de entiteit te contacteren."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "contactinfo"@nl;
+    shacl:path schema:contactPoint
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Merk.Afzender>;
+    shacl:class <https://data.vlaanderen.be/ns/notificatie#Notificatiebericht>;
+    shacl:description "De afzender van het Notificatiebericht."@nl;
+    shacl:name "afzender"@nl;
+    shacl:path schema:sender
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Merk.HeeftMerk>;
+    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+    shacl:description "Het merk dat geassocieerd is met één of meerdere Publieke Organisatie(s), in de context van Publieke Dienstverlening."@nl;
+    shacl:name "heeft merk"@nl;
+    shacl:path schema:brand
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Merk.IsGerelateerdMet>;
+    shacl:class <http://purl.org/vocab/cpsv#PublicService>;
+    shacl:description "De Publieke Dienstverlening waar het Merk aan gerelateerd is."@nl;
+    shacl:name "is gerelateerd met"@nl;
+    shacl:path dc:relation
+  ];
+  shacl:targetClass schemas:Brand .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/NotificatieberichtShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.DatumCreatie>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "De datum waarop het Notificatiebericht gecreëerd werd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "datum creatie"@nl;
+    shacl:path schemas:dateCreated
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.DatumGelezen>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "De datum waarop het Notificatiebericht werd gelezen door de bestemmeling."@nl;
+    shacl:maxCount "1";
+    shacl:name "datum gelezen"@nl;
+    shacl:path schema:dateRead
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.DatumOntvangen>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "De datum waarop het Notificatiebericht werd ontvangen door de bestemmeling."@nl;
+    shacl:maxCount "1";
+    shacl:name "datum ontvangen"@nl;
+    shacl:path schema:dateReceived
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.DatumVerzending>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "De datum waarop het Notificatiebericht werd verzonden naar de bestemmeling."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "datum verzending"@nl;
+    shacl:path schema:dateSent
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.Tekst>;
+    shacl:datatype xsd:string;
+    shacl:description "De tekstuele inhoud van het Notificatiebericht."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "tekst"@nl;
+    shacl:path schemas:text
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.Titel>;
+    shacl:datatype xsd:string;
+    shacl:description "Een titel voor het Notificatiebericht."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "titel"@nl;
+    shacl:path schemas:name
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.Url>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Een url voor het Notificatiebericht."@nl;
+    shacl:maxCount "1";
+    shacl:name "url"@nl;
+    shacl:path schema:url
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.Vervalt>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "De datum waarop een Notificatiebericht vervalt."@nl;
+    shacl:maxCount "1";
+    shacl:name "vervalt"@nl;
+    shacl:path schema:expires
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.Notificatiekanaal>;
+    shacl:class skos:Concept;
+    shacl:description "Het notificatiekanaal duidt het technisch medium aan waarlangs het Notificatiebericht wordt verzonden."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "notificatiekanaal"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/notificatie#notificatiekanaal>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.Afzender>;
+    shacl:class schemas:Brand;
+    shacl:description "De afzender van het Notificatiebericht."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "afzender"@nl;
+    shacl:path schema:sender
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.ResulteertIn>;
+    shacl:class schemas:InformAction;
+    shacl:description "De relatie tussen een Informeer Actie en het (de) Notificatiebericht(en) die hier uit voortkomen."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resulteert in"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/notificatie#Notificatiebericht.resulteertIn>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/notificatie#Notificatiebericht> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/PubliekeDienstverleningShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://purl.org/vocab/cpsv#PublicService> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/PubliekeOrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#PubliekeOrganisatie.Agent>;
+    shacl:class schemas:InformAction;
+    shacl:description "Duidt de agent aan die aanleiding gaf tot de InformeerActie."@nl;
+    shacl:name "agent"@nl;
+    shacl:path schemas:agent
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#PubliekeOrganisatie.HeeftMerk>;
+    shacl:class schemas:Brand;
+    shacl:description "Het merk dat geassocieerd is met één of meerdere Publieke Organisatie(s), in de context van Publieke Dienstverlening."@nl;
+    shacl:minCount "1";
+    shacl:name "heeft merk"@nl;
+    shacl:path schema:brand
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/Sleutel/waardePaarShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Sleutel/waardePaar.Naam>;
+    shacl:datatype xsd:string;
+    shacl:description "Het label is de sleutel van het sleutel/waarde paar."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path schemas:name
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Sleutel/waardePaar.Waarde>;
+    shacl:datatype xsd:string;
+    shacl:description "De waarde van het sleutel/waarde paar."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path schemas:value
+  ];
+  shacl:targetClass schemas:PropertyValue .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/StringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/TijdsintervalShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Tijdsinterval.Begin>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Moment waarop het tijdsinterval begint."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "begin"@nl;
+    shacl:path <http://data.europa.eu/m8g/startTime>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Tijdsinterval.Einde>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Moment waarop het tijdsinterval eindigt."@nl;
+    shacl:maxCount "1";
+    shacl:name "einde"@nl;
+    shacl:path <http://data.europa.eu/m8g/endTime>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/UriShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:anyURI .
