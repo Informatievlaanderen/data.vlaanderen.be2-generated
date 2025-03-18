@@ -385,7 +385,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/vocabularium/organisatie/ontwerpdocument/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/test/overlijdensaangifte.publication.json
 #||# 
