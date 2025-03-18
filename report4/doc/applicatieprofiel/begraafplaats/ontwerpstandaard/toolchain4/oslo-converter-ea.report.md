@@ -2,23 +2,23 @@
 
 #||# -------------------------------------
 
-2025-02-11T10:11:09.705Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-03-18T10:24:06.254Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T10:11:09.706Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
+2025-03-18T10:24:06.256Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T10:11:09.707Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
+2025-03-18T10:24:06.257Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T10:11:09.707Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated) and fallback URI (http://todo.com/) will be assigned.
+2025-03-18T10:24:06.257Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T10:11:09.707Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
+2025-03-18T10:24:06.257Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T10:11:09.712Z warn: [ConnectorConverterHandler]: Connector (voorkomen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-18T10:24:06.265Z warn: [ConnectorConverterHandler]: Connector (voorkomen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T10:11:09.712Z warn: [ConnectorConverterHandler]: Connector (voorkomen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-18T10:24:06.265Z warn: [ConnectorConverterHandler]: Connector (voorkomen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T10:11:09.713Z warn: [ConnectorConverterHandler]: Connector (bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-18T10:24:06.265Z warn: [ConnectorConverterHandler]: Connector (bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T10:11:09.713Z warn: [ConnectorConverterHandler]: Connector (bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-03-18T10:24:06.266Z warn: [ConnectorConverterHandler]: Connector (bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 #||# -------------------------------------
 

@@ -6,8 +6,6 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/bedrijventerrein.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/dev/begraafplaats.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/besluit-mobiliteit.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/besluit-publicatie.publication.json
@@ -111,6 +109,8 @@
 #||#   + adding supporting /home/circleci/project/config/dev/mobiliteitsbudget.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/notificatie.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/od-begraafplaats.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/od-terrein.publication.json
 #||#  

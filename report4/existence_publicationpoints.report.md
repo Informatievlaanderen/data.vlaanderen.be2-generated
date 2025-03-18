@@ -21,12 +21,6 @@ Directory check
 
 index.html check
 
-#||#    + checking /home/circleci/project/config/dev/begraafplaats.publication.json
-#||# 
-Directory check
-
-index.html check
-
 #||#    + checking /home/circleci/project/config/dev/besluit-mobiliteit.publication.json
 #||# 
 Directory check
@@ -387,6 +381,12 @@ Directory check
 index.html check
 error: missing '/tmp/generated/doc/vocabularium/notificatie/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4/index.html'
+
+#||#    + checking /home/circleci/project/config/dev/od-begraafplaats.publication.json
+#||# 
+Directory check
+
+index.html check
 
 #||#    + checking /home/circleci/project/config/dev/od-terrein.publication.json
 #||# 
