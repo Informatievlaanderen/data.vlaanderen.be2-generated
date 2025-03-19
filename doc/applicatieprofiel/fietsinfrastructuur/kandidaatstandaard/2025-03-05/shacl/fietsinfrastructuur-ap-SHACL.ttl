@@ -9,6 +9,10 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/AdresShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/adres#Adres> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/AdresvoorstellingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -93,13 +97,20 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/fiets#BruikbareFietsbreedte> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/CodeShape> a shacl:NodeShape;
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/ConceptShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/ContactinfoShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Contactinfo.Aanschrijfvorm>;
+    shacl:datatype rdf:langString;
+    shacl:description "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen."@nl;
+    shacl:maxCount "1";
+    shacl:name "aanschrijfvorm"@nl;
+    shacl:path <http://ww.w3.org/2006/vcard/ns#honorific-prefix>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Contactinfo.Contactnaam>;
     shacl:datatype xsd:string;
     shacl:description "Naam van bvb de persoon die men kan contacteren."@nl;
@@ -144,6 +155,10 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/DocumentShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass foaf:Document .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/EenheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://qudt.org/schema/qudt/Unit> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/FietsbreedteShape> a shacl:NodeShape;
   shacl:closed false;
@@ -351,6 +366,13 @@
     shacl:minCount "1";
     shacl:name "type"@nl;
     shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Fietslinkset.Link>;
+    shacl:class <https://data.vlaanderen.be/ns/fiets#GeneriekeFietslink>;
+    shacl:description "GeneriekeFietslink die deel uitmaakt van de Fietslinkset."@nl;
+    shacl:minCount "1";
+    shacl:name "link"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/netwerk#Linkset.link>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/fiets#Fietslinkset> .
 
@@ -401,6 +423,19 @@
     shacl:maxCount "1";
     shacl:name "transportobject"@nl;
     shacl:path <https://data.vlaanderen.be/ns/fiets#transportobject>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Fietsnetwerkelement.Fietsinfrastructuurobject>;
+    shacl:class <https://data.vlaanderen.be/ns/fiets#Fietsinfrastructuurobject>;
+    shacl:description "Referentie naar een Fietsinfrastructuurobject gelegen op of langs het Fietsnetwerkelement of dat op het Fietsnetwerkelement van toepassing is."@nl;
+    shacl:name "fietsinfrastructuurobject"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/fiets#fietsinfrastructuurobject>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Fietsnetwerkelement.Fietsnetwerk>;
+    shacl:class <https://data.vlaanderen.be/ns/fiets#Fietsnetwerk>;
+    shacl:description "Het Fietsnetwerk waartoe het Fietsnetwerkelement behoort."@nl;
+    shacl:minCount "1";
+    shacl:name "fietsnetwerk"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/fiets#fietsnetwerk>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelement> .
 
@@ -567,10 +602,6 @@
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#GeneriekeLink> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/GeografischeNaamShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass rdf:langString .
-
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/GeometrieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -623,14 +654,6 @@
     shacl:path <https://data.vlaanderen.be/ns/netwerk#GerichteLink.link>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/fiets#GerichteFietslink> .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/GetalShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass schemas:Number .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/GetypeerdeStringShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass rdfs:Literal .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/IdentificatorShape> a shacl:NodeShape;
   shacl:closed false;
@@ -693,27 +716,13 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/KwantitatievewaardeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Kwantitatievewaarde.Eenheid>;
-    shacl:datatype xsd:string;
-    shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
-    shacl:maxCount "1";
-    shacl:name "eenheid"@nl;
-    shacl:path schemas:unitText
-  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Kwantitatievewaarde.Waarde>;
-    shacl:class schemas:Number;
+    shacl:datatype rdfs:Literal;
     shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "waarde"@nl;
     shacl:path schemas:value
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Kwantitatievewaarde.StandaardEenheid>;
-    shacl:class <https://data.vlaanderen.be/ns/generiek#StandaardEenheid>;
-    shacl:description "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
-    shacl:maxCount "1";
-    shacl:name "standaard eenheid"@nl;
-    shacl:path schemas:unitCode
   ];
   shacl:targetClass schemas:QuantitativeValue .
 
@@ -803,6 +812,18 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/fiets#Luchtkwaliteit> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/MomentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Moment.InXsdDatumtijd>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Positie in de tijd uitgedrukt dmv xsd:dateTime."@nl;
+    shacl:maxCount "1";
+    shacl:name "in XSD datumTijd"@nl;
+    shacl:path <http://www.w3.org/2006/time#inXSDDateTime>
+  ];
+  shacl:targetClass <http://www.w3.org/2006/time#Instant> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/NetwerkShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#Netwerk> .
@@ -817,6 +838,14 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/NetwerkreferentieShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Netwerkreferentie.Element>;
+    shacl:class <https://data.vlaanderen.be/ns/fiets#Fietsnetwerkelement>;
+    shacl:description "Netwerkreferentie waarbij naar een Fietsnetwerkelement wordt verwezen."@nl;
+    shacl:minCount "1";
+    shacl:name "element"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie.element>
+  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/ObservatieShape> a shacl:NodeShape;
@@ -901,22 +930,21 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/PeriodeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Periode.Begin>;
-    shacl:datatype xsd:dateTime;
-    shacl:description "Aanvang van de tijdsduur."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Periode.Tot>;
+    shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:description "Einde ve Temporele Entiteit."@nl;
     shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "begin"@nl;
-    shacl:path <http://data.europa.eu/m8g/startTime>
+    shacl:name "tot"@nl;
+    shacl:path <http://www.w3.org/2006/time#hasEnd>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Periode.Einde>;
-    shacl:datatype xsd:dateTime;
-    shacl:description "Einde vd tijdsduur."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Periode.Van>;
+    shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:description "Start ve Temporele Entiteit."@nl;
     shacl:maxCount "1";
-    shacl:name "einde"@nl;
-    shacl:path <http://data.europa.eu/m8g/endTime>
+    shacl:name "van"@nl;
+    shacl:path <http://www.w3.org/2006/time#hasBeginning>
   ];
-  shacl:targetClass <http://data.europa.eu/m8g/PeriodOfTime> .
+  shacl:targetClass <http://www.w3.org/2006/time#ProperInterval> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/PuntShape> a shacl:NodeShape;
   shacl:closed false;
@@ -962,24 +990,16 @@
   shacl:closed false;
   shacl:targetClass schemas:speed .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/StandaardeenheidShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#StandaardEenheid> .
-
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/StringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass xsd:string .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/TaalstringShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass rdf:langString .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/ToegestanesnelheidShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Toegestanesnelheid.Snelheidslimiet>;
     shacl:class schemas:speed;
-    shacl:description "De limiet voor de snelheid van een voertuig op de weg."@nl;
+    shacl:description "De maximum toegelaten snelheid."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "snelheidslimiet"@nl;
@@ -994,13 +1014,13 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Toegestanesnelheid.Voertuigtype>;
     shacl:class skos:Concept;
-    shacl:description "Het voertuigtype waarop de ToegestaneSnelheid van toepassing is."@nl;
+    shacl:description "Het voertuigtype waarop de toegelaten snelheid van toepassing is."@nl;
     shacl:name "voertuigtype"@nl;
     shacl:path <https://data.vlaanderen.be/ns/fiets#Snelheidsbeperking.voertuigtype>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Toegestanesnelheid.Verkeersteken>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>;
-    shacl:description "Het Verkeersteken dat toegestane snelheid oplegt."@nl;
+    shacl:description "Het Verkeersteken dat de toegelaten snelheid oplegt."@nl;
     shacl:name "verkeersteken"@nl;
     shacl:path <https://data.vlaanderen.be/ns/fiets#verkeersteken>
   ];
@@ -1123,7 +1143,7 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Verkeersbord.Afbeelding>;
     shacl:class foaf:Document;
-    shacl:description "Grafiscge voorstelling  van het geïnstalleerde verkeersbord op het openbaar domein."@nl;
+    shacl:description "Grafische voorstelling  van het geïnstalleerd verkeersbord op het openbaar domein."@nl;
     shacl:name "afbeelding"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#grafischeWeergave>
   ], [
@@ -1155,7 +1175,7 @@
   shacl:property [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Verkeersbordconcept.Verkeersbordcode>;
     shacl:datatype xsd:string;
-    shacl:description "Code die aan dit soort bord gegeven wordt binnen de wegcode."@nl;
+    shacl:description "Code die aan dit type bord gegeven wordt in de wegcode."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "verkeersbordcode"@nl;
@@ -1163,7 +1183,7 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Verkeersbordconcept.Betekenis>;
     shacl:datatype xsd:string;
-    shacl:description "Betekenis die gegeven wordt aan dit soort verkeersbord volgens de wegcode."@nl;
+    shacl:description "Betekenis die gegeven wordt aan dit type verkeersbord volgens de wegcode."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "betekenis"@nl;
@@ -1252,7 +1272,7 @@
   shacl:property [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Verkeersongeval.Aantal>;
     shacl:datatype rdfs:Literal;
-    shacl:description "Het aantalongevallen in de opgegeven periode."@nl;
+    shacl:description "Het aantal ongevallen in de opgegeven periode."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "aantal"@nl;
@@ -1310,7 +1330,7 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05#Verkeerstelling.Richting>;
     shacl:class skos:Concept;
-    shacl:description "De rijrichting van het verkeer dat werd geteld."@nl;
+    shacl:description "De rijrichting waarvoor de telling geldt."@nl;
     shacl:maxCount "1";
     shacl:name "richting"@nl;
     shacl:path <https://data.vlaanderen.be/ns/fiets#Verkeerstelling.richting>
@@ -1353,10 +1373,6 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/VervoersknooppuntShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit/vervoersknooppunten#Vervoersknooppunt> .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/WaardeShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/fiets#Waarde> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/WegbreedteShape> a shacl:NodeShape;
   shacl:closed false;

@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-03-19T14:52:39.293Z error: Unable to find the definition for property [urn:oslo-toolchain:aeb194531d87e1b1424046166ff94a312da192b0aae2606861a58813618f8703](all-fiets.jsonld#L3499).
+2025-03-19T16:42:31.582Z error: Unable to find the definition for property [urn:oslo-toolchain:aeb194531d87e1b1424046166ff94a312da192b0aae2606861a58813618f8703](all-fiets.jsonld#L3552).
 
-2025-03-19T14:52:39.295Z error: Unable to find the definition for property [urn:oslo-toolchain:b99af94c053eda9a1beb485b6356d2536202f97ab995ae710edbf399f408f3cd](all-fiets.jsonld#L3537).
+2025-03-19T16:42:31.584Z error: Unable to find the definition for property [urn:oslo-toolchain:b99af94c053eda9a1beb485b6356d2536202f97ab995ae710edbf399f408f3cd](all-fiets.jsonld#L3590).
 
