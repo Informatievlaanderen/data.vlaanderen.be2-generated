@@ -1,0 +1,432 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/2d-gebouwgeometrieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#2d-gebouwgeometrie.Default>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Geometrie die moet worden gebruikt bv bij voorstelling op kaart."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "default"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#default>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#2d-gebouwgeometrie.Geometrie>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "2D- of 2.5D-geometrische voorstelling van het gebouw."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#geometrie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#2d-gebouwgeometrie.HorizontaleReferentie>;
+    shacl:class skos:Concept;
+    shacl:description "Aspect van het object dat door de xy-coördinaten wordt voorgesteld."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "horizontale referentie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#horizontaleReferentie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#2d-gebouwgeometrie.Methode>;
+    shacl:class skos:Concept;
+    shacl:description "Beschrijving van de manier waarop de geometrie aangemaakt werd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "methode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#methode>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#2d-gebouwgeometrie.VerticaleReferentie>;
+    shacl:class skos:Concept;
+    shacl:description "Aspect van het object dat door de z-coördinaten wordt voorgesteld."@nl;
+    shacl:maxCount "1";
+    shacl:name "verticale referentie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#verticaleReferentie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/gebouw#2DGebouwgeometrie> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/2dgeometriemethodewaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/AdresseerbaarObjectShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#AdresseerbaarObject.IsToegekendAan>;
+    shacl:class <https://data.vlaanderen.be/ns/adres#Adres>;
+    shacl:description "Adresseerbaar object waaraan het adres is toegekend."@nl;
+    shacl:name "is toegekend aan"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject.isToegekendAan>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/AdresvoorstellingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Adresvoorstelling.Postnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:name "postnaam"@nl;
+    shacl:path <http://www.w3.org/ns/locn#postName>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Adresvoorstelling.Straatnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Straatnaam vh adres."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "straatnaam"@nl;
+    shacl:path <http://www.w3.org/ns/locn#thoroughfare>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Adresvoorstelling.VolledigAdres>;
+    shacl:datatype rdf:langString;
+    shacl:description "Het complete adres in één string, al dan niet geformatteerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "volledig adres"@nl;
+    shacl:path <http://www.w3.org/ns/locn#fullAddress>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Adresvoorstelling.AdministratieveEenheidNiveau1>;
+    shacl:datatype rdf:langString;
+    shacl:description "Hoogste Administratieve eenheid vh adres, doorgaans een land."@nl;
+    shacl:maxCount "1";
+    shacl:name "administratieve eenheid niveau 1"@nl;
+    shacl:path <http://www.w3.org/ns/locn#adminUnitL1>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Adresvoorstelling.AdministratieveEenheidNiveau2>;
+    shacl:datatype rdf:langString;
+    shacl:description "De regio vh adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat."@nl;
+    shacl:maxCount "1";
+    shacl:name "administratieve eenheid niveau 2"@nl;
+    shacl:path <http://www.w3.org/ns/locn#adminUnitL2>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Adresvoorstelling.Adresgebied>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is"@nl;
+    shacl:maxCount "1";
+    shacl:name "adresgebied"@nl;
+    shacl:path <http://www.w3.org/ns/locn#addressArea>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Adresvoorstelling.Busnummer>;
+    shacl:datatype xsd:string;
+    shacl:description "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."@nl;
+    shacl:maxCount "1";
+    shacl:name "busnummer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Adresvoorstelling.Gemeentenaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Gemeentenaam vh adres."@nl;
+    shacl:maxCount "1";
+    shacl:name "gemeentenaam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#gemeentenaam>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Adresvoorstelling.Huisnummer>;
+    shacl:datatype xsd:string;
+    shacl:description "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."@nl;
+    shacl:maxCount "1";
+    shacl:name "huisnummer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Adresvoorstelling.Land>;
+    shacl:datatype rdf:langString;
+    shacl:description "Land waarin het adres gelegen is."@nl;
+    shacl:maxCount "1";
+    shacl:name "land"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#land>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Adresvoorstelling.Locatieaanduiding>;
+    shacl:datatype xsd:string;
+    shacl:description "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc."@nl;
+    shacl:name "locatieaanduiding"@nl;
+    shacl:path <http://www.w3.org/ns/locn#locatorDesignator>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Adresvoorstelling.Locatienaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam of omschrijving vh het geografisch object dat de adreslocator aanduidt."@nl;
+    shacl:name "locatienaam"@nl;
+    shacl:path <http://www.w3.org/ns/locn#locatorName>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Adresvoorstelling.Postbus>;
+    shacl:datatype xsd:string;
+    shacl:description "Postbusnummer in een postkantoor."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "postbus"@nl;
+    shacl:path <http://www.w3.org/ns/locn#poBox>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Adresvoorstelling.Postcode>;
+    shacl:datatype xsd:string;
+    shacl:description "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:name "postcode"@nl;
+    shacl:path <http://www.w3.org/ns/locn#postCode>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Adresvoorstelling.VerwijstNaar>;
+    shacl:class <https://data.vlaanderen.be/ns/adres#Adres>;
+    shacl:description "Adres waarvan de adresvoorstelling is afgeleid."@nl;
+    shacl:maxCount "1";
+    shacl:name "verwijst naar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.verwijstNaar>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Address> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/BelgischAdresShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#BelgischAdres.IsToegekendAan>;
+    shacl:class <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject>;
+    shacl:description "Adresseerbaar object waaraan het adres is toegekend."@nl;
+    shacl:name "is toegekend aan"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Adres.isToegekendAan>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#BelgischAdres.VerwijstNaar>;
+    shacl:class <http://www.w3.org/ns/locn#Address>;
+    shacl:description "Adres waarvan de adresvoorstelling is afgeleid."@nl;
+    shacl:name "verwijst naar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Adres.verwijstNaar>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/adres#Adres> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/BooleanShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:boolean .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/DatetimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/FunctiewaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/GebeurtenisdatumShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebeurtenisdatum.Begin>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum en tijd waarop de gebeurtenis startte."@nl;
+    shacl:maxCount "1";
+    shacl:name "begin"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#begin>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebeurtenisdatum.Einde>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum en tijd waarop de gebeurtenis eindigde."@nl;
+    shacl:maxCount "1";
+    shacl:name "einde"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#einde>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebeurtenisdatum.Tussentijdstip>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum en tijd van een moment tussen begin en einde."@nl;
+    shacl:maxCount "1";
+    shacl:name "tussentijdstip"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#tussentijdstip>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Gebeurtenisdatum> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/GebouwShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouw.AantalBovengrondseVerdiepingen>;
+    shacl:datatype xsd:integer;
+    shacl:description "Totaal van het aantal bovengrondse gebouwlagen, bekeken over alle gebouwdelen heen."@nl;
+    shacl:maxCount "1";
+    shacl:name "aantal bovengrondse verdiepingen"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#aantalBovengrondseVerdiepingen>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouw.AantalOndergrondseVerdiepingen>;
+    shacl:datatype xsd:integer;
+    shacl:description "Totaal van het aantal ondergrondse gebouwlagen, bekeken over alle gebouwdelen heen."@nl;
+    shacl:maxCount "1";
+    shacl:name "aantal ondergrondse verdiepingen"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#aantalOndergrondseVerdiepingen>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouw.Gebouwnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van het gebouw."@nl;
+    shacl:name "gebouwnaam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#gebouwnaam>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouw.Adres>;
+    shacl:class <http://www.w3.org/ns/locn#Address>;
+    shacl:description "Adresvoorstelling die bij het gebouw hoort."@nl;
+    shacl:name "adres"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouw.adres>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouw.Bouwjaar>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#Gebeurtenisdatum>;
+    shacl:description "Datum waarop het gebouw voltooid werd."@nl;
+    shacl:maxCount "1";
+    shacl:name "bouwjaar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#bouwjaar>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouw.Geometrie>;
+    shacl:class <https://data.vlaanderen.be/ns/gebouw#2DGebouwgeometrie>;
+    shacl:description "2D- of 2.5D-geometrische voorstelling van het gebouw."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouw.geometrie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouw.LaatsteRenovatie>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#Gebeurtenisdatum>;
+    shacl:description "Datum waarop het gebouw het laatst gerenoveerd werd."@nl;
+    shacl:maxCount "1";
+    shacl:name "laatste renovatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#laatsteRenovatie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouw.Gebouwstatus>;
+    shacl:class skos:Concept;
+    shacl:description "Fase van de levensloop waarin het gebouw zich bevindt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "gebouwstatus"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouw.status>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouw.BestaatUit>;
+    shacl:class <https://data.vlaanderen.be/ns/gebouw#Gebouweenheid>;
+    shacl:description "De gebouweenheden die tot het gebouw behoren."@nl;
+    shacl:name "bestaat uit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouw.bestaatUit>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouw.LigtOp>;
+    shacl:class <https://data.vlaanderen.be/ns/perceel#Perceel>;
+    shacl:description "De percelen waarmee het gebouw officieel geassocieerd is."@nl;
+    shacl:name "ligt op"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouw.ligtOp>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/gebouw#Gebouw> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/GebouweenheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouweenheid.Adres>;
+    shacl:class <http://www.w3.org/ns/locn#Address>;
+    shacl:description "Adresvoorstelling die bij de gebouweenheid hoort."@nl;
+    shacl:name "adres"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.adres>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouweenheid.Functie>;
+    shacl:class skos:Concept;
+    shacl:description "Functie waarvoor de gebouweenheid in de realiteit (zoals vastgesteld op het terrein) gebruikt wordt."@nl;
+    shacl:maxCount "1";
+    shacl:name "functie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#functie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouweenheid.Geometrie>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "2D-geometrische voorstelling van de gebouweenheid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.geometrie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouweenheid.Locatieaanduiding>;
+    shacl:class <https://data.vlaanderen.be/ns/adres#Locatieaanduiding>;
+    shacl:description "Alfanumerieke code die een adreslocator uniek identificeert binnen de straat, administratieve eenheid etc."@nl;
+    shacl:name "locatieaanduiding"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#locatieAanduiding>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouweenheid.Gebouweenheidstatus>;
+    shacl:class skos:Concept;
+    shacl:description "Fase van de levensloop waarin de gebouweenheid zich bevindt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "gebouweenheidstatus"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.status>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Gebouweenheid.BestaatUit>;
+    shacl:class <https://data.vlaanderen.be/ns/gebouw#Gebouw>;
+    shacl:description "De gebouweenheden die tot het gebouw behoren."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "bestaat uit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.bestaatUit>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/gebouw#Gebouweenheid> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/GebouweenheidstatuswaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/GebouwstatuswaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/GeometrieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Geometrie.AlsGml>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "als GML"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Geometrie.AlsWkt>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "als WKT"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/HorizontalereferentiewaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/IntegerShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:integer .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/LocatieaanduidingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Locatieaanduiding.Aanduiding>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Alfanumerieke code waarmee het identificerend deel van een adreslocator wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "aanduiding"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Locatieaanduiding.aanduiding>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Locatieaanduiding.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard vd locatieaanduiding."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Locatieaanduiding.type>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/adres#Locatieaanduiding> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/LocatieaanduidingtypeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/PerceelShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4#Perceel.LigtOp>;
+    shacl:class <https://data.vlaanderen.be/ns/gebouw#Gebouw>;
+    shacl:description "De percelen waarmee het gebouw officieel geassocieerd is."@nl;
+    shacl:name "ligt op"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/gebouw#Perceel.ligtOp>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/perceel#Perceel> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/StringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/VerticalereferentiewaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
