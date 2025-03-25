@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2025-03-25T12:55:27.997Z error: Unable to find the assigned URI of parent (http://www.w3.org/ns/prov#Entity) of class [urn:oslo-toolchain:93cb6d517064094a9be5d1df221c8827168eb476392bc8aeba32a084d9a3ffe1](all-generiek-basis.jsonld#L468).
+2025-03-25T16:33:49.719Z error: Unable to find the assigned URI of parent (http://www.w3.org/ns/prov#Entity) of class [urn:oslo-toolchain:f5096fb093659f7845db6016623106de5703505bf6cffc9639a9c8a59639d863](all-generiek-basis.jsonld#L462).
 

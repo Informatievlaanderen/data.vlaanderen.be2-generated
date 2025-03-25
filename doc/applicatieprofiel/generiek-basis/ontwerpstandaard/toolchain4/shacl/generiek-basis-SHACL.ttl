@@ -74,6 +74,13 @@
     shacl:name "fax"@nl;
     shacl:path schema:faxNumber
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Contactinfo.Website>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Website waarnaar men kan surfen."@nl;
+    shacl:maxCount "1";
+    shacl:name "website"@nl;
+    shacl:path foaf:page
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Contactinfo.Openingsuren>;
     shacl:datatype rdfs:Literal;
     shacl:description "Uren waarbinnen contact kan worden opgenomen."@nl;
@@ -81,12 +88,12 @@
     shacl:name "openingsuren"@nl;
     shacl:path schema:openingHours
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Contactinfo.Website>;
-    shacl:datatype xsd:anyURI;
-    shacl:description "Website waarnaar men kan surfen."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Contactinfo.Telefoon>;
+    shacl:class schemas:OpeningHoursSpecification;
+    shacl:description "Telefoonnummer waarop men kan bellen."@nl;
     shacl:maxCount "1";
-    shacl:name "website"@nl;
-    shacl:path foaf:page
+    shacl:name "telefoon"@nl;
+    shacl:path schema:telephone
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Contactinfo.Adres>;
     shacl:class <http://www.w3.org/ns/locn#Address>;
@@ -101,13 +108,6 @@
     shacl:maxCount "1";
     shacl:name "beschikbaarheid"@nl;
     shacl:path schema:hoursAvailable
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Contactinfo.Telefoon>;
-    shacl:class schemas:OpeningHoursSpecification;
-    shacl:description "Telefoonnummer waarop men kan bellen."@nl;
-    shacl:maxCount "1";
-    shacl:name "telefoon"@nl;
-    shacl:path schema:telephone
   ];
   shacl:targetClass schema:ContactPoint .
 
@@ -130,6 +130,10 @@
     shacl:path prov:activity
   ];
   shacl:targetClass prov:Generation .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/DateShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:date .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/DatetimeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -166,6 +170,10 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/generiek#DocumentOnderdeel> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/DurationShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:duration .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/Eli_statusShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
@@ -177,13 +185,6 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/FormeelKaderShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#FormeelKader.Beschrijving>;
-    shacl:datatype rdf:langString;
-    shacl:description "Beschrijving van het formeel kader."@nl;
-    shacl:maxCount "1";
-    shacl:name "beschrijving"@nl;
-    shacl:path dc:description
-  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#FormeelKader.Naam>;
     shacl:datatype rdf:langString;
     shacl:description "Naam vh formeel kader."@nl;
@@ -192,11 +193,18 @@
     shacl:name "naam"@nl;
     shacl:path dc:title
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#FormeelKader.Onderwerp>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#FormeelKader.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van het formeel kader."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#FormeelKader.Taal>;
     shacl:class skos:Concept;
-    shacl:description "Onderwerp vh formeel kader."@nl;
-    shacl:name "onderwerp"@nl;
-    shacl:path <http://data.europa.eu/m8g/subject>
+    shacl:description "Taal waarin het formeel kader beschikbaar is."@nl;
+    shacl:name "taal"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#language>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#FormeelKader.Status>;
     shacl:class skos:Concept;
@@ -205,11 +213,11 @@
     shacl:name "status"@nl;
     shacl:path <http://www.w3.org/ns/adms#status>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#FormeelKader.Taal>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#FormeelKader.Onderwerp>;
     shacl:class skos:Concept;
-    shacl:description "Taal waarin het formeel kader beschikbaar is."@nl;
-    shacl:name "taal"@nl;
-    shacl:path <http://data.europa.eu/eli/ontology#language>
+    shacl:description "Onderwerp vh formeel kader."@nl;
+    shacl:name "onderwerp"@nl;
+    shacl:path <http://data.europa.eu/m8g/subject>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#FormeelKader.Toepassingsgebied>;
     shacl:class skos:Concept;
@@ -230,6 +238,66 @@
     shacl:path dc:relation
   ];
   shacl:targetClass <http://purl.org/vocab/cpsv#FormalFramework> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/GebeurtenisShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Gebeurtenis.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de gebeurtenis."@nl;
+    shacl:maxCount "1";
+    shacl:name "naam"@nl;
+    shacl:path dc:title
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Gebeurtenis.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de gebeurtenis."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Gebeurtenis.Begindatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waariop de gebeurtenis start."@nl;
+    shacl:maxCount "1";
+    shacl:name "begindatum"@nl;
+    shacl:path schemas:startDate
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Gebeurtenis.Einddatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum waarop de gebeurtenis eindigt."@nl;
+    shacl:maxCount "1";
+    shacl:name "einddatum"@nl;
+    shacl:path schemas:endDate
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Gebeurtenis.Begintijd>;
+    shacl:datatype xsd:time;
+    shacl:description "Tijd waarop de gebeurtenis start."@nl;
+    shacl:maxCount "1";
+    shacl:name "begintijd"@nl;
+    shacl:path schemas:startTime
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Gebeurtenis.Eindtijd>;
+    shacl:datatype xsd:time;
+    shacl:description "Tijd waarop de gebeurtenis eindigt."@nl;
+    shacl:maxCount "1";
+    shacl:name "eindtijd"@nl;
+    shacl:path schemas:endTime
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Gebeurtenis.Duur>;
+    shacl:datatype xsd:duration;
+    shacl:description "De duur van de gebeurtenis."@nl;
+    shacl:maxCount "1";
+    shacl:name "duur"@nl;
+    shacl:path schemas:duration
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Gebeurtenis.Tijdschema>;
+    shacl:class schemas:Schedule;
+    shacl:description "Schema volgens hetwelk een gebeurtenis zich herhaalt."@nl;
+    shacl:name "tijdschema"@nl;
+    shacl:path schemas:eventSchedule
+  ];
+  shacl:targetClass schemas:Event .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/GebeurtenisdatumShape> a shacl:NodeShape;
   shacl:closed false;
@@ -275,6 +343,13 @@
     shacl:name "default"@nl;
     shacl:path <https://data.vlaanderen.be/ns/generiek#default>
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#GeografischePositie.Specificatie>;
+    shacl:class skos:Concept;
+    shacl:description "Het type object op basis waarvan het punt werd bepaald."@nl;
+    shacl:maxCount "1";
+    shacl:name "specificatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#specificatie>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#GeografischePositie.Geometrie>;
     shacl:class <http://www.opengis.net/ont/sf#Point>;
     shacl:description "De cartografische coöordinaten vh punt."@nl;
@@ -289,32 +364,25 @@
     shacl:maxCount "1";
     shacl:name "methode"@nl;
     shacl:path <https://data.vlaanderen.be/ns/generiek#methode>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#GeografischePositie.Specificatie>;
-    shacl:class skos:Concept;
-    shacl:description "Het type object op basis waarvan het punt werd bepaald."@nl;
-    shacl:maxCount "1";
-    shacl:name "specificatie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/generiek#specificatie>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/generiek#GeografischePositie> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/GeometrieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Geometrie.Gml>;
-    shacl:datatype rdfs:Literal;
-    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
-    shacl:maxCount "1";
-    shacl:name "gml"@nl;
-    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
-  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Geometrie.Wkt>;
     shacl:datatype rdfs:Literal;
     shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
     shacl:maxCount "1";
     shacl:name "wkt"@nl;
     shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Geometrie.Gml>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "gml"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
   ];
   shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
 
@@ -354,6 +422,10 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/GetalShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass schemas:Number .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/GetypeerdeStringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass rdfs:Literal .
@@ -361,12 +433,12 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/HerkomstactiviteitShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Herkomstactiviteit.Applicatie>;
-    shacl:class prov:Entity;
-    shacl:description "Gebruik ve entiteit door een activiteit."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Herkomstactiviteit.Operator>;
+    shacl:class prov:Agent;
+    shacl:description "Geeft aan welke agent verantwoordelijk was voor de activiteit en meer bepaald verantwoordelijk was voor het uitvoeren vd activiteit."@nl;
     shacl:maxCount "1";
-    shacl:name "applicatie"@nl;
-    shacl:path prov:used
+    shacl:name "operator"@nl;
+    shacl:path prov:wasAssociatedWith
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Herkomstactiviteit.Bewerking>;
     shacl:class skos:Concept;
@@ -376,12 +448,12 @@
     shacl:name "bewerking"@nl;
     shacl:path <https://data.vlaanderen.be/ns/generiek#bewerking>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Herkomstactiviteit.Operator>;
-    shacl:class prov:Agent;
-    shacl:description "Geeft aan welke agent verantwoordelijk was voor de activiteit en meer bepaald verantwoordelijk was voor het uitvoeren vd activiteit."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Herkomstactiviteit.Applicatie>;
+    shacl:class prov:Entity;
+    shacl:description "Gebruik ve entiteit door een activiteit."@nl;
     shacl:maxCount "1";
-    shacl:name "operator"@nl;
-    shacl:path prov:wasAssociatedWith
+    shacl:name "applicatie"@nl;
+    shacl:path prov:used
   ];
   shacl:targetClass prov:Activity .
 
@@ -424,13 +496,6 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/IdentificatorShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Identificator.ToegekendOp>;
-    shacl:datatype xsd:dateTime;
-    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
-    shacl:maxCount "1";
-    shacl:name "toegekend op"@nl;
-    shacl:path dc:issued
-  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Identificator.Identificator>;
     shacl:datatype rdfs:Literal;
     shacl:description "String gebruikt om het object uniek te identificeren."@nl;
@@ -438,12 +503,19 @@
     shacl:name "identificator"@nl;
     shacl:path skos:notation
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Identificator.ToegekendOp>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend op"@nl;
+    shacl:path dc:issued
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Identificator.GestructureerdeIdentificator>;
     shacl:class <https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator>;
     shacl:description "Identificator vh object opgesplitst in zijn onderdelen."@nl;
     shacl:maxCount "1";
     shacl:name "gestructureerde identificator"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/generiek#gestructureerdedentificator>
+    shacl:path <https://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Identificator.ToegekendDoor>;
     shacl:class dc:Agent;
@@ -478,6 +550,33 @@
   ];
   shacl:targetClass dc:Jurisdiction .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/KwantitatieveWaardeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#KwantitatieveWaarde.Eenheid>;
+    shacl:datatype xsd:string;
+    shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "eenheid"@nl;
+    shacl:path schemas:unitText
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#KwantitatieveWaarde.Waarde>;
+    shacl:class schemas:Number;
+    shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path schemas:value
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#KwantitatieveWaarde.StandaardEenheid>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#StandaardEenheid>;
+    shacl:description "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "standaard eenheid"@nl;
+    shacl:path schemas:unitCode
+  ];
+  shacl:targetClass schemas:QuantitativeValue .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/LijnstringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://www.opengis.net/ont/sf#LineString> .
@@ -504,6 +603,7 @@
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Object.Identificator>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "Identificator van het object."@nl;
+    shacl:minCount "1";
     shacl:name "identificator"@nl;
     shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
@@ -538,6 +638,26 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/OrganisatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass org:Organization .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/PeriodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Periode.Begin>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Aanvang van de tijdsduur."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "begin"@nl;
+    shacl:path <http://data.europa.eu/m8g/startTime>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Periode.Einde>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Einde vd tijdsduur."@nl;
+    shacl:maxCount "1";
+    shacl:name "einde"@nl;
+    shacl:path <http://data.europa.eu/m8g/endTime>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/PeriodOfTime> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/PersoonShape> a shacl:NodeShape;
   shacl:closed false;
@@ -574,6 +694,10 @@
   shacl:closed false;
   shacl:targetClass <http://www.opengis.net/ont/sf#Point> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/StandaardEenheidShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#StandaardEenheid> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/StringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass xsd:string .
@@ -585,6 +709,96 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/TaalstringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass rdf:langString .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/TijdschemaShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Tijdschema.PerDag>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Dagen van de week waarop het plaatsvindt."@nl;
+    shacl:name "per dag"@nl;
+    shacl:path schemas:byDay
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Tijdschema.PerMaand>;
+    shacl:datatype xsd:integer;
+    shacl:description "Maanden van het jaar waarop het plaatsvindt."@nl;
+    shacl:name "per maand"@nl;
+    shacl:path schemas:byMonth
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Tijdschema.PerDagVanDeMaand>;
+    shacl:datatype xsd:integer;
+    shacl:description "Dagen van de maand waarop het plaatsvindt."@nl;
+    shacl:name "per dag van de maand"@nl;
+    shacl:path schemas:byMonthDay
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Tijdschema.Uitzonderingsdatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datums waarop het uitzonderlijk niet plaatsvindt."@nl;
+    shacl:name "uitzonderingsdatum"@nl;
+    shacl:path schemas:exceptDate
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Tijdschema.Frequentie>;
+    shacl:datatype xsd:string;
+    shacl:description "Frequentie waarmee het plaatsvindt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "frequentie"@nl;
+    shacl:path schemas:repeatFrequency
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Tijdschema.Einddatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum tot wanneer het plaatsvindt."@nl;
+    shacl:maxCount "1";
+    shacl:name "einddatum"@nl;
+    shacl:path schemas:endDate
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Tijdschema.Aantal>;
+    shacl:datatype xsd:integer;
+    shacl:description "Aantal keer dat het plaatsvindt."@nl;
+    shacl:maxCount "1";
+    shacl:name "aantal"@nl;
+    shacl:path schemas:repeatCount
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Tijdschema.Eindtijd>;
+    shacl:datatype xsd:time;
+    shacl:description "Tijdstip waarop het eindigt."@nl;
+    shacl:maxCount "1";
+    shacl:name "eindtijd"@nl;
+    shacl:path schemas:endTime
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Tijdschema.Startdatum>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum vanaf wanneer het plaatsvindt."@nl;
+    shacl:maxCount "1";
+    shacl:name "startdatum"@nl;
+    shacl:path schemas:startDate
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Tijdschema.Starttijd>;
+    shacl:datatype xsd:time;
+    shacl:description "Tijdstip waarop het start."@nl;
+    shacl:maxCount "1";
+    shacl:name "starttijd"@nl;
+    shacl:path schemas:startTime
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Tijdschema.Duur>;
+    shacl:datatype xsd:duration;
+    shacl:description "Duur van hetgeen plaatsvindt."@nl;
+    shacl:maxCount "1";
+    shacl:name "duur"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#duur>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4#Tijdschema.PerSetpositie>;
+    shacl:datatype xsd:integer;
+    shacl:description "N-de keer dat iets plaatsvindt uit de verzameling van mogelijke tijdstippen."@nl;
+    shacl:maxCount "1";
+    shacl:name "per setpositie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#perSetpositie>
+  ];
+  shacl:targetClass schemas:Schedule .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/TimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:time .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/UriShape> a shacl:NodeShape;
   shacl:closed false;
