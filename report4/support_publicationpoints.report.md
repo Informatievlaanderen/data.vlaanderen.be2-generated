@@ -128,6 +128,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/publicatie-advertentie.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/rooilijnplannen.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/ruimtelijkebereiken.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/sb.publication.json

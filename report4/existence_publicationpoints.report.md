@@ -409,6 +409,14 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/test/rooilijnplannen.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-04-01/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/rooilijnplannen/index.html'
+
 #||#    + checking /home/circleci/project/config/test/ruimtelijkebereiken.publication.json
 #||# 
 Directory check
