@@ -414,7 +414,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-04-01/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/rooilijnplannen/index.html'
 
 #||#    + checking /home/circleci/project/config/test/ruimtelijkebereiken.publication.json
