@@ -189,7 +189,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/kandidaatstandaard/2022-03-21",
   "/tmp/generated/doc/applicatieprofiel/dienst-transactiemodel",
   "/tmp/generated/doc/applicatieprofiel/dienstencataloog",
-  "/tmp/generated/doc/applicatieprofiel/energiehuis",
+  "/tmp/generated/doc/applicatieprofiel/energiehuis/notawerkgroep",
   "/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17",
   "/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2025-03-05",
   "/tmp/generated/doc/applicatieprofiel/gebieden",
