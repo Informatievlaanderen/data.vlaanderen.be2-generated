@@ -164,6 +164,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/wetgeving.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/zaalreservatie.publication.json
+#||#  
 #||# checking publication points in directory /home/circleci/project/config/production
 #||# 
 Error: the following directories are unsupported
