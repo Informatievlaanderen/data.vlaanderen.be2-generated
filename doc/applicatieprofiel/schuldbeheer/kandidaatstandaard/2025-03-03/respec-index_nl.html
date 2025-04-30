@@ -2,7 +2,7 @@
 <html>
   <head><meta charset="utf-8"/>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
-    <script class="remove">var respecConfig = {"specStatus":"unofficial","editors":[{"name":"John Doe"}],"publishDate":"2025-03-19T14:15:19.164Z"}</script>
+    <script class="remove">var respecConfig = {"specStatus":"unofficial","editors":[{"name":"John Doe"}],"publishDate":"2025-04-30T10:41:40.708Z"}</script>
   </head>
 
   <style>
@@ -60,6 +60,12 @@ Schriftelijk berichtgeving van een schuldeiser naar een schuldenaar om deze schu
     <td>aanmaningsdatum</td>
     <td>http://www.w3.org/2001/XMLSchema#date</td>
     <td>Datum waarop de aanmaning werd verstuurd.</td>
+  </tr>
+  
+  <tr>
+    <td>genereert wanbetalingsvergoeding</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding</td>
+    <td>Verwijzing naar een wanbetalingsvergoeding die door de aanmaning wordt gegenereerd. Een wanbetalingsvergoeding wordt gegenereerd door een aanmaning maar heeft zijn grondslag in een algemene voorwaarde of een reglement</td>
   </tr>
   
 </table>
@@ -137,7 +143,22 @@ Betaling in het kader van een afbetalingsplan
 
 <br>
 
-<p><b><i>No properties defined for this entity</b></i></p>
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+    <th>Definition</th>
+    <th>Cardinality</th>
+  </tr>
+
+  
+  <tr>
+    <td>gevolgd afbetalingsplanonderdeel</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplanonderdeel</td>
+    <td>Verwijzing naar het afbetalingsplanonderdeel dat werd gevolgd bij het uitvoeren van de afbetaling.</td>
+  </tr>
+  
+</table>
 
 
     
@@ -167,15 +188,45 @@ Een gestructureerd schema dat wordt gebruikt om een schuld af te lossen.
 
   
   <tr>
+    <td>aanvaarding</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Aanvaarding</td>
+    <td>Verwijzing naar de aanvaarding van het afbetalingsplan.</td>
+  </tr>
+  
+  <tr>
     <td>afbetalingsplanonderdeel</td>
     <td>https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplanonderdeel</td>
     <td>Verwijzing naar een onderdeel van het afbetalingsplan.</td>
   </tr>
   
   <tr>
+    <td>afbetalingsplansaldo</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplansaldo</td>
+    <td>Verwijzing naar een saldo van een afbetalingsplan, namelijk het nog af te betalen bedrag op een bepaalde datum.</td>
+  </tr>
+  
+  <tr>
+    <td>herschikte schuldvordering</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering</td>
+    <td>Verwijzijng naar een schuldvordering waarvan de betaalmodaliteiten door het afbetalingsplan herschikt worden.</td>
+  </tr>
+  
+  <tr>
+    <td>schrapping</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Schrapping</td>
+    <td>Verwijzing naar een schrapping van de schuldvordering.</td>
+  </tr>
+  
+  <tr>
     <td>startbedrag</td>
     <td>https://schema.org/MonetaryAmount</td>
     <td>Het totale verschuldigde bedrag dat wordt herschikt bij de aanvang van het afbetalingsplan.</td>
+  </tr>
+  
+  <tr>
+    <td>voorstel</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Voorstel</td>
+    <td>Verwijzing naar de activiteit die het afbetalingsplan voorstelt.</td>
   </tr>
   
 </table>
@@ -211,6 +262,12 @@ Een afbetalingsplan bestaat uit verschillende onderdelen. Elk onderdeel specifi
     <td>af te betalen bedrag</td>
     <td>https://schema.org/MonetaryAmount</td>
     <td>Het geldbedrag dat voor de uiterste betaaldatum moet worden betaald.</td>
+  </tr>
+  
+  <tr>
+    <td>is deel van</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan</td>
+    <td>Een afbetalingsplanonderdeel is een deel van een afbetalingsplan.</td>
   </tr>
   
   <tr>
@@ -309,6 +366,12 @@ De overdracht van geld van één of meerdere partij(en) naar een andere partij.
 
   
   <tr>
+    <td>bedoeld voor</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering</td>
+    <td>Verwijzing naar de schuldvordering die de betaler wenst af te lossen met de betaling.</td>
+  </tr>
+  
+  <tr>
     <td>betaald bedrag</td>
     <td>https://schema.org/MonetaryAmount</td>
     <td>Het geldbedrag dat werd betaald.</td>
@@ -318,6 +381,12 @@ De overdracht van geld van één of meerdere partij(en) naar een andere partij.
     <td>betalingsdatum</td>
     <td>http://www.w3.org/2001/XMLSchema#date</td>
     <td>Datum waarop het overgedragen geld werd ontvangen door de ontvanger.</td>
+  </tr>
+  
+  <tr>
+    <td>wordt toegerekend door</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling</td>
+    <td>Verwijzing naar de activiteit die (een deel van) een  betaald bedrag toewijst aan een schuldvordering.</td>
   </tr>
   
 </table>
@@ -495,7 +564,46 @@ Persoon waarvan de gegevens zijn ingeschreven in een register.
 
 <br>
 
-<p><b><i>No properties defined for this entity</b></i></p>
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+    <th>Definition</th>
+    <th>Cardinality</th>
+  </tr>
+
+  
+  <tr>
+    <td>inkomst</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Inkomst</td>
+    <td>Verwijzing naar een inkomst van een persoon.</td>
+  </tr>
+  
+  <tr>
+    <td>juridisch statuut</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut</td>
+    <td>Verwijzing naar een juridisch statuut van een persoon.</td>
+  </tr>
+  
+  <tr>
+    <td>krediet</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Krediet</td>
+    <td>Verwijzing naar een krediet dat door een persoon werd aangegaan als schuldenaar.</td>
+  </tr>
+  
+  <tr>
+    <td>sociaal statuut</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut</td>
+    <td>Verwijzing naar een sociaal statuut van een persoon.</td>
+  </tr>
+  
+  <tr>
+    <td>solvabiliteitsprofiel</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel</td>
+    <td>Verwijzing naar een solvabiliteitsrofiel van een persoon.</td>
+  </tr>
+  
+</table>
 
 
     
@@ -953,9 +1061,33 @@ Aanspraak van een partij (de schuldeiser) op een bepaalde prestatie vanwege een 
 
   
   <tr>
+    <td>aanleiding</td>
+    <td>http://www.w3.org/2000/01/rdf-schema#Resource</td>
+    <td>Verwijzing naar de aanleiding voor de schuldvordering.</td>
+  </tr>
+  
+  <tr>
+    <td>aanmaning</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Aanmaning</td>
+    <td>Verwijzing naar een aanmaning  met betrekking tot de schuldvordering.</td>
+  </tr>
+  
+  <tr>
     <td>afbetalingsplan</td>
     <td>https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan</td>
     <td>Verwijzing naar een afbetalingsplan dat voor de schuldvordering geldt.</td>
+  </tr>
+  
+  <tr>
+    <td>betwisting</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Betwisting</td>
+    <td>Verwijzing naar een betwisting van de schuldvordering.</td>
+  </tr>
+  
+  <tr>
+    <td>grondslag</td>
+    <td>http://data.europa.eu/eli/ontology#LegalResource</td>
+    <td>Verwijzing naar de juridische basis voor de schuldvordering</td>
   </tr>
   
   <tr>
@@ -968,6 +1100,42 @@ Aanspraak van een partij (de schuldeiser) op een bepaalde prestatie vanwege een 
     <td>identificator</td>
     <td>http://www.w3.org/ns/adms#Identifier</td>
     <td>Een identificator voor de schuldvordering</td>
+  </tr>
+  
+  <tr>
+    <td>is gerelateerd met</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering</td>
+    <td>Verwijzing naar een andere schuldvordering die een verband heeft met de eerste schuldvordering.</td>
+  </tr>
+  
+  <tr>
+    <td>oninbaarheidsverklaring</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring</td>
+    <td>Verwijzing naar een oninbaarheidsverklaring voor de schuldvordering.</td>
+  </tr>
+  
+  <tr>
+    <td>schuldeiser</td>
+    <td>http://www.w3.org/ns/prov#Agent</td>
+    <td>Verwijzing naar de agent (persoon of organisatie) die zijn recht uitoefent om een bedrag te innen van andere partijen.</td>
+  </tr>
+  
+  <tr>
+    <td>schuldenaar</td>
+    <td>http://www.w3.org/ns/prov#Agent</td>
+    <td>Verwijzing naar de agent (persoon of organisatie) die de verplichting heeft om een schuld te voldoen aan een andere partij.</td>
+  </tr>
+  
+  <tr>
+    <td>schuldvorderingscategorie</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingscategorie</td>
+    <td>Een schuldvordering behoort tot een categorie.</td>
+  </tr>
+  
+  <tr>
+    <td>schuldvorderingssaldo</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingssaldo</td>
+    <td>Verwijzing naar een saldo dat werd berekend voor de schuldvordering.</td>
   </tr>
   
   <tr>
@@ -989,9 +1157,21 @@ Aanspraak van een partij (de schuldeiser) op een bepaalde prestatie vanwege een 
   </tr>
   
   <tr>
+    <td>vermindering</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Vermindering</td>
+    <td>Verwijzing naar een vermindering voor de schuldvordering.</td>
+  </tr>
+  
+  <tr>
     <td>wanbetaling</td>
     <td>http://www.w3.org/2001/XMLSchema#boolean</td>
     <td>Laat toe om aan te duiden of de hoofdsom voor de uiterste betaaldatum werd betaald.</td>
+  </tr>
+  
+  <tr>
+    <td>wanbetalingsvergoeding</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding</td>
+    <td>Een schuldvordering kan verhoogd worden met een wanbetalingsvergoeding.</td>
   </tr>
   
 </table>
@@ -1187,6 +1367,12 @@ Categorisatie van  het vermogen van een persoon om schulden af te betalen.
 
   
   <tr>
+    <td>afgeleid van</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator</td>
+    <td>Verwijzing naar een solvabiliteitsindicator waarvan het solvabilitetisprofiel werd afgeleid.</td>
+  </tr>
+  
+  <tr>
     <td>bepaald door</td>
     <td>http://www.w3.org/ns/prov#Agent</td>
     <td>Verwijzing naar de agent die het solvabiliteitsprofiel bepaald heeft.</td>
@@ -1292,6 +1478,12 @@ Het toewijzen van een betaald geldbedrag aan een schuldvordering.
     <th>Cardinality</th>
   </tr>
 
+  
+  <tr>
+    <td>rekent toe aan</td>
+    <td>https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering</td>
+    <td>Een toerekening van betaling rekent een (deel van het) betaalde bedrag toe aan een schuldvordering.</td>
+  </tr>
   
   <tr>
     <td>toegerekend bedrag</td>
