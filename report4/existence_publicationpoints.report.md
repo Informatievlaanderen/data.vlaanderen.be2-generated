@@ -195,8 +195,10 @@ error: missing '/tmp/generated/doc/vocabularium/generiek/ontwerpstandaard/toolch
 #||#    + checking /home/circleci/project/config/test/hulp-dienst-verlening-gedetineerden.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated '
 
 index.html check
+error: missing '/tmp/generated /index.html'
 
 #||#    + checking /home/circleci/project/config/test/incentiveringsplatform.publication.json
 #||# 
