@@ -2,125 +2,125 @@
 
 #||# -------------------------------------
 
-2025-05-09T15:02:39.263Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
+2025-05-09T15:18:31.439Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
 
-2025-05-09T15:02:39.264Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
+2025-05-09T15:18:31.440Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
 
-2025-05-09T15:02:39.264Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+2025-05-09T15:18:31.440Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-05-09T15:02:39.264Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:heeftGemeentenaam)
+2025-05-09T15:18:31.440Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:heeftGemeentenaam)
 
-2025-05-09T15:02:39.264Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:heeftPostinfo)
+2025-05-09T15:18:31.440Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:heeftPostinfo)
 
-2025-05-09T15:02:39.265Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:isGerelateerdAan)
+2025-05-09T15:18:31.440Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:isGerelateerdAan)
 
-2025-05-09T15:02:39.265Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
+2025-05-09T15:18:31.440Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
 
-2025-05-09T15:02:39.265Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isHoofdVan)
+2025-05-09T15:18:31.440Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isHoofdVan)
 
-2025-05-09T15:02:39.265Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:rapporteertAan)
+2025-05-09T15:18:31.441Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-05-09T15:02:39.265Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Agent))
+2025-05-09T15:18:31.441Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Agent))
 
-2025-05-09T15:02:39.265Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
+2025-05-09T15:18:31.441Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
 
-2025-05-09T15:02:39.265Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:heeftGeregistreerdeOrganisatie)
+2025-05-09T15:18:31.441Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:heeftGeregistreerdeOrganisatie)
 
-2025-05-09T15:02:39.265Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:wordtUitgevoerdDoor)
+2025-05-09T15:18:31.441Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:wordtUitgevoerdDoor)
 
-2025-05-09T15:02:39.265Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:produceert)
+2025-05-09T15:18:31.441Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:produceert)
 
-2025-05-09T15:02:39.265Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftParticiperende)
+2025-05-09T15:18:31.441Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftParticiperende)
 
-2025-05-09T15:02:39.265Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:aangebodenBinnen)
+2025-05-09T15:18:31.441Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:aangebodenBinnen)
 
-2025-05-09T15:02:39.265Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:vereist)
+2025-05-09T15:18:31.441Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:vereist)
 
-2025-05-09T15:02:39.265Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet)
+2025-05-09T15:18:31.441Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet)
 
-2025-05-09T15:02:39.265Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:heeftStraatnaam)
+2025-05-09T15:18:31.441Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:heeftStraatnaam)
 
-2025-05-09T15:02:39.265Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Logies:Beoordeling:heeftAuteur)
+2025-05-09T15:18:31.441Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Logies:Beoordeling:heeftAuteur)
 
-2025-05-09T15:02:39.266Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Logies:Logies:heeftSuborganisatie)
+2025-05-09T15:18:31.441Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Logies:Logies:heeftSuborganisatie)
 
-2025-05-09T15:02:39.270Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-09T15:18:31.446Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-09T15:02:39.271Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-09T15:18:31.447Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-09T15:02:39.271Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
+2025-05-09T15:18:31.447Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-09T15:02:39.271Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium:OSLO-Perceel) and fallback URI (http://todo.com/) will be assigned.
+2025-05-09T15:18:31.447Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium:OSLO-Perceel) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-09T15:02:39.271Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium:OSLO-Placeholder) and fallback URI (http://todo.com/) will be assigned.
+2025-05-09T15:18:31.447Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium:OSLO-Placeholder) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-09T15:02:39.271Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Schema.org) and fallback URI (http://todo.com/) will be assigned.
+2025-05-09T15:18:31.447Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Schema.org) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-09T15:02:39.274Z warn: [ConnectorConverterHandler]: Connector (heeftVerhuureenheid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.450Z warn: [ConnectorConverterHandler]: Connector (heeftVerhuureenheid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.274Z warn: [ConnectorConverterHandler]: Connector (heeftVerhuureenheid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.450Z warn: [ConnectorConverterHandler]: Connector (heeftVerhuureenheid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.274Z warn: [ConnectorConverterHandler]: Connector (behoortTotToeristischeRegio) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.450Z warn: [ConnectorConverterHandler]: Connector (behoortTotToeristischeRegio) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.274Z warn: [ConnectorConverterHandler]: Connector (behoortTotToeristischeRegio) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.450Z warn: [ConnectorConverterHandler]: Connector (behoortTotToeristischeRegio) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.274Z warn: [ConnectorConverterHandler]: Connector (heeftUitbater) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (heeftUitbater) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.274Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftUitbater) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftUitbater) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-09T15:02:39.274Z warn: [ConnectorConverterHandler]: Connector (heeftUitbater) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (heeftUitbater) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.274Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftUitbater) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftUitbater) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-09T15:02:39.274Z warn: [ConnectorConverterHandler]: Connector (heeftBeschrijving) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (heeftBeschrijving) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.274Z warn: [ConnectorConverterHandler]: Connector (heeftBeschrijving) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (heeftBeschrijving) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.274Z warn: [ConnectorConverterHandler]: Connector (heeftKamer) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (heeftKamer) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.274Z warn: [ConnectorConverterHandler]: Connector (heeftKamer) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (heeftKamer) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.274Z warn: [ConnectorConverterHandler]: Connector (verwijstNaar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (verwijstNaar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.275Z warn: [ConnectorConverterHandler]: Connector (verwijstNaar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (verwijstNaar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.275Z warn: [ConnectorConverterHandler]: Connector (heeftMedia) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (heeftMedia) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.275Z warn: [ConnectorConverterHandler]: Connector (heeftMedia) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (heeftMedia) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.275Z warn: [ConnectorConverterHandler]: Connector (heeftRegistratie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (heeftRegistratie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.275Z warn: [ConnectorConverterHandler]: Connector (heeftRegistratie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (heeftRegistratie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.275Z warn: [ConnectorConverterHandler]: Connector (verantwoordelijkeOrganisatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (verantwoordelijkeOrganisatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.275Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verantwoordelijkeOrganisatie) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verantwoordelijkeOrganisatie) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-09T15:02:39.275Z warn: [ConnectorConverterHandler]: Connector (verantwoordelijkeOrganisatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (verantwoordelijkeOrganisatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.275Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verantwoordelijkeOrganisatie) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verantwoordelijkeOrganisatie) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-09T15:02:39.275Z warn: [ConnectorConverterHandler]: Connector (heeftAlternatieveUitbating (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (heeftAlternatieveUitbating (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.275Z warn: [ConnectorConverterHandler]: Connector (heeftAlternatieveUitbating (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (heeftAlternatieveUitbating (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.275Z warn: [ConnectorConverterHandler]: Connector (isSpecialisatieVan (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.451Z warn: [ConnectorConverterHandler]: Connector (isSpecialisatieVan (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.275Z warn: [ConnectorConverterHandler]: Connector (isSpecialisatieVan (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.452Z warn: [ConnectorConverterHandler]: Connector (isSpecialisatieVan (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.275Z warn: [ConnectorConverterHandler]: Connector (heeftKwaliteitsLabel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.452Z warn: [ConnectorConverterHandler]: Connector (heeftKwaliteitsLabel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.275Z warn: [ConnectorConverterHandler]: Connector (heeftKwaliteitsLabel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-09T15:18:31.452Z warn: [ConnectorConverterHandler]: Connector (heeftKwaliteitsLabel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-09T15:02:39.278Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-Logies:Verhuureenheid has already a value for definition-nl in language nl, but will be overwritten.
+2025-05-09T15:18:31.455Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-Logies:Verhuureenheid has already a value for definition-nl in language nl, but will be overwritten.
 
-2025-05-09T15:02:39.279Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-Logies:Faciliteit has already a value for definition-ap-nl in language nl, but will be overwritten.
+2025-05-09T15:18:31.455Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-Logies:Faciliteit has already a value for definition-ap-nl in language nl, but will be overwritten.
 
-2025-05-09T15:02:39.287Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-Logies:Logies:doelpubliek has an empty value for tag definition-nl.
+2025-05-09T15:18:31.469Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-Logies:Logies:doelpubliek has an empty value for tag definition-nl.
 
-2025-05-09T15:02:39.301Z warn: [ConverterHandler]: Entity with path heeftKamer has already a value for label-ap-nl in language nl, but will be overwritten.
+2025-05-09T15:18:31.484Z warn: [ConverterHandler]: Entity with path heeftKamer has already a value for label-ap-nl in language nl, but will be overwritten.
 
-2025-05-09T15:02:39.302Z warn: [ConverterHandler]: Entity with path heeftKamer has already a value for label-ap-nl in language nl, but will be overwritten.
+2025-05-09T15:18:31.485Z warn: [ConverterHandler]: Entity with path heeftKamer has already a value for label-ap-nl in language nl, but will be overwritten.
 
 #||# -------------------------------------
 
