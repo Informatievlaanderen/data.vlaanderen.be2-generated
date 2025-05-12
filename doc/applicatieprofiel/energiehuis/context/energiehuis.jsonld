@@ -131,40 +131,36 @@
       "@id": "https://data.vlaanderen.be/ns/energiehuis#Contact.onderwerp",
       "@type": "@id"
     },
-    "Contactinfo": "http://schema.org/ContactPoint",
-    "Contactinfo.aanschrijfvorm": {
+    "Contactpunt": "http://schema.org/ContactPoint",
+    "Contactpunt.aanschrijfprefix": {
       "@id": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "Contactinfo.adres": {
+    "Contactpunt.adres": {
       "@id": "http://www.w3.org/ns/locn#address",
       "@type": "@id"
     },
-    "Contactinfo.beschikbaarheid": {
-      "@id": "http://schema.org/hoursAvailable",
-      "@type": "@id"
-    },
-    "Contactinfo.contactnaam": {
+    "Contactpunt.contactnaam": {
       "@id": "http://xmlns.com/foaf/0.1/name",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "Contactinfo.email": {
+    "Contactpunt.email": {
       "@id": "http://schema.org/email",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "Contactinfo.fax": {
-      "@id": "http://schema.org/faxNumber",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Contactinfo.openingsuren": {
+    "Contactpunt.openingsuren": {
       "@id": "http://schema.org/openingHours",
       "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
-    "Contactinfo.telefoon": {
+    "Contactpunt.telefoon": {
       "@id": "http://schema.org/telephone",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "Contactinfo.website": {
+    "Contactpunt.urenBeschikbaarheid": {
+      "@id": "http://schema.org/hoursAvailable",
+      "@type": "@id"
+    },
+    "Contactpunt.website": {
       "@id": "http://xmlns.com/foaf/0.1/page",
       "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
     },
@@ -293,11 +289,6 @@
       "@type": "@id"
     },
     "Kanaal": "http://data.europa.eu/m8g/Channel",
-    "Kanaal.beschikbaarheid": {
-      "@container": "@set",
-      "@id": "http://schema.org/hoursAvailable",
-      "@type": "@id"
-    },
     "Kanaal.eigendomVan": {
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/ownedBy",
@@ -309,6 +300,11 @@
     },
     "Kanaal.type": {
       "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Kanaal.urenBeschikbaarheid": {
+      "@container": "@set",
+      "@id": "http://schema.org/hoursAvailable",
       "@type": "@id"
     },
     "Kenmerk": "https://data.vlaanderen.be/ns/energiehuis#Kenmerk",
@@ -343,17 +339,26 @@
     },
     "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
     "Locatie": "http://www.w3.org/ns/prov#Location",
+    "Locatie.geometrieVanDePlaatsOfHetGebied.": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "@id"
+    },
+    "Locatie.plaatsnaam": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
     "Moment": "http://www.w3.org/2006/time#Instant",
     "Moment.inEDTF": {
       "@id": "https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription",
       "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
-    "Moment.inXSDDateTime": {
+    "Moment.inXSDDatumTijd": {
       "@id": "http://www.w3.org/2006/time#inXSDDateTime",
       "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "Openingsurenspecificatie": "http://schema.org/OpeningHoursSpecification",
-    "Openingsurenspecificatie.dagVanDeWeek": {
+    "Openingsurenspecificatie.dagVanWeek": {
       "@id": "http://schema.org/dayOfWeek",
       "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
     },
@@ -374,12 +379,12 @@
       "@type": "http://www.w3.org/2001/XMLSchema#time"
     },
     "Organisatie": "http://www.w3.org/ns/org#Organization",
-    "Organisatie.contactinfo": {
+    "Organisatie.contactpunt": {
       "@container": "@set",
       "@id": "http://schema.org/contactPoint",
       "@type": "@id"
     },
-    "Organisatie.voorkeursnaam": {
+    "Organisatie.voorkeurslabel": {
       "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -388,7 +393,7 @@
       "@id": "http://purl.org/dc/terms/description",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "Output.naam": {
+    "Output.titel": {
       "@id": "http://purl.org/dc/terms/title",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
@@ -425,28 +430,18 @@
       "@type": "@id"
     },
     "Persoon": "http://www.w3.org/ns/person#Person",
-    "Persoon.achternaam": {
-      "@id": "http://xmlns.com/foaf/0.1/familyName",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Persoon.contactinfo": {
+    "Persoon.contactpunt": {
       "@id": "http://schema.org/contactPoint",
       "@type": "@id"
     },
-    "Persoon.voornaam": {
+    "Persoon.familienaam": {
+      "@id": "http://xmlns.com/foaf/0.1/familyName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Persoon.gegevenNaam": {
       "@container": "@set",
       "@id": "http://xmlns.com/foaf/0.1/givenName",
       "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "Plaats": "http://purl.org/dc/terms/Location",
-    "Plaats.geometrie": {
-      "@id": "http://www.w3.org/ns/locn#geometry",
-      "@type": "@id"
-    },
-    "Plaats.plaatsnaam": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "Plaatsbezoek": "https://data.vlaanderen.be/ns/energiehuis#Plaatsbezoek",
     "Plaatsbezoek.locatie": {
@@ -477,7 +472,7 @@
       "@id": "http://purl.org/dc/terms/description",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "PubliekeDienstverlening.contactinfo": {
+    "PubliekeDienstverlening.heeftContactpunt": {
       "@id": "http://data.europa.eu/m8g/hasContactPoint",
       "@type": "@id"
     },
@@ -489,10 +484,6 @@
     "PubliekeDienstverlening.heeftVerantwoordelijke": {
       "@id": "http://data.europa.eu/m8g/hasCompetentAuthority",
       "@type": "@id"
-    },
-    "PubliekeDienstverlening.naam": {
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "PubliekeDienstverlening.produceert": {
       "@container": "@set",
@@ -508,6 +499,10 @@
       "@container": "@set",
       "@id": "http://data.europa.eu/m8g/hasChannel",
       "@type": "@id"
+    },
+    "PubliekeDienstverlening.titel": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
     "PubliekeOrganisatie": "http://data.europa.eu/m8g/PublicOrganisation",
     "PubliekeOrganisatie.werkingsgebied": {
