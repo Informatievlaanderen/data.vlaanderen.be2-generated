@@ -1,3 +1,358 @@
 {
-  "@context": {}
+  "@context": {
+    "Activiteit": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
+    "Activiteittype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Adresvoorstelling": "http://www.w3.org/ns/locn#Address",
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Bereikbaarheid": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Bereikbaarheid",
+    "Beschikbaarheid": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Beschikbaarheid",
+    "Binnenruimte": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Binnenruimte",
+    "Binnenruimte.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Binnenruimtetype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Buitenruimte": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Buitenruimte",
+    "Buitenruimtetype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Capaciteit": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Capaciteit",
+    "Capaciteittype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Contactpunt": "http://schema.org/ContactPoint",
+    "Contactpunt.naam": {
+      "@id": "http://xmlns.com/foaf/0.1/name",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Criterium": "http://data.europa.eu/m8g/#Criterion",
+    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "Diensttype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Dimensie": "http://www.cidoc-crm.org/cidoc-crm/E54_Dimension",
+    "Dimensietype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Document": "http://xmlns.com/foaf/0.1/Document",
+    "Eigenaarschap": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Eigenaarschap",
+    "Eigenaarschapstype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Exclusiviteitstype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Faciliteit": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Faciliteit",
+    "Faciliteittype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Gebruik": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Gebruik",
+    "Gebruiktype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "GeografischeNaam": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
+    "Infrastructuur": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur",
+    "Infrastructuur.infrastructuurreservatiedienst": {
+      "@container": "@set",
+      "@id": "http://todo.com/dienstverlening",
+      "@type": "@id"
+    },
+    "Infrastructuur.naam": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.naam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Infrastructuur.type": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.type",
+      "@type": "@id"
+    },
+    "InfrastructuurReservatie": "https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/#Infrastructuurreservatie",
+    "InfrastructuurReservatie.infrastructuur": {
+      "@id": "http://todo.com/infrastructuur",
+      "@type": "@id"
+    },
+    "InfrastructuurReservatie.infrastructuurreservatiedienst": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/#dienstverlening",
+      "@type": "@id"
+    },
+    "InfrastructuurReservatie.status": {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/#status",
+      "@type": "@id"
+    },
+    "Infrastructuurreservatiedienst": "https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/#Infrastructuurreservatiedienst",
+    "Infrastructuurreservatiedienst.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Infrastructuurreservatiedienst.infrastructuur": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur",
+      "@type": "@id"
+    },
+    "Infrastructuurreservatiedienst.status": {
+      "@id": "http://www.w3.org/ns/adms#status",
+      "@type": "@id"
+    },
+    "Infrastructuurreservatiestatus": "https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/#Infrastructuurreservatiestatus",
+    "Infrastructuurreservatiestatustype": "https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/#Infrastructuurreservatiestatustype",
+    "Infrastructuurtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Integer": "http://www.w3.org/2001/XMLSchema#integer",
+    "KwantitatieveWaarde": "https://schema.org/QuantitativeValue",
+    "LangString": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "Locatie": "http://www.w3.org/ns/prov#Location",
+    "Locatie.beschrijving": {
+      "@id": "http://todo.com/beschrijving",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Openingsurenspecificatie": "http://schema.org/OpeningHoursSpecification",
+    "Openstellingtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Parkeercapaciteit": "http://schema.mobivoc.org/#Capacity",
+    "Periode": "http://data.europa.eu/m8g/PeriodOfTime",
+    "Plaatsbeschrijving": "https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/#Plaatsbeschrijving",
+    "PubliekeOrganisatie": "http://data.europa.eu/m8g/PublicOrganisation",
+    "StatusType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "String": "http://www.w3.org/2001/XMLSchema#string",
+    "Time": "http://www.w3.org/2001/XMLSchema#time",
+    "Toegankelijkheid": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Toegankelijkheid",
+    "ToegankelijkheidType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Toegankelijkheidsniveau": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Toegankelijkheidsonderdeel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "Voertuig": "http://schema.org/Vehicle",
+    "Voertuigtype": "https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/#Voertuigtype",
+    "alternatieveLabel": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "begin": {
+      "@id": "http://data.europa.eu/m8g/startTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "bereikbaarheid": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.bereikbaarheid",
+      "@type": "@id"
+    },
+    "beschikbaarheid": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.beschikbaarheid",
+      "@type": "@id"
+    },
+    "buffer": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/#buffer",
+      "@type": "@id"
+    },
+    "busnummer": {
+      "@id": "http://todo.com/Adresvoorstelling.busnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "capaciteit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.capaciteit",
+      "@type": "@id"
+    },
+    "contactinfo": {
+      "@id": "http://todo.com/contactinfo",
+      "@type": "@id"
+    },
+    "contactpersoon": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.contactpersoon",
+      "@type": "@id"
+    },
+    "dagVanWeek": {
+      "@id": "http://schema.org/dayOfWeek",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "dimensie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.dimensie",
+      "@type": "@id"
+    },
+    "eenheid": {
+      "@id": "https://schema.org/unitText",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "eenheidtekst": {
+      "@id": "https://schema.org/unitText",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "eigenaar": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.eigenaar",
+      "@type": "@id"
+    },
+    "einde": {
+      "@id": "http://data.europa.eu/m8g/endTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "email": {
+      "@id": "http://schema.org/email",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "faciliteit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.faciliteit",
+      "@type": "@id"
+    },
+    "faxnummer": {
+      "@id": "http://schema.org/faxNumber",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gebruik": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.gebruik",
+      "@type": "@id"
+    },
+    "geldigTot": {
+      "@id": "http://schema.org/validThrough",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "geldigVan": {
+      "@id": "http://schema.org/validFrom",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gereserveerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Reservatie.gereserveerdDoor",
+      "@type": "@id"
+    },
+    "gereserveerdVoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/#Reservatie.gereserveerdVoor",
+      "@type": "@id"
+    },
+    "gesloten": {
+      "@id": "http://schema.org/closes",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "heeftParticiperende": {
+      "@container": "@set",
+      "@id": "http://todo.com/heeftParticiperende",
+      "@type": "@id"
+    },
+    "heeftVerantwoordelijke": {
+      "@container": "@set",
+      "@id": "http://todo.com/heeftVerantwoordelijke",
+      "@type": "@id"
+    },
+    "huisnummer": {
+      "@id": "http://todo.com/Adresvoorstelling.huisnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "infrastructuurReservatie": {
+      "@id": "http://todo.com/reservatie",
+      "@type": "@id"
+    },
+    "laatsteOpenbaarVervoer": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Bereikbaarheid.laasteOpenbaarVervoer",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "locatie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.locatie",
+      "@type": "@id"
+    },
+    "locatieaanduiding": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorDesignator",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "mobiscore": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Bereikbaarheid.mobiscore",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "open": {
+      "@id": "http://schema.org/opens",
+      "@type": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "openstelling": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.openstelling",
+      "@type": "@id"
+    },
+    "opneningsuren": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#openingsuren",
+      "@type": "@id"
+    },
+    "pagina": {
+      "@id": "http://xmlns.com/foaf/0.1/page",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "parkeercapaciteit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#parkeercapaciteit",
+      "@type": "@id"
+    },
+    "periode": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/#Reservatie.periode",
+      "@type": "@id"
+    },
+    "plaatsbeschrijving": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/#plaatsbeschrijving",
+      "@type": "@id"
+    },
+    "postbus": {
+      "@id": "http://www.w3.org/ns/locn#poBox",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "postcode": {
+      "@id": "http://www.w3.org/ns/locn#postCode",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "publiekeDienstverlening": {
+      "@id": "http://purl.org/vocab/cpsv#PublicService",
+      "@type": "@id"
+    },
+    "ruimtelijkeDekking": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/spatial",
+      "@type": "@id"
+    },
+    "subinfrastructuur": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.subinfrastructuur",
+      "@type": "@id"
+    },
+    "superinfrastructuur": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#superInfrastructuur",
+      "@type": "@id"
+    },
+    "telefoon": {
+      "@id": "http://schema.org/telephone",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tijdstip": {
+      "@id": "https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/#tijdstip",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "titel": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "toegankelijkheid": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.toegankelijkheid",
+      "@type": "@id"
+    },
+    "totaleCapaciteit": {
+      "@id": "http://schema.mobivoc.org/#totalCapacity",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "trefwoord": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/dcat#keyword",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "verbondenAan": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Buitenruimte.verbondenAan",
+      "@type": "@id"
+    },
+    "voertuigtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept",
+      "@type": "@id"
+    },
+    "voorkeursnaam": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "werkingsgebied": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/spatial",
+      "@type": "@id"
+    }
+  }
 }
