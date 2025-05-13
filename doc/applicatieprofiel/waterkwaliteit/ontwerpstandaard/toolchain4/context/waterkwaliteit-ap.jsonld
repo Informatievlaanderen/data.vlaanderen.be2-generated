@@ -1,357 +1,548 @@
 {
   "@context": {
-    "Agens": "https://data.vlaanderen.be/ns/waterkwaliteit#Agens",
-    "Agent": "http://purl.org/dc/terms/Agent",
-    "Any": "http://www.w3.org/2000/01/rdf-schema#Resource",
-    "Bemonsteringsobject": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
-    "Bemonsteringsobject.identificator": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringsobject.identificator",
-      "@type": "http://www.w3.org/ns/adms#Identifier"
-    },
-    "Bemonsteringsobject.parameter": {
-      "@container": "@set",
-      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter",
-      "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
-    },
-    "Bemonsteringsobjecttype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Bemonsteringsobjectverzameling": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection",
-    "BenoemdeWaarde": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
-    "BioIndicatorObservatie": "https://purl.eu/ns/air-and-water/water#BioIndicatorObservation",
-    "BioIndicatorObservatie.geobserveerdKenmerk": {
-      "@id": "https://purl.eu/ns/air-and-water/water#BioIndicatorObservation.observedProperty",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "BioIndicatorType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "BiotischeIndexObservatie": "https://purl.eu/ns/air-and-water/water#BioticIndexObservation",
-    "BiotischeIndexObservatie.geobserveerdKenmerk": {
-      "@id": "https://purl.eu/ns/air-and-water/water#BioticIndexObservation.observedProperty",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "BiotischeIndexType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "ChemischAgensConcentratieObservatie": "https://purl.eu/ns/air-and-water/water#ChemicalAgentConcentrationObservation",
-    "ChemischAgensConcentratieObservatie.agens": {
-      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensConcentratieObservatie.agens",
-      "@type": "https://data.vlaanderen.be/ns/waterkwaliteit#Agens"
-    },
-    "ChemischAgensConcentratieObservatie.geobserveerdKenmerk": {
-      "@id": "https://purl.eu/ns/air-and-water/water#ChemicalAgentConcentrationObservation.observedProperty",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "ChemischAgensKenmerkType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "ChemischAgensVrachtObservatie": "https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensVrachtObservatie",
-    "ChemischAgensVrachtObservatie.agens": {
-      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensVrachtObservatie.agens",
-      "@type": "https://data.vlaanderen.be/ns/waterkwaliteit#Agens"
-    },
-    "ChemischAgensVrachtObservatie.geobserveerdKenmerk": {
-      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensVrachtObservatie.geobserveerdKenmerk",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "Emissie": "https://data.vlaanderen.be/ns/waterkwaliteit#Emissie",
-    "EmissieType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Emissiebron": "https://data.vlaanderen.be/ns/waterkwaliteit#Emissiebron",
-    "Emissiebron.identificator": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#identificator",
-      "@type": "http://www.w3.org/ns/adms#Identifier"
-    },
-    "Emissiebron.type": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "EmissiebronType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Emissiewijzetype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "GeneriekeNaam": "http://def.isotc211.org/iso19103/2005/Names#GenericName",
-    "GeobserveerdWeer": "https://data.vlaanderen.be/ns/waterkwaliteit#GeobserveerdWeer",
-    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
-    "Herkomst": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage",
-    "HydromorfologischIndexType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "HydromorfologischeIndexObservatie": "https://data.vlaanderen.be/ns/waterkwaliteit#HydromorfologischeIndexObservatie",
-    "HydromorfologischeIndexObservatie.geobserveerdKenmerk": {
-      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#HydromorfologischeIndexObservatie.geobserveerdKenmerk",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "Identificator": "http://www.w3.org/ns/adms#Identifier",
-    "Kenmerktype": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
-    "Kwaliteitselement": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element",
-    "Locatie": "http://www.w3.org/ns/prov#Location",
-    "Maat": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
-    "MatrixType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Meetnet": "https://data.vlaanderen.be/ns/waterkwaliteit#Meetnet",
-    "Meetnet.lid": {
-      "@container": "@set",
-      "@id": "http://todo.com/lid",
-      "@type": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature"
-    },
-    "Meetpunt": "https://data.vlaanderen.be/ns/waterkwaliteit#Meetpunt",
-    "Metadata": "http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata",
-    "Meting": "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement",
-    "Moment": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant",
-    "Object": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
-    "Observatie": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
-    "Observatie.fenomeentijd": {
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
-      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
-    },
-    "Observatie.geobserveerdObject": {
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
-      "@type": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
-    },
-    "Observatie.identificator": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.identificator",
-      "@type": "http://www.w3.org/ns/adms#Identifier"
-    },
-    "Observatie.parameter": {
-      "@container": "@set",
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter",
-      "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
-    },
-    "Observatie.uitgevoerdDoor": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "Observatiecontext": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext",
-    "Observatieprocedure": "http://www.w3.org/ns/sosa/Procedure",
-    "Observatietype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Observatieverzameling": "http://www.w3.org/ns/sosa/ObservationCollection",
-    "Opmeting": "https://data.vlaanderen.be/ns/generiek#Opmeting",
-    "Opmeting.uitgevoerdDoor": {
-      "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "Opmetingtype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Periode": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period",
-    "PositioneleNauwkeurigheid": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy",
-    "Procedure": "http://www.w3.org/ns/sosa/Procedure",
-    "Proces": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process",
-    "RuimtelijkBemonsteringsobject": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
-    "Sensor": "http://www.w3.org/ns/sosa/Sensor",
-    "Soort": "https://data.vlaanderen.be/ns/waterkwaliteit#Soort",
-    "StatistischeObservatie": "https://data.vlaanderen.be/ns/waterkwaliteit#StatistischeObservatie",
-    "Systeem": "http://www.w3.org/ns/ssn/System",
-    "TemporeleEntiteit": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object",
-    "WaterObject": "https://purl.eu/ns/air-and-water/water#WaterFeature",
-    "WaterObject.type": {
-      "@id": "https://purl.eu/ns/air-and-water/water#Waterfeature.type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "WaterObjectType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "WaterkwaliteitObservatieVerzameling": "https://data.vlaanderen.be/ns/waterkwaliteit#WaterkwaliteitObservatieVerzameling",
-    "WaterkwaliteitObservatieVerzameling.fenomeentijd": {
-      "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
-      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
-    },
-    "WaterkwaliteitObservatieVerzameling.geobserveerdObject": {
-      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-      "@type": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
-    },
-    "WaterkwaliteitObservatieVerzameling.lid": {
-      "@container": "@set",
-      "@id": "https://www.w3.org/ns/sosa/hasMember",
-      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
-    },
-    "WaterkwaliteitParameterObservatie": "https://purl.eu/ns/air-and-water/water#WaterQualityParameterObservation",
-    "WaterkwaliteitParameterObservatie.geobserveerdKenmerk": {
-      "@id": "https://purl.eu/ns/air-and-water/water#WaterQualityParameterObservation.observedProperty",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "WaterkwaliteitParameterType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "WettelijkKader": "https://data.vlaanderen.be/ns/generiek#WettelijkKader",
-    "bioIndicator": {
-      "@id": "https://purl.eu/ns/air-and-water/water#BioIndicatorObservation.bioIndicator",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
-    },
-    "biotischeIndex": {
-      "@id": "https://purl.eu/ns/air-and-water/water#BioticIndexObservation.bioticIndex",
-      "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
-    },
-    "chemischAgensConcentratie": {
-      "@id": "https://purl.eu/ns/air-and-water/water#ChemicalAgentConcentrationObservation.chemicalAgentConcentration",
-      "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
-    },
-    "chemischAgensVracht": {
-      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#chemischAgensVracht",
-      "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
-    },
-    "domein": {
-      "@container": "@set",
-      "@id": "http://def.isotc211.org/iso19150/-2/2012/base#Domain",
-      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
-    },
-    "emissiewijze": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "fenomeen": {
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
-      "@type": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
-    },
-    "geassocieerdeObservatie": {
-      "@container": "@set",
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
-      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
-    },
-    "gebruikteProcedure": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
-      "@type": "http://www.w3.org/ns/sosa/Procedure"
-    },
-    "gehostPlatform": {
-      "@container": "@set",
-      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure",
-      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process"
-    },
-    "geldigeTijd": {
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime",
-      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period"
-    },
-    "geometrie": {
-      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape",
-      "@type": "http://www.w3.org/ns/locn#Geometry"
-    },
-    "gml": {
-      "@id": "http://www.opengis.net/ont/geosparql#asGML",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "herkomst": {
-      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage",
-      "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage"
-    },
-    "hydromorfologischeIndex": {
-      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#hydromorfologischeIndex",
-      "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
-    },
-    "implementeert": {
-      "@id": "http://www.w3.org/ns/ssn/implements",
-      "@type": "http://www.w3.org/ns/sosa/Procedure"
-    },
-    "isGeobserveerdMet": {
-      "@container": "@set",
-      "@id": "http://todo.com/isGeobserveerdMet",
-      "@type": "http://www.w3.org/ns/sosa/Sensor"
-    },
-    "locatie": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#locatie",
-      "@type": "http://www.w3.org/ns/prov#Location"
-    },
-    "matrix": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#matrix",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "metadata": {
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.metadata",
-      "@type": "http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata"
-    },
-    "methode": {
-      "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "naam": {
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name",
-      "@type": "http://def.isotc211.org/iso19103/2005/Names#GenericName"
-    },
-    "observatie(Source)": {
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.source",
-      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
-    },
-    "observatie(Target)": {
-      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.target",
-      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
-    },
-    "ontvanger": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#ontvanger",
-      "@type": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
-    },
-    "ontwerp": {
-      "@container": "@set",
-      "@id": "http://def.isotc211.org/iso19150/-2/2012/base#Design",
-      "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
-    },
-    "opmeting": {
-      "@id": "https://data.vlaanderen.be/ns/generiek#opmeting",
-      "@type": "https://data.vlaanderen.be/ns/generiek#Opmeting"
-    },
-    "periode": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#periode",
-      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period"
-    },
-    "positioneleNauwkeurigheid": {
-      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.positionalAccuracy",
-      "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy"
-    },
-    "refGeobserveerdWeer": {
-      "@id": "https://purl.eu/ns/air-and-water/water#WaterQualityObservationCollection.refWeatherObserved",
-      "@type": "https://data.vlaanderen.be/ns/waterkwaliteit#GeobserveerdWeer"
-    },
-    "resultaat": {
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
-    },
-    "resultaatkwaliteit": {
-      "@container": "@set",
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
-      "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element"
-    },
-    "resultaattijd": {
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
-      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant"
-    },
-    "rol": {
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role",
-      "@type": "http://def.isotc211.org/iso19103/2005/Names#GenericName"
-    },
-    "soort": {
-      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#soort",
-      "@type": "https://data.vlaanderen.be/ns/waterkwaliteit#Soort"
-    },
-    "type": {
-      "@id": "http://purl.org/dc/terms/type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "uitgestotenDoor": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#uitgestotenDoor",
-      "@type": "https://data.vlaanderen.be/ns/waterkwaliteit#Emissiebron"
-    },
-    "uitgevoerdMetSensor": {
-      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
-      "@type": "http://www.w3.org/ns/sosa/Sensor"
-    },
-    "verantwoordelijke": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#verantwoordelijke",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "verzameling": {
-      "@container": "@set",
-      "@id": "http://todo/",
-      "@type": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
-    },
-    "waarde": {
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
-    },
-    "waterkwaliteitParameterResultaat": {
-      "@id": "https://purl.eu/ns/air-and-water/water#WaterQualityParameterObservation.waterQualityParameterResult",
-      "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
-    },
-    "wettelijkKader": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#wettelijkkader",
-      "@type": "https://data.vlaanderen.be/ns/generiek#WettelijkKader"
-    },
-    "wkt": {
-      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "Agens": {
+      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#Agens"
+    },
+    "Agent": {
+      "@id": "http://purl.org/dc/terms/Agent"
+    },
+    "Any": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    "Bemonsteringsobject": {
+      "@context": {
+        "herkomst": {
+          "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage",
+          "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage"
+        },
+        "identificator": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringsobject.identificator",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "ontwerp": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19150/-2/2012/base#Design",
+          "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+        },
+        "parameter": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter",
+          "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+    },
+    "Bemonsteringsobjecttype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Bemonsteringsobjectverzameling": {
+      "@context": {
+        "verzameling": {
+          "@container": "@set",
+          "@id": "http://todo/",
+          "@type": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection"
+    },
+    "BenoemdeWaarde": {
+      "@context": {
+        "naam": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name",
+          "@type": "http://def.isotc211.org/iso19103/2005/Names#GenericName"
+        },
+        "waarde": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+    },
+    "BioIndicatorObservatie": {
+      "@context": {
+        "bioIndicator": {
+          "@id": "https://purl.eu/ns/air-and-water/water#BioIndicatorObservation.bioIndicator",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        },
+        "geobserveerdKenmerk": {
+          "@id": "https://purl.eu/ns/air-and-water/water#BioIndicatorObservation.observedProperty",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "soort": {
+          "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#soort",
+          "@type": "https://data.vlaanderen.be/ns/waterkwaliteit#Soort"
+        }
+      },
+      "@id": "https://purl.eu/ns/air-and-water/water#BioIndicatorObservation"
+    },
+    "BioIndicatorType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "BiotischeIndexObservatie": {
+      "@context": {
+        "biotischeIndex": {
+          "@id": "https://purl.eu/ns/air-and-water/water#BioticIndexObservation.bioticIndex",
+          "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+        },
+        "geobserveerdKenmerk": {
+          "@id": "https://purl.eu/ns/air-and-water/water#BioticIndexObservation.observedProperty",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://purl.eu/ns/air-and-water/water#BioticIndexObservation"
+    },
+    "BiotischeIndexType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "ChemischAgensConcentratieObservatie": {
+      "@context": {
+        "agens": {
+          "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensConcentratieObservatie.agens",
+          "@type": "https://data.vlaanderen.be/ns/waterkwaliteit#Agens"
+        },
+        "chemischAgensConcentratie": {
+          "@id": "https://purl.eu/ns/air-and-water/water#ChemicalAgentConcentrationObservation.chemicalAgentConcentration",
+          "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+        },
+        "geobserveerdKenmerk": {
+          "@id": "https://purl.eu/ns/air-and-water/water#ChemicalAgentConcentrationObservation.observedProperty",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://purl.eu/ns/air-and-water/water#ChemicalAgentConcentrationObservation"
+    },
+    "ChemischAgensKenmerkType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "ChemischAgensVrachtObservatie": {
+      "@context": {
+        "agens": {
+          "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensVrachtObservatie.agens",
+          "@type": "https://data.vlaanderen.be/ns/waterkwaliteit#Agens"
+        },
+        "chemischAgensVracht": {
+          "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#chemischAgensVracht",
+          "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+        },
+        "geobserveerdKenmerk": {
+          "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensVrachtObservatie.geobserveerdKenmerk",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#ChemischAgensVrachtObservatie"
+    },
+    "Emissie": {
+      "@context": {
+        "emissiewijze": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "matrix": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#matrix",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "periode": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#periode",
+          "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "uitgestotenDoor": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#uitgestotenDoor",
+          "@type": "https://data.vlaanderen.be/ns/waterkwaliteit#Emissiebron"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#Emissie"
+    },
+    "EmissieType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Emissiebron": {
+      "@context": {
+        "identificator": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#identificator",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "locatie": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#locatie",
+          "@type": "http://www.w3.org/ns/prov#Location"
+        },
+        "ontvanger": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#ontvanger",
+          "@type": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "verantwoordelijke": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#verantwoordelijke",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "wettelijkKader": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#wettelijkkader",
+          "@type": "https://data.vlaanderen.be/ns/generiek#WettelijkKader"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#Emissiebron"
+    },
+    "EmissiebronType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Emissiewijzetype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "GeneriekeNaam": {
+      "@id": "http://def.isotc211.org/iso19103/2005/Names#GenericName"
+    },
+    "GeobserveerdWeer": {
+      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#GeobserveerdWeer"
+    },
+    "Geometrie": {
+      "@context": {
+        "gml": {
+          "@id": "http://www.opengis.net/ont/geosparql#asGML",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "opmeting": {
+          "@id": "https://data.vlaanderen.be/ns/generiek#opmeting",
+          "@type": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+        },
+        "wkt": {
+          "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      },
+      "@id": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "Herkomst": {
+      "@id": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage"
+    },
+    "HydromorfologischIndexType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "HydromorfologischeIndexObservatie": {
+      "@context": {
+        "geobserveerdKenmerk": {
+          "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#HydromorfologischeIndexObservatie.geobserveerdKenmerk",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "hydromorfologischeIndex": {
+          "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#hydromorfologischeIndex",
+          "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#HydromorfologischeIndexObservatie"
+    },
+    "Identificator": {
+      "@id": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Kenmerktype": {
+      "@context": {
+        "isGeobserveerdMet": {
+          "@container": "@set",
+          "@id": "http://todo.com/isGeobserveerdMet",
+          "@type": "http://www.w3.org/ns/sosa/Sensor"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
+    },
+    "Kwaliteitselement": {
+      "@id": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element"
+    },
+    "Locatie": {
+      "@id": "http://www.w3.org/ns/prov#Location"
+    },
+    "Maat": {
+      "@id": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+    },
+    "MatrixType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Meetnet": {
+      "@context": {
+        "lid": {
+          "@container": "@set",
+          "@id": "http://todo.com/lid",
+          "@type": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#Meetnet"
+    },
+    "Meetpunt": {
+      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#Meetpunt"
+    },
+    "Metadata": {
+      "@id": "http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata"
+    },
+    "Meting": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement"
+    },
+    "Moment": {
+      "@id": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant"
+    },
+    "Object": {
+      "@context": {
+        "domein": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19150/-2/2012/base#Domain",
+          "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+    },
+    "Observatie": {
+      "@context": {
+        "domein": {
+          "@id": "http://def.isotc211.org/iso19150/-2/2012/base#Domain",
+          "@type": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+        },
+        "fenomeen": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+          "@type": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
+        },
+        "fenomeentijd": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+          "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
+        },
+        "geassocieerdeObservatie": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+          "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+        },
+        "gebruikteProcedure": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+          "@type": "http://www.w3.org/ns/sosa/Procedure"
+        },
+        "geldigeTijd": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime",
+          "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period"
+        },
+        "identificator": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.identificator",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "metadata": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.metadata",
+          "@type": "http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata"
+        },
+        "parameter": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter",
+          "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+        },
+        "resultaat": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        },
+        "resultaatkwaliteit": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
+          "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element"
+        },
+        "resultaattijd": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
+          "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "uitgevoerdDoor": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "uitgevoerdMetSensor": {
+          "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+          "@type": "http://www.w3.org/ns/sosa/Sensor"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+    },
+    "Observatiecontext": {
+      "@context": {
+        "observatie(Source)": {
+          "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.source",
+          "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+        },
+        "observatie(Target)": {
+          "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.target",
+          "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+        },
+        "rol": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role",
+          "@type": "http://def.isotc211.org/iso19103/2005/Names#GenericName"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext"
+    },
+    "Observatieprocedure": {
+      "@context": {
+        "geïMplementeerdMet": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/ssn/implementedBy",
+          "@type": "http://www.w3.org/ns/sosa/Sensor"
+        }
+      },
+      "@id": "http://www.w3.org/ns/sosa/Procedure"
+    },
+    "Observatietype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Observatieverzameling": {
+      "@id": "http://www.w3.org/ns/sosa/ObservationCollection"
+    },
+    "Opmeting": {
+      "@context": {
+        "methode": {
+          "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "uitgevoerdDoor": {
+          "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor",
+          "@type": "http://purl.org/dc/terms/Agent"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+    },
+    "Opmetingtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Periode": {
+      "@id": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period"
+    },
+    "PositioneleNauwkeurigheid": {
+      "@id": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy"
+    },
+    "Procedure": {
+      "@id": "http://www.w3.org/ns/sosa/Procedure"
+    },
+    "Proces": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process"
+    },
+    "RuimtelijkBemonsteringsobject": {
+      "@context": {
+        "gehostPlatform": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure",
+          "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process"
+        },
+        "geometrie": {
+          "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape",
+          "@type": "http://www.w3.org/ns/locn#Geometry"
+        },
+        "positioneleNauwkeurigheid": {
+          "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.positionalAccuracy",
+          "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature"
+    },
+    "Sensor": {
+      "@context": {
+        "implementeert": {
+          "@id": "http://www.w3.org/ns/ssn/implements",
+          "@type": "http://www.w3.org/ns/sosa/Procedure"
+        },
+        "observeert": {
+          "@container": "@set",
+          "@id": "http://todo.com/observeert",
+          "@type": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
+        },
+        "uitgevoerdeObservatie": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/madeObservation",
+          "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+        }
+      },
+      "@id": "http://www.w3.org/ns/sosa/Sensor"
+    },
+    "Soort": {
+      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#Soort"
+    },
+    "StatistischeObservatie": {
+      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#StatistischeObservatie"
+    },
+    "Systeem": {
+      "@id": "http://www.w3.org/ns/ssn/System"
+    },
+    "TemporeleEntiteit": {
+      "@id": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
+    },
+    "WaterObject": {
+      "@context": {
+        "type": {
+          "@id": "https://purl.eu/ns/air-and-water/water#Waterfeature.type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://purl.eu/ns/air-and-water/water#WaterFeature"
+    },
+    "WaterObjectType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "WaterkwaliteitObservatieVerzameling": {
+      "@context": {
+        "fenomeentijd": {
+          "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
+          "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
+        },
+        "geobserveerdObject": {
+          "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+          "@type": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature"
+        },
+        "lid": {
+          "@container": "@set",
+          "@id": "https://www.w3.org/ns/sosa/hasMember",
+          "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+        },
+        "refGeobserveerdWeer": {
+          "@id": "https://purl.eu/ns/air-and-water/water#WaterQualityObservationCollection.refWeatherObserved",
+          "@type": "https://data.vlaanderen.be/ns/waterkwaliteit#GeobserveerdWeer"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/waterkwaliteit#WaterkwaliteitObservatieVerzameling"
+    },
+    "WaterkwaliteitParameterObservatie": {
+      "@context": {
+        "geobserveerdKenmerk": {
+          "@id": "https://purl.eu/ns/air-and-water/water#WaterQualityParameterObservation.observedProperty",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "waterkwaliteitParameterResultaat": {
+          "@id": "https://purl.eu/ns/air-and-water/water#WaterQualityParameterObservation.waterQualityParameterResult",
+          "@type": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure"
+        }
+      },
+      "@id": "https://purl.eu/ns/air-and-water/water#WaterQualityParameterObservation"
+    },
+    "WaterkwaliteitParameterType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "WettelijkKader": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#WettelijkKader"
     }
   }
 }
