@@ -2,123 +2,123 @@
 
 #||# -------------------------------------
 
-2025-05-13T11:03:43.530Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Generiek:Gemeente:(Gemeente -> Object))
+2025-05-13T11:43:12.778Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2025-05-13T11:03:43.531Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2025-05-13T11:43:12.780Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-05-13T11:03:43.532Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Generiek:Agent:rapporteertAan)
+2025-05-13T11:43:12.780Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-05-13T11:03:43.532Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:StopPlace:(StopPlace -> Country))
+2025-05-13T11:43:12.780Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:StopPlace:(StopPlace -> Country))
 
-2025-05-13T11:03:43.532Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:ORG:Organization:heeftSuborganisatie)
+2025-05-13T11:43:12.780Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:ORG:Organization:heeftSuborganisatie)
 
-2025-05-13T11:03:43.532Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:ORG:Organization:isGeassocieerdMet)
+2025-05-13T11:43:12.780Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:ORG:Organization:isGeassocieerdMet)
 
-2025-05-13T11:03:43.532Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:ORG:Organization:isSuborganisatieVan)
+2025-05-13T11:43:12.780Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:ORG:Organization:isSuborganisatieVan)
 
-2025-05-13T11:03:43.535Z info: Connector Model:Domain Model:TimetablesAndPlanning:GroupOfStopPlaces:(GroupOfStopPlaces -> StopPlace) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:43:12.784Z info: Connector Model:Domain Model:TimetablesAndPlanning:GroupOfStopPlaces:(GroupOfStopPlaces -> StopPlace) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:43.535Z info: Connector Model:Domain Model:TimetablesAndPlanning:Operator:(Operator -> Organization) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:43:12.785Z info: Connector Model:Domain Model:TimetablesAndPlanning:Operator:(Operator -> Organization) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:43.536Z info: Connector Model:Domain Model:TimetablesAndPlanning:TopographicPlace:(TopographicPlace -> TopographicPlace) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:43:12.785Z info: Connector Model:Domain Model:TimetablesAndPlanning:TopographicPlace:(TopographicPlace -> TopographicPlace) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:43.536Z info: Connector Model:Domain Model:TimetablesAndPlanning:TopographicPlace:(TopographicPlace -> TopographicPlace) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:43:12.785Z info: Connector Model:Domain Model:TimetablesAndPlanning:TopographicPlace:(TopographicPlace -> TopographicPlace) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:43.536Z info: Connector Model:Domain Model:TimetablesAndPlanning:StopPlaceEntrance:(StopPlaceEntrance -> Entrance) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:43:12.786Z info: Connector Model:Domain Model:TimetablesAndPlanning:StopPlaceEntrance:(StopPlaceEntrance -> Entrance) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:43.536Z info: Connector Model:Domain Model:OpenGIS-SF:Point2:(Point2 -> Geometry) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:43:12.786Z info: Connector Model:Domain Model:OpenGIS-SF:Point2:(Point2 -> Geometry) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:43.536Z info: Connector Model:Domain Model:ORG:FormalOrganization:(FormalOrganization -> Organization) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:43:12.786Z info: Connector Model:Domain Model:ORG:FormalOrganization:(FormalOrganization -> Organization) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:43.536Z info: Connector Model:Domain Model:REGORG:RegisteredOrganization:(RegisteredOrganization -> FormalOrganization) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:43:12.786Z info: Connector Model:Domain Model:REGORG:RegisteredOrganization:(RegisteredOrganization -> FormalOrganization) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:43.537Z info: Connector Model:Domain Model:OpenGIS-SF:Polygon:(Polygon -> Geometry) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:43:12.786Z info: Connector Model:Domain Model:OpenGIS-SF:Polygon:(Polygon -> Geometry) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:43.537Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.787Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.537Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.787Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.537Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:TransportEnAanbod) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.787Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:TransportEnAanbod) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.537Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:INSPIRE-Transportnetwerk) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.787Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:INSPIRE-Transportnetwerk) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.537Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Objectdiagram-DoorkomstenLijn5CentraalStation) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.787Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Objectdiagram-DoorkomstenLijn5CentraalStation) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.787Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagram-Lijn5) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.787Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagram-Lijn5) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagram-DoorkomstenLijn5HermanDebrouxRit9u03) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.787Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagram-DoorkomstenLijn5HermanDebrouxRit9u03) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Timetables) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.787Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Timetables) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:StopPlaces) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.787Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:StopPlaces) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagram-CentraalStation01) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.787Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagram-CentraalStation01) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagram-CentraalStation02) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.787Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagram-CentraalStation02) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:VehicleScheduling) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.787Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:VehicleScheduling) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagram-CentraalStation03) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.788Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagram-CentraalStation03) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagram-DeLijn-block264-6407/51152) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.788Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:Objectdiagram-DeLijn-block264-6407/51152) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.788Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Dummy) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.788Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Dummy) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OpenGIS-SF) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.788Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OpenGIS-SF) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:XML-Schema) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.788Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:XML-Schema) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:locn) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.788Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:locn) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:REGORG) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.788Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:REGORG) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ADMS) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.788Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ADMS) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:BestAdd) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.788Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:BestAdd) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.538Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Schema) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:43:12.788Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Schema) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:43.543Z warn: [ConnectorConverterHandler]: Connector (containing) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.795Z warn: [ConnectorConverterHandler]: Connector (containing) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.543Z warn: [ConnectorConverterHandler]: Connector (enteredThrough) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.795Z warn: [ConnectorConverterHandler]: Connector (enteredThrough) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.543Z warn: [ConnectorConverterHandler]: Connector (scheduledStopPoint) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.795Z warn: [ConnectorConverterHandler]: Connector (scheduledStopPoint) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.544Z warn: [ConnectorConverterHandler]: Connector (stopPlace) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.795Z warn: [ConnectorConverterHandler]: Connector (stopPlace) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.544Z warn: [ConnectorConverterHandler]: Connector (PassengerStopAssignment.ScheduledStopPoint) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.795Z warn: [ConnectorConverterHandler]: Connector (PassengerStopAssignment.ScheduledStopPoint) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.544Z warn: [ConnectorConverterHandler]: Connector (PassengerStopAssignment.StopPlace) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.795Z warn: [ConnectorConverterHandler]: Connector (PassengerStopAssignment.StopPlace) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.544Z warn: [ConnectorConverterHandler]: Connector (member) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.795Z warn: [ConnectorConverterHandler]: Connector (member) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.544Z warn: [ConnectorConverterHandler]: Connector (parentQuay) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.795Z warn: [ConnectorConverterHandler]: Connector (parentQuay) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.544Z warn: [ConnectorConverterHandler]: Connector (servedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.795Z warn: [ConnectorConverterHandler]: Connector (servedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.544Z warn: [ConnectorConverterHandler]: Connector (servesTopographicPlace) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.796Z warn: [ConnectorConverterHandler]: Connector (servesTopographicPlace) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.544Z warn: [ConnectorConverterHandler]: Connector (mainTerminus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.796Z warn: [ConnectorConverterHandler]: Connector (mainTerminus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.544Z warn: [ConnectorConverterHandler]: Connector (for) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.796Z warn: [ConnectorConverterHandler]: Connector (for) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.544Z warn: [ConnectorConverterHandler]: Connector (contained) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.796Z warn: [ConnectorConverterHandler]: Connector (contained) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.544Z warn: [ConnectorConverterHandler]: Connector (in) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.796Z warn: [ConnectorConverterHandler]: Connector (in) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.544Z warn: [ConnectorConverterHandler]: Connector (servedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.796Z warn: [ConnectorConverterHandler]: Connector (servedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.544Z warn: [ConnectorConverterHandler]: Connector (servesPointOfInterest) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.796Z warn: [ConnectorConverterHandler]: Connector (servesPointOfInterest) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.544Z warn: [ConnectorConverterHandler]: Connector (parentTopographicPlace) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.796Z warn: [ConnectorConverterHandler]: Connector (parentTopographicPlace) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.544Z warn: [ConnectorConverterHandler]: Connector (containedIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:43:12.796Z warn: [ConnectorConverterHandler]: Connector (containedIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T11:03:43.590Z warn: [ConverterHandler]: Entity with path Model:Domain Model:Schema:QuantitativeValue:unit has already a value for ap-usageNote-nl in language nl, but will be overwritten.
+2025-05-13T11:43:12.851Z warn: [ConverterHandler]: Entity with path Model:Domain Model:Schema:QuantitativeValue:unit has already a value for ap-usageNote-nl in language nl, but will be overwritten.
 
 #||# -------------------------------------
 

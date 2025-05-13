@@ -1,227 +1,366 @@
 {
   "@context": {
-    "Agent": "http://purl.org/dc/terms/Agent",
-    "Agent.heeftParticiperende": {
-      "@container": "@set",
-      "@id": "http://todo.com/Agent.heeftParticiperende",
-      "@type": "http://purl.org/vocab/cpsv#PublicService"
+    "Agent": {
+      "@context": {
+        "dienstverlener": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/serviceProvider",
+          "@type": "http://purl.org/vocab/cpsv#PublicService"
+        },
+        "heeftParticiperende": {
+          "@container": "@set",
+          "@id": "http://todo.com/Agent.heeftParticiperende",
+          "@type": "http://purl.org/vocab/cpsv#PublicService"
+        },
+        "verschaftCriteriumAntwoord": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/providesRequirementResponse",
+          "@type": "http://data.europa.eu/m8g/RequirementResponse"
+        },
+        "wordtGeconsumeerdDoor": {
+          "@container": "@set",
+          "@id": "http://todo.com/Agent.wordtGeconsumeerdDoor",
+          "@type": "http://purl.org/vocab/cpsv#PublicService"
+        }
+      },
+      "@id": "http://purl.org/dc/terms/Agent"
     },
-    "Agent.wordtGeconsumeerdDoor": {
-      "@container": "@set",
-      "@id": "http://todo.com/Agent.wordtGeconsumeerdDoor",
-      "@type": "http://purl.org/vocab/cpsv#PublicService"
+    "Bewijs": {
+      "@context": {
+        "behoortTotAgent": {
+          "@id": "http://data.europa.eu/m8g/belongsToAgent",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "betrouwbaarheidsniveau": {
+          "@id": "https://data.vlaanderen.be/ns/transactie#betrouwbaarheidsniveau",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "bewezenDoor": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/provenByEvidence",
+          "@type": "http://data.europa.eu/m8g/RequirementResponse"
+        },
+        "heeftInput": {
+          "@container": "@set",
+          "@id": "http://purl.org/vocab/cpsv#hasInput",
+          "@type": "http://purl.org/vocab/cpsv#PublicService"
+        },
+        "pagina": {
+          "@id": "http://xmlns.com/foaf/0.1/page",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "referentie": {
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "taal": {
+          "@id": "http://purl.org/dc/terms/language",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "titel": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "uitgegevenDoorOrganisatie": {
+          "@id": "http://data.europa.eu/m8g/issuedByOrganisation",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/Evidence"
     },
-    "Bewijs": "http://data.europa.eu/m8g/Evidence",
-    "Boolean": "http://www.w3.org/2001/XMLSchema#boolean",
-    "CriteriumAntwoord": "http://data.europa.eu/m8g/RequirementResponse",
-    "Criteriumvereiste": "http://data.europa.eu/m8g/CriterionRequirement",
-    "Date": "http://www.w3.org/2001/XMLSchema#date",
-    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
-    "Dossier": "https://lod.milieuinfo.be/ns/dossier",
-    "Double": "http://www.w3.org/2001/XMLSchema#double",
-    "Hoedanigheid": "https://data.vlaanderen.be/ns/organisatie#Hoedanigheid",
-    "Identificator": "http://www.w3.org/ns/adms#Identifier",
-    "Kost": "http://data.europa.eu/m8g/Cost",
-    "Organisatie": "http://www.w3.org/ns/org#Organization",
-    "Output": "http://data.europa.eu/m8g/Output",
-    "Participatie": "http://data.europa.eu/m8g/Participation",
-    "Persoon": "http://www.w3.org/ns/person#Person",
-    "PubliekeDienstverlening": "http://purl.org/vocab/cpsv#PublicService",
-    "PubliekeDienstverlening(Aanbod)": "http://purl.org/vocab/cpsv#PublicService",
-    "PubliekeDienstverlening(Aanbod).isInstantieVan": {
-      "@id": "https://data.vlaanderen.be/ns/transactie#PubliekeDienstverlening(Aanbod).isInstantieVan",
-      "@type": "http://purl.org/vocab/cpsv#PublicService"
+    "Boolean": {
+      "@id": "http://www.w3.org/2001/XMLSchema#boolean"
     },
-    "PubliekeDienstverlening.heeftParticiperende": {
-      "@container": "@set",
-      "@id": "http://todo.com/PubliekeDienstverlening(Consumptie).heeftParticiperende",
-      "@type": "http://purl.org/dc/terms/Agent"
+    "CriteriumAntwoord": {
+      "@context": {
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "bewezenDoor": {
+          "@id": "http://data.europa.eu/m8g/provenByEvidence",
+          "@type": "http://data.europa.eu/m8g/Evidence"
+        },
+        "referentie": {
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "valideertCriteriumVereiste": {
+          "@id": "http://data.europa.eu/m8g/validatesCriterionRequirement",
+          "@type": "http://data.europa.eu/m8g/CriterionRequirement"
+        },
+        "vanToepassingOpTijdsinterval": {
+          "@id": "http://data.europa.eu/m8g/appliesToPeriodOfTime",
+          "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+        },
+        "waarde": {
+          "@id": "http://data.europa.eu/m8g/value",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/RequirementResponse"
     },
-    "PubliekeDienstverlening.heeftStatus": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/transactie#PubliekeDienstverlening(Consumptie).heeftStatus",
-      "@type": "https://data.vlaanderen.be/ns/transactie#Status"
+    "Criteriumvereiste": {
+      "@id": "http://data.europa.eu/m8g/CriterionRequirement"
     },
-    "PubliekeDienstverlening.isInstantieVan": {
-      "@id": "https://data.vlaanderen.be/ns/transactie#PubliekeDienstverlening(Consumptie).isInstantieVan",
-      "@type": "http://purl.org/vocab/cpsv#PublicService"
+    "Date": {
+      "@id": "http://www.w3.org/2001/XMLSchema#date"
     },
-    "PubliekeDienstverlening.wordtGeconsumeerdDoor": {
-      "@id": "http://todo.com/PubliekeDienstverlening(Consumptie).wordtGeconsumeerdDoor",
-      "@type": "http://purl.org/dc/terms/Agent"
+    "DateTime": {
+      "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
-    "PubliekeOrganisatie": "http://data.europa.eu/m8g/PublicOrganisation",
-    "Status": "https://data.vlaanderen.be/ns/transactie#Status",
-    "Status.heeftStatus": {
-      "@id": "https://data.vlaanderen.be/ns/transactie#Status.heeftStatus",
-      "@type": "http://purl.org/vocab/cpsv#PublicService"
+    "Dossier": {
+      "@id": "https://lod.milieuinfo.be/ns/dossier"
     },
-    "String": "http://www.w3.org/2001/XMLSchema#string",
-    "Taalcode": "http://www.w3.org/2004/02/skos/core#Concept",
-    "TijdsInterval": "http://data.europa.eu/m8g/PeriodOfTime",
-    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
-    "actie": {
-      "@id": "https://data.vlaanderen.be/ns/transactie#actie",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    "Double": {
+      "@id": "http://www.w3.org/2001/XMLSchema#double"
     },
-    "actieNodig": {
-      "@id": "https://data.vlaanderen.be/ns/transactie#actieNodig",
-      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    "Hoedanigheid": {
+      "@context": {
+        "contactinfo": {
+          "@id": "https://data.vlaanderen.be/ns/organisatie#contactinfo",
+          "@type": "http://schema.org/ContactPoint"
+        },
+        "isLidVan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#memberOf",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/organisatie#Hoedanigheid"
     },
-    "begin": {
-      "@id": "http://data.europa.eu/m8g/startTime",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    "Identificator": {
+      "@context": {
+        "gestructureerdeIdentificator": {
+          "@id": "https://data.vlaanderen.be/ns/generiek#gestructureerdedentificator",
+          "@type": "https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator"
+        },
+        "identificator": {
+          "@id": "http://www.w3.org/2004/02/skos/core#notation",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "toegekendDoor": {
+          "@id": "http://purl.org/dc/terms/creator",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "toegekendDoor(String)": {
+          "@id": "http://www.w3.org/ns/adms#schemaAgency",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "toegekendOp": {
+          "@id": "http://purl.org/dc/terms/issued",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "http://www.w3.org/ns/adms#Identifier"
     },
-    "behoortTotAgent": {
-      "@id": "http://data.europa.eu/m8g/belongsToAgent",
-      "@type": "http://purl.org/dc/terms/Agent"
+    "Kost": {
+      "@context": {
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "valuta": {
+          "@id": "http://data.europa.eu/m8g/currency",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "waarde": {
+          "@id": "http://data.europa.eu/m8g/value",
+          "@type": "http://www.w3.org/2001/XMLSchema#double"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/Cost"
     },
-    "beschrijving": {
-      "@id": "http://purl.org/dc/terms/description",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    "Organisatie": {
+      "@context": {
+        "isLidVan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#memberOf",
+          "@type": "https://data.vlaanderen.be/ns/organisatie#Hoedanigheid"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#Organization"
     },
-    "betrouwbaarheidsniveau": {
-      "@id": "https://data.vlaanderen.be/ns/transactie#betrouwbaarheidsniveau",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    "Output": {
+      "@context": {
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "datum": {
+          "@id": "http://purl.org/dc/terms/date",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "produceert": {
+          "@container": "@set",
+          "@id": "http://purl.org/vocab/cpsv#produces",
+          "@type": "http://purl.org/vocab/cpsv#PublicService"
+        },
+        "referentie": {
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "titel": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/Output"
     },
-    "bewezenDoor": {
-      "@id": "http://data.europa.eu/m8g/provenByEvidence",
-      "@type": "http://data.europa.eu/m8g/Evidence"
+    "Participatie": {
+      "@context": {
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "participatie.Agent": {
+          "@id": "http://todo.com/Participatie.Agent",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "participatie.PubliekeDienstverlening(Consumptie)": {
+          "@id": "http://todo.com/Participatie.PubliekeDienstverlening%20(consumptie)",
+          "@type": "http://purl.org/vocab/cpsv#PublicService"
+        },
+        "rol": {
+          "@id": "http://data.europa.eu/m8g/role",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/Participation"
     },
-    "contactinfo": {
-      "@id": "https://data.vlaanderen.be/ns/organisatie#contactinfo",
-      "@type": "http://schema.org/ContactPoint"
+    "Persoon": {
+      "@id": "http://www.w3.org/ns/person#Person"
     },
-    "datum": {
-      "@id": "http://purl.org/dc/terms/date",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    "PubliekeDienstverlening": {
+      "@context": {
+        "dienstverlener": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/serviceProvider",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "heeftInput": {
+          "@container": "@set",
+          "@id": "http://purl.org/vocab/cpsv#hasInput",
+          "@type": "http://data.europa.eu/m8g/Evidence"
+        },
+        "heeftParticiperende": {
+          "@container": "@set",
+          "@id": "http://todo.com/PubliekeDienstverlening(Consumptie).heeftParticiperende",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "heeftStatus": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/transactie#PubliekeDienstverlening(Consumptie).heeftStatus",
+          "@type": "https://data.vlaanderen.be/ns/transactie#Status"
+        },
+        "isGerelateerdMet": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/relation",
+          "@type": "http://purl.org/vocab/cpsv#PublicService"
+        },
+        "isInstantieVan": {
+          "@id": "https://data.vlaanderen.be/ns/transactie#PubliekeDienstverlening(Consumptie).isInstantieVan",
+          "@type": "http://purl.org/vocab/cpsv#PublicService"
+        },
+        "kost": {
+          "@id": "http://data.europa.eu/m8g/hasCost",
+          "@type": "http://data.europa.eu/m8g/Cost"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "produceert": {
+          "@container": "@set",
+          "@id": "http://purl.org/vocab/cpsv#produces",
+          "@type": "http://data.europa.eu/m8g/Output"
+        },
+        "taal": {
+          "@id": "http://purl.org/dc/terms/language",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "wordtGeconsumeerdDoor": {
+          "@id": "http://todo.com/PubliekeDienstverlening(Consumptie).wordtGeconsumeerdDoor",
+          "@type": "http://purl.org/dc/terms/Agent"
+        }
+      },
+      "@id": "http://purl.org/vocab/cpsv#PublicService"
     },
-    "dienstverlener": {
-      "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/serviceProvider",
-      "@type": "http://purl.org/dc/terms/Agent"
+    "PubliekeDienstverlening(Aanbod)": {
+      "@context": {
+        "heeftCriterium": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/hasCriterion",
+          "@type": "http://data.europa.eu/m8g/CriterionRequirement"
+        },
+        "isInstantieVan": {
+          "@id": "https://data.vlaanderen.be/ns/transactie#PubliekeDienstverlening(Aanbod).isInstantieVan",
+          "@type": "http://purl.org/vocab/cpsv#PublicService"
+        }
+      },
+      "@id": "http://purl.org/vocab/cpsv#PublicService"
     },
-    "einde": {
-      "@id": "http://data.europa.eu/m8g/endTime",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    "PubliekeOrganisatie": {
+      "@id": "http://data.europa.eu/m8g/PublicOrganisation"
     },
-    "gestructureerdeIdentificator": {
-      "@id": "https://data.vlaanderen.be/ns/generiek#gestructureerdedentificator",
-      "@type": "https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator"
+    "Status": {
+      "@context": {
+        "actie": {
+          "@id": "https://data.vlaanderen.be/ns/transactie#actie",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "actieNodig": {
+          "@id": "https://data.vlaanderen.be/ns/transactie#actieNodig",
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+        },
+        "heeftStatus": {
+          "@id": "https://data.vlaanderen.be/ns/transactie#Status.heeftStatus",
+          "@type": "http://purl.org/vocab/cpsv#PublicService"
+        },
+        "statusdatum": {
+          "@id": "https://data.vlaanderen.be/ns/transactie#statusWijzigingsdatum",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "streefdatum": {
+          "@id": "https://data.vlaanderen.be/ns/transactie#streefdatum",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/transactie#Status"
     },
-    "heeftCriterium": {
-      "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/hasCriterion",
-      "@type": "http://data.europa.eu/m8g/CriterionRequirement"
+    "String": {
+      "@id": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "heeftInput": {
-      "@container": "@set",
-      "@id": "http://purl.org/vocab/cpsv#hasInput",
-      "@type": "http://data.europa.eu/m8g/Evidence"
+    "Taalcode": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "identificator": {
-      "@id": "http://www.w3.org/2004/02/skos/core#notation",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "TijdsInterval": {
+      "@context": {
+        "begin": {
+          "@id": "http://data.europa.eu/m8g/startTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "einde": {
+          "@id": "http://data.europa.eu/m8g/endTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/PeriodOfTime"
     },
-    "isGerelateerdMet": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/relation",
-      "@type": "http://purl.org/vocab/cpsv#PublicService"
-    },
-    "isLidVan": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#memberOf",
-      "@type": "http://www.w3.org/ns/org#Organization"
-    },
-    "kost": {
-      "@id": "http://data.europa.eu/m8g/hasCost",
-      "@type": "http://data.europa.eu/m8g/Cost"
-    },
-    "naam": {
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "pagina": {
-      "@id": "http://xmlns.com/foaf/0.1/page",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "participatie.Agent": {
-      "@id": "http://todo.com/Participatie.agent",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "participatie.PubliekeDienstverlening(Consumptie)": {
-      "@id": "http://todo.com/Participatie.publiekeDienstverlening(Consumptie)",
-      "@type": "http://purl.org/vocab/cpsv#PublicService"
-    },
-    "produceert": {
-      "@container": "@set",
-      "@id": "http://purl.org/vocab/cpsv#produces",
-      "@type": "http://data.europa.eu/m8g/Output"
-    },
-    "referentie": {
-      "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "http://www.w3.org/ns/adms#Identifier"
-    },
-    "rol": {
-      "@id": "http://data.europa.eu/m8g/role",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "statusdatum": {
-      "@id": "https://data.vlaanderen.be/ns/transactie#statusWijzigingsdatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "streefdatum": {
-      "@id": "https://data.vlaanderen.be/ns/transactie#streefdatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "taal": {
-      "@id": "http://purl.org/dc/terms/language",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "titel": {
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "toegekendDoor": {
-      "@id": "http://purl.org/dc/terms/creator",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "toegekendDoor(String)": {
-      "@id": "http://www.w3.org/ns/adms#schemaAgency",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "toegekendOp": {
-      "@id": "http://purl.org/dc/terms/issued",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "type": {
-      "@id": "http://purl.org/dc/terms/type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "uitgegevenDoorOrganisatie": {
-      "@id": "http://data.europa.eu/m8g/issuedByOrganisation",
-      "@type": "http://www.w3.org/ns/org#Organization"
-    },
-    "valideertCriteriumVereiste": {
-      "@id": "http://data.europa.eu/m8g/validatesCriterionRequirement",
-      "@type": "http://data.europa.eu/m8g/CriterionRequirement"
-    },
-    "valuta": {
-      "@id": "http://data.europa.eu/m8g/currency",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "vanToepassingOpTijdsinterval": {
-      "@id": "http://data.europa.eu/m8g/appliesToPeriodOfTime",
-      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
-    },
-    "verschaftCriteriumAntwoord": {
-      "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/providesRequirementResponse",
-      "@type": "http://data.europa.eu/m8g/RequirementResponse"
-    },
-    "waarde": {
-      "@id": "http://data.europa.eu/m8g/value",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    "URI": {
+      "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
     }
   }
 }

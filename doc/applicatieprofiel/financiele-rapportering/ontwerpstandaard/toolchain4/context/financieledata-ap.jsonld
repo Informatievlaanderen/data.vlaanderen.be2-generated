@@ -1,500 +1,843 @@
 {
   "@context": {
-    "Aandelen": "https://data.vlaanderen.be/ns/financiele-rapportering#Aandelen",
-    "AandelenDatatype": "https://data.vlaanderen.be/ns/financiele-rapportering#AandelenDatatype",
-    "Adresvoorstelling": "http://www.w3.org/ns/locn#Address",
-    "Agent": "http://purl.org/dc/terms/Agent",
-    "AnyDatatype": "http://www.w3.org/2001/XMLSchema#anyType",
-    "BalansType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Boolean": "http://www.w3.org/2001/XMLSchema#boolean",
-    "Concept": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept",
-    "Concept.abstract": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept.abstract",
-      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    "Concept.definitie": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept.definitie",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Concept.label": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept.label",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Conceptrelatie": "https://data.vlaanderen.be/ns/financiele-rapportering#Conceptrelatie",
-    "Conceptrelatie.orde": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Conceptrelatie.orde",
-      "@type": "http://www.w3.org/2001/XMLSchema#integer"
-    },
-    "Conceptrelatie.rol": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Conceptrelatie.rol",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Conceptrelatie"
-    },
-    "Conceptrelatietype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Contactinfo": "http://schema.org/ContactPoint",
-    "Context": "https://data.vlaanderen.be/ns/financiele-rapportering#Context",
-    "Context.periode": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Context.periode",
-      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
-    },
-    "Date": "http://www.w3.org/2001/XMLSchema#date",
-    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
-    "Decimal": "http://www.w3.org/2001/XMLSchema#decimal",
-    "Dimensie": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensie",
-    "DimensieConceptrelatietype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "DimensieItemtype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Dimensieconcept": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept",
-    "Dimensieconcept.abstract": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept.abstract",
-      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    "Dimensieconcept.definitie": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept.definitie",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Dimensieconcept.label": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept.label",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Dimensieconceptrelatie": "https://data.vlaanderen.be/ns/financiele-rapportering#DimensieConceptrelatie",
-    "Dimensieconceptrelatie.orde": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconceptrelatie.orde",
-      "@type": "http://www.w3.org/2001/XMLSchema#integer"
-    },
-    "Dimensieschema": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieschema",
-    "Dossier": "https://data.vlaanderen.be/ns/dossier#Dossier",
-    "Dossier.identificator": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "http://www.w3.org/ns/adms#Identifier"
-    },
-    "Eenheid": "https://data.vlaanderen.be/ns/financiele-rapportering#Eenheid",
-    "Feit": "https://data.vlaanderen.be/ns/financiele-rapportering#Feit",
-    "FeitelijkeVereniging": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#FeitelijkeVereniging",
-    "FinancieelRapport": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport",
-    "FinancieelRapport.periode": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport.periode",
-      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
-    },
-    "GeografischeNaam": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-    "GeregistreerdPersoon": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon",
-    "GeregistreerdPersoon.registratie": {
-      "@id": "https://data.vlaanderen.be/ns/persoon#registratie",
-      "@type": "http://www.w3.org/ns/adms#Identifier"
-    },
-    "GeregistreerdeOrganisatie": "http://www.w3.org/ns/regorg#RegisteredOrganization",
-    "GeregistreerdeOrganisatie.registratie": {
-      "@id": "http://www.w3.org/ns/regorg#registration",
-      "@type": "http://www.w3.org/ns/adms#Identifier"
-    },
-    "Getal": "https://schema.org/Number",
-    "Hypercube": "https://data.vlaanderen.be/ns/financiele-rapportering#Hypercube",
-    "Hypercube.definitie": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Hypercube.definitie",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Hypercube.label": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Hypercube.label",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Identificator": "http://www.w3.org/ns/adms#Identifier",
-    "Identificator.identificator": {
-      "@id": "http://www.w3.org/2004/02/skos/core#notation",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "Informatieclassificatie": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Integer": "http://www.w3.org/2001/XMLSchema#integer",
-    "Itemtype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Moment": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant",
-    "Monetair": "https://data.vlaanderen.be/ns/financiele-rapportering#Monetair",
-    "MonetairDatatype": "https://schema.org/MonetaryAmount",
-    "Neerlegging": "https://data.vlaanderen.be/ns/financiele-rapportering#Neerlegging",
-    "Neerlegging.datum": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Neerlegging.datum",
-      "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant"
-    },
-    "NietNumeriekDatatype": "https://schema.org/QualitativeValue",
-    "NumeriekDatatype": "https://schema.org/QuantitativeValue",
-    "Opmerking": "https://data.vlaanderen.be/ns/financiele-rapportering#Opmerking",
-    "Opmerking.opmerking": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Opmerking.opmerking",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Oprichting": "http://data.europa.eu/m8g/FoundationEvent",
-    "Oprichting.datum": {
-      "@id": "http://purl.org/dc/terms/date",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Organisatie": "http://www.w3.org/ns/org#Organization",
-    "Organisatie.contactinfo": {
-      "@container": "@set",
-      "@id": "http://schema.org/contactPoint",
-      "@type": "http://schema.org/ContactPoint"
-    },
-    "Periode": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period",
-    "PeriodeType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Persoon": "http://www.w3.org/ns/person#Person",
-    "Plaats": "http://purl.org/dc/terms/Location",
-    "PubliekeDienstverlening": "http://purl.org/vocab/cpsv#PublicService",
-    "PubliekeDienstverlening.contactinfo": {
-      "@id": "http://data.europa.eu/m8g/hasContactPoint",
-      "@type": "http://schema.org/ContactPoint"
-    },
-    "PubliekeDienstverlening.identificator": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/adms#Identifier",
-      "@type": "http://www.w3.org/ns/adms#Identifier"
-    },
-    "PubliekeOrganisatie": "http://data.europa.eu/m8g/PublicOrganisation",
-    "Puur": "https://data.vlaanderen.be/ns/financiele-rapportering#Puur",
-    "PuurDatatype": "https://data.vlaanderen.be/ns/financiele-rapportering#PuurDatatype",
-    "RapportType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Rapportrelatie": "https://data.vlaanderen.be/ns/financiele-rapportering#Rapportrelatie",
-    "Rapportrelatie.rol": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Rapportrelatie.rol",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "Rapportrelatietype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Rechtsvormtype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Schema": "https://data.vlaanderen.be/ns/financiele-rapportering#Schema",
-    "SchemaType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "String": "http://www.w3.org/2001/XMLSchema#string",
-    "Taalstring": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-    "TemporeleEntiteit": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object",
-    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
-    "Validatie": "https://data.vlaanderen.be/ns/financiele-rapportering#Validatie",
-    "Validatie.datum": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Validatie.datum",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Validatie.opmerking": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#opmerking",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Opmerking"
-    },
-    "Validatiestatus": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Vereniging": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Vereniging",
-    "Vestiging": "http://www.w3.org/ns/org#Site",
-    "Zaak": "http://dbpedia.org/ontology/Case",
-    "ZakelijkRapport": "https://data.vlaanderen.be/ns/financiele-data#ZakelijkRapport",
-    "aanschrijfvorm": {
-      "@id": "http://ww.w3.org/2006/vcard/ns#honorific-prefix",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "achternaam": {
-      "@id": "http://xmlns.com/foaf/0.1/familyName",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "adres": {
-      "@id": "http://www.w3.org/ns/locn#address",
-      "@type": "http://www.w3.org/ns/locn#Address"
-    },
-    "balansType": {
-      "@id": "http://purl.org/dc/elements/1.1/type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "beschrijving": {
-      "@id": "http://purl.org/dc/terms/description",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "bevat": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#bevat",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Feit"
-    },
-    "busnummer": {
-      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "concept": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#concept",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept"
-    },
-    "concept(Source)": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Conceptrelatie.concept.source",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept"
-    },
-    "concept(Target)": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Conceptrelatie.concept.target",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept"
-    },
-    "contactinfo": {
-      "@id": "http://schema.org/contactPoint",
-      "@type": "http://schema.org/ContactPoint"
-    },
-    "contactnaam": {
-      "@id": "http://xmlns.com/foaf/0.1/name",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "context": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#context",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Context"
-    },
-    "datatype": {
-      "@id": "http://purl.org/dc/elements/1.1/type",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "decimalen": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#NumeriekDatatype.decimalen",
-      "@type": "http://www.w3.org/2001/XMLSchema#integer"
-    },
-    "definieert": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#definieert",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept"
-    },
-    "dimensie": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#dimensie",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept"
-    },
-    "dimensieconcept(Source)": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#DimensieConceptrelatie.dimensieconcept.source",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept"
-    },
-    "dimensieconcept(Target)": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#DimensieConceptrelatie.dimensieconcept.target",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept"
-    },
-    "dossier": {
-      "@container": "@set",
-      "@id": "http://todo.com/dossier",
-      "@type": "https://data.vlaanderen.be/ns/dossier#Dossier"
-    },
-    "eenheid": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#eenheid",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Eenheid"
-    },
-    "email": {
-      "@id": "http://schema.org/email",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "entiteit": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Context.entiteit",
-      "@type": "http://www.w3.org/ns/org#Organization"
-    },
-    "fax": {
-      "@id": "http://schema.org/faxNumber",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "feit": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Opmerking.feit",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Feit"
-    },
-    "financieelRapport(Source)": {
-      "@id": "http://todo.com/Rapportrelatie.financieelRapport.source",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport"
-    },
-    "financieelRapport(Target)": {
-      "@id": "http://todo.com/Rapportrelatie.financieelRapport.target",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport"
-    },
-    "gaatOver": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport.gaatOver",
-      "@type": "http://www.w3.org/ns/org#Organization"
-    },
-    "geassocieerdMet": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#geassocieerdMet",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept"
-    },
-    "geboortedatum": {
-      "@id": "http://xmlns.com/foaf/0.1/birthday",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "gemeentenaam": {
-      "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "getal": {
-      "@id": "https://schema.org/value",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Puur"
-    },
-    "gevalideerdDoor": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Validatie.gevalideerddoor",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "heeftVerantwoordelijke": {
-      "@id": "https://data.vlaanderen.be/ns/dienst#heeftVerantwoordelijke",
-      "@type": "http://data.europa.eu/m8g/PublicOrganisation"
-    },
-    "huisnummer": {
-      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "hypercube": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#hypercube",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Hypercube"
-    },
-    "id": {
-      "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "http://www.w3.org/ns/adms#Identifier"
-    },
-    "identificator": {
-      "@id": "http://www.w3.org/ns/adms#Identifier",
-      "@type": "http://www.w3.org/ns/adms#Identifier"
-    },
-    "informatieclassificatie": {
-      "@id": "https://data.vlaanderen.be/ns/dossier#informatieclassificatie",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "ingediendDoor": {
-      "@id": "http://todo.com/Dossier.ingediendDoor",
-      "@type": "http://www.w3.org/ns/org#Organization"
-    },
-    "isHetresultaatVan": {
-      "@id": "http://www.w3.org/ns/org#resultedFrom",
-      "@type": "http://data.europa.eu/m8g/FoundationEvent"
-    },
-    "isNeerslagVan": {
-      "@id": "https://data.vlaanderen.be/ns/dossier#isNeerslagVan",
-      "@type": "http://dbpedia.org/ontology/Case"
-    },
-    "itemtype": {
-      "@id": "http://purl.org/dc/elements/1.1/type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "land": {
-      "@id": "https://data.vlaanderen.be/ns/adres#land",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "naam": {
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "neergelegdBij": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Neerlegging.neergelegdBij",
-      "@type": "http://www.w3.org/ns/org#Organization"
-    },
-    "neerlegging": {
-      "@container": "@set",
-      "@id": "http://todo.com/neerlegging",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Neerlegging"
-    },
-    "openingsdatum": {
-      "@id": "https://data.vlaanderen.be/ns/dossier#openingsdatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "periodeType": {
-      "@id": "http://purl.org/dc/elements/1.1/type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "plaatsnaam": {
-      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "postcode": {
-      "@id": "http://www.w3.org/ns/locn#postCode",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "precisie": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Numeriekdatatype.precisie",
-      "@type": "http://www.w3.org/2001/XMLSchema#integer"
-    },
-    "rechtsvorm": {
-      "@id": "https://data.vlaanderen.be/ns/organisatie#rechtsvorm",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "rol": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Conceptrelatie.rol",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "ruimtelijkeDekking": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/spatial",
-      "@type": "http://purl.org/dc/terms/Location"
-    },
-    "scenario": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Context.scenario",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "sluitingsdatum": {
-      "@id": "https://data.vlaanderen.be/ns/dossier#sluitingsdatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "status": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Validatie.status",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "straatnaam": {
-      "@id": "http://www.w3.org/ns/locn#thoroughfare",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "taal": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport.taal",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "telefoon": {
-      "@id": "http://schema.org/telephone",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "toegekendDoor": {
-      "@id": "http://purl.org/dc/terms/creator",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "toegekendDoor(String)": {
-      "@id": "http://www.w3.org/ns/adms#schemaAgency",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "toegekendOp": {
-      "@id": "http://purl.org/dc/terms/issued",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "totAanvragen": {
-      "@container": "@set",
-      "@id": "http://todo.com/totAanvragen",
-      "@type": "http://purl.org/vocab/cpsv#PublicService"
-    },
-    "type": {
-      "@id": "http://purl.org/dc/elements/1.1/type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "validatiestatus": {
-      "@container": "@set",
-      "@id": "http://todo.com/validatieStatus",
-      "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Validatie"
-    },
-    "vestiging": {
-      "@id": "http://www.w3.org/ns/org#hasSite",
-      "@type": "http://www.w3.org/ns/org#Site"
-    },
-    "vestigingsadres": {
-      "@id": "http://www.w3.org/ns/org#siteAddress",
-      "@type": "http://schema.org/ContactPoint"
-    },
-    "voorkeursnaam": {
-      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "voornaam": {
-      "@container": "@set",
-      "@id": "http://xmlns.com/foaf/0.1/givenName",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "waarde": {
-      "@id": "https://schema.org/value",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyType"
-    },
-    "website": {
-      "@id": "http://xmlns.com/foaf/0.1/page",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "werkingsgebied": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/spatial",
-      "@type": "http://purl.org/dc/terms/Location"
-    },
-    "wettelijkeNaam": {
-      "@id": "http://www.w3.org/ns/regorg#legalName",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "woonplaats": {
-      "@id": "https://data.vlaanderen.be/ns/financiele-info#Persoon.woonplaats",
-      "@type": "http://purl.org/dc/terms/Location"
+    "Aandelen": {
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Aandelen"
+    },
+    "AandelenDatatype": {
+      "@context": {
+        "getal": {
+          "@id": "https://schema.org/value",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Aandelen"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#AandelenDatatype"
+    },
+    "Adresvoorstelling": {
+      "@context": {
+        "busnummer": {
+          "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "gemeentenaam": {
+          "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "huisnummer": {
+          "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "land": {
+          "@id": "https://data.vlaanderen.be/ns/adres#land",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "postcode": {
+          "@id": "http://www.w3.org/ns/locn#postCode",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "straatnaam": {
+          "@id": "http://www.w3.org/ns/locn#thoroughfare",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.w3.org/ns/locn#Address"
+    },
+    "Agent": {
+      "@id": "http://purl.org/dc/terms/Agent"
+    },
+    "AnyDatatype": {
+      "@id": "http://www.w3.org/2001/XMLSchema#anyType"
+    },
+    "BalansType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Boolean": {
+      "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Concept": {
+      "@context": {
+        "abstract": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept.abstract",
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+        },
+        "balansType": {
+          "@id": "http://purl.org/dc/elements/1.1/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "datatype": {
+          "@id": "http://purl.org/dc/elements/1.1/type",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "definitie": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept.definitie",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "geassocieerdMet": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept.geassocieerdMet",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept"
+        },
+        "hypercube": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept.hypercube",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Hypercube"
+        },
+        "id": {
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "itemtype": {
+          "@id": "http://purl.org/dc/elements/1.1/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "label": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept.label",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "periodeType": {
+          "@id": "http://purl.org/dc/elements/1.1/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept"
+    },
+    "Conceptrelatie": {
+      "@context": {
+        "concept(Source)": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Conceptrelatie.concept.source",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept"
+        },
+        "concept(Target)": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Conceptrelatie.concept.target",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept"
+        },
+        "orde": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Conceptrelatie.orde",
+          "@type": "http://www.w3.org/2001/XMLSchema#integer"
+        },
+        "rol": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Conceptrelatie.rol",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Conceptrelatie"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Conceptrelatie"
+    },
+    "Conceptrelatietype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Contactinfo": {
+      "@context": {
+        "aanschrijfvorm": {
+          "@id": "http://ww.w3.org/2006/vcard/ns#honorific-prefix",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "adres": {
+          "@id": "http://www.w3.org/ns/locn#address",
+          "@type": "http://www.w3.org/ns/locn#Address"
+        },
+        "contactnaam": {
+          "@id": "http://xmlns.com/foaf/0.1/name",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "email": {
+          "@id": "http://schema.org/email",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "fax": {
+          "@id": "http://schema.org/faxNumber",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "telefoon": {
+          "@id": "http://schema.org/telephone",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "website": {
+          "@id": "http://xmlns.com/foaf/0.1/page",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        }
+      },
+      "@id": "http://schema.org/ContactPoint"
+    },
+    "Context": {
+      "@context": {
+        "dimensie": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Context.dimensie",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensie"
+        },
+        "entiteit": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Context.entiteit",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "periode": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Context.periode",
+          "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
+        },
+        "rapport": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#rapport",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport"
+        },
+        "scenario": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Context.scenario",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Context"
+    },
+    "Date": {
+      "@id": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "DateTime": {
+      "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Decimal": {
+      "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "Dimensie": {
+      "@context": {
+        "concept": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensie.concept",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept"
+        },
+        "waarde": {
+          "@id": "https://schema.org/value",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyType"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensie"
+    },
+    "DimensieConceptrelatietype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "DimensieItemtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Dimensieconcept": {
+      "@context": {
+        "abstract": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept.abstract",
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+        },
+        "datatype": {
+          "@id": "http://purl.org/dc/elements/1.1/type",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "definitie": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept.definitie",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "geassocieerdMet": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept.geassocieerdMet",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept"
+        },
+        "id": {
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "itemtype": {
+          "@id": "http://purl.org/dc/elements/1.1/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "label": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept.label",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept"
+    },
+    "Dimensieconceptrelatie": {
+      "@context": {
+        "dimensieconcept(Source)": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#DimensieConceptrelatie.dimensieconcept.source",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept"
+        },
+        "dimensieconcept(Target)": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#DimensieConceptrelatie.dimensieconcept.target",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept"
+        },
+        "orde": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconceptrelatie.orde",
+          "@type": "http://www.w3.org/2001/XMLSchema#integer"
+        },
+        "rol": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Conceptrelatie.rol",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#DimensieConceptrelatie"
+    },
+    "Dimensieschema": {
+      "@context": {
+        "definieert": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieschema.definieert",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept"
+        },
+        "id": {
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/elements/1.1/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieschema"
+    },
+    "Dossier": {
+      "@context": {
+        "identificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "informatieclassificatie": {
+          "@id": "https://data.vlaanderen.be/ns/dossier#informatieclassificatie",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "ingediendDoor": {
+          "@id": "http://todo.com/Dossier.ingediendDoor",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "isNeerslagVan": {
+          "@id": "https://data.vlaanderen.be/ns/dossier#isNeerslagVan",
+          "@type": "http://dbpedia.org/ontology/Case"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "rapport": {
+          "@container": "@set",
+          "@id": "http://todo.com/rapport",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport"
+        },
+        "totAanvragen": {
+          "@container": "@set",
+          "@id": "http://todo.com/Dossier.totAanvragen",
+          "@type": "http://purl.org/vocab/cpsv#PublicService"
+        },
+        "validatiestatus": {
+          "@container": "@set",
+          "@id": "http://todo.com/Dossier.validatiestatus",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Validatie"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/dossier#Dossier"
+    },
+    "Eenheid": {
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Eenheid"
+    },
+    "Feit": {
+      "@context": {
+        "concept": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Feit.concept",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept"
+        },
+        "context": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Feit.context",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Context"
+        },
+        "rapport": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#rapport",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport"
+        },
+        "waarde": {
+          "@id": "https://schema.org/value",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyType"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Feit"
+    },
+    "FeitelijkeVereniging": {
+      "@context": {
+        "identificator": {
+          "@id": "http://www.w3.org/ns/adms#Identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#FeitelijkeVereniging"
+    },
+    "FinancieelRapport": {
+      "@context": {
+        "bevat": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#ZakelijkRapport.bevat",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Feit"
+        },
+        "context": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport.context",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Context"
+        },
+        "dossier": {
+          "@container": "@set",
+          "@id": "http://todo.com/FinancieelRapport.dossier",
+          "@type": "https://data.vlaanderen.be/ns/dossier#Dossier"
+        },
+        "gaatOver": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport.gaatOver",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "geassocieerdMet": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport.geassocieerdMet",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport"
+        },
+        "id": {
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "neerlegging": {
+          "@container": "@set",
+          "@id": "http://todo.com/FinancieelRapport.neerlegging",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Neerlegging"
+        },
+        "periode": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport.periode",
+          "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
+        },
+        "schema": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#schema",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Schema"
+        },
+        "taal": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport.taal",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/elements/1.1/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "validatieStatus": {
+          "@container": "@set",
+          "@id": "http://todo.com/validatieStatus",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Validatie"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport"
+    },
+    "GeografischeNaam": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "GeregistreerdPersoon": {
+      "@context": {
+        "registratie": {
+          "@id": "https://data.vlaanderen.be/ns/persoon#registratie",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
+    },
+    "GeregistreerdeOrganisatie": {
+      "@context": {
+        "rechtsvorm": {
+          "@id": "https://data.vlaanderen.be/ns/organisatie#rechtsvorm",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "registratie": {
+          "@id": "http://www.w3.org/ns/regorg#registration",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "wettelijkeNaam": {
+          "@id": "http://www.w3.org/ns/regorg#legalName",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.w3.org/ns/regorg#RegisteredOrganization"
+    },
+    "Getal": {
+      "@id": "https://schema.org/Number"
+    },
+    "Hypercube": {
+      "@context": {
+        "definitie": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Hypercube.definitie",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "dimensie": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Hypercube.dimensie",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept"
+        },
+        "id": {
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "label": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Hypercube.label",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Hypercube"
+    },
+    "Identificator": {
+      "@context": {
+        "identificator": {
+          "@id": "http://www.w3.org/2004/02/skos/core#notation",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "toegekendDoor": {
+          "@id": "http://purl.org/dc/terms/creator",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "toegekendDoor(String)": {
+          "@id": "http://www.w3.org/ns/adms#schemaAgency",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "toegekendOp": {
+          "@id": "http://purl.org/dc/terms/issued",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Informatieclassificatie": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Integer": {
+      "@id": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Itemtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Moment": {
+      "@id": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant"
+    },
+    "Monetair": {
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Monetair"
+    },
+    "MonetairDatatype": {
+      "@context": {
+        "getal": {
+          "@id": "https://schema.org/value",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Monetair"
+        }
+      },
+      "@id": "https://schema.org/MonetaryAmount"
+    },
+    "Neerlegging": {
+      "@context": {
+        "datum": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Neerlegging.datum",
+          "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant"
+        },
+        "neergelegdBij": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Neerlegging.neergelegdBij",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Neerlegging"
+    },
+    "NietNumeriekDatatype": {
+      "@id": "https://schema.org/QualitativeValue"
+    },
+    "NumeriekDatatype": {
+      "@context": {
+        "decimalen": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#NumeriekDatatype.decimalen",
+          "@type": "http://www.w3.org/2001/XMLSchema#integer"
+        },
+        "eenheid": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#eenheid",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Eenheid"
+        },
+        "getal": {
+          "@id": "https://schema.org/value",
+          "@type": "https://schema.org/Number"
+        },
+        "precisie": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Numeriekdatatype.precisie",
+          "@type": "http://www.w3.org/2001/XMLSchema#integer"
+        }
+      },
+      "@id": "https://schema.org/QuantitativeValue"
+    },
+    "Opmerking": {
+      "@context": {
+        "feit": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Opmerking.feit",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Feit"
+        },
+        "opmerking": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Opmerking.opmerking",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Opmerking"
+    },
+    "Oprichting": {
+      "@context": {
+        "datum": {
+          "@id": "http://purl.org/dc/terms/date",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/FoundationEvent"
+    },
+    "Organisatie": {
+      "@context": {
+        "contactinfo": {
+          "@container": "@set",
+          "@id": "http://schema.org/contactPoint",
+          "@type": "http://schema.org/ContactPoint"
+        },
+        "isHetresultaatVan": {
+          "@id": "http://www.w3.org/ns/org#resultedFrom",
+          "@type": "http://data.europa.eu/m8g/FoundationEvent"
+        },
+        "vestiging": {
+          "@id": "http://www.w3.org/ns/org#hasSite",
+          "@type": "http://www.w3.org/ns/org#Site"
+        },
+        "voorkeursnaam": {
+          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#Organization"
+    },
+    "Periode": {
+      "@id": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period"
+    },
+    "PeriodeType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Persoon": {
+      "@context": {
+        "achternaam": {
+          "@id": "http://xmlns.com/foaf/0.1/familyName",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "contactinfo": {
+          "@id": "http://schema.org/contactPoint",
+          "@type": "http://schema.org/ContactPoint"
+        },
+        "geboortedatum": {
+          "@id": "http://xmlns.com/foaf/0.1/birthday",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "voornaam": {
+          "@container": "@set",
+          "@id": "http://xmlns.com/foaf/0.1/givenName",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "woonplaats": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-info#Persoon.woonplaats",
+          "@type": "http://purl.org/dc/terms/Location"
+        }
+      },
+      "@id": "http://www.w3.org/ns/person#Person"
+    },
+    "Plaats": {
+      "@context": {
+        "plaatsnaam": {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://purl.org/dc/terms/Location"
+    },
+    "PubliekeDienstverlening": {
+      "@context": {
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "contactinfo": {
+          "@id": "http://data.europa.eu/m8g/hasContactPoint",
+          "@type": "http://schema.org/ContactPoint"
+        },
+        "heeftVerantwoordelijke": {
+          "@id": "https://data.vlaanderen.be/ns/dienst#heeftVerantwoordelijke",
+          "@type": "http://data.europa.eu/m8g/PublicOrganisation"
+        },
+        "identificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#Identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "ruimtelijkeDekking": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/spatial",
+          "@type": "http://purl.org/dc/terms/Location"
+        }
+      },
+      "@id": "http://purl.org/vocab/cpsv#PublicService"
+    },
+    "PubliekeOrganisatie": {
+      "@context": {
+        "werkingsgebied": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/spatial",
+          "@type": "http://purl.org/dc/terms/Location"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/PublicOrganisation"
+    },
+    "Puur": {
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Puur"
+    },
+    "PuurDatatype": {
+      "@context": {
+        "getal": {
+          "@id": "https://schema.org/value",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Puur"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#PuurDatatype"
+    },
+    "RapportType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Rapportrelatie": {
+      "@context": {
+        "financieelRapport(Source)": {
+          "@id": "http://todo.com/Rapportrelatie.financieelRapport.source",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport"
+        },
+        "financieelRapport(Target)": {
+          "@id": "http://todo.com/Rapportrelatie.financieelRapport.target",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport"
+        },
+        "rol": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Rapportrelatie.rol",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Rapportrelatie"
+    },
+    "Rapportrelatietype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Rechtsvormtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Schema": {
+      "@context": {
+        "definieert": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Schema.definieert",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Concept"
+        },
+        "id": {
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/elements/1.1/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Schema"
+    },
+    "SchemaType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "String": {
+      "@id": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Taalstring": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "TemporeleEntiteit": {
+      "@id": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object"
+    },
+    "URI": {
+      "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Validatie": {
+      "@context": {
+        "datum": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Validatie.datum",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "gevalideerdDoor": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Validatie.gevalideerddoor",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "opmerking": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Validatie.opmerking",
+          "@type": "https://data.vlaanderen.be/ns/financiele-rapportering#Opmerking"
+        },
+        "status": {
+          "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Validatie.status",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/financiele-rapportering#Validatie"
+    },
+    "Validatiestatus": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Vereniging": {
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Vereniging"
+    },
+    "Vestiging": {
+      "@context": {
+        "vestigingsadres": {
+          "@id": "http://www.w3.org/ns/org#siteAddress",
+          "@type": "http://schema.org/ContactPoint"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#Site"
+    },
+    "Zaak": {
+      "@context": {
+        "identificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "openingsdatum": {
+          "@id": "https://data.vlaanderen.be/ns/dossier#openingsdatum",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "sluitingsdatum": {
+          "@id": "https://data.vlaanderen.be/ns/dossier#sluitingsdatum",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        }
+      },
+      "@id": "http://dbpedia.org/ontology/Case"
+    },
+    "ZakelijkRapport": {
+      "@id": "https://data.vlaanderen.be/ns/financiele-data#ZakelijkRapport"
     }
   }
 }

@@ -166,13 +166,13 @@
     shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#Concept>;
     shacl:description "Associatie tussen twee Concepten."@nl;
     shacl:name "geassocieerdMet"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#geassocieerdMet>
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#Concept.geassocieerdMet>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Concept.Hypercube>;
     shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#Hypercube>;
     shacl:description "Hypercube waarmee Feiten van dit type geassocieerd worden."@nl;
     shacl:name "hypercube"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#hypercube>
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#Concept.hypercube>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/financiele-rapportering#Concept> .
 
@@ -298,7 +298,15 @@
     shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#Dimensie>;
     shacl:description "Perpectief van waaruit naar het Feit is gekeken."@nl;
     shacl:name "dimensie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#dimensie>
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#Context.dimensie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Context.Rapport>;
+    shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport>;
+    shacl:description "FinancieelRapport waartoe de Context behoort."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "rapport"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#rapport>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/financiele-rapportering#Context> .
 
@@ -331,7 +339,7 @@
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "concept"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#concept>
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#Dimensie.concept>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/financiele-rapportering#Dimensie> .
 
@@ -396,7 +404,7 @@
     shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept>;
     shacl:description "Associatie tussen twee Dimensieconcepten."@nl;
     shacl:name "geassocieerdMet"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#geassocieerdMet>
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept.geassocieerdMet>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieconcept> .
 
@@ -473,7 +481,7 @@
     shacl:description "Verwijzing naar een type Dimesie gedefinieerd in het schema."@nl;
     shacl:minCount "1";
     shacl:name "definieert"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#definieert>
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieschema.definieert>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/financiele-rapportering#Dimensieschema> .
 
@@ -509,18 +517,24 @@
     shacl:name "ingediendDoor"@nl;
     shacl:path <http://todo.com/Dossier.ingediendDoor>
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Dossier.Rapport>;
+    shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport>;
+    shacl:description "FinancieelRapport dat deel uitmaakt van het Dossier."@nl;
+    shacl:name "rapport"@nl;
+    shacl:path <http://todo.com/rapport>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Dossier.Totaanvragen>;
     shacl:class <http://purl.org/vocab/cpsv#PublicService>;
     shacl:description "PubliekeDienstverlening waarvoor het Dossier wordt ingediend."@nl;
     shacl:minCount "1";
     shacl:name "totAanvragen"@nl;
-    shacl:path <http://todo.com/totAanvragen>
+    shacl:path <http://todo.com/Dossier.totAanvragen>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Dossier.Validatiestatus>;
     shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#Validatie>;
     shacl:description "Verwijzing naar de status van het Dossier met het oog op  de Validatie ervan."@nl;
     shacl:name "validatiestatus"@nl;
-    shacl:path <http://todo.com/validatieStatus>
+    shacl:path <http://todo.com/Dossier.validatiestatus>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Dossier.Isneerslagvan>;
     shacl:class dbo:Case;
@@ -547,13 +561,21 @@
     shacl:name "waarde"@nl;
     shacl:path schemas:value
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Feit.Rapport>;
+    shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport>;
+    shacl:description "Verwijzing naar het financieelRapport waarvan het feit deel uitmaakt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "rapport"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#rapport>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Feit.Concept>;
     shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#Concept>;
     shacl:description "Verwijzing naar het Concept dat achter het feit zit."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "concept"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#concept>
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#Feit.concept>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Feit.Context>;
     shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#Context>;
@@ -561,7 +583,7 @@
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "context"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#context>
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#Feit.context>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/financiele-rapportering#Feit> .
 
@@ -632,31 +654,44 @@
     shacl:class <https://data.vlaanderen.be/ns/dossier#Dossier>;
     shacl:description "Dossier dat betrekking heeft op het rapport."@nl;
     shacl:name "dossier"@nl;
-    shacl:path <http://todo.com/dossier>
+    shacl:path <http://todo.com/FinancieelRapport.dossier>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Financieelrapport.Validatiestatus>;
+    shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#Validatie>;
+    shacl:description "Verwijzing naar de status van het Rapport met het oog op  de Validatie ervan."@nl;
+    shacl:name "validatieStatus"@nl;
+    shacl:path <http://todo.com/validatieStatus>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Financieelrapport.Schema>;
+    shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#Schema>;
+    shacl:description "Schema waaraan het rapport voldoet."@nl;
+    shacl:maxCount "1";
+    shacl:name "schema"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#schema>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Financieelrapport.Bevat>;
     shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#Feit>;
     shacl:description "Feit dat in het rapport staat."@nl;
     shacl:name "bevat"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#bevat>
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#ZakelijkRapport.bevat>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Financieelrapport.Neerlegging>;
     shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#Neerlegging>;
     shacl:description "Verwijst naar de Neerlegging van het rapport."@nl;
     shacl:name "neerlegging"@nl;
-    shacl:path <http://todo.com/neerlegging>
+    shacl:path <http://todo.com/FinancieelRapport.neerlegging>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Financieelrapport.Geassocieerdmet>;
     shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport>;
     shacl:description "Ander FinancieelRapport waarmee het rapport geassocieerd is."@nl;
     shacl:name "geassocieerdMet"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#geassocieerdMet>
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport.geassocieerdMet>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Financieelrapport.Context>;
     shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#Context>;
     shacl:description "Verwijzing naar een Context waarin de Feiten in het rapport worden bekeken."@nl;
     shacl:name "context"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#context>
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport.context>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/financiele-rapportering#FinancieelRapport> .
 
@@ -746,7 +781,7 @@
     shacl:description "Dimensie die deel uitmaakt van de Hypercube."@nl;
     shacl:minCount "1";
     shacl:name "dimensie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#dimensie>
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#Hypercube.dimensie>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/financiele-rapportering#Hypercube> .
 
@@ -754,7 +789,6 @@
   shacl:closed false;
   shacl:property [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/financiele-rapportering/ontwerpstandaard/toolchain4#Identificator.Identificator>;
-    shacl:datatype rdfs:Literal;
     shacl:description "String gebruikt om het object uniek te identificeren."@nl;
     shacl:maxCount "1";
     shacl:name "identificator"@nl;
@@ -1149,7 +1183,7 @@
     shacl:description "Concepten die deel uitmaken van het schema."@nl;
     shacl:minCount "1";
     shacl:name "definieert"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#definieert>
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#Schema.definieert>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/financiele-rapportering#Schema> .
 
@@ -1204,7 +1238,7 @@
     shacl:class <https://data.vlaanderen.be/ns/financiele-rapportering#Opmerking>;
     shacl:description "Opmerking bij de Validatie."@nl;
     shacl:name "opmerking"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#opmerking>
+    shacl:path <https://data.vlaanderen.be/ns/financiele-rapportering#Validatie.opmerking>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/financiele-rapportering#Validatie> .
 

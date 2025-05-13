@@ -98,7 +98,7 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Adresvoorstelling.AdministratieveEenheidNiveau1>;
     shacl:datatype rdf:langString;
-    shacl:description "Hoogste administratieve eenheid vh adres, doorgaans een land."@nl;
+    shacl:description "Hoogste Administratieve eenheid vh adres, doorgaans een land."@nl;
     shacl:maxCount "1";
     shacl:name "administratieve eenheid niveau 1"@nl;
     shacl:path <http://www.w3.org/ns/locn#adminUnitL1>
@@ -145,6 +145,13 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/AgentShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Agent.Participeertin>;
+    shacl:class <http://purl.org/vocab/cpsv#PublicService>;
+    shacl:description "Publieke Dienstverlening waarin de Agent een rol speelt."@nl;
+    shacl:name "participeertIn"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/dienst#participeertIn>
+  ];
   shacl:targetClass dc:Agent .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/BasistaakShape> a shacl:NodeShape;
@@ -176,6 +183,14 @@
     shacl:description "Soort Basistaak."@nl;
     shacl:name "type"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#Basistaak.type>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Basistaak.Verrichtdoor>;
+    shacl:class <https://data.vlaanderen.be/ns/energiehuis#Energiehuis>;
+    shacl:description "Energiehuis dat of in wiens naam de Basistaak wordt verricht."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "verrichtDoor"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/energiehuis#verrichtDoor>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Basistaak> .
 
@@ -200,6 +215,13 @@
     shacl:maxCount "1";
     shacl:name "fase"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#Begeleiding.fase>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Begeleiding.Begeleidingvan>;
+    shacl:class dbo:Project;
+    shacl:description "Project dat wordt begeleid."@nl;
+    shacl:maxCount "1";
+    shacl:name "begeleidingVan"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/energiehuis#begeleidingVan>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Begeleiding> .
 
@@ -218,66 +240,59 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Contact> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/ContactinfoShape> a shacl:NodeShape;
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/ContactpuntShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactinfo.Aanschrijfvorm>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactpunt.Aanschrijfprefix>;
     shacl:datatype rdf:langString;
     shacl:description "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen."@nl;
     shacl:maxCount "1";
-    shacl:name "aanschrijfvorm"@nl;
+    shacl:name "aanschrijfprefix"@nl;
     shacl:path vcard:honorific-prefix
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactinfo.Contactnaam>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactpunt.Contactnaam>;
     shacl:datatype xsd:string;
     shacl:description "Naam van bvb de persoon die men kan contacteren."@nl;
     shacl:maxCount "1";
     shacl:name "contactnaam"@nl;
     shacl:path foaf:name
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactinfo.Email>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactpunt.Email>;
     shacl:datatype xsd:string;
     shacl:description "Email-adres waarnaar men kan mailen."@nl;
     shacl:maxCount "1";
     shacl:name "email"@nl;
     shacl:path schema:email
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactinfo.Telefoon>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactpunt.Telefoon>;
     shacl:datatype xsd:string;
     shacl:description "Telefoonnummer waarop men kan bellen."@nl;
     shacl:maxCount "1";
     shacl:name "telefoon"@nl;
     shacl:path schema:telephone
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactinfo.Fax>;
-    shacl:datatype xsd:string;
-    shacl:description "Faxnummer waarnaar men kan faxen."@nl;
-    shacl:maxCount "1";
-    shacl:name "fax"@nl;
-    shacl:path schema:faxNumber
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactinfo.Website>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactpunt.Website>;
     shacl:datatype xsd:anyURI;
     shacl:description "Website waarnaar men kan surfen."@nl;
     shacl:maxCount "1";
     shacl:name "website"@nl;
     shacl:path foaf:page
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactinfo.Openingsuren>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactpunt.Openingsuren>;
     shacl:datatype rdfs:Literal;
     shacl:description "Uren waarbinnen contact kan worden opgenomen."@nl;
     shacl:maxCount "1";
     shacl:name "openingsuren"@nl;
     shacl:path schema:openingHours
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactinfo.Beschikbaarheid>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactpunt.UrenBeschikbaarheid>;
     shacl:class schema:OpeningHoursSpecification;
     shacl:description "Periode waarin contact kan worden opgenomen."@nl;
     shacl:maxCount "1";
-    shacl:name "beschikbaarheid"@nl;
+    shacl:name "uren beschikbaarheid"@nl;
     shacl:path schema:hoursAvailable
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactinfo.Adres>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Contactpunt.Adres>;
     shacl:class <http://www.w3.org/ns/locn#Address>;
     shacl:description "Adres dat men kan aanschrijven of bezoeken."@nl;
     shacl:maxCount "1";
@@ -347,6 +362,13 @@
     shacl:maxCount "1";
     shacl:name "output"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#output>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Financiering.Financieringvan>;
+    shacl:class dbo:Project;
+    shacl:description "Project dat wordt gefinancierd."@nl;
+    shacl:maxCount "1";
+    shacl:name "financieringVan"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/energiehuis#financieringVan>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Financiering> .
 
@@ -490,8 +512,14 @@
   shacl:property [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Informatievoorziening.Type>;
     shacl:class skos:Concept;
-    shacl:description "Het soort informatie dat in een eerste persoonlijk contact met de burger gedeeld wordt."@nl;
+    shacl:description "Het soort Informatievoorziening."@nl;
     shacl:name "type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/energiehuis#Informatievoorziening.type>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Informatievoorziening.Thema>;
+    shacl:class skos:Concept;
+    shacl:description "Het soort informatie dat in een eerste persoonlijk contact met de burger gedeeld wordt."@nl;
+    shacl:name "thema"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#thema>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Informatievoorziening> .
@@ -502,6 +530,13 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/InteresseopwekkingShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Interesseopwekking.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Het soort InteresseOpwekking."@nl;
+    shacl:name "type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/energiehuis#InteresseOpwekking.type>
+  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#InteresseOpwekking> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/KanaalShape> a shacl:NodeShape;
@@ -521,10 +556,10 @@
     shacl:name "type"@nl;
     shacl:path dc:type
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Kanaal.Beschikbaarheid>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Kanaal.UrenBeschikbaarheid>;
     shacl:class schema:OpeningHoursSpecification;
     shacl:description "Periode waarin de publieke dienstverlening beschikbaar is via het kanaal."@nl;
-    shacl:name "beschikbaarheid"@nl;
+    shacl:name "uren beschikbaarheid"@nl;
     shacl:path schema:hoursAvailable
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Kanaal.Eigendomvan>;
@@ -609,21 +644,37 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/LocatieShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass prov:Location .
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Locatie.Plaatsnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de plaats of van het gebied."@nl;
+    shacl:minCount "1";
+    shacl:name "plaatsnaam"@nl;
+    shacl:path rdfs:label
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Locatie.GeometrieVanDePlaatsOfHetGebied.>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "Geometrie van de plaats of het gebied."@nl;
+    shacl:maxCount "1";
+    shacl:name "Geometrie van de plaats of het gebied."@nl;
+    shacl:path <http://www.w3.org/ns/locn#geometry>
+  ];
+  shacl:targetClass dc:Location,
+    prov:Location .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/MomentShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Moment.Inxsddatetime>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Moment.InXsdDatumtijd>;
     shacl:datatype xsd:dateTime;
     shacl:description "Positie in de tijd uitgedrukt dmv xsd:dateTime."@nl;
     shacl:maxCount "1";
-    shacl:name "inXSDDateTime"@nl;
+    shacl:name "in XSD datumTijd"@nl;
     shacl:path <http://www.w3.org/2006/time#inXSDDateTime>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Moment.InEdtf>;
     shacl:datatype rdfs:Literal;
-    shacl:description "Positie in de tijd van een Moment, uitgedrukt in EDTF."@nl;
+    shacl:description "Positie van een Moment, uitgedrukt in EDTF."@nl;
     shacl:maxCount "1";
     shacl:name "in EDTF"@nl;
     shacl:path <https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription>
@@ -647,11 +698,11 @@
     shacl:name "gesloten"@nl;
     shacl:path schema:closes
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Openingsurenspecificatie.DagVanDeWeek>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Openingsurenspecificatie.DagVanWeek>;
     shacl:datatype xsd:anyURI;
     shacl:description "Dag van de week waarvoor de openingsuren geldig zijn."@nl;
     shacl:maxCount "1";
-    shacl:name "dag van de week"@nl;
+    shacl:name "dag van week"@nl;
     shacl:path schema:dayOfWeek
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Openingsurenspecificatie.GeldigVan>;
@@ -673,18 +724,18 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/OrganisatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Organisatie.Voorkeursnaam>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Organisatie.Voorkeurslabel>;
     shacl:datatype rdf:langString;
     shacl:description "Naam waarmee de organisatie bij voorkeur wordt aangeduid."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "voorkeursnaam"@nl;
+    shacl:name "voorkeurslabel"@nl;
     shacl:path skos:prefLabel
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Organisatie.Contactinfo>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Organisatie.Contactpunt>;
     shacl:class schema:ContactPoint;
     shacl:description "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."@nl;
-    shacl:name "contactinfo"@nl;
+    shacl:name "contactpunt"@nl;
     shacl:path schema:contactPoint
   ];
   shacl:targetClass org:Organization .
@@ -692,11 +743,11 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/OutputShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Output.Naam>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Output.Titel>;
     shacl:datatype rdf:langString;
     shacl:description "Officiële naam van de output."@nl;
     shacl:maxCount "1";
-    shacl:name "naam"@nl;
+    shacl:name "titel"@nl;
     shacl:path dc:title
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Output.Beschrijving>;
@@ -724,20 +775,20 @@
     shacl:name "rol"@nl;
     shacl:path <http://data.europa.eu/m8g/role>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Participatie.Participatie.publiekedienstverlening>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Participatie.Publiekedienstverlening>;
     shacl:class <http://purl.org/vocab/cpsv#PublicService>;
-    shacl:description "Verwijzing naar de verbonden klasse"@nl;
+    shacl:description "De dienstverlening waaraan de agent deelneemt"@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "Participatie.PubliekeDienstverlening";
+    shacl:name "publiekeDienstverlening"@nl;
     shacl:path <https://data.vlaanderen.be/ns/dienst#Participatie.publiekeDienstverlening>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Participatie.Participatie.agent>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Participatie.Agent>;
     shacl:class dc:Agent;
-    shacl:description "Verwijzing naar de verbonden klasse"@nl;
+    shacl:description "De agent die deelneemt aan de dienstverlening."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "Participatie.Agent";
+    shacl:name "agent"@nl;
     shacl:path <https://data.vlaanderen.be/ns/dienst#Participatie.agent>
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Participation> .
@@ -754,14 +805,14 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Periode.Tot>;
     shacl:class <http://www.w3.org/2006/time#Instant>;
-    shacl:description "Einde ve Temporele Entiteit."@nl;
+    shacl:description "Einde ve TemporeleEntiteit."@nl;
     shacl:maxCount "1";
     shacl:name "tot"@nl;
     shacl:path <http://www.w3.org/2006/time#hasEnd>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Periode.Van>;
     shacl:class <http://www.w3.org/2006/time#Instant>;
-    shacl:description "Start ve Temporele Entiteit."@nl;
+    shacl:description "Start ve TemporeleEntiteit."@nl;
     shacl:maxCount "1";
     shacl:name "van"@nl;
     shacl:path <http://www.w3.org/2006/time#hasBeginning>
@@ -771,48 +822,29 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/PersoonShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Persoon.Achternaam>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Persoon.Familienaam>;
     shacl:datatype xsd:string;
     shacl:description "Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "achternaam"@nl;
+    shacl:name "familienaam"@nl;
     shacl:path foaf:familyName
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Persoon.Voornaam>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Persoon.GegevenNaam>;
     shacl:datatype xsd:string;
     shacl:description "Naam die een kind bij geboorte wordt gegeven. Onderscheidt het kind van de andere kinderen in de familie."@nl;
     shacl:minCount "1";
-    shacl:name "voornaam"@nl;
+    shacl:name "gegeven naam"@nl;
     shacl:path foaf:givenName
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Persoon.Contactinfo>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Persoon.Contactpunt>;
     shacl:class schema:ContactPoint;
     shacl:description "Informatie zoals email, telefoon... die toelaat de Persoon te contacteren."@nl;
     shacl:maxCount "1";
-    shacl:name "contactinfo"@nl;
+    shacl:name "contactpunt"@nl;
     shacl:path schema:contactPoint
   ];
   shacl:targetClass <http://www.w3.org/ns/person#Person> .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/PlaatsShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Plaats.Plaatsnaam>;
-    shacl:datatype rdf:langString;
-    shacl:description "Naam van de plaats of van het gebied."@nl;
-    shacl:minCount "1";
-    shacl:name "plaatsnaam"@nl;
-    shacl:path rdfs:label
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Plaats.Geometrie>;
-    shacl:class <http://www.w3.org/ns/locn#Geometry>;
-    shacl:description "Geometrie van de plaats of het gebied."@nl;
-    shacl:maxCount "1";
-    shacl:name "geometrie"@nl;
-    shacl:path <http://www.w3.org/ns/locn#geometry>
-  ];
-  shacl:targetClass dc:Location .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/PlaatsbezoekShape> a shacl:NodeShape;
   shacl:closed false;
@@ -851,20 +883,31 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Project.Financiering>;
     shacl:class <https://data.vlaanderen.be/ns/energiehuis#Financiering>;
-    shacl:description "Renovatieproject waarvoor de Financiering wordt gebruikt."@nl;
+    shacl:description "Project waarvoor de Financiering wordt gebruikt."@nl;
     shacl:name "financiering"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#financiering>
   ];
   shacl:targetClass dbo:Project .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/PubliekeOrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#PubliekeOrganisatie.Werkingsgebied>;
+    shacl:class dc:Location;
+    shacl:description "Administratief gebied dat de Publieke Organisatie dekt."@nl;
+    shacl:name "werkingsgebied"@nl;
+    shacl:path dc:spatial
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/PubliekedienstverleningShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Publiekedienstverlening.Naam>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Publiekedienstverlening.Titel>;
     shacl:datatype rdf:langString;
     shacl:description "Officiële naam van de publieke dienstverlening."@nl;
     shacl:maxCount "1";
-    shacl:name "naam"@nl;
+    shacl:name "titel"@nl;
     shacl:path dc:title
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Publiekedienstverlening.Beschrijving>;
@@ -880,11 +923,11 @@
     shacl:name "taal"@nl;
     shacl:path dc:language
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Publiekedienstverlening.Contactinfo>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Publiekedienstverlening.HeeftContactpunt>;
     shacl:class schema:ContactPoint;
     shacl:description "Informatie waarmee de publieke dienstverlening kan worden gecontacteerd."@nl;
     shacl:maxCount "1";
-    shacl:name "contactinfo"@nl;
+    shacl:name "heeft contactpunt"@nl;
     shacl:path <http://data.europa.eu/m8g/hasContactPoint>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Publiekedienstverlening.Produceert>;
@@ -915,17 +958,6 @@
   ];
   shacl:targetClass <http://purl.org/vocab/cpsv#PublicService> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/PubliekeorganisatieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Publiekeorganisatie.Werkingsgebied>;
-    shacl:class dc:Location;
-    shacl:description "Administratief gebied dat de Publieke Organisatie dekt."@nl;
-    shacl:name "werkingsgebied"@nl;
-    shacl:path dc:spatial
-  ];
-  shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
-
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4/RenovatiebegeleidingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -942,7 +974,7 @@
   shacl:property [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/toolchain4#Renovatieproject.Categoriewerken>;
     shacl:class skos:Concept;
-    shacl:description "categorieWerken"@nl;
+    shacl:description "Indeling van diverse renovatietaken en activiteiten."@nl;
     shacl:name "categorieWerken"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#categorieWerken>
   ], [

@@ -2,65 +2,65 @@
 
 #||# -------------------------------------
 
-2025-05-13T11:03:00.080Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Dossier:Activiteit:(Activiteit -> Procedurestap))
+2025-05-13T11:42:23.675Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Dossier:Activiteit:(Activiteit -> Procedurestap))
 
-2025-05-13T11:03:00.082Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:PubliekeDienstverlening (consumptie):isGerelateerdMet)
+2025-05-13T11:42:23.677Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:PubliekeDienstverlening (consumptie):isGerelateerdMet)
 
-2025-05-13T11:03:00.082Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:PubliekeDienstverlening (consumptie):vereist)
+2025-05-13T11:42:23.677Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:PubliekeDienstverlening (consumptie):vereist)
 
-2025-05-13T11:03:00.082Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:Dienstconsumptie:isGerelateerdMet)
+2025-05-13T11:42:23.677Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:Dienstconsumptie:isGerelateerdMet)
 
-2025-05-13T11:03:00.082Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:Dienstconsumptie:vereist)
+2025-05-13T11:42:23.677Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:Dienstconsumptie:vereist)
 
-2025-05-13T11:03:00.082Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:Dienstconsumptie:isGerelateerdMet)
+2025-05-13T11:42:23.677Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:Dienstconsumptie:isGerelateerdMet)
 
-2025-05-13T11:03:00.082Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:Dienstaanbod:isGerelateerdMet)
+2025-05-13T11:42:23.677Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:Dienstaanbod:isGerelateerdMet)
 
-2025-05-13T11:03:00.082Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:Dienstaanbod:vereist)
+2025-05-13T11:42:23.677Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:Dienstaanbod:vereist)
 
-2025-05-13T11:03:00.082Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Organisatie:Organisatie:heeftGeregistreerdeVestiging)
+2025-05-13T11:42:23.677Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Organisatie:Organisatie:heeftGeregistreerdeVestiging)
 
-2025-05-13T11:03:00.082Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Organisatie:Organisatie:heeftPrimaireVestiging)
+2025-05-13T11:42:23.677Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Organisatie:Organisatie:heeftPrimaireVestiging)
 
-2025-05-13T11:03:00.082Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
+2025-05-13T11:42:23.677Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
 
-2025-05-13T11:03:00.082Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+2025-05-13T11:42:23.678Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-05-13T11:03:00.082Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Generiek:Gemeente:(Gemeente -> Object))
+2025-05-13T11:42:23.678Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2025-05-13T11:03:00.082Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2025-05-13T11:42:23.678Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-05-13T11:03:00.082Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Generiek:Agent:rapporteertAan)
+2025-05-13T11:42:23.678Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-05-13T11:03:00.084Z info: Connector Model:OSLO:OSLO-Persoon:Persoonsrelatie:(Persoonsrelatie -> Agentrelatie) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:42:23.680Z info: Connector Model:OSLO:OSLO-Persoon:Persoonsrelatie:(Persoonsrelatie -> Agentrelatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:00.085Z info: Connector Model:OSLO:OSLO-Generiek:Agent:(Agent -> Agentrelatie) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:42:23.680Z info: Connector Model:OSLO:OSLO-Generiek:Agent:(Agent -> Agentrelatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:00.085Z info: Connector Model:OSLO:OSLO-Persoon:Persoon:(Persoon -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:42:23.681Z info: Connector Model:OSLO:OSLO-Persoon:Persoon:(Persoon -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:00.086Z info: Connector Model:OSLO:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:42:23.681Z info: Connector Model:OSLO:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:00.086Z info: Connector Model:OSLO:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:42:23.681Z info: Connector Model:OSLO:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:00.086Z info: Connector Model:OSLO:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:42:23.681Z info: Connector Model:OSLO:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:00.086Z info: Connector Model:OSLO:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:42:23.681Z info: Connector Model:OSLO:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:00.086Z info: Connector Model:OSLO:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:42:23.681Z info: Connector Model:OSLO:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:00.086Z info: Connector Model:OSLO:OSLO-Transactie:Dienstconsumptie:(Dienstconsumptie -> Participatie) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:42:23.681Z info: Connector Model:OSLO:OSLO-Transactie:Dienstconsumptie:(Dienstconsumptie -> Participatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:00.086Z info: Connector Model:OSLO:OSLO-Persoon:Persoonsrelatie:(Persoonsrelatie -> JuridischWerk) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:42:23.682Z info: Connector Model:OSLO:OSLO-Persoon:Persoonsrelatie:(Persoonsrelatie -> JuridischWerk) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:00.087Z info: Connector Model:OSLO-Kindfiche:Gezondheidstoestand:(Gezondheidstoestand -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:42:23.682Z info: Connector Model:OSLO-Kindfiche:Gezondheidstoestand:(Gezondheidstoestand -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:00.087Z info: Connector Model:OSLO-Kindfiche:SpecifiekeBehoefte:(SpecifiekeBehoefte -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:42:23.682Z info: Connector Model:OSLO-Kindfiche:SpecifiekeBehoefte:(SpecifiekeBehoefte -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:00.087Z info: Connector Model:OSLO-Kindfiche:PersoonsrelatieType:(PersoonsrelatieType -> AgentRelatieType) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:42:23.682Z info: Connector Model:OSLO-Kindfiche:PersoonsrelatieType:(PersoonsrelatieType -> AgentRelatieType) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T11:03:00.087Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:42:23.683Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T11:03:00.088Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:42:23.683Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO) and fallback URI (http://todo.com/) will be assigned.
 
 #||# -------------------------------------
 

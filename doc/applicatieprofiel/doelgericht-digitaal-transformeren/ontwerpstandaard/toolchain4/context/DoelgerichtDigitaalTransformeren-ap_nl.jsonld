@@ -1,546 +1,949 @@
 {
   "@context": {
-    "Activiteit": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-    "Activiteit.dienst": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.dienst",
-      "@type": "http://purl.org/vocab/cpsv#PublicService"
-    },
-    "Activiteit.locatie": {
-      "@id": "https://www.w3.org/ns/prov#atLocation",
-      "@type": "http://www.w3.org/ns/prov#Location"
-    },
-    "Activiteit.naam": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Activiteit.thema": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#thema",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "Activiteit.tijd": {
-      "@id": "http://cidoc-crm.org/cidoc-crm/P4_has_time-span",
-      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
-    },
-    "ActiviteitFunctietype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "ActiviteitStatus": "http://www.w3.org/2004/02/skos/core#Concept",
-    "ActiviteitVerhouding": "https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding",
-    "ActiviteitVerhoudingType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Activiteittype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Agent": "http://purl.org/dc/terms/Agent",
-    "AlgemeenParticipantkenmerk": "https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantkenmerk",
-    "Berichtgeving": "https://data.vlaanderen.be/ns/cultuurparticipatie#Berichtgeving",
-    "Beschikbaarheid": "https://data.vlaanderen.be/ns/cultuurparticipatie#Beschikbaarheid",
-    "BetaaltermijnType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Boekingsinfo": "https://data.vlaanderen.be/ns/cultuurparticipatie#Boekingsinfo",
-    "Boekingsinfo.kanaal": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Boekinginfo.kanaal",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal"
-    },
-    "Boolean": "http://www.w3.org/2001/XMLSchema#boolean",
-    "Consent": "https://w3id.org/GConsent#Consent",
-    "Contactinfo": "http://schema.org/ContactPoint",
-    "Cultuurdeelname": "https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname",
-    "Cultuurdeelname.typeActiviteit": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname.typeActiviteit",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
-    "Deelname": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname",
-    "Deelname.tijdstip": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname.tijdstip",
-      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
-    },
-    "DeelnameType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Deelnamerecht": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelnamerecht",
-    "Ding": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing",
-    "DisciplineType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Document": "http://xmlns.com/foaf/0.1/Document",
-    "Documenttype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "DoelgroepType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Feedback": "https://data.vlaanderen.be/ns/cultuurparticipatie#Feedback",
-    "FeedbackBron": "http://www.w3.org/2004/02/skos/core#Concept",
-    "FeedbackContent": "https://data.vlaanderen.be/ns/cultuurparticipatie#FeedbackContent",
-    "Feedbacktype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "FeitelijkeVereniging": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#FeitelijkeVereniging",
-    "Financiering": "https://data.vlaanderen.be/ns/cultuurparticipatie#Financiering",
-    "FormeleOrganisatie": "http://www.w3.org/ns/org#FormalOrganization",
-    "Geldbedrag": "https://schema.org/MonetaryAmount",
-    "GeregistreerdPersoon": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon",
-    "GeregistreerdeOrganisatie": "http://www.w3.org/ns/regorg#RegisteredOrganization",
-    "Geslacht": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Getal": "https://schema.org/Number",
-    "Identificator": "http://www.w3.org/ns/adms#Identifier",
-    "Infrastructuur": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur",
-    "Inkomensniveau": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Kanaal": "https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal",
-    "Kanaal.naam": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal.naam",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "KwantitatieveWaarde": "https://schema.org/QuantitativeValue",
-    "LabelType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "Locatie": "http://www.w3.org/ns/prov#Location",
-    "LocatieType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Mediumtype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Nationaliteit": "https://data.vlaanderen.be/ns/persoon#Nationaliteit",
-    "Nationaliteitscode": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Object": "http://www.w3.org/ns/prov#Entity",
-    "Objecttype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Onderwijsniveau": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Organisatie": "http://www.w3.org/ns/org#Organization",
-    "OrganisatieActiviteit": "http://www.w3.org/2004/02/skos/core#Concept",
-    "OrganisatieClassificatie": "http://www.w3.org/2004/02/skos/core#Concept",
-    "OrganisatieStatus": "http://www.w3.org/2004/02/skos/core#Concept",
-    "OrganisatieType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "OrganisatievormType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Organisator": "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator",
-    "Participant": "https://data.vlaanderen.be/ns/cultuurparticipatie#Participant",
-    "Participant.onderwijsniveau": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.onderwijsniveau",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "ParticipantProfiel": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel",
-    "Participanttype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Periode": "http://data.europa.eu/m8g/PeriodOfTime",
-    "Persoon": "http://www.w3.org/ns/person#Person",
-    "Plaats": "http://purl.org/dc/terms/Location",
-    "PrijsCategorieType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Prijsinfo": "https://schema.org/PriceSpecification",
-    "Promotie": "https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie",
-    "Promotie.kanaal": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.kanaal",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal"
-    },
-    "Promotie.tijdstip": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.tijdstip",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Promotietype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "PubliekeDienstverlening": "http://purl.org/vocab/cpsv#PublicService",
-    "Realisatie": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie",
-    "Realisator": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator",
-    "Realisator.dienst": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.dienst",
-      "@type": "http://purl.org/vocab/cpsv#PublicService"
-    },
-    "Realisator.thema": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.thema",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "Realisator.typeActiviteit": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.typeActiviteit",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "RealisatorType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Rechtspersoonlijkheidstype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Rechtstoestandtype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Rechtsvormtype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "RolTypeOrganisator": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Ruimtetijd": "http://cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume",
-    "Ruimtetijd.locatie": {
-      "@container": "@set",
-      "@id": "https://cidoc-crm.org/html/cidoc_crm_v7.1.2.html#P161",
-      "@type": "http://www.w3.org/ns/prov#Location"
-    },
-    "Ruimtetijd.tijd": {
-      "@container": "@set",
-      "@id": "https://cidoc-crm.org/html/cidoc_crm_v7.1.2.html#P160",
-      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
-    },
-    "Samenwerking": "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking",
-    "Samenwerkingstype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Schema": "https://schema.org/Schedule",
-    "SociodemografischKenmerk": "https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk",
-    "SociodemografischKenmerk.locatie": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk.locatie",
-      "@type": "http://www.w3.org/ns/prov#Location"
-    },
-    "SociodemografischKenmerk.onderwijsniveau": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk.onderwijsniveau",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "StandaardEenheid": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid",
-    "String": "http://www.w3.org/2001/XMLSchema#string",
-    "TaalString": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-    "ThemaType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Ticket": "https://data.vlaanderen.be/ns/cultuurparticipatie#Ticket",
-    "Tickettype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Transactie": "https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie",
-    "Transactie.tijdstip": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.tijdstip",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Transactietype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Triggertype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "TypeTechniek": "http://www.w3.org/2004/02/skos/core#Concept",
-    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
-    "Uitvoerder": "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder",
-    "Vereniging": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Vereniging",
-    "aangekochtDoor": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.aangekochtDoor",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "activiteit": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.activiteit",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-    },
-    "activiteit(Source)": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding.activiteit.source",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-    },
-    "activiteit(Target)": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding.activiteit.target",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-    },
-    "agent(Source)": {
-      "@id": "http://todo.com/Samenwerking.agent.source",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "agent(Target)": {
-      "@id": "http://todo.com/Samenwerking.agent.target",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "begin": {
-      "@id": "http://data.europa.eu/m8g/startTime",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "bepaaltBeperking": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#bepaaltBeperking",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-    },
-    "berichtgeving": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.berichtgeving",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Berichtgeving"
-    },
-    "beschikbaar": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Document.beschikbaar",
-      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
-    },
-    "beschikbaarheid": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.beschikbaarheid",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Beschikbaarheid"
-    },
-    "beschrijving": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/description",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "betaaltermijn": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.betaaltermijn",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "boeking": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#boeking",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Boekingsinfo"
-    },
-    "contactinfo": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.contactinfo",
-      "@type": "http://schema.org/ContactPoint"
-    },
-    "deelVan": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#deelVan",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
-    },
-    "deelname.Activiteit": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname.activiteit",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-    },
-    "deelname.Participant": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname.participant",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Participant"
-    },
-    "deelnamerecht": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname.deelnamerecht",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelnamerecht"
-    },
-    "documentatie": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.documentatie",
-      "@type": "http://xmlns.com/foaf/0.1/Document"
-    },
-    "doelParticipant": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#doelParticipant",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Participant"
-    },
-    "doelProfiel": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#doelProfiel",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
-    },
-    "doelgroep": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.doelgroep",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "duur": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.duur",
-      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
-    },
-    "eenheid": {
-      "@id": "https://schema.org/unitText",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "einde": {
-      "@id": "http://data.europa.eu/m8g/endTime",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "familienaam": {
-      "@id": "http://xmlns.com/foaf/0.1/familyName",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "feedbackOpDeelname": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#feedbackopDeelname",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Feedback"
-    },
-    "financiering": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.financiering",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Financiering"
-    },
-    "frequentie": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname.frequentie",
-      "@type": "https://schema.org/QuantitativeValue"
-    },
-    "geboortedatum": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Persoon.geboortedatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "gebruiktObject": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.gebruiktObject",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing"
-    },
-    "gebruikteVoornaam": {
-      "@id": "http://xmlns.com/foaf/0.1/givenName",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "geeftRechtOp": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#geefrechtop",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname"
-    },
-    "gerichteDoelgroep": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#gerichteDoelgroep",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-    },
-    "geslacht": {
-      "@id": "https://data.vlaanderen.be/ns/persoon#geslacht",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "heeftPersoonlijkProfiel": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#heeftPersoonlijkProfiel",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
-    },
-    "heeftProfiel": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#heeftProfiel",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
-    },
-    "heeftSuborganisatie": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#hasSubOrganization",
-      "@type": "http://www.w3.org/ns/org#Organization"
-    },
-    "heeftVorigeActiviteit": {
-      "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/hasPreviousEvent",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-    },
-    "homepage": {
-      "@id": "http://xmlns.com/foaf/0.1/homepage",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "inclusiefBTW": {
-      "@id": "https://schema.org/valueAddedTaxIncluded",
-      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    "inputVoor": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#inputVoor",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
-    },
-    "isDeelVan": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#deelVan",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
-    },
-    "isGeassocieerdMet": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#linkedTo",
-      "@type": "http://www.w3.org/ns/org#Organization"
-    },
-    "isGepromoot": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#isGepromoot",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie"
-    },
-    "label": {
-      "@container": "@set",
-      "@id": "https://www.w3.org/2000/01/rdf-schema#label",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "leeftijdsgroep": {
-      "@id": "https://schema.org/typicalAgeRange",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "link": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Document.link",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "medium": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/format",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "nationaliteit": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Persoon.nationaliteit",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "neemtDeelAan": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#neemtDeelAan",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-    },
-    "patroniem": {
-      "@id": "http://www.w3.org/ns/person#patronymicName",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "periode": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.periode",
-      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
-    },
-    "prijs": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#prijs",
-      "@type": "https://schema.org/PriceSpecification"
-    },
-    "rang": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.rang",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "realisatie.Activiteit": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.activiteit",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-    },
-    "realisatie.Realisator": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.realisator",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator"
-    },
-    "realiseert": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#realiseert",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-    },
-    "rechthebbende": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Document.rechthebbende",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "rol": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.rol",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "ruimtetijd": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.ruimtetijd",
-      "@type": "http://cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume"
-    },
-    "standaardEenheid": {
-      "@id": "https://schema.org/unitCode",
-      "@type": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid"
-    },
-    "subactiviteit": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#subactiviteit",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-    },
-    "suborganisatieVan": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#subOrganizationOf",
-      "@type": "http://www.w3.org/ns/org#Organization"
-    },
-    "superrealisator": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#superrealisator",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator"
-    },
-    "taal": {
-      "@container": "@set",
-      "@id": "https://schema.org/inLanguage",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "themaActiviteit": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname.themaActiviteit",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "transactie": {
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#transactie",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie"
-    },
-    "trigger": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#trigger",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "type": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "uitgevoerdDoor": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#uitgevoerdDoor",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing"
-    },
-    "verhoudtZichTot": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#verhoudtZichTot",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
-    },
-    "voertUit": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#voertUit",
-      "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie"
-    },
-    "volledigeNaam": {
-      "@id": "http://xmlns.com/foaf/0.1/name",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "waarde": {
-      "@id": "https://schema.org/value",
-      "@type": "https://schema.org/Number"
-    },
-    "werktSamenMet": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#werktSamenMet",
-      "@type": "http://purl.org/dc/terms/Agent"
+    "Activiteit": {
+      "@context": {
+        "beperktTot": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#beperktTot",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
+        },
+        "berichtgeving": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.berichtgeving",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Berichtgeving"
+        },
+        "beschikbaarheid": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.beschikbaarheid",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Beschikbaarheid"
+        },
+        "beschrijving": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "boeking": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.boeking",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Boekingsinfo"
+        },
+        "contactinfo": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.contactinfo",
+          "@type": "http://schema.org/ContactPoint"
+        },
+        "deelnemer": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#deelnemer",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Participant"
+        },
+        "dienst": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.dienst",
+          "@type": "http://purl.org/vocab/cpsv#PublicService"
+        },
+        "documentatie": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.documentatie",
+          "@type": "http://xmlns.com/foaf/0.1/Document"
+        },
+        "doelgroep": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.doelgroep",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "duur": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.duur",
+          "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+        },
+        "financiering": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.financiering",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Financiering"
+        },
+        "gebruiktObject": {
+          "@container": "@set",
+          "@id": "http://todo.com/gebruiktObject",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing"
+        },
+        "gerealiseerdDoor": {
+          "@container": "@set",
+          "@id": "http://cidoc-crm.org/cidoc-crm/P14_carried_out_by",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator"
+        },
+        "heeftVolgendeActiviteit": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/hasNextEvent",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        },
+        "heeftVorigeActiviteit": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/hasPreviousEvent",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        },
+        "isGepromoot": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.isGepromoot",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie"
+        },
+        "label": {
+          "@container": "@set",
+          "@id": "https://www.w3.org/2000/01/rdf-schema#label",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "locatie": {
+          "@id": "https://www.w3.org/ns/prov#atLocation",
+          "@type": "http://www.w3.org/ns/prov#Location"
+        },
+        "naam": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "prijs": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.prijs",
+          "@type": "https://schema.org/PriceSpecification"
+        },
+        "ruimtetijd": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.ruimtetijd",
+          "@type": "http://cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume"
+        },
+        "subactiviteit": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.subactiviteit",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        },
+        "superactiviteit": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#superactiviteit",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        },
+        "taal": {
+          "@container": "@set",
+          "@id": "https://schema.org/inLanguage",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "thema": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#thema",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "tijd": {
+          "@id": "http://cidoc-crm.org/cidoc-crm/P4_has_time-span",
+          "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+        },
+        "trigger": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#trigger",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "verhoudtZichTot": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.verhoudtZichTot",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+    },
+    "ActiviteitFunctietype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "ActiviteitStatus": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "ActiviteitVerhouding": {
+      "@context": {
+        "activiteit(Source)": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding.activiteit.source",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        },
+        "activiteit(Target)": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding.activiteit.target",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#ActiviteitVerhouding"
+    },
+    "ActiviteitVerhoudingType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Activiteittype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Agent": {
+      "@context": {
+        "werktSamenMet": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Agent.werktSamenMet",
+          "@type": "http://purl.org/dc/terms/Agent"
+        }
+      },
+      "@id": "http://purl.org/dc/terms/Agent"
+    },
+    "AlgemeenParticipantkenmerk": {
+      "@context": {
+        "isDeelVan": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantkenmerk.isDeelVan",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantkenmerk"
+    },
+    "Berichtgeving": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Berichtgeving"
+    },
+    "Beschikbaarheid": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Beschikbaarheid"
+    },
+    "BetaaltermijnType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Boekingsinfo": {
+      "@context": {
+        "kanaal": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Boekinginfo.kanaal",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Boekingsinfo"
+    },
+    "Boolean": {
+      "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Consent": {
+      "@id": "https://w3id.org/GConsent#Consent"
+    },
+    "Contactinfo": {
+      "@id": "http://schema.org/ContactPoint"
+    },
+    "Cultuurdeelname": {
+      "@context": {
+        "deelVan": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname.deelVan",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
+        },
+        "frequentie": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname.frequentie",
+          "@type": "https://schema.org/QuantitativeValue"
+        },
+        "themaActiviteit": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname.themaActiviteit",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "typeActiviteit": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname.typeActiviteit",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname"
+    },
+    "DateTime": {
+      "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Deelname": {
+      "@context": {
+        "deelname.Activiteit": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname.Activiteit",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        },
+        "deelname.Participant": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname.Participant",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Participant"
+        },
+        "deelnamerecht": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname.deelnamerecht",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelnamerecht"
+        },
+        "feedbackOpDeelname": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname.feedbackOpDeelname",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Feedback"
+        },
+        "inputVoor": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname.inputVoor",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
+        },
+        "tijdstip": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname.tijdstip",
+          "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+        },
+        "transactie": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#transactie",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname"
+    },
+    "DeelnameType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Deelnamerecht": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelnamerecht"
+    },
+    "Ding": {
+      "@context": {
+        "voertUit": {
+          "@container": "@set",
+          "@id": "http://todo.com/ding.UitgevoerdDoor",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing"
+    },
+    "DisciplineType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Document": {
+      "@context": {
+        "beschikbaar": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Document.beschikbaar",
+          "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+        },
+        "link": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Document.link",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "rechthebbende": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Document.rechthebbende",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "Documenttype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "DoelgroepType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Feedback": {
+      "@context": {
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "vanDeelname": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#vanDeelname",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Feedback"
+    },
+    "FeedbackBron": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "FeedbackContent": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#FeedbackContent"
+    },
+    "Feedbacktype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "FeitelijkeVereniging": {
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#FeitelijkeVereniging"
+    },
+    "Financiering": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Financiering"
+    },
+    "FormeleOrganisatie": {
+      "@id": "http://www.w3.org/ns/org#FormalOrganization"
+    },
+    "Geldbedrag": {
+      "@id": "https://schema.org/MonetaryAmount"
+    },
+    "GeregistreerdPersoon": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
+    },
+    "GeregistreerdeOrganisatie": {
+      "@id": "http://www.w3.org/ns/regorg#RegisteredOrganization"
+    },
+    "Geslacht": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Getal": {
+      "@id": "https://schema.org/Number"
+    },
+    "Identificator": {
+      "@id": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Infrastructuur": {
+      "@id": "https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur"
+    },
+    "Inkomensniveau": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Kanaal": {
+      "@context": {
+        "medium": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/format",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "naam": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal.naam",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal"
+    },
+    "KwantitatieveWaarde": {
+      "@context": {
+        "eenheid": {
+          "@id": "https://schema.org/unitText",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "standaardEenheid": {
+          "@id": "https://schema.org/unitCode",
+          "@type": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid"
+        },
+        "waarde": {
+          "@id": "https://schema.org/value",
+          "@type": "https://schema.org/Number"
+        }
+      },
+      "@id": "https://schema.org/QuantitativeValue"
+    },
+    "LabelType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Literal": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Locatie": {
+      "@id": "http://www.w3.org/ns/prov#Location"
+    },
+    "LocatieType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Mediumtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Nationaliteit": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#Nationaliteit"
+    },
+    "Nationaliteitscode": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Object": {
+      "@context": {
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://www.w3.org/ns/prov#Entity"
+    },
+    "Objecttype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Onderwijsniveau": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Organisatie": {
+      "@context": {
+        "heeftSuborganisatie": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#hasSubOrganization",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "homepage": {
+          "@id": "http://xmlns.com/foaf/0.1/homepage",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "isGeassocieerdMet": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#linkedTo",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "suborganisatieVan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#subOrganizationOf",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#Organization"
+    },
+    "OrganisatieActiviteit": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "OrganisatieClassificatie": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "OrganisatieStatus": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "OrganisatieType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "OrganisatievormType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Organisator": {
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Organisator"
+    },
+    "Participant": {
+      "@context": {
+        "heeftPersoonlijkProfiel": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.heeftPersoonlijkeProfiel",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
+        },
+        "heeftProfiel": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.heeftProfiel",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
+        },
+        "heeftRelatieMet": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#heeftRelatieMet",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Participant"
+        },
+        "leeftijdsgroep": {
+          "@id": "https://schema.org/typicalAgeRange",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "neemtDeelAan": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.neemtDeelAan",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        },
+        "onderwijsniveau": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.onderwijsniveau",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Participant"
+    },
+    "ParticipantProfiel": {
+      "@context": {
+        "afgeleidVan": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#afgeleidVan",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname"
+        },
+        "algemeenKenmerk": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#algemeenKenmerk",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantkenmerk"
+        },
+        "bepaaltBeperking": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel.bepaaltBeperking",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        },
+        "cultureel": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#cultureel",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname"
+        },
+        "gerichteDoelgroep": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel.gerichteDoelgroep",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        },
+        "persoonlijkProfielVan": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#persoonlijkProfielVan",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Participant"
+        },
+        "profielVan": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#profielVan",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Participant"
+        },
+        "sociodemografisch": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#sociodemografisch",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
+    },
+    "Participanttype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Periode": {
+      "@context": {
+        "begin": {
+          "@id": "http://data.europa.eu/m8g/startTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "einde": {
+          "@id": "http://data.europa.eu/m8g/endTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "Persoon": {
+      "@context": {
+        "familienaam": {
+          "@id": "http://xmlns.com/foaf/0.1/familyName",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "geboortedatum": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Persoon.geboortedatum",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "gebruikteVoornaam": {
+          "@id": "http://xmlns.com/foaf/0.1/givenName",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "geslacht": {
+          "@id": "https://data.vlaanderen.be/ns/persoon#geslacht",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "nationaliteit": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Persoon.nationaliteit",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "patroniem": {
+          "@id": "http://www.w3.org/ns/person#patronymicName",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "volledigeNaam": {
+          "@id": "http://xmlns.com/foaf/0.1/name",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      "@id": "http://www.w3.org/ns/person#Person"
+    },
+    "Plaats": {
+      "@id": "http://purl.org/dc/terms/Location"
+    },
+    "PrijsCategorieType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Prijsinfo": {
+      "@context": {
+        "inclusiefBTW": {
+          "@id": "https://schema.org/valueAddedTaxIncluded",
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+        }
+      },
+      "@id": "https://schema.org/PriceSpecification"
+    },
+    "Promotie": {
+      "@context": {
+        "activiteit": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#activiteit",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        },
+        "doelParticipant": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.doelParticipant",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Participant"
+        },
+        "doelProfiel": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.doelProfiel",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
+        },
+        "kanaal": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.kanaal",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal"
+        },
+        "tijdstip": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.tijdstip",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "uitgevoerdDoor": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#uitgevoerdDoor",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie"
+    },
+    "Promotietype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "PubliekeDienstverlening": {
+      "@id": "http://purl.org/vocab/cpsv#PublicService"
+    },
+    "Realisatie": {
+      "@context": {
+        "gebruiktObject": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.gebruiktObject",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing"
+        },
+        "rang": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.rang",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "realisatie.Activiteit": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.Activiteit",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        },
+        "realisatie.Realisator": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.Realisator",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator"
+        },
+        "rol": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.rol",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie"
+    },
+    "Realisator": {
+      "@context": {
+        "dienst": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.dienst",
+          "@type": "http://purl.org/vocab/cpsv#PublicService"
+        },
+        "realiseert": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.realiseert",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        },
+        "subrealisator": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#subrealisator",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator"
+        },
+        "superrealisator": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.superrealisator",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator"
+        },
+        "thema": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.thema",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "typeActiviteit": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.typeActiviteit",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "voertUit": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.voertUit",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator"
+    },
+    "RealisatorType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Rechtspersoonlijkheidstype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Rechtstoestandtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Rechtsvormtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "RolTypeOrganisator": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Ruimtetijd": {
+      "@context": {
+        "locatie": {
+          "@container": "@set",
+          "@id": "https://cidoc-crm.org/html/cidoc_crm_v7.1.2.html#P161",
+          "@type": "http://www.w3.org/ns/prov#Location"
+        },
+        "tijd": {
+          "@container": "@set",
+          "@id": "https://cidoc-crm.org/html/cidoc_crm_v7.1.2.html#P160",
+          "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+        }
+      },
+      "@id": "http://cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume"
+    },
+    "Samenwerking": {
+      "@context": {
+        "activiteit": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.activiteit",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        },
+        "agent(Source)": {
+          "@id": "http://todo.com/Samenwerking.agent.source",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "agent(Target)": {
+          "@id": "http://todo.com/Samenwerking.agent.target",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "periode": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking.periode",
+          "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Samenwerking"
+    },
+    "Samenwerkingstype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Schema": {
+      "@id": "https://schema.org/Schedule"
+    },
+    "SociodemografischKenmerk": {
+      "@context": {
+        "deelVan": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk.deelVan",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel"
+        },
+        "leeftijdsgroep": {
+          "@id": "https://schema.org/typicalAgeRange",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "locatie": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk.locatie",
+          "@type": "http://www.w3.org/ns/prov#Location"
+        },
+        "onderwijsniveau": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk.onderwijsniveau",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk"
+    },
+    "StandaardEenheid": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid"
+    },
+    "String": {
+      "@id": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "TaalString": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "ThemaType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Ticket": {
+      "@context": {
+        "transactie": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Ticket.transactie",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Ticket"
+    },
+    "Tickettype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Transactie": {
+      "@context": {
+        "aangekochtDoor": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.aangekochtDoor",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "betaaltermijn": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.betaaltermijn",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "geeftRechtOp": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#geefrechtop",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname"
+        },
+        "ticket": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#ticket",
+          "@type": "https://data.vlaanderen.be/ns/cultuurparticipatie#Ticket"
+        },
+        "tijdstip": {
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.tijdstip",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie"
+    },
+    "Transactietype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Triggertype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "TypeTechniek": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "URI": {
+      "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Uitvoerder": {
+      "@context": {
+        "uitgevoerdDoor": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#uitgevoerdDoor",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder"
+    },
+    "Vereniging": {
+      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#Vereniging"
     }
   }
 }
