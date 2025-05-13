@@ -2,65 +2,65 @@
 
 #||# -------------------------------------
 
-2025-03-16T21:21:14.215Z info: Connector Model:OSLO-Loongegevens_globaal:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:04:48.437Z info: Connector Model:OSLO-Loongegevens_globaal:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:21:14.217Z info: Connector Model:OSLO-Loongegevens_globaal:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:04:48.438Z info: Connector Model:OSLO-Loongegevens_globaal:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:21:14.217Z info: Connector Model:OSLO-Loongegevens_globaal:OSLO-Persoon:Persoon:(Persoon -> Arbeidsrelatie) has no name. Ignoring this connector.
+2025-05-13T11:04:48.440Z info: Connector Model:OSLO-Loongegevens_globaal:OSLO-Persoon:Persoon:isHoofdVan is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:21:14.218Z info: Connector Model:OSLO-Loongegevens_globaal:OSLO-Organisatie:Organisatie:(Organisatie -> Arbeidsrelatie) has no name. Ignoring this connector.
+2025-05-13T11:04:48.440Z info: Connector Model:OSLO-Loongegevens_globaal:OSLO-Persoon:Persoon:isHoofdVan has name "isHoofdVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-03-16T21:21:14.218Z info: Connector Model:OSLO-Loongegevens_globaal:OSLO-Loongegevens:Arbeidsrelatie:(Arbeidsrelatie -> Arbeidsloon) has no name. Ignoring this connector.
+2025-05-13T11:04:48.440Z info: Connector Model:OSLO-Loongegevens_globaal:OSLO-Persoon:Persoon:isLidVan is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:21:14.218Z info: Connector Model:OSLO-Loongegevens_globaal:OSLO-Persoon:Persoon:(Persoon -> Inkomst) has no name. Ignoring this connector.
+2025-05-13T11:04:48.440Z info: Connector Model:OSLO-Loongegevens_globaal:OSLO-Persoon:Persoon:isLidVan has name "isLidVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-03-16T21:21:14.219Z info: Connector Model:OSLO-Loongegevens_globaal:OSLO-Loongegevens:Arbeidsloon:(Arbeidsloon -> Inkomst) is not an association with a source role. Ignoring this connector.
+2025-05-13T11:04:48.440Z info: Connector Model:OSLO-Loongegevens_globaal:OSLO-Loongegevens:Arbeidsloon:(Arbeidsloon -> Inkomst) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:21:14.220Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:04:48.441Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:21:14.220Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:04:48.441Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:21:14.220Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:04:48.441Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:21:14.220Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-Persoon) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:04:48.441Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-Persoon) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:21:14.220Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:04:48.441Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:21:14.220Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:04:48.441Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:21:14.220Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-Perceel) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:04:48.441Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-Perceel) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:21:14.220Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-Besluit) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:04:48.441Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-Besluit) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:21:14.220Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:Hulppakket) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:04:48.441Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:Hulppakket) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:21:14.220Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-PubliekeDienstverlening) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:04:48.442Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-PubliekeDienstverlening) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:21:14.221Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-Gebouw) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:04:48.442Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-Gebouw) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:21:14.221Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-omgevingsanalyse) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:04:48.442Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-omgevingsanalyse) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:21:14.221Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-FeitelijkeVerenigingen) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T11:04:48.442Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Loongegevens_globaal:OSLO-FeitelijkeVerenigingen) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:21:14.223Z warn: [ConnectorConverterHandler]: Connector (arbeidsloon) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T11:04:48.444Z warn: [ConnectorConverterHandler]: Connector (arbeidsrelatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-16T21:21:14.234Z warn: [ConverterHandler]: Entity with path isHoofdVan has an empty value for tag ap-usageNote-nl.
+2025-05-13T11:04:48.444Z warn: [ConnectorConverterHandler]: Connector (arbeidsloon) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-16T21:21:14.234Z warn: [ConverterHandler]: Entity with path isHoofdVan has an empty value for tag ap-usageNote-nl.
+2025-05-13T11:04:48.455Z warn: [ConverterHandler]: Entity with path isHoofdVan has an empty value for tag ap-usageNote-nl.
 
-2025-03-16T21:21:14.235Z warn: [ConverterHandler]: Entity with path isLidVan has already a value for ap-label-nl in language nl, but will be overwritten.
+2025-05-13T11:04:48.457Z warn: [ConverterHandler]: Entity with path isHoofdVan has an empty value for tag ap-usageNote-nl.
 
-2025-03-16T21:21:14.235Z warn: [ConverterHandler]: Entity with path isLidVan has already a value for label-nl in language nl, but will be overwritten.
+2025-05-13T11:04:48.458Z warn: [ConverterHandler]: Entity with path isLidVan has already a value for ap-label-nl in language nl, but will be overwritten.
 
-2025-03-16T21:21:14.235Z warn: [ConverterHandler]: Entity with path isLidVan has an empty value for tag ap-usageNote-nl.
+2025-05-13T11:04:48.458Z warn: [ConverterHandler]: Entity with path isLidVan has already a value for label-nl in language nl, but will be overwritten.
 
-2025-03-16T21:21:14.238Z warn: [ConverterHandler]: Entity with path isLidVan has already a value for ap-label-nl in language nl, but will be overwritten.
+2025-05-13T11:04:48.458Z warn: [ConverterHandler]: Entity with path isLidVan has an empty value for tag ap-usageNote-nl.
 
-2025-03-16T21:21:14.238Z warn: [ConverterHandler]: Entity with path isLidVan has already a value for label-nl in language nl, but will be overwritten.
+2025-05-13T11:04:48.458Z warn: [ConverterHandler]: Entity with path isLidVan has already a value for ap-label-nl in language nl, but will be overwritten.
 
-2025-03-16T21:21:14.238Z warn: [ConverterHandler]: Entity with path isLidVan has an empty value for tag ap-usageNote-nl.
+2025-05-13T11:04:48.458Z warn: [ConverterHandler]: Entity with path isLidVan has already a value for label-nl in language nl, but will be overwritten.
 
-2025-03-16T21:21:14.238Z warn: [ConverterHandler]: Entity with path gezinslid has already a value for ap-definition-nl in language nl, but will be overwritten.
+2025-05-13T11:04:48.458Z warn: [ConverterHandler]: Entity with path isLidVan has an empty value for tag ap-usageNote-nl.
 
 #||# -------------------------------------
 

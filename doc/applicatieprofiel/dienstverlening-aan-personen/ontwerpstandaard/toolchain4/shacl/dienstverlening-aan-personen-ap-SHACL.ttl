@@ -364,12 +364,33 @@
     shacl:description "Soort dienstverlening."@nl;
     shacl:name "diensttype"@nl;
     shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#Dienstaanbod.Vestiging>;
+    shacl:class org:Site;
+    shacl:description "De Vestiging waarop het Dienstaanbod wordt aangeboden."@nl;
+    shacl:maxCount "1";
+    shacl:name "vestiging"@nl;
+    shacl:path prov:atLocation
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#Dienstaanbod.Organisatie>;
+    shacl:class org:Organization;
+    shacl:description "Organisatie verantwoordelijk voor het Dienstaanbod."@nl;
+    shacl:maxCount "1";
+    shacl:name "organisatie"@nl;
+    shacl:path prov:agent
   ];
   shacl:targetClass <http://purl.org/vocab/cpsv#PublicService> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4/DienstconsumptieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#Dienstconsumptie.Dienstaanbod>;
+    shacl:class <http://purl.org/vocab/cpsv#PublicService>;
+    shacl:description "Linkt een bepaalde consumptie van een dienstverlening (een transactie) met het product uit de dienstencatalogus."@nl;
+    shacl:maxCount "1";
+    shacl:name "dienstaanbod"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/transactie#isInstantieVan>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#Dienstconsumptie.Participatie>;
     shacl:class <http://data.europa.eu/m8g/Participation>;
     shacl:description "Verwijst naar de afnemers van de dienst, inclusief hun respectieve rollen."@nl;
@@ -646,6 +667,13 @@
     shacl:maxCount "1";
     shacl:name "beëindiging"@nl;
     shacl:path <https://data.vlaanderen.be/ns/dienst#beeindiging>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#Participatie.Agent>;
+    shacl:class dc:Agent;
+    shacl:description "Agent waarvoor de details van de Participatie worden vastgelegd."@nl;
+    shacl:maxCount "1";
+    shacl:name "agent"@nl;
+    shacl:path prov:agent
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Participation> .
 
@@ -809,6 +837,13 @@
     shacl:description "De wijze waarop het socioeconomisch kenmerk tot uiting komt."@nl;
     shacl:name "waarde"@nl;
     shacl:path rdf:value
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#SocioEconomischKenmerk.Persoon>;
+    shacl:class <http://www.w3.org/ns/person#Person>;
+    shacl:description "De persoon waarvoor het kenmerk van toepassing is."@nl;
+    shacl:maxCount "1";
+    shacl:name "persoon"@nl;
+    shacl:path rdf:subject
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#Statistiek> .
 
@@ -972,6 +1007,13 @@
     shacl:maxCount "1";
     shacl:name "plan"@nl;
     shacl:path prov:atTime
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#Uitgangregeling.Participatie>;
+    shacl:class <http://data.europa.eu/m8g/Participation>;
+    shacl:description "De Participatie waarop de Uitgangregeling van toepassing is."@nl;
+    shacl:maxCount "1";
+    shacl:name "participatie"@nl;
+    shacl:path prov:qualifiedAssociation
   ];
   shacl:targetClass prov:Association .
 
@@ -988,5 +1030,12 @@
     shacl:maxCount "1";
     shacl:name "contactinfo"@nl;
     shacl:path <http://data.europa.eu/m8g/contactPoint>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#Vestiging.Organisatie>;
+    shacl:class org:Organization;
+    shacl:description "Organisatie verantwoordelijk voor de Vestiging."@nl;
+    shacl:maxCount "1";
+    shacl:name "organisatie"@nl;
+    shacl:path org:siteOf
   ];
   shacl:targetClass org:Site .

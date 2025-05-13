@@ -2,23 +2,5 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for class http://def.isotc211.org/iso19157/2013/DataQuality_2#DQ_Element which acts as a parent.
-
-    at JsonWebuniversumGenerationService.createParentObject (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:237:19)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:137:65
-
-    at Array.map (<anonymous>)
-
-    at JsonWebuniversumGenerationService.generateEntityData (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:137:42)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:33:36
-
-    at Array.map (<anonymous>)
-
-    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:33:14)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-05-13T11:09:40.277Z warn: Unable to find the assigned URI for external class http://def.isotc211.org/iso19157/2013/DataQuality_2#DQ_Element which acts as a parent. Using original URI as fallback.
 
