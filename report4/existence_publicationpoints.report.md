@@ -458,6 +458,14 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/test/thermAI.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/thermAI/ontwerpstandaard/15-05-2025/index.html'
+error: missing '/tmp/generated/doc/vocabularium/thermAI/ontwerpstandaard/15-05-2025/index.html'
+
 #||#    + checking /home/circleci/project/config/test/toestemming.publication.json
 #||# 
 Directory check

@@ -2,369 +2,369 @@
 
 #||# -------------------------------------
 
-2025-05-13T13:23:22.559Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:TimeTabledPassingTime:(TimeTabledPassingTime -> PointInJourneyPattern))
+2025-05-13T15:07:23.077Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:TimeTabledPassingTime:(TimeTabledPassingTime -> PointInJourneyPattern))
 
-2025-05-13T13:23:22.561Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:TimeTabledPassingTime:(TimeTabledPassingTime -> VehicleJourney))
+2025-05-13T15:07:23.078Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:TimeTabledPassingTime:(TimeTabledPassingTime -> VehicleJourney))
 
-2025-05-13T13:23:22.561Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:ServiceJourney:(ServiceJourney -> ServiceJourneyPattern))
+2025-05-13T15:07:23.078Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:ServiceJourney:(ServiceJourney -> ServiceJourneyPattern))
 
-2025-05-13T13:23:22.561Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:PointOnRoute:(PointOnRoute -> Route))
+2025-05-13T15:07:23.079Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:PointOnRoute:(PointOnRoute -> Route))
 
-2025-05-13T13:23:22.561Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:ScheduledStopPoint:(ScheduledStopPoint -> ServiceLink))
+2025-05-13T15:07:23.079Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:ScheduledStopPoint:(ScheduledStopPoint -> ServiceLink))
 
-2025-05-13T13:23:22.561Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:ScheduledStopPoint:(ScheduledStopPoint -> ServiceLink))
+2025-05-13T15:07:23.079Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:ScheduledStopPoint:(ScheduledStopPoint -> ServiceLink))
 
-2025-05-13T13:23:22.561Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:StopPointInJourneyPattern:(StopPointInJourneyPattern -> ServiceJourneyPattern))
+2025-05-13T15:07:23.079Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:StopPointInJourneyPattern:(StopPointInJourneyPattern -> ServiceJourneyPattern))
 
-2025-05-13T13:23:22.561Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:VehicleJourney:(VehicleJourney -> ServiceCalendar))
+2025-05-13T15:07:23.079Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:VehicleJourney:(VehicleJourney -> ServiceCalendar))
 
-2025-05-13T13:23:22.561Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:Block:(Block -> ServiceCalendar))
+2025-05-13T15:07:23.079Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:Block:(Block -> ServiceCalendar))
 
-2025-05-13T13:23:22.561Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:JourneyPattern:(JourneyPattern -> ServiceJourneyPattern))
+2025-05-13T15:07:23.079Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:JourneyPattern:(JourneyPattern -> ServiceJourneyPattern))
 
-2025-05-13T13:23:22.561Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:VehicleJourney:(VehicleJourney -> Block))
+2025-05-13T15:07:23.079Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:TimetablesAndPlanning:VehicleJourney:(VehicleJourney -> Block))
 
-2025-05-13T13:23:22.561Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
+2025-05-13T15:07:23.079Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
 
-2025-05-13T13:23:22.561Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+2025-05-13T15:07:23.079Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-05-13T13:23:22.561Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
+2025-05-13T15:07:23.079Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
 
-2025-05-13T13:23:22.563Z info: Connector Model:Domain Model:TimetablesAndPlanning:Network:(Network -> GroupOfLines) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.081Z info: Connector Model:Domain Model:TimetablesAndPlanning:Network:(Network -> GroupOfLines) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.565Z info: Connector Model:Domain Model:TimetablesAndPlanning:TimeTabledPassingTime:(TimeTabledPassingTime -> PassingTime) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.083Z info: Connector Model:Domain Model:TimetablesAndPlanning:TimeTabledPassingTime:(TimeTabledPassingTime -> PassingTime) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.565Z info: Connector Model:Domain Model:TimetablesAndPlanning:JourneyPattern:(JourneyPattern -> LinkSequence) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.083Z info: Connector Model:Domain Model:TimetablesAndPlanning:JourneyPattern:(JourneyPattern -> LinkSequence) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.565Z info: Connector Model:Domain Model:TimetablesAndPlanning:Route:(Route -> LinkSequence) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.083Z info: Connector Model:Domain Model:TimetablesAndPlanning:Route:(Route -> LinkSequence) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.565Z info: Connector Model:Domain Model:TimetablesAndPlanning:PointInJourneyPattern:(PointInJourneyPattern -> PointInLinkSequence) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.083Z info: Connector Model:Domain Model:TimetablesAndPlanning:PointInJourneyPattern:(PointInJourneyPattern -> PointInLinkSequence) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.565Z info: Connector Model:Domain Model:TimetablesAndPlanning:ServiceJourney:(ServiceJourney -> VehicleJourney) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.083Z info: Connector Model:Domain Model:TimetablesAndPlanning:ServiceJourney:(ServiceJourney -> VehicleJourney) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.565Z info: Connector Model:Domain Model:TimetablesAndPlanning:Country:(Country -> Place) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.083Z info: Connector Model:Domain Model:TimetablesAndPlanning:Country:(Country -> Place) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.565Z info: Connector Model:Domain Model:TimetablesAndPlanning:TopographicPlace:(TopographicPlace -> Place) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.083Z info: Connector Model:Domain Model:TimetablesAndPlanning:TopographicPlace:(TopographicPlace -> Place) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.565Z info: Connector Model:Domain Model:TimetablesAndPlanning:GroupOfLines:(GroupOfLines -> GroupOfEntities) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:GroupOfLines:(GroupOfLines -> GroupOfEntities) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:StopPlace:(StopPlace -> Site) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:StopPlace:(StopPlace -> Site) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:Quay:(Quay -> StopPlaceSpace) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:Quay:(Quay -> StopPlaceSpace) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:GroupOfStopPlaces:(GroupOfStopPlaces -> GroupOfEntities) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:GroupOfStopPlaces:(GroupOfStopPlaces -> GroupOfEntities) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:Place:(Place -> Zone) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:Place:(Place -> Zone) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:PointOnRoute:(PointOnRoute -> PointInLinkSequence) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:PointOnRoute:(PointOnRoute -> PointInLinkSequence) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:RoutePoint:(RoutePoint -> Point) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:RoutePoint:(RoutePoint -> Point) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:RouteLink:(RouteLink -> Link) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:RouteLink:(RouteLink -> Link) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:TimingPointInJourneyPattern:(TimingPointInJourneyPattern -> PointInJourneyPattern) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:TimingPointInJourneyPattern:(TimingPointInJourneyPattern -> PointInJourneyPattern) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:ServiceLink:(ServiceLink -> Link) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:ServiceLink:(ServiceLink -> Link) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:Zone:(Zone -> GroupOfPoints) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:Zone:(Zone -> GroupOfPoints) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:GroupOfPoints:(GroupOfPoints -> GroupOfEntities) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:GroupOfPoints:(GroupOfPoints -> GroupOfEntities) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:StopPlaceEntrance:(StopPlaceEntrance -> Entrance) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:StopPlaceEntrance:(StopPlaceEntrance -> Entrance) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:Garage:(Garage -> AddressablePlace) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:Garage:(Garage -> AddressablePlace) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:AddressablePlace:(AddressablePlace -> Place) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:AddressablePlace:(AddressablePlace -> Place) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:ReliefPoint:(ReliefPoint -> TimingPoint) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:ReliefPoint:(ReliefPoint -> TimingPoint) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:TimingPoint:(TimingPoint -> Point) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:TimingPoint:(TimingPoint -> Point) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.566Z info: Connector Model:Domain Model:TimetablesAndPlanning:Entrance:(Entrance -> SiteComponent) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.084Z info: Connector Model:Domain Model:TimetablesAndPlanning:Entrance:(Entrance -> SiteComponent) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.567Z info: Connector Model:Domain Model:TimetablesAndPlanning:ReliefPoint:(ReliefPoint -> CrewBase) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.085Z info: Connector Model:Domain Model:TimetablesAndPlanning:ReliefPoint:(ReliefPoint -> CrewBase) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.567Z info: Connector Model:Domain Model:TimetablesAndPlanning:TopographicPlace:(TopographicPlace -> TopographicPlace) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.085Z info: Connector Model:Domain Model:TimetablesAndPlanning:TopographicPlace:(TopographicPlace -> TopographicPlace) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.567Z info: Connector Model:Domain Model:TimetablesAndPlanning:PointOfInterest:(PointOfInterest -> Site) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.085Z info: Connector Model:Domain Model:TimetablesAndPlanning:PointOfInterest:(PointOfInterest -> Site) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.567Z info: Connector Model:Domain Model:TimetablesAndPlanning:DeadRun:(DeadRun -> VehicleJourney) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.085Z info: Connector Model:Domain Model:TimetablesAndPlanning:DeadRun:(DeadRun -> VehicleJourney) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.567Z info: Connector Model:Domain Model:TimetablesAndPlanning:DeadRunPattern:(DeadRunPattern -> JourneyPattern) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.085Z info: Connector Model:Domain Model:TimetablesAndPlanning:DeadRunPattern:(DeadRunPattern -> JourneyPattern) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.567Z info: Connector Model:Domain Model:TimetablesAndPlanning:VehicleJourney:(VehicleJourney -> JourneyPattern) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.085Z info: Connector Model:Domain Model:TimetablesAndPlanning:VehicleJourney:(VehicleJourney -> JourneyPattern) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.567Z info: Connector Model:Domain Model:TimetablesAndPlanning:GaragePoint:(GaragePoint -> ParkingPoint) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.085Z info: Connector Model:Domain Model:TimetablesAndPlanning:GaragePoint:(GaragePoint -> ParkingPoint) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.567Z info: Connector Model:Domain Model:TimetablesAndPlanning:Block:(Block -> ParkingPoint) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.085Z info: Connector Model:Domain Model:TimetablesAndPlanning:Block:(Block -> ParkingPoint) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.567Z info: Connector Model:Domain Model:TimetablesAndPlanning:Block:(Block -> ParkingPoint) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.085Z info: Connector Model:Domain Model:TimetablesAndPlanning:Block:(Block -> ParkingPoint) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.567Z info: Connector Model:Domain Model:TimetablesAndPlanning:Block:(Block -> VehicleType) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.085Z info: Connector Model:Domain Model:TimetablesAndPlanning:Block:(Block -> VehicleType) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.567Z info: Connector Model:Domain Model:TimetablesAndPlanning:ParkingPoint:(ParkingPoint -> ReliefPoint) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:ParkingPoint:(ParkingPoint -> ReliefPoint) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:TopographicPlace:(TopographicPlace -> TopographicPlace) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:TopographicPlace:(TopographicPlace -> TopographicPlace) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:ServiceJourneyPattern:(ServiceJourneyPattern -> LinkSequence) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:ServiceJourneyPattern:(ServiceJourneyPattern -> LinkSequence) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:StopPointInJourneyPattern:(StopPointInJourneyPattern -> TimingPointInJourneyPattern) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:StopPointInJourneyPattern:(StopPointInJourneyPattern -> TimingPointInJourneyPattern) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:ServiceJourneyPattern:(ServiceJourneyPattern -> JourneyPattern) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:ServiceJourneyPattern:(ServiceJourneyPattern -> JourneyPattern) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:PointInLinkSequence:(PointInLinkSequence -> LinkSequence) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:PointInLinkSequence:(PointInLinkSequence -> LinkSequence) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:StopPlaceSpace:(StopPlaceSpace -> SiteComponent) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:StopPlaceSpace:(StopPlaceSpace -> SiteComponent) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:SiteComponent:(SiteComponent -> SiteElement) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:SiteComponent:(SiteComponent -> SiteElement) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:GroupOfStopPlaces:(GroupOfStopPlaces -> StopPlace) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:GroupOfStopPlaces:(GroupOfStopPlaces -> StopPlace) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:SiteElement:(SiteElement -> AddressablePlace) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:SiteElement:(SiteElement -> AddressablePlace) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:Journey:(Journey -> LinkSequence) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:Journey:(Journey -> LinkSequence) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:ServiceJourney:(ServiceJourney -> Journey) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:ServiceJourney:(ServiceJourney -> Journey) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:StopPlaceEntrance:(StopPlaceEntrance -> StopPlaceSpace) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:StopPlaceEntrance:(StopPlaceEntrance -> StopPlaceSpace) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:Site:(Site -> SiteElement) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:Site:(Site -> SiteElement) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:JourneyPart:(JourneyPart -> JourneyPartCouple) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:JourneyPart:(JourneyPart -> JourneyPartCouple) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:Authority:(Authority -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.086Z info: Connector Model:Domain Model:TimetablesAndPlanning:Authority:(Authority -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:Operator:(Operator -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:TimetablesAndPlanning:Operator:(Operator -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:Authority:(Authority -> AuthorityOrOperator) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:TimetablesAndPlanning:Authority:(Authority -> AuthorityOrOperator) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:DayType:(DayType -> Timeband) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:TimetablesAndPlanning:DayType:(DayType -> Timeband) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:Operator:(Operator -> AuthorityOrOperator) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:TimetablesAndPlanning:Operator:(Operator -> AuthorityOrOperator) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.568Z info: Connector Model:Domain Model:TimetablesAndPlanning:GroupOfLines:(GroupOfLines -> Line) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:TimetablesAndPlanning:GroupOfLines:(GroupOfLines -> Line) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.569Z info: Connector Model:Domain Model:OSLO-Generiek:Point:(Point -> Geometry) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:OSLO-Generiek:Point:(Point -> Geometry) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.569Z info: Connector Model:Domain Model:TimetablesAndPlanning:Direction:(Direction -> Direction) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:TimetablesAndPlanning:Direction:(Direction -> Direction) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.569Z info: Connector Model:Domain Model:OSLO-Generiek:LineString:(LineString -> Geometry) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:OSLO-Generiek:LineString:(LineString -> Geometry) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.569Z info: Connector Model:Domain Model:TimetablesAndPlanning:Route:(Route -> Route) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:TimetablesAndPlanning:Route:(Route -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.569Z info: Connector Model:Domain Model:TimetablesAndPlanning:ScheduledStopPoint:(ScheduledStopPoint -> TimingPoint) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:TimetablesAndPlanning:ScheduledStopPoint:(ScheduledStopPoint -> TimingPoint) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.569Z info: Connector Model:Domain Model:TimetablesAndPlanning:VehicleJourney:(VehicleJourney -> Journey) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:TimetablesAndPlanning:VehicleJourney:(VehicleJourney -> Journey) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.569Z info: Connector Model:Domain Model:TimetablesAndPlanning:Train:(Train -> VehicleType) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:TimetablesAndPlanning:Train:(Train -> VehicleType) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.569Z info: Connector Model:Domain Model:TimetablesAndPlanning:ServiceFacilitySet:(ServiceFacilitySet -> FacilitySet) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:TimetablesAndPlanning:ServiceFacilitySet:(ServiceFacilitySet -> FacilitySet) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.569Z info: Connector Model:Domain Model:TimetablesAndPlanning:UicOperatingPeriod:(UicOperatingPeriod -> OperatingPeriod) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:TimetablesAndPlanning:UicOperatingPeriod:(UicOperatingPeriod -> OperatingPeriod) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.569Z info: Connector Model:Domain Model:OpenGIS-SF:Polygon:(Polygon -> Geometry) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:OpenGIS-SF:Polygon:(Polygon -> Geometry) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.569Z info: Connector Model:Domain Model:TimetablesAndPlanning:TariffZone:(TariffZone -> Zone) is not an association with a source role. Ignoring this connector.
+2025-05-13T15:07:23.087Z info: Connector Model:Domain Model:TimetablesAndPlanning:TariffZone:(TariffZone -> Zone) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T13:23:22.570Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T15:07:23.088Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T13:23:22.570Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T15:07:23.088Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T13:23:22.570Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:TransportEnAanbod) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T15:07:23.088Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:TransportEnAanbod) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T13:23:22.570Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:INSPIRE-Transportnetwerk) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T15:07:23.088Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:INSPIRE-Transportnetwerk) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T13:23:22.570Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Timetables) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T15:07:23.088Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Timetables) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T13:23:22.570Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:StopPlaces) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T15:07:23.088Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:StopPlaces) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T13:23:22.570Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:VehicleScheduling) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T15:07:23.088Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:VehicleScheduling) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T13:23:22.570Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:XML-Schema) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T15:07:23.089Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:XML-Schema) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T13:23:22.570Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:XMLSchema) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T15:07:23.089Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:XMLSchema) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T13:23:22.570Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OpenGIS-SF) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T15:07:23.089Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OpenGIS-SF) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (madeUpOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.094Z warn: [ConnectorConverterHandler]: Connector (madeUpOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (line) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.094Z warn: [ConnectorConverterHandler]: Connector (line) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (madeUpOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.094Z warn: [ConnectorConverterHandler]: Connector (madeUpOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (route) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.094Z warn: [ConnectorConverterHandler]: Connector (route) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (coveredBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.094Z warn: [ConnectorConverterHandler]: Connector (coveredBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (madeUpOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.094Z warn: [ConnectorConverterHandler]: Connector (madeUpOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (^linkSequence) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.094Z warn: [ConnectorConverterHandler]: Connector (^linkSequence) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (composedOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (composedOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (viewedAs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (viewedAs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (aViewOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (aViewOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (from) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (from) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (startOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (startOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (to) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (to) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (endOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (endOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (locationOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (locationOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (locatedIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (locatedIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.576Z warn: [ConnectorConverterHandler]: Connector (mainPart) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (mainPart) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (timeband) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (timeband) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (journeyPart) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (journeyPart) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (journeyPartCouple) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (journeyPartCouple) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (containing) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (containing) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (parentQuay) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (parentQuay) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (enteredThrough) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (enteredThrough) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (member) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (member) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (servedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (servedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (serves) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (serves) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (servedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (servedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (serves) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (serves) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (mainTerminus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (mainTerminus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (for) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.095Z warn: [ConnectorConverterHandler]: Connector (for) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (contained) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (contained) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (in) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (in) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (trainElement) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (trainElement) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (madeUsing) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (madeUsing) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (stopPlace) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (stopPlace) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (scheduledStopPoint) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (scheduledStopPoint) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (PassengerStopAssignment.StopPlace) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (PassengerStopAssignment.StopPlace) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (PassengerStopAssignment.ScheduledStopPoint) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (PassengerStopAssignment.ScheduledStopPoint) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (linkSequence) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (linkSequence) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (component) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (component) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (including) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (including) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (in) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (in) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (using) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (using) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (mainline) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (mainline) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (endedAt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (endedAt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (startedAt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (startedAt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (garagePoint) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (garagePoint) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (belongingTo) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (belongingTo) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (garage) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (garage) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.577Z warn: [ConnectorConverterHandler]: Connector (crewBase) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (crewBase) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.578Z warn: [ConnectorConverterHandler]: Connector (managedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (managedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.578Z warn: [ConnectorConverterHandler]: Connector (containedIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (containedIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.578Z warn: [ConnectorConverterHandler]: Connector (parentTopographicPlace) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (parentTopographicPlace) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.578Z warn: [ConnectorConverterHandler]: Connector (oppositeDirection) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (oppositeDirection) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.578Z warn: [ConnectorConverterHandler]: Connector (inverseRoute) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (inverseRoute) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.578Z warn: [ConnectorConverterHandler]: Connector (variant) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (variant) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.578Z warn: [ConnectorConverterHandler]: Connector (part) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (part) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.578Z warn: [ConnectorConverterHandler]: Connector (specifiedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (specifiedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.578Z warn: [ConnectorConverterHandler]: Connector (definedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (definedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.578Z warn: [ConnectorConverterHandler]: Connector (DayTypeAssignment.DayType) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (DayTypeAssignment.DayType) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.578Z warn: [ConnectorConverterHandler]: Connector (DayTypeAssignment.ServiceCalendar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (DayTypeAssignment.ServiceCalendar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.578Z warn: [ConnectorConverterHandler]: Connector (usedToDescribe) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (usedToDescribe) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.578Z warn: [ConnectorConverterHandler]: Connector (describedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.096Z warn: [ConnectorConverterHandler]: Connector (describedBy) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.578Z warn: [ConnectorConverterHandler]: Connector (within) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.097Z warn: [ConnectorConverterHandler]: Connector (within) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.578Z warn: [ConnectorConverterHandler]: Connector (operatingDay) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T15:07:23.097Z warn: [ConnectorConverterHandler]: Connector (operatingDay) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T13:23:22.586Z warn: [ConverterHandler]: Entity with path Model:Domain Model:TimetablesAndPlanning:DestinationDisplayVariant has already a value for label-nl in language nl, but will be overwritten.
+2025-05-13T15:07:23.105Z warn: [ConverterHandler]: Entity with path Model:Domain Model:TimetablesAndPlanning:DestinationDisplayVariant has already a value for label-nl in language nl, but will be overwritten.
 
-2025-05-13T13:23:22.593Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:Organisatie:contactinfo).
+2025-05-13T15:07:23.115Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:Organisatie:contactinfo).
 
-2025-05-13T13:23:22.605Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:Organisatie:voorkeursnaam).
+2025-05-13T15:07:23.130Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:Organisatie:voorkeursnaam).
 
-2025-05-13T13:23:22.621Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:GeregistreerdeOrganisatie:registratie).
+2025-05-13T15:07:23.145Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:GeregistreerdeOrganisatie:registratie).
 
-2025-05-13T13:23:22.621Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:GeregistreerdeOrganisatie:wettelijkeNaam).
+2025-05-13T15:07:23.145Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:GeregistreerdeOrganisatie:wettelijkeNaam).
 
-2025-05-13T13:23:22.623Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:TimetablesAndPlanning:Notice:name).
+2025-05-13T15:07:23.148Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:TimetablesAndPlanning:Notice:name).
 
-2025-05-13T13:23:22.623Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:Organisatie:alternatieveNaam).
+2025-05-13T15:07:23.148Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:Organisatie:alternatieveNaam).
 
-2025-05-13T13:23:22.623Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:Organisatie:beschrijving).
+2025-05-13T15:07:23.148Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:Organisatie:beschrijving).
 
-2025-05-13T13:23:22.624Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:TimetablesAndPlanning:JourneyPart:description).
+2025-05-13T15:07:23.149Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:TimetablesAndPlanning:JourneyPart:description).
 
-2025-05-13T13:23:22.627Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Generiek:ContactInfo:adres).
+2025-05-13T15:07:23.153Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Generiek:ContactInfo:adres).
 
-2025-05-13T13:23:22.627Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Generiek:ContactInfo:beschikbaarheid).
+2025-05-13T15:07:23.153Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Generiek:ContactInfo:beschikbaarheid).
 
-2025-05-13T13:23:22.633Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:TimetablesAndPlanning:JourneyPartCouple:description).
+2025-05-13T15:07:23.162Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:TimetablesAndPlanning:JourneyPartCouple:description).
 
-2025-05-13T13:23:22.641Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:administratieveEenheidNiveau1).
+2025-05-13T15:07:23.177Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:administratieveEenheidNiveau1).
 
-2025-05-13T13:23:22.641Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:administratieveEenheidNiveau2).
+2025-05-13T15:07:23.177Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:administratieveEenheidNiveau2).
 
-2025-05-13T13:23:22.641Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:adresgebied).
+2025-05-13T15:07:23.177Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:adresgebied).
 
-2025-05-13T13:23:22.641Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:gemeentenaam).
+2025-05-13T15:07:23.178Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:gemeentenaam).
 
-2025-05-13T13:23:22.641Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:land).
+2025-05-13T15:07:23.178Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:land).
 
-2025-05-13T13:23:22.642Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:locatienaam).
+2025-05-13T15:07:23.178Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:locatienaam).
 
-2025-05-13T13:23:22.642Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:postnaam).
+2025-05-13T15:07:23.178Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:postnaam).
 
-2025-05-13T13:23:22.642Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:straatnaam).
+2025-05-13T15:07:23.178Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:straatnaam).
 
-2025-05-13T13:23:22.642Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:volledigAdres).
+2025-05-13T15:07:23.178Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Adres:AddressRepresentation:volledigAdres).
 
-2025-05-13T13:23:22.653Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:TimetablesAndPlanning:Notice:text).
+2025-05-13T15:07:23.187Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:TimetablesAndPlanning:Notice:text).
 
-2025-05-13T13:23:22.662Z warn: [ConverterHandler]: Entity with path stopPlace has already a value for label-nl in language nl, but will be overwritten.
+2025-05-13T15:07:23.200Z warn: [ConverterHandler]: Entity with path stopPlace has already a value for label-nl in language nl, but will be overwritten.
 
-2025-05-13T13:23:22.663Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (managedBy).
+2025-05-13T15:07:23.206Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (managedBy).
 
 #||# -------------------------------------
 

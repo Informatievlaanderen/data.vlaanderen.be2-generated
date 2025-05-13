@@ -144,6 +144,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/subsidie.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/thermAI.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/toestemming.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/vastgoed.publication.json
