@@ -2,35 +2,37 @@
 
 #||# -------------------------------------
 
-2025-03-15T21:53:06.112Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:(Terreindeel -> Deel) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:17:39.068Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:(Terreindeel -> Deel) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:06.114Z info: Connector Model:OSLO-OpenbaarDomein:Model:Deel:(Deel -> FysiekObject) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:17:39.069Z info: Connector Model:OSLO-OpenbaarDomein:Model:Deel:(Deel -> FysiekObject) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:06.114Z info: Connector Model:OSLO-OpenbaarDomein:Model:Element:(Element -> FysiekObject) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:17:39.070Z info: Connector Model:OSLO-OpenbaarDomein:Model:Element:(Element -> FysiekObject) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:06.115Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:heeftObstakel is not an association with a source role. Ignoring this connector.
+2025-05-13T12:17:39.070Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:heeftObstakel is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:06.115Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:BegraafplaatsRij:(BegraafplaatsRij -> Terreindeel) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:17:39.070Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:heeftObstakel has name "heeftObstakel". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-03-15T21:53:06.115Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Graf:(Graf -> Element) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:17:39.070Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:BegraafplaatsRij:(BegraafplaatsRij -> Terreindeel) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:06.115Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Columbarium:(Columbarium -> Element) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:17:39.070Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Graf:(Graf -> Element) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:06.115Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Urnenveld:(Urnenveld -> Element) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:17:39.071Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Columbarium:(Columbarium -> Element) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:06.115Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Strooiweide:(Strooiweide -> Terreindeel) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:17:39.071Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Urnenveld:(Urnenveld -> Element) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:06.115Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:BegraafplaatsBlok:(BegraafplaatsBlok -> Terreindeel) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:17:39.071Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Strooiweide:(Strooiweide -> Terreindeel) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:06.116Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:17:39.071Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:BegraafplaatsBlok:(BegraafplaatsBlok -> Terreindeel) is not an association with a source role. Ignoring this connector.
 
-2025-03-15T21:53:06.116Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:17:39.074Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-15T21:53:06.116Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:17:39.074Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-15T21:53:06.116Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:17:39.075Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-15T21:53:06.116Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:17:39.075Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated) and fallback URI (http://todo.com/) will be assigned.
+
+2025-05-13T12:17:39.075Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
 
 #||# -------------------------------------
 

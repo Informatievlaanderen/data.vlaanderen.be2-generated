@@ -2,191 +2,187 @@
 
 #||# -------------------------------------
 
-2025-03-16T10:03:02.050Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> Agent))
+2025-05-13T12:18:16.245Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> Agent))
 
-2025-03-16T10:03:02.051Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Wetgeving:Rechtsgrond:isDeelVan)
+2025-05-13T12:18:16.246Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Wetgeving:Rechtsgrond:isDeelVan)
 
-2025-03-16T10:03:02.051Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Event:Meting:(Meting -> Toekenning))
+2025-05-13T12:18:16.246Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Event:Meting:(Meting -> Toekenning))
 
-2025-03-16T10:03:02.051Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Event:Classificatie:(Classificatie -> Toekenning))
+2025-05-13T12:18:16.246Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Event:Classificatie:(Classificatie -> Toekenning))
 
-2025-03-16T10:03:02.051Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Wetgeving:Rechtsgrond:heeftDeel)
+2025-05-13T12:18:16.246Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Wetgeving:Rechtsgrond:heeftDeel)
 
-2025-03-16T10:03:02.051Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> Agent))
+2025-05-13T12:18:16.246Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> Agent))
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:BestaatUit)
+2025-05-13T12:18:16.246Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:BestaatUit)
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> Agent))
+2025-05-13T12:18:16.246Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> Agent))
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:InformatieObject:OnderworpenAan)
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:InformatieObject:OnderworpenAan)
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:InformatieObject:(InformatieObject -> Agent))
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:InformatieObject:(InformatieObject -> Agent))
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:InformatieObject:HeeftComponent)
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:InformatieObject:HeeftComponent)
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:OnderworpenAan)
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:OnderworpenAan)
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:(GecureerdeCollectie -> Agent))
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:(GecureerdeCollectie -> Agent))
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:OnderworpenAan)
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:OnderworpenAan)
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:HeeftItem)
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:HeeftItem)
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:(GecureerdeCollectie -> Agent))
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:(GecureerdeCollectie -> Agent))
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:Bestaatuit)
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:Bestaatuit)
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> GecureerdeCollectie))
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> GecureerdeCollectie))
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:(GecureerdeCollectie -> Agent))
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:(GecureerdeCollectie -> Agent))
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> VisueelItem))
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> VisueelItem))
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:InformatieObject:BestaatUit)
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:InformatieObject:BestaatUit)
 
-2025-03-16T10:03:02.052Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:InformatieObject:(InformatieObject -> GecureerdeCollectie))
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:InformatieObject:(InformatieObject -> GecureerdeCollectie))
 
-2025-03-16T10:03:02.053Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> MensgemaaktKenmerk))
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> MensgemaaktKenmerk))
 
-2025-03-16T10:03:02.053Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktKenmerk:BestaatUit)
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktKenmerk:BestaatUit)
 
-2025-03-16T10:03:02.053Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:Werk:HeeftComponent)
+2025-05-13T12:18:16.247Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-CultureelErfgoed-Object:Werk:HeeftComponent)
 
-2025-03-16T10:03:02.054Z info: Connector Model:Domain Model:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.249Z info: Connector Model:Domain Model:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.055Z info: Connector Model:Domain Model:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.249Z info: Connector Model:Domain Model:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.055Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:InformatieObject:Omvat is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.250Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:InformatieObject:Omvat is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.055Z info: Connector Model:Domain Model:OSLO-Generiek:Agent:(Agent -> Recht) has no name. Ignoring this connector.
+2025-05-13T12:18:16.250Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:InformatieObject:Omvat has name "Omvat". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-03-16T10:03:02.055Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Recht:GebaseerdOp is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.250Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Recht:GebaseerdOp is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.056Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:(GecureerdeCollectie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.250Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Recht:GebaseerdOp has name "GebaseerdOp". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-03-16T10:03:02.056Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:(GecureerdeCollectie -> MensgemaaktObject) has no name. Ignoring this connector.
+2025-05-13T12:18:16.250Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:(GecureerdeCollectie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.056Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:ConceptueelDing:HeeftComponent is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.251Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:ConceptueelDing:HeeftComponent is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.056Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> InformatieObject) has no name. Ignoring this connector.
+2025-05-13T12:18:16.251Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:ConceptueelDing:HeeftComponent has name "HeeftComponent". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-03-16T10:03:02.056Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:VisueelItem:(VisueelItem -> InformatieObject) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.251Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:VisueelItem:(VisueelItem -> InformatieObject) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.056Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:OntwerpOfProcedure:IsGeassocieerdMet is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.251Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:OntwerpOfProcedure:IsGeassocieerdMet is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.056Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:SerieelWerk:(SerieelWerk -> OntwerpOfProcedure) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.251Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:OntwerpOfProcedure:IsGeassocieerdMet has name "IsGeassocieerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-03-16T10:03:02.056Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:OntwerpOfProcedure:(OntwerpOfProcedure -> InformatieObject) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.251Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:SerieelWerk:(SerieelWerk -> OntwerpOfProcedure) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.056Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktKenmerk:(MensgemaaktKenmerk -> InformatieObject) has no name. Ignoring this connector.
+2025-05-13T12:18:16.251Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:OntwerpOfProcedure:(OntwerpOfProcedure -> InformatieObject) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.056Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:MaterieelDing:(MaterieelDing -> Agent) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.251Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:MaterieelDing:(MaterieelDing -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.056Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:(GecureerdeCollectie -> Collectie) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.251Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:(GecureerdeCollectie -> Collectie) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.056Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Collectie:(Collectie -> Entiteit) has no name. Ignoring this connector.
+2025-05-13T12:18:16.251Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Taalobject:(Taalobject -> InformatieObject) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Taalobject:(Taalobject -> InformatieObject) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Taalobject:IsVertalingvan is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Taalobject:IsVertalingvan is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Taalobject:IsVertalingvan has name "IsVertalingvan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Aggregatiewerk:(Aggregatiewerk -> Werk) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Aggregatiewerk:(Aggregatiewerk -> Werk) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Publicatiewerk:(Publicatiewerk -> Werk) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Publicatiewerk:(Publicatiewerk -> Werk) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Voorstellingswerk:(Voorstellingswerk -> Werk) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Voorstellingswerk:(Voorstellingswerk -> Werk) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktKenmerk:(MensgemaaktKenmerk -> GecureerdeCollectie) has no name. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:MaterieelDing:BestaatUit is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:MaterieelDing:BestaatUit is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:MaterieelDing:BestaatUit has name "BestaatUit". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:MaterieelDing:(MaterieelDing -> Agent) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:MaterieelDing:(MaterieelDing -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:IndividueelWerk:(IndividueelWerk -> Werk) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:IndividueelWerk:(IndividueelWerk -> Werk) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:SerieelWerk:(SerieelWerk -> Werk) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:SerieelWerk:(SerieelWerk -> Werk) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:ComplexWerk:(ComplexWerk -> Werk) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:ComplexWerk:(ComplexWerk -> Werk) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Werk:AfgeleidVan is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Werk:AfgeleidVan is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Opnamewerk:(Opnamewerk -> Werk) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Werk:AfgeleidVan has name "AfgeleidVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:ComplexWerk:HeeftComponent is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Opnamewerk:(Opnamewerk -> Werk) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Voorstellingsplan:(Voorstellingsplan -> ZelfstandigeExpressie) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:ComplexWerk:HeeftComponent is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Werk:(Werk -> ZelfstandigeExpressie) has no name. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:ComplexWerk:HeeftComponent has name "HeeftComponent". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:IndividueelWerk:(IndividueelWerk -> ZelfstandigeExpressie) has no name. Ignoring this connector.
+2025-05-13T12:18:16.252Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Voorstellingsplan:(Voorstellingsplan -> ZelfstandigeExpressie) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Opname:(Opname -> ZelfstandigeExpressie) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.253Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Opname:(Opname -> ZelfstandigeExpressie) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:PublicatieExpressie:(PublicatieExpressie -> ZelfstandigeExpressie) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.253Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:PublicatieExpressie:(PublicatieExpressie -> ZelfstandigeExpressie) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:ZelfstandigeExpressie:(ZelfstandigeExpressie -> InformatieObject) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.253Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:ZelfstandigeExpressie:(ZelfstandigeExpressie -> InformatieObject) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.057Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Document:(Document -> InformatieObject) is not an association with a source role. Ignoring this connector.
+2025-05-13T12:18:16.253Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:Document:(Document -> InformatieObject) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T10:03:02.058Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:WettelijkObject:(WettelijkObject -> Recht) has no name. Ignoring this connector.
+2025-05-13T12:18:16.253Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.058Z info: Connector Model:Domain Model:OSLO-CultureelErfgoed-Object:WettelijkObject:(WettelijkObject -> Agent) has no name. Ignoring this connector.
+2025-05-13T12:18:16.254Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.058Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.254Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (ObjectDiagram:LamGods) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.058Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.254Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.058Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (ObjectDiagram:LamGods) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.254Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:WoningVanWassenhove) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.058Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.254Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:RosasDanstRosas) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.058Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:WoningVanWassenhove) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.254Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:VerdrietVanBelgië) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.058Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:RosasDanstRosas) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.254Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:VerdrietVanBelgië:VerdrietVanBelgië-individueelWerkEnBoek) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.058Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:VerdrietVanBelgië) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.254Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:VerdrietVanBelgië:VerdrietVanBelgië-publicatie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.058Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:VerdrietVanBelgië:VerdrietVanBelgië-individueelWerkEnBoek) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.254Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:VerdrietVanBelgië:VerdrietVanBelgië-vertaling) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.059Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:VerdrietVanBelgië:VerdrietVanBelgië-publicatie) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.254Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:VerdrietVanBelgië:VerdrietVanBelgië-werk) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.059Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:VerdrietVanBelgië:VerdrietVanBelgië-vertaling) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.254Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:TerugkeerUitEgypte) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.059Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:VerdrietVanBelgië:VerdrietVanBelgië-werk) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.254Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:DianasJacht) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.059Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:TerugkeerUitEgypte) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.254Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:HulpPakket) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.059Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:ObjectDiagram:DianasJacht) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.254Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-CultureelErfgoed-Iteratie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.059Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:HulpPakket) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.257Z warn: [ConnectorConverterHandler]: Connector (GebaseerdOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-16T10:03:02.059Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO-CultureelErfgoed-Iteratie) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.257Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (GebaseerdOp) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T10:03:02.061Z warn: [ConnectorConverterHandler]: Connector (GebaseerdOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T12:18:16.265Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Generiek:Identificator:toegekendDoor).
 
-2025-03-16T10:03:02.062Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (GebaseerdOp) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-13T12:18:16.265Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Generiek:ContactInfo:adres).
 
-2025-03-16T10:03:02.070Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Generiek:Identificator:toegekendDoor).
+2025-05-13T12:18:16.266Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-CultureelErfgoed-Object:Werk:titel).
 
-2025-03-16T10:03:02.070Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Generiek:ContactInfo:adres).
+2025-05-13T12:18:16.267Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:Organisatie:voorkeursnaam).
 
-2025-03-16T10:03:02.071Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-CultureelErfgoed-Object:Werk:titel).
+2025-05-13T12:18:16.267Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-CultureelErfgoed-Object:Taalobject:taal).
 
-2025-03-16T10:03:02.071Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:Organisatie:voorkeursnaam).
+2025-05-13T12:18:16.268Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:titel).
 
-2025-03-16T10:03:02.072Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-CultureelErfgoed-Object:Taalobject:taal).
+2025-05-13T12:18:16.269Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-CultureelErfgoed-Object:InformatieObject:titel).
 
-2025-03-16T10:03:02.076Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-CultureelErfgoed-Object:MensgemaaktObject:titel).
+2025-05-13T12:18:16.270Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-CultureelErfgoed-Object:Entiteit:identificator).
 
-2025-03-16T10:03:02.077Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-CultureelErfgoed-Object:InformatieObject:titel).
+2025-05-13T12:18:16.282Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:titel).
 
-2025-03-16T10:03:02.078Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-CultureelErfgoed-Object:Entiteit:identificator).
+2025-05-13T12:18:16.282Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-CultureelErfgoed-Object:Recht:titel).
 
-2025-03-16T10:03:02.086Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:titel).
-
-2025-03-16T10:03:02.087Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-CultureelErfgoed-Object:Recht:titel).
-
-2025-03-16T10:03:02.092Z warn: [ConverterHandler]: Entity with path BestaatUit has an empty value for tag ap-usageNote-nl.
+2025-05-13T12:18:16.285Z warn: [ConverterHandler]: Entity with path BestaatUit has an empty value for tag ap-usageNote-nl.
 
 #||# -------------------------------------
 

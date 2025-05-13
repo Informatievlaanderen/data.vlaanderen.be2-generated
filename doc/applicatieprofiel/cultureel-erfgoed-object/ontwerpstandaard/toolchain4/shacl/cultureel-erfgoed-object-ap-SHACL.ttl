@@ -33,6 +33,12 @@
     shacl:description "Recht dat een Agent bezit."@nl;
     shacl:name "heeft"@nl;
     shacl:path crm:P75_possesses
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Agent.OefentRechtUitOp>;
+    shacl:class crm:E72_Legal_Object;
+    shacl:description "WettelijkObject waarop een Agent een Recht bezit."@nl;
+    shacl:name "oefent recht uit op"@nl;
+    shacl:path crm:P105i_has_right_on
   ];
   shacl:targetClass dc:Agent .
 
@@ -320,6 +326,12 @@
     shacl:description "VisueelItem dat de Entiteit voorstelt."@nl;
     shacl:name "wordt voorgesteld door"@nl;
     shacl:path crm:P138i_has_representation
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Entiteit.MaaktDeelUitVan>;
+    shacl:class dcmitype:Collection;
+    shacl:description "De Collectie waar de Entiteit deel van uitmaakt."@nl;
+    shacl:name "maakt deel uit van"@nl;
+    shacl:path dc:isPartOf
   ];
   shacl:targetClass crm:E1_CRM_Entity .
 
@@ -362,6 +374,12 @@
     shacl:description "Het MensgemaaktObject dat deel uitmaakt van de GecureerdeCollectie."@nl;
     shacl:name "bestaat uit"@nl;
     shacl:path crm:P46_is_composed_of
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#GecureerdeCollectie.BestaatUit>;
+    shacl:class crm:E25_Man-Made_Feature;
+    shacl:description "Het MensgemaaktKenmerk dat deel uitmaakt van de GecureerdeCollectie."@nl;
+    shacl:name "bestaat uit"@nl;
+    shacl:path crm:P46_is_composed_of
   ];
   shacl:targetClass crm:E78_Collection .
 
@@ -373,7 +391,6 @@
   shacl:closed false;
   shacl:property [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Identificator.Identificator>;
-    shacl:datatype rdfs:Literal;
     shacl:description "String gebruikt om het object uniek te identificeren."@nl;
     shacl:maxCount "1";
     shacl:name "identificator"@nl;
@@ -434,6 +451,18 @@
     shacl:description "Zelfstandig onderdeel van het InformatieObject."@nl;
     shacl:name "omvat"@nl;
     shacl:path crm:P165_incorporates
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#InformatieObject.Drager>;
+    shacl:class crm:E22_Man-Made_Object;
+    shacl:description "Het MensgemaaktObject dat het InformatieObject draagt."@nl;
+    shacl:name "drager"@nl;
+    shacl:path crm:P128i_is_carried_by
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#InformatieObject.Drager>;
+    shacl:class crm:E25_Man-Made_Feature;
+    shacl:description "Het MensgemaaktKenmerk dat het InformatieObject draagt."@nl;
+    shacl:name "drager"@nl;
+    shacl:path crm:P128i_is_carried_by
   ];
   shacl:targetClass crm:E73_Information_Object .
 
@@ -624,6 +653,12 @@
     shacl:name "conditie"@nl;
     shacl:path crm:P44_has_condition
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.MaaktDeelUitVan>;
+    shacl:class crm:E78_Collection;
+    shacl:description "De GecureerdeCollectie waarvan het MensgemaaktObject deel uitmaakt."@nl;
+    shacl:name "maakt deel uit van"@nl;
+    shacl:path crm:P46i_forms_part_of
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#MensgemaaktObject.Draagt>;
     shacl:class crm:E73_Information_Object;
     shacl:description "InformatieObject dat gedragen wordt door het MensgemaaktObject."@nl;
@@ -748,12 +783,24 @@
     shacl:name "type"@nl;
     shacl:path crm:P2_has_type
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Recht.IsInBezitVan>;
+    shacl:class dc:Agent;
+    shacl:description "Recht waarover een Agent beschikt."@nl;
+    shacl:name "is in bezit van"@nl;
+    shacl:path crm:P75i_is_possessed_by
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Recht.GebaseerdOp>;
     shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
     shacl:description "Rechtsgrond van het Recht."@nl;
     shacl:maxCount "1";
     shacl:name "gebaseerd op"@nl;
     shacl:path <http://todo.com/gebaseerdOp>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#Recht.IsVanToepassingOp>;
+    shacl:class crm:E72_Legal_Object;
+    shacl:description "WettelijkObject waarop het recht van toepassing is."@nl;
+    shacl:name "is van toepassing op"@nl;
+    shacl:path crm:P104i_applies_to
   ];
   shacl:targetClass crm:E30_Right .
 
@@ -948,5 +995,21 @@
     shacl:minCount "1";
     shacl:name "creatie"@nl;
     shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R17i>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#ZelfstandigeExpressie.Realiseert>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F1>;
+    shacl:description "Werk dat door de ZelfstandigeExpressie wordt gerealiseerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "realiseert"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R3i>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultureel-erfgoed-object/ontwerpstandaard/toolchain4#ZelfstandigeExpressie.Realiseert>;
+    shacl:class <https://www.iflastandards.info/fr/frbr/frbroo#F14>;
+    shacl:description "IndividueelWerk dat door de ZelfstandigeExpressie wordt gerealiseerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "realiseert"@nl;
+    shacl:path <https://www.iflastandards.info/fr/frbr/frbroo#R9i>
   ];
   shacl:targetClass <https://www.iflastandards.info/fr/frbr/frbroo#F22> .
