@@ -1,281 +1,418 @@
 {
   "@context": {
-    "AdresseerbaarObject": "https://data.vlaanderen.be/ns/adres#AdresseerbaarObject",
-    "AdresseerbaarObject.bestaatUit": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/organisatie#AdresseerbaarObject.bestaatUit",
-      "@type": "@id"
+    "AdresseerbaarObject": {
+      "@context": {
+        "bestaatUit": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/organisatie#AdresseerbaarObject.bestaatUit",
+          "@type": "http://www.w3.org/ns/org#Site"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/adres#AdresseerbaarObject"
     },
-    "Agent": "http://purl.org/dc/terms/Agent",
-    "Agent.isLidVan": {
-      "@container": "@set",
-      "@id": "http://todo.com/Agent.isLidVan",
-      "@type": "@id"
+    "Agent": {
+      "@context": {
+        "heeftGeregistreerdeOrganisatie": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/regorg#hasRegisteredOrganization",
+          "@type": "http://www.w3.org/ns/regorg#RegisteredOrganization"
+        },
+        "houdt": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#holds",
+          "@type": "http://www.w3.org/ns/org#Post"
+        },
+        "isHoofdVan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#headOf",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "isLidVan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#memberOf",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "rapporteertAan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#reportsTo",
+          "@type": "http://purl.org/dc/terms/Agent"
+        }
+      },
+      "@id": "http://purl.org/dc/terms/Agent"
     },
-    "Contactinfo": "http://schema.org/ContactPoint",
-    "FormeelKader": "http://purl.org/vocab/cpsv#FormalFramework",
-    "FormeleOrganisatie": "http://www.w3.org/ns/org#FormalOrganization",
-    "Fusie": "https://data.vlaanderen.be/ns/organisatie#Fusie",
-    "GeregistreerdeOrganisatie": "http://www.w3.org/ns/regorg#RegisteredOrganization",
-    "Hoedanigheid": "https://data.vlaanderen.be/ns/organisatie#Hoedanigheid",
-    "Hoedanigheid.contactinfo": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/organisatie#contactinfo",
-      "@type": "@id"
+    "Contactinfo": {
+      "@id": "http://schema.org/ContactPoint"
     },
-    "Lidmaatschap": "http://www.w3.org/ns/org#Membership",
-    "Oprichting": "http://data.europa.eu/m8g/FoundationEvent",
-    "Organisatie": "http://www.w3.org/ns/org#Organization",
-    "Organisatie-Eenheid": "http://www.w3.org/ns/org#OrganizationalUnit",
-    "Organisatie.contactinfo": {
-      "@container": "@set",
-      "@id": "http://schema.org/contactPoint",
-      "@type": "@id"
+    "FormeelKader": {
+      "@context": {
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "vindtPlaatsBinnen": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/hasFormalFramework",
+          "@type": "http://www.w3.org/ns/org#ChangeEvent"
+        }
+      },
+      "@id": "http://purl.org/vocab/cpsv#FormalFramework"
     },
-    "Organisatie.isLidVan": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#memberOf",
-      "@type": "@id"
+    "FormeleOrganisatie": {
+      "@id": "http://www.w3.org/ns/org#FormalOrganization"
     },
-    "OrganisatieActiviteit": "http://www.w3.org/2004/02/skos/core#Concept",
-    "OrganisatieClassificatie": "http://www.w3.org/2004/02/skos/core#Concept",
-    "OrganisatieStatus": "http://www.w3.org/2004/02/skos/core#Concept",
-    "OrganisatieType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Persoon": "http://www.w3.org/ns/person#Person",
-    "Plaats": "http://purl.org/dc/terms/Location",
-    "Plaatscode": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Positie": "http://www.w3.org/ns/org#Post",
-    "PubliekeOrganisatie": "http://data.europa.eu/m8g/PublicOrganisation",
-    "Rechtspersoonlijkheidtype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Rechtstoestandtype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Rechtsvormtype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Rol": "http://www.w3.org/ns/org#Role",
-    "Samenwerkingsverband": "http://www.w3.org/ns/org#OrganizationalCollaboration",
-    "Splitsing": "https://data.vlaanderen.be/ns/organisatie#Splitsing",
-    "Stopzetting": "https://data.vlaanderen.be/ns/organisatie#Stopzetting",
-    "StopzettingType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "String": "http://www.w3.org/2001/XMLSchema#string",
-    "Veranderingsgebeurtenis": "http://www.w3.org/ns/org#ChangeEvent",
-    "Vervanging": "https://data.vlaanderen.be/ns/organisatie#Vervanging",
-    "Vestiging": "http://www.w3.org/ns/org#Site",
-    "Vestiging.bestaatUit": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/organisatie#Vestiging.bestaatUit",
-      "@type": "@id"
+    "Fusie": {
+      "@id": "https://data.vlaanderen.be/ns/organisatie#Fusie"
     },
-    "activiteit": {
-      "@id": "http://www.w3.org/ns/regorg#orgActivity",
-      "@type": "@id"
+    "GeregistreerdeOrganisatie": {
+      "@context": {
+        "heeftGeregistreerdeOrganisatie": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/regorg#hasRegisteredOrganization",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "rechtspersoonlijkheid": {
+          "@id": "https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "rechtstoestand": {
+          "@id": "https://data.vlaanderen.be/ns/organisatie#rechtstoestand",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "rechtsvorm": {
+          "@id": "https://data.vlaanderen.be/ns/organisatie#rechtsvorm",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "registratie": {
+          "@id": "http://www.w3.org/ns/regorg#registration",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "wettelijkeNaam": {
+          "@id": "http://www.w3.org/ns/regorg#legalName",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.w3.org/ns/regorg#RegisteredOrganization"
     },
-    "alternatieveNaam": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
-      "@type": "@id"
+    "Hoedanigheid": {
+      "@context": {
+        "contactinfo": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/organisatie#contactinfo",
+          "@type": "http://schema.org/ContactPoint"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/organisatie#Hoedanigheid"
     },
-    "beschrijving": {
-      "@id": "http://purl.org/dc/terms/description",
-      "@type": "@id"
+    "Lidmaatschap": {
+      "@context": {
+        "lidVanTot": {
+          "@id": "http://www.w3.org/ns/org#memberDuring",
+          "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+        },
+        "lidmaatschap.Agent": {
+          "@id": "http://todo.com/Lidmaatschap.Agent",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "lidmaatschap.Organisatie": {
+          "@id": "https://data.vlaanderen.be/ns/organisatie#Lidmaatschap.Organisatie",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "rol": {
+          "@id": "http://www.w3.org/ns/org#role",
+          "@type": "http://www.w3.org/ns/org#Role"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#Membership"
     },
-    "classificatie": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#classification",
-      "@type": "@id"
+    "Oprichting": {
+      "@id": "http://data.europa.eu/m8g/FoundationEvent"
     },
-    "datum": {
-      "@id": "http://purl.org/dc/terms/date",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "Organisatie": {
+      "@context": {
+        "activiteit": {
+          "@id": "http://www.w3.org/ns/regorg#orgActivity",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "alternatieveNaam": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "classificatie": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#classification",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "contactinfo": {
+          "@container": "@set",
+          "@id": "http://schema.org/contactPoint",
+          "@type": "http://schema.org/ContactPoint"
+        },
+        "doel": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#purpose",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "heeft": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#hasPost",
+          "@type": "http://www.w3.org/ns/org#Post"
+        },
+        "heeftEenheid": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#hasUnit",
+          "@type": "http://www.w3.org/ns/org#OrganizationalUnit"
+        },
+        "heeftGeregistreerdeVestiging": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#hasRegisteredSite",
+          "@type": "http://www.w3.org/ns/org#Site"
+        },
+        "heeftPrimaireVestiging": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#hasPrimarySite",
+          "@type": "http://www.w3.org/ns/org#Site"
+        },
+        "heeftSuborganisatie": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#hasSubOrganization",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "heeftVestiging": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#hasSite",
+          "@type": "http://www.w3.org/ns/org#Site"
+        },
+        "homepage": {
+          "@id": "http://xmlns.com/foaf/0.1/homepage",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "isGeassocieerdMet": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#linkedTo",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "isHetResultaatVan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#resultedFrom",
+          "@type": "http://www.w3.org/ns/org#ChangeEvent"
+        },
+        "isHoofdVan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#headOf",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "isLidVan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#memberOf",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "isSuborganisatieVan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#subOrganizationOf",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "isVeranderdDoor": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#changedBy",
+          "@type": "http://www.w3.org/ns/org#ChangeEvent"
+        },
+        "logo": {
+          "@id": "http://schema.org/logo",
+          "@type": "https://schema.org/MediaObject"
+        },
+        "status": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/regorg#orgStatus",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/regorg#orgType",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "voorkeursnaam": {
+          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#Organization"
     },
-    "doel": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#purpose",
-      "@type": "@id"
+    "Organisatie-Eenheid": {
+      "@context": {
+        "isEenheidVan": {
+          "@id": "http://www.w3.org/ns/org#unitOf",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#OrganizationalUnit"
     },
-    "geometrie": {
-      "@id": "http://www.w3.org/ns/locn#geometry",
-      "@type": "@id"
+    "OrganisatieActiviteit": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "heeft": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#hasPost",
-      "@type": "@id"
+    "OrganisatieClassificatie": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "heeftEenheid": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#hasUnit",
-      "@type": "@id"
+    "OrganisatieStatus": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "heeftGeregistreerdeOrganisatie": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/regorg#hasRegisteredOrganization",
-      "@type": "@id"
+    "OrganisatieType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "heeftGeregistreerdeVestiging": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#hasRegisteredSite",
-      "@type": "@id"
+    "Persoon": {
+      "@context": {
+        "heeftStandplaats": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#basedAt",
+          "@type": "http://www.w3.org/ns/org#Site"
+        }
+      },
+      "@id": "http://www.w3.org/ns/person#Person"
     },
-    "heeftOorspronkelijkeOrganisatie": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#originalOrganization",
-      "@type": "@id"
+    "Plaats": {
+      "@context": {
+        "geometrie": {
+          "@id": "http://www.w3.org/ns/locn#geometry",
+          "@type": "http://www.w3.org/ns/locn#Geometry"
+        },
+        "plaatsnaam": {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://purl.org/dc/terms/Location"
     },
-    "heeftPrimaireVestiging": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#hasPrimarySite",
-      "@type": "@id"
+    "Plaatscode": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "heeftResulterendeOrganisatie": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#resultingOrganization",
-      "@type": "@id"
+    "Positie": {
+      "@context": {
+        "houdt": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#holds",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "isPositieIn": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#postIn",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "rapporteertAan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#reportsTo",
+          "@type": "http://www.w3.org/ns/org#Post"
+        },
+        "rol": {
+          "@id": "http://www.w3.org/ns/org#role",
+          "@type": "http://www.w3.org/ns/org#Role"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#Post"
     },
-    "heeftStandplaats": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#basedAt",
-      "@type": "@id"
+    "PubliekeOrganisatie": {
+      "@context": {
+        "werkingsgebied": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/spatial",
+          "@type": "http://purl.org/dc/terms/Location"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/PublicOrganisation"
     },
-    "heeftSuborganisatie": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#hasSubOrganization",
-      "@type": "@id"
+    "Rechtspersoonlijkheidtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "heeftVestiging": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#hasSite",
-      "@type": "@id"
+    "Rechtstoestandtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "homepage": {
-      "@id": "http://xmlns.com/foaf/0.1/homepage",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    "Rechtsvormtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "houdt": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#holds",
-      "@type": "@id"
+    "Rol": {
+      "@id": "http://www.w3.org/ns/org#Role"
     },
-    "isEenheidVan": {
-      "@id": "http://www.w3.org/ns/org#unitOf",
-      "@type": "@id"
+    "Samenwerkingsverband": {
+      "@id": "http://www.w3.org/ns/org#OrganizationalCollaboration"
     },
-    "isGeassocieerdMet": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#linkedTo",
-      "@type": "@id"
+    "Splitsing": {
+      "@id": "https://data.vlaanderen.be/ns/organisatie#Splitsing"
     },
-    "isHetResultaatVan": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#resultedFrom",
-      "@type": "@id"
+    "Stopzetting": {
+      "@context": {
+        "redenStopzetting": {
+          "@id": "https://data.vlaanderen.be/ns/organisatie#redenStopzetting",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/organisatie#Stopzetting"
     },
-    "isHoofdVan": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#headOf",
-      "@type": "@id"
+    "StopzettingType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "isLidVan": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#memberOf",
-      "@type": "@id"
+    "String": {
+      "@id": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "isPositieIn": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#postIn",
-      "@type": "@id"
+    "Veranderingsgebeurtenis": {
+      "@context": {
+        "datum": {
+          "@id": "http://purl.org/dc/terms/date",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "heeftOorspronkelijkeOrganisatie": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#originalOrganization",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "heeftResulterendeOrganisatie": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#resultingOrganization",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "vindtPlaatsBinnen": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/hasFormalFramework",
+          "@type": "http://purl.org/vocab/cpsv#FormalFramework"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#ChangeEvent"
     },
-    "isSuborganisatieVan": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#subOrganizationOf",
-      "@type": "@id"
+    "Vervanging": {
+      "@id": "https://data.vlaanderen.be/ns/organisatie#Vervanging"
     },
-    "isVeranderdDoor": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#changedBy",
-      "@type": "@id"
-    },
-    "lidVanTot": {
-      "@id": "http://www.w3.org/ns/org#memberDuring",
-      "@type": "@id"
-    },
-    "lidmaatschap.Agent": {
-      "@id": "http://todo.com/Lidmaatschap.Agent",
-      "@type": "@id"
-    },
-    "lidmaatschap.Organisatie": {
-      "@id": "https://data.vlaanderen.be/ns/organisatie#Lidmaatschap.Organisatie",
-      "@type": "@id"
-    },
-    "logo": {
-      "@id": "http://schema.org/logo",
-      "@type": "@id"
-    },
-    "naam": {
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "@id"
-    },
-    "plaatsnaam": {
-      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "rapporteertAan": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#reportsTo",
-      "@type": "@id"
-    },
-    "rechtspersoonlijkheid": {
-      "@id": "https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid",
-      "@type": "@id"
-    },
-    "rechtstoestand": {
-      "@id": "https://data.vlaanderen.be/ns/organisatie#rechtstoestand",
-      "@type": "@id"
-    },
-    "rechtsvorm": {
-      "@id": "https://data.vlaanderen.be/ns/organisatie#rechtsvorm",
-      "@type": "@id"
-    },
-    "redenStopzetting": {
-      "@id": "https://data.vlaanderen.be/ns/organisatie#redenStopzetting",
-      "@type": "@id"
-    },
-    "registratie": {
-      "@id": "http://www.w3.org/ns/regorg#registration",
-      "@type": "@id"
-    },
-    "rol": {
-      "@id": "http://www.w3.org/ns/org#role",
-      "@type": "@id"
-    },
-    "status": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/regorg#orgStatus",
-      "@type": "@id"
-    },
-    "type": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/regorg#orgType",
-      "@type": "@id"
-    },
-    "vestigingsadres": {
-      "@id": "http://www.w3.org/ns/org#siteAddress",
-      "@type": "@id"
-    },
-    "vindtPlaatsBinnen": {
-      "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/hasFormalFramework",
-      "@type": "@id"
-    },
-    "voorkeursnaam": {
-      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "@type": "@id"
-    },
-    "werkingsgebied": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/spatial",
-      "@type": "@id"
-    },
-    "wettelijkeNaam": {
-      "@id": "http://www.w3.org/ns/regorg#legalName",
-      "@type": "@id"
+    "Vestiging": {
+      "@context": {
+        "bestaatUit": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/organisatie#Vestiging.bestaatUit",
+          "@type": "https://data.vlaanderen.be/ns/adres#AdresseerbaarObject"
+        },
+        "heeftGeregistreerdeVestiging": {
+          "@id": "http://www.w3.org/ns/org#hasRegisteredSite",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "heeftPrimaireVestiging": {
+          "@id": "http://www.w3.org/ns/org#hasPrimarySite",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "heeftStandplaats": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#basedAt",
+          "@type": "http://www.w3.org/ns/person#Person"
+        },
+        "heeftVestiging": {
+          "@id": "http://www.w3.org/ns/org#hasSite",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "vestigingsadres": {
+          "@id": "http://www.w3.org/ns/org#siteAddress",
+          "@type": "http://schema.org/ContactPoint"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#Site"
     }
   }
 }

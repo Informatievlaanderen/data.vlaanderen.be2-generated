@@ -1,296 +1,399 @@
 {
   "@context": {
-    "AantalObstakels": "http://www.w3.org/2004/02/skos/core#Concept",
-    "BegroeidVoorkomen": "https://data.vlaanderen.be/ns/openbaardomein/begroeidvoorkomen#BegroeidVoorkomen",
-    "BegroeidVoorkomen.soortcode": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/begroeidvoorkomen#soortcode",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    "AantalObstakels": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "BegroeidVoorkomen.soortnaamNederlands": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/begroeidvoorkomen#soortnaamNederlands",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    "BegroeidVoorkomen": {
+      "@context": {
+        "drassigheid": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/begroeidvoorkomen#drassigheid",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "soortcode": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/begroeidvoorkomen#soortcode",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "soortnaamNederlands": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/begroeidvoorkomen#soortnaamNederlands",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "wetenschappelijkeSoortnaam": {
+          "@container": "@set",
+          "@id": "http://rs.tdwg.org/dwc/terms/scientificName",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein/begroeidvoorkomen#BegroeidVoorkomen"
     },
-    "Collectie": "https://data.vlaanderen.be/ns/openbaardomein#Collectie",
-    "Collectie.bevat": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein#Collectie.bevat",
-      "@type": "https://data.vlaanderen.be/ns/openbaardomein#FysiekObject"
+    "Collectie": {
+      "@context": {
+        "bevat": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein#Collectie.bevat",
+          "@type": "https://data.vlaanderen.be/ns/openbaardomein#FysiekObject"
+        },
+        "titel": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein#Collectie"
     },
-    "Contactinfo": "http://schema.org/ContactPoint",
-    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
-    "Deel": "https://data.vlaanderen.be/ns/openbaardomein#Deel",
-    "Deel.voorkomen": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein#Deel.voorkomen",
-      "@type": "https://data.vlaanderen.be/ns/openbaardomein#FysiekVoorkomen"
+    "Contactinfo": {
+      "@context": {
+        "aanschrijfvorm": {
+          "@id": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "adres": {
+          "@id": "http://www.w3.org/ns/locn#address",
+          "@type": "http://www.w3.org/ns/locn#Address"
+        },
+        "beschikbaarheid": {
+          "@id": "http://schema.org/hoursAvailable",
+          "@type": "https://schema.org/OpeningHoursSpecification"
+        },
+        "contactnaam": {
+          "@id": "http://xmlns.com/foaf/0.1/name",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "email": {
+          "@id": "http://schema.org/email",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "fax": {
+          "@id": "http://schema.org/faxNumber",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "openingsuren": {
+          "@id": "http://schema.org/openingHours",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "telefoon": {
+          "@id": "http://schema.org/telephone",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "website": {
+          "@id": "http://xmlns.com/foaf/0.1/page",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        }
+      },
+      "@id": "http://schema.org/ContactPoint"
     },
-    "DrassigheidWaarde": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Element": "https://data.vlaanderen.be/ns/openbaardomein#Element",
-    "Element.heeftObstakel": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Element.heeftObstakel",
-      "@type": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Terreindeel"
+    "DateTime": {
+      "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
-    "FysiekObject": "https://data.vlaanderen.be/ns/openbaardomein#FysiekObject",
-    "FysiekObject.begindatum": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein#begindatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    "Deel": {
+      "@context": {
+        "oppervlakte": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein#oppervlakte",
+          "@type": "https://schema.org/QuantitativeValue"
+        },
+        "voorkomen": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein#Deel.voorkomen",
+          "@type": "https://data.vlaanderen.be/ns/openbaardomein#FysiekVoorkomen"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein#Deel"
     },
-    "FysiekObject.beheerder": {
-      "@id": "http://todo.com/FysiekObject.beheerder",
-      "@type": "http://www.w3.org/ns/org#Organization"
+    "DrassigheidWaarde": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "FysiekObject.bevat": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein#FysiekObject.bevat",
-      "@type": "https://data.vlaanderen.be/ns/openbaardomein#Collectie"
+    "Element": {
+      "@context": {
+        "heeftObstakel": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Element.heeftObstakel",
+          "@type": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Terreindeel"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein#Element"
     },
-    "FysiekObject.eigenaar": {
-      "@id": "http://todo.com/FysiekObject.eigenaar",
-      "@type": "http://www.w3.org/ns/org#Organization"
+    "FysiekObject": {
+      "@context": {
+        "begindatum": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein#begindatum",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "beheerder": {
+          "@id": "http://todo.com/FysiekObject.beheerder",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "bevat": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein#FysiekObject.bevat",
+          "@type": "https://data.vlaanderen.be/ns/openbaardomein#Collectie"
+        },
+        "eigenaar": {
+          "@id": "http://todo.com/FysiekObject.eigenaar",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "einddatum": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein#einddatum",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "geometrie": {
+          "@id": "http://www.w3.org/ns/locn#geometry",
+          "@type": "http://www.opengis.net/ont/geosparql#Geometry"
+        },
+        "nauwkeurigheid": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein#nauwkeurigheid",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "niveau": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein#niveau",
+          "@type": "http://www.w3.org/2001/XMLSchema#integer"
+        },
+        "relatie": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/relation",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein#FysiekObject"
     },
-    "FysiekObject.einddatum": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein#einddatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    "FysiekVoorkomen": {
+      "@context": {
+        "voorkomen": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein#FysiekVoorkomen.voorkomen",
+          "@type": "https://data.vlaanderen.be/ns/openbaardomein#Deel"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein#FysiekVoorkomen"
     },
-    "FysiekVoorkomen": "https://data.vlaanderen.be/ns/openbaardomein#FysiekVoorkomen",
-    "FysiekVoorkomen.voorkomen": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein#FysiekVoorkomen.voorkomen",
-      "@type": "https://data.vlaanderen.be/ns/openbaardomein#Deel"
+    "GBIFcode": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "GBIFcode": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Gebied": "https://data.vlaanderen.be/ns/openbaardomein/gebied#Gebied",
-    "Gebied.begindatum": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/gebied#begindatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    "Gebied": {
+      "@context": {
+        "begindatum": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/gebied#begindatum",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "beheerder": {
+          "@id": "http://todo.com/Gebied.beheerder",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "eigenaar": {
+          "@id": "http://todo.com/Gebied.eigenaar",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "einddatum": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/gebied#einddatum",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "geometrie": {
+          "@id": "http://www.w3.org/ns/locn#geometry",
+          "@type": "http://www.opengis.net/ont/sf#Polygon"
+        },
+        "naam": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein/gebied#Gebied"
     },
-    "Gebied.beheerder": {
-      "@id": "http://todo.com/Gebied.beheerder",
-      "@type": "http://www.w3.org/ns/org#Organization"
+    "GeografischeNaam": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "Gebied.eigenaar": {
-      "@id": "http://todo.com/Gebied.eigenaar",
-      "@type": "http://www.w3.org/ns/org#Organization"
+    "Geometrie": {
+      "@context": {
+        "gml": {
+          "@id": "http://www.opengis.net/ont/geosparql#asGML",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "wkt": {
+          "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      },
+      "@id": "http://www.opengis.net/ont/geosparql#Geometry"
     },
-    "Gebied.einddatum": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/gebied#einddatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    "Getal": {
+      "@id": "https://schema.org/Number"
     },
-    "GeografischeNaam": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-    "Geometrie": "http://www.opengis.net/ont/geosparql#Geometry",
-    "Getal": "https://schema.org/Number",
-    "Infrastructuurelement": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Infrastructuurelement",
-    "Integer": "http://www.w3.org/2001/XMLSchema#integer",
-    "KwantitatieveWaarde": "https://schema.org/QuantitativeValue",
-    "Lijnstring": "http://www.opengis.net/ont/sf#LineString",
-    "Nauwkeurigheidsklassen": "http://www.w3.org/2004/02/skos/core#Concept",
-    "OnbegroeidVoorkomen": "https://data.vlaanderen.be/ns/openbaardomein/onbegroeidvoorkomen#OnbegroeidVoorkomen",
-    "Organisatie": "http://www.w3.org/ns/org#Organization",
-    "Organisatie.beheerder": {
-      "@container": "@set",
-      "@id": "http://todo.com/Organisatie.beheerder",
-      "@type": "https://data.vlaanderen.be/ns/openbaardomein/gebied#Gebied"
+    "Infrastructuurelement": {
+      "@context": {
+        "materiaal": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#materiaal",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#Infrastructuurelement"
     },
-    "Organisatie.eigenaar": {
-      "@container": "@set",
-      "@id": "http://todo.com/Organisatie.eigenaar",
-      "@type": "https://data.vlaanderen.be/ns/openbaardomein#FysiekObject"
+    "Integer": {
+      "@id": "http://www.w3.org/2001/XMLSchema#integer"
     },
-    "Polygoon": "http://www.opengis.net/ont/sf#Polygon",
-    "Punt": "http://www.opengis.net/ont/sf#Point",
-    "RelatieObject": "http://www.w3.org/2000/01/rdf-schema#Resource",
-    "StandaardEenheid": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid",
-    "String": "http://www.w3.org/2001/XMLSchema#string",
-    "TaludWaarde": "http://www.w3.org/2004/02/skos/core#Concept",
-    "TerreinVoorkomen": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#TerreinVoorkomen",
-    "TerreinVoorkomen.voorkomen": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#TerreinVoorkomen.voorkomen",
-      "@type": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Terreindeel"
+    "KwantitatieveWaarde": {
+      "@context": {
+        "eenheid": {
+          "@id": "https://schema.org/unitText",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "standaardEenheid": {
+          "@id": "https://schema.org/unitCode",
+          "@type": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid"
+        },
+        "waarde": {
+          "@id": "https://schema.org/value",
+          "@type": "https://schema.org/Number"
+        }
+      },
+      "@id": "https://schema.org/QuantitativeValue"
     },
-    "Terreindeel": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Terreindeel",
-    "Terreindeel.heeftObstakel": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Terreindeel.heeftObstakel",
-      "@type": "https://data.vlaanderen.be/ns/openbaardomein#Element"
+    "Lijnstring": {
+      "@id": "http://www.opengis.net/ont/sf#LineString"
     },
-    "Terreindeel.voorkomen": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Terreindeel.voorkomen",
-      "@type": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#TerreinVoorkomen"
+    "Nauwkeurigheidsklassen": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
-    "VegetatieElement": "https://data.vlaanderen.be/ns/openbaardomein/vegetatie#VegetatieElement",
-    "VegetatieElement.soortcode": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/vegetatie#soortcode",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    "OnbegroeidVoorkomen": {
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein/onbegroeidvoorkomen#OnbegroeidVoorkomen"
     },
-    "VegetatieElement.soortnaamNederlands": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/vegetatie#soortnaamNederlands",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    "Organisatie": {
+      "@context": {
+        "alternatieveNaam": {
+          "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "beheerder": {
+          "@container": "@set",
+          "@id": "http://todo.com/Organisatie.beheerder",
+          "@type": "https://data.vlaanderen.be/ns/openbaardomein#FysiekObject"
+        },
+        "contactinfo": {
+          "@id": "http://schema.org/contactPoint",
+          "@type": "http://schema.org/ContactPoint"
+        },
+        "eigenaar": {
+          "@container": "@set",
+          "@id": "http://todo.com/Organisatie.eigenaar",
+          "@type": "https://data.vlaanderen.be/ns/openbaardomein/gebied#Gebied"
+        },
+        "voorkeursnaam": {
+          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#Organization"
     },
-    "WaterVoorkomen": "https://data.vlaanderen.be/ns/openbaardomein/watervoorkomen#WaterVoorkomen",
-    "WaterVoorkomen.voorkomen": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/waterdeel#voorkomen",
-      "@type": "https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Waterdeel"
+    "Polygoon": {
+      "@id": "http://www.opengis.net/ont/sf#Polygon"
     },
-    "Waterdeel": "https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Waterdeel",
-    "aanschrijfvorm": {
-      "@id": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    "Punt": {
+      "@id": "http://www.opengis.net/ont/sf#Point"
     },
-    "adres": {
-      "@id": "http://www.w3.org/ns/locn#address",
-      "@type": "http://www.w3.org/ns/locn#Address"
+    "RelatieObject": {
+      "@context": {
+        "bronnaam": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein#bronnaam",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "uuid": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein#uuid",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
     },
-    "alternatieveNaam": {
-      "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    "StandaardEenheid": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid"
     },
-    "beheerder": {
-      "@container": "@set",
-      "@id": "http://todo.com/Organisatie.beheerder",
-      "@type": "https://data.vlaanderen.be/ns/openbaardomein#FysiekObject"
+    "String": {
+      "@id": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "beschikbaarheid": {
-      "@id": "http://schema.org/hoursAvailable",
-      "@type": "https://schema.org/OpeningHoursSpecification"
+    "TaludWaarde": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "breedte": {
-      "@id": "http://schema.org/width",
-      "@type": "https://schema.org/QuantitativeValue"
+    "TerreinVoorkomen": {
+      "@context": {
+        "obstakels": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#obstakels",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "talud": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#talud",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "voorkomen": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#TerreinVoorkomen.voorkomen",
+          "@type": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Terreindeel"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#TerreinVoorkomen"
     },
-    "bronnaam": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein#bronnaam",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    "Terreindeel": {
+      "@context": {
+        "breedte": {
+          "@id": "http://schema.org/width",
+          "@type": "https://schema.org/QuantitativeValue"
+        },
+        "heeftObstakel": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Terreindeel.heeftObstakel",
+          "@type": "https://data.vlaanderen.be/ns/openbaardomein#Element"
+        },
+        "lengte": {
+          "@id": "http://open.vocab.org/terms/length",
+          "@type": "https://schema.org/QuantitativeValue"
+        },
+        "voorkomen": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Terreindeel.voorkomen",
+          "@type": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#TerreinVoorkomen"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Terreindeel"
     },
-    "contactinfo": {
-      "@id": "http://schema.org/contactPoint",
-      "@type": "http://schema.org/ContactPoint"
+    "URI": {
+      "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
     },
-    "contactnaam": {
-      "@id": "http://xmlns.com/foaf/0.1/name",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    "VegetatieElement": {
+      "@context": {
+        "hoogte": {
+          "@id": "http://schema.org/height",
+          "@type": "https://schema.org/QuantitativeValue"
+        },
+        "soortcode": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/vegetatie#soortcode",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "soortnaamNederlands": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/vegetatie#soortnaamNederlands",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "wetenschappelijkeSoortnaam": {
+          "@container": "@set",
+          "@id": "http://rs.tdwg.org/dwc/terms/scientificName",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein/vegetatie#VegetatieElement"
     },
-    "drassigheid": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/begroeidvoorkomen#drassigheid",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    "WaterVoorkomen": {
+      "@context": {
+        "voorkomen": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/waterdeel#voorkomen",
+          "@type": "https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Waterdeel"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein/watervoorkomen#WaterVoorkomen"
     },
-    "eenheid": {
-      "@id": "https://schema.org/unitText",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "eigenaar": {
-      "@container": "@set",
-      "@id": "http://todo.com/Organisatie.eigenaar",
-      "@type": "https://data.vlaanderen.be/ns/openbaardomein/gebied#Gebied"
-    },
-    "email": {
-      "@id": "http://schema.org/email",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "fax": {
-      "@id": "http://schema.org/faxNumber",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "geometrie": {
-      "@id": "http://www.w3.org/ns/locn#geometry",
-      "@type": "http://www.opengis.net/ont/geosparql#Geometry"
-    },
-    "gml": {
-      "@id": "http://www.opengis.net/ont/geosparql#asGML",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "hoogte": {
-      "@id": "http://schema.org/height",
-      "@type": "https://schema.org/QuantitativeValue"
-    },
-    "lengte": {
-      "@id": "http://open.vocab.org/terms/length",
-      "@type": "https://schema.org/QuantitativeValue"
-    },
-    "materiaal": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/infrastructuur#materiaal",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "naam": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "nauwkeurigheid": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein#nauwkeurigheid",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "niveau": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein#niveau",
-      "@type": "http://www.w3.org/2001/XMLSchema#integer"
-    },
-    "obstakels": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#obstakels",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "openingsuren": {
-      "@id": "http://schema.org/openingHours",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "oppervlakte": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein#oppervlakte",
-      "@type": "https://schema.org/QuantitativeValue"
-    },
-    "relatie": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/relation",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
-    },
-    "standaardEenheid": {
-      "@id": "https://schema.org/unitCode",
-      "@type": "https://data.vlaanderen.be/ns/generiek#StandaardEenheid"
-    },
-    "talud": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#talud",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "telefoon": {
-      "@id": "http://schema.org/telephone",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "titel": {
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "uuid": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein#uuid",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "voorkeursnaam": {
-      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "voorkomen": {
-      "@id": "https://data.vlaanderen.be/ns/openbaardomein/waterdeel#voorkomen",
-      "@type": "https://data.vlaanderen.be/ns/openbaardomein/watervoorkomen#WaterVoorkomen"
-    },
-    "waarde": {
-      "@id": "https://schema.org/value",
-      "@type": "https://schema.org/Number"
-    },
-    "website": {
-      "@id": "http://xmlns.com/foaf/0.1/page",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "wetenschappelijkeSoortnaam": {
-      "@container": "@set",
-      "@id": "http://rs.tdwg.org/dwc/terms/scientificName",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "wkt": {
-      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "Waterdeel": {
+      "@context": {
+        "voorkomen": {
+          "@id": "https://data.vlaanderen.be/ns/openbaardomein/waterdeel#voorkomen",
+          "@type": "https://data.vlaanderen.be/ns/openbaardomein/watervoorkomen#WaterVoorkomen"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Waterdeel"
     }
   }
 }

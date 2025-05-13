@@ -1,239 +1,347 @@
 {
   "@context": {
-    "Agent": "http://purl.org/dc/terms/Agent",
-    "Applicatie": "https://data.vlaanderen.be/ns/melding#Applicatie",
-    "Applicatie.meldingsapplicatie": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/melding#Applicatie.meldingsapplicatie",
-      "@type": "https://data.vlaanderen.be/ns/melding#Terugmelding"
+    "Agent": {
+      "@id": "http://purl.org/dc/terms/Agent"
     },
-    "Boolean": "http://www.w3.org/2001/XMLSchema#boolean",
-    "Concept": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Concept.bronhouder": {
-      "@id": "https://data.vlaanderen.be/ns/melding#Concept.bronhouder",
-      "@type": "https://www.w3.org/ns/org#Organization"
+    "Applicatie": {
+      "@context": {
+        "meldingsapplicatie": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/melding#Applicatie.meldingsapplicatie",
+          "@type": "https://data.vlaanderen.be/ns/melding#Terugmelding"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/melding#Applicatie"
     },
-    "Concept.label": {
-      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    "Boolean": {
+      "@id": "http://www.w3.org/2001/XMLSchema#boolean"
     },
-    "Concept.mogelijkeWaarden": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/melding#Concept.mogelijkeWaarden",
-      "@type": "https://data.vlaanderen.be/ns/melding#Eigenschap"
+    "Concept": {
+      "@context": {
+        "bronhouder": {
+          "@id": "https://data.vlaanderen.be/ns/melding#Concept.bronhouder",
+          "@type": "https://www.w3.org/ns/org#Organization"
+        },
+        "label": {
+          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "mogelijkeWaarden": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/melding#Concept.mogelijkeWaarden",
+          "@type": "https://data.vlaanderen.be/ns/melding#Eigenschap"
+        }
+      },
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "Dataset": "http://purl.org/dc/dcmitype/Dataset",
-    "Dataset.bronhouder": {
-      "@id": "https://data.vlaanderen.be/ns/melding#bronhouder",
-      "@type": "https://www.w3.org/ns/org#Organization"
+    "Dataset": {
+      "@context": {
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "bronhouder": {
+          "@id": "https://data.vlaanderen.be/ns/melding#bronhouder",
+          "@type": "https://www.w3.org/ns/org#Organization"
+        },
+        "eigenschap": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/melding#Dataset.eigenschap",
+          "@type": "https://data.vlaanderen.be/ns/melding#Eigenschap"
+        },
+        "heeftBron": {
+          "@id": "http://www.w3.org/ns/oa#hasSource",
+          "@type": "https://data.vlaanderen.be/ns/melding#Meldingsobject"
+        },
+        "titel": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      "@id": "http://purl.org/dc/dcmitype/Dataset"
     },
-    "Dataset.eigenschap": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/melding#Dataset.eigenschap",
-      "@type": "https://data.vlaanderen.be/ns/melding#Eigenschap"
+    "DateTime": {
+      "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
-    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
-    "Eigenschap": "https://data.vlaanderen.be/ns/melding#Eigenschap",
-    "Eigenschap.bronhouder": {
-      "@id": "https://data.vlaanderen.be/ns/melding#Eigenschap.bronhouder",
-      "@type": "https://www.w3.org/ns/org#Organization"
+    "Eigenschap": {
+      "@context": {
+        "bronhouder": {
+          "@id": "https://data.vlaanderen.be/ns/melding#Eigenschap.bronhouder",
+          "@type": "https://www.w3.org/ns/org#Organization"
+        },
+        "eigenschap": {
+          "@id": "https://data.vlaanderen.be/ns/melding#Eigenschap.eigenschap",
+          "@type": "http://purl.org/dc/dcmitype/Dataset"
+        },
+        "label": {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "meldbaar": {
+          "@id": "https://data.vlaanderen.be/ns/melding#meldbaar",
+          "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+        },
+        "mogelijkeWaarden": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/melding#Eigenschap.mogelijkeWaarden",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "verplicht": {
+          "@id": "https://data.vlaanderen.be/ns/melding#verwachtType",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/melding#Eigenschap"
     },
-    "Eigenschap.eigenschap": {
-      "@id": "https://data.vlaanderen.be/ns/melding#Eigenschap.eigenschap",
-      "@type": "http://purl.org/dc/dcmitype/Dataset"
+    "Geometrie": {
+      "@context": {
+        "gml": {
+          "@id": "http://www.opengis.net/ont/geosparql#asGML",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "wkt": {
+          "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      },
+      "@id": "http://www.w3.org/ns/locn#Geometry"
     },
-    "Eigenschap.label": {
-      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    "GeregistreerdPersoon": {
+      "@context": {
+        "registratie": {
+          "@id": "http://data.vlaanderen.be/ns/persoon#registratie",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon"
     },
-    "Eigenschap.mogelijkeWaarden": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/melding#Eigenschap.mogelijkeWaarden",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    "Hoedanigheid": {
+      "@id": "https://data.vlaanderen.be/ns/organisatie#Hoedanigheid"
     },
-    "Eigenschap.verplicht": {
-      "@id": "https://data.vlaanderen.be/ns/melding#verwachtType",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    "Literal": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
-    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
-    "GeregistreerdPersoon": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon",
-    "Hoedanigheid": "https://data.vlaanderen.be/ns/organisatie#Hoedanigheid",
-    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "MeldingBody": "https://data.vlaanderen.be/ns/melding#MeldingBody",
-    "Meldingsobject": "https://data.vlaanderen.be/ns/melding#Meldingsobject",
-    "Meldingsobject.behandelaar": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/melding#Meldingsobject.behandelaar",
-      "@type": "https://www.w3.org/ns/org#Organization"
+    "MeldingBody": {
+      "@context": {
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "bijlage": {
+          "@id": "https://www.w3.org/ns/activitystreams#attachment",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "geometrie": {
+          "@id": "http://www.w3.org/ns/locn#geometry",
+          "@type": "http://www.w3.org/ns/locn#Geometry"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/melding#MeldingBody"
     },
-    "MeldingsobjectAttribuut": "https://data.vlaanderen.be/ns/melding#MeldingsobjectAttribuut",
-    "Meldingstatus": "https://data.vlaanderen.be/ns/melding#Meldingstatus",
-    "Organisatie": "https://www.w3.org/ns/org#Organization",
-    "Organisatie-Eenheid": "http://www.w3.org/ns/org#OrganizationalUnit",
-    "Organisatie.behandelaar": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/melding#Organisatie.behandelaar",
-      "@type": "https://data.vlaanderen.be/ns/melding#Meldingsobject"
+    "Meldingsobject": {
+      "@context": {
+        "behandelaar": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/melding#Meldingsobject.behandelaar",
+          "@type": "https://www.w3.org/ns/org#Organization"
+        },
+        "gerelateerdeBody": {
+          "@id": "https://data.vlaanderen.be/ns/melding#gerelateerdeBody",
+          "@type": "https://data.vlaanderen.be/ns/melding#Codelijst"
+        },
+        "heeftBron": {
+          "@id": "http://www.w3.org/ns/oa#hasSource",
+          "@type": "http://purl.org/dc/dcmitype/Dataset"
+        },
+        "heeftDoelwit": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/oa#hasTarget",
+          "@type": "https://data.vlaanderen.be/ns/melding#Terugmelding"
+        },
+        "heeftEigenschap": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/melding#heeftEigenschap",
+          "@type": "https://data.vlaanderen.be/ns/melding#MeldingsobjectAttribuut"
+        },
+        "heeftStatus": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/melding#heeftStatus",
+          "@type": "https://data.vlaanderen.be/ns/melding#Meldingstatus"
+        },
+        "heeftToestand": {
+          "@id": "http://www.w3.org/ns/oa#hasState",
+          "@type": "http://www.w3.org/ns/oa#TimeState"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/melding#Meldingsobject"
     },
-    "Organisatie.bronhouder": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/melding#Organisatie.bronhouder",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    "MeldingsobjectAttribuut": {
+      "@context": {
+        "huidigeWaarde": {
+          "@id": "https://data.vlaanderen.be/ns/melding#huidigeWaarde",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "voorgesteldeWaarde": {
+          "@id": "https://data.vlaanderen.be/ns/melding#voorgesteldeWaarde",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/melding#MeldingsobjectAttribuut"
     },
-    "Organisatie.meldingsorganisatie": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/melding#Organisatie.meldingsorganisatie",
-      "@type": "https://data.vlaanderen.be/ns/melding#Terugmelding"
+    "Meldingstatus": {
+      "@context": {
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "statusType": {
+          "@id": "https://data.vlaanderen.be/ns/melding#statuswaarde",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "statusdatum": {
+          "@id": "https://data.vlaanderen.be/ns/melding#statusdatum",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "statuswijzigingDoor": {
+          "@id": "https://data.vlaanderen.be/ns/melding#statuswijzigingDoor",
+          "@type": "http://purl.org/dc/terms/Agent"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/melding#Meldingstatus"
     },
-    "Persoon": "http://www.w3.org/ns/person#Person",
-    "PubliekeOrganisatie": "http://data.europa.eu/m8g/PublicOrganisation",
-    "String": "http://www.w3.org/2001/XMLSchema#string",
-    "Terugmelding": "https://data.vlaanderen.be/ns/melding#Terugmelding",
-    "Terugmelding.behandelaar": {
-      "@id": "https://data.vlaanderen.be/ns/melding#behandelaar",
-      "@type": "http://purl.org/dc/terms/Agent"
+    "Organisatie": {
+      "@context": {
+        "behandelaar": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/melding#Organisatie.behandelaar",
+          "@type": "https://data.vlaanderen.be/ns/melding#Meldingsobject"
+        },
+        "bronhouder": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/melding#Organisatie.bronhouder",
+          "@type": "https://data.vlaanderen.be/ns/melding#Eigenschap"
+        },
+        "heeftEenheid": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#hasUnit",
+          "@type": "http://www.w3.org/ns/org#OrganizationalUnit"
+        },
+        "isEenheidVan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#unitOf",
+          "@type": "http://www.w3.org/ns/org#OrganizationalUnit"
+        },
+        "meldingsorganisatie": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/melding#Organisatie.meldingsorganisatie",
+          "@type": "https://data.vlaanderen.be/ns/melding#Terugmelding"
+        }
+      },
+      "@id": "https://www.w3.org/ns/org#Organization"
     },
-    "Terugmelding.meldingsapplicatie": {
-      "@id": "https://data.vlaanderen.be/ns/melding#Terugmelding.meldingsapplicatie",
-      "@type": "https://data.vlaanderen.be/ns/melding#Applicatie"
+    "Organisatie-Eenheid": {
+      "@context": {
+        "heeftEenheid": {
+          "@id": "http://www.w3.org/ns/org#hasUnit",
+          "@type": "https://www.w3.org/ns/org#Organization"
+        },
+        "isEenheidVan": {
+          "@id": "http://www.w3.org/ns/org#unitOf",
+          "@type": "https://www.w3.org/ns/org#Organization"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#OrganizationalUnit"
     },
-    "Terugmelding.meldingsorganisatie": {
-      "@id": "https://data.vlaanderen.be/ns/melding#Terugmelding.meldingsorganisatie",
-      "@type": "https://www.w3.org/ns/org#Organization"
+    "Persoon": {
+      "@id": "http://www.w3.org/ns/person#Person"
     },
-    "TijdToestand": "http://www.w3.org/ns/oa#TimeState",
-    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
-    "beschrijving": {
-      "@id": "http://purl.org/dc/terms/description",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    "PubliekeOrganisatie": {
+      "@id": "http://data.europa.eu/m8g/PublicOrganisation"
     },
-    "betrokkene": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/melding#betrokkene",
-      "@type": "http://purl.org/dc/terms/Agent"
+    "String": {
+      "@id": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "bijlage": {
-      "@id": "https://www.w3.org/ns/activitystreams#attachment",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    "Terugmelding": {
+      "@context": {
+        "behandelaar": {
+          "@id": "https://data.vlaanderen.be/ns/melding#behandelaar",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "betrokkene": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/melding#betrokkene",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "heeftBody": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/oa#hasBody",
+          "@type": "https://data.vlaanderen.be/ns/melding#MeldingBody"
+        },
+        "heeftDoelwit": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/oa#hasTarget",
+          "@type": "https://data.vlaanderen.be/ns/melding#Meldingsobject"
+        },
+        "heeftStatus": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/melding#heeftStatus",
+          "@type": "https://data.vlaanderen.be/ns/melding#Meldingstatus"
+        },
+        "indiener": {
+          "@id": "https://data.vlaanderen.be/ns/melding#indiener",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "melder": {
+          "@id": "https://data.vlaanderen.be/ns/melding#melder",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "meldingsapplicatie": {
+          "@id": "https://data.vlaanderen.be/ns/melding#Terugmelding.meldingsapplicatie",
+          "@type": "https://data.vlaanderen.be/ns/melding#Applicatie"
+        },
+        "meldingsorganisatie": {
+          "@id": "https://data.vlaanderen.be/ns/melding#Terugmelding.meldingsorganisatie",
+          "@type": "https://www.w3.org/ns/org#Organization"
+        },
+        "meldingstype": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/melding#meldingstype",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "samenvatting": {
+          "@id": "https://www.w3.org/ns/activitystreams#summary",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "titel": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "webpagina": {
+          "@id": "https://data.vlaanderen.be/ns/melding#webpagina",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/melding#Terugmelding"
     },
-    "bronhouder": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/melding#Organisatie.bronhouder",
-      "@type": "https://data.vlaanderen.be/ns/melding#Eigenschap"
+    "TijdToestand": {
+      "@context": {
+        "cachedBron": {
+          "@id": "http://www.w3.org/ns/oa#cachedSource",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "datumVaststelling": {
+          "@id": "http://www.w3.org/ns/oa#sourceDate",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "heeftToestand": {
+          "@id": "http://www.w3.org/ns/oa#hasState",
+          "@type": "https://data.vlaanderen.be/ns/melding#Meldingsobject"
+        }
+      },
+      "@id": "http://www.w3.org/ns/oa#TimeState"
     },
-    "cachedBron": {
-      "@id": "http://www.w3.org/ns/oa#cachedSource",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "datumVaststelling": {
-      "@id": "http://www.w3.org/ns/oa#sourceDate",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "geometrie": {
-      "@id": "http://www.w3.org/ns/locn#geometry",
-      "@type": "http://www.w3.org/ns/locn#Geometry"
-    },
-    "gerelateerdeBody": {
-      "@id": "https://data.vlaanderen.be/ns/melding#gerelateerdeBody",
-      "@type": "https://data.vlaanderen.be/ns/melding#Codelijst"
-    },
-    "gml": {
-      "@id": "http://www.opengis.net/ont/geosparql#asGML",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "heeftBody": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/oa#hasBody",
-      "@type": "https://data.vlaanderen.be/ns/melding#MeldingBody"
-    },
-    "heeftBron": {
-      "@id": "http://www.w3.org/ns/oa#hasSource",
-      "@type": "http://purl.org/dc/dcmitype/Dataset"
-    },
-    "heeftDoelwit": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/oa#hasTarget",
-      "@type": "https://data.vlaanderen.be/ns/melding#Meldingsobject"
-    },
-    "heeftEenheid": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#hasUnit",
-      "@type": "http://www.w3.org/ns/org#OrganizationalUnit"
-    },
-    "heeftEigenschap": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/melding#heeftEigenschap",
-      "@type": "https://data.vlaanderen.be/ns/melding#MeldingsobjectAttribuut"
-    },
-    "heeftStatus": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/melding#heeftStatus",
-      "@type": "https://data.vlaanderen.be/ns/melding#Meldingstatus"
-    },
-    "heeftToestand": {
-      "@id": "http://www.w3.org/ns/oa#hasState",
-      "@type": "http://www.w3.org/ns/oa#TimeState"
-    },
-    "huidigeWaarde": {
-      "@id": "https://data.vlaanderen.be/ns/melding#huidigeWaarde",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "indiener": {
-      "@id": "https://data.vlaanderen.be/ns/melding#indiener",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "isEenheidVan": {
-      "@id": "http://www.w3.org/ns/org#unitOf",
-      "@type": "https://www.w3.org/ns/org#Organization"
-    },
-    "meldbaar": {
-      "@id": "https://data.vlaanderen.be/ns/melding#meldbaar",
-      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    "melder": {
-      "@id": "https://data.vlaanderen.be/ns/melding#melder",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "meldingstype": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/melding#meldingstype",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "registratie": {
-      "@id": "http://data.vlaanderen.be/ns/persoon#registratie",
-      "@type": "http://www.w3.org/ns/adms#Identifier"
-    },
-    "samenvatting": {
-      "@id": "https://www.w3.org/ns/activitystreams#summary",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "statusType": {
-      "@id": "https://data.vlaanderen.be/ns/melding#statuswaarde",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "statusdatum": {
-      "@id": "https://data.vlaanderen.be/ns/melding#statusdatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "statuswijzigingDoor": {
-      "@id": "https://data.vlaanderen.be/ns/melding#statuswijzigingDoor",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "titel": {
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "voorgesteldeWaarde": {
-      "@id": "https://data.vlaanderen.be/ns/melding#voorgesteldeWaarde",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "webpagina": {
-      "@id": "https://data.vlaanderen.be/ns/melding#webpagina",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "wkt": {
-      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "URI": {
+      "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
     }
   }
 }

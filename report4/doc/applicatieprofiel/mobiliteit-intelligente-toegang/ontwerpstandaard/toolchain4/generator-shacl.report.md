@@ -2,9 +2,9 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find a label for the domain "urn:oslo-toolchain:4177087511b790553db49cc0748f6ccda09fcdd5d0e7ac598e1352b8f2057611" of subject "[urn:oslo-toolchain:6d1bd0cd2b27dafec09321da039a21c85d8703717fbc876c26817cdce5c4800f](all-mobiliteit-intelligente-toegang-ap.jsonld#L2331)".
+Error: Unable to find the assigned URI for range "urn:oslo-toolchain:6e3a0c04bad0ea70f6e1bf049461f23544986414027035093d5e1e18344fad66".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:77:23)
+    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:51:19)
 
     at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
 

@@ -1,117 +1,183 @@
 {
   "@context": {
-    "Agent": "http://purl.org/dc/terms/Agent",
-    "Attribuutwaarde": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues",
-    "Attribuutwaarde.waarde": {
-      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues.values",
-      "@type": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record"
+    "Agent": {
+      "@id": "http://purl.org/dc/terms/Agent"
     },
-    "Bereik": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage",
-    "CRS": "http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS",
-    "Curve": "http://www.opengis.net/ont/sf#Curve",
-    "CurveWaardepaar": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair",
-    "CurveWaardepaar.geometrie": {
-      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry",
-      "@type": "http://www.opengis.net/ont/sf#Curve"
+    "Attribuutwaarde": {
+      "@context": {
+        "waarde": {
+          "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues.values",
+          "@type": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues"
     },
-    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
-    "DiscreetBereik": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage",
-    "DiscreetBereik.element": {
-      "@container": "@set",
-      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage.element",
-      "@type": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair"
+    "Bereik": {
+      "@context": {
+        "bereikElement": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeElement",
+          "@type": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues"
+        },
+        "crs": {
+          "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CRS",
+          "@type": "http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS"
+        },
+        "domeinElement": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainElement",
+          "@type": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject"
+        },
+        "domeinOmvang": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainExtent",
+          "@type": "http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent"
+        },
+        "gemeenschappelijkPuntRegel": {
+          "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#commonPointRule",
+          "@type": "http://def.isotc211.org/iso19123/2005/SegmentedCurve#CV_CommonPointRule"
+        },
+        "typeBereik": {
+          "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeType",
+          "@type": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_Coverage"
     },
-    "DiscreetCurvebereik": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage",
-    "DiscreetCurvebereik.element": {
-      "@container": "@set",
-      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element",
-      "@type": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair"
+    "CRS": {
+      "@id": "http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS"
     },
-    "DiscreetPuntbereik": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscretePointCoverage",
-    "DiscreetPuntbereik.element": {
-      "@container": "@set",
-      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscretePointCoverage.element",
-      "@type": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair"
+    "Curve": {
+      "@id": "http://www.opengis.net/ont/sf#Curve"
     },
-    "Domeinobject": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject",
-    "GemeenschappelijkePuntregel": "http://def.isotc211.org/iso19123/2005/SegmentedCurve#CV_CommonPointRule",
-    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
-    "GeometrieWaardepaar": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair",
-    "GeometrieWaardepaar.geometrie": {
-      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.geometry",
-      "@type": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject"
+    "CurveWaardepaar": {
+      "@context": {
+        "geometrie": {
+          "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry",
+          "@type": "http://www.opengis.net/ont/sf#Curve"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair"
     },
-    "GeometrieWaardepaar.waarde": {
-      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
-      "@type": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record"
+    "DateTime": {
+      "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
-    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "Omvang": "http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent",
-    "Opmeting": "https://data.vlaanderen.be/ns/generiek#Opmeting",
-    "Opmetingmethode": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Punt": "http://www.opengis.net/ont/sf#Point",
-    "PuntWaardepaar": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair",
-    "PuntWaardepaar.geometrie": {
-      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair.geometry",
-      "@type": "http://www.opengis.net/ont/sf#Point"
+    "DiscreetBereik": {
+      "@context": {
+        "element": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage.element",
+          "@type": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCoverage"
     },
-    "Record": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record",
-    "Recordtype": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType",
-    "bereikElement": {
-      "@container": "@set",
-      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeElement",
-      "@type": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_AttributeValues"
+    "DiscreetCurvebereik": {
+      "@context": {
+        "element": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage.element",
+          "@type": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscreteCurveCoverage"
     },
-    "crs": {
-      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CRS",
-      "@type": "http://def.isotc211.org/iso19111/2007/CoordinateReferenceSystems#SC_CRS"
+    "DiscreetPuntbereik": {
+      "@context": {
+        "element": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscretePointCoverage.element",
+          "@type": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_DiscretePointCoverage"
     },
-    "domeinElement": {
-      "@container": "@set",
-      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainElement",
-      "@type": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject"
+    "Domeinobject": {
+      "@context": {
+        "ruimtelijkeSamenstelling": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject.spatialElement",
+          "@type": "http://www.w3.org/ns/locn#Geometry"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject"
     },
-    "domeinOmvang": {
-      "@container": "@set",
-      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#domainExtent",
-      "@type": "http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent"
+    "GemeenschappelijkePuntregel": {
+      "@id": "http://def.isotc211.org/iso19123/2005/SegmentedCurve#CV_CommonPointRule"
     },
-    "gemeenschappelijkPuntRegel": {
-      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#commonPointRule",
-      "@type": "http://def.isotc211.org/iso19123/2005/SegmentedCurve#CV_CommonPointRule"
+    "Geometrie": {
+      "@context": {
+        "gml": {
+          "@id": "http://www.opengis.net/ont/geosparql#asGML",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "opmeting": {
+          "@id": "https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting",
+          "@type": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+        },
+        "wkt": {
+          "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      },
+      "@id": "http://www.w3.org/ns/locn#Geometry"
     },
-    "gml": {
-      "@id": "http://www.opengis.net/ont/geosparql#asGML",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "GeometrieWaardepaar": {
+      "@context": {
+        "geometrie": {
+          "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.geometry",
+          "@type": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject"
+        },
+        "waarde": {
+          "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+          "@type": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair"
     },
-    "methode": {
-      "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+    "Literal": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
-    "opmeting": {
-      "@id": "https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting",
-      "@type": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+    "Omvang": {
+      "@id": "http://def.isotc211.org/iso19115/2003/ExtentInformation#EX_Extent"
     },
-    "opnamedatum": {
-      "@id": "https://data.vlaanderen.be/ns/generiek#opnamedatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    "Opmeting": {
+      "@context": {
+        "methode": {
+          "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "opnamedatum": {
+          "@id": "https://data.vlaanderen.be/ns/generiek#opnamedatum",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "uitgevoerdDoor": {
+          "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor",
+          "@type": "http://purl.org/dc/terms/Agent"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting"
     },
-    "ruimtelijkeSamenstelling": {
-      "@container": "@set",
-      "@id": "http://def.isotc211.org/iso19123/2005/DiscreteCoverages#CV_Domainobject.spatialElement",
-      "@type": "http://www.w3.org/ns/locn#Geometry"
+    "Opmetingmethode": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
-    "typeBereik": {
-      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#rangeType",
-      "@type": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType"
+    "Punt": {
+      "@id": "http://www.opengis.net/ont/sf#Point"
     },
-    "uitgevoerdDoor": {
-      "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor",
-      "@type": "http://purl.org/dc/terms/Agent"
+    "PuntWaardepaar": {
+      "@context": {
+        "geometrie": {
+          "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair.geometry",
+          "@type": "http://www.opengis.net/ont/sf#Point"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_PointValuePair"
     },
-    "wkt": {
-      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "Record": {
+      "@id": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record"
+    },
+    "Recordtype": {
+      "@id": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#RecordType"
     }
   }
 }

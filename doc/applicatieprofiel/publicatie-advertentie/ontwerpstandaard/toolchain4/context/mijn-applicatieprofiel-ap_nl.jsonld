@@ -1,389 +1,645 @@
 {
   "@context": {
-    "Adresvoorstelling": "http://www.w3.org/ns/locn#Address",
-    "Advertentie": "https://data.vlaanderen.be/ns/campagne/publicatie#Advertentie",
-    "AdvertentieEvent": "https://data.vlaanderen.be/ns/campagne/publicatie#AdvertentieEvent",
-    "Agent": "http://purl.org/dc/terms/Agent",
-    "Bestandsindelingstype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Campagne": "https://data.vlaanderen.be/ns/campagne/publicatie#Campagne",
-    "CampagneComponent": "https://data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent",
-    "CampagneType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Contactinfo": "http://schema.org/ContactPoint",
-    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
-    "DirectMarketing": "https://data.vlaanderen.be/ns/campagne/publicatie#DirectMarketing",
-    "Distributie": "https://data.vlaanderen.be/ns/campagne/publicatie#Distributie",
-    "Document": "http://www.cidoc-crm.org/cidoc-crm/E31_Document",
-    "DoelgroepType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Drager": "http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by",
-    "DragerType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "FormeleOrganisatie": "http://www.w3.org/ns/org#FormalOrganization",
-    "Geldbedrag": "https://schema.org/MonetaryAmount",
-    "Geldbedrag.waarde": {
-      "@id": "https://schema.org/value",
-      "@type": "https://schema.org/Number"
-    },
-    "GeografischeNaam": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
-    "GeregistreerdeOrganisatie": "http://www.w3.org/ns/regorg#RegisteredOrganization",
-    "Getal": "https://schema.org/Number",
-    "GetypeerdeString": "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "Impact": "https://data.vlaanderen.be/ns/campagne/publicatie#Impact",
-    "Impact.waarde": {
-      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#waarde",
-      "@type": "https://schema.org/QuantitativeValue"
-    },
-    "InformatieObject": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
-    "Kost": "http://data.europa.eu/m8g/Cost",
-    "Kost.type": {
-      "@id": "http://purl.org/dc/terms/type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "KostenType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "KwantitatieveWaarde": "https://schema.org/QuantitativeValue",
-    "Locatie": "http://www.w3.org/ns/prov#Location",
-    "Marketing": "https://data.vlaanderen.be/ns/campagne/publicatie#Marketing",
-    "MaterieelDing": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
-    "MensgemaaktObject": "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object",
-    "NAL_currency": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Openingsuren": "https://schema.org/OpeningHoursSpecification",
-    "Organisatie": "http://www.w3.org/ns/org#Organization",
-    "Organisatie.status": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/regorg#orgStatus",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "Organisatie.type": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/regorg#orgType",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "OrganisatieActiviteit": "http://www.w3.org/2004/02/skos/core#Concept",
-    "OrganisatieClassificatie": "http://www.w3.org/2004/02/skos/core#Concept",
-    "OrganisatieStatus": "http://www.w3.org/2004/02/skos/core#Concept",
-    "OrganisatieType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Periode": "http://data.europa.eu/m8g/PeriodOfTime",
-    "Persoon": "http://www.w3.org/ns/person#Person",
-    "Plaats": "http://purl.org/dc/terms/Location",
-    "PrestatieType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Product": "https://data.vlaanderen.be/ns/campagne/publicatie#Product",
-    "Producttype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "PublicRelations": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicRelations",
-    "PublicatieEvent": "https://www.iflastandards.info/fr/frbr/frbroo#F30",
-    "PublicatieEvent.status": {
-      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieEvent.status",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "PublicatieExpressie": "https://www.iflastandards.info/fr/frbr/frbroo#F24",
-    "PublicatieKanaalType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "PublicatieTool": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieTool",
-    "PublicatieToolType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Publicatiekanaal": "https://data.vlaanderen.be/ns/campagne/publicatie#Publicatiekanaal",
-    "PubliekeOrganisatie": "http://data.europa.eu/m8g/PublicOrganisation",
-    "Rechtspersoonlijkheidstype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Rechtstoestandstype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Rechtsvormtype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "StandaardEenheid": "https://schema.org/unitCode",
-    "StatusType": "http://www.w3.org/2004/02/skos/core#Concept",
-    "String": "http://www.w3.org/2001/XMLSchema#string",
-    "Taalcode": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Taalstring": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
-    "Time": "http://www.w3.org/2001/XMLSchema#time",
-    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
-    "VerkoopPromotie": "https://data.vlaanderen.be/ns/campagne/publicatie#VerkoopPromotie",
-    "ZelfstandigeExpressie": "https://www.iflastandards.info/fr/frbr/frbroo#F22",
-    "aanschrijfvorm": {
-      "@id": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "achternaam": {
-      "@id": "http://xmlns.com/foaf/0.1/familyName",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "activiteit": {
-      "@id": "http://www.w3.org/ns/regorg#orgActivity",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "adres": {
-      "@id": "http://www.w3.org/ns/locn#address",
-      "@type": "http://www.w3.org/ns/locn#Address"
-    },
-    "alsGML": {
-      "@id": "http://www.opengis.net/ont/geosparql#asGML",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "alsWKT": {
-      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "alternatieveNaam": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "begin": {
-      "@id": "http://data.europa.eu/m8g/startTime",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "beschikbaarheid": {
-      "@id": "http://schema.org/hoursAvailable",
-      "@type": "https://schema.org/OpeningHoursSpecification"
-    },
-    "beschrijving": {
-      "@id": "http://purl.org/dc/terms/description",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "budget": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#budget",
-      "@type": "http://data.europa.eu/m8g/Cost"
-    },
-    "campagne": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#campagne",
-      "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#Campagne"
-    },
-    "classificatie": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#classification",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "contactinfo": {
-      "@id": "http://schema.org/contactPoint",
-      "@type": "http://schema.org/ContactPoint"
-    },
-    "contactnaam": {
-      "@id": "http://xmlns.com/foaf/0.1/name",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "dagVanDeWeek": {
-      "@id": "https://schema.org/dayOfWeek",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "distributie": {
-      "@container": "@set",
-      "@id": "http://todo.com/distributie",
-      "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#Distributie"
-    },
-    "doel": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#purpose",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "doelgroep": {
-      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#doelgroep",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "drager": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by"
-    },
-    "eenheid": {
-      "@id": "https://schema.org/unitText",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "einde": {
-      "@id": "http://data.europa.eu/m8g/endTime",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "eindproduct": {
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object"
-    },
-    "email": {
-      "@id": "http://schema.org/email",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "fax": {
-      "@id": "http://schema.org/faxNumber",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "geldbedrag": {
-      "@id": "https://schema.org/MonetaryAmount",
-      "@type": "https://schema.org/MonetaryAmount"
-    },
-    "geldigTot": {
-      "@id": "https://schema.org/validThrough",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "geldigVan": {
-      "@id": "https://schema.org/validFrom",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "geometrie": {
-      "@id": "http://www.w3.org/ns/locn#geometry",
-      "@type": "http://www.w3.org/ns/locn#Geometry"
-    },
-    "gesloten": {
-      "@id": "https://schema.org/closes",
-      "@type": "http://www.w3.org/2001/XMLSchema#time"
-    },
-    "gevoerdDoor": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#gevoerdDoor",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "heeftSuborganisatie": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#hasSubOrganization",
-      "@type": "http://www.w3.org/ns/org#Organization"
-    },
-    "homepage": {
-      "@id": "http://xmlns.com/foaf/0.1/homepage",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "impact": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#impact",
-      "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#Impact"
-    },
-    "inhoud": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "isSuborganisatieVan": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/org#subOrganizationOf",
-      "@type": "http://www.w3.org/ns/org#Organization"
-    },
-    "kanaal": {
-      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#kanaal",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "kost": {
-      "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/hasCost",
-      "@type": "http://data.europa.eu/m8g/Cost"
-    },
-    "locatie": {
-      "@id": "http://www.w3.org/ns/prov#Location",
-      "@type": "http://www.w3.org/ns/prov#Location"
-    },
-    "marketing": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#marketing",
-      "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#Marketing"
-    },
-    "naam": {
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "omvat": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P165_incorporates",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"
-    },
-    "open": {
-      "@id": "https://schema.org/opens",
-      "@type": "http://www.w3.org/2001/XMLSchema#time"
-    },
-    "openingsuren": {
-      "@id": "http://schema.org/openingHours",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "periode": {
-      "@container": "@set",
-      "@id": "http://data.europa.eu/m8g/PeriodOfTime",
-      "@type": "http://data.europa.eu/m8g/PeriodOfTime"
-    },
-    "plaats": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/Location",
-      "@type": "http://www.w3.org/ns/prov#Location"
-    },
-    "plaatsnaam": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "product": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#product",
-      "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#Product"
-    },
-    "publicatieEvent": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#publicatieEvent",
-      "@type": "https://www.iflastandards.info/fr/frbr/frbroo#F30"
-    },
-    "rechtspersoonlijkheid": {
-      "@id": "https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "rechtstoestand": {
-      "@id": "https://data.vlaanderen.be/ns/organisatie#rechtstoestand",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "rechtsvorm": {
-      "@id": "https://data.vlaanderen.be/ns/organisatie#rechtsvorm",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "registratie": {
-      "@id": "http://www.w3.org/ns/regorg#registration",
-      "@type": "http://www.w3.org/ns/adms#Identifier"
-    },
-    "rekeningnummer": {
-      "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#bankrekeningnummer",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "standaardEenheid": {
-      "@id": "https://schema.org/unitCode",
-      "@type": "https://schema.org/unitCode"
-    },
-    "telefoon": {
-      "@id": "http://schema.org/telephone",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "titel": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "tool": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieEvent.tool",
-      "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieTool"
-    },
-    "type": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "uitgevoerdDoor": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieEvent.uitgevoerdDoor",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "valuta": {
-      "@id": "https://schema.org/currency",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "voorkeursnaam": {
-      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "voornaam": {
-      "@container": "@set",
-      "@id": "http://xmlns.com/foaf/0.1/givenName",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "waarde": {
-      "@id": "https://schema.org/value",
-      "@type": "https://schema.org/Number"
-    },
-    "website": {
-      "@id": "http://xmlns.com/foaf/0.1/page",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "werkingsgebied": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/spatial",
-      "@type": "http://purl.org/dc/terms/Location"
-    },
-    "wettelijkeNaam": {
-      "@id": "http://www.w3.org/ns/regorg#legalName",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    "Adresvoorstelling": {
+      "@id": "http://www.w3.org/ns/locn#Address"
+    },
+    "Advertentie": {
+      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#Advertentie"
+    },
+    "AdvertentieEvent": {
+      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#AdvertentieEvent"
+    },
+    "Agent": {
+      "@id": "http://purl.org/dc/terms/Agent"
+    },
+    "Bestandsindelingstype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Campagne": {
+      "@context": {
+        "bestaatUit": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#bestaatUit",
+          "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent"
+        },
+        "budget": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#budget",
+          "@type": "http://data.europa.eu/m8g/Cost"
+        },
+        "gevoerdDoor": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#gevoerdDoor",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "marketing": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#marketing",
+          "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#Marketing"
+        },
+        "periode": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/PeriodOfTime",
+          "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+        },
+        "product": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#product",
+          "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#Product"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#Campagne"
+    },
+    "CampagneComponent": {
+      "@context": {
+        "campagne": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#campagne",
+          "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#Campagne"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#CampagneComponent"
+    },
+    "CampagneType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Contactinfo": {
+      "@context": {
+        "aanschrijfvorm": {
+          "@id": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "adres": {
+          "@id": "http://www.w3.org/ns/locn#address",
+          "@type": "http://www.w3.org/ns/locn#Address"
+        },
+        "beschikbaarheid": {
+          "@id": "http://schema.org/hoursAvailable",
+          "@type": "https://schema.org/OpeningHoursSpecification"
+        },
+        "contactnaam": {
+          "@id": "http://xmlns.com/foaf/0.1/name",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "email": {
+          "@id": "http://schema.org/email",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "fax": {
+          "@id": "http://schema.org/faxNumber",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "openingsuren": {
+          "@id": "http://schema.org/openingHours",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "telefoon": {
+          "@id": "http://schema.org/telephone",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "website": {
+          "@id": "http://xmlns.com/foaf/0.1/page",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        }
+      },
+      "@id": "http://schema.org/ContactPoint"
+    },
+    "DateTime": {
+      "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "DirectMarketing": {
+      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#DirectMarketing"
+    },
+    "Distributie": {
+      "@context": {
+        "drager": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by"
+        },
+        "kanaal": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#kanaal",
+          "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#Publicatiekanaal"
+        },
+        "marketing": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#marketing",
+          "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#Marketing"
+        },
+        "periode": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/PeriodOfTime",
+          "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#Distributie"
+    },
+    "Document": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E31_Document"
+    },
+    "DoelgroepType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Drager": {
+      "@context": {
+        "locatie": {
+          "@id": "http://www.w3.org/ns/prov#Location",
+          "@type": "http://www.w3.org/ns/prov#Location"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by"
+    },
+    "DragerType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "FormeleOrganisatie": {
+      "@context": {
+        "rekeningnummer": {
+          "@id": "https://data.vlaanderen.be/ns/FeitelijkeVerenigingen#bankrekeningnummer",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#FormalOrganization"
+    },
+    "Geldbedrag": {
+      "@context": {
+        "valuta": {
+          "@id": "https://schema.org/currency",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "waarde": {
+          "@id": "https://schema.org/value",
+          "@type": "https://schema.org/Number"
+        }
+      },
+      "@id": "https://schema.org/MonetaryAmount"
+    },
+    "GeografischeNaam": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Geometrie": {
+      "@context": {
+        "alsGML": {
+          "@id": "http://www.opengis.net/ont/geosparql#asGML",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "alsWKT": {
+          "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      },
+      "@id": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "GeregistreerdeOrganisatie": {
+      "@context": {
+        "rechtspersoonlijkheid": {
+          "@id": "https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "rechtstoestand": {
+          "@id": "https://data.vlaanderen.be/ns/organisatie#rechtstoestand",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "rechtsvorm": {
+          "@id": "https://data.vlaanderen.be/ns/organisatie#rechtsvorm",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "registratie": {
+          "@id": "http://www.w3.org/ns/regorg#registration",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "wettelijkeNaam": {
+          "@id": "http://www.w3.org/ns/regorg#legalName",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.w3.org/ns/regorg#RegisteredOrganization"
+    },
+    "Getal": {
+      "@id": "https://schema.org/Number"
+    },
+    "GetypeerdeString": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Impact": {
+      "@context": {
+        "doelgroep": {
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#doelgroep",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "kanaal": {
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#kanaal",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "waarde": {
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#waarde",
+          "@type": "https://schema.org/QuantitativeValue"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#Impact"
+    },
+    "InformatieObject": {
+      "@context": {
+        "inhoud": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "omvat": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P165_incorporates",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"
+        },
+        "titel": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"
+    },
+    "Kost": {
+      "@context": {
+        "geldbedrag": {
+          "@id": "https://schema.org/MonetaryAmount",
+          "@type": "https://schema.org/MonetaryAmount"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/Cost"
+    },
+    "KostenType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "KwantitatieveWaarde": {
+      "@context": {
+        "eenheid": {
+          "@id": "https://schema.org/unitText",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "standaardEenheid": {
+          "@id": "https://schema.org/unitCode",
+          "@type": "https://schema.org/unitCode"
+        },
+        "waarde": {
+          "@id": "https://schema.org/value",
+          "@type": "https://schema.org/Number"
+        }
+      },
+      "@id": "https://schema.org/QuantitativeValue"
+    },
+    "Locatie": {
+      "@id": "http://www.w3.org/ns/prov#Location"
+    },
+    "Marketing": {
+      "@context": {
+        "doelgroep": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#doelgroep",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "impact": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#impact",
+          "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#Impact"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#Marketing"
+    },
+    "MaterieelDing": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"
+    },
+    "MensgemaaktObject": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object"
+    },
+    "NAL_currency": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Openingsuren": {
+      "@context": {
+        "dagVanDeWeek": {
+          "@id": "https://schema.org/dayOfWeek",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "geldigTot": {
+          "@id": "https://schema.org/validThrough",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "geldigVan": {
+          "@id": "https://schema.org/validFrom",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "gesloten": {
+          "@id": "https://schema.org/closes",
+          "@type": "http://www.w3.org/2001/XMLSchema#time"
+        },
+        "open": {
+          "@id": "https://schema.org/opens",
+          "@type": "http://www.w3.org/2001/XMLSchema#time"
+        }
+      },
+      "@id": "https://schema.org/OpeningHoursSpecification"
+    },
+    "Organisatie": {
+      "@context": {
+        "activiteit": {
+          "@id": "http://www.w3.org/ns/regorg#orgActivity",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "alternatieveNaam": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "classificatie": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#classification",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "contactinfo": {
+          "@container": "@set",
+          "@id": "http://schema.org/contactPoint",
+          "@type": "http://schema.org/ContactPoint"
+        },
+        "doel": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#purpose",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "heeftSuborganisatie": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#hasSubOrganization",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "homepage": {
+          "@id": "http://xmlns.com/foaf/0.1/homepage",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "isSuborganisatieVan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/org#subOrganizationOf",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "status": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/regorg#orgStatus",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/regorg#orgType",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "voorkeursnaam": {
+          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#Organization"
+    },
+    "OrganisatieActiviteit": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "OrganisatieClassificatie": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "OrganisatieStatus": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "OrganisatieType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Periode": {
+      "@context": {
+        "begin": {
+          "@id": "http://data.europa.eu/m8g/startTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "einde": {
+          "@id": "http://data.europa.eu/m8g/endTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/PeriodOfTime"
+    },
+    "Persoon": {
+      "@context": {
+        "achternaam": {
+          "@id": "http://xmlns.com/foaf/0.1/familyName",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "contactinfo": {
+          "@id": "http://schema.org/contactPoint",
+          "@type": "http://schema.org/ContactPoint"
+        },
+        "voornaam": {
+          "@container": "@set",
+          "@id": "http://xmlns.com/foaf/0.1/givenName",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      "@id": "http://www.w3.org/ns/person#Person"
+    },
+    "Plaats": {
+      "@context": {
+        "geometrie": {
+          "@id": "http://www.w3.org/ns/locn#geometry",
+          "@type": "http://www.w3.org/ns/locn#Geometry"
+        },
+        "plaatsnaam": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://purl.org/dc/terms/Location"
+    },
+    "PrestatieType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Product": {
+      "@context": {
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#Product"
+    },
+    "Producttype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "PublicRelations": {
+      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicRelations"
+    },
+    "PublicatieEvent": {
+      "@context": {
+        "distributie": {
+          "@container": "@set",
+          "@id": "http://todo.com/distributie",
+          "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#Distributie"
+        },
+        "eindproduct": {
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object"
+        },
+        "kost": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/hasCost",
+          "@type": "http://data.europa.eu/m8g/Cost"
+        },
+        "marketing": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#marketing",
+          "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#Marketing"
+        },
+        "periode": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/PeriodOfTime",
+          "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+        },
+        "plaats": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/Location",
+          "@type": "http://www.w3.org/ns/prov#Location"
+        },
+        "publicatieExpressie": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieExpressie",
+          "@type": "https://www.iflastandards.info/fr/frbr/frbroo#F24"
+        },
+        "status": {
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieEvent.status",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "tool": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieEvent.tool",
+          "@type": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieTool"
+        },
+        "uitgevoerdDoor": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieEvent.uitgevoerdDoor",
+          "@type": "http://purl.org/dc/terms/Agent"
+        }
+      },
+      "@id": "https://www.iflastandards.info/fr/frbr/frbroo#F30"
+    },
+    "PublicatieExpressie": {
+      "@context": {
+        "publicatieEvent": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#publicatieEvent",
+          "@type": "https://www.iflastandards.info/fr/frbr/frbroo#F30"
+        }
+      },
+      "@id": "https://www.iflastandards.info/fr/frbr/frbroo#F24"
+    },
+    "PublicatieKanaalType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "PublicatieTool": {
+      "@context": {
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#PublicatieTool"
+    },
+    "PublicatieToolType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Publicatiekanaal": {
+      "@context": {
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#Publicatiekanaal"
+    },
+    "PubliekeOrganisatie": {
+      "@context": {
+        "werkingsgebied": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/spatial",
+          "@type": "http://purl.org/dc/terms/Location"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/PublicOrganisation"
+    },
+    "Rechtspersoonlijkheidstype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Rechtstoestandstype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Rechtsvormtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "StandaardEenheid": {
+      "@id": "https://schema.org/unitCode"
+    },
+    "StatusType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "String": {
+      "@id": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Taalcode": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Taalstring": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Time": {
+      "@id": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "URI": {
+      "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "VerkoopPromotie": {
+      "@id": "https://data.vlaanderen.be/ns/campagne/publicatie#VerkoopPromotie"
+    },
+    "ZelfstandigeExpressie": {
+      "@id": "https://www.iflastandards.info/fr/frbr/frbroo#F22"
     }
   }
 }

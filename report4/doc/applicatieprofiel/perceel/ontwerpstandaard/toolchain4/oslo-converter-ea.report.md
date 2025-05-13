@@ -2,67 +2,65 @@
 
 #||# -------------------------------------
 
-2025-03-16T21:44:59.622Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftRelatieMet)
+2025-05-13T10:44:52.821Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftRelatieMet)
 
-2025-03-16T21:44:59.623Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersbordbasis:(Verkeersbordbasis -> OSLO-OpenbaarDomein::Verkeersbord))
+2025-05-13T10:44:52.822Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersbordbasis:(Verkeersbordbasis -> OSLO-OpenbaarDomein::Verkeersbord))
 
-2025-03-16T21:44:59.623Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Positie:rapporteertAan)
+2025-05-13T10:44:52.823Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Positie:rapporteertAan)
 
-2025-03-16T21:44:59.623Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersmaatregel:verwijstNaar)
+2025-05-13T10:44:52.823Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersmaatregel:verwijstNaar)
 
-2025-03-16T21:44:59.624Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
+2025-05-13T10:44:52.823Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
 
-2025-03-16T21:44:59.624Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Object))
+2025-05-13T10:44:52.823Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Object))
 
-2025-03-16T21:44:59.624Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-GeneriekVoc!!!:FormeelKader:(FormeelKader -> Object))
+2025-05-13T10:44:52.823Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-GeneriekVoc!!!:FormeelKader:(FormeelKader -> Object))
 
-2025-03-16T21:44:59.624Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:wordtUitgevoerdDoor)
+2025-05-13T10:44:52.823Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:wordtUitgevoerdDoor)
 
-2025-03-16T21:44:59.624Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftParticiperende)
+2025-05-13T10:44:52.823Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftParticiperende)
 
-2025-03-16T21:44:59.624Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke)
+2025-05-13T10:44:52.823Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke)
 
-2025-03-16T21:44:59.624Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:vereist)
+2025-05-13T10:44:52.823Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:vereist)
 
-2025-03-16T21:44:59.624Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet)
+2025-05-13T10:44:52.823Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet)
 
-2025-03-16T21:44:59.624Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:aangenomenDoor)
+2025-05-13T10:44:52.823Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:aangenomenDoor)
 
-2025-03-16T21:44:59.624Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Generiek:Gemeente:(Gemeente -> Object))
+2025-05-13T10:44:52.823Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2025-03-16T21:44:59.624Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2025-05-13T10:44:52.824Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-03-16T21:44:59.627Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Agent:(Agent -> RuimtelijkeEenheid) has no name. Ignoring this connector.
+2025-05-13T10:44:52.827Z info: Connector Model:OSLO²_vocabularium:OSLO-Gebouw:Gebouw:ligtOp is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:59.628Z info: Connector Model:OSLO²_vocabularium:OSLO-Gebouw:Gebouw:ligtOp is not an association with a source role. Ignoring this connector.
+2025-05-13T10:44:52.828Z info: Connector Model:OSLO²_vocabularium:OSLO-Gebouw:Gebouw:ligtOp has name "ligtOp". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-03-16T21:44:59.628Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Agent:(Agent -> KadastraalPatrimoniumperceel) has no name. Ignoring this connector.
+2025-05-13T10:44:52.828Z info: Connector Model:OSLO-Perceel:KadastraalPatrimoniumperceel:isGerelateerdAan is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:59.628Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Agent:(Agent -> RuimtelijkeEenheid) has no name. Ignoring this connector.
+2025-05-13T10:44:52.828Z info: Connector Model:OSLO-Perceel:KadastraalPatrimoniumperceel:isGerelateerdAan has name "isGerelateerdAan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-03-16T21:44:59.628Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Agent:(Agent -> RuimtelijkeEenheid) has no name. Ignoring this connector.
+2025-05-13T10:44:52.829Z info: Connector Model:OSLO-Perceel:KadastraalPlanperceel:(KadastraalPlanperceel -> RuimtelijkeEenheid) is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:59.629Z info: Connector Model:OSLO-Perceel:KadastraalPatrimoniumperceel:isGerelateerdAan is not an association with a source role. Ignoring this connector.
+2025-05-13T10:44:52.829Z info: Connector Model:OSLO-Perceel:RuimtelijkeEenheid:isGerelateerdAan is not an association with a source role. Ignoring this connector.
 
-2025-03-16T21:44:59.629Z info: Connector Model:OSLO-Perceel:KadastraalPlanperceel:(KadastraalPlanperceel -> RuimtelijkeEenheid) is not an association with a source role. Ignoring this connector.
+2025-05-13T10:44:52.829Z info: Connector Model:OSLO-Perceel:RuimtelijkeEenheid:isGerelateerdAan has name "isGerelateerdAan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-03-16T21:44:59.629Z info: Connector Model:OSLO-Perceel:RuimtelijkeEenheid:isGerelateerdAan is not an association with a source role. Ignoring this connector.
+2025-05-13T10:44:52.830Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:44:59.630Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T10:44:52.830Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:44:59.630Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T10:44:52.831Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_vocabularium:OSLO-Subsidie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-03-16T21:44:59.630Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_vocabularium:OSLO-Subsidie) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T10:44:52.839Z warn: [ConnectorConverterHandler]: Connector (ZakelijkRecht.KadastraalPatrimoniumperceel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-16T21:44:59.636Z warn: [ConnectorConverterHandler]: Connector (ZakelijkRecht.KadastraalPatrimoniumperceel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T10:44:52.839Z warn: [ConnectorConverterHandler]: Connector (Recht.RuimtelijkeEenheid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-16T21:44:59.636Z warn: [ConnectorConverterHandler]: Connector (Recht.RuimtelijkeEenheid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T10:44:52.839Z warn: [ConnectorConverterHandler]: Connector (Restrictie.RuimtelijkeEenheid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-16T21:44:59.637Z warn: [ConnectorConverterHandler]: Connector (Restrictie.RuimtelijkeEenheid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T10:44:52.839Z warn: [ConnectorConverterHandler]: Connector (Verantwoordelijkheid.RuimtelijkeEenheid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-16T21:44:59.637Z warn: [ConnectorConverterHandler]: Connector (Verantwoordelijkheid.RuimtelijkeEenheid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-03-16T21:44:59.643Z warn: [ConverterHandler]: Entity with path Model:OSLO-Perceel:Verantwoordelijkheid:omschrijving has already a value for definition-nl in language nl, but will be overwritten.
+2025-05-13T10:44:52.846Z warn: [ConverterHandler]: Entity with path Model:OSLO-Perceel:Verantwoordelijkheid:omschrijving has already a value for definition-nl in language nl, but will be overwritten.
 
 #||# -------------------------------------
 
