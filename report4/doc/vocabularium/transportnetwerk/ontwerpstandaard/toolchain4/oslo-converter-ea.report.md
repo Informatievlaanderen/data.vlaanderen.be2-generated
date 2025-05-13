@@ -2,43 +2,43 @@
 
 #||# -------------------------------------
 
-2025-05-13T12:22:35.056Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportnetwerk:^BestaatUit is not an association with a source role. Ignoring this connector.
+2025-05-13T13:24:19.968Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportnetwerk:^BestaatUit is not an association with a source role. Ignoring this connector.
 
-2025-05-13T12:22:35.058Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportnetwerk:^BestaatUit has name "^BestaatUit". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-13T13:24:19.970Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportnetwerk:^BestaatUit has name "^BestaatUit". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-13T12:22:35.059Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportgebied:(Transportgebied -> Transportobject) is not an association with a source role. Ignoring this connector.
+2025-05-13T13:24:19.970Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportgebied:(Transportgebied -> Transportobject) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T12:22:35.059Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportknoop:(Transportknoop -> Transportobject) is not an association with a source role. Ignoring this connector.
+2025-05-13T13:24:19.970Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportknoop:(Transportknoop -> Transportobject) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T12:22:35.059Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportlink:(Transportlink -> Transportobject) is not an association with a source role. Ignoring this connector.
+2025-05-13T13:24:19.970Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportlink:(Transportlink -> Transportobject) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T12:22:35.059Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportlinksequentie:(Transportlinksequentie -> Transportobject) is not an association with a source role. Ignoring this connector.
+2025-05-13T13:24:19.970Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportlinksequentie:(Transportlinksequentie -> Transportobject) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T12:22:35.059Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportlinkset:(Transportlinkset -> Transportobject) is not an association with a source role. Ignoring this connector.
+2025-05-13T13:24:19.970Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportlinkset:(Transportlinkset -> Transportobject) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T12:22:35.060Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportpunt:(Transportpunt -> Transportobject) is not an association with a source role. Ignoring this connector.
+2025-05-13T13:24:19.970Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportpunt:(Transportpunt -> Transportobject) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T12:22:35.060Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Afstandspaal:(Afstandspaal -> Transportpunt) is not an association with a source role. Ignoring this connector.
+2025-05-13T13:24:19.971Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Afstandspaal:(Afstandspaal -> Transportpunt) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T12:22:35.060Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Afstandspaal:(Afstandspaal -> Transportlinkset) is not an association with a source role. Ignoring this connector.
+2025-05-13T13:24:19.971Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Afstandspaal:(Afstandspaal -> Transportlinkset) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T12:22:35.061Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T13:24:19.972Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T12:22:35.062Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-13T13:24:19.972Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T12:22:35.065Z warn: [ConnectorConverterHandler]: Connector (route) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-13T13:24:19.974Z warn: [ConnectorConverterHandler]: Connector (route) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T12:22:35.067Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Transportnetwerk:Transportobject has an empty value for tag usageNote-nl.
+2025-05-13T13:24:19.976Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Transportnetwerk:Transportobject has an empty value for tag usageNote-nl.
 
-2025-05-13T12:22:35.069Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Netwerkgebied has an empty value for tag usageNote-nl.
+2025-05-13T13:24:19.976Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Netwerkgebied has an empty value for tag usageNote-nl.
 
-2025-05-13T12:22:35.069Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Knoop has an empty value for tag usageNote-nl.
+2025-05-13T13:24:19.977Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Knoop has an empty value for tag usageNote-nl.
 
-2025-05-13T12:22:35.069Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Link has an empty value for tag usageNote-nl.
+2025-05-13T13:24:19.977Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Link has an empty value for tag usageNote-nl.
 
-2025-05-13T12:22:35.070Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Linkset has an empty value for tag usageNote-nl.
+2025-05-13T13:24:19.977Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Linkset has an empty value for tag usageNote-nl.
 
-2025-05-13T12:22:35.072Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Transportnetwerk:Transporttype has an empty value for tag usageNote-nl.
+2025-05-13T13:24:19.979Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Transportnetwerk:Transporttype has an empty value for tag usageNote-nl.
 
 #||# -------------------------------------
 

@@ -2,9 +2,9 @@
 
 #||# -------------------------------------  
 
-2025-05-13T12:27:32.086Z warn: Unable to find the description for subject "[urn:oslo-toolchain:666c520d7034f629fc9ae4e59ea4da6064459f60072862e002808e8a815aacaf](all-mobiliteitsbudget-ap.jsonld#L3423)".
+2025-05-13T13:29:51.020Z warn: Unable to find the description for subject "[urn:oslo-toolchain:666c520d7034f629fc9ae4e59ea4da6064459f60072862e002808e8a815aacaf](all-mobiliteitsbudget-ap.jsonld#L3423)".
 
-2025-05-13T12:27:32.090Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5878cf332f30dbbdbb3c45bb8fbb9900e25800a4ee44a42762aa0bc1e5aeca7e](all-mobiliteitsbudget-ap.jsonld#L3919)".
+2025-05-13T13:29:51.025Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5878cf332f30dbbdbb3c45bb8fbb9900e25800a4ee44a42762aa0bc1e5aeca7e](all-mobiliteitsbudget-ap.jsonld#L3919)".
 
 Error: Unable to find a label for the domain "urn:oslo-toolchain:9375741b6c08b437366490c0433675151d95e57390070b54eb24bb52d1575058" of subject "[urn:oslo-toolchain:5878cf332f30dbbdbb3c45bb8fbb9900e25800a4ee44a42762aa0bc1e5aeca7e](all-mobiliteitsbudget-ap.jsonld#L3919)".
 

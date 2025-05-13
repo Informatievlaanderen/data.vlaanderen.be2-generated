@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2025-05-13T12:27:08.401Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:cf6ee3fc81b046cdf1452e222bdccbac821a1db0cb188858db7be96a915ef004](all-energiehuis.jsonld#L5393).
+2025-05-13T13:29:12.095Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:cf6ee3fc81b046cdf1452e222bdccbac821a1db0cb188858db7be96a915ef004](all-energiehuis.jsonld#L5393).
 
