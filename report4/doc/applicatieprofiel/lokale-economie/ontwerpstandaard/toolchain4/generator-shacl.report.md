@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-05-13T15:13:43.906Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8142)".
+2025-05-14T09:04:42.653Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8142)".
 
 Error: Unable to find a label for the domain "urn:oslo-toolchain:41606a73ee77f1a70d17fe06204ad584ba23dfa1bcba4c3b6b168faa75360a57" of subject "[urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8142)".
 

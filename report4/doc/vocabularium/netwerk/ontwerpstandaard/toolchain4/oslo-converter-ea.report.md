@@ -2,65 +2,65 @@
 
 #||# -------------------------------------
 
-2025-05-13T15:07:27.553Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Netwerk:Netwerkreferentie:(Netwerkreferentie -> Netwerkelement))
+2025-05-14T08:58:19.468Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Netwerk:Netwerkreferentie:(Netwerkreferentie -> Netwerkelement))
 
-2025-05-13T15:07:27.556Z info: Connector Model:Domain Model:OSLO-Netwerk:Linkset:(Linkset -> Netwerkelement) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.473Z info: Connector Model:Domain Model:OSLO-Netwerk:Linkset:(Linkset -> Netwerkelement) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.556Z info: Connector Model:Domain Model:OSLO-Netwerk:GeneriekeLink:(GeneriekeLink -> Netwerkelement) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.473Z info: Connector Model:Domain Model:OSLO-Netwerk:GeneriekeLink:(GeneriekeLink -> Netwerkelement) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.556Z info: Connector Model:Domain Model:OSLO-Netwerk:Knoop:(Knoop -> Netwerkelement) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.473Z info: Connector Model:Domain Model:OSLO-Netwerk:Knoop:(Knoop -> Netwerkelement) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.557Z info: Connector Model:Domain Model:OSLO-Netwerk:Netwerkgebied:(Netwerkgebied -> Netwerkelement) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.473Z info: Connector Model:Domain Model:OSLO-Netwerk:Netwerkgebied:(Netwerkgebied -> Netwerkelement) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.557Z info: Connector Model:Domain Model:OSLO-Netwerk:Connectie:(Connectie -> Netwerkelement) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.473Z info: Connector Model:Domain Model:OSLO-Netwerk:Connectie:(Connectie -> Netwerkelement) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.557Z info: Connector Model:Domain Model:OSLO-Netwerk:Linksequentie:(Linksequentie -> GeneriekeLink) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.473Z info: Connector Model:Domain Model:OSLO-Netwerk:Linksequentie:(Linksequentie -> GeneriekeLink) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.557Z info: Connector Model:Domain Model:OSLO-Netwerk:Link:(Link -> GeneriekeLink) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.473Z info: Connector Model:Domain Model:OSLO-Netwerk:Link:(Link -> GeneriekeLink) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.557Z info: Connector Model:Domain Model:OSLO-Netwerk:Link:(Link -> Knoop) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.473Z info: Connector Model:Domain Model:OSLO-Netwerk:Link:(Link -> Knoop) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.557Z info: Connector Model:Domain Model:OSLO-Netwerk:Link:(Link -> Knoop) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.473Z info: Connector Model:Domain Model:OSLO-Netwerk:Link:(Link -> Knoop) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.557Z info: Connector Model:Domain Model:OSLO-Netwerk:Connectie:(Connectie -> Netwerkelement) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.474Z info: Connector Model:Domain Model:OSLO-Netwerk:Connectie:(Connectie -> Netwerkelement) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.557Z info: Connector Model:Domain Model:OSLO-Netwerk:Linkreferentie:(Linkreferentie -> Netwerkreferentie) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.474Z info: Connector Model:Domain Model:OSLO-Netwerk:Linkreferentie:(Linkreferentie -> Netwerkreferentie) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.558Z info: Connector Model:Domain Model:OSLO-Netwerk:LineaireReferentie:(LineaireReferentie -> Linkreferentie) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.474Z info: Connector Model:Domain Model:OSLO-Netwerk:LineaireReferentie:(LineaireReferentie -> Linkreferentie) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.558Z info: Connector Model:Domain Model:OSLO-Netwerk:Puntreferentie:(Puntreferentie -> Linkreferentie) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.474Z info: Connector Model:Domain Model:OSLO-Netwerk:Puntreferentie:(Puntreferentie -> Linkreferentie) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.558Z info: Connector Model:Domain Model:OSLO-Netwerk:GerichteLink:(GerichteLink -> Link) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.474Z info: Connector Model:Domain Model:OSLO-Netwerk:GerichteLink:(GerichteLink -> Link) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.558Z info: Connector Model:Domain Model:OSLO-Netwerk:OngelijkgrondseKruising:(OngelijkgrondseKruising -> Netwerkelement) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.475Z info: Connector Model:Domain Model:OSLO-Netwerk:OngelijkgrondseKruising:(OngelijkgrondseKruising -> Netwerkelement) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.558Z info: Connector Model:Domain Model:OSLO-Netwerk:OngelijkgrondseKruising:(OngelijkgrondseKruising -> Link) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:19.475Z info: Connector Model:Domain Model:OSLO-Netwerk:OngelijkgrondseKruising:(OngelijkgrondseKruising -> Link) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:27.559Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T08:58:19.475Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T15:07:27.559Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T08:58:19.476Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T15:07:27.561Z warn: [ConnectorConverterHandler]: Connector (inNetwerk) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T08:58:19.478Z warn: [ConnectorConverterHandler]: Connector (inNetwerk) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T15:07:27.561Z warn: [ConnectorConverterHandler]: Connector (bestaatUit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T08:58:19.478Z warn: [ConnectorConverterHandler]: Connector (bestaatUit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T15:07:27.561Z warn: [ConnectorConverterHandler]: Connector (beginknoop) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T08:58:19.478Z warn: [ConnectorConverterHandler]: Connector (beginknoop) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T15:07:27.561Z warn: [ConnectorConverterHandler]: Connector (eindknoop) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T08:58:19.478Z warn: [ConnectorConverterHandler]: Connector (eindknoop) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T15:07:27.561Z warn: [ConnectorConverterHandler]: Connector (link) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T08:58:19.478Z warn: [ConnectorConverterHandler]: Connector (link) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T15:07:27.561Z warn: [ConnectorConverterHandler]: Connector (kruisingVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T08:58:19.478Z warn: [ConnectorConverterHandler]: Connector (kruisingVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T15:07:27.561Z warn: [ConnectorConverterHandler]: Connector (link) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T08:58:19.478Z warn: [ConnectorConverterHandler]: Connector (link) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T15:07:27.561Z warn: [ConnectorConverterHandler]: Connector (verbindt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T08:58:19.478Z warn: [ConnectorConverterHandler]: Connector (verbindt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-13T15:07:27.566Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Netwerk:LineaireReferentie:vanPositie).
+2025-05-14T08:58:19.483Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Netwerk:LineaireReferentie:vanPositie).
 
-2025-05-13T15:07:27.566Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Netwerk:LineaireReferentie:totPositie).
+2025-05-14T08:58:19.483Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Netwerk:LineaireReferentie:totPositie).
 
-2025-05-13T15:07:27.566Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Netwerk:Linkreferentie:element).
+2025-05-14T08:58:19.483Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Netwerk:Linkreferentie:element).
 
 #||# -------------------------------------
 

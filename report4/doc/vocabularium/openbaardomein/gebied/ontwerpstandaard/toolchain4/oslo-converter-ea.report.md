@@ -2,43 +2,43 @@
 
 #||# -------------------------------------
 
-2025-05-13T15:07:42.607Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Begraafplaats:(Begraafplaats -> Gebied) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:34.534Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Begraafplaats:(Begraafplaats -> Gebied) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:42.609Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Natuur:(Natuur -> Gebied) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:34.536Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Natuur:(Natuur -> Gebied) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:42.609Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Bufferzone:(Bufferzone -> Gebied) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:34.537Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Bufferzone:(Bufferzone -> Gebied) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:42.609Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Groenzone:(Groenzone -> Gebied) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:34.537Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Groenzone:(Groenzone -> Gebied) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:42.609Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Parking:(Parking -> Gebied) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:34.537Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Parking:(Parking -> Gebied) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:42.610Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Park:(Park -> Gebied) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:34.537Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Park:(Park -> Gebied) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:42.610Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Plein:(Plein -> Gebied) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:34.537Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Plein:(Plein -> Gebied) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:42.610Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Recreatiegebied:(Recreatiegebied -> Gebied) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:34.537Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Recreatiegebied:(Recreatiegebied -> Gebied) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:42.610Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Recyclagepark:(Recyclagepark -> Gebied) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:34.537Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Recyclagepark:(Recyclagepark -> Gebied) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:42.610Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Spoorweg:(Spoorweg -> Gebied) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:34.537Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Spoorweg:(Spoorweg -> Gebied) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:42.610Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Wegzone:(Wegzone -> Gebied) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:34.537Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Wegzone:(Wegzone -> Gebied) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:42.610Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Tuinzone:(Tuinzone -> Gebied) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:34.538Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Tuinzone:(Tuinzone -> Gebied) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:42.610Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Volkstuin:(Volkstuin -> Gebied) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:34.538Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Volkstuin:(Volkstuin -> Gebied) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:42.610Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Waterverkeerzone:(Waterverkeerzone -> Gebied) is not an association with a source role. Ignoring this connector.
+2025-05-14T08:58:34.538Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Waterverkeerzone:(Waterverkeerzone -> Gebied) is not an association with a source role. Ignoring this connector.
 
-2025-05-13T15:07:42.611Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T08:58:34.539Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T15:07:42.611Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T08:58:34.539Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T15:07:42.611Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T08:58:34.539Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T15:07:42.611Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T08:58:34.540Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-13T15:07:42.611Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T08:58:34.540Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
 
 #||# -------------------------------------
 
