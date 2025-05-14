@@ -130,8 +130,14 @@
       },
       "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Bevoorradingsgebied"
     },
+    "Collectie": {
+      "@id": "https://www.w3.org/ns/prov#Collection"
+    },
     "Concept": {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Dataset": {
+      "@id": "http://www.w3.org/ns/dcat#Dataset"
     },
     "DateTime": {
       "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
@@ -149,10 +155,7 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Eenheid": {
-      "@id": "http://qudt.org/schema/qudt/Unit"
-    },
-    "Functietype": {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+      "@id": "http://qudt.org/2.1/schema/qudt/Unit"
     },
     "GeaggregeerdVerbruikObservatie": {
       "@context": {
@@ -169,7 +172,7 @@
     },
     "GeaggregeerdVerbruikTijdreeksobservatie": {
       "@context": {
-        "geobserveerdObject": {
+        "geobserveerdobject": {
           "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
           "@type": "http://purl.org/dc/terms/Location"
         },
@@ -223,14 +226,14 @@
     },
     "Inbouw": {
       "@context": {
-        "inbouwDoor": {
+        "deployedOp": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/digitaleWatermeter#deployedOp",
+          "@type": "https://vocab.belgif.be/ns/utility-services#Connection"
+        },
+        "gedeployedDoor": {
           "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#inbouwDoor",
           "@type": "http://purl.org/dc/terms/Agent"
-        },
-        "inbouwOp": {
-          "@container": "@set",
-          "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#inbouwOp",
-          "@type": "https://vocab.belgif.be/ns/utility-services#Connection"
         },
         "inbouwSysteem": {
           "@container": "@set",
@@ -303,7 +306,7 @@
       "@context": {
         "eenheid": {
           "@id": "https://qudt.org/schema/qudt/hasUnit",
-          "@type": "http://qudt.org/schema/qudt/Unit"
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
         },
         "waarde": {
           "@id": "https://qudt.org/schema/qudt/value",
@@ -323,8 +326,12 @@
     },
     "MachineLearningInput": {
       "@context": {
+        "model": {
+          "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#model",
+          "@type": "http://data.europa.eu/m8g/MachineLearningModel"
+        },
         "observaties": {
-          "@id": "http://todo.com/observaties",
+          "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#observaties",
           "@type": "http://www.w3.org/ns/sosa/ObservationCollection"
         }
       },
@@ -338,16 +345,12 @@
         },
         "fineTunedFrom": {
           "@id": "http://data.europa.eu/m8g/fineTunedFrom",
-          "@type": "http://data.europa.eu/it6/MachineLearningModel"
-        },
-        "getraindOp": {
-          "@id": "http://data.europa.eu/it6/trainedOn",
-          "@type": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#MachineLearningInput"
+          "@type": "http://data.europa.eu/m8g/MachineLearningModel"
         },
         "hasVariation": {
           "@container": "@set",
           "@id": "http://data.europa.eu/m8g/hasVariation",
-          "@type": "http://data.europa.eu/it6/MachineLearningModel"
+          "@type": "http://data.europa.eu/m8g/MachineLearningModel"
         },
         "naam": {
           "@id": "http://purl.org/dc/terms/title",
@@ -359,22 +362,17 @@
           "@type": "http://www.w3.org/2004/02/skos/core#Concept"
         },
         "versie": {
-          "@id": "http://data.europa.eu/it6/version",
+          "@id": "http://openml.org/openml#version",
           "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
         }
       },
-      "@id": "http://data.europa.eu/it6/MachineLearningModel"
+      "@id": "http://data.europa.eu/m8g/MachineLearningModel"
     },
     "Meter": {
       "@context": {
         "fabrikant": {
           "@id": "https://saref.etsi.org/core/hasManufacturer",
           "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "functie": {
-          "@container": "@set",
-          "@id": "https://saref.etsi.org/core/hasFunction",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
         },
         "heeftFabrieksnummer": {
           "@id": "https://w3id.org/def/S4WATR#hasFabricationNumber",
@@ -410,7 +408,7 @@
           "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
         },
         "werktopRadiofrequentie": {
-          "@id": "https://saref.etsi.org/saref4watr/operatesAtRadioFrequency",
+          "@id": "https://saref.etsi.org/saref4watr/operatesAtRadiofrequency",
           "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
         }
       },
@@ -441,7 +439,7 @@
       },
       "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#Meterzone"
     },
-    "Meting(OSLO-Grondwatermeetnet)": {
+    "Meting": {
       "@id": "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement"
     },
     "Moment": {
@@ -818,7 +816,7 @@
     "Watermeter": {
       "@context": {
         "diameter": {
-          "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#diameter",
+          "@id": "https://data.vlaanderen.be/ns/digitaleWatermeter#diameter",
           "@type": "https://qudt.org/schema/qudt/QuantityValue"
         }
       },
