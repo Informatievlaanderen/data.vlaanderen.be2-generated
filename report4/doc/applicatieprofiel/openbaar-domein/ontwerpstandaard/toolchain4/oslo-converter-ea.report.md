@@ -2,85 +2,85 @@
 
 #||# -------------------------------------
 
-2025-05-14T09:35:34.182Z info: Connector Model:OSLO-OpenbaarDomein:OSLO-Generiek:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.119Z info: Connector Model:OSLO-OpenbaarDomein:OSLO-Generiek:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.184Z info: Connector Model:OSLO-OpenbaarDomein:OSLO-Generiek:Lijnstring:(Lijnstring -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.121Z info: Connector Model:OSLO-OpenbaarDomein:OSLO-Generiek:Lijnstring:(Lijnstring -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.184Z info: Connector Model:OSLO-OpenbaarDomein:OSLO-Generiek:Polygoon:(Polygoon -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.122Z info: Connector Model:OSLO-OpenbaarDomein:OSLO-Generiek:Polygoon:(Polygoon -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.184Z info: Connector Applicatieprofiel:InfrastructuurElement:Infrastructuurelement:(Infrastructuurelement -> Element) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.122Z info: Connector Applicatieprofiel:InfrastructuurElement:Infrastructuurelement:(Infrastructuurelement -> Element) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.185Z info: Connector Applicatieprofiel:Terreindeel:TerreinVoorkomen:(TerreinVoorkomen -> FysiekVoorkomen) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.122Z info: Connector Applicatieprofiel:Terreindeel:TerreinVoorkomen:(TerreinVoorkomen -> FysiekVoorkomen) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.185Z info: Connector Model:OSLO-OpenbaarDomein:Model:Deel:voorkomen is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.123Z info: Connector Model:OSLO-OpenbaarDomein:Model:Deel:voorkomen is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.186Z info: Connector Model:OSLO-OpenbaarDomein:Model:Deel:voorkomen has name "voorkomen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-14T09:48:26.123Z info: Connector Model:OSLO-OpenbaarDomein:Model:Deel:voorkomen has name "voorkomen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T09:35:34.186Z info: Connector Applicatieprofiel:BegroeidVoorkomen:BegroeidVoorkomen:(BegroeidVoorkomen -> TerreinVoorkomen) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.123Z info: Connector Applicatieprofiel:BegroeidVoorkomen:BegroeidVoorkomen:(BegroeidVoorkomen -> TerreinVoorkomen) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.186Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:(Waterdeel -> Deel) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.123Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:(Waterdeel -> Deel) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.186Z info: Connector Applicatieprofiel:VegetatieElement:VegetatieElement:(VegetatieElement -> Element) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.124Z info: Connector Applicatieprofiel:VegetatieElement:VegetatieElement:(VegetatieElement -> Element) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.186Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Gebied:beheerder is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.124Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Gebied:beheerder is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.186Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Gebied:beheerder has name "beheerder". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-14T09:48:26.124Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Gebied:beheerder has name "beheerder". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T09:35:34.187Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:(Terreindeel -> Deel) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.124Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:(Terreindeel -> Deel) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.187Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:voorkomen is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.124Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:voorkomen is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.187Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:voorkomen has name "voorkomen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-14T09:48:26.124Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:voorkomen has name "voorkomen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T09:35:34.187Z info: Connector Applicatieprofiel:WaterVoorkomen:WaterVoorkomen:(WaterVoorkomen -> FysiekVoorkomen) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.125Z info: Connector Applicatieprofiel:WaterVoorkomen:WaterVoorkomen:(WaterVoorkomen -> FysiekVoorkomen) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.187Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:voorkomen is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.125Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:voorkomen is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.187Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:voorkomen has name "voorkomen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-14T09:48:26.125Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:voorkomen has name "voorkomen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T09:35:34.187Z info: Connector Model:OSLO-OpenbaarDomein:Model:Deel:(Deel -> FysiekObject) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.125Z info: Connector Model:OSLO-OpenbaarDomein:Model:Deel:(Deel -> FysiekObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.188Z info: Connector Model:OSLO-OpenbaarDomein:Model:FysiekObject:beheerder is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.126Z info: Connector Model:OSLO-OpenbaarDomein:Model:FysiekObject:beheerder is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.188Z info: Connector Model:OSLO-OpenbaarDomein:Model:FysiekObject:beheerder has name "beheerder". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-14T09:48:26.126Z info: Connector Model:OSLO-OpenbaarDomein:Model:FysiekObject:beheerder has name "beheerder". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T09:35:34.188Z info: Connector Model:OSLO-OpenbaarDomein:Model:Element:(Element -> FysiekObject) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.126Z info: Connector Model:OSLO-OpenbaarDomein:Model:Element:(Element -> FysiekObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.188Z info: Connector Model:OSLO-OpenbaarDomein:Model:FysiekObject:eigenaar is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.126Z info: Connector Model:OSLO-OpenbaarDomein:Model:FysiekObject:eigenaar is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.188Z info: Connector Model:OSLO-OpenbaarDomein:Model:FysiekObject:eigenaar has name "eigenaar". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-14T09:48:26.126Z info: Connector Model:OSLO-OpenbaarDomein:Model:FysiekObject:eigenaar has name "eigenaar". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T09:35:34.188Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Gebied:eigenaar is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.126Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Gebied:eigenaar is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.188Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Gebied:eigenaar has name "eigenaar". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-14T09:48:26.127Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Gebied:eigenaar has name "eigenaar". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T09:35:34.188Z info: Connector Model:OSLO-OpenbaarDomein:Model:Collectie:bevat is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.127Z info: Connector Model:OSLO-OpenbaarDomein:Model:Collectie:bevat is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.189Z info: Connector Model:OSLO-OpenbaarDomein:Model:Collectie:bevat has name "bevat". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-14T09:48:26.127Z info: Connector Model:OSLO-OpenbaarDomein:Model:Collectie:bevat has name "bevat". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T09:35:34.189Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:heeftObstakel is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.127Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:heeftObstakel is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.189Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:heeftObstakel has name "heeftObstakel". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-14T09:48:26.127Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:heeftObstakel has name "heeftObstakel". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T09:35:34.189Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:OnbegroeidVoorkomen:OnbegroeidVoorkomen:(OnbegroeidVoorkomen -> TerreinVoorkomen) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:48:26.127Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:OnbegroeidVoorkomen:OnbegroeidVoorkomen:(OnbegroeidVoorkomen -> TerreinVoorkomen) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:35:34.190Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:48:26.128Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:35:34.190Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:48:26.128Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:35:34.190Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:48:26.129Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:35:34.190Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:48:26.129Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:35:34.190Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:48:26.129Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:35:34.196Z warn: [ConnectorConverterHandler]: Connector (voorkomen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T09:48:26.136Z warn: [ConnectorConverterHandler]: Connector (voorkomen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T09:35:34.197Z warn: [ConnectorConverterHandler]: Connector (voorkomen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T09:48:26.136Z warn: [ConnectorConverterHandler]: Connector (voorkomen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T09:35:34.197Z warn: [ConnectorConverterHandler]: Connector (bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T09:48:26.137Z warn: [ConnectorConverterHandler]: Connector (bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T09:35:34.197Z warn: [ConnectorConverterHandler]: Connector (bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T09:48:26.137Z warn: [ConnectorConverterHandler]: Connector (bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 #||# -------------------------------------
 

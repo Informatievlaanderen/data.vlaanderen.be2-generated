@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2025-05-14T09:46:55.698Z warn: Unable to find the assigned URI for external class http://purl.org/vocab/bio/0.1/Event which acts as a parent. Using original URI as fallback.
+2025-05-14T09:58:52.740Z warn: Unable to find the assigned URI for external class http://purl.org/vocab/bio/0.1/Event which acts as a parent. Using original URI as fallback.
 

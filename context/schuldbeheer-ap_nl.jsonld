@@ -1,350 +1,507 @@
 {
   "@context": {
     "Aanmaning": "https://data.vlaanderen.be/ns/schuldbeheer#Aanmaning",
+    "Aanmaning.aanmaningsdatum": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#aanmaningsdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Aanmaning.genereertWanbetalingsvergoeding": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#genereertWanbetalingsvergoeding",
+      "@type": "@id"
+    },
     "Aanvaarding": "https://data.vlaanderen.be/ns/schuldbeheer#Aanvaarding",
+    "Aanvaarding.aanvaardAfbetalingsplan": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#aanvaardAfbetalingsplan",
+      "@type": "@id"
+    },
     "Activiteit": "http://www.w3.org/ns/prov#Activity",
     "Activiteit.einddatum": {
       "@id": "https://data.vlaanderen.be/ns/dossier/#Activiteit.einddatum",
       "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
+    "Activiteit.genereert": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/dossier#genereert",
+      "@type": "@id"
+    },
+    "Activiteit.heeftDeelnemer": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#qualifiedAssociation",
+      "@type": "@id"
+    },
     "Activiteit.startdatum": {
       "@id": "https://data.vlaanderen.be/ns/dossier#Activiteit.startdatum",
       "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
+    "Activiteit.werdGestartDoor": {
+      "@id": "https://www.w3.org/TR/prov-o/#wasStartedBy",
+      "@type": "@id"
+    },
     "Afbetaling": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetaling",
+    "Afbetaling.gevolgdAfbetalingsplanonderdeel": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#gevolgdAfbetalingsplanonderdeel",
+      "@type": "@id"
+    },
     "Afbetalingsplan": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan",
-    "Afbetalingsplanonderdeel": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplanonderdeel",
-    "Afbetalingsplansaldo": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplansaldo",
-    "Agent": "http://www.w3.org/ns/prov#Agent",
-    "Agent (in rol)": "http://www.w3.org/ns/prov#Association",
-    "Betaling": "https://data.vlaanderen.be/ns/schuldbeheer#Betaling",
-    "Betwisting": "https://data.vlaanderen.be/ns/schuldbeheer#Betwisting",
-    "Geregistreerd Persoon": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon",
-    "Geregistreerde Organisatie": "http://www.w3.org/ns/regorg#RegisteredOrganization",
-    "Gezin": "https://data.vlaanderen.be/ns/persoon#Gezin",
-    "Identificator.toegekendDoor": {
-      "@id": "http://purl.org/dc/terms/creator",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "Inkomst": "https://data.vlaanderen.be/ns/schuldbeheer#Inkomst",
-    "Inkomsttype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Juridisch statuut": "https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut",
-    "JuridischStatuut.type": {
-      "@id": "http://purl.org/dc/terms/type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "Krediet": "https://data.vlaanderen.be/ns/schuldbeheer#Krediet",
-    "Krediettype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Oninbaarheidsverklaring": "https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring",
-    "Organisatie": "http://www.w3.org/ns/org#Organization",
-    "Periodiciteit inkomst": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Persoon": "http://www.w3.org/ns/person#Person",
-    "Rechtsgrond": "http://data.europa.eu/eli/ontology#LegalResource",
-    "Resource": "http://www.w3.org/2000/01/rdf-schema#Resource",
-    "Saldo": "https://data.vlaanderen.be/ns/schuldbeheer#Saldo",
-    "Schrapping": "https://data.vlaanderen.be/ns/schuldbeheer#Schrapping",
-    "Schuldvordering": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering",
-    "Schuldvorderingscategorie": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingscategorie",
-    "Schuldvorderingssaldo": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingssaldo",
-    "Sociaal Statuut": "https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut",
-    "SociaalStatuut.toegekendDoor": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#toegekendDoor",
-      "@type": "http://www.w3.org/ns/prov#Agent"
-    },
-    "Solvabiliteitsindicator": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator",
-    "Solvabiliteitsindicator.type": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "Solvabiliteitsindicatortype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Solvabiliteitsprofiel": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel",
-    "Solvabiliteitsprofiel.einddatum": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#einddatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "Solvabiliteitsprofiel.startdatum": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#startdatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "Solvabiliteitstype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Stuk": "https://data.vlaanderen.be/ns/dossier#Stuk",
-    "Toerekening van Betaling": "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling",
-    "Type jurische statuut": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Type sociaal statuut": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Vermindering": "https://data.vlaanderen.be/ns/schuldbeheer#Vermindering",
-    "Voorstel": "https://data.vlaanderen.be/ns/schuldbeheer#Voorstel",
-    "Wanbetalingsvergoeding": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding",
-    "Wanbetalingsvergoedingstype": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Wijziging": "https://data.vlaanderen.be/ns/schuldbeheer#Wijziging",
-    "aanleiding": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#aanleiding",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
-    },
-    "aanmaning": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#aanmaning",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Aanmaning"
-    },
-    "aanmaningsdatum": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#aanmaningsdatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "aanvaardAfbetalingsplan": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#aanvaardAfbetalingsplan",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
-    },
-    "aanvaarding": {
+    "Afbetalingsplan.aanvaarding": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#aanvaarding",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Aanvaarding"
+      "@type": "@id"
     },
-    "afTeBetalenBedrag": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#afTeBetalenBedrag",
-      "@type": "https://schema.org/MonetaryAmount"
-    },
-    "afbetalingsplan": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplan",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
-    },
-    "afbetalingsplanonderdeel": {
+    "Afbetalingsplan.afbetalingsplanonderdeel": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplanonderdeel",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplanonderdeel"
+      "@type": "@id"
     },
-    "afbetalingsplansaldo": {
+    "Afbetalingsplan.afbetalingsplansaldo": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplansaldo",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplansaldo"
+      "@type": "@id"
     },
-    "afgeleidVan": {
+    "Afbetalingsplan.herschikteSchuldvordering": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#afgeleidVan",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator"
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#herschikteSchuldvordering",
+      "@type": "@id"
     },
-    "auteur": {
+    "Afbetalingsplan.schrapping": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#schrapping",
+      "@type": "@id"
+    },
+    "Afbetalingsplan.startbedrag": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#startBedrag",
+      "@type": "@id"
+    },
+    "Afbetalingsplan.voorstel": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/dossier#auteur",
-      "@type": "http://www.w3.org/ns/prov#Agent"
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#voorstel",
+      "@type": "@id"
     },
-    "bedoeldVoor": {
+    "Afbetalingsplanonderdeel": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplanonderdeel",
+    "Afbetalingsplanonderdeel.afTeBetalenBedrag": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#afTeBetalenBedrag",
+      "@type": "@id"
+    },
+    "Afbetalingsplanonderdeel.isDeelVan": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#isDeelVan",
+      "@type": "@id"
+    },
+    "Afbetalingsplanonderdeel.uitersteBetaaldatum": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplanonderdeel.uitersteBetaaldatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Afbetalingsplansaldo": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplansaldo",
+    "Agent": "http://www.w3.org/ns/prov#Agent",
+    "Agent(InRol)": "http://www.w3.org/ns/prov#Association",
+    "Agent(InRol).isRolspecialisatieVan": {
+      "@id": "http://www.w3.org/ns/prov#agent",
+      "@type": "@id"
+    },
+    "Agent(InRol).rol": {
+      "@id": "http://www.w3.org/ns/prov#hadRole",
+      "@type": "@id"
+    },
+    "Agent.handeltInOpdrachtVan": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/prov#actedOnBehalfOf",
+      "@type": "@id"
+    },
+    "Betaling": "https://data.vlaanderen.be/ns/schuldbeheer#Betaling",
+    "Betaling.bedoeldVoor": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#bedoeldVoor",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
+      "@type": "@id"
     },
-    "bedrag": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#bedrag",
-      "@type": "https://schema.org/MonetaryAmount"
-    },
-    "bepaaldDoor": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#bepaaldDoor",
-      "@type": "http://www.w3.org/ns/prov#Agent"
-    },
-    "betaaldBedrag": {
+    "Betaling.betaaldBedrag": {
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#betaaldBedrag",
-      "@type": "https://schema.org/MonetaryAmount"
+      "@type": "@id"
     },
-    "betalingsdatum": {
+    "Betaling.betalingsdatum": {
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#betalingsdatum",
       "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
-    "betwistBedrag": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#betwistBedrag",
-      "@type": "https://schema.org/MonetaryAmount"
+    "Betaling.identificator": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
     },
-    "betwisting": {
+    "Betaling.wordtToegerekendDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#wordtToegerekendDoor",
+      "@type": "@id"
+    },
+    "Betwisting": "https://data.vlaanderen.be/ns/schuldbeheer#Betwisting",
+    "Betwisting.betwistBedrag": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#betwistBedrag",
+      "@type": "@id"
+    },
+    "Boolean": "http://www.w3.org/2001/XMLSchema#boolean",
+    "Date": "http://www.w3.org/2001/XMLSchema#date",
+    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "Decimal": "http://www.w3.org/2001/XMLSchema#decimal",
+    "Duration": "http://www.w3.org/2001/XMLSchema#duration",
+    "Geldbedrag": "https://schema.org/MonetaryAmount",
+    "Geldbedrag.valuta": {
+      "@id": "https://schema.org/currency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Geldbedrag.waarde": {
+      "@id": "https://schema.org/value",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "GeregistreerdPersoon": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon",
+    "GeregistreerdPersoon.inkomst": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#inkomst",
+      "@type": "@id"
+    },
+    "GeregistreerdPersoon.juridischStatuut": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#juridischStatuut",
+      "@type": "@id"
+    },
+    "GeregistreerdPersoon.krediet": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#krediet",
+      "@type": "@id"
+    },
+    "GeregistreerdPersoon.registratie": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "GeregistreerdPersoon.sociaalStatuut": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#sociaalStatuut",
+      "@type": "@id"
+    },
+    "GeregistreerdPersoon.solvabiliteitsprofiel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#solvabiliteitsprofiel",
+      "@type": "@id"
+    },
+    "GeregistreerdeOrganisatie": "http://www.w3.org/ns/regorg#RegisteredOrganization",
+    "GeregistreerdeOrganisatie.registratie": {
+      "@id": "http://www.w3.org/ns/regorg#registration",
+      "@type": "@id"
+    },
+    "Gezin": "https://data.vlaanderen.be/ns/persoon#Gezin",
+    "Gezin.gezinshoofd": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#gezinshoofd",
+      "@type": "@id"
+    },
+    "Gezin.gezinslid": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#gezinslid",
+      "@type": "@id"
+    },
+    "Identificator": "http://www.w3.org/ns/adms#Identifier",
+    "Identificator.identificator": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Identificator.toegekendDoor": {
+      "@id": "http://purl.org/dc/terms/creator",
+      "@type": "@id"
+    },
+    "Identificator.toegekendOp": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Inkomst": "https://data.vlaanderen.be/ns/schuldbeheer#Inkomst",
+    "Inkomst.bedrag": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#bedrag",
+      "@type": "@id"
+    },
+    "Inkomst.periodiciteitInkomst": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#periodiciteitInkomst",
+      "@type": "@id"
+    },
+    "Inkomst.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Inkomsttype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "JuridischStatuut": "https://data.vlaanderen.be/ns/schuldbeheer#JuridischStatuut",
+    "JuridischStatuut.rechtsgrond": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#rechtsgrond",
+      "@type": "@id"
+    },
+    "JuridischStatuut.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Krediet": "https://data.vlaanderen.be/ns/schuldbeheer#Krediet",
+    "Krediet.initieelKredietbedrag": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#initieelKredietbedrag",
+      "@type": "@id"
+    },
+    "Krediet.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Krediet.wanbetaling": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Krediet.wanbetaling",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Krediettype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Oninbaarheidsverklaring": "https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring",
+    "Oninbaarheidsverklaring.oninbaarBedrag": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#oninbaarBedrag",
+      "@type": "@id"
+    },
+    "Organisatie": "http://www.w3.org/ns/org#Organization",
+    "Organisatie.isSuborganisatieVan": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#subOrganizationOf",
+      "@type": "@id"
+    },
+    "PeriodiciteitInkomst": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Persoon": "http://www.w3.org/ns/person#Person",
+    "Persoon.heeftRelatieMet": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#heeftRelatieMet",
+      "@type": "@id"
+    },
+    "Persoon.isHoofdVan": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#isHoofdVan",
+      "@type": "@id"
+    },
+    "Persoon.isLidVan": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#isLidVan",
+      "@type": "@id"
+    },
+    "Persoon.volledigeNaam": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#volledigeNaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Persoonsrelatie": "https://data.vlaanderen.be/ns/persoon#Persoonsrelatie",
+    "Persoonsrelatie.persoon(Source)": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#Persoonsrelatie.persoon.source",
+      "@type": "@id"
+    },
+    "Persoonsrelatie.persoon(Target)": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#Persoonsrelatie.persoon.target",
+      "@type": "@id"
+    },
+    "Rechtsgrond": "http://data.europa.eu/eli/ontology#LegalResource",
+    "Resource": "http://www.w3.org/2000/01/rdf-schema#Resource",
+    "Saldo": "https://data.vlaanderen.be/ns/schuldbeheer#Saldo",
+    "Saldo.saldobedrag": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#saldobedrag",
+      "@type": "@id"
+    },
+    "Saldo.saldodatum": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#saldodatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Schrapping": "https://data.vlaanderen.be/ns/schuldbeheer#Schrapping",
+    "Schrapping.geschraptAfbetalingsplan": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#geschraptAfbetalingsplan",
+      "@type": "@id"
+    },
+    "Schuldvordering": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering",
+    "Schuldvordering.aanleiding": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#aanleiding",
+      "@type": "@id"
+    },
+    "Schuldvordering.aanmaning": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#aanmaning",
+      "@type": "@id"
+    },
+    "Schuldvordering.afbetalingsplan": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#afbetalingsplan",
+      "@type": "@id"
+    },
+    "Schuldvordering.betwisting": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#betwisting",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Betwisting"
+      "@type": "@id"
     },
-    "datum": {
+    "Schuldvordering.grondslag": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#grondslag",
+      "@type": "@id"
+    },
+    "Schuldvordering.hoofdsom": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#hoofdsom",
+      "@type": "@id"
+    },
+    "Schuldvordering.identificator": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#identificator",
+      "@type": "@id"
+    },
+    "Schuldvordering.isGerelateerdMet": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#isGerelateerdMet",
+      "@type": "@id"
+    },
+    "Schuldvordering.oninbaarheidsverklaring": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#oninbaarheidsverklaring",
+      "@type": "@id"
+    },
+    "Schuldvordering.schuldeiser": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#schuldeiser",
+      "@type": "@id"
+    },
+    "Schuldvordering.schuldenaar": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#schuldenaar",
+      "@type": "@id"
+    },
+    "Schuldvordering.schuldvorderingscategorie": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#schuldvorderingscategorie",
+      "@type": "@id"
+    },
+    "Schuldvordering.schuldvorderingssaldo": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#schuldvordingssaldo",
+      "@type": "@id"
+    },
+    "Schuldvordering.toerekeningVanBetaling": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#toerekeningVanBetaling",
+      "@type": "@id"
+    },
+    "Schuldvordering.uitersteBetaaldatum": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering.uitersteBetaaldatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Schuldvordering.verjaringsdatum": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#verjaringsdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Schuldvordering.vermindering": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#vermindering",
+      "@type": "@id"
+    },
+    "Schuldvordering.wanbetaling": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering.wanbetaling",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Schuldvordering.wanbetalingsvergoeding": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetalingsvergoeding",
+      "@type": "@id"
+    },
+    "Schuldvorderingscategorie": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingscategorie",
+    "Schuldvorderingscategorie.fiscaal": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#fiscaal",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Schuldvorderingscategorie.naam": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Schuldvorderingscategorie.verjaringstermijn": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#verjaringstermijn",
+      "@type": "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "Schuldvorderingssaldo": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingssaldo",
+    "SociaalStatuut": "https://data.vlaanderen.be/ns/schuldbeheer#SociaalStatuut",
+    "SociaalStatuut.toegekendDoor": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#toegekendDoor",
+      "@type": "@id"
+    },
+    "SociaalStatuut.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Solvabiliteitsindicator": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator",
+    "Solvabiliteitsindicator.einddatum": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel.einddatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Solvabiliteitsindicator.startdatum": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicatoprofiel.startdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Solvabiliteitsindicator.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Solvabiliteitsindicatortype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Solvabiliteitsprofiel": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel",
+    "Solvabiliteitsprofiel.afgeleidVan": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#afgeleidVan",
+      "@type": "@id"
+    },
+    "Solvabiliteitsprofiel.bepaaldDoor": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#bepaaldDoor",
+      "@type": "@id"
+    },
+    "Solvabiliteitsprofiel.einddatum": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator.einddatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Solvabiliteitsprofiel.startdatum": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsindicator.startdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Solvabiliteitsprofiel.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Solvabiliteitstype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "String": "http://www.w3.org/2001/XMLSchema#string",
+    "Stuk": "https://data.vlaanderen.be/ns/dossier#Stuk",
+    "Stuk.auteur": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/dossier#auteur",
+      "@type": "@id"
+    },
+    "Stuk.datum": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/date",
       "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
-    "einddatum": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#einddatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "fiscaal": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#fiscaal",
-      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    "genereertWanbetalingsvergoeding": {
+    "Stuk.identificator": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#genereertWanbetalingsvergoeding",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding"
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
     },
-    "geschraptAfbetalingsplan": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#geschraptAfbetalingsplan",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
+    "ToerekeningVanBetaling": "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling",
+    "ToerekeningVanBetaling.rekentToeAan": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#rekentToeAan",
+      "@type": "@id"
     },
-    "gevolgdAfbetalingsplanonderdeel": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#gevolgdAfbetalingsplanonderdeel",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplanonderdeel"
+    "ToerekeningVanBetaling.toegerekendBedrag": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#toegerekendBedrag",
+      "@type": "@id"
     },
-    "grondslag": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#grondslag",
-      "@type": "http://data.europa.eu/eli/ontology#LegalResource"
+    "ToerekeningVanBetaling.toegerekendeBetaling": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#toegerekendeBetaling",
+      "@type": "@id"
     },
-    "herschikteSchuldvordering": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#herschikteSchuldvordering",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
+    "TypeJurischeStatuut": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TypeSociaalStatuut": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Vermindering": "https://data.vlaanderen.be/ns/schuldbeheer#Vermindering",
+    "Vermindering.verminderingsbedrag": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#verminderingsbedrag",
+      "@type": "@id"
     },
-    "identificator": {
-      "@id": "http://www.w3.org/2004/02/skos/core#notation",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "Voorstel": "https://data.vlaanderen.be/ns/schuldbeheer#Voorstel",
+    "Voorstel.voorgesteldAfbetalingsplan": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#voorgesteldAfbetalingsplan",
+      "@type": "@id"
     },
-    "initieelKredietbedrag": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#initieelKredietbedrag",
-      "@type": "https://schema.org/MonetaryAmount"
-    },
-    "interest": {
+    "Wanbetalingsvergoeding": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding",
+    "Wanbetalingsvergoeding.interest": {
       "@id": "https://data.vlaanderen.be/ns/schuldbeheer#interest",
       "@type": "http://www.w3.org/2001/XMLSchema#decimal"
     },
-    "isDeelVan": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#isDeelVan",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
+    "Wanbetalingsvergoeding.kost": {
+      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#kost",
+      "@type": "@id"
     },
-    "isGerelateerdMet": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#isGerelateerdMet",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
-    },
-    "naam": {
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "oninbaarBedrag": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#oninbaarBedrag",
-      "@type": "https://schema.org/MonetaryAmount"
-    },
-    "oninbaarheidsverklaring": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#oninbaarheidsverklaring",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Oninbaarheidsverklaring"
-    },
-    "registratie": {
-      "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "http://www.w3.org/ns/adms#Identifier"
-    },
-    "rekentToeAan": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#rekentToeAan",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvordering"
-    },
-    "rol": {
-      "@id": "http://www.w3.org/ns/prov#hadRole",
-      "@type": "http://www.w3.org/ns/prov#Role"
-    },
-    "saldodatum": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#saldodatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "schrapping": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#schrapping",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Schrapping"
-    },
-    "schuldeiser": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#schuldeiser",
-      "@type": "http://www.w3.org/ns/prov#Agent"
-    },
-    "schuldenaar": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#schuldenaar",
-      "@type": "http://www.w3.org/ns/prov#Agent"
-    },
-    "schuldvorderingscategorie": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#schuldvorderingscategorie",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingscategorie"
-    },
-    "schuldvorderingssaldo": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#schuldvordingssaldo",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Schuldvorderingssaldo"
-    },
-    "solvabiliteitsprofiel": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#solvabiliteitsprofiel",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Solvabiliteitsprofiel"
-    },
-    "startdatum": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#startdatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "toegekendOp": {
-      "@id": "http://purl.org/dc/terms/issued",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "toegerekendBedrag": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#toegerekendBedrag",
-      "@type": "https://schema.org/MonetaryAmount"
-    },
-    "toegerekendeBetaling": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#toegerekendeBetaling",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Betaling"
-    },
-    "toerekeningVanBetaling": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#toerekeningVanBetaling",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling"
-    },
-    "type": {
+    "Wanbetalingsvergoeding.type": {
       "@id": "http://purl.org/dc/terms/type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+      "@type": "@id"
     },
-    "uitersteBetaaldatum": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#uitersteBetaaldatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "valuta": {
-      "@id": "https://schema.org/currency",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "verjaringsdatum": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#verjaringsdatum",
-      "@type": "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "verjaringstermijn": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#verjaringstermijn",
-      "@type": "http://www.w3.org/2001/XMLSchema#duration"
-    },
-    "vermindering": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#vermindering",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Vermindering"
-    },
-    "volledigeNaam": {
-      "@id": "https://data.vlaanderen.be/ns/persoon#volledigeNaam",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "voorgesteldAfbetalingsplan": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#voorgesteldAfbetalingsplan",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Afbetalingsplan"
-    },
-    "voorstel": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#voorstel",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Voorstel"
-    },
-    "waarde": {
-      "@id": "https://schema.org/value",
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
-    },
-    "wanbetaling": {
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetaling",
-      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    "wanbetalingsvergoeding": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#wanbetalingsvergoeding",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#Wanbetalingsvergoeding"
-    },
-    "wordtToegerekendDoor": {
-      "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/schuldbeheer#wordtToegerekendDoor",
-      "@type": "https://data.vlaanderen.be/ns/schuldbeheer#ToerekeningVanBetaling"
-    }
+    "Wanbetalingsvergoedingstype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Wijziging": "https://data.vlaanderen.be/ns/schuldbeheer#Wijziging"
   }
 }
