@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2025-05-14T09:56:37.953Z warn: Unable to find the description for subject "[urn:oslo-toolchain:341c0d7a8d99b190b65fdbbabfa938efdf3827b6f81305b19cd1ecf327bc740b](all-kwaliteitWegenEnWegmarkeringen-impl.jsonld#L1893)".
+2025-05-14T11:20:28.040Z warn: Unable to find the description for subject "[urn:oslo-toolchain:341c0d7a8d99b190b65fdbbabfa938efdf3827b6f81305b19cd1ecf327bc740b](all-kwaliteitWegenEnWegmarkeringen-impl.jsonld#L1893)".
 

@@ -2,9 +2,9 @@
 
 #||# -------------------------------------  
 
-2025-05-14T09:56:18.302Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#Activity which acts as a parent. Using original URI as fallback.
+2025-05-14T11:20:03.030Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#Activity which acts as a parent. Using original URI as fallback.
 
-2025-05-14T09:56:18.311Z warn: Unable to find the assigned URI for external class http://www.w3.org/2004/02/skos/core#Concept which acts as a parent. Using original URI as fallback.
+2025-05-14T11:20:03.039Z warn: Unable to find the assigned URI for external class http://www.w3.org/2004/02/skos/core#Concept which acts as a parent. Using original URI as fallback.
 
-2025-05-14T09:56:18.329Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/Document which acts as a parent. Using original URI as fallback.
+2025-05-14T11:20:03.056Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/Document which acts as a parent. Using original URI as fallback.
 

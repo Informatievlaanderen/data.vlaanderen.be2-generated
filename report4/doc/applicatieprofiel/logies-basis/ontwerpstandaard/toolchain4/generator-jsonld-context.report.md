@@ -2,23 +2,23 @@
 
 #||# -------------------------------------  
 
-2025-05-14T09:56:42.717Z error: Unable to find the assigned URI of range with id http://schema.org/QuantitativeValue.
+2025-05-14T11:20:30.032Z error: Unable to find the assigned URI of range with id http://schema.org/QuantitativeValue.
 
-2025-05-14T09:56:42.719Z error: Unable to find the assigned URI of range with id http://schema.org/QuantitativeValue.
+2025-05-14T11:20:30.034Z error: Unable to find the assigned URI of range with id http://schema.org/QuantitativeValue.
 
-2025-05-14T09:56:42.719Z error: Unable to find the assigned URI of range with id http://www.w3.org/2004/02/skos/core#Concept.
+2025-05-14T11:20:30.034Z error: Unable to find the assigned URI of range with id http://www.w3.org/2004/02/skos/core#Concept.
 
-2025-05-14T09:56:42.720Z error: Unable to find the assigned URI of range with id http://www.w3.org/2004/02/skos/core#Concept.
+2025-05-14T11:20:30.034Z error: Unable to find the assigned URI of range with id http://www.w3.org/2004/02/skos/core#Concept.
 
-2025-05-14T09:56:42.720Z error: Unable to find the assigned URI of range with id http://purl.org/dc/terms/LicenseDocument.
+2025-05-14T11:20:30.034Z error: Unable to find the assigned URI of range with id http://purl.org/dc/terms/LicenseDocument.
 
-2025-05-14T09:56:42.720Z error: Unable to find the assigned URI of range with id http://www.w3.org/ns/prov#Invalidation.
+2025-05-14T11:20:30.035Z error: Unable to find the assigned URI of range with id http://www.w3.org/ns/prov#Invalidation.
 
-2025-05-14T09:56:42.721Z error: Unable to find the assigned URI of range with id http://schema.org/QuantitativeValue.
+2025-05-14T11:20:30.035Z error: Unable to find the assigned URI of range with id http://schema.org/QuantitativeValue.
 
-2025-05-14T09:56:42.721Z error: Unable to find the assigned URI of range with id http://www.w3.org/ns/prov#Generation.
+2025-05-14T11:20:30.036Z error: Unable to find the assigned URI of range with id http://www.w3.org/ns/prov#Generation.
 
-2025-05-14T09:56:42.721Z error: Unable to find the assigned URI of range with id http://schema.org/QuantitativeValue.
+2025-05-14T11:20:30.036Z error: Unable to find the assigned URI of range with id http://schema.org/QuantitativeValue.
 
-2025-05-14T09:56:42.722Z error: Unable to find the assigned URI of range with id http://purl.org/dc/terms/Location.
+2025-05-14T11:20:30.036Z error: Unable to find the assigned URI of range with id http://purl.org/dc/terms/Location.
 

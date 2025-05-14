@@ -532,8 +532,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/zaalreservatie/index.html'
 error: missing '/tmp/generated/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/index.html'
 error: missing '/tmp/generated/ns/zaalreservatie/index.html'
 
