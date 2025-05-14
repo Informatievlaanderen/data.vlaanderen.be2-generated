@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-05-14T09:26:11.111Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1ba82969225c4435342e8a972ba25c835935af7affc4af3fe709686f1c7a131a](all-organisatie-basis.jsonld#L3285)".
+2025-05-14T09:44:26.573Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1ba82969225c4435342e8a972ba25c835935af7affc4af3fe709686f1c7a131a](all-organisatie-basis.jsonld#L3285)".
 
-2025-05-14T09:26:11.113Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c96b2c6ef6df002096e98a46a32c7aa623d7f55f570ccc034291a9f20264fd89](all-organisatie-basis.jsonld#L3305)".
+2025-05-14T09:44:26.575Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c96b2c6ef6df002096e98a46a32c7aa623d7f55f570ccc034291a9f20264fd89](all-organisatie-basis.jsonld#L3305)".
 

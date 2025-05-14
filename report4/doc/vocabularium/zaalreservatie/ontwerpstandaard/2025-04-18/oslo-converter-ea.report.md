@@ -1,12 +1,14 @@
-#||# oslo-converter-ea for diagram OSLO-MijnVocabularium
+#||# oslo-converter-ea for diagram OSLO-Zaalreservatie
 
 #||# -------------------------------------
 
-2025-04-22T08:28:37.127Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+Error: UML model does not contain a diagram with name OSLO-Zaalreservatie.
 
-2025-04-22T08:28:37.128Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
+    at DataRegistry.setTargetDiagram (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/ea-uml-extractor/lib/DataRegistry.js:33:19)
 
-2025-04-22T08:28:37.128Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_vocabularium:OSLO-MijnVocabularium) and fallback URI (http://todo.com/) will be assigned.
+    at EaUmlConversionService.run (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/EaUmlConversionService.js:38:15)
 
 #||# -------------------------------------
+
+file zaalreservatie.jsonld does not exist
 

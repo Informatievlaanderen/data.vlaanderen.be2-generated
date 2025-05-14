@@ -2,145 +2,145 @@
 
 #||# -------------------------------------
 
-2025-05-14T09:15:43.820Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:SOSA:Platform:(Platform -> Feature))
+2025-05-14T09:33:14.936Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:SOSA:Platform:(Platform -> Feature))
 
-2025-05-14T09:15:43.822Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:OM:SamplingFeature:(SamplingFeature -> AirFeature))
+2025-05-14T09:33:14.938Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:OM:SamplingFeature:(SamplingFeature -> AirFeature))
 
-2025-05-14T09:15:43.822Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:OSLO-Generic:Agent:rapporteertAan)
+2025-05-14T09:33:14.938Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:OSLO-Generic:Agent:rapporteertAan)
 
-2025-05-14T09:15:43.823Z info: Connector Model:Class Model:OM:Observation:(Observation -> ObservationProcedure) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.939Z info: Connector Model:Class Model:OM:Observation:(Observation -> ObservationProcedure) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.824Z info: Connector Model:Class Model:OM:SamplingFeature:(SamplingFeature -> Feature) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.941Z info: Connector Model:Class Model:OM:SamplingFeature:(SamplingFeature -> Feature) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.824Z info: Connector Model:Class Model:SOSA:Sensor:(Sensor -> System) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.941Z info: Connector Model:Class Model:SOSA:Sensor:(Sensor -> System) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.825Z info: Connector Model:Class Model:OM:Observation:(Observation -> Observation) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.941Z info: Connector Model:Class Model:OM:Observation:(Observation -> Observation) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.825Z info: Connector Model:Class Model:OM:Observation:(Observation -> Metadata) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.941Z info: Connector Model:Class Model:OM:Observation:(Observation -> Metadata) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.825Z info: Connector Model:Class Model:SSN:Accuracy:(Accuracy -> SystemProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.942Z info: Connector Model:Class Model:SSN:Accuracy:(Accuracy -> SystemProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.826Z info: Connector Model:Class Model:SSN:Resolution:(Resolution -> SystemProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.942Z info: Connector Model:Class Model:SSN:Resolution:(Resolution -> SystemProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.826Z info: Connector Model:Class Model:SSN:Selectivity:(Selectivity -> SystemProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.942Z info: Connector Model:Class Model:SSN:Selectivity:(Selectivity -> SystemProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.826Z info: Connector Model:Class Model:SSN:Frequency:(Frequency -> SystemProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.942Z info: Connector Model:Class Model:SSN:Frequency:(Frequency -> SystemProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.826Z info: Connector Model:Class Model:SSN:Precision:(Precision -> SystemProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.942Z info: Connector Model:Class Model:SSN:Precision:(Precision -> SystemProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.826Z info: Connector Model:Class Model:SSN:Latency:(Latency -> SystemProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.942Z info: Connector Model:Class Model:SSN:Latency:(Latency -> SystemProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.826Z info: Connector Model:Class Model:SSN:DetectionLimit:(DetectionLimit -> SystemProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.942Z info: Connector Model:Class Model:SSN:DetectionLimit:(DetectionLimit -> SystemProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.826Z info: Connector Model:Class Model:SSN:Drift:(Drift -> SystemProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.942Z info: Connector Model:Class Model:SSN:Drift:(Drift -> SystemProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.826Z info: Connector Model:Class Model:SSN:ResponseTime:(ResponseTime -> SystemProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.942Z info: Connector Model:Class Model:SSN:ResponseTime:(ResponseTime -> SystemProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.826Z info: Connector Model:Class Model:SSN:Sensitivity:(Sensitivity -> SystemProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.942Z info: Connector Model:Class Model:SSN:Sensitivity:(Sensitivity -> SystemProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.826Z info: Connector Model:Class Model:SSN:MeasurementRange:(MeasurementRange -> SystemProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.942Z info: Connector Model:Class Model:SSN:MeasurementRange:(MeasurementRange -> SystemProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.826Z info: Connector Model:Class Model:SSN:Repeatablity:(Repeatablity -> SystemProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.942Z info: Connector Model:Class Model:SSN:Repeatablity:(Repeatablity -> SystemProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.826Z info: Connector Model:Class Model:SSN:MaintenanceSchedule:(MaintenanceSchedule -> OperatingProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.943Z info: Connector Model:Class Model:SSN:MaintenanceSchedule:(MaintenanceSchedule -> OperatingProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.826Z info: Connector Model:Class Model:SSN:OperatingPowerRange:(OperatingPowerRange -> OperatingProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.943Z info: Connector Model:Class Model:SSN:OperatingPowerRange:(OperatingPowerRange -> OperatingProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.826Z info: Connector Model:Class Model:SSN:SystemLifetime:(SystemLifetime -> SurvivalProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.943Z info: Connector Model:Class Model:SSN:SystemLifetime:(SystemLifetime -> SurvivalProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.826Z info: Connector Model:Class Model:SSN:BatteryLifetime:(BatteryLifetime -> SurvivalProperty) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.943Z info: Connector Model:Class Model:SSN:BatteryLifetime:(BatteryLifetime -> SurvivalProperty) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.827Z info: Connector Model:Class Model:OM:SamplingFeature:(SamplingFeature -> Feature) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.943Z info: Connector Model:Class Model:OM:SamplingFeature:(SamplingFeature -> Feature) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.827Z info: Connector Model:Class Model:OM:Observation:(Observation -> PropertyType) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.943Z info: Connector Model:Class Model:OM:Observation:(Observation -> PropertyType) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.827Z info: Connector Model:Class Model:OM:Observation:(Observation -> Any) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.943Z info: Connector Model:Class Model:OM:Observation:(Observation -> Any) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.827Z info: Connector Model:Class Model:OM:SpatialSamplingFeature:(SpatialSamplingFeature -> SamplingFeature) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.943Z info: Connector Model:Class Model:OM:SpatialSamplingFeature:(SpatialSamplingFeature -> SamplingFeature) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.827Z info: Connector Model:Class Model:SOSA-extensions:ObservationCollection:(ObservationCollection -> Observation) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.943Z info: Connector Model:Class Model:SOSA-extensions:ObservationCollection:(ObservationCollection -> Observation) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.827Z info: Connector Model:Class Model:OM:Specimen:(Specimen -> SamplingFeature) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.943Z info: Connector Model:Class Model:OM:Specimen:(Specimen -> SamplingFeature) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.827Z info: Connector Model:Class Model:OM:SamplingFeature:(SamplingFeature -> SamplingFeature) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.944Z info: Connector Model:Class Model:OM:SamplingFeature:(SamplingFeature -> SamplingFeature) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.827Z info: Connector Model:Class Model:CUBE:Slice:(Slice -> ObservationCollection) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.944Z info: Connector Model:Class Model:CUBE:Slice:(Slice -> ObservationCollection) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.827Z info: Connector Model:Class Model:SOSA-extensions:ObservationCollection:(ObservationCollection -> Metadata) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.944Z info: Connector Model:Class Model:SOSA-extensions:ObservationCollection:(ObservationCollection -> Metadata) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.828Z info: Connector Model:Class Model:SOSA:SamplingProcedure:(SamplingProcedure -> SamplingProces) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.944Z info: Connector Model:Class Model:SOSA:SamplingProcedure:(SamplingProcedure -> SamplingProces) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.828Z info: Connector Model:Class Model:SOSA:Sampler:(Sampler -> SamplingProces) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.944Z info: Connector Model:Class Model:SOSA:Sampler:(Sampler -> SamplingProces) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.828Z info: Connector Model:Class Model:OM:PreparationStep:(PreparationStep -> Sampling) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.944Z info: Connector Model:Class Model:OM:PreparationStep:(PreparationStep -> Sampling) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.828Z info: Connector Model:Class Model:OM:Specimen:(Specimen -> SamplingProces) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.944Z info: Connector Model:Class Model:OM:Specimen:(Specimen -> SamplingProces) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.828Z info: Connector Model:Class Model:SOSA:Sampler:(Sampler -> System) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.944Z info: Connector Model:Class Model:SOSA:Sampler:(Sampler -> System) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.828Z info: Connector Model:Class Model:SOSA:Sampling:(Sampling -> SamplingProcedure) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.944Z info: Connector Model:Class Model:SOSA:Sampling:(Sampling -> SamplingProcedure) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.828Z info: Connector Model:Class Model:SOSA:Sampling:(Sampling -> Feature) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.944Z info: Connector Model:Class Model:SOSA:Sampling:(Sampling -> Feature) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.828Z info: Connector Model:Class Model:SAREF:Device:(Device -> Platform) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.944Z info: Connector Model:Class Model:SAREF:Device:(Device -> Platform) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.828Z info: Connector Model:Class Model:SAREF:Device:(Device -> System) is not an association with a source role. Ignoring this connector.
+2025-05-14T09:33:14.945Z info: Connector Model:Class Model:SAREF:Device:(Device -> System) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.945Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.945Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:SOSA) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.945Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:SOSA) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Objectdiagram-SOSA-Observation) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.945Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Objectdiagram-SOSA-Observation) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.945Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-SOSA-Sample) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.945Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-SOSA-Sample) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:FIWARE) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.945Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:FIWARE) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:OSLO-Generic) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:OSLO-Generic) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:SSN) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:SSN) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:SOSA-extensions) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:SOSA-extensions) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:AirQuality) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:AirQuality) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-AirQuality) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-AirQuality) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:WaterQuality) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:WaterQuality) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-WaterQuality) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-WaterQuality) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Mirror) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Mirror) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-Waterquality-BioIndicatorAndBioticIndex) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-Waterquality-BioIndicatorAndBioticIndex) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-Device) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-Device) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-WaterQuality-alternative1) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-WaterQuality-alternative1) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:CUBE) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:CUBE) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:SAREF) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:SAREF) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.829Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-NewDevice) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T09:33:14.946Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-NewDevice) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T09:15:43.832Z warn: [ConnectorConverterHandler]: Connector (Observation (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T09:33:14.949Z warn: [ConnectorConverterHandler]: Connector (Observation (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T09:15:43.833Z warn: [ConnectorConverterHandler]: Connector (Observation (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T09:33:14.949Z warn: [ConnectorConverterHandler]: Connector (Observation (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T09:15:43.833Z warn: [ConnectorConverterHandler]: Connector (SamplingFeature (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T09:33:14.949Z warn: [ConnectorConverterHandler]: Connector (SamplingFeature (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T09:15:43.833Z warn: [ConnectorConverterHandler]: Connector (SamplingFeature (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T09:33:14.950Z warn: [ConnectorConverterHandler]: Connector (SamplingFeature (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T09:15:43.833Z warn: [ConnectorConverterHandler]: Connector (PreparationStep.Specimen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T09:33:14.950Z warn: [ConnectorConverterHandler]: Connector (PreparationStep.Specimen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T09:15:43.833Z warn: [ConnectorConverterHandler]: Connector (PreparationStep.SamplingProces) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T09:33:14.950Z warn: [ConnectorConverterHandler]: Connector (PreparationStep.SamplingProces) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 Error: [ElementConverterHandler]: Invalid URL (https//www.w3.org/ns/locn#Address) for element (Model:Class Model:OSLO-Adres:AddressRepresentation).
 

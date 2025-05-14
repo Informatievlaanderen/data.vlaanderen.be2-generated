@@ -2,9 +2,9 @@
 
 #||# -------------------------------------  
 
-2025-05-14T09:27:36.917Z warn: Unable to find the assigned URI for external class http://schema.org/LocationFeatureSpecification which acts as a parent. Using original URI as fallback.
+2025-05-14T09:46:22.129Z warn: Unable to find the assigned URI for external class http://schema.org/LocationFeatureSpecification which acts as a parent. Using original URI as fallback.
 
-2025-05-14T09:27:36.923Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/generiek#VersieVolgensGeldigeTijd which acts as a parent. Using original URI as fallback.
+2025-05-14T09:46:22.137Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/generiek#VersieVolgensGeldigeTijd which acts as a parent. Using original URI as fallback.
 
 Error: Unable to find the assigned URI for range http://www.w3.org/2004/02/skos/core#Concept of attribute [urn:oslo-toolchain:845671f3c69a48cea2d1aed5fff414f3c0342312d1734503081f63eddde9d359](all-logies.jsonld#L3059).
 
