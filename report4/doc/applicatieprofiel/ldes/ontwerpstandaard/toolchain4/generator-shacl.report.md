@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2025-05-14T12:38:21.812Z warn: Unable to find the description for subject "[urn:oslo-toolchain:e2c9ec5076e2628b4bc20629ba712bd204abcfeb3bf8626e6a776b992baafcc4](all-OSLO-LDES-ap.jsonld#L2099)".
+2025-05-14T14:20:23.771Z warn: Unable to find the description for subject "[urn:oslo-toolchain:e2c9ec5076e2628b4bc20629ba712bd204abcfeb3bf8626e6a776b992baafcc4](all-OSLO-LDES-ap.jsonld#L2099)".
 

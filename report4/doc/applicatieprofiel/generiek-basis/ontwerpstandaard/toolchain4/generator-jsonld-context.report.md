@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2025-05-14T12:38:21.225Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:066eafd93298f9a678dc4ad42c422e539e2e8038d8c5ca336708fc94488df49d](all-generiek-basis.jsonld#L3885).
+2025-05-14T14:20:19.457Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:066eafd93298f9a678dc4ad42c422e539e2e8038d8c5ca336708fc94488df49d](all-generiek-basis.jsonld#L3885).
 
