@@ -2,45 +2,45 @@
 
 #||# -------------------------------------
 
-2025-05-14T11:10:28.051Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adresuitbreiding:(Adresuitbreiding -> Plaats) is not an association with a source role. Ignoring this connector.
+2025-05-14T12:28:22.116Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adresuitbreiding:(Adresuitbreiding -> Plaats) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T11:10:28.053Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Gemeentenaam:(Gemeentenaam -> Gemeente) is not an association with a source role. Ignoring this connector.
+2025-05-14T12:28:22.119Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Gemeentenaam:(Gemeentenaam -> Gemeente) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T11:10:28.054Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Straatnaam:(Straatnaam -> Gemeente) is not an association with a source role. Ignoring this connector.
+2025-05-14T12:28:22.120Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Straatnaam:(Straatnaam -> Gemeente) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T11:10:28.054Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Adresuitbreiding) is not an association with a source role. Ignoring this connector.
+2025-05-14T12:28:22.120Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Adresuitbreiding) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T11:10:28.054Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Gemeentenaam) is not an association with a source role. Ignoring this connector.
+2025-05-14T12:28:22.120Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Gemeentenaam) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T11:10:28.054Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adresvoorstelling:(Adresvoorstelling -> Adres) is not an association with a source role. Ignoring this connector.
+2025-05-14T12:28:22.120Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adresvoorstelling:(Adresvoorstelling -> Adres) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T11:10:28.054Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Gemeente) is not an association with a source role. Ignoring this connector.
+2025-05-14T12:28:22.120Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Gemeente) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T11:10:28.054Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Straatnaam) is not an association with a source role. Ignoring this connector.
+2025-05-14T12:28:22.121Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Straatnaam) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T11:10:28.054Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Postinfo) is not an association with a source role. Ignoring this connector.
+2025-05-14T12:28:22.121Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Postinfo) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T11:10:28.055Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Standplaats:(Standplaats -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
+2025-05-14T12:28:22.121Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Standplaats:(Standplaats -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T11:10:28.055Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
+2025-05-14T12:28:22.121Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T11:10:28.055Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Ligplaats:(Ligplaats -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
+2025-05-14T12:28:22.122Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Ligplaats:(Ligplaats -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T11:10:28.055Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T12:28:22.123Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T11:10:28.055Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_applicatieprofiel_Adres_adresregister) and fallback URI (http://todo.com/) will be assigned.
+2025-05-14T12:28:22.123Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_applicatieprofiel_Adres_adresregister) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T11:10:28.058Z warn: [ConnectorConverterHandler]: Connector (heeftGemeentenaam) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T12:28:22.128Z warn: [ConnectorConverterHandler]: Connector (heeftGemeentenaam) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T11:10:28.059Z warn: [ConnectorConverterHandler]: Connector (heeftPostinfo) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T12:28:22.128Z warn: [ConnectorConverterHandler]: Connector (heeftPostinfo) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T11:10:28.059Z warn: [ConnectorConverterHandler]: Connector (verwijstNaar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T12:28:22.128Z warn: [ConnectorConverterHandler]: Connector (verwijstNaar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T11:10:28.059Z warn: [ConnectorConverterHandler]: Connector (heeftStraatnaam) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T12:28:22.128Z warn: [ConnectorConverterHandler]: Connector (heeftStraatnaam) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T11:10:28.059Z warn: [ConnectorConverterHandler]: Connector (isToegekendAan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T12:28:22.128Z warn: [ConnectorConverterHandler]: Connector (isToegekendAan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T11:10:28.059Z warn: [ConnectorConverterHandler]: Connector (isVerrijktMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-14T12:28:22.128Z warn: [ConnectorConverterHandler]: Connector (isVerrijktMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 #||# -------------------------------------
 

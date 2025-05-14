@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-05-14T11:20:04.942Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-ap-grondwatermeetnet.jsonld#L6317)".
+2025-05-14T12:38:00.666Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-ap-grondwatermeetnet.jsonld#L6317)".
 
 Error: Unable to find a label for the domain "urn:oslo-toolchain:047ecd14c046206c3e6122bd67238ae4d2e39eb4fc2774eb7c9664970ed7483c" of subject "[urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-ap-grondwatermeetnet.jsonld#L6317)".
 
