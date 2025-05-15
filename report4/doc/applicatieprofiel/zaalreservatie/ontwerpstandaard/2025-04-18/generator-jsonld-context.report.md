@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-05-15T07:18:30.177Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:80a9ef866d7d1b808bed47fab69a13d8d30c8c265546a5263222b684d3da9197](all-zaalreservatie.jsonld#L5509).
+2025-05-15T09:28:07.926Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:80a9ef866d7d1b808bed47fab69a13d8d30c8c265546a5263222b684d3da9197](all-zaalreservatie.jsonld#L5509).
 
-2025-05-15T07:18:30.179Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:5ce8718fc1552702bf6a1f68df565d3cb4007735271a53d165aa5e49c2c749bc](all-zaalreservatie.jsonld#L5551).
+2025-05-15T09:28:07.929Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:5ce8718fc1552702bf6a1f68df565d3cb4007735271a53d165aa5e49c2c749bc](all-zaalreservatie.jsonld#L5551).
 

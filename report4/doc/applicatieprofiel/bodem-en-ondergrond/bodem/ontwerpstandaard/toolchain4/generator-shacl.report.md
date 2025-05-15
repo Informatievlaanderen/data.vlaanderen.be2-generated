@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-05-15T07:18:00.831Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-ap-bodem.jsonld#L5809)".
+2025-05-15T09:27:20.342Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-ap-bodem.jsonld#L5809)".
 
 Error: Unable to find a label for the domain "urn:oslo-toolchain:047ecd14c046206c3e6122bd67238ae4d2e39eb4fc2774eb7c9664970ed7483c" of subject "[urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-ap-bodem.jsonld#L5809)".
 
