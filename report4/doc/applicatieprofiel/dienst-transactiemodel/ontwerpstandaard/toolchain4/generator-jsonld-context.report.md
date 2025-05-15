@@ -2,9 +2,9 @@
 
 #||# -------------------------------------  
 
-2025-05-15T09:27:29.969Z error: Unable to find the assigned URI of range with id http://www.w3.org/2004/02/skos/core#Concept.
+2025-05-15T09:53:15.049Z error: Unable to find the assigned URI of range with id http://www.w3.org/2004/02/skos/core#Concept.
 
-2025-05-15T09:27:29.971Z error: Unable to find the assigned URI of range with id http://www.w3.org/2004/02/skos/core#Concept.
+2025-05-15T09:53:15.051Z error: Unable to find the assigned URI of range with id http://www.w3.org/2004/02/skos/core#Concept.
 
-2025-05-15T09:27:29.971Z error: Unable to find the assigned URI of range with id http://www.w3.org/2004/02/skos/core#Concept.
+2025-05-15T09:53:15.051Z error: Unable to find the assigned URI of range with id http://www.w3.org/2004/02/skos/core#Concept.
 

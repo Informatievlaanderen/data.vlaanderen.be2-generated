@@ -2,231 +2,231 @@
 
 #||# -------------------------------------
 
-2025-05-15T09:20:20.325Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Generiek:Agent:handeltInOpdrachtVan)
+2025-05-15T09:46:01.978Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Generiek:Agent:handeltInOpdrachtVan)
 
-2025-05-15T09:20:20.326Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:geeftAanleidingTot)
+2025-05-15T09:46:01.979Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:geeftAanleidingTot)
 
-2025-05-15T09:20:20.326Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Dossier:Stuk:heeftRelatieTot)
+2025-05-15T09:46:01.980Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Dossier:Stuk:heeftRelatieTot)
 
-2025-05-15T09:20:20.326Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:heeftAanwezige)
+2025-05-15T09:46:01.980Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:heeftAanwezige)
 
-2025-05-15T09:20:20.326Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Besluitvorming:Verslag:(Verslag -> Besluit))
+2025-05-15T09:46:01.980Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Besluitvorming:Verslag:(Verslag -> Besluit))
 
-2025-05-15T09:20:20.326Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftRelatieMet)
+2025-05-15T09:46:01.980Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftRelatieMet)
 
-2025-05-15T09:20:20.326Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
+2025-05-15T09:46:01.980Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
 
-2025-05-15T09:20:20.326Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
+2025-05-15T09:46:01.980Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
 
-2025-05-15T09:20:20.327Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+2025-05-15T09:46:01.980Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-05-15T09:20:20.327Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersbordbasis:(Verkeersbordbasis -> OSLO-OpenbaarDomein::Verkeersbord))
+2025-05-15T09:46:01.980Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersbordbasis:(Verkeersbordbasis -> OSLO-OpenbaarDomein::Verkeersbord))
 
-2025-05-15T09:20:20.327Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Agent))
+2025-05-15T09:46:01.980Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Agent))
 
-2025-05-15T09:20:20.327Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
+2025-05-15T09:46:01.980Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
 
-2025-05-15T09:20:20.327Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:heeftAanwezigeBijStart)
+2025-05-15T09:46:01.980Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:heeftAanwezigeBijStart)
 
-2025-05-15T09:20:20.327Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Positie:rapporteertAan)
+2025-05-15T09:46:01.980Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Positie:rapporteertAan)
 
-2025-05-15T09:20:20.327Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersmaatregel:verwijstNaar)
+2025-05-15T09:46:01.980Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersmaatregel:verwijstNaar)
 
-2025-05-15T09:20:20.327Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
+2025-05-15T09:46:01.980Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
 
-2025-05-15T09:20:20.327Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Object))
+2025-05-15T09:46:01.981Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Object))
 
-2025-05-15T09:20:20.327Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2025-05-15T09:46:01.981Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-05-15T09:20:20.327Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
+2025-05-15T09:46:01.981Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
 
-2025-05-15T09:20:20.327Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isHoofdVan)
+2025-05-15T09:46:01.981Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isHoofdVan)
 
-2025-05-15T09:20:20.327Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:aangenomenDoor)
+2025-05-15T09:46:01.981Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:aangenomenDoor)
 
-2025-05-15T09:20:20.327Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Besluit:Besluit:volgtUit)
+2025-05-15T09:46:01.981Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Besluit:Besluit:volgtUit)
 
-2025-05-15T09:20:20.327Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:geeftAanleidingTot)
+2025-05-15T09:46:01.981Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:geeftAanleidingTot)
 
-2025-05-15T09:20:20.330Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:genereert is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.983Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:genereert is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.330Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:genereert has name "genereert". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.983Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:genereert has name "genereert". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.330Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Stemming:(Stemming -> Beslissingsactiviteit) is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.984Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Stemming:(Stemming -> Beslissingsactiviteit) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.330Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Besluit:(Besluit -> Stuk) is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.984Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Besluit:(Besluit -> Stuk) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.330Z info: Connector Model:OSLO-Dossier:Dossier:bestaatUit is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.984Z info: Connector Model:OSLO-Dossier:Dossier:bestaatUit is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.330Z info: Connector Model:OSLO-Dossier:Dossier:bestaatUit has name "bestaatUit". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.984Z info: Connector Model:OSLO-Dossier:Dossier:bestaatUit has name "bestaatUit". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.331Z info: Connector Model:OSLO-Dossier:Dossier:isNeerslagVan is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.984Z info: Connector Model:OSLO-Dossier:Dossier:isNeerslagVan is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.331Z info: Connector Model:OSLO-Dossier:Dossier:isNeerslagVan has name "isNeerslagVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.984Z info: Connector Model:OSLO-Dossier:Dossier:isNeerslagVan has name "isNeerslagVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.331Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Besluitvormingsaangelegenheid:doorloopt is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.985Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Besluitvormingsaangelegenheid:doorloopt is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.331Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Besluitvormingsaangelegenheid:doorloopt has name "doorloopt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.985Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Besluitvormingsaangelegenheid:doorloopt has name "doorloopt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.331Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:genereertVerslag is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.985Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:genereertVerslag is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.331Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:genereertVerslag has name "genereertVerslag". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.985Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:genereertVerslag has name "genereertVerslag". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.331Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Agendering:(Agendering -> Activiteit) is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.985Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Agendering:(Agendering -> Activiteit) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.331Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Besluit:realiseert is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.985Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Besluit:realiseert is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.331Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Besluit:realiseert has name "realiseert". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.985Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Besluit:realiseert has name "realiseert". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.332Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Verslag:beschrijft is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.985Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Verslag:beschrijft is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.332Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Verslag:beschrijft has name "beschrijft". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.985Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Verslag:beschrijft has name "beschrijft". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.332Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:heeftBeslissing is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.985Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:heeftBeslissing is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.332Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:heeftBeslissing has name "heeftBeslissing". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.985Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:heeftBeslissing has name "heeftBeslissing". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.332Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Beslissingsactiviteit:geeftAanleidingTot is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Beslissingsactiviteit:geeftAanleidingTot is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.332Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Beslissingsactiviteit:geeftAanleidingTot has name "geeftAanleidingTot". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Beslissingsactiviteit:geeftAanleidingTot has name "geeftAanleidingTot". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.332Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:heeftDeelnemer is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:heeftDeelnemer is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.332Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:heeftDeelnemer has name "heeftDeelnemer". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:heeftDeelnemer has name "heeftDeelnemer". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.332Z info: Connector Model:OSLO-Dossier:Stuk:vervangt is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO-Dossier:Stuk:vervangt is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.332Z info: Connector Model:OSLO-Dossier:Stuk:vervangt has name "vervangt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO-Dossier:Stuk:vervangt has name "vervangt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.332Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Beslissingsactiviteit:(Beslissingsactiviteit -> Activiteit) is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Beslissingsactiviteit:(Beslissingsactiviteit -> Activiteit) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.332Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:isOnderdeelVan is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:isOnderdeelVan is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.332Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:isOnderdeelVan has name "isOnderdeelVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:isOnderdeelVan has name "isOnderdeelVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.332Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:behandelt is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:behandelt is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:behandelt has name "behandelt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:behandelt has name "behandelt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Agenda:isAgendaVoor is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Agenda:isAgendaVoor is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Agenda:isAgendaVoor has name "isAgendaVoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Agenda:isAgendaVoor has name "isAgendaVoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Agenda:(Agenda -> Stuk) is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Agenda:(Agenda -> Stuk) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Besluitvormingsaangelegenheid:heeftAanleiding is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Besluitvormingsaangelegenheid:heeftAanleiding is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Besluitvormingsaangelegenheid:heeftAanleiding has name "heeftAanleiding". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Besluitvormingsaangelegenheid:heeftAanleiding has name "heeftAanleiding". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Aanleiding:heeftOorsprongIn is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Aanleiding:heeftOorsprongIn is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Aanleiding:heeftOorsprongIn has name "heeftOorsprongIn". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Aanleiding:heeftOorsprongIn has name "heeftOorsprongIn". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Agendering:genereertAgendapunt is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Agendering:genereertAgendapunt is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Agendering:genereertAgendapunt has name "genereertAgendapunt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.986Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Agendering:genereertAgendapunt has name "genereertAgendapunt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO-Dossier:Stuk:heeftBijlage is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO-Dossier:Stuk:heeftBijlage is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO-Dossier:Stuk:heeftBijlage has name "heeftBijlage". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO-Dossier:Stuk:heeftBijlage has name "heeftBijlage". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:gebruikt is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:gebruikt is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:gebruikt has name "gebruikt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:gebruikt has name "gebruikt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:geagendeerdStuk is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:geagendeerdStuk is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:geagendeerdStuk has name "geagendeerdStuk". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:geagendeerdStuk has name "geagendeerdStuk". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:vervangt is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:vervangt is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:vervangt has name "vervangt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:vervangt has name "vervangt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Bestuursorgaan:bestuurt is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Bestuursorgaan:bestuurt is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Bestuursorgaan:bestuurt has name "bestuurt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Bestuursorgaan:bestuurt has name "bestuurt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Bestuursorgaan:(Bestuursorgaan -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Bestuursorgaan:(Bestuursorgaan -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Bestuurseenheid:(Bestuurseenheid -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Bestuurseenheid:(Bestuurseenheid -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:wasGeassocieerdMet is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:wasGeassocieerdMet is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:wasGeassocieerdMet has name "wasGeassocieerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:wasGeassocieerdMet has name "wasGeassocieerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:isDeelVan is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:isDeelVan is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.333Z info: Connector Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:isDeelVan has name "isDeelVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:isDeelVan has name "isDeelVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:heeftDeel is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:heeftDeel is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:heeftDeel has name "heeftDeel". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Wetgeving:Rechtsgrond:heeftDeel has name "heeftDeel". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:(BehandelingVanAgendapunt -> Vergaderactiviteit) is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:(BehandelingVanAgendapunt -> Vergaderactiviteit) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:heeftAanwezige is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:heeftAanwezige is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:heeftAanwezige has name "heeftAanwezige". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:heeftAanwezige has name "heeftAanwezige". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:(Vergaderactiviteit -> Activiteit) is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:(Vergaderactiviteit -> Activiteit) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Verslag:(Verslag -> Stuk) is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:Verslag:(Verslag -> Stuk) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:heeftNotulen is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:heeftNotulen is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:heeftNotulen has name "heeftNotulen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.987Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:heeftNotulen has name "heeftNotulen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:AgentInRol:isRolspecialisatieVan is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.988Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:AgentInRol:isRolspecialisatieVan is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:AgentInRol:isRolspecialisatieVan has name "isRolspecialisatieVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.988Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluitvorming:AgentInRol:isRolspecialisatieVan has name "isRolspecialisatieVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:isGehoudenDoor is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.988Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:isGehoudenDoor is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:isGehoudenDoor has name "isGehoudenDoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.988Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Vergaderactiviteit:isGehoudenDoor has name "isGehoudenDoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:gebeurtNa is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.988Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:gebeurtNa is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:gebeurtNa has name "gebeurtNa". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.988Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:gebeurtNa has name "gebeurtNa". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:heeftOnderwerp is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.988Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:heeftOnderwerp is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:heeftOnderwerp has name "heeftOnderwerp". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.988Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:heeftOnderwerp has name "heeftOnderwerp". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:vindtPlaatsTijdens is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.988Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:vindtPlaatsTijdens is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.334Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:vindtPlaatsTijdens has name "vindtPlaatsTijdens". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.988Z info: Connector Model:OSLO²_vocabularium:OSLO-Generiek:Activiteit:vindtPlaatsTijdens has name "vindtPlaatsTijdens". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.335Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:isAangebrachtNa is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.988Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:isAangebrachtNa is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.335Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:isAangebrachtNa has name "isAangebrachtNa". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.988Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Agendapunt:isAangebrachtNa has name "isAangebrachtNa". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.335Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Stemming:(Stemming -> Vergaderactiviteit) is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.988Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:Stemming:(Stemming -> Vergaderactiviteit) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.335Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:heeftStemming is not an association with a source role. Ignoring this connector.
+2025-05-15T09:46:01.988Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:heeftStemming is not an association with a source role. Ignoring this connector.
 
-2025-05-15T09:20:20.335Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:heeftStemming has name "heeftStemming". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T09:46:01.988Z info: Connector Model:OSLO²_vocabularium:OSLO-Besluit:BehandelingVanAgendapunt:heeftStemming has name "heeftStemming". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T09:20:20.335Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-15T09:46:01.989Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-15T09:20:20.335Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
+2025-05-15T09:46:01.989Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-15T09:20:20.340Z warn: [ConnectorConverterHandler]: Connector (heeftStemming) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T09:46:01.995Z warn: [ConnectorConverterHandler]: Connector (heeftStemming) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-15T09:20:20.340Z warn: [ConnectorConverterHandler]: Connector (beschrijft) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T09:46:01.995Z warn: [ConnectorConverterHandler]: Connector (beschrijft) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-15T09:20:20.341Z warn: [ConnectorConverterHandler]: Connector (beschrijft) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T09:46:01.995Z warn: [ConnectorConverterHandler]: Connector (beschrijft) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-15T09:20:20.341Z warn: [ConnectorConverterHandler]: Connector (bestuurt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T09:46:01.995Z warn: [ConnectorConverterHandler]: Connector (bestuurt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-15T09:20:20.341Z warn: [ConnectorConverterHandler]: Connector (bestaatUit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T09:46:01.995Z warn: [ConnectorConverterHandler]: Connector (bestaatUit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-15T09:20:20.341Z warn: [ConnectorConverterHandler]: Connector (gebeurtNa) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T09:46:01.996Z warn: [ConnectorConverterHandler]: Connector (gebeurtNa) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-15T09:20:20.360Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (isDeelVan).
+2025-05-15T09:46:02.015Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (isDeelVan).
 
-2025-05-15T09:20:20.360Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (heeftDeel).
+2025-05-15T09:46:02.016Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (heeftDeel).
 
 #||# -------------------------------------
 
