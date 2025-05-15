@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2025-05-14T14:20:14.705Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9164ef5057eebd6d5c44317b1f0c528b4d07f59c0dc4ed1680bfa2ea5170f67d](all-energiehuis.jsonld#L5721)".
+2025-05-15T07:18:16.603Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9164ef5057eebd6d5c44317b1f0c528b4d07f59c0dc4ed1680bfa2ea5170f67d](all-energiehuis.jsonld#L5721)".
 

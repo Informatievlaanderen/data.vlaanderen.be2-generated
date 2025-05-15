@@ -225,6 +225,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/organisatie-basis",
   "/tmp/generated/doc/applicatieprofiel/persoon-basis",
   "/tmp/generated/doc/applicatieprofiel/ruimtelijke-bereiken",
+  "/tmp/generated/doc/applicatieprofiel/schuldbeheer/kandidaatstandaard/kristof",
   "/tmp/generated/doc/applicatieprofiel/schuldbeheer/ontwerpstandaard/2024-07-23",
   "/tmp/generated/doc/applicatieprofiel/schuldbeheer/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/sensoren-en-bemonstering",

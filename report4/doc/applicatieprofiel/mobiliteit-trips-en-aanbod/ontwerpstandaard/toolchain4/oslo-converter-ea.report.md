@@ -2,309 +2,309 @@
 
 #||# -------------------------------------
 
-2025-05-14T14:11:24.984Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Boeking:(Boeking -> Reis) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.797Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Boeking:(Boeking -> Reis) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.986Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:(Reiziger -> Kenmerk) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.800Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:(Reiziger -> Kenmerk) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.987Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportnetwerk:^BestaatUit is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.801Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportnetwerk:^BestaatUit is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.987Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportnetwerk:^BestaatUit has name "^BestaatUit". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.801Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportnetwerk:^BestaatUit has name "^BestaatUit". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.987Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Boeking:(Boeking -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.801Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Boeking:(Boeking -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.987Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:(Mobiliteitsdienst -> Prijsplan) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.801Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:(Mobiliteitsdienst -> Prijsplan) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.988Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:UitgevoerdDoor is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.801Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:UitgevoerdDoor is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.988Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:UitgevoerdDoor has name "UitgevoerdDoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.802Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:UitgevoerdDoor has name "UitgevoerdDoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.988Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportconnectie:^Verbindt is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.802Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportconnectie:^Verbindt is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.989Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportconnectie:^Verbindt has name "^Verbindt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.802Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportconnectie:^Verbindt has name "^Verbindt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.989Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:Overstap is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.803Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:Overstap is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.989Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:Overstap has name "Overstap". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.803Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:Overstap has name "Overstap". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.989Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Route) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.803Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.989Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:Onderneemt is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.803Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:Onderneemt is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.990Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:Onderneemt has name "Onderneemt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.803Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:Onderneemt has name "Onderneemt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.990Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:BestaatUit is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.804Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:BestaatUit is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.990Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:BestaatUit has name "BestaatUit". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.804Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:BestaatUit has name "BestaatUit". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.990Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:IsDeelVan is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.804Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:IsDeelVan is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.990Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:IsDeelVan has name "IsDeelVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.804Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:IsDeelVan has name "IsDeelVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.990Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:Omvat is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.804Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:Omvat is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.991Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:Omvat has name "Omvat". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.804Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:Omvat has name "Omvat". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.991Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Routeknoop) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.804Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Routeknoop) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.991Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Routeknoop) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.805Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Routeknoop) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.991Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.805Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.991Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Boeking) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.805Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Boeking) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.991Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.805Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.992Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Boeking:(Boeking -> Resource) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.805Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Boeking:(Boeking -> Resource) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.992Z info: Connector Model:Domain Model:OSLO-Generiek:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.806Z info: Connector Model:Domain Model:OSLO-Generiek:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.992Z info: Connector Model:Domain Model:OSLO-Generiek:Polygoon:(Polygoon -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.806Z info: Connector Model:Domain Model:OSLO-Generiek:Polygoon:(Polygoon -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.992Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.806Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.992Z info: Connector Model:Domain Model:OSLO-Generiek:LijnString:(LijnString -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.806Z info: Connector Model:Domain Model:OSLO-Generiek:LijnString:(LijnString -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.992Z info: Connector Model:Domain Model:OSLO-Netwerk:GerichteLink:(GerichteLink -> Link) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.806Z info: Connector Model:Domain Model:OSLO-Netwerk:GerichteLink:(GerichteLink -> Link) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.992Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportgebied:(Transportgebied -> Transportobject) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.806Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportgebied:(Transportgebied -> Transportobject) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.992Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportknoop:(Transportknoop -> Transportobject) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.806Z info: Connector Model:Domain Model:OSLO-Transportnetwerk:Transportknoop:(Transportknoop -> Transportobject) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.993Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:GerealiseerdOp is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.806Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:GerealiseerdOp is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.993Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:GerealiseerdOp has name "GerealiseerdOp". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.807Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:GerealiseerdOp has name "GerealiseerdOp". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.993Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeplanner:IntegreertInfoOver is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.807Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeplanner:IntegreertInfoOver is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.993Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeplanner:IntegreertInfoOver has name "IntegreertInfoOver". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.807Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeplanner:IntegreertInfoOver has name "IntegreertInfoOver". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.993Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.807Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Route) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.993Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:BerekendMet is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.807Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:BerekendMet is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.993Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:BerekendMet has name "BerekendMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.807Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:BerekendMet has name "BerekendMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.993Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:(Reiziger -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.807Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:(Reiziger -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.993Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Vervoersbewijs:(Vervoersbewijs -> Mobiliteitsdienst) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.807Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Vervoersbewijs:(Vervoersbewijs -> Mobiliteitsdienst) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.994Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Overstap:GerealiseerdOp is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.807Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Overstap:GerealiseerdOp is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.994Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Overstap:GerealiseerdOp has name "GerealiseerdOp". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.807Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Overstap:GerealiseerdOp has name "GerealiseerdOp". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.994Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:(Reiziger -> Voorkeur) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.808Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:(Reiziger -> Voorkeur) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.994Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:IsMedereizigerVan is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.808Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:IsMedereizigerVan is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.994Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:IsMedereizigerVan has name "IsMedereizigerVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.808Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:IsMedereizigerVan has name "IsMedereizigerVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.994Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:GerealiseerdMet is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.808Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:GerealiseerdMet is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.994Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:GerealiseerdMet has name "GerealiseerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.808Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:GerealiseerdMet has name "GerealiseerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.994Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:BeschikbaarOp is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.808Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:BeschikbaarOp is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.994Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:BeschikbaarOp has name "BeschikbaarOp". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.808Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:BeschikbaarOp has name "BeschikbaarOp". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.994Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.808Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:(Reis -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.994Z info: Connector Model:Domain Model:OSLO-Generiek:FormeelKader:isGerelateerdAan is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.808Z info: Connector Model:Domain Model:OSLO-Generiek:FormeelKader:isGerelateerdAan is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.994Z info: Connector Model:Domain Model:OSLO-Generiek:FormeelKader:isGerelateerdAan has name "isGerelateerdAan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.808Z info: Connector Model:Domain Model:OSLO-Generiek:FormeelKader:isGerelateerdAan has name "isGerelateerdAan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.995Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:AangebodenBinnen is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.808Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:AangebodenBinnen is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.995Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:AangebodenBinnen has name "AangebodenBinnen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.808Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:AangebodenBinnen has name "AangebodenBinnen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.995Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:(Mobiliteitsdienst -> Licentie) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.808Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:(Mobiliteitsdienst -> Licentie) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.995Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Licentie:VerkregenBinnen is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.809Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Licentie:VerkregenBinnen is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.995Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Licentie:VerkregenBinnen has name "VerkregenBinnen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.809Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Licentie:VerkregenBinnen has name "VerkregenBinnen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.995Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:GerealiseerdMet is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.809Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:GerealiseerdMet is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.995Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:GerealiseerdMet has name "GerealiseerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.809Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:GerealiseerdMet has name "GerealiseerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.995Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:GerealiseerdDoor is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.809Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:GerealiseerdDoor is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.995Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:GerealiseerdDoor has name "GerealiseerdDoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.809Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:GerealiseerdDoor has name "GerealiseerdDoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.995Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:GerealiseerdDoor is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.809Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:GerealiseerdDoor is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.995Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:GerealiseerdDoor has name "GerealiseerdDoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T07:09:09.809Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:GerealiseerdDoor has name "GerealiseerdDoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-14T14:11:24.995Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Uitvoerder) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.809Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:(Routesegment -> Uitvoerder) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.995Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:(Routeknoop -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.809Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop:(Routeknoop -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.995Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportconnectie:(Transportconnectie -> Transportobject) is not an association with a source role. Ignoring this connector.
+2025-05-15T07:09:09.809Z info: Connector Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportconnectie:(Transportconnectie -> Transportobject) is not an association with a source role. Ignoring this connector.
 
-2025-05-14T14:11:24.997Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-15T07:09:09.810Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T14:11:24.997Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-15T07:09:09.811Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T14:11:24.997Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
+2025-05-15T07:09:09.811Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T14:11:24.997Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:ObjectdiagramStory2) and fallback URI (http://todo.com/) will be assigned.
+2025-05-15T07:09:09.811Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:ObjectdiagramStory2) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T14:11:24.997Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:ObjectdiagramStory1) and fallback URI (http://todo.com/) will be assigned.
+2025-05-15T07:09:09.811Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:ObjectdiagramStory1) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T14:11:24.997Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:StoryAutodelen) and fallback URI (http://todo.com/) will be assigned.
+2025-05-15T07:09:09.811Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:Objectdiagrammen:StoryAutodelen) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-14T14:11:25.002Z warn: [ConnectorConverterHandler]: Connector (Onderneemt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.817Z warn: [ConnectorConverterHandler]: Connector (Onderneemt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.003Z warn: [ConnectorConverterHandler]: Connector (BestaatUit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.817Z warn: [ConnectorConverterHandler]: Connector (BestaatUit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.003Z warn: [ConnectorConverterHandler]: Connector (vertrekknoop) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.817Z warn: [ConnectorConverterHandler]: Connector (vertrekknoop) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.003Z warn: [ConnectorConverterHandler]: Connector (aankomstknoop) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.817Z warn: [ConnectorConverterHandler]: Connector (aankomstknoop) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.003Z warn: [ConnectorConverterHandler]: Connector (mogelijkeRoute) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.817Z warn: [ConnectorConverterHandler]: Connector (mogelijkeRoute) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.003Z warn: [ConnectorConverterHandler]: Connector (gekozenRoute) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.817Z warn: [ConnectorConverterHandler]: Connector (gekozenRoute) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.003Z warn: [ConnectorConverterHandler]: Connector (aanbieder) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.817Z warn: [ConnectorConverterHandler]: Connector (aanbieder) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.003Z warn: [ConnectorConverterHandler]: Connector (Omvat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.817Z warn: [ConnectorConverterHandler]: Connector (Omvat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.003Z warn: [ConnectorConverterHandler]: Connector (UitgevoerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.817Z warn: [ConnectorConverterHandler]: Connector (UitgevoerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.003Z warn: [ConnectorConverterHandler]: Connector (Overstap) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.817Z warn: [ConnectorConverterHandler]: Connector (Overstap) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.003Z warn: [ConnectorConverterHandler]: Connector (Routeknoop (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.818Z warn: [ConnectorConverterHandler]: Connector (Routeknoop (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.003Z warn: [ConnectorConverterHandler]: Connector (Routeknoop (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.818Z warn: [ConnectorConverterHandler]: Connector (Routeknoop (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.003Z warn: [ConnectorConverterHandler]: Connector (uitgevoerdeRoute) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.818Z warn: [ConnectorConverterHandler]: Connector (uitgevoerdeRoute) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.003Z warn: [ConnectorConverterHandler]: Connector (dienst) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.818Z warn: [ConnectorConverterHandler]: Connector (dienst) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.003Z warn: [ConnectorConverterHandler]: Connector (resource) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.818Z warn: [ConnectorConverterHandler]: Connector (resource) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.003Z warn: [ConnectorConverterHandler]: Connector (kenmerk) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.818Z warn: [ConnectorConverterHandler]: Connector (kenmerk) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (BerekendMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.818Z warn: [ConnectorConverterHandler]: Connector (BerekendMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (reis) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.818Z warn: [ConnectorConverterHandler]: Connector (reis) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (boeking) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.818Z warn: [ConnectorConverterHandler]: Connector (boeking) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (voorkeur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.818Z warn: [ConnectorConverterHandler]: Connector (voorkeur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (IsMedereizigerVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.818Z warn: [ConnectorConverterHandler]: Connector (IsMedereizigerVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.818Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.818Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.818Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.818Z warn: [ConnectorConverterHandler]: Connector (GerealiseerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (licentie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.819Z warn: [ConnectorConverterHandler]: Connector (licentie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (uitvoerder) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.819Z warn: [ConnectorConverterHandler]: Connector (uitvoerder) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.819Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (link) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.819Z warn: [ConnectorConverterHandler]: Connector (link) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.819Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (dienst) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.819Z warn: [ConnectorConverterHandler]: Connector (dienst) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.819Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (prijsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.819Z warn: [ConnectorConverterHandler]: Connector (prijsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (resource) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.819Z warn: [ConnectorConverterHandler]: Connector (resource) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (Reservatie.Boeking) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.819Z warn: [ConnectorConverterHandler]: Connector (Reservatie.Boeking) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (Reservatie.Resource) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.819Z warn: [ConnectorConverterHandler]: Connector (Reservatie.Resource) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.819Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.004Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T07:09:09.819Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-14T14:11:25.006Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.822Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.007Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.823Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.007Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.824Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.007Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcetype has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.825Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcetype has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.008Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Vervoermiddel has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.825Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Vervoermiddel has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.008Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.826Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routeknoop has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.008Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Uitvoerder has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.826Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Uitvoerder has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.008Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Teken has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.826Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Teken has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.009Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Dienstverleningtype has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.827Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Dienstverleningtype has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.009Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Link has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.827Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Link has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.009Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:GeneriekeLink has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.827Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:GeneriekeLink has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.010Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Netwerkelement has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.828Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Netwerkelement has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.010Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Netwerkgebied has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.828Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Netwerkgebied has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.010Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Knoop has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.829Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Knoop has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.011Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Connectietype has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.829Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Netwerk:Connectietype has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.011Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Transportnetwerk:Transporttype has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.829Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Transportnetwerk:Transporttype has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.011Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcestatus has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.830Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Resourcestatus has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.012Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reizigerskenmerk has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.830Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reizigerskenmerk has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.012Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reizigersvoorkeur has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.831Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Reizigersvoorkeur has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.012Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Licentie has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.831Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Licentie has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.012Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportgebiedtype has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.831Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportgebiedtype has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.012Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportknooptype has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.831Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Transportknooptype has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.014Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:vertrektijdstip has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.835Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:vertrektijdstip has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.014Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:aankomsttijdstip has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.836Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Route:aankomsttijdstip has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.015Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:vervoermiddel has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.837Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Routesegment:vervoermiddel has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.016Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Beschikbaarheid:dienstregeling has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.838Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Beschikbaarheid:dienstregeling has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.022Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Overstap:overstaptijd has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.846Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Mobiliteit-Trips-En-Aanbod:Overstap:overstaptijd has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.022Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:FormeelKader:naam has an empty value for tag ap-usageNote-nl.
+2025-05-15T07:09:09.847Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:FormeelKader:naam has an empty value for tag ap-usageNote-nl.
 
-2025-05-14T14:11:25.023Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:FormeelKader:beschrijving has an empty value for tag ap-usageNote-nl.
+2025-05-15T07:09:09.847Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:FormeelKader:beschrijving has an empty value for tag ap-usageNote-nl.
 
-2025-05-14T14:11:25.024Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:Periode:begin has an empty value for tag ap-usageNote-nl.
+2025-05-15T07:09:09.849Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:Periode:begin has an empty value for tag ap-usageNote-nl.
 
-2025-05-14T14:11:25.024Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:Periode:einde has an empty value for tag ap-usageNote-nl.
+2025-05-15T07:09:09.849Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO-Generiek:Periode:einde has an empty value for tag ap-usageNote-nl.
 
-2025-05-14T14:11:25.040Z warn: [ConverterHandler]: Entity with path Omvat has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.875Z warn: [ConverterHandler]: Entity with path Omvat has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.053Z warn: [ConverterHandler]: Entity with path GerealiseerdOp has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.892Z warn: [ConverterHandler]: Entity with path GerealiseerdOp has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.053Z warn: [ConverterHandler]: Entity with path IntegreertInfoOver has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.893Z warn: [ConverterHandler]: Entity with path IntegreertInfoOver has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.055Z warn: [ConverterHandler]: Entity with path GerealiseerdOp has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.896Z warn: [ConverterHandler]: Entity with path GerealiseerdOp has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.055Z warn: [ConverterHandler]: Entity with path IsMedereizigerVan has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.897Z warn: [ConverterHandler]: Entity with path IsMedereizigerVan has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.056Z warn: [ConverterHandler]: Entity with path GerealiseerdMet has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.897Z warn: [ConverterHandler]: Entity with path GerealiseerdMet has an empty value for tag usageNote-nl.
 
-2025-05-14T14:11:25.057Z warn: [ConverterHandler]: Entity with path isGerelateerdAan has an empty value for tag ap-usageNote-nl.
+2025-05-15T07:09:09.898Z warn: [ConverterHandler]: Entity with path isGerelateerdAan has an empty value for tag ap-usageNote-nl.
 
-2025-05-14T14:11:25.058Z warn: [ConverterHandler]: Entity with path GerealiseerdDoor has an empty value for tag usageNote-nl.
+2025-05-15T07:09:09.900Z warn: [ConverterHandler]: Entity with path GerealiseerdDoor has an empty value for tag usageNote-nl.
 
 #||# -------------------------------------
 
