@@ -2,131 +2,131 @@
 
 #||# -------------------------------------
 
-2025-05-15T11:32:26.373Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
+2025-05-15T15:40:18.922Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
 
-2025-05-15T11:32:26.375Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+2025-05-15T15:40:18.923Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-05-15T11:32:26.375Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Organisatie:PubliekeOrganisatie:opeenvolging)
+2025-05-15T15:40:18.923Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Organisatie:PubliekeOrganisatie:opeenvolging)
 
-2025-05-15T11:32:26.375Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:Agent:isLidVan)
+2025-05-15T15:40:18.923Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:Agent:isLidVan)
 
-2025-05-15T11:32:26.375Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:Agent:rapporteertAan)
+2025-05-15T15:40:18.923Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-05-15T11:32:26.375Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:Agent:isHoofdVan)
+2025-05-15T15:40:18.923Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:Agent:isHoofdVan)
 
-2025-05-15T11:32:26.375Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:Agent:isLidVan)
+2025-05-15T15:40:18.923Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:Agent:isLidVan)
 
-2025-05-15T11:32:26.377Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.925Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.377Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.925Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.378Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:FormeelKader:isGerelateerdAan is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.926Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:FormeelKader:isGerelateerdAan is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.378Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:FormeelKader:isGerelateerdAan has name "isGerelateerdAan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.926Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Generiek:FormeelKader:isGerelateerdAan has name "isGerelateerdAan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.378Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Procedure:implementeert is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.926Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Procedure:implementeert is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.378Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Procedure:implementeert has name "implementeert". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.926Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Procedure:implementeert has name "implementeert". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.378Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kanaal:isBezitVan is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.927Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kanaal:isBezitVan is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.379Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kanaal:isBezitVan has name "isBezitVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.927Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kanaal:isBezitVan has name "isBezitVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.379Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kost:indienBenaderdVia is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.927Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kost:indienBenaderdVia is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.379Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kost:indienBenaderdVia has name "indienBenaderdVia". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.927Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kost:indienBenaderdVia has name "indienBenaderdVia". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.379Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kost:isGedefinieerdDoor is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.927Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kost:isGedefinieerdDoor is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.379Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kost:isGedefinieerdDoor has name "isGedefinieerdDoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.927Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kost:isGedefinieerdDoor has name "isGedefinieerdDoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.379Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:LevensGebeurtenis:(LevensGebeurtenis -> Gebeurtenis) is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.927Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:LevensGebeurtenis:(LevensGebeurtenis -> Gebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.379Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kanaal:vereistAlsInput is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.928Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kanaal:vereistAlsInput is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.379Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kanaal:vereistAlsInput has name "vereistAlsInput". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.928Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Kanaal:vereistAlsInput has name "vereistAlsInput". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.380Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:BedrijfsGebeurtenis:(BedrijfsGebeurtenis -> Gebeurtenis) is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.928Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:BedrijfsGebeurtenis:(BedrijfsGebeurtenis -> Gebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.380Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:produceert is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.928Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:produceert is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.380Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:produceert has name "produceert". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.928Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:produceert has name "produceert". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.380Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:wordtUitgevoerdDoor is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.928Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:wordtUitgevoerdDoor is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.380Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:wordtUitgevoerdDoor has name "wordtUitgevoerdDoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.928Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:wordtUitgevoerdDoor has name "wordtUitgevoerdDoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.380Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:vereist is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.928Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:vereist is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.380Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:vereist has name "vereist". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.928Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:vereist has name "vereist". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.380Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.928Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.380Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke has name "heeftVerantwoordelijke". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.929Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke has name "heeftVerantwoordelijke". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.380Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:heeftParticiperende is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.929Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:heeftParticiperende is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.380Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:heeftParticiperende has name "heeftParticiperende". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.929Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:heeftParticiperende has name "heeftParticiperende". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.381Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:isGegroepeerdVolgens is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.929Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:isGegroepeerdVolgens is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.381Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:isGegroepeerdVolgens has name "isGegroepeerdVolgens". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.929Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:isGegroepeerdVolgens has name "isGegroepeerdVolgens". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.381Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:aangebodenBinnen is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.929Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:aangebodenBinnen is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.381Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:aangebodenBinnen has name "aangebodenBinnen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.929Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:aangebodenBinnen has name "aangebodenBinnen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.381Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:teConsumerenVia is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.929Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:teConsumerenVia is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.381Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:teConsumerenVia has name "teConsumerenVia". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.929Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:teConsumerenVia has name "teConsumerenVia". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.381Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Gebeurtenis:isGerelateerdMet is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.929Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Gebeurtenis:isGerelateerdMet is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.381Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Gebeurtenis:isGerelateerdMet has name "isGerelateerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.929Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:Gebeurtenis:isGerelateerdMet has name "isGerelateerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.381Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:heeftCriterium is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.929Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:heeftCriterium is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.381Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:heeftCriterium has name "heeftCriterium". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.930Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:heeftCriterium has name "heeftCriterium". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.381Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:vereistAlsInput is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.930Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:vereistAlsInput is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.381Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:vereistAlsInput has name "vereistAlsInput". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.930Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:vereistAlsInput has name "vereistAlsInput". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.382Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:volgt is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.930Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:volgt is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.382Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:volgt has name "volgt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.930Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:volgt has name "volgt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.382Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet is not an association with a source role. Ignoring this connector.
+2025-05-15T15:40:18.930Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet is not an association with a source role. Ignoring this connector.
 
-2025-05-15T11:32:26.382Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet has name "isGerelateerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-15T15:40:18.930Z info: Connector Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet has name "isGerelateerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-15T11:32:26.382Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-15T15:40:18.930Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-15T11:32:26.382Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog) and fallback URI (http://todo.com/) will be assigned.
+2025-05-15T15:40:18.930Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-15T11:32:26.382Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Placeholder) and fallback URI (http://todo.com/) will be assigned.
+2025-05-15T15:40:18.931Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Placeholder) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-15T11:32:26.385Z warn: [ConnectorConverterHandler]: Connector (heeftParticiperende) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T15:40:18.933Z warn: [ConnectorConverterHandler]: Connector (heeftParticiperende) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-15T11:32:26.385Z warn: [ConnectorConverterHandler]: Connector (heeftParticiperende) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T15:40:18.934Z warn: [ConnectorConverterHandler]: Connector (heeftParticiperende) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-15T11:32:26.385Z warn: [ConnectorConverterHandler]: Connector (Participatie.PubliekeDienstverlening) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T15:40:18.934Z warn: [ConnectorConverterHandler]: Connector (Participatie.PubliekeDienstverlening) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-15T11:32:26.385Z warn: [ConnectorConverterHandler]: Connector (Participatie.AgentDienstencataloog) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-15T15:40:18.934Z warn: [ConnectorConverterHandler]: Connector (Participatie.AgentDienstencataloog) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-15T11:32:26.391Z warn: [ConverterHandler]: Entity with path Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:beschrijving has already a value for ap-usageNote in language nl, but will be overwritten.
+2025-05-15T15:40:18.939Z warn: [ConverterHandler]: Entity with path Model:OSLO²_applicatieprofiel_Dienst_dienstencataloog:OSLO-Dienst:PubliekeDienstverlening:beschrijving has already a value for ap-usageNote in language nl, but will be overwritten.
 
-2025-05-15T11:32:26.397Z warn: [ConverterHandler]: Entity with path heeftVerantwoordelijke has an empty value for tag ap-usageNote-nl.
+2025-05-15T15:40:18.945Z warn: [ConverterHandler]: Entity with path heeftVerantwoordelijke has an empty value for tag ap-usageNote-nl.
 
-2025-05-15T11:32:26.400Z warn: [ConverterHandler]: Entity with path heeftVerantwoordelijke has an empty value for tag ap-usageNote-nl.
+2025-05-15T15:40:18.945Z warn: [ConverterHandler]: Entity with path heeftVerantwoordelijke has an empty value for tag ap-usageNote-nl.
 
-2025-05-15T11:32:26.400Z warn: [ConverterHandler]: Entity with path heeftParticiperende has an empty value for tag ap-usageNote-nl.
+2025-05-15T15:40:18.945Z warn: [ConverterHandler]: Entity with path heeftParticiperende has an empty value for tag ap-usageNote-nl.
 
-2025-05-15T11:32:26.400Z warn: [ConverterHandler]: Entity with path heeftParticiperende has an empty value for tag ap-usageNote-nl.
+2025-05-15T15:40:18.948Z warn: [ConverterHandler]: Entity with path heeftParticiperende has an empty value for tag ap-usageNote-nl.
 
-2025-05-15T11:32:26.400Z warn: [ConverterHandler]: Entity with path aangebodenBinnen has already a value for ap-definition-nl in language nl, but will be overwritten.
+2025-05-15T15:40:18.948Z warn: [ConverterHandler]: Entity with path aangebodenBinnen has already a value for ap-definition-nl in language nl, but will be overwritten.
 
-2025-05-15T11:32:26.401Z warn: [ConverterHandler]: Entity with path aangebodenBinnen has already a value for ap-definition-nl in language nl, but will be overwritten.
+2025-05-15T15:40:18.948Z warn: [ConverterHandler]: Entity with path aangebodenBinnen has already a value for ap-definition-nl in language nl, but will be overwritten.
 
 #||# -------------------------------------
 

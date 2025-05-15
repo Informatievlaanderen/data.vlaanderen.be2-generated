@@ -2,5 +2,5 @@
 
 #||# -------------------------------------
 
-2025-05-15T11:36:37.665Z error: [CsvConverterHandler] Unable to convert the provided csv into a stakeholders-file. Error: Invalid Record Length: columns length is 7, got 6 on line 2 for record Ward,Steeman,West-Vlaamse Intercommunale,,https://www.wvi.be/,A
+2025-05-15T15:44:45.058Z error: [CsvConverterHandler] Unable to convert the provided csv into a stakeholders-file. Error: Invalid Record Length: columns length is 7, got 6 on line 2 for record Ward,Steeman,West-Vlaamse Intercommunale,,https://www.wvi.be/,A
 
