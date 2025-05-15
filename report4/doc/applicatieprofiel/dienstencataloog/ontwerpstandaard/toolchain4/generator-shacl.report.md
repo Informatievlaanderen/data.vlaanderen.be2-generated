@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-05-15T09:53:21.341Z warn: Unable to find the description for subject "[urn:oslo-toolchain:a512c74b6cbca97f7b5f9f63368f419fabb0d5ab54a40d515bc515fa2874f1c5](all-dienstencataloog.jsonld#L3850)".
+2025-05-15T11:00:01.098Z warn: Unable to find the description for subject "[urn:oslo-toolchain:a512c74b6cbca97f7b5f9f63368f419fabb0d5ab54a40d515bc515fa2874f1c5](all-dienstencataloog.jsonld#L3850)".
 
-2025-05-15T09:53:21.343Z warn: Unable to find the description for subject "[urn:oslo-toolchain:6b614c7d676358986195f6ea1bcd1331eeb733e136afd5b08d1a9c1b300b5dad](all-dienstencataloog.jsonld#L3870)".
+2025-05-15T11:00:01.100Z warn: Unable to find the description for subject "[urn:oslo-toolchain:6b614c7d676358986195f6ea1bcd1331eeb733e136afd5b08d1a9c1b300b5dad](all-dienstencataloog.jsonld#L3870)".
 
