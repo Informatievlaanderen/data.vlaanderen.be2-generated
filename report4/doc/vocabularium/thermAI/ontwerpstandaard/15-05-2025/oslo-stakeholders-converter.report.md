@@ -2,5 +2,7 @@
 
 #||# -------------------------------------
 
-2025-05-19T06:04:41.195Z error: [CsvConverterHandler] Unable to convert the provided csv into a stakeholders-file. Error: Invalid Record Length: columns length is 7, got 6 on line 2 for record Ward,Steeman,West-Vlaamse Intercommunale,,https://www.wvi.be/,A
+2025-05-19T09:26:30.450Z warn: Unable to find the contributor type for "undefined undefined" using column "MijnKolom". Please make sure this column has a value set for this person.
+
+2025-05-19T09:26:30.453Z error: [CsvConverterHandler] Unable to convert the provided csv into a stakeholders-file. Error: Invalid Record Length: columns length is 6, got 7 on line 3 for record Geert,Thijs,Digitaal Vlaanderen,geert.thijs@vlaanderen.be,https://www.vlaanderen.be/digitaal-vlaanderen,E,
 

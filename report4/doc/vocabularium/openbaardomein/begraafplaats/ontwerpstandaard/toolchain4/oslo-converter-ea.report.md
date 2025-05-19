@@ -2,37 +2,37 @@
 
 #||# -------------------------------------
 
-2025-05-19T06:03:56.247Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:(Terreindeel -> Deel) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:49.499Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:(Terreindeel -> Deel) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:56.249Z info: Connector Model:OSLO-OpenbaarDomein:Model:Deel:(Deel -> FysiekObject) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:49.500Z info: Connector Model:OSLO-OpenbaarDomein:Model:Deel:(Deel -> FysiekObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:56.249Z info: Connector Model:OSLO-OpenbaarDomein:Model:Element:(Element -> FysiekObject) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:49.500Z info: Connector Model:OSLO-OpenbaarDomein:Model:Element:(Element -> FysiekObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:56.250Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:heeftObstakel is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:49.501Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:heeftObstakel is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:56.250Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:heeftObstakel has name "heeftObstakel". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-19T09:25:49.501Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:heeftObstakel has name "heeftObstakel". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-19T06:03:56.250Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:BegraafplaatsRij:(BegraafplaatsRij -> Terreindeel) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:49.501Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:BegraafplaatsRij:(BegraafplaatsRij -> Terreindeel) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:56.250Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Graf:(Graf -> Element) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:49.501Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Graf:(Graf -> Element) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:56.250Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Columbarium:(Columbarium -> Element) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:49.501Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Columbarium:(Columbarium -> Element) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:56.250Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Urnenveld:(Urnenveld -> Element) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:49.501Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Urnenveld:(Urnenveld -> Element) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:56.250Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Strooiweide:(Strooiweide -> Terreindeel) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:49.502Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Strooiweide:(Strooiweide -> Terreindeel) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:56.250Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:BegraafplaatsBlok:(BegraafplaatsBlok -> Terreindeel) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:49.502Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:BegraafplaatsBlok:(BegraafplaatsBlok -> Terreindeel) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:56.251Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T09:25:49.502Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T06:03:56.251Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T09:25:49.502Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T06:03:56.252Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T09:25:49.503Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T06:03:56.252Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T09:25:49.503Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T06:03:56.252Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T09:25:49.503Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
 
 #||# -------------------------------------
 

@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2025-05-19T06:09:16.581Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:6f8d7232bd5972e37ff480cee7892d60c4a70b8f54336da2f45bb426cc980527](all-leercredential-ap.jsonld#L9268).
+2025-05-19T09:31:24.102Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:6f8d7232bd5972e37ff480cee7892d60c4a70b8f54336da2f45bb426cc980527](all-leercredential-ap.jsonld#L9268).
 

@@ -2,97 +2,97 @@
 
 #||# -------------------------------------
 
-2025-05-19T06:03:22.819Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Leercredential:Leerprestatie:(Leerprestatie -> Toekenningsproces))
+2025-05-19T09:25:18.280Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Leercredential:Leerprestatie:(Leerprestatie -> Toekenningsproces))
 
-2025-05-19T06:03:22.820Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Leercredential:Leeropportuniteit:(Leeropportuniteit -> Leerprestatiespecificatie))
+2025-05-19T09:25:18.282Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Leercredential:Leeropportuniteit:(Leeropportuniteit -> Leerprestatiespecificatie))
 
-2025-05-19T06:03:22.820Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Leercredential:Leerclaim:(Leerclaim -> Leerclaim))
+2025-05-19T09:25:18.282Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Leercredential:Leerclaim:(Leerclaim -> Leerclaim))
 
-2025-05-19T06:03:22.820Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Leercredential:Leeropportuniteit:(Leeropportuniteit -> Leeractiviteitspecificatie))
+2025-05-19T09:25:18.282Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Leercredential:Leeropportuniteit:(Leeropportuniteit -> Leeractiviteitspecificatie))
 
-2025-05-19T06:03:22.820Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Leeropportuniteit))
+2025-05-19T09:25:18.282Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Leeropportuniteit))
 
-2025-05-19T06:03:22.820Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Organisatie:Organisatie:(Organisatie -> Groep))
+2025-05-19T09:25:18.282Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Organisatie:Organisatie:(Organisatie -> Groep))
 
-2025-05-19T06:03:22.820Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Leercredential:Groep:(Groep -> Persoon))
+2025-05-19T09:25:18.282Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Leercredential:Groep:(Groep -> Persoon))
 
-2025-05-19T06:03:22.820Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Leercredential:EuropeesDigitaalCredential:(EuropeesDigitaalCredential -> VerifieerbareCredential))
+2025-05-19T09:25:18.282Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Leercredential:EuropeesDigitaalCredential:(EuropeesDigitaalCredential -> VerifieerbareCredential))
 
-2025-05-19T06:03:22.822Z info: Connector Model:Model:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.286Z info: Connector Model:Model:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.823Z info: Connector Model:Model:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.286Z info: Connector Model:Model:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.823Z info: Connector Model:Model:OSLO-Leercredential:WettelijkeIdentificator:(WettelijkeIdentificator -> Identificator) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.287Z info: Connector Model:Model:OSLO-Leercredential:WettelijkeIdentificator:(WettelijkeIdentificator -> Identificator) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.823Z info: Connector Model:Model:OSLO-Leercredential:VerifieerbareCredential:(VerifieerbareCredential -> Credential) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.287Z info: Connector Model:Model:OSLO-Leercredential:VerifieerbareCredential:(VerifieerbareCredential -> Credential) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.823Z info: Connector Model:Model:OSLO-Leercredential:Toekenningsproces:(Toekenningsproces -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.287Z info: Connector Model:Model:OSLO-Leercredential:Toekenningsproces:(Toekenningsproces -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.824Z info: Connector Model:Model:OSLO-Leercredential:ToegekendRechtspecificatie:(ToegekendRechtspecificatie -> Leerspecificatie) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.288Z info: Connector Model:Model:OSLO-Leercredential:ToegekendRechtspecificatie:(ToegekendRechtspecificatie -> Leerspecificatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.824Z info: Connector Model:Model:OSLO-Leercredential:ToegekendRecht:(ToegekendRecht -> Leerclaim) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.288Z info: Connector Model:Model:OSLO-Leercredential:ToegekendRecht:(ToegekendRecht -> Leerclaim) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.824Z info: Connector Model:Model:OSLO-Leercredential:Leerprestatiespecificatie:(Leerprestatiespecificatie -> Leerspecificatie) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.289Z info: Connector Model:Model:OSLO-Leercredential:Leerprestatiespecificatie:(Leerprestatiespecificatie -> Leerspecificatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.824Z info: Connector Model:Model:OSLO-Leercredential:Leerprestatie:(Leerprestatie -> Leerclaim) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.289Z info: Connector Model:Model:OSLO-Leercredential:Leerprestatie:(Leerprestatie -> Leerclaim) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.825Z info: Connector Model:Model:OSLO-Persoon:Persoon:(Persoon -> Leercredential) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.289Z info: Connector Model:Model:OSLO-Persoon:Persoon:(Persoon -> Leercredential) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.825Z info: Connector Model:Model:OSLO-Leercredential:Leercredential:(Leercredential -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.289Z info: Connector Model:Model:OSLO-Leercredential:Leercredential:(Leercredential -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.825Z info: Connector Model:Model:OSLO-Leercredential:Leercredential:(Leercredential -> Leercredential) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.289Z info: Connector Model:Model:OSLO-Leercredential:Leercredential:(Leercredential -> Leercredential) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.825Z info: Connector Model:Model:OSLO-Leercredential:Leercredential:(Leercredential -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.290Z info: Connector Model:Model:OSLO-Leercredential:Leercredential:(Leercredential -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.825Z info: Connector Model:Model:OSLO-Leercredential:Leercredential:(Leercredential -> VerifieerbareCredential) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.290Z info: Connector Model:Model:OSLO-Leercredential:Leercredential:(Leercredential -> VerifieerbareCredential) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.825Z info: Connector Model:Model:OSLO-Leercredential:Leerinschrijfcredential:(Leerinschrijfcredential -> Leercredential) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.290Z info: Connector Model:Model:OSLO-Leercredential:Leerinschrijfcredential:(Leerinschrijfcredential -> Leercredential) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.825Z info: Connector Model:Model:OSLO-Leercredential:Leerprestatiecredential:(Leerprestatiecredential -> Leercredential) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.290Z info: Connector Model:Model:OSLO-Leercredential:Leerprestatiecredential:(Leerprestatiecredential -> Leercredential) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.825Z info: Connector Model:Model:OSLO-Persoon:Persoon:(Persoon -> Leerclaim) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.291Z info: Connector Model:Model:OSLO-Persoon:Persoon:(Persoon -> Leerclaim) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.825Z info: Connector Model:Model:OSLO-Leercredential:Leerclaim:(Leerclaim -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.291Z info: Connector Model:Model:OSLO-Leercredential:Leerclaim:(Leerclaim -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.826Z info: Connector Model:Model:OSLO-Leercredential:Leeractiviteitspecificatie:(Leeractiviteitspecificatie -> Leerspecificatie) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.291Z info: Connector Model:Model:OSLO-Leercredential:Leeractiviteitspecificatie:(Leeractiviteitspecificatie -> Leerspecificatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.826Z info: Connector Model:Model:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Leerclaim) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.291Z info: Connector Model:Model:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Leerclaim) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.826Z info: Connector Model:Model:OSLO-Leercredential:Kwalificatie:(Kwalificatie -> Leerprestatiespecificatie) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.291Z info: Connector Model:Model:OSLO-Leercredential:Kwalificatie:(Kwalificatie -> Leerprestatiespecificatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.826Z info: Connector Model:Model:OSLO-Persoon:Persoon:(Persoon -> Groep) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.291Z info: Connector Model:Model:OSLO-Persoon:Persoon:(Persoon -> Groep) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.826Z info: Connector Model:Model:OSLO-Leercredential:Assessmentspecificatie:(Assessmentspecificatie -> Leerspecificatie) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.292Z info: Connector Model:Model:OSLO-Leercredential:Assessmentspecificatie:(Assessmentspecificatie -> Leerspecificatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.826Z info: Connector Model:Model:OSLO-Leercredential:Toekenningsproces:(Toekenningsproces -> Assessment) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.292Z info: Connector Model:Model:OSLO-Leercredential:Toekenningsproces:(Toekenningsproces -> Assessment) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.826Z info: Connector Model:Model:OSLO-Leercredential:Assessment:(Assessment -> Leerclaim) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.292Z info: Connector Model:Model:OSLO-Leercredential:Assessment:(Assessment -> Leerclaim) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.826Z info: Connector Model:Model:OSLO-Adres:Adres:(Adres -> AlgemeenAdres) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.292Z info: Connector Model:Model:OSLO-Adres:Adres:(Adres -> AlgemeenAdres) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.826Z info: Connector Model:Model:OSLO-Leercredential:Bewijs:(Bewijs -> Accreditatie) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.292Z info: Connector Model:Model:OSLO-Leercredential:Bewijs:(Bewijs -> Accreditatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.826Z info: Connector Model:Model:OSLO-Leercredential:EuropeesDigitaalCredential:(EuropeesDigitaalCredential -> Leercredential) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.292Z info: Connector Model:Model:OSLO-Leercredential:EuropeesDigitaalCredential:(EuropeesDigitaalCredential -> Leercredential) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.826Z info: Connector Model:Model:OSLO-Leercredential:Leercredential:(Leercredential -> Bewijs) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.292Z info: Connector Model:Model:OSLO-Leercredential:Leercredential:(Leercredential -> Bewijs) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.827Z info: Connector Model:Model:OSLO-Leercredential:Bewijs:(Bewijs -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-05-19T09:25:18.292Z info: Connector Model:Model:OSLO-Leercredential:Bewijs:(Bewijs -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T06:03:22.827Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T09:25:18.294Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T06:03:22.827Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T09:25:18.294Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T06:03:22.827Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T09:25:18.294Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T06:03:22.827Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T09:25:18.294Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T06:03:22.828Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Persoon) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T09:25:18.294Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Persoon) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T06:03:22.828Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Leerprestatiecredential) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T09:25:18.294Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Leerprestatiecredential) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T06:03:22.833Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
+2025-05-19T09:25:18.304Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
 
-2025-05-19T06:03:22.903Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Leercredential:Leeractiviteit:inschrijving has already a value for definition-nl in language nl, but will be overwritten.
+2025-05-19T09:25:18.393Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Leercredential:Leeractiviteit:inschrijving has already a value for definition-nl in language nl, but will be overwritten.
 
 #||# -------------------------------------
 
