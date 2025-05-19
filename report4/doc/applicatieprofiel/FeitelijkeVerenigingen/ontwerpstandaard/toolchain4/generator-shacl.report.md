@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2025-05-16T10:48:31.945Z warn: Unable to find the description for subject "[urn:oslo-toolchain:65d8c8f7b9533b5eaf2c01f1f490f5d323e01e6873a98072b75ca8a59717291b](all-Feitelijke-Verenigingen-ap.jsonld#L3990)".
+2025-05-19T06:08:53.500Z warn: Unable to find the description for subject "[urn:oslo-toolchain:65d8c8f7b9533b5eaf2c01f1f490f5d323e01e6873a98072b75ca8a59717291b](all-Feitelijke-Verenigingen-ap.jsonld#L3990)".
 

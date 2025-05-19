@@ -2,55 +2,55 @@
 
 #||# -------------------------------------
 
-2025-05-16T10:41:42.158Z info: Connector Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Buitenruimte:(Buitenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
+2025-05-19T06:02:07.923Z info: Connector Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Buitenruimte:(Buitenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
 
-2025-05-16T10:41:42.160Z info: Connector Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Binnenruimte:(Binnenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
+2025-05-19T06:02:07.924Z info: Connector Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Binnenruimte:(Binnenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
 
-2025-05-16T10:41:42.161Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T06:02:07.925Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-16T10:41:42.161Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T06:02:07.925Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-16T10:41:42.161Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T06:02:07.926Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-16T10:41:42.161Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Consent) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T06:02:07.926Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Consent) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-16T10:41:42.161Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T06:02:07.926Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-16T10:41:42.161Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-adresregister) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T06:02:07.926Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-adresregister) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-16T10:41:42.161Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:MobiVOC) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T06:02:07.926Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:MobiVOC) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-16T10:41:42.161Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:schema.org) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T06:02:07.926Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:schema.org) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-16T10:41:42.164Z warn: [ConnectorConverterHandler]: Connector (superInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-19T06:02:07.929Z warn: [ConnectorConverterHandler]: Connector (superInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-16T10:41:42.164Z warn: [ConnectorConverterHandler]: Connector (subInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-19T06:02:07.929Z warn: [ConnectorConverterHandler]: Connector (subInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-16T10:41:42.164Z warn: [ConnectorConverterHandler]: Connector (dienstverlening) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-19T06:02:07.929Z warn: [ConnectorConverterHandler]: Connector (dienstverlening) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-16T10:41:42.165Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dienstverlening) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-19T06:02:07.929Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dienstverlening) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-16T10:41:42.165Z warn: [ConnectorConverterHandler]: Connector (^heeftVerantwoordelijke) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-19T06:02:07.929Z warn: [ConnectorConverterHandler]: Connector (^heeftVerantwoordelijke) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-16T10:41:42.165Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (^heeftVerantwoordelijke) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-19T06:02:07.929Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (^heeftVerantwoordelijke) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-16T10:41:42.165Z warn: [ConnectorConverterHandler]: Connector (dienstverlening) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-19T06:02:07.929Z warn: [ConnectorConverterHandler]: Connector (dienstverlening) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-16T10:41:42.165Z warn: [ConnectorConverterHandler]: Connector (^reservatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-19T06:02:07.929Z warn: [ConnectorConverterHandler]: Connector (^reservatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-16T10:41:42.165Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (^reservatie) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-19T06:02:07.929Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (^reservatie) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-16T10:41:42.165Z warn: [ConnectorConverterHandler]: Connector (infrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-19T06:02:07.929Z warn: [ConnectorConverterHandler]: Connector (infrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-16T10:41:42.165Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (infrastructuur) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-19T06:02:07.929Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (infrastructuur) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-16T10:41:42.170Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Dienst:OpeningsurenSpecificatie has an empty value for tag ap-usageNote-nl.
+2025-05-19T06:02:07.935Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Dienst:OpeningsurenSpecificatie has an empty value for tag ap-usageNote-nl.
 
-2025-05-16T10:41:42.182Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiedienst:^beschrijving has already a value for ap-usageNote in language nl, but will be overwritten.
+2025-05-19T06:02:07.948Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiedienst:^beschrijving has already a value for ap-usageNote in language nl, but will be overwritten.
 
-2025-05-16T10:41:42.201Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (^reservatie).
+2025-05-19T06:02:07.965Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (^reservatie).
 
-2025-05-16T10:41:42.202Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (infrastructuur).
+2025-05-19T06:02:07.966Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (infrastructuur).
 
 #||# -------------------------------------
 
