@@ -2,89 +2,89 @@
 
 #||# -------------------------------------
 
-2025-05-19T09:21:11.280Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:OM:SamplingFeature:(SamplingFeature -> AirFeature))
+2025-05-19T10:13:14.703Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:OM:SamplingFeature:(SamplingFeature -> AirFeature))
 
-2025-05-19T09:21:11.281Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:OM:SamplingFeature:(SamplingFeature -> Feature))
+2025-05-19T10:13:14.705Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:OM:SamplingFeature:(SamplingFeature -> Feature))
 
-2025-05-19T09:21:11.281Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:SOSA:Sensor:(Sensor -> PropertyType))
+2025-05-19T10:13:14.705Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:SOSA:Sensor:(Sensor -> PropertyType))
 
-2025-05-19T09:21:11.282Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:OM:SamplingFeature:(SamplingFeature -> SamplingFeature))
+2025-05-19T10:13:14.705Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:OM:SamplingFeature:(SamplingFeature -> SamplingFeature))
 
-2025-05-19T09:21:11.282Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:SOSA:Sensor:(Sensor -> ObservationProcedure))
+2025-05-19T10:13:14.705Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Class Model:SOSA:Sensor:(Sensor -> ObservationProcedure))
 
-2025-05-19T09:21:11.283Z info: Connector Model:Class Model:OM:Observation:(Observation -> ObservationProcedure) is not an association with a source role. Ignoring this connector.
+2025-05-19T10:13:14.707Z info: Connector Model:Class Model:OM:Observation:(Observation -> ObservationProcedure) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T09:21:11.284Z info: Connector Model:Class Model:OM:SamplingFeature:(SamplingFeature -> Feature) is not an association with a source role. Ignoring this connector.
+2025-05-19T10:13:14.708Z info: Connector Model:Class Model:OM:SamplingFeature:(SamplingFeature -> Feature) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T09:21:11.285Z info: Connector Model:Class Model:OM:Observation:(Observation -> Observation) is not an association with a source role. Ignoring this connector.
+2025-05-19T10:13:14.708Z info: Connector Model:Class Model:OM:Observation:(Observation -> Observation) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T09:21:11.285Z info: Connector Model:Class Model:OM:Observation:(Observation -> Metadata) is not an association with a source role. Ignoring this connector.
+2025-05-19T10:13:14.708Z info: Connector Model:Class Model:OM:Observation:(Observation -> Metadata) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T09:21:11.285Z info: Connector Model:Class Model:WaterQuality:WaterQualityParameterObservation:(WaterQualityParameterObservation -> Observation) is not an association with a source role. Ignoring this connector.
+2025-05-19T10:13:14.709Z info: Connector Model:Class Model:WaterQuality:WaterQualityParameterObservation:(WaterQualityParameterObservation -> Observation) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T09:21:11.285Z info: Connector Model:Class Model:WaterQuality:WaterQualityObservationCollection:(WaterQualityObservationCollection -> Observation) is not an association with a source role. Ignoring this connector.
+2025-05-19T10:13:14.709Z info: Connector Model:Class Model:WaterQuality:WaterQualityObservationCollection:(WaterQualityObservationCollection -> Observation) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T09:21:11.285Z info: Connector Model:Class Model:WaterQuality:ChemicalAgentConcentrationObservation:(ChemicalAgentConcentrationObservation -> Observation) is not an association with a source role. Ignoring this connector.
+2025-05-19T10:13:14.709Z info: Connector Model:Class Model:WaterQuality:ChemicalAgentConcentrationObservation:(ChemicalAgentConcentrationObservation -> Observation) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T09:21:11.286Z info: Connector Model:Class Model:OM:Observation:(Observation -> PropertyType) is not an association with a source role. Ignoring this connector.
+2025-05-19T10:13:14.709Z info: Connector Model:Class Model:OM:Observation:(Observation -> PropertyType) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T09:21:11.286Z info: Connector Model:Class Model:WaterQuality:WaterFeature:(WaterFeature -> Feature) is not an association with a source role. Ignoring this connector.
+2025-05-19T10:13:14.709Z info: Connector Model:Class Model:WaterQuality:WaterFeature:(WaterFeature -> Feature) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T09:21:11.286Z info: Connector Model:Class Model:OM:SamplingFeature:(SamplingFeature -> WaterFeature) is not an association with a source role. Ignoring this connector.
+2025-05-19T10:13:14.709Z info: Connector Model:Class Model:OM:SamplingFeature:(SamplingFeature -> WaterFeature) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T09:21:11.286Z info: Connector Model:Class Model:WaterQuality:BioIndicatorObservation:(BioIndicatorObservation -> Observation) is not an association with a source role. Ignoring this connector.
+2025-05-19T10:13:14.709Z info: Connector Model:Class Model:WaterQuality:BioIndicatorObservation:(BioIndicatorObservation -> Observation) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T09:21:11.286Z info: Connector Model:Class Model:WaterQuality:BioticIndexObservation:(BioticIndexObservation -> Observation) is not an association with a source role. Ignoring this connector.
+2025-05-19T10:13:14.709Z info: Connector Model:Class Model:WaterQuality:BioticIndexObservation:(BioticIndexObservation -> Observation) is not an association with a source role. Ignoring this connector.
 
-2025-05-19T09:21:11.287Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.710Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.287Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.710Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.287Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:SOSA) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.710Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:SOSA) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.287Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Objectdiagram-SOSA-Observation) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.710Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Objectdiagrammen:Objectdiagram-SOSA-Observation) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.287Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.710Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.287Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-SOSA-Sample) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.711Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-SOSA-Sample) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.287Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:FIWARE) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.711Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:FIWARE) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.287Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:AirAndWater) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.711Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:AirAndWater) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.287Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:OM) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.711Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:OM) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.287Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.711Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.287Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:SSN) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.711Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:SSN) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.288Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:SOSA-extensions) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.711Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:SOSA-extensions) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.288Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-AirQuality) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.711Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-AirQuality) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.288Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-WaterQuality) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.711Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-WaterQuality) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.288Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Mirror) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.711Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Mirror) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.288Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-Waterquality-BioIndicatorAndBioticIndex) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.711Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-Waterquality-BioIndicatorAndBioticIndex) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.288Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-Device) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.711Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-Device) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.288Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-WaterQuality-alternative1) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.711Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:Objectdiagrammen:Objectdiagram-WaterQuality-alternative1) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.288Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:CUBE) and fallback URI (http://todo.com/) will be assigned.
+2025-05-19T10:13:14.711Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Class Model:CUBE) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-19T09:21:11.291Z warn: [ConnectorConverterHandler]: Connector (Observation (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-19T10:13:14.714Z warn: [ConnectorConverterHandler]: Connector (Observation (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-19T09:21:11.291Z warn: [ConnectorConverterHandler]: Connector (Observation (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-19T10:13:14.714Z warn: [ConnectorConverterHandler]: Connector (Observation (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-19T09:21:11.297Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Class Model:OM:Observation:resultQuality).
+2025-05-19T10:13:14.722Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Class Model:OM:Observation:resultQuality).
 
-2025-05-19T09:21:11.297Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Class Model:OM:Observation:parameter).
+2025-05-19T10:13:14.722Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Class Model:OM:Observation:parameter).
 
-2025-05-19T09:21:11.298Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Class Model:WaterQuality:WaterQualityObservationCollection:refWeatherObserved).
+2025-05-19T10:13:14.722Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Class Model:WaterQuality:WaterQualityObservationCollection:refWeatherObserved).
 
-2025-05-19T09:21:11.299Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Class Model:OSLO-Generiek:QuantitativeValue:value).
+2025-05-19T10:13:14.724Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Class Model:OSLO-Generiek:QuantitativeValue:value).
 
 #||# -------------------------------------
 

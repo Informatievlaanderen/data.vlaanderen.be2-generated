@@ -2,11 +2,11 @@
 
 #||# -------------------------------------  
 
-2025-05-19T09:31:33.154Z error: Unable to find assigned URI for range of property [urn:oslo-toolchain:b63c80145b94d36385b3a3a00160ceb024f4c1368f1b93cc0572e5b70e137107](all-logies.jsonld#L3445).
+2025-05-19T10:23:23.018Z error: Unable to find assigned URI for range of property [urn:oslo-toolchain:b63c80145b94d36385b3a3a00160ceb024f4c1368f1b93cc0572e5b70e137107](all-logies.jsonld#L3445).
 
-2025-05-19T09:31:33.156Z error: Unable to find assigned URI for range of property [urn:oslo-toolchain:577dcf09e8e7b3159b210a21b4d3b49157f1ef03bc831460149dc1ab8ba38ad4](all-logies.jsonld#L3669).
+2025-05-19T10:23:23.019Z error: Unable to find assigned URI for range of property [urn:oslo-toolchain:577dcf09e8e7b3159b210a21b4d3b49157f1ef03bc831460149dc1ab8ba38ad4](all-logies.jsonld#L3669).
 
-2025-05-19T09:31:33.156Z error: Unable to find assigned URI for range of property [urn:oslo-toolchain:f94fa70c6069defdbbb40ca993df6eb6dec29a20596608fc1e1fc6da62c546d6](all-logies.jsonld#L3786).
+2025-05-19T10:23:23.020Z error: Unable to find assigned URI for range of property [urn:oslo-toolchain:f94fa70c6069defdbbb40ca993df6eb6dec29a20596608fc1e1fc6da62c546d6](all-logies.jsonld#L3786).
 
 Error: Unable to find the assigned URI for parent http://schema.org/LocationFeatureSpecification of class [[urn:oslo-toolchain:0bc0355ee2b243cba119b3396389ce7a0b77ca0dcabafc5bfb414546c8a7c35d](all-logies.jsonld#L5665)](all-logies.jsonld#L366).
 
