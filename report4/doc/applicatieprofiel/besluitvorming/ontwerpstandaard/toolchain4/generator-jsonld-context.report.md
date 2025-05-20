@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-05-19T15:20:39.541Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:1480fc914a3239de6d1fe75cc41e6beaa0b77f2ff59316583e87ee4aacf84344](all-besluitvorming-ap.jsonld#L4395).
+2025-05-20T07:42:52.327Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:1480fc914a3239de6d1fe75cc41e6beaa0b77f2ff59316583e87ee4aacf84344](all-besluitvorming-ap.jsonld#L4395).
 
-2025-05-19T15:20:39.543Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:b7f163359c99c486a7c7320c5a50c47ec04fbaea5b1df88809b9a02c93844c6d](all-besluitvorming-ap.jsonld#L4425).
+2025-05-20T07:42:52.329Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:b7f163359c99c486a7c7320c5a50c47ec04fbaea5b1df88809b9a02c93844c6d](all-besluitvorming-ap.jsonld#L4425).
 
