@@ -142,6 +142,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/subsidie.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/thermografische-gebouwanalyse.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/production/toestemming.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/vastgoed.publication.json

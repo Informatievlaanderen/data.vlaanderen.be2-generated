@@ -465,6 +465,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/production/thermografische-gebouwanalyse.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/production/toestemming.publication.json
 #||# 
 Directory check
