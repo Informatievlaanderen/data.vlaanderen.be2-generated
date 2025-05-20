@@ -2,109 +2,109 @@
 
 #||# -------------------------------------
 
-2025-05-20T07:36:49.540Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:OSLO LDES:OnveranderlijkObject:(OnveranderlijkObject -> EventStream))
+2025-05-20T08:40:42.482Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:OSLO LDES:OnveranderlijkObject:(OnveranderlijkObject -> EventStream))
 
-2025-05-20T07:36:49.541Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:TREE:Node:Fragmentatie)
+2025-05-20T08:40:42.484Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:TREE:Node:Fragmentatie)
 
-2025-05-20T07:36:49.541Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:OSLO LDES:OnveranderlijkObject:(OnveranderlijkObject -> Node))
+2025-05-20T08:40:42.484Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:OSLO LDES:OnveranderlijkObject:(OnveranderlijkObject -> Node))
 
-2025-05-20T07:36:49.541Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:TREE:Node:(Node -> Node))
+2025-05-20T08:40:42.484Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:TREE:Node:(Node -> Node))
 
-2025-05-20T07:36:49.541Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:OSLO LDES:RootNode:(RootNode -> EventStream))
+2025-05-20T08:40:42.484Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:OSLO LDES:RootNode:(RootNode -> EventStream))
 
-2025-05-20T07:36:49.541Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:TREE:Node:(Node -> OnveranderlijkObject))
+2025-05-20T08:40:42.484Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:TREE:Node:(Node -> OnveranderlijkObject))
 
-2025-05-20T07:36:49.541Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:TREE:Collection:(Collection -> Node))
+2025-05-20T08:40:42.484Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:TREE:Collection:(Collection -> Node))
 
-2025-05-20T07:36:49.541Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:LDES:EventStream:(EventStream -> Dataset))
+2025-05-20T08:40:42.484Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-LDES-AP:LDES:EventStream:(EventStream -> Dataset))
 
-2025-05-20T07:36:49.543Z info: Connector Model:OSLO-LDES-AP:LDES:EventStream:(EventStream -> Collection) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.486Z info: Connector Model:OSLO-LDES-AP:LDES:EventStream:(EventStream -> Collection) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.543Z info: Connector Model:OSLO-LDES-AP:OSLO Generiek:Versie:(Versie -> OnveranderlijkObject) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.486Z info: Connector Model:OSLO-LDES-AP:OSLO Generiek:Versie:(Versie -> OnveranderlijkObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.543Z info: Connector Model:OSLO-LDES-AP:OSLO-ObservatiesEnMetingen:Observatie:(Observatie -> OnveranderlijkObject) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.486Z info: Connector Model:OSLO-LDES-AP:OSLO-ObservatiesEnMetingen:Observatie:(Observatie -> OnveranderlijkObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.543Z info: Connector Model:OSLO-LDES-AP:TREE:Node:(Node -> Relatie) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.486Z info: Connector Model:OSLO-LDES-AP:TREE:Node:(Node -> Relatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.544Z info: Connector Model:OSLO-LDES-AP:TREE:Relatie:(Relatie -> Node) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.487Z info: Connector Model:OSLO-LDES-AP:TREE:Relatie:(Relatie -> Node) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.544Z info: Connector Model:OSLO-LDES-AP:LDES:EventStream:(EventStream -> OnveranderlijkObject) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.487Z info: Connector Model:OSLO-LDES-AP:LDES:EventStream:(EventStream -> OnveranderlijkObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.544Z info: Connector Model:OSLO-LDES-AP:LDES:DurationAgoPolicy:(DurationAgoPolicy -> RetentionPolicy) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.487Z info: Connector Model:OSLO-LDES-AP:LDES:DurationAgoPolicy:(DurationAgoPolicy -> RetentionPolicy) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.545Z info: Connector Model:OSLO-LDES-AP:LDES:LatestVersionSubset:(LatestVersionSubset -> RetentionPolicy) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.488Z info: Connector Model:OSLO-LDES-AP:LDES:LatestVersionSubset:(LatestVersionSubset -> RetentionPolicy) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.545Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:VersieEventStream:(VersieEventStream -> EventStream) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.488Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:VersieEventStream:(VersieEventStream -> EventStream) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.545Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:AfgeleideCollectie:(AfgeleideCollectie -> Collection) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.488Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:AfgeleideCollectie:(AfgeleideCollectie -> Collection) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.545Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:Snapshot:(Snapshot -> OnveranderlijkObject) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.488Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:Snapshot:(Snapshot -> OnveranderlijkObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.545Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:VersieMaterialisatie:(VersieMaterialisatie -> Collection) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.488Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:VersieMaterialisatie:(VersieMaterialisatie -> Collection) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.545Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:AfgeleideCollectie:(AfgeleideCollectie -> Collection) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.488Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:AfgeleideCollectie:(AfgeleideCollectie -> Collection) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.545Z info: Connector Model:OSLO-LDES-AP:metadata_DCAT:DataService:(DataService -> Dataset) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.488Z info: Connector Model:OSLO-LDES-AP:metadata_DCAT:DataService:(DataService -> Dataset) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.545Z info: Connector Model:OSLO-LDES-AP:metadata_DCAT:DataServiceLDES:(DataServiceLDES -> DataService) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.489Z info: Connector Model:OSLO-LDES-AP:metadata_DCAT:DataServiceLDES:(DataServiceLDES -> DataService) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.546Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:Snapshot:(Snapshot -> EventStream) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.489Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:Snapshot:(Snapshot -> EventStream) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.546Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:RootNode:(RootNode -> Node) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.489Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:RootNode:(RootNode -> Node) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.546Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:VersieMaterialisatie:(VersieMaterialisatie -> VeranderlijkObject) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.489Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:VersieMaterialisatie:(VersieMaterialisatie -> VeranderlijkObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.546Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:Snapshot:(Snapshot -> VersieEventStream) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.489Z info: Connector Model:OSLO-LDES-AP:OSLO LDES:Snapshot:(Snapshot -> VersieEventStream) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.546Z info: Connector Model:OSLO-LDES-AP:OSLO Generiek:Object:(Object -> VeranderlijkObject) is not an association with a source role. Ignoring this connector.
+2025-05-20T08:40:42.489Z info: Connector Model:OSLO-LDES-AP:OSLO Generiek:Object:(Object -> VeranderlijkObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T07:36:49.547Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-20T08:40:42.490Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-20T07:36:49.547Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP) and fallback URI (http://todo.com/) will be assigned.
+2025-05-20T08:40:42.490Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-20T07:36:49.547Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP:OSLO Generiek) and fallback URI (http://todo.com/) will be assigned.
+2025-05-20T08:40:42.490Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP:OSLO Generiek) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-20T07:36:49.547Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP:OSLO-ObservatiesEnMetingen) and fallback URI (http://todo.com/) will be assigned.
+2025-05-20T08:40:42.490Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP:OSLO-ObservatiesEnMetingen) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-20T07:36:49.547Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP:TREE) and fallback URI (http://todo.com/) will be assigned.
+2025-05-20T08:40:42.490Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP:TREE) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-20T07:36:49.547Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP:LDES) and fallback URI (http://todo.com/) will be assigned.
+2025-05-20T08:40:42.490Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP:LDES) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-20T07:36:49.547Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP:Shape) and fallback URI (http://todo.com/) will be assigned.
+2025-05-20T08:40:42.490Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP:Shape) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-20T07:36:49.547Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP:metadata_DCAT) and fallback URI (http://todo.com/) will be assigned.
+2025-05-20T08:40:42.490Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP:metadata_DCAT) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-20T07:36:49.547Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP:hulppakket) and fallback URI (http://todo.com/) will be assigned.
+2025-05-20T08:40:42.490Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-LDES-AP:hulppakket) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-20T07:36:49.549Z warn: [ConnectorConverterHandler]: Connector (^lid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-20T08:40:42.492Z warn: [ConnectorConverterHandler]: Connector (^lid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-20T07:36:49.549Z warn: [ConnectorConverterHandler]: Connector (snapshotVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-20T08:40:42.492Z warn: [ConnectorConverterHandler]: Connector (snapshotVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-20T07:36:49.549Z warn: [ConnectorConverterHandler]: Connector (versiematerialisatieVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-20T08:40:42.492Z warn: [ConnectorConverterHandler]: Connector (versiematerialisatieVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-20T07:36:49.549Z warn: [ConnectorConverterHandler]: Connector (eventStream) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-20T08:40:42.492Z warn: [ConnectorConverterHandler]: Connector (eventStream) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-20T07:36:49.549Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (eventStream) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-20T08:40:42.492Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (eventStream) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-20T07:36:49.549Z warn: [ConnectorConverterHandler]: Connector (eventStreamView) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-20T08:40:42.492Z warn: [ConnectorConverterHandler]: Connector (eventStreamView) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-20T07:36:49.549Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (eventStreamView) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-20T08:40:42.493Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (eventStreamView) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-20T07:36:49.549Z warn: [ConnectorConverterHandler]: Connector (eventstreamView) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-20T08:40:42.493Z warn: [ConnectorConverterHandler]: Connector (eventstreamView) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-20T07:36:49.549Z warn: [ConnectorConverterHandler]: Connector (rootNode) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-20T08:40:42.493Z warn: [ConnectorConverterHandler]: Connector (rootNode) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-20T07:36:49.549Z warn: [ConnectorConverterHandler]: Connector (relatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-20T08:40:42.493Z warn: [ConnectorConverterHandler]: Connector (relatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-20T07:36:49.549Z warn: [ConnectorConverterHandler]: Connector (viewOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-20T08:40:42.493Z warn: [ConnectorConverterHandler]: Connector (viewOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-20T07:36:49.549Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (viewOf) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-20T08:40:42.493Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (viewOf) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-20T07:36:49.549Z warn: [ConnectorConverterHandler]: Connector (viewOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-20T08:40:42.493Z warn: [ConnectorConverterHandler]: Connector (viewOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-20T07:36:49.549Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (viewOf) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-20T08:40:42.493Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (viewOf) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-20T07:36:49.555Z warn: [ConverterHandler]: Entity with path Model:OSLO-LDES-AP:TREE:Collection:shape has already a value for ap-definition-nl in language nl, but will be overwritten.
+2025-05-20T08:40:42.499Z warn: [ConverterHandler]: Entity with path Model:OSLO-LDES-AP:TREE:Collection:shape has already a value for ap-definition-nl in language nl, but will be overwritten.
 
 #||# -------------------------------------
 
