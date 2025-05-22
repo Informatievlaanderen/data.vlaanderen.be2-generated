@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-05-20T08:48:35.708Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b13fb05ecc6c48ae66e55570adcfce4d67d7e400e75fa3a1e7526c617d9bf497](all-DCAT-AP-VL-20.jsonld#L4267)".
+2025-05-22T07:48:57.241Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b13fb05ecc6c48ae66e55570adcfce4d67d7e400e75fa3a1e7526c617d9bf497](all-DCAT-AP-VL-20.jsonld#L4267)".
 
-2025-05-20T08:48:35.710Z warn: Unable to find the description for subject "[urn:oslo-toolchain:441482222127cc2b1c5ea440bf8d1a5231ec7fe575b0f337bd172ae01fc66eef](all-DCAT-AP-VL-20.jsonld#L4287)".
+2025-05-22T07:48:57.243Z warn: Unable to find the description for subject "[urn:oslo-toolchain:441482222127cc2b1c5ea440bf8d1a5231ec7fe575b0f337bd172ae01fc66eef](all-DCAT-AP-VL-20.jsonld#L4287)".
 
