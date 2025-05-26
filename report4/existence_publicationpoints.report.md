@@ -437,6 +437,7 @@ index.html check
 #||#    + checking /home/circleci/project/config/test/shok.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated/doc/vocabularium/shok/ontwerpstandaard/2025-05-26'
 
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/shok/ontwerpstandaard/2025-05-26/index.html'
@@ -542,8 +543,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/index.html'
-error: missing '/tmp/generated/ns/zaalreservatie/index.html'
 
 #||# checking publication points in directory /home/circleci/project/config/production
 #||# 
