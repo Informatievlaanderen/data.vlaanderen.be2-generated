@@ -136,6 +136,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/schuldbeheer.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/shok.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/slim-ruimtelijk-plannen.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/slimme-raadpleegomgeving.publication.json
