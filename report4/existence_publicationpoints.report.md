@@ -437,7 +437,6 @@ index.html check
 #||#    + checking /home/circleci/project/config/test/shok.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/vocabularium/shok/ontwerpstandaard/2025-05-26'
 
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/shok/ontwerpstandaard/2025-05-26/index.html'
