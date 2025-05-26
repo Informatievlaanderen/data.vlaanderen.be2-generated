@@ -6,7 +6,7 @@
 | --- | --- |
 | mrg | Merge translations to create for each language a single source of truth |
 | aut | Autotranslate the translation files, if active |
-| ns | Validate the used namespaces in the jsonldƒ |
+| ns | Validate the used namespaces in the jsonld |
 | uml | Extraction of the data out of the UML |
 | rdf | RDF file generation |
 | issu | Open Issues |
