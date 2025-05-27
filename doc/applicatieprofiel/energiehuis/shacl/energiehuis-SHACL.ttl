@@ -39,7 +39,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#InteresseopwekkingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#InformatievoorzieningShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#AdviesverleningShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#LocatieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#PlaatsShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#RenovatiebegeleidingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#EnergiescanShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#GebouwShape>,
@@ -51,6 +51,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#ValutaShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#KlantencontactShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#ProfessioneelcontactShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#LocatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#LiteralShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#LangstringShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#KwantitatievewaardeShape>,
@@ -60,7 +61,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#DatetimeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#DurationShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#IntegerShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#GeografischeNaamShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#GeografischenaamShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#ContactinfoShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#StringShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#DateShape>,
@@ -547,7 +548,7 @@
   ];
   shacl:targetClass schemas:MonetaryAmount .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#GeografischeNaamShape> a shacl:NodeShape;
+<https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#GeografischenaamShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass rdf:langString .
 
@@ -700,30 +701,14 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#LocatieShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#Locatie.Plaatsnaam>;
-    shacl:datatype rdf:langString;
-    shacl:description "Naam van de plaats of van het gebied."@nl;
-    shacl:minCount "1";
-    shacl:name "plaatsnaam"@nl;
-    shacl:path rdfs:label
-  ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#Locatie.GeometrieVanDePlaatsOfHetGebied.>;
-    shacl:class <http://www.w3.org/ns/locn#Geometry>;
-    shacl:description "Geometrie van de plaats of het gebied."@nl;
-    shacl:maxCount "1";
-    shacl:name "Geometrie van de plaats of het gebied."@nl;
-    shacl:path <http://www.w3.org/ns/locn#geometry>
-  ];
-  shacl:targetClass dc:Location,
-    prov:Location .
+  shacl:targetClass prov:Location .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#MomentShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#Moment.InXsdDatumtijd>;
     shacl:datatype xsd:dateTime;
-    shacl:description "Positie in de tijd uitgedrukt dmv xsd:dateTime."@nl;
+    shacl:description "Positie ve Moment, uitgedrukt dmv xsd:dateTime."@nl;
     shacl:maxCount "1";
     shacl:name "in XSD datumTijd"@nl;
     shacl:path <http://www.w3.org/2006/time#inXSDDateTime>
@@ -788,10 +773,10 @@
     shacl:name "voorkeursnaam"@nl;
     shacl:path skos:prefLabel
   ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#Organisatie.Contactpunt>;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#Organisatie.Contactinfo>;
     shacl:class schema:ContactPoint;
     shacl:description "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."@nl;
-    shacl:name "contactpunt"@nl;
+    shacl:name "contactinfo"@nl;
     shacl:path schema:contactPoint
   ];
   shacl:targetClass org:Organization .
@@ -854,7 +839,7 @@
   shacl:property [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#Periode.InEdtf>;
     shacl:datatype rdfs:Literal;
-    shacl:description "Waarde van een Periode, uitgedrukt in EDTF."@nl;
+    shacl:description "Periode uitgedrukt in EDTF."@nl;
     shacl:maxCount "1";
     shacl:name "in EDTF"@nl;
     shacl:path <https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription>
@@ -901,6 +886,25 @@
     shacl:path schema:contactPoint
   ];
   shacl:targetClass <http://www.w3.org/ns/person#Person> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#PlaatsShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#Plaats.Plaatsnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de plaats of van het gebied."@nl;
+    shacl:minCount "1";
+    shacl:name "plaatsnaam"@nl;
+    shacl:path rdfs:label
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#Plaats.Geometrie>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "Geometrie van de plaats of het gebied."@nl;
+    shacl:maxCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://www.w3.org/ns/locn#geometry>
+  ];
+  shacl:targetClass dc:Location .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18#PlaatsbezoekShape> a shacl:NodeShape;
   shacl:closed false;
