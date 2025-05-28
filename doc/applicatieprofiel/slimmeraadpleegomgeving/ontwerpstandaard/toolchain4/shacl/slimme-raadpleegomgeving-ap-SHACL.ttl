@@ -34,7 +34,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#LocatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#FragmentselectorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#InstantiePubliekeDienstverleningShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#ActiviteitShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit(generiek)Shape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#ThemaShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#BeslissingsactiviteitShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#ConceptueelPubliekeDienstverleningShape>,
@@ -50,6 +50,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#RolShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#RechtShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#NormatieveBepalingShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit(omgevingsvergunning)Shape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#VerbintenisShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#PeriodeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#DatetimeShape>,
@@ -62,64 +63,68 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#LiteralShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#LangstringShape> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#ActiviteitShape> a shacl:NodeShape;
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit(generiek)Shape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit.Beschrijving>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit(generiek).Type>;
+    shacl:class skos:Concept;
+    shacl:description "Specialisatie van het type activiteit zoals bepaald in W3C Activity Streams."@nl;
+    shacl:name "type"@nl;
+    shacl:path rdf:type
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit(generiek).Genereert>;
+    shacl:class oa:Annotation;
+    shacl:name "genereert"@nl;
+    shacl:path prov:generates
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit(generiek).WasGeassocieerdMet>;
+    shacl:class prov:Agent;
+    shacl:description "Agent die betrokken was bij de activiteit."@nl;
+    shacl:name "was geassocieerd met"@nl;
+    shacl:path prov:wasAssociatedWith
+  ];
+  shacl:targetClass prov:Activity .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit(omgevingsvergunning)Shape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit(omgevingsvergunning).Beschrijving>;
     shacl:datatype rdf:langString;
     shacl:description "De beschrijving van de Activiteit."@nl;
     shacl:maxCount "1";
     shacl:name "beschrijving"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#beschrijving>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit.Type>;
-    shacl:class skos:Concept;
-    shacl:description "Specialisatie van het type activiteit zoals bepaald in W3C Activity Streams."@nl;
-    shacl:name "type"@nl;
-    shacl:path rdf:type
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit.Locatie>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit(omgevingsvergunning).Locatie>;
     shacl:class <https://data.vlaanderen.be/ns/slimmeraadpleegomgeving#RuimtelijkeEenheid>;
     shacl:description "Aanduiding van de plaats waar een Activiteit plaatsvindt, zal vinden, of zou hebben gevonden."@nl;
     shacl:name "locatie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#locatie>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit.JuridischeKwalificatie>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit(omgevingsvergunning).JuridischeKwalificatie>;
     shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#JuridischeKwalificatie>;
     shacl:description "De Juridische Kwalificatie van de Activiteit."@nl;
     shacl:name "juridische kwalificatie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#juridischeKwalificatie>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit.Tijdsbestek>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit(omgevingsvergunning).Tijdsbestek>;
     shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
     shacl:description "Aanduiding van het tijdsbestek van de Activiteit."@nl;
     shacl:name "tijdsbestek"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#tijdsbestek>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit.Rechtssubject>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit(omgevingsvergunning).Rechtssubject>;
     shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject>;
     shacl:name "rechtssubject"@nl;
     shacl:path <https://data.vlaanderen.be/ns/omgevingsvergunning#rechtssubject>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit.Genereert>;
-    shacl:class oa:Annotation;
-    shacl:name "genereert"@nl;
-    shacl:path prov:generates
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit.WasGeassocieerdMet>;
-    shacl:class prov:Agent;
-    shacl:description "Agent die betrokken was bij de activiteit."@nl;
-    shacl:name "was geassocieerd met"@nl;
-    shacl:path prov:wasAssociatedWith
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit.IsDeelVan>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#Activiteit(omgevingsvergunning).IsDeelVan>;
     shacl:class <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit>;
     shacl:description "Verwijzing naar omvattende Activiteiten."@nl;
     shacl:name "is deel van"@nl;
     shacl:path dc:isPartOf
   ];
-  shacl:targetClass prov:Activity,
-    <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4#ActiviteitstypeShape> a shacl:NodeShape;
   shacl:closed false;
