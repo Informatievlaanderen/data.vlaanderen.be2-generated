@@ -1,4 +1,4 @@
-#||# oslo-converter-ea for diagram SHOK
+#||# oslo-converter-ea for diagram SHOK.eap
 
 #||# -------------------------------------
 
