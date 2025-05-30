@@ -1,11 +1,5 @@
 #||# checking publication points in directory /home/circleci/project/config/production
 #||# 
-#||#    + checking /home/circleci/project/config/production/Vrachtwagenparkeren.publication.json
-#||# 
-Directory check
-
-index.html check
-
 #||#    + checking /home/circleci/project/config/production/adres.publication.json
 #||# 
 Directory check
@@ -150,6 +144,14 @@ index.html check
 Directory check
 
 index.html check
+
+#||#    + checking /home/circleci/project/config/production/energiemanagementsysteem.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/energiemanagementsysteem/index.html'
 
 #||#    + checking /home/circleci/project/config/production/erosiepoel.publication.json
 #||# 
@@ -509,6 +511,12 @@ Directory check
 index.html check
 
 #||#    + checking /home/circleci/project/config/production/voorwaarden-dienstverlening.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/production/vrachtwagenparkeren.publication.json
 #||# 
 Directory check
 

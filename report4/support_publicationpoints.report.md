@@ -1,7 +1,5 @@
 #||# checking publication points in directory /home/circleci/project/config/production
 #||# 
-#||#   + adding supporting /home/circleci/project/config/production/Vrachtwagenparkeren.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/production/adres.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/air-and-water.publication.json
@@ -41,6 +39,8 @@
 #||#   + adding supporting /home/circleci/project/config/production/dossier.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/energiehuis.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/energiemanagementsysteem.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/erosiepoel.publication.json
 #||#  
@@ -157,6 +157,8 @@
 #||#   + adding supporting /home/circleci/project/config/production/vlaamsecodex.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/voorwaarden-dienstverlening.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/production/vrachtwagenparkeren.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/waterkwaliteit.publication.json
 #||#  
