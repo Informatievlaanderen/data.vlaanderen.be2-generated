@@ -2,263 +2,263 @@
 
 #||# -------------------------------------
 
-2025-05-30T11:41:26.547Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO_Zaalreservatie:OSLO-Organisatie:PubliekeOrganisatie:opeenvolging)
+2025-05-30T13:57:37.521Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO_Zaalreservatie:OSLO-Organisatie:PubliekeOrganisatie:opeenvolging)
 
-2025-05-30T11:41:26.549Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO_Zaalreservatie:OSLO-Transactie:PubliekeDienstverlening (consumptie):vereist)
+2025-05-30T13:57:37.522Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO_Zaalreservatie:OSLO-Transactie:PubliekeDienstverlening (consumptie):vereist)
 
-2025-05-30T11:41:26.549Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO_Zaalreservatie:OSLO-Transactie:PubliekeDienstverlening (consumptie):isGerelateerdMet)
+2025-05-30T13:57:37.522Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO_Zaalreservatie:OSLO-Transactie:PubliekeDienstverlening (consumptie):isGerelateerdMet)
 
-2025-05-30T11:41:26.551Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Vastgoed:Aanvraag:(Aanvraag -> Output) is not an association with a source role. Ignoring this connector.
+2025-05-30T13:57:37.525Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Vastgoed:Aanvraag:(Aanvraag -> Output) is not an association with a source role. Ignoring this connector.
 
-2025-05-30T11:41:26.552Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:heefStatus is not an association with a source role. Ignoring this connector.
+2025-05-30T13:57:37.525Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:heefStatus is not an association with a source role. Ignoring this connector.
 
-2025-05-30T11:41:26.552Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:heefStatus has name "heefStatus". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-30T13:57:37.526Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:heefStatus has name "heefStatus". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-30T11:41:26.552Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:isInstantieVan is not an association with a source role. Ignoring this connector.
+2025-05-30T13:57:37.526Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:isInstantieVan is not an association with a source role. Ignoring this connector.
 
-2025-05-30T11:41:26.552Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:isInstantieVan has name "isInstantieVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-30T13:57:37.526Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:isInstantieVan has name "isInstantieVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-30T11:41:26.553Z info: Connector Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Buitenruimte:(Buitenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
+2025-05-30T13:57:37.526Z info: Connector Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Buitenruimte:(Buitenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
 
-2025-05-30T11:41:26.553Z info: Connector Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Binnenruimte:(Binnenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
+2025-05-30T13:57:37.526Z info: Connector Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Binnenruimte:(Binnenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
 
-2025-05-30T11:41:26.553Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:aangebodenBinnen is not an association with a source role. Ignoring this connector.
+2025-05-30T13:57:37.527Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:aangebodenBinnen is not an association with a source role. Ignoring this connector.
 
-2025-05-30T11:41:26.553Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:aangebodenBinnen has name "aangebodenBinnen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-30T13:57:37.527Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:aangebodenBinnen has name "aangebodenBinnen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-30T11:41:26.553Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:heeftCriterium is not an association with a source role. Ignoring this connector.
+2025-05-30T13:57:37.527Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:heeftCriterium is not an association with a source role. Ignoring this connector.
 
-2025-05-30T11:41:26.553Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:heeftCriterium has name "heeftCriterium". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-30T13:57:37.527Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:heeftCriterium has name "heeftCriterium". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-30T11:41:26.553Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:volgt is not an association with a source role. Ignoring this connector.
+2025-05-30T13:57:37.527Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:volgt is not an association with a source role. Ignoring this connector.
 
-2025-05-30T11:41:26.554Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:volgt has name "volgt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-30T13:57:37.527Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:PubliekeDienstverlening:volgt has name "volgt". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-30T11:41:26.554Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiedienst:(Infrastructuurreservatiedienst -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
+2025-05-30T13:57:37.527Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiedienst:(Infrastructuurreservatiedienst -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-05-30T11:41:26.554Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Generiek:FormeelKader:isGerelateerdAan is not an association with a source role. Ignoring this connector.
+2025-05-30T13:57:37.528Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Generiek:FormeelKader:isGerelateerdAan is not an association with a source role. Ignoring this connector.
 
-2025-05-30T11:41:26.554Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Generiek:FormeelKader:isGerelateerdAan has name "isGerelateerdAan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-30T13:57:37.528Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Generiek:FormeelKader:isGerelateerdAan has name "isGerelateerdAan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-30T11:41:26.554Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:Procedure:implementeert is not an association with a source role. Ignoring this connector.
+2025-05-30T13:57:37.528Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:Procedure:implementeert is not an association with a source role. Ignoring this connector.
 
-2025-05-30T11:41:26.554Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:Procedure:implementeert has name "implementeert". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-05-30T13:57:37.528Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Dienst:Procedure:implementeert has name "implementeert". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-05-30T11:41:26.555Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.529Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.555Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie) and fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.529Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.555Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.529Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.555Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.529Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.555Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Vastgoed) and fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.529Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Vastgoed) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.555Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Perceel) and fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.529Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Perceel) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.555Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OLSO-SlimmeStadsdistributie) and fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.529Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OLSO-SlimmeStadsdistributie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.555Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-CultureelErfgoed) and fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.529Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-CultureelErfgoed) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.555Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Consent) and fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.529Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-Consent) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.556Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-adresregister) and fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.529Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:OSLO-adresregister) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.556Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:MobiVOC) and fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.529Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:MobiVOC) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.556Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:schema.org) and fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.529Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO_Zaalreservatie:schema.org) and fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.559Z warn: [ConnectorConverterHandler]: Connector (aanvrager) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.533Z warn: [ConnectorConverterHandler]: Connector (aanvrager) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.559Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (aanvrager) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.533Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (aanvrager) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.559Z warn: [ConnectorConverterHandler]: Connector (aanvraag) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.533Z warn: [ConnectorConverterHandler]: Connector (aanvraag) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.559Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (aanvraag) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.533Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (aanvraag) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.559Z warn: [ConnectorConverterHandler]: Connector (superInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.533Z warn: [ConnectorConverterHandler]: Connector (superInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Connector (subInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Connector (subInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Connector (heefStatus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Connector (heefStatus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heefStatus) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heefStatus) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Connector (heefStatus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Connector (heefStatus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heefStatus) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heefStatus) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Connector (isInstantieVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Connector (isInstantieVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (isInstantieVan) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (isInstantieVan) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Connector (isInstantieVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Connector (isInstantieVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (isInstantieVan) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (isInstantieVan) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Connector (dienstverlening) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Connector (dienstverlening) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dienstverlening) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dienstverlening) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Connector (heeftParticiperende) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Connector (heeftParticiperende) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftParticiperende) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftParticiperende) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Connector (^heeftVerantwoordelijke) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Connector (^heeftVerantwoordelijke) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (^heeftVerantwoordelijke) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (^heeftVerantwoordelijke) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Connector (dienstverlening) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Connector (dienstverlening) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Connector (implementeert) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Connector (implementeert) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (implementeert) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (implementeert) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Connector (implementeert) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Connector (implementeert) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (implementeert) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (implementeert) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Connector (aangebodenBinnen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Connector (aangebodenBinnen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (aangebodenBinnen) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (aangebodenBinnen) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Connector (aangebodenBinnen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Connector (aangebodenBinnen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (aangebodenBinnen) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (aangebodenBinnen) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Connector (^reservatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Connector (^reservatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (^reservatie) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (^reservatie) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Connector (infrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Connector (infrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-30T11:41:26.560Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (infrastructuur) and the fallback URI (http://todo.com/) will be assigned.
+2025-05-30T13:57:37.534Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (infrastructuur) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-05-30T11:41:26.567Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Dienst:OpeningsurenSpecificatie has an empty value for tag ap-usageNote-nl.
+2025-05-30T13:57:37.542Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Dienst:OpeningsurenSpecificatie has an empty value for tag ap-usageNote-nl.
 
-2025-05-30T11:41:26.569Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:Plaats:geometrie).
+2025-05-30T13:57:37.544Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:Plaats:geometrie).
 
-2025-05-30T11:41:26.570Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:Geometrie:gml).
+2025-05-30T13:57:37.545Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:Geometrie:gml).
 
-2025-05-30T11:41:26.570Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:Geometrie:wkt).
+2025-05-30T13:57:37.545Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:Geometrie:wkt).
 
-2025-05-30T11:41:26.570Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Faciliteit:beschrijving).
+2025-05-30T13:57:37.545Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Faciliteit:beschrijving).
 
-2025-05-30T11:41:26.571Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:KwantitatieveWaarde:standaardEenheid).
+2025-05-30T13:57:37.545Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:KwantitatieveWaarde:standaardEenheid).
 
-2025-05-30T11:41:26.571Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:KwantitatieveWaarde:waarde).
+2025-05-30T13:57:37.545Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:KwantitatieveWaarde:waarde).
 
-2025-05-30T11:41:26.571Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Faciliteit:document).
+2025-05-30T13:57:37.546Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Faciliteit:document).
 
-2025-05-30T11:41:26.572Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Faciliteit:gebruiker).
+2025-05-30T13:57:37.546Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Faciliteit:gebruiker).
 
-2025-05-30T11:41:26.572Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Faciliteit:type).
+2025-05-30T13:57:37.546Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Faciliteit:type).
 
-2025-05-30T11:41:26.572Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Beschikbaarheid:gebruiker).
+2025-05-30T13:57:37.547Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Beschikbaarheid:gebruiker).
 
-2025-05-30T11:41:26.572Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Beschikbaarheid:openingsuren).
+2025-05-30T13:57:37.547Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Beschikbaarheid:openingsuren).
 
-2025-05-30T11:41:26.572Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Beschikbaarheid:periode).
+2025-05-30T13:57:37.547Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Beschikbaarheid:periode).
 
-2025-05-30T11:41:26.572Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:beheer).
+2025-05-30T13:57:37.547Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:beheer).
 
-2025-05-30T11:41:26.572Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:beschrijving).
+2025-05-30T13:57:37.547Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:beschrijving).
 
-2025-05-30T11:41:26.573Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:exploitatie).
+2025-05-30T13:57:37.547Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:exploitatie).
 
-2025-05-30T11:41:26.573Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:observatie).
+2025-05-30T13:57:37.548Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:observatie).
 
-2025-05-30T11:41:26.573Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:officieleStatus).
+2025-05-30T13:57:37.548Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:officieleStatus).
 
-2025-05-30T11:41:26.573Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:permanentie).
+2025-05-30T13:57:37.548Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:permanentie).
 
-2025-05-30T11:41:26.573Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:reservatie).
+2025-05-30T13:57:37.548Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:reservatie).
 
-2025-05-30T11:41:26.573Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:staat).
+2025-05-30T13:57:37.548Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:staat).
 
-2025-05-30T11:41:26.573Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Gebruik:exclusiviteit).
+2025-05-30T13:57:37.548Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Gebruik:exclusiviteit).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Gebruik:gebruiker).
+2025-05-30T13:57:37.548Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Gebruik:gebruiker).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Gebruik:periode).
+2025-05-30T13:57:37.549Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Gebruik:periode).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Gebruik:voorwaarde).
+2025-05-30T13:57:37.549Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Gebruik:voorwaarde).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Capaciteit:beschrijving).
+2025-05-30T13:57:37.549Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Capaciteit:beschrijving).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Capaciteit:standaardeenheid).
+2025-05-30T13:57:37.549Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Capaciteit:standaardeenheid).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Capaciteit:type).
+2025-05-30T13:57:37.549Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Capaciteit:type).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Capaciteit:waarde).
+2025-05-30T13:57:37.549Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Capaciteit:waarde).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Eigenaarschap:eigenaar).
+2025-05-30T13:57:37.549Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Eigenaarschap:eigenaar).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Eigenaarschap:type).
+2025-05-30T13:57:37.549Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Eigenaarschap:type).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Dimensie:beschrijving).
+2025-05-30T13:57:37.549Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Dimensie:beschrijving).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Dimensie:standaardEenheid).
+2025-05-30T13:57:37.549Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Dimensie:standaardEenheid).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Dimensie:type).
+2025-05-30T13:57:37.549Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Dimensie:type).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Dimensie:waarde).
+2025-05-30T13:57:37.549Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Dimensie:waarde).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Cultuurparticipatie:Activiteit:Type).
+2025-05-30T13:57:37.549Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Cultuurparticipatie:Activiteit:Type).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Toegankelijkheid:niveau).
+2025-05-30T13:57:37.549Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Toegankelijkheid:niveau).
 
-2025-05-30T11:41:26.574Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Toegankelijkheid:onderdeel).
+2025-05-30T13:57:37.549Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Toegankelijkheid:onderdeel).
 
-2025-05-30T11:41:26.575Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:eigenaar).
+2025-05-30T13:57:37.550Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:eigenaar).
 
-2025-05-30T11:41:26.575Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:administratieveEenheidNiveau1).
+2025-05-30T13:57:37.550Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:administratieveEenheidNiveau1).
 
-2025-05-30T11:41:26.576Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiedienst:^beschrijving has already a value for ap-usageNote in language nl, but will be overwritten.
+2025-05-30T13:57:37.551Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiedienst:^beschrijving has already a value for ap-usageNote in language nl, but will be overwritten.
 
-2025-05-30T11:41:26.576Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiedienst:^taal).
+2025-05-30T13:57:37.551Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiedienst:^taal).
 
-2025-05-30T11:41:26.576Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiedienst:^contactinfo).
+2025-05-30T13:57:37.551Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiedienst:^contactinfo).
 
-2025-05-30T11:41:26.576Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:administratieveEenheidNiveau2).
+2025-05-30T13:57:37.552Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:administratieveEenheidNiveau2).
 
-2025-05-30T11:41:26.576Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:adresgebied).
+2025-05-30T13:57:37.552Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:adresgebied).
 
-2025-05-30T11:41:26.577Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:Plaats:plaatsnaam).
+2025-05-30T13:57:37.552Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:Plaats:plaatsnaam).
 
-2025-05-30T11:41:26.577Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:gemeentenaam).
+2025-05-30T13:57:37.552Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:gemeentenaam).
 
-2025-05-30T11:41:26.577Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:land).
+2025-05-30T13:57:37.552Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:land).
 
-2025-05-30T11:41:26.577Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:locatienaam).
+2025-05-30T13:57:37.552Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:locatienaam).
 
-2025-05-30T11:41:26.577Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:postnaam).
+2025-05-30T13:57:37.553Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:postnaam).
 
-2025-05-30T11:41:26.577Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:straatnaam).
+2025-05-30T13:57:37.553Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:straatnaam).
 
-2025-05-30T11:41:26.577Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:volledigAdres).
+2025-05-30T13:57:37.553Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:volledigAdres).
 
-2025-05-30T11:41:26.577Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:Locatie:adres).
+2025-05-30T13:57:37.553Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:Locatie:adres).
 
-2025-05-30T11:41:26.577Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiestatus:type).
+2025-05-30T13:57:37.553Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiestatus:type).
 
-2025-05-30T11:41:26.578Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:toegang).
+2025-05-30T13:57:37.553Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:toegang).
 
-2025-05-30T11:41:26.578Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:veiligheidsvereisten).
+2025-05-30T13:57:37.553Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Infrastructuur:veiligheidsvereisten).
 
-2025-05-30T11:41:26.578Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:ContactInfo:aanschrijfvorm).
+2025-05-30T13:57:37.553Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:ContactInfo:aanschrijfvorm).
 
-2025-05-30T11:41:26.578Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:ContactInfo:adres).
+2025-05-30T13:57:37.553Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:ContactInfo:adres).
 
-2025-05-30T11:41:26.578Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:ContactInfo:beschikbaarheid).
+2025-05-30T13:57:37.553Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:ContactInfo:beschikbaarheid).
 
-2025-05-30T11:41:26.578Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:ContactInfo:openingsuren).
+2025-05-30T13:57:37.554Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Generiek:ContactInfo:openingsuren).
 
-2025-05-30T11:41:26.579Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Plaatsbeschrijving:bijlage).
+2025-05-30T13:57:37.554Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Plaatsbeschrijving:bijlage).
 
-2025-05-30T11:41:26.584Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (^reservatie).
+2025-05-30T13:57:37.560Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (^reservatie).
 
-2025-05-30T11:41:26.591Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (infrastructuur).
+2025-05-30T13:57:37.561Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (infrastructuur).
 
 #||# -------------------------------------
 
