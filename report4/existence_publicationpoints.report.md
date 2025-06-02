@@ -546,6 +546,4 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/zaalreservatie/index.html'
-error: missing '/tmp/generated/ns/zaalreservatie/index.html'
 
