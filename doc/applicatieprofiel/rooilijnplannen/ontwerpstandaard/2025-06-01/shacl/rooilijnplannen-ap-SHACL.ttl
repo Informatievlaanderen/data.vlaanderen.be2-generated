@@ -98,13 +98,6 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#BesluitShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Besluit.Beschrijving>;
-    shacl:datatype xsd:string;
-    shacl:description "Een beknopte beschrijving van het Besluit."@nl;
-    shacl:maxCount "1";
-    shacl:name "beschrijving"@nl;
-    shacl:path <http://data.europa.eu/eli/ontology#description>
-  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Besluit.Publicatiedatum>;
     shacl:datatype xsd:date;
     shacl:description "De officiële publicatiedatum van het Besluit."@nl;
@@ -145,7 +138,7 @@
     shacl:path <https://data.vlaanderen.be/ns/rooilijn#Bouwlijn.kenmerkLinks>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Bouwlijn.Geometrie>;
-    shacl:class <https://data.vlaanderen.be/ns/rooilijn#GeneriekeCurve>;
+    shacl:class <http://www.opengis.net/ont/gml#AbstractCurve>;
     shacl:description "Geometrie van de Bouwlijn."@nl;
     shacl:maxCount "1";
     shacl:name "geometrie"@nl;
@@ -223,11 +216,11 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#GeneriekecurveShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/rooilijn#GeneriekeCurve> .
+  shacl:targetClass <http://www.opengis.net/ont/gml#AbstractCurve> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#GeneriekvlakShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/rooilijn#Generiekvlak> .
+  shacl:targetClass <http://www.opengis.net/ont/gml#AbstractSurface> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#GeometrieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -252,7 +245,7 @@
   shacl:closed false;
   shacl:property [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Getroffenoppervlak.Geometrie>;
-    shacl:class <https://data.vlaanderen.be/ns/rooilijn#Generiekvlak>;
+    shacl:class <http://www.opengis.net/ont/gml#AbstractSurface>;
     shacl:description "Geometrie van het getroffen oppervlak."@nl;
     shacl:maxCount "1";
     shacl:name "geometrie"@nl;
@@ -312,6 +305,14 @@
     shacl:name "datum bijwerking"@nl;
     shacl:path <https://data.vlaanderen.be/ns/perceel#datumbijwerking>
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#KadastraalPlanperceel.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "De identificator van de Ruimtelijke Eenheid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#KadastraalPlanperceel.Geometrie>;
     shacl:class <https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheidGeometrie>;
     shacl:description "Geometrie van de ruimtelijke eenheid en metadata over hoe deze werd bepaald."@nl;
@@ -344,6 +345,13 @@
     shacl:minCount "1";
     shacl:name "waarde"@nl;
     shacl:path schemas:value
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Kwantitatievewaarde.Eenheid>;
+    shacl:class skos:Concept;
+    shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "eenheid"@nl;
+    shacl:path schemas:unitCode
   ];
   shacl:targetClass schemas:QuantitativeValue .
 
@@ -581,7 +589,7 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Plan.Identificator>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
-    shacl:description "Identificator van het Rooilijnplan"@nl;
+    shacl:description "Identificator van het Plan."@nl;
     shacl:name "identificator"@nl;
     shacl:path <http://www.w3.org/ns/adms#Identifier>
   ], [
@@ -617,7 +625,7 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Planelement.Identificator>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
-    shacl:description "Identificator van het Pplanelement"@nl;
+    shacl:description "Identificator van het Planelement"@nl;
     shacl:name "identificator"@nl;
     shacl:path <http://www.w3.org/ns/adms#Identifier>
   ], [
@@ -655,7 +663,7 @@
     shacl:path <https://data.vlaanderen.be/ns/rooilijn#Rooilijn.kenmerkLinks>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Rooilijn.Geometrie>;
-    shacl:class <https://data.vlaanderen.be/ns/rooilijn#GeneriekeCurve>;
+    shacl:class <http://www.opengis.net/ont/gml#AbstractCurve>;
     shacl:description "Geometrie van de Rooilijn."@nl;
     shacl:maxCount "1";
     shacl:name "geometrie"@nl;
@@ -762,11 +770,11 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Ruimtelijkuitvoeringsplan.Status>;
     shacl:class <https://data.vlaanderen.be/ns/rooilijn#Status>;
-    shacl:description "Verwijzing naar de Status van het Plan."@nl;
+    shacl:description "Verwijzing naar de Status van het RuimtelijkUitvoeringspan."@nl;
     shacl:name "status"@nl;
     shacl:path <http://purl.org/vocab/lifecycle/schema#state>
   ];
-  shacl:targetClass <http://todo.com/RuimtelijkuitvoeringsPlan> .
+  shacl:targetClass <http://todo.com/RuimtelijkUitvoeringsplan> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#StatusShape> a shacl:NodeShape;
   shacl:closed false;
@@ -823,6 +831,13 @@
     shacl:name "aandeel"@nl;
     shacl:path <https://data.vlaanderen.be/ns/perceel#aandeel>
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Zakelijkrecht.Geldigheidsperiode>;
+    shacl:class <http://www.w3.org/2006/time#ProperInterval>;
+    shacl:description "Tijdsinterval waarbinnen het zakelijk recht van toepassing is."@nl;
+    shacl:maxCount "1";
+    shacl:name "geldigheidsperiode"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#geldigheidsperiode>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Zakelijkrecht.Type>;
     shacl:class skos:Concept;
     shacl:description "De aard van het zakelijk recht."@nl;
@@ -831,18 +846,20 @@
     shacl:name "type"@nl;
     shacl:path <https://data.vlaanderen.be/ns/perceel#ZakelijkRecht.type>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Zakelijkrecht.Zakelijkrecht.kadastraalpatrimoniumperceel>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Zakelijkrecht.Kadastraalpatrimoniumperceel>;
     shacl:class <https://data.vlaanderen.be/ns/perceel#KadastraalPatrimoniumperceel>;
+    shacl:description "KadastraalPatrimoniumperceel waarop het zakelijkrecht betrekking heeft."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "ZakelijkRecht.KadastraalPatrimoniumperceel";
-    shacl:path <https://data.vlaanderen.be/ns/perceel#ZakelijkRecht.KadastraalPatrimoniumperceel>
+    shacl:name "kadastraalPatrimoniumperceel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#ZakelijkRecht.kadastraalPatrimoniumperceel>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Zakelijkrecht.Zakelijkrecht.agent>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Zakelijkrecht.Agent>;
     shacl:class dc:Agent;
+    shacl:description "Agent die het ZakelijkRecht bezit."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "ZakelijkRecht.Agent";
-    shacl:path <http://todo.com/ZakelijkRecht.Agent>
+    shacl:name "agent"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/perceel#ZakelijkRecht.agent>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/perceel#ZakelijkRecht> .
