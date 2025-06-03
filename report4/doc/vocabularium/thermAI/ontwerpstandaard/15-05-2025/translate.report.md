@@ -12,5 +12,5 @@ WARNING The entered language values are the same!
 
 #||# Write complete  
 
-#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/thermAI/ontwerpstandaard/15-05-2025/translation/thermAI_nl.json  
+#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/thermAI/ontwerpstandaard/15-05-2025/translation/thermografische-gebouwanalyse_nl.json  
 

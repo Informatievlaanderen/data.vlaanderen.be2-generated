@@ -14,5 +14,5 @@
 
 #||# start writing  
 
-#||# The file has been saved to /tmp/workspace/report4/doc/vocabularium/thermAI/ontwerpstandaard/15-05-2025/html/meta_thermAI_nl.json  
+#||# The file has been saved to /tmp/workspace/report4/doc/vocabularium/thermAI/ontwerpstandaard/15-05-2025/html/meta_thermografische-gebouwanalyse_nl.json  
 
