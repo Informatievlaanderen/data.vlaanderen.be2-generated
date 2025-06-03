@@ -146,6 +146,14 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/test/energiemanagementsysteem.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/energiemanagementsysteem/index.html'
+
 #||#    + checking /home/circleci/project/config/test/erosiepoel.publication.json
 #||# 
 Directory check
@@ -470,13 +478,11 @@ Directory check
 
 index.html check
 
-#||#    + checking /home/circleci/project/config/test/thermAI.publication.json
+#||#    + checking /home/circleci/project/config/test/thermografische-gebouwanalyse.publication.json
 #||# 
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/thermAI/ontwerpstandaard/15-05-2025/index.html'
-error: missing '/tmp/generated/doc/vocabularium/thermAI/ontwerpstandaard/15-05-2025/index.html'
 
 #||#    + checking /home/circleci/project/config/test/toestemming.publication.json
 #||# 

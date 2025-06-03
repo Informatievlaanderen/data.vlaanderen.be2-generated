@@ -44,6 +44,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/energiehuis.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/energiemanagementsysteem.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/erosiepoel.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/feitelijke-verenigingen.publication.json
@@ -146,7 +148,7 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/subsidie.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/test/thermAI.publication.json
+#||#   + adding supporting /home/circleci/project/config/test/thermografische-gebouwanalyse.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/toestemming.publication.json
 #||#  
