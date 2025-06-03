@@ -449,9 +449,9 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/shok/ontwerpstandaard/2025-05-26/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/shok/ontwerpstandaard/2025-06-03/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/shok/index.html'
-error: missing '/tmp/generated/doc/vocabularium/shok/ontwerpstandaard/2025-05-26/index.html'
+error: missing '/tmp/generated/doc/vocabularium/shok/ontwerpstandaard/2025-06-03/index.html'
 error: missing '/tmp/generated/ns/shok/index.html'
 
 #||#    + checking /home/circleci/project/config/test/slim-ruimtelijk-plannen.publication.json
