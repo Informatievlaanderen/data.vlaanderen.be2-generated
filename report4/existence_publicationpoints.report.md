@@ -432,10 +432,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/index.html'
-error: missing '/tmp/generated/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-06-01/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/rooilijnplannen/index.html'
-error: missing '/tmp/generated/doc/ns/rooilijn/index.html'
 
 #||#    + checking /home/circleci/project/config/test/ruimtelijkebereiken.publication.json
 #||# 
