@@ -1,5 +1,7 @@
 #||# checking publication points in directory /home/circleci/project/config/test
 #||# 
+#||#   + adding supporting /home/circleci/project/config/test/SmartInnovationFactory.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/Vrachtwagenparkeren.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/adres.publication.json

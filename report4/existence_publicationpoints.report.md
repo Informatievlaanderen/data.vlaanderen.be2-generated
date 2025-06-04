@@ -1,5 +1,13 @@
 #||# checking publication points in directory /home/circleci/project/config/test
 #||# 
+#||#    + checking /home/circleci/project/config/test/SmartInnovationFactory.publication.json
+#||# 
+Directory check
+error: missing '/tmp/generated/doc/implementatiemodel/SIF'
+
+index.html check
+error: missing '/tmp/generated/doc/implementatiemodel/SIF/index.html'
+
 #||#    + checking /home/circleci/project/config/test/Vrachtwagenparkeren.publication.json
 #||# 
 Directory check
