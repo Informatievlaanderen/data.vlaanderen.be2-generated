@@ -1,7 +1,5 @@
 #||# checking publication points in directory /home/circleci/project/config/test
 #||# 
-#||#   + adding supporting /home/circleci/project/config/test/SmartInnovationFactory.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/test/Vrachtwagenparkeren.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/adres.publication.json
@@ -148,6 +146,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/slimme-stadsdistributie.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/smart-innovation-factory.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/subsidie.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/thermAI.publication.json
@@ -251,6 +251,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/waterdelen",
   "/tmp/generated/doc/applicatieprofiel/watervoorkomen",
   "/tmp/generated/doc/applicatieprofiel/wegenregister",
+  "/tmp/generated/doc/vocabularium/SIF/ontwerpstandaard/2025-06-04",
   "/tmp/generated/doc/vocabularium/besluit/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/bestuur/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/energiehuis/ontwerpstandaard/test",
@@ -283,6 +284,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/toestemming",
   "/tmp/generated/doc/vocabularium/toestemming/ontwerpdocument/2020-01-06",
   "/tmp/generated/ns/FeitelijkeVerenigingen",
+  "/tmp/generated/ns/SIF",
   "/tmp/generated/ns/bodem-en-ondergrond",
   "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
   "/tmp/generated/ns/grondboringen",

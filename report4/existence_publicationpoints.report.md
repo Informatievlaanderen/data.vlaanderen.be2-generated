@@ -1,13 +1,5 @@
 #||# checking publication points in directory /home/circleci/project/config/test
 #||# 
-#||#    + checking /home/circleci/project/config/test/SmartInnovationFactory.publication.json
-#||# 
-Directory check
-error: missing '/tmp/generated/doc/implementatiemodel/SIF'
-
-index.html check
-error: missing '/tmp/generated/doc/implementatiemodel/SIF/index.html'
-
 #||#    + checking /home/circleci/project/config/test/Vrachtwagenparkeren.publication.json
 #||# 
 Directory check
@@ -476,6 +468,14 @@ index.html check
 Directory check
 
 index.html check
+
+#||#    + checking /home/circleci/project/config/test/smart-innovation-factory.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/smart-innovation-factory/ontwerpstandaard/2025-06-04/index.html'
+error: missing '/tmp/generated/ns/smart-innovation-factory/index.html'
 
 #||#    + checking /home/circleci/project/config/test/subsidie.publication.json
 #||# 
