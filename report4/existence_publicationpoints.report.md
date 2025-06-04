@@ -150,8 +150,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/energiemanagementsysteem/index.html'
 
 #||#    + checking /home/circleci/project/config/production/erosiepoel.publication.json
 #||# 
