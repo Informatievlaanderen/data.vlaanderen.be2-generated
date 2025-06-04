@@ -392,10 +392,10 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/shok/ontwerpstandaard/2025-06-03/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/shok/index.html'
-error: missing '/tmp/generated/doc/vocabularium/shok/ontwerpstandaard/2025-06-03/index.html'
-error: missing '/tmp/generated/ns/shok/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/openbare-kasten/ontwerpstandaard/2025-06-03/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/openbare-kasten/index.html'
+error: missing '/tmp/generated/doc/vocabularium/openbare-kasten/ontwerpstandaard/2025-06-03/index.html'
+error: missing '/tmp/generated/ns/openbare-kasten/index.html'
 
 #||#    + checking /home/circleci/project/config/test/organisatie.publication.json
 #||# 
