@@ -387,16 +387,6 @@ Directory check
 
 index.html check
 
-#||#    + checking /home/circleci/project/config/test/openbare-kasten.publication.json
-#||# 
-Directory check
-
-index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/openbare-kasten/ontwerpstandaard/2025-06-03/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/openbare-kasten/index.html'
-error: missing '/tmp/generated/doc/vocabularium/openbare-kasten/ontwerpstandaard/2025-06-03/index.html'
-error: missing '/tmp/generated/ns/openbare-kasten/index.html'
-
 #||#    + checking /home/circleci/project/config/test/organisatie.publication.json
 #||# 
 Directory check
@@ -450,6 +440,16 @@ index.html check
 Directory check
 
 index.html check
+
+#||#    + checking /home/circleci/project/config/test/shok.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/openbare-nutsvoorzieningkasten/ontwerpstandaard/2025-06-03/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/openbare-nutsvoorzieningkasten/index.html'
+error: missing '/tmp/generated/doc/vocabularium/openbare-nutsvoorzieningkasten/ontwerpstandaard/2025-06-03/index.html'
+error: missing '/tmp/generated/ns/openbare-nutsvoorzieningkasten/index.html'
 
 #||#    + checking /home/circleci/project/config/test/slim-ruimtelijk-plannen.publication.json
 #||# 

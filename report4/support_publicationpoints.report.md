@@ -120,8 +120,6 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/openbaar-domein.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/test/openbare-kasten.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/test/organisatie.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/overlijdensaangifte.publication.json
@@ -139,6 +137,8 @@
 #||#   + adding supporting /home/circleci/project/config/test/sb.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/schuldbeheer.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/shok.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/slim-ruimtelijk-plannen.publication.json
 #||#  
