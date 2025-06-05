@@ -446,10 +446,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/openbare-nutsvoorzieningkasten/ontwerpstandaard/2025-06-03/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/openbare-nutsvoorzieningkasten/index.html'
-error: missing '/tmp/generated/doc/vocabularium/openbare-nutsvoorzieningkasten/ontwerpstandaard/2025-06-03/index.html'
-error: missing '/tmp/generated/ns/openbare-nutsvoorzieningkasten/index.html'
 
 #||#    + checking /home/circleci/project/config/test/slim-ruimtelijk-plannen.publication.json
 #||# 

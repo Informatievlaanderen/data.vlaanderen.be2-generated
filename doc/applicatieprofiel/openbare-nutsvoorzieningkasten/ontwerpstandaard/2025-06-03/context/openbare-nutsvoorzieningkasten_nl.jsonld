@@ -1,3 +1,507 @@
 {
-  "@context": {}
+  "@context": {
+    "Aansluiting": {
+      "@context": {
+        "^Geometrie": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#geometrie",
+          "@type": "http://www.opengis.net/ont/sf#Point"
+        },
+        "^Identificator": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#identificator",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "adres": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#address",
+          "@type": "http://www.w3.org/ns/locn#Address"
+        },
+        "gebruiker": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#gebruiker",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "leverancier": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#leverancier",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "toebehorentype": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#Connection.appurtenanceType",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://vocab.belgif.be/ns/utility-services#Connection"
+    },
+    "Activiteit": {
+      "@context": {
+        "agent": {
+          "@id": "http://todo.com/agent",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "locatie": {
+          "@id": "http://todo.com/locatie",
+          "@type": "http://www.w3.org/ns/prov#Location"
+        },
+        "tijd": {
+          "@id": "http://todo.com/tijd",
+          "@type": "http://www.w3.org/2006/time#TemporalEntity"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://todo.com/type",
+          "@type": "http://todo.com/Activiteittype"
+        }
+      },
+      "@id": "http://todo.com/Activiteit"
+    },
+    "Activiteittype": {
+      "@id": "http://todo.com/Activiteittype"
+    },
+    "Agent": {
+      "@id": "http://purl.org/dc/terms/Agent"
+    },
+    "DateTime": {
+      "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Deployment": {
+      "@context": {
+        "deployedSysteem": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/deployedSystem",
+          "@type": "http://www.w3.org/ns/ssn/System"
+        },
+        "deploymentReden": {
+          "@container": "@set",
+          "@id": "http://fixme.com/",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "deploymentTijdstip": {
+          "@container": "@set",
+          "@id": "http://fixme.com/",
+          "@type": "http://www.w3.org/2006/time#TemporalEntity"
+        },
+        "host": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/deployedOnPlatform",
+          "@type": "https://www.w3.org/ns/sosa/Platform"
+        }
+      },
+      "@id": "http://www.w3.org/ns/sosa/Deployment"
+    },
+    "Domeinobject": {
+      "@context": {
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+    },
+    "Factuur": {
+      "@id": "https://schema.org/Invoice"
+    },
+    "GeaggregeerdVerbruikObservatie": {
+      "@context": {
+        "geobserveerdObject": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+          "@type": "http://purl.org/dc/terms/Location"
+        },
+        "resultaat": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+          "@type": "https://qudt.org/schema/qudt/QuantityValue"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#GeaggregeerdVerbruikObservatie"
+    },
+    "IndividueelVerbruikObservatie": {
+      "@context": {
+        "factuur": {
+          "@container": "@set",
+          "@id": "http://todo.com/factuur",
+          "@type": "https://schema.org/Invoice"
+        },
+        "geobserveerdObject": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+          "@type": "https://vocab.belgif.be/ns/utility-services#Connection"
+        },
+        "resultaat": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+          "@type": "https://qudt.org/schema/qudt/QuantityValue"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/nutsvoorzieningen/meters#IndividueelVerbruikObservatie"
+    },
+    "Kast": {
+      "@id": "https://vocab.belgif.be/ns/utility-services#Cabinet"
+    },
+    "Kenmerktype": {
+      "@id": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
+    },
+    "LangString": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Literal": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Locatie": {
+      "@id": "http://www.w3.org/ns/prov#Location"
+    },
+    "Meter": {
+      "@context": {
+        "fabrikant": {
+          "@id": "https://saref.etsi.org/core/hasManufacturer",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "functie": {
+          "@container": "@set",
+          "@id": "https://saref.etsi.org/core/hasFunction",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "heeftFabrieksnummer": {
+          "@id": "https://w3id.org/def/S4WATR#hasFabricationNumber",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "heeftFirmwareVersion": {
+          "@id": "https://w3id.org/def/S4WATR#hasFirmwareVersion",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "heeftHardwareVersie": {
+          "@id": "https://w3id.org/def/S4WATR#hasHardwareVersion",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "heeftVersie": {
+          "@id": "https://w3id.org/def/S4WATR#hasVersion",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "identificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/2004/02/skos/core#notation",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "model": {
+          "@id": "https://saref.etsi.org/core/hasModel",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "uitgevoerdObservatie": {
+          "@id": "https://data.vlaanderen.be/ns/digitaleWatermeter#uitgevoerdObservatie",
+          "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+        },
+        "verbruiksadres": {
+          "@id": "http://todo.com/Meter.verbruiksadres",
+          "@type": "http://www.w3.org/ns/locn#Address"
+        },
+        "vereistStroom": {
+          "@id": "https://saref.etsi.org/saref4watr/requiresPower",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "werktopRadiofrequentie": {
+          "@id": "https://saref.etsi.org/saref4watr/operatesAtRadioFrequency",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      },
+      "@id": "https://saref.etsi.org/core/Meter"
+    },
+    "Moment": {
+      "@context": {
+        "inXSDDatumTijd": {
+          "@id": "http://www.w3.org/2006/time#inXSDDateTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "http://www.w3.org/2006/time#Instant"
+    },
+    "Nustvoorzieningnetwerkelement": {
+      "@context": {
+        "documentatie": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/elements/1.1/relation",
+          "@type": "http://xmlns.com/foaf/0.1/Document"
+        },
+        "geldigTot": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#validTo",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "geldigVan": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#validFrom",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "huidigeStatus": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#currentStatus",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "identificator": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "inNetwerk": {
+          "@container": "@set",
+          "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNetworkElement.inNetwork",
+          "@type": "https://vocab.belgif.be/ns/utility-services#UtilityNetwork"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "https://vocab.belgif.be/ns/utility-services#type",
+          "@type": "http://todo.com/Nutsvoorzieningnetwerkelmenttype"
+        },
+        "verticalePositie": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNetworkElement.verticalPosition",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "verticalePositiedetail": {
+          "@container": "@set",
+          "@id": "https://vocab.belgif.be/ns/utility-services#verticalPositionDetail",
+          "@type": "https://vocab.belgif.be/ns/utility-services#VerticalPosition"
+        }
+      },
+      "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNetworkElement"
+    },
+    "Nutsvoorzieningknoopcontainer": {
+      "@context": {
+        "geometrie": {
+          "@id": "https://vocab.belgif.be/ns/network#Node.geometry",
+          "@type": "http://www.opengis.net/ont/sf#Point"
+        },
+        "inNetwerk": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#inNetwerk",
+          "@type": "https://vocab.belgif.be/ns/utility-services#UtilityNetwork"
+        },
+        "knoop": {
+          "@container": "@set",
+          "@id": "https://vocab.belgif.be/ns/utility-services#node",
+          "@type": "https://vocab.belgif.be/ns/utility-services#Connection"
+        },
+        "oriëNtatie": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNodeContainer.orientation",
+          "@type": "https://qudt.org/schema/qudt/QuantityValue"
+        },
+        "risico": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNodeContainer.risk",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "uiterlijk": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNodeContainer.appearance",
+          "@type": "https://vocab.belgif.be/ns/utility-services#Appearance"
+        },
+        "zichtbaarheid": {
+          "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNodeContainer.visibility",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNodeContainer"
+    },
+    "Nutsvoorzieningnetwerk": {
+      "@context": {
+        "bevoegdePartij": {
+          "@container": "@set",
+          "@id": "https://vocab.belgif.be/ns/utility-services#authorityRole",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "element": {
+          "@container": "@set",
+          "@id": "https://vocab.belgif.be/ns/utility-services#element",
+          "@type": "https://vocab.belgif.be/ns/utility-services#UtilityNetworkElement"
+        },
+        "geografischeNaam": {
+          "@container": "@set",
+          "@id": "https://vocab.belgif.be/ns/utility-services#geographicalName",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "netwerk": {
+          "@container": "@set",
+          "@id": "https://vocab.belgif.be/ns/utility-services#network",
+          "@type": "https://vocab.belgif.be/ns/utility-services#UtilityNetwork"
+        },
+        "nutsvoorzieningnetwerktype": {
+          "@id": "http://purl.org/dc/elements/1.1/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://vocab.belgif.be/ns/utility-services#UtilityNetwork"
+    },
+    "Nutsvoorzieningnetwerkelmenttype": {
+      "@id": "http://todo.com/Nutsvoorzieningnetwerkelmenttype"
+    },
+    "Observatie": {
+      "@context": {
+        "fenomeen": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+          "@type": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
+        },
+        "fenomeentijd": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+          "@type": "http://www.w3.org/2006/time#TemporalEntity"
+        },
+        "geassocieerdeObservatie": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+          "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+        },
+        "geldigeTijd": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime",
+          "@type": "http://www.w3.org/2006/time#ProperInterval"
+        },
+        "geobserveerdObject": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+          "@type": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature"
+        },
+        "identificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "parameter": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter",
+          "@type": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+        },
+        "resultaat": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        },
+        "resultaatkwaliteit": {
+          "@container": "@set",
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
+          "@type": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element"
+        },
+        "resultaattijd": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
+          "@type": "http://www.w3.org/2006/time#Instant"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "uitgevoerdDoor": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "uitgevoerdMetSensor": {
+          "@id": "http://todo.com/uitgevoerdMetSensor",
+          "@type": "https://saref.etsi.org/core/Meter"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+    },
+    "Periode": {
+      "@context": {
+        "tot": {
+          "@id": "http://www.w3.org/2006/time#hasEnd",
+          "@type": "http://www.w3.org/2006/time#Instant"
+        },
+        "van": {
+          "@id": "http://www.w3.org/2006/time#hasBeginning",
+          "@type": "http://www.w3.org/2006/time#Instant"
+        }
+      },
+      "@id": "http://www.w3.org/2006/time#ProperInterval"
+    },
+    "Platform": {
+      "@context": {
+        "deployment": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/inDeployment",
+          "@type": "http://www.w3.org/ns/sosa/Deployment"
+        },
+        "geassocieerdeHost": {
+          "@container": "@set",
+          "@id": "http://fixme.com/",
+          "@type": "https://www.w3.org/ns/sosa/Platform"
+        },
+        "hostVan": {
+          "@container": "@set",
+          "@id": "https://www.w3.org/ns/sosa/hosts",
+          "@type": "http://www.w3.org/ns/ssn/System"
+        },
+        "locatie": {
+          "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
+          "@type": "http://www.w3.org/ns/locn#Geometry"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://www.w3.org/ns/sosa/Platform"
+    },
+    "Reservatie": {
+      "@context": {
+        "doel": {
+          "@container": "@set",
+          "@id": "http://todo.com/doel",
+          "@type": "http://todo.com/Activiteittype"
+        },
+        "gereserveerdDoor": {
+          "@container": "@set",
+          "@id": "http://todo.com/Reservatie.gereserveerdDoor",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "resource": {
+          "@id": "http://todo.com/resource",
+          "@type": "http://todo.com/Resource"
+        }
+      },
+      "@id": "http://todo.com/Reservatie"
+    },
+    "Resource": {
+      "@id": "http://todo.com/Resource"
+    },
+    "Stopcontact": {
+      "@id": "http://todo.com/Stopcontact"
+    },
+    "Systeem": {
+      "@context": {
+        "capaciteit": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
+          "@type": "http://www.w3.org/ns/ssn/systems/SystemCapacity"
+        },
+        "gehostDoor": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/isHostedBy",
+          "@type": "https://www.w3.org/ns/sosa/Platform"
+        },
+        "heeftDeployment": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/hasDeployment",
+          "@type": "http://www.w3.org/ns/sosa/Deployment"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://www.w3.org/ns/ssn/System"
+    },
+    "TemporeleEntiteit": {
+      "@id": "http://www.w3.org/2006/time#TemporalEntity"
+    },
+    "Toestel": {
+      "@context": {
+        "fabrikant": {
+          "@id": "https://saref.etsi.org/core/hasManufacturer",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "functie": {
+          "@container": "@set",
+          "@id": "https://saref.etsi.org/core/hasFunction",
+          "@type": "https://saref.etsi.org/core/Function"
+        },
+        "model": {
+          "@id": "https://saref.etsi.org/core/hasModel",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "taak": {
+          "@container": "@set",
+          "@id": "https://saref.etsi.org/core/accomplishes",
+          "@type": "https://saref.etsi.org/core/Task"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://saref.etsi.org/core/Device"
+    }
+  }
 }
