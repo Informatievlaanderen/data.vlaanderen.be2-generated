@@ -1,3 +1,608 @@
 {
-  "@context": {}
+  "@context": {
+    "Any": {
+      "@context": {
+        "geassocieerdMet": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/elements/relation",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        }
+      },
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
+    },
+    "BenoemdeWaarde": {
+      "@id": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyseBenoemdeWaarde"
+    },
+    "Camera": {
+      "@id": "http://dbpedia.org/resource/Camera"
+    },
+    "Categorie": {
+      "@id": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "Classificatie": {
+      "@context": {
+        "resultaat": {
+          "@id": "http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation.result",
+          "@type": "http://www.w3.org/2004/02/skos/core#"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/CategoryObservation#OM_CategoryObservation"
+    },
+    "Dataset": {
+      "@context": {
+        "beschrijving": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "collectieDatum": {
+          "@id": "http://openml.org/openml#collectionDate",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "gerefereerdDoor": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/isReferencedBy",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        },
+        "identificator": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/identifier",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "sleutelwoord": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#keyword",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "startpagina": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/dcat#landingPage",
+          "@type": "http://xmlns.com/foaf/0.1/Document"
+        },
+        "status": {
+          "@id": "http://www.w3.org/ns/adms#status",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "titel": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "toegangsrechten": {
+          "@id": "http://purl.org/dc/terms/accessRights",
+          "@type": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyseRightsStatement"
+        },
+        "uitgegeven": {
+          "@id": "http://purl.org/dc/terms/issued",
+          "@type": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyseTemporalLiteral"
+        },
+        "versieInfo": {
+          "@id": "http://www.w3.org/2002/07/owl#versionInfo",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "versieLabel": {
+          "@id": "http://openml.org/openml#versionLabel",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "zichtbaarheid": {
+          "@id": "http://openml.org/openml#access_policy",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://www.w3.org/ns/dcat#Dataset"
+    },
+    "Date": {
+      "@id": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Deployment": {
+      "@context": {
+        "deployedSysteem": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/deployedSystem",
+          "@type": "http://www.w3.org/ns/ssn/System"
+        },
+        "deploymentReden": {
+          "@container": "@set",
+          "@id": "http://fixme.com/",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "deploymentTijdstip": {
+          "@container": "@set",
+          "@id": "http://fixme.com/",
+          "@type": "http://www.w3.org/2006/time#TemporalEntity"
+        },
+        "host": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/deployedOnPlatform",
+          "@type": "https://www.w3.org/ns/sosa/Platform"
+        }
+      },
+      "@id": "http://www.w3.org/ns/sosa/Deployment"
+    },
+    "Domeinobject": {
+      "@context": {
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/thermai#DomeinObject"
+    },
+    "DomeinobjectType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "Element": {
+      "@context": {
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#"
+        }
+      },
+      "@id": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcElement"
+    },
+    "Elementtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "Foto": {
+      "@context": {
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#"
+        }
+      },
+      "@id": "https://schema.org/Photograph"
+    },
+    "Fototype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "GPS": {
+      "@id": "https://data.vlaanderen.be/ns/thermai#GPS"
+    },
+    "Gebouw": {
+      "@context": {
+        "adres": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.adres",
+          "@type": "http://www.w3.org/ns/locn#Address"
+        },
+        "bestaatUit": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.bestaatUit",
+          "@type": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid"
+        },
+        "bouwjaar": {
+          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.bouwjaar",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "kenmerk": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.kenmerk",
+          "@type": "https://data.vlaanderen.be/ns/energiehuis#Kenmerk"
+        },
+        "laatsteRenovatie": {
+          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.laatsteRenovatie",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "status": {
+          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.status",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw"
+    },
+    "Gebouweenheid": {
+      "@context": {
+        "adres": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.adres",
+          "@type": "http://www.w3.org/ns/locn#Address"
+        },
+        "functie": {
+          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.functie",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "kenmerk": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.kenmerk",
+          "@type": "https://data.vlaanderen.be/ns/energiehuis#Kenmerk"
+        },
+        "status": {
+          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.status",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid"
+    },
+    "Gebouweenheidttype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "Gebouwtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "GeometrieObservatie": {
+      "@context": {
+        "resultaat": {
+          "@id": "http://def.isotc211.org/iso19156/2011/GeometryObservation#OM_GeometryObservation.result",
+          "@type": "http://www.w3.org/ns/locn#Geometry"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/GeometryObservation#OM_GeometryObservation"
+    },
+    "IFCGebouw": {
+      "@context": {
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#"
+        }
+      },
+      "@id": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcBuilding"
+    },
+    "Interpretatie": {
+      "@id": "https://data.vlaanderen.be/ns/thermai#Interpretatie"
+    },
+    "LangString": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Literal": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Maat": {
+      "@id": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyseMaat"
+    },
+    "MachineLearningModel": {
+      "@context": {
+        "creatiedatum": {
+          "@id": "http://purl.org/dc/terms/created",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "getraindOp": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/it6/trainedOn",
+          "@type": "http://www.w3.org/ns/dcat#Dataset"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#"
+        },
+        "versie": {
+          "@id": "http://data.europa.eu/it6/version",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      },
+      "@id": "http://data.europa.eu/it6/MachineLearningModel"
+    },
+    "MachineLearningModeltype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "Meting": {
+      "@context": {
+        "resultaat": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement.result",
+          "@type": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyseMaat"
+        }
+      },
+      "@id": "http://def.isotc211.org/iso19156/2011/Measurement#OM_Measurement"
+    },
+    "Observatie": {
+      "@context": {
+        "fenomeentijd": {
+          "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
+          "@type": "http://www.w3.org/2006/time#TemporalEntity"
+        },
+        "geassocieerdeObservatie": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/relatedObservation",
+          "@type": "http://www.w3.org/ns/sosa/Observation"
+        },
+        "gebruikteProcedure": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+          "@type": "http://www.w3.org/ns/sosa/oms/ObservingProcedure"
+        },
+        "geobserveerdKenmerk": {
+          "@id": "http://www.w3.org/ns/sosa/observedProperty",
+          "@type": "http://www.w3.org/ns/sosa/Property"
+        },
+        "geobserveerdObject": {
+          "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        },
+        "identificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "isLidVan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/memberOf",
+          "@type": "http://www.w3.org/ns/sosa/ObservationCollection"
+        },
+        "parameter": {
+          "@container": "@set",
+          "@id": "http://fixme.com/",
+          "@type": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyseBenoemdeWaarde"
+        },
+        "resultaat": {
+          "@id": "http://www.w3.org/ns/sosa/hasResult",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "uitgevoerdDoor": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "uitgevoerdMetSensor": {
+          "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+          "@type": "https://www.w3.org/ns/sosa/Sensor"
+        }
+      },
+      "@id": "http://www.w3.org/ns/sosa/Observation"
+    },
+    "ObservatieCollectieType": {
+      "@id": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "Observatieprocedure": {
+      "@context": {
+        "geïMplementeerdMet": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/implementedBy",
+          "@type": "https://www.w3.org/ns/sosa/Sensor"
+        },
+        "input": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/hasInput",
+          "@type": "http://www.w3.org/2004/02/skos/core#"
+        },
+        "output": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/hasOutput",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "parameter": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.parameter",
+          "@type": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyseBenoemdeWaarde"
+        },
+        "specificatie": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://www.w3.org/ns/sosa/oms/ObservingProcedure"
+    },
+    "Observatieverzameling": {
+      "@context": {
+        "fenomeentijd": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
+          "@type": "http://www.w3.org/2006/time#TemporalEntity"
+        },
+        "geassocieerdeVerzameling": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/relatedObservation",
+          "@type": "http://www.w3.org/ns/sosa/ObservationCollection"
+        },
+        "gebruikteProcedure": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+          "@type": "http://todo.com/Observatieprocedure"
+        },
+        "geobserveerdKenmerk": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/observedProperty",
+          "@type": "http://todo.com/ObserveerbaarKenmerk"
+        },
+        "geobserveerdObject": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+          "@type": "http://www.w3.org/ns/sosa/FeatureOfInterest"
+        },
+        "heeftLid": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/hasMember",
+          "@type": "http://www.w3.org/ns/sosa/Observation"
+        },
+        "resultaatTijd": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/resultTime",
+          "@type": "http://www.w3.org/2006/time#TemporalEntity"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://fixme.com/",
+          "@type": "http://www.w3.org/2004/02/skos/core#"
+        },
+        "uitgevoerdMetSensor": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+          "@type": "http://todo.com/Sensor"
+        }
+      },
+      "@id": "http://www.w3.org/ns/sosa/ObservationCollection"
+    },
+    "ObserveerbaarKenmerk": {
+      "@id": "http://www.w3.org/ns/sosa/Property"
+    },
+    "Opstelling": {
+      "@id": "https://data.vlaanderen.be/ns/thermai#Opstelling"
+    },
+    "Overlevingscapaciteit": {
+      "@id": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyseOverlevingscapaciteit"
+    },
+    "Platform": {
+      "@context": {
+        "deployment": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/inDeployment",
+          "@type": "http://www.w3.org/ns/sosa/Deployment"
+        },
+        "geassocieerdeHost": {
+          "@container": "@set",
+          "@id": "http://fixme.com/",
+          "@type": "https://www.w3.org/ns/sosa/Platform"
+        },
+        "hostVan": {
+          "@container": "@set",
+          "@id": "https://www.w3.org/ns/sosa/hosts",
+          "@type": "http://www.w3.org/ns/ssn/System"
+        },
+        "locatie": {
+          "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
+          "@type": "http://todo.com/GeometrieType"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#"
+        }
+      },
+      "@id": "https://www.w3.org/ns/sosa/Platform"
+    },
+    "Platformtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "RechtenStatement": {
+      "@id": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyseRightsStatement"
+    },
+    "Sensor": {
+      "@context": {
+        "implementeert": {
+          "@id": "http://www.w3.org/ns/sosa/implements",
+          "@type": "http://www.w3.org/ns/sosa/oms/ObservingProcedure"
+        },
+        "uitgevoerdeObservatie": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/madeObservation",
+          "@type": "http://www.w3.org/ns/sosa/Observation"
+        }
+      },
+      "@id": "https://www.w3.org/ns/sosa/Sensor"
+    },
+    "Systeem": {
+      "@context": {
+        "capaciteit": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
+          "@type": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyseSysteemvermogen"
+        },
+        "gehostDoor": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/isHostedBy",
+          "@type": "https://www.w3.org/ns/sosa/Platform"
+        },
+        "heeftDeployment": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/hasDeployment",
+          "@type": "http://www.w3.org/ns/sosa/Deployment"
+        },
+        "overlevingsbereik": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
+          "@type": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyseOverlevingscapaciteit"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#"
+        },
+        "werkingsbereik": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
+          "@type": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyseWerkingsgebied"
+        }
+      },
+      "@id": "http://www.w3.org/ns/ssn/System"
+    },
+    "Systeemtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "Systeemvermogen": {
+      "@id": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyseSysteemvermogen"
+    },
+    "TemporalLiteral": {
+      "@id": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyseTemporalLiteral"
+    },
+    "Toestel": {
+      "@context": {
+        "fabrikant": {
+          "@id": "https://saref.etsi.org/core/hasManufacturer",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "functie": {
+          "@container": "@set",
+          "@id": "https://saref.etsi.org/core/hasFunction",
+          "@type": "https://saref.etsi.org/core/Function"
+        },
+        "model": {
+          "@id": "https://saref.etsi.org/core/hasModel",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "taak": {
+          "@container": "@set",
+          "@id": "https://saref.etsi.org/core/accomplishes",
+          "@type": "https://saref.etsi.org/core/Task"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#"
+        }
+      },
+      "@id": "https://saref.etsi.org/core/Device"
+    },
+    "Toesteltype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "TypeInput": {
+      "@id": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "URI": {
+      "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Video": {
+      "@context": {
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#"
+        }
+      },
+      "@id": "https://schema.org/VideoObject"
+    },
+    "Videotype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "Werkingsgebied": {
+      "@id": "https://data.vlaanderen.be/ns/thermografische-gebouwanalyseWerkingsgebied"
+    }
+  }
 }
