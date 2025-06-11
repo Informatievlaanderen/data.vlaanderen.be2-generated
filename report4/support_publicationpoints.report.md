@@ -189,6 +189,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-12-17",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/latest",
   "/tmp/generated/doc/applicatieprofiel/FeitelijkeVerenigingen",
+  "/tmp/generated/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/begraafplaatsen",
   "/tmp/generated/doc/applicatieprofiel/begraafplaatsenbeheer",
   "/tmp/generated/doc/applicatieprofiel/begroeid-voorkomen",
