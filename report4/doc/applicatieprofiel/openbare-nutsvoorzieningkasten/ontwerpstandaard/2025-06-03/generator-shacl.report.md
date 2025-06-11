@@ -2,33 +2,33 @@
 
 #||# -------------------------------------  
 
-2025-06-11T16:30:20.632Z warn: Unable to find the description for subject "[urn:oslo-toolchain:759d64789e09be8dcfe16c2ef2348db9981979149ae1ad16a7fb7da2d628c221](all-openbare-nutsvoorzieningkasten.jsonld#L2104)".
+2025-06-11T17:11:33.942Z warn: Unable to find the description for subject "[urn:oslo-toolchain:759d64789e09be8dcfe16c2ef2348db9981979149ae1ad16a7fb7da2d628c221](all-openbare-nutsvoorzieningkasten.jsonld#L2080)".
 
-2025-06-11T16:30:20.634Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9cf4cb43f2a98c634c524614f4b775a287db323260295c5feb9a72c5e3461856](all-openbare-nutsvoorzieningkasten.jsonld#L2124)".
+2025-06-11T17:11:33.944Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9cf4cb43f2a98c634c524614f4b775a287db323260295c5feb9a72c5e3461856](all-openbare-nutsvoorzieningkasten.jsonld#L2100)".
 
-2025-06-11T16:30:20.642Z warn: Unable to find the description for subject "[urn:oslo-toolchain:29e6f9f08e51597cb0231d90b7ffd65b984b930fec0688ffad3e8665a6bd7e08](all-openbare-nutsvoorzieningkasten.jsonld#L3888)".
+2025-06-11T17:11:33.950Z warn: Unable to find the description for subject "[urn:oslo-toolchain:29e6f9f08e51597cb0231d90b7ffd65b984b930fec0688ffad3e8665a6bd7e08](all-openbare-nutsvoorzieningkasten.jsonld#L3864)".
 
-2025-06-11T16:30:20.642Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c7fa0841b222febe6ca9a6af73d547bfbebb5e9199ca913526ebccff8361c4b0](all-openbare-nutsvoorzieningkasten.jsonld#L3924)".
+2025-06-11T17:11:33.950Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c7fa0841b222febe6ca9a6af73d547bfbebb5e9199ca913526ebccff8361c4b0](all-openbare-nutsvoorzieningkasten.jsonld#L3900)".
 
-2025-06-11T16:30:20.642Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5d48aab9abec7976786c64a6ce787981c8321d25051969e18570413c99fb7c56](all-openbare-nutsvoorzieningkasten.jsonld#L3960)".
+2025-06-11T17:11:33.950Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5d48aab9abec7976786c64a6ce787981c8321d25051969e18570413c99fb7c56](all-openbare-nutsvoorzieningkasten.jsonld#L3936)".
 
-2025-06-11T16:30:20.642Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2e78daffa7387be5473afc2caa810a31bd086701401debc399f8aff383ca75d2](all-openbare-nutsvoorzieningkasten.jsonld#L3980)".
+2025-06-11T17:11:33.950Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2e78daffa7387be5473afc2caa810a31bd086701401debc399f8aff383ca75d2](all-openbare-nutsvoorzieningkasten.jsonld#L3956)".
 
-2025-06-11T16:30:20.643Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1a611426fcace9f943f26b73c4ebbaed938cc0c43782ad6bb131f06f725a2afe](all-openbare-nutsvoorzieningkasten.jsonld#L4000)".
+2025-06-11T17:11:33.951Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1a611426fcace9f943f26b73c4ebbaed938cc0c43782ad6bb131f06f725a2afe](all-openbare-nutsvoorzieningkasten.jsonld#L3976)".
 
-2025-06-11T16:30:20.643Z warn: Unable to find the description for subject "[urn:oslo-toolchain:82a7df42bbecf9e2fcb5fe54b018fd113761c9c57efa0715f69814d79c04f287](all-openbare-nutsvoorzieningkasten.jsonld#L4020)".
+2025-06-11T17:11:33.951Z warn: Unable to find the description for subject "[urn:oslo-toolchain:82a7df42bbecf9e2fcb5fe54b018fd113761c9c57efa0715f69814d79c04f287](all-openbare-nutsvoorzieningkasten.jsonld#L3996)".
 
-2025-06-11T16:30:20.644Z warn: Unable to find the description for subject "[urn:oslo-toolchain:682003ce45bd479e88cdeff4d3cc838aeabc057880644c14c73408bb2a105ef2](all-openbare-nutsvoorzieningkasten.jsonld#L4168)".
+2025-06-11T17:11:33.952Z warn: Unable to find the description for subject "[urn:oslo-toolchain:682003ce45bd479e88cdeff4d3cc838aeabc057880644c14c73408bb2a105ef2](all-openbare-nutsvoorzieningkasten.jsonld#L4144)".
 
-2025-06-11T16:30:20.645Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1d3662b7746b305570ae0625b5d8202ac9fc6fbc8476e7b5a9128067e8898498](all-openbare-nutsvoorzieningkasten.jsonld#L4188)".
+2025-06-11T17:11:33.952Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1d3662b7746b305570ae0625b5d8202ac9fc6fbc8476e7b5a9128067e8898498](all-openbare-nutsvoorzieningkasten.jsonld#L4164)".
 
-2025-06-11T16:30:20.645Z warn: Unable to find the description for subject "[urn:oslo-toolchain:028f735a9c5748283ffd6f3d946533fad3c486c696ef78485aaa777eb2d9e876](all-openbare-nutsvoorzieningkasten.jsonld#L4208)".
+2025-06-11T17:11:33.952Z warn: Unable to find the description for subject "[urn:oslo-toolchain:028f735a9c5748283ffd6f3d946533fad3c486c696ef78485aaa777eb2d9e876](all-openbare-nutsvoorzieningkasten.jsonld#L4184)".
 
-2025-06-11T16:30:20.646Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2ef027aa2a85823d8bd62915471763093a1a81dad2500f10af35b4a74e518715](all-openbare-nutsvoorzieningkasten.jsonld#L4360)".
+2025-06-11T17:11:33.953Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2ef027aa2a85823d8bd62915471763093a1a81dad2500f10af35b4a74e518715](all-openbare-nutsvoorzieningkasten.jsonld#L4336)".
 
-2025-06-11T16:30:20.651Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c3b128ae8278fb9abcfbb45da1ee0ce473aaf354547155756840d61ead0d30ef](all-openbare-nutsvoorzieningkasten.jsonld#L4902)".
+2025-06-11T17:11:33.958Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c3b128ae8278fb9abcfbb45da1ee0ce473aaf354547155756840d61ead0d30ef](all-openbare-nutsvoorzieningkasten.jsonld#L4878)".
 
-Error: Unable to find a label for the domain "urn:oslo-toolchain:877adc51755f49eb3ddfa23f867c203520ec014b7c21a8a161df9f52a0e51a77" of subject "[urn:oslo-toolchain:c3b128ae8278fb9abcfbb45da1ee0ce473aaf354547155756840d61ead0d30ef](all-openbare-nutsvoorzieningkasten.jsonld#L4902)".
+Error: Unable to find a label for the domain "urn:oslo-toolchain:877adc51755f49eb3ddfa23f867c203520ec014b7c21a8a161df9f52a0e51a77" of subject "[urn:oslo-toolchain:c3b128ae8278fb9abcfbb45da1ee0ce473aaf354547155756840d61ead0d30ef](all-openbare-nutsvoorzieningkasten.jsonld#L4878)".
 
     at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:95:23)
 

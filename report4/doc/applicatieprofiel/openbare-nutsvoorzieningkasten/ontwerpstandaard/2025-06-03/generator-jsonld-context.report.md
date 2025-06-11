@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-06-11T16:29:30.500Z error: No label found for domain urn:oslo-toolchain:877adc51755f49eb3ddfa23f867c203520ec014b7c21a8a161df9f52a0e51a77 of attribute [urn:oslo-toolchain:c3b128ae8278fb9abcfbb45da1ee0ce473aaf354547155756840d61ead0d30ef](all-openbare-nutsvoorzieningkasten.jsonld#L4902).
+2025-06-11T17:11:34.017Z error: No label found for domain urn:oslo-toolchain:877adc51755f49eb3ddfa23f867c203520ec014b7c21a8a161df9f52a0e51a77 of attribute [urn:oslo-toolchain:c3b128ae8278fb9abcfbb45da1ee0ce473aaf354547155756840d61ead0d30ef](all-openbare-nutsvoorzieningkasten.jsonld#L4878).
 
-2025-06-11T16:29:30.503Z error: No label found for domain urn:oslo-toolchain:877adc51755f49eb3ddfa23f867c203520ec014b7c21a8a161df9f52a0e51a77 of attribute [urn:oslo-toolchain:df40d007af1a6c804ee6fd2bb942827a360bd0a2152391f42f0aa5e1574d223a](all-openbare-nutsvoorzieningkasten.jsonld#L4922).
+2025-06-11T17:11:34.019Z error: No label found for domain urn:oslo-toolchain:877adc51755f49eb3ddfa23f867c203520ec014b7c21a8a161df9f52a0e51a77 of attribute [urn:oslo-toolchain:df40d007af1a6c804ee6fd2bb942827a360bd0a2152391f42f0aa5e1574d223a](all-openbare-nutsvoorzieningkasten.jsonld#L4898).
 
