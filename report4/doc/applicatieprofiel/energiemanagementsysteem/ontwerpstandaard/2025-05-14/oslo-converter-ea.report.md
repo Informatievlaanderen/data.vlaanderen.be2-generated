@@ -2,223 +2,219 @@
 
 #||# -------------------------------------
 
-2025-06-11T18:06:59.304Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:Model test:SSN/SOSA:Observatie:(Observatie -> Observatie))
+2025-06-12T08:40:37.298Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:Model test:SSN/SOSA:Observatie:(Observatie -> Observatie))
 
-2025-06-11T18:06:59.306Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:SSN/SOSA:Observatie:(Observatie -> Observatie))
+2025-06-12T08:40:37.299Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:SSN/SOSA:Observatie:(Observatie -> Observatie))
 
-2025-06-11T18:06:59.306Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OMS modified:Domain Model:dcterms:Agent:rapporteertAan)
+2025-06-12T08:40:37.299Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OMS modified:Domain Model:dcterms:Agent:rapporteertAan)
 
-2025-06-11T18:06:59.306Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:SSN/SOSA:ObserveerbaarKenmerk:(ObserveerbaarKenmerk -> Sensor))
+2025-06-12T08:40:37.299Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:SSN/SOSA:ObserveerbaarKenmerk:(ObserveerbaarKenmerk -> Sensor))
 
-2025-06-11T18:06:59.306Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:SSN/SOSA:Observatie:(Observatie -> Platform))
+2025-06-12T08:40:37.299Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:SSN/SOSA:Observatie:(Observatie -> Platform))
 
-2025-06-11T18:06:59.306Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:SSN/SOSA:Observatieverzameling:(Observatieverzameling -> Observatieverzameling))
+2025-06-12T08:40:37.299Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:SSN/SOSA:Observatieverzameling:(Observatieverzameling -> Observatieverzameling))
 
-2025-06-11T18:06:59.306Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OMS modified:Domain Model:SSN/SOSA-VL:Deployment:(Deployment -> Observatie))
+2025-06-12T08:40:37.299Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OMS modified:Domain Model:SSN/SOSA-VL:Deployment:(Deployment -> Observatie))
 
-2025-06-11T18:06:59.306Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OMS modified:Domain Model:OMS:Domeinobject:(Domeinobject -> Observatie))
+2025-06-12T08:40:37.299Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OMS modified:Domain Model:OMS:Domeinobject:(Domeinobject -> Observatie))
 
-2025-06-11T18:06:59.306Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Dump:IMKL:SupportPackage:Link:(Link -> Knoop))
+2025-06-12T08:40:37.300Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Dump:IMKL:SupportPackage:Link:(Link -> Knoop))
 
-2025-06-11T18:06:59.307Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Dump:IMKL:IMKL-LD:Nutsvoorzieningnetwerkelement:(Nutsvoorzieningnetwerkelement -> Activiteitencomplex))
+2025-06-12T08:40:37.300Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Dump:IMKL:IMKL-LD:Nutsvoorzieningnetwerkelement:(Nutsvoorzieningnetwerkelement -> Activiteitencomplex))
 
-2025-06-11T18:06:59.307Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Dump:IMKL:SupportPackage:Link:(Link -> Knoop))
+2025-06-12T08:40:37.300Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Dump:IMKL:SupportPackage:Link:(Link -> Knoop))
 
-2025-06-11T18:06:59.307Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:IMKL-LD:Aansluiting:(Aansluiting -> Aansluiting))
+2025-06-12T08:40:37.300Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:IMKL-LD:Aansluiting:(Aansluiting -> Aansluiting))
 
-2025-06-11T18:06:59.310Z info: Connector Model:Model:SSN/SOSA:Observatie:(Observatie -> ObserveerbaarKenmerk) is not an association with a source role. Ignoring this connector.
+2025-06-12T08:40:37.303Z info: Connector Model:Model:SSN/SOSA:Observatie:(Observatie -> ObserveerbaarKenmerk) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T18:06:59.311Z info: Connector Model:sf:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-06-12T08:40:37.304Z info: Connector Model:sf:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T18:06:59.311Z info: Connector Model:Model:SSN/SOSA:Observatie:(Observatie -> Observatieprocedure) is not an association with a source role. Ignoring this connector.
+2025-06-12T08:40:37.304Z info: Connector Model:Model:SSN/SOSA:Observatie:(Observatie -> Observatieprocedure) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T18:06:59.312Z info: Connector Model:Model:SSN/SOSA:Aansturing:(Aansturing -> AanstuurbaarKenmerk) is not an association with a source role. Ignoring this connector.
+2025-06-12T08:40:37.304Z info: Connector Model:Model:SSN/SOSA:Aansturing:(Aansturing -> AanstuurbaarKenmerk) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T18:06:59.312Z info: Connector Model:Model:SSN/SOSA:Aansturing:(Aansturing -> Aansturingsprocedure) is not an association with a source role. Ignoring this connector.
+2025-06-12T08:40:37.305Z info: Connector Model:Model:SSN/SOSA:Aansturing:(Aansturing -> Aansturingsprocedure) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T18:06:59.312Z info: Connector Model:Model:OMS:Domeinobject:(Domeinobject -> Object) is not an association with a source role. Ignoring this connector.
+2025-06-12T08:40:37.305Z info: Connector Model:Model:OMS:Domeinobject:(Domeinobject -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T18:06:59.312Z info: Connector Model:Model:SSN/SOSA2:Platform:(Platform -> Platform) is not an association with a source role. Ignoring this connector.
+2025-06-12T08:40:37.305Z info: Connector Model:Model:SSN/SOSA2:Platform:(Platform -> Platform) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T18:06:59.312Z info: Connector Model:Model:SAREF:Toestel:(Toestel -> Domeinobject) is not an association with a source role. Ignoring this connector.
+2025-06-12T08:40:37.305Z info: Connector Model:Model:SAREF:Toestel:(Toestel -> Domeinobject) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T18:06:59.312Z info: Connector Model:Model:IMKL-LD:Aansluiting:(Aansluiting -> Domeinobject) is not an association with a source role. Ignoring this connector.
+2025-06-12T08:40:37.305Z info: Connector Model:Model:IMKL-LD:Aansluiting:(Aansluiting -> Domeinobject) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T18:06:59.312Z info: Connector Model:Model:SAREF:Meter:(Meter -> Toestel) is not an association with a source role. Ignoring this connector.
+2025-06-12T08:40:37.305Z info: Connector Model:Model:SAREF:Meter:(Meter -> Toestel) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T18:06:59.312Z info: Connector Model:Model:IMKL-LD:Nutsvoorzieningnetwerk:(Nutsvoorzieningnetwerk -> Nutsvoorzieningnetwerk) is not an association with a source role. Ignoring this connector.
+2025-06-12T08:40:37.305Z info: Connector Model:Model:IMKL-LD:Nutsvoorzieningnetwerk:(Nutsvoorzieningnetwerk -> Nutsvoorzieningnetwerk) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T18:06:59.313Z info: Connector Model:Model:IMKL-LD:Aansluiting:(Aansluiting -> Nutsvoorzieningnetwerk) is not an association with a source role. Ignoring this connector.
+2025-06-12T08:40:37.306Z info: Connector Model:Model:IMKL-LD:Aansluiting:(Aansluiting -> Nutsvoorzieningnetwerk) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T18:06:59.313Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.306Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:SSN/SOSA) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:SSN/SOSA) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:SAREF) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:SAREF) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:OMS) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:OMS) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:IMKL) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:IMKL) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:Datavoorbeelden) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:Datavoorbeelden) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:Datavoorbeelden:DatavoorbeeldAansturingElektrischeBoiler) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:Datavoorbeelden:DatavoorbeeldAansturingElektrischeBoiler) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:SKOS) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:SKOS) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:QUDT) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:QUDT) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:schema.org) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:schema.org) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:W3C-Time) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:W3C-Time) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:rdfs) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:rdfs) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:Datavoorbeelden:Test) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:Model test:Datavoorbeelden:Test) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:dcterms) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:dcterms) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-ObservatiesEnMetingen:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-ObservatiesEnMetingen:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.314Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-ObservatiesEnMetingen:Objectdiagrammen:DrogeMaterie) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-ObservatiesEnMetingen:Objectdiagrammen:DrogeMaterie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-ObservatiesEnMetingen:Objectdiagrammen:FietsersWegsegment) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-ObservatiesEnMetingen:Objectdiagrammen:FietsersWegsegment) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:Hulppakket) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:Hulppakket) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-Besluit) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-Besluit) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:sf) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:sf) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dummy) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dummy) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.307Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-SensorenEnBemonstering:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-SensorenEnBemonstering:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-SensorenEnBemonstering:Objectdiagrammen:InwinningEnVoorbereidingMonster) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-SensorenEnBemonstering:Objectdiagrammen:InwinningEnVoorbereidingMonster) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-SensorenEnBemonstering:Objectdiagrammen:pH-Meting) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-SensorenEnBemonstering:Objectdiagrammen:pH-Meting) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-SensorenEnBemonstering:Objectdiagrammen:Humusgehalte) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-SensorenEnBemonstering:Objectdiagrammen:Humusgehalte) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:SSN/SOSA) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:SSN/SOSA) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:SSN/SOSA-extensies) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:SSN/SOSA-extensies) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:DublinCore) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:DublinCore) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:FIWARE) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:FIWARE) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OMS) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:OMS) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:SAREF) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:SAREF) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:SSN/SOSA-VL) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:SSN/SOSA-VL) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:TimeOntology) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:TimeOntology) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:locn) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:locn) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:ISO-OMS) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:ISO-OMS) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:dcterms) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:dcterms) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:ISO-metadata) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:ISO-metadata) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:ADMS) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:ADMS) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:PROV) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:PROV) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:RDFS) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:RDFS) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:ISO-UOM) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:ISO-UOM) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:QUDT) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:QUDT) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:skos) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Dump:OMS modified:Domain Model:skos) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:SSN/SOSA) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:SSN/SOSA) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:W3C-Time) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:W3C-Time) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OMS) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OMS) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:SAREF) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:SAREF) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:ISO-SS) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:ISO-SS) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:Schema.org) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:Schema.org) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:Objectdiagrammen) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:Objectdiagrammen:DatavoorbeeldenDiepte) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:Objectdiagrammen:DatavoorbeeldenDiepte) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:Objectdiagrammen:DatavoorbeeldLeiding) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:Objectdiagrammen:DatavoorbeeldLeiding) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:Objectdiagrammen:DatavoorbeeldKabelMetDiepte) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:Objectdiagrammen:DatavoorbeeldKabelMetDiepte) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:PROV) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:PROV) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:OSLO-Address) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:OSLO-Address) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.315Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:SupportPackage) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:SupportPackage) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:ISO-CSL) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:ISO-CSL) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:ADMS) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:ADMS) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:LOCN) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:LOCN) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:DCTERMS) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:DCTERMS) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:FOAF) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:FOAF) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:OSLO-Netwerk) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:OSLO-Netwerk) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:ISO-DQ) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.308Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:IMKL:ISO-DQ) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.309Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:SAREF) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.309Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:SAREF) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:OSLO-ObservatiesEnMetingen) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.309Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:OSLO-ObservatiesEnMetingen) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:SSN/SOSA) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.309Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:SSN/SOSA) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:DigitaleWatermeter-MLDCAT) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.309Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:DigitaleWatermeter-MLDCAT) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:Dummy) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.309Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:Dummy) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:IM-BenoemdeWaarden) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.309Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:IM-BenoemdeWaarden) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:W3C-Time) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.309Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:W3C-Time) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:QUDT) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.309Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Dump:DigitaleWatermeter:QUDT) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:IMKL-LD) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.309Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:IMKL-LD) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.316Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:SSN/SOSA2) and fallback URI (http://todo.com/) will be assigned.
+2025-06-12T08:40:37.309Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:SSN/SOSA2) and fallback URI (http://todo.com/) will be assigned.
 
-2025-06-11T18:06:59.321Z warn: [AttributeConverterHandler]: Multiple packages discovered through name tag "DigitaleWatermeter" for attribute (Model:Dump:DigitaleWatermeter:SAREF:Meter:verbruiksadres).
-
-2025-06-11T18:06:59.322Z warn: [AttributeConverterHandler]: Multiple packages discovered through name tag "DigitaleWatermeter" for attribute (Model:Model:SAREF:Meter:verbruiksadres).
-
-2025-06-11T18:06:59.325Z warn: [ConnectorConverterHandler]: Connector (^inNetwerk) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-06-12T08:40:37.314Z warn: [AttributeConverterHandler]: Multiple packages discovered through name tag "DigitaleWatermeter" for attribute (Model:Dump:DigitaleWatermeter:SAREF:Meter:verbruiksadres).
 
 #||# -------------------------------------
 
