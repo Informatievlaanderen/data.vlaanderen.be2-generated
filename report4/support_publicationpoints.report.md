@@ -150,8 +150,6 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/subsidie.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/test/thermAI.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/test/thermografische-gebouwanalyse.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/toestemming.publication.json
@@ -245,6 +243,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/2024-07-08",
   "/tmp/generated/doc/applicatieprofiel/subsidieregister",
   "/tmp/generated/doc/applicatieprofiel/terreindelen",
+  "/tmp/generated/doc/applicatieprofiel/thermAI/ontwerpstandaard/15-05-2025",
   "/tmp/generated/doc/applicatieprofiel/vegetatie-elementen",
   "/tmp/generated/doc/applicatieprofiel/verkeersborden",
   "/tmp/generated/doc/applicatieprofiel/vlaamse-codex",
@@ -282,6 +281,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-10-14",
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-10-15",
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/ontwerpstandaard/2024-07-08",
+  "/tmp/generated/doc/vocabularium/thermAI/ontwerpstandaard/15-05-2025",
   "/tmp/generated/doc/vocabularium/toestemming",
   "/tmp/generated/doc/vocabularium/toestemming/ontwerpdocument/2020-01-06",
   "/tmp/generated/ns/FeitelijkeVerenigingen",

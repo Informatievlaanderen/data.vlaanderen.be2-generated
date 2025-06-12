@@ -477,12 +477,6 @@ Directory check
 
 index.html check
 
-#||#    + checking /home/circleci/project/config/test/thermAI.publication.json
-#||# 
-Directory check
-
-index.html check
-
 #||#    + checking /home/circleci/project/config/test/thermografische-gebouwanalyse.publication.json
 #||# 
 Directory check
