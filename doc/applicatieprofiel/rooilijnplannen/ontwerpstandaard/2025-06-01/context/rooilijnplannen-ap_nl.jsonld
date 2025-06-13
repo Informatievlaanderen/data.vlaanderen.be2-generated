@@ -1,0 +1,385 @@
+{
+  "@context": {
+    "AangelandeEigendommen": "https://data.vlaanderen.be/ns/rooilijn#AangelandeEigendommen",
+    "AangelandeEigendommen.getroffenOppervlak": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#AangelandeEigendommen.getroffenOppervlak",
+      "@type": "@id"
+    },
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Besluit": "http://data.vlaanderen.be/ns/besluit#Besluit",
+    "Besluit.titel": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/eli/ontology#title",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Bouwlijn": "https://data.vlaanderen.be/ns/rooilijn#Bouwlijn",
+    "Bouwlijnkenmerk": "https://data.vlaanderen.be/ns/rooilijn#Bouwlijnkenmerk",
+    "Bouwlijnreferentie": "https://data.vlaanderen.be/ns/rooilijn#Bouwlijnreferentie",
+    "Bouwverbod": "https://data.vlaanderen.be/ns/rooilijn#Bouwverbod",
+    "Concept": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Curve": "http://www.opengis.net/ont/sf#Curve",
+    "Date": "http://www.w3.org/2001/XMLSchema#date",
+    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "Eenheid": "https://qudt.org/schema/qudt/Unit",
+    "GeenBouwverbod": "https://data.vlaanderen.be/ns/rooilijn#GeenBouwverbod",
+    "Geldbedrag": "https://schema.org/MonetaryAmount",
+    "GeneriekVlak": "http://www.opengis.net/ont/gml#AbstractSurface",
+    "GeneriekeCurve": "http://www.opengis.net/ont/gml#AbstractCurve",
+    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
+    "GetroffenOppervlak": "https://data.vlaanderen.be/ns/rooilijn#GetroffenOppervlak",
+    "GetroffenOppervlak.oppervlakte": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#oppervlakte",
+      "@type": "@id"
+    },
+    "GetroffenOppervlak.rooilijn": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#GetroffenOppervlak.rooilijn",
+      "@type": "@id"
+    },
+    "Grens": "https://data.vlaanderen.be/ns/rooilijn#Grens",
+    "Identificator": "http://www.w3.org/ns/adms#Identifier",
+    "Identificator.identificator": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "KadastraalPatrimoniumperceel": "https://data.vlaanderen.be/ns/perceel#KadastraalPatrimoniumperceel",
+    "KadastraalPlanperceel": "https://data.vlaanderen.be/ns/perceel#KadastraalPlanperceel",
+    "KadastraalPlanperceel.geometrie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.geometrie",
+      "@type": "@id"
+    },
+    "KadastraalPlanperceel.identificator": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "KadastraalPlanperceel.oppervlakte": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid.oppervlakte",
+      "@type": "@id"
+    },
+    "KwantitatieveWaarde": "https://schema.org/QuantitativeValue",
+    "LangString": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "Lijn": "http://www.opengis.net/ont/sf#Curve",
+    "Lijndiepte": "https://data.vlaanderen.be/ns/rooilijn#Lijndiepte",
+    "Lijndiepte.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Lijnkenmerk": "https://data.vlaanderen.be/ns/rooilijn#Lijnkenmerk",
+    "Lijnstatus": "https://data.vlaanderen.be/ns/rooilijn#Lijnstatus",
+    "Lijnstring": "http://www.opengis.net/ont/sf#LineString",
+    "LineaireReferentie": "https://data.vlaanderen.be/ns/netwerk#LineaireReferentie",
+    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "Moment": "http://www.w3.org/2006/time#Instant",
+    "MultiLijnstring": "http://www.opengis.net/ont/sf#MultiLineString",
+    "MultiPolygoon": "http://www.opengis.net/ont/sf#MultiLineString",
+    "Multicurve": "http://www.opengis.net/ont/gml#MultiCurve",
+    "Multivlak": "http://www.opengis.net/ont/gml#MultiSurface",
+    "Nustvoorzieningnetwerkelement": "https://vocab.belgif.be/ns/utility-services#UtilityNetworkElement",
+    "Objectreferentie": "https://data.vlaanderen.be/ns/rooilijn#Objectreferentie",
+    "Omgevingsvergunning": "https://data.vlaanderen.be/ns/rooilijn#Omgevingsvergunning",
+    "OpenbareWeg": "https://data.vlaanderen.be/ns/rooilijn#OpenbareWeg",
+    "OpenbareWeg.getroffenOppervlak": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#OpenbareWeg.getroffenOppervlak",
+      "@type": "@id"
+    },
+    "OpenbareWegreferentie": "https://data.vlaanderen.be/ns/rooilijn#OpenbareWegreferentie",
+    "OpenbareWegreferentie.getroffenOppervlak": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#OpenbareWegreferentie.getroffenOppervlak",
+      "@type": "@id"
+    },
+    "Perceelreferentie": "https://data.vlaanderen.be/ns/rooilijn#Perceelreferentie",
+    "Perceelreferentie.getroffenOppervlak": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#Perceelreferentie.getroffenOppervlak",
+      "@type": "@id"
+    },
+    "Periode": "http://www.w3.org/2006/time#ProperInterval",
+    "Plan": "https://data.vlaanderen.be/ns/rooilijn#Plan",
+    "Planelement": "https://data.vlaanderen.be/ns/rooilijn#Planelement",
+    "Planelement.identificator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#Identifier",
+      "@type": "@id"
+    },
+    "Polygoon": "http://www.opengis.net/ont/sf#Polygon",
+    "Rooilijn": "https://data.vlaanderen.be/ns/rooilijn#Rooilijn",
+    "Rooilijn.geometrie": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "@id"
+    },
+    "Rooilijninventaris": "https://data.vlaanderen.be/ns/rooilijn#Rooilijninventaris",
+    "Rooilijnkenmerk": "https://data.vlaanderen.be/ns/rooilijn#Rooilijnkenmerk",
+    "Rooilijnplan": "https://data.vlaanderen.be/ns/rooilijn#Rooilijnplan",
+    "Rooilijnplan.rooilijn": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#Rooilijnplan.rooilijn",
+      "@type": "@id"
+    },
+    "RuimtelijkUitvoeringsplan": "https://data.vlaanderen.be/ns/rooilijn#RuimtelijkUitvoeringsplan",
+    "RuimtelijkUitvoeringsplan.titel": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "RuimtelijkeEenheid": "https://data.vlaanderen.be/ns/perceel#RuimtelijkeEenheid",
+    "Status": "https://data.vlaanderen.be/ns/rooilijn#Status",
+    "String": "http://www.w3.org/2001/XMLSchema#string",
+    "TemporeleEntiteit": "http://www.w3.org/2006/time#TemporalEntity",
+    "Valuta": "http://qudt.org/schema/qudt/CurrencyUnit",
+    "Vergunning": "https://data.vlaanderen.be/ns/omgevingsvergunning#Vergunning",
+    "Verordening": "https://data.vlaanderen.be/ns/rooilijn#Verordening",
+    "Vlak": "http://www.opengis.net/ont/geosparql#Surface",
+    "Wegbaan": "https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Wegbaan",
+    "Wegsegment": "https://data.vlaanderen.be/ns/weg#Wegsegment",
+    "ZakelijkRecht": "https://data.vlaanderen.be/ns/perceel#ZakelijkRecht",
+    "ZakelijkRecht.type": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#ZakelijkRecht.type",
+      "@type": "@id"
+    },
+    "aandeel": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#aandeel",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "agent": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#ZakelijkRecht.agent",
+      "@type": "@id"
+    },
+    "agentMetZakelijkRecht": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/perceel#agentMetZakelijkRecht",
+      "@type": "@id"
+    },
+    "bouwlijn": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#bouwlijn",
+      "@type": "@id"
+    },
+    "bouwlijnreferentie": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#bouwlijnreferentie",
+      "@type": "@id"
+    },
+    "datum": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#datum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "datumBijwerking": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#datumbijwerking",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "eenheid": {
+      "@id": "https://schema.org/unitCode",
+      "@type": "@id"
+    },
+    "element": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#element",
+      "@type": "@id"
+    },
+    "geldigheidsperiode": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#geldigheidsperiode",
+      "@type": "@id"
+    },
+    "geometrie": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "@id"
+    },
+    "getroffenOpenbareWeg": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#getroffenOpenbareWeg",
+      "@type": "@id"
+    },
+    "getroffenOppervlakOpenbareWeg": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#getroffenOppervlakOpenbareWeg",
+      "@type": "@id"
+    },
+    "getroffenOppervlakPerceel": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#getroffenOppervlakPerceel",
+      "@type": "@id"
+    },
+    "getroffenPerceel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#getroffenPerceel",
+      "@type": "@id"
+    },
+    "gml": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "identificator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#Identifier",
+      "@type": "@id"
+    },
+    "inEDTF": {
+      "@id": "https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "inXSDDatumTijd": {
+      "@id": "http://www.w3.org/2006/time#inXSDDateTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "ingangsdatum": {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "kadastraalPatrimoniumperceel": {
+      "@id": "https://data.vlaanderen.be/ns/perceel#ZakelijkRecht.kadastraalPatrimoniumperceel",
+      "@type": "@id"
+    },
+    "kenmerkLinks": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#kenmerkLinks",
+      "@type": "@id"
+    },
+    "kenmerkRechts": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#kenmerkRechts",
+      "@type": "@id"
+    },
+    "lijnreferentie": {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#Netwerkreferentie.element",
+      "@type": "@id"
+    },
+    "lineaireReferentie": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#lineaireReferentie",
+      "@type": "@id"
+    },
+    "naam": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "offsetRooilijn": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#offsetRooilijn",
+      "@type": "@id"
+    },
+    "offsetWegsegment": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#offsetWegsegment",
+      "@type": "@id"
+    },
+    "openbareWegreferentie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#openbareWegreferentie",
+      "@type": "@id"
+    },
+    "patrimoniumperceel": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/relation",
+      "@type": "@id"
+    },
+    "perceel": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#perceel",
+      "@type": "@id"
+    },
+    "perceelreferentie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#perceelreferentie",
+      "@type": "@id"
+    },
+    "plan": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#plan",
+      "@type": "@id"
+    },
+    "planelementstatus": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/lifecycle/schema#state",
+      "@type": "@id"
+    },
+    "planperceel": {
+      "@id": "http://purl.org/dc/terms/relation",
+      "@type": "@id"
+    },
+    "planstatus": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/lifecycle/schema#state",
+      "@type": "@id"
+    },
+    "publicatiedatum": {
+      "@id": "http://data.europa.eu/eli/ontology#date_publication",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "rooilijninventaris": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#rooilijninventaris",
+      "@type": "@id"
+    },
+    "rooilijntype": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#rooilijntype",
+      "@type": "@id"
+    },
+    "status": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/lifecycle/schema#state",
+      "@type": "@id"
+    },
+    "titel": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "toegekendDoor": {
+      "@id": "http://purl.org/dc/terms/creator",
+      "@type": "@id"
+    },
+    "toegekendDoor(String)": {
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "@id"
+    },
+    "toegekendOp": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "toepassingsrichting": {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#toepassingsrichting",
+      "@type": "@id"
+    },
+    "tot": {
+      "@id": "http://www.w3.org/2006/time#hasEnd",
+      "@type": "@id"
+    },
+    "totPositie": {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#LineaireReferentie.totPositie",
+      "@type": "@id"
+    },
+    "type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "valuta": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/P180_has_currency",
+      "@type": "@id"
+    },
+    "van": {
+      "@id": "http://www.w3.org/2006/time#hasBeginning",
+      "@type": "@id"
+    },
+    "vanPositie": {
+      "@id": "https://data.vlaanderen.be/ns/netwerk#LineaireReferentie.vanPositie",
+      "@type": "@id"
+    },
+    "verordening": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#verordening",
+      "@type": "@id"
+    },
+    "waarde": {
+      "@id": "https://schema.org/value",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "waardeverandering": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#waardeverandering",
+      "@type": "@id"
+    },
+    "wegbaan": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#wegbaan",
+      "@type": "@id"
+    },
+    "wegsegment": {
+      "@id": "https://data.vlaanderen.be/ns/rooilijn#wegsegment",
+      "@type": "@id"
+    },
+    "wkt": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    }
+  }
+}

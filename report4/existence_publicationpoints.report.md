@@ -423,6 +423,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/production/rooilijnplannen.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/production/ruimtelijkebereiken.publication.json
 #||# 
 Directory check
