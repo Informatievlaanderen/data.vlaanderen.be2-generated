@@ -274,6 +274,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/vegetatie",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/waterdeel",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/watervoorkomen",
+  "/tmp/generated/doc/vocabularium/openbare-nutsvoorzieningkasten/ontwerpstandaard/2025-06-03",
   "/tmp/generated/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-04-01",
   "/tmp/generated/doc/vocabularium/schuldbeheer/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-07-12",
@@ -293,6 +294,7 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/leercredential",
   "/tmp/generated/ns/metadata-dcat",
   "/tmp/generated/ns/observaties-en-metingen",
+  "/tmp/generated/ns/openbare-nutsvoorzieningkasten",
   "/tmp/generated/ns/rooilijn",
   "/tmp/generated/ns/sensoren-en-bemonstering"
 ]
