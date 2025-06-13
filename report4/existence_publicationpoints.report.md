@@ -441,6 +441,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/production/shok.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/production/slim-ruimtelijk-plannen.publication.json
 #||# 
 Directory check
