@@ -269,6 +269,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-10-14",
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-10-15",
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/ontwerpstandaard/2024-07-08",
+  "/tmp/generated/doc/vocabularium/thermografische-gebouwanalyse/ontwerpstandaard/2025-05-22",
   "/tmp/generated/doc/vocabularium/toestemming",
   "/tmp/generated/doc/vocabularium/toestemming/ontwerpdocument/2020-01-06",
   "/tmp/generated/ns/FeitelijkeVerenigingen",
@@ -280,5 +281,6 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/leercredential",
   "/tmp/generated/ns/metadata-dcat",
   "/tmp/generated/ns/observaties-en-metingen",
-  "/tmp/generated/ns/sensoren-en-bemonstering"
+  "/tmp/generated/ns/sensoren-en-bemonstering",
+  "/tmp/generated/ns/thermografische-gebouwanalyse"
 ]
