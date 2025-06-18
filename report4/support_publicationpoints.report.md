@@ -244,6 +244,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/subsidieregister",
   "/tmp/generated/doc/applicatieprofiel/terreindelen",
   "/tmp/generated/doc/applicatieprofiel/thermAI/ontwerpstandaard/15-05-2025",
+  "/tmp/generated/doc/applicatieprofiel/thermografische-gebouwanalyse/ontwerpstandaard/2025-05-22",
   "/tmp/generated/doc/applicatieprofiel/vegetatie-elementen",
   "/tmp/generated/doc/applicatieprofiel/verkeersborden",
   "/tmp/generated/doc/applicatieprofiel/vlaamse-codex",
