@@ -2,6 +2,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -116,28 +117,28 @@
     shacl:description "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."@nl;
     shacl:maxCount "1";
     shacl:name "busnummer"@nl;
-    shacl:path <http://todo.com/Adresvoorstelling.busnummer>
+    shacl:path <https://data.vlaanderen.be/ns/adres#busnummer>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#Adresvoorstelling.Gemeentenaam>;
     shacl:datatype rdf:langString;
     shacl:description "Gemeentenaam vh adres."@nl;
     shacl:maxCount "1";
     shacl:name "gemeentenaam"@nl;
-    shacl:path <http://todo.com/gemeentenaam>
+    shacl:path <https://data.vlaanderen.be/ns/adres#Gemeentenaam>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#Adresvoorstelling.Huisnummer>;
     shacl:datatype xsd:string;
     shacl:description "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."@nl;
     shacl:maxCount "1";
     shacl:name "huisnummer"@nl;
-    shacl:path <http://todo.com/Adresvoorstelling.huisnummer>
+    shacl:path rdfs:label
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#Adresvoorstelling.Land>;
     shacl:datatype rdf:langString;
     shacl:description "Land waarin het adres gelegen is."@nl;
     shacl:maxCount "1";
     shacl:name "land"@nl;
-    shacl:path <http://todo.com/land>
+    shacl:path <https://data.vlaanderen.be/ns/adres#land>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#Adresvoorstelling.Locatieaanduiding>;
     shacl:datatype xsd:string;
@@ -196,7 +197,7 @@
     shacl:description "Contactgegevens die al dan niet publiek zijn."@nl;
     shacl:maxCount "1";
     shacl:name "contactinfo"@nl;
-    shacl:path <http://todo.com/contactinfo>
+    shacl:path schema:ContactPoint
   ];
   shacl:targetClass dc:Agent .
 
@@ -303,7 +304,7 @@
     shacl:description "De omschrijving van de capaciteit van een infrastructuur."@nl;
     shacl:maxCount "1";
     shacl:name "beschrijving"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Capaciteit.beschrijving>
+    shacl:path dc:description
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#Capaciteit.Eenheid>;
     shacl:datatype xsd:string;
@@ -313,7 +314,7 @@
     shacl:path schemas:unitText
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#Capaciteit.Standaardeenheid>;
-    shacl:class <http://todo.com/StandaardEenheid>;
+    shacl:class schemas:unitCode;
     shacl:description "De standaard maat waarin de capaciteit wordt uitgedrukt."@nl;
     shacl:maxCount "1";
     shacl:name "standaardeenheid"@nl;
@@ -436,7 +437,7 @@
     shacl:path schemas:unitText
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#Dimensie.Standaardeenheid>;
-    shacl:class <http://todo.com/StandaardEenheid>;
+    shacl:class schemas:unitCode;
     shacl:description "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
     shacl:maxCount "1";
     shacl:name "standaardeenheid"@nl;
@@ -597,10 +598,11 @@
   shacl:property [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#Infrastructuur.Annuleringsvoorwaarden>;
     shacl:datatype rdfs:Literal;
+    shacl:description "De voorwaarde(n) die noodzakelijk is (zijn) om een bepaalde reservatie te annuleren."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "annuleringsvoorwaarden";
-    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#annuleringsvoorwaarden>
+    shacl:name "annuleringsvoorwaarden"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/zaalreservatie#annuleringsvoorwaarden>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#Infrastructuur.Naam>;
     shacl:datatype rdf:langString;
@@ -645,13 +647,6 @@
     shacl:description "De afmetingen in iedere richting van een Infrastructuur."@nl;
     shacl:name "dimensie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.dimensie>
-  ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#Infrastructuur.Eigenaar>;
-    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Eigenaarschap>;
-    shacl:description "De Agent die de Infrastructuur bezit."@nl;
-    shacl:maxCount "1";
-    shacl:name "eigenaar"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur.eigenaar>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#Infrastructuur.Faciliteit>;
     shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Faciliteit>;
@@ -742,7 +737,7 @@
     shacl:description "Het voorbehouden van een infrastructuur."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "InfrastructuurReservatie"@nl;
+    shacl:name "infrastructuurReservatie"@nl;
     shacl:path <http://purl.org/vocab/cpsv>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur> .
@@ -772,7 +767,7 @@
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#Infrastructuurreservatie.Status>;
     shacl:class <https://data.vlaanderen.be/ns/zaalreservatie#Infrastructuurreservatiestatus>;
-    shacl:description "huidige toestand, positie, of situatie van een persoon, plaats, object, systeem, of proces op een bepaald moment."@nl;
+    shacl:description "Huidige toestand, positie, of situatie van een persoon, plaats, object, systeem, of proces op een bepaald moment."@nl;
     shacl:minCount "1";
     shacl:name "status"@nl;
     shacl:path <https://data.vlaanderen.be/ns/zaalreservatie#status>
@@ -795,13 +790,13 @@
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "infrastructuur"@nl;
-    shacl:path <http://todo.com/infrastructuur>
+    shacl:path <http://purl.org/vocab/cpsv>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#Infrastructuurreservatie.Infrastructuurreservatiedienst>;
     shacl:class <https://data.vlaanderen.be/ns/zaalreservatie#Infrastructuurreservatiedienst>;
     shacl:description "dienst of systeem dat is ontworpen voor het reserveren van infrastructuur."@nl;
     shacl:name "Infrastructuurreservatiedienst"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/zaalreservatie#dienstverlening>
+    shacl:path <http://purl.org/vocab/cpsv>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/zaalreservatie#Infrastructuurreservatie> .
 
@@ -876,8 +871,8 @@
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#Infrastructuurreservatiedienst.Heeftverantwoordelijke>;
     shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
-    shacl:name "heeftVerantwoordelijke";
-    shacl:path <http://todo.com/heeftVerantwoordelijke>
+    shacl:name "heeftVerantwoordelijke"@nl;
+    shacl:path <http://data.europa.eu/m8g/hasCompetentAuthority>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/zaalreservatie#Infrastructuurreservatiedienst> .
 
@@ -896,7 +891,7 @@
     shacl:class skos:Concept;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "Infrastructuurreservatiestatustype"@nl;
+    shacl:name "infrastructuurreservatiestatustype"@nl;
     shacl:path <https://data.vlaanderen.be/ns/zaalreservatie#type>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/zaalreservatie#Infrastructuurreservatiestatus> .
@@ -924,7 +919,7 @@
     shacl:path schemas:unitText
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#KwantitatieveWaarde.Eenheidcode>;
-    shacl:class <http://todo.com/StandaardEenheid>;
+    shacl:class schemas:unitCode;
     shacl:description "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
     shacl:maxCount "1";
     shacl:name "eenheidcode"@nl;
@@ -961,7 +956,7 @@
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "beschrijving"@nl;
-    shacl:path <http://todo.com/beschrijving>
+    shacl:path dc:description
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#Locatie.Geometrie>;
     shacl:class <http://www.w3.org/ns/locn#Geometry>;
@@ -975,7 +970,7 @@
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "adres"@nl;
-    shacl:path <http://todo.com/adres>
+    shacl:path org:siteAddress
   ];
   shacl:targetClass dc:Location,
     prov:Location .
@@ -1089,26 +1084,29 @@
   shacl:property [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#PubliekeOrganisatie.Voorkeursnaam>;
     shacl:datatype rdf:langString;
+    shacl:description "Naam waarmee de organisatie bij voorkeur wordt aangeduid."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "voorkeursnaam"@nl;
-    shacl:path <http://todo.com/voorkeursnaam>
+    shacl:path skos:prefLabel
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#PubliekeOrganisatie.Contactinfo>;
     shacl:class schema:ContactPoint;
-    shacl:name "Contactinfo"@nl;
-    shacl:path <http://todo.com/contactinfo>
+    shacl:description "Adres vd vestiging."@nl;
+    shacl:name "contactinfo"@nl;
+    shacl:path schema:ContactPoint
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#PubliekeOrganisatie.Werkingsgebied>;
     shacl:class dc:Location;
+    shacl:description "Administratief gebied dat de Publieke Organisatie dekt."@nl;
     shacl:name "werkingsgebied"@nl;
-    shacl:path <http://todo.com/werkingsgebied>
+    shacl:path dc:spatial
   ];
   shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#StandaardEenheidShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://todo.com/StandaardEenheid> .
+  shacl:targetClass schemas:unitCode .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18#StatustypeShape> a shacl:NodeShape;
   shacl:closed false;
