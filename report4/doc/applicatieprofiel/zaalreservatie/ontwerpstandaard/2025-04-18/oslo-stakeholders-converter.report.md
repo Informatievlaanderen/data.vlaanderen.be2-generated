@@ -2,19 +2,19 @@
 
 #||# -------------------------------------
 
-2025-06-23T09:10:14.528Z warn: Unable to find the contributor type for "Alexander Potloot" using column "Functie". Please make sure this column has a value set for this person.
+2025-06-23T11:58:42.162Z warn: Unable to find the contributor type for "Alexander Potloot" using column "Functie". Please make sure this column has a value set for this person.
 
-2025-06-23T09:10:14.530Z warn: Unable to find the contributor type for "Isabaut Martens" using column "Functie". Please make sure this column has a value set for this person.
+2025-06-23T11:58:42.163Z warn: Unable to find the contributor type for "Isabaut Martens" using column "Functie". Please make sure this column has a value set for this person.
 
-2025-06-23T09:10:14.530Z warn: Unable to find the contributor type for "Yaron Dassonneville" using column "Functie". Please make sure this column has a value set for this person.
+2025-06-23T11:58:42.164Z warn: Unable to find the contributor type for "Yaron Dassonneville" using column "Functie". Please make sure this column has a value set for this person.
 
-2025-06-23T09:10:14.530Z warn: Unable to find the contributor type for "Jitse De Cock" using column "Functie". Please make sure this column has a value set for this person.
+2025-06-23T11:58:42.164Z warn: Unable to find the contributor type for "Jitse De Cock" using column "Functie". Please make sure this column has a value set for this person.
 
-2025-06-23T09:10:14.530Z warn: Unable to find the contributor type for "Els de Vleeschauwer" using column "Functie". Please make sure this column has a value set for this person.
+2025-06-23T11:58:42.164Z warn: Unable to find the contributor type for "Els de Vleeschauwer" using column "Functie". Please make sure this column has a value set for this person.
 
-2025-06-23T09:10:14.530Z warn: Unable to find the contributor type for "Janis Sevenis" using column "Functie". Please make sure this column has a value set for this person.
+2025-06-23T11:58:42.164Z warn: Unable to find the contributor type for "Janis Sevenis" using column "Functie". Please make sure this column has a value set for this person.
 
-2025-06-23T09:10:14.530Z warn: Unable to find the contributor type for "Danny Lievens" using column "Functie". Please make sure this column has a value set for this person.
+2025-06-23T11:58:42.164Z warn: Unable to find the contributor type for "Danny Lievens" using column "Functie". Please make sure this column has a value set for this person.
 
-2025-06-23T09:10:14.532Z error: [CsvConverterHandler] Unable to convert the provided csv into a stakeholders-file. Error: Invalid Record Length: columns length is 7, got 6 on line 9 for record Simon, Vander Elst,Digitaal Vlaanderen, simon.vanderelst@vlaanderen.be,https://data.vlaanderen.be/id/organisatie/OVO002949A,
+2025-06-23T11:58:42.166Z error: [CsvConverterHandler] Unable to convert the provided csv into a stakeholders-file. Error: Invalid Record Length: columns length is 7, got 6 on line 9 for record Simon, Vander Elst,Digitaal Vlaanderen, simon.vanderelst@vlaanderen.be,https://data.vlaanderen.be/id/organisatie/OVO002949A,
 
