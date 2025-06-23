@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-06-19T10:24:21.721Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c3b128ae8278fb9abcfbb45da1ee0ce473aaf354547155756840d61ead0d30ef](all-openbare-nutsvoorzieningkasten.jsonld#L5114)".
+2025-06-23T12:29:31.378Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c3b128ae8278fb9abcfbb45da1ee0ce473aaf354547155756840d61ead0d30ef](all-openbare-nutsvoorzieningkasten.jsonld#L5114)".
 
 Error: Unable to find a label for the domain "urn:oslo-toolchain:877adc51755f49eb3ddfa23f867c203520ec014b7c21a8a161df9f52a0e51a77" of subject "[urn:oslo-toolchain:c3b128ae8278fb9abcfbb45da1ee0ce473aaf354547155756840d61ead0d30ef](all-openbare-nutsvoorzieningkasten.jsonld#L5114)".
 
