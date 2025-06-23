@@ -584,3 +584,9 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/dev/zaalreservatie.publication.json
+#||# 
+Directory check
+
+index.html check
+

@@ -172,6 +172,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/wetgeving.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/dev/zaalreservatie.publication.json
+#||#  
 Error: the following directories are unsupported
 [
   "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL",
