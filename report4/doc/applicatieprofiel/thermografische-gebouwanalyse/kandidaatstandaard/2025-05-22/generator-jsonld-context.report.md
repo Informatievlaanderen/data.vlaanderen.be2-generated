@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-06-25T06:19:26.993Z error: Found [urn:oslo-toolchain:0833a0b992a6c781b63ab2060d3126bd7a995d27636fd8b4cc2ffebec056b84a](all-thermografische-gebouwanalyse.jsonld#L867) in duplicates, meaning "Gebouw" is used multiple times as label.
+2025-06-25T07:47:29.407Z error: Found [urn:oslo-toolchain:0833a0b992a6c781b63ab2060d3126bd7a995d27636fd8b4cc2ffebec056b84a](all-thermografische-gebouwanalyse.jsonld#L867) in duplicates, meaning "Gebouw" is used multiple times as label.
 
-2025-06-25T06:19:26.997Z error: Found [urn:oslo-toolchain:abb4b0e6ef8d096b8fb5ef18795462129d9a0b583355f36171d55e1dca66f2d8](all-thermografische-gebouwanalyse.jsonld#L1236) in duplicates, meaning "Gebouw" is used multiple times as label.
+2025-06-25T07:47:29.413Z error: Found [urn:oslo-toolchain:abb4b0e6ef8d096b8fb5ef18795462129d9a0b583355f36171d55e1dca66f2d8](all-thermografische-gebouwanalyse.jsonld#L1236) in duplicates, meaning "Gebouw" is used multiple times as label.
 
