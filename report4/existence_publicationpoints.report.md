@@ -468,8 +468,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/vocabularium/smart-innovation-factory/ontwerpstandaard/2025-06-04/index.html'
-error: missing '/tmp/generated/ns/smart-innovation-factory/index.html'
 
 #||#    + checking /home/circleci/project/config/test/subsidie.publication.json
 #||# 
