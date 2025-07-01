@@ -83,21 +83,6 @@
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Agent(inRol)Shape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Agent(inRol).Agentinrol.zaak>;
-    shacl:class dbo:Case;
-    shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "AgentInRol.Zaak";
-    shacl:path <https://data.vlaanderen.be/ns/dossier#AgentInRol.Zaak>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Agent(inRol).Agentinrol.agent>;
-    shacl:class dc:Agent;
-    shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "AgentInRol.Agent";
-    shacl:path <http://todo.com/AgentInRol.Agent>
-  ];
   shacl:targetClass prov:Association .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#AgentShape> a shacl:NodeShape;
@@ -105,8 +90,7 @@
   shacl:property [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Agent.Zaak>;
     shacl:class dbo:Case;
-    shacl:description "De Zaak die in behandeling is door de Agent."@nl;
-    shacl:name "zaak"@nl;
+    shacl:name "zaak";
     shacl:path <http://todo.com/zaak>
   ];
   shacl:targetClass dc:Agent .
@@ -154,7 +138,7 @@
     shacl:class <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation>;
     shacl:description "Observaties die op het Object gebeuren."@nl;
     shacl:name "waardeverschaffer"@nl;
-    shacl:path <http://todo.com/Object.waardeverschaffer>
+    shacl:path <http://www.w3.org/ns/sosa/isFeatureOfInterestOf>
   ];
   shacl:targetClass <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature> .
 
@@ -268,24 +252,27 @@
     shacl:name "meldingstype"@nl;
     shacl:path oa:motivatedBy
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Melding.Heeftdoelwit>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Melding.HeeftDoelwit>;
     shacl:class <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature>;
-    shacl:name "heeftDoelwit";
-    shacl:path <http://todo.com/heeftDoelwit>
+    shacl:description "De relatie tussen de Melding en het doelwit, het Meldingsobject waarop de melding slaat."@nl;
+    shacl:name "heeft doelwit"@nl;
+    shacl:path oa:hasTarget
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Melding.Behandelaar>;
     shacl:class dc:Agent;
+    shacl:description "Agent die werd aangewezen om de melding op te volgen en af te handelen."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "behandelaar";
+    shacl:name "behandelaar"@nl;
     shacl:path <http://todo.com/behandelaar>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Melding.Indiener>;
     shacl:class dc:Agent;
+    shacl:description "Agent die de Melding heeft aangemaakt en/of ingediend."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "indiener";
-    shacl:path <http://todo.com/indiener>
+    shacl:name "indiener"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#indiener>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/melding#Melding> .
 
@@ -518,16 +505,15 @@
     shacl:name "procedure"@nl;
     shacl:path <https://dbpedia.org/ontology/procedure>
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Zaak.Agent>;
+    shacl:class dc:Agent;
+    shacl:name "agent";
+    shacl:path <http://todo.com/agent>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Zaak.Behandelt>;
     shacl:class rdfs:Resource;
     shacl:description "Een zaak behandelt een resource."@nl;
     shacl:name "behandelt"@nl;
     shacl:path <https://data.vlaanderen.be/ns/dossier#behandelt>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Zaak.Agent>;
-    shacl:class dc:Agent;
-    shacl:description "De Agent die de zaak behandeld."@nl;
-    shacl:name "agent"@nl;
-    shacl:path dc:agent
   ];
   shacl:targetClass dbo:Case .
