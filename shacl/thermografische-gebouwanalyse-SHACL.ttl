@@ -1,4 +1,5 @@
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -34,7 +35,8 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#GeometrieobservatieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#MetingShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#FotoShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#ElementShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Bim_gebouwShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Bim_elementShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#VideoShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#MachinelearningModelShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#DatasetShape>,
@@ -181,9 +183,31 @@
   shacl:closed false;
   shacl:targetClass dc:Agent .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Bim_elementShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Bim_element.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van het Domeinobject."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcElement> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Bim_gebouwShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Bim_gebouw.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van het Domeinobject."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ];
+  shacl:targetClass <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcBuilding> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#CameraShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://dbpedia.org/resource/Camera> .
+  shacl:targetClass dbo:Camera .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#ClassificatieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -221,17 +245,11 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#DeploymentShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Deployment.Deploymentreden>;
-    shacl:datatype rdf:langString;
-    shacl:description "De oorzaak of het doel van een bepaalde Deployment."@nl;
-    shacl:name "deploymentReden"@nl;
-    shacl:path <http://fixme.com/>
-  ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Deployment.Deploymenttijdstip>;
     shacl:class <http://www.w3.org/2006/time#TemporalEntity>;
     shacl:description "Het moment waarop een bepaalde Deployment plaatsvindt."@nl;
     shacl:name "deploymentTijdstip"@nl;
-    shacl:path <http://fixme.com/>
+    shacl:path <http://www.w3.org/2006/time#hasTime>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Deployment.Deployedsysteem>;
     shacl:class <http://www.w3.org/ns/ssn/System>;
@@ -262,22 +280,11 @@
   shacl:closed false;
   shacl:targetClass <https://qudt.org/schema/qudt/Unit> .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#ElementShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Element.Type>;
-    shacl:class <https://data.vlaanderen.be/ns/thermografische-gebouwanalyse#Elementtype>;
-    shacl:description "Aard van het Domeinobject."@nl;
-    shacl:name "type"@nl;
-    shacl:path dc:type
-  ];
-  shacl:targetClass <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcElement> .
-
 <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#FotoShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Foto.Type>;
-    shacl:class <https://data.vlaanderen.be/ns/thermografische-gebouwanalyse#Fototype>;
+    shacl:class skos:Concept;
     shacl:description "Aard van het Domeinobject."@nl;
     shacl:name "type"@nl;
     shacl:path dc:type
@@ -326,13 +333,7 @@
     shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouw.status>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Gebouw.Type>;
-    shacl:class <https://data.vlaanderen.be/ns/thermografische-gebouwanalyse#Gebouwtype>;
-    shacl:description "Aard van het Domeinobject."@nl;
-    shacl:name "type"@nl;
-    shacl:path dc:type
-  ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Gebouw.Type>;
-    shacl:class <https://data.vlaanderen.be/ns/thermografische-gebouwanalyse#Gebouwtype>;
+    shacl:class skos:Concept;
     shacl:description "Aard van het Domeinobject."@nl;
     shacl:name "type"@nl;
     shacl:path dc:type
@@ -343,8 +344,7 @@
     shacl:name "bestaatUit"@nl;
     shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouw.bestaatUit>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/gebouw#Gebouw>,
-    <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcBuilding> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/gebouw#Gebouw> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#GebouweenheidShape> a shacl:NodeShape;
   shacl:closed false;
@@ -377,7 +377,7 @@
     shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.status>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Gebouweenheid.Type>;
-    shacl:class <https://data.vlaanderen.be/ns/thermografische-gebouwanalyse#Gebouweenheidttype>;
+    shacl:class skos:Concept;
     shacl:description "Aard van het Domeinobject."@nl;
     shacl:name "type"@nl;
     shacl:path dc:type
@@ -418,7 +418,7 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#GnssOntvangerShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://dbpedia.org/resource/Satellite_navigation_device> .
+  shacl:targetClass <https://www.fair-gnss.oma.be/gnss-dcat-ap/vocabulary/geo#GNSSReceiver> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#IdentificatorShape> a shacl:NodeShape;
   shacl:closed false;
@@ -545,7 +545,7 @@
     shacl:path dc:created
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#MachinelearningModel.Type>;
-    shacl:class <https://data.vlaanderen.be/ns/thermografische-gebouwanalyse#MachineLearningModeltype>;
+    shacl:class skos:Concept;
     shacl:description "De aard of genre van het model."@nl;
     shacl:name "type"@nl;
     shacl:path dc:type
@@ -752,7 +752,7 @@
     shacl:class skos:Concept;
     shacl:description "De aard van de Observatieverzameling."@nl;
     shacl:name "type"@nl;
-    shacl:path <http://fixme.com/>
+    shacl:path dc:type
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Observatieverzameling.Geassocieerdeverzameling>;
     shacl:class <http://www.w3.org/ns/sosa/ObservationCollection>;
@@ -774,7 +774,7 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#OpstellingShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <http://dbpedia.org/resource/Construction> .
+  shacl:targetClass dbo:ArchitecturalStructure .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#OutputShape> a shacl:NodeShape;
   shacl:closed false;
@@ -861,12 +861,6 @@
     shacl:description "Systeem dat door het Platform wordt gehost."@nl;
     shacl:name "hostVan"@nl;
     shacl:path <https://www.w3.org/ns/sosa/hosts>
-  ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Platform.Geassocieerdehost>;
-    shacl:class <https://www.w3.org/ns/sosa/Platform>;
-    shacl:description "Een platform heeft een geassocieerde host Platform."@nl;
-    shacl:name "geassocieerdeHost"@nl;
-    shacl:path <http://fixme.com/>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Platform.Deployment>;
     shacl:class <http://www.w3.org/ns/sosa/Deployment>;
@@ -1023,7 +1017,7 @@
   shacl:closed false;
   shacl:property [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22#Video.Type>;
-    shacl:class <https://data.vlaanderen.be/ns/thermografische-gebouwanalyse#Videotype>;
+    shacl:class skos:Concept;
     shacl:description "Aard van het Domeinobject."@nl;
     shacl:name "type"@nl;
     shacl:path dc:type
