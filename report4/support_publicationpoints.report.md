@@ -249,6 +249,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/besluit/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/bestuur/ontwerpdocument/2020-01-06",
+  "/tmp/generated/doc/vocabularium/energiehuis/kandidaatstandaard/2025-06-19",
   "/tmp/generated/doc/vocabularium/energiehuis/ontwerpstandaard/2025-02-18",
   "/tmp/generated/doc/vocabularium/erosiepoel/ontwerpstandaard/2025-04-29",
   "/tmp/generated/doc/vocabularium/fietsinfrastructuur/ontwerpstandaard/2025-03-05",
