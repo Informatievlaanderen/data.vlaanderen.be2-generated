@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-07-01T12:43:27.426Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:16ae7cc0430940b46153233289b097318e9f672b096a210bb7da7f76018afeb1](all-verkeersmeldingen.jsonld#L2155).
+2025-07-02T09:14:31.400Z error: No range found for attribute [urn:oslo-toolchain:17f63c93429513422fb077a05af5351957e068e4271b03c6e33d0969c2a26011](all-verkeersmeldingen.jsonld#L2269).
 
-2025-07-01T12:43:27.428Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:be3f2b022575368470723e8f47b26416415783bcf0a76108124657998d3c4ebd](all-verkeersmeldingen.jsonld#L2185).
+2025-07-02T09:14:31.402Z error: No range found for attribute [urn:oslo-toolchain:14c34fbd8b47e220f3f094b946e6f324c45c62a5c8d2ecd21598c7283eb95840](all-verkeersmeldingen.jsonld#L2304).
 
