@@ -2,3 +2,11 @@
 
 #||# -------------------------------------  
 
+2025-07-04T07:52:05.921Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
+
+2025-07-04T07:52:05.924Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
+
+2025-07-04T07:52:05.926Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+
+2025-07-04T07:52:05.926Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+
