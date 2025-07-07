@@ -27,7 +27,6 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#AanstuurbaarkenmerkShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#AansturingsprocedureShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#ObjectShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#DomeinobjectShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#FunctieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#ToestelShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#TaakShape>,
@@ -130,7 +129,7 @@
     shacl:path <http://www.w3.org/ns/sosa/hasResult>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#Aansturing.Parameter>;
-    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:class schemas:StructuredValue;
     shacl:description "Fenomeen dat activiteit van de Aansturing beInvloedt."@nl;
     shacl:name "parameter"@nl;
     shacl:path <https://dbpedia.org/ontology/influencedBy>
@@ -209,7 +208,7 @@
     shacl:path <http://www.w3.org/ns/sosa/hasOutput>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#Aansturingsprocedure.Parameter>;
-    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:class schemas:StructuredValue;
     shacl:description "Fenomeen dat uitvoering van de Aansturingsprocedure beInvloedt."@nl;
     shacl:name "parameter"@nl;
     shacl:path <https://dbpedia.org/ontology/influencedBy>
@@ -373,7 +372,7 @@
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "naam"@nl;
-    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name>
+    shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#Benoemdewaarde.Waarde>;
     shacl:class rdfs:Resource;
@@ -381,9 +380,9 @@
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "waarde"@nl;
-    shacl:path <http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value>
+    shacl:path schemas:value
   ];
-  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#NamedValue> .
+  shacl:targetClass schemas:StructuredValue .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#ConceptShape> a shacl:NodeShape;
   shacl:closed false;
@@ -441,24 +440,6 @@
     shacl:path <http://www.w3.org/ns/sosa/deployedOnPlatform>
   ];
   shacl:targetClass <http://www.w3.org/ns/sosa/Deployment> .
-
-<https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#DomeinobjectShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#Domeinobject.Type>;
-    shacl:class skos:Concept;
-    shacl:description "Aard van het Domeinobject."@nl;
-    shacl:maxCount "1";
-    shacl:name "type"@nl;
-    shacl:path dc:type
-  ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#Domeinobject.Identificator>;
-    shacl:description "Identificator van het domeinobject."@nl;
-    shacl:minCount "1";
-    shacl:name "identificator"@nl;
-    shacl:path skos:notation
-  ];
-  shacl:targetClass <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#EenheidShape> a shacl:NodeShape;
   shacl:closed false;
@@ -648,13 +629,27 @@
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#ObjectShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#Object.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van het Domeinobject."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#Object.Identificator>;
+    shacl:description "Identificator van het domeinobject."@nl;
+    shacl:minCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path skos:notation
+  ];
   shacl:targetClass <http://www.w3.org/ns/sosa/FeatureOfInterest> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#ObservatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#Observatie.Parameter>;
-    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:class schemas:StructuredValue;
     shacl:description "Fenomeen dat activiteit van de Observatie beInvloedt."@nl;
     shacl:name "parameter"@nl;
     shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter>
@@ -685,7 +680,7 @@
     shacl:class dc:Agent;
     shacl:description "Agent die de Observatie heeft uitgevoerd."@nl;
     shacl:name "uitgevoerdDoor"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor>
+    shacl:path <https://dbpedia.org/ontology/influencedBy>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#Observatie.Identificator>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
@@ -753,7 +748,7 @@
     shacl:path <http://www.w3.org/ns/sosa/hasOutput>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#Observatieprocedure.Parameter>;
-    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:class schemas:StructuredValue;
     shacl:description "Fenomeen dat uitvoering van de Observatieprocedure beInvloedt."@nl;
     shacl:name "parameter"@nl;
     shacl:path <https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.parameter>
@@ -818,7 +813,7 @@
     shacl:path <http://www.w3.org/ns/sosa/usedProcedure>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14#Observatieverzameling.Parameter>;
-    shacl:class <http://def.isotc211.org/iso19156/2011/Observation#NamedValue>;
+    shacl:class schemas:StructuredValue;
     shacl:description "Parameter van de Observaties in de collectie."@nl;
     shacl:name "parameter"@nl;
     shacl:path <http://fixme.com/>
