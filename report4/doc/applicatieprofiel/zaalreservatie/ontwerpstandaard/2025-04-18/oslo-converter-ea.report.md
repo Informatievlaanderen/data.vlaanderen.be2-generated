@@ -2,51 +2,51 @@
 
 #||# -------------------------------------
 
-2025-07-08T14:43:18.574Z info: Connector Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Buitenruimte:(Buitenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
+2025-07-08T18:51:00.568Z info: Connector Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Buitenruimte:(Buitenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
 
-2025-07-08T14:43:18.575Z info: Connector Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Binnenruimte:(Binnenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
+2025-07-08T18:51:00.569Z info: Connector Model:OSLO_Zaalreservatie:OSLO-CultuurEnJeugdinfrastructuur:Binnenruimte:(Binnenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
 
-2025-07-08T14:43:18.575Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiedienst:(Infrastructuurreservatiedienst -> Infrastructuurreservatie) is not an association with a source role. Ignoring this connector.
+2025-07-08T18:51:00.569Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiedienst:(Infrastructuurreservatiedienst -> Infrastructuurreservatie) is not an association with a source role. Ignoring this connector.
 
-2025-07-08T14:43:18.575Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Generiek:GeografischeNaam:(GeografischeNaam -> Locatie) is not an association with a source role. Ignoring this connector.
+2025-07-08T18:51:00.570Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Generiek:GeografischeNaam:(GeografischeNaam -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-07-08T14:43:18.575Z info: Connector Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:(Adresvoorstelling -> Locatie) is not an association with a source role. Ignoring this connector.
+2025-07-08T18:51:00.570Z info: Connector Model:OSLO_Zaalreservatie:OSLO-adresregister:Adresvoorstelling:(Adresvoorstelling -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-07-08T14:43:18.575Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Generiek:Plaats:(Plaats -> Locatie) is not an association with a source role. Ignoring this connector.
+2025-07-08T18:51:00.570Z info: Connector Model:OSLO_Zaalreservatie:OSLO-Generiek:Plaats:(Plaats -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-07-08T14:43:18.576Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-07-08T18:51:00.571Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-07-08T14:43:18.576Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie). Using fallback URI (http://todo.com/) instead.
+2025-07-08T18:51:00.571Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie). Using fallback URI (http://todo.com/) instead.
 
-2025-07-08T14:43:18.577Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:OSLO-Generiek). Using fallback URI (http://todo.com/) instead.
+2025-07-08T18:51:00.571Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:OSLO-Generiek). Using fallback URI (http://todo.com/) instead.
 
-2025-07-08T14:43:18.577Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:OSLO-Consent). Using fallback URI (http://todo.com/) instead.
+2025-07-08T18:51:00.571Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:OSLO-Consent). Using fallback URI (http://todo.com/) instead.
 
-2025-07-08T14:43:18.577Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:OSLO-Organisatie). Using fallback URI (http://todo.com/) instead.
+2025-07-08T18:51:00.571Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:OSLO-Organisatie). Using fallback URI (http://todo.com/) instead.
 
-2025-07-08T14:43:18.577Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:Dummy). Using fallback URI (http://todo.com/) instead.
+2025-07-08T18:51:00.571Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:Dummy). Using fallback URI (http://todo.com/) instead.
 
-2025-07-08T14:43:18.577Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Copy). Using fallback URI (http://todo.com/) instead.
+2025-07-08T18:51:00.571Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Copy). Using fallback URI (http://todo.com/) instead.
 
-2025-07-08T14:43:18.577Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:W3C-Time). Using fallback URI (http://todo.com/) instead.
+2025-07-08T18:51:00.571Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:W3C-Time). Using fallback URI (http://todo.com/) instead.
 
-2025-07-08T14:43:18.577Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:OSLO-adresregister). Using fallback URI (http://todo.com/) instead.
+2025-07-08T18:51:00.572Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:OSLO-adresregister). Using fallback URI (http://todo.com/) instead.
 
-2025-07-08T14:43:18.577Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:MobiVOC). Using fallback URI (http://todo.com/) instead.
+2025-07-08T18:51:00.572Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:MobiVOC). Using fallback URI (http://todo.com/) instead.
 
-2025-07-08T14:43:18.577Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:Schema.org). Using fallback URI (http://todo.com/) instead.
+2025-07-08T18:51:00.572Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO_Zaalreservatie:Schema.org). Using fallback URI (http://todo.com/) instead.
 
-2025-07-08T14:43:18.580Z warn: [ConnectorConverterHandler]: Connector (superInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-07-08T18:51:00.575Z warn: [ConnectorConverterHandler]: Connector (superInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-07-08T14:43:18.580Z warn: [ConnectorConverterHandler]: Connector (subInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-07-08T18:51:00.575Z warn: [ConnectorConverterHandler]: Connector (subInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-07-08T14:43:18.584Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Generiek:Taalcode has an empty value for tag ap-usageNote-nl.
+2025-07-08T18:51:00.578Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Generiek:Taalcode has an empty value for tag ap-usageNote-nl.
 
-2025-07-08T14:43:18.587Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Cultuurparticipatie:Activiteit has an empty value for tag ap-usageNote-nl.
+2025-07-08T18:51:00.581Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Cultuurparticipatie:Activiteit has an empty value for tag ap-usageNote-nl.
 
-2025-07-08T14:43:18.587Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Dienst:OpeningsurenSpecificatie has an empty value for tag ap-usageNote-nl.
+2025-07-08T18:51:00.581Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Dienst:OpeningsurenSpecificatie has an empty value for tag ap-usageNote-nl.
 
-2025-07-08T14:43:18.604Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiedienst:^beschrijving has already a value for ap-usageNote in language nl, but will be overwritten.
+2025-07-08T18:51:00.597Z warn: [ConverterHandler]: Entity with path Model:OSLO_Zaalreservatie:OSLO-Zaalreservatie:Infrastructuurreservatiedienst:^beschrijving has already a value for ap-usageNote in language nl, but will be overwritten.
 
 #||# -------------------------------------
 
