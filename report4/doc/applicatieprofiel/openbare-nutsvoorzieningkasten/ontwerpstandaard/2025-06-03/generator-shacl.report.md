@@ -2,9 +2,9 @@
 
 #||# -------------------------------------  
 
-2025-07-03T11:23:16.274Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c3b128ae8278fb9abcfbb45da1ee0ce473aaf354547155756840d61ead0d30ef](all-openbare-nutsvoorzieningkasten.jsonld#L4746)".
+2025-07-08T07:03:34.550Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c3b128ae8278fb9abcfbb45da1ee0ce473aaf354547155756840d61ead0d30ef](all-openbare-nutsvoorzieningkasten.jsonld#L4759)".
 
-Error: Unable to find a label for the domain "urn:oslo-toolchain:877adc51755f49eb3ddfa23f867c203520ec014b7c21a8a161df9f52a0e51a77" of subject "[urn:oslo-toolchain:c3b128ae8278fb9abcfbb45da1ee0ce473aaf354547155756840d61ead0d30ef](all-openbare-nutsvoorzieningkasten.jsonld#L4746)".
+Error: Unable to find a label for the domain "urn:oslo-toolchain:877adc51755f49eb3ddfa23f867c203520ec014b7c21a8a161df9f52a0e51a77" of subject "[urn:oslo-toolchain:c3b128ae8278fb9abcfbb45da1ee0ce473aaf354547155756840d61ead0d30ef](all-openbare-nutsvoorzieningkasten.jsonld#L4759)".
 
     at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:95:23)
 
