@@ -1,62 +1,6 @@
 | Execution | Existence | Support |
 | --- | --- | --- |
-| [commit ce6281f057b244e624461d917019ebe3038f7709](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/ce6281f057b244e624461d917019ebe3038f7709) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 34528d185748ec4bbb685ec0778fcf53e9bbb645](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/34528d185748ec4bbb685ec0778fcf53e9bbb645) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit cd630eee6650bccd80fa4b3d2282157c8d8cd5be](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/cd630eee6650bccd80fa4b3d2282157c8d8cd5be) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 7134dbb6d1c315a9700cbd6c3188bf88a0d819e4](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/7134dbb6d1c315a9700cbd6c3188bf88a0d819e4) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit f1db2294cd7c929ddb338bce93e8506fb1691372](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/f1db2294cd7c929ddb338bce93e8506fb1691372) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 5564ab9df505e7becf9a7c56a47ec298599902f9](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/5564ab9df505e7becf9a7c56a47ec298599902f9) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 0987375f16920135c933fec725f345abed659854](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/0987375f16920135c933fec725f345abed659854) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 906460a193726ccfbb8bc50830336154c3ef2506](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/906460a193726ccfbb8bc50830336154c3ef2506) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 22090e0eda8a9d68c1ea0793a85f7a87b983666e](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/22090e0eda8a9d68c1ea0793a85f7a87b983666e) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 0feac5544e54aa779625746352e9d3bea2a8bb69](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/0feac5544e54aa779625746352e9d3bea2a8bb69) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit fbbb50c1db5fe2c0447731e0510e6b3c6d44063e](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/fbbb50c1db5fe2c0447731e0510e6b3c6d44063e) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 41e623cfc808488b18d9291a810b4ef0bf5cbc33](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/41e623cfc808488b18d9291a810b4ef0bf5cbc33) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit d3c856d4cab9358064c684dea5e65b6b8cd6c26c](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/d3c856d4cab9358064c684dea5e65b6b8cd6c26c) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit 7e3de2ad3e3796e56ef482381758c1faf6dc39e2](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/7e3de2ad3e3796e56ef482381758c1faf6dc39e2) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
- 
-| Execution | Existence | Support |
-| --- | --- | --- |
-| [commit f7c502afe5f73fbae2fb59a1ffe71df959aa7b93](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/f7c502afe5f73fbae2fb59a1ffe71df959aa7b93) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
+| [commit 3806074c46e6b77c12bc4b7c4650be4820347a4e](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/3806074c46e6b77c12bc4b7c4650be4820347a4e) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
  
 ### Legende
 
@@ -85,8 +29,8 @@
 
 | Specification | tag | uml | stak | trns | aut | mrg | web | met | html | rspc | ctx | rdf | shcl | ns | issu |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [vocabularium/zaalreservatie/ ontwerpstandaard/2025-04-18](https://data.dev-vlaanderen.be/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18) <br/> [&#9883;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18) [&#9884;](https://data.dev-vlaanderen.be/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18) |  | [&#9729;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/oslo-converter-ea.report.md) | [&#9728;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/oslo-stakeholders-converter.report.md) | [&#9729;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/translate.report.md) |  | [&#9728;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/merge.report.md) | [&#9729;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/metadata.report.md) | [&#9728;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/generator-html.report.md) | [&#9728;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/generator-respec.report.md) |  | [&#9736;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/generator-rdf.report.md) |  |  | [ 0 ](https://github.com/Informatievlaanderen/OSLOthema-zaalreservatie/issues) |
 | [applicatieprofiel/zaalreservatie/ ontwerpstandaard/2025-04-18](https://data.dev-vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18) <br/> [&#9883;](/report4/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18) [&#9884;](https://data.dev-vlaanderen.be/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18) |  | [&#9729;](/report4/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18/oslo-converter-ea.report.md) | [&#9728;](/report4/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18/oslo-stakeholders-converter.report.md) | [&#9729;](/report4/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18/translate.report.md) |  | [&#9728;](/report4/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18/merge.report.md) | [&#9728;](/report4/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18/metadata.report.md) | [&#9728;](/report4/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18/generator-html.report.md) | [&#9728;](/report4/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18/generator-respec.report.md) | [&#9728;](/report4/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18/generator-jsonld-context.report.md) |  | [&#9729;](/report4/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18/generator-shacl.report.md) |  | [ 0 ](https://github.com/Informatievlaanderen/OSLOthema-zaalreservatie/issues) |
-| [vocabularium/zaalreservatie/ ontwerpstandaard/2025-04-18](https://data.dev-vlaanderen.be/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18) <br/> [&#9883;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18) [&#9884;](https://data.dev-vlaanderen.be/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18) |  | [&#9729;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/oslo-converter-ea.report.md) | [&#9728;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/oslo-stakeholders-converter.report.md) | [&#9729;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/translate.report.md) |  | [&#9728;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/merge.report.md) | [&#9728;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/metadata.report.md) | [&#9728;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/generator-html.report.md) | [&#9728;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/generator-respec.report.md) |  | [&#9736;](/report4/doc/vocabularium/zaalreservatie/ontwerpstandaard/2025-04-18/generator-rdf.report.md) |  |  | [ 0 ](https://github.com/Informatievlaanderen/OSLOthema-zaalreservatie/issues) |
 | [applicatieprofiel/energiehuis/ ontwerpstandaard/test](https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test) <br/> [&#9883;](/report4/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test) [&#9884;](https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test) | [&#9736;](/report4/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test/branchtag.report.md) | [&#9729;](/report4/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test/oslo-converter-ea.report.md) | [&#9728;](/report4/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test/oslo-stakeholders-converter.report.md) | [&#9729;](/report4/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test/translate.report.md) |  | [&#9728;](/report4/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test/merge.report.md) | [&#9728;](/report4/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test/metadata.report.md) | [&#9728;](/report4/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test/generator-html.report.md) | [&#9728;](/report4/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test/generator-respec.report.md) | [&#9729;](/report4/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test/generator-jsonld-context.report.md) |  | [&#9729;](/report4/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test/generator-shacl.report.md) |  | [ 0 ](https://github.com/Informatievlaanderen/OSLOthema-energiehuis/issues) |
 | [vocabularium/ldes/ ontwerpstandaard/toolchain4](https://data.dev-vlaanderen.be/doc/vocabularium/ldes/ontwerpstandaard/toolchain4) <br/> [&#9883;](/report4/doc/vocabularium/ldes/ontwerpstandaard/toolchain4) [&#9884;](https://data.dev-vlaanderen.be/doc/vocabularium/ldes/ontwerpstandaard/toolchain4) | [&#9736;](/report4/doc/vocabularium/ldes/ontwerpstandaard/toolchain4/branchtag.report.md) | [&#9729;](/report4/doc/vocabularium/ldes/ontwerpstandaard/toolchain4/oslo-converter-ea.report.md) | [&#9728;](/report4/doc/vocabularium/ldes/ontwerpstandaard/toolchain4/oslo-stakeholders-converter.report.md) | [&#9729;](/report4/doc/vocabularium/ldes/ontwerpstandaard/toolchain4/translate.report.md) |  | [&#9728;](/report4/doc/vocabularium/ldes/ontwerpstandaard/toolchain4/merge.report.md) | [&#9728;](/report4/doc/vocabularium/ldes/ontwerpstandaard/toolchain4/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/vocabularium/ldes/ontwerpstandaard/toolchain4/metadata.report.md) | [&#9728;](/report4/doc/vocabularium/ldes/ontwerpstandaard/toolchain4/generator-html.report.md) | [&#9728;](/report4/doc/vocabularium/ldes/ontwerpstandaard/toolchain4/generator-respec.report.md) |  | [&#9728;](/report4/doc/vocabularium/ldes/ontwerpstandaard/toolchain4/generator-rdf.report.md) |  | [&#9729;](/report4/doc/vocabularium/ldes/ontwerpstandaard/toolchain4/jsonld-validation.report.md) | [ 9 ](https://github.com/Informatievlaanderen/OSLOthema-ldes/issues) |
 | [applicatieprofiel/ldes/ ontwerpstandaard/toolchain4](https://data.dev-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4) <br/> [&#9883;](/report4/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4) [&#9884;](https://data.dev-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4) | [&#9736;](/report4/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4/branchtag.report.md) | [&#9729;](/report4/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4/oslo-converter-ea.report.md) | [&#9728;](/report4/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4/oslo-stakeholders-converter.report.md) | [&#9729;](/report4/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4/translate.report.md) |  | [&#9728;](/report4/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4/merge.report.md) | [&#9728;](/report4/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4/metadata.report.md) | [&#9728;](/report4/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4/generator-html.report.md) | [&#9728;](/report4/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4/generator-respec.report.md) | [&#9728;](/report4/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4/generator-jsonld-context.report.md) |  | [&#9729;](/report4/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4/generator-shacl.report.md) |  | [ 9 ](https://github.com/Informatievlaanderen/OSLOthema-ldes/issues) |
