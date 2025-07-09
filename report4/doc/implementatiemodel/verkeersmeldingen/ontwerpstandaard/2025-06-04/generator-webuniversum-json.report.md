@@ -2,15 +2,15 @@
 
 #||# -------------------------------------  
 
-2025-07-03T08:05:00.450Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#startedAtTime which acts as a parent. Using original URI as fallback.
+2025-07-09T17:54:34.179Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#startedAtTime which acts as a parent. Using original URI as fallback.
 
-2025-07-03T08:05:00.452Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#endedAtTime which acts as a parent. Using original URI as fallback.
+2025-07-09T17:54:34.181Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#endedAtTime which acts as a parent. Using original URI as fallback.
 
-2025-07-03T08:05:00.453Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/date which acts as a parent. Using original URI as fallback.
+2025-07-09T17:54:34.182Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/date which acts as a parent. Using original URI as fallback.
 
-2025-07-03T08:05:00.453Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/date which acts as a parent. Using original URI as fallback.
+2025-07-09T17:54:34.182Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/date which acts as a parent. Using original URI as fallback.
 
-Error: No range found for class [urn:oslo-toolchain:17f63c93429513422fb077a05af5351957e068e4271b03c6e33d0969c2a26011](all-verkeersmeldingen.jsonld#L2457).
+Error: No range found for class [urn:oslo-toolchain:17f63c93429513422fb077a05af5351957e068e4271b03c6e33d0969c2a26011](all-verkeersmeldingen.jsonld#L2451).
 
     at JsonWebuniversumGenerationService.addPropertySpecificInformation (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:233:19)
 

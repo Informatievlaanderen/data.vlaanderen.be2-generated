@@ -24,9 +24,9 @@
     },
     "Agent": {
       "@context": {
-        "agent": {
+        "zaak": {
           "@container": "@set",
-          "@id": "http://todo.com/agent",
+          "@id": "http://todo.com/zaak",
           "@type": "http://dbpedia.org/ontology/Case"
         }
       },
@@ -35,27 +35,27 @@
     "Agent(InRol)": {
       "@context": {
         "agent": {
-          "@id": "http://todo.com/AgentInRol.Agent",
-          "@type": "http://purl.org/dc/terms/Agent"
-        },
-        "zaak": {
           "@id": "https://data.vlaanderen.be/ns/dossier#AgentInRol.Zaak",
           "@type": "http://dbpedia.org/ontology/Case"
+        },
+        "zaak": {
+          "@id": "http://todo.com/AgentInRol.Agent",
+          "@type": "http://purl.org/dc/terms/Agent"
         }
       },
       "@id": "http://www.w3.org/ns/prov#Association"
     },
     "Any": {
-      "@id": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any"
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
     },
     "BenoemdeWaarde": {
       "@context": {
         "waarde": {
-          "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value",
-          "@type": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any"
+          "@id": "https://schema.org/value",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
         }
       },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue"
+      "@id": "https://schema.org/StructuredValue"
     },
     "Concept": {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept"
@@ -65,20 +65,6 @@
     },
     "DateTime": {
       "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "Domeinobject": {
-      "@context": {
-        "type": {
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        },
-        "waardeverschaffer": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
-          "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
-        }
-      },
-      "@id": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
     },
     "Domeinobjecttype": {
       "@id": "http://www.w3.org/2004/02/skos/core#Concept"
@@ -116,7 +102,7 @@
       "@id": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
     },
     "Kwaliteitselement": {
-      "@id": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element"
+      "@id": "https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement"
     },
     "LangString": {
       "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
@@ -129,7 +115,7 @@
         "heeftDoelwit": {
           "@container": "@set",
           "@id": "http://www.w3.org/ns/oa#hasTarget",
-          "@type": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
+          "@type": "http://www.w3.org/ns/sosa/FeatureOfInterest"
         },
         "heeftStatus": {
           "@container": "@set",
@@ -189,7 +175,21 @@
       "@id": "https://data.vlaanderen.be/ns/mobiliteit#Mobiliteitshinder"
     },
     "Moment": {
-      "@id": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant"
+      "@id": "http://www.w3.org/2006/time#Instant"
+    },
+    "Object": {
+      "@context": {
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "waardeverschaffer": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+          "@type": "http://www.w3.org/ns/sosa/Observation"
+        }
+      },
+      "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest"
     },
     "Observatie": {
       "@context": {
@@ -199,23 +199,23 @@
           "@type": "http://www.w3.org/ns/sosa/Procedure"
         },
         "geldigeTijd": {
-          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime",
-          "@type": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period"
+          "@id": "http://www.w3.org/ns/sosa/oms/validTime",
+          "@type": "http://www.w3.org/2006/time#ProperInterval"
         },
         "geobserveerdKenmerk": {
-          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+          "@id": "http://www.w3.org/ns/sosa/observedProperty",
           "@type": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
         },
         "geobserveerdObject": {
-          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
-          "@type": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
+          "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+          "@type": "http://www.w3.org/ns/sosa/FeatureOfInterest"
         },
         "uitgevoerdMet": {
           "@id": "http://www.w3.org/ns/sosa/madeBySensor",
           "@type": "http://www.w3.org/ns/sosa/Sensor"
         }
       },
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+      "@id": "http://www.w3.org/ns/sosa/Observation"
     },
     "Observatieprocedure": {
       "@context": {
@@ -252,7 +252,7 @@
         "heeftLid": {
           "@container": "@set",
           "@id": "http://www.w3.org/ns/sosa/hasMember",
-          "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+          "@type": "http://www.w3.org/ns/sosa/Observation"
         },
         "resultaattijd": {
           "@id": "http://www.w3.org/ns/sosa/resultTime",
@@ -274,7 +274,7 @@
       "@id": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Periode": {
-      "@id": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period"
+      "@id": "http://www.w3.org/2006/time#ProperInterval"
     },
     "Resource": {
       "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
@@ -287,7 +287,7 @@
         "uitgevoerdeObservatie": {
           "@container": "@set",
           "@id": "http://www.w3.org/ns/sosa/madeObservation",
-          "@type": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation"
+          "@type": "http://www.w3.org/ns/sosa/Observation"
         }
       },
       "@id": "http://www.w3.org/ns/sosa/Sensor"
@@ -318,13 +318,18 @@
         "heeftLid": {
           "@container": "@set",
           "@id": "http://purl.org/dc/terms/hasPart",
-          "@type": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature"
+          "@type": "http://www.w3.org/ns/sosa/FeatureOfInterest"
         }
       },
       "@id": "http://purl.org/dc/dcmitype/Collection"
     },
     "Zaak": {
       "@context": {
+        "agent": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/agent",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
         "behandelt": {
           "@container": "@set",
           "@id": "https://data.vlaanderen.be/ns/dossier#behandelt",
@@ -345,11 +350,6 @@
         "sluitingsdatum": {
           "@id": "https://data.vlaanderen.be/ns/dossier#sluitingsdatum",
           "@type": "http://www.w3.org/2001/XMLSchema#date"
-        },
-        "zaak": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/agent",
-          "@type": "http://purl.org/dc/terms/Agent"
         }
       },
       "@id": "http://dbpedia.org/ontology/Case"
