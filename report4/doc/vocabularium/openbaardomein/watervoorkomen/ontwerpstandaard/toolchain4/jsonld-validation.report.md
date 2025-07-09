@@ -1,18 +1,18 @@
-REPORTLINE: #||# oslo-jsonld-validator   
+#||# oslo-jsonld-validator   
 
 #||# -------------------------------------  
 
-2025-07-08T14:13:11.667Z info: Loaded 13 URI prefixes into whitelist
+2025-07-09T13:39:43.351Z info: Loaded 25 URI prefixes into whitelist
 
-2025-07-08T14:13:11.713Z warn: Found sentence without a '.': 'Oppervlakte volledig bedekt met water met beperkte plantengroei aan de oevers' for subject: [urn:oslo-toolchain:c71e2a3e3df8e0ed2844a5a86d41fa797995d87f3a64f79db15d7a24bd36d29b](all-watervoorkomen.jsonld#L228)
+2025-07-09T13:39:43.397Z warn: Found sentence without a '.': 'Oppervlakte volledig bedekt met water met beperkte plantengroei aan de oevers' for subject: [urn:oslo-toolchain:c71e2a3e3df8e0ed2844a5a86d41fa797995d87f3a64f79db15d7a24bd36d29b](all-watervoorkomen.jsonld#L228)
 
-2025-07-08T14:13:11.713Z warn: Found sentence without a '.': 'Oppervlakte volledig bedekt met water met beperkte plantengroei aan de oevers' for subject: [urn:oslo-toolchain:c71e2a3e3df8e0ed2844a5a86d41fa797995d87f3a64f79db15d7a24bd36d29b](all-watervoorkomen.jsonld#L228)
+2025-07-09T13:39:43.397Z warn: Found sentence without a '.': 'Oppervlakte volledig bedekt met water met beperkte plantengroei aan de oevers' for subject: [urn:oslo-toolchain:c71e2a3e3df8e0ed2844a5a86d41fa797995d87f3a64f79db15d7a24bd36d29b](all-watervoorkomen.jsonld#L228)
 
-2025-07-08T14:13:11.714Z info: Validation successful! All assigned URIs are whitelisted.
+2025-07-09T13:39:43.398Z info: Validation successful! All assigned URIs are whitelisted.
 
-2025-07-08T14:13:11.714Z info: Validation found 2 sentences with spelling mistakes.
+2025-07-09T13:39:43.398Z info: Validation found 2 sentences with spelling mistakes.
 
-2025-07-08T14:13:11.714Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2025-07-09T13:39:43.398Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-2025-07-08T14:13:11.714Z info: Validation successful! All base URIs seem to be valid.
+2025-07-09T13:39:43.398Z info: Validation successful! All base URIs seem to be valid.
 
