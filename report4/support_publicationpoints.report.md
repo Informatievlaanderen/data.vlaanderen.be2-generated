@@ -199,6 +199,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/kandidaatstandaard/2022-03-21",
   "/tmp/generated/doc/applicatieprofiel/dienst-transactiemodel",
   "/tmp/generated/doc/applicatieprofiel/dienstencataloog",
+  "/tmp/generated/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/energiehuis/notawerkgroep",
   "/tmp/generated/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18",
   "/tmp/generated/doc/applicatieprofiel/erosiepoel/ontwerpstandaard/2025-04-29",
