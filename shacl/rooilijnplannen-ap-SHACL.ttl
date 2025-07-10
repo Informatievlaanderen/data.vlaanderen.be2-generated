@@ -1,5 +1,6 @@
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schemas: <https://schema.org/> .
@@ -16,6 +17,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#ZakelijkrechtShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#KadastraalPlanperceelShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#KadastraalPatrimoniumperceelShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#DocumentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#AgentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#ConceptShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#RooilijnkenmerkShape>,
@@ -33,7 +35,7 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#VerordeningShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#RuimtelijkuitvoeringsplanShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#OmgevingsvergunningShape>,
-    <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#RooilijninventarisShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#RooilijnplaninventarisShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#GetroffenoppervlakShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#NustvoorzieningnetwerkelementShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#LijnShape>,
@@ -118,7 +120,7 @@
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "Identificator van het Besluit."@nl;
     shacl:name "identificator"@nl;
-    shacl:path <http://www.w3.org/ns/adms#Identifier>
+    shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Besluit.Status>;
     shacl:class <https://data.vlaanderen.be/ns/rooilijn#Status>;
@@ -199,6 +201,10 @@
 <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#DatetimeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass xsd:dateTime .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#DocumentShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass foaf:Document .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#EenheidShape> a shacl:NodeShape;
   shacl:closed false;
@@ -539,7 +545,7 @@
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "Identificator van de Omgevingsvergunning."@nl;
     shacl:name "identificator"@nl;
-    shacl:path <http://www.w3.org/ns/adms#Identifier>
+    shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Omgevingsvergunning.Status>;
     shacl:class <https://data.vlaanderen.be/ns/rooilijn#Status>;
@@ -663,11 +669,19 @@
     shacl:name "titel"@nl;
     shacl:path dc:title
   ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Plan.Document>;
+    shacl:class foaf:Document;
+    shacl:description "Verwijzing naar het originele plan op papier."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "document"@nl;
+    shacl:path dc:references
+  ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Plan.Identificator>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "Identificator van het Plan."@nl;
     shacl:name "identificator"@nl;
-    shacl:path <http://www.w3.org/ns/adms#Identifier>
+    shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Plan.Planstatus>;
     shacl:class <https://data.vlaanderen.be/ns/rooilijn#Status>;
@@ -758,43 +772,6 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/rooilijn#Rooilijn> .
 
-<https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#RooilijninventarisShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Rooilijninventaris.Getroffennutsleiding>;
-    shacl:class <https://vocab.belgif.be/ns/utility-services#UtilityNetworkElement>;
-    shacl:description "Nutsleiding die door het verleggen van een Rooilijn op privaat domein komt te liggen."@nl;
-    shacl:name "getroffenNutsleiding"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/rooilijn#getroffenNutsleiding>
-  ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Rooilijninventaris.Getroffenperceel>;
-    shacl:class <https://data.vlaanderen.be/ns/rooilijn#Perceelreferentie>;
-    shacl:description "Verwijzing naar een door de Rooilijn getroffenPerceel."@nl;
-    shacl:name "getroffenPerceel"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/rooilijn#getroffenPerceel>
-  ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Rooilijninventaris.Getroffenopenbareweg>;
-    shacl:class <https://data.vlaanderen.be/ns/rooilijn#OpenbareWegreferentie>;
-    shacl:description "Verwijzing naar een door een Rooilijn getroffen weg."@nl;
-    shacl:name "getroffenOpenbareWeg"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/rooilijn#getroffenOpenbareWeg>
-  ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Rooilijninventaris.Getroffenoppervlakperceel>;
-    shacl:class <https://data.vlaanderen.be/ns/rooilijn#GetroffenOppervlak>;
-    shacl:description "Verwijzing naar het totale oppervlak van percelen dat binnen de grenzen van het Rooilijnplan door de Rooilijn getroffen is."@nl;
-    shacl:maxCount "1";
-    shacl:name "getroffenOppervlakPerceel"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/rooilijn#getroffenOppervlakPerceel>
-  ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Rooilijninventaris.Getroffenoppervlakopenbareweg>;
-    shacl:class <https://data.vlaanderen.be/ns/rooilijn#GetroffenOppervlak>;
-    shacl:description "Verwijzing naar het totale oppervlak van de OpenbareWeg dat binnen de grenzen van het Rooilijnplan door de Rooilijn getroffen is."@nl;
-    shacl:maxCount "1";
-    shacl:name "getroffenOppervlakOpenbareWeg"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/rooilijn#getroffenOppervlakOpenbareWeg>
-  ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/rooilijn#Rooilijninventaris> .
-
 <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#RooilijnkenmerkShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/rooilijn#Rooilijnkenmerk> .
@@ -809,13 +786,12 @@
     shacl:name "rooilijn"@nl;
     shacl:path <https://data.vlaanderen.be/ns/rooilijn#Rooilijnplan.rooilijn>
   ], [
-    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Rooilijnplan.Rooilijninventaris>;
-    shacl:class <https://data.vlaanderen.be/ns/rooilijn#Rooilijninventaris>;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Rooilijnplan.Rooilijnplaninventaris>;
+    shacl:class <https://data.vlaanderen.be/ns/rooilijn#Rooilijnplaninventaris>;
     shacl:description "Verwijzing naar de Rooilijninventaris bij het Rooilijnplan."@nl;
     shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "rooilijninventaris"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/rooilijn#rooilijninventaris>
+    shacl:name "rooilijnplaninventaris"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/rooilijn#rooilijnplaninventaris>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Rooilijnplan.Verordening>;
     shacl:class <https://data.vlaanderen.be/ns/rooilijn#Verordening>;
@@ -825,6 +801,43 @@
     shacl:path <https://data.vlaanderen.be/ns/rooilijn#verordening>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/rooilijn#Rooilijnplan> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#RooilijnplaninventarisShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Rooilijnplaninventaris.Getroffennutsleiding>;
+    shacl:class <https://vocab.belgif.be/ns/utility-services#UtilityNetworkElement>;
+    shacl:description "Nutsleiding die door het verleggen van een Rooilijn op privaat domein komt te liggen."@nl;
+    shacl:name "getroffenNutsleiding"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/rooilijn#getroffenNutsleiding>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Rooilijnplaninventaris.Getroffenperceel>;
+    shacl:class <https://data.vlaanderen.be/ns/rooilijn#Perceelreferentie>;
+    shacl:description "Verwijzing naar een door de Rooilijn getroffenPerceel."@nl;
+    shacl:name "getroffenPerceel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/rooilijn#getroffenPerceel>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Rooilijnplaninventaris.Getroffenopenbareweg>;
+    shacl:class <https://data.vlaanderen.be/ns/rooilijn#OpenbareWegreferentie>;
+    shacl:description "Verwijzing naar een door een Rooilijn getroffen weg."@nl;
+    shacl:name "getroffenOpenbareWeg"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/rooilijn#getroffenOpenbareWeg>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Rooilijnplaninventaris.Getroffenoppervlakperceel>;
+    shacl:class <https://data.vlaanderen.be/ns/rooilijn#GetroffenOppervlak>;
+    shacl:description "Verwijzing naar het totale oppervlak van percelen dat binnen de grenzen van het Rooilijnplan door de Rooilijn getroffen is."@nl;
+    shacl:maxCount "1";
+    shacl:name "getroffenOppervlakPerceel"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/rooilijn#getroffenOppervlakPerceel>
+  ], [
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Rooilijnplaninventaris.Getroffenoppervlakopenbareweg>;
+    shacl:class <https://data.vlaanderen.be/ns/rooilijn#GetroffenOppervlak>;
+    shacl:description "Verwijzing naar het totale oppervlak van de OpenbareWeg dat binnen de grenzen van het Rooilijnplan door de Rooilijn getroffen is."@nl;
+    shacl:maxCount "1";
+    shacl:name "getroffenOppervlakOpenbareWeg"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/rooilijn#getroffenOppervlakOpenbareWeg>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/rooilijn#Rooilijnplaninventaris> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#RuimtelijkeEenheidShape> a shacl:NodeShape;
   shacl:closed false;
@@ -844,7 +857,7 @@
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
     shacl:description "Identificator van het RuimtelijkUitvoeringsplan."@nl;
     shacl:name "identificator"@nl;
-    shacl:path <http://www.w3.org/ns/adms#Identifier>
+    shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01#Ruimtelijkuitvoeringsplan.Status>;
     shacl:class <https://data.vlaanderen.be/ns/rooilijn#Status>;
