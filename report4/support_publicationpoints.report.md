@@ -148,6 +148,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/slimme-stadsdistributie.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/dev/smart-innovation-factory.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/subsidie.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/toestemming.publication.json
