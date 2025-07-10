@@ -52,6 +52,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/energiehuis.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/dev/energiemanagementsysteem.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/erosiepoel.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/feitelijke-verenigingen.publication.json
@@ -164,9 +166,9 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/vlaamsecodex.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/dev/voorwaarden-dienstverlening.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/vrachtwagenparkeren.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/voorwaarden-dienstverlening.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/waterkwaliteit.publication.json
 #||#  
