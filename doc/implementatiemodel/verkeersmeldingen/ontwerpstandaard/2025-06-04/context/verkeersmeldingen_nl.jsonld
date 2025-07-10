@@ -54,6 +54,10 @@
     },
     "BenoemdeWaarde": {
       "@context": {
+        "naam": {
+          "@id": "https://schema.org/name",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
         "waarde": {
           "@id": "https://schema.org/value",
           "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
@@ -79,6 +83,10 @@
           "@id": "http://www.w3.org/2004/02/skos/core#notation",
           "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
         },
+        "toegekendDoor": {
+          "@id": "http://purl.org/dc/terms/creator",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
         "toegekendDoor(String)": {
           "@id": "http://www.w3.org/ns/adms#schemaAgency",
           "@type": "http://www.w3.org/2001/XMLSchema#string"
@@ -95,6 +103,10 @@
         "referentie": {
           "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie",
           "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
         }
       },
       "@id": "http://www.w3.org/ns/ssn/Input"
@@ -119,6 +131,11 @@
     },
     "Melding": {
       "@context": {
+        "heeftBody": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/oa#hasBody",
+          "@type": "https://data.vlaanderen.be/ns/melding#MeldingBody"
+        },
         "heeftDoelwit": {
           "@container": "@set",
           "@id": "http://www.w3.org/ns/oa#hasTarget",
@@ -158,6 +175,10 @@
         "bijlage": {
           "@id": "https://www.w3.org/ns/activitystreams#attachment",
           "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "geometrie": {
+          "@id": "http://www.w3.org/ns/locn#geometry",
+          "@type": "http://www.w3.org/ns/locn#Geometry"
         }
       },
       "@id": "https://data.vlaanderen.be/ns/melding#MeldingBody"
@@ -168,9 +189,17 @@
           "@id": "http://purl.org/dc/terms/description",
           "@type": "http://www.w3.org/2001/XMLSchema#string"
         },
+        "statusType": {
+          "@id": "https://data.vlaanderen.be/ns/melding#statuswaarde",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
         "statusdatum": {
           "@id": "https://data.vlaanderen.be/ns/melding#statusdatum",
           "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "statuswijzigingDoor": {
+          "@id": "https://data.vlaanderen.be/ns/melding#statuswijzigingDoor",
+          "@type": "http://purl.org/dc/terms/Agent"
         }
       },
       "@id": "https://data.vlaanderen.be/ns/melding#Meldingstatus"
@@ -200,6 +229,10 @@
     },
     "Observatie": {
       "@context": {
+        "fenomeentijd": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+          "@type": "http://www.w3.org/2006/time#TemporalEntity"
+        },
         "gebruikteProcedure": {
           "@container": "@set",
           "@id": "http://www.w3.org/ns/sosa/usedProcedure",
@@ -216,6 +249,39 @@
         "geobserveerdObject": {
           "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
           "@type": "http://www.w3.org/ns/sosa/FeatureOfInterest"
+        },
+        "identificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "parameter": {
+          "@container": "@set",
+          "@id": "http://dbpedia.org/ontology/influencedBy",
+          "@type": "https://schema.org/StructuredValue"
+        },
+        "resultaat": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        },
+        "resultaatkwaliteit": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/sosa/resultQuality",
+          "@type": "https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement"
+        },
+        "resultaattijd": {
+          "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
+          "@type": "http://www.w3.org/2006/time#Instant"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "uitgevoerdDoor": {
+          "@container": "@set",
+          "@id": "http://todo.com/Observatie.uitgevoerdDoor",
+          "@type": "http://purl.org/dc/terms/Agent"
         },
         "uitgevoerdMet": {
           "@id": "http://www.w3.org/ns/sosa/madeBySensor",
@@ -234,12 +300,22 @@
         "output": {
           "@container": "@set",
           "@id": "http://www.w3.org/ns/ssn/hasOutput",
-          "@type": "http://www.w3.org/ns/ssn/Output"
+          "@type": "https://schema.org/StructuredValue"
+        },
+        "parameter": {
+          "@container": "@set",
+          "@id": "http://dbpedia.org/ontology/influencedBy",
+          "@type": "https://schema.org/StructuredValue"
         },
         "specificatie": {
           "@container": "@set",
           "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie",
           "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
         }
       },
       "@id": "http://www.w3.org/ns/sosa/Procedure"
@@ -252,9 +328,21 @@
     },
     "Observatieverzameling": {
       "@context": {
+        "fenomeentijd": {
+          "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
+          "@type": "http://www.w3.org/2006/time#TemporalEntity"
+        },
+        "gebruikteProcedure": {
+          "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+          "@type": "http://www.w3.org/ns/sosa/Procedure"
+        },
         "geobserveerdKenmerk": {
           "@id": "http://www.w3.org/ns/sosa/observedProperty",
           "@type": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType"
+        },
+        "geobserveerdObject": {
+          "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+          "@type": "http://www.w3.org/ns/sosa/FeatureOfInterest"
         },
         "heeftLid": {
           "@container": "@set",
@@ -264,6 +352,10 @@
         "resultaattijd": {
           "@id": "http://www.w3.org/ns/sosa/resultTime",
           "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "uitgevoerdMetsensor": {
+          "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+          "@type": "http://www.w3.org/ns/sosa/Sensor"
         }
       },
       "@id": "http://www.w3.org/ns/sosa/ObservationCollection"
@@ -273,6 +365,10 @@
         "referentie": {
           "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Output.referentie",
           "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
         }
       },
       "@id": "http://www.w3.org/ns/ssn/Output"
@@ -284,6 +380,13 @@
       "@id": "http://www.w3.org/2006/time#ProperInterval"
     },
     "Resource": {
+      "@context": {
+        "identificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        }
+      },
       "@id": "http://www.w3.org/2000/01/rdf-schema#Resource"
     },
     "Rol": {
@@ -291,6 +394,16 @@
     },
     "Sensor": {
       "@context": {
+        "ligging": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/verkeersmetingen#ligging",
+          "@type": "http://www.w3.org/ns/prov#Location"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
         "uitgevoerdeObservatie": {
           "@container": "@set",
           "@id": "http://www.w3.org/ns/sosa/madeObservation",
@@ -341,6 +454,11 @@
           "@container": "@set",
           "@id": "https://data.vlaanderen.be/ns/dossier#behandelt",
           "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
+        },
+        "identificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
         },
         "naam": {
           "@id": "http://purl.org/dc/terms/title",
