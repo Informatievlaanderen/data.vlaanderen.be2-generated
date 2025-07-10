@@ -508,8 +508,6 @@ index.html check
 #||#    + checking /home/circleci/project/config/dev/smart-innovation-factory.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04'
-error: missing '/tmp/generated/doc/implementatiemodel/verkeersmeldingen'
 
 index.html check
 error: missing '/tmp/generated/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/index.html'
