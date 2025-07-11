@@ -1,708 +1,542 @@
 {
   "@context": {
-    "Adres": {
-      "@id": "https://data.vlaanderen.be/ns/adres#Adres"
+    "Adres": "https://data.vlaanderen.be/ns/adres#Adres",
+    "Adresvoorstelling": "http://www.w3.org/ns/locn#Address",
+    "Adresvoorstelling.administratieveEenheidNiveau1": {
+      "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "Adresvoorstelling": {
-      "@context": {
-        "administratieveEenheidNiveau1": {
-          "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "administratieveEenheidNiveau2": {
-          "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "adresgebied": {
-          "@id": "http://www.w3.org/ns/locn#addressArea",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "busnummer": {
-          "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
-          "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "gemeentenaam": {
-          "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "huisnummer": {
-          "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
-          "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "land": {
-          "@id": "https://data.vlaanderen.be/ns/adres#land",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "locatieaanduiding": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-          "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "locatienaam": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/locn#locatorName",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "postbus": {
-          "@id": "http://www.w3.org/ns/locn#poBox",
-          "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "postcode": {
-          "@id": "http://www.w3.org/ns/locn#postCode",
-          "@type": "http://www.w3.org/2001/XMLSchema#string"
-        },
-        "postnaam": {
-          "@id": "http://www.w3.org/ns/locn#postName",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "straatnaam": {
-          "@id": "http://www.w3.org/ns/locn#thoroughfare",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "verwijstNaar": {
-          "@id": "https://data.vlaanderen.be/ns/adres#verwijstNaar",
-          "@type": "https://data.vlaanderen.be/ns/adres#Adres"
-        },
-        "volledigAdres": {
-          "@id": "http://www.w3.org/ns/locn#fullAddress",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        }
-      },
-      "@id": "http://www.w3.org/ns/locn#Address"
+    "Adresvoorstelling.administratieveEenheidNiveau2": {
+      "@id": "http://www.w3.org/ns/locn#adminUnitL2",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "Agent": {
-      "@id": "http://purl.org/dc/terms/Agent"
+    "Adresvoorstelling.adresgebied": {
+      "@id": "http://www.w3.org/ns/locn#addressArea",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "BIM_Element": {
-      "@context": {
-        "type": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        }
-      },
-      "@id": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcElement"
+    "Adresvoorstelling.busnummer": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "BIM_Gebouw": {
-      "@context": {
-        "type": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        }
-      },
-      "@id": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcBuilding"
+    "Adresvoorstelling.gemeentenaam": {
+      "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "BenoemdeWaarde": {
-      "@context": {
-        "naam": {
-          "@id": "https://schema.org/name",
-          "@type": "http://def.isotc211.org/iso19103/2005/Names#GenericName"
-        },
-        "waarde": {
-          "@id": "https://schema.org/value",
-          "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
-        }
-      },
-      "@id": "https://schema.org/StructuredValue"
+    "Adresvoorstelling.huisnummer": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "Camera": {
-      "@id": "http://dbpedia.org/ontology/Camera"
+    "Adresvoorstelling.land": {
+      "@id": "https://data.vlaanderen.be/ns/adres#land",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "Concept": {
-      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    "Adresvoorstelling.locatieaanduiding": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorDesignator",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "Conditie": {
-      "@id": "http://www.w3.org/ns/ssn/systems/Condition"
+    "Adresvoorstelling.locatienaam": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "Dataset": {
-      "@id": "http://www.w3.org/ns/dcat#Dataset"
+    "Adresvoorstelling.postbus": {
+      "@id": "http://www.w3.org/ns/locn#poBox",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "Date": {
-      "@id": "http://www.w3.org/2001/XMLSchema#date"
+    "Adresvoorstelling.postcode": {
+      "@id": "http://www.w3.org/ns/locn#postCode",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
     },
-    "DateTime": {
-      "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+    "Adresvoorstelling.postnaam": {
+      "@id": "http://www.w3.org/ns/locn#postName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "Deployment": {
-      "@context": {
-        "deployedSysteem": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/deployedSystem",
-          "@type": "http://www.w3.org/ns/ssn/System"
-        },
-        "deploymentTijdstip": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/2006/time#hasTime",
-          "@type": "http://www.w3.org/2006/time#TemporalEntity"
-        },
-        "host": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/deployedOnPlatform",
-          "@type": "https://www.w3.org/ns/sosa/Platform"
-        }
-      },
-      "@id": "http://www.w3.org/ns/sosa/Deployment"
+    "Adresvoorstelling.straatnaam": {
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "Eenheid": {
-      "@id": "https://qudt.org/schema/qudt/Unit"
+    "Adresvoorstelling.verwijstNaar": {
+      "@id": "https://data.vlaanderen.be/ns/adres#verwijstNaar",
+      "@type": "@id"
     },
-    "Foto": {
-      "@context": {
-        "type": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        }
-      },
-      "@id": "https://schema.org/Photograph"
+    "Adresvoorstelling.volledigAdres": {
+      "@id": "http://www.w3.org/ns/locn#fullAddress",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
     },
-    "Functie": {
-      "@id": "https://saref.etsi.org/core/Function"
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Any": "http://www.w3.org/2000/01/rdf-schema#Resource",
+    "BIM_Element": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcElement",
+    "BIM_Element.aardVanHetBIMElement.": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
     },
-    "GNSSOntvanger": {
-      "@id": "https://www.fair-gnss.oma.be/gnss-dcat-ap/vocabulary/geo#GNSSReceiver"
+    "BIM_Gebouw": "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcBuilding",
+    "BIM_Gebouw.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
     },
-    "Gebouw": {
-      "@context": {
-        "adres": {
-          "@container": "@set",
-          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.adres",
-          "@type": "http://www.w3.org/ns/locn#Address"
-        },
-        "bestaatUit": {
-          "@container": "@set",
-          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.bestaatUit",
-          "@type": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid"
-        },
-        "bouwjaar": {
-          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.bouwjaar",
-          "@type": "http://www.w3.org/2001/XMLSchema#date"
-        },
-        "kenmerk": {
-          "@container": "@set",
-          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.kenmerk",
-          "@type": "https://data.vlaanderen.be/ns/energiehuis#Kenmerk"
-        },
-        "laatsteRenovatie": {
-          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.laatsteRenovatie",
-          "@type": "http://www.w3.org/2001/XMLSchema#date"
-        },
-        "status": {
-          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.status",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        },
-        "type": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        }
-      },
-      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw"
+    "BenoemdeWaarde": "https://schema.org/StructuredValue",
+    "BenoemdeWaarde.naam": {
+      "@id": "https://schema.org/name",
+      "@type": "@id"
     },
-    "Gebouweenheid": {
-      "@context": {
-        "adres": {
-          "@container": "@set",
-          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.adres",
-          "@type": "http://www.w3.org/ns/locn#Address"
-        },
-        "functie": {
-          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.functie",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        },
-        "kenmerk": {
-          "@container": "@set",
-          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.kenmerk",
-          "@type": "https://data.vlaanderen.be/ns/energiehuis#Kenmerk"
-        },
-        "status": {
-          "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.status",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        },
-        "type": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        }
-      },
-      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid"
+    "BenoemdeWaarde.waarde": {
+      "@id": "https://schema.org/value",
+      "@type": "@id"
     },
-    "Geometrie": {
-      "@context": {
-        "alsGML": {
-          "@id": "http://www.opengis.net/ont/geosparql#asGML",
-          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-        },
-        "alsWKT": {
-          "@id": "http://www.opengis.net/ont/geosparql#asWKT",
-          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-        }
-      },
-      "@id": "http://www.w3.org/ns/locn#Geometry"
+    "Camera": "http://dbpedia.org/ontology/Camera",
+    "Concept": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Conditie": "http://www.w3.org/ns/ssn/systems/Condition",
+    "Dataset": "http://www.w3.org/ns/dcat#Dataset",
+    "Date": "http://www.w3.org/2001/XMLSchema#date",
+    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "Deployment": "http://www.w3.org/ns/sosa/Deployment",
+    "Deployment.deployedSysteem": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/deployedSystem",
+      "@type": "@id"
     },
-    "Identificator": {
-      "@context": {
-        "identificator": {
-          "@id": "http://www.w3.org/2004/02/skos/core#notation",
-          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-        },
-        "toegekendDoor": {
-          "@id": "http://purl.org/dc/terms/creator",
-          "@type": "http://purl.org/dc/terms/Agent"
-        },
-        "toegekendOp": {
-          "@id": "http://purl.org/dc/terms/issued",
-          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-        }
-      },
-      "@id": "http://www.w3.org/ns/adms#Identifier"
+    "Deployment.deploymentTijdstip": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2006/time#hasTime",
+      "@type": "@id"
     },
-    "Informatieobject": {
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"
+    "Deployment.host": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/deployedOnPlatform",
+      "@type": "@id"
     },
-    "Input": {
-      "@context": {
-        "referentie": {
-          "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie",
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-        },
-        "type": {
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        }
-      },
-      "@id": "http://www.w3.org/ns/ssn/Input"
+    "Eenheid": "https://qudt.org/schema/qudt/Unit",
+    "Foto": "https://schema.org/Photograph",
+    "Foto.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
     },
-    "Interpretatie": {
-      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Interpretatie"
+    "Functie": "https://saref.etsi.org/core/Function",
+    "GNSSOntvanger": "https://www.fair-gnss.oma.be/gnss-dcat-ap/vocabulary/geo#GNSSReceiver",
+    "Gebouw": "https://data.vlaanderen.be/ns/gebouw#Gebouw",
+    "Gebouw.adres": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.adres",
+      "@type": "@id"
     },
-    "Kenmerk": {
-      "@context": {
-        "type": {
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        },
-        "waarde": {
-          "@container": "@set",
-          "@id": "https://schema.org/value",
-          "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
-        }
-      },
-      "@id": "https://data.vlaanderen.be/ns/energiehuis#Kenmerk"
+    "Gebouw.bestaatUit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.bestaatUit",
+      "@type": "@id"
     },
-    "KwantitatieveWaarde": {
-      "@context": {
-        "eenheid": {
-          "@id": "https://qudt.org/schema/qudt/hasUnit",
-          "@type": "https://qudt.org/schema/qudt/Unit"
-        },
-        "waarde": {
-          "@id": "https://qudt.org/schema/qudt/value",
-          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-        }
-      },
-      "@id": "https://qudt.org/schema/qudt/QuantityValue"
+    "Gebouw.bouwjaar": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.bouwjaar",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
-    "LangString": {
-      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    "Gebouw.kenmerk": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.kenmerk",
+      "@type": "@id"
     },
-    "Literal": {
-      "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "Gebouw.laatsteRenovatie": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.laatsteRenovatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
     },
-    "MachineLearningModel": {
-      "@context": {
-        "creatiedatum": {
-          "@id": "http://purl.org/dc/terms/created",
-          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-        },
-        "getraindOp": {
-          "@container": "@set",
-          "@id": "http://data.europa.eu/it6/trainedOn",
-          "@type": "http://www.w3.org/ns/dcat#Dataset"
-        },
-        "naam": {
-          "@id": "http://purl.org/dc/terms/title",
-          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-        },
-        "type": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        },
-        "versie": {
-          "@id": "http://data.europa.eu/it6/version",
-          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-        }
-      },
-      "@id": "http://data.europa.eu/it6/MachineLearningModel"
+    "Gebouw.status": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.status",
+      "@type": "@id"
     },
-    "Moment": {
-      "@context": {
-        "inXSDDatumTijd": {
-          "@id": "http://www.w3.org/2006/time#inXSDDateTime",
-          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-        }
-      },
-      "@id": "http://www.w3.org/2006/time#Instant"
+    "Gebouw.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
     },
-    "Object": {
-      "@context": {
-        "type": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        }
-      },
-      "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest"
+    "Gebouweenheid": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid",
+    "Gebouweenheid.adres": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.adres",
+      "@type": "@id"
     },
-    "Observatie": {
-      "@context": {
-        "fenomeentijd": {
-          "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
-          "@type": "http://www.w3.org/2006/time#TemporalEntity"
-        },
-        "gebruikteProcedure": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/usedProcedure",
-          "@type": "http://www.w3.org/ns/sosa/oms/ObservingProcedure"
-        },
-        "geobserveerdKenmerk": {
-          "@id": "http://www.w3.org/ns/sosa/observedProperty",
-          "@type": "http://www.w3.org/ns/sosa/Property"
-        },
-        "geobserveerdObject": {
-          "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-          "@type": "http://www.w3.org/ns/sosa/FeatureOfInterest"
-        },
-        "identificator": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/adms#identifier",
-          "@type": "http://www.w3.org/ns/adms#Identifier"
-        },
-        "isLidVan": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/memberOf",
-          "@type": "http://www.w3.org/ns/sosa/ObservationCollection"
-        },
-        "parameter": {
-          "@container": "@set",
-          "@id": "http://dbpedia.org/ontology/influencedBy",
-          "@type": "https://schema.org/StructuredValue"
-        },
-        "resultaat": {
-          "@id": "http://www.w3.org/ns/sosa/hasResult",
-          "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
-        },
-        "type": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        },
-        "uitgevoerdDoor": {
-          "@container": "@set",
-          "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
-          "@type": "http://purl.org/dc/terms/Agent"
-        },
-        "uitgevoerdMetSensor": {
-          "@id": "http://www.w3.org/ns/sosa/madeBySensor",
-          "@type": "https://www.w3.org/ns/sosa/Sensor"
-        }
-      },
-      "@id": "http://www.w3.org/ns/sosa/Observation"
+    "Gebouweenheid.functie": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.functie",
+      "@type": "@id"
     },
-    "Observatieprocedure": {
-      "@context": {
-        "geïMplementeerdMet": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/implementedBy",
-          "@type": "https://www.w3.org/ns/sosa/Sensor"
-        },
-        "input": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/hasInput",
-          "@type": "http://www.w3.org/ns/ssn/Input"
-        },
-        "output": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/hasOutput",
-          "@type": "http://www.w3.org/ns/ssn/Output"
-        },
-        "parameter": {
-          "@container": "@set",
-          "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.parameter",
-          "@type": "https://schema.org/StructuredValue"
-        },
-        "specificatie": {
-          "@container": "@set",
-          "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie",
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-        },
-        "type": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        }
-      },
-      "@id": "http://www.w3.org/ns/sosa/oms/ObservingProcedure"
+    "Gebouweenheid.kenmerk": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.kenmerk",
+      "@type": "@id"
     },
-    "Observatieverzameling": {
-      "@context": {
-        "fenomeentijd": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
-          "@type": "http://www.w3.org/ns/sosa/Property"
-        },
-        "geassocieerdeVerzameling": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/relatedObservation",
-          "@type": "http://www.w3.org/ns/sosa/ObservationCollection"
-        },
-        "gebruikteProcedure": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/usedProcedure",
-          "@type": "http://www.w3.org/ns/sosa/oms/ObservingProcedure"
-        },
-        "geobserveerdKenmerk": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/observedProperty",
-          "@type": "http://www.w3.org/ns/sosa/Property"
-        },
-        "geobserveerdObject": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-          "@type": "http://www.w3.org/ns/sosa/FeatureOfInterest"
-        },
-        "heeftLid": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/hasMember",
-          "@type": "http://www.w3.org/ns/sosa/Observation"
-        },
-        "resultaatTijd": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/resultTime",
-          "@type": "http://www.w3.org/2006/time#TemporalEntity"
-        },
-        "type": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        },
-        "uitgevoerdMetSensor": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/madeBySensor",
-          "@type": "https://www.w3.org/ns/sosa/Sensor"
-        }
-      },
-      "@id": "http://www.w3.org/ns/sosa/ObservationCollection"
+    "Gebouweenheid.status": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.status",
+      "@type": "@id"
     },
-    "ObserveerbaarKenmerk": {
-      "@id": "http://www.w3.org/ns/sosa/Property"
+    "Gebouweenheid.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
     },
-    "Opstelling": {
-      "@id": "https://w3id.org/okn/o/sd#ConfigurationSetup"
+    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
+    "Geometrie.alsGML": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
-    "Output": {
-      "@context": {
-        "referentie": {
-          "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Output.referentie",
-          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-        },
-        "type": {
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        }
-      },
-      "@id": "http://www.w3.org/ns/ssn/Output"
+    "Geometrie.alsWKT": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
-    "Overlevingscapaciteit": {
-      "@context": {
-        "conditie": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/ssn/systems/inCondition",
-          "@type": "http://www.w3.org/ns/ssn/systems/Condition"
-        },
-        "kenmerk": {
-          "@id": "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
-          "@type": "http://www.w3.org/ns/ssn/systems/SurvivalProperty"
-        }
-      },
-      "@id": "http://www.w3.org/ns/ssn/systems/SurvivalRange"
+    "Identificator": "http://www.w3.org/ns/adms#Identifier",
+    "Identificator.identificator": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
-    "Overlevingskenmerk": {
-      "@id": "http://www.w3.org/ns/ssn/systems/SurvivalProperty"
+    "Identificator.toegekendDoor": {
+      "@id": "http://purl.org/dc/terms/creator",
+      "@type": "@id"
     },
-    "Periode": {
-      "@context": {
-        "tot": {
-          "@id": "http://www.w3.org/2006/time#hasEnd",
-          "@type": "http://www.w3.org/2006/time#Instant"
-        },
-        "van": {
-          "@id": "http://www.w3.org/2006/time#hasBeginning",
-          "@type": "http://www.w3.org/2006/time#Instant"
-        }
-      },
-      "@id": "http://www.w3.org/2006/time#ProperInterval"
+    "Identificator.toegekendOp": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
-    "Platform": {
-      "@context": {
-        "deployment": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/inDeployment",
-          "@type": "http://www.w3.org/ns/sosa/Deployment"
-        },
-        "hostVan": {
-          "@container": "@set",
-          "@id": "https://www.w3.org/ns/sosa/hosts",
-          "@type": "http://www.w3.org/ns/ssn/System"
-        },
-        "locatie": {
-          "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
-          "@type": "http://www.w3.org/ns/locn#Geometry"
-        },
-        "type": {
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        }
-      },
-      "@id": "https://www.w3.org/ns/sosa/Platform"
+    "Informatieobject": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
+    "Input": "http://www.w3.org/ns/ssn/Input",
+    "Input.referentie": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
     },
-    "Rechten": {
-      "@id": "http://purl.org/dc/terms/RightsStatement"
+    "Input.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
     },
-    "Sensor": {
-      "@context": {
-        "implementeert": {
-          "@id": "http://www.w3.org/ns/sosa/implements",
-          "@type": "http://www.w3.org/ns/sosa/oms/ObservingProcedure"
-        },
-        "uitgevoerdeObservatie": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/madeObservation",
-          "@type": "http://www.w3.org/ns/sosa/Observation"
-        }
-      },
-      "@id": "https://www.w3.org/ns/sosa/Sensor"
+    "Interpretatie": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Interpretatie",
+    "Kenmerk": "https://data.vlaanderen.be/ns/energiehuis#Kenmerk",
+    "Kenmerk.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
     },
-    "String": {
-      "@id": "http://www.w3.org/2001/XMLSchema#string"
+    "Kenmerk.waarde": {
+      "@container": "@set",
+      "@id": "https://schema.org/value",
+      "@type": "@id"
     },
-    "Systeem": {
-      "@context": {
-        "capaciteit": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
-          "@type": "http://www.w3.org/ns/ssn/systems/SystemCapacity"
-        },
-        "gehostDoor": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/isHostedBy",
-          "@type": "https://www.w3.org/ns/sosa/Platform"
-        },
-        "heeftDeployment": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/sosa/hasDeployment",
-          "@type": "http://www.w3.org/ns/sosa/Deployment"
-        },
-        "overlevingsbereik": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
-          "@type": "http://www.w3.org/ns/ssn/systems/SurvivalRange"
-        },
-        "type": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        },
-        "werkingsbereik": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
-          "@type": "http://www.w3.org/ns/ssn/systems/OperatingRange"
-        }
-      },
-      "@id": "http://www.w3.org/ns/ssn/System"
+    "KwantitatieveWaarde": "https://qudt.org/schema/qudt/QuantityValue",
+    "KwantitatieveWaarde.eenheid": {
+      "@id": "https://qudt.org/schema/qudt/hasUnit",
+      "@type": "@id"
     },
-    "Systeemkenmerk": {
-      "@id": "http://www.w3.org/ns/ssn/systems/SystemProperty"
+    "KwantitatieveWaarde.waarde": {
+      "@id": "https://qudt.org/schema/qudt/value",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
-    "Systeemvermogen": {
-      "@context": {
-        "conditie": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/ssn/systems/inCondition",
-          "@type": "http://www.w3.org/ns/ssn/systems/Condition"
-        },
-        "kenmerk": {
-          "@id": "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
-          "@type": "http://www.w3.org/ns/ssn/systems/SystemProperty"
-        }
-      },
-      "@id": "http://www.w3.org/ns/ssn/systems/SystemCapacity"
+    "LangString": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "MachineLearningModel": "http://data.europa.eu/it6/MachineLearningModel",
+    "MachineLearningModel.creatiedatum": {
+      "@id": "http://purl.org/dc/terms/created",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
-    "Taak": {
-      "@id": "https://saref.etsi.org/core/Task"
+    "MachineLearningModel.getraindOp": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/it6/trainedOn",
+      "@type": "@id"
     },
-    "TemporeleEntiteit": {
-      "@id": "http://www.w3.org/2006/time#TemporalEntity"
+    "MachineLearningModel.naam": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
-    "Toestel": {
-      "@context": {
-        "fabrikant": {
-          "@id": "https://saref.etsi.org/core/hasManufacturer",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "functie": {
-          "@container": "@set",
-          "@id": "https://saref.etsi.org/core/hasFunction",
-          "@type": "https://saref.etsi.org/core/Function"
-        },
-        "model": {
-          "@id": "https://saref.etsi.org/core/hasModel",
-          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        },
-        "taak": {
-          "@container": "@set",
-          "@id": "https://saref.etsi.org/core/accomplishes",
-          "@type": "https://saref.etsi.org/core/Task"
-        },
-        "type": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        }
-      },
-      "@id": "https://saref.etsi.org/core/Device"
+    "MachineLearningModel.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
     },
-    "URI": {
-      "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+    "MachineLearningModel.versie": {
+      "@id": "http://data.europa.eu/it6/version",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
-    "Video": {
-      "@context": {
-        "type": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        }
-      },
-      "@id": "https://schema.org/VideoObject"
+    "Moment": "http://www.w3.org/2006/time#Instant",
+    "Moment.inXSDDatumTijd": {
+      "@id": "http://www.w3.org/2006/time#inXSDDateTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
-    "Werkingsbereik": {
-      "@context": {
-        "conditie": {
-          "@container": "@set",
-          "@id": "http://www.w3.org/ns/ssn/systems/inCondition",
-          "@type": "http://www.w3.org/ns/ssn/systems/Condition"
-        },
-        "kenmerk": {
-          "@id": "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
-          "@type": "http://www.w3.org/ns/ssn/systems/OperatingProperty"
-        }
-      },
-      "@id": "http://www.w3.org/ns/ssn/systems/OperatingRange"
+    "Object": "http://www.w3.org/ns/sosa/FeatureOfInterest",
+    "Object.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
     },
-    "Werkingskenmerk": {
-      "@id": "http://www.w3.org/ns/ssn/systems/OperatingProperty"
-    }
+    "Observatie": "http://www.w3.org/ns/sosa/Observation",
+    "Observatie.fenomeentijd": {
+      "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
+      "@type": "@id"
+    },
+    "Observatie.gebruikteProcedure": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "@id"
+    },
+    "Observatie.geobserveerdKenmerk": {
+      "@id": "http://www.w3.org/ns/sosa/observedProperty",
+      "@type": "@id"
+    },
+    "Observatie.geobserveerdObject": {
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "Observatie.identificator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "Observatie.isLidVan": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/memberOf",
+      "@type": "@id"
+    },
+    "Observatie.parameter": {
+      "@container": "@set",
+      "@id": "http://dbpedia.org/ontology/influencedBy",
+      "@type": "@id"
+    },
+    "Observatie.resultaat": {
+      "@id": "http://www.w3.org/ns/sosa/hasResult",
+      "@type": "@id"
+    },
+    "Observatie.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Observatie.uitgevoerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
+      "@type": "@id"
+    },
+    "Observatie.uitgevoerdMetSensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "@id"
+    },
+    "Observatieprocedure": "http://www.w3.org/ns/sosa/oms/ObservingProcedure",
+    "Observatieprocedure.geïMplementeerdMet": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/implementedBy",
+      "@type": "@id"
+    },
+    "Observatieprocedure.input": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasInput",
+      "@type": "@id"
+    },
+    "Observatieprocedure.output": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasOutput",
+      "@type": "@id"
+    },
+    "Observatieprocedure.parameter": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.parameter",
+      "@type": "@id"
+    },
+    "Observatieprocedure.specificatie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Observatieprocedure.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Observatieverzameling": "http://www.w3.org/ns/sosa/ObservationCollection",
+    "Observatieverzameling.fenomeentijd": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
+      "@type": "@id"
+    },
+    "Observatieverzameling.geassocieerdeVerzameling": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/relatedObservation",
+      "@type": "@id"
+    },
+    "Observatieverzameling.gebruikteProcedure": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "@id"
+    },
+    "Observatieverzameling.geobserveerdKenmerk": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/observedProperty",
+      "@type": "@id"
+    },
+    "Observatieverzameling.geobserveerdObject": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "@id"
+    },
+    "Observatieverzameling.heeftLid": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasMember",
+      "@type": "@id"
+    },
+    "Observatieverzameling.resultaatTijd": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/resultTime",
+      "@type": "@id"
+    },
+    "Observatieverzameling.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Observatieverzameling.uitgevoerdMetSensor": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "@id"
+    },
+    "ObserveerbaarKenmerk": "http://www.w3.org/ns/sosa/Property",
+    "Opstelling": "https://w3id.org/okn/o/sd#ConfigurationSetup",
+    "Output": "http://www.w3.org/ns/ssn/Output",
+    "Output.referentie": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Output.referentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Output.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Overlevingscapaciteit": "http://www.w3.org/ns/ssn/systems/SurvivalRange",
+    "Overlevingscapaciteit.conditie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/inCondition",
+      "@type": "@id"
+    },
+    "Overlevingscapaciteit.kenmerk": {
+      "@id": "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
+      "@type": "@id"
+    },
+    "Overlevingskenmerk": "http://www.w3.org/ns/ssn/systems/SurvivalProperty",
+    "Periode": "http://www.w3.org/2006/time#ProperInterval",
+    "Periode.tot": {
+      "@id": "http://www.w3.org/2006/time#hasEnd",
+      "@type": "@id"
+    },
+    "Periode.van": {
+      "@id": "http://www.w3.org/2006/time#hasBeginning",
+      "@type": "@id"
+    },
+    "Platform": "https://www.w3.org/ns/sosa/Platform",
+    "Platform.deployment": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/inDeployment",
+      "@type": "@id"
+    },
+    "Platform.hostVan": {
+      "@container": "@set",
+      "@id": "https://www.w3.org/ns/sosa/hosts",
+      "@type": "@id"
+    },
+    "Platform.locatie": {
+      "@id": "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "@type": "@id"
+    },
+    "Platform.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Sensor": "https://www.w3.org/ns/sosa/Sensor",
+    "Sensor.implementeert": {
+      "@id": "http://www.w3.org/ns/sosa/implements",
+      "@type": "@id"
+    },
+    "Sensor.uitgevoerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/madeObservation",
+      "@type": "@id"
+    },
+    "String": "http://www.w3.org/2001/XMLSchema#string",
+    "Systeem": "http://www.w3.org/ns/ssn/System",
+    "Systeem.capaciteit": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
+      "@type": "@id"
+    },
+    "Systeem.gehostDoor": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/isHostedBy",
+      "@type": "@id"
+    },
+    "Systeem.heeftDeployment": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasDeployment",
+      "@type": "@id"
+    },
+    "Systeem.overlevingsbereik": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
+      "@type": "@id"
+    },
+    "Systeem.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Systeem.werkingsbereik": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
+      "@type": "@id"
+    },
+    "Systeemkenmerk": "http://www.w3.org/ns/ssn/systems/SystemProperty",
+    "Systeemvermogen": "http://www.w3.org/ns/ssn/systems/SystemCapacity",
+    "Systeemvermogen.conditie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/inCondition",
+      "@type": "@id"
+    },
+    "Systeemvermogen.kenmerk": {
+      "@id": "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
+      "@type": "@id"
+    },
+    "Taak": "https://saref.etsi.org/core/Task",
+    "TemporeleEntiteit": "http://www.w3.org/2006/time#TemporalEntity",
+    "Toestel": "https://saref.etsi.org/core/Device",
+    "Toestel.fabrikant": {
+      "@id": "https://saref.etsi.org/core/hasManufacturer",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Toestel.functie": {
+      "@container": "@set",
+      "@id": "https://saref.etsi.org/core/hasFunction",
+      "@type": "@id"
+    },
+    "Toestel.model": {
+      "@id": "https://saref.etsi.org/core/hasModel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Toestel.taak": {
+      "@container": "@set",
+      "@id": "https://saref.etsi.org/core/accomplishes",
+      "@type": "@id"
+    },
+    "Toestel.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "Video": "https://schema.org/VideoObject",
+    "Video.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Werkingsbereik": "http://www.w3.org/ns/ssn/systems/OperatingRange",
+    "Werkingsbereik.conditie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/inCondition",
+      "@type": "@id"
+    },
+    "Werkingsbereik.kenmerk": {
+      "@id": "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
+      "@type": "@id"
+    },
+    "Werkingskenmerk": "http://www.w3.org/ns/ssn/systems/OperatingProperty"
   }
 }
