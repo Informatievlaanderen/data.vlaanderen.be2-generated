@@ -2,85 +2,31 @@
 
 #||# -------------------------------------  
 
-2025-07-14T07:14:02.109Z info: Loaded 27 URI prefixes into whitelist
+2025-07-14T07:59:17.263Z info: Loaded 33 URI prefixes into whitelist
 
-2025-07-14T07:14:02.312Z warn: Found non-whitelisted assigned URI: http://todo.com/ for subject: [urn:oslo-toolchain:fc255ab16bf0d37dcb34731096f33811f89cb869e8a98513e301efe0d4df5ef7](all-verkeersmeldingen.jsonld#L119)
+2025-07-14T07:59:17.418Z warn: Found non-whitelisted assigned URI: http://todo.com/ for subject: [urn:oslo-toolchain:fc255ab16bf0d37dcb34731096f33811f89cb869e8a98513e301efe0d4df5ef7](all-verkeersmeldingen.jsonld#L119)
 
-2025-07-14T07:14:02.312Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType for subject: [urn:oslo-toolchain:130e6383e8cbc25acbf09c99a5dadb7c85eac421a63a2f5b80156cc5f693b550](all-verkeersmeldingen.jsonld#L567)
+2025-07-14T07:59:17.418Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType for subject: [urn:oslo-toolchain:130e6383e8cbc25acbf09c99a5dadb7c85eac421a63a2f5b80156cc5f693b550](all-verkeersmeldingen.jsonld#L567)
 
-2025-07-14T07:14:02.312Z warn: Found non-whitelisted assigned URI: http://datex2.eu/vocab/3/Situation#Situation for subject: [urn:oslo-toolchain:fb06224fbd9fc5831e2edd0ba024950f8fb9509da68ade7c8d9c506279a86262](all-verkeersmeldingen.jsonld#L603)
+2025-07-14T07:59:17.419Z warn: Found non-whitelisted assigned URI: https://dbpedia.org/ontology/procedure for subject: [urn:oslo-toolchain:66e281763fbdfd80acf1705d04b0e09a31c002a12d54c6756316d7fdb5a30e06](all-verkeersmeldingen.jsonld#L1871)
 
-2025-07-14T07:14:02.312Z warn: Found non-whitelisted assigned URI: https://www.w3.org/2009/08/skos-reference/skos.html#Concept for subject: [urn:oslo-toolchain:5f5a13564cf762a41dcb8b0976a3b1343f191ccbfda0b4bdb0cef830de959149](all-verkeersmeldingen.jsonld#L699)
+2025-07-14T07:59:17.419Z warn: Found non-whitelisted assigned URI: http://todo.com/Observatie.uitgevoerdDoor for subject: [urn:oslo-toolchain:547ff9a3696393fbeefaa779ed1219cfc0652a3781b27477126e0c83235a6349](all-verkeersmeldingen.jsonld#L2867)
 
-2025-07-14T07:14:02.312Z warn: Found non-whitelisted assigned URI: http://purl.org/dc/dcmitype/Collection for subject: [urn:oslo-toolchain:4c87f624e39c0b10589cc5a213e63a4d8e72fb75dc19408f4d69b58ca3250499](all-verkeersmeldingen.jsonld#L976)
+2025-07-14T07:59:17.419Z warn: Found non-whitelisted assigned URI: http://todo.com/zaak for subject: [urn:oslo-toolchain:04080bac213ff8f9b24eda6aa8298a62f0ab7d0b11941c26d60d50d1495b2c71](all-verkeersmeldingen.jsonld#L3845)
 
-2025-07-14T07:14:02.312Z warn: Found non-whitelisted assigned URI: http://dbpedia.org/ontology/Case for subject: [urn:oslo-toolchain:d46743a3df9dfeb56636e51cc90cf6b69490e203655533a99fdbe73863a5816b](all-verkeersmeldingen.jsonld#L1053)
+2025-07-14T07:59:17.419Z warn: Found non-whitelisted assigned URI: http://todo.com/AgentInRol.Agent for subject: [urn:oslo-toolchain:b52268295f02c324adc414461faa7afa2cf902a3d5530ace76a70eae4a772de0](all-verkeersmeldingen.jsonld#L3941)
 
-2025-07-14T07:14:02.312Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/activitystreams#summary for subject: [urn:oslo-toolchain:1faadb75766ce907e1af8bdc6dcee8effcebafddfe4ec8103971914cbcb67ef2](all-verkeersmeldingen.jsonld#L1341)
+2025-07-14T07:59:17.421Z warn: Labels must only contain alphabetical characters: 'toegekend door (String)' for subject: [urn:oslo-toolchain:6a91cc544615b91f3beba42af7b5e0e149ad3e450fb267574b565359783b93c0](all-verkeersmeldingen.jsonld#L1669)
 
-2025-07-14T07:14:02.312Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/activitystreams#attachment for subject: [urn:oslo-toolchain:dfd8257652e4df3f92ea1d42269a93f6fee7822eb696822b9f0161667d1f58b4](all-verkeersmeldingen.jsonld#L1525)
+2025-07-14T07:59:17.421Z warn: Labels must only contain alphabetical characters: 'Agent (in rol)' for subject: [urn:oslo-toolchain:70886cd4e3ef5b1103d30edae2d77afdee809884f97078ac38add7dca3565a84](all-verkeersmeldingen.jsonld#L1077)
 
-2025-07-14T07:14:02.313Z warn: Found non-whitelisted assigned URI: https://dbpedia.org/ontology/procedure for subject: [urn:oslo-toolchain:66e281763fbdfd80acf1705d04b0e09a31c002a12d54c6756316d7fdb5a30e06](all-verkeersmeldingen.jsonld#L1889)
+2025-07-14T07:59:17.422Z warn: Found base URI with TODO or FIXME: [urn:oslo-toolchain:fc255ab16bf0d37dcb34731096f33811f89cb869e8a98513e301efe0d4df5ef7](all-verkeersmeldingen.jsonld#L119)
 
-2025-07-14T07:14:02.313Z warn: Found non-whitelisted assigned URI: http://dbpedia.org/ontology/influencedBy for subject: [urn:oslo-toolchain:a2c39d67222e4680f7333dad1e17a5ce5eb55facd0d16252cf2f745216102933](all-verkeersmeldingen.jsonld#L2419)
+2025-07-14T07:59:17.422Z info: Validation found 6 non-whitelisted assigned URIs
 
-2025-07-14T07:14:02.313Z warn: Found non-whitelisted assigned URI: http://dbpedia.org/ontology/influencedBy for subject: [urn:oslo-toolchain:02da5ab78014587fd09ca72126e11c7b4edf9eb881159834e8ad59eb7b4f608a](all-verkeersmeldingen.jsonld#L2701)
+2025-07-14T07:59:17.422Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
 
-2025-07-14T07:14:02.313Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime for subject: [urn:oslo-toolchain:99390968745ba952b7786f232b84e5f1f9961fbc7918b8179e73a08c0bdc66c2](all-verkeersmeldingen.jsonld#L2593)
+2025-07-14T07:59:17.422Z info: Validation found 2 labels with spelling mistakes.
 
-2025-07-14T07:14:02.313Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result for subject: [urn:oslo-toolchain:bcd72b895180087bddfbff2fdd1cf0297a9694e4c7a87cf5e7d5c9548fd972f3](all-verkeersmeldingen.jsonld#L2739)
-
-2025-07-14T07:14:02.313Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime for subject: [urn:oslo-toolchain:4d538ade2e952a76e4c5b22a4851c2153b794cfc16e48e6f11a9450434bb7c13](all-verkeersmeldingen.jsonld#L2815)
-
-2025-07-14T07:14:02.313Z warn: Found non-whitelisted assigned URI: http://todo.com/Observatie.uitgevoerdDoor for subject: [urn:oslo-toolchain:547ff9a3696393fbeefaa779ed1219cfc0652a3781b27477126e0c83235a6349](all-verkeersmeldingen.jsonld#L2885)
-
-2025-07-14T07:14:02.313Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/oa#hasBody for subject: [urn:oslo-toolchain:8604021b35e19a66f70a4ed9e5e369f3a024af182bc87bde51ba670a10a0540d](all-verkeersmeldingen.jsonld#L2917)
-
-2025-07-14T07:14:02.313Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/oa#motivatedBy for subject: [urn:oslo-toolchain:dabe65860a8f12f88207fe85f52aa2e61c77797df7cb2426e7ddc1ad9e21eed8](all-verkeersmeldingen.jsonld#L2987)
-
-2025-07-14T07:14:02.313Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/oa#hasTarget for subject: [urn:oslo-toolchain:648b3d760c688229d7211405c7bcedce9a674372c5b8c07551a174f8fefb44dc](all-verkeersmeldingen.jsonld#L3511)
-
-2025-07-14T07:14:02.313Z warn: Found non-whitelisted assigned URI: http://todo.com/zaak for subject: [urn:oslo-toolchain:04080bac213ff8f9b24eda6aa8298a62f0ab7d0b11941c26d60d50d1495b2c71](all-verkeersmeldingen.jsonld#L3869)
-
-2025-07-14T07:14:02.313Z warn: Found non-whitelisted assigned URI: http://todo.com/AgentInRol.Agent for subject: [urn:oslo-toolchain:b52268295f02c324adc414461faa7afa2cf902a3d5530ace76a70eae4a772de0](all-verkeersmeldingen.jsonld#L3965)
-
-2025-07-14T07:14:02.314Z warn: Found non-whitelisted assigned URI: https://www.w3.org/TR/vocab-dqv/#dqv:QualityMeasurement for subject: [urn:oslo-toolchain:df52d99d942cbdfd425fe91c92eb1e9d91de94b64240754e8d8088e4c2848cfb](all-verkeersmeldingen.jsonld#L4263)
-
-2025-07-14T07:14:02.315Z warn: Found sentence without a '.': 'Any information that is generated by a procedure' for subject: [urn:oslo-toolchain:55a837d44f899b9a4510bf34fe1599d53a06058c4aced00415bf0bced6cf5629](all-verkeersmeldingen.jsonld#L419)
-
-2025-07-14T07:14:02.315Z warn: Found sentence without a '.': 'Type of Observationprocedure' for subject: [urn:oslo-toolchain:fa6834d45fec6bde93d482ebf2f5106a9e2fb84d95f2bbb4e7db6db0a361be4c](all-verkeersmeldingen.jsonld#L872)
-
-2025-07-14T07:14:02.315Z warn: Found sentence without a '.': 'Reference to original input' for subject: [urn:oslo-toolchain:4b02c8423212eb2e070c92922b9577ff7654bacfbee0fb33293d812983920691](all-verkeersmeldingen.jsonld#L1257)
-
-2025-07-14T07:14:02.315Z warn: Found sentence without a '.': 'Location of the Sensor' for subject: [urn:oslo-toolchain:cca12c61182fb835a2df47dae9dddc4da88a8ac86c5d26d14550916dcfc9a780](all-verkeersmeldingen.jsonld#L2137)
-
-2025-07-14T07:14:02.315Z warn: Found sentence without a '.': 'Procedure followed by the TrafficMeasurement' for subject: [urn:oslo-toolchain:a67ee69f9187d3a876e4c3b7fd980109882ebd9bde81132f2e56bad5795fbd89](all-verkeersmeldingen.jsonld#L3689)
-
-2025-07-14T07:14:02.315Z warn: Found sentence without a '.': 'A generic weakly-typed parameter value' for subject: [urn:oslo-toolchain:dd612f6c7698dd1e0b84dd539e4b967faf75c40cba56e69ea5eaa814670ba4d5](all-verkeersmeldingen.jsonld#L4215)
-
-2025-07-14T07:14:02.316Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:1b3f87bcb66c6bdafe2913ec1576a7ca509831f043d214593f0e705f9d7180dd](all-verkeersmeldingen.jsonld#L1563)
-
-2025-07-14T07:14:02.316Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:56c7764319e932013f7e688b6088fd9c7f11dee90b04a37cb0473d6e31a225c4](all-verkeersmeldingen.jsonld#L4299)
-
-2025-07-14T07:14:02.316Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:8b9a6694d8e2727d27b4d7915cc86186f92b0e8bd44d2713d1c4884e9e0da0ce](all-verkeersmeldingen.jsonld#L3209)
-
-2025-07-14T07:14:02.316Z warn: Found empty sentence for subject: [urn:oslo-toolchain:6a91cc544615b91f3beba42af7b5e0e149ad3e450fb267574b565359783b93c0](all-verkeersmeldingen.jsonld#L1675)
-
-2025-07-14T07:14:02.316Z warn: Found empty sentence for subject: [urn:oslo-toolchain:ca23d459b34d8d0d4742e96a6683c384a4d6b7bfbf17179e49d5bc8c7f1e3588](all-verkeersmeldingen.jsonld#L1731)
-
-2025-07-14T07:14:02.316Z warn: Found sentence without a '.': 'In essence, a value and the name of the type of the value. E.g.  temperature of 21 degrees Celcius (value = 21 degrees Celcius, name = temperature)' for subject: [urn:oslo-toolchain:dd612f6c7698dd1e0b84dd539e4b967faf75c40cba56e69ea5eaa814670ba4d5](all-verkeersmeldingen.jsonld#L4215)
-
-2025-07-14T07:14:02.317Z warn: Labels must only contain alphabetical characters: 'toegekend door (String)' for subject: [urn:oslo-toolchain:6a91cc544615b91f3beba42af7b5e0e149ad3e450fb267574b565359783b93c0](all-verkeersmeldingen.jsonld#L1675)
-
-2025-07-14T07:14:02.317Z warn: Labels must only contain alphabetical characters: 'Agent (in rol)' for subject: [urn:oslo-toolchain:70886cd4e3ef5b1103d30edae2d77afdee809884f97078ac38add7dca3565a84](all-verkeersmeldingen.jsonld#L1077)
-
-2025-07-14T07:14:02.317Z warn: Found base URI with TODO or FIXME: [urn:oslo-toolchain:fc255ab16bf0d37dcb34731096f33811f89cb869e8a98513e301efe0d4df5ef7](all-verkeersmeldingen.jsonld#L119)
-
-2025-07-14T07:14:02.317Z info: Validation found 21 non-whitelisted assigned URIs
-
-2025-07-14T07:14:02.317Z info: Validation found 12 sentences with spelling mistakes.
-
-2025-07-14T07:14:02.317Z info: Validation found 2 labels with spelling mistakes.
-
-2025-07-14T07:14:02.317Z info: Validation found 2 invalid base URIs.
+2025-07-14T07:59:17.422Z info: Validation found 2 invalid base URIs.
 
