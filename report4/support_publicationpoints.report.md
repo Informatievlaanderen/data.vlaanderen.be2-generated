@@ -288,6 +288,7 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/leercredential",
   "/tmp/generated/ns/metadata-dcat",
   "/tmp/generated/ns/observaties-en-metingen",
+  "/tmp/generated/ns/rooilijnplannen",
   "/tmp/generated/ns/sensoren-en-bemonstering",
   "/tmp/generated/ns/thermografische-gebouwanalyse"
 ]
