@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-07-22T15:55:14.857Z warn: Unable to find the description for subject "[urn:oslo-toolchain:eb2957bf629021190e4301047979467f09996bf3b372420938b35ec580ba5687](all-cultureel-erfgoed-basisregistratie.jsonld#L7387)".
+2025-07-22T16:07:20.742Z warn: Unable to find the description for subject "[urn:oslo-toolchain:eb2957bf629021190e4301047979467f09996bf3b372420938b35ec580ba5687](all-cultureel-erfgoed-basisregistratie.jsonld#L7387)".
 
 Error: Unable to find a label for the domain "urn:oslo-toolchain:759b21cc1ae48e3d257f73bc5be2fd6c8130bb67fba5de89a50b63ddda0e93e4" of subject "[urn:oslo-toolchain:eb2957bf629021190e4301047979467f09996bf3b372420938b35ec580ba5687](all-cultureel-erfgoed-basisregistratie.jsonld#L7387)".
 
