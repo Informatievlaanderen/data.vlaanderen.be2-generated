@@ -502,6 +502,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/production/verkeersmeldingen.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/production/verkeersmetingen.publication.json
 #||# 
 Directory check

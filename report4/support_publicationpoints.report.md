@@ -154,6 +154,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/verkeersborden.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/verkeersmeldingen.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/production/verkeersmetingen.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/vervoersknooppunten.publication.json
