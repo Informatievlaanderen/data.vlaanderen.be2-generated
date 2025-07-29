@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2025-07-15T11:51:44.411Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/openbaardomein#voorkomen which acts as a parent. Using original URI as fallback.
+2025-07-29T07:31:48.160Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/openbaardomein#voorkomen which acts as a parent. Using original URI as fallback.
 
