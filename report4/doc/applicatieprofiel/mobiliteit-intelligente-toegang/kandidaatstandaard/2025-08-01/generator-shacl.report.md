@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:6e3a0c04bad0ea70f6e1bf049461f23544986414027035093d5e1e18344fad66".
+Error: Unable to find the assigned URI for range "urn:oslo-toolchain:4177087511b790553db49cc0748f6ccda09fcdd5d0e7ac598e1352b8f2057611".
 
     at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:51:19)
 
