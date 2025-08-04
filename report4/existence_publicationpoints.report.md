@@ -324,8 +324,6 @@ error: missing '/tmp/generated/doc/applicatieprofiel/metadata-dcat/ontwerpstanda
 #||# Directory check
 #||# 
 #||# index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/mobiliteit-intelligente-toegang/kandidaatstandaard/2025-08-01/index.html'
-error: missing '/tmp/generated/doc/vocabularium/mobiliteit-intelligente-toegang/kandidaatstandaard/2025-08-01/index.html'
 
 #||#    + checking /home/circleci/project/config/test/mobiliteit.publication.json
 #||# 
