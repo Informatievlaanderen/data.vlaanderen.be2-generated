@@ -2,57 +2,51 @@
 
 #||# -------------------------------------
 
-2025-08-11T10:08:30.589Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:Leerclaim:(Leerclaim -> Leerclaim))
+2025-08-11T10:17:47.266Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:Leerclaim:(Leerclaim -> Leerclaim))
 
-2025-08-11T10:08:30.590Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:Leerprestatie:(Leerprestatie -> Toekenningsproces))
+2025-08-11T10:17:47.267Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:Leerprestatie:(Leerprestatie -> Toekenningsproces))
 
-2025-08-11T10:08:30.591Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:EuropeesDigitaalCredential:(EuropeesDigitaalCredential -> VerifieerbareCredential))
+2025-08-11T10:17:47.268Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:EuropeesDigitaalCredential:(EuropeesDigitaalCredential -> VerifieerbareCredential))
 
-2025-08-11T10:08:30.591Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Leeractiviteit))
+2025-08-11T10:17:47.268Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Leeractiviteit))
 
-2025-08-11T10:08:30.592Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:CreatiefWerk:(CreatiefWerk -> Licentie) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.269Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:CreatiefWerk:(CreatiefWerk -> Licentie) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.593Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Leermiddel) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.270Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Leermiddel) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.594Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Leermiddel:(Leermiddel -> Doel) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.270Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Leermiddel:(Leermiddel -> Doel) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.594Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:LeermiddelVerzameling:(LeermiddelVerzameling -> Leermiddel) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.271Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:LeermiddelVerzameling:(LeermiddelVerzameling -> Leermiddel) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.594Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Leermiddel:(Leermiddel -> CreatiefWerk) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.271Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Leermiddel:(Leermiddel -> CreatiefWerk) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.594Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:Leeractiviteitspecificatie:(Leeractiviteitspecificatie -> Doel) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.271Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:Leeractiviteitspecificatie:(Leeractiviteitspecificatie -> Doel) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.594Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.271Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.594Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Leermiddel:(Leermiddel -> Leermiddel) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.271Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Leermiddel:(Leermiddel -> Leermiddel) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.595Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:Leeractiviteitspecificatie:(Leeractiviteitspecificatie -> Leermiddel) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.271Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:Leeractiviteitspecificatie:(Leeractiviteitspecificatie -> Leermiddel) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.595Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Doel) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.271Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Doel) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.595Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:CreatiefWerk:(CreatiefWerk -> Agent) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.272Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:CreatiefWerk:(CreatiefWerk -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.595Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO Generiek:Agent:(Agent -> CreatiefWerk) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.272Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO Generiek:Agent:(Agent -> CreatiefWerk) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.595Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.272Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.595Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.272Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.596Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.272Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.596Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Leermiddel:(Leermiddel -> LeermiddelVerzameling) is not an association with a source role. Ignoring this connector.
+2025-08-11T10:17:47.272Z info: Connector Model:applicatieprofiel_Leermiddelen:OSLO-Leermiddelen:Leermiddel:(Leermiddel -> LeermiddelVerzameling) is not an association with a source role. Ignoring this connector.
 
-2025-08-11T10:08:30.597Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-08-11T10:17:47.273Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-08-11T10:08:30.597Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Leermiddelen). Using fallback URI (http://todo.com/) instead.
+2025-08-11T10:17:47.273Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Leermiddelen). Using fallback URI (http://todo.com/) instead.
 
-2025-08-11T10:08:30.597Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Leermiddelen:OSLO Generiek). Using fallback URI (http://todo.com/) instead.
-
-2025-08-11T10:08:30.612Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_Leermiddelen:OSLO Generiek:Identificator:gestructureerdeIdentificator).
-
-2025-08-11T10:08:30.613Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_Leermiddelen:OSLO Generiek:Identificator:identificator).
-
-2025-08-11T10:08:30.613Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:applicatieprofiel_Leermiddelen:OSLO Generiek:Identificator:toegekendDoor).
+2025-08-11T10:17:47.273Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Leermiddelen:OSLO Generiek). Using fallback URI (http://todo.com/) instead.
 
 #||# -------------------------------------
 
