@@ -88,6 +88,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/leerinschrijfcredential.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/dev/leermiddelen.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/logies.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/lokale-economie.publication.json
@@ -166,9 +168,9 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/vlaamsecodex.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/dev/vrachtwagenparkeren.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/voorwaarden-dienstverlening.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/vrachtwagenparkeren.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/waterkwaliteit.publication.json
 #||#  
