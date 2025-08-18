@@ -304,12 +304,8 @@ index.html check
 #||#    + checking /home/circleci/project/config/dev/leermiddelen.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-02'
-error: missing '/tmp/generated/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-02'
 
 index.html check
-error: missing '/tmp/generated/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-02/index.html'
-error: missing '/tmp/generated/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-02/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/logies.publication.json
 #||# 
