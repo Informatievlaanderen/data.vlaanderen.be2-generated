@@ -2,7 +2,3 @@
 
 #||# -------------------------------------  
 
-2025-03-17T13:58:09.394Z error: No range found for attribute [urn:oslo-toolchain:caf2d7eb930365a87bafc0d0df7f9651773363c5bf71237b951793a931341b26](all-adressenregister.jsonld#L2205).
-
-2025-03-17T13:58:09.396Z error: No range found for attribute [urn:oslo-toolchain:b217d3bce7cc3998c3580607add9db281dcb4b66505a83cec23d96198672931e](all-adressenregister.jsonld#L2219).
-

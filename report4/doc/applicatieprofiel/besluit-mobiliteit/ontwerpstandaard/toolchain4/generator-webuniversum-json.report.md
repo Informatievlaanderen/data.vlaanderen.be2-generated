@@ -2,55 +2,21 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for class http://www.w3.org/ns/prov#Activity which acts as a parent.
+2025-08-19T16:00:03.311Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#Activity which acts as a parent. Using original URI as fallback.
 
-    at JsonWebuniversumGenerationService.createParentObject (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:237:19)
+2025-08-19T16:00:03.316Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/mobiliteit#periode which acts as a parent. Using original URI as fallback.
 
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:137:65
+2025-08-19T16:00:03.325Z warn: Unable to find the assigned URI for external class http://www.w3.org/2004/02/skos/core#Concept which acts as a parent. Using original URI as fallback.
 
-    at Array.map (<anonymous>)
+2025-08-19T16:00:03.356Z warn: Unable to find the assigned URI for external class http://schema.org/ListItem which acts as a parent. Using original URI as fallback.
 
-    at JsonWebuniversumGenerationService.generateEntityData (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:137:42)
+2025-08-19T16:00:03.359Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:33:36
+2025-08-19T16:00:03.359Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-    at Array.map (<anonymous>)
+2025-08-19T16:00:03.360Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
 
-    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:33:14)
+2025-08-19T16:00:03.361Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
 
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-
-/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:237
-
-            throw new Error(`Unable to find the assigned URI for class ${subject.value} which acts as a parent.`);
-
-                  ^
-
-
-
-Error: Unable to find the assigned URI for class http://xmlns.com/foaf/0.1/Document which acts as a parent.
-
-    at JsonWebuniversumGenerationService.createParentObject (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:237:19)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:137:65
-
-    at Array.map (<anonymous>)
-
-    at JsonWebuniversumGenerationService.generateEntityData (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:137:42)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:36:39
-
-    at Array.map (<anonymous>)
-
-    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:36:14)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-
-
-
-Node.js v20.15.0
+2025-08-19T16:00:03.362Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/Document which acts as a parent. Using original URI as fallback.
 

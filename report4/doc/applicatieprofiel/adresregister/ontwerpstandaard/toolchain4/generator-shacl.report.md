@@ -2,17 +2,15 @@
 
 #||# -------------------------------------  
 
-2025-03-17T13:58:10.163Z error: Unable to find the description for subject "[urn:oslo-toolchain:caf2d7eb930365a87bafc0d0df7f9651773363c5bf71237b951793a931341b26](all-adressenregister.jsonld#L2205)".
+2025-08-19T16:00:04.529Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b2c88c2adaac2d86f8cd93b551193cdc49102aa5f8198598276a482e38279c80](all-adressenregister.jsonld#L2307)".
 
-Error: Unable to find the range for subject "[urn:oslo-toolchain:caf2d7eb930365a87bafc0d0df7f9651773363c5bf71237b951793a931341b26](all-adressenregister.jsonld#L2205)".
+2025-08-19T16:00:04.532Z warn: Unable to find the description for subject "[urn:oslo-toolchain:179f84a6764f5043ec82dd637b695ec930853a7fc4b7a9b763f49a49629475de](all-adressenregister.jsonld#L2327)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:45:19)
+2025-08-19T16:00:04.533Z warn: Unable to find the description for subject "[urn:oslo-toolchain:0fc8435b473a9a8d41770657e357949fad8073407e8a1bb57f678d39d50dc933](all-adressenregister.jsonld#L2347)".
 
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+2025-08-19T16:00:04.533Z warn: Unable to find the description for subject "[urn:oslo-toolchain:d4884b7caaf3b39be880c0a3e6c1ffdf2248eb213bc08f170897b118613df9ff](all-adressenregister.jsonld#L2405)".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:51)
+2025-08-19T16:00:04.534Z warn: Unable to find the description for subject "[urn:oslo-toolchain:d7c96ced6bef1b25a4051ee0b0320b1e90d66589f0c7d0c9544184fcb840dfdc](all-adressenregister.jsonld#L2425)".
 
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-08-19T16:00:04.534Z warn: Unable to find the description for subject "[urn:oslo-toolchain:bc4bb4449d9dad2f067eb1a4d2e2590cb0158b6f78a7b94d7105aa2f9dab6fb1](all-adressenregister.jsonld#L2445)".
 
