@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-08-01T11:42:51.566Z warn: Unable to find the description for subject "[urn:oslo-toolchain:871195df287b309104da61e39cf7b8661aa6cb752f5ad3d787af6f1910436b70](all-zaalreservatie.jsonld#L5785)".
+2025-08-19T08:34:46.831Z warn: Unable to find the description for subject "[urn:oslo-toolchain:871195df287b309104da61e39cf7b8661aa6cb752f5ad3d787af6f1910436b70](all-zaalreservatie.jsonld#L5785)".
 
-2025-08-01T11:42:51.570Z warn: Unable to find the description for subject "[urn:oslo-toolchain:044daabb90662384951ef19045b3899118c543ebbd67c3e592ea52c7598dde12](all-zaalreservatie.jsonld#L6351)".
+2025-08-19T08:34:46.836Z warn: Unable to find the description for subject "[urn:oslo-toolchain:044daabb90662384951ef19045b3899118c543ebbd67c3e592ea52c7598dde12](all-zaalreservatie.jsonld#L6351)".
 
