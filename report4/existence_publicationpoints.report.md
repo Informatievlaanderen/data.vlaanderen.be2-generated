@@ -252,12 +252,6 @@ Directory check
 
 index.html check
 
-#||#    + checking /home/circleci/project/config/production/mobiliteit.publication.json
-#||# 
-Directory check
-
-index.html check
-
 #||#    + checking /home/circleci/project/config/production/mobiliteitsbudget.publication.json
 #||# 
 Directory check
@@ -332,46 +326,13 @@ Directory check
 
 index.html check
 
-#||#    + checking /home/circleci/project/config/production/organisatie.publication.json
-#||# 
-Directory check
-
-index.html check
-error: missing '/tmp/generated/doc/vocabularium/organisatie/ontwerpdocument/toolchain4/index.html'
-
 #||#    + checking /home/circleci/project/config/production/overlijdensaangifte.publication.json
 #||# 
 Directory check
 
 index.html check
 
-#||#    + checking /home/circleci/project/config/production/perceel.publication.json
-#||# 
-Directory check
-
-index.html check
-
-#||#    + checking /home/circleci/project/config/production/persoon.publication.json
-#||# 
-Directory check
-
-index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/persoon/ontwerpstandaard/toolchain4/index.html'
-
-#||#    + checking /home/circleci/project/config/production/publicatie-advertentie.publication.json
-#||# 
-Directory check
-
-index.html check
-
 #||#    + checking /home/circleci/project/config/production/rooilijnplannen.publication.json
-#||# 
-Directory check
-
-index.html check
-
-#||#    + checking /home/circleci/project/config/production/ruimtelijkebereiken.publication.json
 #||# 
 Directory check
 

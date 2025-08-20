@@ -82,8 +82,6 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/mobiliteit-intelligente-toegang.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/production/mobiliteit.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/production/mobiliteitsbudget.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/notificatie.publication.json
@@ -108,19 +106,9 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/openbaar-domein.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/production/organisatie.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/production/overlijdensaangifte.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/production/perceel.publication.json
-#||#  
-#||#   + adding supporting /home/circleci/project/config/production/persoon.publication.json
-#||#  
-#||#   + adding supporting /home/circleci/project/config/production/publicatie-advertentie.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/production/rooilijnplannen.publication.json
-#||#  
-#||#   + adding supporting /home/circleci/project/config/production/ruimtelijkebereiken.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/sb.publication.json
 #||#  
@@ -226,6 +214,22 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24",
   "/tmp/generated/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17",
   "/tmp/generated/doc/applicatieprofiel/metadata-dcat",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit-trips-en-aanbod",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/erkendestandaard/2020-04-23",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/kandidaatstandaard/2020-01-12",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/kandidaatstandaard/2020-04-09",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/2019-11-20",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/2019-12-16",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/stopplaatsen",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/stopplaatsen/erkendestandaard/2022-04-21",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/stopplaatsen/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/erkendestandaard/2022-04-21",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/voertuigplanning",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/voertuigplanning/erkendestandaard/2022-04-21",
+  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/voertuigplanning/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/mobiliteitsbudget/erkendestandaard/2025-02-06",
   "/tmp/generated/doc/applicatieprofiel/mobiliteitsbudget/ontwerpstandaard/2023-01-16",
   "/tmp/generated/doc/applicatieprofiel/mobiliteitsbudget/ontwerpstandaard/toolchain4",
@@ -239,8 +243,25 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12",
   "/tmp/generated/doc/applicatieprofiel/onbegroeid-voorkomen",
   "/tmp/generated/doc/applicatieprofiel/organisatie-basis",
+  "/tmp/generated/doc/applicatieprofiel/organisatie-basis/kandidaatstandaard/niet-bepaald",
+  "/tmp/generated/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2024-06-01",
+  "/tmp/generated/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/applicatieprofiel/perceel",
+  "/tmp/generated/doc/applicatieprofiel/perceel/erkendestandaard/2020-06-18",
+  "/tmp/generated/doc/applicatieprofiel/perceel/kandidaatstandaard/2019-08-23",
+  "/tmp/generated/doc/applicatieprofiel/perceel/kandidaatstandaard/2020-04-23",
+  "/tmp/generated/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/persoon-basis",
+  "/tmp/generated/doc/applicatieprofiel/persoon-basis/kandidaatstandaard/niet-bepaald",
+  "/tmp/generated/doc/applicatieprofiel/persoon-basis/ontwerpdocument/2020-01-06",
+  "/tmp/generated/doc/applicatieprofiel/publicatie-advertentie",
+  "/tmp/generated/doc/applicatieprofiel/publicatie-advertentie/erkendestandaard/2023-11-09",
+  "/tmp/generated/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/ruimtelijke-bereiken",
+  "/tmp/generated/doc/applicatieprofiel/ruimtelijke-bereiken/kandidaatstandaard/2024-10-01",
+  "/tmp/generated/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2021-08-01",
+  "/tmp/generated/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15",
+  "/tmp/generated/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/schuldbeheer/ontwerpstandaard/2024-07-23",
   "/tmp/generated/doc/applicatieprofiel/schuldbeheer/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/sensoren-en-bemonstering",
@@ -259,6 +280,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/watervoorkomen",
   "/tmp/generated/doc/applicatieprofiel/wegenregister",
   "/tmp/generated/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/vocabularium/Persoon/ontwerpstandaard/2023-06-01",
   "/tmp/generated/doc/vocabularium/besluit/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/bestuur/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01",
@@ -282,10 +304,22 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
   "/tmp/generated/doc/vocabularium/leermiddelen/ontwerpstandaard/2025-02-24",
   "/tmp/generated/doc/vocabularium/mandaat/ontwerpdocument/2020-01-06",
+  "/tmp/generated/doc/vocabularium/mobiliteit-trips-en-aanbod/erkendestandaard/2020-04-23",
+  "/tmp/generated/doc/vocabularium/mobiliteit-trips-en-aanbod/kandidaatstandaard/2020-01-12",
+  "/tmp/generated/doc/vocabularium/mobiliteit-trips-en-aanbod/kandidaatstandaard/2020-04-09",
+  "/tmp/generated/doc/vocabularium/mobiliteit-trips-en-aanbod/ontwerpstandaard/2019-12-16",
+  "/tmp/generated/doc/vocabularium/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/vocabularium/mobiliteit",
   "/tmp/generated/doc/vocabularium/mobiliteit/Hoppinpunten/kandidaatstandaard/2022-04-01",
+  "/tmp/generated/doc/vocabularium/mobiliteit/dienstregeling-en-planning/erkendestandaard/2022-04-21",
+  "/tmp/generated/doc/vocabularium/mobiliteit/dienstregeling-en-planning/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/vocabularium/mobiliteit/kandidaatstandaard/2018-09-30",
   "/tmp/generated/doc/vocabularium/mobiliteitsbudget",
   "/tmp/generated/doc/vocabularium/mobiliteitsbudget/erkendestandaard/2025-02-06",
   "/tmp/generated/doc/vocabularium/mobiliteitsbudget/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/vocabularium/netwerk/erkendestandaard/2020-04-23",
+  "/tmp/generated/doc/vocabularium/netwerk/kandidaatstandaard/2020-04-09",
+  "/tmp/generated/doc/vocabularium/netwerk/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/nutsvoorzieningen/kandidaatstandaard/2023-12-19",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/begraafplaats",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/begroeid-voorkomen",
@@ -296,6 +330,21 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/vegetatie",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/waterdeel",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/watervoorkomen",
+  "/tmp/generated/doc/vocabularium/organisatie",
+  "/tmp/generated/doc/vocabularium/organisatie/erkendestandaard/2018-07-03",
+  "/tmp/generated/doc/vocabularium/perceel/erkendestandaard/2020-06-18",
+  "/tmp/generated/doc/vocabularium/perceel/kandidaatstandaard/2019-08-23",
+  "/tmp/generated/doc/vocabularium/perceel/kandidaatstandaard/2020-04-23",
+  "/tmp/generated/doc/vocabularium/perceel/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/vocabularium/persoon",
+  "/tmp/generated/doc/vocabularium/persoon/ontwerpdocument/2020-01-06",
+  "/tmp/generated/doc/vocabularium/persoon/standaard/2019-07-03",
+  "/tmp/generated/doc/vocabularium/publicatie-advertentie/erkendestandaard/2023-11-09",
+  "/tmp/generated/doc/vocabularium/publicatie-advertentie/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/vocabularium/ruimtelijke-bereiken/kandidaatstandaard/2024-10-01",
+  "/tmp/generated/doc/vocabularium/ruimtelijke-bereiken/ontwerpstandaard/2021-08-01",
+  "/tmp/generated/doc/vocabularium/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15",
+  "/tmp/generated/doc/vocabularium/ruimtelijke-bereiken/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/schuldbeheer/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-07-12",
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-09-12",
@@ -305,19 +354,32 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/thermografische-gebouwanalyse/ontwerpstandaard/2025-05-22",
   "/tmp/generated/doc/vocabularium/toestemming",
   "/tmp/generated/doc/vocabularium/toestemming/ontwerpdocument/2020-01-06",
+  "/tmp/generated/doc/vocabularium/transportnetwerk/erkendestandaard/2020-04-23",
+  "/tmp/generated/doc/vocabularium/transportnetwerk/kandidaatstandaard/2020-04-09",
+  "/tmp/generated/doc/vocabularium/transportnetwerk/ontwerpstandaard/toolchain4",
   "/tmp/generated/ns/FeitelijkeVerenigingen",
   "/tmp/generated/ns/bodem-en-ondergrond",
   "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
   "/tmp/generated/ns/bodem-en-ondergrond/observaties",
+  "/tmp/generated/ns/campagne/publicatie",
   "/tmp/generated/ns/erosiepoel/ontwerpstandaard/2025-04-30",
   "/tmp/generated/ns/generiek",
   "/tmp/generated/ns/grondboringen",
   "/tmp/generated/ns/kindfiche",
   "/tmp/generated/ns/leercredential",
   "/tmp/generated/ns/metadata-dcat",
+  "/tmp/generated/ns/mobiliteit",
+  "/tmp/generated/ns/mobiliteit/dienstregeling-en-planning",
+  "/tmp/generated/ns/mobiliteit/trips-en-aanbod",
+  "/tmp/generated/ns/netwerk",
   "/tmp/generated/ns/nutsvoorzieningen",
   "/tmp/generated/ns/observaties-en-metingen",
+  "/tmp/generated/ns/organisatie",
+  "/tmp/generated/ns/perceel",
+  "/tmp/generated/ns/persoon",
   "/tmp/generated/ns/rooilijnplannen",
+  "/tmp/generated/ns/ruimtelijke-bereiken",
   "/tmp/generated/ns/sensoren-en-bemonstering",
-  "/tmp/generated/ns/thermografische-gebouwanalyse"
+  "/tmp/generated/ns/thermografische-gebouwanalyse",
+  "/tmp/generated/ns/transportnetwerk"
 ]
