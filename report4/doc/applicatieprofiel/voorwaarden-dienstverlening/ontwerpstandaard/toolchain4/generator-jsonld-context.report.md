@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-03-17T17:18:38.648Z error: No label found for class [urn:oslo-toolchain:f460559fe0d1600047ee22f3e15903e7296961e452725e64f6ba78c83a32079c](all-OSLO-voorwaardendienstverlening-ap.jsonld#L657) in language nl.
+2025-08-20T08:25:07.746Z error: No label found for class [urn:oslo-toolchain:f460559fe0d1600047ee22f3e15903e7296961e452725e64f6ba78c83a32079c](all-OSLO-voorwaardendienstverlening-ap.jsonld#L657) in language nl.
 
-2025-03-17T17:18:38.662Z error: No label found for attribute [urn:oslo-toolchain:6f6c2a5fc225cc37135ee8c0fd77196bef016afe4e777758c7f8373b5424036e](all-OSLO-voorwaardendienstverlening-ap.jsonld#L4993) in language "nl" or without language tag.
+2025-08-20T08:25:07.762Z error: No label found for attribute [urn:oslo-toolchain:6f6c2a5fc225cc37135ee8c0fd77196bef016afe4e777758c7f8373b5424036e](all-OSLO-voorwaardendienstverlening-ap.jsonld#L5177) in language "nl" or without language tag.
 
