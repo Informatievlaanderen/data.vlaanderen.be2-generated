@@ -2,11 +2,9 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the subject for the package.
+2025-08-20T12:20:41.080Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/name which acts as a parent. Using original URI as fallback.
 
-    at JsonWebuniversumGenerationService.getBaseURI (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:108:19)
+2025-08-20T12:20:41.082Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/givenName which acts as a parent. Using original URI as fallback.
 
-    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:45:30)
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-08-20T12:20:41.083Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/name which acts as a parent. Using original URI as fallback.
 

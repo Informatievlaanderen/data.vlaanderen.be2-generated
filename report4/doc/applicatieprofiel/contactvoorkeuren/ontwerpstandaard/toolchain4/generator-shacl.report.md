@@ -2,15 +2,7 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for range "https://data.vlaanderen.be/ns/adres#Adres".
+2025-08-20T12:20:40.414Z warn: Unable to find the description for subject "[urn:oslo-toolchain:7d7591685bd00cff70467d0f9e63cb51e383927d8eefcba3049173a36fac0ee2](all-contactvoorkeuren.jsonld#L1607)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:51:19)
-
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
-
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:51)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-08-20T12:20:40.416Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9d01e0eedf94f14525d976c187115c892b9e0e6d66a23293553415fd73c5c004](all-contactvoorkeuren.jsonld#L1627)".
 
