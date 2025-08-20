@@ -2,7 +2,7 @@
 <html>
   <head><meta charset="utf-8"/>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
-    <script class="remove">var respecConfig = {"specStatus":"unofficial","editors":[{"name":"John Doe"}],"publishDate":"2025-03-17T15:13:57.040Z"}</script>
+    <script class="remove">var respecConfig = {"specStatus":"unofficial","editors":[{"name":"John Doe"}],"publishDate":"2025-08-20T07:16:26.798Z"}</script>
   </head>
 
   <style>
@@ -57,6 +57,12 @@ Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel,
 
   
   <tr>
+    <td>beperkt tot</td>
+    <td>https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel</td>
+    <td>Een beperking opgelegd aan de Activiteit op basis van het ParticipantProfiel.</td>
+  </tr>
+  
+  <tr>
     <td>berichtgeving</td>
     <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Berichtgeving</td>
     <td>Berichtgeving rond de Activiteit.</td>
@@ -78,6 +84,12 @@ Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel,
     <td>contactinfo</td>
     <td>http://schema.org/ContactPoint</td>
     <td>Informatie zoals email, telefoon... die toelaat de aanbieder te contacteren.</td>
+  </tr>
+  
+  <tr>
+    <td>deelnemer</td>
+    <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Participant</td>
+    <td>Participant die deelneemt aan een Activiteit.</td>
   </tr>
   
   <tr>
@@ -132,6 +144,12 @@ Actie die bewust wordt uitgevoerd door een Agent met de bedoeling een cultureel,
     <td>subactiviteit</td>
     <td>http://www.cidoc-crm.org/cidoc-crm/E7_Activity</td>
     <td>De Activiteit maakt deel uit van een overkoepelende Superactiviteit.</td>
+  </tr>
+  
+  <tr>
+    <td>superactiviteit</td>
+    <td>http://www.cidoc-crm.org/cidoc-crm/E7_Activity</td>
+    <td>De Activiteit heeft één of meerdere Subactiviteiten.</td>
   </tr>
   
   <tr>
@@ -603,13 +621,13 @@ Het deelnemen van een Participant aan een Activiteit.
   <tr>
     <td>Deelname.Activiteit</td>
     <td>http://www.cidoc-crm.org/cidoc-crm/E7_Activity</td>
-    <td>Verwijzing naar de verbonden klasse</td>
+    <td></td>
   </tr>
   
   <tr>
     <td>Deelname.Participant</td>
     <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Participant</td>
-    <td>Verwijzing naar de verbonden klasse</td>
+    <td></td>
   </tr>
   
   <tr>
@@ -634,6 +652,12 @@ Het deelnemen van een Participant aan een Activiteit.
     <td>tijdstip</td>
     <td>http://data.europa.eu/m8g/PeriodOfTime</td>
     <td>De periode van de deelname afgebakend in tijd.</td>
+  </tr>
+  
+  <tr>
+    <td>transactie</td>
+    <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie</td>
+    <td>Transactie die eventueel nodig is om deel te nemen aan een Activiteit</td>
   </tr>
   
 </table>
@@ -823,7 +847,22 @@ Terugkoppeling van de participant over de activiteit.
 
 <br>
 
-<p><b><i>No properties defined for this entity</b></i></p>
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+    <th>Definition</th>
+    <th>Cardinality</th>
+  </tr>
+
+  
+  <tr>
+    <td>van deelname</td>
+    <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname</td>
+    <td>Feedback die gegeven wordt door de Participant rond de Deelname aan een Activiteit.</td>
+  </tr>
+  
+</table>
 
 
     
@@ -1540,6 +1579,12 @@ Persoon of organisatie die afnemer is van het aanbod aan activiteiten.
   </tr>
   
   <tr>
+    <td>heeft relatie met</td>
+    <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Participant</td>
+    <td>De Participant heeft een relatie met een andere Participant.</td>
+  </tr>
+  
+  <tr>
     <td>neemt deel aan</td>
     <td>http://www.cidoc-crm.org/cidoc-crm/E7_Activity</td>
     <td>De Participant neemt deel aan een Activiteit.</td>
@@ -1581,15 +1626,51 @@ Specifiek of algemeen profiel van een Participant die meer info verschaft over d
 
   
   <tr>
+    <td>afgeleid van</td>
+    <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname</td>
+    <td>Het ParticipantProfiel wordt afgeleid van de Deelname van de Participant aan een Activiteit.</td>
+  </tr>
+  
+  <tr>
+    <td>algemeen kenmerk</td>
+    <td>https://data.vlaanderen.be/ns/cultuurparticipatie#AlgemeenParticipantkenmerk</td>
+    <td>Een ParticipantProfiel heeft een AlgemeenKenmerk.</td>
+  </tr>
+  
+  <tr>
     <td>bepaalt beperking</td>
     <td>http://www.cidoc-crm.org/cidoc-crm/E7_Activity</td>
     <td>Een beperking die wordt opgelegd aan de Activiteit op basis van het ParticipantProfiel.</td>
   </tr>
   
   <tr>
+    <td>cultureel</td>
+    <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Cultuurdeelname</td>
+    <td>Een ParticipantProfiel heeft een Cultuurdeelname van de Participant.</td>
+  </tr>
+  
+  <tr>
     <td>gerichte doelgroep</td>
     <td>http://www.cidoc-crm.org/cidoc-crm/E7_Activity</td>
     <td>De doelgroep van de Activiteit die bepaald wordt aan de hand van het ParticipantProfiel.</td>
+  </tr>
+  
+  <tr>
+    <td>persoonlijk profiel van</td>
+    <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Participant</td>
+    <td>Het persoonlijk profiel van de Participant. dat meer info geeft rond de specifieke cultuurparticipatie van een Participant.</td>
+  </tr>
+  
+  <tr>
+    <td>profiel van</td>
+    <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Participant</td>
+    <td>Generiek profiel van de Participant dat slaat op een algemenere invulling van een Participant.</td>
+  </tr>
+  
+  <tr>
+    <td>sociodemografisch</td>
+    <td>https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk</td>
+    <td>Sociodemografisch kenmerk over de participant</td>
   </tr>
   
 </table>
@@ -1763,6 +1844,12 @@ Het met enkele of meerdere middelen bekend maken van een actie, activiteit, dien
 
   
   <tr>
+    <td>activiteit</td>
+    <td>http://www.cidoc-crm.org/cidoc-crm/E7_Activity</td>
+    <td>De Activiteit kan een Promotie hebben.</td>
+  </tr>
+  
+  <tr>
     <td>doel participant</td>
     <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Participant</td>
     <td>Het doel van de Promotie is om de Participant te bereiken.</td>
@@ -1784,6 +1871,12 @@ Het met enkele of meerdere middelen bekend maken van een actie, activiteit, dien
     <td>tijdstip</td>
     <td>http://www.w3.org/2001/XMLSchema#dateTime</td>
     <td>De periode van de promotie afgebakend in tijd.</td>
+  </tr>
+  
+  <tr>
+    <td>uitgevoerd door</td>
+    <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator</td>
+    <td>De Promotie wordt uitgevoerd door een Realisator.</td>
   </tr>
   
 </table>
@@ -1858,13 +1951,13 @@ De concrete realisering van een Realisator gekoppeld aan een Activiteit.
   <tr>
     <td>Realisatie.Activiteit</td>
     <td>http://www.cidoc-crm.org/cidoc-crm/E7_Activity</td>
-    <td>Verwijzing naar de verbonden klasse</td>
+    <td></td>
   </tr>
   
   <tr>
     <td>Realisatie.Realisator</td>
     <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator</td>
-    <td>Verwijzing naar de verbonden klasse</td>
+    <td></td>
   </tr>
   
   <tr>
@@ -1924,6 +2017,12 @@ Persoon of organisatie die iets cultureel realisert.
     <td>realiseert</td>
     <td>http://www.cidoc-crm.org/cidoc-crm/E7_Activity</td>
     <td>De Realisator voert de Activiteit uit.</td>
+  </tr>
+  
+  <tr>
+    <td>subrealisator</td>
+    <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator</td>
+    <td>De Realisator heeft één of meerdere Superrealisators.</td>
   </tr>
   
   <tr>
@@ -2378,6 +2477,12 @@ Een handeling zoals een  registratie, reservering of aankopen die toegang geeft 
     <td>geeft recht op</td>
     <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname</td>
     <td>De Transactie geeft recht op een Ticket.</td>
+  </tr>
+  
+  <tr>
+    <td>ticket</td>
+    <td>https://data.vlaanderen.be/ns/cultuurparticipatie#Ticket</td>
+    <td>Het Ticket komt voort uit een Transactie.</td>
   </tr>
   
   <tr>

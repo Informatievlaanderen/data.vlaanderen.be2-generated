@@ -46,8 +46,6 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/gebouw.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/production/generiek.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/production/hulp-dienst-verlening-gedetineerden.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/incentiveringsplatform.publication.json
@@ -216,6 +214,9 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17",
   "/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2025-03-05",
   "/tmp/generated/doc/applicatieprofiel/gebieden",
+  "/tmp/generated/doc/applicatieprofiel/generiek-basis",
+  "/tmp/generated/doc/applicatieprofiel/generiek-basis/zonderstatus/2018-10-04",
+  "/tmp/generated/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01",
   "/tmp/generated/doc/applicatieprofiel/generieke-terugmeldfaciliteit",
   "/tmp/generated/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
   "/tmp/generated/doc/applicatieprofiel/infrastructuurelementen",
@@ -276,6 +277,8 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/energiehuis/ontwerpstandaard/2025-02-18",
   "/tmp/generated/doc/vocabularium/erosiepoel/ontwerpstandaard/2025-04-29",
   "/tmp/generated/doc/vocabularium/fietsinfrastructuur/ontwerpstandaard/2025-03-05",
+  "/tmp/generated/doc/vocabularium/generiek/zonderstatus/2018-10-04",
+  "/tmp/generated/doc/vocabularium/generiek/zonderstatus/2019-07-01",
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
   "/tmp/generated/doc/vocabularium/leermiddelen/ontwerpstandaard/2025-02-24",
   "/tmp/generated/doc/vocabularium/mandaat/ontwerpdocument/2020-01-06",
@@ -306,6 +309,7 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
   "/tmp/generated/ns/bodem-en-ondergrond/observaties",
   "/tmp/generated/ns/erosiepoel/ontwerpstandaard/2025-04-30",
+  "/tmp/generated/ns/generiek",
   "/tmp/generated/ns/grondboringen",
   "/tmp/generated/ns/kindfiche",
   "/tmp/generated/ns/leercredential",

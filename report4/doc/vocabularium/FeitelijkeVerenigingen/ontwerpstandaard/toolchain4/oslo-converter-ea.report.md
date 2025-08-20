@@ -2,85 +2,77 @@
 
 #||# -------------------------------------
 
-2025-03-17T15:24:01.135Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-FeitelijkeVerenigingen:OSLO-Dienstencataloog:PubliekeDienstverlening:(PubliekeDienstverlening -> PubliekeDienstverlening))
+2025-08-20T07:14:57.096Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-FeitelijkeVerenigingen:OSLO-Dienstencataloog:PubliekeDienstverlening:(PubliekeDienstverlening -> PubliekeDienstverlening))
 
-2025-03-17T15:24:01.136Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:FeitelijkeVereniging:(FeitelijkeVereniging -> GeregistreerdeOrganisatie))
+2025-08-20T07:14:57.097Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:FeitelijkeVereniging:(FeitelijkeVereniging -> GeregistreerdeOrganisatie))
 
-2025-03-17T15:24:01.136Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:FeitelijkeVereniging:(FeitelijkeVereniging -> Agent))
+2025-08-20T07:14:57.098Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:FeitelijkeVereniging:(FeitelijkeVereniging -> Agent))
 
-2025-03-17T15:24:01.138Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Erkenning:(Erkenning -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.099Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Erkenning:(Erkenning -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.139Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:FeitelijkeVereniging:(FeitelijkeVereniging -> Erkenning) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.100Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:FeitelijkeVereniging:(FeitelijkeVereniging -> Erkenning) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.139Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.100Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.139Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Dienstencataloog:Output:(Output -> PubliekeDienstverlening) has no name. Ignoring this connector.
+2025-08-20T07:14:57.100Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Vereniging:(Vereniging -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.139Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Vereniging:(Vereniging -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.101Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Erkenningsaanvraag:(Erkenningsaanvraag -> Erkenning) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.139Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Erkenningsaanvraag:(Erkenningsaanvraag -> Erkenning) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.101Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Erkenning:(Erkenning -> Output) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.140Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Erkenningsaanvraag:(Erkenningsaanvraag -> FeitelijkeVereniging) has no name. Ignoring this connector.
+2025-08-20T07:14:57.101Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> FormeleOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.140Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:FeitelijkeVereniging:(FeitelijkeVereniging -> FeitelijkeVereniging) has no name. Ignoring this connector.
+2025-08-20T07:14:57.101Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Erkenningsaanvraag:(Erkenningsaanvraag -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.140Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Erkenning:(Erkenning -> Output) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.101Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Erkenningsaanvraag:(Erkenningsaanvraag -> PubliekeDienstverlening (consumptie)) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.140Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> FormeleOrganisatie) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.102Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Dienstencataloog:PubliekeDienstverlening:(PubliekeDienstverlening -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.140Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie) has no name. Ignoring this connector.
+2025-08-20T07:14:57.102Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.140Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Erkenningsaanvraag:(Erkenningsaanvraag -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.102Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Organisatie:FormeleOrganisatie:(FormeleOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.140Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Erkenningsaanvraag:(Erkenningsaanvraag -> PubliekeDienstverlening (consumptie)) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.102Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:FeitelijkeVereniging:(FeitelijkeVereniging -> PubliekeDienstverlening) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.140Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Dienstencataloog:PubliekeDienstverlening:(PubliekeDienstverlening -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.102Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Vertegenwoordiger:(Vertegenwoordiger -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.140Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.102Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.141Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Organisatie:FormeleOrganisatie:(FormeleOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.102Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.141Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:FeitelijkeVereniging:(FeitelijkeVereniging -> PubliekeDienstverlening) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.102Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:FeitelijkeVereniging:(FeitelijkeVereniging -> Vereniging) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T15:24:01.141Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Vertegenwoordiger:(Vertegenwoordiger -> Agent) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.103Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T15:24:01.141Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Vertegenwoordiger:(Vertegenwoordiger -> FeitelijkeVereniging) has no name. Ignoring this connector.
+2025-08-20T07:14:57.103Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-FeitelijkeVerenigingen). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T15:24:01.141Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.103Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-FeitelijkeVerenigingen:OSLO-Generiek). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T15:24:01.141Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.103Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-FeitelijkeVerenigingen:OSLO-Persoon). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T15:24:01.141Z info: Connector Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:FeitelijkeVereniging:(FeitelijkeVereniging -> Vereniging) is not an association with a source role. Ignoring this connector.
+2025-08-20T07:14:57.103Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-FeitelijkeVerenigingen:OSLO-Organisatie). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T15:24:01.142Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T07:14:57.103Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-FeitelijkeVerenigingen:OSLO-Adres). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T15:24:01.142Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-FeitelijkeVerenigingen) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T07:14:57.103Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-FeitelijkeVerenigingen:OSLO-Besluit). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T15:24:01.142Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-FeitelijkeVerenigingen:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T07:14:57.103Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-FeitelijkeVerenigingen:Hulppakket). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T15:24:01.142Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-FeitelijkeVerenigingen:OSLO-Persoon) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T07:14:57.103Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-FeitelijkeVerenigingen:OSLO-Dienstencataloog). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T15:24:01.142Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-FeitelijkeVerenigingen:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T07:14:57.104Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-FeitelijkeVerenigingen:CCCEV). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T15:24:01.142Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-FeitelijkeVerenigingen:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T07:14:57.106Z warn: [ConnectorConverterHandler]: Connector (aangevraagdBij) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-17T15:24:01.142Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-FeitelijkeVerenigingen:OSLO-Besluit) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T07:14:57.106Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (aangevraagdBij) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-03-17T15:24:01.142Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-FeitelijkeVerenigingen:Hulppakket) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T07:14:57.106Z warn: [ConnectorConverterHandler]: Connector (heeftVertegenwoordiger) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-03-17T15:24:01.142Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-FeitelijkeVerenigingen:OSLO-Dienstencataloog) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T07:14:57.110Z warn: [ConverterHandler]: Entity with path Model:OSLO-FeitelijkeVerenigingen:OSLO-Organisatie:OrganisatieActiviteit has an empty value for tag ap-usageNote-nl.
 
-2025-03-17T15:24:01.142Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-FeitelijkeVerenigingen:CCCEV) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T07:14:57.111Z warn: [ConverterHandler]: Entity with path Model:OSLO-FeitelijkeVerenigingen:OSLO-Dienstencataloog:Kost has an empty value for tag ap-usageNote-nl.
 
-2025-03-17T15:24:01.144Z warn: [ConnectorConverterHandler]: Connector (aangevraagdBij) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-03-17T15:24:01.144Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (aangevraagdBij) and the fallback URI (http://todo.com/) will be assigned.
-
-2025-03-17T15:24:01.148Z warn: [ConverterHandler]: Entity with path Model:OSLO-FeitelijkeVerenigingen:OSLO-Organisatie:OrganisatieActiviteit has an empty value for tag ap-usageNote-nl.
-
-2025-03-17T15:24:01.149Z warn: [ConverterHandler]: Entity with path Model:OSLO-FeitelijkeVerenigingen:OSLO-Dienstencataloog:Kost has an empty value for tag ap-usageNote-nl.
-
-2025-03-17T15:24:01.150Z warn: [ConverterHandler]: Entity with path Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Erkenning:activiteit has an empty value for tag ap-label-activiteit.
+2025-08-20T07:14:57.112Z warn: [ConverterHandler]: Entity with path Model:OSLO-FeitelijkeVerenigingen:OSLO-FeitelijkeVerenigingen:Erkenning:activiteit has an empty value for tag ap-label-activiteit.
 
 #||# -------------------------------------
 

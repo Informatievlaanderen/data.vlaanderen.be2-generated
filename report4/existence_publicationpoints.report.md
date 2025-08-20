@@ -141,14 +141,6 @@ Directory check
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/index.html'
 
-#||#    + checking /home/circleci/project/config/production/generiek.publication.json
-#||# 
-Directory check
-
-index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/generiek/ontwerpstandaard/toolchain4/index.html'
-
 #||#    + checking /home/circleci/project/config/production/hulp-dienst-verlening-gedetineerden.publication.json
 #||# 
 Directory check
