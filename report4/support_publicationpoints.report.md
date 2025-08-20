@@ -14,6 +14,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/bestuurlijk-sanctieregister.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/contactvoorkeuren.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/production/cultureel-erfgoed-basisregistratie.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/cultureel-erfgoed.publication.json
@@ -189,7 +191,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/sonderingen/ontwerpstandaard/2021-08-01",
   "/tmp/generated/doc/applicatieprofiel/contactvoorkeuren",
   "/tmp/generated/doc/applicatieprofiel/contactvoorkeuren/ontwerpdocument/2020-01-06",
-  "/tmp/generated/doc/applicatieprofiel/contactvoorkeuren/standaard/2019-02-07",
   "/tmp/generated/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/kandidaatstandaard/2022-03-21",
   "/tmp/generated/doc/applicatieprofiel/dienst-transactiemodel",
   "/tmp/generated/doc/applicatieprofiel/dienstencataloog",

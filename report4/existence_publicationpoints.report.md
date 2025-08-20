@@ -42,6 +42,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/production/contactvoorkeuren.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/production/cultureel-erfgoed-basisregistratie.publication.json
 #||# 
 Directory check
