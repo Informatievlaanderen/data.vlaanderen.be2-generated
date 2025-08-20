@@ -126,8 +126,6 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/thermografische-gebouwanalyse.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/production/toestemming.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/production/vastgoed.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/verkeersborden.publication.json
@@ -354,6 +352,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/thermografische-gebouwanalyse/ontwerpstandaard/2025-05-22",
   "/tmp/generated/doc/vocabularium/toestemming",
   "/tmp/generated/doc/vocabularium/toestemming/ontwerpdocument/2020-01-06",
+  "/tmp/generated/doc/vocabularium/toestemming/standaard/2019-02-07",
   "/tmp/generated/doc/vocabularium/transportnetwerk/erkendestandaard/2020-04-23",
   "/tmp/generated/doc/vocabularium/transportnetwerk/kandidaatstandaard/2020-04-09",
   "/tmp/generated/doc/vocabularium/transportnetwerk/ontwerpstandaard/toolchain4",
@@ -381,5 +380,6 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/ruimtelijke-bereiken",
   "/tmp/generated/ns/sensoren-en-bemonstering",
   "/tmp/generated/ns/thermografische-gebouwanalyse",
+  "/tmp/generated/ns/toestemming",
   "/tmp/generated/ns/transportnetwerk"
 ]

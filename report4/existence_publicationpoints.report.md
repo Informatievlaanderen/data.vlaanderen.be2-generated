@@ -386,13 +386,6 @@ Directory check
 
 index.html check
 
-#||#    + checking /home/circleci/project/config/production/toestemming.publication.json
-#||# 
-Directory check
-
-index.html check
-error: missing '/tmp/generated/doc/vocabularium/toestemming/ontwerpstandaard/toolchain4/index.html'
-
 #||#    + checking /home/circleci/project/config/production/vastgoed.publication.json
 #||# 
 Directory check

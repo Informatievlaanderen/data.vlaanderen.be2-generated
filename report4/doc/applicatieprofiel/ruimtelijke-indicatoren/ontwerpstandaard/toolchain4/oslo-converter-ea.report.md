@@ -2,79 +2,71 @@
 
 #||# -------------------------------------
 
-2025-03-17T17:15:17.221Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+2025-08-20T08:15:47.741Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-03-17T17:15:17.222Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
+2025-08-20T08:15:47.743Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
 
-2025-03-17T17:15:17.222Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
+2025-08-20T08:15:47.743Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
 
-2025-03-17T17:15:17.223Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Persoon:Persoon:(Persoon -> Persoon))
+2025-08-20T08:15:47.743Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Persoon:Persoon:(Persoon -> Persoon))
 
-2025-03-17T17:15:17.223Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Generiek:Agent:rapporteertAan)
+2025-08-20T08:15:47.743Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-03-17T17:15:17.223Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-ObservatiesEnMetingen:Observatie:(Observatie -> Observatie))
+2025-08-20T08:15:47.743Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-ObservatiesEnMetingen:Observatie:(Observatie -> Observatie))
 
-2025-03-17T17:15:17.223Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-ObservatiesEnMetingen:Monster:(Monster -> BemonsteringsProces))
+2025-08-20T08:15:47.743Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-ObservatiesEnMetingen:Monster:(Monster -> BemonsteringsProces))
 
-2025-03-17T17:15:17.225Z info: Connector Model:OSLO-Generiek:IndirecteLocatieAanduiding:(IndirecteLocatieAanduiding -> Locatie) is not an association with a source role. Ignoring this connector.
+2025-08-20T08:15:47.746Z info: Connector Model:OSLO-Generiek:IndirecteLocatieAanduiding:(IndirecteLocatieAanduiding -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T17:15:17.226Z info: Connector Model:OSLO-Generiek:DirecteLocatieAanduiding:(DirecteLocatieAanduiding -> Locatie) is not an association with a source role. Ignoring this connector.
+2025-08-20T08:15:47.747Z info: Connector Model:OSLO-Generiek:DirecteLocatieAanduiding:(DirecteLocatieAanduiding -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T17:15:17.226Z info: Connector Model:OSLO-Generiek:Geometrie:(Geometrie -> DirecteLocatieAanduiding) is not an association with a source role. Ignoring this connector.
+2025-08-20T08:15:47.747Z info: Connector Model:OSLO-Generiek:Geometrie:(Geometrie -> DirecteLocatieAanduiding) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T17:15:17.226Z info: Connector Model:OSLO-ObservatiesEnMetingen:Observatie:(Observatie -> RuimtelijkObject) has no name. Ignoring this connector.
+2025-08-20T08:15:47.748Z info: Connector Model:SSN/SOSA:Observatieverzameling:(Observatieverzameling -> Observatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T17:15:17.226Z info: Connector Model:SSN/SOSA:Observatieverzameling:(Observatieverzameling -> Observatie) is not an association with a source role. Ignoring this connector.
+2025-08-20T08:15:47.748Z info: Connector Model:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T17:15:17.227Z info: Connector Model:dct:Metadata:(Metadata -> Observatie) has no name. Ignoring this connector.
+2025-08-20T08:15:47.749Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T17:15:17.227Z info: Connector Model:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+2025-08-20T08:15:47.749Z info: Connector Model:OSLO-ObservatiesEnMetingen:WaarheidsObservatie:(WaarheidsObservatie -> Observatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T17:15:17.227Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-08-20T08:15:47.749Z info: Connector Model:OSLO-ObservatiesEnMetingen:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T17:15:17.227Z info: Connector Model:OSLO-ObservatiesEnMetingen:WaarheidsObservatie:(WaarheidsObservatie -> Observatie) is not an association with a source role. Ignoring this connector.
+2025-08-20T08:15:47.749Z info: Connector Model:OSLO-ObservatiesEnMetingen:Meting:(Meting -> Observatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T17:15:17.227Z info: Connector Model:OSLO-ObservatiesEnMetingen:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2025-08-20T08:15:47.749Z info: Connector Model:OSLO-ObservatiesEnMetingen:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T17:15:17.227Z info: Connector Model:OSLO-ObservatiesEnMetingen:Meting:(Meting -> Observatie) is not an association with a source role. Ignoring this connector.
+2025-08-20T08:15:47.749Z info: Connector Model:OSLO-ObservatiesEnMetingen:Classificatie:(Classificatie -> Observatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T17:15:17.227Z info: Connector Model:OSLO-ObservatiesEnMetingen:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2025-08-20T08:15:47.749Z info: Connector Model:OSLO-ObservatiesEnMetingen:Telling:(Telling -> Observatie) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T17:15:17.227Z info: Connector Model:OSLO-ObservatiesEnMetingen:Classificatie:(Classificatie -> Observatie) is not an association with a source role. Ignoring this connector.
+2025-08-20T08:15:47.750Z info: Connector Model:OSLO-ObservatiesEnMetingen:Observatie:(Observatie -> Observatieprocedure) is not an association with a source role. Ignoring this connector.
 
-2025-03-17T17:15:17.227Z info: Connector Model:OSLO-ObservatiesEnMetingen:Telling:(Telling -> Observatie) is not an association with a source role. Ignoring this connector.
+2025-08-20T08:15:47.751Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T17:15:17.227Z info: Connector Model:OSLO-Ruimtelijke-Indicatoren:RuimtelijkObject:(RuimtelijkObject -> RuimtelijkObject) has no name. Ignoring this connector.
+2025-08-20T08:15:47.751Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T17:15:17.227Z info: Connector Model:OSLO-ObservatiesEnMetingen:Observatie:(Observatie -> Observatieprocedure) is not an association with a source role. Ignoring this connector.
+2025-08-20T08:15:47.751Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T17:15:17.228Z info: Connector Model:OSLO-Ruimtelijke-Indicatoren:RuimtelijkeIndicator:(RuimtelijkeIndicator -> Observatie) has no name. Ignoring this connector.
+2025-08-20T08:15:47.751Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:dct). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T17:15:17.228Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T08:15:47.751Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:SSN/SOSA). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T17:15:17.228Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T08:15:47.751Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Hulppakket). Using fallback URI (http://todo.com/) instead.
 
-2025-03-17T17:15:17.228Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T08:15:47.760Z warn: [ConverterHandler]: Entity with path Model:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
 
-2025-03-17T17:15:17.228Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:dct) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T08:15:47.766Z warn: [ConverterHandler]: Entity with path Model:OSLO-Organisatie:OrganisatieActiviteit has an empty value for tag ap-usageNote-nl.
 
-2025-03-17T17:15:17.228Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:SSN/SOSA) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T08:15:47.767Z warn: [ConverterHandler]: Entity with path Model:OSLO-Organisatie:OrganisatieType has an empty value for tag ap-usageNote-nl.
 
-2025-03-17T17:15:17.229Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Hulppakket) and fallback URI (http://todo.com/) will be assigned.
+2025-08-20T08:15:47.769Z warn: [ConverterHandler]: Entity with path Model:OSLO-Generiek:Identificator:toegekendDoor has an empty value for tag ap-usageNote-nl.
 
-2025-03-17T17:15:17.235Z warn: [ConverterHandler]: Entity with path Model:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
+2025-08-20T08:15:47.770Z warn: [ConverterHandler]: Entity with path Model:OSLO-Generiek:Identificator:toegekendDoorString has an empty value for tag ap-usageNote-nl.
 
-2025-03-17T17:15:17.238Z warn: [ConverterHandler]: Entity with path Model:OSLO-Organisatie:OrganisatieActiviteit has an empty value for tag ap-usageNote-nl.
+2025-08-20T08:15:47.770Z warn: [ConverterHandler]: Entity with path Model:OSLO-Generiek:Identificator:toegekendOp has an empty value for tag ap-usageNote-nl.
 
-2025-03-17T17:15:17.239Z warn: [ConverterHandler]: Entity with path Model:OSLO-Organisatie:OrganisatieType has an empty value for tag ap-usageNote-nl.
-
-2025-03-17T17:15:17.241Z warn: [ConverterHandler]: Entity with path Model:OSLO-Generiek:Identificator:toegekendDoor has an empty value for tag ap-usageNote-nl.
-
-2025-03-17T17:15:17.241Z warn: [ConverterHandler]: Entity with path Model:OSLO-Generiek:Identificator:toegekendDoorString has an empty value for tag ap-usageNote-nl.
-
-2025-03-17T17:15:17.241Z warn: [ConverterHandler]: Entity with path Model:OSLO-Generiek:Identificator:toegekendOp has an empty value for tag ap-usageNote-nl.
-
-2025-03-17T17:15:17.249Z warn: [ConverterHandler]: Entity with path Model:OSLO-ObservatiesEnMetingen:Observatie:resultaattijd has an empty value for tag ap-definition-nl.
+2025-08-20T08:15:47.780Z warn: [ConverterHandler]: Entity with path Model:OSLO-ObservatiesEnMetingen:Observatie:resultaattijd has an empty value for tag ap-definition-nl.
 
 #||# -------------------------------------
 
