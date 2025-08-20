@@ -139,7 +139,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/gebouwenregister/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/production/hulp-dienst-verlening-gedetineerden.publication.json
 #||# 
@@ -158,14 +157,6 @@ index.html check
 Directory check
 
 index.html check
-
-#||#    + checking /home/circleci/project/config/production/kabels-en-leidingen.publication.json
-#||# 
-Directory check
-
-index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/nutsvoorzieningen/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/production/kindfiche.publication.json
 #||# 
