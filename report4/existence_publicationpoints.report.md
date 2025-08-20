@@ -386,6 +386,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/production/toestemming.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/production/vastgoed.publication.json
 #||# 
 Directory check
