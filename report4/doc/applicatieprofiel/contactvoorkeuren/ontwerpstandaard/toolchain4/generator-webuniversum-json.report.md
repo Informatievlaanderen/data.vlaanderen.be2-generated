@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for range https://data.vlaanderen.be/ns/adres#Adres of attribute [urn:oslo-toolchain:e155a2a9b9cb86cc0cacf759742c9f29dc1d6ec91609ab1a8ff69620bdb07ddf](all-contactvoorkeuren.jsonld#L1231).
+Error: Unable to find the assigned URI for range https://data.vlaanderen.be/ns/adres#Adres of attribute [urn:oslo-toolchain:e155a2a9b9cb86cc0cacf759742c9f29dc1d6ec91609ab1a8ff69620bdb07ddf](all-contactvoorkeuren.jsonld#L1267).
 
     at JsonWebuniversumGenerationService.addPropertySpecificInformation (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:237:19)
 
