@@ -1,3 +1,211 @@
 {
-  "@context": {}
+  "@context": {
+    "Adresvoorstelling": {
+      "@context": {
+        "busnummer": {
+          "@id": "http://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "gemeentenaam": {
+          "@id": "http://data.vlaanderen.be/ns/adres#gemeentenaam",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "huisnummer": {
+          "@id": "http://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "land": {
+          "@id": "http://data.vlaanderen.be/ns/adres#land",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "postcode": {
+          "@id": "http://www.w3.org/ns/locn#postCode",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "straatnaam": {
+          "@id": "http://www.w3.org/ns/locn#thoroughfare",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.w3.org/ns/locn#Address"
+    },
+    "Agent": {
+      "@context": {
+        "contactinfo": {
+          "@id": "http://schema.org/contactPoint",
+          "@type": "http://schema.org/ContactPoint"
+        },
+        "dataSubject": {
+          "@container": "@set",
+          "@id": "http://todo.com/Agent.dataSubject",
+          "@type": "https://data.vlaanderen.be/ns/toestemming#Toestemming"
+        }
+      },
+      "@id": "http://purl.org/dc/terms/Agent"
+    },
+    "AlgemeneVoorwaarden": {
+      "@id": "https://data.vlaanderen.be/ns/toestemming#AlgemeneVoorwaarden"
+    },
+    "ContactInfo": {
+      "@context": {
+        "aanschrijfvorm": {
+          "@id": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "adres": {
+          "@id": "http://www.w3.org/ns/locn#address",
+          "@type": "http://www.w3.org/ns/locn#Address"
+        },
+        "contactnaam": {
+          "@id": "http://xmlns.com/foaf/0.1/name",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "email": {
+          "@id": "http://schema.org/email",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "telefoon": {
+          "@id": "http://schema.org/telephone",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      "@id": "http://schema.org/ContactPoint"
+    },
+    "Cookieverklaring": {
+      "@id": "https://data.vlaanderen.be/ns/toestemming#Cookieverklaring"
+    },
+    "Date": {
+      "@id": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Document": {
+      "@context": {
+        "extraInformatie": {
+          "@container": "@set",
+          "@id": "http://todo.com/Document.extraInformatie",
+          "@type": "https://data.vlaanderen.be/ns/toestemming#Verwerkingsactiviteit"
+        }
+      },
+      "@id": "http://xmlns.com/foaf/0.1/Document"
+    },
+    "Hoedanigheid": {
+      "@id": "https://data.vlaanderen.be/ns/organisatie#Hoedanigheid"
+    },
+    "Organisatie": {
+      "@context": {
+        "heeftVerwerkersovereenkomstMet": {
+          "@id": "https://data.vlaanderen.be/ns/organisatie#Organisatie.heeftVerwerkersovereenkomstMet",
+          "@type": "http://data.europa.eu/m8g/PublicOrganisation"
+        },
+        "verwerker": {
+          "@container": "@set",
+          "@id": "http://todo.com/Organisatie.verwerker",
+          "@type": "https://data.vlaanderen.be/ns/toestemming#Verwerkingsactiviteit"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#Organization"
+    },
+    "Persoon": {
+      "@id": "http://www.w3.org/ns/person#Person"
+    },
+    "Privacyverklaring": {
+      "@id": "https://data.vlaanderen.be/ns/toestemming#Privacyverklaring"
+    },
+    "PubliekeDienstverlening": {
+      "@context": {
+        "isGerelateerdMet": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/relation",
+          "@type": "https://data.vlaanderen.be/ns/toestemming#Verwerkingsactiviteit"
+        }
+      },
+      "@id": "http://purl.org/vocab/cpsv#PublicService"
+    },
+    "PubliekeOrganisatie": {
+      "@context": {
+        "heeftVerwerkersovereenkomstMet": {
+          "@id": "https://data.vlaanderen.be/ns/organisatie#PubliekeOrganisatie.heeftVerwerkersovereenkomstMet",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "verwerkingsverantwoordelijke": {
+          "@container": "@set",
+          "@id": "http://todo.com/PubliekeOrganisatie.verwerkingsverantwoordelijke",
+          "@type": "https://data.vlaanderen.be/ns/toestemming#Verwerkingsactiviteit"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/PublicOrganisation"
+    },
+    "String": {
+      "@id": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Toestemming": {
+      "@context": {
+        "dataSubject": {
+          "@id": "http://todo.com/Toestemming.dataSubject",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "gegevenOp": {
+          "@id": "https://data.vlaanderen.be/ns/toestemming#gegevenOp",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "gegevenVoor": {
+          "@id": "https://data.vlaanderen.be/ns/toestemming#Toestemming.gegevenVoor",
+          "@type": "https://data.vlaanderen.be/ns/toestemming#Verwerkingsactiviteit"
+        },
+        "vervalt": {
+          "@id": "http://schema.org/expires",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/toestemming#Toestemming"
+    },
+    "ToestemmingDescriptor": {
+      "@context": {
+        "extraInformatie": {
+          "@container": "@set",
+          "@id": "http://todo.com/Verwerkingsactiviteit.extraInformatie",
+          "@type": "http://xmlns.com/foaf/0.1/Document"
+        },
+        "gegevenVoor": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/toestemming#Verwerkingsactiviteit.gegevenVoor",
+          "@type": "https://data.vlaanderen.be/ns/toestemming#Toestemming"
+        },
+        "isGerelateerdMet": {
+          "@id": "http://purl.org/dc/terms/relation",
+          "@type": "http://purl.org/vocab/cpsv#PublicService"
+        },
+        "label": {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "toestemmingsvraag": {
+          "@id": "https://data.vlaanderen.be/ns/toestemming#toestemmingsvraag",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "verwerker": {
+          "@container": "@set",
+          "@id": "http://todo.com/Verwerkingsactiviteit.verwerker",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "verwerkingsverantwoordelijke": {
+          "@id": "http://todo.com/Verwerkingsactiviteit.verwerkingsverantwoordelijke",
+          "@type": "http://data.europa.eu/m8g/PublicOrganisation"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/toestemming#Verwerkingsactiviteit"
+    },
+    "Verwerkersovereenkomst": {
+      "@context": {
+        "verwerkersovereenkomst.Organisatie": {
+          "@id": "http://todo.com/Verwerkersovereenkomst.Organisatie",
+          "@type": "http://www.w3.org/ns/org#Organization"
+        },
+        "verwerkersovereenkomst.PubliekeOrganisatie": {
+          "@id": "http://todo.com/Verwerkersovereenkomst.PubliekeOrganisatie",
+          "@type": "http://data.europa.eu/m8g/PublicOrganisation"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/toestemming#Verwerkersovereenkomst"
+    }
+  }
 }
