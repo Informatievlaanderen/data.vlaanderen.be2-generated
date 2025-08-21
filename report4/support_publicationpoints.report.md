@@ -110,6 +110,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/overlijdensaangifte.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/persoon.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/production/rooilijnplannen.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/sb.publication.json
@@ -253,8 +255,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/perceel/kandidaatstandaard/2020-04-23",
   "/tmp/generated/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/persoon-basis",
-  "/tmp/generated/doc/applicatieprofiel/persoon-basis/kandidaatstandaard/niet-bepaald",
-  "/tmp/generated/doc/applicatieprofiel/persoon-basis/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/applicatieprofiel/publicatie-advertentie",
   "/tmp/generated/doc/applicatieprofiel/publicatie-advertentie/erkendestandaard/2023-11-09",
   "/tmp/generated/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4",
@@ -281,7 +281,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/watervoorkomen",
   "/tmp/generated/doc/applicatieprofiel/wegenregister",
   "/tmp/generated/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/Persoon/ontwerpstandaard/2023-06-01",
   "/tmp/generated/doc/vocabularium/besluit/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/bestuur/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01",
@@ -337,9 +336,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/perceel/kandidaatstandaard/2019-08-23",
   "/tmp/generated/doc/vocabularium/perceel/kandidaatstandaard/2020-04-23",
   "/tmp/generated/doc/vocabularium/perceel/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/persoon",
-  "/tmp/generated/doc/vocabularium/persoon/ontwerpdocument/2020-01-06",
-  "/tmp/generated/doc/vocabularium/persoon/standaard/2019-07-03",
   "/tmp/generated/doc/vocabularium/publicatie-advertentie/erkendestandaard/2023-11-09",
   "/tmp/generated/doc/vocabularium/publicatie-advertentie/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/ruimtelijke-bereiken/kandidaatstandaard/2024-10-01",
@@ -377,7 +373,6 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/observaties-en-metingen",
   "/tmp/generated/ns/organisatie",
   "/tmp/generated/ns/perceel",
-  "/tmp/generated/ns/persoon",
   "/tmp/generated/ns/rooilijnplannen",
   "/tmp/generated/ns/ruimtelijke-bereiken",
   "/tmp/generated/ns/sensoren-en-bemonstering",
