@@ -2,3 +2,9 @@
 
 #||# -------------------------------------  
 
+2025-08-22T09:26:15.877Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/regorg#orgType which acts as a parent. Using original URI as fallback.
+
+2025-08-22T09:26:15.879Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/regorg#orgStatus which acts as a parent. Using original URI as fallback.
+
+2025-08-22T09:26:15.879Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/regorg#orgType which acts as a parent. Using original URI as fallback.
+
