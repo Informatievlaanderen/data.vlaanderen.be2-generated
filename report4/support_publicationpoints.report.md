@@ -84,6 +84,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/mobiliteit-intelligente-toegang.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/mobiliteit.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/production/mobiliteitsbudget.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/notificatie.publication.json
@@ -217,22 +219,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24",
   "/tmp/generated/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17",
   "/tmp/generated/doc/applicatieprofiel/metadata-dcat",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit-trips-en-aanbod",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/erkendestandaard/2020-04-23",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/kandidaatstandaard/2020-01-12",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/kandidaatstandaard/2020-04-09",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/2019-11-20",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/2019-12-16",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/stopplaatsen",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/stopplaatsen/erkendestandaard/2022-04-21",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/stopplaatsen/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/erkendestandaard/2022-04-21",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/tijdstabellen/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/voertuigplanning",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/voertuigplanning/erkendestandaard/2022-04-21",
-  "/tmp/generated/doc/applicatieprofiel/mobiliteit/dienstregeling-en-planning/voertuigplanning/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/mobiliteitsbudget/erkendestandaard/2025-02-06",
   "/tmp/generated/doc/applicatieprofiel/mobiliteitsbudget/ontwerpstandaard/2023-01-16",
   "/tmp/generated/doc/applicatieprofiel/mobiliteitsbudget/ontwerpstandaard/toolchain4",
@@ -304,22 +290,10 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
   "/tmp/generated/doc/vocabularium/leermiddelen/ontwerpstandaard/2025-02-24",
   "/tmp/generated/doc/vocabularium/mandaat/ontwerpdocument/2020-01-06",
-  "/tmp/generated/doc/vocabularium/mobiliteit-trips-en-aanbod/erkendestandaard/2020-04-23",
-  "/tmp/generated/doc/vocabularium/mobiliteit-trips-en-aanbod/kandidaatstandaard/2020-01-12",
-  "/tmp/generated/doc/vocabularium/mobiliteit-trips-en-aanbod/kandidaatstandaard/2020-04-09",
-  "/tmp/generated/doc/vocabularium/mobiliteit-trips-en-aanbod/ontwerpstandaard/2019-12-16",
-  "/tmp/generated/doc/vocabularium/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/mobiliteit",
   "/tmp/generated/doc/vocabularium/mobiliteit/Hoppinpunten/kandidaatstandaard/2022-04-01",
-  "/tmp/generated/doc/vocabularium/mobiliteit/dienstregeling-en-planning/erkendestandaard/2022-04-21",
-  "/tmp/generated/doc/vocabularium/mobiliteit/dienstregeling-en-planning/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/mobiliteit/kandidaatstandaard/2018-09-30",
   "/tmp/generated/doc/vocabularium/mobiliteitsbudget",
   "/tmp/generated/doc/vocabularium/mobiliteitsbudget/erkendestandaard/2025-02-06",
   "/tmp/generated/doc/vocabularium/mobiliteitsbudget/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/netwerk/erkendestandaard/2020-04-23",
-  "/tmp/generated/doc/vocabularium/netwerk/kandidaatstandaard/2020-04-09",
-  "/tmp/generated/doc/vocabularium/netwerk/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/nutsvoorzieningen/kandidaatstandaard/2023-12-19",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/begraafplaats",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/begroeid-voorkomen",
@@ -351,9 +325,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/thermografische-gebouwanalyse/ontwerpstandaard/2025-05-22",
   "/tmp/generated/doc/vocabularium/toestemming",
   "/tmp/generated/doc/vocabularium/toestemming/ontwerpdocument/2020-01-06",
-  "/tmp/generated/doc/vocabularium/transportnetwerk/erkendestandaard/2020-04-23",
-  "/tmp/generated/doc/vocabularium/transportnetwerk/kandidaatstandaard/2020-04-09",
-  "/tmp/generated/doc/vocabularium/transportnetwerk/ontwerpstandaard/toolchain4",
   "/tmp/generated/ns/FeitelijkeVerenigingen",
   "/tmp/generated/ns/bodem-en-ondergrond",
   "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
@@ -365,10 +336,6 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/kindfiche",
   "/tmp/generated/ns/leercredential",
   "/tmp/generated/ns/metadata-dcat",
-  "/tmp/generated/ns/mobiliteit",
-  "/tmp/generated/ns/mobiliteit/dienstregeling-en-planning",
-  "/tmp/generated/ns/mobiliteit/trips-en-aanbod",
-  "/tmp/generated/ns/netwerk",
   "/tmp/generated/ns/nutsvoorzieningen",
   "/tmp/generated/ns/observaties-en-metingen",
   "/tmp/generated/ns/organisatie",
@@ -376,6 +343,5 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/rooilijnplannen",
   "/tmp/generated/ns/ruimtelijke-bereiken",
   "/tmp/generated/ns/sensoren-en-bemonstering",
-  "/tmp/generated/ns/thermografische-gebouwanalyse",
-  "/tmp/generated/ns/transportnetwerk"
+  "/tmp/generated/ns/thermografische-gebouwanalyse"
 ]

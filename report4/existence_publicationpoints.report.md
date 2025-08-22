@@ -258,6 +258,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/production/mobiliteit.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/production/mobiliteitsbudget.publication.json
 #||# 
 Directory check
