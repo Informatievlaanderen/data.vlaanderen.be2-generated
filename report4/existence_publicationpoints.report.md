@@ -338,6 +338,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/production/organisatie.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/production/overlijdensaangifte.publication.json
 #||# 
 Directory check

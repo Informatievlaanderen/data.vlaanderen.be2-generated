@@ -2,11 +2,7 @@
 
 #||# -------------------------------------  
 
-Error: No package was defined in the OSLO RDF file.
+2025-08-22T15:19:42.984Z error: Unable to find the assigned URI for the domain of property [urn:oslo-toolchain:9794f5d200b28470187d859735af0ef19bfb6e6cfa8dcc00c6f0d2b00d980035](all-organisatie.jsonld#L3136).
 
-    at RdfVocabularyGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/rdf-vocabulary-generator/lib/RdfVocabularyGenerationService.js:40:19)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/rdf-vocabulary-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-08-22T15:19:42.986Z error: Unable to find the definition for property [urn:oslo-toolchain:9794f5d200b28470187d859735af0ef19bfb6e6cfa8dcc00c6f0d2b00d980035](all-organisatie.jsonld#L3136).
 

@@ -110,6 +110,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/openbaar-domein.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/organisatie.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/production/overlijdensaangifte.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/persoon.publication.json
@@ -232,9 +234,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/omgevingsvergunning/kandidaatstandaard/2024-09-12",
   "/tmp/generated/doc/applicatieprofiel/onbegroeid-voorkomen",
   "/tmp/generated/doc/applicatieprofiel/organisatie-basis",
-  "/tmp/generated/doc/applicatieprofiel/organisatie-basis/kandidaatstandaard/niet-bepaald",
-  "/tmp/generated/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2024-06-01",
-  "/tmp/generated/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/perceel",
   "/tmp/generated/doc/applicatieprofiel/perceel/erkendestandaard/2020-06-18",
   "/tmp/generated/doc/applicatieprofiel/perceel/kandidaatstandaard/2019-08-23",
@@ -304,8 +303,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/vegetatie",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/waterdeel",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/watervoorkomen",
-  "/tmp/generated/doc/vocabularium/organisatie",
-  "/tmp/generated/doc/vocabularium/organisatie/erkendestandaard/2018-07-03",
   "/tmp/generated/doc/vocabularium/perceel/erkendestandaard/2020-06-18",
   "/tmp/generated/doc/vocabularium/perceel/kandidaatstandaard/2019-08-23",
   "/tmp/generated/doc/vocabularium/perceel/kandidaatstandaard/2020-04-23",
@@ -338,7 +335,6 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/metadata-dcat",
   "/tmp/generated/ns/nutsvoorzieningen",
   "/tmp/generated/ns/observaties-en-metingen",
-  "/tmp/generated/ns/organisatie",
   "/tmp/generated/ns/perceel",
   "/tmp/generated/ns/rooilijnplannen",
   "/tmp/generated/ns/ruimtelijke-bereiken",
