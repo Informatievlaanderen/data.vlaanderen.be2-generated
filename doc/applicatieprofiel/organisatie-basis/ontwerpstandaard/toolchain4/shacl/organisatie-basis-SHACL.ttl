@@ -68,12 +68,6 @@
     shacl:name "houdt"@nl;
     shacl:path org:holds
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Agent.IsLidVan>;
-    shacl:class org:Organization;
-    shacl:description "Lidmaatschap van een agent van een organisatie."@nl;
-    shacl:name "is lid van"@nl;
-    shacl:path <http://todo.com/isLidVan>
-  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Agent.IsHoofdVan>;
     shacl:class org:Organization;
     shacl:description "Verwijst naar de organisatie waaraan een agent aan het hoofd staat of leiding geeft."@nl;
@@ -184,19 +178,21 @@
     shacl:name "rol"@nl;
     shacl:path org:role
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Lidmaatschap.Lidmaatschap.agent>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Lidmaatschap.HeeftLidmaatschap>;
     shacl:class dc:Agent;
+    shacl:description "Lidmaatschap van een agent (van een organisatie)."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "Lidmaatschap.Agent";
-    shacl:path <http://todo.com/Lidmaatschap.Agent>
+    shacl:name "heeft lidmaatschap"@nl;
+    shacl:path org:member
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Lidmaatschap.Lidmaatschap.organisatie>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Lidmaatschap.IsLidmaatschapBij>;
     shacl:class org:Organization;
+    shacl:description "Organisatie waarop het lidmaatschap (van een agent) betrekking heeft."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "Lidmaatschap.Organisatie";
-    shacl:path <https://data.vlaanderen.be/ns/organisatie#Lidmaatschap.Organisatie>
+    shacl:name "is lidmaatschap bij"@nl;
+    shacl:path org:organization
   ];
   shacl:targetClass org:Membership .
 
@@ -351,6 +347,12 @@
     shacl:description "Verwijst naar een organisatie-eenheid die deel uitmaakt van de organisatie, bv een afdeling."@nl;
     shacl:name "heeft eenheid"@nl;
     shacl:path org:hasUnit
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/toolchain4#Organisatie.Lid>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die lid is (van een organisatie)."@nl;
+    shacl:name "lid"@nl;
+    shacl:path org:hasMember
   ];
   shacl:targetClass org:Organization .
 
