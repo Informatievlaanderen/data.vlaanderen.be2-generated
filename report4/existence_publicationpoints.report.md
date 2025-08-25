@@ -310,7 +310,6 @@ error: missing '/tmp/generated/doc/applicatieprofiel/logies-basis/ontwerpstandaa
 #||# Directory check
 #||# 
 #||# index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/test/metadata-geo-dcat-vl.publication.json
 #||# 
