@@ -106,6 +106,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/metadata-geo-dcat-vl.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/dev/metadata.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/mobiliteit-intelligente-toegang.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/mobiliteit.publication.json
