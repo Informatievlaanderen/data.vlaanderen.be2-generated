@@ -2,15 +2,15 @@
 
 #||# -------------------------------------  
 
-2025-08-25T11:05:24.851Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
+2025-08-25T11:18:49.708Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
 
-2025-08-25T11:05:24.858Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/dcat#landingPage which acts as a parent. Using original URI as fallback.
+2025-08-25T11:18:49.716Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/dcat#landingPage which acts as a parent. Using original URI as fallback.
 
-2025-08-25T11:05:24.859Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/dcat#landingPage which acts as a parent. Using original URI as fallback.
+2025-08-25T11:18:49.717Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/dcat#landingPage which acts as a parent. Using original URI as fallback.
 
-2025-08-25T11:05:24.860Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/conformsTo which acts as a parent. Using original URI as fallback.
+2025-08-25T11:18:49.719Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/conformsTo which acts as a parent. Using original URI as fallback.
 
-2025-08-25T11:05:24.860Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
+2025-08-25T11:18:49.719Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
 
-2025-08-25T11:05:24.861Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/dcat#landingPage which acts as a parent. Using original URI as fallback.
+2025-08-25T11:18:49.720Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/dcat#landingPage which acts as a parent. Using original URI as fallback.
 
