@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-Error: template not found: /tmp/workspace/report4/doc/applicatieprofiel/metadata/ontwerpstandaard/demo/templates/mijn-applicatieprofiel-ap.j2
+Error: template not found: /tmp/workspace/report4/doc/applicatieprofiel/metadata/ontwerpstandaard/demo/templates/metadata.j2
 
     at createTemplate (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:234:15)
 
