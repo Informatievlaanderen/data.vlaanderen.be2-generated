@@ -371,7 +371,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/metadata/ontwerpstandaard/demo/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/mobiliteit-intelligente-toegang.publication.json
 #||# 
