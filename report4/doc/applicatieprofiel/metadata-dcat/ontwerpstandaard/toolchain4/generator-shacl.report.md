@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-08-25T11:17:46.314Z warn: Unable to find the description for subject "[urn:oslo-toolchain:95838aa419b0cc36c1447acd0939b6a412f4645b4a83982e84b62ba1b9cf6319](all-metadata-voor-services-ap.jsonld#L4859)".
+2025-08-26T07:31:06.607Z warn: Unable to find the description for subject "[urn:oslo-toolchain:95838aa419b0cc36c1447acd0939b6a412f4645b4a83982e84b62ba1b9cf6319](all-metadata-voor-services-ap.jsonld#L4859)".
 
-2025-08-25T11:17:46.316Z warn: Unable to find the description for subject "[urn:oslo-toolchain:0512a862d47557595179f9f7164576c83752a10d3eac0ceac42ada2fe7aebccc](all-metadata-voor-services-ap.jsonld#L4879)".
+2025-08-26T07:31:06.609Z warn: Unable to find the description for subject "[urn:oslo-toolchain:0512a862d47557595179f9f7164576c83752a10d3eac0ceac42ada2fe7aebccc](all-metadata-voor-services-ap.jsonld#L4879)".
 
