@@ -2,5 +2,7 @@
 
 #||# -------------------------------------
 
-2025-08-28T10:55:38.255Z warn: Unable to find the contributor type for "Martin Vanbrabant" using column "metadata-dcat". Please make sure this column has a value set for this person.
+2025-08-28T11:45:49.003Z warn: Unable to find the contributor type for "Martin Vanbrabant" using column "metadata-dcat". Please make sure this column has a value set for this person.
+
+2025-08-28T11:45:49.007Z error: [CsvConverterHandler] Unable to convert the provided csv into a stakeholders-file. Error: Invalid Record Length: columns length is 7, got 6 on line 16 for record Eric Duchesne,BDO Digital,,,C,
 
