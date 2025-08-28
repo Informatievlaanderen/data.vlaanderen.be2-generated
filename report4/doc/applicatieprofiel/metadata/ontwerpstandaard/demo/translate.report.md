@@ -14,3 +14,17 @@ WARNING The entered language values are the same!
 
 #||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/metadata/ontwerpstandaard/demo/translation/metadata_nl.json  
 
+#||# translate for language en  
+
+#||# -------------------------------------  
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/metadata/ontwerpstandaard/demo/translation/metadata_en.json  
+
