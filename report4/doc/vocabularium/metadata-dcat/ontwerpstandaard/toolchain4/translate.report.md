@@ -14,3 +14,17 @@ WARNING The entered language values are the same!
 
 #||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/metadata-dcat/ontwerpstandaard/toolchain4/translation/metadata-dcat_nl.json  
 
+#||# translate for language en  
+
+#||# -------------------------------------  
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/metadata-dcat/ontwerpstandaard/toolchain4/translation/metadata-dcat_en.json  
+
