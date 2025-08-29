@@ -21,11 +21,11 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#StringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#KostShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#DoubleShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#PeriodeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#IdentificatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#DoelgroepShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#TijdsduurShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#TaalstringShape> .
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#PeriodeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#TemporeleentiteitShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#AgentShape> a shacl:NodeShape;
   shacl:closed false;
@@ -102,7 +102,7 @@
     shacl:path schemas:inLanguage
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Creatiefwerk.Vereistetijd>;
-    shacl:class <https://www.w3.org/TR/owl-time/#time:Duration>;
+    shacl:class <http://www.w3.org/2006/time#Duration>;
     shacl:description "De geschatte of typische tijd die het doorgaans kost om met of door de inhoud van dit werk voor het typische of beoogde publiek te werken."@nl;
     shacl:maxCount "1";
     shacl:name "vereisteTijd"@nl;
@@ -110,7 +110,7 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Creatiefwerk.Licentie>;
     shacl:class schemas:CreativeWork;
-    shacl:description "De licentie die rust op het gebruik van het Creatief Werk"@nl;
+    shacl:description "De licentie die rust op het gebruik van het Creatief Werk."@nl;
     shacl:name "licentie"@nl;
     shacl:path schemas:license
   ], [
@@ -332,7 +332,7 @@
     shacl:path <http://data.europa.eu/snb/model/elm/specifiedBy>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Leeractiviteit.Workload>;
-    shacl:class <https://www.w3.org/TR/owl-time/#time:Duration>;
+    shacl:class <http://www.w3.org/2006/time#Duration>;
     shacl:description "De feitelijke werklast in aantal uren dat de lerende aan de activiteit heeft besteed. Dit omvat het aantal uren in de klas, in groepsverband, in practica, alsook het aantal uren dat de lerende aan zelfstudie heeft besteed."@nl;
     shacl:maxCount "1";
     shacl:name "workload"@nl;
@@ -570,31 +570,30 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#PeriodeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Periode.Begin>;
-    shacl:datatype xsd:dateTime;
-    shacl:description "Aanvang van de tijdsduur."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Periode.Tot>;
+    shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:description "Einde ve Temporele Entiteit."@nl;
     shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "begin"@nl;
-    shacl:path <http://data.europa.eu/m8g/startTime>
+    shacl:name "tot"@nl;
+    shacl:path <http://www.w3.org/2006/time#hasEnd>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Periode.Einde>;
-    shacl:datatype xsd:dateTime;
-    shacl:description "Einde vd tijdsduur."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Periode.Van>;
+    shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:description "Start ve Temporele Entiteit."@nl;
     shacl:maxCount "1";
-    shacl:name "einde"@nl;
-    shacl:path <http://data.europa.eu/m8g/endTime>
+    shacl:name "van"@nl;
+    shacl:path <http://www.w3.org/2006/time#hasBeginning>
   ];
-  shacl:targetClass <http://data.europa.eu/m8g/PeriodOfTime> .
+  shacl:targetClass <http://www.w3.org/2006/time#ProperInterval> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#StringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass xsd:string .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#TaalstringShape> a shacl:NodeShape;
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#TemporeleentiteitShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass rdf:langString .
+  shacl:targetClass <http://www.w3.org/2006/time#TemporalEntity> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#TijdsduurShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://www.w3.org/TR/owl-time/#time:Duration> .
+  shacl:targetClass <http://www.w3.org/2006/time#Duration> .
