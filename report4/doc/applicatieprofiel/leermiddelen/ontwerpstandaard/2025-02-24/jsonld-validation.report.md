@@ -2,21 +2,17 @@
 
 #||# -------------------------------------  
 
-2025-09-02T08:31:26.628Z info: Loaded 45 URI prefixes into whitelist
+2025-09-02T09:07:55.370Z info: Loaded 45 URI prefixes into whitelist
 
-2025-09-02T08:31:26.798Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:c5159c1b7585bbb69b6052999fc86aca5fbb78c3b3d7f46bea61d4cb77cbf6b6](all-leermiddelen-ap.jsonld#L4744)
+2025-09-02T09:07:55.604Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:c5159c1b7585bbb69b6052999fc86aca5fbb78c3b3d7f46bea61d4cb77cbf6b6](all-leermiddelen-ap.jsonld#L4700)
 
-2025-09-02T08:31:26.804Z error: Found missing class (TemporeleEntiteit): [urn:oslo-toolchain:ea817fe7d910f6f2b4e13096785971e0be5bf9afff54d89a0876181d3661cac5](all-leermiddelen-ap.jsonld#L3859)
+Error: Unknown specification type: undefined
 
-2025-09-02T08:31:26.805Z error: Found missing class (NAL_currency): [urn:oslo-toolchain:aeaf77a4415bf9b48c21c0aa9deeffab6a34027b0ae5626f75c635c4e58905a0](all-leermiddelen-ap.jsonld#L4837)
+    at JsonldValidationService.validateMissingClasses (/usr/local/lib/node_modules/@oslo-flanders/jsonld-validator/lib/JsonldValidationService.js:312:27)
 
-2025-09-02T08:31:26.805Z info: Validation successful! All assigned URIs are whitelisted.
+    at JsonldValidationService.run (/usr/local/lib/node_modules/@oslo-flanders/jsonld-validator/lib/JsonldValidationService.js:37:43)
 
-2025-09-02T08:31:26.805Z info: Validation found 1 sentences with spelling mistakes.
+    at /usr/local/lib/node_modules/@oslo-flanders/jsonld-validator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
 
-2025-09-02T08:31:26.805Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
-
-2025-09-02T08:31:26.805Z info: Validation successful! All base URIs seem to be valid.
-
-2025-09-02T08:31:26.805Z info: Validation found 2 missing referenced classes.
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
