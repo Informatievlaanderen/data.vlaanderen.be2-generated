@@ -1,0 +1,67 @@
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/metadata/ontwerpstandaard/demo#> rdfs:member <https://data.dev-vlaanderen.be/doc/applicatieprofiel/metadata/ontwerpstandaard/demo#UitkomstShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/metadata/ontwerpstandaard/demo#NeerleggingShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/metadata/ontwerpstandaard/demo#OrganisatieShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/metadata/ontwerpstandaard/demo#IntShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/metadata/ontwerpstandaard/demo#StringShape> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/metadata/ontwerpstandaard/demo#IntShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:int .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/metadata/ontwerpstandaard/demo#NeerleggingShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/metadata/ontwerpstandaard/demo#Neerlegging.Datum>;
+    shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>;
+    shacl:description "De datum waarop het rapport werd neergelegd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "datum"@nl;
+    shacl:path <http://todo.com/Neerlegging.datum>
+  ], [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/metadata/ontwerpstandaard/demo#Neerlegging.Neergelegdbij>;
+    shacl:class org:Organization;
+    shacl:description "De Organisatie waarbij het rapport werd neergelegd"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "neergelegdBij"@nl;
+    shacl:path <http://todo.com/Neerlegging.neergelegdBij>
+  ];
+  shacl:targetClass <http://todo.com/Neerlegging> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/metadata/ontwerpstandaard/demo#OrganisatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/metadata/ontwerpstandaard/demo#Organisatie.Voorkeursnaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam waarmee de organisatie bij voorkeur wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "voorkeursnaam"@nl;
+    shacl:path skos:prefLabel
+  ];
+  shacl:targetClass org:Organization .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/metadata/ontwerpstandaard/demo#StringShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/metadata/ontwerpstandaard/demo#UitkomstShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/metadata/ontwerpstandaard/demo#Uitkomst.Temp>;
+    shacl:datatype xsd:int;
+    shacl:description "Dit is de definitie van dit label"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Temp"@nl;
+    shacl:path <http://todo.com/temp>
+  ];
+  shacl:targetClass <http://todo.com/Uitkomst> .

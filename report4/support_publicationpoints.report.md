@@ -88,6 +88,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/leerinschrijfcredential.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/dev/leermiddelen.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/logies.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/lokale-economie.publication.json
@@ -103,6 +105,8 @@
 #||#   + adding supporting /home/circleci/project/config/dev/metadata-dcat.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/metadata-geo-dcat-vl.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/metadata.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/mobiliteit-intelligente-toegang.publication.json
 #||#  
@@ -166,9 +170,9 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/vlaamsecodex.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/dev/vrachtwagenparkeren.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/voorwaarden-dienstverlening.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/dev/vrachtwagenparkeren.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/waterkwaliteit.publication.json
 #||#  
@@ -261,6 +265,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-10-14",
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-10-15",
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/ontwerpstandaard/2024-07-08",
+  "/tmp/generated/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01",
   "/tmp/generated/ns/FeitelijkeVerenigingen",
   "/tmp/generated/ns/bodem-en-ondergrond",
   "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",

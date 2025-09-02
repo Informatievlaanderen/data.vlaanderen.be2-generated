@@ -1,0 +1,8 @@
+#||# oslo-shacl-template-generator for language nl  
+
+#||# -------------------------------------  
+
+#||# oslo-shacl-template-generator for language en  
+
+#||# -------------------------------------  
+

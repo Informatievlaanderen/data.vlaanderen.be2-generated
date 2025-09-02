@@ -301,6 +301,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/dev/leermiddelen.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/dev/logies.publication.json
 #||# 
 Directory check
@@ -352,9 +358,14 @@ Directory check
 
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/metadata-dcat/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/metadata-geo-dcat-vl.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/dev/metadata.publication.json
 #||# 
 Directory check
 
@@ -565,13 +576,13 @@ Directory check
 
 index.html check
 
-#||#    + checking /home/circleci/project/config/dev/vrachtwagenparkeren.publication.json
+#||#    + checking /home/circleci/project/config/dev/voorwaarden-dienstverlening.publication.json
 #||# 
 Directory check
 
 index.html check
 
-#||#    + checking /home/circleci/project/config/dev/voorwaarden-dienstverlening.publication.json
+#||#    + checking /home/circleci/project/config/dev/vrachtwagenparkeren.publication.json
 #||# 
 Directory check
 

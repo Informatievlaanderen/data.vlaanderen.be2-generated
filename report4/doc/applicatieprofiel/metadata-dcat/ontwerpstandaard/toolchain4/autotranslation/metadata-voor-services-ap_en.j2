@@ -1,0 +1,68 @@
+{% extends "ap2_en.j2" %}
+
+{% block summary %}
+<p>The application profile "metadata dcat". This is an application profile based on <a href="https://www.w3.org/TR/vocab-dcat-2/">DCAT</a> and focuses on collecting information about generic datasets, distributions and services made available by a government. The datasets and services 
+include both publicly accessible and protected data and services (developed in and for any technical perspective). Bringing all this information together in a catalogue makes it possible to increase the findability of these datasets and services.
+This application profile is the generic basic profile. Derived profiles can certainly be created for specific domains or communities. For example, DCAT-AP-VL is such a derived application profile, specifically for the Open data domain and associated community.</p>
+
+{% endblock %}
+
+{% block conformance %}
+  <p>An application profile is a data exchange specification that introduces additional restrictions on the application of vocabularies.
+        Such additional restrictions may include the following elements:</p>
+        <p>
+        <ul>
+        <li>Refinement of the terminology (classes and properties) consistent with the semantics from the relevant specifications with a specific use as a goal.</li>
+        <li>External terminology (classes and properties) used for new/additional terms that do not appear in the existing vocabularies.</li>
+        </ul>
+        </p>
+
+  <p>To be compliant with this application profile, an implementation must:</p>
+        <p>
+        <ul>
+        <li>MUST comply with <a href="https://www.w3.org/TR/vocab-dcat-2/">DCAT's</a> obligations.</li>
+        <li>MUST always contain the properties for each class that have a minimum cardinality of 1.</li>
+        <li>MUST NOT contain more than 1 instance of traits that have 1 as the maximum cardinality.</li>
+        <li>MAG uses terminology (classes and properties) in a way that is consistent with its semantics (definition, use, domain, and scope).</li>
+        <li>MAG may be extended to include classes and properties of other data models (vocabularies) that do not overlap with terminology mentioned in this document or in <a href="https://www.w3.org/TR/vocab-dcat-2/">DCAT,</a> <a href="https://joinup.ec.europa.eu/release/dcat-ap/12">DCAT-AP</a>.</li>
+        <li>APPLIES the general and specific recommendations for use as much as possible.        </li></ul>
+        </p> 
+
+  <div class="region region--no-space-top">
+      <h3 class="h3">General recommendations for use</h3> 
+      <ul>
+       <li>Provide stable identifiers for datasets and data services, and where possible, for all other entities listed.</li>
+       <li>Only use absolute URLs. Then, under all the catalog processing operations, the URL remains identical and there is no loss of quality for the user.</li>
+       <li>For temporal information, the time zone is expected to be provided.</li>
+       <li>If you choose to give the geographical description as a geometry, it is best to choose a description with explicit mention of the Coordinates Reference System (CRS) used. </li>
+       <li>Descriptive information such as titles and descriptions are language-dependent. Provide only one value for each language.</li> 
+      </ul>
+  </div>
+
+  <div>
+<h3 class="h3">Information security</h3>
+<p>A semantic specification focuses primarily on making agreements about the meaning of terms. This is pre-eminently the purpose of a vocabulary. Application profiles focus on appointments in a broad context of use.     
+As a result, they include more and specific restrictions that benefit their use.</p><p>One of the aspects for the use of the specification is information security. The majority of information security concerns do not have a direct impact on an application profile. They are often of a technical nature that fall outside the semantic agreements such as the encryption of data streams. Preferably, these two worlds are separated as much as possible and only merged in one implementation.</p><p>However, some agreements can be influenced by information security. Examples of this are whether or not to require a property or the range of a property (an identifier versus a string). It is up to the authors of the specification to find the right balance.</p><p>For services metadata, a key context of use is the aggregation of catalogs coming from different organizations. The aim is to make this aggregation available to the public as a whole. Because entities from one catalogue can refer to entities from other catalogues, it is virtually impossible to pursue a different information security policy for each catalogue to be aggregated. Therefore, this is not included as part of the specification. If desired, this will become an implementation agreement.</p><p>Because the basis of the use case is the public sharing of information, it is assumed that the information structure as included in the specification can also be shared in that form.  
+Information that has been taken note of that cannot be made public for one reason or another will therefore not be mandatory.
+Often, this information will be available to the user of the aggregated catalogue via another feature, via an access page.</p>
+
+  </div>
+
+  <div>
+<p/>
+<h3 class="h3">Service description and payload description</h3>
+<p>If a data service is described, there is usually also the need to provide information about the data that is accessed via the data service. In order to establish this distinction unambiguously, the following draft decision is followed. Properties that are directly related to the data service are properties of the data service. Properties that relate to the accessed data are properties of the connected dataset (or datasets) offered. For example, the language property for a data service: the service can be written in English and respond to queries in English, while the data from the dataset offered in that data service is in Dutch. However, if one wants to indicate that the information is only available in Dutch, then this is indicated as a value for the language property of the offered dataset.</p>
+  </div>
+
+  <div>
+<p/>
+<h3 class="h3">Distinction between distribution and data service</h3>
+<p>In a daily conversation about datasets and their forms of access, the term distribution is used in a broad sense. A distribution is the designation of any form of access. DCAT has chosen to include a service as an independent entity. This creates a field of tension between the everyday terminology and the formal terminology of DCAT. However, even on the basis of the definitions in DCAT, one cannot make a precisely defined distinction between a distribution and a data service.</p><p>In order to give the catalogue managers in Flanders a more uniform approach, the following has been agreed. A distribution will mainly be used to indicate a completed set of data. Something that can be downloaded as a file. A dataset is an abstract entity (a name for a set of data); A distribution of the dataset is a concrete form that the recipient of the dataset can use locally without any other system access. A distribution will therefore not exist without a dataset.</p><p>All other forms will be described as a data service. A data service often has a high degree of independence from a distribution (effective data) of a dataset; it cannot even be tied to a single dataset. Or it offers smart access to the data (e.g. via a query interface).</p>
+</div>
+
+
+
+
+{% endblock %}
+
+
