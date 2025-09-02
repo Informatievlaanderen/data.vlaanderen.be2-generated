@@ -338,14 +338,12 @@
                                           {% else %}
                                              <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
                                           {% endif %}
-                                          {%- for prop in entity['properties'] %}
-                                             {% if prop.markdown[language] %}
+                                             {% if entity.markdown[language] %}
                                                 <dt>Extra informatie</dt>
                                                 <dd>
-                                                   {{ if prop.markdown[language] | safe }}
+                                                   {{ entity.markdown[language] | markdown | safe }}
                                                 </dd>
                                              {% endif %}
-                                          {% endfor %}
                                        </dl>
                                        {% if ((entity.properties | length) > 0 ) %}
                                           <div class="vl-u-table-overflow">
@@ -358,6 +356,7 @@
                                                       <th class="vl-data-table__header-title--sortable">Beschrijving</th>
                                                       <th class="vl-data-table__header-title--sortable">Gebruik</th>
                                                       <th class="vl-data-table__header-title--sortable">Codelijst</th>
+                                                      <th class="vl-data-table__header-title--sortable">Extra</th>
                                                    </tr>
                                                 </thead>
                                                 <tbody class="supertype">
@@ -408,6 +407,11 @@
                                                          <td>
                                                             {% if prop.codelist %}
                                                                <a href="{{ prop.codelist }}">Link</a>
+                                                            {% endif %}
+                                                         </td>
+                                                         <td>
+                                                            {% if prop.markdown[language] %}
+                                                               {{ prop.markdown[language] | markdown | safe }}
                                                             {% endif %}
                                                          </td>
                                                       </tr>

@@ -30,7 +30,7 @@
 
 #||# start translating json  
 
-#||# Number of calls: 0  
+#||# Number of calls: 6  
 
 #||# start writing file /tmp/workspace/report4/doc/applicatieprofiel/metadata/ontwerpstandaard/demo/autotranslation/metadata_en.json  
 
