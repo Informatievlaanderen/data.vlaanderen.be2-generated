@@ -2,6 +2,7 @@
 @prefix dc11: <http://purl.org/dc/elements/1.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
 @prefix schemas: <https://schema.org/> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -18,11 +19,13 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#CompetentieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#LangstringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#DatetimeShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#KostShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#LiteralShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#OpeningsurenspecificatieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#TimeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#UriShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#IdentificatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#DoelgroepShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#TijdsduurShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#GeldbedragShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#PeriodeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#TemporeleentiteitShape> .
 
@@ -46,7 +49,7 @@
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "naam"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/leermiddelen#naam>
+    shacl:path dc:title
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Competentie.Type>;
     shacl:class skos:Concept;
@@ -150,7 +153,7 @@
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "identificator"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/leermiddelen#identificator>
+    shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Doel.Niveau>;
     shacl:class skos:Concept;
@@ -241,6 +244,10 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/leermiddelen#Doelgroep> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#GeldbedragShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass schemas:MonetaryAmount .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#IdentificatorShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -252,35 +259,6 @@
     shacl:path dc:creator
   ];
   shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#KostShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Kost.Beschrijving>;
-    shacl:datatype rdf:langString;
-    shacl:description "Beschrijving van de Kost."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "beschrijving"@nl;
-    shacl:path dc:description
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Kost.Waarde>;
-    shacl:datatype rdfs:Literal;
-    shacl:description "Omvang van de Kost, uitgedrukt in de opgegeven munteenheid."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "waarde"@nl;
-    shacl:path <http://data.europa.eu/m8g/value>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Kost.Valuta>;
-    shacl:class skos:Concept;
-    shacl:description "Munteenheid waarin de Kost is gedefinieerd."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "valuta"@nl;
-    shacl:path <http://data.europa.eu/m8g/currency>
-  ];
-  shacl:targetClass <http://data.europa.eu/m8g/Cost> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#LangstringShape> a shacl:NodeShape;
   shacl:closed false;
@@ -357,7 +335,7 @@
   shacl:closed false;
   shacl:property [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Leeractiviteitspecificatie.Contacturen>;
-    shacl:datatype rdf:langString;
+    shacl:class schema:OpeningHoursSpecification;
     shacl:description "De contacturen."@nl;
     shacl:name "contacturen"@nl;
     shacl:path <http://data.europa.eu/snb/model/elm/contactHour>
@@ -448,13 +426,13 @@
     shacl:datatype rdf:langString;
     shacl:description "Een overzicht van de fysieke of digitale elementen die nodig zijn om een Leermiddel uit te kunnen voeren of te gebruiken."@nl;
     shacl:name "benodigdMateriaal"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/leermiddelen#benodigdMateriaal>
+    shacl:path schemas:material
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Leermiddel.Sleutelwoord>;
     shacl:datatype rdf:langString;
     shacl:description "Een kernbegrip dat wordt gebruikt om de inhoud van een Leermiddel te beschrijven."@nl;
     shacl:name "sleutelwoord"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/leermiddelen#sleutelwoord>
+    shacl:path schemas:keywords
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Leermiddel.Onderwerp>;
     shacl:class skos:Concept;
@@ -479,14 +457,14 @@
     shacl:class skos:Concept;
     shacl:description "De aard van de wederzijdse actie of communicatie tussen gebruiker en systeem."@nl;
     shacl:name "interactieType"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/leermiddelen#interactieType>
+    shacl:path schemas:interactivityType
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Leermiddel.Instructietaal>;
     shacl:class skos:Concept;
     shacl:description "Taal waarin het Leermiddel wordt gegeven."@nl;
     shacl:minCount "1";
-    shacl:name "instructieTaal"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/leermiddelen#instructieTaal>
+    shacl:name "instructietaal"@nl;
+    shacl:path schemas:inLanguage
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Leermiddel.Resultaattype>;
     shacl:class skos:Concept;
@@ -502,11 +480,11 @@
     shacl:path dc:educationLevel
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Leermiddel.Kost>;
-    shacl:class <http://data.europa.eu/m8g/Cost>;
+    shacl:class schemas:MonetaryAmount;
     shacl:description "Het bedrag aan middelen, vaak uitgedrukt in geld, dat nodig is voor het gebruik van het Leermiddel."@nl;
     shacl:maxCount "1";
     shacl:name "kost"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/leermiddelen#kost>
+    shacl:path schemas:estimatedCost
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Leermiddel.Formaat>;
     shacl:class skos:Concept;
@@ -562,9 +540,45 @@
   ];
   shacl:targetClass schemas:CreativeWork .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#LiteralShape> a shacl:NodeShape;
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#OpeningsurenspecificatieShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass rdfs:Literal .
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Openingsurenspecificatie.Open>;
+    shacl:datatype xsd:time;
+    shacl:description "Openingsuur vd plaats of dienst op de opgegeven dag vd week."@nl;
+    shacl:maxCount "1";
+    shacl:name "open"@nl;
+    shacl:path schema:opens
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Openingsurenspecificatie.Gesloten>;
+    shacl:datatype xsd:time;
+    shacl:description "Sluitingsuur vd plaats of dienst op de opgegeven dag vd week."@nl;
+    shacl:maxCount "1";
+    shacl:name "gesloten"@nl;
+    shacl:path schema:closes
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Openingsurenspecificatie.DagVanDeWeek>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Dag van de week waarvoor de openingsuren geldig zijn."@nl;
+    shacl:maxCount "1";
+    shacl:name "dag van de week"@nl;
+    shacl:path schema:dayOfWeek
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Openingsurenspecificatie.GeldigVan>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum vanaf wanneer de opgegeven openingsuren gelden."@nl;
+    shacl:maxCount "1";
+    shacl:name "geldig van"@nl;
+    shacl:path schema:validFrom
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Openingsurenspecificatie.GeldigTot>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum tot wanneer de opgegeven openingsuren gelden."@nl;
+    shacl:maxCount "1";
+    shacl:name "geldig tot"@nl;
+    shacl:path schema:validThrough
+  ];
+  shacl:targetClass schema:OpeningHoursSpecification .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#PeriodeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -592,3 +606,11 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#TijdsduurShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass <http://www.w3.org/2006/time#Duration> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#TimeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:time .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#UriShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass xsd:anyURI .
