@@ -36,11 +36,11 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#AgentShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Agent.Gedeelddoor>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Agent.Publiceerder>;
     shacl:class schemas:CreativeWork;
     shacl:description "Deze relatie toont aan dat een CreatiefWerk steeds gedeeld wordt door een Agent."@nl;
-    shacl:name "gedeeldDoor"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/leermiddelen#gedeeldDoor>
+    shacl:name "publiceerder"@nl;
+    shacl:path schemas:publisher
   ];
   shacl:targetClass dc:Agent .
 
@@ -149,7 +149,7 @@
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "geldigheid"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/leermiddelen#geldigheid>
+    shacl:path schemas:validFor
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Doel.Identificator>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
@@ -215,7 +215,7 @@
     shacl:class <https://data.vlaanderen.be/ns/leermiddelen#Doel>;
     shacl:description "Deze zelfrelatie toont aan dat een Doel potentieel breder is dan een ander Doel."@nl;
     shacl:name "isBrederDan"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/leermiddelen#isBrederDan>
+    shacl:path rdfs:subClassOf
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Doel.Bestaatuit>;
     shacl:class <https://data.vlaanderen.be/ns/leermiddelen#Doel>;
@@ -246,7 +246,7 @@
     shacl:name "onderwijsniveau"@nl;
     shacl:path dc:educationLevel
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/leermiddelen#Doelgroep> .
+  shacl:targetClass schemas:Audience .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#GeldbedragShape> a shacl:NodeShape;
   shacl:closed false;
@@ -499,11 +499,11 @@
     shacl:name "instructietaal"@nl;
     shacl:path schemas:inLanguage
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Leermiddel.Resultaattype>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Leermiddel.Resultaat>;
     shacl:class skos:Concept;
     shacl:description "De algemene categorie of classificatie waarin een resultaat van het doorlopen van een Leermiddel kan worden ingedeeld."@nl;
-    shacl:name "resultaatType"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/leermiddelen#resultaatType>
+    shacl:name "resultaat"@nl;
+    shacl:path schemas:result
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Leermiddel.Niveau>;
     shacl:class skos:Concept;
@@ -529,7 +529,7 @@
     shacl:class <https://data.vlaanderen.be/ns/leermiddelen#Competentie>;
     shacl:description "Een specifiek geheel van kennis, vaardigheden en attitudes die door een lerende moet worden beheerst."@nl;
     shacl:name "competentie"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/leermiddelen#competentie>
+    shacl:path schemas:competencyRequired
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Leermiddel.Bron>;
     shacl:class skos:Concept;
@@ -550,7 +550,7 @@
     shacl:path dc:hasPart
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Leermiddel.Behoorttot>;
-    shacl:class <https://data.vlaanderen.be/ns/leermiddelen#LeermiddelVerzameling>;
+    shacl:class schemas:CreativeWorkSeries;
     shacl:description "Een Leermiddel is een onderdeel van een LeermiddelVerzameling."@nl;
     shacl:name "behoortTot"@nl;
     shacl:path dc:isPartOf
@@ -559,7 +559,7 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#LeermiddelverzamelingShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/leermiddelen#LeermiddelVerzameling> .
+  shacl:targetClass schemas:CreativeWorkSeries .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#LicentieShape> a shacl:NodeShape;
   shacl:closed false;
