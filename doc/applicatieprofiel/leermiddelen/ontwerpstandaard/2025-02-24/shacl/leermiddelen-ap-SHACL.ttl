@@ -1,3 +1,4 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix dc11: <http://purl.org/dc/elements/1.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -249,6 +250,15 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#GeldbedragShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Geldbedrag.Valuta>;
+    shacl:class <http://qudt.org/schema/qudt/CurrencyUnit>;
+    shacl:description "Munteenheid waarin een bedrag uitgedrukt is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "valuta"@nl;
+    shacl:path crm:P180_has_currency
+  ];
   shacl:targetClass schemas:MonetaryAmount .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#IdentificatorShape> a shacl:NodeShape;
@@ -541,7 +551,7 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24#Leermiddel.Behoorttot>;
     shacl:class <https://data.vlaanderen.be/ns/leermiddelen#LeermiddelVerzameling>;
-    shacl:description "Deze relatie toont aan dat een Leermiddel kan behoren tot een groter geheel van Leermiddelen in een LeermiddelVerzameling."@nl;
+    shacl:description "Een Leermiddel is een onderdeel van een LeermiddelVerzameling."@nl;
     shacl:name "behoortTot"@nl;
     shacl:path dc:isPartOf
   ];
