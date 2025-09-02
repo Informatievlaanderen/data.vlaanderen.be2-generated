@@ -2,23 +2,23 @@
 
 #||# -------------------------------------
 
-2025-06-11T07:28:24.432Z info: Connector Applicatieprofiel:WaterVoorkomen:WaterVoorkomen:(WaterVoorkomen -> FysiekVoorkomen) is not an association with a source role. Ignoring this connector.
+2025-09-02T06:46:10.944Z info: Connector Applicatieprofiel:WaterVoorkomen:WaterVoorkomen:(WaterVoorkomen -> FysiekVoorkomen) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T07:28:24.434Z info: Connector Applicatieprofiel:WaterVoorkomen:DiepWater:(DiepWater -> WaterVoorkomen) is not an association with a source role. Ignoring this connector.
+2025-09-02T06:46:10.945Z info: Connector Applicatieprofiel:WaterVoorkomen:DiepWater:(DiepWater -> WaterVoorkomen) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T07:28:24.434Z info: Connector Applicatieprofiel:WaterVoorkomen:DiepWaterMetOevervegetatie:(DiepWaterMetOevervegetatie -> WaterVoorkomen) is not an association with a source role. Ignoring this connector.
+2025-09-02T06:46:10.945Z info: Connector Applicatieprofiel:WaterVoorkomen:DiepWaterMetOevervegetatie:(DiepWaterMetOevervegetatie -> WaterVoorkomen) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T07:28:24.434Z info: Connector Applicatieprofiel:WaterVoorkomen:OndiepWater:(OndiepWater -> WaterVoorkomen) is not an association with a source role. Ignoring this connector.
+2025-09-02T06:46:10.946Z info: Connector Applicatieprofiel:WaterVoorkomen:OndiepWater:(OndiepWater -> WaterVoorkomen) is not an association with a source role. Ignoring this connector.
 
-2025-06-11T07:28:24.435Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-09-02T06:46:10.946Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-06-11T07:28:24.435Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel) and fallback URI (http://todo.com/) will be assigned.
+2025-09-02T06:46:10.946Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel). Using fallback URI (http://todo.com/) instead.
 
-2025-06-11T07:28:24.435Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
+2025-09-02T06:46:10.946Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres). Using fallback URI (http://todo.com/) instead.
 
-2025-06-11T07:28:24.435Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated) and fallback URI (http://todo.com/) will be assigned.
+2025-09-02T06:46:10.947Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated). Using fallback URI (http://todo.com/) instead.
 
-2025-06-11T07:28:24.435Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst) and fallback URI (http://todo.com/) will be assigned.
+2025-09-02T06:46:10.947Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst). Using fallback URI (http://todo.com/) instead.
 
 #||# -------------------------------------
 

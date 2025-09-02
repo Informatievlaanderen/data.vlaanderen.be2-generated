@@ -1,10 +1,12 @@
            var treeData = [
               {
                 "name": "Begroeid voorkomen",
+                "target": "Begroeidvoorkomen",
                 "parent": "null",
                 "children": [
                   {
                     "name": "Grazige vegetatie",
+                    "target": "Grazigevegetatie",
                     "parent": "Begroeid voorkomen",
                     "children": [
                       {
@@ -83,6 +85,7 @@
                           },
                           {
                             "name": "Bodembedekkende heesters",
+                            "target": "Bodembedekkendeheesters",
                             "parent": "Heester"
                           }
                         ]
@@ -97,6 +100,7 @@
                           },
                           {
                             "name": "Geschoren haag",
+                            "target": "Geschorenhaag",
                             "parent": "Haag"
                           }
                         ]
@@ -133,10 +137,12 @@
                       },
                       {
                         "name": "Natte ruigte",
+                        "target": "Natteruigte",
                         "parent": "Ruigte"
                       },
                       {
                         "name": "Droge ruigte",
+                        "target": "Drogeruigte",
                         "parent": "Ruigte"
                       }                    
                     ]
@@ -155,6 +161,7 @@
                       },
                       {
                         "name": "Vaste planten",
+                        "target": "Vasteplanten",
                         "parent": "Sierbeplanting"
                       },
                       {
@@ -163,6 +170,7 @@
                       },
                       {
                         "name": "Bol- en knolgewassen",
+                        "target": "Bol-enknolgewassen",
                         "parent": "Sierbeplanting"
                       }                  
                     ]
@@ -173,6 +181,7 @@
                   },
                   {
                     "name": "Niet begroeid",
+                    "target": "Nietbegroeid",
                     "parent": "Begroeid Voorkomen"
                   }
                 ]
