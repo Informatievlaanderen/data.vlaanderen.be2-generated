@@ -2,35 +2,33 @@
 
 #||# -------------------------------------  
 
-2025-09-03T09:20:00.122Z info: Loaded 45 URI prefixes into whitelist
+2025-09-03T09:55:59.728Z info: Loaded 45 URI prefixes into whitelist
 
-2025-09-03T09:20:00.416Z warn: Found non-whitelisted assigned URI: http://schema.org/opens for subject: [urn:oslo-toolchain:ee9cfe0eea8860f9da792281e396feb6b875b51fcb29aa31a92c6019ebba8c0c](all-leermiddelen-ap.jsonld#L1461)
+2025-09-03T09:55:59.945Z warn: Found non-whitelisted assigned URI: http://schema.org/opens for subject: [urn:oslo-toolchain:ee9cfe0eea8860f9da792281e396feb6b875b51fcb29aa31a92c6019ebba8c0c](all-leermiddelen-ap.jsonld#L1461)
 
-2025-09-03T09:20:00.417Z warn: Found non-whitelisted assigned URI: http://schema.org/closes for subject: [urn:oslo-toolchain:7cc32b8548b857d89262475044d130b87584e7ec5b87119d13a3090b7756ec7f](all-leermiddelen-ap.jsonld#L1499)
+2025-09-03T09:55:59.945Z warn: Found non-whitelisted assigned URI: http://schema.org/closes for subject: [urn:oslo-toolchain:7cc32b8548b857d89262475044d130b87584e7ec5b87119d13a3090b7756ec7f](all-leermiddelen-ap.jsonld#L1499)
 
-2025-09-03T09:20:00.417Z warn: Found non-whitelisted assigned URI: http://schema.org/dayOfWeek for subject: [urn:oslo-toolchain:0172cf620bdd16150eea25f8dc72ec563ea20d361c09f2a54a24bf5ddcbe5f25](all-leermiddelen-ap.jsonld#L1537)
+2025-09-03T09:55:59.945Z warn: Found non-whitelisted assigned URI: http://schema.org/dayOfWeek for subject: [urn:oslo-toolchain:0172cf620bdd16150eea25f8dc72ec563ea20d361c09f2a54a24bf5ddcbe5f25](all-leermiddelen-ap.jsonld#L1537)
 
-2025-09-03T09:20:00.417Z warn: Found non-whitelisted assigned URI: http://schema.org/validFrom for subject: [urn:oslo-toolchain:cce3ce75f91d7df4430de6592ad48ce344d910bc468607595cf07e6a2d794489](all-leermiddelen-ap.jsonld#L1581)
+2025-09-03T09:55:59.945Z warn: Found non-whitelisted assigned URI: http://schema.org/validFrom for subject: [urn:oslo-toolchain:cce3ce75f91d7df4430de6592ad48ce344d910bc468607595cf07e6a2d794489](all-leermiddelen-ap.jsonld#L1581)
 
-2025-09-03T09:20:00.417Z warn: Found non-whitelisted assigned URI: http://schema.org/validThrough for subject: [urn:oslo-toolchain:78385e7b413ac08ef5a4c7306da996d075044ed0ce2852d137864303f5e43daf](all-leermiddelen-ap.jsonld#L1619)
+2025-09-03T09:55:59.945Z warn: Found non-whitelisted assigned URI: http://schema.org/validThrough for subject: [urn:oslo-toolchain:78385e7b413ac08ef5a4c7306da996d075044ed0ce2852d137864303f5e43daf](all-leermiddelen-ap.jsonld#L1619)
 
-2025-09-03T09:20:00.417Z warn: Found non-whitelisted assigned URI: http://todo.com/publiceerder for subject: [urn:oslo-toolchain:f16f250b0529c139de037b1a8f84b6e1d3fa6068b01edb8a244670d05764883d](all-leermiddelen-ap.jsonld#L4407)
+2025-09-03T09:55:59.946Z warn: Found non-whitelisted assigned URI: https://ec.europa.eu/esco/lod/static/model.html#Skill for subject: [urn:oslo-toolchain:6bf9edebd501978400e505857cbf1d3efd7a63f0c02542c98716ffd04d778a97](all-leermiddelen-ap.jsonld#L4682)
 
-2025-09-03T09:20:00.418Z warn: Found non-whitelisted assigned URI: https://ec.europa.eu/esco/lod/static/model.html#Skill for subject: [urn:oslo-toolchain:6bf9edebd501978400e505857cbf1d3efd7a63f0c02542c98716ffd04d778a97](all-leermiddelen-ap.jsonld#L4664)
+2025-09-03T09:55:59.946Z warn: Found non-whitelisted assigned URI: http://schema.org/OpeningHoursSpecification for subject: [urn:oslo-toolchain:c35947b4ea05516bd3bdc5d373f83fca2365977e85d9c60794973d5a680a9f64](all-leermiddelen-ap.jsonld#L4873)
 
-2025-09-03T09:20:00.418Z warn: Found non-whitelisted assigned URI: http://schema.org/OpeningHoursSpecification for subject: [urn:oslo-toolchain:c35947b4ea05516bd3bdc5d373f83fca2365977e85d9c60794973d5a680a9f64](all-leermiddelen-ap.jsonld#L4855)
+2025-09-03T09:55:59.946Z warn: Found non-whitelisted assigned URI: https://qudt.org/schema/qudt/Unit for subject: [urn:oslo-toolchain:f377d413ed884f0570c6e6ae53067fadb1adeb441386aa90c1c5661e5754b6cb](all-leermiddelen-ap.jsonld#L5124)
 
-2025-09-03T09:20:00.419Z warn: Found non-whitelisted assigned URI: https://qudt.org/schema/qudt/Unit for subject: [urn:oslo-toolchain:f377d413ed884f0570c6e6ae53067fadb1adeb441386aa90c1c5661e5754b6cb](all-leermiddelen-ap.jsonld#L5106)
+2025-09-03T09:55:59.949Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:c5159c1b7585bbb69b6052999fc86aca5fbb78c3b3d7f46bea61d4cb77cbf6b6](all-leermiddelen-ap.jsonld#L168)
 
-2025-09-03T09:20:00.423Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:c5159c1b7585bbb69b6052999fc86aca5fbb78c3b3d7f46bea61d4cb77cbf6b6](all-leermiddelen-ap.jsonld#L168)
+2025-09-03T09:55:59.949Z warn: Found empty sentence for subject: [urn:oslo-toolchain:ee9cfe0eea8860f9da792281e396feb6b875b51fcb29aa31a92c6019ebba8c0c](all-leermiddelen-ap.jsonld#L1461)
 
-2025-09-03T09:20:00.424Z warn: Found empty sentence for subject: [urn:oslo-toolchain:ee9cfe0eea8860f9da792281e396feb6b875b51fcb29aa31a92c6019ebba8c0c](all-leermiddelen-ap.jsonld#L1461)
+2025-09-03T09:55:59.949Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7cc32b8548b857d89262475044d130b87584e7ec5b87119d13a3090b7756ec7f](all-leermiddelen-ap.jsonld#L1499)
 
-2025-09-03T09:20:00.424Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7cc32b8548b857d89262475044d130b87584e7ec5b87119d13a3090b7756ec7f](all-leermiddelen-ap.jsonld#L1499)
+2025-09-03T09:55:59.949Z warn: Found empty sentence for subject: [urn:oslo-toolchain:cce3ce75f91d7df4430de6592ad48ce344d910bc468607595cf07e6a2d794489](all-leermiddelen-ap.jsonld#L1581)
 
-2025-09-03T09:20:00.425Z warn: Found empty sentence for subject: [urn:oslo-toolchain:cce3ce75f91d7df4430de6592ad48ce344d910bc468607595cf07e6a2d794489](all-leermiddelen-ap.jsonld#L1581)
-
-2025-09-03T09:20:00.425Z warn: Found empty sentence for subject: [urn:oslo-toolchain:78385e7b413ac08ef5a4c7306da996d075044ed0ce2852d137864303f5e43daf](all-leermiddelen-ap.jsonld#L1619)
+2025-09-03T09:55:59.949Z warn: Found empty sentence for subject: [urn:oslo-toolchain:78385e7b413ac08ef5a4c7306da996d075044ed0ce2852d137864303f5e43daf](all-leermiddelen-ap.jsonld#L1619)
 
 Error: Unknown specification type: undefined
 
