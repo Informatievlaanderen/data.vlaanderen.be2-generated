@@ -266,7 +266,6 @@ error: missing '/tmp/generated/doc/vocabularium/leercredential/ontwerpstandaard/
 #||# Directory check
 #||# 
 #||# index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/leermiddelen/index.html'
 
 #||#    + checking /home/circleci/project/config/test/logies.publication.json
 #||# 
