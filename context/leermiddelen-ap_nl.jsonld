@@ -5,6 +5,10 @@
     },
     "Competentie": {
       "@context": {
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
         "naam": {
           "@id": "http://purl.org/dc/terms/title",
           "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
@@ -100,10 +104,6 @@
           "@id": "http://purl.org/dc/terms/publisher",
           "@type": "http://purl.org/dc/terms/Agent"
         },
-        "vereisteTijd": {
-          "@id": "https://schema.org/timeRequired",
-          "@type": "http://www.w3.org/2006/time#Duration"
-        },
         "versie": {
           "@id": "http://www.w3.org/ns/dcat#version",
           "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
@@ -149,15 +149,15 @@
           "@id": "http://data.europa.eu/snb/model/elm/isPartOf",
           "@type": "http://data.europa.eu/snb/model/elm/LearningActivity"
         },
+        "leermiddel": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/references",
+          "@type": "https://schema.org/LearningResource"
+        },
         "locatie": {
           "@container": "@set",
           "@id": "http://data.europa.eu/snb/model/elm/location",
           "@type": "http://data.europa.eu/snb/model/elm/Address"
-        },
-        "maaktGebruikVan": {
-          "@container": "@set",
-          "@id": "https://data.vlaanderen.be/ns/leercredential#maaktGebruikVan",
-          "@type": "https://schema.org/LearningResource"
         },
         "periode": {
           "@container": "@set",
@@ -168,12 +168,12 @@
           "@id": "http://data.europa.eu/snb/model/elm/specifiedBy",
           "@type": "http://data.europa.eu/snb/model/elm/LearningActivitySpecification"
         },
-        "typeLeeractiviteit": {
+        "type": {
           "@container": "@set",
           "@id": "http://purl.org/dc/terms/type",
           "@type": "http://www.w3.org/2004/02/skos/core#Concept"
         },
-        "workload": {
+        "werklast": {
           "@id": "http://data.europa.eu/snb/model/elm/workload",
           "@type": "http://www.w3.org/2006/time#Duration"
         }
@@ -214,7 +214,7 @@
         },
         "schrijftVoor": {
           "@container": "@set",
-          "@id": "https://data.vlaanderen.be/ns/leercredential#schrijftVoor",
+          "@id": "http://purl.org/dc/terms/references",
           "@type": "https://schema.org/LearningResource"
         },
         "specialisatieVan": {
@@ -303,7 +303,7 @@
     "Leermiddel": {
       "@context": {
         "^VereisteTijd": {
-          "@id": "https://data.vlaanderen.be/ns/leermiddelen#vereisteTijd",
+          "@id": "https://schema.org/timeRequired",
           "@type": "http://www.w3.org/2006/time#Duration"
         },
         "benodigdMateriaal": {
@@ -315,14 +315,18 @@
           "@id": "http://purl.org/dc/elements/1.1/description",
           "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
         },
+        "bestaatUit": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/hasPart",
+          "@type": "https://schema.org/LearningResource"
+        },
         "bron": {
           "@container": "@set",
           "@id": "http://purl.org/dc/elements/1.1/source",
           "@type": "http://www.w3.org/2004/02/skos/core#Concept"
         },
         "competentie": {
-          "@container": "@set",
-          "@id": "https://schema.org/competencyRequired",
+          "@id": "https://schema.org/assesses",
           "@type": "https://ec.europa.eu/esco/lod/static/model.html#Skill"
         },
         "dient": {
@@ -349,7 +353,7 @@
           "@id": "https://schema.org/interactivityType",
           "@type": "http://www.w3.org/2004/02/skos/core#Concept"
         },
-        "isOnderdeelVan": {
+        "isLidVan": {
           "@container": "@set",
           "@id": "http://purl.org/dc/terms/isPartOf",
           "@type": "https://schema.org/CreativeWorkSeries"
@@ -357,11 +361,6 @@
         "kost": {
           "@id": "https://schema.org/estimatedCost",
           "@type": "https://schema.org/MonetaryAmount"
-        },
-        "leermiddelType": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/type",
-          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
         },
         "naam": {
           "@id": "http://purl.org/dc/terms/title",
@@ -371,11 +370,6 @@
           "@container": "@set",
           "@id": "http://purl.org/dc/terms/educationLevel",
           "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-        },
-        "omvat": {
-          "@container": "@set",
-          "@id": "http://purl.org/dc/terms/hasPart",
-          "@type": "https://schema.org/LearningResource"
         },
         "onderwerp": {
           "@container": "@set",
@@ -396,6 +390,11 @@
           "@id": "https://schema.org/accessibilityFeature",
           "@type": "http://www.w3.org/2004/02/skos/core#Concept"
         },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
         "vereiste": {
           "@container": "@set",
           "@id": "http://purl.org/dc/terms/requires",
@@ -405,6 +404,13 @@
       "@id": "https://schema.org/LearningResource"
     },
     "LeermiddelVerzameling": {
+      "@context": {
+        "heeftLid": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/hasPart",
+          "@type": "https://schema.org/LearningResource"
+        }
+      },
       "@id": "https://schema.org/CreativeWorkSeries"
     },
     "Licentie": {
