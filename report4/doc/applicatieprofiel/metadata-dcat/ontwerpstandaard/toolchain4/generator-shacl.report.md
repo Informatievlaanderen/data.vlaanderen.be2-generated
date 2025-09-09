@@ -2,7 +2,13 @@
 
 #||# -------------------------------------  
 
-2025-09-09T21:51:25.317Z warn: Unable to find the description for subject "[urn:oslo-toolchain:95838aa419b0cc36c1447acd0939b6a412f4645b4a83982e84b62ba1b9cf6319](all-metadata-voor-services-ap.jsonld#L6663)".
+Error: Unable to find a label for subject "[urn:oslo-toolchain:2c30d56b28583290f49888b2aef7773937e6a8420fc11d62189a3c9a9f67eb93](all-metadata-voor-services-ap.jsonld#L655)".
 
-2025-09-09T21:51:25.319Z warn: Unable to find the description for subject "[urn:oslo-toolchain:0512a862d47557595179f9f7164576c83752a10d3eac0ceac42ada2fe7aebccc](all-metadata-voor-services-ap.jsonld#L6683)".
+    at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:98:23)
+
+    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:40:42)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
