@@ -2,37 +2,11 @@
 
 #||# -------------------------------------
 
-2025-02-11T11:45:42.807Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+TypeError: model.extract is not a function
 
-2025-02-11T11:45:42.808Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+    at EaUmlConversionService.run (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/EaUmlConversionService.js:37:21)
 
-2025-02-11T11:45:42.808Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
-
-2025-02-11T11:45:42.813Z warn: [ConnectorConverterHandler]: Connector (heeftVerwerkersovereenkomstMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-11T11:45:42.814Z warn: [ConnectorConverterHandler]: Connector (heeftVerwerkersovereenkomstMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-11T11:45:42.814Z warn: [ConnectorConverterHandler]: Connector (Verwerkersovereenkomst.PubliekeOrganisatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-11T11:45:42.814Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Verwerkersovereenkomst.PubliekeOrganisatie) and the fallback URI (http://todo.com/) will be assigned.
-
-2025-02-11T11:45:42.814Z warn: [ConnectorConverterHandler]: Connector (Verwerkersovereenkomst.Organisatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-11T11:45:42.814Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Verwerkersovereenkomst.Organisatie) and the fallback URI (http://todo.com/) will be assigned.
-
-Error: [AttributeConverterHandler]: Unable to find domain object for attribute (Model:Domain Model:OSLO²_vocabularium:OSLO-Notificatie:Notificatiekanaal:Passief).
-
-    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/converter-handlers/AttributeConverterHandler.js:46:23
-
-    at Array.forEach (<anonymous>)
-
-    at AttributeConverterHandler.assignUris (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/converter-handlers/AttributeConverterHandler.js:43:26)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConverterHandlerService.js:31:50
-
-    at Array.map (<anonymous>)
-
-    at ConverterHandlerService.assignUris (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConverterHandlerService.js:31:37)
+    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
 
 #||# -------------------------------------
 
