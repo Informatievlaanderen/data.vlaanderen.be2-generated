@@ -2,11 +2,23 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for range urn:oslo-toolchain:4177087511b790553db49cc0748f6ccda09fcdd5d0e7ac598e1352b8f2057611 of attribute [urn:oslo-toolchain:b249c9672995918d36fa47930646cc69edc00add2be87e15b30b93dd7f7cecf3](all-mobiliteit-intelligente-toegang.jsonld#L2098).
+Error: Unable to find the subject for the package.
 
-    at JsonWebuniversumGenerationService.addPropertySpecificInformation (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:191:19)
+    at JsonWebuniversumGenerationService.getBaseURI (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:112:19)
 
-    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:170:96
+    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:46:30)
+
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+#||# oslo-webuniversum-json-generator for language en  
+
+#||# -------------------------------------  
+
+Error: Unable to find the subject for the package.
+
+    at JsonWebuniversumGenerationService.getBaseURI (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:112:19)
+
+    at JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:46:30)
 
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
