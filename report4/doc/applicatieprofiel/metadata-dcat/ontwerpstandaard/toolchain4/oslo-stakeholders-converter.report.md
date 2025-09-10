@@ -2,5 +2,5 @@
 
 #||# -------------------------------------
 
-2025-09-09T22:36:45.812Z warn: Unable to find the contributor type for "Martin Vanbrabant" using column "metadata-dcat". Please make sure this column has a value set for this person.
+2025-09-10T07:37:07.059Z warn: Unable to find the contributor type for "Martin Vanbrabant" using column "metadata-dcat". Please make sure this column has a value set for this person.
 
