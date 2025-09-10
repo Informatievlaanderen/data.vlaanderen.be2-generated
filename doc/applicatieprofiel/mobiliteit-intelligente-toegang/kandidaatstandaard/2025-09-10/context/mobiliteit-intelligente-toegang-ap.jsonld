@@ -1,0 +1,425 @@
+{
+  "@context": {
+    "Aanvraag": {
+      "@context": {
+        "aanvrager": {
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+          "@type": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
+        },
+        "identificator": {
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "ingangsdatum": {
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum",
+          "@type": "http://todo.com/Date"
+        },
+        "inhoud": {
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud",
+          "@type": "https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "vergunningshouder": {
+          "@id": "https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Aanvraag.vergunningshouder",
+          "@type": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
+        },
+        "zaak": {
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+          "@type": "http://dbpedia.org/ontology/Case"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Aanvraag"
+    },
+    "Aanvraagtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Activiteit": {
+      "@context": {
+        "locatie": {
+          "@id": "http://www.w3.org/ns/locn#location",
+          "@type": "https://data.vlaanderen.be/ns/mobiliteit#Zone"
+        },
+        "periode": {
+          "@id": "http://purl.org/dc/terms/extent",
+          "@type": "http://www.w3.org/2006/time#ProperInterval"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "https://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
+    },
+    "Activiteitstype": {
+      "@id": "https://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Bewijs": {
+      "@context": {
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "identificator": {
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "vervult": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/supportsRequirement",
+          "@type": "http://data.europa.eu/m8g/Requirement"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/Evidence"
+    },
+    "Bewijstypeclassificatietype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Bewijstypelijst": {
+      "@context": {
+        "specificieertBewijstype": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/specifiesEvidenceType",
+          "@type": "http://data.europa.eu/m8g/EvidenceType"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/EvidenceTypeList"
+    },
+    "Date": {
+      "@id": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "DateTime": {
+      "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Dossier": {
+      "@context": {
+        "bestaatUit": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/dossier#Dossier.bestaatUit",
+          "@type": "https://data.vlaanderen.be/ns/dossier#Stuk"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/dossier#Dossier"
+    },
+    "GetypeerdeString": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Identificator": {
+      "@context": {
+        "identificator": {
+          "@id": "http://www.w3.org/2004/02/skos/core#notation",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "maker": {
+          "@id": "http://purl.org/dc/terms/creator",
+          "@type": "https://www.w3.org/ns/prov#Agent"
+        },
+        "toegekendDoor": {
+          "@id": "http://www.w3.org/ns/adms#schemaAgency",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "uitgegeven": {
+          "@id": "http://purl.org/dc/terms/issued",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "Informatieconcept": {
+      "@context": {
+        "uitdrukkingVerwachteWaarde": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/expressionOfExpectedValue",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/InformationConcept"
+    },
+    "Literal": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "LogischeOperatie": {
+      "@id": "https://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Moment": {
+      "@context": {
+        "inXSDDateTime": {
+          "@id": "http://www.w3.org/2006/time#inXSDDateTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "http://www.w3.org/2006/time#Instant"
+    },
+    "Periode": {
+      "@context": {
+        "tot": {
+          "@id": "http://www.w3.org/2006/time#hasEnd",
+          "@type": "http://www.w3.org/2006/time#Instant"
+        },
+        "van": {
+          "@id": "http://www.w3.org/2006/time#hasBeginning",
+          "@type": "http://www.w3.org/2006/time#Instant"
+        }
+      },
+      "@id": "http://www.w3.org/2006/time#ProperInterval"
+    },
+    "Procedure": {
+      "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"
+    },
+    "Project": {
+      "@id": "http://dbpedia.org/ontology/Project"
+    },
+    "PubliekeDienstverlening": {
+      "@context": {
+        "heeftCompetenteAutoriteit": {
+          "@id": "http://data.europa.eu/m8g/hasCompetentAuthority",
+          "@type": "http://data.europa.eu/m8g/PublicOrganisation"
+        },
+        "heeftOutputtype": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#heeftOutputtype",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "heeftVoorwaarde": {
+          "@container": "@set",
+          "@id": "http://vocab.belgif.be/ns/publicservice#hasRequirement",
+          "@type": "http://data.europa.eu/m8g/Requirement"
+        },
+        "produceert": {
+          "@container": "@set",
+          "@id": "http://purl.org/vocab/cpsv#produces",
+          "@type": "http://data.vlaanderen.be/ns/besluit#Vergunning"
+        },
+        "status": {
+          "@id": "http://www.w3.org/ns/adms#status",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "volgt": {
+          "@container": "@set",
+          "@id": "http://purl.org/vocab/cpsv#follows",
+          "@type": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"
+        }
+      },
+      "@id": "http://purl.org/vocab/cpsv#PublicService"
+    },
+    "Status": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "String": {
+      "@id": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Stuk": {
+      "@id": "https://data.vlaanderen.be/ns/dossier#Stuk"
+    },
+    "TaalString": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "TemporeleEntiteit": {
+      "@id": "http://www.w3.org/2006/time#TemporalEntity"
+    },
+    "Toegang": {
+      "@context": {
+        "periode": {
+          "@id": "http://purl.org/dc/terms/extent",
+          "@type": "http://www.w3.org/2006/time#ProperInterval"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "https://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "voertuig": {
+          "@id": "https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#voertuig",
+          "@type": "https://schema.org/Vehicle"
+        },
+        "voorwerp": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#voorwerp",
+          "@type": "https://data.vlaanderen.be/ns/omgevingsvergunning#Activiteit"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang"
+    },
+    "Toegangstype": {
+      "@id": "https://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Vergunning": {
+      "@context": {
+        "document": {
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#document",
+          "@type": "http://xmlns.com/foaf/0.1/Document"
+        },
+        "gebruiktAls": {
+          "@container": "@set",
+          "@id": "http://vocab.belgif.be/ns/publicservice#isUsedAs",
+          "@type": "http://data.europa.eu/m8g/Evidence"
+        },
+        "identificator": {
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "ingangsdatum": {
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "inhoud": {
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud",
+          "@type": "https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang"
+        },
+        "verantwoordelijke": {
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#verantwoordelijke",
+          "@type": "http://data.europa.eu/m8g/PublicOrganisation"
+        },
+        "vergunningshouder": {
+          "@id": "https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Vergunning.vergunningshouder",
+          "@type": "https://data.vlaanderen.be/ns/omgevingsvergunning#Rechtssubject"
+        },
+        "zaak": {
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+          "@type": "http://dbpedia.org/ontology/Case"
+        }
+      },
+      "@id": "http://data.vlaanderen.be/ns/besluit#Vergunning"
+    },
+    "Voertuig": {
+      "@context": {
+        "identificator": {
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "toegang": {
+          "@container": "@set",
+          "@id": "https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#toegang",
+          "@type": "https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://schema.org/Vehicle"
+    },
+    "Voertuigtype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Voorwaarde": {
+      "@context": {
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "heeftBewijstypelijst": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/hasEvidenceTypeList",
+          "@type": "http://data.europa.eu/m8g/EvidenceTypeList"
+        },
+        "heeftConcept": {
+          "@id": "http://data.europa.eu/m8g/hasConcept",
+          "@type": "http://data.europa.eu/m8g/InformationConcept"
+        },
+        "heeftOndersteunendBewijs": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/hasSupportingEvidence",
+          "@type": "http://data.europa.eu/m8g/Evidence"
+        },
+        "isVoorwaardeVan": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/isRequirementOf",
+          "@type": "https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Voorwaardecollectie"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "uitgever": {
+          "@id": "http://purl.org/dc/terms/publisher",
+          "@type": "https://www.w3.org/ns/prov#Agent"
+        }
+      },
+      "@id": "http://data.europa.eu/m8g/Requirement"
+    },
+    "VoorwaardeCollectie": {
+      "@context": {
+        "heeftVoorwaarde": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/m8g/hasRequirement",
+          "@type": "http://data.europa.eu/m8g/Requirement"
+        },
+        "operatie": {
+          "@id": "https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#operatie",
+          "@type": "https://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Voorwaardecollectie"
+    },
+    "Voorwaardetype": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "Weigering": {
+      "@context": {
+        "identificator": {
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "ingangsdatum": {
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#ingangsdatum",
+          "@type": "http://todo.com/Date"
+        },
+        "inhoud": {
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#inhoud",
+          "@type": "https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Toegang"
+        },
+        "zaak": {
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaak",
+          "@type": "http://dbpedia.org/ontology/Case"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit-intelligente-toegang#Weigering"
+    },
+    "Zaak": {
+      "@context": {
+        "dossier": {
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#dossier",
+          "@type": "https://data.vlaanderen.be/ns/dossier#Dossier"
+        },
+        "isDeelVan": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/isPartOf",
+          "@type": "http://dbpedia.org/ontology/Project"
+        },
+        "procedure": {
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#procedure",
+          "@type": "https://data.vlaanderen.be/ns/omgevingsvergunning#Procedure"
+        },
+        "zaakhandeling": {
+          "@id": "https://data.vlaanderen.be/ns/omgevingsvergunning#zaakhandeling",
+          "@type": "http://data.vlaanderen.be/ns/besluit#Vergunning"
+        }
+      },
+      "@id": "http://dbpedia.org/ontology/Case"
+    },
+    "Zone": {
+      "@context": {
+        "geometrie": {
+          "@id": "http://www.w3.org/ns/locn#geometry",
+          "@type": "http://www.w3.org/ns/locn#Geometry"
+        },
+        "naam": {
+          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit#Zone"
+    }
+  }
+}
