@@ -12,15 +12,6 @@
 #||# 
 #||# index.html check
 
-#||#    + checking /home/circleci/project/config/test/air-and-water.publication.json
-#||# 
-#||# Directory check
-#||# 
-#||# index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/AirAndWater/Core/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/AirAndWater/Air/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/AirAndWater/Water/ontwerpstandaard/toolchain4/index.html'
-
 #||#    + checking /home/circleci/project/config/test/bedrijventerrein.publication.json
 #||# 
 #||# Directory check
@@ -62,20 +53,6 @@ error: missing '/tmp/generated/doc/applicatieprofiel/AirAndWater/Water/ontwerpst
 #||# Directory check
 #||# 
 #||# index.html check
-
-#||#    + checking /home/circleci/project/config/test/bodem-en-ondergrond.publication.json
-#||# 
-#||# Directory check
-#||# 
-#||# index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bodem-en-ondergrond/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/observaties/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/sonderingen/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/sonderingen/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/test/contactvoorkeuren.publication.json
 #||# 
@@ -386,8 +363,6 @@ error: missing '/tmp/generated/doc/applicatieprofiel/logies-basis/ontwerpstandaa
 #||#    + checking /home/circleci/project/config/test/organisatie.publication.json
 #||# 
 #||# Directory check
-error: missing '/tmp/generated/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025'
-error: missing '/tmp/generated/doc/vocabularium/organisatie/ontwerpdocument/2025'
 #||# 
 #||# index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025/index.html'

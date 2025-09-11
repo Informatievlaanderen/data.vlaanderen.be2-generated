@@ -4,8 +4,6 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/adres.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/test/air-and-water.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/test/bedrijventerrein.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/begraafplaats.publication.json
@@ -19,8 +17,6 @@
 #||#   + adding supporting /home/circleci/project/config/test/bestuur.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/bestuurlijk-sanctieregister.publication.json
-#||#  
-#||#   + adding supporting /home/circleci/project/config/test/bodem-en-ondergrond.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/contactvoorkeuren.publication.json
 #||#  
@@ -178,6 +174,7 @@
 #||# 
 Error: the following directories are unsupported
 [
+  "/tmp/generated/doc/applicatieprofiel/AirAndWater/Core/ontwerpstandaard/2021-10-01",
   "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-04-30",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-08-30",
@@ -194,11 +191,29 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/besluit-publicatie/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/applicatieprofiel/besluitvorming",
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2021-08-01",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2022-04-28",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/ontwerpstandaard/2021-08-01",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bodem/ontwerpstandaard/2021-08-01",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bodem/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2021-08-01",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondwatermeetnet/ontwerpstandaard/2021-08-01",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondwatermeetnet/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/interpretaties",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/interpretaties/ontwerpstandaard/2023-04-01",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/interpretaties/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/observaties",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/observaties/ontwerpstandaard/2023-04-01",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/observaties/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/ruimtelijke-bereiken",
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/ruimtelijke-bereiken/ontwerpstandaard/2021-08-01/i",
+  "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/sonderingen/ontwerpstandaard/2021-08-01",
   "/tmp/generated/doc/applicatieprofiel/contactvoorkeuren",
   "/tmp/generated/doc/applicatieprofiel/contactvoorkeuren/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/applicatieprofiel/cultuur-en-jeugdinfrastructuur/kandidaatstandaard/2022-03-21",
@@ -264,6 +279,22 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/SIF/ontwerpstandaard/2025-06-04",
   "/tmp/generated/doc/vocabularium/besluit/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/bestuur/ontwerpdocument/2020-01-06",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-observaties/ontwerpstandaard/2021-08-01",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2022-04-28",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bodem-en-ondergrond/kandidaatstandaard/2024-10-01",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bodem-en-ondergrond/ontwerpstandaard/2021-08-01",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bodem/ontwerpstandaard/2021-08-01",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bodem/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2021-08-01",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/grondboringen/ontwerpstandaard/2023-04-01",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/grondboringen/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/grondwatermeetnet/ontwerpstandaard/2021-08-01",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/grondwatermeetnet/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/interpretaties/ontwerpstandaard/2023-04-01",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/interpretaties/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/observaties/ontwerpstandaard/2023-04-01",
+  "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/sonderingen/ontwerpstandaard/2021-08-01",
   "/tmp/generated/doc/vocabularium/energiehuis/ontwerpstandaard/2024-12-03",
   "/tmp/generated/doc/vocabularium/energiehuis/ontwerpstandaard/2025-02-18",
   "/tmp/generated/doc/vocabularium/energiehuis/ontwerpstandaard/kristof",
@@ -307,6 +338,7 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/SIF",
   "/tmp/generated/ns/bodem-en-ondergrond",
   "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
+  "/tmp/generated/ns/bodem-en-ondergrond/observaties",
   "/tmp/generated/ns/grondboringen",
   "/tmp/generated/ns/kindfiche",
   "/tmp/generated/ns/leercredential",

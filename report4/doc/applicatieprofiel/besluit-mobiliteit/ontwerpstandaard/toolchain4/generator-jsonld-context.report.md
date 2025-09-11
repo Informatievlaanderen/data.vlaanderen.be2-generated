@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2025-09-02T06:48:23.926Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:bbb9ddf443bd35fdf583788904b4c2d91905a9dd5f7a9dacb919ebd963bdb743](all-besluit-mobiliteit-ap.jsonld#L6744).
+2025-09-11T12:26:22.625Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:bbb9ddf443bd35fdf583788904b4c2d91905a9dd5f7a9dacb919ebd963bdb743](all-besluit-mobiliteit-ap.jsonld#L6744).
 

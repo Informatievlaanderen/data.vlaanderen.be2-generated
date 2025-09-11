@@ -2,11 +2,11 @@
 
 #||# -------------------------------------
 
-2025-05-20T08:39:39.462Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-09-11T12:23:59.616Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:39:39.464Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-09-11T12:23:59.618Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:39:39.465Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
+2025-09-11T12:23:59.618Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium). Using fallback URI (http://todo.com/) instead.
 
 #||# -------------------------------------
 
