@@ -211,6 +211,13 @@
     shacl:name "pagina"@nl;
     shacl:path foaf:page
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Contactpunt.Adres>;
+    shacl:class <http://www.w3.org/ns/locn#Address>;
+    shacl:description "Adres dat men kan aanschrijven of bezoeken."@nl;
+    shacl:maxCount "1";
+    shacl:name "adres"@nl;
+    shacl:path <http://www.w3.org/ns/locn#address>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Contactpunt.UrenBeschikbaarheid>;
     shacl:class schemas:OpeningHoursSpecification;
     shacl:description "Periode waarin contact kan worden opgenomen."@nl;
@@ -299,6 +306,13 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#HoedanigheidShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Hoedanigheid.Contactinfo>;
+    shacl:class schemas:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon… die toelaat de hoedanigheid te contacteren."@nl;
+    shacl:name "contactinfo"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#contactinfo>
+  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#Hoedanigheid> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#IdentificatorShape> a shacl:NodeShape;
@@ -323,6 +337,13 @@
     shacl:maxCount "1";
     shacl:name "toegekendDoor(String)"@nl;
     shacl:path <http://www.w3.org/ns/adms#schemaAgency>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Identificator.Toegekenddoor>;
+    shacl:class dc:Agent;
+    shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekendDoor"@nl;
+    shacl:path dc:creator
   ];
   shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
 
@@ -455,6 +476,12 @@
     shacl:maxCount "1";
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Organisatie.Contactinfo>;
+    shacl:class schemas:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."@nl;
+    shacl:name "contactinfo"@nl;
+    shacl:path schemas:contactPoint
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Organisatie.Status>;
     shacl:class skos:Concept;
@@ -600,6 +627,13 @@
     shacl:minCount "1";
     shacl:name "plaatsnaam"@nl;
     shacl:path rdfs:label
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Plaats.Geometrie>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "Geometrie van de plaats of het gebied."@nl;
+    shacl:maxCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://www.w3.org/ns/locn#geometry>
   ];
   shacl:targetClass dc:Location .
 
@@ -730,4 +764,12 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#VestigingShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Vestiging.Vestigingsadres>;
+    shacl:class schemas:ContactPoint;
+    shacl:description "Adres van de Vestiging."@nl;
+    shacl:maxCount "1";
+    shacl:name "vestigingsadres"@nl;
+    shacl:path org:siteAddress
+  ];
   shacl:targetClass org:Site .
