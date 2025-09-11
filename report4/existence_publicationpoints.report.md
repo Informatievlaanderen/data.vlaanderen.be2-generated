@@ -200,13 +200,6 @@ error: missing '/tmp/generated /index.html'
 #||# 
 #||# index.html check
 
-#||#    + checking /home/circleci/project/config/test/kabels-en-leidingen.publication.json
-#||# 
-#||# Directory check
-#||# 
-#||# index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/kristof/index.html'
-
 #||#    + checking /home/circleci/project/config/test/kindfiche.publication.json
 #||# 
 #||# Directory check
