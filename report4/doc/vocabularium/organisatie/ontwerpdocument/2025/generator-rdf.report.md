@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2025-09-11T13:45:57.093Z error: Unable to find the definition for class [urn:oslo-toolchain:9edcda8b7bcbf5b0edd7ebfd8b76f3fd3a893ae38a0dca63295e89245f9088aa](all-organisatie.jsonld#L416).
+2025-09-11T13:53:56.508Z error: Unable to find the definition for class [urn:oslo-toolchain:9edcda8b7bcbf5b0edd7ebfd8b76f3fd3a893ae38a0dca63295e89245f9088aa](all-organisatie.jsonld#L416).
 
