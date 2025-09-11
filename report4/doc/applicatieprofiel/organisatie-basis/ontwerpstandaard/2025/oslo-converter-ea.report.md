@@ -2,95 +2,95 @@
 
 #||# -------------------------------------
 
-2025-09-11T12:23:49.201Z info: Connector Model:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> FormeleOrganisatie) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.100Z info: Connector Model:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> FormeleOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.202Z info: Connector Model:OSLO-Organisatie:Positie:(Positie -> Positie) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.102Z info: Connector Model:OSLO-Organisatie:Positie:(Positie -> Positie) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.203Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Vestiging) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.103Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Vestiging) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.203Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Vestiging) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.103Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Vestiging) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.203Z info: Connector Model:OSLO-Organisatie:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.103Z info: Connector Model:OSLO-Organisatie:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.203Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.103Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.203Z info: Connector Model:OSLO-Organisatie:FormeleOrganisatie:(FormeleOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.103Z info: Connector Model:OSLO-Organisatie:FormeleOrganisatie:(FormeleOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.204Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.103Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.204Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Vestiging) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.104Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Vestiging) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.204Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.104Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.204Z info: Connector Model:OSLO-Organisatie:Samenwerkingsverband:(Samenwerkingsverband -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.104Z info: Connector Model:OSLO-Organisatie:Samenwerkingsverband:(Samenwerkingsverband -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.204Z info: Connector Model:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.104Z info: Connector Model:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.204Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Veranderingsgebeurtenis) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.104Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Veranderingsgebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.204Z info: Connector Model:OSLO-Organisatie:Veranderingsgebeurtenis:(Veranderingsgebeurtenis -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.104Z info: Connector Model:OSLO-Organisatie:Veranderingsgebeurtenis:(Veranderingsgebeurtenis -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.205Z info: Connector Model:OSLO-Organisatie:Veranderingsgebeurtenis:(Veranderingsgebeurtenis -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.104Z info: Connector Model:OSLO-Organisatie:Veranderingsgebeurtenis:(Veranderingsgebeurtenis -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.205Z info: Connector Model:OSLO-Organisatie:Splitsing:(Splitsing -> Veranderingsgebeurtenis) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.105Z info: Connector Model:OSLO-Organisatie:Splitsing:(Splitsing -> Veranderingsgebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.205Z info: Connector Model:OSLO-Organisatie:Stopzetting:(Stopzetting -> Veranderingsgebeurtenis) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.105Z info: Connector Model:OSLO-Organisatie:Stopzetting:(Stopzetting -> Veranderingsgebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.205Z info: Connector Model:OSLO-Organisatie:Fusie:(Fusie -> Veranderingsgebeurtenis) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.105Z info: Connector Model:OSLO-Organisatie:Fusie:(Fusie -> Veranderingsgebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.205Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Veranderingsgebeurtenis) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.105Z info: Connector Model:OSLO-Organisatie:Organisatie:(Organisatie -> Veranderingsgebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.205Z info: Connector Model:OSLO-Organisatie:Oprichting:(Oprichting -> Veranderingsgebeurtenis) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.105Z info: Connector Model:OSLO-Organisatie:Oprichting:(Oprichting -> Veranderingsgebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.205Z info: Connector Model:OSLO-Organisatie:Hoedanigheid:(Hoedanigheid -> Positie) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.105Z info: Connector Model:OSLO-Organisatie:Hoedanigheid:(Hoedanigheid -> Positie) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.205Z info: Connector Model:OSLO-Organisatie:OrganisatieEenheid:(OrganisatieEenheid -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.105Z info: Connector Model:OSLO-Organisatie:OrganisatieEenheid:(OrganisatieEenheid -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.205Z info: Connector Model:OSLO-Organisatie:Vervanging:(Vervanging -> Veranderingsgebeurtenis) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.105Z info: Connector Model:OSLO-Organisatie:Vervanging:(Vervanging -> Veranderingsgebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.205Z info: Connector Model:OSLO-Organisatie:W3C-LOCN:Adresvoorstelling:(Adresvoorstelling -> Locatie) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.105Z info: Connector Model:OSLO-Organisatie:W3C-LOCN:Adresvoorstelling:(Adresvoorstelling -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.205Z info: Connector Model:OSLO-Organisatie:DCTerms:Plaats:(Plaats -> Locatie) is not an association with a source role. Ignoring this connector.
+2025-09-11T12:58:40.105Z info: Connector Model:OSLO-Organisatie:DCTerms:Plaats:(Plaats -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-09-11T12:23:49.206Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-09-11T12:58:40.106Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-09-11T12:23:49.206Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie). Using fallback URI (http://todo.com/) instead.
+2025-09-11T12:58:40.106Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie). Using fallback URI (http://todo.com/) instead.
 
-2025-09-11T12:23:49.206Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:W3C-Time). Using fallback URI (http://todo.com/) instead.
+2025-09-11T12:58:40.106Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:W3C-Time). Using fallback URI (http://todo.com/) instead.
 
-2025-09-11T12:23:49.206Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:ADMS). Using fallback URI (http://todo.com/) instead.
+2025-09-11T12:58:40.106Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:ADMS). Using fallback URI (http://todo.com/) instead.
 
-2025-09-11T12:23:49.206Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:DCTerms). Using fallback URI (http://todo.com/) instead.
+2025-09-11T12:58:40.106Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:DCTerms). Using fallback URI (http://todo.com/) instead.
 
-2025-09-11T12:23:49.206Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:Schema.org). Using fallback URI (http://todo.com/) instead.
+2025-09-11T12:58:40.106Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:Schema.org). Using fallback URI (http://todo.com/) instead.
 
-2025-09-11T12:23:49.206Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:OSLO-Generiek). Using fallback URI (http://todo.com/) instead.
+2025-09-11T12:58:40.106Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:OSLO-Generiek). Using fallback URI (http://todo.com/) instead.
 
-2025-09-11T12:23:49.206Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:PROV-O). Using fallback URI (http://todo.com/) instead.
+2025-09-11T12:58:40.106Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:PROV-O). Using fallback URI (http://todo.com/) instead.
 
-2025-09-11T12:23:49.206Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:W3C-LOCN). Using fallback URI (http://todo.com/) instead.
+2025-09-11T12:58:40.106Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Organisatie:W3C-LOCN). Using fallback URI (http://todo.com/) instead.
 
-2025-09-11T12:23:49.213Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:Organisatie:contactinfo).
+2025-09-11T12:58:40.113Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:Organisatie:contactinfo).
 
-2025-09-11T12:23:49.213Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:Organisatie:logo).
+2025-09-11T12:58:40.113Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:Organisatie:logo).
 
-2025-09-11T12:23:49.214Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:PubliekeOrganisatie:werkingsgebied).
+2025-09-11T12:58:40.114Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:PubliekeOrganisatie:werkingsgebied).
 
-2025-09-11T12:23:49.214Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:Vestiging:vestigingsAdres).
+2025-09-11T12:58:40.115Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:Vestiging:vestigingsAdres).
 
-2025-09-11T12:23:49.215Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:Hoedanigheid:contactinfo).
+2025-09-11T12:58:40.115Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:Hoedanigheid:contactinfo).
 
-2025-09-11T12:23:49.216Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:ADMS:Identificator:toegekendDoor).
+2025-09-11T12:58:40.116Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:ADMS:Identificator:toegekendDoor).
 
-2025-09-11T12:23:49.216Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:Schema.org:ContactInfo:adres).
+2025-09-11T12:58:40.116Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:Schema.org:ContactInfo:adres).
 
-2025-09-11T12:23:49.216Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:Schema.org:ContactInfo:beschikbaarheid).
+2025-09-11T12:58:40.116Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:Schema.org:ContactInfo:beschikbaarheid).
 
-2025-09-11T12:23:49.217Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:PROV-O:Locatie:adres).
+2025-09-11T12:58:40.117Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:PROV-O:Locatie:adres).
 
-2025-09-11T12:23:49.220Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:DCTerms:Plaats:geometrie).
+2025-09-11T12:58:40.123Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:DCTerms:Plaats:geometrie).
 
-2025-09-11T12:23:49.220Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:DCTerms:Plaats:plaatsnaam).
+2025-09-11T12:58:40.123Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Organisatie:DCTerms:Plaats:plaatsnaam).
 
 #||# -------------------------------------
 

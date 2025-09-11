@@ -358,8 +358,6 @@ error: missing '/tmp/generated/doc/applicatieprofiel/logies-basis/ontwerpstandaa
 #||# Directory check
 #||# 
 #||# index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025/index.html'
-error: missing '/tmp/generated/doc/vocabularium/organisatie/ontwerpdocument/2025/index.html'
 
 #||#    + checking /home/circleci/project/config/test/overlijdensaangifte.publication.json
 #||# 
