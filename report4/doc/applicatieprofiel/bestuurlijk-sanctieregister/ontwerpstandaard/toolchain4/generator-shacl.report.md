@@ -2,9 +2,9 @@
 
 #||# -------------------------------------  
 
-2025-09-11T12:25:59.731Z warn: Unable to find the description for subject "[urn:oslo-toolchain:03f223c4b3ed420a33074fe0e29df5acdd2e391c86a984c963e88830e4971e2e](all-bestuurlijk-sanctieregister-ap.jsonld#L4378)".
+2025-09-12T07:46:25.305Z warn: Unable to find the description for subject "[urn:oslo-toolchain:03f223c4b3ed420a33074fe0e29df5acdd2e391c86a984c963e88830e4971e2e](all-bestuurlijk-sanctieregister-ap.jsonld#L4378)".
 
-2025-09-11T12:25:59.733Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b668c4d368703da609097ba36b979b1e303ba12581e95b9f1d44946941c641fe](all-bestuurlijk-sanctieregister-ap.jsonld#L4398)".
+2025-09-12T07:46:25.308Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b668c4d368703da609097ba36b979b1e303ba12581e95b9f1d44946941c641fe](all-bestuurlijk-sanctieregister-ap.jsonld#L4398)".
 
-2025-09-11T12:25:59.734Z warn: Unable to find the description for subject "[urn:oslo-toolchain:86bba0232fb51c1f3ba48c38702604a9a3e5789482b42849d3d4bdb44e3bfefa](all-bestuurlijk-sanctieregister-ap.jsonld#L4485)".
+2025-09-12T07:46:25.308Z warn: Unable to find the description for subject "[urn:oslo-toolchain:86bba0232fb51c1f3ba48c38702604a9a3e5789482b42849d3d4bdb44e3bfefa](all-bestuurlijk-sanctieregister-ap.jsonld#L4485)".
 
