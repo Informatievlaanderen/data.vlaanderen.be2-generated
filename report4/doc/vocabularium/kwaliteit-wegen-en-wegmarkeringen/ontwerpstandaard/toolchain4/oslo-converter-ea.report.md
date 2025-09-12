@@ -2,193 +2,193 @@
 
 #||# -------------------------------------
 
-2025-05-20T08:40:40.513Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:(KwaliteitsObservatie -> RuimtelijkBemonsteringsObject))
+2025-09-12T10:24:34.510Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:(KwaliteitsObservatie -> RuimtelijkBemonsteringsObject))
 
-2025-05-20T08:40:40.516Z info: Connector Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:(KwaliteitsObservatie -> KwaliteitsResultaat) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.513Z info: Connector Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:(KwaliteitsObservatie -> KwaliteitsResultaat) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.517Z info: Connector Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:(KwaliteitsObservatie -> KwaliteitsKenmerk) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.514Z info: Connector Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:(KwaliteitsObservatie -> KwaliteitsKenmerk) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.518Z info: Connector Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:(KwaliteitsObservatie -> Object) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.514Z info: Connector Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:(KwaliteitsObservatie -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.518Z info: Connector Model:Model:KwaliteitOpenbaarDomein:OpenbaarDomeinObject:(OpenbaarDomeinObject -> Object) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.514Z info: Connector Model:Model:KwaliteitOpenbaarDomein:OpenbaarDomeinObject:(OpenbaarDomeinObject -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.518Z info: Connector Model:Model:ObservatiesEnMetingen:RuimtelijkBemonsteringsObject:(RuimtelijkBemonsteringsObject -> Object) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.515Z info: Connector Model:Model:ObservatiesEnMetingen:RuimtelijkBemonsteringsObject:(RuimtelijkBemonsteringsObject -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.518Z info: Connector Model:Model:ObservatiesEnMetingen:RuimtelijkBemonsteringsObject:(RuimtelijkBemonsteringsObject -> Object) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.515Z info: Connector Model:Model:ObservatiesEnMetingen:RuimtelijkBemonsteringsObject:(RuimtelijkBemonsteringsObject -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.518Z info: Connector Model:Model:ObservatiesEnMetingen:Traject:(Traject -> RuimtelijkBemonsteringsObject) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.515Z info: Connector Model:Model:ObservatiesEnMetingen:Traject:(Traject -> RuimtelijkBemonsteringsObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.518Z info: Connector Model:Model:OpenbaarDomein:Deel:(Deel -> FysiekObject) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.515Z info: Connector Model:Model:OpenbaarDomein:Deel:(Deel -> FysiekObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.518Z info: Connector Model:Model:OpenbaarDomein:Element:(Element -> FysiekObject) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.515Z info: Connector Model:Model:OpenbaarDomein:Element:(Element -> FysiekObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.518Z info: Connector Model:Model:OpenbaarDomein:FysiekObject:(FysiekObject -> OpenbaarDomeinObject) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.515Z info: Connector Model:Model:OpenbaarDomein:FysiekObject:(FysiekObject -> OpenbaarDomeinObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.518Z info: Connector Model:Model:OTL:AIMObject:(AIMObject -> OpenbaarDomeinObject) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.515Z info: Connector Model:Model:OTL:AIMObject:(AIMObject -> OpenbaarDomeinObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.519Z info: Connector Model:Model:KwaliteitOpenbaarDomein:KwantitatiefResultaat:(KwantitatiefResultaat -> KwaliteitsResultaat) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.515Z info: Connector Model:Model:KwaliteitOpenbaarDomein:KwantitatiefResultaat:(KwantitatiefResultaat -> KwaliteitsResultaat) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.519Z info: Connector Model:Model:ObservatiesEnMetingen:Scene:(Scene -> RuimtelijkBemonsteringsObject) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.515Z info: Connector Model:Model:ObservatiesEnMetingen:Scene:(Scene -> RuimtelijkBemonsteringsObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.519Z info: Connector Model:Model:KwaliteitOpenbaarDomein:Conformiteitsresultaat:(Conformiteitsresultaat -> KwaliteitsResultaat) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.515Z info: Connector Model:Model:KwaliteitOpenbaarDomein:Conformiteitsresultaat:(Conformiteitsresultaat -> KwaliteitsResultaat) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.519Z info: Connector Model:Model:KwaliteitOpenbaarDomein:BeschrijvendResultaat:(BeschrijvendResultaat -> KwaliteitsResultaat) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.515Z info: Connector Model:Model:KwaliteitOpenbaarDomein:BeschrijvendResultaat:(BeschrijvendResultaat -> KwaliteitsResultaat) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.519Z info: Connector Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:(KwaliteitsObservatie -> KwaliteitsSensor) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:(KwaliteitsObservatie -> KwaliteitsSensor) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.519Z info: Connector Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:(KwaliteitsObservatie -> KwaliteitsObservatieprocedure) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:(KwaliteitsObservatie -> KwaliteitsObservatieprocedure) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.519Z info: Connector Model:Model:OTL:Markering:(Markering -> AIMObject) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:OTL:Markering:(Markering -> AIMObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.519Z info: Connector Model:Model:QUDT:Eenheid:(Eenheid -> Concept) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:QUDT:Eenheid:(Eenheid -> Concept) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.519Z info: Connector Model:Model:W3C-Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:W3C-Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.519Z info: Connector Model:Model:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.519Z info: Connector Model:Model:IM-BenoemdeWaarden:NaamInNaamruimte:(NaamInNaamruimte -> GeneriekeNaam) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:IM-BenoemdeWaarden:NaamInNaamruimte:(NaamInNaamruimte -> GeneriekeNaam) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.519Z info: Connector Model:Model:OpenbaarDomein:Wegmarkering:(Wegmarkering -> Element) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:OpenbaarDomein:Wegmarkering:(Wegmarkering -> Element) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.519Z info: Connector Model:Model:OTL:Laag:(Laag -> AIMObject) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:OTL:Laag:(Laag -> AIMObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.519Z info: Connector Model:Model:KwaliteitOpenbaarDomein:MarkeringKOD:(MarkeringKOD -> Markering) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:KwaliteitOpenbaarDomein:MarkeringKOD:(MarkeringKOD -> Markering) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.519Z info: Connector Model:Model:ObservatiesEnMetingen:LIDARpuntenwolk:(LIDARpuntenwolk -> RuimtelijkBemonsteringsObject) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:ObservatiesEnMetingen:LIDARpuntenwolk:(LIDARpuntenwolk -> RuimtelijkBemonsteringsObject) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.520Z info: Connector Model:Model:OSLO-Generiek:Vlak:(Vlak -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:OSLO-Generiek:Vlak:(Vlak -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.520Z info: Connector Model:Model:OSLO-Generiek:3Dobject:(3Dobject -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:OSLO-Generiek:3Dobject:(3Dobject -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.520Z info: Connector Model:Model:OSLO-Generiek:Curve:(Curve -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:OSLO-Generiek:Curve:(Curve -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.520Z info: Connector Model:Model:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.520Z info: Connector Model:Model:IM-BenoemdeWaarden:LokaleNaam:(LokaleNaam -> GeneriekeNaam) is not an association with a source role. Ignoring this connector.
+2025-09-12T10:24:34.516Z info: Connector Model:Model:IM-BenoemdeWaarden:LokaleNaam:(LokaleNaam -> GeneriekeNaam) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:40:40.520Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-09-12T10:24:34.517Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:40:40.520Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
+2025-09-12T10:24:34.517Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:40:40.520Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:ObservatiesEnMetingen) and fallback URI (http://todo.com/) will be assigned.
+2025-09-12T10:24:34.517Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:ObservatiesEnMetingen). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:40:40.520Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:FOAF) and fallback URI (http://todo.com/) will be assigned.
+2025-09-12T10:24:34.517Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:FOAF). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:40:40.521Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OpenbaarDomein) and fallback URI (http://todo.com/) will be assigned.
+2025-09-12T10:24:34.517Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:OpenbaarDomein). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:40:40.521Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OTL) and fallback URI (http://todo.com/) will be assigned.
+2025-09-12T10:24:34.517Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:OTL). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:40:40.521Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:SensorenEnBemonstering) and fallback URI (http://todo.com/) will be assigned.
+2025-09-12T10:24:34.517Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:SensorenEnBemonstering). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:40:40.521Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-09-12T10:24:34.517Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:40:40.521Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:SSN/SOSA) and fallback URI (http://todo.com/) will be assigned.
+2025-09-12T10:24:34.517Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:SSN/SOSA). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:40:40.521Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:skos) and fallback URI (http://todo.com/) will be assigned.
+2025-09-12T10:24:34.517Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:skos). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:40:40.521Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:QUDT) and fallback URI (http://todo.com/) will be assigned.
+2025-09-12T10:24:34.518Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:QUDT). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:40:40.521Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:W3C-Time) and fallback URI (http://todo.com/) will be assigned.
+2025-09-12T10:24:34.518Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:W3C-Time). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:40:40.521Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:IM-BenoemdeWaarden) and fallback URI (http://todo.com/) will be assigned.
+2025-09-12T10:24:34.518Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:IM-BenoemdeWaarden). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:40:40.524Z error: [AttributeConverterHandler]: Package tag was defined (OSLO-SensorenEnBemonstering), but unable to find a related package object for attribute (Model:Model:SensorenEnBemonstering:Observatieprocedure:parameter).
+2025-09-12T10:24:34.521Z error: [AttributeConverterHandler]: Package tag was defined (OSLO-SensorenEnBemonstering), but unable to find a related package object for attribute (Model:Model:SensorenEnBemonstering:Observatieprocedure:parameter).
 
-2025-05-20T08:40:40.525Z error: [AttributeConverterHandler]: Package tag was defined (OSLO-SensorenEnBemonstering), but unable to find a related package object for attribute (Model:Model:SensorenEnBemonstering:Observatieprocedure:specificatie).
+2025-09-12T10:24:34.521Z error: [AttributeConverterHandler]: Package tag was defined (OSLO-SensorenEnBemonstering), but unable to find a related package object for attribute (Model:Model:SensorenEnBemonstering:Observatieprocedure:specificatie).
 
-2025-05-20T08:40:40.530Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
+2025-09-12T10:24:34.527Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
 
-2025-05-20T08:40:40.531Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Markering has an empty value for tag usageNote-nl.
+2025-09-12T10:24:34.527Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Markering has an empty value for tag usageNote-nl.
 
-2025-05-20T08:40:40.531Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Signalisatie has an empty value for tag usageNote-nl.
+2025-09-12T10:24:34.527Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Signalisatie has an empty value for tag usageNote-nl.
 
-2025-05-20T08:40:40.531Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Laag has an empty value for tag usageNote-nl.
+2025-09-12T10:24:34.528Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Laag has an empty value for tag usageNote-nl.
 
-2025-05-20T08:40:40.533Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieStatus has an empty value for tag ap-usageNote-nl.
+2025-09-12T10:24:34.532Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieStatus has an empty value for tag ap-usageNote-nl.
 
-2025-05-20T08:40:40.533Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieClassificatie has an empty value for tag ap-usageNote-nl.
+2025-09-12T10:24:34.532Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieClassificatie has an empty value for tag ap-usageNote-nl.
 
-2025-05-20T08:40:40.536Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieType has an empty value for tag ap-usageNote-nl.
+2025-09-12T10:24:34.532Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieType has an empty value for tag ap-usageNote-nl.
 
-2025-05-20T08:40:40.537Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieActiviteit has an empty value for tag ap-usageNote-nl.
+2025-09-12T10:24:34.533Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:OrganisatieActiviteit has an empty value for tag ap-usageNote-nl.
 
-2025-05-20T08:40:40.537Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Implementatieelement:KwantWrdInMeter has an empty value for tag usageNote-nl.
+2025-09-12T10:24:34.533Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Implementatieelement:KwantWrdInMeter has an empty value for tag usageNote-nl.
 
-2025-05-20T08:40:40.537Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Implementatieelement:KwantWrdInVierkanteMeter has an empty value for tag usageNote-nl.
+2025-09-12T10:24:34.533Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Implementatieelement:KwantWrdInVierkanteMeter has an empty value for tag usageNote-nl.
 
-2025-05-20T08:40:40.537Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Onderdeel:KlMarkeringSoort has an empty value for tag usageNote-nl.
+2025-09-12T10:24:34.534Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Onderdeel:KlMarkeringSoort has an empty value for tag usageNote-nl.
 
-2025-05-20T08:40:40.537Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Onderdeel:KlKleurMarkering has an empty value for tag usageNote-nl.
+2025-09-12T10:24:34.534Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Onderdeel:KlKleurMarkering has an empty value for tag usageNote-nl.
 
-2025-05-20T08:40:40.539Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OpenbaarDomein:FysiekObject:geometrie).
+2025-09-12T10:24:34.537Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OpenbaarDomein:FysiekObject:geometrie).
 
-2025-05-20T08:40:40.540Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:QUDT:KwantitatieveWaarde:eenheid).
+2025-09-12T10:24:34.537Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:QUDT:KwantitatieveWaarde:eenheid).
 
-2025-05-20T08:40:40.541Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Organisatie:Organisatie:voorkeursnaam).
+2025-09-12T10:24:34.538Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Organisatie:Organisatie:voorkeursnaam).
 
-2025-05-20T08:40:40.541Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OpenbaarDomein:FysiekObject:identificator).
+2025-09-12T10:24:34.538Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OpenbaarDomein:FysiekObject:identificator).
 
-2025-05-20T08:40:40.543Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Markering:kleur has an empty value for tag usageNote-nl.
+2025-09-12T10:24:34.539Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Markering:kleur has an empty value for tag usageNote-nl.
 
-2025-05-20T08:40:40.543Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Markering:kleur).
+2025-09-12T10:24:34.539Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Markering:kleur).
 
-2025-05-20T08:40:40.543Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Markering:markeringsoort has an empty value for tag usageNote-nl.
+2025-09-12T10:24:34.539Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Markering:markeringsoort has an empty value for tag usageNote-nl.
 
-2025-05-20T08:40:40.543Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Markering:markeringsoort).
+2025-09-12T10:24:34.539Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Markering:markeringsoort).
 
-2025-05-20T08:40:40.543Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:AIMObject:identificator).
+2025-09-12T10:24:34.540Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:AIMObject:identificator).
 
-2025-05-20T08:40:40.544Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:^fenomeentijd).
+2025-09-12T10:24:34.540Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:^fenomeentijd).
 
-2025-05-20T08:40:40.544Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:ObservatiesEnMetingen:LIDARpuntenwolk:^geometrie).
+2025-09-12T10:24:34.540Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:ObservatiesEnMetingen:LIDARpuntenwolk:^geometrie).
 
-2025-05-20T08:40:40.544Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:^geldigeTijd).
+2025-09-12T10:24:34.540Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:^geldigeTijd).
 
-2025-05-20T08:40:40.544Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:^parameter).
+2025-09-12T10:24:34.540Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:^parameter).
 
-2025-05-20T08:40:40.544Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:^type).
+2025-09-12T10:24:34.541Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatie:^type).
 
-2025-05-20T08:40:40.544Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Markering:lengte).
+2025-09-12T10:24:34.541Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Markering:lengte).
 
-2025-05-20T08:40:40.544Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Laag:breedte has an empty value for tag usageNote-nl.
+2025-09-12T10:24:34.541Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Laag:breedte has an empty value for tag usageNote-nl.
 
-2025-05-20T08:40:40.544Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Laag:breedte).
+2025-09-12T10:24:34.541Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Laag:breedte).
 
-2025-05-20T08:40:40.545Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Laag:lengte has an empty value for tag usageNote-nl.
+2025-09-12T10:24:34.541Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Laag:lengte has an empty value for tag usageNote-nl.
 
-2025-05-20T08:40:40.545Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Laag:lengte).
+2025-09-12T10:24:34.541Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Laag:lengte).
 
-2025-05-20T08:40:40.545Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Laag:oppervlakte has an empty value for tag usageNote-nl.
+2025-09-12T10:24:34.541Z warn: [ConverterHandler]: Entity with path Model:Model:OTL:Laag:oppervlakte has an empty value for tag usageNote-nl.
 
-2025-05-20T08:40:40.545Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Laag:oppervlakte).
+2025-09-12T10:24:34.541Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Laag:oppervlakte).
 
-2025-05-20T08:40:40.545Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Markering:oppervlakte).
+2025-09-12T10:24:34.541Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Markering:oppervlakte).
 
-2025-05-20T08:40:40.545Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Markering:breedte).
+2025-09-12T10:24:34.541Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Markering:breedte).
 
-2025-05-20T08:40:40.545Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Markering:kleurKOD).
+2025-09-12T10:24:34.541Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OTL:Markering:kleurKOD).
 
-2025-05-20T08:40:40.546Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatieprocedure:^parameter).
+2025-09-12T10:24:34.542Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:KwaliteitOpenbaarDomein:KwaliteitsObservatieprocedure:^parameter).
 
-2025-05-20T08:40:40.546Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:ObservatiesEnMetingen:BenoemdeWaarde:naam).
+2025-09-12T10:24:34.542Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:ObservatiesEnMetingen:BenoemdeWaarde:naam).
 
-2025-05-20T08:40:40.546Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:ObservatiesEnMetingen:BenoemdeWaarde:waarde).
+2025-09-12T10:24:34.542Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:ObservatiesEnMetingen:BenoemdeWaarde:waarde).
 
-2025-05-20T08:40:40.546Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Generiek:Geometrie:gml).
+2025-09-12T10:24:34.542Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Generiek:Geometrie:gml).
 
-2025-05-20T08:40:40.547Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Generiek:Geometrie:wkt).
+2025-09-12T10:24:34.542Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:OSLO-Generiek:Geometrie:wkt).
 
-2025-05-20T08:40:40.547Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:ObservatiesEnMetingen:Traject:^geometrie).
+2025-09-12T10:24:34.542Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:ObservatiesEnMetingen:Traject:^geometrie).
 
-2025-05-20T08:40:40.547Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:ObservatiesEnMetingen:RuimtelijkBemonsteringsObject:identificator).
+2025-09-12T10:24:34.543Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:ObservatiesEnMetingen:RuimtelijkBemonsteringsObject:identificator).
 
-2025-05-20T08:40:40.547Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:KwaliteitOpenbaarDomein:KwaliteitsSensor:type).
+2025-09-12T10:24:34.543Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:KwaliteitOpenbaarDomein:KwaliteitsSensor:type).
 
-2025-05-20T08:40:40.547Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:ObservatiesEnMetingen:Scene:^geometrie).
+2025-09-12T10:24:34.543Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Model:ObservatiesEnMetingen:Scene:^geometrie).
 
-2025-05-20T08:40:40.547Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Implementatieelement:KwantWrdInMeter:waarde has an empty value for tag usageNote-nl.
+2025-09-12T10:24:34.543Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Implementatieelement:KwantWrdInMeter:waarde has an empty value for tag usageNote-nl.
 
-2025-05-20T08:40:40.548Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Implementatieelement:KwantWrdInVierkanteMeter:waarde has an empty value for tag usageNote-nl.
+2025-09-12T10:24:34.543Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Implementatieelement:KwantWrdInVierkanteMeter:waarde has an empty value for tag usageNote-nl.
 
 #||# -------------------------------------
 

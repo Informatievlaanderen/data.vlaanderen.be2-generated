@@ -167,13 +167,6 @@ error: missing '/tmp/generated/doc/vocabularium/erosiepoel/ontwerpstandaard/2024
 #||# 
 #||# index.html check
 
-#||#    + checking /home/circleci/project/config/test/generiek.publication.json
-#||# 
-#||# Directory check
-#||# 
-#||# index.html check
-error: missing '/tmp/generated/doc/vocabularium/generiek/ontwerpstandaard/toolchain4/index.html'
-
 #||#    + checking /home/circleci/project/config/test/hulp-dienst-verlening-gedetineerden.publication.json
 #||# 
 #||# Directory check

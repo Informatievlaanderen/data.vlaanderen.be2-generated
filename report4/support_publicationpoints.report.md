@@ -54,8 +54,6 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/gebouw.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/test/generiek.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/test/hulp-dienst-verlening-gedetineerden.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/incentiveringsplatform.publication.json
@@ -226,6 +224,10 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17",
   "/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/gebieden",
+  "/tmp/generated/doc/applicatieprofiel/generiek-basis",
+  "/tmp/generated/doc/applicatieprofiel/generiek-basis/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/applicatieprofiel/generiek-basis/zonderstatus/2018-10-04",
+  "/tmp/generated/doc/applicatieprofiel/generiek-basis/zonderstatus/2019-07-01",
   "/tmp/generated/doc/applicatieprofiel/generieke-terugmeldfaciliteit",
   "/tmp/generated/doc/applicatieprofiel/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
   "/tmp/generated/doc/applicatieprofiel/infrastructuurelementen",
@@ -303,6 +305,8 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/energiehuis/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/erosiepoel",
   "/tmp/generated/doc/vocabularium/fietsinfrastructuur/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/vocabularium/generiek/zonderstatus/2018-10-04",
+  "/tmp/generated/doc/vocabularium/generiek/zonderstatus/2019-07-01",
   "/tmp/generated/doc/vocabularium/gezondheidstoestand/ontwerpstandaard/test",
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/public-review",
@@ -342,6 +346,7 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/bodem-en-ondergrond",
   "/tmp/generated/ns/bodem-en-ondergrond/interpretaties",
   "/tmp/generated/ns/bodem-en-ondergrond/observaties",
+  "/tmp/generated/ns/generiek",
   "/tmp/generated/ns/grondboringen",
   "/tmp/generated/ns/kindfiche",
   "/tmp/generated/ns/leercredential",

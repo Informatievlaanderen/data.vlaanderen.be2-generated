@@ -24,7 +24,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#PersoonShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#GeslachtShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#DienstaanbodShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#DienstconsumptieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#PubliekeDienstverlening(consumptie)Shape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#BeëindigingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#InschrijvingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#ReactietypeShape>,
@@ -432,24 +432,6 @@
   ];
   shacl:targetClass <http://purl.org/vocab/cpsv#PublicService> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#DienstconsumptieShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#Dienstconsumptie.Dienstaanbod>;
-    shacl:class <http://purl.org/vocab/cpsv#PublicService>;
-    shacl:description "Linkt een bepaalde consumptie van een dienstverlening (een transactie) met het product uit de dienstencatalogus."@nl;
-    shacl:maxCount "1";
-    shacl:name "dienstaanbod"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/transactie#isInstantieVan>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#Dienstconsumptie.Participatie>;
-    shacl:class <http://data.europa.eu/m8g/Participation>;
-    shacl:description "Verwijst naar de afnemers van de dienst, inclusief hun respectieve rollen."@nl;
-    shacl:name "participatie"@nl;
-    shacl:path prov:qualifiedAssociation
-  ];
-  shacl:targetClass <http://purl.org/vocab/cpsv#PublicService> .
-
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#DurationShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass xsd:duration .
@@ -849,6 +831,7 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#Persoonsrelatie.Persoon>;
     shacl:class <http://www.w3.org/ns/person#Person>;
+    shacl:description "De persoon waarmee er een persoonsrelatie is."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "persoon"@nl;
@@ -865,6 +848,24 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#PersoonsrelatietypeShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#PubliekeDienstverlening(consumptie)Shape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#PubliekeDienstverlening(consumptie).Dienstaanbod>;
+    shacl:class <http://purl.org/vocab/cpsv#PublicService>;
+    shacl:description "Linkt een bepaalde consumptie van een dienstverlening (een transactie) met het product uit de dienstencatalogus."@nl;
+    shacl:maxCount "1";
+    shacl:name "dienstaanbod"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/transactie#isInstantieVan>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#PubliekeDienstverlening(consumptie).Participatie>;
+    shacl:class <http://data.europa.eu/m8g/Participation>;
+    shacl:description "Verwijst naar de afnemers van de dienst, inclusief hun respectieve rollen."@nl;
+    shacl:name "participatie"@nl;
+    shacl:path prov:qualifiedAssociation
+  ];
+  shacl:targetClass <http://purl.org/vocab/cpsv#PublicService> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#ReactietypeShape> a shacl:NodeShape;
   shacl:closed false;
@@ -896,7 +897,7 @@
     shacl:name "persoon"@nl;
     shacl:path rdf:subject
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#Statistiek> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4#SpecifiekeBehoefteShape> a shacl:NodeShape;
   shacl:closed false;
