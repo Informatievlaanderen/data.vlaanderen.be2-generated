@@ -2,9 +2,5 @@
 
 #||# -------------------------------------
 
-2025-09-12T10:33:01.198Z warn: Unable to find the contributor type for "AuteurVoornaam AuteurNaam" using column "Organisatie". Please make sure this column has a value set for this person.
-
-2025-09-12T10:33:01.200Z warn: Unable to find the contributor type for "EditorVoornaam EditorNaam" using column "Organisatie". Please make sure this column has a value set for this person.
-
-2025-09-12T10:33:01.200Z warn: Unable to find the contributor type for "MedewerkerVoornaam MedewerkerNaam" using column "Organisatie". Please make sure this column has a value set for this person.
+2025-09-12T11:52:02.586Z error: [CsvConverterHandler] Unable to convert the provided csv into a stakeholders-file. Error: Invalid Record Length: columns length is 7, got 6 on line 2 for record Dries,Beheydt,Informatie Vlaanderen,dries.beheydt@kb.vlaanderen.be,https://data.vlaanderen.be/id/organisatie/OVO001828,A
 
