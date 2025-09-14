@@ -2,11 +2,11 @@
 
 #||# -------------------------------------  
 
-2025-09-12T10:49:18.944Z error: Unable to find the definition for property [urn:oslo-toolchain:7168b6e0ab1ad7e95d819fc07a8711b6709ed080086b782e6e31e8f9e20a39d6](all-metadata-dcat.jsonld#L5756).
+2025-09-14T21:07:37.846Z error: Unable to find the definition for property [urn:oslo-toolchain:7168b6e0ab1ad7e95d819fc07a8711b6709ed080086b782e6e31e8f9e20a39d6](all-metadata-dcat.jsonld#L5830).
 
-2025-09-12T10:49:18.946Z error: Unable to find the definition for property [urn:oslo-toolchain:7c463a9fa88cd8877517674ce6f4c1977a60aa0f1900a32be868065f41238a0d](all-metadata-dcat.jsonld#L5792).
+2025-09-14T21:07:37.847Z error: Unable to find the definition for property [urn:oslo-toolchain:7c463a9fa88cd8877517674ce6f4c1977a60aa0f1900a32be868065f41238a0d](all-metadata-dcat.jsonld#L5866).
 
-2025-09-12T10:49:18.946Z error: Unable to find the definition for property [urn:oslo-toolchain:95838aa419b0cc36c1447acd0939b6a412f4645b4a83982e84b62ba1b9cf6319](all-metadata-dcat.jsonld#L7908).
+2025-09-14T21:07:37.848Z error: Unable to find the definition for property [urn:oslo-toolchain:95838aa419b0cc36c1447acd0939b6a412f4645b4a83982e84b62ba1b9cf6319](all-metadata-dcat.jsonld#L8004).
 
-2025-09-12T10:49:18.947Z error: Unable to find the definition for property [urn:oslo-toolchain:0512a862d47557595179f9f7164576c83752a10d3eac0ceac42ada2fe7aebccc](all-metadata-dcat.jsonld#L7928).
+2025-09-14T21:07:37.848Z error: Unable to find the definition for property [urn:oslo-toolchain:0512a862d47557595179f9f7164576c83752a10d3eac0ceac42ada2fe7aebccc](all-metadata-dcat.jsonld#L8024).
 
