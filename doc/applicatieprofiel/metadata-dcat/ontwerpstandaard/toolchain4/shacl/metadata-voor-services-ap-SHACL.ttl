@@ -20,14 +20,19 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#PlaatsShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#HerkomstVerklaringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#VoorbeeldweergaveShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#RechtsgrondShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#StandaardShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#LicentieDocumentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#AgentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#RelatieQualificatieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#TijdsperiodeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#FrequentieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#LiteralShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#StringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#IdentificatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatetimeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#LiteralVoorTijdsinformatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#ContactinfoShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#ContactpuntShape> .
 
@@ -426,6 +431,72 @@ wordt."""@nl;
   ];
   shacl:targetClass dcat:DataService .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.Beschrijving>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Een bondige tekstuele bescrhijving van de Dataset Serie."@nl;
+    shacl:minCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.PublicatieDatum>;
+    shacl:datatype rdfs:Literal;
+    shacl:maxCount "1";
+    shacl:name "publicatie datum"@nl;
+    shacl:path dc:issued
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.Wijzigingsdatum>;
+    shacl:datatype rdfs:Literal;
+    shacl:maxCount "1";
+    shacl:name "wijzigingsdatum"@nl;
+    shacl:path dc:modified
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.Titel>;
+    shacl:datatype rdfs:Literal;
+    shacl:minCount "1";
+    shacl:name "titel"@nl;
+    shacl:path dc:title
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.Contactpunt>;
+    shacl:class vcard:Kind;
+    shacl:description "De relevante contactinformatie waarmee een eindgebruiker in contact kan treden met de verantwoordelijken van de Dataset Serie."@nl;
+    shacl:name "contactpunt"@nl;
+    shacl:path dcat:contactPoint
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.BelanghebbendeWetgeving>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description "De wetgeving die aanzet tot het aanmaken of het beheren van de Dataset Serie."@nl;
+    shacl:name "belanghebbende wetgeving"@nl;
+    shacl:path <http://data.europa.eu/r5r/applicableLegislation>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.Periodiciteit>;
+    shacl:class dc:Frequency;
+    shacl:maxCount "1";
+    shacl:name "periodiciteit"@nl;
+    shacl:path dc:accrualPeriodicity
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.GeografischeDekking>;
+    shacl:class dc:Location;
+    shacl:name "geografische dekking"@nl;
+    shacl:path dc:spatial
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.TemporeleDekking>;
+    shacl:class dc:PeriodOfTime;
+    shacl:name "temporele dekking"@nl;
+    shacl:path dc:temporal
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.Uitgever>;
+    shacl:class dc:Agent;
+    shacl:description "De uitgever, de entiteit die verantwoordelijk is voor het beschikbaar stellen, van de resource in de catalogus."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "uitgever"@nl;
+    shacl:path dc:publisher
+  ];
+  shacl:targetClass dcat:DatasetSeries .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -573,6 +644,11 @@ wordt."""@nl;
     shacl:maxCount "n";
     shacl:name "eigenaar"@nl;
     shacl:path dc:rightsHolder
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#Dataset.InSerie>;
+    shacl:class dcat:DatasetSeries;
+    shacl:name "in serie"@nl;
+    shacl:path dcat:inSeries
   ];
   shacl:targetClass dcat:Dataset .
 
@@ -666,6 +742,10 @@ waaraan de distributie voldoet."""@nl;
   ];
   shacl:targetClass dcat:Distribution .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#FrequentieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass dc:Frequency .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#HerkomstVerklaringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass dc:ProvenanceStatement .
@@ -721,6 +801,10 @@ waaraan de distributie voldoet."""@nl;
   shacl:closed false;
   shacl:targetClass rdfs:Literal .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#LiteralVoorTijdsinformatieShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass rdfs:Literal .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#PlaatsShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
@@ -753,6 +837,10 @@ waaraan de distributie voldoet."""@nl;
     shacl:path rdfs:label
   ];
   shacl:targetClass dc:Location .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#RechtsgrondShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResource> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#RelatieQualificatieShape> a shacl:NodeShape;
   shacl:closed false;
@@ -842,6 +930,35 @@ vinden"""@nl;
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#StringShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:targetClass xsd:string .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#TijdsperiodeShape> a shacl:NodeShape;
+  shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#Tijdsperiode.EindDatum>;
+    shacl:datatype rdfs:Literal;
+    shacl:maxCount "1";
+    shacl:name "eind datum"@nl;
+    shacl:path dcat:endDate
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#Tijdsperiode.StartDatum>;
+    shacl:datatype rdfs:Literal;
+    shacl:maxCount "1";
+    shacl:name "start datum"@nl;
+    shacl:path dcat:startDate
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#Tijdsperiode.HeeftStart>;
+    shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:maxCount "1";
+    shacl:name "heeft start"@nl;
+    shacl:path <http://www.w3.org/2006/time#hasBeginning>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#Tijdsperiode.HeeftEinde>;
+    shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:maxCount "1";
+    shacl:name "heeft einde"@nl;
+    shacl:path <http://www.w3.org/2006/time#hasEnd>
+  ];
+  shacl:targetClass dc:PeriodOfTime .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#VoorbeeldweergaveShape> a shacl:NodeShape;
   shacl:closed false;
