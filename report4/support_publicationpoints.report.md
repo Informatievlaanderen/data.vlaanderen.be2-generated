@@ -289,6 +289,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
   "/tmp/generated/doc/vocabularium/leermiddelen/ontwerpstandaard/2025-02-24",
   "/tmp/generated/doc/vocabularium/mandaat/ontwerpdocument/2020-01-06",
+  "/tmp/generated/doc/vocabularium/metadata-dcat/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/mobiliteit/Hoppinpunten/kandidaatstandaard/2022-04-01",
   "/tmp/generated/doc/vocabularium/mobiliteitsbudget",
   "/tmp/generated/doc/vocabularium/mobiliteitsbudget/erkendestandaard/2025-02-06",
