@@ -14,6 +14,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#VeranderingsgebeurtenisShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#FormeleorganisatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#OrganisatieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#AgentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#VestigingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#LidmaatschapShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#RechtspersoonlijkheidtypeShape>,
@@ -35,7 +36,6 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#OrganisatieactiviteitShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#RolShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#FusieShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#AgentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#MediaobjectShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#PlaatsShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#TaalShape>,
@@ -158,6 +158,13 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#AgentShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Agent.Islidvan>;
+    shacl:class org:Organization;
+    shacl:description "Niet nader bepaald lidmaatschap van een Agent van een Organisatie."@nl;
+    shacl:name "isLidVan"@nl;
+    shacl:path org:memberOf
+  ];
   shacl:targetClass dc:Agent .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#ContactpuntShape> a shacl:NodeShape;
@@ -172,10 +179,10 @@
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Contactpunt.Naam>;
     shacl:datatype xsd:string;
-    shacl:description "Naam van bvb de persoon die men kan contacteren."@nl;
+    shacl:description "Naam van bijvoorbeeld de persoon die men kan contacteren."@nl;
     shacl:maxCount "1";
     shacl:name "naam"@nl;
-    shacl:path foaf:name
+    shacl:path schemas:contactnaam
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Contactpunt.Email>;
     shacl:datatype xsd:string;
@@ -210,7 +217,7 @@
     shacl:description "Website waarnaar men kan surfen."@nl;
     shacl:maxCount "1";
     shacl:name "pagina"@nl;
-    shacl:path foaf:page
+    shacl:path foaf:homepage
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Contactpunt.Adres>;
     shacl:class <http://www.w3.org/ns/locn#Address>;
@@ -219,11 +226,11 @@
     shacl:name "adres"@nl;
     shacl:path <http://www.w3.org/ns/locn#address>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Contactpunt.UrenBeschikbaarheid>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Contactpunt.Beschikbaarheid>;
     shacl:class schemas:OpeningHoursSpecification;
     shacl:description "Periode waarin contact kan worden opgenomen."@nl;
     shacl:maxCount "1";
-    shacl:name "uren beschikbaarheid"@nl;
+    shacl:name "beschikbaarheid"@nl;
     shacl:path schemas:hoursAvailable
   ];
   shacl:targetClass schemas:ContactPoint .
@@ -279,21 +286,21 @@
     shacl:description "Aard van de rechtspersoonlijkheid."@nl;
     shacl:maxCount "1";
     shacl:name "rechtspersoonlijkheid"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/organisatie#rechtspersoonlijkheid>
+    shacl:path <http://todo.com/rechtspersoonlijkheid>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Geregistreerdeorganisatie.Rechtstoestand>;
     shacl:class skos:Concept;
     shacl:description "Status van een GeregistreerdeOrganisatie."@nl;
     shacl:maxCount "1";
     shacl:name "rechtstoestand"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/organisatie#rechtstoestand>
+    shacl:path <http://todo.com/rechtstoestand>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Geregistreerdeorganisatie.Rechtsvorm>;
     shacl:class skos:Concept;
     shacl:description "Juridisch statuut van de geregistreerde organisatie."@nl;
     shacl:maxCount "1";
     shacl:name "rechtsvorm"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/organisatie#rechtsvorm>
+    shacl:path <http://todo.com/rechtsvorm>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Geregistreerdeorganisatie.Registratie>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
@@ -369,6 +376,22 @@
     shacl:minCount "1";
     shacl:name "rol"@nl;
     shacl:path org:role
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Lidmaatschap.Lid>;
+    shacl:class org:Organization;
+    shacl:description "Lidmaatschap van een agent (van een organisatie)."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "lid"@nl;
+    shacl:path org:member
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Lidmaatschap.IsLidmaatschapBij>;
+    shacl:class dc:Agent;
+    shacl:description "Organisatie waarop het lidmaatschap (van een agent) betrekking heeft."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "is lidmaatschap bij"@nl;
+    shacl:path org:organization
   ];
   shacl:targetClass org:Membership .
 
@@ -404,37 +427,37 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#OpeningsurenspecificatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Openingsurenspecificatie.DagVanWeek>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Openingsurenspecificatie.Dagvandeweek>;
     shacl:datatype xsd:anyURI;
     shacl:description "Dag van de week waarvoor de openingsuren geldig zijn."@nl;
     shacl:maxCount "1";
-    shacl:name "dag van week"@nl;
+    shacl:name "dagVanDeWeek"@nl;
     shacl:path schemas:dayOfWeek
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Openingsurenspecificatie.GeldigTot>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Openingsurenspecificatie.Geldigtot>;
     shacl:datatype xsd:dateTime;
     shacl:description "Datum tot wanneer de opgegeven openingsuren gelden."@nl;
     shacl:maxCount "1";
-    shacl:name "geldig tot"@nl;
+    shacl:name "geldigTot"@nl;
     shacl:path schemas:validThrough
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Openingsurenspecificatie.GeldigVan>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Openingsurenspecificatie.Geldigvan>;
     shacl:datatype xsd:dateTime;
     shacl:description "Datum vanaf wanneer de opgegeven openingsuren gelden."@nl;
     shacl:maxCount "1";
-    shacl:name "geldig van"@nl;
+    shacl:name "geldigVan"@nl;
     shacl:path schemas:validFrom
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Openingsurenspecificatie.Gesloten>;
     shacl:datatype xsd:time;
-    shacl:description "Sluitingsuur van de plaats of dienst op de opgegeven dag vd week."@nl;
+    shacl:description "Sluitingsuur van de plaats of dienst op de opgegeven dag van de week."@nl;
     shacl:maxCount "1";
     shacl:name "gesloten"@nl;
     shacl:path schemas:closes
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Openingsurenspecificatie.Open>;
     shacl:datatype xsd:time;
-    shacl:description "Openingsuur van de plaats of dienst op de opgegeven dag vd week."@nl;
+    shacl:description "Openingsuur van de plaats of dienst op de opgegeven dag van de week."@nl;
     shacl:maxCount "1";
     shacl:name "open"@nl;
     shacl:path schemas:opens
@@ -544,9 +567,10 @@
     shacl:name "heeftPositie"@nl;
     shacl:path org:hasPost
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Organisatie.Isgeassocieerdmet>;
     shacl:class org:Organization;
     shacl:description "Niet nader bepaalde relatie met een andere Organisatie."@nl;
-    shacl:name "http://www.w3.org/ns/org#linkedTo"@nl;
+    shacl:name "isGeassocieerdMet"@nl;
     shacl:path org:linkedTo
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Organisatie.Heeftvestiging>;
@@ -578,6 +602,12 @@
     shacl:description "Verwijst naar een Organisatie-eenheid die deel uitmaakt van de Organisatie, bijvoorbeeld een afdeling."@nl;
     shacl:name "heeftEenheid"@nl;
     shacl:path org:hasUnit
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Organisatie.Lid>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die lid is (van een Organisatie)."@nl;
+    shacl:name "lid"@nl;
+    shacl:path org:hasMember
   ];
   shacl:targetClass org:Organization .
 
@@ -615,14 +645,14 @@
   shacl:property [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Periode.Tot>;
     shacl:class <http://www.w3.org/2006/time#Instant>;
-    shacl:description "Einde ve Temporele Entiteit."@nl;
+    shacl:description "Einde van een TemporeleEntiteit."@nl;
     shacl:maxCount "1";
     shacl:name "tot"@nl;
     shacl:path <http://www.w3.org/2006/time#hasEnd>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Periode.Van>;
     shacl:class <http://www.w3.org/2006/time#Instant>;
-    shacl:description "Start ve Temporele Entiteit."@nl;
+    shacl:description "Start van een TemporeleEntiteit."@nl;
     shacl:maxCount "1";
     shacl:name "van"@nl;
     shacl:path <http://www.w3.org/2006/time#hasBeginning>
