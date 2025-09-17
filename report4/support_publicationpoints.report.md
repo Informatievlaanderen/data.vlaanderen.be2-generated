@@ -62,6 +62,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/inname-openbaar-domein.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/kabels-en-leidingen-fix.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/kindfiche.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/kwaliteit-wegen-en-markeringen.publication.json
@@ -233,8 +235,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/infrastructuurelementen",
   "/tmp/generated/doc/applicatieprofiel/inname-openbaar-domein",
   "/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties",
-  "/tmp/generated/doc/applicatieprofiel/kabels-en-leidingen",
-  "/tmp/generated/doc/applicatieprofiel/kabels-en-leidingen/kandidaatstandaard/2023-12-19",
   "/tmp/generated/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/leerinschrijfcredential/kandidaatstandaard/2024-05-16",
   "/tmp/generated/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2026-02-24",
@@ -318,7 +318,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/mobiliteit/Hoppinpunten/kandidaatstandaard/2022-04-01",
   "/tmp/generated/doc/vocabularium/mobiliteitsbudget/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/notificatie/ontwerpdocument/2020-01-06",
-  "/tmp/generated/doc/vocabularium/nutsvoorzieningen/kandidaatstandaard/2023-12-19",
   "/tmp/generated/doc/vocabularium/nutsvoorzieningen/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/begraafplaats",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/begroeid-voorkomen",
@@ -351,7 +350,6 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/kindfiche",
   "/tmp/generated/ns/leercredential",
   "/tmp/generated/ns/metadata-dcat",
-  "/tmp/generated/ns/nutsvoorzieningen",
   "/tmp/generated/ns/observaties-en-metingen",
   "/tmp/generated/ns/openbare-nutsvoorzieningkasten",
   "/tmp/generated/ns/rooilijn",
