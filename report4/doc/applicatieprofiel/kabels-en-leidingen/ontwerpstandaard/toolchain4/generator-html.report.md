@@ -2,47 +2,71 @@
 
 #||# -------------------------------------  
 
-Error reading or parsing config file: Error: Path does not refer to a valid file: /tmp/workspace/report4/html/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/html/int_kabels-en-leidingen-ap_nl.json
+Template render error: (/tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/templates/cable-pipe_nl.j2)
 
-    at fetchFileOrUrl (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/@oslo-flanders/core/lib/utils/fetchFileOrUrl.js:18:15)
+  Template render error: (/tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/templates/cable-pipe_nl.j2)
 
-    at HtmlGenerationService.readConfigFile (/usr/local/lib/node_modules/@oslo-flanders/html-generator/lib/HtmlGenerationService.js:130:60)
+  Error: template not found: ap2_nl.j2
 
-    at HtmlGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/html-generator/lib/HtmlGenerationService.js:94:18)
+    at Object._prettifyError (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/lib.js:32:11)
 
-    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:464:19
 
-Error: Path does not refer to a valid file: /tmp/workspace/report4/html/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/html/int_kabels-en-leidingen-ap_nl.json
+    at Template.root [as rootRenderFunc] (eval at _compile (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:527:18), <anonymous>:31:3)
 
-    at fetchFileOrUrl (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/@oslo-flanders/core/lib/utils/fetchFileOrUrl.js:18:15)
+    at Template.render (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:454:10)
 
-    at HtmlGenerationService.readConfigFile (/usr/local/lib/node_modules/@oslo-flanders/html-generator/lib/HtmlGenerationService.js:130:60)
+    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:301:27
 
-    at HtmlGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/html-generator/lib/HtmlGenerationService.js:94:18)
+    at createTemplate (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:254:9)
 
-    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+    at handle (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:265:11)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:276:9
+
+    at next (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/lib.js:258:7)
+
+    at Object.asyncIter (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/lib.js:263:3)
 
 #||# oslo-generator-html for language en  
 
 #||# -------------------------------------  
 
-Error reading or parsing config file: Error: Path does not refer to a valid file: /tmp/workspace/report4/html/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/html/int_kabels-en-leidingen-ap_en.json
+Template render error: (/tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/templates/cable-pipe_en.j2)
 
-    at fetchFileOrUrl (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/@oslo-flanders/core/lib/utils/fetchFileOrUrl.js:18:15)
+  Template render error: (/tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/templates/cable-pipe_en.j2) [Line 429, Column 33]
 
-    at HtmlGenerationService.readConfigFile (/usr/local/lib/node_modules/@oslo-flanders/html-generator/lib/HtmlGenerationService.js:130:60)
+  Template render error: (/tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/templates/cable-pipe_en.j2) [Line 188, Column 30]
 
-    at HtmlGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/html-generator/lib/HtmlGenerationService.js:94:18)
+  Template render error: (/tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/templates/cable-pipe_en.j2) [Line 2, Column 3]
 
-    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+  Template render error: (/tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/templates/cable-pipe_en.j2) [Line 213, Column 30]
 
-Error: Path does not refer to a valid file: /tmp/workspace/report4/html/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/html/int_kabels-en-leidingen-ap_en.json
+  Template render error: (/tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/templates/cable-pipe_en.j2) [Line 229, Column 27]
 
-    at fetchFileOrUrl (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/@oslo-flanders/core/lib/utils/fetchFileOrUrl.js:18:15)
+  Template render error: (/tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/templates/cable-pipe_en.j2) [Line 248, Column 27]
 
-    at HtmlGenerationService.readConfigFile (/usr/local/lib/node_modules/@oslo-flanders/html-generator/lib/HtmlGenerationService.js:130:60)
+  Template render error: (/tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/templates/cable-pipe_en.j2) [Line 17, Column 3]
 
-    at HtmlGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/html-generator/lib/HtmlGenerationService.js:94:18)
+  Error: Unable to call `if`, which is undefined or falsey
 
-    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+    at Object._prettifyError (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/lib.js:32:11)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:464:19
+
+    at Template.root [as rootRenderFunc] (eval at _compile (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:527:18), <anonymous>:31:3)
+
+    at Template.render (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:454:10)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:301:27
+
+    at createTemplate (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:254:9)
+
+    at handle (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:265:11)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/environment.js:276:9
+
+    at next (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/lib.js:258:7)
+
+    at Object.asyncIter (/usr/local/lib/node_modules/@oslo-flanders/html-generator/node_modules/nunjucks/src/lib.js:263:3)
 

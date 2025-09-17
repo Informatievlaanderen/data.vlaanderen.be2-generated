@@ -14,7 +14,7 @@
 
 #||# start writing  
 
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/html/meta_kabels-en-leidingen-ap_nl.json  
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/html/meta_cable-pipe_nl.json  
 
 #||# metadata for language en   
 
@@ -32,5 +32,5 @@
 
 #||# start writing  
 
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/html/meta_kabels-en-leidingen-ap_en.json  
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/ontwerpstandaard/toolchain4/html/meta_cable-pipe_en.json  
 
