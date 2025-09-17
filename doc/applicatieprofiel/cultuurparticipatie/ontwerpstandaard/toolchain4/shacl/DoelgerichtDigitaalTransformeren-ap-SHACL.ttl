@@ -92,6 +92,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#StringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#LiteralShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#KwantitatievewaardeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#TaalstringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#DatetimeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#UriShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#BooleanShape>,
@@ -99,13 +100,12 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#GetalShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#StandaardeenheidShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#LocatieShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#TaalstringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#ContactinfoShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#BeschikbaarheidShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#RuimtetijdShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#GeldbedragShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#BeschikbaarheidShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#IdentificatorShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#SchemaShape> .
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#SchemaShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#RuimtetijdShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#ActiviteitShape> a shacl:NodeShape;
   shacl:closed false;
@@ -116,11 +116,23 @@
     shacl:name "label"@nl;
     shacl:path <https://www.w3.org/2000/01/rdf-schema#label>
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Een tekstuele beschrijving van de Activiteit."@nl;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Taal>;
     shacl:datatype rdfs:Literal;
     shacl:description "Taal waarin de activiteit doorgaat."@nl;
     shacl:name "taal"@nl;
     shacl:path schemas:inLanguage
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "De naam die de activiteit draagt."@nl;
+    shacl:name "naam"@nl;
+    shacl:path dc:title
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Type>;
     shacl:class skos:Concept;
@@ -135,12 +147,6 @@
     shacl:name "locatie"@nl;
     shacl:path <https://www.w3.org/ns/prov#atLocation>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Beschrijving>;
-    shacl:class rdf:langString;
-    shacl:description "Een tekstuele beschrijving van de Activiteit."@nl;
-    shacl:name "beschrijving"@nl;
-    shacl:path dc:description
-  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Tijd>;
     shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
     shacl:description "Tijdstip wanneer de activiteit zal plaatsvinden of heeft plaatsgevonden."@nl;
@@ -154,12 +160,6 @@
     shacl:maxCount "1";
     shacl:name "duur"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.duur>
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Naam>;
-    shacl:class rdf:langString;
-    shacl:description "De naam die de activiteit draagt."@nl;
-    shacl:name "naam"@nl;
-    shacl:path dc:title
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Contactinfo>;
     shacl:class schema:ContactPoint;
@@ -191,6 +191,18 @@
     shacl:name "berichtgeving"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.berichtgeving>
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Functie>;
+    shacl:class skos:Concept;
+    shacl:description "Doel van de Activiteit binnen een geheel van een systeem of apparaat."@nl;
+    shacl:name "functie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.functie>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Infrastructuur>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur>;
+    shacl:description "Informatie rond de infrastructuur waarrond of waarin de Activiteit doorgaat."@nl;
+    shacl:name "infrastructuur"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.infrastructuur>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Beschikbaarheid>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Beschikbaarheid>;
     shacl:description "Geeft de beschikbaarheid weer van de Activiteit."@nl;
@@ -198,11 +210,41 @@
     shacl:name "beschikbaarheid"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.beschikbaarheid>
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificator dat de Activiteit verkreeg bij registratie."@nl;
+    shacl:name "identificator"@nl;
+    shacl:path <https://www.w3.org/ns/adms#identifier>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Discipline>;
+    shacl:class skos:Concept;
+    shacl:description "De verschillende vormen, uitingen of richtingen van kunst met betrekking tot de activiteit."@nl;
+    shacl:name "discipline"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.discipline>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Status>;
+    shacl:class skos:Concept;
+    shacl:description "Geeft de status van de activiteit weer."@nl;
+    shacl:name "status"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.status>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Financiering>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Financiering>;
     shacl:description "De benodigde middelen in het organiseren van de Activiteit."@nl;
     shacl:name "financiering"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.financiering>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.GebruikteTechniek>;
+    shacl:class skos:Concept;
+    shacl:description "Techniek of methode die gebruikt werd bij de Activiteit."@nl;
+    shacl:name "gebruikte techniek"@nl;
+    shacl:path crm:P32_used_general_technique
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.LocatieType>;
+    shacl:class skos:Concept;
+    shacl:description "Het type locatie van de activiteit."@nl;
+    shacl:name "locatie type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.locatieType>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Documentatie>;
     shacl:class foaf:Document;
@@ -210,11 +252,18 @@
     shacl:name "documentatie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.documentatie>
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Recurrerend>;
+    shacl:class schemas:Schedule;
+    shacl:description "Geeft aan of een Activiteit meerdere keren plaatsvindt, onderbroken wordt of permanent is."@nl;
+    shacl:maxCount "1";
+    shacl:name "recurrerend"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.recurrerend>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Ruimtetijd>;
     shacl:class <http://cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume>;
     shacl:description "Een vierdimensionele puntenreeks in de fysieke ruimtetijd waarbij er een intersectie kan zijn van een plaats en tijdsaanduiding."@nl;
     shacl:name "ruimtetijd"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.ruimtetijd>
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#ruimtetijd>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Dienst>;
     shacl:class <http://purl.org/vocab/cpsv#PublicService>;
@@ -232,7 +281,7 @@
     shacl:class crm:E7_Activity;
     shacl:description "De relatie tussen twee of meerdere Activiteiten waarbij de ene een typering op zich neemt ten opzichte van een andere."@nl;
     shacl:name "verhoudt zich tot"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.verhoudtZichTot>
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#verhoudtZichTot>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.Superactiviteit>;
     shacl:class crm:E7_Activity;
@@ -256,7 +305,7 @@
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Boekingsinfo>;
     shacl:description "De Boekinginfo van de Activiteit."@nl;
     shacl:name "boeking"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Activiteit.boeking>
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Acitviteit.boeking>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Activiteit.IsGepromoot>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie>;
@@ -380,6 +429,19 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#BoekingsinfoShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Boekingsinfo.Contactinfo>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon... die toelaat de aanbieder te contacteren."@nl;
+    shacl:name "contactinfo"@nl;
+    shacl:path schema:contactPoint
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Boekingsinfo.Beschikbaar>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "Periode waarin de boekinginfo beschikbaar is."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschikbaar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Boekinginfo.beschikbaar>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Boekingsinfo.Kanaal>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal>;
     shacl:description "De Boeking van een Activiteit verloopt via een Kanaal."@nl;
@@ -443,6 +505,12 @@
     shacl:name "tijdstip"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname.tijdstip>
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Deelname.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Beschrijft het type van deelname."@nl;
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Deelname.Deelnamerecht>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Deelnamerecht>;
     shacl:description "Het deelnamerecht gekoppeld die nodig kan zijn om een Deelname mogelijk te maken."@nl;
@@ -494,6 +562,12 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#DingShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Ding.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificator dat het Ding verkreeg bij registratie."@nl;
+    shacl:name "identificator"@nl;
+    shacl:path <https://www.w3.org/ns/adms#identifier>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Ding.VoertUit>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder>;
     shacl:description "De Uitvoerder voert het Ding uit."@nl;
@@ -554,6 +628,18 @@
     shacl:name "type"@nl;
     shacl:path dc:type
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Feedback.Content>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#FeedbackContent>;
+    shacl:description "De inhoud van de feedback."@nl;
+    shacl:name "content"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Feedback.content>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Feedback.Bron>;
+    shacl:class skos:Concept;
+    shacl:description "De bron langs waar de feedback is gegeven."@nl;
+    shacl:name "bron"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Feedback.bron>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Feedback.VanDeelname>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Deelname>;
     shacl:description "Feedback die gegeven wordt door de Participant rond de Deelname aan een Activiteit."@nl;
@@ -592,10 +678,57 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#GeregistreerdPersoonShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#GeregistreerdPersoon.Registratie>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificatiecode vd persoon ih register."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "registratie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#registratie>
+  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#GeregistreerdeOrganisatieShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#GeregistreerdeOrganisatie.WettelijkeNaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Wettelijk geregistreerde naam vd organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "wettelijke naam"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#legalName>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#GeregistreerdeOrganisatie.Rechtspersoonlijkheid>;
+    shacl:class skos:Concept;
+    shacl:description "Geeft aan of de rechtspersoonlijkheid van de geregistreerde organisatie deze is van een natuurlijk persoon of van een rechtspersoon."@nl;
+    shacl:maxCount "1";
+    shacl:name "rechtspersoonlijkheid"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#orgType>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#GeregistreerdeOrganisatie.Rechtstoestand>;
+    shacl:class skos:Concept;
+    shacl:description "Status van de geregistreerde organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "rechtstoestand"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#orgStatus>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#GeregistreerdeOrganisatie.Rechtsvorm>;
+    shacl:class skos:Concept;
+    shacl:description "Juridisch statuut van de geregistreerde organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "rechtsvorm"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#orgType>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#GeregistreerdeOrganisatie.Registratie>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificator dat de organisatie verkreeg bij registratie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "registratie"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#registration>
+  ];
   shacl:targetClass <http://www.w3.org/ns/regorg#RegisteredOrganization> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#GeslachtShape> a shacl:NodeShape;
@@ -621,17 +754,17 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#KanaalShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Kanaal.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van het promotiekanaal."@nl;
+    shacl:name "naam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal.naam>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Kanaal.Medium>;
     shacl:class skos:Concept;
     shacl:description "Medium langswaar de literaire communicatie  die boodschap bij de ontvanger brengt."@nl;
     shacl:name "medium"@nl;
     shacl:path dc:format
-  ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Kanaal.Naam>;
-    shacl:class rdf:langString;
-    shacl:description "Naam van het promotiekanaal."@nl;
-    shacl:name "naam"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal.naam>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal> .
 
@@ -684,6 +817,15 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#NationaliteitShape> a shacl:NodeShape;
   shacl:closed false;
+  shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Nationaliteit.Nationaliteit>;
+    shacl:class skos:Concept;
+    shacl:description "De nationaliteit vd persoon."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "nationaliteit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#nationaliteit>
+  ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Nationaliteit> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#NationaliteitscodeShape> a shacl:NodeShape;
@@ -693,6 +835,13 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#ObjectShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Object.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificator van het object."@nl;
+    shacl:minCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Object.Type>;
     shacl:class skos:Concept;
     shacl:description "Het type Object."@nl;
@@ -712,12 +861,63 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#OrganisatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Organisatie.AlternatieveNaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Andere naam waaronder de organisatie bekend is."@nl;
+    shacl:name "alternatieve naam"@nl;
+    shacl:path skos:altLabel
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Organisatie.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Organisatie.Homepage>;
     shacl:datatype xsd:string;
     shacl:description "Adres vd homepage van de website vd organisatie."@nl;
     shacl:maxCount "1";
     shacl:name "homepage"@nl;
     shacl:path foaf:homepage
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Organisatie.Voorkeursnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam waarmee de organisatie bij voorkeur wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:name "voorkeursnaam"@nl;
+    shacl:path skos:prefLabel
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Organisatie.Activiteit>;
+    shacl:class skos:Concept;
+    shacl:description "Type activiteit die door de organisatie wordt uitgeoefend."@nl;
+    shacl:maxCount "1";
+    shacl:name "activiteit"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#orgActivity>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Organisatie.Classificatie>;
+    shacl:class skos:Concept;
+    shacl:description "Rangschikking van de organisatie in een classificatiesysteem."@nl;
+    shacl:name "classificatie"@nl;
+    shacl:path org:classification
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Organisatie.Contactinfo>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."@nl;
+    shacl:name "contactinfo"@nl;
+    shacl:path schema:contactPoint
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Organisatie.Status>;
+    shacl:class skos:Concept;
+    shacl:description "Toestand vd organisatie."@nl;
+    shacl:name "status"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#orgStatus>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Organisatie.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Soort organisatie."@nl;
+    shacl:name "type"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#orgType>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Organisatie.HeeftSuborganisatie>;
     shacl:class org:Organization;
@@ -779,6 +979,12 @@
     shacl:maxCount "1";
     shacl:name "onderwijsniveau"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.onderwijsniveau>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Participant.Consent>;
+    shacl:class <https://w3id.org/GConsent#Consent>;
+    shacl:description "Toestemming van de betrokkene voor de verwerking van zijn persoonsgegevens"@nl;
+    shacl:name "consent"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Participant.consent>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Participant.NeemtDeelAan>;
     shacl:class crm:E7_Activity;
@@ -929,6 +1135,20 @@
     shacl:name "nationaliteit"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Persoon.nationaliteit>
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Persoon.Contactinfo>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon... die toelaat de Persoon te contacteren."@nl;
+    shacl:maxCount "1";
+    shacl:name "contactinfo"@nl;
+    shacl:path schema:contactPoint
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Persoon.Woonplaats>;
+    shacl:class dc:Location;
+    shacl:description "De plaats waar de Persoon woonachtig is."@nl;
+    shacl:maxCount "1";
+    shacl:name "woonplaats"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Persoon.woonplaats>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Persoon.Geslacht>;
     shacl:class skos:Concept;
     shacl:description "Het feit of men een man of een vrouw is."@nl;
@@ -955,6 +1175,40 @@
     shacl:maxCount "1";
     shacl:name "inclusief BTW"@nl;
     shacl:path schemas:valueAddedTaxIncluded
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Prijsinfo.BeschikbareHoeveelheid>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "Het interval en de meeteenheid van de bestelhoeveelheden waarvoor de prijsinfo geldt."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschikbare hoeveelheid"@nl;
+    shacl:path schemas:eligibleQuantity
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Prijsinfo.BeschikbaarTransactievolume>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "Het interval en de meeteenheid van de bestelhoeveelheden voor een activiteit of transactie."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschikbaar transactievolume"@nl;
+    shacl:path schemas:eligibleQuantity
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Prijsinfo.Prijs>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "De aanbiedingsprijs van een activiteit."@nl;
+    shacl:maxCount "1";
+    shacl:name "prijs"@nl;
+    shacl:path schemas:price
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Prijsinfo.Beschikbaar>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "De periode waarin de prijsinfo van een activiteit beschikbaar is."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschikbaar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Prijsinfo.beschikbaar>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Prijsinfo.Prijscategorie>;
+    shacl:class skos:Concept;
+    shacl:description "De categorie van de prijs zoals een jongerentarief of seniorentarief."@nl;
+    shacl:name "prijscategorie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Prijsinfo.prijscategorie>
   ];
   shacl:targetClass schemas:PriceSpecification .
 
@@ -973,6 +1227,12 @@
     shacl:description "Het type promotie die gevoerd is in kader van de activiteit."@nl;
     shacl:name "type"@nl;
     shacl:path dc:type
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Promotie.Documentatie>;
+    shacl:class foaf:Document;
+    shacl:description "De documentatie bijhorend bij een Promotie van een Activiteit."@nl;
+    shacl:name "documentatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Promotie.documentatie>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Promotie.Kanaal>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Kanaal>;
@@ -1017,6 +1277,13 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#RealisatieShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Realisatie.RealisatorVermeldAls>;
+    shacl:datatype rdf:langString;
+    shacl:description "De naam waarmee de Realisators vermeldt wordt bij een specifieke Activiteit."@nl;
+    shacl:maxCount "1";
+    shacl:name "realisator vermeld als"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisatie.realisatorVermeldAls>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Realisatie.Rang>;
     shacl:datatype xsd:string;
     shacl:description "De rang van de Realisator ten opzichte van andere Realisators."@nl;
@@ -1055,6 +1322,19 @@
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#RealisatorShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Realisator.AlternatieveNaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Alternatieve naam voor een Realisator."@nl;
+    shacl:name "alternatieve naam"@nl;
+    shacl:path skos:altLabel
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Realisator.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "De naam van de Realisator."@nl;
+    shacl:maxCount "1";
+    shacl:name "naam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.naam>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Realisator.Dienst>;
     shacl:class <http://purl.org/vocab/cpsv#PublicService>;
     shacl:description "Publieke dienstverlening gekoppeld aan de Realisator."@nl;
@@ -1079,6 +1359,24 @@
     shacl:name "type activiteit"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.typeActiviteit>
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Realisator.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificator die de Realisator verkreeg bij registratie."@nl;
+    shacl:name "identificator"@nl;
+    shacl:path <https://www.w3.org/ns/adms#identifier>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Realisator.Infrastructuur>;
+    shacl:class <https://data.vlaanderen.be/ns/cultuur-en-jeugd/infrastructuur#Infrastructuur>;
+    shacl:description "Infrastructuur die gekoppeld is aan de Realisator."@nl;
+    shacl:name "infrastructuur"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.infrastructuur>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Realisator.Organisatievorm>;
+    shacl:class skos:Concept;
+    shacl:description "De organisatievorm van de Realisator."@nl;
+    shacl:name "organisatievorm"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.organisatievorm>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Realisator.Subrealisator>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator>;
     shacl:description "De Realisator heeft één of meerdere Superrealisators."@nl;
@@ -1091,10 +1389,10 @@
     shacl:name "superrealisator"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Uitvoerder.superrealisator>
   ], [
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Realisator.Realiseert>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Realisator.VoertUit>;
     shacl:class crm:E7_Activity;
     shacl:description "De Realisator voert de Activiteit uit."@nl;
-    shacl:name "realiseert"@nl;
+    shacl:name "voert uit"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Realisator.realiseert>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Realisator.VoertUit>;
@@ -1211,6 +1509,13 @@
     shacl:name "locatie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk.locatie>
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Sociodemografischkenmerk.Inkomensniveau>;
+    shacl:class skos:Concept;
+    shacl:description "Het inkomensniveau van de participant"@nl;
+    shacl:maxCount "1";
+    shacl:name "inkomensniveau"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#SociodemografischKenmerk.inkomensniveau>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Sociodemografischkenmerk.DeelVan>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#ParticipantProfiel>;
     shacl:description "Sociodemografisch kenmerk maakt deel uit van het ParticipantProfiel."@nl;
@@ -1244,6 +1549,13 @@
     shacl:name "type"@nl;
     shacl:path dc:type
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Ticket.Geldigheid>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "De periode waarin een ticket geldig is."@nl;
+    shacl:maxCount "1";
+    shacl:name "geldigheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Ticket.geldigheid>
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Ticket.Transactie>;
     shacl:class <https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie>;
     shacl:description "De Transactie kan resulteren in een Ticket."@nl;
@@ -1274,12 +1586,25 @@
     shacl:name "type"@nl;
     shacl:path dc:type
   ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Transactie.Prijs>;
+    shacl:class schemas:MonetaryAmount;
+    shacl:description "Waarde die gepaard gaat met de transactie."@nl;
+    shacl:maxCount "1";
+    shacl:name "prijs"@nl;
+    shacl:path schemas:price
+  ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Transactie.AangekochtDoor>;
     shacl:class dc:Agent;
     shacl:description "Het individu, groep of organisatie die de transactie heeft uitgevoerd"@nl;
     shacl:maxCount "1";
     shacl:name "aangekocht door"@nl;
     shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.aangekochtDoor>
+  ], [
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Transactie.Object>;
+    shacl:class prov:Entity;
+    shacl:description "Materieel ding dat verbonden is aan de transactie zoals een fysieke of digitale kopie van een boek."@nl;
+    shacl:name "object"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/cultuurparticipatie#Transactie.object>
   ], [
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/cultuurparticipatie/ontwerpstandaard/toolchain4#Transactie.Betaaltermijn>;
     shacl:class skos:Concept;
