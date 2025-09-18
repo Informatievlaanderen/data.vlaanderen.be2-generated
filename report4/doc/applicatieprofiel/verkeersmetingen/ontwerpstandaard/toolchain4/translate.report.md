@@ -2,15 +2,15 @@
 
 #||# -------------------------------------  
 
-#||# start reading  
+undefinedstart reading  
 
-#||# done  
+undefineddone  
 
-#||# start processing  
+undefinedstart processing  
 
 WARNING The entered language values are the same!  
 
-#||# Write complete  
+undefinedWrite complete  
 
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/toolchain4/translation/Verkeersmetingen_nl.json  
+undefinedthe file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/toolchain4/translation/Verkeersmetingen_nl.json  
 
