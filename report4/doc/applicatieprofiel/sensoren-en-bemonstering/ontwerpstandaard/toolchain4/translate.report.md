@@ -12,5 +12,5 @@ WARNING The entered language values are the same!
 
 #||# Write complete  
 
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/translation/ap-sensoren-en-bemonstering_nl.json  
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/translation/sensoren-en-bemonstering_nl.json  
 
