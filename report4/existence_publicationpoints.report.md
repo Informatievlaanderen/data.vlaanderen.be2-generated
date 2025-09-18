@@ -463,10 +463,8 @@ index.html check
 #||#    + checking /home/circleci/project/config/test/verkeersmetingen.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/toolchain4'
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/test/vervoersknooppunten.publication.json
 #||# 
