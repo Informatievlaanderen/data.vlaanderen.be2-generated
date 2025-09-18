@@ -14,5 +14,5 @@
 
 #||# start writing  
 
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/html/meta_OSLO-Vastgoed-AP_nl.json  
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/html/meta_vastgoed_nl.json  
 
