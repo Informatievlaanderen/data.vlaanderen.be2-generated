@@ -1,16 +1,22 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/toolchain4/translation/Verkeersmetingen_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/toolchain4/translation/Verkeersmetingen_nl.json
+
+TRANSLATIONFILE: Verkeersmetingen_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
 
-undefinedstart reading  
+#||# start reading  
 
-undefineddone  
+#||# done  
 
-undefinedstart processing  
+#||# start processing  
 
 WARNING The entered language values are the same!  
 
-undefinedWrite complete  
+#||# Write complete  
 
-undefinedthe file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/toolchain4/translation/Verkeersmetingen_nl.json  
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/toolchain4/translation/Verkeersmetingen_nl.json  
 
