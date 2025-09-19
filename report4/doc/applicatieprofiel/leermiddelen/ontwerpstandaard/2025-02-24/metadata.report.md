@@ -16,5 +16,5 @@ Warning: no navigation defined for this rendering
 
 #||# start writing  
 
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24/html/meta_leermiddelen-ap_nl.json  
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24/html/meta_leermiddelen_nl.json  
 

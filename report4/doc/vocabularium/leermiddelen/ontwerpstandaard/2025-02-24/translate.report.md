@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/leermiddelen/ontwerpstandaard/2025-02-24/translation/leermiddelen_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/leermiddelen/ontwerpstandaard/2025-02-24/translation/leermiddelen_nl.json
+
+TRANSLATIONFILE: leermiddelen_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
