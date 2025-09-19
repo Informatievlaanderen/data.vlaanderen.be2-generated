@@ -2,77 +2,79 @@
 
 #||# -------------------------------------
 
-2025-08-20T08:01:37.894Z info: Connector Model:Package1:OSLO-Mobiliteit-Intelligente-Toegang:ConsumeerPubliekeDienstverleningstap:(ConsumeerPubliekeDienstverleningstap -> Procedurestap) is not an association with a source role. Ignoring this connector.
+2025-09-19T11:29:17.367Z info: Connector Model:Package1:OSLO-Mobiliteit-Intelligente-Toegang:ConsumeerPubliekeDienstverleningstap:(ConsumeerPubliekeDienstverleningstap -> Procedurestap) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.896Z info: Connector Model:Package1:Dossier:Zaak:(Zaak -> Dossier) is not an association with a source role. Ignoring this connector.
+2025-09-19T11:29:17.369Z info: Connector Model:Package1:CCCEV:Voorwaarde:(Voorwaarde -> Informatieconcept) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.896Z info: Connector Model:Package1:OSLO-Mobiliteit-Intelligente-Toegang:VoorwaardeCollectie:(VoorwaardeCollectie -> Voorwaarde) is not an association with a source role. Ignoring this connector.
+2025-09-19T11:29:17.369Z info: Connector Model:Package1:Dossier:Zaak:(Zaak -> Dossier) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.896Z info: Connector Model:Package1:CPSV-AP:PubliekeDienstverlening:(PubliekeDienstverlening -> Voorwaarde) is not an association with a source role. Ignoring this connector.
+2025-09-19T11:29:17.369Z info: Connector Model:Package1:OSLO-Mobiliteit-Intelligente-Toegang:VoorwaardeCollectie:(VoorwaardeCollectie -> Voorwaarde) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.896Z info: Connector Model:Package1:CCCEV:Voorwaarde:(Voorwaarde -> Bewijstypelijst) is not an association with a source role. Ignoring this connector.
+2025-09-19T11:29:17.370Z info: Connector Model:Package1:CPSV-AP:PubliekeDienstverlening:(PubliekeDienstverlening -> Voorwaarde) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.897Z info: Connector Model:Package1:CCCEV:Bewijstypelijst:(Bewijstypelijst -> Bewijstype) is not an association with a source role. Ignoring this connector.
+2025-09-19T11:29:17.370Z info: Connector Model:Package1:CCCEV:Voorwaarde:(Voorwaarde -> Bewijstypelijst) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.897Z info: Connector Model:Package1:OSLO-Mobiliteit-Intelligente-Toegang:Weigering:(Weigering -> Toegang) is not an association with a source role. Ignoring this connector.
+2025-09-19T11:29:17.370Z info: Connector Model:Package1:CCCEV:Bewijstypelijst:(Bewijstypelijst -> Bewijstype) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.897Z info: Connector Model:Package1:W3Ctime:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2025-09-19T11:29:17.370Z info: Connector Model:Package1:OSLO-Mobiliteit-Intelligente-Toegang:Weigering:(Weigering -> Toegang) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.897Z info: Connector Model:Package1:W3Ctime:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2025-09-19T11:29:17.370Z info: Connector Model:Package1:W3Ctime:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.898Z info: Connector Model:Package1:OV:Vergunning:(Vergunning -> Bewijs) is not an association with a source role. Ignoring this connector.
+2025-09-19T11:29:17.371Z info: Connector Model:Package1:W3Ctime:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.898Z info: Connector Model:Package1:CPSV-AP:PubliekeDienstverlening:(PubliekeDienstverlening -> Toegang) is not an association with a source role. Ignoring this connector.
+2025-09-19T11:29:17.371Z info: Connector Model:Package1:OV:Vergunning:(Vergunning -> Bewijs) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.898Z info: Connector Package1:OSLO-Dienst:Bewijs:(Bewijs -> Stuk) is not an association with a source role. Ignoring this connector.
+2025-09-19T11:29:17.371Z info: Connector Model:Package1:CPSV-AP:PubliekeDienstverlening:(PubliekeDienstverlening -> Toegang) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.898Z info: Connector Model:Package1:OV:Activiteit:(Activiteit -> Zone) is not an association with a source role. Ignoring this connector.
+2025-09-19T11:29:17.371Z info: Connector Package1:OSLO-Dienst:Bewijs:(Bewijs -> Stuk) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.898Z info: Connector Model:Package1:Dossier:Dossier:(Dossier -> Stuk) is not an association with a source role. Ignoring this connector.
+2025-09-19T11:29:17.371Z info: Connector Model:Package1:OV:Activiteit:(Activiteit -> Zone) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.898Z info: Connector Model:Package1:CPSV-AP:PubliekeDienstverlening:(PubliekeDienstverlening -> Vergunning) is not an association with a source role. Ignoring this connector.
+2025-09-19T11:29:17.372Z info: Connector Model:Package1:Dossier:Dossier:(Dossier -> Stuk) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.899Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OSLO-Mobiliteit-Intelligente-Toegang:Voorbeelden-v2). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.372Z info: Connector Model:Package1:CPSV-AP:PubliekeDienstverlening:(PubliekeDienstverlening -> Vergunning) is not an association with a source role. Ignoring this connector.
 
-2025-08-20T08:01:37.899Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Package1:Common-datatypes). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.373Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OSLO-Mobiliteit-Intelligente-Toegang:Voorbeelden-v2). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Package1:OSLO-Dienst). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.373Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Package1:Common-datatypes). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Package1:OSLO-Generiek). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.373Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Package1:OSLO-Dienst). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Package1:Besluit-Mobiliteit). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.373Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Package1:OSLO-Generiek). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.373Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Package1:Besluit-Mobiliteit). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.373Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:OV). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.373Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:PROV). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.373Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:OV). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:CPSV-AP). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.373Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:PROV). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:FOAF). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.373Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:CPSV-AP). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:ADMS). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.373Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:FOAF). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:W3Ctime). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.373Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:ADMS). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:CCCEV). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.374Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:W3Ctime). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:Dossier). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.374Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:CCCEV). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:dcterms). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.374Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:Dossier). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:locn). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.374Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:dcterms). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:OSLO-Mobiliteit-Intelligente-Toegang:Voorbeelden). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.374Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:locn). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:Besluit). Using fallback URI (http://todo.com/) instead.
+2025-09-19T11:29:17.374Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:OSLO-Mobiliteit-Intelligente-Toegang:Voorbeelden). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.903Z warn: [ConnectorConverterHandler]: Connector (toegang) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-09-19T11:29:17.374Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Package1:Besluit). Using fallback URI (http://todo.com/) instead.
 
-2025-08-20T08:01:37.903Z warn: [ConnectorConverterHandler]: Connector (voertuig) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-09-19T11:29:17.376Z warn: [ConnectorConverterHandler]: Connector (toegang) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-09-19T11:29:17.376Z warn: [ConnectorConverterHandler]: Connector (voertuig) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 #||# -------------------------------------
 

@@ -14,5 +14,5 @@
 
 #||# start writing  
 
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit-intelligente-toegang/ontwerpstandaard/toolchain4/html/meta_mobiliteit-intelligente-toegang-ap_nl.json  
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/mobiliteit-intelligente-toegang/ontwerpstandaard/toolchain4/html/meta_mobiliteit-intelligente-toegang_nl.json  
 
