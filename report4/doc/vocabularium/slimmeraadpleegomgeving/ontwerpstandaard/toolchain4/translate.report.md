@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/translation/slimmeraadpleegomgeving_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/translation/slimmeraadpleegomgeving_nl.json
+
+TRANSLATIONFILE: slimmeraadpleegomgeving_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  

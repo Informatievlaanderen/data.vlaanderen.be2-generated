@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/translation/slimme-raadpleegomgeving-ap_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/slimmeraadpleegomgeving/ontwerpstandaard/toolchain4/translation/slimme-raadpleegomgeving-ap_nl.json
+
+TRANSLATIONFILE: slimme-raadpleegomgeving-ap_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
