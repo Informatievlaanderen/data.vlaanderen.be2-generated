@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/translation/mandatendatabank_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/mandatendatabank/ontwerpstandaard/toolchain4/translation/mandatendatabank_nl.json
+
+TRANSLATIONFILE: mandatendatabank_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  

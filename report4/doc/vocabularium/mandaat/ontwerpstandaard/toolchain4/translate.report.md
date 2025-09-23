@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/mandaat/ontwerpstandaard/toolchain4/translation/mandaat_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/mandaat/ontwerpstandaard/toolchain4/translation/mandaat_nl.json
+
+TRANSLATIONFILE: mandaat_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
