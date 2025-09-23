@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/besluit/ontwerpstandaard/toolchain4/translation/besluit_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/besluit/ontwerpstandaard/toolchain4/translation/besluit_nl.json
+
+TRANSLATIONFILE: besluit_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
