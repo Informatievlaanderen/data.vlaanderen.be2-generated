@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/translation/cultureel-erfgoed-basisregistratie_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/translation/cultureel-erfgoed-basisregistratie_nl.json
+
+TRANSLATIONFILE: cultureel-erfgoed-basisregistratie_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
