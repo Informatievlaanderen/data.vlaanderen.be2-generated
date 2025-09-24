@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/kabels-en-leidingen/erkendestandaard/2025-02-06/translation/cable-pipe_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/erkendestandaard/2025-02-06/translation/cable-pipe_nl.json
+
+TRANSLATIONFILE: cable-pipe_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
