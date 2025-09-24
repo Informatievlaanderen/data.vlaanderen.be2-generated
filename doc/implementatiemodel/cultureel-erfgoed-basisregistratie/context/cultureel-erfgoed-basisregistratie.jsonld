@@ -1,424 +1,781 @@
 {
   "@context": {
-    "Aankoop": "http://www.cidoc-crm.org/cidoc-crm/E96_Purchase",
-    "Activiteit": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity",
-    "Activiteit.gaatOver": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/elements/1.1/subject",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
-    },
-    "Agent": "http://purl.org/dc/terms/Agent",
-    "Begin Bestaan": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence",
-    "Belgisch Adres": "https://data.vlaanderen.be/ns/adres#Adres",
-    "Beschrijving.type": {
-      "@id": "https://data.vlaanderen.be/ns/cultureel-erfgoed#type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "Classificatie": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment",
-    "Concept": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Conceptueel Object": "http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object",
-    "ConceptueelObject.creatie": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E65_Creation"
-    },
-    "Creatie": "http://www.cidoc-crm.org/cidoc-crm/E65_Creation",
-    "Creatie.creatie": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P94_has_created",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"
-    },
-    "Ding": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing",
-    "Eenheid": "https://qudt.org/schema/qudt/Unit",
-    "Entiteit": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity",
-    "Gebeurtenis": "http://www.cidoc-crm.org/cidoc-crm/E5_Event",
-    "Gebeurtenis.type": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "Grootheid": "https://qudt.org/schema/qudt/QuantityKind",
-    "Identificator.identificator": {
-      "@id": "http://www.w3.org/2004/02/skos/core#notation",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "InformatieObject": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object",
-    "InformatieObject.gaatOver": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
-    },
-    "Materieel Ding": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing",
-    "Materieel Mensgemaakt Ding": "http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing",
-    "Materieel Object": "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object",
-    "Mensgemaakt Ding": "http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing",
-    "Mensgemaakt Object": "http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object",
-    "Moment.inEDTF": {
-      "@id": "https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime",
-      "@type": "http://id.loc.gov/datatypes/edtf/EDTF"
-    },
-    "Organisatie": "http://www.w3.org/ns/org#Organization",
-    "Periode.inEDTF": {
-      "@id": "https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription",
-      "@type": "http://id.loc.gov/datatypes/edtf/EDTF"
-    },
-    "Persoon": "http://www.w3.org/ns/person#Person",
-    "Plaats": "http://purl.org/dc/terms/Location",
-    "Productie": "http://www.cidoc-crm.org/cidoc-crm/E12_Production",
-    "Propositioneel Object": "http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object",
-    "Recht": "http://www.cidoc-crm.org/cidoc-crm/E30_Right",
-    "Recht.identificator": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "http://www.w3.org/ns/adms#Identifier"
-    },
-    "Rol": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol",
-    "Ruimtelijk Object": "https://data.vlaanderen.be/ns/generiek#RuimtelijkObject",
-    "Set": "https://linked.art/Set",
-    "Symbolisch Object": "http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object",
-    "Tijdvak": "http://www.cidoc-crm.org/cidoc-crm/E4_Period",
-    "Toekenning": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment",
-    "Type Conditie": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Type Entiteit": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Type Grootheid": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Type Materiaal": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Type Recht": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Type Rol": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Type Techniek": "http://www.w3.org/2004/02/skos/core#Concept",
-    "Valuta": "http://qudt.org/schema/qudt/CurrencyUnit",
-    "Verwerving": "http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition",
-    "Wettelijk Object": "http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object",
-    "Wijziging": "http://www.cidoc-crm.org/cidoc-crm/E11_Modification",
-    "aanschrijfvorm": {
-      "@id": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "achternaam": {
-      "@id": "http://xmlns.com/foaf/0.1/familyName",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "administratieveEenheidNiveau1": {
-      "@id": "http://www.w3.org/ns/locn#adminUnitL1",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "administratieveEenheidNiveau2": {
-      "@id": "http://www.w3.org/ns/locn#adminUnitL2",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "adres": {
-      "@id": "http://www.w3.org/ns/locn#address",
-      "@type": "http://www.w3.org/ns/locn#Address"
-    },
-    "adresgebied": {
-      "@id": "http://www.w3.org/ns/locn#addressArea",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "beeldtUit": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P62_depicts",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
-    },
-    "beschrijving": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
-      "@type": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving"
-    },
-    "busnummer": {
-      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "classificatie": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment"
-    },
-    "conditie": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P44_has_condition",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State"
-    },
-    "contactinfo": {
-      "@container": "@set",
-      "@id": "http://schema.org/contactPoint",
-      "@type": "http://schema.org/ContactPoint"
-    },
-    "contactnaam": {
-      "@id": "http://xmlns.com/foaf/0.1/name",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "dimensie": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"
-    },
-    "eenheid": {
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P91_has_unit",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "email": {
-      "@id": "http://schema.org/email",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "fax": {
-      "@id": "http://schema.org/faxNumber",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "gaatOver": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
-    },
-    "geboortedatum": {
-      "@id": "https://data.vlaanderen.be/ns/persoon#/Geboortedatum",
-      "@type": "http://www.w3.org/2006/time#TemporalEntity"
-    },
-    "gebruiktObject": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing"
-    },
-    "gebruikteTechniek": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "geldigheid": {
-      "@id": "http://purl.org/dc/terms/valid",
-      "@type": "http://www.w3.org/2006/time#ProperInterval"
-    },
-    "gemeentenaam": {
-      "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "geometrie": {
-      "@id": "http://www.w3.org/ns/locn#geometry",
-      "@type": "http://www.w3.org/ns/locn#Geometry"
-    },
-    "getypeerdeEntiteit": {
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P41_classified",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
-    },
-    "gml": {
-      "@id": "http://www.opengis.net/ont/geosparql#asGML",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "heeft": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P75_possesses",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
-    },
-    "heeftAankoopprijs": {
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P179_had_sales_price",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E97_Monetary_Amount"
-    },
-    "huisnummer": {
-      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "identificator": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "http://www.w3.org/ns/adms#Identifier"
-    },
-    "inXSDDateTime": {
-      "@id": "http://www.w3.org/2006/time#inXSDDateTime",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "isOnderworpenAan": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
-    },
-    "isOvergedragenBijVerwerving": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition"
-    },
-    "isVanToepassingOp": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P104i_applies_to",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
-    },
-    "land": {
-      "@id": "https://data.vlaanderen.be/ns/adres#land",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "locatie": {
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location",
-      "@type": "https://wherever/TODO"
-    },
-    "locatieaanduiding": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/locn#locatorDesignator",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "locatienaam": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/locn#locatorName",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "materiaal": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P45_consists_of",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "overdrachtVan": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P24_transferred_title_of",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"
-    },
-    "overgedragenAan": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P22_transferred_title_to",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "overgedragenVan": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P23_transfered_title_from",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "periode": {
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
-      "@type": "http://id.loc.gov/datatypes/edtf/EDTF"
-    },
-    "permanenteLocatie": {
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location",
-      "@type": "https://wherever/TODO"
-    },
-    "plaats": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at",
-      "@type": "http://www.w3.org/ns/prov#Location"
-    },
-    "plaatsnaam": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/2000/01/rdf-schema#label",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "postbus": {
-      "@id": "http://www.w3.org/ns/locn#poBox",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "postcode": {
-      "@id": "http://www.w3.org/ns/locn#postCode",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "postnaam": {
-      "@id": "http://www.w3.org/ns/locn#postName",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "product": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P108_has_produced",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"
-    },
-    "productie": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E12_Production"
-    },
-    "rechtenhouder": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "rol": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P14.1_in_the_role_of",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "sterfdatum": {
-      "@id": "https://data.vlaanderen.be/ns/persoon#/Sterfdatum",
-      "@type": "http://www.w3.org/2006/time#TemporalEntity"
-    },
-    "straatnaam": {
-      "@id": "http://www.w3.org/ns/locn#thoroughfare",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "tekst": {
-      "@id": "https://data.vlaanderen.be/ns/cultureel-erfgoed#tekst",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "telefoon": {
-      "@id": "http://schema.org/telephone",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "tijd": {
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
-      "@type": "http://www.w3.org/2006/time#TemporalEntity"
-    },
-    "titel": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P102_has_title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "toegekendDoor": {
-      "@id": "http://purl.org/dc/terms/creator",
-      "@type": "http://purl.org/dc/terms/Agent"
-    },
-    "toegekendDoor(String)": {
-      "@id": "http://www.w3.org/ns/adms#schemaAgency",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "toegekendOp": {
-      "@id": "http://purl.org/dc/terms/issued",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "toegekendType": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P42_assigned",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "tot": {
-      "@id": "http://www.w3.org/2006/time#hasEnd",
-      "@type": "http://www.w3.org/2006/time#Instant"
-    },
-    "type": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "valuta": {
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P180_has_currency",
-      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
-    },
-    "van": {
-      "@id": "http://www.w3.org/2006/time#hasBeginning",
-      "@type": "http://www.w3.org/2006/time#Instant"
-    },
-    "verwijstNaar": {
-      "@container": "@set",
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
-      "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
-    },
-    "volledigAdres": {
-      "@id": "http://www.w3.org/ns/locn#fullAddress",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "volledigeNaam": {
-      "@id": "https://data.vlaanderen.be/ns/persoon#volledigeNaam",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "voorkeursnaam": {
-      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "voornaam": {
-      "@container": "@set",
-      "@id": "http://xmlns.com/foaf/0.1/givenName",
-      "@type": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "waarde": {
-      "@id": "http://www.cidoc-crm.org/cidoc-crm/P90_has_value",
-      "@type": "https://schema.org/Number"
-    },
-    "website": {
-      "@id": "http://xmlns.com/foaf/0.1/page",
-      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
-    },
-    "wkt": {
-      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    "Aankoop": {
+      "@context": {
+        "heeftAankoopprijs": {
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P179_had_sales_price",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E97_Monetary_Amount"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E96_Purchase"
+    },
+    "Activiteit": {
+      "@context": {
+        "gaatOver": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/elements/1.1/subject",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
+        },
+        "gebruiktObject": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing"
+        },
+        "gebruikteTechniek": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "uitgevoerdDoor": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by",
+          "@type": "http://purl.org/dc/terms/Agent"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+    },
+    "Adresvoorstelling": {
+      "@context": {
+        "administratieveEenheidNiveau1": {
+          "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "administratieveEenheidNiveau2": {
+          "@id": "http://www.w3.org/ns/locn#adminUnitL2",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "adresgebied": {
+          "@id": "http://www.w3.org/ns/locn#addressArea",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "busnummer": {
+          "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "gemeentenaam": {
+          "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "huisnummer": {
+          "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "land": {
+          "@id": "https://data.vlaanderen.be/ns/adres#land",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "locatieaanduiding": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#locatorDesignator",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "locatienaam": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#locatorName",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "postbus": {
+          "@id": "http://www.w3.org/ns/locn#poBox",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "postcode": {
+          "@id": "http://www.w3.org/ns/locn#postCode",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "postnaam": {
+          "@id": "http://www.w3.org/ns/locn#postName",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "straatnaam": {
+          "@id": "http://www.w3.org/ns/locn#thoroughfare",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "verwijstNaar": {
+          "@id": "https://data.vlaanderen.be/ns/adres#verwijstNaar",
+          "@type": "https://data.vlaanderen.be/ns/adres#Adres"
+        },
+        "volledigAdres": {
+          "@id": "http://www.w3.org/ns/locn#fullAddress",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.w3.org/ns/locn#Address"
+    },
+    "Agent": {
+      "@context": {
+        "heeft": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P75_possesses",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+        },
+        "identificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        }
+      },
+      "@id": "http://purl.org/dc/terms/Agent"
+    },
+    "BeginBestaan": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence"
+    },
+    "BelgischAdres": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adres"
+    },
+    "Beschrijving": {
+      "@context": {
+        "tekst": {
+          "@id": "https://data.vlaanderen.be/ns/cultureel-erfgoed#tekst",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "type": {
+          "@id": "https://data.vlaanderen.be/ns/cultureel-erfgoed#type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving"
+    },
+    "Classificatie": {
+      "@context": {
+        "getypeerdeEntiteit": {
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P41_classified",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
+        },
+        "toegekendType": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P42_assigned",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment"
+    },
+    "Concept": {
+      "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "ConceptueelObject": {
+      "@context": {
+        "creatie": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E65_Creation"
+        },
+        "dimensie": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"
+        },
+        "heeftComponent": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P148_has_component",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"
+        },
+        "titel": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P102_has_title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"
+    },
+    "Conditie": {
+      "@context": {
+        "beschrijving": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+          "@type": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving"
+        },
+        "periode": {
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
+          "@type": "http://id.loc.gov/datatypes/edtf/EDTF"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State"
+    },
+    "Contactinfo": {
+      "@context": {
+        "aanschrijfvorm": {
+          "@id": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "adres": {
+          "@id": "http://www.w3.org/ns/locn#address",
+          "@type": "http://www.w3.org/ns/locn#Address"
+        },
+        "contactnaam": {
+          "@id": "http://xmlns.com/foaf/0.1/name",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "email": {
+          "@id": "http://schema.org/email",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "fax": {
+          "@id": "http://schema.org/faxNumber",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "telefoon": {
+          "@id": "http://schema.org/telephone",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "website": {
+          "@id": "http://xmlns.com/foaf/0.1/page",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        }
+      },
+      "@id": "http://schema.org/ContactPoint"
+    },
+    "Creatie": {
+      "@context": {
+        "creatie": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P94_has_created",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E65_Creation"
+    },
+    "DateTime": {
+      "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Dimensie": {
+      "@context": {
+        "beschrijving": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+          "@type": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving"
+        },
+        "eenheid": {
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P91_has_unit",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "type": {
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "waarde": {
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P90_has_value",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"
+    },
+    "Ding": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E70_Thing"
+    },
+    "EDTF": {
+      "@id": "http://id.loc.gov/datatypes/edtf/EDTF"
+    },
+    "Eenheid": {
+      "@id": "https://qudt.org/schema/qudt/Unit"
+    },
+    "Entiteit": {
+      "@context": {
+        "beschrijving": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "classificatie": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment"
+        },
+        "identificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "lidVan": {
+          "@container": "@set",
+          "@id": "https://linked.art/ns/terms/member_of",
+          "@type": "https://linked.art/Set"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
+    },
+    "Gebeurtenis": {
+      "@context": {
+        "beschrijving": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "identificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "plaats": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at",
+          "@type": "http://www.w3.org/ns/prov#Location"
+        },
+        "tijd": {
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span",
+          "@type": "http://www.w3.org/2006/time#TemporalEntity"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E5_Event"
+    },
+    "Geldbedrag": {
+      "@context": {
+        "valuta": {
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P180_has_currency",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E97_Monetary_Amount"
+    },
+    "GeografischeNaam": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Geometrie": {
+      "@context": {
+        "gml": {
+          "@id": "http://www.opengis.net/ont/geosparql#asGML",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "wkt": {
+          "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      },
+      "@id": "http://www.w3.org/ns/locn#Geometry"
+    },
+    "Grootheid": {
+      "@id": "https://qudt.org/schema/qudt/QuantityKind"
+    },
+    "Identificator": {
+      "@context": {
+        "identificator": {
+          "@id": "http://www.w3.org/2004/02/skos/core#notation",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "toegekendDoor": {
+          "@id": "http://purl.org/dc/terms/creator",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "toegekendDoor(String)": {
+          "@id": "http://www.w3.org/ns/adms#schemaAgency",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "toegekendOp": {
+          "@id": "http://purl.org/dc/terms/issued",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "InformatieObject": {
+      "@context": {
+        "bevat": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P165_incorporates",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"
+        },
+        "drager": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P128i_is_carried_by",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"
+        },
+        "gaatOver": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
+        },
+        "heeftComponent": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P148_has_component",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"
+        },
+        "isOnderworpenAan": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+        },
+        "rechtenhouder": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "taal": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/language",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        },
+        "verwijstNaar": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"
+    },
+    "LangString": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Literal": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Locatie": {
+      "@context": {
+        "identificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        }
+      },
+      "@id": "http://www.w3.org/ns/prov#Location"
+    },
+    "MaterieelDing": {
+      "@context": {
+        "beheerder": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P50_has_current_keeper",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "bestaatUit": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"
+        },
+        "conditie": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P44_has_condition",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State"
+        },
+        "dimensie": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"
+        },
+        "draagt": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P128_carries",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"
+        },
+        "eigenaar": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "gaatOver": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/elements/1.1/subject",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
+        },
+        "isOnderworpenAan": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+        },
+        "isOvergedragenBijVerwerving": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition"
+        },
+        "materiaal": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P45_consists_of",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"
+    },
+    "MaterieelMensgemaaktDing": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"
+    },
+    "MaterieelObject": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object"
+    },
+    "MensgemaaktDing": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E71_Human-Made_Thing"
+    },
+    "MensgemaaktObject": {
+      "@context": {
+        "beeldtUit": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P62_depicts",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
+        },
+        "locatie": {
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location",
+          "@type": "https://wherever/TODO"
+        },
+        "permanenteLocatie": {
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P54_has_current_permanent_location",
+          "@type": "https://wherever/TODO"
+        },
+        "productie": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E12_Production"
+        },
+        "titel": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P102_has_title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object"
+    },
+    "Moment": {
+      "@context": {
+        "inEDTF": {
+          "@id": "https://periodo.github.io/edtf-ontology/edtfo.ttl#inEDTFDateTime",
+          "@type": "http://id.loc.gov/datatypes/edtf/EDTF"
+        },
+        "inXSDDateTime": {
+          "@id": "http://www.w3.org/2006/time#inXSDDateTime",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "http://www.w3.org/2006/time#Instant"
+    },
+    "Organisatie": {
+      "@context": {
+        "contactinfo": {
+          "@container": "@set",
+          "@id": "http://schema.org/contactPoint",
+          "@type": "http://schema.org/ContactPoint"
+        },
+        "voorkeursnaam": {
+          "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.w3.org/ns/org#Organization"
+    },
+    "Periode": {
+      "@context": {
+        "inEDTF": {
+          "@id": "https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription",
+          "@type": "http://id.loc.gov/datatypes/edtf/EDTF"
+        },
+        "tot": {
+          "@id": "http://www.w3.org/2006/time#hasEnd",
+          "@type": "http://www.w3.org/2006/time#Instant"
+        },
+        "van": {
+          "@id": "http://www.w3.org/2006/time#hasBeginning",
+          "@type": "http://www.w3.org/2006/time#Instant"
+        }
+      },
+      "@id": "http://www.w3.org/2006/time#ProperInterval"
+    },
+    "Persoon": {
+      "@context": {
+        "achternaam": {
+          "@id": "http://xmlns.com/foaf/0.1/familyName",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "contactinfo": {
+          "@id": "http://schema.org/contactPoint",
+          "@type": "http://schema.org/ContactPoint"
+        },
+        "geboortedatum": {
+          "@id": "https://data.vlaanderen.be/ns/persoon#/Geboortedatum",
+          "@type": "http://www.w3.org/2006/time#TemporalEntity"
+        },
+        "sterfdatum": {
+          "@id": "https://data.vlaanderen.be/ns/persoon#/Sterfdatum",
+          "@type": "http://www.w3.org/2006/time#TemporalEntity"
+        },
+        "volledigeNaam": {
+          "@id": "https://data.vlaanderen.be/ns/persoon#volledigeNaam",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "voornaam": {
+          "@container": "@set",
+          "@id": "http://xmlns.com/foaf/0.1/givenName",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      },
+      "@id": "http://www.w3.org/ns/person#Person"
+    },
+    "Plaats": {
+      "@context": {
+        "geometrie": {
+          "@id": "http://www.w3.org/ns/locn#geometry",
+          "@type": "http://www.w3.org/ns/locn#Geometry"
+        },
+        "plaatsnaam": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/2000/01/rdf-schema#label",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://purl.org/dc/terms/Location"
+    },
+    "Productie": {
+      "@context": {
+        "product": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P108_has_produced",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E12_Production"
+    },
+    "PropositioneelObject": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"
+    },
+    "Recht": {
+      "@context": {
+        "beschrijving": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P3_has_note",
+          "@type": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Beschrijving"
+        },
+        "geldigheid": {
+          "@id": "http://purl.org/dc/terms/valid",
+          "@type": "http://www.w3.org/2006/time#ProperInterval"
+        },
+        "identificator": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "isInBezitVan": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P75i_is_possessed_by",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "isVanToepassingOp": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P104i_applies_to",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
+        },
+        "titel": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P102_has_title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P2_has_type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+    },
+    "Rol": {
+      "@context": {
+        "activiteit": {
+          "@id": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol.activiteit",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E7_Activity"
+        },
+        "agent": {
+          "@id": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol.agent",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "rol": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P14.1_in_the_role_of",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://data.vlaanderen.be/ns/cultureel-erfgoed#Rol"
+    },
+    "RuimtelijkObject": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#RuimtelijkObject"
+    },
+    "Set": {
+      "@context": {
+        "gaatOver": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P129_is_about",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
+        },
+        "heeftComponent": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P148_has_component",
+          "@type": "https://linked.art/Set"
+        },
+        "heeftLid": {
+          "@container": "@set",
+          "@id": "https://linked.art/ns/terms/has_member",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
+        },
+        "isOnderworpenAan": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E30_Right"
+        },
+        "rechtenhouder": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P105_right_held_by",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "verwijstNaar": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P67_refers_to",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity"
+        }
+      },
+      "@id": "https://linked.art/Set"
+    },
+    "String": {
+      "@id": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "SymbolischObject": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"
+    },
+    "TemporeleEntiteit": {
+      "@id": "http://www.w3.org/2006/time#TemporalEntity"
+    },
+    "Tijdvak": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E4_Period"
+    },
+    "Toekenning": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"
+    },
+    "URI": {
+      "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Valuta": {
+      "@id": "http://qudt.org/schema/qudt/CurrencyUnit"
+    },
+    "Verwerving": {
+      "@context": {
+        "overdrachtVan": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P24_transferred_title_of",
+          "@type": "http://www.cidoc-crm.org/cidoc-crm/E18_Physical_Thing"
+        },
+        "overgedragenAan": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P22_transferred_title_to",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "overgedragenVan": {
+          "@container": "@set",
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P23_transfered_title_from",
+          "@type": "http://purl.org/dc/terms/Agent"
+        }
+      },
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition"
+    },
+    "WettelijkObject": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E72_Legal_Object"
+    },
+    "Wijziging": {
+      "@id": "http://www.cidoc-crm.org/cidoc-crm/E11_Modification"
     }
   }
 }
