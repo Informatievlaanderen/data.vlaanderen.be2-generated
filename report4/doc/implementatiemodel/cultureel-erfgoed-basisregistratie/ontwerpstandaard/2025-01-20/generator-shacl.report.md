@@ -2,13 +2,25 @@
 
 #||# -------------------------------------  
 
-2025-09-24T12:51:13.455Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-cultureel-erfgoed-basisregistratie.jsonld#L8165)".
+2025-09-24T13:13:32.809Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-cultureel-erfgoed-basisregistratie.jsonld#L8165)".
 
-2025-09-24T12:51:13.458Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-cultureel-erfgoed-basisregistratie.jsonld#L8176)".
+2025-09-24T13:13:32.811Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-cultureel-erfgoed-basisregistratie.jsonld#L8176)".
 
-2025-09-24T12:51:13.458Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-cultureel-erfgoed-basisregistratie.jsonld#L8187)".
+2025-09-24T13:13:32.811Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-cultureel-erfgoed-basisregistratie.jsonld#L8187)".
 
-2025-09-24T12:51:13.458Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-cultureel-erfgoed-basisregistratie.jsonld#L8198)".
+2025-09-24T13:13:32.811Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-cultureel-erfgoed-basisregistratie.jsonld#L8198)".
 
-2025-09-24T12:51:13.459Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
+2025-09-24T13:13:32.812Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
+
+Error: Unable to find the assigned URI for range "http://id.loc.gov/datatypes/edtf/EDTF".
+
+    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:52:19)
+
+    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+
+    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:51)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
