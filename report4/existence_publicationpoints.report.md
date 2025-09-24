@@ -164,6 +164,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/production/kabels-en-leidingen.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/production/kindfiche.publication.json
 #||# 
 Directory check

@@ -54,6 +54,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/inname-openbaar-domein.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/production/kabels-en-leidingen.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/production/kindfiche.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/kwaliteit-wegen-en-markeringen.publication.json
@@ -215,8 +217,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/infrastructuurelementen",
   "/tmp/generated/doc/applicatieprofiel/inname-openbaar-domein",
   "/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties",
-  "/tmp/generated/doc/applicatieprofiel/kabels-en-leidingen",
-  "/tmp/generated/doc/applicatieprofiel/kabels-en-leidingen/kandidaatstandaard/2023-12-19",
   "/tmp/generated/doc/applicatieprofiel/leerinschrijfcredential/kandidaatstandaard/2024-05-16",
   "/tmp/generated/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24",
   "/tmp/generated/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17",
@@ -296,7 +296,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/mobiliteitsbudget",
   "/tmp/generated/doc/vocabularium/mobiliteitsbudget/erkendestandaard/2025-02-06",
   "/tmp/generated/doc/vocabularium/mobiliteitsbudget/ontwerpstandaard/toolchain4",
-  "/tmp/generated/doc/vocabularium/nutsvoorzieningen/kandidaatstandaard/2023-12-19",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/begraafplaats",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/begroeid-voorkomen",
   "/tmp/generated/doc/vocabularium/openbaardomein/standaard/2018-11-27/gebied",
@@ -336,7 +335,6 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/kindfiche",
   "/tmp/generated/ns/leercredential",
   "/tmp/generated/ns/metadata-dcat",
-  "/tmp/generated/ns/nutsvoorzieningen",
   "/tmp/generated/ns/observaties-en-metingen",
   "/tmp/generated/ns/perceel",
   "/tmp/generated/ns/rooilijn",
