@@ -2,73 +2,73 @@
 
 #||# -------------------------------------
 
-2025-09-24T09:12:22.094Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Leermiddelen:OSLO-Leercredential:Leerclaim:(Leerclaim -> Leerclaim))
+2025-09-24T09:57:17.763Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Leermiddelen:OSLO-Leercredential:Leerclaim:(Leerclaim -> Leerclaim))
 
-2025-09-24T09:12:22.096Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Leermiddelen:OSLO-Leercredential:Leerprestatie:(Leerprestatie -> Toekenningsproces))
+2025-09-24T09:57:17.764Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Leermiddelen:OSLO-Leercredential:Leerprestatie:(Leerprestatie -> Toekenningsproces))
 
-2025-09-24T09:12:22.096Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Leermiddelen:OSLO-Leercredential:EuropeesDigitaalCredential:(EuropeesDigitaalCredential -> VerifieerbareCredential))
+2025-09-24T09:57:17.765Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Leermiddelen:OSLO-Leercredential:EuropeesDigitaalCredential:(EuropeesDigitaalCredential -> VerifieerbareCredential))
 
-2025-09-24T09:12:22.096Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Leermiddelen:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Leeractiviteit))
+2025-09-24T09:57:17.765Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Leermiddelen:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Leeractiviteit))
 
-2025-09-24T09:12:22.099Z info: Connector Model:OSLO-Leermiddelen:Schema.org:CreatiefWerk:(CreatiefWerk -> Licentie) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.766Z info: Connector Model:OSLO-Leermiddelen:Schema.org:CreatiefWerk:(CreatiefWerk -> Licentie) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.100Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Leermiddel) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.767Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Leermiddel) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.101Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leermiddelen:Leermiddel:(Leermiddel -> Doel) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.767Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leermiddelen:Leermiddel:(Leermiddel -> Doel) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.101Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leermiddelen:Leermiddel:(Leermiddel -> CreatiefWerk) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.768Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leermiddelen:Leermiddel:(Leermiddel -> CreatiefWerk) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.101Z info: Connector Model:OSLO-Leermiddelen:LOCN:Adresvoorstelling:(Adresvoorstelling -> Locatie) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.768Z info: Connector Model:OSLO-Leermiddelen:LOCN:Adresvoorstelling:(Adresvoorstelling -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.101Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.768Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.102Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leercredential:Leeractiviteitspecificatie:(Leeractiviteitspecificatie -> Doel) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.768Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leercredential:Leeractiviteitspecificatie:(Leeractiviteitspecificatie -> Doel) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.102Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leercredential:Leeractiviteitspecificatie:(Leeractiviteitspecificatie -> Leermiddel) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.768Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leercredential:Leeractiviteitspecificatie:(Leeractiviteitspecificatie -> Leermiddel) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.102Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Doel) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.768Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leercredential:Leeractiviteit:(Leeractiviteit -> Doel) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.103Z info: Connector Model:OSLO-Leermiddelen:Schema.org:CreatiefWerk:(CreatiefWerk -> Agent) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.769Z info: Connector Model:OSLO-Leermiddelen:Schema.org:CreatiefWerk:(CreatiefWerk -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.103Z info: Connector Model:OSLO-Leermiddelen:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.769Z info: Connector Model:OSLO-Leermiddelen:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.103Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.769Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.104Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.769Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.104Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.769Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leermiddelen:Doel:(Doel -> Doel) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.104Z info: Connector Model:OSLO-Leermiddelen:W3C-Time:Tijdsduur:(Tijdsduur -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.772Z info: Connector Model:OSLO-Leermiddelen:W3C-Time:Tijdsduur:(Tijdsduur -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.104Z info: Connector Model:OSLO-Leermiddelen:QUDT:Valuta:(Valuta -> Eenheid) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.772Z info: Connector Model:OSLO-Leermiddelen:QUDT:Valuta:(Valuta -> Eenheid) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.104Z info: Connector Model:OSLO-Leermiddelen:Schema.org:Geldbedrag:(Geldbedrag -> KwantitatieveWaarde) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.772Z info: Connector Model:OSLO-Leermiddelen:Schema.org:Geldbedrag:(Geldbedrag -> KwantitatieveWaarde) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.104Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leermiddelen:LeermiddelVerzameling:(LeermiddelVerzameling -> Verzameling) is not an association with a source role. Ignoring this connector.
+2025-09-24T09:57:17.772Z info: Connector Model:OSLO-Leermiddelen:OSLO-Leermiddelen:LeermiddelVerzameling:(LeermiddelVerzameling -> Verzameling) is not an association with a source role. Ignoring this connector.
 
-2025-09-24T09:12:22.109Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-09-24T09:57:17.773Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-09-24T09:12:22.109Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen). Using fallback URI (http://todo.com/) instead.
+2025-09-24T09:57:17.773Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen). Using fallback URI (http://todo.com/) instead.
 
-2025-09-24T09:12:22.109Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:Schema.org). Using fallback URI (http://todo.com/) instead.
+2025-09-24T09:57:17.773Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:Schema.org). Using fallback URI (http://todo.com/) instead.
 
-2025-09-24T09:12:22.109Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:W3C-Time). Using fallback URI (http://todo.com/) instead.
+2025-09-24T09:57:17.773Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:W3C-Time). Using fallback URI (http://todo.com/) instead.
 
-2025-09-24T09:12:22.109Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:DCTerms). Using fallback URI (http://todo.com/) instead.
+2025-09-24T09:57:17.773Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:DCTerms). Using fallback URI (http://todo.com/) instead.
 
-2025-09-24T09:12:22.109Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:Dummy). Using fallback URI (http://todo.com/) instead.
+2025-09-24T09:57:17.773Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:Dummy). Using fallback URI (http://todo.com/) instead.
 
-2025-09-24T09:12:22.109Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:Dump). Using fallback URI (http://todo.com/) instead.
+2025-09-24T09:57:17.773Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:Dump). Using fallback URI (http://todo.com/) instead.
 
-2025-09-24T09:12:22.109Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:QUDT). Using fallback URI (http://todo.com/) instead.
+2025-09-24T09:57:17.773Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:QUDT). Using fallback URI (http://todo.com/) instead.
 
-2025-09-24T09:12:22.110Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:PROV). Using fallback URI (http://todo.com/) instead.
+2025-09-24T09:57:17.774Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:PROV). Using fallback URI (http://todo.com/) instead.
 
-2025-09-24T09:12:22.110Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:LOCN). Using fallback URI (http://todo.com/) instead.
+2025-09-24T09:57:17.774Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Leermiddelen:LOCN). Using fallback URI (http://todo.com/) instead.
 
-2025-09-24T09:12:22.121Z warn: [ConverterHandler]: Entity with path Model:OSLO-Leermiddelen:Schema.org:OpeningsurenSpecificatie has an empty value for tag ap-usageNote-nl.
+2025-09-24T09:57:17.781Z warn: [ConverterHandler]: Entity with path Model:OSLO-Leermiddelen:Schema.org:OpeningsurenSpecificatie has an empty value for tag ap-usageNote-nl.
 
-2025-09-24T09:12:22.142Z warn: [ConverterHandler]: Entity with path onderdeelVan has already a value for ap-usageNote-nl in language nl, but will be overwritten.
+2025-09-24T09:57:17.795Z warn: [ConverterHandler]: Entity with path onderdeelVan has already a value for ap-usageNote-nl in language nl, but will be overwritten.
 
 #||# -------------------------------------
 
