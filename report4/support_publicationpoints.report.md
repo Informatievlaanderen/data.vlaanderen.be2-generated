@@ -217,7 +217,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/infrastructuurelementen",
   "/tmp/generated/doc/applicatieprofiel/inname-openbaar-domein",
   "/tmp/generated/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties",
-  "/tmp/generated/doc/applicatieprofiel/kabels-en-leidingen/erkendestandaard/2025-02-06",
+  "/tmp/generated/doc/applicatieprofiel/kabels-en-leidingen/erkendestandaard/temp",
   "/tmp/generated/doc/applicatieprofiel/leerinschrijfcredential/kandidaatstandaard/2024-05-16",
   "/tmp/generated/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-02-24",
   "/tmp/generated/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17",
