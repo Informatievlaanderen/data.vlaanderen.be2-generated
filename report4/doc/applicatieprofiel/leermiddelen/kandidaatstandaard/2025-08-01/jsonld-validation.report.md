@@ -2,63 +2,103 @@
 
 #||# -------------------------------------  
 
-2025-08-20T12:42:01.508Z info: Loaded 44 URI prefixes into whitelist
+2025-09-25T09:34:45.234Z info: Loaded 45 URI prefixes into whitelist
 
-2025-08-20T12:42:01.721Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/LearningActivity for subject: [[urn:oslo-toolchain:9c96992a596f567a50f41d4bfc327255b6d4665a3c237db3935f56d869253ccd](all-leermiddelen-ap.jsonld#L4815)](all-leermiddelen-ap.jsonld#L164)
+2025-09-25T09:34:45.433Z warn: Found non-whitelisted assigned URI: https://qudt.org/schema/qudt/Unit for subject: [urn:oslo-toolchain:f377d413ed884f0570c6e6ae53067fadb1adeb441386aa90c1c5661e5754b6cb](all-leermiddelen.jsonld#L634)
 
-2025-08-20T12:42:01.721Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/LearningActivitySpecification for subject: [[urn:oslo-toolchain:b3e58ee7e1dc892d6fa594062ef7685af0285191d9947e9301cb2e41298075ac](all-leermiddelen-ap.jsonld#L4848)](all-leermiddelen-ap.jsonld#L289)
+2025-09-25T09:34:45.433Z warn: Found non-whitelisted assigned URI: http://schema.org/opens for subject: [urn:oslo-toolchain:ee9cfe0eea8860f9da792281e396feb6b875b51fcb29aa31a92c6019ebba8c0c](all-leermiddelen.jsonld#L1164)
 
-2025-08-20T12:42:01.721Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/contactHour for subject: [urn:oslo-toolchain:13b008d10f4b178dff3f2f1f58e2b6ef62f97f462871b90fa093ab93fa54f093](all-leermiddelen-ap.jsonld#L1159)
+2025-09-25T09:34:45.433Z warn: Found non-whitelisted assigned URI: http://schema.org/closes for subject: [urn:oslo-toolchain:7cc32b8548b857d89262475044d130b87584e7ec5b87119d13a3090b7756ec7f](all-leermiddelen.jsonld#L1202)
 
-2025-08-20T12:42:01.721Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/hasPart for subject: [urn:oslo-toolchain:799b4fdc96b272fd4d500a140cc66d7b9baea5d5751443d519307580e281290d](all-leermiddelen-ap.jsonld#L2219)
+2025-09-25T09:34:45.433Z warn: Found non-whitelisted assigned URI: http://schema.org/dayOfWeek for subject: [urn:oslo-toolchain:0172cf620bdd16150eea25f8dc72ec563ea20d361c09f2a54a24bf5ddcbe5f25](all-leermiddelen.jsonld#L1240)
 
-2025-08-20T12:42:01.721Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/hasPart for subject: [urn:oslo-toolchain:4c9de59fe8d262068a7f83f8c97ea8c22b8a1de0986bdae0acadacf3288d5571](all-leermiddelen-ap.jsonld#L3093)
+2025-09-25T09:34:45.433Z warn: Found non-whitelisted assigned URI: http://schema.org/validFrom for subject: [urn:oslo-toolchain:cce3ce75f91d7df4430de6592ad48ce344d910bc468607595cf07e6a2d794489](all-leermiddelen.jsonld#L1284)
 
-2025-08-20T12:42:01.721Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/directedBy for subject: [urn:oslo-toolchain:f4b5d686396c3b4e5b8cb9d186dceefe9b60df7614c1f6ac975ae912ebc815f3](all-leermiddelen-ap.jsonld#L2267)
+2025-09-25T09:34:45.433Z warn: Found non-whitelisted assigned URI: http://schema.org/validThrough for subject: [urn:oslo-toolchain:78385e7b413ac08ef5a4c7306da996d075044ed0ce2852d137864303f5e43daf](all-leermiddelen.jsonld#L1322)
 
-2025-08-20T12:42:01.721Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/isPartOf for subject: [urn:oslo-toolchain:eb72c39ca5cc9a42314fd561720b8a12d3989d5b6561cbaf19aa6949fdf8bef6](all-leermiddelen-ap.jsonld#L2311)
+2025-09-25T09:34:45.433Z warn: Found non-whitelisted assigned URI: https://ec.europa.eu/esco/lod/static/model.html#Skill for subject: [urn:oslo-toolchain:6bf9edebd501978400e505857cbf1d3efd7a63f0c02542c98716ffd04d778a97](all-leermiddelen.jsonld#L4787)
 
-2025-08-20T12:42:01.721Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/isPartOf for subject: [urn:oslo-toolchain:dc61999b42d5caeb2e61305d9a9ddaa8522a20f5b4c6786ea4da6d626b32f2bf](all-leermiddelen-ap.jsonld#L3185)
+2025-09-25T09:34:45.433Z warn: Found non-whitelisted assigned URI: http://schema.org/OpeningHoursSpecification for subject: [urn:oslo-toolchain:c35947b4ea05516bd3bdc5d373f83fca2365977e85d9c60794973d5a680a9f64](all-leermiddelen.jsonld#L5055)
 
-2025-08-20T12:42:01.721Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/location for subject: [urn:oslo-toolchain:3dbd14bfc51265420b8f7fab26539242c0fcb3de2e7e0423b3b924c9958153e3](all-leermiddelen-ap.jsonld#L2355)
+2025-09-25T09:34:45.435Z warn: Found sentence without a '.': 'Een element waaruit een Leermiddel bestaat' for subject: [[urn:oslo-toolchain:d241dee0e1f2b6996447f906f4a19a8fa68567dd33fb60ab585ea846bec8f8c2](all-leermiddelen.jsonld#L5286)](all-leermiddelen.jsonld#L783)
 
-2025-08-20T12:42:01.722Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/specifiedBy for subject: [urn:oslo-toolchain:87f5029519f5c15e5af71350167371330d1fe5b94b5dd21a9539e17bbcc9d10d](all-leermiddelen-ap.jsonld#L2491)
+2025-09-25T09:34:45.435Z warn: Found sentence without a '.': 'Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is' for subject: [urn:oslo-toolchain:950bdc15278fbf28ad7dfa7128e58c0f45db15d21133b289113a76ad53afab1a](all-leermiddelen.jsonld#L1515)
 
-2025-08-20T12:42:01.722Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/workload for subject: [urn:oslo-toolchain:d890513770ccb5bfe6e35db5083cf3720a162f338905b683c322d087647b4f4f](all-leermiddelen-ap.jsonld#L2535)
+2025-09-25T09:34:45.435Z warn: Found sentence without a '.': 'De bijdrage van een Leeractiviteit om een Doel te behalen' for subject: [urn:oslo-toolchain:d97929e47a52a8bc0bab88d2abb632b8fba6f5dc38ad419d345fa5c65f117d10](all-leermiddelen.jsonld#L4382)
 
-2025-08-20T12:42:01.722Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/generalisationOf for subject: [urn:oslo-toolchain:36e55b77475e486e873d7a44dae946647bd825c70a129bb9442d3c6733e54cfe](all-leermiddelen-ap.jsonld#L3049)
+2025-09-25T09:34:45.435Z warn: Found sentence without a '.': 'Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is' for subject: [urn:oslo-toolchain:950bdc15278fbf28ad7dfa7128e58c0f45db15d21133b289113a76ad53afab1a](all-leermiddelen.jsonld#L1515)
 
-2025-08-20T12:42:01.722Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/specialisationOf for subject: [urn:oslo-toolchain:28781596623cf0100edb6bf8e43afaf83de44f5793732e11f871d134aab2c9b3](all-leermiddelen-ap.jsonld#L3229)
+2025-09-25T09:34:45.436Z warn: Found empty sentence for subject: [urn:oslo-toolchain:ee9cfe0eea8860f9da792281e396feb6b875b51fcb29aa31a92c6019ebba8c0c](all-leermiddelen.jsonld#L1164)
 
-2025-08-20T12:42:01.722Z warn: Found non-whitelisted assigned URI: https://www.w3.org/TR/owl-time/#time:Duration for subject: [urn:oslo-toolchain:5e1cba97b7e737a1d4f9c674865bd3627aff9d93674dcbde80903ffc080ea2dc](all-leermiddelen-ap.jsonld#L4474)
+2025-09-25T09:34:45.436Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7cc32b8548b857d89262475044d130b87584e7ec5b87119d13a3090b7756ec7f](all-leermiddelen.jsonld#L1202)
 
-2025-08-20T12:42:01.722Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/Claim for subject: [urn:oslo-toolchain:ece4cbd1975bb44c707b794518d90fa706b13bd8ea16bb07036f72ff58f00e26](all-leermiddelen-ap.jsonld#L4819)
+2025-09-25T09:34:45.436Z warn: Found empty sentence for subject: [urn:oslo-toolchain:cce3ce75f91d7df4430de6592ad48ce344d910bc468607595cf07e6a2d794489](all-leermiddelen.jsonld#L1284)
 
-2025-08-20T12:42:01.722Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/Specification for subject: [urn:oslo-toolchain:a60bb451216ca120cc984fd5b4192e0dea7d5051acbba31ff72eb8fc27578627](all-leermiddelen-ap.jsonld#L4852)
+2025-09-25T09:34:45.436Z warn: Found empty sentence for subject: [urn:oslo-toolchain:78385e7b413ac08ef5a4c7306da996d075044ed0ce2852d137864303f5e43daf](all-leermiddelen.jsonld#L1322)
 
-2025-08-20T12:42:01.722Z warn: Found non-whitelisted assigned URI: http://data.europa.eu/snb/model/elm/Address for subject: [urn:oslo-toolchain:39d22c8f3f46fb43e358f9fef3570d73f273b36f28d0a68a9ebfa451932c63bf](all-leermiddelen-ap.jsonld#L4875)
+2025-09-25T09:34:45.436Z warn: Found empty sentence for subject: [urn:oslo-toolchain:29f82a3b87d680591fe408fd171740943463c9ccdd40a089d241890510daee48](all-leermiddelen.jsonld#L1457)
 
-2025-08-20T12:42:01.726Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:aeaf77a4415bf9b48c21c0aa9deeffab6a34027b0ae5626f75c635c4e58905a0](all-leermiddelen-ap.jsonld#L988)
+2025-09-25T09:34:45.436Z warn: Found empty sentence for subject: [urn:oslo-toolchain:bc4396b4f62570616c64a7300249392eb519fadfad3788fe1f1628c90fc06a25](all-leermiddelen.jsonld#L1583)
 
-2025-08-20T12:42:01.727Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:c5159c1b7585bbb69b6052999fc86aca5fbb78c3b3d7f46bea61d4cb77cbf6b6](all-leermiddelen-ap.jsonld#L4927)
+2025-09-25T09:34:45.436Z warn: Found empty sentence for subject: [urn:oslo-toolchain:2f2aeb71dbf27b047a77364199fdf80ec44467d98340a54d2f2fe62f7e9ce734](all-leermiddelen.jsonld#L1696)
 
-2025-08-20T12:42:01.727Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:aeaf77a4415bf9b48c21c0aa9deeffab6a34027b0ae5626f75c635c4e58905a0](all-leermiddelen-ap.jsonld#L988)
+2025-09-25T09:34:45.436Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4eb5fff61723b39c0f17410cc8711abad39f4e095e396e8644c2d798f7d81aae](all-leermiddelen.jsonld#L1754)
 
-2025-08-20T12:42:01.727Z warn: Found empty sentence for subject: [urn:oslo-toolchain:80ca3001123a42c4d1bea26419f50b2021a984733bcebd64b72bb5707f00b185](all-leermiddelen-ap.jsonld#L1499)
+2025-09-25T09:34:45.436Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4a76fd190ed8cc443cd78faae332d1c9f2e1ba970cf1e077831c3b11e9d41f22](all-leermiddelen.jsonld#L1867)
 
-2025-08-20T12:42:01.727Z warn: Found empty sentence for subject: [urn:oslo-toolchain:373aec4bc01dddfb157dd7da9e96503f8f98fbb6a649199302589ea7e36f690c](all-leermiddelen-ap.jsonld#L1549)
+2025-09-25T09:34:45.436Z warn: Found empty sentence for subject: [urn:oslo-toolchain:16b5ef4c830178babc02531c2699397c1bd61c93519706b10eae4bd488aebeae](all-leermiddelen.jsonld#L2025)
 
-2025-08-20T12:42:01.727Z warn: Found empty sentence for subject: [urn:oslo-toolchain:a1606391e86838963ec74366271c83ef6670b355a45482c6536ea904c11fc60d](all-leermiddelen-ap.jsonld#L3806)
+2025-09-25T09:34:45.436Z warn: Found empty sentence for subject: [urn:oslo-toolchain:5b889b383226c7d15ba16103d676263960306f3e38b3c286f06f04bf9a3b6cb2](all-leermiddelen.jsonld#L2083)
 
-2025-08-20T12:42:01.730Z error: Found missing class (NAL_currency): [urn:oslo-toolchain:aeaf77a4415bf9b48c21c0aa9deeffab6a34027b0ae5626f75c635c4e58905a0](all-leermiddelen-ap.jsonld#L988)
+2025-09-25T09:34:45.436Z warn: Found empty sentence for subject: [urn:oslo-toolchain:a8047471c75223778240e49f8044f4536c31ede20bece1b42816f5228768ed2f](all-leermiddelen.jsonld#L2141)
 
-2025-08-20T12:42:01.733Z info: Validation found 17 non-whitelisted assigned URIs
+2025-09-25T09:34:45.436Z warn: Found sentence without a '.': 'Je kan ook dcterms:' for subject: [urn:oslo-toolchain:81bc25dd2b50d4bb2d4115af23c33a1cfab9c9ebc7a89fb905494f39b059d6d8](all-leermiddelen.jsonld#L4650)
 
-2025-08-20T12:42:01.733Z info: Validation found 6 sentences with spelling mistakes.
+2025-09-25T09:34:45.439Z error: Found missing class or attribute (Leeractiviteittype): [urn:oslo-toolchain:c5159c1b7585bbb69b6052999fc86aca5fbb78c3b3d7f46bea61d4cb77cbf6b6](all-leermiddelen.jsonld#L156)
 
-2025-08-20T12:42:01.733Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2025-09-25T09:34:45.439Z error: Found missing class or attribute (Taal): [urn:oslo-toolchain:990626280dfacb47215214e8742c5c2ec65f37655eeeeb31ebf0dc393462feef](all-leermiddelen.jsonld#L221)
 
-2025-08-20T12:42:01.733Z info: Validation successful! All base URIs seem to be valid.
+2025-09-25T09:34:45.439Z error: Found missing class or attribute (Doelgroep): [urn:oslo-toolchain:bd12f5b1a4c0b9cb81036768df2f9e270624c505960594f1cfc242d9a4602e20](all-leermiddelen.jsonld#L239)
 
-2025-08-20T12:42:01.733Z info: Validation found 1 missing referenced classes.
+2025-09-25T09:34:45.439Z error: Found missing class or attribute (LeermiddelType): [urn:oslo-toolchain:db4318edea62d8548535f018869d485cfa3e29d00acd44dc9c16c24000c7e7b1](all-leermiddelen.jsonld#L357)
+
+2025-09-25T09:34:45.439Z error: Found missing class or attribute (FormaatType): [urn:oslo-toolchain:25265f51ccd5ffea032f67a3c8a3dc2919a4b5770715da581b32b705a88cc946](all-leermiddelen.jsonld#L455)
+
+2025-09-25T09:34:45.439Z error: Found missing class or attribute (DoelType): [urn:oslo-toolchain:bb875baf3364fda1ef520c59d3d1bba658dfe805c7c24ba25448c73c7e73cc1a](all-leermiddelen.jsonld#L467)
+
+2025-09-25T09:34:45.439Z error: Found missing class or attribute (LicentieType): [urn:oslo-toolchain:efaf285f090b45a4fee6778a735ef32714e1f0cba3d193ce3a1044e85a7f0f47](all-leermiddelen.jsonld#L479)
+
+2025-09-25T09:34:45.440Z error: Found missing class or attribute (OpleidingsniveauType): [urn:oslo-toolchain:3babc22030f4b3617e93eea5bb95a7e3cb997aa331f24ad1dc566ddf2d05e3aa](all-leermiddelen.jsonld#L491)
+
+2025-09-25T09:34:45.440Z error: Found missing class or attribute (OnderwerpType): [urn:oslo-toolchain:482bc9d73bc9ad65a73ee3d380318e0b9a0a19e573ed2fa9703192631dbf63a6](all-leermiddelen.jsonld#L532)
+
+2025-09-25T09:34:45.440Z error: Found missing class or attribute (BronType): [urn:oslo-toolchain:ec2d17dde02f5b246498b96be40a5285cf34c26593e472c313cf6b51c7d254d0](all-leermiddelen.jsonld#L544)
+
+2025-09-25T09:34:45.440Z error: Found missing class or attribute (CompetentieType): [urn:oslo-toolchain:8adbe6a345541821b026afe5e637a3da18a78f3b4a5fd79170de35accb285892](all-leermiddelen.jsonld#L556)
+
+2025-09-25T09:34:45.440Z error: Found missing class or attribute (LeeftijdsType): [urn:oslo-toolchain:1de0499527eea1903effcfa63f07e178fff71a0606187317c97e856655497a8b](all-leermiddelen.jsonld#L574)
+
+2025-09-25T09:34:45.440Z error: Found missing class or attribute (InteractieType): [urn:oslo-toolchain:32df8932aab5d1fe6bfbc5f94eb196bba4be1d7852582a39f72d1030eae5728f](all-leermiddelen.jsonld#L586)
+
+2025-09-25T09:34:45.440Z error: Found missing class or attribute (ResultaatType): [urn:oslo-toolchain:82cba58fc0813a63e77d21154310a233beff07e423f9293cc92d26b4be4e50e4](all-leermiddelen.jsonld#L598)
+
+2025-09-25T09:34:45.440Z error: Found missing class or attribute (ToegankelijkheidsType): [urn:oslo-toolchain:f437fa4c65fbee49bdeef60cf89056ab22cc4a1c6c2ba63bb098189a161f15bc](all-leermiddelen.jsonld#L610)
+
+2025-09-25T09:34:45.440Z error: Found missing class or attribute (Leeractiviteitspecificatietype): [urn:oslo-toolchain:81f3cf8b2726b646157e5fd9256d50980ef508ca43d6f537809029a0194d4fbd](all-leermiddelen.jsonld#L622)
+
+2025-09-25T09:34:45.443Z error: Found missing class or attribute (vereisteTijd): [urn:oslo-toolchain:44936e77cc0b893c1262074e263a666d358597916d563f11661a39f7e2cc3fbd](all-leermiddelen.jsonld#L4024)
+
+2025-09-25T09:34:45.444Z error: Found missing class or attribute (bestaatUit): [urn:oslo-toolchain:fad6835f400673d59833faf807064426b5963497c9eacb1169480edc015e0cb0](all-leermiddelen.jsonld#L4682)
+
+2025-09-25T09:34:45.444Z error: Found missing class or attribute (onderdeelVan): [urn:oslo-toolchain:81bc25dd2b50d4bb2d4115af23c33a1cfab9c9ebc7a89fb905494f39b059d6d8](all-leermiddelen.jsonld#L4650)
+
+2025-09-25T09:34:45.445Z info: Validation found 8 non-whitelisted assigned URIs
+
+2025-09-25T09:34:45.445Z info: Validation found 17 sentences with spelling mistakes.
+
+2025-09-25T09:34:45.445Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+
+2025-09-25T09:34:45.445Z info: Validation successful! All base URIs seem to be valid.
+
+2025-09-25T09:34:45.445Z info: Validation found 19 missing referenced classes or attributes.
 

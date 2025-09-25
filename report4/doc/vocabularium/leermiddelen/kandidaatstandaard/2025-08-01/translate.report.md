@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/translation/leermiddelen_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/translation/leermiddelen_nl.json
+
+TRANSLATIONFILE: leermiddelen_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
