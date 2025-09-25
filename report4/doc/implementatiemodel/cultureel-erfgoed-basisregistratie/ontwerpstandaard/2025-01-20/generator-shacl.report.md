@@ -2,13 +2,13 @@
 
 #||# -------------------------------------  
 
-2025-09-24T14:49:57.790Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-cultureel-erfgoed-basisregistratie.jsonld#L8165)".
+2025-09-25T07:19:18.461Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-cultureel-erfgoed-basisregistratie.jsonld#L8165)".
 
-2025-09-24T14:49:57.792Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-cultureel-erfgoed-basisregistratie.jsonld#L8176)".
+2025-09-25T07:19:18.463Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-cultureel-erfgoed-basisregistratie.jsonld#L8176)".
 
-2025-09-24T14:49:57.793Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-cultureel-erfgoed-basisregistratie.jsonld#L8187)".
+2025-09-25T07:19:18.463Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-cultureel-erfgoed-basisregistratie.jsonld#L8187)".
 
-2025-09-24T14:49:57.793Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-cultureel-erfgoed-basisregistratie.jsonld#L8198)".
+2025-09-25T07:19:18.464Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-cultureel-erfgoed-basisregistratie.jsonld#L8198)".
 
-2025-09-24T14:49:57.793Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
+2025-09-25T07:19:18.464Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
 
