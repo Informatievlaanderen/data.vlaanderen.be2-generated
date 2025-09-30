@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/translation/leermiddelen_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/translation/leermiddelen_nl.json
+
+TRANSLATIONFILE: leermiddelen_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
@@ -13,6 +19,12 @@ WARNING The entered language values are the same!
 #||# Write complete  
 
 #||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/translation/leermiddelen_nl.json  
+
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/translation/leermiddelen_en.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/translation/leermiddelen_en.json
+
+TRANSLATIONFILE: leermiddelen_en.json
 
 #||# translate for language en  
 
