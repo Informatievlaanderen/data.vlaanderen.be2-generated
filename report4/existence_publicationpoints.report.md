@@ -554,6 +554,14 @@ Directory check
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/verkeersborden/ontwerpstandaard/toolchain4/index.html'
 
+#||#    + checking /home/circleci/project/config/dev/weg.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/weg/ontwerpstandaard/toolchain4/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/wegenregister/ontwerpstandaard/toolchain4/index.html'
+
 #||#    + checking /home/circleci/project/config/dev/verkeersmetingen.publication.json
 #||# 
 Directory check
@@ -592,14 +600,6 @@ Directory check
 
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/waterkwaliteit/ontwerpstandaard/toolchain4/index.html'
-
-#||#    + checking /home/circleci/project/config/dev/weg.publication.json
-#||# 
-Directory check
-
-index.html check
-error: missing '/tmp/generated/doc/vocabularium/weg/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/wegenregister/ontwerpstandaard/toolchain4/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/wetgeving.publication.json
 #||# 

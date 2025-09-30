@@ -164,6 +164,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/verkeersborden.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/dev/weg.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/verkeersmetingen.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/vervoersknooppunten.publication.json
@@ -175,8 +177,6 @@
 #||#   + adding supporting /home/circleci/project/config/dev/vrachtwagenparkeren.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/waterkwaliteit.publication.json
-#||#  
-#||#   + adding supporting /home/circleci/project/config/dev/weg.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/wetgeving.publication.json
 #||#  
