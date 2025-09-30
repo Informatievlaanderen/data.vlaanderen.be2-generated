@@ -205,6 +205,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/dienstverlening-aan-personen/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/energiehuis/notawerkgroep",
   "/tmp/generated/doc/applicatieprofiel/energiehuis/notawerkgroep/2025-02-18",
+  "/tmp/generated/doc/applicatieprofiel/energiemanagementsysteem/kandidaatstandaard/2025-09-11",
   "/tmp/generated/doc/applicatieprofiel/energiemanagementsysteem/kandidaatstandaard/2025-09-13",
   "/tmp/generated/doc/applicatieprofiel/erosiepoel/ontwerpstandaard/2025-04-29",
   "/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/ontwerpstandaard/2021-12-17",
