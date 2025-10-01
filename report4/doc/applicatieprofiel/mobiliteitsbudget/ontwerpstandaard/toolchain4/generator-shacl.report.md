@@ -2,9 +2,59 @@
 
 #||# -------------------------------------  
 
-2025-02-11T11:29:31.549Z error: Unable to find the description for subject "[urn:oslo-toolchain:fa8c96eaf57dbfb105ab459c21a0eb53342a43eabc14031c4ea7e8398893beb5](all-mobiliteitsbudget-ap.jsonld#L3389)".
+2025-10-01T14:04:04.886Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-mobiliteitsbudget-ap.jsonld#L4369)".
 
-2025-02-11T11:29:31.551Z error: Unable to find the description for subject "[urn:oslo-toolchain:dea3838b311bbe0a984b491b655731ae04dca2f1565bfac09f932990431a3956](all-mobiliteitsbudget-ap.jsonld#L3409)".
+2025-10-01T14:04:04.888Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-mobiliteitsbudget-ap.jsonld#L4380)".
 
-2025-02-11T11:29:31.551Z error: Unable to find the description for subject "[urn:oslo-toolchain:761052abe264aa38244616c03fa8ca80a4493ec9b350e7d238ff8a1ec8450aee](all-mobiliteitsbudget-ap.jsonld#L3525)".
+2025-10-01T14:04:04.888Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-mobiliteitsbudget-ap.jsonld#L4391)".
+
+2025-10-01T14:04:04.888Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mobiliteitsbudget-ap.jsonld#L4402)".
+
+2025-10-01T14:04:04.888Z warn: Unable to find the description for subject "urn:oslo-toolchain:1727880001".
+
+2025-10-01T14:04:04.904Z warn: Unable to find the description for subject "[urn:oslo-toolchain:666c520d7034f629fc9ae4e59ea4da6064459f60072862e002808e8a815aacaf](all-mobiliteitsbudget-ap.jsonld#L3427)".
+
+2025-10-01T14:04:04.911Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5878cf332f30dbbdbb3c45bb8fbb9900e25800a4ee44a42762aa0bc1e5aeca7e](all-mobiliteitsbudget-ap.jsonld#L3923)".
+
+Error: Unable to find a label for the domain "urn:oslo-toolchain:9375741b6c08b437366490c0433675151d95e57390070b54eb24bb52d1575058" of subject "[urn:oslo-toolchain:5878cf332f30dbbdbb3c45bb8fbb9900e25800a4ee44a42762aa0bc1e5aeca7e](all-mobiliteitsbudget-ap.jsonld#L3923)".
+
+    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:104:23)
+
+    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+
+    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:51)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+#||# oslo-shacl-template-generator for language en  
+
+#||# -------------------------------------  
+
+2025-10-01T14:04:05.611Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-mobiliteitsbudget-ap.jsonld#L4369)".
+
+2025-10-01T14:04:05.613Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-mobiliteitsbudget-ap.jsonld#L4380)".
+
+2025-10-01T14:04:05.613Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-mobiliteitsbudget-ap.jsonld#L4391)".
+
+2025-10-01T14:04:05.613Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mobiliteitsbudget-ap.jsonld#L4402)".
+
+2025-10-01T14:04:05.613Z warn: Unable to find the description for subject "urn:oslo-toolchain:1727880001".
+
+2025-10-01T14:04:05.625Z warn: Unable to find the description for subject "[urn:oslo-toolchain:666c520d7034f629fc9ae4e59ea4da6064459f60072862e002808e8a815aacaf](all-mobiliteitsbudget-ap.jsonld#L3427)".
+
+2025-10-01T14:04:05.628Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5878cf332f30dbbdbb3c45bb8fbb9900e25800a4ee44a42762aa0bc1e5aeca7e](all-mobiliteitsbudget-ap.jsonld#L3923)".
+
+Error: Unable to find a label for the domain "urn:oslo-toolchain:9375741b6c08b437366490c0433675151d95e57390070b54eb24bb52d1575058" of subject "[urn:oslo-toolchain:5878cf332f30dbbdbb3c45bb8fbb9900e25800a4ee44a42762aa0bc1e5aeca7e](all-mobiliteitsbudget-ap.jsonld#L3923)".
+
+    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:104:23)
+
+    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+
+    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:51)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 

@@ -1,20 +1,20 @@
-#||# oslo-converter-ea for diagram OSLO-Leerinschrijfcredential
+#||# oslo-converter-ea for diagram OSLO-Diploma
 
 #||# -------------------------------------
 
-2025-02-11T11:07:11.246Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+Error: Path does not refer to a valid file: OSLO-Diploma.eap
 
-2025-02-11T11:07:11.247Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model) and fallback URI (http://todo.com/) will be assigned.
+    at fetchFileOrUrl (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/utils/fetchFileOrUrl.js:18:15)
 
-2025-02-11T11:07:11.247Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
+    at AccessDbFileReader.initDataRegistry (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/ea-uml-extractor/lib/AccessDbFileReader.js:19:56)
 
-2025-02-11T11:07:11.247Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
+    at FileReaderService.createDataRegistry (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/ea-uml-extractor/lib/FileReaderService.js:15:32)
 
-2025-02-11T11:07:11.247Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Persoon) and fallback URI (http://todo.com/) will be assigned.
+    at EaUmlConversionService.run (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/EaUmlConversionService.js:36:116)
 
-2025-02-11T11:07:11.247Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Model:OSLO-Leerprestatiecredential) and fallback URI (http://todo.com/) will be assigned.
-
-2025-02-11T11:07:11.252Z warn: [ConverterHandler]: Entity with path Model:Model:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
+    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
 
 #||# -------------------------------------
+
+file leerinschrijfcredential-ap.jsonld does not exist
 

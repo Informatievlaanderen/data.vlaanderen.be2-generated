@@ -1,3 +1,225 @@
 {
-  "@context": {}
+  "@context": {
+    "2D-Gebouwgeometrie": "https://data.vlaanderen.be/ns/gebouw#2DGebouwgeometrie",
+    "2D-Gebouwgeometrie.geometrie": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#geometrie",
+      "@type": "@id"
+    },
+    "2DGeometrieMethodeWaarde": "http://www.w3.org/2004/02/skos/core#Concept",
+    "AdresseerbaarObject": "https://data.vlaanderen.be/ns/adres#AdresseerbaarObject",
+    "AdresseerbaarObject.isToegekendAan": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/adres#AdresseerbaarObject.isToegekendAan",
+      "@type": "@id"
+    },
+    "Adresvoorstelling": "http://www.w3.org/ns/locn#Address",
+    "Adresvoorstelling.locatieaanduiding": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorDesignator",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Adresvoorstelling.verwijstNaar": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.verwijstNaar",
+      "@type": "@id"
+    },
+    "BelgischAdres": "https://data.vlaanderen.be/ns/adres#Adres",
+    "BelgischAdres.isToegekendAan": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/adres#Adres.isToegekendAan",
+      "@type": "@id"
+    },
+    "BelgischAdres.verwijstNaar": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/adres#Adres.verwijstNaar",
+      "@type": "@id"
+    },
+    "Boolean": "http://www.w3.org/2001/XMLSchema#boolean",
+    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "FunctieWaarde": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Gebeurtenisdatum": "https://data.vlaanderen.be/ns/generiek#Gebeurtenisdatum",
+    "Gebouw": "https://data.vlaanderen.be/ns/gebouw#Gebouw",
+    "Gebouw.adres": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.adres",
+      "@type": "@id"
+    },
+    "Gebouw.bestaatUit": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.bestaatUit",
+      "@type": "@id"
+    },
+    "Gebouw.geometrie": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.geometrie",
+      "@type": "@id"
+    },
+    "Gebouw.ligtOp": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.ligtOp",
+      "@type": "@id"
+    },
+    "Gebouweenheid": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid",
+    "Gebouweenheid.adres": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.adres",
+      "@type": "@id"
+    },
+    "Gebouweenheid.bestaatUit": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.bestaatUit",
+      "@type": "@id"
+    },
+    "Gebouweenheid.geometrie": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.geometrie",
+      "@type": "@id"
+    },
+    "Gebouweenheid.locatieaanduiding": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#locatieAanduiding",
+      "@type": "@id"
+    },
+    "GebouweenheidstatusWaarde": "http://www.w3.org/2004/02/skos/core#Concept",
+    "GebouwstatusWaarde": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
+    "HorizontaleReferentieWaarde": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Integer": "http://www.w3.org/2001/XMLSchema#integer",
+    "Locatieaanduiding": "https://data.vlaanderen.be/ns/adres#Locatieaanduiding",
+    "Locatieaanduidingtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Perceel": "https://data.vlaanderen.be/ns/perceel#Perceel",
+    "Perceel.ligtOp": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Perceel.ligtOp",
+      "@type": "@id"
+    },
+    "String": "http://www.w3.org/2001/XMLSchema#string",
+    "VerticaleReferentieWaarde": "http://www.w3.org/2004/02/skos/core#Concept",
+    "aanduiding": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Locatieaanduiding.aanduiding",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "aantalBovengrondseVerdiepingen": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#aantalBovengrondseVerdiepingen",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "aantalOndergrondseVerdiepingen": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#aantalOndergrondseVerdiepingen",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "administratieveEenheidNiveau1": {
+      "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "administratieveEenheidNiveau2": {
+      "@id": "http://www.w3.org/ns/locn#adminUnitL2",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "adresgebied": {
+      "@id": "http://www.w3.org/ns/locn#addressArea",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "alsGML": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "alsWKT": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "begin": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#begin",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "bouwjaar": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#bouwjaar",
+      "@type": "@id"
+    },
+    "busnummer": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "default": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#default",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "einde": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#einde",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "functie": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#functie",
+      "@type": "@id"
+    },
+    "gebouweenheidstatus": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.status",
+      "@type": "@id"
+    },
+    "gebouwnaam": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/gebouw#gebouwnaam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "gebouwstatus": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#Gebouw.status",
+      "@type": "@id"
+    },
+    "gemeentenaam": {
+      "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "horizontaleReferentie": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#horizontaleReferentie",
+      "@type": "@id"
+    },
+    "huisnummer": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "laatsteRenovatie": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#laatsteRenovatie",
+      "@type": "@id"
+    },
+    "land": {
+      "@id": "https://data.vlaanderen.be/ns/adres#land",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "locatienaam": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#locatorName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "methode": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#methode",
+      "@type": "@id"
+    },
+    "postbus": {
+      "@id": "http://www.w3.org/ns/locn#poBox",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "postcode": {
+      "@id": "http://www.w3.org/ns/locn#postCode",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "postnaam": {
+      "@id": "http://www.w3.org/ns/locn#postName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "straatnaam": {
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "tussentijdstip": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#tussentijdstip",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "type": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Locatieaanduiding.type",
+      "@type": "@id"
+    },
+    "verticaleReferentie": {
+      "@id": "https://data.vlaanderen.be/ns/gebouw#verticaleReferentie",
+      "@type": "@id"
+    },
+    "volledigAdres": {
+      "@id": "http://www.w3.org/ns/locn#fullAddress",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    }
+  }
 }

@@ -2,15 +2,19 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for range "http://www.w3.org/2004/02/skos/core#Concept".
+2025-10-01T14:04:06.174Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-notificatie-basis.jsonld#L2337)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:49:19)
+2025-10-01T14:04:06.176Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-notificatie-basis.jsonld#L2348)".
 
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+2025-10-01T14:04:06.177Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:51)
+#||# oslo-shacl-template-generator for language en  
 
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+#||# -------------------------------------  
 
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-01T14:04:06.869Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-notificatie-basis.jsonld#L2337)".
+
+2025-10-01T14:04:06.871Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-notificatie-basis.jsonld#L2348)".
+
+2025-10-01T14:04:06.872Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
 

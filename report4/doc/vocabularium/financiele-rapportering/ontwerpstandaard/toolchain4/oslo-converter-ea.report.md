@@ -2,103 +2,165 @@
 
 #||# -------------------------------------
 
-2025-02-11T10:53:23.084Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:22.894Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Dossier:(Dossier -> PubliekeDienstverlening) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.086Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_FinancieleData) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:22.896Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Schema:(Schema -> Concept) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.086Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_FinancieleData:OSLO-Dossier) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:22.896Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Dossier:(Dossier -> Validatie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.086Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_FinancieleData:OSLO-Generiek) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:22.896Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Feit:(Feit -> Concept) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.086Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_FinancieleData:OSLO-Organisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:22.896Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Feit:(Feit -> Context) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.086Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Copies) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:22.896Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Dimensie:(Dimensie -> Dimensieconcept) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.086Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_FinancieleData:W3C-Time) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:22.896Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.086Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_FinancieleData:OSLO-FeitelijkeVerenigingen) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:22.896Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.086Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_FinancieleData:OSLO-Persoon) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:22.897Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.086Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_FinancieleData:XML-Schema) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:22.897Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:MonetairDatatype:(MonetairDatatype -> NumeriekDatatype) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.086Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_FinancieleData:XML-Schema) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:22.897Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Validatie:(Validatie -> Opmerking) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.087Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:applicatieprofiel_FinancieleData:OSLO-Adres) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:22.897Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.089Z warn: [ConnectorConverterHandler]: Connector (rapport) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.897Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.090Z warn: [ConnectorConverterHandler]: Connector (dossier) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.897Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:NietNumeriekDatatype:(NietNumeriekDatatype -> AnyDatatype) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.090Z warn: [ConnectorConverterHandler]: Connector (validatieStatus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.897Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:NumeriekDatatype:(NumeriekDatatype -> AnyDatatype) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.090Z warn: [ConnectorConverterHandler]: Connector (totAanvragen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.897Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Dossier:(Dossier -> Zaak) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.090Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (totAanvragen) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:22.898Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Monetair:(Monetair -> Decimal) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.090Z warn: [ConnectorConverterHandler]: Connector (^schema) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.898Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:AandelenDatatype:(AandelenDatatype -> NumeriekDatatype) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.090Z warn: [ConnectorConverterHandler]: Connector (definieert) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.898Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:PuurDatatype:(PuurDatatype -> NumeriekDatatype) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.090Z warn: [ConnectorConverterHandler]: Connector (rapport) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.898Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Dimensieschema:(Dimensieschema -> Dimensieconcept) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.090Z warn: [ConnectorConverterHandler]: Connector (^bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.898Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Feit:(Feit -> Concept) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.090Z warn: [ConnectorConverterHandler]: Connector (concept) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.898Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:FinancieelRapport:(FinancieelRapport -> Neerlegging) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (context) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.898Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Context:(Context -> Dimensie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (validatieStatus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.898Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Dimensie:(Dimensie -> Dimensieconcept) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (opmerking) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.898Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:FinancieelRapport:(FinancieelRapport -> FinancieelRapport) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (concept) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.899Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Concept:(Concept -> Concept) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (definieert) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.899Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Aandelen:(Aandelen -> Decimal) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (geassocieerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.899Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Puur:(Puur -> Decimal) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (FinancieelRapport (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.899Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FeitelijkeVerenigingen:FeitelijkeVereniging:(FeitelijkeVereniging -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (FinancieelRapport (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.899Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (rapport) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.899Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Dimensieconcept:(Dimensieconcept -> Dimensieconcept) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (context) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.899Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Concept:(Concept -> Hypercube) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (dimensie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.899Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (neerlegging) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.899Z info: Connector Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Hypercube:(Hypercube -> Dimensieconcept) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (geassocieerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.900Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (Concept (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_FinancieleData). Using fallback URI (http://todo.com/) instead.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (Concept (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_FinancieleData:OSLO-Dossier). Using fallback URI (http://todo.com/) instead.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (geassocieerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_FinancieleData:OSLO-Generiek). Using fallback URI (http://todo.com/) instead.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (Dimensieconcept (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_FinancieleData:OSLO-Organisatie). Using fallback URI (http://todo.com/) instead.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (Dimensieconcept (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_FinancieleData:OSLO-FinancieleData:Copies). Using fallback URI (http://todo.com/) instead.
 
-2025-02-11T10:53:23.091Z warn: [ConnectorConverterHandler]: Connector (hypercube) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_FinancieleData:W3C-Time). Using fallback URI (http://todo.com/) instead.
 
-2025-02-11T10:53:23.092Z warn: [ConnectorConverterHandler]: Connector (dimensie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:22.900Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_FinancieleData:OSLO-FeitelijkeVerenigingen). Using fallback URI (http://todo.com/) instead.
 
-2025-02-11T10:53:23.095Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_FinancieleData:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
+2025-10-01T13:52:22.901Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_FinancieleData:OSLO-Persoon). Using fallback URI (http://todo.com/) instead.
 
-2025-02-11T10:53:23.096Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_FinancieleData:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
+2025-10-01T13:52:22.901Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_FinancieleData:XML-Schema). Using fallback URI (http://todo.com/) instead.
 
-2025-02-11T10:53:23.097Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_FinancieleData:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
+2025-10-01T13:52:22.901Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_FinancieleData:XML-Schema). Using fallback URI (http://todo.com/) instead.
 
-2025-02-11T10:53:23.099Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_FinancieleData:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
+2025-10-01T13:52:22.901Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_FinancieleData:OSLO-Adres). Using fallback URI (http://todo.com/) instead.
 
-2025-02-11T10:53:23.127Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_FinancieleData:OSLO-Generiek:Identificator:toegekendDoor has an empty value for tag ap-usageNote-nl.
+2025-10-01T13:52:22.903Z warn: [ConnectorConverterHandler]: Connector (rapport) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T10:53:23.127Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_FinancieleData:OSLO-Generiek:Identificator:toegekendDoorString has an empty value for tag ap-usageNote-nl.
+2025-10-01T13:52:22.903Z warn: [ConnectorConverterHandler]: Connector (dossier) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T10:53:23.128Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_FinancieleData:OSLO-Generiek:Identificator:toegekendOp has an empty value for tag ap-usageNote-nl.
+2025-10-01T13:52:22.903Z warn: [ConnectorConverterHandler]: Connector (validatieStatus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.903Z warn: [ConnectorConverterHandler]: Connector (totAanvragen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.903Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (totAanvragen) and the fallback URI (http://todo.com/) will be assigned.
+
+2025-10-01T13:52:22.903Z warn: [ConnectorConverterHandler]: Connector (^schema) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.903Z warn: [ConnectorConverterHandler]: Connector (definieert) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (rapport) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (^bevat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (concept) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (context) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (validatieStatus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (opmerking) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (concept) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (definieert) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (geassocieerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (FinancieelRapport (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (FinancieelRapport (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (rapport) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (context) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (dimensie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (neerlegging) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (geassocieerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (Concept (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (Concept (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (geassocieerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (Dimensieconcept (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (Dimensieconcept (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (hypercube) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.904Z warn: [ConnectorConverterHandler]: Connector (dimensie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:22.907Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_FinancieleData:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
+
+2025-10-01T13:52:22.931Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_FinancieleData:OSLO-Generiek:Identificator:toegekendDoor has an empty value for tag ap-usageNote-nl.
+
+2025-10-01T13:52:22.931Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_FinancieleData:OSLO-Generiek:Identificator:toegekendDoorString has an empty value for tag ap-usageNote-nl.
+
+2025-10-01T13:52:22.931Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_FinancieleData:OSLO-Generiek:Identificator:toegekendOp has an empty value for tag ap-usageNote-nl.
 
 #||# -------------------------------------
 

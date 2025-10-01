@@ -1,5 +1,4 @@
 @prefix dc: <http://purl.org/dc/terms/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
@@ -8,17 +7,50 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/BeekShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#> rdfs:member <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#FysiekObjectShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#WaterVoorkomenShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#WatervlakShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#WaterdeelShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#DeelShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#WaterloopShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#Sloot(deprecated)Shape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#GrachtShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#RivierShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#NatuurlijkeWaterloopShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#KanaalShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#KunstmatigeWaterloopShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#BeekShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#VijverShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#MeerShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#PoelShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#SlotgrachtShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#VenShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#NatuurlijkeGrachtShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#KunstmatigeGrachtShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#DatetimeShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#IntegerShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#StringShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#KwantitatieveWaardeShape> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#BeekShape> a shacl:NodeShape;
+  rdfs:label "Beek"@nl;
+  rdfs:comment "Een Natuurlijke Waterloop die een buiten de wegbaan gelegen natuurlijke stroom ondiep water is die vanuit een oorsprong, vaak een bron, stroomafwaarts vloeit. Een beek is onbevaarbaar."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Beek> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/DatetimeShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#DatetimeShape> a shacl:NodeShape;
+  rdfs:label "DateTime";
   shacl:closed false;
   shacl:targetClass xsd:dateTime .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/DeelShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#DeelShape> a shacl:NodeShape;
+  rdfs:label "Deel"@nl;
+  rdfs:comment "Homogeen gedeelte van het aardoppervlak, met een gelijkaardige hoofdfunctie en fysiek voorkomen."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "oppervlakte"@nl;
+    rdfs:comment "De afmeting van het object."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#Deel.Oppervlakte>;
     shacl:class schemas:QuantitativeValue;
     shacl:description "De afmeting van het object."@nl;
@@ -28,13 +60,14 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein#Deel> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/DingShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass schema:Thing .
-
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/FysiekObjectShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#FysiekObjectShape> a shacl:NodeShape;
+  rdfs:label "Fysiek object"@nl;
+  rdfs:comment "De hoofdklasse waar alle objecten die geïnventariseerd kunnen worden van afgeleid worden."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "begindatum"@nl;
+    rdfs:comment "Datum waarop de huidige versie van het gebied of object in gebruik wordt genomen."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#FysiekObject.Begindatum>;
     shacl:datatype xsd:dateTime;
     shacl:description "Datum waarop de huidige versie van het gebied of object in gebruik wordt genomen."@nl;
@@ -42,6 +75,9 @@
     shacl:name "begindatum"@nl;
     shacl:path <https://data.vlaanderen.be/ns/openbaardomein#begindatum>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "einddatum"@nl;
+    rdfs:comment "Datum waarop de huidige versie van het beheerobject uit gebruik wordt genomen."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#FysiekObject.Einddatum>;
     shacl:datatype xsd:dateTime;
     shacl:description "Datum waarop de huidige versie van het beheerobject uit gebruik wordt genomen."@nl;
@@ -49,6 +85,10 @@
     shacl:name "einddatum"@nl;
     shacl:path <https://data.vlaanderen.be/ns/openbaardomein#einddatum>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "niveau"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Negatieve waarden worden geassocieerd met ondergronds en positieve waarden met bovengronds. Nul wordt beschouwd als een absolute waarde om het maaiveld aan te duiden."@nl;
+    rdfs:comment "Het niveau waarop het object zich bevindt, relatief ten opzichte van andere objecten."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#FysiekObject.Niveau>;
     shacl:datatype xsd:integer;
     shacl:description "Het niveau waarop het object zich bevindt, relatief ten opzichte van andere objecten."@nl;
@@ -56,6 +96,9 @@
     shacl:name "niveau"@nl;
     shacl:path <https://data.vlaanderen.be/ns/openbaardomein#niveau>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "nauwkeurigheid"@nl;
+    rdfs:comment "De precisie waarmee het object opgemeten werd."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#FysiekObject.Nauwkeurigheid>;
     shacl:class skos:Concept;
     shacl:description "De precisie waarmee het object opgemeten werd."@nl;
@@ -64,6 +107,9 @@
     shacl:name "nauwkeurigheid"@nl;
     shacl:path <https://data.vlaanderen.be/ns/openbaardomein#nauwkeurigheid>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "geometrie"@nl;
+    rdfs:comment "De geometrie overeenkomstig met een bepaald object."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#FysiekObject.Geometrie>;
     shacl:class <http://www.opengis.net/ont/geosparql#Geometry>;
     shacl:description "De geometrie overeenkomstig met een bepaald object."@nl;
@@ -72,6 +118,10 @@
     shacl:name "geometrie"@nl;
     shacl:path <http://www.w3.org/ns/locn#geometry>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "relatie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld een verwijzing naar een object uit het wegenregister of grootschalig referentiebestand."@nl;
+    rdfs:comment "Verwijst naar een object in een andere databank dat meer informatie kan verschaffen over het beheerobject."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#FysiekObject.Relatie>;
     shacl:class rdfs:Resource;
     shacl:description "Verwijst naar een object in een andere databank dat meer informatie kan verschaffen over het beheerobject."@nl;
@@ -80,33 +130,47 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein#FysiekObject> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/FysiekVoorkomenShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein#FysiekVoorkomen> .
-
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/GrachtShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#GrachtShape> a shacl:NodeShape;
+  rdfs:label "Gracht"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bron definitie: naar GRB-basis: WGR: Gracht"@nl;
+  rdfs:comment "Een afvoerweg tot afscheiding, tot afwatering of tot ontwatering van hemelwater, drainagewater, bemalingswater en in voorkomend geval ook effluentwater uit een waterzuiveringsinstallatie, of water afkomstig uit een overstort, die niet bij de waterwegen en ook niet bij de onbevaarbare waterlopen is ingedeeld. Een gracht is niet altijd permanent watervoerend."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Gracht> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/IntegerShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#IntegerShape> a shacl:NodeShape;
+  rdfs:label "Integer";
   shacl:closed false;
   shacl:targetClass xsd:integer .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/KanaalShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#KanaalShape> a shacl:NodeShape;
+  rdfs:label "Kanaal"@nl;
+  rdfs:comment "Een Kunstmatige Waterloop die bevaarbaar is."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Kanaal> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/KunstmatigeGrachtShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#KunstmatigeGrachtShape> a shacl:NodeShape;
+  rdfs:label "Kunstmatige gracht"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld een baangracht of een gracht voor effluentwater uit een waterzuiveringsinstallatie."@nl;
+  rdfs:comment "Een Gracht die is aangelegd door de mens."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#KunstmatigeGracht> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/KunstmatigeWaterloopShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#KunstmatigeWaterloopShape> a shacl:NodeShape;
+  rdfs:label "Kunstmatige waterloop"@nl;
+  rdfs:comment "Een Waterloop die, geheel of in grote mate, tot stand is gebracht door het ingrijpen van de mens."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#KunstmatigeWaterloop> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/KwantitatieveWaardeShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#KwantitatieveWaardeShape> a shacl:NodeShape;
+  rdfs:label "Kwantitatieve Waarde"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bv de hoogte van een object,het gewicht,de temperatuur etc. Het gaat om een kenmerk dat numeriek uitgedrukt kan worden en in een bepaalde eenheid. Kwalitatieve aanduidingen zoals hoog,laag ed vallen hier dus niet onder."@nl;
+  rdfs:comment "Aanduiding van de kwantiteit van een bepaald kenmerk van een object."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "eenheid"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Te gebruiken als geen standaard eenheid gekend is."@nl;
+    rdfs:comment "De eenheid waarin de waarde is uitgedrukt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#KwantitatieveWaarde.Eenheid>;
     shacl:datatype xsd:string;
     shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
@@ -114,6 +178,9 @@
     shacl:name "eenheid"@nl;
     shacl:path schemas:unitText
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "standaard eenheid"@nl;
+    rdfs:comment "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#KwantitatieveWaarde.StandaardEenheid>;
     shacl:class <https://data.vlaanderen.be/ns/generiek#StandaardEenheid>;
     shacl:description "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
@@ -121,6 +188,9 @@
     shacl:name "standaard eenheid"@nl;
     shacl:path schemas:unitCode
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "waarde"@nl;
+    rdfs:comment "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#KwantitatieveWaarde.Waarde>;
     shacl:class schemas:Number;
     shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
@@ -131,53 +201,75 @@
   ];
   shacl:targetClass schemas:QuantitativeValue .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/MeerShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#MeerShape> a shacl:NodeShape;
+  rdfs:label "Meer"@nl;
+  rdfs:comment "Een meer is een door land omringde watervlakte. De meeste meren hebben een of meer voedende en afwaterende rivieren."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Meer> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/NatuurlijkeGrachtShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#NatuurlijkeGrachtShape> a shacl:NodeShape;
+  rdfs:label "Natuurlijke gracht"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld tussen twee landbouwpercelen."@nl;
+  rdfs:comment "Een Gracht die op natuurlijke wijze is ontstaan door de afwatering van hemelwater."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#NatuurlijkeGracht> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/NatuurlijkeWaterloopShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#NatuurlijkeWaterloopShape> a shacl:NodeShape;
+  rdfs:label "Natuurlijke waterloop"@nl;
+  rdfs:comment "Een Waterloop die op natuurlijke wijze is ontstaan."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#NatuurlijkeWaterloop> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/ObjectShape> a shacl:NodeShape;
-  shacl:closed false;
-  shacl:targetClass prov:Entity .
-
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/PoelShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#PoelShape> a shacl:NodeShape;
+  rdfs:label "Poel"@nl;
+  rdfs:comment "Een poel is een meestal door de mens uitgegraven waterpartij in een grasland, bedoeld als drinkplaats voor het vee. Het zijn meestal kleine, ondiepe waterpartijen in grasland."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Poel> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/RivierShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#RivierShape> a shacl:NodeShape;
+  rdfs:label "Rivier"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bron object: GRB-entiteit: Watergang (Wtz), NOTE Bron object: VHA: waterloop"@nl;
+  rdfs:comment "Een Natuurlijke Waterloop, bedoeld voor de af- of aanvoer of het tijdelijk ophouden van oppervlaktewater en die (meestal) bevaarbaar is."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Rivier> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/Sloot(deprecated)Shape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#Sloot(deprecated)Shape> a shacl:NodeShape;
+  rdfs:label "Sloot (deprecated)"@nl;
+  rdfs:comment "Een sloot is een waterloop op plaatsen waar regenwater samenstroomt, zodat het gezamenlijk kan worden afgevoerd om wateroverlast te voorkomen. Een sloot is een onderdeel van de waterhishoudkundige infrastructuur. Het via sloten afgevoerde water wordt elders weggepompt."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Sloot> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/SlotgrachtShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#SlotgrachtShape> a shacl:NodeShape;
+  rdfs:label "Slotgracht"@nl;
+  rdfs:comment "Een slotgracht is een diepe, brede gracht, droog of gevuld met water, dat een kasteel of gebouw omringt."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Slotgracht> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/StringShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#StringShape> a shacl:NodeShape;
+  rdfs:label "String";
   shacl:closed false;
   shacl:targetClass xsd:string .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/VenShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#VenShape> a shacl:NodeShape;
+  rdfs:label "Ven"@nl;
+  rdfs:comment "Een ven is een klein, meestal ondiep meer dat voorkomt op Pleistocene zandgronden. Vennen hebben wisselende waterstanden en zijn zelden groter dan enkele hectaren. Onder vennen worden uitsluitend natuurlijke wateren verstaan."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Ven> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/VijverShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#VijverShape> a shacl:NodeShape;
+  rdfs:label "Vijver"@nl;
+  rdfs:comment "Een vijver is een door de mens aangelegd waterlichaam met beperkte oppervlakte en wordt geassocieerd met visvangst of een sierfunctie."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Vijver> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/WaterVoorkomenShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#WaterVoorkomenShape> a shacl:NodeShape;
+  rdfs:label "Water voorkomen"@nl;
+  rdfs:comment "Fysiek voorkomen van het oppervlak bestaande uit water."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "voorkomen"@nl;
+    rdfs:comment "Verwijst naar het voorkomen van het Waterdeel."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#WaterVoorkomen.Voorkomen>;
     shacl:class <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Waterdeel>;
     shacl:description "Verwijst naar het voorkomen van het Waterdeel."@nl;
@@ -186,9 +278,15 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/watervoorkomen#WaterVoorkomen> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/WaterdeelShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#WaterdeelShape> a shacl:NodeShape;
+  rdfs:label "Waterdeel"@nl;
+  <http://purl.org/vocab/vann/usageNote> "GRB Lexicon: Definitie Watergang"@nl;
+  rdfs:comment "Gebied dat rechtstreeks gedomineerd wordt door de tijdelijke of permanente aanwezigheid van oppervlaktewater, met een bepaalde hieraan verbonden functie."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "voorkomen"@nl;
+    rdfs:comment "Verwijst naar het voorkomen van het Waterdeel."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#Waterdeel.Voorkomen>;
     shacl:class <https://data.vlaanderen.be/ns/openbaardomein/watervoorkomen#WaterVoorkomen>;
     shacl:description "Verwijst naar het voorkomen van het Waterdeel."@nl;
@@ -199,9 +297,15 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Waterdeel> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/WaterloopShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#WaterloopShape> a shacl:NodeShape;
+  rdfs:label "Waterloop"@nl;
+  rdfs:comment "Gebied dat zorgt voor het verzamelen en transporteren van de horizontale afvloeiing van neerslag- en bronwater."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "naam"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Naar GRB-entiteit Watergang (Wtz): Attribuut NAAM WATERLOOP"@nl;
+    rdfs:comment "Naam die de (VHA-) waterloop draagt bij zijn monding, zgn. (VHA-) roepnaam van de waterloop. Kan ook de waarden nvt (niet van toepassing) of ng (niet gekend) aannemen."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#Waterloop.Naam>;
     shacl:datatype xsd:string;
     shacl:description "Naam die de (VHA-) waterloop draagt bij zijn monding, zgn. (VHA-) roepnaam van de waterloop. Kan ook de waarden nvt (niet van toepassing) of ng (niet gekend) aannemen."@nl;
@@ -210,6 +314,10 @@
     shacl:name "naam"@nl;
     shacl:path dc:title
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "breedte"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Indien er variatie zit in de breedte wordt de gemiddelde breedte opgenomen."@nl;
+    rdfs:comment "De breedte van het object."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#Waterloop.Breedte>;
     shacl:class schemas:QuantitativeValue;
     shacl:description "De breedte van het object."@nl;
@@ -218,6 +326,9 @@
     shacl:name "breedte"@nl;
     shacl:path schema:width
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "lengte"@nl;
+    rdfs:comment "De lineare grootte van het object."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#Waterloop.Lengte>;
     shacl:class schemas:QuantitativeValue;
     shacl:description "De lineare grootte van het object."@nl;
@@ -228,9 +339,14 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/waterdeel#Waterloop> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4/WatervlakShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#WatervlakShape> a shacl:NodeShape;
+  rdfs:label "Watervlak"@nl;
+  rdfs:comment "Het gedeelte van het landoppervlak dat wordt ingenomen door stilstaand water en dat in hoofdzaak geen deel uitmaakt van het hydrografisch netwerk."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "naam"@nl;
+    rdfs:comment "De naam van het watervlak."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/waterdelen/ontwerpstandaard/toolchain4#Watervlak.Naam>;
     shacl:datatype xsd:string;
     shacl:description "De naam van het watervlak."@nl;

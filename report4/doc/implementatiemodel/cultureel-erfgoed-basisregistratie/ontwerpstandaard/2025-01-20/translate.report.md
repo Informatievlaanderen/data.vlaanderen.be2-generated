@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/translation/cultureel-erfgoed-basisregistratie_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/translation/cultureel-erfgoed-basisregistratie_nl.json
+
+TRANSLATIONFILE: cultureel-erfgoed-basisregistratie_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
@@ -13,4 +19,24 @@ WARNING The entered language values are the same!
 #||# Write complete  
 
 #||# the file was saved to: /tmp/workspace/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/translation/cultureel-erfgoed-basisregistratie_nl.json  
+
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/translation/cultureel-erfgoed-basisregistratie_en.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/translation/cultureel-erfgoed-basisregistratie_en.json
+
+TRANSLATIONFILE: cultureel-erfgoed-basisregistratie_en.json
+
+#||# translate for language en  
+
+#||# -------------------------------------  
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/translation/cultureel-erfgoed-basisregistratie_en.json  
 

@@ -1,32 +1,114 @@
-#||# oslo-converter-ea for diagram OSLO-Persoon
+#||# oslo-converter-ea for diagram OSLO-Persoon-VOC
 
 #||# -------------------------------------
 
-2025-02-11T12:03:48.700Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:54:03.391Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):isGerelateerdMet)
 
-2025-02-11T12:03:48.702Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:54:03.392Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):vereist)
 
-2025-02-11T12:03:48.702Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:54:03.393Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Persoon))
 
-2025-02-11T12:03:48.706Z warn: [ConnectorConverterHandler]: Connector (Inwonerschap.Persoon) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:54:03.393Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):wordtUitgevoerdDoor)
 
-2025-02-11T12:03:48.706Z warn: [ConnectorConverterHandler]: Connector (Inwonerschap.Jurisdictie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:54:03.393Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-02-11T12:03:48.707Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Inwonerschap.Jurisdictie) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:54:03.393Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Object))
 
-2025-02-11T12:03:48.707Z warn: [ConnectorConverterHandler]: Connector (Staatsburgerschap.Persoon) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:54:03.393Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-02-11T12:03:48.707Z warn: [ConnectorConverterHandler]: Connector (Staatsburgerschap.Jurisdictie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:54:03.393Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2025-02-11T12:03:48.707Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Staatsburgerschap.Jurisdictie) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:54:03.393Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftParticiperende)
 
-2025-02-11T12:03:48.707Z warn: [ConnectorConverterHandler]: Connector (heeftRelatieMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:54:03.393Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:vereist)
 
-2025-02-11T12:03:48.707Z warn: [ConnectorConverterHandler]: Connector (Persoon (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:54:03.393Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet)
 
-2025-02-11T12:03:48.707Z warn: [ConnectorConverterHandler]: Connector (Persoon (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:54:03.393Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:wordtUitgevoerdDoor)
 
-2025-02-11T12:03:48.717Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (heeftRelatieMet).
+2025-10-01T13:54:03.396Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftNationaliteit is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.396Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftNationaliteit has name "heeftNationaliteit". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2025-10-01T13:54:03.397Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftOverlijden is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.397Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftOverlijden has name "heeftOverlijden". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2025-10-01T13:54:03.397Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Overlijden:(Overlijden -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.397Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:isLidVan is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.397Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:isLidVan has name "isLidVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2025-10-01T13:54:03.397Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:isHoofdVan is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.397Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:isHoofdVan has name "isHoofdVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2025-10-01T13:54:03.397Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Inwonerschap:heeftVerblijfplaats is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Inwonerschap:heeftVerblijfplaats has name "heeftVerblijfplaats". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Vreemdeling:(Vreemdeling -> Staatsburgerschap) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftBurgerlijkeStaat is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftBurgerlijkeStaat has name "heeftBurgerlijkeStaat". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Inwoner:(Inwoner -> Inwonerschap) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Domicilie:(Domicilie -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Staatsburger:(Staatsburger -> Staatsburgerschap) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftGeboorte is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftGeboorte has name "heeftGeboorte". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Geboorte:(Geboorte -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Voogdij:(Voogdij -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Huwelijk:(Huwelijk -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Afstamming:(Afstamming -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Gezinsrelatie:(Gezinsrelatie -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:TijdelijkInwoner:(TijdelijkInwoner -> Inwoner) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:PermanentInwoner:(PermanentInwoner -> Inwoner) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Samenwonen:(Samenwonen -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.398Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Inwonerschap) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.399Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Staatsburgerschap) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.399Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.399Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.400Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:staatsburgerschap is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.400Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:staatsburgerschap has name "staatsburgerschap". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2025-10-01T13:54:03.400Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:inwonerschap is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:54:03.400Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:inwonerschap has name "inwonerschap". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2025-10-01T13:54:03.401Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:54:03.401Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:54:03.401Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:54:03.405Z warn: [ConnectorConverterHandler]: Connector (heeftNationaliteit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:54:03.406Z warn: [ConnectorConverterHandler]: Connector (heeftInwonerschap) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:54:03.406Z warn: [ConnectorConverterHandler]: Connector (heeftStaatsburgerschap) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 #||# -------------------------------------
 

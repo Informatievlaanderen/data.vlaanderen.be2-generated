@@ -5,13 +5,40 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/AnyShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#> rdfs:member <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#AnyShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#ObservatieShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#StatistiekShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#StatistiektypeShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#KwantielShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#MomentShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#DiscreteprobabiliteitShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#OperatortypeShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#StatistischeobservatieShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#ProbabiliteitShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#ObjectShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#KenmerktypeShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#DoubleShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#IntegerShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#TemporeleentiteitShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#DrempelwaardeShape> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#AnyShape> a shacl:NodeShape;
+  rdfs:label "Any"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Te substitueren door een geschikte klasse of datatype."@nl;
+  rdfs:comment "Stelt een instantie van eender welk type voor."@nl;
   shacl:closed false;
   shacl:targetClass rdfs:Resource .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/DiscreteprobabiliteitShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#DiscreteprobabiliteitShape> a shacl:NodeShape;
+  rdfs:label "DiscreteProbabiliteit"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb de kans dat de begroeiing uit eik bestaat of de kans dat het waterpeil een bepaalde limiet overschrijdt."@nl;
+  rdfs:comment "Statistiek die beschrijft hoe waarschijnlijk het is dat een variable binnen een bepaalde categorie valt."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "categorie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb eik voor voorgaand vb."@nl;
+    rdfs:comment "De categorie waarvoor de probaliteit bepaald is."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#Discreteprobabiliteit.Categorie>;
     shacl:class rdfs:Resource;
     shacl:description "De categorie waarvoor de probaliteit bepaald is."@nl;
@@ -22,13 +49,21 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#DiscreteProbabiliteit> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/DoubleShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#DoubleShape> a shacl:NodeShape;
+  rdfs:label "Double";
   shacl:closed false;
   shacl:targetClass xsd:double .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/DrempelwaardeShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#DrempelwaardeShape> a shacl:NodeShape;
+  rdfs:label "Drempelwaarde"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb 10m voor een maximaal waterpeil."@nl;
+  rdfs:comment "Waarde die aangeeft wanneer een grens wordt overschreden."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "operator"@nl;
+    <http://purl.org/vocab/vann/usageNote> "In voornoemd vb zou de drempel overschreden worden bij waarden 'groter of gelijk aan' 10m."@nl;
+    rdfs:comment "Vergelijkingsoperator."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#Drempelwaarde.Operator>;
     shacl:class skos:Concept;
     shacl:description "Vergelijkingsoperator."@nl;
@@ -37,6 +72,9 @@
     shacl:name "operator"@nl;
     shacl:path <https://data.vlaanderen.be/ns/statistiek#operator>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "waarde"@nl;
+    rdfs:comment "De grenswaarde."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#Drempelwaarde.Waarde>;
     shacl:class rdfs:Resource;
     shacl:description "De grenswaarde."@nl;
@@ -47,17 +85,28 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#Drempelwaarde> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/IntegerShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#IntegerShape> a shacl:NodeShape;
+  rdfs:label "Integer";
   shacl:closed false;
   shacl:targetClass xsd:integer .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/KenmerktypeShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#KenmerktypeShape> a shacl:NodeShape;
+  rdfs:label "Kenmerktype"@nl;
+  <http://purl.org/vocab/vann/usageNote> "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject en in het bijzonder van alle instanties van het type geobserveerdObject."@nl;
+  rdfs:comment "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt."@nl;
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/KwantielShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#KwantielShape> a shacl:NodeShape;
+  rdfs:label "Kwantiel"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Onder kwantiel verstaan we de subset van data die ontstaat door de volledige set te ordenen en in gelijke aantallen op te delen. Bvb een kwartiel van een set waarnemingen bevat 25% van alle waarnemingen. De Statistiek is dan bvb het gemiddelde van alle waarden in het eerste kwartiel."@nl;
+  rdfs:comment "Statistiek die betrekking heeft op een bepaald kwantiel."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "niveau"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb 1 als de Statistiek betrekking heeft op het eerste kwartiel."@nl;
+    rdfs:comment "Nummer van het kwantiel waarvoor de Statistiek geldt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#Kwantiel.Niveau>;
     shacl:datatype xsd:double;
     shacl:description "Nummer van het kwantiel waarvoor de Statistiek geldt."@nl;
@@ -67,9 +116,16 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#Kwantiel> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/MomentShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#MomentShape> a shacl:NodeShape;
+  rdfs:label "Moment"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb de spreiding tov het gemiddelde, uitgedrukt als de standaarddeviatie. De statistiek is bvb de standaardddeviatie tov het gemiddelde."@nl;
+  rdfs:comment "Statistiek die aangeeft hoe de waarden gespreid zijn tov een centrale maat."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "orde"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Het gemiddelde wordt beschouwd als een moment van orde 1, varantie en standaarddeviatie van orde 2, orde 3 voor de scheefheid van de verdeling en orde 4 voor de mate waarin outlierts de verdeling verbreden of versmallen."@nl;
+    rdfs:comment "Orde van het Moment."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#Moment.Orde>;
     shacl:datatype xsd:integer;
     shacl:description "Orde van het Moment."@nl;
@@ -80,21 +136,35 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#Moment> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/ObjectShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#ObjectShape> a shacl:NodeShape;
+  rdfs:label "Object"@nl;
+  <http://purl.org/vocab/vann/usageNote> "In de context van Observaties en Metingen is dit het geobserveerdObject waarvan een kenmerk wordt geobserveerd. Het geobserveerdObject kan ook een Object zijn dat de werkelijkheid bemonstert (subklasse Bemonsteringsobject). OPGELET: deze klasse is abstract, ze moet gespecialiseerd worden in functie van het applicatiedomein."@nl;
+  rdfs:comment "Klasse die instanties van om het even welk type vertegenwoordigt."@nl;
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/ObservatieShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#ObservatieShape> a shacl:NodeShape;
+  rdfs:label "Observatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Meer info over deze klasse in het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/observaties-en-metingen/\">applicatieprofiel Observaties en Metingen</a>."@nl;
+  rdfs:comment "Het vaststellen van de waarde van een bepaald kenmerk van een Object op een bepaald tijdstip of tussen twee tijdstippen."@nl;
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/OperatortypeShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#OperatortypeShape> a shacl:NodeShape;
+  rdfs:label "OperatorType"@nl;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/ProbabiliteitShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#ProbabiliteitShape> a shacl:NodeShape;
+  rdfs:label "Probabiliteit"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb de kans dat het waterpeil 10m overschrijdt."@nl;
+  rdfs:comment "Statistiek die beschrijft hoe waarschijnlijk het is dat een variabele een bepaalde drempelwaarde (al dan niet) overschrijdt."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "drempelwaarde"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb 10m voor voorgaand vb."@nl;
+    rdfs:comment "De waarde die wordt overschreden."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#Probabiliteit.Drempelwaarde>;
     shacl:class <https://data.vlaanderen.be/ns/statistiek#Drempelwaarde>;
     shacl:description "De waarde die wordt overschreden."@nl;
@@ -104,9 +174,15 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#Probabiliteit> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/StatistiekShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#StatistiekShape> a shacl:NodeShape;
+  rdfs:label "Statistiek"@nl;
+  rdfs:comment "Een stuk informatie dat een kenmerk van een dataset of variable beschrijft."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "statistiektype"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb gemiddelde, index etc."@nl;
+    rdfs:comment "Het type Statistiek."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#Statistiek.Statistiektype>;
     shacl:class skos:Concept;
     shacl:description "Het type Statistiek."@nl;
@@ -115,6 +191,10 @@
     shacl:name "statistiektype"@nl;
     shacl:path dc:type
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "waarde"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Doorgaans numeriek."@nl;
+    rdfs:comment "Omvang van de Statistiek."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#Statistiek.Waarde>;
     shacl:class rdfs:Resource;
     shacl:description "Omvang van de Statistiek."@nl;
@@ -125,13 +205,20 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#Statistiek> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/StatistiektypeShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#StatistiektypeShape> a shacl:NodeShape;
+  rdfs:label "StatistiekType"@nl;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/StatistischeobservatieShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#StatistischeobservatieShape> a shacl:NodeShape;
+  rdfs:label "StatistischeObservatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb een gemiddelde temperatuur."@nl;
+  rdfs:comment "Observatie waarvan het resultaat een Statistiek is."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "geobserveerdObject"@nl;
+    rdfs:comment "Object dat met observeert."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#Statistischeobservatie.Geobserveerdobject>;
     shacl:class <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature>;
     shacl:description "Object dat met observeert."@nl;
@@ -140,6 +227,9 @@
     shacl:name "geobserveerdObject"@nl;
     shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "resultaat"@nl;
+    rdfs:comment "De waarde van het geobserveerdeKenmerk als resultaat van de StatistischeObservatie."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#Statistischeobservatie.Resultaat>;
     shacl:class <https://data.vlaanderen.be/ns/statistiek#Statistiek>;
     shacl:description "De waarde van het geobserveerdeKenmerk als resultaat van de StatistischeObservatie."@nl;
@@ -148,6 +238,9 @@
     shacl:name "resultaat"@nl;
     shacl:path <https://data.vlaanderen.be/ns/statistiek#resultaat>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "geobserveerdKenmerk"@nl;
+    rdfs:comment "Kenmerk dat men observeert vh geobserveerdObject."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#Statistischeobservatie.Geobserveerdkenmerk>;
     shacl:class <http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType>;
     shacl:description "Kenmerk dat men observeert vh geobserveerdObject."@nl;
@@ -156,6 +249,10 @@
     shacl:name "geobserveerdKenmerk"@nl;
     shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "fenomeentijd"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Typisch de periode waarvoor de data waarop de Statistiek wordt berekend geldig is."@nl;
+    rdfs:comment "Het moment waarop het resultaat van de Observatie van toepassing was."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#Statistischeobservatie.Fenomeentijd>;
     shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object>;
     shacl:description "Het moment waarop het resultaat van de Observatie van toepassing was."@nl;
@@ -164,6 +261,10 @@
     shacl:name "fenomeentijd"@nl;
     shacl:path <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "resultaattijd"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Typisch het moment waarop de StatistischeObservatie is berekend."@nl;
+    rdfs:comment "Tijdstip waarop het resultaat van de Observatie werd bekomen."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#Statistischeobservatie.Resultaattijd>;
     shacl:class <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant>;
     shacl:description "Tijdstip waarop het resultaat van de Observatie werd bekomen."@nl;
@@ -174,6 +275,9 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/statistiek#StatistischeObservatie> .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4/TemporeleentiteitShape> a shacl:NodeShape;
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/statistiek/ontwerpstandaard/toolchain4#TemporeleentiteitShape> a shacl:NodeShape;
+  rdfs:label "TemporeleEntiteit"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Die temporele objecten zijn temporele geometrische primitieven zoals Moment of Periode. Of het zijn composieten van temporele primitieven, bv om de geschiedenis van een fenomeen weer te geven (bv de opeenvolgende Periodes dat het fenomeen zich voordeed). Te gebruiken wanneer bvb beide temporele geometrische primitieven mogelijk zijn. OPMERKING: Meer info in <a href=\"https://iso.org/standard/26013.html\">ISO 19108 Geographic Information - Temporal schema</a>. Substitutie door een eenvoudiger equivalent bv time:TemporalEntity uit de <a href=\"https://w3.org/TR/owl-time/\">W3C Time Ontology</a> is aanbevolen."@nl;
+  rdfs:comment "Abstracte klasse voor temporele objecten."@nl;
   shacl:closed false;
   shacl:targetClass <http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object> .

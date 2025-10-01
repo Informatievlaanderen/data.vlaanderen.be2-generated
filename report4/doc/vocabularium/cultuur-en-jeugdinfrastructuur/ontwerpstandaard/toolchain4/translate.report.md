@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/translation/infrastructuur_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/translation/infrastructuur_nl.json
+
+TRANSLATIONFILE: infrastructuur_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
@@ -13,4 +19,24 @@ WARNING The entered language values are the same!
 #||# Write complete  
 
 #||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/translation/infrastructuur_nl.json  
+
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/translation/infrastructuur_en.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/translation/infrastructuur_en.json
+
+TRANSLATIONFILE: infrastructuur_en.json
+
+#||# translate for language en  
+
+#||# -------------------------------------  
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/cultuur-en-jeugdinfrastructuur/ontwerpstandaard/toolchain4/translation/infrastructuur_en.json  
 

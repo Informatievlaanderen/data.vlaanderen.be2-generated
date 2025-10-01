@@ -1,0 +1,652 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#> rdfs:member <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#PubliekeDienstverleningShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#PubliekeOrganisatieShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#AgentShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#NotificatieberichtShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#AdministratieveEenheidShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActieShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#MerkShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#ContactinfoShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#StringShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#GetypeerdeStringShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#UriShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#TijdsintervalShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#GeometrieShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#DatetimeShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#GeografischeNaamShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#DoelgroepShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Sleutel/waardePaarShape> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#AdministratieveEenheidShape> a shacl:NodeShape;
+  rdfs:label "Administratieve Eenheid"@nl;
+  rdfs:comment "Een geografisch gebied,dat typisch onder de jurisdictie van een bepaalde publieke administratie valt."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "naam"@nl;
+    rdfs:comment "Naam van de Administratieve Eenheid."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#AdministratieveEenheid.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de Administratieve Eenheid."@nl;
+    shacl:maxCount "1";
+    shacl:name "naam"@nl;
+    shacl:path schemas:name
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "geometrie"@nl;
+    rdfs:comment "De geometrische voorstelling van het object."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#AdministratieveEenheid.Geometrie>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "De geometrische voorstelling van het object."@nl;
+    shacl:maxCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://www.w3.org/ns/locn#geometry>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "geografisch gebied"@nl;
+    rdfs:comment "Het geografisch gebied geassocieerd met de doelgroep."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#AdministratieveEenheid.GeografischGebied>;
+    shacl:class schemas:Audience;
+    shacl:description "Het geografisch gebied geassocieerd met de doelgroep."@nl;
+    shacl:name "geografisch gebied"@nl;
+    shacl:path schemas:geographicArea
+  ];
+  shacl:targetClass schemas:AdministrativeArea .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#AgentShape> a shacl:NodeShape;
+  rdfs:label "Agent"@nl;
+  <http://purl.org/vocab/vann/usageNote> ""@nl;
+  rdfs:comment "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."@nl;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#ContactinfoShape> a shacl:NodeShape;
+  rdfs:label "Contactinfo"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb een persoon of organisatie of dienstverlening... Mogelijke vormen van contact: bellen, mailen etc."@nl;
+  rdfs:comment "Informatie zoals email, telefoon, adres die toelaat om iemand of iets te contacteren."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "aanschrijfvorm"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb De heer/Mevrouw, Excellentie, Dokter..."@nl;
+    rdfs:comment "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Aanschrijfvorm>;
+    shacl:datatype rdf:langString;
+    shacl:description "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen."@nl;
+    shacl:maxCount "1";
+    shacl:name "aanschrijfvorm"@nl;
+    shacl:path vcard:honorific-prefix
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "contactnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Naam van bvb de persoon die men kan contacteren."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Contactnaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam van bvb de persoon die men kan contacteren."@nl;
+    shacl:maxCount "1";
+    shacl:name "contactnaam"@nl;
+    shacl:path foaf:name
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "email"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Email-adres waarnaar men kan mailen."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Email>;
+    shacl:datatype xsd:string;
+    shacl:description "Email-adres waarnaar men kan mailen."@nl;
+    shacl:maxCount "1";
+    shacl:name "email"@nl;
+    shacl:path schema:email
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "fax"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Faxnummer waarnaar men kan faxen."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Fax>;
+    shacl:datatype xsd:string;
+    shacl:description "Faxnummer waarnaar men kan faxen."@nl;
+    shacl:maxCount "1";
+    shacl:name "fax"@nl;
+    shacl:path schema:faxNumber
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "openingsuren"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Syntax volgens schema.org voor openingsuren. Bv als contact kan worden opgenomen tussen 8 en 20u maandag tot zaterdag en tussen 8 en 18u op zondag wordt dit gecodeerd als Ma-za 08:00-20:00, zo 08:00-18:00."@nl;
+    rdfs:comment "Uren waarbinnen contact kan worden opgenomen."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Openingsuren>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Uren waarbinnen contact kan worden opgenomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "openingsuren"@nl;
+    shacl:path schema:openingHours
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "telefoon"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Telefoonnummer waarop men kan bellen."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Telefoon>;
+    shacl:datatype xsd:string;
+    shacl:description "Telefoonnummer waarop men kan bellen."@nl;
+    shacl:maxCount "1";
+    shacl:name "telefoon"@nl;
+    shacl:path schema:telephone
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "website"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Website waarnaar men kan surfen."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Website>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Website waarnaar men kan surfen."@nl;
+    shacl:maxCount "1";
+    shacl:name "website"@nl;
+    shacl:path foaf:page
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "adres"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Adres dat men kan aanschrijven of bezoeken."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Adres>;
+    shacl:class <http://www.w3.org/ns/locn#Address>;
+    shacl:description "Adres dat men kan aanschrijven of bezoeken."@nl;
+    shacl:maxCount "1";
+    shacl:name "adres"@nl;
+    shacl:path <http://www.w3.org/ns/locn#address>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "beschikbaarheid"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bv aanduiding van het seizoen waarin contact kan worden opgenomen. Begin- en einddatum volgens ISO8601 syntax."@nl;
+    rdfs:comment "Periode waarin contact kan worden opgenomen."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Beschikbaarheid>;
+    shacl:class schema:OpeningHoursSpecification;
+    shacl:description "Periode waarin contact kan worden opgenomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschikbaarheid"@nl;
+    shacl:path schema:hoursAvailable
+  ];
+  shacl:targetClass schema:ContactPoint .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#DatetimeShape> a shacl:NodeShape;
+  rdfs:label "DateTime";
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#DoelgroepShape> a shacl:NodeShape;
+  rdfs:label "Doelgroep"@nl;
+  rdfs:comment "De beoogde doelgroep van een informeer actie."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "doelgroep type"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Er wordt verwacht dat het type doelgroep gedefinieerd is in een codelijst. Het bepalen en ontlsuiten van deze codelijst kan applicatie-specifiek worden ingevuld. Voorbeelden zijn leerkrachten, vastgoedeigenaars, personen die een auto bezitten,..."@nl;
+    rdfs:comment "Een typering van de doelgroep."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Doelgroep.DoelgroepType>;
+    shacl:datatype xsd:string;
+    shacl:description "Een typering van de doelgroep."@nl;
+    shacl:maxCount "1";
+    shacl:name "doelgroep type"@nl;
+    shacl:path schemas:audienceType
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "identificator"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Kan bijvoorbeeld een specifieke persoon of organisatie identificeren, of een groep van personen of organisaties."@nl;
+    rdfs:comment "Een identificator voor de doelgroep."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Doelgroep.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Een identificator voor de doelgroep."@nl;
+    shacl:maxCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "geografisch gebied"@nl;
+    rdfs:comment "Het geografisch gebied geassocieerd met de doelgroep."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Doelgroep.GeografischGebied>;
+    shacl:class schemas:AdministrativeArea;
+    shacl:description "Het geografisch gebied geassocieerd met de doelgroep."@nl;
+    shacl:name "geografisch gebied"@nl;
+    shacl:path schemas:geographicArea
+  ];
+  shacl:targetClass schemas:Audience .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#GeografischeNaamShape> a shacl:NodeShape;
+  rdfs:label "Geografische Naam"@nl;
+  rdfs:comment "Benaming toegekend aan of gebruikt voor een geografisch object."@nl;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#GeometrieShape> a shacl:NodeShape;
+  rdfs:label "Geometrie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Beschrijft deze kenmerken dmv punten, lijnen, polygonen en coördinaten."@nl;
+  rdfs:comment "Vorm- en positiekenmerken van een object."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "gml"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype."@nl;
+    rdfs:comment "Geometrie uitgedrukt in gml-formaat."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Geometrie.Gml>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "gml"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "wkt"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype."@nl;
+    rdfs:comment "Geometrie uitgedrukt in wkt-formaat."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Geometrie.Wkt>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "wkt"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#GetypeerdeStringShape> a shacl:NodeShape;
+  rdfs:label "Getypeerde String"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb '20170901' als string en 'datum' als type. Laat automatische interpretatie vd string toe."@nl;
+  rdfs:comment "Combinatie van een string en het type van wat de string voorstelt."@nl;
+  shacl:closed false;
+  shacl:targetClass rdfs:Literal .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActieShape> a shacl:NodeShape;
+  rdfs:label "Informeer Actie"@nl;
+  rdfs:comment "Kennisgeving van informatie aan zij die het aanbelangt. Deze informatie kan via meerdere kanalen naar een individu of naar een doelgroep genotificeerd worden."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "doelgroep"@nl;
+    rdfs:comment "De bestemmeling(en) die de informatie dien(t)(en) te ontvangen."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.Doelgroep>;
+    shacl:class schemas:Audience;
+    shacl:description "De bestemmeling(en) die de informatie dien(t)(en) te ontvangen."@nl;
+    shacl:minCount "1";
+    shacl:name "doelgroep"@nl;
+    shacl:path schema:recipient
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "inhoud"@nl;
+    <http://purl.org/vocab/vann/usageNote> "De inhoudt van een Notificatiebericht wordt gevormd door een aantal key-value pairs."@nl;
+    rdfs:comment "De inhoud van een Notificatiebericht."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.Inhoud>;
+    shacl:class schemas:PropertyValue;
+    shacl:description "De inhoud van een Notificatiebericht."@nl;
+    shacl:name "inhoud"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/notificatie#inhoud>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "notificatiekanaal"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Er wordt verwacht dat het notificatiekanaal gedefinieerd is in een codelijst. Het bepalen en ontlsuiten van deze codelijst kan applicatie-specifiek worden ingevuld. Mogelijke waarden zijn sms en e-mail."@nl;
+    rdfs:comment "Het notificatiekanaal duidt het technisch medium aan waarlangs het Notificatiebericht wordt verzonden."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.Notificatiekanaal>;
+    shacl:class skos:Concept;
+    shacl:description "Het notificatiekanaal duidt het technisch medium aan waarlangs het Notificatiebericht wordt verzonden."@nl;
+    shacl:minCount "1";
+    shacl:name "notificatiekanaal"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/notificatie#notificatiekanaal>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "onderwerp"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Er wordt verwacht dat de notificatiecategorie gedefinieerd is in een codelijst. Het bepalen en ontlsuiten van deze codelijst kan applicatie-specifiek worden ingevuld."@nl;
+    rdfs:comment "Het onderwerp van de informeer actie."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.Onderwerp>;
+    shacl:class skos:Concept;
+    shacl:description "Het onderwerp van de informeer actie."@nl;
+    shacl:minCount "1";
+    shacl:name "onderwerp"@nl;
+    shacl:path schemas:about
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "periode verzending"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld, wanneer het stedelijk zwembad een week gesloten is, kan de periode voor verzending van de Informeer Actie beginnen een maand voor de sluiting en eindigen op de laatste dag van de sluitingsperiode."@nl;
+    rdfs:comment "Het tijdsinterval waarbinnen de Informeer Actie relevant is en bijgevolg kan resulteren in de verzending van notificatieberichten."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.PeriodeVerzending>;
+    shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
+    shacl:description "Het tijdsinterval waarbinnen de Informeer Actie relevant is en bijgevolg kan resulteren in de verzending van notificatieberichten."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "periode verzending"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/notificatie#periodeVerzending>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "is gerelateerd met"@nl;
+    rdfs:comment "Een relatie tussen twee Informeer Acties."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.IsGerelateerdMet>;
+    shacl:class schemas:InformAction;
+    shacl:description "Een relatie tussen twee Informeer Acties."@nl;
+    shacl:name "is gerelateerd met"@nl;
+    shacl:path dc:relation
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "resulteert in"@nl;
+    rdfs:comment "De relatie tussen een Informeer Actie en het (de) Notificatiebericht(en) die hier uit voortkomen."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.ResulteertIn>;
+    shacl:class <https://data.vlaanderen.be/ns/notificatie#Notificatiebericht>;
+    shacl:description "De relatie tussen een Informeer Actie en het (de) Notificatiebericht(en) die hier uit voortkomen."@nl;
+    shacl:name "resulteert in"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/notificatie#InformeerActie.resulteertIn>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "agent"@nl;
+    rdfs:comment "Duidt de agent aan die aanleiding gaf tot de InformeerActie."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.Agent>;
+    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+    shacl:description "Duidt de agent aan die aanleiding gaf tot de InformeerActie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "agent"@nl;
+    shacl:path schemas:agent
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "kadert binnen"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld een Informeer Actie over een statuswijziging in een aanvraag voor een bouwvergunning."@nl;
+    rdfs:comment "Verwijst naar de publieke dienstverlening in de context waarvan de Informeer Actie plaatsvindt."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.KadertBinnen>;
+    shacl:class <http://purl.org/vocab/cpsv#PublicService>;
+    shacl:description "Verwijst naar de publieke dienstverlening in de context waarvan de Informeer Actie plaatsvindt."@nl;
+    shacl:name "kadert binnen"@nl;
+    shacl:path <http://todo.com/kadertBinnen>
+  ];
+  shacl:targetClass schemas:InformAction .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#MerkShape> a shacl:NodeShape;
+  rdfs:label "Merk"@nl;
+  rdfs:comment "De naam gebruikt door een Publieke Organisatie om te communiceren over een bepaalde Publieke Dienstverlening."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "naam"@nl;
+    rdfs:comment "De naam van het Merk."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Merk.Naam>;
+    shacl:datatype xsd:string;
+    shacl:description "De naam van het Merk."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path schema:name
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "contactinfo"@nl;
+    rdfs:comment "Informatie zoals email, telefoon... die toelaat de entiteit te contacteren."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Merk.Contactinfo>;
+    shacl:class schema:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon... die toelaat de entiteit te contacteren."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "contactinfo"@nl;
+    shacl:path schema:contactPoint
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "afzender"@nl;
+    rdfs:comment "De afzender van het Notificatiebericht."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Merk.Afzender>;
+    shacl:class <https://data.vlaanderen.be/ns/notificatie#Notificatiebericht>;
+    shacl:description "De afzender van het Notificatiebericht."@nl;
+    shacl:name "afzender"@nl;
+    shacl:path schema:sender
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft merk"@nl;
+    rdfs:comment "Het merk dat geassocieerd is met één of meerdere Publieke Organisatie(s), in de context van Publieke Dienstverlening."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Merk.HeeftMerk>;
+    shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
+    shacl:description "Het merk dat geassocieerd is met één of meerdere Publieke Organisatie(s), in de context van Publieke Dienstverlening."@nl;
+    shacl:name "heeft merk"@nl;
+    shacl:path schema:brand
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "is gerelateerd met"@nl;
+    rdfs:comment "De Publieke Dienstverlening waar het Merk aan gerelateerd is."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Merk.IsGerelateerdMet>;
+    shacl:class <http://purl.org/vocab/cpsv#PublicService>;
+    shacl:description "De Publieke Dienstverlening waar het Merk aan gerelateerd is."@nl;
+    shacl:name "is gerelateerd met"@nl;
+    shacl:path dc:relation
+  ];
+  shacl:targetClass schemas:Brand .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#NotificatieberichtShape> a shacl:NodeShape;
+  rdfs:label "Notificatiebericht"@nl;
+  rdfs:comment "Een bericht van een afzender naar een bestemmeling met als doel het informeren van de bestemmeling."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "datum creatie"@nl;
+    rdfs:comment "De datum waarop het Notificatiebericht gecreëerd werd."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.DatumCreatie>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "De datum waarop het Notificatiebericht gecreëerd werd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "datum creatie"@nl;
+    shacl:path schemas:dateCreated
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "datum gelezen"@nl;
+    rdfs:comment "De datum waarop het Notificatiebericht werd gelezen door de bestemmeling."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.DatumGelezen>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "De datum waarop het Notificatiebericht werd gelezen door de bestemmeling."@nl;
+    shacl:maxCount "1";
+    shacl:name "datum gelezen"@nl;
+    shacl:path schema:dateRead
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "datum ontvangen"@nl;
+    rdfs:comment "De datum waarop het Notificatiebericht werd ontvangen door de bestemmeling."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.DatumOntvangen>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "De datum waarop het Notificatiebericht werd ontvangen door de bestemmeling."@nl;
+    shacl:maxCount "1";
+    shacl:name "datum ontvangen"@nl;
+    shacl:path schema:dateReceived
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "datum verzending"@nl;
+    rdfs:comment "De datum waarop het Notificatiebericht werd verzonden naar de bestemmeling."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.DatumVerzending>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "De datum waarop het Notificatiebericht werd verzonden naar de bestemmeling."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "datum verzending"@nl;
+    shacl:path schema:dateSent
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "tekst"@nl;
+    <http://purl.org/vocab/vann/usageNote> "De tekst wordt afgeleid van de inhoud van een InformeerActie.In praktijk kan dit gebeuren door het vastleggen van sjablonen voor verschillende kanalen. De verderedere uitwerking hiervan is applicatie-specifiek."@nl;
+    rdfs:comment "De tekstuele inhoud van het Notificatiebericht."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.Tekst>;
+    shacl:datatype xsd:string;
+    shacl:description "De tekstuele inhoud van het Notificatiebericht."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "tekst"@nl;
+    shacl:path schemas:text
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "titel"@nl;
+    <http://purl.org/vocab/vann/usageNote> "De titel kan in praktijk automatisch worden samengesteld aan de hand van een aantal andere beschikbare velden."@nl;
+    rdfs:comment "Een titel voor het Notificatiebericht."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.Titel>;
+    shacl:datatype xsd:string;
+    shacl:description "Een titel voor het Notificatiebericht."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "titel"@nl;
+    shacl:path schemas:name
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "url"@nl;
+    <http://purl.org/vocab/vann/usageNote> "De url kan gebruikt worden om een doorverwijzing mee te geven naar een resource waarop het Notificatiebericht betrekking heeft."@nl;
+    rdfs:comment "Een url voor het Notificatiebericht."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.Url>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Een url voor het Notificatiebericht."@nl;
+    shacl:maxCount "1";
+    shacl:name "url"@nl;
+    shacl:path schema:url
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "vervalt"@nl;
+    rdfs:comment "De datum waarop een Notificatiebericht vervalt."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.Vervalt>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "De datum waarop een Notificatiebericht vervalt."@nl;
+    shacl:maxCount "1";
+    shacl:name "vervalt"@nl;
+    shacl:path schema:expires
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "notificatiekanaal"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Er wordt verwacht dat het notificatiekanaal gedefinieerd is in een codelijst. Het bepalen en ontlsuiten van deze codelijst kan applicatie-specifiek worden ingevuld. Mogelijke waarden zijn sms en e-mail."@nl;
+    rdfs:comment "Het notificatiekanaal duidt het technisch medium aan waarlangs het Notificatiebericht wordt verzonden."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.Notificatiekanaal>;
+    shacl:class skos:Concept;
+    shacl:description "Het notificatiekanaal duidt het technisch medium aan waarlangs het Notificatiebericht wordt verzonden."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "notificatiekanaal"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/notificatie#notificatiekanaal>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "afzender"@nl;
+    rdfs:comment "De afzender van het Notificatiebericht."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.Afzender>;
+    shacl:class schemas:Brand;
+    shacl:description "De afzender van het Notificatiebericht."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "afzender"@nl;
+    shacl:path schema:sender
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "resulteert in"@nl;
+    rdfs:comment "De relatie tussen een Informeer Actie en het (de) Notificatiebericht(en) die hier uit voortkomen."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.ResulteertIn>;
+    shacl:class schemas:InformAction;
+    shacl:description "De relatie tussen een Informeer Actie en het (de) Notificatiebericht(en) die hier uit voortkomen."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "resulteert in"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/notificatie#Notificatiebericht.resulteertIn>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/notificatie#Notificatiebericht> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#PubliekeDienstverleningShape> a shacl:NodeShape;
+  rdfs:label "Publieke Dienstverlening"@nl;
+  <http://purl.org/vocab/vann/usageNote> "De dienstverlening vormt een aanbod (dat dus niet noodzakelijk wordt gebruikt). Ze houdt niet noodzakelijk het opnemen van een recht in,de dienstverlening kan de gebruiker ook toelaten een verplichting te vervullen."@nl;
+  rdfs:comment "Een Publieke Dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een publieke organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen hiervan."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://purl.org/vocab/cpsv#PublicService> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#PubliekeOrganisatieShape> a shacl:NodeShape;
+  rdfs:label "Publieke Organisatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "De overheids- en semioverheidsorganisaties die tot men zo tot de publieke sector kan rekenen worden in Europese richtlijn 2003/98/EG \"openbaar lichaam\" genoemd en gedefinieerd als: \"de staat, zijn territoriale lichamen, publiekrechtelijke instellingen, en verenigingen gevormd door een of meer van deze lichamen of een of meer van deze publiekrechtelijke instellingen\". En onder een publiekrechtelijke instelling verstaat men \" iedere instelling die a) is opgericht met het specifieke doel te voorzien in behoeften van algemeen belang die niet van industriële of commerciële aard zijn, en b) rechtspersoonlijkheid heeft, en c) waarvan hetzij de activiteiten in hoofdzaak door de staat of zijn territoriale lichamen of andere publiekrechtelijke instellingen worden gefinancierd, hetzij het beheer is onderworpen aan toezicht door deze laatste, hetzij de leden van het bestuursorgaan, het leidinggevend orgaan of het toezichthoudend orgaan voor meer dan de helft door de staat, zijn territoriale lichamen of andere publiekrechtelijke instellingen zijn aangewezen.\"."@nl;
+  rdfs:comment "Een Organisatie die volgens een wettelijk kader behoort tot de publieke sector,ongeacht het bestuursniveau waarop dat kader van kracht is."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "agent"@nl;
+    rdfs:comment "Duidt de agent aan die aanleiding gaf tot de InformeerActie."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#PubliekeOrganisatie.Agent>;
+    shacl:class schemas:InformAction;
+    shacl:description "Duidt de agent aan die aanleiding gaf tot de InformeerActie."@nl;
+    shacl:name "agent"@nl;
+    shacl:path schemas:agent
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft merk"@nl;
+    rdfs:comment "Het merk dat geassocieerd is met één of meerdere Publieke Organisatie(s), in de context van Publieke Dienstverlening."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#PubliekeOrganisatie.HeeftMerk>;
+    shacl:class schemas:Brand;
+    shacl:description "Het merk dat geassocieerd is met één of meerdere Publieke Organisatie(s), in de context van Publieke Dienstverlening."@nl;
+    shacl:minCount "1";
+    shacl:name "heeft merk"@nl;
+    shacl:path schema:brand
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Sleutel/waardePaarShape> a shacl:NodeShape;
+  rdfs:label "Sleutel/Waarde Paar"@nl;
+  rdfs:comment "Een open data structuur dat uitbreiding toelaat aan de hand van een sleutel en een waarde."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "naam"@nl;
+    rdfs:comment "Het label is de sleutel van het sleutel/waarde paar."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Sleutel/waardePaar.Naam>;
+    shacl:datatype xsd:string;
+    shacl:description "Het label is de sleutel van het sleutel/waarde paar."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path schemas:name
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "waarde"@nl;
+    rdfs:comment "De waarde van het sleutel/waarde paar."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Sleutel/waardePaar.Waarde>;
+    shacl:datatype xsd:string;
+    shacl:description "De waarde van het sleutel/waarde paar."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path schemas:value
+  ];
+  shacl:targetClass schemas:PropertyValue .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#StringShape> a shacl:NodeShape;
+  rdfs:label "String";
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#TijdsintervalShape> a shacl:NodeShape;
+  rdfs:label "TijdsInterval"@nl;
+  <http://purl.org/vocab/vann/usageNote> ""@nl;
+  rdfs:comment "De tijdsperiode tussen twee momenten in de tijd."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "begin"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Moment waarop het tijdsinterval begint."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Tijdsinterval.Begin>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Moment waarop het tijdsinterval begint."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "begin"@nl;
+    shacl:path <http://data.europa.eu/m8g/startTime>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "einde"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Moment waarop het tijdsinterval eindigt."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Tijdsinterval.Einde>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Moment waarop het tijdsinterval eindigt."@nl;
+    shacl:maxCount "1";
+    shacl:name "einde"@nl;
+    shacl:path <http://data.europa.eu/m8g/endTime>
+  ];
+  shacl:targetClass <http://data.europa.eu/m8g/PeriodOfTime> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#UriShape> a shacl:NodeShape;
+  rdfs:label "URI";
+  shacl:closed false;
+  shacl:targetClass xsd:anyURI .

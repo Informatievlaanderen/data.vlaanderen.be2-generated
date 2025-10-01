@@ -2,15 +2,27 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for range "http://www.w3.org/2004/02/skos/core#Concept".
+2025-10-01T14:03:27.408Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-generieke-terugmeldfaciliteit.jsonld#L2867)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:49:19)
+2025-10-01T14:03:27.410Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-generieke-terugmeldfaciliteit.jsonld#L2878)".
 
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+2025-10-01T14:03:27.410Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-generieke-terugmeldfaciliteit.jsonld#L2889)".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:51)
+2025-10-01T14:03:27.410Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-generieke-terugmeldfaciliteit.jsonld#L2900)".
 
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+2025-10-01T14:03:27.410Z warn: Unable to find the description for subject "urn:oslo-toolchain:286333439".
 
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+#||# oslo-shacl-template-generator for language en  
+
+#||# -------------------------------------  
+
+2025-10-01T14:03:28.142Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-generieke-terugmeldfaciliteit.jsonld#L2867)".
+
+2025-10-01T14:03:28.145Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-generieke-terugmeldfaciliteit.jsonld#L2878)".
+
+2025-10-01T14:03:28.145Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-generieke-terugmeldfaciliteit.jsonld#L2889)".
+
+2025-10-01T14:03:28.145Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-generieke-terugmeldfaciliteit.jsonld#L2900)".
+
+2025-10-01T14:03:28.146Z warn: Unable to find the description for subject "urn:oslo-toolchain:286333439".
 

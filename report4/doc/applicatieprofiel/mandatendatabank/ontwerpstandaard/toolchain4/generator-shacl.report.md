@@ -2,7 +2,23 @@
 
 #||# -------------------------------------  
 
-2025-03-12T16:53:02.339Z error: Unable to find the description for subject "[urn:oslo-toolchain:0dd08ae7b9b478c365d368e2e1d2c755645ad2385a9d562d6824a86810c085cb](all-mandatendatabank.jsonld#L2532)".
+2025-10-01T14:03:48.782Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-mandatendatabank.jsonld#L2939)".
 
-2025-03-12T16:53:02.341Z error: Unable to find the description for subject "[urn:oslo-toolchain:ae8d6bfda2b145d8465c332a2d995a783be4189d90713f89d8a3e9e54f4f7009](all-mandatendatabank.jsonld#L2552)".
+2025-10-01T14:03:48.784Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mandatendatabank.jsonld#L2950)".
+
+2025-10-01T14:03:48.784Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-mandatendatabank.jsonld#L2961)".
+
+2025-10-01T14:03:48.784Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
+
+#||# oslo-shacl-template-generator for language en  
+
+#||# -------------------------------------  
+
+2025-10-01T14:03:49.519Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-mandatendatabank.jsonld#L2939)".
+
+2025-10-01T14:03:49.521Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mandatendatabank.jsonld#L2950)".
+
+2025-10-01T14:03:49.521Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-mandatendatabank.jsonld#L2961)".
+
+2025-10-01T14:03:49.521Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
 

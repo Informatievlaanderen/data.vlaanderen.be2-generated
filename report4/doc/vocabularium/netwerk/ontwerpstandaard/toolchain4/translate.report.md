@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/netwerk/ontwerpstandaard/toolchain4/translation/netwerk_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/netwerk/ontwerpstandaard/toolchain4/translation/netwerk_nl.json
+
+TRANSLATIONFILE: netwerk_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
@@ -13,4 +19,24 @@ WARNING The entered language values are the same!
 #||# Write complete  
 
 #||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/netwerk/ontwerpstandaard/toolchain4/translation/netwerk_nl.json  
+
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/netwerk/ontwerpstandaard/toolchain4/translation/netwerk_en.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/netwerk/ontwerpstandaard/toolchain4/translation/netwerk_en.json
+
+TRANSLATIONFILE: netwerk_en.json
+
+#||# translate for language en  
+
+#||# -------------------------------------  
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/netwerk/ontwerpstandaard/toolchain4/translation/netwerk_en.json  
 

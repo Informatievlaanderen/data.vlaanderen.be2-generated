@@ -1,34 +1,20 @@
-#||# oslo-converter-ea for diagram OSLO-Dossier
+#||# oslo-converter-ea for diagram OSLO-DDT
 
 #||# -------------------------------------
 
-2025-02-11T10:33:52.822Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+Error: Path does not refer to a valid file: Cultuurparticipatie_Voc_and_AP.eap
 
-2025-02-11T10:33:52.824Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
+    at fetchFileOrUrl (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/utils/fetchFileOrUrl.js:18:15)
 
-2025-02-11T10:33:52.829Z warn: [ConnectorConverterHandler]: Connector (genereert) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+    at AccessDbFileReader.initDataRegistry (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/ea-uml-extractor/lib/AccessDbFileReader.js:19:56)
 
-2025-02-11T10:33:52.829Z warn: [ConnectorConverterHandler]: Connector (doorloopt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+    at FileReaderService.createDataRegistry (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/ea-uml-extractor/lib/FileReaderService.js:15:32)
 
-2025-02-11T10:33:52.829Z warn: [ConnectorConverterHandler]: Connector (bestaatUit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+    at EaUmlConversionService.run (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/EaUmlConversionService.js:36:116)
 
-2025-02-11T10:33:52.829Z warn: [ConnectorConverterHandler]: Connector (vindtPlaatsTijdens) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-11T10:33:52.829Z warn: [ConnectorConverterHandler]: Connector (isNeerslagVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-11T10:33:52.829Z warn: [ConnectorConverterHandler]: Connector (vindtPlaatsTijdens) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-11T10:33:52.829Z warn: [ConnectorConverterHandler]: Connector (isNeerslagVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-11T10:33:52.830Z warn: [ConnectorConverterHandler]: Connector (bestaatUit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-11T10:33:52.830Z warn: [ConnectorConverterHandler]: Connector (vindtPlaatsTijdens) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-11T10:33:52.830Z warn: [ConnectorConverterHandler]: Connector (vindtPlaatsTijdens) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-11T10:33:52.830Z warn: [ConnectorConverterHandler]: Connector (isVoorgesteldDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-02-11T10:33:52.830Z warn: [ConnectorConverterHandler]: Connector (isVoorgesteldDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
 
 #||# -------------------------------------
+
+file dossier-ap.jsonld does not exist
 

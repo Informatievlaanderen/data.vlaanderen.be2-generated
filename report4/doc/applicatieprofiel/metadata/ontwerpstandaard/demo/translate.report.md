@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/metadata/ontwerpstandaard/demo/translation/metadata_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/metadata/ontwerpstandaard/demo/translation/metadata_nl.json
+
+TRANSLATIONFILE: metadata_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
@@ -13,6 +19,12 @@ WARNING The entered language values are the same!
 #||# Write complete  
 
 #||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/metadata/ontwerpstandaard/demo/translation/metadata_nl.json  
+
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/metadata/ontwerpstandaard/demo/translation/metadata_en.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/metadata/ontwerpstandaard/demo/translation/metadata_en.json
+
+TRANSLATIONFILE: metadata_en.json
 
 #||# translate for language en  
 

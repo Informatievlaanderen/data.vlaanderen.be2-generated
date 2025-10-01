@@ -2,17 +2,27 @@
 
 #||# -------------------------------------  
 
-2025-02-11T10:54:42.909Z error: Unable to find the description for subject "[urn:oslo-toolchain:f5956698f83c73ece4314b808976a5fc8262e1556f90db3bccdf31ee2975aa0f](all-generiek-basis.jsonld#L3157)".
+2025-10-01T14:03:25.930Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-generiek-basis.jsonld#L3735)".
 
-Error: Unable to find a label for the domain "urn:oslo-toolchain:d025456eb298de3c1389213d1e2467b1ee3dea1ffe4b86f61c4aeb81cd5e1e4a" of subject "[urn:oslo-toolchain:f5956698f83c73ece4314b808976a5fc8262e1556f90db3bccdf31ee2975aa0f](all-generiek-basis.jsonld#L3157)".
+2025-10-01T14:03:25.932Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-generiek-basis.jsonld#L3746)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:77:23)
+2025-10-01T14:03:25.933Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-generiek-basis.jsonld#L3757)".
 
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+2025-10-01T14:03:25.933Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-generiek-basis.jsonld#L3768)".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:51)
+2025-10-01T14:03:25.934Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
 
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+#||# oslo-shacl-template-generator for language en  
 
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+#||# -------------------------------------  
+
+2025-10-01T14:03:26.734Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-generiek-basis.jsonld#L3735)".
+
+2025-10-01T14:03:26.736Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-generiek-basis.jsonld#L3746)".
+
+2025-10-01T14:03:26.737Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-generiek-basis.jsonld#L3757)".
+
+2025-10-01T14:03:26.737Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-generiek-basis.jsonld#L3768)".
+
+2025-10-01T14:03:26.737Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
 

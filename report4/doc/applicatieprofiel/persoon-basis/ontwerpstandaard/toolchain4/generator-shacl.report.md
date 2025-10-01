@@ -2,15 +2,25 @@
 
 #||# -------------------------------------  
 
-2025-02-11T12:05:01.840Z error: Unable to find the description for subject "[urn:oslo-toolchain:8982ab2f1b81978adced8ad6620969886ad3497f191753aeb162bd4addceedb4](all-persoon-basis.jsonld#L2548)".
+2025-10-01T14:04:22.828Z warn: Unable to find the description for subject "[urn:oslo-toolchain:ead03005cf2f07f8db3f94cec05dea5b976be666cf787dd765564ebfc66b6fc5](all-persoon-basis.jsonld#L926)".
 
-2025-02-11T12:05:01.842Z error: Unable to find the description for subject "[urn:oslo-toolchain:dc99411509b8962c498c7ce32705704ab649c7500a4a5900e301d697d5a76eed](all-persoon-basis.jsonld#L2568)".
+2025-10-01T14:04:22.832Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
 
-2025-02-11T12:05:01.845Z error: Unable to find the description for subject "[urn:oslo-toolchain:7c01492a0a16cf34e7061837303589a9570a1a1684e4e04992c95fae3bfacb60](all-persoon-basis.jsonld#L2851)".
+2025-10-01T14:04:22.842Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8982ab2f1b81978adced8ad6620969886ad3497f191753aeb162bd4addceedb4](all-persoon-basis.jsonld#L2544)".
 
-2025-02-11T12:05:01.845Z error: Unable to find the description for subject "[urn:oslo-toolchain:30dd53c7f14b73184f27a47a12e03c0b469d49d4c4e8ff13e4ff949cef2fcf56](all-persoon-basis.jsonld#L2871)".
+2025-10-01T14:04:22.843Z warn: Unable to find the description for subject "[urn:oslo-toolchain:dc99411509b8962c498c7ce32705704ab649c7500a4a5900e301d697d5a76eed](all-persoon-basis.jsonld#L2564)".
 
-2025-02-11T12:05:01.846Z error: Unable to find the description for subject "[urn:oslo-toolchain:8c2210581b0cf04a1714e5c255e70e34583e524119192fa48481e008161e1fb2](all-persoon-basis.jsonld#L2923)".
+#||# oslo-shacl-template-generator for language en  
 
-2025-02-11T12:05:01.846Z error: Unable to find the description for subject "[urn:oslo-toolchain:a92e90e6af873f4e310d94b0a4da4aed332872a136aa2dfe5e71801f604f200b](all-persoon-basis.jsonld#L2943)".
+#||# -------------------------------------  
+
+Error: Unable to find a label for subject "[urn:oslo-toolchain:e85c8f961433da819dcad00ec60647cc8bf53c409bf1d70a0cc8a8b73e3d1c43](all-persoon-basis.jsonld#L132)".
+
+    at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:98:23)
+
+    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:40:42)
+
+    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 

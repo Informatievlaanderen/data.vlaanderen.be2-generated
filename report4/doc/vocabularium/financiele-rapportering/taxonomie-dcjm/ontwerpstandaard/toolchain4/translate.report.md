@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/financiele-rapportering/taxonomie-dcjm/ontwerpstandaard/toolchain4/translation/taxonomie-dcjm_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/financiele-rapportering/taxonomie-dcjm/ontwerpstandaard/toolchain4/translation/taxonomie-dcjm_nl.json
+
+TRANSLATIONFILE: taxonomie-dcjm_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
@@ -13,4 +19,24 @@ WARNING The entered language values are the same!
 #||# Write complete  
 
 #||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/financiele-rapportering/taxonomie-dcjm/ontwerpstandaard/toolchain4/translation/taxonomie-dcjm_nl.json  
+
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/financiele-rapportering/taxonomie-dcjm/ontwerpstandaard/toolchain4/translation/taxonomie-dcjm_en.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/financiele-rapportering/taxonomie-dcjm/ontwerpstandaard/toolchain4/translation/taxonomie-dcjm_en.json
+
+TRANSLATIONFILE: taxonomie-dcjm_en.json
+
+#||# translate for language en  
+
+#||# -------------------------------------  
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/vocabularium/financiele-rapportering/taxonomie-dcjm/ontwerpstandaard/toolchain4/translation/taxonomie-dcjm_en.json  
 

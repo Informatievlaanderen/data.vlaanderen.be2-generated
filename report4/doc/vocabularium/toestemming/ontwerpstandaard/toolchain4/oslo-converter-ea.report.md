@@ -1,48 +1,80 @@
-#||# oslo-converter-ea for diagram OSLO-Toestemming
+#||# oslo-converter-ea for diagram OSLO-Statistiek
+
+
 
 #||# -------------------------------------
 
-2025-02-11T12:04:04.920Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T12:04:04.921Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T12:04:04.922Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
+Error: Path does not refer to a valid file: OSLO-Waterkwaliteit-AP.EAP
 
-2025-02-11T12:04:04.926Z warn: [ConnectorConverterHandler]: Connector (dataSubject) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T12:04:04.926Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dataSubject) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T12:04:04.926Z warn: [ConnectorConverterHandler]: Connector (dataSubject) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+    at fetchFileOrUrl (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/utils/fetchFileOrUrl.js:18:15)
 
-2025-02-11T12:04:04.926Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (dataSubject) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T12:04:04.926Z warn: [ConnectorConverterHandler]: Connector (verwerker) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T12:04:04.926Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verwerker) and the fallback URI (http://todo.com/) will be assigned.
+    at AccessDbFileReader.initDataRegistry (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/ea-uml-extractor/lib/AccessDbFileReader.js:19:56)
 
-2025-02-11T12:04:04.927Z warn: [ConnectorConverterHandler]: Connector (verwerkingsverantwoordelijke) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-02-11T12:04:04.927Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verwerkingsverantwoordelijke) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-02-11T12:04:04.927Z warn: [ConnectorConverterHandler]: Connector (extraInformatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+    at FileReaderService.createDataRegistry (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/ea-uml-extractor/lib/FileReaderService.js:15:32)
 
-2025-02-11T12:04:04.927Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (extraInformatie) and the fallback URI (http://todo.com/) will be assigned.
 
-Error: [AttributeConverterHandler]: Unable to find domain object for attribute (Model:Domain Model:OSLO²_vocabularium:OSLO-Mandaat:Lidmaatschap:lidVanTot).
 
-    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/converter-handlers/AttributeConverterHandler.js:46:23
+    at EaUmlConversionService.run (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/EaUmlConversionService.js:36:116)
 
-    at Array.forEach (<anonymous>)
 
-    at AttributeConverterHandler.assignUris (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/converter-handlers/AttributeConverterHandler.js:43:26)
 
-    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConverterHandlerService.js:31:50
+    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
 
-    at Array.map (<anonymous>)
 
-    at ConverterHandlerService.assignUris (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/ConverterHandlerService.js:31:37)
 
 #||# -------------------------------------
 
-file toestemming.jsonld does not exist
+
+
+file toestemming does not exist
+
+
+
+#||# oslo-converter-ea for diagram OSLO-Statistiek
+
+
+
+#||# -------------------------------------
+
+
+
+Error: Path does not refer to a valid file: OSLO-Waterkwaliteit-AP.EAP
+
+
+
+    at fetchFileOrUrl (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/utils/fetchFileOrUrl.js:18:15)
+
+
+
+    at AccessDbFileReader.initDataRegistry (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/ea-uml-extractor/lib/AccessDbFileReader.js:19:56)
+
+
+
+    at FileReaderService.createDataRegistry (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/ea-uml-extractor/lib/FileReaderService.js:15:32)
+
+
+
+    at EaUmlConversionService.run (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/EaUmlConversionService.js:36:116)
+
+
+
+    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+
+
+
+#||# -------------------------------------
+
+
+
+file toestemming does not exist
+
+
 

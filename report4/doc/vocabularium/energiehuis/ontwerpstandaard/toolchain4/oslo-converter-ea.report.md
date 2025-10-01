@@ -1,76 +1,118 @@
-#||# oslo-converter-ea for diagram OSLO-Energiehuis-VOC
+#||# oslo-converter-ea for diagram Energiehuis
 
 #||# -------------------------------------
 
-2025-02-11T10:53:19.332Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:15.362Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2025-02-11T10:53:19.333Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:15.364Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-02-11T10:53:19.333Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:15.364Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Energiehuis:Plaatsbezoek:(Plaatsbezoek -> Basistaak))
 
-2025-02-11T10:53:19.333Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:IPDC-LPDC:classes) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:15.364Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Persoon:Persoon:(Persoon -> Persoon))
 
-2025-02-11T10:53:19.334Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:IPDC-LPDC:codelijsten) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:15.367Z info: Connector Model:Model:OSLO-Energiehuis:Energiehuis:(Energiehuis -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.334Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:IPDC-LPDC:data types) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:15.368Z info: Connector Model:Model:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.334Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:schema-org) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:52:15.368Z info: Connector Model:Model:OSLO-Dienst:PubliekeDienstverlening:(PubliekeDienstverlening -> Output) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.340Z warn: [ConnectorConverterHandler]: Connector (financiering) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T13:52:15.369Z info: Connector Model:Model:OSLO-Dienst:PubliekeDienstverlening:(PubliekeDienstverlening -> Kanaal) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.346Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Dienst:PubliekeDienstverlening:naam).
+2025-10-01T13:52:15.370Z info: Connector Model:Model:OSLO-Dienst:PubliekeDienstverlening:(PubliekeDienstverlening -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.346Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Dienst:PubliekeDienstverlening:alternatieveNaam).
+2025-10-01T13:52:15.370Z info: Connector Model:Model:OSLO-Energiehuis:WoonEnEnergieloket:(WoonEnEnergieloket -> Kanaal) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.347Z warn: [ConverterHandler]: Entity with path Model:OSLO:OSLO-Dienst:PubliekeDienstverlening:beschrijving has already a value for ap-usageNote-nl in language nl, but will be overwritten.
+2025-10-01T13:52:15.370Z info: Connector Model:Model:OSLO-Energiehuis:Lening:(Lening -> Financieringsoutput) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.347Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Dienst:PubliekeDienstverlening:beschrijving).
+2025-10-01T13:52:15.370Z info: Connector Model:Model:OSLO-Energiehuis:Premie:(Premie -> Financieringsoutput) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.347Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Dienst:PubliekeDienstverlening:trefwoord).
+2025-10-01T13:52:15.371Z info: Connector Model:Model:OSLO-Energiehuis:Plaatsbezoek:(Plaatsbezoek -> Contact) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.347Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Dienst:PubliekeDienstverlening:taal).
+2025-10-01T13:52:15.371Z info: Connector Model:Model:OSLO-Energiehuis:InteresseOpwekking:(InteresseOpwekking -> Basistaak) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.347Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Dienst:PubliekeDienstverlening:ruimtelijkeDekking).
+2025-10-01T13:52:15.371Z info: Connector Model:Model:OSLO-Energiehuis:Informatievoorziening:(Informatievoorziening -> Basistaak) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.348Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Dienst:PubliekeDienstverlening:contactinfo).
+2025-10-01T13:52:15.371Z info: Connector Model:Model:OSLO-Energiehuis:Adviesverlening:(Adviesverlening -> Basistaak) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.348Z warn: [ConverterHandler]: Entity with path Model:OSLO:OSLO-Dienst:Kost has an empty value for tag ap-usageNote-nl.
+2025-10-01T13:52:15.371Z info: Connector Model:Model:OSLO-Energiehuis:Begeleiding:(Begeleiding -> Basistaak) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.349Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Generiek:ContactInfo:beschikbaarheid).
+2025-10-01T13:52:15.371Z info: Connector Model:Model:OSLO-Energiehuis:Contact:(Contact -> Basistaak) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.349Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Generiek:ContactInfo:adres).
+2025-10-01T13:52:15.371Z info: Connector Model:Model:OSLO-Energiehuis:GeregistreerdContact:(GeregistreerdContact -> Contact) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.349Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Organisatie:Organisatie:doel).
+2025-10-01T13:52:15.372Z info: Connector Model:Model:OSLO-Energiehuis:Basistaak:(Basistaak -> PubliekeDienstverlening) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.350Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Organisatie:Organisatie:voorkeursnaam).
+2025-10-01T13:52:15.372Z info: Connector Model:Model:OSLO-Energiehuis:Financiering:(Financiering -> Basistaak) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.350Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Organisatie:Organisatie:alternatieveNaam).
+2025-10-01T13:52:15.372Z info: Connector Model:Model:OSLO-Energiehuis:Renovatieproject:(Renovatieproject -> Project) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.350Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Organisatie:Organisatie:logo).
+2025-10-01T13:52:15.372Z info: Connector Model:Model:OSLO-Energiehuis:Renovatiebegeleiding:(Renovatiebegeleiding -> Begeleiding) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.350Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Organisatie:Organisatie:contactinfo).
+2025-10-01T13:52:15.372Z info: Connector Model:Model:OSLO-Energiehuis:Energiescan:(Energiescan -> Adviesverlening) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.351Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Organisatie:Organisatie:beschrijving).
+2025-10-01T13:52:15.373Z info: Connector Model:Model:OSLO-Energiehuis:Financieringsoutput:(Financieringsoutput -> Output) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.351Z warn: [ConverterHandler]: Entity with path Model:OSLO:OSLO-Adres:Adres:positie has already a value for usageNote-nl in language nl, but will be overwritten.
+2025-10-01T13:52:15.373Z info: Connector Model:Model:OSLO-Energiehuis:Renovatieproject:(Renovatieproject -> Gebouw) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.351Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Adres:Adres:positie).
+2025-10-01T13:52:15.373Z info: Connector Model:Model:OSLO-Energiehuis:Renovatieproject:(Renovatieproject -> Gebouweenheid) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.353Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO-Energiehuis:GeregistreerdKlantencontact:onderwerp).
+2025-10-01T13:52:15.373Z info: Connector Model:Model:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.354Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Gebouw:Gebouw:adres).
+2025-10-01T13:52:15.373Z info: Connector Model:Model:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.354Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Gebouw:Gebouw:bouwjaar).
+2025-10-01T13:52:15.373Z info: Connector Model:Model:OSLO-Gebouw:Gebouw:(Gebouw -> Gebouweenheid) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.354Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Gebouw:Gebouw:gebouwnaam).
+2025-10-01T13:52:15.373Z info: Connector Model:Model:OSLO-Adres:Adresvoorstelling:(Adresvoorstelling -> Adres) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.354Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Gebouw:Gebouw:laatsteRenovatie).
+2025-10-01T13:52:15.373Z info: Connector Model:Model:OSLO-Generiek:GeografischeNaam:(GeografischeNaam -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.354Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Gebouw:Gebouweenheid:adres).
+2025-10-01T13:52:15.373Z info: Connector Model:Model:OSLO-Adres:Adresvoorstelling:(Adresvoorstelling -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.354Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Gebouw:Gebouweenheid:geometrie).
+2025-10-01T13:52:15.373Z info: Connector Model:Model:OSLO-Generiek:Plaats:(Plaats -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:53:19.355Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:OSLO:OSLO-Gebouw:Gebouweenheid:locatieAanduiding).
+2025-10-01T13:52:15.374Z info: Connector Model:Model:OSLO-Adres:Adres:(Adres -> Locatie) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:52:15.374Z info: Connector Model:Model:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:52:15.374Z info: Connector Model:Model:QUDT:Valuta:(Valuta -> Eenheid) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:52:15.374Z info: Connector Model:Model:Schema.org:Geldbedrag:(Geldbedrag -> KwantitatieveWaarde) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:52:15.374Z info: Connector Model:Model:QUDT:Eenheid:(Eenheid -> Concept) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:52:15.374Z info: Connector Model:Model:OSLO-Energiehuis:Klantencontact:(Klantencontact -> Contact) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:52:15.374Z info: Connector Model:Model:OSLO-Energiehuis:ProfessioneelContact:(ProfessioneelContact -> Contact) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:52:15.374Z info: Connector Model:Model:W3C-Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:52:15.375Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:52:15.375Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:52:15.375Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:52:15.375Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:RDFS). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:52:15.375Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:EDTF). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:52:15.376Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:W3C-Time). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:52:15.376Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:52:15.376Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:QUDT). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:52:15.376Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:skos). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:52:15.376Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:Schema.org). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:52:15.376Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:FOAF). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:52:15.382Z warn: [ConnectorConverterHandler]: Connector (verrichtDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:15.383Z warn: [ConnectorConverterHandler]: Connector (verricht) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+
+2025-10-01T13:52:15.383Z warn: [ConnectorConverterHandler]: Connector (verwijstNaar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 #||# -------------------------------------
 

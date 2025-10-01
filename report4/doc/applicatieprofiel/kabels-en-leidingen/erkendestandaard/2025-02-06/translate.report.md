@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/kabels-en-leidingen/erkendestandaard/2025-02-06/translation/cable-pipe_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/erkendestandaard/2025-02-06/translation/cable-pipe_nl.json
+
+TRANSLATIONFILE: cable-pipe_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
@@ -307,6 +313,12 @@ TypeError: Cannot read properties of undefined (reading 'reduce')
     at Object.mergefiles (/app/translation-json-lib.js:7:30)
 
     at /app/translation-json-generator.js:52:47
+
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/kabels-en-leidingen/erkendestandaard/2025-02-06/translation/cable-pipe_en.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/kabels-en-leidingen/erkendestandaard/2025-02-06/translation/cable-pipe_en.json
+
+TRANSLATIONFILE: cable-pipe_en.json
 
 #||# translate for language en  
 

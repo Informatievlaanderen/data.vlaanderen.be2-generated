@@ -2,15 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-02-11T11:08:39.578Z error: Unable to find the description for subject "[urn:oslo-toolchain:858fccfc1ccdfcf4f304e47ace48ec1f13744db47231a93872aa73612f0de3c2](all-leerinschrijfcredential-ap.jsonld#L2555)".
+#||# oslo-shacl-template-generator for language en  
 
-2025-02-11T11:08:39.580Z error: Unable to find the description for subject "[urn:oslo-toolchain:0853fd58d49a4174c5f94a6b5b60e3ced621a8e34660acc679f32ccf6f814eff](all-leerinschrijfcredential-ap.jsonld#L2619)".
-
-2025-02-11T11:08:39.581Z error: Unable to find the description for subject "[urn:oslo-toolchain:a80e66b5a1e9f80d4167385ea6f94776215075b8d1d430013fa159c62dd756ba](all-leerinschrijfcredential-ap.jsonld#L2677)".
-
-2025-02-11T11:08:39.583Z error: Unable to find the description for subject "[urn:oslo-toolchain:30a73fe0d016533bd6625fadde871e0fe7e73e9031bfa66c9734d1c3f9bdc520](all-leerinschrijfcredential-ap.jsonld#L2952)".
-
-2025-02-11T11:08:39.584Z error: Unable to find the description for subject "[urn:oslo-toolchain:72112ac291d92860ec029db6cad1702580775f0f6289b8e677806c6b3dfd8c57](all-leerinschrijfcredential-ap.jsonld#L3016)".
-
-2025-02-11T11:08:39.584Z error: Unable to find the description for subject "[urn:oslo-toolchain:0a355355125604802cc86a5046b5c3e02c15a3a821cd90901a228af68cdc007e](all-leerinschrijfcredential-ap.jsonld#L3042)".
+#||# -------------------------------------  
 

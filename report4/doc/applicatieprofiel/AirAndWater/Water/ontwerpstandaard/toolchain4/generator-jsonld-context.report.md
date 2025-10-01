@@ -2,85 +2,145 @@
 
 #||# -------------------------------------  
 
-2025-02-11T10:14:04.576Z error: No label found for class [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L128) in language nl.
+2025-10-01T14:02:21.999Z error: No label found for class [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L132) in language nl.
 
-2025-02-11T10:14:04.578Z error: No label found for class [urn:oslo-toolchain:44cff10145f0598a00f85aff0911071a7ca5b088832d6a84fb249b82381253c8](all-OSLO-airAndWater-Water-ap.jsonld#L164) in language nl.
+2025-10-01T14:02:22.001Z error: No label found for class [[urn:oslo-toolchain:44cff10145f0598a00f85aff0911071a7ca5b088832d6a84fb249b82381253c8](all-OSLO-airAndWater-Water-ap.jsonld#L3292)](all-OSLO-airAndWater-Water-ap.jsonld#L168) in language nl.
 
-2025-02-11T10:14:04.578Z error: No label found for class [urn:oslo-toolchain:faa9204e11f27dca1d8c4f89de1266c32922c02cc13008dc92533464030b6b98](all-OSLO-airAndWater-Water-ap.jsonld#L214) in language nl.
+2025-10-01T14:02:22.001Z error: No label found for class [urn:oslo-toolchain:faa9204e11f27dca1d8c4f89de1266c32922c02cc13008dc92533464030b6b98](all-OSLO-airAndWater-Water-ap.jsonld#L218) in language nl.
 
-2025-02-11T10:14:04.578Z error: No label found for class [[urn:oslo-toolchain:d0d10ad5b42e6ac50c4576ccdf947be1137c634ac3f857d2009dd5281366198a](all-OSLO-airAndWater-Water-ap.jsonld#L2657)](all-OSLO-airAndWater-Water-ap.jsonld#L255) in language nl.
+2025-10-01T14:02:22.001Z error: No label found for class [urn:oslo-toolchain:d0d10ad5b42e6ac50c4576ccdf947be1137c634ac3f857d2009dd5281366198a](all-OSLO-airAndWater-Water-ap.jsonld#L259) in language nl.
 
-2025-02-11T10:14:04.578Z error: No label found for class [urn:oslo-toolchain:c8ea6a6acf0b2f360e692fe1df842e15fc76337261ed56eefb8ad7c7318e735b](all-OSLO-airAndWater-Water-ap.jsonld#L326) in language nl.
+2025-10-01T14:02:22.001Z error: No label found for class [urn:oslo-toolchain:c8ea6a6acf0b2f360e692fe1df842e15fc76337261ed56eefb8ad7c7318e735b](all-OSLO-airAndWater-Water-ap.jsonld#L307) in language nl.
 
-2025-02-11T10:14:04.578Z error: No label found for class [urn:oslo-toolchain:011d99689db604ecdaf291128d78c2772182a9c51c5b5bc665074f559591e85c](all-OSLO-airAndWater-Water-ap.jsonld#L362) in language nl.
+2025-10-01T14:02:22.001Z error: No label found for class [urn:oslo-toolchain:011d99689db604ecdaf291128d78c2772182a9c51c5b5bc665074f559591e85c](all-OSLO-airAndWater-Water-ap.jsonld#L343) in language nl.
 
-2025-02-11T10:14:04.579Z error: No label found for class [urn:oslo-toolchain:d7daf5d8e091ec984f07674e0e0a03f5733937bf918f36cc9844fc2a4227495e](all-OSLO-airAndWater-Water-ap.jsonld#L404) in language nl.
+2025-10-01T14:02:22.001Z error: No label found for class [[urn:oslo-toolchain:d7daf5d8e091ec984f07674e0e0a03f5733937bf918f36cc9844fc2a4227495e](all-OSLO-airAndWater-Water-ap.jsonld#L3342)](all-OSLO-airAndWater-Water-ap.jsonld#L385) in language nl.
 
-2025-02-11T10:14:04.579Z error: No label found for class [urn:oslo-toolchain:bf8087724a7794d2b3b1c6228f5fcb5aae2116ba9183d05b7cfede9ce9d2df4e](all-OSLO-airAndWater-Water-ap.jsonld#L454) in language nl.
+2025-10-01T14:02:22.002Z error: No label found for class [[urn:oslo-toolchain:bf8087724a7794d2b3b1c6228f5fcb5aae2116ba9183d05b7cfede9ce9d2df4e](all-OSLO-airAndWater-Water-ap.jsonld#L3357)](all-OSLO-airAndWater-Water-ap.jsonld#L435) in language nl.
 
-2025-02-11T10:14:04.579Z error: No label found for class [urn:oslo-toolchain:8fe273700666cd7c15577e4ff3e285ae22de53747c87aad871f23a213b78aee4](all-OSLO-airAndWater-Water-ap.jsonld#L510) in language nl.
+2025-10-01T14:02:22.002Z error: No label found for class [urn:oslo-toolchain:8fe273700666cd7c15577e4ff3e285ae22de53747c87aad871f23a213b78aee4](all-OSLO-airAndWater-Water-ap.jsonld#L491) in language nl.
 
-2025-02-11T10:14:04.579Z error: No label found for class [urn:oslo-toolchain:84fcbdfe93348985bc89003561b7761494774d6de990e00aaeba553730737de5](all-OSLO-airAndWater-Water-ap.jsonld#L546) in language nl.
+2025-10-01T14:02:22.002Z error: No label found for class [[urn:oslo-toolchain:84fcbdfe93348985bc89003561b7761494774d6de990e00aaeba553730737de5](all-OSLO-airAndWater-Water-ap.jsonld#L3372)](all-OSLO-airAndWater-Water-ap.jsonld#L527) in language nl.
 
-2025-02-11T10:14:04.579Z error: No label found for class [urn:oslo-toolchain:fa5923aebac3cfc6188e26b5d6171370ea8588242511f22ebbb81de87ba91a13](all-OSLO-airAndWater-Water-ap.jsonld#L2723) in language nl.
+2025-10-01T14:02:22.002Z error: No label found for class [urn:oslo-toolchain:17306cafa562a1d449f9077e4a4fa8977d5e52b7f408426ccc7f05688a61a234](all-OSLO-airAndWater-Water-ap.jsonld#L672) in language nl.
 
-2025-02-11T10:14:04.579Z error: No label found for class [urn:oslo-toolchain:17306cafa562a1d449f9077e4a4fa8977d5e52b7f408426ccc7f05688a61a234](all-OSLO-airAndWater-Water-ap.jsonld#L691) in language nl.
+2025-10-01T14:02:22.002Z error: No label found for class [urn:oslo-toolchain:35d41f22dc4c0bd182336b5ad06829070f01b73c132bb5dfd16672ec3a6a8d6e](all-OSLO-airAndWater-Water-ap.jsonld#L749) in language nl.
 
-2025-02-11T10:14:04.580Z error: No label found for class [urn:oslo-toolchain:35d41f22dc4c0bd182336b5ad06829070f01b73c132bb5dfd16672ec3a6a8d6e](all-OSLO-airAndWater-Water-ap.jsonld#L768) in language nl.
+2025-10-01T14:02:22.002Z error: No label found for class [urn:oslo-toolchain:2fc4e40c607e5d13d1ede9070b63116a50bfb43bc418e5413ea57ac16c8a0aac](all-OSLO-airAndWater-Water-ap.jsonld#L785) in language nl.
 
-2025-02-11T10:14:04.580Z error: No label found for class [urn:oslo-toolchain:2fc4e40c607e5d13d1ede9070b63116a50bfb43bc418e5413ea57ac16c8a0aac](all-OSLO-airAndWater-Water-ap.jsonld#L804) in language nl.
+2025-10-01T14:02:22.003Z error: No label found for class [urn:oslo-toolchain:723ca01ccaa4980c9cfd459181f8ee68d0e0c2dd34deca1174d09d26bc7fe115](all-OSLO-airAndWater-Water-ap.jsonld#L821) in language nl.
 
-2025-02-11T10:14:04.580Z error: No label found for class [urn:oslo-toolchain:723ca01ccaa4980c9cfd459181f8ee68d0e0c2dd34deca1174d09d26bc7fe115](all-OSLO-airAndWater-Water-ap.jsonld#L840) in language nl.
+2025-10-01T14:02:22.003Z error: No label found for class [[urn:oslo-toolchain:6a3bf02925a1ff23b466723233769cf2b215a41f43e2258ec2b6ddf416f04810](all-OSLO-airAndWater-Water-ap.jsonld#L3415)](all-OSLO-airAndWater-Water-ap.jsonld#L898) in language nl.
 
-2025-02-11T10:14:04.580Z error: No label found for class [urn:oslo-toolchain:6a3bf02925a1ff23b466723233769cf2b215a41f43e2258ec2b6ddf416f04810](all-OSLO-airAndWater-Water-ap.jsonld#L917) in language nl.
+2025-10-01T14:02:22.003Z error: No label found for class [[urn:oslo-toolchain:15a40da80e1c0757e1c2f56308b8c552616c3c1e576e740838f820fd5bfa2992](all-OSLO-airAndWater-Water-ap.jsonld#L3419)](all-OSLO-airAndWater-Water-ap.jsonld#L978) in language nl.
 
-2025-02-11T10:14:04.580Z error: No label found for class [urn:oslo-toolchain:15a40da80e1c0757e1c2f56308b8c552616c3c1e576e740838f820fd5bfa2992](all-OSLO-airAndWater-Water-ap.jsonld#L997) in language nl.
+2025-10-01T14:02:22.003Z error: No label found for class [urn:oslo-toolchain:14df5ca3aaf3da0c334f690228b7846570cfee8cae655bc03069197915bad2fd](all-OSLO-airAndWater-Water-ap.jsonld#L1043) in language nl.
 
-2025-02-11T10:14:04.582Z error: No label found for class [urn:oslo-toolchain:14df5ca3aaf3da0c334f690228b7846570cfee8cae655bc03069197915bad2fd](all-OSLO-airAndWater-Water-ap.jsonld#L1062) in language nl.
+2025-10-01T14:02:22.003Z error: No label found for class [urn:oslo-toolchain:dbd4253c3c94ee91cdd2f4fe34345ea17617521819586f4f21749d70c63b88de](all-OSLO-airAndWater-Water-ap.jsonld#L1091) in language nl.
 
-2025-02-11T10:14:04.582Z error: No label found for class [urn:oslo-toolchain:dbd4253c3c94ee91cdd2f4fe34345ea17617521819586f4f21749d70c63b88de](all-OSLO-airAndWater-Water-ap.jsonld#L1110) in language nl.
+2025-10-01T14:02:22.003Z error: No label found for class [urn:oslo-toolchain:2210d3d0cc48466c1532a20bb3e1ed123a5391902fd075ffee5e7450eab6891a](all-OSLO-airAndWater-Water-ap.jsonld#L1133) in language nl.
 
-2025-02-11T10:14:04.582Z error: No label found for class [urn:oslo-toolchain:2210d3d0cc48466c1532a20bb3e1ed123a5391902fd075ffee5e7450eab6891a](all-OSLO-airAndWater-Water-ap.jsonld#L1152) in language nl.
+2025-10-01T14:02:22.003Z error: No label found for class [urn:oslo-toolchain:08fa4bcb0261f58c46c309b4d5e86e72ba8d93edb37ef5d853a7ad694bceb272](all-OSLO-airAndWater-Water-ap.jsonld#L1175) in language nl.
 
-2025-02-11T10:14:04.582Z error: No label found for class [urn:oslo-toolchain:08fa4bcb0261f58c46c309b4d5e86e72ba8d93edb37ef5d853a7ad694bceb272](all-OSLO-airAndWater-Water-ap.jsonld#L1194) in language nl.
+2025-10-01T14:02:22.004Z error: No label found for datatype [urn:oslo-toolchain:8f16a32edb7fb5322a7cd74e9396a27eea1f71c0dfb9e71ceb5e2b69381ebc79](all-OSLO-airAndWater-Water-ap.jsonld#L2993) in language nl.
 
-2025-02-11T10:14:04.584Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L128) of attribute [urn:oslo-toolchain:677cd9ceb7f86568de716ad7574671ed00c3a5bb10d0ff993e6b516ec766ccb5](all-OSLO-airAndWater-Water-ap.jsonld#L1262).
+2025-10-01T14:02:22.004Z error: No label found for datatype [urn:oslo-toolchain:b3d42ae7807e71671cca235b35d7a1f8060302848c9bb07180435b4c2feb0515](all-OSLO-airAndWater-Water-ap.jsonld#L3119) in language nl.
 
-2025-02-11T10:14:04.584Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L128) of attribute [urn:oslo-toolchain:148cd2bf629f5c0d282895008f8ba38db08011d9359315781df2b66589d0b04a](all-OSLO-airAndWater-Water-ap.jsonld#L1314).
+2025-10-01T14:02:22.004Z error: No label found for datatype [urn:oslo-toolchain:6d58b437b1cce3ab8c9d94bd7c1438e45eb5e7280245490c10dff8b257b4b759](all-OSLO-airAndWater-Water-ap.jsonld#L3077) in language nl.
 
-2025-02-11T10:14:04.584Z error: No label found for domain [urn:oslo-toolchain:8f16a32edb7fb5322a7cd74e9396a27eea1f71c0dfb9e71ceb5e2b69381ebc79](all-OSLO-airAndWater-Water-ap.jsonld#L2310) of attribute [urn:oslo-toolchain:df64b8974dec8395e73e1278877745385981afa6761efef1d8576f7290cf7a53](all-OSLO-airAndWater-Water-ap.jsonld#L1366).
+2025-10-01T14:02:22.005Z error: No label found for datatype [urn:oslo-toolchain:0c2e6557376aca267574261ccfe74bd991da3465b5f37e3a3c771d26caa38a0c](all-OSLO-airAndWater-Water-ap.jsonld#L3161) in language nl.
 
-2025-02-11T10:14:04.584Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L128) of attribute [urn:oslo-toolchain:e84c647cfbfaf3f6aa3b16c76e900ad07f063bcaca49c0a64c4fb6bddd24fc96](all-OSLO-airAndWater-Water-ap.jsonld#L1422).
+2025-10-01T14:02:22.005Z error: No label found for datatype [urn:oslo-toolchain:33a2636933c97b047c29fec1237f2bb62da92818de936e758df9a59697721947](all-OSLO-airAndWater-Water-ap.jsonld#L3209) in language nl.
 
-2025-02-11T10:14:04.584Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L128) of attribute [urn:oslo-toolchain:9d16b49420b9a7c33da28dcf3a4aff3e4a0c2d8a8258885b8d163cbd16440fb0](all-OSLO-airAndWater-Water-ap.jsonld#L1474).
+2025-10-01T14:02:22.005Z error: No label found for datatype [urn:oslo-toolchain:29bcd2fc89517176737c9cb7fe4e853a5588cb9e22c18c421c4a1fada088af34](all-OSLO-airAndWater-Water-ap.jsonld#L3041) in language nl.
 
-2025-02-11T10:14:04.584Z error: No label found for domain [urn:oslo-toolchain:17306cafa562a1d449f9077e4a4fa8977d5e52b7f408426ccc7f05688a61a234](all-OSLO-airAndWater-Water-ap.jsonld#L691) of attribute [urn:oslo-toolchain:a32b79478a4098491c3deb39351ba136311e7396ebbdb63034c483b15aa74006](all-OSLO-airAndWater-Water-ap.jsonld#L1526).
+2025-10-01T14:02:22.007Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L132) of attribute [urn:oslo-toolchain:677cd9ceb7f86568de716ad7574671ed00c3a5bb10d0ff993e6b516ec766ccb5](all-OSLO-airAndWater-Water-ap.jsonld#L1243).
 
-2025-02-11T10:14:04.585Z error: No label found for domain [urn:oslo-toolchain:15a40da80e1c0757e1c2f56308b8c552616c3c1e576e740838f820fd5bfa2992](all-OSLO-airAndWater-Water-ap.jsonld#L997) of attribute [urn:oslo-toolchain:36343d04b02291a3a39eccd242322d601aac9faf52c1c5fe6a44b8dd9c539464](all-OSLO-airAndWater-Water-ap.jsonld#L1578).
+2025-10-01T14:02:22.007Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L132) of attribute [urn:oslo-toolchain:148cd2bf629f5c0d282895008f8ba38db08011d9359315781df2b66589d0b04a](all-OSLO-airAndWater-Water-ap.jsonld#L1295).
 
-2025-02-11T10:14:04.585Z error: No label found for domain [urn:oslo-toolchain:15a40da80e1c0757e1c2f56308b8c552616c3c1e576e740838f820fd5bfa2992](all-OSLO-airAndWater-Water-ap.jsonld#L997) of attribute [urn:oslo-toolchain:a455522b139fdacd46d9f16ecd47575b66601c3760ef106150cae6757a56f414](all-OSLO-airAndWater-Water-ap.jsonld#L1634).
+2025-10-01T14:02:22.007Z error: No label found for domain [urn:oslo-toolchain:8f16a32edb7fb5322a7cd74e9396a27eea1f71c0dfb9e71ceb5e2b69381ebc79](all-OSLO-airAndWater-Water-ap.jsonld#L2993) of attribute [urn:oslo-toolchain:df64b8974dec8395e73e1278877745385981afa6761efef1d8576f7290cf7a53](all-OSLO-airAndWater-Water-ap.jsonld#L1347).
 
-2025-02-11T10:14:04.585Z error: No label found for domain [urn:oslo-toolchain:84fcbdfe93348985bc89003561b7761494774d6de990e00aaeba553730737de5](all-OSLO-airAndWater-Water-ap.jsonld#L546) of attribute [urn:oslo-toolchain:1bdac33e89339dd6f4d26eb5e9fa17420bb1fd4c46c2f73d546b0dc961089027](all-OSLO-airAndWater-Water-ap.jsonld#L1690).
+2025-10-01T14:02:22.007Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L132) of attribute [urn:oslo-toolchain:e84c647cfbfaf3f6aa3b16c76e900ad07f063bcaca49c0a64c4fb6bddd24fc96](all-OSLO-airAndWater-Water-ap.jsonld#L1403).
 
-2025-02-11T10:14:04.585Z error: No label found for domain [urn:oslo-toolchain:84fcbdfe93348985bc89003561b7761494774d6de990e00aaeba553730737de5](all-OSLO-airAndWater-Water-ap.jsonld#L546) of attribute [urn:oslo-toolchain:1e647ec24e6dea422a010fb28f73f034e64214f460e0c91a415ff75375fbeeee](all-OSLO-airAndWater-Water-ap.jsonld#L1742).
+2025-10-01T14:02:22.007Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L132) of attribute [urn:oslo-toolchain:90e414864123ea113ca5893d6c5359cef54f561e009e221c0833ca155e413eb7](all-OSLO-airAndWater-Water-ap.jsonld#L1455).
 
-2025-02-11T10:14:04.585Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L128) of attribute [urn:oslo-toolchain:9248d1a45622808365168defa93c6d0540c1db554ed748f7d8fbdd9141c401fa](all-OSLO-airAndWater-Water-ap.jsonld#L1794).
+2025-10-01T14:02:22.007Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L132) of attribute [urn:oslo-toolchain:98395954b12137f22f0dee1b4f5ecd702637aaf5d3c9c64f8ef8aa348c7f0178](all-OSLO-airAndWater-Water-ap.jsonld#L1507).
 
-2025-02-11T10:14:04.585Z error: No label found for domain [urn:oslo-toolchain:2fc4e40c607e5d13d1ede9070b63116a50bfb43bc418e5413ea57ac16c8a0aac](all-OSLO-airAndWater-Water-ap.jsonld#L804) of attribute [urn:oslo-toolchain:b487cc3d3d2a64ac28b626c16e7f114d5205bed2aed2dee1dbf45485b54bd1e4](all-OSLO-airAndWater-Water-ap.jsonld#L1846).
+2025-10-01T14:02:22.007Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L132) of attribute [urn:oslo-toolchain:9d16b49420b9a7c33da28dcf3a4aff3e4a0c2d8a8258885b8d163cbd16440fb0](all-OSLO-airAndWater-Water-ap.jsonld#L1559).
 
-2025-02-11T10:14:04.585Z error: No label found for domain [urn:oslo-toolchain:bf8087724a7794d2b3b1c6228f5fcb5aae2116ba9183d05b7cfede9ce9d2df4e](all-OSLO-airAndWater-Water-ap.jsonld#L454) of attribute [urn:oslo-toolchain:ac4058beaa8d2c27f2781083ea98f94c5d6be48ce3e2ac29118cfd914c14074a](all-OSLO-airAndWater-Water-ap.jsonld#L1898).
+2025-10-01T14:02:22.007Z error: No label found for domain [urn:oslo-toolchain:17306cafa562a1d449f9077e4a4fa8977d5e52b7f408426ccc7f05688a61a234](all-OSLO-airAndWater-Water-ap.jsonld#L672) of attribute [urn:oslo-toolchain:a32b79478a4098491c3deb39351ba136311e7396ebbdb63034c483b15aa74006](all-OSLO-airAndWater-Water-ap.jsonld#L1611).
 
-2025-02-11T10:14:04.586Z error: No label found for domain [urn:oslo-toolchain:723ca01ccaa4980c9cfd459181f8ee68d0e0c2dd34deca1174d09d26bc7fe115](all-OSLO-airAndWater-Water-ap.jsonld#L840) of attribute [urn:oslo-toolchain:74a262eb2eb08e9d242d94ffc02384a1940664452b0de8d3c252f1c87704beed](all-OSLO-airAndWater-Water-ap.jsonld#L1950).
+2025-10-01T14:02:22.008Z error: No label found for domain [[urn:oslo-toolchain:15a40da80e1c0757e1c2f56308b8c552616c3c1e576e740838f820fd5bfa2992](all-OSLO-airAndWater-Water-ap.jsonld#L3419)](all-OSLO-airAndWater-Water-ap.jsonld#L978) of attribute [urn:oslo-toolchain:6103ab55dabaaba4d0a70e61f6905da360482f7c3c5d88a37df6cf1e1dc0eb08](all-OSLO-airAndWater-Water-ap.jsonld#L1663).
 
-2025-02-11T10:14:04.586Z error: No label found for domain [urn:oslo-toolchain:6a3bf02925a1ff23b466723233769cf2b215a41f43e2258ec2b6ddf416f04810](all-OSLO-airAndWater-Water-ap.jsonld#L917) of attribute [urn:oslo-toolchain:57e1e67030a5977652907b57e2ff10f96c4bba2767611f755091bc7aae230429](all-OSLO-airAndWater-Water-ap.jsonld#L2002).
+2025-10-01T14:02:22.008Z error: No label found for domain [[urn:oslo-toolchain:15a40da80e1c0757e1c2f56308b8c552616c3c1e576e740838f820fd5bfa2992](all-OSLO-airAndWater-Water-ap.jsonld#L3419)](all-OSLO-airAndWater-Water-ap.jsonld#L978) of attribute [urn:oslo-toolchain:36343d04b02291a3a39eccd242322d601aac9faf52c1c5fe6a44b8dd9c539464](all-OSLO-airAndWater-Water-ap.jsonld#L1715).
 
-2025-02-11T10:14:04.586Z error: No label found for domain [urn:oslo-toolchain:6a3bf02925a1ff23b466723233769cf2b215a41f43e2258ec2b6ddf416f04810](all-OSLO-airAndWater-Water-ap.jsonld#L917) of attribute [urn:oslo-toolchain:22666b1b48e306a92a40c2a3736ca4e88edb130319af1fd85fb4d089435fc53a](all-OSLO-airAndWater-Water-ap.jsonld#L2054).
+2025-10-01T14:02:22.008Z error: No label found for domain [[urn:oslo-toolchain:15a40da80e1c0757e1c2f56308b8c552616c3c1e576e740838f820fd5bfa2992](all-OSLO-airAndWater-Water-ap.jsonld#L3419)](all-OSLO-airAndWater-Water-ap.jsonld#L978) of attribute [urn:oslo-toolchain:a455522b139fdacd46d9f16ecd47575b66601c3760ef106150cae6757a56f414](all-OSLO-airAndWater-Water-ap.jsonld#L1771).
 
-2025-02-11T10:14:04.586Z error: No label found for domain [urn:oslo-toolchain:723ca01ccaa4980c9cfd459181f8ee68d0e0c2dd34deca1174d09d26bc7fe115](all-OSLO-airAndWater-Water-ap.jsonld#L840) of attribute [urn:oslo-toolchain:d42933ead9b888e4178b5c447284990077322da92b8294d12457a6df62797035](all-OSLO-airAndWater-Water-ap.jsonld#L2106).
+2025-10-01T14:02:22.008Z error: No label found for domain [[urn:oslo-toolchain:84fcbdfe93348985bc89003561b7761494774d6de990e00aaeba553730737de5](all-OSLO-airAndWater-Water-ap.jsonld#L3372)](all-OSLO-airAndWater-Water-ap.jsonld#L527) of attribute [urn:oslo-toolchain:1bdac33e89339dd6f4d26eb5e9fa17420bb1fd4c46c2f73d546b0dc961089027](all-OSLO-airAndWater-Water-ap.jsonld#L1827).
 
-2025-02-11T10:14:04.586Z error: No label found for domain [urn:oslo-toolchain:bf8087724a7794d2b3b1c6228f5fcb5aae2116ba9183d05b7cfede9ce9d2df4e](all-OSLO-airAndWater-Water-ap.jsonld#L454) of attribute [urn:oslo-toolchain:b62146a371d675a1b80ce4acfc746d38bdac3e1a20be4a4a095a2f6630dd7a39](all-OSLO-airAndWater-Water-ap.jsonld#L2158).
+2025-10-01T14:02:22.008Z error: No label found for domain [[urn:oslo-toolchain:84fcbdfe93348985bc89003561b7761494774d6de990e00aaeba553730737de5](all-OSLO-airAndWater-Water-ap.jsonld#L3372)](all-OSLO-airAndWater-Water-ap.jsonld#L527) of attribute [urn:oslo-toolchain:1e647ec24e6dea422a010fb28f73f034e64214f460e0c91a415ff75375fbeeee](all-OSLO-airAndWater-Water-ap.jsonld#L1879).
 
-2025-02-11T10:14:04.586Z error: No label found for domain [urn:oslo-toolchain:8f16a32edb7fb5322a7cd74e9396a27eea1f71c0dfb9e71ceb5e2b69381ebc79](all-OSLO-airAndWater-Water-ap.jsonld#L2310) of attribute [urn:oslo-toolchain:a9d600d06b7194b7ac9f4b94c300919b1ba9da143cbfa8b319ba78a85ffc9f86](all-OSLO-airAndWater-Water-ap.jsonld#L2210).
+2025-10-01T14:02:22.008Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L132) of attribute [urn:oslo-toolchain:9248d1a45622808365168defa93c6d0540c1db554ed748f7d8fbdd9141c401fa](all-OSLO-airAndWater-Water-ap.jsonld#L1931).
 
-2025-02-11T10:14:04.586Z error: No label found for domain [urn:oslo-toolchain:15a40da80e1c0757e1c2f56308b8c552616c3c1e576e740838f820fd5bfa2992](all-OSLO-airAndWater-Water-ap.jsonld#L997) of attribute [urn:oslo-toolchain:e89935ba5317073f4d0ac50b6e228db78a175aa6e4d66f44c75ea4905f422411](all-OSLO-airAndWater-Water-ap.jsonld#L2256).
+2025-10-01T14:02:22.008Z error: No label found for domain [urn:oslo-toolchain:2fc4e40c607e5d13d1ede9070b63116a50bfb43bc418e5413ea57ac16c8a0aac](all-OSLO-airAndWater-Water-ap.jsonld#L785) of attribute [urn:oslo-toolchain:b487cc3d3d2a64ac28b626c16e7f114d5205bed2aed2dee1dbf45485b54bd1e4](all-OSLO-airAndWater-Water-ap.jsonld#L1983).
+
+2025-10-01T14:02:22.009Z error: No label found for domain [[urn:oslo-toolchain:bf8087724a7794d2b3b1c6228f5fcb5aae2116ba9183d05b7cfede9ce9d2df4e](all-OSLO-airAndWater-Water-ap.jsonld#L3357)](all-OSLO-airAndWater-Water-ap.jsonld#L435) of attribute [urn:oslo-toolchain:ac4058beaa8d2c27f2781083ea98f94c5d6be48ce3e2ac29118cfd914c14074a](all-OSLO-airAndWater-Water-ap.jsonld#L2035).
+
+2025-10-01T14:02:22.009Z error: No label found for domain [urn:oslo-toolchain:723ca01ccaa4980c9cfd459181f8ee68d0e0c2dd34deca1174d09d26bc7fe115](all-OSLO-airAndWater-Water-ap.jsonld#L821) of attribute [urn:oslo-toolchain:74a262eb2eb08e9d242d94ffc02384a1940664452b0de8d3c252f1c87704beed](all-OSLO-airAndWater-Water-ap.jsonld#L2087).
+
+2025-10-01T14:02:22.009Z error: No label found for domain [[urn:oslo-toolchain:6a3bf02925a1ff23b466723233769cf2b215a41f43e2258ec2b6ddf416f04810](all-OSLO-airAndWater-Water-ap.jsonld#L3415)](all-OSLO-airAndWater-Water-ap.jsonld#L898) of attribute [urn:oslo-toolchain:57e1e67030a5977652907b57e2ff10f96c4bba2767611f755091bc7aae230429](all-OSLO-airAndWater-Water-ap.jsonld#L2139).
+
+2025-10-01T14:02:22.009Z error: No label found for domain [[urn:oslo-toolchain:6a3bf02925a1ff23b466723233769cf2b215a41f43e2258ec2b6ddf416f04810](all-OSLO-airAndWater-Water-ap.jsonld#L3415)](all-OSLO-airAndWater-Water-ap.jsonld#L898) of attribute [urn:oslo-toolchain:22666b1b48e306a92a40c2a3736ca4e88edb130319af1fd85fb4d089435fc53a](all-OSLO-airAndWater-Water-ap.jsonld#L2191).
+
+2025-10-01T14:02:22.009Z error: No label found for domain [urn:oslo-toolchain:723ca01ccaa4980c9cfd459181f8ee68d0e0c2dd34deca1174d09d26bc7fe115](all-OSLO-airAndWater-Water-ap.jsonld#L821) of attribute [urn:oslo-toolchain:d42933ead9b888e4178b5c447284990077322da92b8294d12457a6df62797035](all-OSLO-airAndWater-Water-ap.jsonld#L2243).
+
+2025-10-01T14:02:22.009Z error: No label found for domain [[urn:oslo-toolchain:bf8087724a7794d2b3b1c6228f5fcb5aae2116ba9183d05b7cfede9ce9d2df4e](all-OSLO-airAndWater-Water-ap.jsonld#L3357)](all-OSLO-airAndWater-Water-ap.jsonld#L435) of attribute [urn:oslo-toolchain:b62146a371d675a1b80ce4acfc746d38bdac3e1a20be4a4a095a2f6630dd7a39](all-OSLO-airAndWater-Water-ap.jsonld#L2295).
+
+2025-10-01T14:02:22.009Z error: No label found for domain [urn:oslo-toolchain:8f16a32edb7fb5322a7cd74e9396a27eea1f71c0dfb9e71ceb5e2b69381ebc79](all-OSLO-airAndWater-Water-ap.jsonld#L2993) of attribute [urn:oslo-toolchain:178b2d20be3ff82fb408846ce130929b9cf90c386971d9229b6fe4e20a27f539](all-OSLO-airAndWater-Water-ap.jsonld#L2347).
+
+2025-10-01T14:02:22.011Z error: No label found for domain [urn:oslo-toolchain:8f16a32edb7fb5322a7cd74e9396a27eea1f71c0dfb9e71ceb5e2b69381ebc79](all-OSLO-airAndWater-Water-ap.jsonld#L2993) of attribute [urn:oslo-toolchain:a9d600d06b7194b7ac9f4b94c300919b1ba9da143cbfa8b319ba78a85ffc9f86](all-OSLO-airAndWater-Water-ap.jsonld#L2393).
+
+2025-10-01T14:02:22.012Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L132) of attribute [urn:oslo-toolchain:134e300ce8cc798c8216edabfa980ca3999caaf270ede232a8d78dbb57240ac1](all-OSLO-airAndWater-Water-ap.jsonld#L2439).
+
+2025-10-01T14:02:22.012Z error: No label found for domain [[urn:oslo-toolchain:44cff10145f0598a00f85aff0911071a7ca5b088832d6a84fb249b82381253c8](all-OSLO-airAndWater-Water-ap.jsonld#L3292)](all-OSLO-airAndWater-Water-ap.jsonld#L168) of attribute [urn:oslo-toolchain:9cdfe8f476ebc43505903736e7a1c576de815e0a6a84538ce51a72fafd9926f4](all-OSLO-airAndWater-Water-ap.jsonld#L2491).
+
+2025-10-01T14:02:22.012Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L132) of attribute [urn:oslo-toolchain:9c4201dbe8137c843a2cd51d00d964ea58acc81ad6df14321cd3c57858f84b40](all-OSLO-airAndWater-Water-ap.jsonld#L2543).
+
+2025-10-01T14:02:22.012Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L132) of attribute [urn:oslo-toolchain:cec6867f3da38272ebdbf27057511b91c474123a729e33e3d8b2c9e0bf22d0a8](all-OSLO-airAndWater-Water-ap.jsonld#L2595).
+
+2025-10-01T14:02:22.012Z error: No label found for domain urn:oslo-toolchain:8099096f24ae3664e60cf21699bf50cedfe7e2195458db5ddd8cb2a82ccfc93f of attribute [urn:oslo-toolchain:6ce0a740a381e7f07c4791356a53c071a0d3cce7c78b5c4143c19f57f77dc169](all-OSLO-airAndWater-Water-ap.jsonld#L2647).
+
+2025-10-01T14:02:22.012Z error: No label found for domain urn:oslo-toolchain:8099096f24ae3664e60cf21699bf50cedfe7e2195458db5ddd8cb2a82ccfc93f of attribute [urn:oslo-toolchain:2010c833d9d477c6f4da052adec9a13d9919e72fc1cbb2cd765573718ee3f1df](all-OSLO-airAndWater-Water-ap.jsonld#L2667).
+
+2025-10-01T14:02:22.012Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L132) of attribute [urn:oslo-toolchain:3fa61c643f186cf6597760d705475fd8bae53c4ce7ce3053e5ff62b598538c24](all-OSLO-airAndWater-Water-ap.jsonld#L2687).
+
+2025-10-01T14:02:22.012Z error: No label found for domain [[urn:oslo-toolchain:15a40da80e1c0757e1c2f56308b8c552616c3c1e576e740838f820fd5bfa2992](all-OSLO-airAndWater-Water-ap.jsonld#L3419)](all-OSLO-airAndWater-Water-ap.jsonld#L978) of attribute [urn:oslo-toolchain:e89935ba5317073f4d0ac50b6e228db78a175aa6e4d66f44c75ea4905f422411](all-OSLO-airAndWater-Water-ap.jsonld#L2739).
+
+2025-10-01T14:02:22.012Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L132) of attribute [urn:oslo-toolchain:db60d92f36c03fa65ae10a3eed620d9d3a4b9fa1438be3048808f2bba7070a03](all-OSLO-airAndWater-Water-ap.jsonld#L2791).
+
+2025-10-01T14:02:22.013Z error: No label found for domain [urn:oslo-toolchain:faa9204e11f27dca1d8c4f89de1266c32922c02cc13008dc92533464030b6b98](all-OSLO-airAndWater-Water-ap.jsonld#L218) of attribute [urn:oslo-toolchain:999a9126b08f200db3d18c703c86ec9a3a5d0ce087709a2f34ac94595920d523](all-OSLO-airAndWater-Water-ap.jsonld#L2843).
+
+2025-10-01T14:02:22.013Z error: No label found for domain [urn:oslo-toolchain:dfd02111587b959dd7b320fa1fcf043a3a56c77575371f4d5cff2a1bab875b4c](all-OSLO-airAndWater-Water-ap.jsonld#L132) of attribute [urn:oslo-toolchain:7587823fb3926986d5e3e91b47c5ebead8e2639eedabb1ac594340f4584bb4e3](all-OSLO-airAndWater-Water-ap.jsonld#L2895).
+
+2025-10-01T14:02:22.013Z error: No label found for domain [urn:oslo-toolchain:d0d10ad5b42e6ac50c4576ccdf947be1137c634ac3f857d2009dd5281366198a](all-OSLO-airAndWater-Water-ap.jsonld#L259) of attribute [urn:oslo-toolchain:429ae5503e664cc74fd2a315cade0ac57536713ff441925003bd923ce00f787e](all-OSLO-airAndWater-Water-ap.jsonld#L2953).
+
+#||# oslo-jsonld-context-generator for language en  
+
+#||# -------------------------------------  
+
+2025-10-01T14:02:22.644Z error: Found [urn:oslo-toolchain:97f89c0c3e3da0bb90bbb51975e3e91d15fcb9d7947650fd3734a39ec4906af4](all-OSLO-airAndWater-Water-ap.jsonld#L1211) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+
+2025-10-01T14:02:22.646Z error: Found [urn:oslo-toolchain:8ce2d51d24267c601017c05c9046870ca7f5c1d55b6b8b151780eb637c8a7ccd](all-OSLO-airAndWater-Water-ap.jsonld#L725) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+
+2025-10-01T14:02:22.646Z error: Found [urn:oslo-toolchain:d582d3b4e2944a24f95ffc5b2270b8ddf440f53b6ee3c9d30578ddc760b24715](all-OSLO-airAndWater-Water-ap.jsonld#L583) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+
+2025-10-01T14:02:22.646Z error: Found [urn:oslo-toolchain:c6688898883fef63ed6294ea162828e3b63bacd8e49abd440c3f1d92a8b1d5e3](all-OSLO-airAndWater-Water-ap.jsonld#L874) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+
+2025-10-01T14:02:22.647Z error: Found [urn:oslo-toolchain:93c24c1cdc18fb9aef86a54a5a1b7f33f44481609c7019af99039f8ba60a5685](all-OSLO-airAndWater-Water-ap.jsonld#L954) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+
+2025-10-01T14:02:22.647Z error: Found [urn:oslo-toolchain:efcd9f32bbe75f2d3cd88123d7bf0bcf8a248bf1a4893e957e1605f72d4adae7](all-OSLO-airAndWater-Water-ap.jsonld#L1019) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+
+2025-10-01T14:02:22.653Z error: No label found for domain urn:oslo-toolchain:8099096f24ae3664e60cf21699bf50cedfe7e2195458db5ddd8cb2a82ccfc93f of attribute [urn:oslo-toolchain:6ce0a740a381e7f07c4791356a53c071a0d3cce7c78b5c4143c19f57f77dc169](all-OSLO-airAndWater-Water-ap.jsonld#L2647).
+
+2025-10-01T14:02:22.653Z error: No label found for domain urn:oslo-toolchain:8099096f24ae3664e60cf21699bf50cedfe7e2195458db5ddd8cb2a82ccfc93f of attribute [urn:oslo-toolchain:2010c833d9d477c6f4da052adec9a13d9919e72fc1cbb2cd765573718ee3f1df](all-OSLO-airAndWater-Water-ap.jsonld#L2667).
 

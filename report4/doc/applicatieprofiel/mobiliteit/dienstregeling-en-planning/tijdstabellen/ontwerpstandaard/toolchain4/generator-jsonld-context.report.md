@@ -2,205 +2,195 @@
 
 #||# -------------------------------------  
 
-2025-02-11T11:29:26.425Z error: No label found for class [urn:oslo-toolchain:d4e6302d5e0d01afd00c1d6c4e9c9bf6b3c63b0f6861f9f66fde45c67a1870ff](all-tijdstabellen-ap.jsonld#L16019) in language nl.
+2025-10-01T14:03:48.884Z error: No label found for class [urn:oslo-toolchain:bad536dff41cdaf7a93602947b92701aea31125e16bb9bbe234f0663348967ad](all-tijdstabellen-ap.jsonld#L1394) in language nl.
 
-2025-02-11T11:29:26.427Z error: No label found for class [urn:oslo-toolchain:0ce7e0b4dde22b6b1e6f9594e1c6f817e3bb978d4728900fb3dd3a8b7b5394c5](all-tijdstabellen-ap.jsonld#L16043) in language nl.
+2025-10-01T14:03:48.889Z error: No label found for class [urn:oslo-toolchain:85ae57ebcc5b4856841bcdc4babcdac7b1e1cf378d93146a45aa2bb9fa5dd2fb](all-tijdstabellen-ap.jsonld#L2265) in language nl.
 
-2025-02-11T11:29:26.427Z error: No label found for class [urn:oslo-toolchain:f9e1d77f2f95b0b71c826783ffe8b8cdcdbaec526465f8f22bbb85cf6a8ff6d2](all-tijdstabellen-ap.jsonld#L16067) in language nl.
+2025-10-01T14:03:48.889Z error: No label found for class [urn:oslo-toolchain:5b65ef38fd6cac6d5e54e67f811308225d5a2f5e5a53d48de1a87a921b4f30e8](all-tijdstabellen-ap.jsonld#L2289) in language nl.
 
-2025-02-11T11:29:26.428Z error: No label found for class [urn:oslo-toolchain:6e2a0cc08370ba773443896a498a4f59fe6e184dfab2e3334426c0e1b58c7bee](all-tijdstabellen-ap.jsonld#L16091) in language nl.
+2025-10-01T14:03:48.889Z error: No label found for class [urn:oslo-toolchain:25b631bde45687655c882411ef5e826a906755fe482094196895abfe7ff20280](all-tijdstabellen-ap.jsonld#L2313) in language nl.
 
-2025-02-11T11:29:26.429Z error: No label found for class [urn:oslo-toolchain:f7d64b4f6fef3d35543221349185352c18b1fbf7cdadff8cecb6eddbe26b43de](all-tijdstabellen-ap.jsonld#L16145) in language nl.
+2025-10-01T14:03:48.889Z error: No label found for class [urn:oslo-toolchain:8e222f1b0680213febc53f3f3dbda55a6dd8287b80046573ddeadf871306e752](all-tijdstabellen-ap.jsonld#L2337) in language nl.
 
-2025-02-11T11:29:26.429Z error: No label found for class [urn:oslo-toolchain:2e44e18128c42c510c07c470bb20310d2a5109da9c841f7b265d24b0312b8861](all-tijdstabellen-ap.jsonld#L16169) in language nl.
+2025-10-01T14:03:48.889Z error: No label found for class [urn:oslo-toolchain:9c73942e5c55463be095cd82097ae4ca67bcc07cd36dee999c9474b144a46d26](all-tijdstabellen-ap.jsonld#L2361) in language nl.
 
-2025-02-11T11:29:26.430Z error: No label found for class [urn:oslo-toolchain:bad536dff41cdaf7a93602947b92701aea31125e16bb9bbe234f0663348967ad](all-tijdstabellen-ap.jsonld#L1440) in language nl.
+2025-10-01T14:03:48.889Z error: No label found for class [urn:oslo-toolchain:2d4220b1d30f8ba60994a28f75297819ae6c4483e5c7901651042c69f71fcdc1](all-tijdstabellen-ap.jsonld#L2385) in language nl.
 
-2025-02-11T11:29:26.431Z error: No label found for class [urn:oslo-toolchain:e2a16ff2d6ba0304a757492a5d353c406269c8ae11c3fc5590bf6e3e8bbb58ba](all-tijdstabellen-ap.jsonld#L16319) in language nl.
+2025-10-01T14:03:48.889Z error: No label found for class [urn:oslo-toolchain:1ebec6d365713b08f7a9cfa8e001654a19d27b5eb5e654413cf2ef452431a72d](all-tijdstabellen-ap.jsonld#L2409) in language nl.
 
-2025-02-11T11:29:26.431Z error: No label found for class [urn:oslo-toolchain:e88c63b5f30eb3c44b7a53d3b5eaab2092d01b7cb87ea9b949011c82e6995d41](all-tijdstabellen-ap.jsonld#L16349) in language nl.
+2025-10-01T14:03:48.889Z error: No label found for class [urn:oslo-toolchain:32be1782e9e8f763fcd3bafa9e1c92088baef4ad36266a91007394ce5ef40217](all-tijdstabellen-ap.jsonld#L2433) in language nl.
 
-2025-02-11T11:29:26.432Z error: No label found for class [urn:oslo-toolchain:85ae57ebcc5b4856841bcdc4babcdac7b1e1cf378d93146a45aa2bb9fa5dd2fb](all-tijdstabellen-ap.jsonld#L2311) in language nl.
+2025-10-01T14:03:48.890Z error: No label found for class [urn:oslo-toolchain:76bcb58bfb84bc30af10d1a0e16ac3dad3154a260ec04eacbb29ba79244c3452](all-tijdstabellen-ap.jsonld#L2451) in language nl.
 
-2025-02-11T11:29:26.432Z error: No label found for class [urn:oslo-toolchain:5b65ef38fd6cac6d5e54e67f811308225d5a2f5e5a53d48de1a87a921b4f30e8](all-tijdstabellen-ap.jsonld#L2335) in language nl.
+2025-10-01T14:03:48.890Z error: No label found for class [urn:oslo-toolchain:54567c28329bfe95cc15b943523ad54a72460cca2b56ac467b2e0b64b0df9fc8](all-tijdstabellen-ap.jsonld#L2475) in language nl.
 
-2025-02-11T11:29:26.432Z error: No label found for class [urn:oslo-toolchain:25b631bde45687655c882411ef5e826a906755fe482094196895abfe7ff20280](all-tijdstabellen-ap.jsonld#L2359) in language nl.
+2025-10-01T14:03:48.890Z error: No label found for class [urn:oslo-toolchain:465e1782e34d3bd8c984c073aa479ded817724685c9c4c5a8332e46c97735885](all-tijdstabellen-ap.jsonld#L2499) in language nl.
 
-2025-02-11T11:29:26.432Z error: No label found for class [urn:oslo-toolchain:8e222f1b0680213febc53f3f3dbda55a6dd8287b80046573ddeadf871306e752](all-tijdstabellen-ap.jsonld#L2383) in language nl.
+2025-10-01T14:03:48.890Z error: No label found for class [urn:oslo-toolchain:8b7a51f20705a4ad167b6327c17033de0849702bb3bd0646bfefbf393a92789e](all-tijdstabellen-ap.jsonld#L2517) in language nl.
 
-2025-02-11T11:29:26.432Z error: No label found for class [urn:oslo-toolchain:9c73942e5c55463be095cd82097ae4ca67bcc07cd36dee999c9474b144a46d26](all-tijdstabellen-ap.jsonld#L2407) in language nl.
+2025-10-01T14:03:48.890Z error: No label found for class [urn:oslo-toolchain:2583f752b74121610019cab40c4e3cf508540bde6a5d33a4227a5e21ba794715](all-tijdstabellen-ap.jsonld#L2535) in language nl.
 
-2025-02-11T11:29:26.432Z error: No label found for class [urn:oslo-toolchain:2d4220b1d30f8ba60994a28f75297819ae6c4483e5c7901651042c69f71fcdc1](all-tijdstabellen-ap.jsonld#L2431) in language nl.
+2025-10-01T14:03:48.890Z error: No label found for class [urn:oslo-toolchain:d443d2078574a416f67458ca148c52237cc2bb6b84053b7ba6ce81ef3a8a354a](all-tijdstabellen-ap.jsonld#L2553) in language nl.
 
-2025-02-11T11:29:26.432Z error: No label found for class [urn:oslo-toolchain:1ebec6d365713b08f7a9cfa8e001654a19d27b5eb5e654413cf2ef452431a72d](all-tijdstabellen-ap.jsonld#L2455) in language nl.
+2025-10-01T14:03:48.891Z error: No label found for class [urn:oslo-toolchain:80c1c62d6bb875d394e3d9dd5299dc3e2db3a16df6bafdca38711fab41a94306](all-tijdstabellen-ap.jsonld#L2571) in language nl.
 
-2025-02-11T11:29:26.433Z error: No label found for class [urn:oslo-toolchain:32be1782e9e8f763fcd3bafa9e1c92088baef4ad36266a91007394ce5ef40217](all-tijdstabellen-ap.jsonld#L2479) in language nl.
+2025-10-01T14:03:48.891Z error: No label found for class [urn:oslo-toolchain:7d9594f2e69900f793f8a24ae01918ada10dda7d4b2a846f08dc12a4508c7660](all-tijdstabellen-ap.jsonld#L2601) in language nl.
 
-2025-02-11T11:29:26.433Z error: No label found for class [urn:oslo-toolchain:76bcb58bfb84bc30af10d1a0e16ac3dad3154a260ec04eacbb29ba79244c3452](all-tijdstabellen-ap.jsonld#L2497) in language nl.
+2025-10-01T14:03:48.891Z error: No label found for class [urn:oslo-toolchain:2694fe06726d240c74d1c831f1ab28aee5091abdc210840145df45b04551a6dd](all-tijdstabellen-ap.jsonld#L2619) in language nl.
 
-2025-02-11T11:29:26.433Z error: No label found for class [urn:oslo-toolchain:54567c28329bfe95cc15b943523ad54a72460cca2b56ac467b2e0b64b0df9fc8](all-tijdstabellen-ap.jsonld#L2521) in language nl.
+2025-10-01T14:03:48.891Z error: No label found for class [urn:oslo-toolchain:522181d5614b3cbdbc54bedf0e2cb246b618fb38d66a205deb9ee7de0aff995a](all-tijdstabellen-ap.jsonld#L2637) in language nl.
 
-2025-02-11T11:29:26.433Z error: No label found for class [urn:oslo-toolchain:465e1782e34d3bd8c984c073aa479ded817724685c9c4c5a8332e46c97735885](all-tijdstabellen-ap.jsonld#L2545) in language nl.
+2025-10-01T14:03:48.891Z error: No label found for class [urn:oslo-toolchain:99095c40b965421ab77d199371e66ac5c3ee16d1907992fbf2bec65a6fcacfa3](all-tijdstabellen-ap.jsonld#L2655) in language nl.
 
-2025-02-11T11:29:26.433Z error: No label found for class [urn:oslo-toolchain:8b7a51f20705a4ad167b6327c17033de0849702bb3bd0646bfefbf393a92789e](all-tijdstabellen-ap.jsonld#L2563) in language nl.
+2025-10-01T14:03:48.891Z error: No label found for class [urn:oslo-toolchain:a651714bd0d35b673a97f31f7c606ab1cea1dbe18312680e541b4e45be373cb9](all-tijdstabellen-ap.jsonld#L2673) in language nl.
 
-2025-02-11T11:29:26.433Z error: No label found for class [urn:oslo-toolchain:2583f752b74121610019cab40c4e3cf508540bde6a5d33a4227a5e21ba794715](all-tijdstabellen-ap.jsonld#L2581) in language nl.
+2025-10-01T14:03:48.891Z error: No label found for class [urn:oslo-toolchain:8952980cd2c53b82c608c8b2e790f1f7c3d5cd7174bd10481761bcdfea9ea2aa](all-tijdstabellen-ap.jsonld#L2702) in language nl.
 
-2025-02-11T11:29:26.433Z error: No label found for class [urn:oslo-toolchain:d443d2078574a416f67458ca148c52237cc2bb6b84053b7ba6ce81ef3a8a354a](all-tijdstabellen-ap.jsonld#L2599) in language nl.
+2025-10-01T14:03:48.891Z error: No label found for class [urn:oslo-toolchain:c97ab10057bea3fa8fe1b77db69bb3354dd2a7570e3ecf1468e9290f47025a47](all-tijdstabellen-ap.jsonld#L2726) in language nl.
 
-2025-02-11T11:29:26.433Z error: No label found for class [urn:oslo-toolchain:80c1c62d6bb875d394e3d9dd5299dc3e2db3a16df6bafdca38711fab41a94306](all-tijdstabellen-ap.jsonld#L2617) in language nl.
+2025-10-01T14:03:48.892Z error: No label found for class [urn:oslo-toolchain:bfcb45697ac2dae05b30330317c2120bbb4632bf100d47b02f9d71e1fb54080e](all-tijdstabellen-ap.jsonld#L2756) in language nl.
 
-2025-02-11T11:29:26.433Z error: No label found for class [urn:oslo-toolchain:7d9594f2e69900f793f8a24ae01918ada10dda7d4b2a846f08dc12a4508c7660](all-tijdstabellen-ap.jsonld#L2647) in language nl.
+2025-10-01T14:03:48.892Z error: No label found for class [urn:oslo-toolchain:6fddfa6907df7fd39323813b65dc417871688e98cd452360d5f0481406bef7af](all-tijdstabellen-ap.jsonld#L2774) in language nl.
 
-2025-02-11T11:29:26.434Z error: No label found for class [urn:oslo-toolchain:2694fe06726d240c74d1c831f1ab28aee5091abdc210840145df45b04551a6dd](all-tijdstabellen-ap.jsonld#L2665) in language nl.
+2025-10-01T14:03:48.892Z error: No label found for class [urn:oslo-toolchain:e69b728ae58ca1c5ad35cab595c497d59a3e7882c4af1c9485a26908cb8a57d3](all-tijdstabellen-ap.jsonld#L2798) in language nl.
 
-2025-02-11T11:29:26.434Z error: No label found for class [urn:oslo-toolchain:522181d5614b3cbdbc54bedf0e2cb246b618fb38d66a205deb9ee7de0aff995a](all-tijdstabellen-ap.jsonld#L2683) in language nl.
+2025-10-01T14:03:48.892Z error: No label found for class [urn:oslo-toolchain:8734ccb854597b3c63fa662ae6a767bfdc4d76d6205fc1d1ef55c8c844b547d9](all-tijdstabellen-ap.jsonld#L2828) in language nl.
 
-2025-02-11T11:29:26.434Z error: No label found for class [urn:oslo-toolchain:99095c40b965421ab77d199371e66ac5c3ee16d1907992fbf2bec65a6fcacfa3](all-tijdstabellen-ap.jsonld#L2701) in language nl.
+2025-10-01T14:03:48.892Z error: No label found for class [urn:oslo-toolchain:df036c50933c9db1fc1ce4ecf69580f453174760c989013b3f9857ad12a1d484](all-tijdstabellen-ap.jsonld#L2852) in language nl.
 
-2025-02-11T11:29:26.434Z error: No label found for class [urn:oslo-toolchain:a651714bd0d35b673a97f31f7c606ab1cea1dbe18312680e541b4e45be373cb9](all-tijdstabellen-ap.jsonld#L2719) in language nl.
+2025-10-01T14:03:48.892Z error: No label found for class [urn:oslo-toolchain:243de2bfbe07d027b506638e7bf3ca623fdb311fac09cd2d736c79424554a5cc](all-tijdstabellen-ap.jsonld#L2882) in language nl.
 
-2025-02-11T11:29:26.434Z error: No label found for class [urn:oslo-toolchain:8952980cd2c53b82c608c8b2e790f1f7c3d5cd7174bd10481761bcdfea9ea2aa](all-tijdstabellen-ap.jsonld#L2748) in language nl.
+2025-10-01T14:03:48.892Z error: No label found for class [urn:oslo-toolchain:8b6e779412053ae93dba3eb4ad9b41a0b6c581110ff6a6b43951151f5ce43aed](all-tijdstabellen-ap.jsonld#L2906) in language nl.
 
-2025-02-11T11:29:26.434Z error: No label found for class [urn:oslo-toolchain:c97ab10057bea3fa8fe1b77db69bb3354dd2a7570e3ecf1468e9290f47025a47](all-tijdstabellen-ap.jsonld#L2772) in language nl.
+2025-10-01T14:03:48.894Z error: No label found for datatype [urn:oslo-toolchain:3cda4a722cc19f1609dc4eed5c24dff091cbc9faf3bd05a72cf3a98425cfc1ec](all-tijdstabellen-ap.jsonld#L15604) in language nl.
 
-2025-02-11T11:29:26.434Z error: No label found for class [urn:oslo-toolchain:bfcb45697ac2dae05b30330317c2120bbb4632bf100d47b02f9d71e1fb54080e](all-tijdstabellen-ap.jsonld#L2802) in language nl.
+2025-10-01T14:03:48.913Z error: No label found for attribute [urn:oslo-toolchain:ab78c11ae2e0c9b97abde5a0086fc4cd0a09f3c593dcccfe30f133942a3bc550](all-tijdstabellen-ap.jsonld#L4697) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.434Z error: No label found for class [urn:oslo-toolchain:6fddfa6907df7fd39323813b65dc417871688e98cd452360d5f0481406bef7af](all-tijdstabellen-ap.jsonld#L2820) in language nl.
+2025-10-01T14:03:48.913Z error: No label found for attribute [urn:oslo-toolchain:6472dcaed1154563a091061d98822a7eb257f1c263fe76f6db0ce92e46d03a72](all-tijdstabellen-ap.jsonld#L4739) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.434Z error: No label found for class [urn:oslo-toolchain:e69b728ae58ca1c5ad35cab595c497d59a3e7882c4af1c9485a26908cb8a57d3](all-tijdstabellen-ap.jsonld#L2844) in language nl.
+2025-10-01T14:03:48.913Z error: No label found for domain [urn:oslo-toolchain:3cda4a722cc19f1609dc4eed5c24dff091cbc9faf3bd05a72cf3a98425cfc1ec](all-tijdstabellen-ap.jsonld#L15604) of attribute [urn:oslo-toolchain:d06944239854a9ffbcd60235ed1316e4199c2d81a1023e4fc9a7872423fb0d41](all-tijdstabellen-ap.jsonld#L4781).
 
-2025-02-11T11:29:26.434Z error: No label found for class [urn:oslo-toolchain:8734ccb854597b3c63fa662ae6a767bfdc4d76d6205fc1d1ef55c8c844b547d9](all-tijdstabellen-ap.jsonld#L2874) in language nl.
+2025-10-01T14:03:48.914Z error: No label found for domain [urn:oslo-toolchain:3cda4a722cc19f1609dc4eed5c24dff091cbc9faf3bd05a72cf3a98425cfc1ec](all-tijdstabellen-ap.jsonld#L15604) of attribute [urn:oslo-toolchain:ef11e32bd8eeb439b2a8640dec066d9d5c6b09210f1b9eb83373527de6546522](all-tijdstabellen-ap.jsonld#L4837).
 
-2025-02-11T11:29:26.434Z error: No label found for class [urn:oslo-toolchain:df036c50933c9db1fc1ce4ecf69580f453174760c989013b3f9857ad12a1d484](all-tijdstabellen-ap.jsonld#L2898) in language nl.
+2025-10-01T14:03:48.914Z error: No label found for attribute [urn:oslo-toolchain:389d81b689c6642ce34240dab154a22ebebc1feb4a27ddb51a77d32b9469dcc0](all-tijdstabellen-ap.jsonld#L4877) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.435Z error: No label found for class [urn:oslo-toolchain:243de2bfbe07d027b506638e7bf3ca623fdb311fac09cd2d736c79424554a5cc](all-tijdstabellen-ap.jsonld#L2928) in language nl.
+2025-10-01T14:03:48.922Z error: No label found for attribute [urn:oslo-toolchain:b944b7968f0a30543fa57d6beb79cfdf34926ec85d132e59fba5a8b87be501ac](all-tijdstabellen-ap.jsonld#L8346) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.435Z error: No label found for class [urn:oslo-toolchain:8b6e779412053ae93dba3eb4ad9b41a0b6c581110ff6a6b43951151f5ce43aed](all-tijdstabellen-ap.jsonld#L2952) in language nl.
+2025-10-01T14:03:48.922Z error: No label found for attribute [urn:oslo-toolchain:50837b8706c5541ca28ae028d69a219f649338682c3e8002cecf0b6bc06b8068](all-tijdstabellen-ap.jsonld#L8384) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.452Z error: No label found for attribute [urn:oslo-toolchain:ab78c11ae2e0c9b97abde5a0086fc4cd0a09f3c593dcccfe30f133942a3bc550](all-tijdstabellen-ap.jsonld#L4743) in language "nl" or without language tag.
+2025-10-01T14:03:48.923Z error: No label found for attribute [urn:oslo-toolchain:f973280182a3a352a25a103cf73c6a20e3814154a48f133a7a79e38c8f78e650](all-tijdstabellen-ap.jsonld#L8416) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.452Z error: No label found for attribute [urn:oslo-toolchain:6472dcaed1154563a091061d98822a7eb257f1c263fe76f6db0ce92e46d03a72](all-tijdstabellen-ap.jsonld#L4785) in language "nl" or without language tag.
+2025-10-01T14:03:48.923Z error: No label found for attribute [urn:oslo-toolchain:47ad444674c9d8d006ff8da44591c210f0fec9580c41c5e8e371519a7786d1f1](all-tijdstabellen-ap.jsonld#L8448) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.452Z error: No label found for domain [urn:oslo-toolchain:3cda4a722cc19f1609dc4eed5c24dff091cbc9faf3bd05a72cf3a98425cfc1ec](all-tijdstabellen-ap.jsonld#L15787) of attribute [urn:oslo-toolchain:d06944239854a9ffbcd60235ed1316e4199c2d81a1023e4fc9a7872423fb0d41](all-tijdstabellen-ap.jsonld#L4827).
+2025-10-01T14:03:48.923Z error: No label found for attribute [urn:oslo-toolchain:4aa846a2e86f7d9f1947b8e52d4a5fd8246248e553fae18d011ed69eba59ad88](all-tijdstabellen-ap.jsonld#L8480) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.452Z error: No label found for domain [urn:oslo-toolchain:3cda4a722cc19f1609dc4eed5c24dff091cbc9faf3bd05a72cf3a98425cfc1ec](all-tijdstabellen-ap.jsonld#L15787) of attribute [urn:oslo-toolchain:ef11e32bd8eeb439b2a8640dec066d9d5c6b09210f1b9eb83373527de6546522](all-tijdstabellen-ap.jsonld#L4883).
+2025-10-01T14:03:48.923Z error: No label found for attribute [urn:oslo-toolchain:0de13d008f43887f81884fc88625439768dc6eb464b4b2700a65afa8e561b760](all-tijdstabellen-ap.jsonld#L8512) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.452Z error: No label found for attribute [urn:oslo-toolchain:389d81b689c6642ce34240dab154a22ebebc1feb4a27ddb51a77d32b9469dcc0](all-tijdstabellen-ap.jsonld#L4923) in language "nl" or without language tag.
+2025-10-01T14:03:48.923Z error: No label found for attribute [urn:oslo-toolchain:7b026995d895df54fe1dc418d598d5d3c93c3e56b5e03985a36e49c74c860c64](all-tijdstabellen-ap.jsonld#L8544) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.460Z error: No label found for attribute [urn:oslo-toolchain:b944b7968f0a30543fa57d6beb79cfdf34926ec85d132e59fba5a8b87be501ac](all-tijdstabellen-ap.jsonld#L8392) in language "nl" or without language tag.
+2025-10-01T14:03:48.923Z error: No label found for attribute [urn:oslo-toolchain:0e51831a4fd04144d6bd9f9cf6ea73dcfa6153f9fbbeaf17fbb2f1f6c9ee47c6](all-tijdstabellen-ap.jsonld#L8576) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.460Z error: No label found for attribute [urn:oslo-toolchain:50837b8706c5541ca28ae028d69a219f649338682c3e8002cecf0b6bc06b8068](all-tijdstabellen-ap.jsonld#L8430) in language "nl" or without language tag.
+2025-10-01T14:03:48.923Z error: No label found for attribute [urn:oslo-toolchain:7f129edf0a78510e3bc0a5d4b35b0846be33129866c41a7b9f40298a2d9ed07d](all-tijdstabellen-ap.jsonld#L8608) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.460Z error: No label found for attribute [urn:oslo-toolchain:f973280182a3a352a25a103cf73c6a20e3814154a48f133a7a79e38c8f78e650](all-tijdstabellen-ap.jsonld#L8462) in language "nl" or without language tag.
+2025-10-01T14:03:48.923Z error: No label found for attribute [urn:oslo-toolchain:8cbc3a586fde865f331c59b5449f99dbe3e7fc9a4c6521d652d950f95cebfa37](all-tijdstabellen-ap.jsonld#L8640) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.460Z error: No label found for attribute [urn:oslo-toolchain:47ad444674c9d8d006ff8da44591c210f0fec9580c41c5e8e371519a7786d1f1](all-tijdstabellen-ap.jsonld#L8494) in language "nl" or without language tag.
+2025-10-01T14:03:48.923Z error: No label found for attribute [urn:oslo-toolchain:ea3c628d8d500bd31a3622c8f4e063ea509a83ddc7e9589ed4503ebadfa50bed](all-tijdstabellen-ap.jsonld#L8672) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.460Z error: No label found for attribute [urn:oslo-toolchain:4aa846a2e86f7d9f1947b8e52d4a5fd8246248e553fae18d011ed69eba59ad88](all-tijdstabellen-ap.jsonld#L8526) in language "nl" or without language tag.
+2025-10-01T14:03:48.923Z error: No label found for domain [urn:oslo-toolchain:e69b728ae58ca1c5ad35cab595c497d59a3e7882c4af1c9485a26908cb8a57d3](all-tijdstabellen-ap.jsonld#L2798) of attribute [urn:oslo-toolchain:e363993ecc40abd113a6cdca01df2a3af2b88e6537a8720163490a64e553a3ba](all-tijdstabellen-ap.jsonld#L8704).
 
-2025-02-11T11:29:26.460Z error: No label found for attribute [urn:oslo-toolchain:0de13d008f43887f81884fc88625439768dc6eb464b4b2700a65afa8e561b760](all-tijdstabellen-ap.jsonld#L8558) in language "nl" or without language tag.
+2025-10-01T14:03:48.924Z error: No label found for attribute [urn:oslo-toolchain:d1ea403a331a48e110eb6cf4b0bbf2bcce0f888ccc6d23906180de99d99310ab](all-tijdstabellen-ap.jsonld#L8746) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.460Z error: No label found for attribute [urn:oslo-toolchain:7b026995d895df54fe1dc418d598d5d3c93c3e56b5e03985a36e49c74c860c64](all-tijdstabellen-ap.jsonld#L8590) in language "nl" or without language tag.
+2025-10-01T14:03:48.924Z error: No label found for attribute [urn:oslo-toolchain:3d9a812949fc6d6287bfe5e0ba1788a7e0318c1fa91da420296c2fd41f3e9485](all-tijdstabellen-ap.jsonld#L8778) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.461Z error: No label found for attribute [urn:oslo-toolchain:0e51831a4fd04144d6bd9f9cf6ea73dcfa6153f9fbbeaf17fbb2f1f6c9ee47c6](all-tijdstabellen-ap.jsonld#L8622) in language "nl" or without language tag.
+2025-10-01T14:03:48.924Z error: No label found for attribute [urn:oslo-toolchain:4f4aedaa0e3bec0b6403628fdbe889a5e45ff80e27eaca334d8f183113d1e7bb](all-tijdstabellen-ap.jsonld#L8810) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.461Z error: No label found for attribute [urn:oslo-toolchain:7f129edf0a78510e3bc0a5d4b35b0846be33129866c41a7b9f40298a2d9ed07d](all-tijdstabellen-ap.jsonld#L8654) in language "nl" or without language tag.
+2025-10-01T14:03:48.924Z error: No label found for attribute [urn:oslo-toolchain:726999bc9ffb88a1b1ada62b9b58da1f52c772cda3502bad95c87aa7c3b713ab](all-tijdstabellen-ap.jsonld#L8842) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.461Z error: No label found for attribute [urn:oslo-toolchain:8cbc3a586fde865f331c59b5449f99dbe3e7fc9a4c6521d652d950f95cebfa37](all-tijdstabellen-ap.jsonld#L8686) in language "nl" or without language tag.
+2025-10-01T14:03:48.924Z error: No label found for attribute [urn:oslo-toolchain:1b5bf6fafd777319e5fa2502f1e47deac081847a5a3c181ac360df3db57fb0be](all-tijdstabellen-ap.jsonld#L8874) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.461Z error: No label found for attribute [urn:oslo-toolchain:ea3c628d8d500bd31a3622c8f4e063ea509a83ddc7e9589ed4503ebadfa50bed](all-tijdstabellen-ap.jsonld#L8718) in language "nl" or without language tag.
+2025-10-01T14:03:48.924Z error: No label found for attribute [urn:oslo-toolchain:4c71fab2b9648a9168c618d97eac2e79fe659b864304df9a339a36f3e700caf7](all-tijdstabellen-ap.jsonld#L8906) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.461Z error: No label found for domain [urn:oslo-toolchain:e69b728ae58ca1c5ad35cab595c497d59a3e7882c4af1c9485a26908cb8a57d3](all-tijdstabellen-ap.jsonld#L2844) of attribute [urn:oslo-toolchain:e363993ecc40abd113a6cdca01df2a3af2b88e6537a8720163490a64e553a3ba](all-tijdstabellen-ap.jsonld#L8750).
+2025-10-01T14:03:48.932Z error: No label found for attribute [urn:oslo-toolchain:346ba632aef1fbfa90c20966262b7d54ad05041830ffb7b0801da38c3c8df5be](all-tijdstabellen-ap.jsonld#L12194) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.461Z error: No label found for attribute [urn:oslo-toolchain:d1ea403a331a48e110eb6cf4b0bbf2bcce0f888ccc6d23906180de99d99310ab](all-tijdstabellen-ap.jsonld#L8792) in language "nl" or without language tag.
+2025-10-01T14:03:48.932Z error: No label found for attribute [urn:oslo-toolchain:db8ce767727590f0bc5575fea787ce0a47a55fb53c36ff98e7c889698f7e9c02](all-tijdstabellen-ap.jsonld#L12232) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.461Z error: No label found for attribute [urn:oslo-toolchain:3d9a812949fc6d6287bfe5e0ba1788a7e0318c1fa91da420296c2fd41f3e9485](all-tijdstabellen-ap.jsonld#L8824) in language "nl" or without language tag.
+2025-10-01T14:03:48.932Z error: No label found for attribute [urn:oslo-toolchain:d75a076d868504a2f29fe8b0ff9e72884a3d63c32728e988e03bbcb8c280688f](all-tijdstabellen-ap.jsonld#L12264) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.461Z error: No label found for attribute [urn:oslo-toolchain:4f4aedaa0e3bec0b6403628fdbe889a5e45ff80e27eaca334d8f183113d1e7bb](all-tijdstabellen-ap.jsonld#L8856) in language "nl" or without language tag.
+2025-10-01T14:03:48.932Z error: No label found for attribute [urn:oslo-toolchain:aad07ba0222dd28749f894f0a755f8216c401299010f413e43cd96feda3a4414](all-tijdstabellen-ap.jsonld#L12296) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.461Z error: No label found for attribute [urn:oslo-toolchain:726999bc9ffb88a1b1ada62b9b58da1f52c772cda3502bad95c87aa7c3b713ab](all-tijdstabellen-ap.jsonld#L8888) in language "nl" or without language tag.
+2025-10-01T14:03:48.932Z error: No label found for attribute [urn:oslo-toolchain:a9c9eb4d51847a986756d8450fa66c87564b99d8982acc598d37308ceef33e6f](all-tijdstabellen-ap.jsonld#L12328) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.461Z error: No label found for attribute [urn:oslo-toolchain:1b5bf6fafd777319e5fa2502f1e47deac081847a5a3c181ac360df3db57fb0be](all-tijdstabellen-ap.jsonld#L8920) in language "nl" or without language tag.
+2025-10-01T14:03:48.932Z error: No label found for attribute [urn:oslo-toolchain:86a99761b2c8545a7cbee5cfe3db11de209bb07a7b3f2f14709b3cef9dba55f6](all-tijdstabellen-ap.jsonld#L12360) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.461Z error: No label found for attribute [urn:oslo-toolchain:4c71fab2b9648a9168c618d97eac2e79fe659b864304df9a339a36f3e700caf7](all-tijdstabellen-ap.jsonld#L8952) in language "nl" or without language tag.
+2025-10-01T14:03:48.933Z error: No label found for attribute [urn:oslo-toolchain:7b7706ed3862062dd9a580beab31871c523a360bb810542e35d11b73e79162dd](all-tijdstabellen-ap.jsonld#L12392) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.467Z error: No label found for attribute [urn:oslo-toolchain:346ba632aef1fbfa90c20966262b7d54ad05041830ffb7b0801da38c3c8df5be](all-tijdstabellen-ap.jsonld#L12240) in language "nl" or without language tag.
+2025-10-01T14:03:48.933Z error: No label found for attribute [urn:oslo-toolchain:ec6363dbb001ab31881d2248c3126a19c0bd31f56294933e48277f321756c43b](all-tijdstabellen-ap.jsonld#L12424) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.467Z error: No label found for attribute [urn:oslo-toolchain:db8ce767727590f0bc5575fea787ce0a47a55fb53c36ff98e7c889698f7e9c02](all-tijdstabellen-ap.jsonld#L12278) in language "nl" or without language tag.
+2025-10-01T14:03:48.933Z error: No label found for attribute [urn:oslo-toolchain:3baa7f26633075a6586f10b8b5c36e6ebae7acc3fea8794e9214abe6b92b9321](all-tijdstabellen-ap.jsonld#L12456) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.467Z error: No label found for attribute [urn:oslo-toolchain:d75a076d868504a2f29fe8b0ff9e72884a3d63c32728e988e03bbcb8c280688f](all-tijdstabellen-ap.jsonld#L12310) in language "nl" or without language tag.
+2025-10-01T14:03:48.933Z error: No label found for attribute [urn:oslo-toolchain:b892ca25a15ebc78e172d0bc9feb5ac5badb9b06b5e0e888b6069df022957ed0](all-tijdstabellen-ap.jsonld#L12488) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.467Z error: No label found for attribute [urn:oslo-toolchain:aad07ba0222dd28749f894f0a755f8216c401299010f413e43cd96feda3a4414](all-tijdstabellen-ap.jsonld#L12342) in language "nl" or without language tag.
+2025-10-01T14:03:48.933Z error: No label found for attribute [urn:oslo-toolchain:f16454cd972c6a0100b1ec6082d8d3881f05092ce065c3c091a9d55a8a3c3c36](all-tijdstabellen-ap.jsonld#L12520) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.467Z error: No label found for attribute [urn:oslo-toolchain:a9c9eb4d51847a986756d8450fa66c87564b99d8982acc598d37308ceef33e6f](all-tijdstabellen-ap.jsonld#L12374) in language "nl" or without language tag.
+2025-10-01T14:03:48.933Z error: No label found for attribute [urn:oslo-toolchain:73828ece88c86535d694c585e7ff7357ac147683acffeed0e0250fa0f6dd9fb2](all-tijdstabellen-ap.jsonld#L12558) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.467Z error: No label found for attribute [urn:oslo-toolchain:86a99761b2c8545a7cbee5cfe3db11de209bb07a7b3f2f14709b3cef9dba55f6](all-tijdstabellen-ap.jsonld#L12406) in language "nl" or without language tag.
+2025-10-01T14:03:48.933Z error: No label found for attribute [urn:oslo-toolchain:0248d0577b7ae61b08ca0d5e1afa4459ef2c17134b860c88709e7ba126880210](all-tijdstabellen-ap.jsonld#L12590) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.467Z error: No label found for attribute [urn:oslo-toolchain:7b7706ed3862062dd9a580beab31871c523a360bb810542e35d11b73e79162dd](all-tijdstabellen-ap.jsonld#L12438) in language "nl" or without language tag.
+2025-10-01T14:03:48.933Z error: No label found for attribute [urn:oslo-toolchain:ab35845efdb0ddf5d2c1a76b58141531debd607841afc68b198610bc672c1cf3](all-tijdstabellen-ap.jsonld#L12628) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:ec6363dbb001ab31881d2248c3126a19c0bd31f56294933e48277f321756c43b](all-tijdstabellen-ap.jsonld#L12470) in language "nl" or without language tag.
+2025-10-01T14:03:48.933Z error: No label found for attribute [urn:oslo-toolchain:0f6a9b2c5ea608b89fe60feaf6b7b7f1513bf2c2ba63522d3659ee67e8bf08a8](all-tijdstabellen-ap.jsonld#L12660) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:3baa7f26633075a6586f10b8b5c36e6ebae7acc3fea8794e9214abe6b92b9321](all-tijdstabellen-ap.jsonld#L12502) in language "nl" or without language tag.
+2025-10-01T14:03:48.933Z error: No label found for attribute [urn:oslo-toolchain:a7431d1e7750e896b91445f05b58dff85495dea345320ec823dfaea32618c6d2](all-tijdstabellen-ap.jsonld#L12692) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:b892ca25a15ebc78e172d0bc9feb5ac5badb9b06b5e0e888b6069df022957ed0](all-tijdstabellen-ap.jsonld#L12534) in language "nl" or without language tag.
+2025-10-01T14:03:48.933Z error: No label found for attribute [urn:oslo-toolchain:36fc52af2bb70e2c8df97df32cec62319c0dea057946c5facf6a6ce84e23b5fe](all-tijdstabellen-ap.jsonld#L12730) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:f16454cd972c6a0100b1ec6082d8d3881f05092ce065c3c091a9d55a8a3c3c36](all-tijdstabellen-ap.jsonld#L12566) in language "nl" or without language tag.
+2025-10-01T14:03:48.933Z error: No label found for attribute [urn:oslo-toolchain:8cd23b12a4fa463f0751f53c02cde0f8d0fd37594dd1c151830fb7b2b49dc649](all-tijdstabellen-ap.jsonld#L12762) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:73828ece88c86535d694c585e7ff7357ac147683acffeed0e0250fa0f6dd9fb2](all-tijdstabellen-ap.jsonld#L12604) in language "nl" or without language tag.
+2025-10-01T14:03:48.934Z error: No label found for attribute [urn:oslo-toolchain:fa0a36296aeb4e0c518c9c479f70ccc5e35ec73c394a942406bf4fb7a880e2a5](all-tijdstabellen-ap.jsonld#L12794) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:0248d0577b7ae61b08ca0d5e1afa4459ef2c17134b860c88709e7ba126880210](all-tijdstabellen-ap.jsonld#L12636) in language "nl" or without language tag.
+2025-10-01T14:03:48.934Z error: No label found for attribute [urn:oslo-toolchain:155320d22c39350f9b3800816d4df5d52a1c9744b1f5b31cc00b993118f18405](all-tijdstabellen-ap.jsonld#L12826) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:ab35845efdb0ddf5d2c1a76b58141531debd607841afc68b198610bc672c1cf3](all-tijdstabellen-ap.jsonld#L12674) in language "nl" or without language tag.
+2025-10-01T14:03:48.934Z error: No label found for attribute [urn:oslo-toolchain:e0c4b6b73af566698f64681f03c9c696407e5946c250600da7b7ec3a822106d0](all-tijdstabellen-ap.jsonld#L12858) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:0f6a9b2c5ea608b89fe60feaf6b7b7f1513bf2c2ba63522d3659ee67e8bf08a8](all-tijdstabellen-ap.jsonld#L12706) in language "nl" or without language tag.
+2025-10-01T14:03:48.934Z error: No label found for attribute [urn:oslo-toolchain:da4c908e241438445976057095d2a9dbe1a604c6d1a132bc24aad05eaa0c956a](all-tijdstabellen-ap.jsonld#L12890) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:a7431d1e7750e896b91445f05b58dff85495dea345320ec823dfaea32618c6d2](all-tijdstabellen-ap.jsonld#L12738) in language "nl" or without language tag.
+2025-10-01T14:03:48.934Z error: No label found for attribute [urn:oslo-toolchain:17aef2b2efeac1a365dd5907b5175c4877b4e56044ffda9bd298e6d290dc75fe](all-tijdstabellen-ap.jsonld#L12922) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:36fc52af2bb70e2c8df97df32cec62319c0dea057946c5facf6a6ce84e23b5fe](all-tijdstabellen-ap.jsonld#L12776) in language "nl" or without language tag.
+2025-10-01T14:03:48.934Z error: No label found for attribute [urn:oslo-toolchain:194f4503d9bcb878f0fd17a1c0dc11048654e066ed29904b88616d00d03ed956](all-tijdstabellen-ap.jsonld#L12954) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:8cd23b12a4fa463f0751f53c02cde0f8d0fd37594dd1c151830fb7b2b49dc649](all-tijdstabellen-ap.jsonld#L12808) in language "nl" or without language tag.
+2025-10-01T14:03:48.934Z error: No label found for attribute [urn:oslo-toolchain:ef3e5de139870f3243a925710be358f454a25d0e88a1f0a981c6465e8fcd22ee](all-tijdstabellen-ap.jsonld#L12986) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:fa0a36296aeb4e0c518c9c479f70ccc5e35ec73c394a942406bf4fb7a880e2a5](all-tijdstabellen-ap.jsonld#L12840) in language "nl" or without language tag.
+2025-10-01T14:03:48.934Z error: No label found for attribute [urn:oslo-toolchain:26a0986e934ec4ab81b1ee2fc6612b6c0cc35a8ba592e1c6bc7960a6fe0b0e4b](all-tijdstabellen-ap.jsonld#L13018) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:155320d22c39350f9b3800816d4df5d52a1c9744b1f5b31cc00b993118f18405](all-tijdstabellen-ap.jsonld#L12872) in language "nl" or without language tag.
+2025-10-01T14:03:48.934Z error: No label found for attribute [urn:oslo-toolchain:61acc01caa3a8b8cfaee6115b7c1b63fb6237b4958ac04a8372ae017543c2874](all-tijdstabellen-ap.jsonld#L13050) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:e0c4b6b73af566698f64681f03c9c696407e5946c250600da7b7ec3a822106d0](all-tijdstabellen-ap.jsonld#L12904) in language "nl" or without language tag.
+2025-10-01T14:03:48.934Z error: No label found for attribute [urn:oslo-toolchain:c6d0f0817725a9d0685c9c8bcf425141018a28bab312e2484f407d3963ee2046](all-tijdstabellen-ap.jsonld#L13082) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:da4c908e241438445976057095d2a9dbe1a604c6d1a132bc24aad05eaa0c956a](all-tijdstabellen-ap.jsonld#L12936) in language "nl" or without language tag.
+2025-10-01T14:03:48.934Z error: No label found for attribute [urn:oslo-toolchain:8dcf3ba8957eeb3003f763d8a9c966489eecafe2ed46ad883f7bf9bea6529ab6](all-tijdstabellen-ap.jsonld#L13120) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:17aef2b2efeac1a365dd5907b5175c4877b4e56044ffda9bd298e6d290dc75fe](all-tijdstabellen-ap.jsonld#L12968) in language "nl" or without language tag.
+2025-10-01T14:03:48.934Z error: No label found for attribute [urn:oslo-toolchain:233e5604f2a15111bb659e1d82b25b9216af45673b5dcc00dff2e8a13db57c4a](all-tijdstabellen-ap.jsonld#L13152) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:194f4503d9bcb878f0fd17a1c0dc11048654e066ed29904b88616d00d03ed956](all-tijdstabellen-ap.jsonld#L13000) in language "nl" or without language tag.
+2025-10-01T14:03:48.934Z error: No label found for attribute [urn:oslo-toolchain:b0e408571f0c68636532a724fdc7899d171385741b408c0fd16bfd997f2150a2](all-tijdstabellen-ap.jsonld#L13184) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:ef3e5de139870f3243a925710be358f454a25d0e88a1f0a981c6465e8fcd22ee](all-tijdstabellen-ap.jsonld#L13032) in language "nl" or without language tag.
+2025-10-01T14:03:48.934Z error: No label found for attribute [urn:oslo-toolchain:d64043a310cb10fd2ae3328fe970adf7f0b076847c5e011264a46cb6ad2f645f](all-tijdstabellen-ap.jsonld#L13216) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.468Z error: No label found for attribute [urn:oslo-toolchain:26a0986e934ec4ab81b1ee2fc6612b6c0cc35a8ba592e1c6bc7960a6fe0b0e4b](all-tijdstabellen-ap.jsonld#L13064) in language "nl" or without language tag.
+2025-10-01T14:03:48.935Z error: No label found for attribute [urn:oslo-toolchain:0fe60310c242663d69b3dbc075f81774c718dd3ce118ae631d90f13981128dde](all-tijdstabellen-ap.jsonld#L13248) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.469Z error: No label found for attribute [urn:oslo-toolchain:61acc01caa3a8b8cfaee6115b7c1b63fb6237b4958ac04a8372ae017543c2874](all-tijdstabellen-ap.jsonld#L13096) in language "nl" or without language tag.
+2025-10-01T14:03:48.935Z error: No label found for attribute [urn:oslo-toolchain:1eab409a4a70dfa86764ea6ed73d4de6f9495216388c768f8f145cdf629667e0](all-tijdstabellen-ap.jsonld#L13280) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.469Z error: No label found for attribute [urn:oslo-toolchain:c6d0f0817725a9d0685c9c8bcf425141018a28bab312e2484f407d3963ee2046](all-tijdstabellen-ap.jsonld#L13128) in language "nl" or without language tag.
+2025-10-01T14:03:48.935Z error: No label found for attribute [urn:oslo-toolchain:b7f7d88f1a005c55951566be2c1592ba39fea59ae254c050cb375fab6d105cf9](all-tijdstabellen-ap.jsonld#L13312) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.469Z error: No label found for attribute [urn:oslo-toolchain:8dcf3ba8957eeb3003f763d8a9c966489eecafe2ed46ad883f7bf9bea6529ab6](all-tijdstabellen-ap.jsonld#L13166) in language "nl" or without language tag.
+2025-10-01T14:03:48.936Z error: No label found for attribute [urn:oslo-toolchain:cba21aa8300c9e18aa0b7557ed09b155b6e82af4a6494086a71297dae075b1e2](all-tijdstabellen-ap.jsonld#L13824) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.469Z error: No label found for attribute [urn:oslo-toolchain:233e5604f2a15111bb659e1d82b25b9216af45673b5dcc00dff2e8a13db57c4a](all-tijdstabellen-ap.jsonld#L13198) in language "nl" or without language tag.
+2025-10-01T14:03:48.936Z error: No label found for attribute [urn:oslo-toolchain:9549579ca5c75825e3386da71a7a0694ec5e6ef35de0e140c333ca7c7f6b0e8b](all-tijdstabellen-ap.jsonld#L13862) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.469Z error: No label found for attribute [urn:oslo-toolchain:b0e408571f0c68636532a724fdc7899d171385741b408c0fd16bfd997f2150a2](all-tijdstabellen-ap.jsonld#L13230) in language "nl" or without language tag.
+2025-10-01T14:03:48.936Z error: No label found for attribute [urn:oslo-toolchain:3300d005acd6ed501f47715b297fe53f01cb232d8279ff2fe568b8cd67ac6477](all-tijdstabellen-ap.jsonld#L14334) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.469Z error: No label found for attribute [urn:oslo-toolchain:d64043a310cb10fd2ae3328fe970adf7f0b076847c5e011264a46cb6ad2f645f](all-tijdstabellen-ap.jsonld#L13262) in language "nl" or without language tag.
+2025-10-01T14:03:48.936Z error: No label found for attribute [urn:oslo-toolchain:a9a137bd9223808aad9b4e65774385c16f6e4d3f40b131a113b8a13c969c07cc](all-tijdstabellen-ap.jsonld#L14366) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.469Z error: No label found for attribute [urn:oslo-toolchain:0fe60310c242663d69b3dbc075f81774c718dd3ce118ae631d90f13981128dde](all-tijdstabellen-ap.jsonld#L13294) in language "nl" or without language tag.
+2025-10-01T14:03:48.937Z error: No label found for attribute [urn:oslo-toolchain:8988a37182efd55062029488135328fc92b4ff7e8c0775261669edb8a9a2b57c](all-tijdstabellen-ap.jsonld#L14398) in language "nl" or without language tag.
 
-2025-02-11T11:29:26.469Z error: No label found for attribute [urn:oslo-toolchain:1eab409a4a70dfa86764ea6ed73d4de6f9495216388c768f8f145cdf629667e0](all-tijdstabellen-ap.jsonld#L13326) in language "nl" or without language tag.
+#||# oslo-jsonld-context-generator for language en  
 
-2025-02-11T11:29:26.469Z error: No label found for attribute [urn:oslo-toolchain:b7f7d88f1a005c55951566be2c1592ba39fea59ae254c050cb375fab6d105cf9](all-tijdstabellen-ap.jsonld#L13358) in language "nl" or without language tag.
-
-2025-02-11T11:29:26.470Z error: No label found for attribute [urn:oslo-toolchain:cba21aa8300c9e18aa0b7557ed09b155b6e82af4a6494086a71297dae075b1e2](all-tijdstabellen-ap.jsonld#L13870) in language "nl" or without language tag.
-
-2025-02-11T11:29:26.470Z error: No label found for attribute [urn:oslo-toolchain:9549579ca5c75825e3386da71a7a0694ec5e6ef35de0e140c333ca7c7f6b0e8b](all-tijdstabellen-ap.jsonld#L13908) in language "nl" or without language tag.
-
-2025-02-11T11:29:26.470Z error: No label found for attribute [urn:oslo-toolchain:3300d005acd6ed501f47715b297fe53f01cb232d8279ff2fe568b8cd67ac6477](all-tijdstabellen-ap.jsonld#L14380) in language "nl" or without language tag.
-
-2025-02-11T11:29:26.470Z error: No label found for attribute [urn:oslo-toolchain:a9a137bd9223808aad9b4e65774385c16f6e4d3f40b131a113b8a13c969c07cc](all-tijdstabellen-ap.jsonld#L14412) in language "nl" or without language tag.
-
-2025-02-11T11:29:26.470Z error: No label found for attribute [urn:oslo-toolchain:8988a37182efd55062029488135328fc92b4ff7e8c0775261669edb8a9a2b57c](all-tijdstabellen-ap.jsonld#L14444) in language "nl" or without language tag.
+#||# -------------------------------------  
 

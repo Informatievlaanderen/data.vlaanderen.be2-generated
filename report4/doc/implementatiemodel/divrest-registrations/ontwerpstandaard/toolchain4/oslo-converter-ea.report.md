@@ -2,13 +2,23 @@
 
 #||# -------------------------------------
 
-2025-02-11T10:33:56.469Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:51:07.723Z info: Connector Model:Domain Model:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:33:56.471Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-10-01T13:51:07.725Z info: Connector Model:Domain Model:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:33:56.480Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Generiek:ContactInfo:adres).
+2025-10-01T13:51:07.725Z info: Connector Model:Domain Model:OSLO-Organisatie:FormeleOrganisatie:(FormeleOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-02-11T10:33:56.481Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:Organisatie:contactinfo).
+2025-10-01T13:51:07.726Z info: Connector Model:Domain Model:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> FormeleOrganisatie) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:51:07.726Z info: Connector Model:Domain Model:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+
+2025-10-01T13:51:07.726Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:51:07.726Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model). Using fallback URI (http://todo.com/) instead.
+
+2025-10-01T13:51:07.733Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Generiek:ContactInfo:adres).
+
+2025-10-01T13:51:07.734Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Model:Domain Model:OSLO-Organisatie:Organisatie:contactinfo).
 
 #||# -------------------------------------
 

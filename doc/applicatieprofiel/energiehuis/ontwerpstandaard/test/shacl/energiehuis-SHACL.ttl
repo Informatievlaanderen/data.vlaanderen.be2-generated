@@ -73,12 +73,22 @@
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#EdtfShape> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#AdresShape> a shacl:NodeShape;
+  rdfs:label "Adres"@nl;
+  <http://purl.org/vocab/vann/usageNote> "De definitie heeft betrekking op Belgische adressen. Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/adresregister/\">OSLO-Adresregister</a>."@nl;
+  rdfs:comment "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats, een standplaats of een perceel op basis van een gemeentenaam, een straatnaam, een huisnummer en eventueel een busnummer en een postcode."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/adres#Adres> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#AdresvoorstellingShape> a shacl:NodeShape;
+  rdfs:label "Adresvoorstelling"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bv als attribuut ve persoon of gebouw... De adresvoorstelling heeft niet enkel betrekking op Belgische adressen, ze kan gebruikt worden om buitenlandse adressen weer te geven (waar mogelijk andere adresaanduidingen dan huisnummer of busnummer worden gebruikt of waar adrescomponenten zoals adresgebieden voorkomen)."@nl;
+  rdfs:comment "Meer leesbare voorstelling met enkel de basisgegevens van het adres, bedoeld voor het gebruik van een adres als attribuut van een ander object."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "volledig adres"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Vermijdt fouten tgv het opsplitsen ve adres in zijn onderdelen. Geeft de voorgeschreven volgorde vd verschillende onderdelen weer."@nl;
+    rdfs:comment "Het complete adres in één string, al dan niet geformatteerd."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adresvoorstelling.VolledigAdres>;
     shacl:datatype rdf:langString;
     shacl:description "Het complete adres in één string, al dan niet geformatteerd."@nl;
@@ -86,6 +96,10 @@
     shacl:name "volledig adres"@nl;
     shacl:path <http://www.w3.org/ns/locn#fullAddress>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "postbus"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Postbusnummer in een postkantoor."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adresvoorstelling.Postbus>;
     shacl:datatype xsd:string;
     shacl:description "Postbusnummer in een postkantoor."@nl;
@@ -93,6 +107,10 @@
     shacl:name "postbus"@nl;
     shacl:path <http://www.w3.org/ns/locn#poBox>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "straatnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Straatnaam vh adres."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adresvoorstelling.Straatnaam>;
     shacl:datatype rdf:langString;
     shacl:description "Straatnaam vh adres."@nl;
@@ -100,12 +118,20 @@
     shacl:name "straatnaam"@nl;
     shacl:path <http://www.w3.org/ns/locn#thoroughfare>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "locatieaanduiding"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adresvoorstelling.Locatieaanduiding>;
     shacl:datatype xsd:string;
     shacl:description "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc."@nl;
     shacl:name "locatieaanduiding"@nl;
     shacl:path <http://www.w3.org/ns/locn#locatorDesignator>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "huisnummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Specialisatie van Adresvoorstelling:locatieaanduiding tbv Belgische adressen."@nl;
+    rdfs:comment "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adresvoorstelling.Huisnummer>;
     shacl:datatype xsd:string;
     shacl:description "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."@nl;
@@ -113,6 +139,10 @@
     shacl:name "huisnummer"@nl;
     shacl:path <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "busnummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Specialisatie van Adresvoorstelling:locatieaanduiding tbv Belgische adressen."@nl;
+    rdfs:comment "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adresvoorstelling.Busnummer>;
     shacl:datatype xsd:string;
     shacl:description "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."@nl;
@@ -120,12 +150,20 @@
     shacl:name "busnummer"@nl;
     shacl:path <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "locatienaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Naam of omschrijving vh het geografisch object dat de adreslocator aanduidt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adresvoorstelling.Locatienaam>;
     shacl:datatype rdf:langString;
     shacl:description "Naam of omschrijving vh het geografisch object dat de adreslocator aanduidt."@nl;
     shacl:name "locatienaam"@nl;
     shacl:path <http://www.w3.org/ns/locn#locatorName>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "adresgebied"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb de naam vh gehucht waarin het adres ligt."@nl;
+    rdfs:comment "Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is"@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adresvoorstelling.Adresgebied>;
     shacl:datatype rdf:langString;
     shacl:description "Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is"@nl;
@@ -133,6 +171,10 @@
     shacl:name "adresgebied"@nl;
     shacl:path <http://www.w3.org/ns/locn#addressArea>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "postnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adresvoorstelling.Postnaam>;
     shacl:datatype rdf:langString;
     shacl:description "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
@@ -140,6 +182,10 @@
     shacl:name "postnaam"@nl;
     shacl:path <http://www.w3.org/ns/locn#postName>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "gemeentenaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Gemeentenaam vh adres."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adresvoorstelling.Gemeentenaam>;
     shacl:datatype rdf:langString;
     shacl:description "Gemeentenaam vh adres."@nl;
@@ -147,6 +193,10 @@
     shacl:name "gemeentenaam"@nl;
     shacl:path <https://data.vlaanderen.be/ns/adres#gemeentenaam>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "administratieve eenheid niveau 2"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "De regio vh adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adresvoorstelling.AdministratieveEenheidNiveau2>;
     shacl:datatype rdf:langString;
     shacl:description "De regio vh adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat."@nl;
@@ -154,6 +204,10 @@
     shacl:name "administratieve eenheid niveau 2"@nl;
     shacl:path <http://www.w3.org/ns/locn#adminUnitL2>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "administratieve eenheid niveau 1"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Hoogste administratieve eenheid vh adres, doorgaans een land."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adresvoorstelling.AdministratieveEenheidNiveau1>;
     shacl:datatype rdf:langString;
     shacl:description "Hoogste administratieve eenheid vh adres, doorgaans een land."@nl;
@@ -161,6 +215,10 @@
     shacl:name "administratieve eenheid niveau 1"@nl;
     shacl:path <http://www.w3.org/ns/locn#adminUnitL1>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "land"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Land waarin het adres gelegen is."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adresvoorstelling.Land>;
     shacl:datatype rdf:langString;
     shacl:description "Land waarin het adres gelegen is."@nl;
@@ -168,6 +226,10 @@
     shacl:name "land"@nl;
     shacl:path <https://data.vlaanderen.be/ns/adres#land>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "postcode"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adresvoorstelling.Postcode>;
     shacl:datatype xsd:string;
     shacl:description "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
@@ -175,6 +237,10 @@
     shacl:name "postcode"@nl;
     shacl:path <http://www.w3.org/ns/locn#postCode>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "verwijst naar"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Dit kan enkel voor Belgische adressen aangezien onder adres een Belgisch adres wordt verstaan."@nl;
+    rdfs:comment "Adres waarvan de adresvoorstelling is afgeleid."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adresvoorstelling.VerwijstNaar>;
     shacl:class <https://data.vlaanderen.be/ns/adres#Adres>;
     shacl:description "Adres waarvan de adresvoorstelling is afgeleid."@nl;
@@ -185,14 +251,25 @@
   shacl:targetClass <http://www.w3.org/ns/locn#Address> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#AdviesverleningShape> a shacl:NodeShape;
+  rdfs:label "Adviesverlening"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Advies kan verleend worden aan alle burgers in het werkingsgebied van het energiehuis, ongeacht de inkomenscategorie."@nl;
+  rdfs:comment "Dienstverlening op maat. Dit kan in de vorm van een huisbezoek, een uitgebreide intake, advies op afspraak aan het loket, uitgebreide antwoorden op mail, etc."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Voor Energiehuizen kan dit bijvoorbeeld betrekking hebben op kennisdeling rond de Mijn VerbouwPremie of Mijn VerbouwLening, afhankelijk van bepaalde informatie over de Agent, maar zonder noodzakelijk verdere vervolgstappen. Meestal is dit op afspraak."@nl;
+    rdfs:comment "De specifieke categorie of vorm van advies die wordt geboden aan een Agent."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adviesverlening.Type>;
     shacl:class skos:Concept;
     shacl:description "De specifieke categorie of vorm van advies die wordt geboden aan een Agent."@nl;
     shacl:name "type"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#Adviesverlening.type>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "adviesverlener"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Doorgaans een Persoon van of in naam van het Energiehuis."@nl;
+    rdfs:comment "De Agent die het advies verleent."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Adviesverlening.Adviesverlener>;
     shacl:class dc:Agent;
     shacl:description "De Agent die het advies verleent."@nl;
@@ -202,8 +279,14 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Adviesverlening> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#AgentShape> a shacl:NodeShape;
+  rdfs:label "Agent"@nl;
+  rdfs:comment "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "participeertIn"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb als leverancier of als ontvanger van de dienst."@nl;
+    rdfs:comment "Publieke Dienstverlening waarin de Agent een rol speelt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Agent.Participeertin>;
     shacl:class <http://purl.org/vocab/cpsv#PublicService>;
     shacl:description "Publieke Dienstverlening waarin de Agent een rol speelt."@nl;
@@ -213,8 +296,13 @@
   shacl:targetClass dc:Agent .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#BasistaakShape> a shacl:NodeShape;
+  rdfs:label "Basistaak"@nl;
+  rdfs:comment "Een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een publieke organisatie. De dienstverlening is ten bate van een Agent."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "tijdstip"@nl;
+    rdfs:comment "Tijdstip waarop de Basistaak is verricht."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Basistaak.Tijdstip>;
     shacl:class <http://www.w3.org/2006/time#TemporalEntity>;
     shacl:description "Tijdstip waarop de Basistaak is verricht."@nl;
@@ -223,12 +311,18 @@
     shacl:name "tijdstip"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#tijdstip>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "verstrektDoor"@nl;
+    rdfs:comment "Agent die de Basistaak uitvoert."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Basistaak.Verstrektdoor>;
     shacl:class dc:Agent;
     shacl:description "Agent die de Basistaak uitvoert."@nl;
     shacl:name "verstrektDoor"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#verstrektDoor>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "verstrektAan"@nl;
+    rdfs:comment "Agent ten voordele van wie de Basistaak uitgevoerd wordt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Basistaak.Verstrektaan>;
     shacl:class dc:Agent;
     shacl:description "Agent ten voordele van wie de Basistaak uitgevoerd wordt."@nl;
@@ -236,12 +330,19 @@
     shacl:name "verstrektAan"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#verstrektAan>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Aanvullend op of in plaats van de subclassificatie."@nl;
+    rdfs:comment "Soort Basistaak."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Basistaak.Type>;
     shacl:class skos:Concept;
     shacl:description "Soort Basistaak."@nl;
     shacl:name "type"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#Basistaak.type>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "verrichtDoor"@nl;
+    rdfs:comment "Energiehuis dat of in wiens naam de Basistaak wordt verricht."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Basistaak.Verrichtdoor>;
     shacl:class <https://data.vlaanderen.be/ns/energiehuis#Energiehuis>;
     shacl:description "Energiehuis dat of in wiens naam de Basistaak wordt verricht."@nl;
@@ -253,20 +354,33 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Basistaak> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#BegeleidingShape> a shacl:NodeShape;
+  rdfs:label "Begeleiding"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Begeleiding kan enkel gegeven worden aan burgers uit inkomenscategorieën 2 en 3. De informatieoverdracht in deze fase is strikt persoonlijk, als ook pandgebonden, en niet vrij beschikbaar voor alle burgers. Deze fase is de overkoepelende fase voor 3 subfases."@nl;
+  rdfs:comment "Het ondersteunen van een Agent door stapsgewijs te helpen bij het ondernemen van acties of het doorlopen van langdurige trajecten, al dan niet met regelmatige contactmomenten."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    rdfs:comment "De specifieke categorie of vorm van ondersteuning die wordt geboden aan een Agent."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Begeleiding.Type>;
     shacl:class skos:Concept;
     shacl:description "De specifieke categorie of vorm van ondersteuning die wordt geboden aan een Agent."@nl;
     shacl:name "type"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#Begeleiding.type>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "begeleider"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Doorgaans een Persoon van of in naam van het Energiehuis."@nl;
+    rdfs:comment "Agent die de Begeleiding uitvoert."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Begeleiding.Begeleider>;
     shacl:class dc:Agent;
     shacl:description "Agent die de Begeleiding uitvoert."@nl;
     shacl:name "begeleider"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#begeleider>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "fase"@nl;
+    rdfs:comment "Fase waarin de Begeleiding zich bevindt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Begeleiding.Fase>;
     shacl:class skos:Concept;
     shacl:description "Fase waarin de Begeleiding zich bevindt."@nl;
@@ -274,6 +388,10 @@
     shacl:name "fase"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#Begeleiding.fase>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "begeleidingVan"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb een Renovatieproject."@nl;
+    rdfs:comment "Project dat wordt begeleid."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Begeleiding.Begeleidingvan>;
     shacl:class dbo:Project;
     shacl:description "Project dat wordt begeleid."@nl;
@@ -284,12 +402,21 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Begeleiding> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#ConceptShape> a shacl:NodeShape;
+  rdfs:label "Concept"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bedoeld om kennis te organiseren, bvb in een codelijst of taxonomie (een zgn ConceptScheme). Zie <a href=\"https://www.w3.org/TR/skos-reference/\">SKOS</a> voor meer informatie."@nl;
+  rdfs:comment "Idee of begrip."@nl;
   shacl:closed false;
   shacl:targetClass skos:Concept .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#ContactShape> a shacl:NodeShape;
+  rdfs:label "Contact"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Hiermee bedoelen we elke interactie (telefoongesprek, hoe kort ook, e-mail, formulier, loket bezoek, huisbezoek, ...), inclusief interacties die niet in een CRM geregistreerd worden, maar bijvoorbeeld wel via streepjes geteld worden."@nl;
+  rdfs:comment "Elke interactie tussen een organisatie en haar klanten, waarbij informatie, ondersteuning of diensten worden uitgewisseld."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "onderwerp"@nl;
+    rdfs:comment "Het specifieke thema of de kwestie die tijdens het Contact wordt besproken."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Contact.Onderwerp>;
     shacl:class skos:Concept;
     shacl:description "Het specifieke thema of de kwestie die tijdens het Contact wordt besproken."@nl;
@@ -299,8 +426,15 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Contact> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#ContactinfoShape> a shacl:NodeShape;
+  rdfs:label "Contactinfo"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb een persoon of organisatie of dienstverlening... Mogelijke vormen van contact: bellen, mailen etc."@nl;
+  rdfs:comment "Informatie zoals email, telefoon, adres die toelaat om iemand of iets te contacteren."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "aanschrijfvorm"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb De heer/Mevrouw, Excellentie, Dokter..."@nl;
+    rdfs:comment "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Contactinfo.Aanschrijfvorm>;
     shacl:datatype rdf:langString;
     shacl:description "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen."@nl;
@@ -308,6 +442,10 @@
     shacl:name "aanschrijfvorm"@nl;
     shacl:path vcard:honorific-prefix
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "contactnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Naam van bvb de persoon die men kan contacteren."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Contactinfo.Contactnaam>;
     shacl:datatype xsd:string;
     shacl:description "Naam van bvb de persoon die men kan contacteren."@nl;
@@ -315,6 +453,10 @@
     shacl:name "contactnaam"@nl;
     shacl:path foaf:name
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "email"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Email-adres waarnaar men kan mailen."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Contactinfo.Email>;
     shacl:datatype xsd:string;
     shacl:description "Email-adres waarnaar men kan mailen."@nl;
@@ -322,6 +464,10 @@
     shacl:name "email"@nl;
     shacl:path schema:email
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "telefoon"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Telefoonnummer waarop men kan bellen."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Contactinfo.Telefoon>;
     shacl:datatype xsd:string;
     shacl:description "Telefoonnummer waarop men kan bellen."@nl;
@@ -329,6 +475,10 @@
     shacl:name "telefoon"@nl;
     shacl:path schema:telephone
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "fax"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Faxnummer waarnaar men kan faxen."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Contactinfo.Fax>;
     shacl:datatype xsd:string;
     shacl:description "Faxnummer waarnaar men kan faxen."@nl;
@@ -336,6 +486,10 @@
     shacl:name "fax"@nl;
     shacl:path schema:faxNumber
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "website"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Website waarnaar men kan surfen."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Contactinfo.Website>;
     shacl:datatype xsd:anyURI;
     shacl:description "Website waarnaar men kan surfen."@nl;
@@ -343,6 +497,10 @@
     shacl:name "website"@nl;
     shacl:path foaf:page
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "openingsuren"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Syntax volgens schema.org voor openingsuren. Bv als contact kan worden opgenomen tussen 8 en 20u maandag tot zaterdag en tussen 8 en 18u op zondag wordt dit gecodeerd als Ma-za 08:00-20:00, zo 08:00-18:00."@nl;
+    rdfs:comment "Uren waarbinnen contact kan worden opgenomen."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Contactinfo.Openingsuren>;
     shacl:datatype rdfs:Literal;
     shacl:description "Uren waarbinnen contact kan worden opgenomen."@nl;
@@ -350,6 +508,10 @@
     shacl:name "openingsuren"@nl;
     shacl:path schema:openingHours
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "beschikbaarheid"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bv aanduiding van het seizoen waarin contact kan worden opgenomen. Begin- en einddatum volgens ISO8601 syntax."@nl;
+    rdfs:comment "Periode waarin contact kan worden opgenomen."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Contactinfo.Beschikbaarheid>;
     shacl:class schema:OpeningHoursSpecification;
     shacl:description "Periode waarin contact kan worden opgenomen."@nl;
@@ -357,6 +519,10 @@
     shacl:name "beschikbaarheid"@nl;
     shacl:path schema:hoursAvailable
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "adres"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Adres dat men kan aanschrijven of bezoeken."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Contactinfo.Adres>;
     shacl:class <http://www.w3.org/ns/locn#Address>;
     shacl:description "Adres dat men kan aanschrijven of bezoeken."@nl;
@@ -367,28 +533,43 @@
   shacl:targetClass schema:ContactPoint .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#DateShape> a shacl:NodeShape;
+  rdfs:label "Date";
   shacl:closed false;
   shacl:targetClass xsd:date .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#DatetimeShape> a shacl:NodeShape;
+  rdfs:label "DateTime";
   shacl:closed false;
   shacl:targetClass xsd:dateTime .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#DurationShape> a shacl:NodeShape;
+  rdfs:label "Duration";
   shacl:closed false;
   shacl:targetClass xsd:duration .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#EdtfShape> a shacl:NodeShape;
+  rdfs:label "EDTF"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Voorbeelden: 1980/1984 (periode 1980-1984), 1984? (jaar onzeker), 1984~ (jaar bij benadering), 19XX (20ste eeuw), /1980 (periode met onbekend begin), 1984 (ergens in 1984). Zie <a href=\"https://www.loc.gov/standards/datetime/\">EDTF</a> voor meer info."@nl;
+  rdfs:comment "Een uitgebreide set van notaties voor het vastleggen van datums, tijden en tijdsintervallen, inclusief onzekere of benaderde datums, herhalende datums en open tijdsintervallen."@nl;
   shacl:closed false;
   shacl:targetClass <http://id.loc.gov/datatypes/edtf/EDTF> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#EenheidShape> a shacl:NodeShape;
+  rdfs:label "Eenheid"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Te gebruiken ipv Concept als een voorgedefinieerde eenheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/unit/M\">meter</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-UNITS.html\">QUDT-units</a> voor meer info."@nl;
+  rdfs:comment "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."@nl;
   shacl:closed false;
   shacl:targetClass <https://qudt.org/schema/qudt/Unit> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#EnergiehuisShape> a shacl:NodeShape;
+  rdfs:label "Energiehuis"@nl;
+  rdfs:comment "Een instantie die op het niveau van één of meer gemeenten diensten inzake energie en woningkwaliteit aanbiedt aan de klant."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "aantal beschikbare loketuren"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld: voor een energiehuis met 3 loketten met respectievelijk 15, 23 en 30 loketuren per week, met respectievelijk 1, 1 en 2 medewerkers, is het totaal aantal beschikbare loketuren gelijk aan 15*1+20*1+30*2=95 per week"@nl;
+    rdfs:comment "Het totaal aantal loketuren, berekend door het aantal loketten te vermenigvuldigen met het aantal openingsuren van de respectievelijke loketten en het aantal medewerkers beschikbaar als aanspreekpunt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Energiehuis.AantalBeschikbareLoketuren>;
     shacl:datatype xsd:integer;
     shacl:description "Het totaal aantal loketuren, berekend door het aantal loketten te vermenigvuldigen met het aantal openingsuren van de respectievelijke loketten en het aantal medewerkers beschikbaar als aanspreekpunt."@nl;
@@ -397,6 +578,10 @@
     shacl:name "aantal beschikbare loketuren"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#aantalBeschikbareLoketuren>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "verricht"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Specifiek in de zin van: geleverd aan persoon x op tijdstip y etc."@nl;
+    rdfs:comment "Specifieke Basistaak die door het Energiehuis is verricht."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Energiehuis.Verricht>;
     shacl:class <https://data.vlaanderen.be/ns/energiehuis#Basistaak>;
     shacl:description "Specifieke Basistaak die door het Energiehuis is verricht."@nl;
@@ -406,8 +591,14 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Energiehuis> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#EnergiescanShape> a shacl:NodeShape;
+  rdfs:label "Energiescan"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb tips geeft over mogelijke aanpassingen van verwarming, verlichting en/of huishoudtoestellen. Maar ook het bepalen van de energetische waarden van een pand."@nl;
+  rdfs:comment "Activiteit van het type Adviesverlening waarbij een Energiescan wordt uitgevoerd."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "energiescanner"@nl;
+    rdfs:comment "Agent die de Energiescan uitvoert."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Energiescan.Energiescanner>;
     shacl:class dc:Agent;
     shacl:description "Agent die de Energiescan uitvoert."@nl;
@@ -417,14 +608,25 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Energiescan> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#FinancieringShape> a shacl:NodeShape;
+  rdfs:label "Financiering"@nl;
+  <http://purl.org/vocab/vann/usageNote> "In de context van energiehuizen verwijst Financiering naar het verstrekken van leningen, subsidies, of andere financiële ondersteuning om energiebesparende maatregelen, duurzame energieprojecten, of renovaties te bekostigen."@nl;
+  rdfs:comment "Verstrekking van geldmiddelen voor de ondersteuning of uitvoering van een Activiteit."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld een subsidie, gift of eigen middelen."@nl;
+    rdfs:comment "Soort Financiering"@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Financiering.Type>;
     shacl:class skos:Concept;
     shacl:description "Soort Financiering"@nl;
     shacl:name "type"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#Financiering.type>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "output"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb de Premie of Lening die is toegekend."@nl;
+    rdfs:comment "Resultaat van de Financiering."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Financiering.Output>;
     shacl:class <https://data.vlaanderen.be/ns/energiehuis#Financieringsoutput>;
     shacl:description "Resultaat van de Financiering."@nl;
@@ -432,6 +634,9 @@
     shacl:name "output"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#output>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "financieringVan"@nl;
+    rdfs:comment "Project dat wordt gefinancierd."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Financiering.Financieringvan>;
     shacl:class dbo:Project;
     shacl:description "Project dat wordt gefinancierd."@nl;
@@ -442,8 +647,14 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Financiering> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#FinancieringsoutputShape> a shacl:NodeShape;
+  rdfs:label "Financieringsoutput"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb de Premie of Lening die is toegekend en de kenmerken ervan (bvb toegekend bedrag, rentevoet van de Lening)."@nl;
+  rdfs:comment "Concreet resultaat van de Financiering."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "uitbetalingStart"@nl;
+    rdfs:comment "Wanneer het bedrag uitbetaald wordt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Financieringsoutput.Uitbetalingstart>;
     shacl:datatype xsd:date;
     shacl:description "Wanneer het bedrag uitbetaald wordt."@nl;
@@ -452,6 +663,9 @@
     shacl:name "uitbetalingStart"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#uitbetalingStart>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "gefinancierdDoor"@nl;
+    rdfs:comment "Organisatie, onderneming, persoon of overheidsinstantie die financiert."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Financieringsoutput.Gefinancierddoor>;
     shacl:class dc:Agent;
     shacl:description "Organisatie, onderneming, persoon of overheidsinstantie die financiert."@nl;
@@ -460,6 +674,9 @@
     shacl:name "gefinancierdDoor"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#gefinancierdDoor>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "bedrag"@nl;
+    rdfs:comment "Het bedrag dat gefinancierd wordt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Financieringsoutput.Bedrag>;
     shacl:class schemas:MonetaryAmount;
     shacl:description "Het bedrag dat gefinancierd wordt."@nl;
@@ -471,8 +688,14 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Financieringsoutput> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#GebouwShape> a shacl:NodeShape;
+  rdfs:label "Gebouw"@nl;
+  rdfs:comment "Een gesloten en/of overdekt, bovengronds of ondergronds bouwwerk, dat dient of bestemd is, ofwel om mensen, dieren en voorwerpen onder te brengen, ofwel om economische goederen te vervaardigen of diensten te verstrekken. Een gebouw verwijst naar gelijk welke structuur die op blijvende wijze op een terrein opgetrokken of gebouwd wordt."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "bouwjaar"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Verbouwingen en renovaties na initiële oplevering worden niet meegeteld."@nl;
+    rdfs:comment "Datum waarop het gebouw voltooid werd."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Gebouw.Bouwjaar>;
     shacl:datatype xsd:date;
     shacl:description "Datum waarop het gebouw voltooid werd."@nl;
@@ -480,6 +703,10 @@
     shacl:name "bouwjaar"@nl;
     shacl:path <https://data.vlaanderen.be/ns/gebouw#bouwjaar>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "laatste renovatie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Verbouwingen en renovaties na initiële oplevering worden niet meegeteld."@nl;
+    rdfs:comment "Datum waarop het gebouw het laatst gerenoveerd werd."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Gebouw.LaatsteRenovatie>;
     shacl:datatype xsd:date;
     shacl:description "Datum waarop het gebouw het laatst gerenoveerd werd."@nl;
@@ -487,18 +714,27 @@
     shacl:name "laatste renovatie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/gebouw#laatsteRenovatie>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "kenmerk"@nl;
+    rdfs:comment "Generieke eigenschap van een Gebouw."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Gebouw.Kenmerk>;
     shacl:class <https://data.vlaanderen.be/ns/energiehuis#Kenmerk>;
     shacl:description "Generieke eigenschap van een Gebouw."@nl;
     shacl:name "kenmerk"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#Gebouw.kenmerk>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "adres"@nl;
+    rdfs:comment "Adresvoorstelling die bij het gebouw hoort."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Gebouw.Adres>;
     shacl:class <http://www.w3.org/ns/locn#Address>;
     shacl:description "Adresvoorstelling die bij het gebouw hoort."@nl;
     shacl:name "adres"@nl;
     shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouw.adres>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "status"@nl;
+    rdfs:comment "Fase van de levensloop waarin het gebouw zich bevindt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Gebouw.Status>;
     shacl:class skos:Concept;
     shacl:description "Fase van de levensloop waarin het gebouw zich bevindt."@nl;
@@ -507,6 +743,9 @@
     shacl:name "status"@nl;
     shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouw.status>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "bestaatUit"@nl;
+    rdfs:comment "De gebouweenheden die tot het gebouw behoren."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Gebouw.Bestaatuit>;
     shacl:class <https://data.vlaanderen.be/ns/gebouw#Gebouweenheid>;
     shacl:description "De gebouweenheden die tot het gebouw behoren."@nl;
@@ -516,20 +755,31 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/gebouw#Gebouw> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#GebouweenheidShape> a shacl:NodeShape;
+  rdfs:label "Gebouweenheid"@nl;
+  rdfs:comment "De kleinste eenheid binnen een gebouw die geschikt is voor woon-, bedrijfsmatige, of recreatieve doeleinden en die ontsloten wordt via een eigen afsluitbare toegang vanaf de openbare weg, een erf of een gedeelde circulatieruimte. Een gebouweenheid is in functioneel opzicht zelfstandig. Daarnaast kan een gebouweenheid ook een gemeenschappelijk deel zijn."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "kenmerk"@nl;
+    rdfs:comment "Generieke eigenschap van een Gebouweenheid."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Gebouweenheid.Kenmerk>;
     shacl:class <https://data.vlaanderen.be/ns/energiehuis#Kenmerk>;
     shacl:description "Generieke eigenschap van een Gebouweenheid."@nl;
     shacl:name "kenmerk"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#Gebouweenheid.kenmerk>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "adres"@nl;
+    rdfs:comment "Adresvoorstelling die bij de gebouweenheid hoort."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Gebouweenheid.Adres>;
     shacl:class <http://www.w3.org/ns/locn#Address>;
     shacl:description "Adresvoorstelling die bij de gebouweenheid hoort."@nl;
     shacl:name "adres"@nl;
     shacl:path <https://data.vlaanderen.be/ns/gebouw#Gebouweenheid.adres>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "functie"@nl;
+    rdfs:comment "Functie waarvoor de gebouweenheid in de realiteit (zoals vastgesteld op het terrein) gebruikt wordt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Gebouweenheid.Functie>;
     shacl:class skos:Concept;
     shacl:description "Functie waarvoor de gebouweenheid in de realiteit (zoals vastgesteld op het terrein) gebruikt wordt."@nl;
@@ -537,6 +787,9 @@
     shacl:name "functie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/gebouw#functie>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "status"@nl;
+    rdfs:comment "Fase van de levensloop waarin de gebouweenheid zich bevindt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Gebouweenheid.Status>;
     shacl:class skos:Concept;
     shacl:description "Fase van de levensloop waarin de gebouweenheid zich bevindt."@nl;
@@ -548,8 +801,14 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/gebouw#Gebouweenheid> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#GeldbedragShape> a shacl:NodeShape;
+  rdfs:label "Geldbedrag";
+  rdfs:comment "Geldwaarde."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "valuta"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Gebruik Concept of de subklasse Valuta."@nl;
+    rdfs:comment "Munteenheid waarin een bedrag uitgedrukt is."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Geldbedrag.Valuta>;
     shacl:class <http://qudt.org/schema/qudt/CurrencyUnit>;
     shacl:description "Munteenheid waarin een bedrag uitgedrukt is."@nl;
@@ -561,12 +820,20 @@
   shacl:targetClass schemas:MonetaryAmount .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#GeografischeNaamShape> a shacl:NodeShape;
+  rdfs:label "Geografische Naam"@nl;
+  rdfs:comment "Benaming toegekend aan of gebruikt voor een geografisch object."@nl;
   shacl:closed false;
   shacl:targetClass rdf:langString .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#GeregistreerdcontactShape> a shacl:NodeShape;
+  rdfs:label "GeregistreerdContact"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit kan bijvoorbeeld een telefonisch gesprek, afspraak of huisbezoek omvatten waarin de klant vragen stelt, advies zoekt, of ondersteuning aanvraagt met betrekking tot energiebesparende maatregelen of diensten."@nl;
+  rdfs:comment "Interactie tussen een klant en een organisatie die formeel wordt vastgelegd en gedocumenteerd in een systeem voor toekomstige referentie en opvolging."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "onderwerp"@nl;
+    rdfs:comment "Het specifieke thema of de kwestie die tijdens het Contact wordt besproken."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Geregistreerdcontact.Onderwerp>;
     shacl:class skos:Concept;
     shacl:description "Het specifieke thema of de kwestie die tijdens het Contact wordt besproken."@nl;
@@ -577,8 +844,14 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#GeregistreerdContact> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#InformatievoorzieningShape> a shacl:NodeShape;
+  rdfs:label "Informatievoorziening"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Deze fase kent bij een Energiehuis doorgaans de volgende activiteiten: Medewerkers luisteren naar wat de burger te vertellen heeft, om een beter begrip te krijgen van hun situatie.Soms worden de wensen en noden van de burger in kaart gebracht, mogelijk via een intakegesprek, hoewel dit niet altijd noodzakelijk is. Er wordt generieke informatie verstrekt, zoals uitleg over beschikbare energieleningen en premies voor bepaalde doelgroepen. De burger wordt naar de juiste dienst of dienstverlener verwezen voor verdere ondersteuning en specifieke hulp."@nl;
+  rdfs:comment "Een eerste persoonlijk contact met een burger waarbij basis- of generieke informatie wordt gedeeld, met als doel burgers te informeren over de beschikbare diensten en mogelijkheden, en hen toe te leiden naar de juiste vervolgstappen."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    rdfs:comment "Het soort informatie dat in een eerste persoonlijk contact met de burger gedeeld wordt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Informatievoorziening.Type>;
     shacl:class skos:Concept;
     shacl:description "Het soort informatie dat in een eerste persoonlijk contact met de burger gedeeld wordt."@nl;
@@ -588,16 +861,27 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Informatievoorziening> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#IntegerShape> a shacl:NodeShape;
+  rdfs:label "Integer";
   shacl:closed false;
   shacl:targetClass xsd:integer .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#InteresseopwekkingShape> a shacl:NodeShape;
+  rdfs:label "InteresseOpwekking"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit kan bijvoorbeeld gaan over het verspreiden van flyers, deelnemen aan informatiemarkten, en het onderhouden van een informatieve website om een breed publiek te informeren over de diensten van een energiehuis."@nl;
+  rdfs:comment "Het verstrekken van algemene, laagdrempelige kennis en richtlijnen via diverse middelen zoals websites, video’s, brochures, telefoon, mail, en loket, op grote schaal. Interesse opwekken is gericht op het creëren van bewustwording en het trekken van de aandacht van een breed publiek, zodat zij op de hoogte zijn van iets."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#InteresseOpwekking> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#KanaalShape> a shacl:NodeShape;
+  rdfs:label "Kanaal"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Typische voorbeelden: online,telefoon,kantoor…"@nl;
+  rdfs:comment "Kanaal waarlangs een agent kan interageren met een publieke dienstverlening."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "openingsuren"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Syntax volgens schema.org voor openingsuren. Bv als een dienstverlening telefonisch bereikbaar is tussen 8 en 20u maandag tot zaterdag and tussen 8 en 18u op zondag wordt dit gecodeerd als Ma-za 08:00-20:00, zo 08:00-18:00."@nl;
+    rdfs:comment "Uren waarbinnen de publieke dienstverlening beschikbaar is via het kanaal."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Kanaal.Openingsuren>;
     shacl:datatype rdfs:Literal;
     shacl:description "Uren waarbinnen de publieke dienstverlening beschikbaar is via het kanaal."@nl;
@@ -605,6 +889,10 @@
     shacl:name "openingsuren"@nl;
     shacl:path schema:openingHours
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Aard vh kanaal."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Kanaal.Type>;
     shacl:class skos:Concept;
     shacl:description "Aard vh kanaal."@nl;
@@ -612,12 +900,19 @@
     shacl:name "type"@nl;
     shacl:path dc:type
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "beschikbaarheid"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bv startdatum zonder einddatum voor dienstverlening die nog actief is of een aanduiding van het seizoen waarin de dienstverlening wordt aangeboden. Een ingevulde einddatum geeft aan wanneer de dienstverlening werd beëindigd. Begin- en einddatum volgens ISO8601 syntax."@nl;
+    rdfs:comment "Periode waarin de publieke dienstverlening beschikbaar is via het kanaal."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Kanaal.Beschikbaarheid>;
     shacl:class schema:OpeningHoursSpecification;
     shacl:description "Periode waarin de publieke dienstverlening beschikbaar is via het kanaal."@nl;
     shacl:name "beschikbaarheid"@nl;
     shacl:path schema:hoursAvailable
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "eigendomVan"@nl;
+    rdfs:comment "de eigenaar van het Kanaal waarlangs de Publieke Dienstverlening plaatsvindt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Kanaal.Eigendomvan>;
     shacl:class org:Organization;
     shacl:description "de eigenaar van het Kanaal waarlangs de Publieke Dienstverlening plaatsvindt."@nl;
@@ -627,8 +922,14 @@
   shacl:targetClass <http://data.europa.eu/m8g/Channel> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#KenmerkShape> a shacl:NodeShape;
+  rdfs:label "Kenmerk"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Relevant ihkv het Renovatieproject, bvb EPC-waarde, isolatiewaarde vh dak, vastgesteld of beschermd onroerend erfgoed etc"@nl;
+  rdfs:comment "Relevant kenmerk van een Gebouw of Gebouweenheid."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    rdfs:comment "Soort kenmerk."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Kenmerk.Type>;
     shacl:class skos:Concept;
     shacl:description "Soort kenmerk."@nl;
@@ -637,6 +938,10 @@
     shacl:name "type"@nl;
     shacl:path dc:type
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "waarde"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Het datatype Resource is te substitueren door een toepasselijk datatype. Bvb voor een EPC-score een KwantiatieveWaarde met waarde in procent of een skos:Concept met een kwalitatieve waarde (A, B, C etc). Bvb voor onroerend erfgoed een skos:Concept met waarde VastgesteldOnroerendErfgoed of BeschermdOnroerenderfgoed."@nl;
+    rdfs:comment "Waarde die het kenmerk aanneemt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Kenmerk.Waarde>;
     shacl:class rdfs:Resource;
     shacl:description "Waarde die het kenmerk aanneemt."@nl;
@@ -646,12 +951,21 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Kenmerk> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#KlantencontactShape> a shacl:NodeShape;
+  rdfs:label "Klantencontact"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Hiermee bedoelen we elke interactie (telefoongesprek, hoe kort ook, e-mail, formulier, loket bezoek, huisbezoek, ...), inclusief interacties die niet in een CRM geregistreerd worden, maar bijvoorbeeld wel via streepjes geteld worden."@nl;
+  rdfs:comment "Interactie tussen een organisatie en haar klanten, waarbij informatie, ondersteuning of diensten worden uitgewisseld."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Klantencontact> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#KwantitatievewaardeShape> a shacl:NodeShape;
+  rdfs:label "KwantitatieveWaarde"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bv de hoogte van een object,het gewicht,de temperatuur etc. Het gaat om een kenmerk dat numeriek uitgedrukt kan worden en in een bepaalde eenheid. Kwalitatieve aanduidingen zoals hoog,laag ed vallen hier dus niet onder."@nl;
+  rdfs:comment "Aanduiding van de kwantiteit van een bepaald kenmerk van een object."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "waarde"@nl;
+    rdfs:comment "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Kwantitatievewaarde.Waarde>;
     shacl:datatype rdfs:Literal;
     shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
@@ -660,6 +974,9 @@
     shacl:name "waarde"@nl;
     shacl:path schemas:value
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "eenheid"@nl;
+    rdfs:comment "De eenheid waarin de waarde is uitgedrukt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Kwantitatievewaarde.Eenheid>;
     shacl:class skos:Concept;
     shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
@@ -670,12 +987,19 @@
   shacl:targetClass schemas:QuantitativeValue .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#LangstringShape> a shacl:NodeShape;
+  rdfs:label "LangString";
   shacl:closed false;
   shacl:targetClass rdf:langString .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#LeningShape> a shacl:NodeShape;
+  rdfs:label "Lening"@nl;
+  <http://purl.org/vocab/vann/usageNote> "In het geval van Energiehuizen verwijst dit voornamelijk naar de ‘Mijn VerbouwLening’ waarbij de rentevoet jaarlijks is vastgelegd en de lening een maximum looptijd van 25 jaar heeft."@nl;
+  rdfs:comment "Een geldbedrag dat een partij aan een andere partij geeft, op voorwaarde dat die laatste op termijn het geld terugbetaalt. Vaak gaat de terugbetaling van het geleende bedrag gepaard met de betaling van een vergoeding (rente)."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "looptijd"@nl;
+    rdfs:comment "De periode gedurende welke de lening moet worden terugbetaald, meestal uitgedrukt in maanden of jaren."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Lening.Looptijd>;
     shacl:datatype xsd:duration;
     shacl:description "De periode gedurende welke de lening moet worden terugbetaald, meestal uitgedrukt in maanden of jaren."@nl;
@@ -684,6 +1008,9 @@
     shacl:name "looptijd"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#looptijd>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "rentevoet"@nl;
+    rdfs:comment "Het percentage van het geleende bedrag dat de lener periodiek betaalt aan de kredietverstrekker als vergoeding voor het gebruik van het geld, meestal uitgedrukt op jaarbasis (jaarlijkse rentevoet)."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Lening.Rentevoet>;
     shacl:class schemas:QuantitativeValue;
     shacl:description "Het percentage van het geleende bedrag dat de lener periodiek betaalt aan de kredietverstrekker als vergoeding voor het gebruik van het geld, meestal uitgedrukt op jaarbasis (jaarlijkse rentevoet)."@nl;
@@ -695,16 +1022,25 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Lening> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#LiteralShape> a shacl:NodeShape;
+  rdfs:label "Literal";
   shacl:closed false;
   shacl:targetClass rdfs:Literal .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#LocatieShape> a shacl:NodeShape;
+  rdfs:label "Locatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie, GeografischeNaam, Adres etc."@nl;
+  rdfs:comment "Aanduiding van een geografische positie, dmv coordinaten, een toponiem, een adreslabel, een verwijzing naar een plaats/regio of verwijzing naar een adres."@nl;
   shacl:closed false;
   shacl:targetClass prov:Location .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#MomentShape> a shacl:NodeShape;
+  rdfs:label "Moment"@nl;
+  rdfs:comment "Moment met omvang en duur nul."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "inXSDDateTime"@nl;
+    rdfs:comment "Positie in de tijd uitgedrukt dmv xsd:dateTime."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Moment.Inxsddatetime>;
     shacl:datatype xsd:dateTime;
     shacl:description "Positie in de tijd uitgedrukt dmv xsd:dateTime."@nl;
@@ -712,6 +1048,10 @@
     shacl:name "inXSDDateTime"@nl;
     shacl:path <http://www.w3.org/2006/time#inXSDDateTime>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "in EDTF"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Gebruik <a href=\"http://id.loc.gov/datatypes/edtf/EDTF\">http://id.loc.gov/datatypes/edtf/EDTF</a> als datatype van de Literal en een String in EDTF-formaat als waarde. EDTF is en uitgebreide set van notaties voor het vastleggen van datums, tijden en tijdsintervallen, inclusief onzekere of benaderde datums, herhalende datums en open tijdsintervallen. Voorbeelden: 1980/1984 (periode 1980-1984), 1984? (jaar onzeker), 1984~ (jaar bij benadering), 19XX (20ste eeuw), /1980 (periode met onbekend begin), 1984 (ergens in 1984). Zie <a href=\"https://www.loc.gov/standards/datetime/\">EDTF</a> voor meer info."@nl;
+    rdfs:comment "Positie in de tijd van een Moment, uitgedrukt in EDTF."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Moment.InEdtf>;
     shacl:datatype rdfs:Literal;
     shacl:description "Positie in de tijd van een Moment, uitgedrukt in EDTF."@nl;
@@ -722,8 +1062,14 @@
   shacl:targetClass <http://www.w3.org/2006/time#Instant> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#OpeningsurenspecificatieShape> a shacl:NodeShape;
+  rdfs:label "Openingsurenspecificatie"@nl;
+  rdfs:comment "Informatie over de openingsuren ve plaats of dienst."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "open"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Openingsuur vd plaats of dienst op de opgegeven dag vd week."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Openingsurenspecificatie.Open>;
     shacl:datatype xsd:time;
     shacl:description "Openingsuur vd plaats of dienst op de opgegeven dag vd week."@nl;
@@ -731,6 +1077,10 @@
     shacl:name "open"@nl;
     shacl:path schema:opens
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "gesloten"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Sluitingsuur vd plaats of dienst op de opgegeven dag vd week."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Openingsurenspecificatie.Gesloten>;
     shacl:datatype xsd:time;
     shacl:description "Sluitingsuur vd plaats of dienst op de opgegeven dag vd week."@nl;
@@ -738,6 +1088,10 @@
     shacl:name "gesloten"@nl;
     shacl:path schema:closes
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "dag van de week"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Zie https://schema.org/DayOfWeek voor lijst van mogelijke waarden."@nl;
+    rdfs:comment "Dag van de week waarvoor de openingsuren geldig zijn."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Openingsurenspecificatie.DagVanDeWeek>;
     shacl:datatype xsd:anyURI;
     shacl:description "Dag van de week waarvoor de openingsuren geldig zijn."@nl;
@@ -745,6 +1099,10 @@
     shacl:name "dag van de week"@nl;
     shacl:path schema:dayOfWeek
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "geldig van"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Datum vanaf wanneer de opgegeven openingsuren gelden."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Openingsurenspecificatie.GeldigVan>;
     shacl:datatype xsd:dateTime;
     shacl:description "Datum vanaf wanneer de opgegeven openingsuren gelden."@nl;
@@ -752,6 +1110,10 @@
     shacl:name "geldig van"@nl;
     shacl:path schema:validFrom
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "geldig tot"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Datum tot wanneer de opgegeven openingsuren gelden."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Openingsurenspecificatie.GeldigTot>;
     shacl:datatype xsd:dateTime;
     shacl:description "Datum tot wanneer de opgegeven openingsuren gelden."@nl;
@@ -762,8 +1124,15 @@
   shacl:targetClass schema:OpeningHoursSpecification .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#OrganisatieShape> a shacl:NodeShape;
+  rdfs:label "Organisatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> ""@nl;
+  rdfs:comment "Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaansreden die de individuele leden ervan overstijgt en kan handelen als agent. Een organisatie heeft dikwijls een hiërarchische structuur."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "voorkeursnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Naam waarmee de organisatie bij voorkeur wordt aangeduid."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Organisatie.Voorkeursnaam>;
     shacl:datatype rdf:langString;
     shacl:description "Naam waarmee de organisatie bij voorkeur wordt aangeduid."@nl;
@@ -772,6 +1141,10 @@
     shacl:name "voorkeursnaam"@nl;
     shacl:path skos:prefLabel
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "contactinfo"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Organisatie.Contactinfo>;
     shacl:class schema:ContactPoint;
     shacl:description "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."@nl;
@@ -781,8 +1154,15 @@
   shacl:targetClass org:Organization .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#OutputShape> a shacl:NodeShape;
+  rdfs:label "Output"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bv toelating verstrekt door of in naam van de bevoegde instantie (publieke organisatie) dat een agent  toelaat om iets bepaald te ondernemen. Eventueel vormt deze output het noodzakelijk bewijs, voor te leggen om gebruik te kunnen maken van een andere dienstverlening. Dit kan verder gedocumenteerd worden in derRichtlijn geassocieerd met de publieke dienstverlening."@nl;
+  rdfs:comment "Resultaat van een publieke dienstverlening."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "naam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Officiële naam van de output."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Output.Naam>;
     shacl:datatype rdf:langString;
     shacl:description "Officiële naam van de output."@nl;
@@ -790,6 +1170,10 @@
     shacl:name "naam"@nl;
     shacl:path dc:title
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "beschrijving"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Beschrijving van de output."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Output.Beschrijving>;
     shacl:datatype rdf:langString;
     shacl:description "Beschrijving van de output."@nl;
@@ -797,6 +1181,9 @@
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    rdfs:comment "Aard van de output."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Output.Type>;
     shacl:class skos:Concept;
     shacl:description "Aard van de output."@nl;
@@ -806,8 +1193,15 @@
   shacl:targetClass <http://data.europa.eu/m8g/Output> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#ParticipatieShape> a shacl:NodeShape;
+  rdfs:label "Participatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Aanvullend op de standaard associatie van een publieke dienstverlening met de uitvoerder of de bevoegde instantie van een publieke dienstverlening biedt participatie de mogelijkheid om deze of andere relaties gedetailleerder te beschrijven. Bv start- en einddatum van een contract, meerdere rollen voor eenzelfde participatie (bv de dienstverlener is tegelijk ook de bevoegde instantie)."@nl;
+  rdfs:comment "Deelname aan een publieke dienstverlening door een agent."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "rol"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "De rol die de participant speelt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Participatie.Rol>;
     shacl:class skos:Concept;
     shacl:description "De rol die de participant speelt."@nl;
@@ -815,6 +1209,10 @@
     shacl:name "rol"@nl;
     shacl:path <http://data.europa.eu/m8g/role>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "new label"@nl;
+    <http://purl.org/vocab/vann/usageNote> "SOURCE NOTE"@nl;
+    rdfs:comment "SOURCE DEF"@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Participatie.NewLabel>;
     shacl:class <http://purl.org/vocab/cpsv#PublicService>;
     shacl:description "SOURCE DEF"@nl;
@@ -823,6 +1221,8 @@
     shacl:name "new label"@nl;
     shacl:path <https://dummy.com/uri>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "target label"@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Participatie.TargetLabel>;
     shacl:class dc:Agent;
     shacl:maxCount "1";
@@ -833,8 +1233,14 @@
   shacl:targetClass <http://data.europa.eu/m8g/Participation> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#PeriodeShape> a shacl:NodeShape;
+  rdfs:label "Periode"@nl;
+  rdfs:comment "Temporele Entiteit waarvan de omvang en duurtijd verschilt van nul, ttz waarvoor de begin- en eindtijd verschillend zijn."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "in EDTF"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Gebruik <a href=\"http://id.loc.gov/datatypes/edtf/EDTF\">http://id.loc.gov/datatypes/edtf/EDTF</a> als datatype van de Literal en een String in EDTF-formaat als waarde. EDTF is en uitgebreide set van notaties voor het vastleggen van datums, tijden en tijdsintervallen, inclusief onzekere of benaderde datums, herhalende datums en open tijdsintervallen. Voorbeelden: 1980/1984 (periode 1980-1984), 1984? (jaar onzeker), 1984~ (jaar bij benadering), 19XX (20ste eeuw), /1980 (periode met onbekend begin), 1984 (ergens in 1984). Zie <a href=\"https://www.loc.gov/standards/datetime/\">EDTF</a> voor meer info."@nl;
+    rdfs:comment "Waarde van een Periode, uitgedrukt in EDTF."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Periode.InEdtf>;
     shacl:datatype rdfs:Literal;
     shacl:description "Waarde van een Periode, uitgedrukt in EDTF."@nl;
@@ -842,6 +1248,9 @@
     shacl:name "in EDTF"@nl;
     shacl:path <https://periodo.github.io/edtf-ontology/edtfo.ttl#hasEDTFDateTimeDescription>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "tot"@nl;
+    rdfs:comment "Einde ve Temporele Entiteit."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Periode.Tot>;
     shacl:class <http://www.w3.org/2006/time#Instant>;
     shacl:description "Einde ve Temporele Entiteit."@nl;
@@ -849,6 +1258,9 @@
     shacl:name "tot"@nl;
     shacl:path <http://www.w3.org/2006/time#hasEnd>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "van"@nl;
+    rdfs:comment "Start ve Temporele Entiteit."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Periode.Van>;
     shacl:class <http://www.w3.org/2006/time#Instant>;
     shacl:description "Start ve Temporele Entiteit."@nl;
@@ -859,8 +1271,15 @@
   shacl:targetClass <http://www.w3.org/2006/time#ProperInterval> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#PersoonShape> a shacl:NodeShape;
+  rdfs:label "Persoon"@nl;
+  <http://purl.org/vocab/vann/usageNote> "In de rechtspraak betreft het een persoon (in de wettelijke betekenis, ttz met eigen rechtspersoonlijkheid) van de menselijke soort, ttz een fysiek persoon. Tegenhanger is de rechtspersoon, een juridische constructie die een private of publieke organisatie dezelfde rechtspersoonlijkheid geeft als een natuurlijk persoon (kan bv ook schulden hebben, contracten afsluiten, aangeklaagd worden etc)."@nl;
+  rdfs:comment "Natuurlijk persoon."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "achternaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Ook wel familienaam genoemd omdat de achternaam een familiale verwantschap aanduidt."@nl;
+    rdfs:comment "Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Persoon.Achternaam>;
     shacl:datatype xsd:string;
     shacl:description "Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie."@nl;
@@ -869,6 +1288,10 @@
     shacl:name "achternaam"@nl;
     shacl:path foaf:familyName
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "voornaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Naam die een kind bij geboorte wordt gegeven. Onderscheidt het kind van de andere kinderen in de familie."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Persoon.Voornaam>;
     shacl:datatype xsd:string;
     shacl:description "Naam die een kind bij geboorte wordt gegeven. Onderscheidt het kind van de andere kinderen in de familie."@nl;
@@ -876,6 +1299,10 @@
     shacl:name "voornaam"@nl;
     shacl:path foaf:givenName
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "contactinfo"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Informatie zoals email, telefoon... die toelaat de Persoon te contacteren."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Persoon.Contactinfo>;
     shacl:class schema:ContactPoint;
     shacl:description "Informatie zoals email, telefoon... die toelaat de Persoon te contacteren."@nl;
@@ -886,8 +1313,13 @@
   shacl:targetClass <http://www.w3.org/ns/person#Person> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#PlaatsShape> a shacl:NodeShape;
+  rdfs:label "Plaats"@nl;
+  rdfs:comment "Een ruimtelijk gebied of benoemde plaats."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "plaatsnaam"@nl;
+    rdfs:comment "Naam van de plaats of van het gebied."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Plaats.Plaatsnaam>;
     shacl:datatype rdf:langString;
     shacl:description "Naam van de plaats of van het gebied."@nl;
@@ -895,6 +1327,9 @@
     shacl:name "plaatsnaam"@nl;
     shacl:path rdfs:label
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "geometrie"@nl;
+    rdfs:comment "Geometrie van de plaats of het gebied."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Plaats.Geometrie>;
     shacl:class <http://www.w3.org/ns/locn#Geometry>;
     shacl:description "Geometrie van de plaats of het gebied."@nl;
@@ -905,8 +1340,14 @@
   shacl:targetClass dc:Location .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#PlaatsbezoekShape> a shacl:NodeShape;
+  rdfs:label "Plaatsbezoek"@nl;
+  rdfs:comment "Bezoek van een fysieke locatie door een deskundige met als doel dienstverlening."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "locatie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb het Adres of de Plaats."@nl;
+    rdfs:comment "Locatie waar het Plaatsbezoek plaatsvindt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Plaatsbezoek.Locatie>;
     shacl:class prov:Location;
     shacl:description "Locatie waar het Plaatsbezoek plaatsvindt."@nl;
@@ -917,28 +1358,45 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Plaatsbezoek> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#PremieShape> a shacl:NodeShape;
+  rdfs:label "Premie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Een geldbedrag dat wordt toegekend aan huiseigenaren, huurders of bedrijven om hen aan te moedigen energiebesparende maatregelen of duurzame energieoplossingen te implementeren."@nl;
+  rdfs:comment "Een financiële tegemoetkoming of subsidie die wordt verstrekt om een specifieke activiteit of investering te ondersteunen en te stimuleren."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Premie> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#ProfessioneelcontactShape> a shacl:NodeShape;
+  rdfs:label "ProfessioneelContact"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Met professionele contacten bedoelen we alle contacten die een Energiehuis heeft met partnerorganisaties, aannemers en andere partijen die geen klanten zijn."@nl;
+  rdfs:comment "Een interactie of verbinding tussen individuen of organisaties binnen een werkcontext."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#ProfessioneelContact> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#ProjectShape> a shacl:NodeShape;
+  rdfs:label "Project"@nl;
+  rdfs:comment "Tijdelijke onderneming om vastgestelde doelen te bereiken."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    rdfs:comment "Aard van het Project."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Project.Type>;
     shacl:class skos:Concept;
     shacl:description "Aard van het Project."@nl;
     shacl:name "type"@nl;
     shacl:path dc11:type
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "fase"@nl;
+    rdfs:comment "Fase waarin het Project zich bevindt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Project.Fase>;
     shacl:class skos:Concept;
     shacl:description "Fase waarin het Project zich bevindt."@nl;
     shacl:name "fase"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#Project.fase>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "financiering"@nl;
+    rdfs:comment "Renovatieproject waarvoor de Financiering wordt gebruikt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Project.Financiering>;
     shacl:class <https://data.vlaanderen.be/ns/energiehuis#Financiering>;
     shacl:description "Renovatieproject waarvoor de Financiering wordt gebruikt."@nl;
@@ -948,8 +1406,15 @@
   shacl:targetClass dbo:Project .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#PubliekedienstverleningShape> a shacl:NodeShape;
+  rdfs:label "PubliekeDienstverlening"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Voor energiehuizen omvat dit minstens de basistaken (informeren, begeleiden en adviseren/ondersteunen van burgers) zoals bepaald door de Vlaamse Regering in 2018.Daarnaast is ook kredietverstrekking een basistaak van de energiehuizen."@nl;
+  rdfs:comment "Een publieke dienstverlening is een geheel van verplichte of optioneel uitgevoerde of uitvoerbare acties door of in naam van een publieke organisatie. De dienstverlening is ten bate van een individu, een bedrijf, een andere publieke organisatie of groepen hiervan."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "naam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Officiële naam van de publieke dienstverlening."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Publiekedienstverlening.Naam>;
     shacl:datatype rdf:langString;
     shacl:description "Officiële naam van de publieke dienstverlening."@nl;
@@ -957,6 +1422,9 @@
     shacl:name "naam"@nl;
     shacl:path dc:title
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "beschrijving"@nl;
+    rdfs:comment "Beschrijving vd PubliekDienstverlening."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Publiekedienstverlening.Beschrijving>;
     shacl:datatype rdf:langString;
     shacl:description "Beschrijving vd PubliekDienstverlening."@nl;
@@ -964,12 +1432,20 @@
     shacl:name "beschrijving"@nl;
     shacl:path dc:description
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "taal"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Gebruik <a href=\"\"http://www.w3.org/2001/XMLSchema#language\">http://www.w3.org/2001/XMLSchema#language</a> als datatype van de Literal en als String een ISO-639 taalcode bvb \"nl\" voor Nederlands."@nl;
+    rdfs:comment "Taal waarin een publieke dienstverlening wordt aangeboden."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Publiekedienstverlening.Taal>;
     shacl:datatype rdfs:Literal;
     shacl:description "Taal waarin een publieke dienstverlening wordt aangeboden."@nl;
     shacl:name "taal"@nl;
     shacl:path dc:language
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "contactinfo"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Verschillend van de informatie waarmee de publieke organisatie kan worden gecontacteerd."@nl;
+    rdfs:comment "Informatie waarmee de publieke dienstverlening kan worden gecontacteerd."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Publiekedienstverlening.Contactinfo>;
     shacl:class schema:ContactPoint;
     shacl:description "Informatie waarmee de publieke dienstverlening kan worden gecontacteerd."@nl;
@@ -977,18 +1453,30 @@
     shacl:name "contactinfo"@nl;
     shacl:path <http://data.europa.eu/m8g/hasContactPoint>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "produceert"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb een erkenning, financieel voordeel, code, fysiek object…"@nl;
+    rdfs:comment "Het werkelijke resultaat van de uitvoering vd publieke dienstverlening."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Publiekedienstverlening.Produceert>;
     shacl:class <http://data.europa.eu/m8g/Output>;
     shacl:description "Het werkelijke resultaat van de uitvoering vd publieke dienstverlening."@nl;
     shacl:name "produceert"@nl;
     shacl:path <http://purl.org/vocab/cpsv#produces>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "te consumeren via"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bv kantoor, telefoon, website…"@nl;
+    rdfs:comment "Kanaal waarlangs een agent interageert met een publieke dienstverlening."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Publiekedienstverlening.TeConsumerenVia>;
     shacl:class <http://data.europa.eu/m8g/Channel>;
     shacl:description "Kanaal waarlangs een agent interageert met een publieke dienstverlening."@nl;
     shacl:name "te consumeren via"@nl;
     shacl:path <http://data.europa.eu/m8g/hasChannel>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeftVerantwoordelijke"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Of de Publieke Organisatie zelf de dienstverlening aanbiedt of deze uitbesteedt is hierbij niet van belang, ze vervult in de eerste plaats de rol van bevoegde instantie."@nl;
+    rdfs:comment "Publieke Organisatie die verantwoordelijk is voor het aanbieden en beheren van de publieke dienstverlening."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Publiekedienstverlening.Heeftverantwoordelijke>;
     shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
     shacl:description "Publieke Organisatie die verantwoordelijk is voor het aanbieden en beheren van de publieke dienstverlening."@nl;
@@ -997,6 +1485,10 @@
     shacl:name "heeftVerantwoordelijke"@nl;
     shacl:path <http://data.europa.eu/m8g/hasCompetentAuthority>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeftParticipant"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb de rol van lleverancier of de rol van ontvanger van de dienst."@nl;
+    rdfs:comment "Participant die een Rol speelt in de PubliekeDienstverlening."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Publiekedienstverlening.Heeftparticipant>;
     shacl:class dc:Agent;
     shacl:description "Participant die een Rol speelt in de PubliekeDienstverlening."@nl;
@@ -1006,14 +1498,23 @@
   shacl:targetClass <http://purl.org/vocab/cpsv#PublicService> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#PubliekeorganisatieShape> a shacl:NodeShape;
+  rdfs:label "PubliekeOrganisatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "De overheids- en semioverheidsorganisaties die tot men zo tot de publieke sector kan rekenen worden in Europese richtlijn 2003/98/EG \"openbaar lichaam\" genoemd en gedefinieerd als: \"de staat, zijn territoriale lichamen, publiekrechtelijke instellingen, en verenigingen gevormd door een of meer van deze lichamen of een of meer van deze publiekrechtelijke instellingen\". En onder een publiekrechtelijke instelling verstaat men \" iedere instelling die a) is opgericht met het specifieke doel te voorzien in behoeften van algemeen belang die niet van industriële of commerciële aard zijn, en b) rechtspersoonlijkheid heeft, en c) waarvan hetzij de activiteiten in hoofdzaak door de staat of zijn territoriale lichamen of andere publiekrechtelijke instellingen worden gefinancierd, hetzij het beheer is onderworpen aan toezicht door deze laatste, hetzij de leden van het bestuursorgaan, het leidinggevend orgaan of het toezichthoudend orgaan voor meer dan de helft door de staat, zijn territoriale lichamen of andere publiekrechtelijke instellingen zijn aangewezen.\"."@nl;
+  rdfs:comment "Een Organisatie die volgens een wettelijk kader behoort tot de publieke sector, ongeacht het bestuursniveau waarop dat kader van kracht is."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "werkingsgebied"@nl;
+    rdfs:comment "Administratief gebied dat de Publieke Organisatie dekt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Publiekeorganisatie.Werkingsgebied>;
     shacl:class dc:Location;
     shacl:description "Administratief gebied dat de Publieke Organisatie dekt."@nl;
     shacl:name "werkingsgebied"@nl;
     shacl:path dc:spatial
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "test"@nl;
+    rdfs:comment "TODO"@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Publiekeorganisatie.Test>;
     shacl:class org:Organization;
     shacl:description "TODO"@nl;
@@ -1023,8 +1524,13 @@
   shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#RenovatiebegeleidingShape> a shacl:NodeShape;
+  rdfs:label "Renovatiebegeleiding"@nl;
+  rdfs:comment "Meer gespecialiseerde vorm van Begeleiding waarbij een Renovatieproject wordt begeleid."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "renovatiebegeleider"@nl;
+    rdfs:comment "Een persoon die de klant maximaal ontzorgt voor, tijdens en na de renovatie door zowel te ondersteunen bij het technische, financiële als administratieve aspect van renovatie."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Renovatiebegeleiding.Renovatiebegeleider>;
     shacl:class dc:Agent;
     shacl:description "Een persoon die de klant maximaal ontzorgt voor, tijdens en na de renovatie door zowel te ondersteunen bij het technische, financiële als administratieve aspect van renovatie."@nl;
@@ -1034,20 +1540,33 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Renovatiebegeleiding> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#RenovatieprojectShape> a shacl:NodeShape;
+  rdfs:label "Renovatieproject"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Een plan of onderneming gericht op de vernieuwing van onroerend goed, zoals woningen, commerciële gebouwen of industriële panden."@nl;
+  rdfs:comment "Renovatieproject"@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "categorieWerken"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Indeling van diverse renovatietaken en activiteiten."@nl;
+    rdfs:comment "categorieWerken"@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Renovatieproject.Categoriewerken>;
     shacl:class skos:Concept;
     shacl:description "categorieWerken"@nl;
     shacl:name "categorieWerken"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#categorieWerken>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "gerenoveerdGebouw"@nl;
+    rdfs:comment "Verwijzing naar het Gebouw dat wordt gerenoveerd."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Renovatieproject.Gerenoveerdgebouw>;
     shacl:class <https://data.vlaanderen.be/ns/gebouw#Gebouw>;
     shacl:description "Verwijzing naar het Gebouw dat wordt gerenoveerd."@nl;
     shacl:name "gerenoveerdGebouw"@nl;
     shacl:path <https://data.vlaanderen.be/ns/energiehuis#gerenoveerdGebouw>
   ], [
+    a shacl:PropertyShape;
+    rdfs:label "gerenoveerdeGebouweenheid"@nl;
+    rdfs:comment "Verwijzing naar de Gebouweenheid dat wordt gerenoveerd."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#Renovatieproject.Gerenoveerdegebouweenheid>;
     shacl:class <https://data.vlaanderen.be/ns/gebouw#Gebouweenheid>;
     shacl:description "Verwijzing naar de Gebouweenheid dat wordt gerenoveerd."@nl;
@@ -1057,29 +1576,43 @@
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#Renovatieproject> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#ResourceShape> a shacl:NodeShape;
+  rdfs:label "Resource";
+  <http://purl.org/vocab/vann/usageNote> "Alle klassen zijn hier in principe subklasse van. In deze context te substitueren door de gewenste klasse of datatype."@nl;
+  rdfs:comment "Klasse van objecten van om het even welk type."@nl;
   shacl:closed false;
   shacl:targetClass rdfs:Resource .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#StringShape> a shacl:NodeShape;
+  rdfs:label "String";
   shacl:closed false;
   shacl:targetClass xsd:string .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#TemporeleentiteitShape> a shacl:NodeShape;
+  rdfs:label "TemporeleEntiteit"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Die temporele objecten zijn temporele geometrische primitieven zoals Moment of Periode.OPMERKING: Dit datatype is Abstract,gebruik een van de subklassen."@nl;
+  rdfs:comment "Abstracte klasse voor temporele objecten."@nl;
   shacl:closed false;
   shacl:targetClass <http://www.w3.org/2006/time#TemporalEntity> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#TimeShape> a shacl:NodeShape;
+  rdfs:label "Time";
   shacl:closed false;
   shacl:targetClass xsd:time .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#UriShape> a shacl:NodeShape;
+  rdfs:label "URI";
   shacl:closed false;
   shacl:targetClass xsd:anyURI .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#ValutaShape> a shacl:NodeShape;
+  rdfs:label "Valuta"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Te gebruiken ipv Concept als een voorgedefinieerde eenheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/currency/EUR\">Euro</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-UNITS-CURRENCY.html\">QUDT-currency-units</a> voor meer info."@nl;
+  rdfs:comment "Gebruikt voor elke eenheid die een munteenheid uitdrukt."@nl;
   shacl:closed false;
   shacl:targetClass <http://qudt.org/schema/qudt/CurrencyUnit> .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/energiehuis/ontwerpstandaard/test#WoonenenergieloketShape> a shacl:NodeShape;
+  rdfs:label "WoonEnEnergieloket"@nl;
+  rdfs:comment "Kanaal waarlangs een PubliekeDienstverlening een breed scala aan diensten ter beschikking stelt met betrekking tot wonen en energie (o.a. wonen, verhuren, bouwen, woningkwaliteit, klimaatadaptatie, energie)."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/energiehuis#WoonEnEnergieloket> .

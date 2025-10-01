@@ -2,15 +2,23 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for range "http://www.w3.org/2004/02/skos/core#Concept".
+2025-10-01T14:03:31.463Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-issue-tracking-voor-burgers-en-organisaties.jsonld#L1570)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:49:19)
+2025-10-01T14:03:31.465Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-issue-tracking-voor-burgers-en-organisaties.jsonld#L1581)".
 
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+2025-10-01T14:03:31.465Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-issue-tracking-voor-burgers-en-organisaties.jsonld#L1592)".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:51)
+2025-10-01T14:03:31.465Z warn: Unable to find the description for subject "urn:oslo-toolchain:2049156247".
 
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+#||# oslo-shacl-template-generator for language en  
 
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+#||# -------------------------------------  
+
+2025-10-01T14:03:32.134Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-issue-tracking-voor-burgers-en-organisaties.jsonld#L1570)".
+
+2025-10-01T14:03:32.136Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-issue-tracking-voor-burgers-en-organisaties.jsonld#L1581)".
+
+2025-10-01T14:03:32.136Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-issue-tracking-voor-burgers-en-organisaties.jsonld#L1592)".
+
+2025-10-01T14:03:32.136Z warn: Unable to find the description for subject "urn:oslo-toolchain:2049156247".
 

@@ -2,9 +2,9 @@
 
 #||# -------------------------------------
 
-2025-02-11T10:53:27.065Z warn: Unable to find the contributor type for "Dieter De Paepe" using column "Gebouw". Please make sure this column has a value set for this person.
+2025-10-01T13:52:27.866Z warn: Unable to find the contributor type for "Dieter De Paepe" using column "Gebouw". Please make sure this column has a value set for this person.
 
-2025-02-11T10:53:27.067Z warn: Unable to find the contributor type for "Erik Mannens" using column "Gebouw". Please make sure this column has a value set for this person.
+2025-10-01T13:52:27.868Z warn: Unable to find the contributor type for "Erik Mannens" using column "Gebouw". Please make sure this column has a value set for this person.
 
-2025-02-11T10:53:27.067Z warn: Unable to find the contributor type for "Laurens De Vocht" using column "Gebouw". Please make sure this column has a value set for this person.
+2025-10-01T13:52:27.869Z warn: Unable to find the contributor type for "Laurens De Vocht" using column "Gebouw". Please make sure this column has a value set for this person.
 
