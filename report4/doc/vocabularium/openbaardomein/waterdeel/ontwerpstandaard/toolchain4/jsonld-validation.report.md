@@ -2,91 +2,91 @@
 
 #||# -------------------------------------  
 
-2025-10-01T14:06:13.634Z info: Loaded 45 URI prefixes into whitelist
+2025-10-01T20:37:08.178Z info: Loaded 45 URI prefixes into whitelist
 
-2025-10-01T14:06:13.719Z warn: Found non-whitelisted assigned URI: http://schema.org/width for subject: [urn:oslo-toolchain:e08099ec5b7f2879c58f18825eb198279d348536c313ab79a8af35ef7e610a81](all-waterdeel.jsonld#L1139)
+2025-10-01T20:37:08.276Z warn: Found non-whitelisted assigned URI: http://schema.org/width for subject: [urn:oslo-toolchain:e08099ec5b7f2879c58f18825eb198279d348536c313ab79a8af35ef7e610a81](all-waterdeel.jsonld#L1139)
 
-2025-10-01T14:06:13.719Z warn: Found non-whitelisted assigned URI: http://open.vocab.org/terms/length for subject: [urn:oslo-toolchain:60fdb32ddbed385502938e1675d850427c6f919a3682634da928ac67b5721aa1](all-waterdeel.jsonld#L1189)
+2025-10-01T20:37:08.276Z warn: Found non-whitelisted assigned URI: http://open.vocab.org/terms/length for subject: [urn:oslo-toolchain:60fdb32ddbed385502938e1675d850427c6f919a3682634da928ac67b5721aa1](all-waterdeel.jsonld#L1189)
 
-2025-10-01T14:06:13.720Z warn: Found non-whitelisted assigned URI: http://schema.org/Thing for subject: [urn:oslo-toolchain:2f659f0e03e3c38af3016acde7aa10c66a533a402ab931cd6ed070d0ba09d97c](all-waterdeel.jsonld#L1571)
+2025-10-01T20:37:08.276Z warn: Found non-whitelisted assigned URI: http://schema.org/Thing for subject: [urn:oslo-toolchain:2f659f0e03e3c38af3016acde7aa10c66a533a402ab931cd6ed070d0ba09d97c](all-waterdeel.jsonld#L1571)
 
-2025-10-01T14:06:13.721Z warn: Found sentence without a '.': 'GRB Lexicon: Definitie Watergang' for subject: [urn:oslo-toolchain:deb85d660c50cd56ef617e92a1661123a5435a8d36f87d813f9ce9357043b035](all-waterdeel.jsonld#L234)
+2025-10-01T20:37:08.277Z warn: Found sentence without a '.': 'GRB Lexicon: Definitie Watergang' for subject: [urn:oslo-toolchain:deb85d660c50cd56ef617e92a1661123a5435a8d36f87d813f9ce9357043b035](all-waterdeel.jsonld#L234)
 
-2025-10-01T14:06:13.721Z warn: Found sentence without a '.': 'Bron definitie: naar GRB-basis: WGR: Gracht' for subject: [urn:oslo-toolchain:91c8f5360b07b838be0a287ce371e6912631baa55ee2366b9e7b6ad818168b10](all-waterdeel.jsonld#L392)
+2025-10-01T20:37:08.277Z warn: Found sentence without a '.': 'Bron definitie: naar GRB-basis: WGR: Gracht' for subject: [urn:oslo-toolchain:91c8f5360b07b838be0a287ce371e6912631baa55ee2366b9e7b6ad818168b10](all-waterdeel.jsonld#L392)
 
-2025-10-01T14:06:13.721Z warn: Found sentence without a '.': 'Bron object: GRB-entiteit: Watergang (Wtz), NOTE Bron object: VHA: waterloop' for subject: [urn:oslo-toolchain:be1fa0096682048af746742f39716675f81ff8839f599eae52f8155e15fc409c](all-waterdeel.jsonld#L439)
+2025-10-01T20:37:08.277Z warn: Found sentence without a '.': 'Bron object: GRB-entiteit: Watergang (Wtz), NOTE Bron object: VHA: waterloop' for subject: [urn:oslo-toolchain:be1fa0096682048af746742f39716675f81ff8839f599eae52f8155e15fc409c](all-waterdeel.jsonld#L439)
 
-2025-10-01T14:06:13.721Z warn: Found sentence without a '.': 'Naar GRB-entiteit Watergang (Wtz): Attribuut NAAM WATERLOOP' for subject: [urn:oslo-toolchain:cc298b7467f75c011d9cfcc0afd5d5f35aadda1c67e5ff4921c29f3c7cf98949](all-waterdeel.jsonld#L1019)
+2025-10-01T20:37:08.277Z warn: Found sentence without a '.': 'Naar GRB-entiteit Watergang (Wtz): Attribuut NAAM WATERLOOP' for subject: [urn:oslo-toolchain:cc298b7467f75c011d9cfcc0afd5d5f35aadda1c67e5ff4921c29f3c7cf98949](all-waterdeel.jsonld#L1019)
 
-2025-10-01T14:06:13.721Z warn: Found sentence without a '.': 'Voorbeeld: een bepaalde GRACHT wordt in dit geval gedefinieerd door te verwijzen naar een relatieobject met volgende eigenschappen: UUID = 289130, bronNaam = GRB' for subject: [urn:oslo-toolchain:0986fe4f05d6fa51cc3b43cda54a14498f1f4790c1b51be4ccfd4f078c1e24c4](all-waterdeel.jsonld#L1730)
+2025-10-01T20:37:08.278Z warn: Found sentence without a '.': 'Voorbeeld: een bepaalde GRACHT wordt in dit geval gedefinieerd door te verwijzen naar een relatieobject met volgende eigenschappen: UUID = 289130, bronNaam = GRB' for subject: [urn:oslo-toolchain:0986fe4f05d6fa51cc3b43cda54a14498f1f4790c1b51be4ccfd4f078c1e24c4](all-waterdeel.jsonld#L1730)
 
-2025-10-01T14:06:13.721Z warn: Found sentence without a '.': 'GRB Lexicon: Definitie Watergang' for subject: [urn:oslo-toolchain:deb85d660c50cd56ef617e92a1661123a5435a8d36f87d813f9ce9357043b035](all-waterdeel.jsonld#L234)
+2025-10-01T20:37:08.278Z warn: Found sentence without a '.': 'GRB Lexicon: Definitie Watergang' for subject: [urn:oslo-toolchain:deb85d660c50cd56ef617e92a1661123a5435a8d36f87d813f9ce9357043b035](all-waterdeel.jsonld#L234)
 
-2025-10-01T14:06:13.721Z warn: Found sentence without a '.': 'Bron definitie: naar GRB-basis: WGR: Gracht' for subject: [urn:oslo-toolchain:91c8f5360b07b838be0a287ce371e6912631baa55ee2366b9e7b6ad818168b10](all-waterdeel.jsonld#L392)
+2025-10-01T20:37:08.278Z warn: Found sentence without a '.': 'Bron definitie: naar GRB-basis: WGR: Gracht' for subject: [urn:oslo-toolchain:91c8f5360b07b838be0a287ce371e6912631baa55ee2366b9e7b6ad818168b10](all-waterdeel.jsonld#L392)
 
-2025-10-01T14:06:13.721Z warn: Found sentence without a '.': 'Bron object: GRB-entiteit: Watergang (Wtz), NOTE Bron object: VHA: waterloop' for subject: [urn:oslo-toolchain:be1fa0096682048af746742f39716675f81ff8839f599eae52f8155e15fc409c](all-waterdeel.jsonld#L439)
+2025-10-01T20:37:08.278Z warn: Found sentence without a '.': 'Bron object: GRB-entiteit: Watergang (Wtz), NOTE Bron object: VHA: waterloop' for subject: [urn:oslo-toolchain:be1fa0096682048af746742f39716675f81ff8839f599eae52f8155e15fc409c](all-waterdeel.jsonld#L439)
 
-2025-10-01T14:06:13.721Z warn: Found sentence without a '.': 'Voorbeeld: een bepaalde GRACHT wordt in dit geval gedefinieerd door te verwijzen naar een relatieobject met volgende eigenschappen: UUID = 289130, bronNaam = GRB' for subject: [urn:oslo-toolchain:0986fe4f05d6fa51cc3b43cda54a14498f1f4790c1b51be4ccfd4f078c1e24c4](all-waterdeel.jsonld#L1730)
+2025-10-01T20:37:08.278Z warn: Found sentence without a '.': 'Voorbeeld: een bepaalde GRACHT wordt in dit geval gedefinieerd door te verwijzen naar een relatieobject met volgende eigenschappen: UUID = 289130, bronNaam = GRB' for subject: [urn:oslo-toolchain:0986fe4f05d6fa51cc3b43cda54a14498f1f4790c1b51be4ccfd4f078c1e24c4](all-waterdeel.jsonld#L1730)
 
-2025-10-01T14:06:13.722Z warn: Labels must only contain alphabetical characters: 'Sloot (deprecated)' for subject: [urn:oslo-toolchain:f612cf6dee4b33f7b17f005e2dec428af64c467af20c76363132e019480fd945](all-waterdeel.jsonld#L357)
+2025-10-01T20:37:08.279Z warn: Labels must only contain alphabetical characters: 'Sloot (deprecated)' for subject: [urn:oslo-toolchain:f612cf6dee4b33f7b17f005e2dec428af64c467af20c76363132e019480fd945](all-waterdeel.jsonld#L357)
 
-2025-10-01T14:06:13.725Z error: Found missing class or attribute (Ding): [urn:oslo-toolchain:2f659f0e03e3c38af3016acde7aa10c66a533a402ab931cd6ed070d0ba09d97c](all-waterdeel.jsonld#L1571)
+2025-10-01T20:37:08.282Z error: Found missing class or attribute (Ding): [urn:oslo-toolchain:2f659f0e03e3c38af3016acde7aa10c66a533a402ab931cd6ed070d0ba09d97c](all-waterdeel.jsonld#L1571)
 
-2025-10-01T14:06:13.725Z error: Found missing class or attribute (Object): [urn:oslo-toolchain:4502c49461b64cf6e5e475ad4f08c0d4d3252a757ea13f89220ffb1d21eb4192](all-waterdeel.jsonld#L1582)
+2025-10-01T20:37:08.282Z error: Found missing class or attribute (Object): [urn:oslo-toolchain:4502c49461b64cf6e5e475ad4f08c0d4d3252a757ea13f89220ffb1d21eb4192](all-waterdeel.jsonld#L1582)
 
-2025-10-01T14:06:13.725Z info: Validation found 3 non-whitelisted assigned URIs
+2025-10-01T20:37:08.282Z info: Validation found 3 non-whitelisted assigned URIs
 
-2025-10-01T14:06:13.725Z info: Validation found 9 sentences with spelling mistakes.
+2025-10-01T20:37:08.282Z info: Validation found 9 sentences with spelling mistakes.
 
-2025-10-01T14:06:13.725Z info: Validation found 1 labels with spelling mistakes.
+2025-10-01T20:37:08.282Z info: Validation found 1 labels with spelling mistakes.
 
-2025-10-01T14:06:13.725Z info: Validation successful! All base URIs seem to be valid.
+2025-10-01T20:37:08.283Z info: Validation successful! All base URIs seem to be valid.
 
-2025-10-01T14:06:13.725Z info: Validation found 2 missing referenced classes or attributes.
+2025-10-01T20:37:08.283Z info: Validation found 2 missing referenced classes or attributes.
 
 #||# oslo-jsonld-validator   
 
 #||# -------------------------------------  
 
-2025-10-01T14:06:14.245Z info: Loaded 45 URI prefixes into whitelist
+2025-10-01T20:37:08.698Z info: Loaded 45 URI prefixes into whitelist
 
-2025-10-01T14:06:14.347Z warn: Found non-whitelisted assigned URI: http://schema.org/width for subject: [urn:oslo-toolchain:e08099ec5b7f2879c58f18825eb198279d348536c313ab79a8af35ef7e610a81](all-waterdeel.jsonld#L1139)
+2025-10-01T20:37:08.807Z warn: Found non-whitelisted assigned URI: http://schema.org/width for subject: [urn:oslo-toolchain:e08099ec5b7f2879c58f18825eb198279d348536c313ab79a8af35ef7e610a81](all-waterdeel.jsonld#L1139)
 
-2025-10-01T14:06:14.347Z warn: Found non-whitelisted assigned URI: http://open.vocab.org/terms/length for subject: [urn:oslo-toolchain:60fdb32ddbed385502938e1675d850427c6f919a3682634da928ac67b5721aa1](all-waterdeel.jsonld#L1189)
+2025-10-01T20:37:08.808Z warn: Found non-whitelisted assigned URI: http://open.vocab.org/terms/length for subject: [urn:oslo-toolchain:60fdb32ddbed385502938e1675d850427c6f919a3682634da928ac67b5721aa1](all-waterdeel.jsonld#L1189)
 
-2025-10-01T14:06:14.347Z warn: Found non-whitelisted assigned URI: http://schema.org/Thing for subject: [urn:oslo-toolchain:2f659f0e03e3c38af3016acde7aa10c66a533a402ab931cd6ed070d0ba09d97c](all-waterdeel.jsonld#L1571)
+2025-10-01T20:37:08.808Z warn: Found non-whitelisted assigned URI: http://schema.org/Thing for subject: [urn:oslo-toolchain:2f659f0e03e3c38af3016acde7aa10c66a533a402ab931cd6ed070d0ba09d97c](all-waterdeel.jsonld#L1571)
 
-2025-10-01T14:06:14.348Z warn: Found sentence without a '.': 'GRB Lexicon: Definitie Watergang' for subject: [urn:oslo-toolchain:deb85d660c50cd56ef617e92a1661123a5435a8d36f87d813f9ce9357043b035](all-waterdeel.jsonld#L234)
+2025-10-01T20:37:08.809Z warn: Found sentence without a '.': 'GRB Lexicon: Definitie Watergang' for subject: [urn:oslo-toolchain:deb85d660c50cd56ef617e92a1661123a5435a8d36f87d813f9ce9357043b035](all-waterdeel.jsonld#L234)
 
-2025-10-01T14:06:14.348Z warn: Found sentence without a '.': 'Bron definitie: naar GRB-basis: WGR: Gracht' for subject: [urn:oslo-toolchain:91c8f5360b07b838be0a287ce371e6912631baa55ee2366b9e7b6ad818168b10](all-waterdeel.jsonld#L392)
+2025-10-01T20:37:08.809Z warn: Found sentence without a '.': 'Bron definitie: naar GRB-basis: WGR: Gracht' for subject: [urn:oslo-toolchain:91c8f5360b07b838be0a287ce371e6912631baa55ee2366b9e7b6ad818168b10](all-waterdeel.jsonld#L392)
 
-2025-10-01T14:06:14.348Z warn: Found sentence without a '.': 'Bron object: GRB-entiteit: Watergang (Wtz), NOTE Bron object: VHA: waterloop' for subject: [urn:oslo-toolchain:be1fa0096682048af746742f39716675f81ff8839f599eae52f8155e15fc409c](all-waterdeel.jsonld#L439)
+2025-10-01T20:37:08.809Z warn: Found sentence without a '.': 'Bron object: GRB-entiteit: Watergang (Wtz), NOTE Bron object: VHA: waterloop' for subject: [urn:oslo-toolchain:be1fa0096682048af746742f39716675f81ff8839f599eae52f8155e15fc409c](all-waterdeel.jsonld#L439)
 
-2025-10-01T14:06:14.349Z warn: Found sentence without a '.': 'Naar GRB-entiteit Watergang (Wtz): Attribuut NAAM WATERLOOP' for subject: [urn:oslo-toolchain:cc298b7467f75c011d9cfcc0afd5d5f35aadda1c67e5ff4921c29f3c7cf98949](all-waterdeel.jsonld#L1019)
+2025-10-01T20:37:08.809Z warn: Found sentence without a '.': 'Naar GRB-entiteit Watergang (Wtz): Attribuut NAAM WATERLOOP' for subject: [urn:oslo-toolchain:cc298b7467f75c011d9cfcc0afd5d5f35aadda1c67e5ff4921c29f3c7cf98949](all-waterdeel.jsonld#L1019)
 
-2025-10-01T14:06:14.349Z warn: Found sentence without a '.': 'Voorbeeld: een bepaalde GRACHT wordt in dit geval gedefinieerd door te verwijzen naar een relatieobject met volgende eigenschappen: UUID = 289130, bronNaam = GRB' for subject: [urn:oslo-toolchain:0986fe4f05d6fa51cc3b43cda54a14498f1f4790c1b51be4ccfd4f078c1e24c4](all-waterdeel.jsonld#L1730)
+2025-10-01T20:37:08.809Z warn: Found sentence without a '.': 'Voorbeeld: een bepaalde GRACHT wordt in dit geval gedefinieerd door te verwijzen naar een relatieobject met volgende eigenschappen: UUID = 289130, bronNaam = GRB' for subject: [urn:oslo-toolchain:0986fe4f05d6fa51cc3b43cda54a14498f1f4790c1b51be4ccfd4f078c1e24c4](all-waterdeel.jsonld#L1730)
 
-2025-10-01T14:06:14.349Z warn: Found sentence without a '.': 'GRB Lexicon: Definitie Watergang' for subject: [urn:oslo-toolchain:deb85d660c50cd56ef617e92a1661123a5435a8d36f87d813f9ce9357043b035](all-waterdeel.jsonld#L234)
+2025-10-01T20:37:08.810Z warn: Found sentence without a '.': 'GRB Lexicon: Definitie Watergang' for subject: [urn:oslo-toolchain:deb85d660c50cd56ef617e92a1661123a5435a8d36f87d813f9ce9357043b035](all-waterdeel.jsonld#L234)
 
-2025-10-01T14:06:14.349Z warn: Found sentence without a '.': 'Bron definitie: naar GRB-basis: WGR: Gracht' for subject: [urn:oslo-toolchain:91c8f5360b07b838be0a287ce371e6912631baa55ee2366b9e7b6ad818168b10](all-waterdeel.jsonld#L392)
+2025-10-01T20:37:08.810Z warn: Found sentence without a '.': 'Bron definitie: naar GRB-basis: WGR: Gracht' for subject: [urn:oslo-toolchain:91c8f5360b07b838be0a287ce371e6912631baa55ee2366b9e7b6ad818168b10](all-waterdeel.jsonld#L392)
 
-2025-10-01T14:06:14.349Z warn: Found sentence without a '.': 'Bron object: GRB-entiteit: Watergang (Wtz), NOTE Bron object: VHA: waterloop' for subject: [urn:oslo-toolchain:be1fa0096682048af746742f39716675f81ff8839f599eae52f8155e15fc409c](all-waterdeel.jsonld#L439)
+2025-10-01T20:37:08.810Z warn: Found sentence without a '.': 'Bron object: GRB-entiteit: Watergang (Wtz), NOTE Bron object: VHA: waterloop' for subject: [urn:oslo-toolchain:be1fa0096682048af746742f39716675f81ff8839f599eae52f8155e15fc409c](all-waterdeel.jsonld#L439)
 
-2025-10-01T14:06:14.349Z warn: Found sentence without a '.': 'Voorbeeld: een bepaalde GRACHT wordt in dit geval gedefinieerd door te verwijzen naar een relatieobject met volgende eigenschappen: UUID = 289130, bronNaam = GRB' for subject: [urn:oslo-toolchain:0986fe4f05d6fa51cc3b43cda54a14498f1f4790c1b51be4ccfd4f078c1e24c4](all-waterdeel.jsonld#L1730)
+2025-10-01T20:37:08.810Z warn: Found sentence without a '.': 'Voorbeeld: een bepaalde GRACHT wordt in dit geval gedefinieerd door te verwijzen naar een relatieobject met volgende eigenschappen: UUID = 289130, bronNaam = GRB' for subject: [urn:oslo-toolchain:0986fe4f05d6fa51cc3b43cda54a14498f1f4790c1b51be4ccfd4f078c1e24c4](all-waterdeel.jsonld#L1730)
 
-2025-10-01T14:06:14.350Z warn: Labels must only contain alphabetical characters: 'Sloot (deprecated)' for subject: [urn:oslo-toolchain:f612cf6dee4b33f7b17f005e2dec428af64c467af20c76363132e019480fd945](all-waterdeel.jsonld#L357)
+2025-10-01T20:37:08.811Z warn: Labels must only contain alphabetical characters: 'Sloot (deprecated)' for subject: [urn:oslo-toolchain:f612cf6dee4b33f7b17f005e2dec428af64c467af20c76363132e019480fd945](all-waterdeel.jsonld#L357)
 
-2025-10-01T14:06:14.353Z error: Found missing class or attribute (Ding): [urn:oslo-toolchain:2f659f0e03e3c38af3016acde7aa10c66a533a402ab931cd6ed070d0ba09d97c](all-waterdeel.jsonld#L1571)
+2025-10-01T20:37:08.814Z error: Found missing class or attribute (Ding): [urn:oslo-toolchain:2f659f0e03e3c38af3016acde7aa10c66a533a402ab931cd6ed070d0ba09d97c](all-waterdeel.jsonld#L1571)
 
-2025-10-01T14:06:14.353Z error: Found missing class or attribute (Object): [urn:oslo-toolchain:4502c49461b64cf6e5e475ad4f08c0d4d3252a757ea13f89220ffb1d21eb4192](all-waterdeel.jsonld#L1582)
+2025-10-01T20:37:08.815Z error: Found missing class or attribute (Object): [urn:oslo-toolchain:4502c49461b64cf6e5e475ad4f08c0d4d3252a757ea13f89220ffb1d21eb4192](all-waterdeel.jsonld#L1582)
 
-2025-10-01T14:06:14.354Z info: Validation found 3 non-whitelisted assigned URIs
+2025-10-01T20:37:08.815Z info: Validation found 3 non-whitelisted assigned URIs
 
-2025-10-01T14:06:14.354Z info: Validation found 9 sentences with spelling mistakes.
+2025-10-01T20:37:08.815Z info: Validation found 9 sentences with spelling mistakes.
 
-2025-10-01T14:06:14.354Z info: Validation found 1 labels with spelling mistakes.
+2025-10-01T20:37:08.815Z info: Validation found 1 labels with spelling mistakes.
 
-2025-10-01T14:06:14.354Z info: Validation successful! All base URIs seem to be valid.
+2025-10-01T20:37:08.815Z info: Validation successful! All base URIs seem to be valid.
 
-2025-10-01T14:06:14.354Z info: Validation found 2 missing referenced classes or attributes.
+2025-10-01T20:37:08.816Z info: Validation found 2 missing referenced classes or attributes.
 

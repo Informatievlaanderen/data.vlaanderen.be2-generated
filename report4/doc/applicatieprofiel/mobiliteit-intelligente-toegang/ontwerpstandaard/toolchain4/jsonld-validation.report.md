@@ -2,31 +2,31 @@
 
 #||# -------------------------------------  
 
-2025-10-01T14:03:50.862Z info: Loaded 45 URI prefixes into whitelist
+2025-10-01T20:34:41.166Z info: Loaded 45 URI prefixes into whitelist
 
-2025-10-01T14:03:50.883Z info: Validation successful! All assigned URIs are whitelisted.
+2025-10-01T20:34:41.181Z info: Validation successful! All assigned URIs are whitelisted.
 
-2025-10-01T14:03:50.883Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
+2025-10-01T20:34:41.181Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
 
-2025-10-01T14:03:50.883Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2025-10-01T20:34:41.181Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-2025-10-01T14:03:50.883Z info: Validation successful! All base URIs seem to be valid.
+2025-10-01T20:34:41.181Z info: Validation successful! All base URIs seem to be valid.
 
-2025-10-01T14:03:50.883Z info: Validation successful! All referenced classes and attributes seem to be included.
+2025-10-01T20:34:41.181Z info: Validation successful! All referenced classes and attributes seem to be included.
 
 #||# oslo-jsonld-validator   
 
 #||# -------------------------------------  
 
-2025-10-01T14:03:51.452Z info: Loaded 45 URI prefixes into whitelist
+2025-10-01T20:34:41.626Z info: Loaded 45 URI prefixes into whitelist
 
-2025-10-01T14:03:51.473Z info: Validation successful! All assigned URIs are whitelisted.
+2025-10-01T20:34:41.641Z info: Validation successful! All assigned URIs are whitelisted.
 
-2025-10-01T14:03:51.473Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
+2025-10-01T20:34:41.641Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
 
-2025-10-01T14:03:51.473Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2025-10-01T20:34:41.641Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-2025-10-01T14:03:51.473Z info: Validation successful! All base URIs seem to be valid.
+2025-10-01T20:34:41.641Z info: Validation successful! All base URIs seem to be valid.
 
-2025-10-01T14:03:51.473Z info: Validation successful! All referenced classes and attributes seem to be included.
+2025-10-01T20:34:41.641Z info: Validation successful! All referenced classes and attributes seem to be included.
 

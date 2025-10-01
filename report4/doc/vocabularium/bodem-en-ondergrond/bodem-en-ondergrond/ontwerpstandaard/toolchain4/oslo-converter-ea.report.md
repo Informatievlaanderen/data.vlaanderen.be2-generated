@@ -2,49 +2,49 @@
 
 #||# -------------------------------------
 
-2025-10-01T13:51:34.352Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Grondboringen:Boorgat:(Boorgat -> Grondmonster))
+2025-10-01T20:23:20.472Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Grondboringen:Boorgat:(Boorgat -> Grondmonster))
 
-2025-10-01T13:51:34.356Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Generiek:Agent:rapporteertAan)
+2025-10-01T20:23:20.473Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-10-01T13:51:34.356Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-BO_Observaties:Schuifweerstandproef:(Schuifweerstandproef -> Schuifweerstandproef))
+2025-10-01T20:23:20.473Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-BO_Observaties:Schuifweerstandproef:(Schuifweerstandproef -> Schuifweerstandproef))
 
-2025-10-01T13:51:34.356Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-BO_Observaties:Schuifweerstandskarakteristieken:(Schuifweerstandskarakteristieken -> Schuifweerstandproef))
+2025-10-01T20:23:20.473Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-BO_Observaties:Schuifweerstandskarakteristieken:(Schuifweerstandskarakteristieken -> Schuifweerstandproef))
 
-2025-10-01T13:51:34.356Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-ObservatiesEnMetingen:Monster:(Monster -> BemonsteringsProces))
+2025-10-01T20:23:20.474Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-ObservatiesEnMetingen:Monster:(Monster -> BemonsteringsProces))
 
-2025-10-01T13:51:34.356Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:SSN/SOSA:Bemonstering:(Bemonstering -> Grondobject))
+2025-10-01T20:23:20.474Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:SSN/SOSA:Bemonstering:(Bemonstering -> Grondobject))
 
-2025-10-01T13:51:34.356Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-ObservatiesEnMetingen:Bemonsteringsobject:(Bemonsteringsobject -> Grondobject))
+2025-10-01T20:23:20.474Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO-ObservatiesEnMetingen:Bemonsteringsobject:(Bemonsteringsobject -> Grondobject))
 
-2025-10-01T13:51:34.365Z info: Connector Model:Domain Model:OSLO-ObservatiesEnMetingen:RuimtelijkBemonsteringsobject:(RuimtelijkBemonsteringsobject -> Bemonsteringsobject) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:23:20.477Z info: Connector Model:Domain Model:OSLO-ObservatiesEnMetingen:RuimtelijkBemonsteringsobject:(RuimtelijkBemonsteringsobject -> Bemonsteringsobject) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:51:34.366Z info: Connector Model:Domain Model:OSLO-ObservatiesEnMetingen:Bemonsteringsobject:(Bemonsteringsobject -> Bemonsteringsobject) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:23:20.478Z info: Connector Model:Domain Model:OSLO-ObservatiesEnMetingen:Bemonsteringsobject:(Bemonsteringsobject -> Bemonsteringsobject) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:51:34.368Z info: Connector Model:Domain Model:OSLO-Grondboringen:Grondboring:(Grondboring -> Bemonstering) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:23:20.479Z info: Connector Model:Domain Model:OSLO-Grondboringen:Grondboring:(Grondboring -> Bemonstering) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:51:34.368Z info: Connector Model:Domain Model:OSLO-Generiek:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:23:20.479Z info: Connector Model:Domain Model:OSLO-Generiek:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:51:34.368Z info: Connector Model:Domain Model:OSLO-Generiek:Curve:(Curve -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:23:20.479Z info: Connector Model:Domain Model:OSLO-Generiek:Curve:(Curve -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:51:34.368Z info: Connector Model:Domain Model:OSLO-Generiek:Vlak:(Vlak -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:23:20.479Z info: Connector Model:Domain Model:OSLO-Generiek:Vlak:(Vlak -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:51:34.368Z info: Connector Model:Domain Model:OSLO-BodemEnOndergrond:Fractiemeting:(Fractiemeting -> Meetreeks) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:23:20.479Z info: Connector Model:Domain Model:OSLO-BodemEnOndergrond:Fractiemeting:(Fractiemeting -> Meetreeks) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:51:34.368Z info: Connector Model:Domain Model:OSLO-Generiek:3Dobject:(3Dobject -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:23:20.479Z info: Connector Model:Domain Model:OSLO-Generiek:3Dobject:(3Dobject -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:51:34.369Z info: Connector Model:Domain Model:OSLO-ObservatiesEnMetingen:Profiel:(Profiel -> RuimtelijkBemonsteringsobject) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:23:20.479Z info: Connector Model:Domain Model:OSLO-ObservatiesEnMetingen:Profiel:(Profiel -> RuimtelijkBemonsteringsobject) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:51:34.369Z info: Connector Model:Domain Model:OSLO-BodemEnOndergrond:BO_RuimtelijkBemonsteringsobject:(BO_RuimtelijkBemonsteringsobject -> RuimtelijkBemonsteringsobject) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:23:20.479Z info: Connector Model:Domain Model:OSLO-BodemEnOndergrond:BO_RuimtelijkBemonsteringsobject:(BO_RuimtelijkBemonsteringsobject -> RuimtelijkBemonsteringsobject) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:51:34.370Z info: Connector Model:Domain Model:OSLO-BodemEnOndergrond:Laag:(Laag -> Interval) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:23:20.479Z info: Connector Model:Domain Model:OSLO-BodemEnOndergrond:Laag:(Laag -> Interval) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:51:34.370Z info: Connector Model:Domain Model:OSLO-BodemEnOndergrond:Profielelement:(Profielelement -> RuimtelijkBemonsteringsobject) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:23:20.479Z info: Connector Model:Domain Model:OSLO-BodemEnOndergrond:Profielelement:(Profielelement -> RuimtelijkBemonsteringsobject) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:51:34.370Z info: Connector Model:Domain Model:OSLO-BodemEnOndergrond:Fractiemetingwaarde:(Fractiemetingwaarde -> Meetreekswaarde) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:23:20.480Z info: Connector Model:Domain Model:OSLO-BodemEnOndergrond:Fractiemetingwaarde:(Fractiemetingwaarde -> Meetreekswaarde) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:51:34.371Z info: Connector Model:Domain Model:OSLO-BodemEnOndergrond:Fractiemetingresultaat:(Fractiemetingresultaat -> Meetreeksresultaat) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:23:20.480Z info: Connector Model:Domain Model:OSLO-BodemEnOndergrond:Fractiemetingresultaat:(Fractiemetingresultaat -> Meetreeksresultaat) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:51:34.371Z info: Connector Model:Domain Model:Hulppakket:Interval:(Interval -> Profielelement) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:23:20.480Z info: Connector Model:Domain Model:Hulppakket:Interval:(Interval -> Profielelement) is not an association with a source role. Ignoring this connector.
 
 Error: Unable to find the association class object for connector with path Model:Domain Model:OSLO-ObservatiesEnMetingen:Bemonsteringsobject:(Bemonsteringsobject -> Bemonsteringsobject).
 

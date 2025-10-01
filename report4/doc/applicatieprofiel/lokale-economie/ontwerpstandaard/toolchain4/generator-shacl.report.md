@@ -2,23 +2,23 @@
 
 #||# -------------------------------------  
 
-2025-10-01T14:03:45.585Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-lokale-economie-ap.jsonld#L9027)".
+2025-10-01T20:34:43.434Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-lokale-economie-ap.jsonld#L9027)".
 
-2025-10-01T14:03:45.587Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-lokale-economie-ap.jsonld#L9038)".
+2025-10-01T20:34:43.436Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-lokale-economie-ap.jsonld#L9038)".
 
-2025-10-01T14:03:45.587Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-lokale-economie-ap.jsonld#L9049)".
+2025-10-01T20:34:43.436Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-lokale-economie-ap.jsonld#L9049)".
 
-2025-10-01T14:03:45.588Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-lokale-economie-ap.jsonld#L9060)".
+2025-10-01T20:34:43.437Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-lokale-economie-ap.jsonld#L9060)".
 
-2025-10-01T14:03:45.588Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-lokale-economie-ap.jsonld#L9071)".
+2025-10-01T20:34:43.437Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-lokale-economie-ap.jsonld#L9071)".
 
-2025-10-01T14:03:45.589Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-lokale-economie-ap.jsonld#L9082)".
+2025-10-01T20:34:43.437Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-lokale-economie-ap.jsonld#L9082)".
 
-2025-10-01T14:03:45.589Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-lokale-economie-ap.jsonld#L9093)".
+2025-10-01T20:34:43.438Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-lokale-economie-ap.jsonld#L9093)".
 
-2025-10-01T14:03:45.589Z warn: Unable to find the description for subject "urn:oslo-toolchain:474230892".
+2025-10-01T20:34:43.438Z warn: Unable to find the description for subject "urn:oslo-toolchain:474230892".
 
-2025-10-01T14:03:45.661Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8146)".
+2025-10-01T20:34:43.504Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8146)".
 
 Error: Unable to find a label for the domain "urn:oslo-toolchain:41606a73ee77f1a70d17fe06204ad584ba23dfa1bcba4c3b6b168faa75360a57" of subject "[urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8146)".
 
@@ -36,23 +36,23 @@ Error: Unable to find a label for the domain "urn:oslo-toolchain:41606a73ee77f1a
 
 #||# -------------------------------------  
 
-2025-10-01T14:03:46.623Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-lokale-economie-ap.jsonld#L9027)".
+2025-10-01T20:34:44.390Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-lokale-economie-ap.jsonld#L9027)".
 
-2025-10-01T14:03:46.625Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-lokale-economie-ap.jsonld#L9038)".
+2025-10-01T20:34:44.392Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-lokale-economie-ap.jsonld#L9038)".
 
-2025-10-01T14:03:46.625Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-lokale-economie-ap.jsonld#L9049)".
+2025-10-01T20:34:44.392Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-lokale-economie-ap.jsonld#L9049)".
 
-2025-10-01T14:03:46.626Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-lokale-economie-ap.jsonld#L9060)".
+2025-10-01T20:34:44.392Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-lokale-economie-ap.jsonld#L9060)".
 
-2025-10-01T14:03:46.626Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-lokale-economie-ap.jsonld#L9071)".
+2025-10-01T20:34:44.393Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-lokale-economie-ap.jsonld#L9071)".
 
-2025-10-01T14:03:46.626Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-lokale-economie-ap.jsonld#L9082)".
+2025-10-01T20:34:44.393Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-lokale-economie-ap.jsonld#L9082)".
 
-2025-10-01T14:03:46.626Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-lokale-economie-ap.jsonld#L9093)".
+2025-10-01T20:34:44.393Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-lokale-economie-ap.jsonld#L9093)".
 
-2025-10-01T14:03:46.627Z warn: Unable to find the description for subject "urn:oslo-toolchain:474230892".
+2025-10-01T20:34:44.393Z warn: Unable to find the description for subject "urn:oslo-toolchain:474230892".
 
-2025-10-01T14:03:46.659Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8146)".
+2025-10-01T20:34:44.424Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8146)".
 
 Error: Unable to find a label for the domain "urn:oslo-toolchain:41606a73ee77f1a70d17fe06204ad584ba23dfa1bcba4c3b6b168faa75360a57" of subject "[urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8146)".
 

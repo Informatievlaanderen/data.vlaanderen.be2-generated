@@ -2,91 +2,91 @@
 
 #||# -------------------------------------
 
-2025-10-01T13:52:33.861Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:vocabularium_gezondheidstoestand:OSLO-Generiek:Gemeente:(Gemeente -> Object))
+2025-10-01T20:24:08.772Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:vocabularium_gezondheidstoestand:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2025-10-01T13:52:33.863Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:vocabularium_gezondheidstoestand:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2025-10-01T20:24:08.774Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:vocabularium_gezondheidstoestand:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-10-01T13:52:33.865Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Persoon:Persoon:(Persoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:24:08.777Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Persoon:Persoon:(Persoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:52:33.866Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:Arts:(Arts -> Zorgverlener) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:24:08.778Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:Arts:(Arts -> Zorgverlener) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:52:33.868Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:Foetus:(Foetus -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:24:08.780Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:Foetus:(Foetus -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:52:33.868Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Persoon:Persoon:(Persoon -> Zwangerschap) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:24:08.780Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Persoon:Persoon:(Persoon -> Zwangerschap) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:52:33.868Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Persoon:Persoon:(Persoon -> Bevalling) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:24:08.780Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Persoon:Persoon:(Persoon -> Bevalling) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:52:33.868Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:Geboortetoestand:(Geboortetoestand -> Gezondheidstoestand) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:24:08.781Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:Geboortetoestand:(Geboortetoestand -> Gezondheidstoestand) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:52:33.869Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:Zwangerschapstoestand:(Zwangerschapstoestand -> Gezondheidstoestand) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:24:08.781Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:Zwangerschapstoestand:(Zwangerschapstoestand -> Gezondheidstoestand) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:52:33.869Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:Bevallingstoestand:(Bevallingstoestand -> Gezondheidstoestand) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:24:08.781Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:Bevallingstoestand:(Bevallingstoestand -> Gezondheidstoestand) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:52:33.869Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:Borstvoeding:(Borstvoeding -> Voedingsinname) is not an association with a source role. Ignoring this connector.
+2025-10-01T20:24:08.781Z info: Connector Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:Borstvoeding:(Borstvoeding -> Voedingsinname) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T13:52:33.870Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-10-01T20:24:08.782Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T13:52:33.870Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:vocabularium_gezondheidstoestand). Using fallback URI (http://todo.com/) instead.
+2025-10-01T20:24:08.782Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:vocabularium_gezondheidstoestand). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T13:52:33.870Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:vocabularium_gezondheidstoestand:OSLO-Adres). Using fallback URI (http://todo.com/) instead.
+2025-10-01T20:24:08.782Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:vocabularium_gezondheidstoestand:OSLO-Adres). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T13:52:33.870Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:vocabularium_gezondheidstoestand:CCCEV). Using fallback URI (http://todo.com/) instead.
+2025-10-01T20:24:08.783Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:vocabularium_gezondheidstoestand:CCCEV). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T13:52:33.870Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:vocabularium_gezondheidstoestand:OSLO-Organisatie). Using fallback URI (http://todo.com/) instead.
+2025-10-01T20:24:08.783Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:vocabularium_gezondheidstoestand:OSLO-Organisatie). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T13:52:33.870Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:vocabularium_gezondheidstoestand:OSLO-Cultuurparticipatie). Using fallback URI (http://todo.com/) instead.
+2025-10-01T20:24:08.783Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:vocabularium_gezondheidstoestand:OSLO-Cultuurparticipatie). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T13:52:33.870Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:vocabularium_gezondheidstoestand:Hulppakket). Using fallback URI (http://todo.com/) instead.
+2025-10-01T20:24:08.783Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:vocabularium_gezondheidstoestand:Hulppakket). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T13:52:33.870Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:vocabularium_gezondheidstoestand:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon). Using fallback URI (http://todo.com/) instead.
+2025-10-01T20:24:08.783Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:vocabularium_gezondheidstoestand:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T13:52:33.877Z warn: [ConnectorConverterHandler]: Connector (heeftBevallingstoestand) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.791Z warn: [ConnectorConverterHandler]: Connector (heeftBevallingstoestand) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.877Z warn: [ConnectorConverterHandler]: Connector (heeftAssistentie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.792Z warn: [ConnectorConverterHandler]: Connector (heeftAssistentie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.877Z warn: [ConnectorConverterHandler]: Connector (doetOntstaan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.792Z warn: [ConnectorConverterHandler]: Connector (doetOntstaan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.877Z warn: [ConnectorConverterHandler]: Connector (ontstaatDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.792Z warn: [ConnectorConverterHandler]: Connector (ontstaatDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.877Z warn: [ConnectorConverterHandler]: Connector (komtVoortUit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.792Z warn: [ConnectorConverterHandler]: Connector (komtVoortUit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.877Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (komtVoortUit) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-01T20:24:08.792Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (komtVoortUit) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-01T13:52:33.877Z warn: [ConnectorConverterHandler]: Connector (wordtGeobserveerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.792Z warn: [ConnectorConverterHandler]: Connector (wordtGeobserveerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.878Z warn: [ConnectorConverterHandler]: Connector (gedocumenteerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.792Z warn: [ConnectorConverterHandler]: Connector (gedocumenteerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.878Z warn: [ConnectorConverterHandler]: Connector (steltOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.793Z warn: [ConnectorConverterHandler]: Connector (steltOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.878Z warn: [ConnectorConverterHandler]: Connector (opgesteldDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.793Z warn: [ConnectorConverterHandler]: Connector (opgesteldDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.878Z warn: [ConnectorConverterHandler]: Connector (voedt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.793Z warn: [ConnectorConverterHandler]: Connector (voedt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.878Z warn: [ConnectorConverterHandler]: Connector (wordtGevoedDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.793Z warn: [ConnectorConverterHandler]: Connector (wordtGevoedDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.878Z warn: [ConnectorConverterHandler]: Connector (deelVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.793Z warn: [ConnectorConverterHandler]: Connector (deelVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.878Z warn: [ConnectorConverterHandler]: Connector (heeftFoetus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.793Z warn: [ConnectorConverterHandler]: Connector (heeftFoetus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.878Z warn: [ConnectorConverterHandler]: Connector (Persoon (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.793Z warn: [ConnectorConverterHandler]: Connector (Persoon (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.878Z warn: [ConnectorConverterHandler]: Connector (Persoon (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.793Z warn: [ConnectorConverterHandler]: Connector (Persoon (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.878Z warn: [ConnectorConverterHandler]: Connector (wordtGevolgdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.793Z warn: [ConnectorConverterHandler]: Connector (wordtGevolgdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.878Z warn: [ConnectorConverterHandler]: Connector (volgtOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-01T20:24:08.793Z warn: [ConnectorConverterHandler]: Connector (volgtOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T13:52:33.882Z warn: [ConverterHandler]: Entity with path Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:MedischVerslag has an empty value for tag ap-usageNote-nl.
+2025-10-01T20:24:08.797Z warn: [ConverterHandler]: Entity with path Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:MedischVerslag has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T13:52:33.882Z warn: [ConverterHandler]: Entity with path Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:MedischVerslag has an empty value for tag usageNote-nl.
+2025-10-01T20:24:08.797Z warn: [ConverterHandler]: Entity with path Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:MedischVerslag has an empty value for tag usageNote-nl.
 
-2025-10-01T13:52:33.888Z warn: [ConverterHandler]: Entity with path Model:vocabularium_gezondheidstoestand:OSLO-Persoon:Geslacht has an empty value for tag ap-usageNote-nl.
+2025-10-01T20:24:08.804Z warn: [ConverterHandler]: Entity with path Model:vocabularium_gezondheidstoestand:OSLO-Persoon:Geslacht has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T13:52:33.895Z warn: [ConverterHandler]: Entity with path Model:vocabularium_gezondheidstoestand:OSLO-Generiek:Tijdsinterval has an empty value for tag ap-usageNote-nl.
+2025-10-01T20:24:08.816Z warn: [ConverterHandler]: Entity with path Model:vocabularium_gezondheidstoestand:OSLO-Generiek:Tijdsinterval has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T13:52:33.898Z warn: [ConverterHandler]: Entity with path Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:MedischeObservatie:effectiefTijdstip has an empty value for tag ap-label-nl.
+2025-10-01T20:24:08.820Z warn: [ConverterHandler]: Entity with path Model:vocabularium_gezondheidstoestand:OSLO-Gezondheidstoestand:MedischeObservatie:effectiefTijdstip has an empty value for tag ap-label-nl.
 
-2025-10-01T13:52:33.917Z warn: [ConverterHandler]: Entity with path vastgesteld has an empty value for tag definition-nl.
+2025-10-01T20:24:08.838Z warn: [ConverterHandler]: Entity with path vastgesteld has an empty value for tag definition-nl.
 
 #||# -------------------------------------
 

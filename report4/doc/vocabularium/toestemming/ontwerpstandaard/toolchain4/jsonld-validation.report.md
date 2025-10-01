@@ -6,7 +6,7 @@
 
 
 
-2025-10-01T14:06:34.286Z info: Loaded 45 URI prefixes into whitelist
+2025-10-01T20:37:28.035Z info: Loaded 45 URI prefixes into whitelist
 
 
 
@@ -38,7 +38,7 @@ Error: Path does not refer to a valid file: /tmp/workspace/report4/doc/vocabular
 
 
 
-2025-10-01T14:06:34.752Z info: Loaded 45 URI prefixes into whitelist
+2025-10-01T20:37:28.462Z info: Loaded 45 URI prefixes into whitelist
 
 
 
