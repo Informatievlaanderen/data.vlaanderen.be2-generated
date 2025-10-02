@@ -2,13 +2,13 @@
 
 #||# -------------------------------------  
 
-2025-10-01T20:35:20.280Z warn: Unable to find the description for subject "[urn:oslo-toolchain:ead03005cf2f07f8db3f94cec05dea5b976be666cf787dd765564ebfc66b6fc5](all-persoon-basis.jsonld#L926)".
+2025-10-02T21:50:48.944Z warn: Unable to find the description for subject "[urn:oslo-toolchain:ead03005cf2f07f8db3f94cec05dea5b976be666cf787dd765564ebfc66b6fc5](all-persoon-basis.jsonld#L926)".
 
-2025-10-01T20:35:20.283Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
+2025-10-02T21:50:48.949Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
 
-2025-10-01T20:35:20.290Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8982ab2f1b81978adced8ad6620969886ad3497f191753aeb162bd4addceedb4](all-persoon-basis.jsonld#L2544)".
+2025-10-02T21:50:48.963Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8982ab2f1b81978adced8ad6620969886ad3497f191753aeb162bd4addceedb4](all-persoon-basis.jsonld#L2544)".
 
-2025-10-01T20:35:20.290Z warn: Unable to find the description for subject "[urn:oslo-toolchain:dc99411509b8962c498c7ce32705704ab649c7500a4a5900e301d697d5a76eed](all-persoon-basis.jsonld#L2564)".
+2025-10-02T21:50:48.964Z warn: Unable to find the description for subject "[urn:oslo-toolchain:dc99411509b8962c498c7ce32705704ab649c7500a4a5900e301d697d5a76eed](all-persoon-basis.jsonld#L2564)".
 
 #||# oslo-shacl-template-generator for language en  
 

@@ -2,19 +2,19 @@
 
 #||# -------------------------------------  
 
-2025-10-01T20:34:45.159Z error: Unable to find the definition for property [urn:oslo-toolchain:ec3e78a65e7f4a4d2bc222badfc70534dcfd508e78b0a2845bf6e0196db4b4f7](all-loongegevens.jsonld#L2748).
+2025-10-02T21:49:45.193Z error: Unable to find the definition for property [urn:oslo-toolchain:ec3e78a65e7f4a4d2bc222badfc70534dcfd508e78b0a2845bf6e0196db4b4f7](all-loongegevens.jsonld#L2748).
 
-2025-10-01T20:34:45.160Z error: Unable to find the definition for property [urn:oslo-toolchain:09026e719d1f01d31a8497486bd5203fadf646bfcbe0cc16858a565bd9342371](all-loongegevens.jsonld#L2824).
+2025-10-02T21:49:45.195Z error: Unable to find the definition for property [urn:oslo-toolchain:09026e719d1f01d31a8497486bd5203fadf646bfcbe0cc16858a565bd9342371](all-loongegevens.jsonld#L2824).
 
-2025-10-01T20:34:45.161Z error: Unable to find the definition for property [urn:oslo-toolchain:daeb4856214b65ef777f051ebce47d5a4b59db9abffaff79ba13c8edb31ec24b](all-loongegevens.jsonld#L2988).
+2025-10-02T21:49:45.195Z error: Unable to find the definition for property [urn:oslo-toolchain:daeb4856214b65ef777f051ebce47d5a4b59db9abffaff79ba13c8edb31ec24b](all-loongegevens.jsonld#L2988).
 
 #||# oslo-generator-rdf for language en  
 
 #||# -------------------------------------  
 
-2025-10-01T20:34:45.803Z error: Unable to find the definition for property [urn:oslo-toolchain:ec3e78a65e7f4a4d2bc222badfc70534dcfd508e78b0a2845bf6e0196db4b4f7](all-loongegevens.jsonld#L2748).
+2025-10-02T21:49:45.888Z error: Unable to find the definition for property [urn:oslo-toolchain:ec3e78a65e7f4a4d2bc222badfc70534dcfd508e78b0a2845bf6e0196db4b4f7](all-loongegevens.jsonld#L2748).
 
-2025-10-01T20:34:45.805Z error: Unable to find the definition for property [urn:oslo-toolchain:09026e719d1f01d31a8497486bd5203fadf646bfcbe0cc16858a565bd9342371](all-loongegevens.jsonld#L2824).
+2025-10-02T21:49:45.889Z error: Unable to find the definition for property [urn:oslo-toolchain:09026e719d1f01d31a8497486bd5203fadf646bfcbe0cc16858a565bd9342371](all-loongegevens.jsonld#L2824).
 
-2025-10-01T20:34:45.805Z error: Unable to find the definition for property [urn:oslo-toolchain:daeb4856214b65ef777f051ebce47d5a4b59db9abffaff79ba13c8edb31ec24b](all-loongegevens.jsonld#L2988).
+2025-10-02T21:49:45.890Z error: Unable to find the definition for property [urn:oslo-toolchain:daeb4856214b65ef777f051ebce47d5a4b59db9abffaff79ba13c8edb31ec24b](all-loongegevens.jsonld#L2988).
 

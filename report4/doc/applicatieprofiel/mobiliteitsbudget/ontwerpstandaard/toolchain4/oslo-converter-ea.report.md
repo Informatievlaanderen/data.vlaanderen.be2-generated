@@ -2,121 +2,121 @@
 
 #||# -------------------------------------
 
-2025-10-01T20:21:55.902Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:19.636Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:55.904Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:Omvat is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:19.638Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:Omvat is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:55.904Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:Omvat has name "Omvat". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-02T21:37:19.638Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Mobiliteitsdienst:Omvat has name "Omvat". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-01T20:21:55.904Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:IsMedereizigerVan is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:19.638Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:IsMedereizigerVan is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:55.904Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:IsMedereizigerVan has name "IsMedereizigerVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-02T21:37:19.638Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:IsMedereizigerVan has name "IsMedereizigerVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-01T20:21:55.904Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:(Reiziger -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:19.638Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:(Reiziger -> Vervoersbewijs) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:55.905Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:(Reiziger -> Reis) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:19.639Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:(Reiziger -> Reis) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:55.905Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:IsDeelVan is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:19.639Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:IsDeelVan is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:55.905Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:IsDeelVan has name "IsDeelVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-02T21:37:19.639Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reis:IsDeelVan has name "IsDeelVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-01T20:21:55.905Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Persoon:Persoon:heeftRelatieMet is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:19.639Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Persoon:Persoon:heeftRelatieMet is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:55.905Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Persoon:Persoon:heeftRelatieMet has name "heeftRelatieMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-02T21:37:19.640Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Persoon:Persoon:heeftRelatieMet has name "heeftRelatieMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-01T20:21:55.906Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:19.640Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:55.906Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:(Reiziger -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:19.640Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger:(Reiziger -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:55.906Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:W3C-Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:19.640Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:W3C-Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:55.906Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:19.640Z info: Connector Model:applicatieprofiel_OSLO-Mobiliteitsbudget:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:55.907Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:37:19.641Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:21:55.907Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_OSLO-Mobiliteitsbudget). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:37:19.641Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_OSLO-Mobiliteitsbudget). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:21:55.907Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:37:19.641Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:21:55.907Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:37:19.641Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:21:55.907Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_OSLO-Mobiliteitsbudget:W3C-Time). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:37:19.641Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_OSLO-Mobiliteitsbudget:W3C-Time). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:21:55.907Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Incentiveringsplatform). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:37:19.641Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Incentiveringsplatform). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:21:55.907Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-ObservatiesEnMetingen). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:37:19.642Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-ObservatiesEnMetingen). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:21:55.911Z warn: [ConnectorConverterHandler]: Connector (Omvat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.645Z warn: [ConnectorConverterHandler]: Connector (Omvat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.911Z warn: [ConnectorConverterHandler]: Connector (reis) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.645Z warn: [ConnectorConverterHandler]: Connector (reis) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.911Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.645Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.911Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.645Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.911Z warn: [ConnectorConverterHandler]: Connector (dienst) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.645Z warn: [ConnectorConverterHandler]: Connector (dienst) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.911Z warn: [ConnectorConverterHandler]: Connector (mobiliteitsbudget) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.645Z warn: [ConnectorConverterHandler]: Connector (mobiliteitsbudget) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.911Z warn: [ConnectorConverterHandler]: Connector (consumptie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.645Z warn: [ConnectorConverterHandler]: Connector (consumptie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.911Z warn: [ConnectorConverterHandler]: Connector (IsMedereizigerVan (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.645Z warn: [ConnectorConverterHandler]: Connector (IsMedereizigerVan (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.911Z warn: [ConnectorConverterHandler]: Connector (IsMedereizigerVan (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.645Z warn: [ConnectorConverterHandler]: Connector (IsMedereizigerVan (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.911Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.646Z warn: [ConnectorConverterHandler]: Connector (vervoersbewijs) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.911Z warn: [ConnectorConverterHandler]: Connector (onderneemt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.646Z warn: [ConnectorConverterHandler]: Connector (onderneemt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.911Z warn: [ConnectorConverterHandler]: Connector (voorwaarde) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.646Z warn: [ConnectorConverterHandler]: Connector (voorwaarde) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.912Z warn: [ConnectorConverterHandler]: Connector (mobiliteitsbudget) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.646Z warn: [ConnectorConverterHandler]: Connector (mobiliteitsbudget) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.912Z warn: [ConnectorConverterHandler]: Connector (heeftRelatieMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.646Z warn: [ConnectorConverterHandler]: Connector (heeftRelatieMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.912Z warn: [ConnectorConverterHandler]: Connector (Persoon (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.646Z warn: [ConnectorConverterHandler]: Connector (Persoon (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.912Z warn: [ConnectorConverterHandler]: Connector (Persoon (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:19.646Z warn: [ConnectorConverterHandler]: Connector (Persoon (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:55.913Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget has an empty value for tag usageNote-nl.
+2025-10-02T21:37:19.648Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget has an empty value for tag usageNote-nl.
 
-2025-10-01T20:21:55.914Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Organisatie:OrganisatieStatus has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:37:19.648Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Organisatie:OrganisatieStatus has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:21:55.914Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Waardetype has an empty value for tag usageNote-nl.
+2025-10-02T21:37:19.649Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Waardetype has an empty value for tag usageNote-nl.
 
-2025-10-01T20:21:55.915Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger has an empty value for tag usageNote-nl.
+2025-10-02T21:37:19.649Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Reiziger has an empty value for tag usageNote-nl.
 
-2025-10-01T20:21:55.915Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Vervoermiddel has an empty value for tag usageNote-nl.
+2025-10-02T21:37:19.649Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Vervoermiddel has an empty value for tag usageNote-nl.
 
-2025-10-01T20:21:55.916Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Dienstverleningtype has an empty value for tag usageNote-nl.
+2025-10-02T21:37:19.650Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteit-Trips-En-Aanbod:Dienstverleningtype has an empty value for tag usageNote-nl.
 
-2025-10-01T20:21:55.916Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:37:19.650Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:21:55.916Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Organisatie:OrganisatieClassificatie has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:37:19.650Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Organisatie:OrganisatieClassificatie has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:21:55.916Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Organisatie:OrganisatieType has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:37:19.651Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Organisatie:OrganisatieType has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:21:55.916Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Organisatie:OrganisatieActiviteit has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:37:19.651Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Organisatie:OrganisatieActiviteit has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:21:55.918Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget:type has an empty value for tag usageNote-nl.
+2025-10-02T21:37:19.652Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget:type has an empty value for tag usageNote-nl.
 
-2025-10-01T20:21:55.918Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget:vervaldatum has an empty value for tag usageNote-nl.
+2025-10-02T21:37:19.653Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget:vervaldatum has an empty value for tag usageNote-nl.
 
-2025-10-01T20:21:55.923Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget:toegekendOp has an empty value for tag usageNote-nl.
+2025-10-02T21:37:19.659Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget:toegekendOp has an empty value for tag usageNote-nl.
 
-2025-10-01T20:21:55.924Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget:naam has an empty value for tag usageNote-nl.
+2025-10-02T21:37:19.659Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget:naam has an empty value for tag usageNote-nl.
 
-2025-10-01T20:21:55.924Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget:waarde has an empty value for tag usageNote.
+2025-10-02T21:37:19.660Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget:waarde has an empty value for tag usageNote.
 
-2025-10-01T20:21:55.924Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget:waardetype has an empty value for tag usageNote-nl.
+2025-10-02T21:37:19.660Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget:waardetype has an empty value for tag usageNote-nl.
 
-2025-10-01T20:21:55.924Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Generiek:Agent:segment has an empty value for tag usageNote-nl.
+2025-10-02T21:37:19.660Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Generiek:Agent:segment has an empty value for tag usageNote-nl.
 
-2025-10-01T20:21:55.924Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget:begindatum has an empty value for tag usageNote-nl.
+2025-10-02T21:37:19.661Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Mobiliteitsbudget:begindatum has an empty value for tag usageNote-nl.
 
-2025-10-01T20:21:55.925Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Persoon:Geslacht has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:37:19.661Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Persoon:Geslacht has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:21:55.927Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Segment:waarde has an empty value for tag usageNote-nl.
+2025-10-02T21:37:19.663Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_OSLO-Mobiliteitsbudget:OSLO-Mobiliteitsbudget:Segment:waarde has an empty value for tag usageNote-nl.
 
 #||# -------------------------------------
 

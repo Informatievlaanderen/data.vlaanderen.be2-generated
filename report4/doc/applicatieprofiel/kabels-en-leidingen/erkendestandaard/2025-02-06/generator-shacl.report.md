@@ -2,15 +2,15 @@
 
 #||# -------------------------------------  
 
-2025-10-01T20:34:31.474Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-cable-pipe.jsonld#L13299)".
+2025-10-02T21:49:48.449Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-cable-pipe.jsonld#L13299)".
 
-2025-10-01T20:34:31.477Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-cable-pipe.jsonld#L13310)".
+2025-10-02T21:49:48.452Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-cable-pipe.jsonld#L13310)".
 
-2025-10-01T20:34:31.477Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-cable-pipe.jsonld#L13321)".
+2025-10-02T21:49:48.452Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-cable-pipe.jsonld#L13321)".
 
-2025-10-01T20:34:31.478Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-cable-pipe.jsonld#L13332)".
+2025-10-02T21:49:48.453Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-cable-pipe.jsonld#L13332)".
 
-2025-10-01T20:34:31.478Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
+2025-10-02T21:49:48.453Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
 
 #||# oslo-shacl-template-generator for language en  
 

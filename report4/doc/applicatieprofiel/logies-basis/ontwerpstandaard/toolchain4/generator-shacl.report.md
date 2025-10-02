@@ -2,13 +2,13 @@
 
 #||# -------------------------------------  
 
-2025-10-01T20:34:41.874Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-logies-basis.jsonld#L5551)".
+2025-10-02T21:50:01.093Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-logies-basis.jsonld#L5551)".
 
-2025-10-01T20:34:41.876Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-logies-basis.jsonld#L5562)".
+2025-10-02T21:50:01.095Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-logies-basis.jsonld#L5562)".
 
-2025-10-01T20:34:41.876Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-logies-basis.jsonld#L5573)".
+2025-10-02T21:50:01.095Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-logies-basis.jsonld#L5573)".
 
-2025-10-01T20:34:41.876Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
+2025-10-02T21:50:01.095Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
 
 Error: Unable to find the assigned URI for range "http://schema.org/QuantitativeValue".
 
@@ -26,13 +26,13 @@ Error: Unable to find the assigned URI for range "http://schema.org/Quantitative
 
 #||# -------------------------------------  
 
-2025-10-01T20:34:42.641Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-logies-basis.jsonld#L5551)".
+2025-10-02T21:50:02.089Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-logies-basis.jsonld#L5551)".
 
-2025-10-01T20:34:42.643Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-logies-basis.jsonld#L5562)".
+2025-10-02T21:50:02.092Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-logies-basis.jsonld#L5562)".
 
-2025-10-01T20:34:42.644Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-logies-basis.jsonld#L5573)".
+2025-10-02T21:50:02.093Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-logies-basis.jsonld#L5573)".
 
-2025-10-01T20:34:42.644Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
+2025-10-02T21:50:02.093Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
 
 Error: Unable to find the assigned URI for range "http://schema.org/QuantitativeValue".
 

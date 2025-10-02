@@ -2,95 +2,95 @@
 
 #||# -------------------------------------
 
-2025-10-01T20:23:40.113Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-C&JI:OSLO-Generiek:Agent:rapporteertAan)
+2025-10-02T21:39:09.368Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-C&JI:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-10-01T20:23:40.116Z info: Connector Model:OSLO-C&JI:OSLO-CultuurEnJeugdinfrastructuur:Binnenruimte:(Binnenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:39:09.372Z info: Connector Model:OSLO-C&JI:OSLO-CultuurEnJeugdinfrastructuur:Binnenruimte:(Binnenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:23:40.116Z info: Connector Model:OSLO-C&JI:OSLO-CultuurEnJeugdinfrastructuur:Buitenruimte:(Buitenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:39:09.372Z info: Connector Model:OSLO-C&JI:OSLO-CultuurEnJeugdinfrastructuur:Buitenruimte:(Buitenruimte -> Infrastructuur) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:23:40.117Z info: Connector Model:OSLO-C&JI:OSLO-Gebouw:Gebouw:(Gebouw -> Infrastructuur) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:39:09.373Z info: Connector Model:OSLO-C&JI:OSLO-Gebouw:Gebouw:(Gebouw -> Infrastructuur) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:23:40.117Z info: Connector Model:OSLO-C&JI:OSLO-CultuurEnJeugdinfrastructuur:PodiumtechnischeFaciliteit:(PodiumtechnischeFaciliteit -> Faciliteit) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:39:09.374Z info: Connector Model:OSLO-C&JI:OSLO-CultuurEnJeugdinfrastructuur:PodiumtechnischeFaciliteit:(PodiumtechnischeFaciliteit -> Faciliteit) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:23:40.117Z info: Connector Model:OSLO-C&JI:OSLO-CultureelErfgoed:Ding:(Ding -> Infrastructuur) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:39:09.374Z info: Connector Model:OSLO-C&JI:OSLO-CultureelErfgoed:Ding:(Ding -> Infrastructuur) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:23:40.117Z info: Connector Model:OSLO-C&JI:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:39:09.374Z info: Connector Model:OSLO-C&JI:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:23:40.117Z info: Connector Model:OSLO-C&JI:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:39:09.374Z info: Connector Model:OSLO-C&JI:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:23:40.118Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.375Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.118Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.375Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.118Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-Generiek). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.375Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-Generiek). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.119Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-Gebouw). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.375Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-Gebouw). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.119Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.375Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.119Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI:OD Bozar). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.375Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI:OD Bozar). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.119Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI:OD Jeugdinfrastructuur). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.376Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI:OD Jeugdinfrastructuur). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.119Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-Consent). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.376Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-Consent). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.119Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-Dienst). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.376Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-Dienst). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.119Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-FeitelijkeVerenigingen). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.376Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-FeitelijkeVerenigingen). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.119Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Hulppakket). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.376Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Hulppakket). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.119Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI:OD Bruikleen). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.376Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI:OD Bruikleen). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.119Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-CultureelErfgoed). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.376Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-CultureelErfgoed). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.119Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI:OD Knokke-Heist Jeugdcentrum). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.376Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI:OD Knokke-Heist Jeugdcentrum). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.120Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI:OD Buitenruimte Jeugdinfrastructuur). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.376Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI:OD Buitenruimte Jeugdinfrastructuur). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.120Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI:OD Depot). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.377Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI:OD Depot). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.120Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI:OD Kleedkamer). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.377Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:Objectdiagrammen C&JI:OD Kleedkamer). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.120Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-Persoon). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.377Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-Persoon). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.120Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-Organisatie). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:39:09.377Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-C&JI:OSLO-Organisatie). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:23:40.123Z warn: [ConnectorConverterHandler]: Connector (superInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:39:09.381Z warn: [ConnectorConverterHandler]: Connector (superInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:23:40.123Z warn: [ConnectorConverterHandler]: Connector (subInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:39:09.381Z warn: [ConnectorConverterHandler]: Connector (subInfrastructuur) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:23:40.123Z warn: [ConnectorConverterHandler]: Connector (ruimte) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:39:09.381Z warn: [ConnectorConverterHandler]: Connector (ruimte) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:23:40.123Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (ruimte) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-02T21:39:09.381Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (ruimte) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-01T20:23:40.123Z warn: [ConnectorConverterHandler]: Connector (gaatDoorIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:39:09.381Z warn: [ConnectorConverterHandler]: Connector (gaatDoorIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:23:40.123Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (gaatDoorIn) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-02T21:39:09.381Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (gaatDoorIn) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-01T20:23:40.123Z warn: [ConnectorConverterHandler]: Connector (opgesteldIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:39:09.381Z warn: [ConnectorConverterHandler]: Connector (opgesteldIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:23:40.123Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (opgesteldIn) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-02T21:39:09.381Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (opgesteldIn) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-01T20:23:40.137Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Generiek:Periode:begin has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:39:09.400Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Generiek:Periode:begin has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:23:40.137Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Generiek:Periode:einde has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:39:09.400Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Generiek:Periode:einde has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:23:40.143Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Cultuurparticipatie:Prijsinfo:beschikbaar has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:39:09.408Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Cultuurparticipatie:Prijsinfo:beschikbaar has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:23:40.144Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Cultuurparticipatie:Prijsinfo:beschikbaarTransactieVolume has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:39:09.409Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Cultuurparticipatie:Prijsinfo:beschikbaarTransactieVolume has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:23:40.164Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Cultuurparticipatie:Prijsinfo:beschikbareHoeveelheid has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:39:09.428Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Cultuurparticipatie:Prijsinfo:beschikbareHoeveelheid has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:23:40.166Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Cultuurparticipatie:Prijsinfo:inclusiefBTW has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:39:09.429Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Cultuurparticipatie:Prijsinfo:inclusiefBTW has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:23:40.167Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Cultuurparticipatie:Prijsinfo:prijs has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:39:09.430Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Cultuurparticipatie:Prijsinfo:prijs has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:23:40.168Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Cultuurparticipatie:Prijsinfo:prijsCategorie has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:39:09.431Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Cultuurparticipatie:Prijsinfo:prijsCategorie has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:23:40.175Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Persoon:Geslacht has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:39:09.443Z warn: [ConverterHandler]: Entity with path Model:OSLO-C&JI:OSLO-Persoon:Geslacht has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:23:40.177Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (ruimte).
+2025-10-02T21:39:09.446Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (ruimte).
 
 #||# -------------------------------------
 

@@ -2,39 +2,39 @@
 
 #||# -------------------------------------  
 
-2025-10-01T20:37:09.197Z info: Loaded 45 URI prefixes into whitelist
+2025-10-02T21:53:42.082Z info: Loaded 45 URI prefixes into whitelist
 
-2025-10-01T20:37:09.235Z warn: Found sentence without a '.': 'Oppervlakte volledig bedekt met water met beperkte plantengroei aan de oevers' for subject: [urn:oslo-toolchain:c71e2a3e3df8e0ed2844a5a86d41fa797995d87f3a64f79db15d7a24bd36d29b](all-watervoorkomen.jsonld#L232)
+2025-10-02T21:53:42.121Z warn: Found sentence without a '.': 'Oppervlakte volledig bedekt met water met beperkte plantengroei aan de oevers' for subject: [urn:oslo-toolchain:c71e2a3e3df8e0ed2844a5a86d41fa797995d87f3a64f79db15d7a24bd36d29b](all-watervoorkomen.jsonld#L232)
 
-2025-10-01T20:37:09.235Z warn: Found sentence without a '.': 'Oppervlakte volledig bedekt met water met beperkte plantengroei aan de oevers' for subject: [urn:oslo-toolchain:c71e2a3e3df8e0ed2844a5a86d41fa797995d87f3a64f79db15d7a24bd36d29b](all-watervoorkomen.jsonld#L232)
+2025-10-02T21:53:42.121Z warn: Found sentence without a '.': 'Oppervlakte volledig bedekt met water met beperkte plantengroei aan de oevers' for subject: [urn:oslo-toolchain:c71e2a3e3df8e0ed2844a5a86d41fa797995d87f3a64f79db15d7a24bd36d29b](all-watervoorkomen.jsonld#L232)
 
-2025-10-01T20:37:09.237Z info: Validation successful! All assigned URIs are whitelisted.
+2025-10-02T21:53:42.122Z info: Validation successful! All assigned URIs are whitelisted.
 
-2025-10-01T20:37:09.237Z info: Validation found 2 sentences with spelling mistakes.
+2025-10-02T21:53:42.123Z info: Validation found 2 sentences with spelling mistakes.
 
-2025-10-01T20:37:09.237Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2025-10-02T21:53:42.123Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-2025-10-01T20:37:09.237Z info: Validation successful! All base URIs seem to be valid.
+2025-10-02T21:53:42.123Z info: Validation successful! All base URIs seem to be valid.
 
-2025-10-01T20:37:09.237Z info: Validation successful! All referenced classes and attributes seem to be included.
+2025-10-02T21:53:42.123Z info: Validation successful! All referenced classes and attributes seem to be included.
 
 #||# oslo-jsonld-validator   
 
 #||# -------------------------------------  
 
-2025-10-01T20:37:09.647Z info: Loaded 45 URI prefixes into whitelist
+2025-10-02T21:53:42.766Z info: Loaded 45 URI prefixes into whitelist
 
-2025-10-01T20:37:09.679Z warn: Found sentence without a '.': 'Oppervlakte volledig bedekt met water met beperkte plantengroei aan de oevers' for subject: [urn:oslo-toolchain:c71e2a3e3df8e0ed2844a5a86d41fa797995d87f3a64f79db15d7a24bd36d29b](all-watervoorkomen.jsonld#L232)
+2025-10-02T21:53:42.805Z warn: Found sentence without a '.': 'Oppervlakte volledig bedekt met water met beperkte plantengroei aan de oevers' for subject: [urn:oslo-toolchain:c71e2a3e3df8e0ed2844a5a86d41fa797995d87f3a64f79db15d7a24bd36d29b](all-watervoorkomen.jsonld#L232)
 
-2025-10-01T20:37:09.680Z warn: Found sentence without a '.': 'Oppervlakte volledig bedekt met water met beperkte plantengroei aan de oevers' for subject: [urn:oslo-toolchain:c71e2a3e3df8e0ed2844a5a86d41fa797995d87f3a64f79db15d7a24bd36d29b](all-watervoorkomen.jsonld#L232)
+2025-10-02T21:53:42.806Z warn: Found sentence without a '.': 'Oppervlakte volledig bedekt met water met beperkte plantengroei aan de oevers' for subject: [urn:oslo-toolchain:c71e2a3e3df8e0ed2844a5a86d41fa797995d87f3a64f79db15d7a24bd36d29b](all-watervoorkomen.jsonld#L232)
 
-2025-10-01T20:37:09.681Z info: Validation successful! All assigned URIs are whitelisted.
+2025-10-02T21:53:42.807Z info: Validation successful! All assigned URIs are whitelisted.
 
-2025-10-01T20:37:09.681Z info: Validation found 2 sentences with spelling mistakes.
+2025-10-02T21:53:42.807Z info: Validation found 2 sentences with spelling mistakes.
 
-2025-10-01T20:37:09.681Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2025-10-02T21:53:42.807Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-2025-10-01T20:37:09.681Z info: Validation successful! All base URIs seem to be valid.
+2025-10-02T21:53:42.807Z info: Validation successful! All base URIs seem to be valid.
 
-2025-10-01T20:37:09.681Z info: Validation successful! All referenced classes and attributes seem to be included.
+2025-10-02T21:53:42.807Z info: Validation successful! All referenced classes and attributes seem to be included.
 

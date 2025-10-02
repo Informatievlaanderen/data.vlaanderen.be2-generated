@@ -2,121 +2,121 @@
 
 #||# -------------------------------------
 
-2025-10-01T20:20:14.375Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Generiek:Agent:rapporteertAan)
+2025-10-02T21:35:38.511Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-10-01T20:20:14.377Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Generiek:Gemeente:(Gemeente -> Object))
+2025-10-02T21:35:38.513Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2025-10-01T20:20:14.377Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2025-10-02T21:35:38.513Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-10-01T20:20:14.377Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Dossier:Agent:handeltInOpdrachtVan)
+2025-10-02T21:35:38.513Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Dossier:Agent:handeltInOpdrachtVan)
 
-2025-10-01T20:20:14.377Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Dossier:Activiteit:vindtPlaatsTijdens)
+2025-10-02T21:35:38.513Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Dossier:Activiteit:vindtPlaatsTijdens)
 
-2025-10-01T20:20:14.379Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.515Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.379Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Jurisdictie) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.515Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Jurisdictie) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.380Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Persoon:Persoon:(Persoon -> Geboorte) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.516Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Persoon:Persoon:(Persoon -> Geboorte) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.380Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Persoon:Inwonerschap:(Inwonerschap -> Domicilie) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.516Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Persoon:Inwonerschap:(Inwonerschap -> Domicilie) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.380Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:UitsluitingVanSteun:(UitsluitingVanSteun -> BestuurlijkeSanctie) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.517Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:UitsluitingVanSteun:(UitsluitingVanSteun -> BestuurlijkeSanctie) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.380Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:Verbeurdverklaring:(Verbeurdverklaring -> BestuurlijkeSanctie) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.517Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:Verbeurdverklaring:(Verbeurdverklaring -> BestuurlijkeSanctie) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.380Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Adres:Adresvoorstelling:(Adresvoorstelling -> Adres) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.517Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Adres:Adresvoorstelling:(Adresvoorstelling -> Adres) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.381Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:Feit:(Feit -> Rechtsbrononderdeel) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.517Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:Feit:(Feit -> Rechtsbrononderdeel) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.381Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:OnmiddellijkeInning:(OnmiddellijkeInning -> BestuurlijkeBeslissing) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.517Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:OnmiddellijkeInning:(OnmiddellijkeInning -> BestuurlijkeBeslissing) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.381Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BeslissingTotBestuurlijkeVervolging:(BeslissingTotBestuurlijkeVervolging -> BestuurlijkeBeslissing) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.517Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BeslissingTotBestuurlijkeVervolging:(BeslissingTotBestuurlijkeVervolging -> BestuurlijkeBeslissing) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.381Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BeslissingTotBestuurlijkOpsporingsonderzoek:(BeslissingTotBestuurlijkOpsporingsonderzoek -> BestuurlijkeBeslissing) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.517Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BeslissingTotBestuurlijkOpsporingsonderzoek:(BeslissingTotBestuurlijkOpsporingsonderzoek -> BestuurlijkeBeslissing) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.381Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:SanctieBeslissing:(SanctieBeslissing -> BestuurlijkeSanctie) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.517Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:SanctieBeslissing:(SanctieBeslissing -> BestuurlijkeSanctie) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.381Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BestuurlijkeSanctie:(BestuurlijkeSanctie -> SanctieBeslissing) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.518Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BestuurlijkeSanctie:(BestuurlijkeSanctie -> SanctieBeslissing) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.381Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BestuurlijkeBeslissing:(BestuurlijkeBeslissing -> GeregistreerdeOrganisatie) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.518Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BestuurlijkeBeslissing:(BestuurlijkeBeslissing -> GeregistreerdeOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.381Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BeslissingTotBestuurlijkeVervolging:(BeslissingTotBestuurlijkeVervolging -> SanctieBeslissing) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.518Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BeslissingTotBestuurlijkeVervolging:(BeslissingTotBestuurlijkeVervolging -> SanctieBeslissing) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.382Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.518Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.382Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BeslissingTotBestuurlijkSepot:(BeslissingTotBestuurlijkSepot -> BestuurlijkeBeslissing) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.518Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BeslissingTotBestuurlijkSepot:(BeslissingTotBestuurlijkSepot -> BestuurlijkeBeslissing) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.382Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:SanctieBeslissing:(SanctieBeslissing -> BestuurlijkeBeslissing) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.518Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:SanctieBeslissing:(SanctieBeslissing -> BestuurlijkeBeslissing) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.382Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Vestiging) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.518Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Vestiging) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.382Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:SanctieBeslissing:(SanctieBeslissing -> BeslissingTotBestuurlijkeVervolging) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.518Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:SanctieBeslissing:(SanctieBeslissing -> BeslissingTotBestuurlijkeVervolging) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.382Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BeslissingTotBestuurlijkeVervolging:(BeslissingTotBestuurlijkeVervolging -> VervalSanctiemogelijkheidDoorBetalingGeldsom) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.518Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BeslissingTotBestuurlijkeVervolging:(BeslissingTotBestuurlijkeVervolging -> VervalSanctiemogelijkheidDoorBetalingGeldsom) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.382Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.519Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.382Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BestuurlijkeGeldboete:(BestuurlijkeGeldboete -> BestuurlijkeSanctie) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.519Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BestuurlijkeGeldboete:(BestuurlijkeGeldboete -> BestuurlijkeSanctie) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.382Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BestuurlijkeBeslissing:(BestuurlijkeBeslissing -> Stuk) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.519Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BestuurlijkeBeslissing:(BestuurlijkeBeslissing -> Stuk) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.382Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:Feit:(Feit -> GeregistreerdeOrganisatie) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.519Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:Feit:(Feit -> GeregistreerdeOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.382Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BestuurlijkeBeslissing:(BestuurlijkeBeslissing -> Feit) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.519Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BestuurlijkeBeslissing:(BestuurlijkeBeslissing -> Feit) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.383Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:Feit:(Feit -> Feit) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.519Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:Feit:(Feit -> Feit) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.383Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.519Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.383Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:Feit:(Feit -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:35:38.519Z info: Connector Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:Feit:(Feit -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:14.383Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:35:38.520Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:14.383Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-BestuurlijkSanctieregister-globaal). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:35:38.520Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-BestuurlijkSanctieregister-globaal). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:14.383Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:35:38.520Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:14.384Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-BestuurlijkSanctieregister-globaal:Objectdiagrammen). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:35:38.520Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-BestuurlijkSanctieregister-globaal:Objectdiagrammen). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:14.387Z warn: [ConnectorConverterHandler]: Connector (Inwonerschap.GeregistreerdPersoon) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:35:38.524Z warn: [ConnectorConverterHandler]: Connector (Inwonerschap.GeregistreerdPersoon) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:20:14.388Z warn: [ConnectorConverterHandler]: Connector (genomenDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:35:38.524Z warn: [ConnectorConverterHandler]: Connector (genomenDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:20:14.388Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (genomenDoor) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-02T21:35:38.524Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (genomenDoor) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-01T20:20:14.388Z warn: [ConnectorConverterHandler]: Connector (verbalisant) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:35:38.524Z warn: [ConnectorConverterHandler]: Connector (verbalisant) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:20:14.388Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verbalisant) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-02T21:35:38.524Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (verbalisant) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-01T20:20:14.388Z warn: [ConnectorConverterHandler]: Connector (legtOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:35:38.524Z warn: [ConnectorConverterHandler]: Connector (legtOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:20:14.388Z warn: [ConnectorConverterHandler]: Connector (opgenomenIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:35:38.524Z warn: [ConnectorConverterHandler]: Connector (opgenomenIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:20:14.388Z warn: [ConnectorConverterHandler]: Connector (betrokkene) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:35:38.525Z warn: [ConnectorConverterHandler]: Connector (betrokkene) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:20:14.388Z warn: [ConnectorConverterHandler]: Connector (verwijstNaar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:35:38.525Z warn: [ConnectorConverterHandler]: Connector (verwijstNaar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:20:14.388Z warn: [ConnectorConverterHandler]: Connector (heeftGeboorte) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:35:38.525Z warn: [ConnectorConverterHandler]: Connector (heeftGeboorte) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:20:14.388Z warn: [ConnectorConverterHandler]: Connector (overtreedt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:35:38.525Z warn: [ConnectorConverterHandler]: Connector (overtreedt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:20:14.388Z warn: [ConnectorConverterHandler]: Connector (gerelateerd) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:35:38.525Z warn: [ConnectorConverterHandler]: Connector (gerelateerd) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:20:14.388Z warn: [ConnectorConverterHandler]: Connector (vindtNeerslagIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:35:38.525Z warn: [ConnectorConverterHandler]: Connector (vindtNeerslagIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:20:14.388Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (vindtNeerslagIn) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-02T21:35:38.525Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (vindtNeerslagIn) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-01T20:20:14.390Z warn: [ConverterHandler]: Entity with path Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:Activity has already a value for definition-nl in language nl, but will be overwritten.
+2025-10-02T21:35:38.527Z warn: [ConverterHandler]: Entity with path Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:Activity has already a value for definition-nl in language nl, but will be overwritten.
 
-2025-10-01T20:20:14.391Z warn: [ConverterHandler]: Entity with path Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Persoon:Persoonsgebeurtenis has an empty value for tag usageNote-nl.
+2025-10-02T21:35:38.527Z warn: [ConverterHandler]: Entity with path Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Persoon:Persoonsgebeurtenis has an empty value for tag usageNote-nl.
 
-2025-10-01T20:20:14.391Z warn: [ConverterHandler]: Entity with path Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Persoon:Verblijfplaats has an empty value for tag usageNote-nl.
+2025-10-02T21:35:38.528Z warn: [ConverterHandler]: Entity with path Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Persoon:Verblijfplaats has an empty value for tag usageNote-nl.
 
-2025-10-01T20:20:14.391Z warn: [ConverterHandler]: Entity with path Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:35:38.528Z warn: [ConverterHandler]: Entity with path Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-Organisatie:Organisatie has an empty value for tag ap-usageNote-nl.
 
-2025-10-01T20:20:14.397Z warn: [ConverterHandler]: Entity with path Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BestuurlijkeGeldboete:betalingsstatus has already a value for definition-nl in language nl, but will be overwritten.
+2025-10-02T21:35:38.533Z warn: [ConverterHandler]: Entity with path Model:OSLO-BestuurlijkSanctieregister-globaal:OSLO-BestuurlijkSanctieregister:BestuurlijkeGeldboete:betalingsstatus has already a value for definition-nl in language nl, but will be overwritten.
 
-2025-10-01T20:20:14.412Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (verwijstNaar).
+2025-10-02T21:35:38.549Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (verwijstNaar).
 
 #||# -------------------------------------
 

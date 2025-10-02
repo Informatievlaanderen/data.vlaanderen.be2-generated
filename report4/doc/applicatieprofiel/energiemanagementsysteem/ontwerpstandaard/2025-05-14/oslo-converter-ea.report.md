@@ -2,89 +2,89 @@
 
 #||# -------------------------------------
 
-2025-10-01T20:20:57.403Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:SSN/SOSA:Observatie:(Observatie -> Observatie))
+2025-10-02T21:36:20.144Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:SSN/SOSA:Observatie:(Observatie -> Observatie))
 
-2025-10-01T20:20:57.404Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:SSN/SOSA:ObserveerbaarKenmerk:(ObserveerbaarKenmerk -> Sensor))
+2025-10-02T21:36:20.146Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:SSN/SOSA:ObserveerbaarKenmerk:(ObserveerbaarKenmerk -> Sensor))
 
-2025-10-01T20:20:57.404Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:SSN/SOSA:Observatieverzameling:(Observatieverzameling -> Observatieverzameling))
+2025-10-02T21:36:20.146Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:SSN/SOSA:Observatieverzameling:(Observatieverzameling -> Observatieverzameling))
 
-2025-10-01T20:20:57.404Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:IMKL-LD:Aansluiting:(Aansluiting -> Aansluiting))
+2025-10-02T21:36:20.146Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:IMKL-LD:Aansluiting:(Aansluiting -> Aansluiting))
 
-2025-10-01T20:20:57.404Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:W3C-Person:Persoon:(Persoon -> Persoon))
+2025-10-02T21:36:20.146Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:W3C-Person:Persoon:(Persoon -> Persoon))
 
-2025-10-01T20:20:57.406Z info: Connector Model:Model:SSN/SOSA:Observatie:(Observatie -> ObserveerbaarKenmerk) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:36:20.149Z info: Connector Model:Model:SSN/SOSA:Observatie:(Observatie -> ObserveerbaarKenmerk) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:57.407Z info: Connector Model:SF:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:36:20.150Z info: Connector Model:SF:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:57.407Z info: Connector Model:Model:SSN/SOSA:Observatie:(Observatie -> Observatieprocedure) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:36:20.151Z info: Connector Model:Model:SSN/SOSA:Observatie:(Observatie -> Observatieprocedure) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:57.408Z info: Connector Model:Model:SSN/SOSA:Aansturing:(Aansturing -> AanstuurbaarKenmerk) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:36:20.151Z info: Connector Model:Model:SSN/SOSA:Aansturing:(Aansturing -> AanstuurbaarKenmerk) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:57.408Z info: Connector Model:Model:SSN/SOSA:Aansturing:(Aansturing -> Aansturingsprocedure) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:36:20.151Z info: Connector Model:Model:SSN/SOSA:Aansturing:(Aansturing -> Aansturingsprocedure) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:57.408Z info: Connector Model:Model:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:36:20.152Z info: Connector Model:Model:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:57.408Z info: Connector Model:Model:W3C-Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:36:20.152Z info: Connector Model:Model:W3C-Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:57.408Z info: Connector Model:Model:SAREF:Toestel:(Toestel -> Object) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:36:20.152Z info: Connector Model:Model:SAREF:Toestel:(Toestel -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:57.408Z info: Connector Model:Model:IMKL-LD:Aansluiting:(Aansluiting -> Object) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:36:20.152Z info: Connector Model:Model:IMKL-LD:Aansluiting:(Aansluiting -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:57.409Z info: Connector Model:Model:SAREF:Meter:(Meter -> Toestel) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:36:20.152Z info: Connector Model:Model:SAREF:Meter:(Meter -> Toestel) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:57.409Z info: Connector Model:Model:IMKL-LD:Nutsvoorzieningnetwerk:(Nutsvoorzieningnetwerk -> Nutsvoorzieningnetwerk) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:36:20.153Z info: Connector Model:Model:IMKL-LD:Nutsvoorzieningnetwerk:(Nutsvoorzieningnetwerk -> Nutsvoorzieningnetwerk) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:57.409Z info: Connector Model:Model:IMKL-LD:Aansluiting:(Aansluiting -> Nutsvoorzieningnetwerk) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:36:20.153Z info: Connector Model:Model:IMKL-LD:Aansluiting:(Aansluiting -> Nutsvoorzieningnetwerk) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:57.409Z info: Connector Model:QUDT:Eenheid:(Eenheid -> Concept) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:36:20.154Z info: Connector Model:QUDT:Eenheid:(Eenheid -> Concept) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:57.409Z info: Connector Model:Model:W3C-Person:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:36:20.154Z info: Connector Model:Model:W3C-Person:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:57.409Z info: Connector Model:Model:W3C-ORG:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-02T21:36:20.154Z info: Connector Model:Model:W3C-ORG:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:20:57.410Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.155Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.410Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:SKOS). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.155Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:SKOS). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.410Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:QUDT). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.155Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:QUDT). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.410Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Schema.org). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.155Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Schema.org). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:DCTerms). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.155Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:DCTerms). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:SF). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.155Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:SF). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Dummy). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.155Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Dummy). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Dump). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.155Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Dump). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:ML-DCAT). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.155Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:ML-DCAT). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:LOCN). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.155Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:LOCN). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:ADMS). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.156Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:ADMS). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:RDFS). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.156Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:RDFS). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.156Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:SSN/SOSA). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.156Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:SSN/SOSA). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:W3C-Time). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.156Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:W3C-Time). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:OMS). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.156Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:OMS). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:SAREF). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.156Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:SAREF). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:FOAF). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.156Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:FOAF). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:IMKL-LD). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.156Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:IMKL-LD). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:SSN/SOSA2). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.156Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:SSN/SOSA2). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:W3C-Person). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.156Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:W3C-Person). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:20:57.411Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:W3C-ORG). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:36:20.156Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:W3C-ORG). Using fallback URI (http://todo.com/) instead.
 
 #||# -------------------------------------
 

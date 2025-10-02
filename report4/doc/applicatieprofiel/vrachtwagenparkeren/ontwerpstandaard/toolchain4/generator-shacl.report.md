@@ -2,43 +2,43 @@
 
 #||# -------------------------------------  
 
-2025-10-01T20:35:42.938Z warn: Unable to find the description for subject "[urn:oslo-toolchain:75a2acd52b081c016820d6e39737c34683901aceb5e5bfdfa780b6ebadc7d95a](all-vrachtwagenParkeren-ap.jsonld#L490)".
+2025-10-02T21:51:16.809Z warn: Unable to find the description for subject "[urn:oslo-toolchain:75a2acd52b081c016820d6e39737c34683901aceb5e5bfdfa780b6ebadc7d95a](all-vrachtwagenParkeren-ap.jsonld#L490)".
 
-2025-10-01T20:35:42.941Z warn: Unable to find the description for subject "[urn:oslo-toolchain:dc86c3fde40a16505abaf3784ff486ecdcde690eeceeaea5751984ed673e93fd](all-vrachtwagenParkeren-ap.jsonld#L925)".
+2025-10-02T21:51:16.814Z warn: Unable to find the description for subject "[urn:oslo-toolchain:dc86c3fde40a16505abaf3784ff486ecdcde690eeceeaea5751984ed673e93fd](all-vrachtwagenParkeren-ap.jsonld#L925)".
 
-2025-10-01T20:35:42.942Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-vrachtwagenParkeren-ap.jsonld#L5842)".
+2025-10-02T21:51:16.815Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-vrachtwagenParkeren-ap.jsonld#L5842)".
 
-2025-10-01T20:35:42.942Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-vrachtwagenParkeren-ap.jsonld#L5853)".
+2025-10-02T21:51:16.815Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-vrachtwagenParkeren-ap.jsonld#L5853)".
 
-2025-10-01T20:35:42.943Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-vrachtwagenParkeren-ap.jsonld#L5864)".
+2025-10-02T21:51:16.816Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-vrachtwagenParkeren-ap.jsonld#L5864)".
 
-2025-10-01T20:35:42.943Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-vrachtwagenParkeren-ap.jsonld#L5875)".
+2025-10-02T21:51:16.816Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-vrachtwagenParkeren-ap.jsonld#L5875)".
 
-2025-10-01T20:35:42.943Z warn: Unable to find the description for subject "urn:oslo-toolchain:10489563".
+2025-10-02T21:51:16.816Z warn: Unable to find the description for subject "urn:oslo-toolchain:10489563".
 
-2025-10-01T20:35:42.970Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5f8f6e2666c8bda03b509a0d3456e58c5774880ca349e040483883cafaf9cf4c](all-vrachtwagenParkeren-ap.jsonld#L5176)".
+2025-10-02T21:51:16.848Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5f8f6e2666c8bda03b509a0d3456e58c5774880ca349e040483883cafaf9cf4c](all-vrachtwagenParkeren-ap.jsonld#L5176)".
 
-2025-10-01T20:35:42.970Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cad28bd76b1538e0283b69a40923f268dea1b5b081da04ba32d3de2fabf15564](all-vrachtwagenParkeren-ap.jsonld#L5196)".
+2025-10-02T21:51:16.849Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cad28bd76b1538e0283b69a40923f268dea1b5b081da04ba32d3de2fabf15564](all-vrachtwagenParkeren-ap.jsonld#L5196)".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2025-10-01T20:35:43.913Z warn: Unable to find the description for subject "[urn:oslo-toolchain:dc86c3fde40a16505abaf3784ff486ecdcde690eeceeaea5751984ed673e93fd](all-vrachtwagenParkeren-ap.jsonld#L925)".
+2025-10-02T21:51:17.937Z warn: Unable to find the description for subject "[urn:oslo-toolchain:dc86c3fde40a16505abaf3784ff486ecdcde690eeceeaea5751984ed673e93fd](all-vrachtwagenParkeren-ap.jsonld#L925)".
 
-2025-10-01T20:35:43.916Z warn: Unable to find the description for subject "[urn:oslo-toolchain:75a2acd52b081c016820d6e39737c34683901aceb5e5bfdfa780b6ebadc7d95a](all-vrachtwagenParkeren-ap.jsonld#L490)".
+2025-10-02T21:51:17.940Z warn: Unable to find the description for subject "[urn:oslo-toolchain:75a2acd52b081c016820d6e39737c34683901aceb5e5bfdfa780b6ebadc7d95a](all-vrachtwagenParkeren-ap.jsonld#L490)".
 
-2025-10-01T20:35:43.917Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-vrachtwagenParkeren-ap.jsonld#L5842)".
+2025-10-02T21:51:17.941Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-vrachtwagenParkeren-ap.jsonld#L5842)".
 
-2025-10-01T20:35:43.917Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-vrachtwagenParkeren-ap.jsonld#L5853)".
+2025-10-02T21:51:17.942Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-vrachtwagenParkeren-ap.jsonld#L5853)".
 
-2025-10-01T20:35:43.918Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-vrachtwagenParkeren-ap.jsonld#L5864)".
+2025-10-02T21:51:17.942Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-vrachtwagenParkeren-ap.jsonld#L5864)".
 
-2025-10-01T20:35:43.918Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-vrachtwagenParkeren-ap.jsonld#L5875)".
+2025-10-02T21:51:17.942Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-vrachtwagenParkeren-ap.jsonld#L5875)".
 
-2025-10-01T20:35:43.918Z warn: Unable to find the description for subject "urn:oslo-toolchain:10489563".
+2025-10-02T21:51:17.943Z warn: Unable to find the description for subject "urn:oslo-toolchain:10489563".
 
-2025-10-01T20:35:43.939Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5f8f6e2666c8bda03b509a0d3456e58c5774880ca349e040483883cafaf9cf4c](all-vrachtwagenParkeren-ap.jsonld#L5176)".
+2025-10-02T21:51:17.965Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5f8f6e2666c8bda03b509a0d3456e58c5774880ca349e040483883cafaf9cf4c](all-vrachtwagenParkeren-ap.jsonld#L5176)".
 
-2025-10-01T20:35:43.939Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cad28bd76b1538e0283b69a40923f268dea1b5b081da04ba32d3de2fabf15564](all-vrachtwagenParkeren-ap.jsonld#L5196)".
+2025-10-02T21:51:17.965Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cad28bd76b1538e0283b69a40923f268dea1b5b081da04ba32d3de2fabf15564](all-vrachtwagenParkeren-ap.jsonld#L5196)".
 

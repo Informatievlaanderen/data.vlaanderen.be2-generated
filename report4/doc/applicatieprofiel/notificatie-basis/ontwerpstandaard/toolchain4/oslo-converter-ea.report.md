@@ -2,67 +2,67 @@
 
 #||# -------------------------------------
 
-2025-10-01T20:21:57.724Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Generiek:Agent:rapporteertAan)
+2025-10-02T21:37:21.694Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-10-01T20:21:57.725Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet)
+2025-10-02T21:37:21.696Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet)
 
-2025-10-01T20:21:57.725Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Dienst:PubliekeDienstverlening:vereist)
+2025-10-02T21:37:21.696Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Dienst:PubliekeDienstverlening:vereist)
 
-2025-10-01T20:21:57.725Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Organisatie:PubliekeOrganisatie:isVerantwoordelijkVoor)
+2025-10-02T21:37:21.696Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Organisatie:PubliekeOrganisatie:isVerantwoordelijkVoor)
 
-2025-10-01T20:21:57.728Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:isGerelateerdMet is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:21.698Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:isGerelateerdMet is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:57.728Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:isGerelateerdMet has name "isGerelateerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-02T21:37:21.699Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:isGerelateerdMet has name "isGerelateerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-01T20:21:57.728Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Doelgroep:geografischGebied is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:21.699Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Doelgroep:geografischGebied is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:57.729Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Doelgroep:geografischGebied has name "geografischGebied". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-02T21:37:21.700Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Doelgroep:geografischGebied has name "geografischGebied". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-01T20:21:57.729Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Notificatiebericht:afzender is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:21.700Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Notificatiebericht:afzender is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:57.729Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Notificatiebericht:afzender has name "afzender". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-02T21:37:21.700Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Notificatiebericht:afzender has name "afzender". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-01T20:21:57.729Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:resulteertIn is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:21.700Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:resulteertIn is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:57.729Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:resulteertIn has name "resulteertIn". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-02T21:37:21.700Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:resulteertIn has name "resulteertIn". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-01T20:21:57.729Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Notificatiebericht:bestemmeling is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:21.700Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Notificatiebericht:bestemmeling is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:57.729Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Notificatiebericht:bestemmeling has name "bestemmeling". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-02T21:37:21.701Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Notificatiebericht:bestemmeling has name "bestemmeling". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-01T20:21:57.730Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:agent is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:21.701Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:agent is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:57.730Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:agent has name "agent". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-02T21:37:21.701Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:agent has name "agent". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-01T20:21:57.730Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Organisatie:PubliekeOrganisatie:heeftMerk is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:21.701Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Organisatie:PubliekeOrganisatie:heeftMerk is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:57.730Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Organisatie:PubliekeOrganisatie:heeftMerk has name "heeftMerk". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-02T21:37:21.701Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Organisatie:PubliekeOrganisatie:heeftMerk has name "heeftMerk". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-01T20:21:57.730Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Merk:isGerelateerdMet is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:21.702Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Merk:isGerelateerdMet is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:57.730Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Merk:isGerelateerdMet has name "isGerelateerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-02T21:37:21.702Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:Merk:isGerelateerdMet has name "isGerelateerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-01T20:21:57.731Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:kadertBinnen is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:21.702Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:kadertBinnen is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:57.731Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:kadertBinnen has name "kadertBinnen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-02T21:37:21.702Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Notificatie:InformeerActie:kadertBinnen has name "kadertBinnen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-01T20:21:57.731Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke is not an association with a source role. Ignoring this connector.
+2025-10-02T21:37:21.702Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke is not an association with a source role. Ignoring this connector.
 
-2025-10-01T20:21:57.731Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke has name "heeftVerantwoordelijke". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-02T21:37:21.702Z info: Connector Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke has name "heeftVerantwoordelijke". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-01T20:21:57.731Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:37:21.703Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:21:57.732Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel). Using fallback URI (http://todo.com/) instead.
+2025-10-02T21:37:21.703Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO²_applicatieprofiel_Notificatie_basisprofiel). Using fallback URI (http://todo.com/) instead.
 
-2025-10-01T20:21:57.735Z warn: [ConnectorConverterHandler]: Connector (resulteertIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:21.706Z warn: [ConnectorConverterHandler]: Connector (resulteertIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:57.735Z warn: [ConnectorConverterHandler]: Connector (resulteertIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:21.707Z warn: [ConnectorConverterHandler]: Connector (resulteertIn) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:57.735Z warn: [ConnectorConverterHandler]: Connector (kadertBinnen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-02T21:37:21.707Z warn: [ConnectorConverterHandler]: Connector (kadertBinnen) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-01T20:21:57.735Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (kadertBinnen) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-02T21:37:21.707Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (kadertBinnen) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-01T20:21:57.746Z warn: [ConverterHandler]: Entity with path isGerelateerdMet has an empty value for tag ap-usageNote-nl.
+2025-10-02T21:37:21.718Z warn: [ConverterHandler]: Entity with path isGerelateerdMet has an empty value for tag ap-usageNote-nl.
 
 #||# -------------------------------------
 

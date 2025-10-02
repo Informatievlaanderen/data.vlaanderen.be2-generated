@@ -2,11 +2,11 @@
 
 #||# -------------------------------------  
 
-2025-10-01T20:35:53.935Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
+2025-10-02T21:51:30.176Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2025-10-01T20:35:54.578Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
+2025-10-02T21:51:31.258Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
 

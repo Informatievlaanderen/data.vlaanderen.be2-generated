@@ -2,67 +2,67 @@
 
 #||# -------------------------------------  
 
-2025-10-01T20:36:40.030Z info: Loaded 45 URI prefixes into whitelist
+2025-10-02T21:53:04.379Z info: Loaded 45 URI prefixes into whitelist
 
-2025-10-01T20:36:40.176Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#RegisteredOrganization for subject: [urn:oslo-toolchain:b3e7d60c33b278659ba5f0b0cdf569912a2a524dd25f0bae28d57260afc9c763](all-loongegevens.jsonld#L132)
+2025-10-02T21:53:04.552Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#RegisteredOrganization for subject: [urn:oslo-toolchain:b3e7d60c33b278659ba5f0b0cdf569912a2a524dd25f0bae28d57260afc9c763](all-loongegevens.jsonld#L132)
 
-2025-10-01T20:36:40.176Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#registration for subject: [urn:oslo-toolchain:d712137d47e3c1d9be997e089e57e2ba72212a2872e353f3fb36b3fbfade5c56](all-loongegevens.jsonld#L1332)
+2025-10-02T21:53:04.552Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#registration for subject: [urn:oslo-toolchain:d712137d47e3c1d9be997e089e57e2ba72212a2872e353f3fb36b3fbfade5c56](all-loongegevens.jsonld#L1332)
 
-2025-10-01T20:36:40.177Z warn: Found non-whitelisted assigned URI: https://w3.org/1999/02/22-rdf-syntax-ns#langString for subject: [urn:oslo-toolchain:c2f3774979e5fe5c44c897e84780e5b10f69e75dd0fa8bb3baa253182b49aa70](all-loongegevens.jsonld#L3551)
+2025-10-02T21:53:04.553Z warn: Found non-whitelisted assigned URI: https://w3.org/1999/02/22-rdf-syntax-ns#langString for subject: [urn:oslo-toolchain:c2f3774979e5fe5c44c897e84780e5b10f69e75dd0fa8bb3baa253182b49aa70](all-loongegevens.jsonld#L3551)
 
-2025-10-01T20:36:40.178Z warn: Found sentence without a '.': 'Een cheque bevat een bepaalde som geld. Bv.Ecocheques' for subject: [urn:oslo-toolchain:2657a75c7331a80c26ec5faa8aabbba2d7822568fc1d116bff859f6333d4f7f9](all-loongegevens.jsonld#L2660)
+2025-10-02T21:53:04.554Z warn: Found sentence without a '.': 'Een cheque bevat een bepaalde som geld. Bv.Ecocheques' for subject: [urn:oslo-toolchain:2657a75c7331a80c26ec5faa8aabbba2d7822568fc1d116bff859f6333d4f7f9](all-loongegevens.jsonld#L2660)
 
-2025-10-01T20:36:40.178Z warn: Found sentence without a '.': 'Een cheque bevat een bepaalde som geld. Bv.Ecocheques' for subject: [urn:oslo-toolchain:2657a75c7331a80c26ec5faa8aabbba2d7822568fc1d116bff859f6333d4f7f9](all-loongegevens.jsonld#L2660)
+2025-10-02T21:53:04.554Z warn: Found sentence without a '.': 'Een cheque bevat een bepaalde som geld. Bv.Ecocheques' for subject: [urn:oslo-toolchain:2657a75c7331a80c26ec5faa8aabbba2d7822568fc1d116bff859f6333d4f7f9](all-loongegevens.jsonld#L2660)
 
-2025-10-01T20:36:40.178Z warn: Found sentence without a '.': 'Ruimer begrip dan familie waar het gezin louter bestaat uit nabije bloedverwanten, bv een eenpersoonsgezin of living apart together. Gezinsleden hebben doorgaans dezelfde verblijfplaats. Een volledige beschrijving van deze klasse is te vinden in het appli' for subject: [urn:oslo-toolchain:ad22f8dac319862ebe16c4c620f0e19ca549471a5404b2d20483844f4238ea78](all-loongegevens.jsonld#L470)
+2025-10-02T21:53:04.555Z warn: Found sentence without a '.': 'Ruimer begrip dan familie waar het gezin louter bestaat uit nabije bloedverwanten, bv een eenpersoonsgezin of living apart together. Gezinsleden hebben doorgaans dezelfde verblijfplaats. Een volledige beschrijving van deze klasse is te vinden in het appli' for subject: [urn:oslo-toolchain:ad22f8dac319862ebe16c4c620f0e19ca549471a5404b2d20483844f4238ea78](all-loongegevens.jsonld#L470)
 
-2025-10-01T20:36:40.180Z error: Found missing class or attribute (NAL_currency): [urn:oslo-toolchain:288ce8935e4caecc90bb022c5a480c7319b269236b4b100211e1801d5d0c2461](all-loongegevens.jsonld#L698)
+2025-10-02T21:53:04.557Z error: Found missing class or attribute (NAL_currency): [urn:oslo-toolchain:288ce8935e4caecc90bb022c5a480c7319b269236b4b100211e1801d5d0c2461](all-loongegevens.jsonld#L698)
 
-2025-10-01T20:36:40.183Z error: Found missing class or attribute (Agent): [urn:oslo-toolchain:7dc81f6db094e159c6ca1f1c645a777d9dad7c295b26acb045986499bab6c070](all-loongegevens.jsonld#L3493)
+2025-10-02T21:53:04.560Z error: Found missing class or attribute (Agent): [urn:oslo-toolchain:7dc81f6db094e159c6ca1f1c645a777d9dad7c295b26acb045986499bab6c070](all-loongegevens.jsonld#L3493)
 
-2025-10-01T20:36:40.183Z error: Found missing class or attribute (TaalString): [urn:oslo-toolchain:c2f3774979e5fe5c44c897e84780e5b10f69e75dd0fa8bb3baa253182b49aa70](all-loongegevens.jsonld#L3551)
+2025-10-02T21:53:04.560Z error: Found missing class or attribute (TaalString): [urn:oslo-toolchain:c2f3774979e5fe5c44c897e84780e5b10f69e75dd0fa8bb3baa253182b49aa70](all-loongegevens.jsonld#L3551)
 
-2025-10-01T20:36:40.183Z info: Validation found 3 non-whitelisted assigned URIs
+2025-10-02T21:53:04.560Z info: Validation found 3 non-whitelisted assigned URIs
 
-2025-10-01T20:36:40.184Z info: Validation found 3 sentences with spelling mistakes.
+2025-10-02T21:53:04.560Z info: Validation found 3 sentences with spelling mistakes.
 
-2025-10-01T20:36:40.184Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2025-10-02T21:53:04.560Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-2025-10-01T20:36:40.184Z info: Validation successful! All base URIs seem to be valid.
+2025-10-02T21:53:04.560Z info: Validation successful! All base URIs seem to be valid.
 
-2025-10-01T20:36:40.184Z info: Validation found 3 missing referenced classes or attributes.
+2025-10-02T21:53:04.560Z info: Validation found 3 missing referenced classes or attributes.
 
 #||# oslo-jsonld-validator   
 
 #||# -------------------------------------  
 
-2025-10-01T20:36:40.618Z info: Loaded 45 URI prefixes into whitelist
+2025-10-02T21:53:05.079Z info: Loaded 45 URI prefixes into whitelist
 
-2025-10-01T20:36:40.763Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#RegisteredOrganization for subject: [urn:oslo-toolchain:b3e7d60c33b278659ba5f0b0cdf569912a2a524dd25f0bae28d57260afc9c763](all-loongegevens.jsonld#L132)
+2025-10-02T21:53:05.271Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#RegisteredOrganization for subject: [urn:oslo-toolchain:b3e7d60c33b278659ba5f0b0cdf569912a2a524dd25f0bae28d57260afc9c763](all-loongegevens.jsonld#L132)
 
-2025-10-01T20:36:40.764Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#registration for subject: [urn:oslo-toolchain:d712137d47e3c1d9be997e089e57e2ba72212a2872e353f3fb36b3fbfade5c56](all-loongegevens.jsonld#L1332)
+2025-10-02T21:53:05.271Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#registration for subject: [urn:oslo-toolchain:d712137d47e3c1d9be997e089e57e2ba72212a2872e353f3fb36b3fbfade5c56](all-loongegevens.jsonld#L1332)
 
-2025-10-01T20:36:40.764Z warn: Found non-whitelisted assigned URI: https://w3.org/1999/02/22-rdf-syntax-ns#langString for subject: [urn:oslo-toolchain:c2f3774979e5fe5c44c897e84780e5b10f69e75dd0fa8bb3baa253182b49aa70](all-loongegevens.jsonld#L3551)
+2025-10-02T21:53:05.271Z warn: Found non-whitelisted assigned URI: https://w3.org/1999/02/22-rdf-syntax-ns#langString for subject: [urn:oslo-toolchain:c2f3774979e5fe5c44c897e84780e5b10f69e75dd0fa8bb3baa253182b49aa70](all-loongegevens.jsonld#L3551)
 
-2025-10-01T20:36:40.765Z warn: Found sentence without a '.': 'Een cheque bevat een bepaalde som geld. Bv.Ecocheques' for subject: [urn:oslo-toolchain:2657a75c7331a80c26ec5faa8aabbba2d7822568fc1d116bff859f6333d4f7f9](all-loongegevens.jsonld#L2660)
+2025-10-02T21:53:05.273Z warn: Found sentence without a '.': 'Een cheque bevat een bepaalde som geld. Bv.Ecocheques' for subject: [urn:oslo-toolchain:2657a75c7331a80c26ec5faa8aabbba2d7822568fc1d116bff859f6333d4f7f9](all-loongegevens.jsonld#L2660)
 
-2025-10-01T20:36:40.765Z warn: Found sentence without a '.': 'Een cheque bevat een bepaalde som geld. Bv.Ecocheques' for subject: [urn:oslo-toolchain:2657a75c7331a80c26ec5faa8aabbba2d7822568fc1d116bff859f6333d4f7f9](all-loongegevens.jsonld#L2660)
+2025-10-02T21:53:05.273Z warn: Found sentence without a '.': 'Een cheque bevat een bepaalde som geld. Bv.Ecocheques' for subject: [urn:oslo-toolchain:2657a75c7331a80c26ec5faa8aabbba2d7822568fc1d116bff859f6333d4f7f9](all-loongegevens.jsonld#L2660)
 
-2025-10-01T20:36:40.765Z warn: Found sentence without a '.': 'Ruimer begrip dan familie waar het gezin louter bestaat uit nabije bloedverwanten, bv een eenpersoonsgezin of living apart together. Gezinsleden hebben doorgaans dezelfde verblijfplaats. Een volledige beschrijving van deze klasse is te vinden in het appli' for subject: [urn:oslo-toolchain:ad22f8dac319862ebe16c4c620f0e19ca549471a5404b2d20483844f4238ea78](all-loongegevens.jsonld#L470)
+2025-10-02T21:53:05.273Z warn: Found sentence without a '.': 'Ruimer begrip dan familie waar het gezin louter bestaat uit nabije bloedverwanten, bv een eenpersoonsgezin of living apart together. Gezinsleden hebben doorgaans dezelfde verblijfplaats. Een volledige beschrijving van deze klasse is te vinden in het appli' for subject: [urn:oslo-toolchain:ad22f8dac319862ebe16c4c620f0e19ca549471a5404b2d20483844f4238ea78](all-loongegevens.jsonld#L470)
 
-2025-10-01T20:36:40.767Z error: Found missing class or attribute (NAL_currency): [urn:oslo-toolchain:288ce8935e4caecc90bb022c5a480c7319b269236b4b100211e1801d5d0c2461](all-loongegevens.jsonld#L698)
+2025-10-02T21:53:05.275Z error: Found missing class or attribute (NAL_currency): [urn:oslo-toolchain:288ce8935e4caecc90bb022c5a480c7319b269236b4b100211e1801d5d0c2461](all-loongegevens.jsonld#L698)
 
-2025-10-01T20:36:40.769Z error: Found missing class or attribute (Agent): [urn:oslo-toolchain:7dc81f6db094e159c6ca1f1c645a777d9dad7c295b26acb045986499bab6c070](all-loongegevens.jsonld#L3493)
+2025-10-02T21:53:05.278Z error: Found missing class or attribute (Agent): [urn:oslo-toolchain:7dc81f6db094e159c6ca1f1c645a777d9dad7c295b26acb045986499bab6c070](all-loongegevens.jsonld#L3493)
 
-2025-10-01T20:36:40.770Z error: Found missing class or attribute (TaalString): [urn:oslo-toolchain:c2f3774979e5fe5c44c897e84780e5b10f69e75dd0fa8bb3baa253182b49aa70](all-loongegevens.jsonld#L3551)
+2025-10-02T21:53:05.278Z error: Found missing class or attribute (TaalString): [urn:oslo-toolchain:c2f3774979e5fe5c44c897e84780e5b10f69e75dd0fa8bb3baa253182b49aa70](all-loongegevens.jsonld#L3551)
 
-2025-10-01T20:36:40.770Z info: Validation found 3 non-whitelisted assigned URIs
+2025-10-02T21:53:05.278Z info: Validation found 3 non-whitelisted assigned URIs
 
-2025-10-01T20:36:40.770Z info: Validation found 3 sentences with spelling mistakes.
+2025-10-02T21:53:05.279Z info: Validation found 3 sentences with spelling mistakes.
 
-2025-10-01T20:36:40.770Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2025-10-02T21:53:05.279Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-2025-10-01T20:36:40.770Z info: Validation successful! All base URIs seem to be valid.
+2025-10-02T21:53:05.279Z info: Validation successful! All base URIs seem to be valid.
 
-2025-10-01T20:36:40.770Z info: Validation found 3 missing referenced classes or attributes.
+2025-10-02T21:53:05.279Z info: Validation found 3 missing referenced classes or attributes.
 
