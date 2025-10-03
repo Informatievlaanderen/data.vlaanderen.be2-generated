@@ -2,27 +2,25 @@
 
 #||# -------------------------------------  
 
-2025-10-03T12:55:55.807Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/givenName which acts as a parent. Using original URI as fallback.
+2025-10-03T13:11:00.477Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/givenName which acts as a parent. Using original URI as fallback.
 
-2025-10-03T12:55:55.809Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/name which acts as a parent. Using original URI as fallback.
+2025-10-03T13:11:00.479Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/name which acts as a parent. Using original URI as fallback.
 
-2025-10-03T12:55:55.813Z warn: Unable to find the assigned URI for external class http://purl.org/vocab/bio/0.1/Event which acts as a parent. Using original URI as fallback.
+2025-10-03T13:11:00.488Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/name which acts as a parent. Using original URI as fallback.
 
-2025-10-03T12:55:55.833Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/name which acts as a parent. Using original URI as fallback.
+2025-10-03T13:11:00.490Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/org#memberOf which acts as a parent. Using original URI as fallback.
 
-2025-10-03T12:55:55.835Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/org#memberOf which acts as a parent. Using original URI as fallback.
+2025-10-03T13:11:00.491Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/org#hasMember which acts as a parent. Using original URI as fallback.
 
-2025-10-03T12:55:55.840Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/org#hasMember which acts as a parent. Using original URI as fallback.
+2025-10-03T13:11:00.499Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/date which acts as a parent. Using original URI as fallback.
 
-2025-10-03T12:55:55.849Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/date which acts as a parent. Using original URI as fallback.
+2025-10-03T13:11:00.500Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/person#Person which acts as a parent. Using original URI as fallback.
 
-2025-10-03T12:55:55.851Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/person#Person which acts as a parent. Using original URI as fallback.
+2025-10-03T13:11:00.513Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
 
-2025-10-03T12:55:55.858Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
+2025-10-03T13:11:00.513Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-2025-10-03T12:55:55.858Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2025-10-03T13:11:00.514Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
 
-2025-10-03T12:55:55.860Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
-
-2025-10-03T12:55:55.861Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2025-10-03T13:11:00.515Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 

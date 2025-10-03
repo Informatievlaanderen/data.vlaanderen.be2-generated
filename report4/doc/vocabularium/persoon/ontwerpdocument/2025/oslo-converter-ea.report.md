@@ -2,115 +2,115 @@
 
 #||# -------------------------------------
 
-2025-10-03T12:55:17.827Z info: Connector Model:OSLO-Persoon:Inwoner:(Inwoner -> Inwonerschap) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.289Z info: Connector Model:OSLO-Persoon:Inwoner:(Inwoner -> Inwonerschap) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.829Z info: Connector Model:OSLO-Persoon:Domicilie:(Domicilie -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.291Z info: Connector Model:OSLO-Persoon:Domicilie:(Domicilie -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.829Z info: Connector Model:OSLO-Persoon:Vreemdeling:(Vreemdeling -> Staatsburgerschap) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.291Z info: Connector Model:OSLO-Persoon:Vreemdeling:(Vreemdeling -> Staatsburgerschap) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.829Z info: Connector Model:W3C-ORG:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.291Z info: Connector Model:W3C-ORG:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.830Z info: Connector Model:OSLO-Persoon:Voogdij:(Voogdij -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.292Z info: Connector Model:OSLO-Persoon:Voogdij:(Voogdij -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.830Z info: Connector Model:OSLO-Persoon:PermanentInwoner:(PermanentInwoner -> Inwoner) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.292Z info: Connector Model:OSLO-Persoon:PermanentInwoner:(PermanentInwoner -> Inwoner) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.830Z info: Connector Model:OSLO-Persoon:GeenInwoner:(GeenInwoner -> Inwonerschap) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.292Z info: Connector Model:OSLO-Persoon:GeenInwoner:(GeenInwoner -> Inwonerschap) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.830Z info: Connector Model:EU-CPV:Persoon:(Persoon -> Overlijden) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.292Z info: Connector Model:EU-CPV:Persoon:(Persoon -> Overlijden) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.831Z info: Connector Model:VOCAB-BIO:Overlijden:(Overlijden -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.292Z info: Connector Model:VOCAB-BIO:Overlijden:(Overlijden -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.831Z info: Connector Model:W3C-PROV-O:Persoon:(Persoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.293Z info: Connector Model:W3C-PROV-O:Persoon:(Persoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.831Z info: Connector Model:OSLO-Persoon:Gezin:(Gezin -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.293Z info: Connector Model:OSLO-Persoon:Gezin:(Gezin -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.831Z info: Connector Model:FOAF:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.293Z info: Connector Model:FOAF:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.831Z info: Connector Model:OSLO-Persoon:Inwonerschap:(Inwonerschap -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.293Z info: Connector Model:OSLO-Persoon:Inwonerschap:(Inwonerschap -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.831Z info: Connector Model:EU-CPV:Persoon:(Persoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.293Z info: Connector Model:EU-CPV:Persoon:(Persoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.831Z info: Connector Model:OSLO-Persoon:Gezinsrelatie:(Gezinsrelatie -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.293Z info: Connector Model:OSLO-Persoon:Gezinsrelatie:(Gezinsrelatie -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.832Z info: Connector Model:DCTerms:Jurisdictie:(Jurisdictie -> LocatiePeriodeOfJurisdictie) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.293Z info: Connector Model:DCTerms:Jurisdictie:(Jurisdictie -> LocatiePeriodeOfJurisdictie) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.832Z info: Connector Model:EU-CPV:Persoon:(Persoon -> Geboorte) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.293Z info: Connector Model:EU-CPV:Persoon:(Persoon -> Geboorte) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.832Z info: Connector Model:EU-CPV:Persoon:(Persoon -> BurgerlijkeStaat) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.293Z info: Connector Model:EU-CPV:Persoon:(Persoon -> BurgerlijkeStaat) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.832Z info: Connector Model:VOCAB-BIO:Geboorte:(Geboorte -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.294Z info: Connector Model:VOCAB-BIO:Geboorte:(Geboorte -> Persoonsgebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.832Z info: Connector Model:OSLO-Persoon:Samenwonen:(Samenwonen -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.294Z info: Connector Model:OSLO-Persoon:Samenwonen:(Samenwonen -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.832Z info: Connector Model:OSLO-Persoon:Afstamming:(Afstamming -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.294Z info: Connector Model:OSLO-Persoon:Afstamming:(Afstamming -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.832Z info: Connector Model:W3C-ORG:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.294Z info: Connector Model:W3C-ORG:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.833Z info: Connector Model:W3C-PROV-O:Locatie:(Locatie -> LocatiePeriodeOfJurisdictie) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.294Z info: Connector Model:W3C-PROV-O:Locatie:(Locatie -> LocatiePeriodeOfJurisdictie) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.833Z info: Connector Model:W3C-PROV-O:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.294Z info: Connector Model:W3C-PROV-O:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.833Z info: Connector Model:DCTerms:Plaats:(Plaats -> Locatie) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.294Z info: Connector Model:DCTerms:Plaats:(Plaats -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.833Z info: Connector Model:OSLO-Persoon:Staatsburger:(Staatsburger -> Staatsburgerschap) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.294Z info: Connector Model:OSLO-Persoon:Staatsburger:(Staatsburger -> Staatsburgerschap) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.833Z info: Connector Model:EU-CPV:Persoon:(Persoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.294Z info: Connector Model:EU-CPV:Persoon:(Persoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.833Z info: Connector Model:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.295Z info: Connector Model:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.833Z info: Connector Model:EU-CPV:Persoon:(Persoon -> Jurisdictie) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.295Z info: Connector Model:EU-CPV:Persoon:(Persoon -> Jurisdictie) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.833Z info: Connector Model:W3C-ORG:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.295Z info: Connector Model:W3C-ORG:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.834Z info: Connector Model:W3C-LOCN:Adresvoorstelling:(Adresvoorstelling -> Locatie) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.295Z info: Connector Model:W3C-LOCN:Adresvoorstelling:(Adresvoorstelling -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.834Z info: Connector Model:EU-CPV:Persoon:(Persoon -> Jurisdictie) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.295Z info: Connector Model:EU-CPV:Persoon:(Persoon -> Jurisdictie) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.834Z info: Connector Model:OSLO-Persoon:TijdelijkInwoner:(TijdelijkInwoner -> Inwoner) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.295Z info: Connector Model:OSLO-Persoon:TijdelijkInwoner:(TijdelijkInwoner -> Inwoner) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.834Z info: Connector Model:DCTerms:Agent:(Agent -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.295Z info: Connector Model:DCTerms:Agent:(Agent -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.834Z info: Connector Model:W3C-ORG:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.295Z info: Connector Model:W3C-ORG:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.834Z info: Connector Model:W3C-PROV-O:Agent:(Agent -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.295Z info: Connector Model:W3C-PROV-O:Agent:(Agent -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.834Z info: Connector Model:OSLO-Persoon:Huwelijk:(Huwelijk -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.295Z info: Connector Model:OSLO-Persoon:Huwelijk:(Huwelijk -> Persoonsrelatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.834Z info: Connector Model:EU-CPV:Persoon:(Persoon -> Nationaliteit) is not an association with a source role. Ignoring this connector.
+2025-10-03T13:10:23.295Z info: Connector Model:EU-CPV:Persoon:(Persoon -> Nationaliteit) is not an association with a source role. Ignoring this connector.
 
-2025-10-03T12:55:17.835Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-10-03T13:10:23.296Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-10-03T12:55:17.835Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:VOCAB-BIO). Using fallback URI (http://todo.com/) instead.
+2025-10-03T13:10:23.296Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:VOCAB-BIO). Using fallback URI (http://todo.com/) instead.
 
-2025-10-03T12:55:17.835Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:EU-CPV). Using fallback URI (http://todo.com/) instead.
+2025-10-03T13:10:23.296Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:EU-CPV). Using fallback URI (http://todo.com/) instead.
 
-2025-10-03T12:55:17.838Z warn: [ConnectorConverterHandler]: Connector (heeftVerblijfplaats) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-03T13:10:23.299Z warn: [ConnectorConverterHandler]: Connector (heeftVerblijfplaats) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-03T12:55:17.838Z warn: [ConnectorConverterHandler]: Connector (heeftBurgerlijkeStaat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-03T13:10:23.299Z warn: [ConnectorConverterHandler]: Connector (heeftBurgerlijkeStaat) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-03T12:55:17.838Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftBurgerlijkeStaat) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-03T13:10:23.299Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftBurgerlijkeStaat) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-03T12:55:17.838Z warn: [ConnectorConverterHandler]: Connector (heeftNationaliteit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-03T13:10:23.299Z warn: [ConnectorConverterHandler]: Connector (heeftNationaliteit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-03T12:55:17.838Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftNationaliteit) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-03T13:10:23.299Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftNationaliteit) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-03T12:55:17.838Z warn: [ConnectorConverterHandler]: Connector (gezinshoofd) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-03T13:10:23.299Z warn: [ConnectorConverterHandler]: Connector (gezinshoofd) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-03T12:55:17.838Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (gezinshoofd) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-03T13:10:23.299Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (gezinshoofd) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-03T12:55:17.838Z warn: [ConnectorConverterHandler]: Connector (isHoofdVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-03T13:10:23.299Z warn: [ConnectorConverterHandler]: Connector (isHoofdVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-03T12:55:17.838Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (isHoofdVan) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-03T13:10:23.299Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (isHoofdVan) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-03T12:55:17.838Z warn: [ConnectorConverterHandler]: Connector (Persoon (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-03T13:10:23.299Z warn: [ConnectorConverterHandler]: Connector (Persoon (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-03T12:55:17.838Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Persoon (source)) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-03T13:10:23.299Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Persoon (source)) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-03T12:55:17.838Z warn: [ConnectorConverterHandler]: Connector (Persoon (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-03T13:10:23.299Z warn: [ConnectorConverterHandler]: Connector (Persoon (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-03T12:55:17.838Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Persoon (target)) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-03T13:10:23.300Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Persoon (target)) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-03T12:55:17.856Z warn: [ConverterHandler]: Entity with path gezinslid has already a value for ap-definition-nl in language nl, but will be overwritten.
+2025-10-03T13:10:23.316Z warn: [ConverterHandler]: Entity with path gezinslid has already a value for ap-definition-nl in language nl, but will be overwritten.
 
 #||# -------------------------------------
 
