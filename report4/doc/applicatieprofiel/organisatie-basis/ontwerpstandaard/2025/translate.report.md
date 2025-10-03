@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025/translation/organisatie_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025/translation/organisatie_nl.json
+
+TRANSLATIONFILE: organisatie_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  

@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/organisatie/ontwerpdocument/2025/translation/organisatie_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/organisatie/ontwerpdocument/2025/translation/organisatie_nl.json
+
+TRANSLATIONFILE: organisatie_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  

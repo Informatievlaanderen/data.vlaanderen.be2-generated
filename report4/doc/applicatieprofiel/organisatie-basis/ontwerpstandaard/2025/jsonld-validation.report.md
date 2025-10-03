@@ -2,65 +2,69 @@
 
 #||# -------------------------------------  
 
-2025-09-17T14:24:21.115Z info: Loaded 45 URI prefixes into whitelist
+2025-10-03T11:59:36.191Z info: Loaded 45 URI prefixes into whitelist
 
-2025-09-17T14:24:21.284Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#RegisteredOrganization for subject: [urn:oslo-toolchain:c994c9ff884a02eaf36e220a8911b170e58544df7506130277f82f2b7293ee73](all-organisatie.jsonld#L704)
+2025-10-03T11:59:36.382Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#RegisteredOrganization for subject: [urn:oslo-toolchain:dcd4ccb15844dde2f592117a7c70d352699b404a2c03edb000e650c824c0ab6b](all-organisatie.jsonld#L630)
 
-2025-09-17T14:24:21.284Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#legalName for subject: [urn:oslo-toolchain:3e4e5e82e49391550fb0dc378131eb2a62bc77e07fa6e4691b7673404184c49e](all-organisatie.jsonld#L1075)
+2025-10-03T11:59:36.382Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#legalName for subject: [urn:oslo-toolchain:8071563141fbd408d71f94cb51db1ec9c7149a65941657128b1a7c060755f4f1](all-organisatie.jsonld#L990)
 
-2025-09-17T14:24:21.284Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#orgStatus for subject: [urn:oslo-toolchain:7b912070999d13123492b9c8f82c4e3e394646617c4985874a26a01431256fd7](all-organisatie.jsonld#L2437)
+2025-10-03T11:59:36.383Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#orgStatus for subject: [urn:oslo-toolchain:a1cec307f4867018c7447685113c4adb085a7e4cd92fea9412f9a877096af8b5](all-organisatie.jsonld#L2448)
 
-2025-09-17T14:24:21.284Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#orgType for subject: [urn:oslo-toolchain:e5c24b927967d7ef8077128b2565250c2ae5525e769dd4677f8e3b9a9cf8aacb](all-organisatie.jsonld#L2475)
+2025-10-03T11:59:36.383Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#orgType for subject: [urn:oslo-toolchain:66d198509faee92c27c144a70c895782f29eaf776046135b3d5f0a70964f6b75](all-organisatie.jsonld#L2486)
 
-2025-09-17T14:24:21.284Z warn: Found non-whitelisted assigned URI: http://todo.com/rechtspersoonlijkheid for subject: [urn:oslo-toolchain:b14cc973efb938e5523c933c33efb689916b13ec2afcfb1b8ca47ddbd47067e4](all-organisatie.jsonld#L2633)
+2025-10-03T11:59:36.383Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#rechtspersoonlijkheid for subject: [urn:oslo-toolchain:865cea17eccd1f96f40eece395c61ef6cea95dfd1e1e5999bfbaf07745bec36e](all-organisatie.jsonld#L2644)
 
-2025-09-17T14:24:21.284Z warn: Found non-whitelisted assigned URI: http://todo.com/rechtstoestand for subject: [urn:oslo-toolchain:0e6811c048a77839e4d092e7767cf7d21d898ab476f93dd193111155c1ca8045](all-organisatie.jsonld#L2686)
+2025-10-03T11:59:36.383Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#rechtstoestand for subject: [urn:oslo-toolchain:de9e927900277648699f5494ab6028030df35fb80b8b9c762fbcb8d090f0e9d5](all-organisatie.jsonld#L2697)
 
-2025-09-17T14:24:21.284Z warn: Found non-whitelisted assigned URI: http://todo.com/rechtsvorm for subject: [urn:oslo-toolchain:b5a224f35fdd68b1dd3bd06bc445462438015ed1141bd4f83339efdce171fc1f](all-organisatie.jsonld#L2733)
+2025-10-03T11:59:36.383Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#rechtsvorm for subject: [urn:oslo-toolchain:d3658258550123eddf39dff678e283821bd5a47ae4b85cfb112e2576754c3666](all-organisatie.jsonld#L2744)
 
-2025-09-17T14:24:21.285Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#registration for subject: [urn:oslo-toolchain:9c106aa07ece6e45eef9d557708b7a11a00db3f219466bcac07efa071d5ca967](all-organisatie.jsonld#L2774)
+2025-10-03T11:59:36.383Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#registration for subject: [urn:oslo-toolchain:7b03d4b65d534f38e569883065811556b1b0a3735c425e75f72824481c2390b0](all-organisatie.jsonld#L2785)
 
-2025-09-17T14:24:21.285Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#orgActivity for subject: [urn:oslo-toolchain:314d0821e736fabe31deca321ac93091edc744b31a53993e473b3e010e883590](all-organisatie.jsonld#L2958)
+2025-10-03T11:59:36.383Z warn: Found non-whitelisted assigned URI: http://www.w3.org/ns/regorg#orgActivity for subject: [urn:oslo-toolchain:c925e4bd78984e4edfea88e362b4e0e63fabfa386e46f518d559b6766e31aa06](all-organisatie.jsonld#L2937)
 
-2025-09-17T14:24:21.286Z warn: Found sentence without a '.': 'Bijvoorbeeld: pensionering, faillissement, …' for subject: [urn:oslo-toolchain:219b11cf742a9e57054598e28baa3a27243f2cc31997ab7e39367352b5156661](all-organisatie.jsonld#L568)
+2025-10-03T11:59:36.385Z warn: Found sentence without a '.': 'Zie Time and date & Recurring and partial dates van <a href="https://www.w3.org/TR/rdf11-concepts/#h2_section-Datatypes"> XSD Datatypes</a>' for subject: [urn:oslo-toolchain:2e48f0886315b1ed766d7e719e9c0e38936b369c901a996819c07956b98f698c](all-organisatie.jsonld#L1028)
 
-2025-09-17T14:24:21.286Z warn: Found sentence without a '.': 'Zie Time and date & Recurring and partial dates van <a href="https://www.w3.org/TR/rdf11-concepts/#h2_section-Datatypes"> XSD Datatypes</a>' for subject: [urn:oslo-toolchain:bb65893f67333cc671351cf7afcd41cbf0a1271d429be4489b029f6151061ef6](all-organisatie.jsonld#L1113)
+2025-10-03T11:59:36.385Z warn: Found sentence without a '.': 'Bijvoorbeeld: commerciële naam, informele naam, …' for subject: [urn:oslo-toolchain:8a9182e00b8cf9e225c287f198f9499621b604a159c517018666eeb413184c0b](all-organisatie.jsonld#L1066)
 
-2025-09-17T14:24:21.287Z warn: Found sentence without a '.': 'Bijvoorbeeld: commerciële naam, informele naam, …' for subject: [urn:oslo-toolchain:684f84550eeacfe793b4fafb29bf7b8b28a078287d35a46d99ed158900a4657a](all-organisatie.jsonld#L1151)
+2025-10-03T11:59:36.386Z warn: Found empty sentence for subject: [urn:oslo-toolchain:924543be0db0c38e475173a931bad530bf801218ca7ecef89b69c16df5b2d8cd](all-organisatie.jsonld#L2562)
 
-2025-09-17T14:24:21.287Z warn: Found empty sentence for subject: [urn:oslo-toolchain:77d1449db6ebd0f333f4db0f39e721263a02a47a503e2bdc43223751971d50bc](all-organisatie.jsonld#L2551)
+2025-10-03T11:59:36.386Z warn: Found empty sentence for subject: [urn:oslo-toolchain:3c02b7e17c4a3916d14bfc452776cbe8c489cb989ff28a5b47ffdd0ead64ed8d](all-organisatie.jsonld#L2606)
 
-2025-09-17T14:24:21.287Z warn: Found empty sentence for subject: [urn:oslo-toolchain:2b800e6666f2937bd4b938f5fb0d15514bcf33d4da4bbc68f77e3d7808a5d2a4](all-organisatie.jsonld#L2595)
+2025-10-03T11:59:36.386Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d0f85299e4e52d874afede1c53fd919a522c3fe9cbb16f704340bff9c2c67104](all-organisatie.jsonld#L2893)
 
-2025-09-17T14:24:21.287Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7b84ffc953ac1ae4dc2fc61d18c8c0f6d21c4ebd99d1b5e2380bd3f4b29079a6](all-organisatie.jsonld#L2914)
+2025-10-03T11:59:36.386Z warn: Found sentence without a '.': 'Bijvoorbeeld: pensionering, faillissement, …' for subject: [urn:oslo-toolchain:5bb22ac116efeea741bf267721c37b4b343fc5c145c29ef2f1b415b393b3f06f](all-organisatie.jsonld#L4286)
 
-2025-09-17T14:24:21.287Z warn: Found sentence without a '.': 'Bijvoorbeeld pensionering, faillissement, …' for subject: [urn:oslo-toolchain:1a858d15c2690b9bbfbec2c1ecf5a1f99238b1da53df6051bd84b3b586c85638](all-organisatie.jsonld#L2513)
+2025-10-03T11:59:36.386Z warn: Found sentence without a '.': 'Bijvoorbeeld pensionering, faillissement, …' for subject: [urn:oslo-toolchain:b85792f669b76f385dc3c4ade6f02a5cec961f49e488bee11461d1bfd577e23a](all-organisatie.jsonld#L2524)
 
-2025-09-17T14:24:21.288Z warn: Labels must only contain alphabetical characters: 'toegekendDoor(String)' for subject: [urn:oslo-toolchain:4cd5933425d4ae3573f11e1cd490fa78d9f28c4a5d5ff6b8e2304f204f2ef911](all-organisatie.jsonld#L1303)
+2025-10-03T11:59:36.387Z warn: Labels must only contain alphabetical characters: 'toegekendDoor(String)' for subject: [urn:oslo-toolchain:bde82917f149a25ffe435a94395f88580c42be6cd6159e461344cf3301672c37](all-organisatie.jsonld#L1218)
 
-2025-09-17T14:24:21.289Z error: Found missing class or attribute (Rechtspersoonlijkheidtype): [urn:oslo-toolchain:a2dbb5c86bd9e33997a65f7c973b10e6bb79d52268c9bb646fb2b9cb018d6cfc](all-organisatie.jsonld#L309)
+2025-10-03T11:59:36.387Z warn: Labels must only contain alphabetical characters: 'http://www.w3.org/ns/org#linkedTo' for subject: [urn:oslo-toolchain:3219634214be49b4a4baca0a737bed679018faee7c8ff68a2a890b999d813ab7](all-organisatie.jsonld#L3395)
 
-2025-09-17T14:24:21.290Z error: Found missing class or attribute (OrganisatieStatus): [urn:oslo-toolchain:8da86e9c5a5b318c77a1b8b254a3fa128c4e167f4c78e6b33c888d289677609c](all-organisatie.jsonld#L333)
+2025-10-03T11:59:36.397Z error: Found missing class or attribute (Resource): [urn:oslo-toolchain:05045d6b80403e66b18609e8c2b1b6c5a7fd20e54b9627357bd305dd6b0483a6](all-organisatie.jsonld#L4168)
 
-2025-09-17T14:24:21.290Z error: Found missing class or attribute (StopzettingType): [urn:oslo-toolchain:219b11cf742a9e57054598e28baa3a27243f2cc31997ab7e39367352b5156661](all-organisatie.jsonld#L568)
+2025-10-03T11:59:36.398Z error: Found missing class or attribute (OrganisatieStatus): [urn:oslo-toolchain:012fb010c2d087bc9660684576c50b0d10e5d14b759581bb2bca5366cd32ca0d](all-organisatie.jsonld#L4252)
 
-2025-09-17T14:24:21.290Z error: Found missing class or attribute (Rechtstoestandtype): [urn:oslo-toolchain:965687a39ab32c9085b433fef2737b0a6df1179268769d477aa53b573ac4e9ed](all-organisatie.jsonld#L662)
+2025-10-03T11:59:36.398Z error: Found missing class or attribute (OrganisatieType): [urn:oslo-toolchain:758539ebbe30bc624df158bbef90abcbd90f7abc60843d994803e3ee6bb884c7](all-organisatie.jsonld#L4269)
 
-2025-09-17T14:24:21.290Z error: Found missing class or attribute (OrganisatieClassificatie): [urn:oslo-toolchain:1b660f0601ae590460293c4173ad34faf768a42fb2f0876132f2a67480bbcfb0](all-organisatie.jsonld#L686)
+2025-10-03T11:59:36.398Z error: Found missing class or attribute (StopzettingType): [urn:oslo-toolchain:5bb22ac116efeea741bf267721c37b4b343fc5c145c29ef2f1b415b393b3f06f](all-organisatie.jsonld#L4286)
 
-2025-09-17T14:24:21.290Z error: Found missing class or attribute (Rechtsvormtype): [urn:oslo-toolchain:c3e815694f2bf41a92e757f2cb4b84b052eb877b308e20d1e88c399bebfadac8](all-organisatie.jsonld#L739)
+2025-10-03T11:59:36.398Z error: Found missing class or attribute (Rechtspersoonlijkheidtype): [urn:oslo-toolchain:0aec5d1e2ba28ad7930912e3ef243ad6d8d087e17116c830a34e4265f320863f](all-organisatie.jsonld#L4338)
 
-2025-09-17T14:24:21.290Z error: Found missing class or attribute (OrganisatieType): [urn:oslo-toolchain:3e4d52b1d501c637feb66b55ca62dda7455064e96c95cc59d0cb26ed55743533](all-organisatie.jsonld#L763)
+2025-10-03T11:59:36.398Z error: Found missing class or attribute (Rechtstoestandtype): [urn:oslo-toolchain:fe7ff19e7d6ef5d612228543630aac92e0e0bdcb28ce6937eea6d68963523479](all-organisatie.jsonld#L4361)
 
-2025-09-17T14:24:21.291Z error: Found missing class or attribute (OrganisatieActiviteit): [urn:oslo-toolchain:af3cc571b900053979fc38d0b7fb2a8e159fccfaa2951a77d06e322102e3d2bf](all-organisatie.jsonld#L781)
+2025-10-03T11:59:36.398Z error: Found missing class or attribute (Rechtsvormtype): [urn:oslo-toolchain:a08ed9df8f0108f9684251901dbfa4aca772f06a0a01c3c24cda9fbac1413113](all-organisatie.jsonld#L4384)
 
-2025-09-17T14:24:21.297Z info: Validation found 9 non-whitelisted assigned URIs
+2025-10-03T11:59:36.398Z error: Found missing class or attribute (OrganisatieActiviteit): [urn:oslo-toolchain:0d0f33d8acc5e5202bb0dcbd982a93ae567bc083c652cb57739373ff2c3612d9](all-organisatie.jsonld#L4407)
 
-2025-09-17T14:24:21.297Z info: Validation found 7 sentences with spelling mistakes.
+2025-10-03T11:59:36.398Z error: Found missing class or attribute (OrganisatieClassificatie): [urn:oslo-toolchain:c4a90963a74112446ef3bfa41a0cff70f98e89f0eb9dd1a32b52908c420164cf](all-organisatie.jsonld#L4424)
 
-2025-09-17T14:24:21.297Z info: Validation found 1 labels with spelling mistakes.
+2025-10-03T11:59:36.398Z info: Validation found 9 non-whitelisted assigned URIs
 
-2025-09-17T14:24:21.297Z info: Validation successful! All base URIs seem to be valid.
+2025-10-03T11:59:36.398Z info: Validation found 7 sentences with spelling mistakes.
 
-2025-09-17T14:24:21.297Z info: Validation found 8 missing referenced classes or attributes.
+2025-10-03T11:59:36.398Z info: Validation found 2 labels with spelling mistakes.
+
+2025-10-03T11:59:36.399Z info: Validation successful! All base URIs seem to be valid.
+
+2025-10-03T11:59:36.399Z info: Validation found 9 missing referenced classes or attributes.
 
