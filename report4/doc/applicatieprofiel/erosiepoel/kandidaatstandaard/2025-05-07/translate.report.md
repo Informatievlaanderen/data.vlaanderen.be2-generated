@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/erosiepoel/kandidaatstandaard/2025-05-07/translation/erosiepoel_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/erosiepoel/kandidaatstandaard/2025-05-07/translation/erosiepoel_nl.json
+
+TRANSLATIONFILE: erosiepoel_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
@@ -12,5 +18,5 @@ WARNING The entered language values are the same!
 
 #||# Write complete  
 
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/erosiepoel/kandidaatstandaard/2025-05-07/translation/erosiepoel-ap_nl.json  
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/erosiepoel/kandidaatstandaard/2025-05-07/translation/erosiepoel_nl.json  
 
