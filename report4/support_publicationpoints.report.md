@@ -130,8 +130,6 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/sb.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/test/schuldbeheer.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/test/shok.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/slim-ruimtelijk-plannen.publication.json
@@ -258,6 +256,10 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/persoon-basis",
   "/tmp/generated/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-04-01",
   "/tmp/generated/doc/applicatieprofiel/ruimtelijke-bereiken",
+  "/tmp/generated/doc/applicatieprofiel/schuldbeheer",
+  "/tmp/generated/doc/applicatieprofiel/schuldbeheer/erkendestandaard/2025-05-15",
+  "/tmp/generated/doc/applicatieprofiel/schuldbeheer/kandidaatstandaard/2024-09-05",
+  "/tmp/generated/doc/applicatieprofiel/schuldbeheer/kandidaatstandaard/2025-03-03",
   "/tmp/generated/doc/applicatieprofiel/schuldbeheer/kandidaatstandaard/kristof",
   "/tmp/generated/doc/applicatieprofiel/schuldbeheer/ontwerpstandaard/2024-07-23",
   "/tmp/generated/doc/applicatieprofiel/schuldbeheer/ontwerpstandaard/toolchain4",
@@ -333,6 +335,9 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/openbare-nutsvoorzieningkasten/ontwerpstandaard/2025-06-03",
   "/tmp/generated/doc/vocabularium/persoon/ontwerpdocument/2025",
   "/tmp/generated/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-04-01",
+  "/tmp/generated/doc/vocabularium/schuldbeheer/erkendestandaard/2025-05-15",
+  "/tmp/generated/doc/vocabularium/schuldbeheer/kandidaatstandaard/2024-09-05",
+  "/tmp/generated/doc/vocabularium/schuldbeheer/kandidaatstandaard/2025-03-03",
   "/tmp/generated/doc/vocabularium/schuldbeheer/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-07-12",
   "/tmp/generated/doc/vocabularium/slimmeraadpleegomgeving/kandidaatstandaard/2024-09-12",
@@ -356,6 +361,7 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/observaties-en-metingen",
   "/tmp/generated/ns/openbare-nutsvoorzieningkasten",
   "/tmp/generated/ns/rooilijn",
+  "/tmp/generated/ns/schuldbeheer",
   "/tmp/generated/ns/sensoren-en-bemonstering",
   "/tmp/generated/ns/thermografische-gebouwanalyse"
 ]
