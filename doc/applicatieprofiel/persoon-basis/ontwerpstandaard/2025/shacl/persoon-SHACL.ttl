@@ -44,13 +44,15 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#LocatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#ContactpuntShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#LangstringShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#GeometrieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#LiteralShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#MomentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#DatetimeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#AdresvoorstellingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#StringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#UriShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#IdentificatorShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#LiteralShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#GeografischenaamShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#PeriodeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#TemporeleentiteitShape> .
 
@@ -401,6 +403,42 @@
   rdfs:comment "Persoon die niet in een bepaalde plaats of land woont."@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#GeenInwoner> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#GeografischenaamShape> a shacl:NodeShape;
+  rdfs:label "GeografischeNaam"@nl;
+  rdfs:comment "Benaming toegekend aan of gebruikt voor een geografisch object."@nl;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#GeometrieShape> a shacl:NodeShape;
+  rdfs:label "Geometrie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Beschrijft deze kenmerken door middel van punten, lijnen, polygonen en coördinaten."@nl;
+  rdfs:comment "Vorm- en positiekenmerken van een object."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "wkt"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype."@nl;
+    rdfs:comment "Geometrie uitgedrukt in WKT-formaat."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#Geometrie.Wkt>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in WKT-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "wkt"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "gml"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype."@nl;
+    rdfs:comment "Geometrie uitgedrukt in GML-formaat."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#Geometrie.Gml>;
+    shacl:datatype rdfs:Literal;
+    shacl:description "Geometrie uitgedrukt in GML-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "gml"@nl;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025#GeregistreerdpersoonShape> a shacl:NodeShape;
   rdfs:label "GeregistreerdPersoon"@nl;
