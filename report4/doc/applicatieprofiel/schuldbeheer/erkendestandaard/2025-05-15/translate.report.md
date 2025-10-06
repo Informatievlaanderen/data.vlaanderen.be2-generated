@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/schuldbeheer/erkendestandaard/2025-05-15/translation/schuldbeheer-ap_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/schuldbeheer/erkendestandaard/2025-05-15/translation/schuldbeheer-ap_nl.json
+
+TRANSLATIONFILE: schuldbeheer-ap_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
