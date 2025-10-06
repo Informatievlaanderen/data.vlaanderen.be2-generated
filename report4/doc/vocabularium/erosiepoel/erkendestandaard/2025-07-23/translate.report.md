@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/erosiepoel/erkendestandaard/2025-07-23/translation/erosiepoel_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/erosiepoel/erkendestandaard/2025-07-23/translation/erosiepoel_nl.json
+
+TRANSLATIONFILE: erosiepoel_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
