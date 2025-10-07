@@ -274,7 +274,6 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/verkeersborden",
   "/tmp/generated/doc/applicatieprofiel/verkeersmetingen/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/vlaamse-codex",
-  "/tmp/generated/doc/applicatieprofiel/vrachtwagenparkeren/ontwerpstandaard/2023-11-30",
   "/tmp/generated/doc/applicatieprofiel/vrachtwagenparkeren/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/waterdelen",
   "/tmp/generated/doc/applicatieprofiel/watervoorkomen",
