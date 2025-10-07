@@ -1,8 +1,8 @@
-INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/vrachtwagenparkeren/translation/vrachtwagenParkeren_nl.json
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/vrachtwagenparkeren/translation/vrachtwagenparkeren_nl.json
 
-OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/vrachtwagenparkeren/translation/vrachtwagenParkeren_nl.json
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/vrachtwagenparkeren/translation/vrachtwagenparkeren_nl.json
 
-TRANSLATIONFILE: vrachtwagenParkeren_nl.json
+TRANSLATIONFILE: vrachtwagenparkeren_nl.json
 
 #||# translate for language nl  
 
@@ -18,5 +18,5 @@ WARNING The entered language values are the same!
 
 #||# Write complete  
 
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/vrachtwagenparkeren/translation/vrachtwagenParkeren_nl.json  
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/vrachtwagenparkeren/translation/vrachtwagenparkeren_nl.json  
 
