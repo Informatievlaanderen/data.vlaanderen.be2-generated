@@ -14,5 +14,5 @@
 
 #||# start writing  
 
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/schuldbeheer/erkendestandaard/2025-05-15/html/meta_schuldbeheer-ap_nl.json  
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/schuldbeheer/erkendestandaard/2025-05-15/html/meta_schuldbeheer_nl.json  
 
