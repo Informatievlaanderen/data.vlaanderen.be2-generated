@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/toolchain4/translation/vrachtwagenparkeren_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/toolchain4/translation/vrachtwagenparkeren_nl.json
+
+TRANSLATIONFILE: vrachtwagenparkeren_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  

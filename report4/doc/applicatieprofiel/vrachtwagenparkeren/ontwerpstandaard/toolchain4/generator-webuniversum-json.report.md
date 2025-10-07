@@ -2,3 +2,5 @@
 
 #||# -------------------------------------  
 
+2025-10-07T11:37:46.784Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/mobiliteit/mobiliteit-trips-en-aanbod#Route.aankomsttijdstip which acts as a parent. Using original URI as fallback.
+
