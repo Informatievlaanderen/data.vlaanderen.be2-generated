@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4/translation/besluit-mobiliteit-ap_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4/translation/besluit-mobiliteit-ap_nl.json
+
+TRANSLATIONFILE: besluit-mobiliteit-ap_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  

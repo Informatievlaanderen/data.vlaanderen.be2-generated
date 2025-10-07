@@ -2,11 +2,17 @@
 
 #||# -------------------------------------  
 
-2025-09-12T07:46:16.908Z error: Unable to find the assigned URI of parent (http://www.w3.org/ns/prov#Activity) of class [urn:oslo-toolchain:75135452014e6aa7d9b10b1213cdc6fd94c0c061e22e488589913a49d28d663f](all-besluit-mobiliteit-ap.jsonld#L512).
+ErrorCoded: Found duplicate @ids 'df_2_981' and '[urn:oslo-toolchain:c90cdefa80fb1317dca22eb6431233121b74c3394d0d88f546de66871a685a1a](all-besluit-mobiliteit-ap.jsonld#L7718)'
 
-2025-09-12T07:46:16.910Z error: Unable to find the assigned URI of parent (http://www.w3.org/2004/02/skos/core#Concept) of class [urn:oslo-toolchain:1f45ed55c939ce0fca9006aea9e65524f80d22157609d67a5c3c9223d4ae9564](all-besluit-mobiliteit-ap.jsonld#L573).
+    at EntryHandlerKeywordId.handle (/usr/local/lib/node_modules/@oslo-flanders/html-respec-generator/node_modules/jsonld-streaming-parser/lib/entryhandler/keyword/EntryHandlerKeywordId.js:41:42)
 
-2025-09-12T07:46:16.913Z error: Unable to find the assigned URI of parent (http://schema.org/ListItem) of class [urn:oslo-toolchain:cc4ad296e8a337e6186ff55547f89619f8cbf2cfafb092421282d1cdfd474420](all-besluit-mobiliteit-ap.jsonld#L1487).
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
-2025-09-12T07:46:16.913Z error: Unable to find the assigned URI of parent (http://xmlns.com/foaf/0.1/Document) of class [urn:oslo-toolchain:46b11fc6006df9b2216b862ec6ef6a670441c07d7ad14930bc5f192405a7e93a](all-besluit-mobiliteit-ap.jsonld#L7412).
+    at async JsonLdParser.newOnValueJob (/usr/local/lib/node_modules/@oslo-flanders/html-respec-generator/node_modules/jsonld-streaming-parser/lib/JsonLdParser.js:206:21)
+
+    at async JsonLdParser.executeBufferedJobs (/usr/local/lib/node_modules/@oslo-flanders/html-respec-generator/node_modules/jsonld-streaming-parser/lib/JsonLdParser.js:465:13) {
+
+  code: 'colliding keywords'
+
+}
 
