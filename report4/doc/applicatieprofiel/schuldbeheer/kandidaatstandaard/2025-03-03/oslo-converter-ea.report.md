@@ -2,185 +2,185 @@
 
 #||# -------------------------------------
 
-2025-06-04T12:27:16.006Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Generiek:Gemeente:(Gemeente -> Object))
+2025-10-07T10:43:12.654Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2025-06-04T12:27:16.007Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2025-10-07T10:43:12.656Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-06-04T12:27:16.007Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Generiek:Agent:rapporteertAan)
+2025-10-07T10:43:12.656Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-06-04T12:27:16.007Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:PubliekeDienstverlening (consumptie):isGerelateerdMet)
+2025-10-07T10:43:12.656Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:PubliekeDienstverlening (consumptie):isGerelateerdMet)
 
-2025-06-04T12:27:16.007Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:PubliekeDienstverlening (consumptie):vereist)
+2025-10-07T10:43:12.656Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Transactie:PubliekeDienstverlening (consumptie):vereist)
 
-2025-06-04T12:27:16.007Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Dossier:Stuk:(Stuk -> Stuk))
+2025-10-07T10:43:12.656Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Dossier:Stuk:(Stuk -> Stuk))
 
-2025-06-04T12:27:16.008Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie))
+2025-10-07T10:43:12.656Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie))
 
-2025-06-04T12:27:16.010Z info: Connector Model:OSLO:OSLO-Persoon:Persoon:(Persoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.659Z info: Connector Model:OSLO:OSLO-Persoon:Persoon:(Persoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.011Z info: Connector Model:OSLO:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.660Z info: Connector Model:OSLO:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.011Z info: Connector Model:OSLO:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.661Z info: Connector Model:OSLO:OSLO-Organisatie:GeregistreerdeOrganisatie:(GeregistreerdeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.011Z info: Connector Model:OSLO:OSLO-Dossier:AgentInRol:(AgentInRol -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.661Z info: Connector Model:OSLO:OSLO-Dossier:AgentInRol:(AgentInRol -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.015Z info: Connector Model:OSLO:OSLO-Dossier:Agent:(Agent -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.661Z info: Connector Model:OSLO:OSLO-Dossier:Agent:(Agent -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.016Z info: Connector Model:OSLO:OSLO-Dossier:Activiteit:(Activiteit -> AgentInRol) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.661Z info: Connector Model:OSLO:OSLO-Dossier:Activiteit:(Activiteit -> AgentInRol) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.016Z info: Connector Model:OSLO:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.661Z info: Connector Model:OSLO:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.016Z info: Connector Model:OSLO:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.661Z info: Connector Model:OSLO:OSLO-Organisatie:Organisatie:(Organisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.016Z info: Connector Model:OSLO:OSLO-Dossier:Activiteit:(Activiteit -> Stuk) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.662Z info: Connector Model:OSLO:OSLO-Dossier:Activiteit:(Activiteit -> Stuk) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.016Z info: Connector Model:OSLO:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.662Z info: Connector Model:OSLO:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.017Z info: Connector Model:OSLO:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.662Z info: Connector Model:OSLO:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.017Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Wanbetalingsvergoeding) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.662Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Wanbetalingsvergoeding) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.017Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Rechtsgrond) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.662Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Rechtsgrond) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.017Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Oninbaarheidsverklaring) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.662Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Oninbaarheidsverklaring) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.017Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Betwisting) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.662Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Betwisting) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.017Z info: Connector Model:OSLO:OSLO-Persoon:Gezin:(Gezin -> Organisatie) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.662Z info: Connector Model:OSLO:OSLO-Persoon:Gezin:(Gezin -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.017Z info: Connector Model:OSLO-Schuldbeheer-master:Wijziging:(Wijziging -> Voorstel) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.663Z info: Connector Model:OSLO-Schuldbeheer-master:Wijziging:(Wijziging -> Voorstel) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.017Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Aanmaning) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.663Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Aanmaning) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.018Z info: Connector Model:OSLO:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> SociaalStatuut) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.663Z info: Connector Model:OSLO:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> SociaalStatuut) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.018Z info: Connector Model:OSLO-Schuldbeheer-master:Aanmaning:(Aanmaning -> Wanbetalingsvergoeding) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.663Z info: Connector Model:OSLO-Schuldbeheer-master:Aanmaning:(Aanmaning -> Wanbetalingsvergoeding) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.018Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Schuldvordering) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.663Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Schuldvordering) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.018Z info: Connector Model:OSLO:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> JuridischStatuut) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.663Z info: Connector Model:OSLO:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> JuridischStatuut) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.018Z info: Connector Model:OSLO-Schuldbeheer-master:Betaling:(Betaling -> Schuldvordering) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.664Z info: Connector Model:OSLO-Schuldbeheer-master:Betaling:(Betaling -> Schuldvordering) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.018Z info: Connector Model:OSLO-Schuldbeheer-master:Afbetalingsplan:(Afbetalingsplan -> Afbetalingsplansaldo) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.664Z info: Connector Model:OSLO-Schuldbeheer-master:Afbetalingsplan:(Afbetalingsplan -> Afbetalingsplansaldo) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.018Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvorderingssaldo:(Schuldvorderingssaldo -> Saldo) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.664Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvorderingssaldo:(Schuldvorderingssaldo -> Saldo) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.018Z info: Connector Model:OSLO:OSLO-Dossier:Activiteit:(Activiteit -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.664Z info: Connector Model:OSLO:OSLO-Dossier:Activiteit:(Activiteit -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.018Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.664Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.018Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.664Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.018Z info: Connector Model:OSLO:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Inkomst) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.664Z info: Connector Model:OSLO:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Inkomst) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.018Z info: Connector Model:OSLO:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Krediet) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.664Z info: Connector Model:OSLO:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Krediet) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.018Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Resource) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.664Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Resource) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.019Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Schuldvorderingscategorie) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.664Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Schuldvorderingscategorie) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.019Z info: Connector Model:OSLO-Schuldbeheer-master:Krediet:(Krediet -> Solvabiliteitsindicator) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.665Z info: Connector Model:OSLO-Schuldbeheer-master:Krediet:(Krediet -> Solvabiliteitsindicator) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.019Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Schuldvorderingssaldo) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.665Z info: Connector Model:OSLO-Schuldbeheer-master:Schuldvordering:(Schuldvordering -> Schuldvorderingssaldo) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.019Z info: Connector Model:OSLO-Schuldbeheer-master:Afbetalingsplansaldo:(Afbetalingsplansaldo -> Saldo) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.665Z info: Connector Model:OSLO-Schuldbeheer-master:Afbetalingsplansaldo:(Afbetalingsplansaldo -> Saldo) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.019Z info: Connector Model:OSLO-Schuldbeheer-master:Solvabiliteitsprofiel:(Solvabiliteitsprofiel -> Solvabiliteitsindicator) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.665Z info: Connector Model:OSLO-Schuldbeheer-master:Solvabiliteitsprofiel:(Solvabiliteitsprofiel -> Solvabiliteitsindicator) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.019Z info: Connector Model:OSLO-Schuldbeheer-master:SociaalStatuut:(SociaalStatuut -> Solvabiliteitsindicator) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.665Z info: Connector Model:OSLO-Schuldbeheer-master:SociaalStatuut:(SociaalStatuut -> Solvabiliteitsindicator) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.019Z info: Connector Model:OSLO-Schuldbeheer-master:JuridischStatuut:(JuridischStatuut -> Solvabiliteitsindicator) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.665Z info: Connector Model:OSLO-Schuldbeheer-master:JuridischStatuut:(JuridischStatuut -> Solvabiliteitsindicator) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.019Z info: Connector Model:OSLO-Schuldbeheer-master:Inkomst:(Inkomst -> Solvabiliteitsindicator) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.665Z info: Connector Model:OSLO-Schuldbeheer-master:Inkomst:(Inkomst -> Solvabiliteitsindicator) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.019Z info: Connector Model:OSLO-Schuldbeheer-master:Afbetaling:(Afbetaling -> Betaling) is not an association with a source role. Ignoring this connector.
+2025-10-07T10:43:12.665Z info: Connector Model:OSLO-Schuldbeheer-master:Afbetaling:(Afbetaling -> Betaling) is not an association with a source role. Ignoring this connector.
 
-2025-06-04T12:27:16.020Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-10-07T10:43:12.666Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-06-04T12:27:16.020Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO) and fallback URI (http://todo.com/) will be assigned.
+2025-10-07T10:43:12.666Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO). Using fallback URI (http://todo.com/) instead.
 
-2025-06-04T12:27:16.020Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:playground) and fallback URI (http://todo.com/) will be assigned.
+2025-10-07T10:43:12.666Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:playground). Using fallback URI (http://todo.com/) instead.
 
-2025-06-04T12:27:16.020Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:FIBO) and fallback URI (http://todo.com/) will be assigned.
+2025-10-07T10:43:12.666Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:FIBO). Using fallback URI (http://todo.com/) instead.
 
-2025-06-04T12:27:16.020Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OMG) and fallback URI (http://todo.com/) will be assigned.
+2025-10-07T10:43:12.666Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OMG). Using fallback URI (http://todo.com/) instead.
 
-2025-06-04T12:27:16.020Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie) and fallback URI (http://todo.com/) will be assigned.
+2025-10-07T10:43:12.666Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie). Using fallback URI (http://todo.com/) instead.
 
-2025-06-04T12:27:16.020Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:OSLO-Schuldbeheer-master:visualization) and fallback URI (http://todo.com/) will be assigned.
+2025-10-07T10:43:12.666Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Schuldbeheer-master:visualization). Using fallback URI (http://todo.com/) instead.
 
-2025-06-04T12:27:16.025Z warn: [ConnectorConverterHandler]: Connector (afgeleidVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.672Z warn: [ConnectorConverterHandler]: Connector (afgeleidVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.025Z warn: [ConnectorConverterHandler]: Connector (vermindering) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.672Z warn: [ConnectorConverterHandler]: Connector (vermindering) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.025Z warn: [ConnectorConverterHandler]: Connector (grondslag) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.672Z warn: [ConnectorConverterHandler]: Connector (grondslag) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.025Z warn: [ConnectorConverterHandler]: Connector (wanbetalingsvergoeding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.673Z warn: [ConnectorConverterHandler]: Connector (wanbetalingsvergoeding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.025Z warn: [ConnectorConverterHandler]: Connector (betwisting) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.673Z warn: [ConnectorConverterHandler]: Connector (betwisting) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.025Z warn: [ConnectorConverterHandler]: Connector (rekentToeAan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.673Z warn: [ConnectorConverterHandler]: Connector (rekentToeAan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.025Z warn: [ConnectorConverterHandler]: Connector (toerekeningVanBetaling) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.673Z warn: [ConnectorConverterHandler]: Connector (toerekeningVanBetaling) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.025Z warn: [ConnectorConverterHandler]: Connector (aanmaning) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.673Z warn: [ConnectorConverterHandler]: Connector (aanmaning) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.025Z warn: [ConnectorConverterHandler]: Connector (oninbaarheidsverklaring) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.673Z warn: [ConnectorConverterHandler]: Connector (oninbaarheidsverklaring) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.025Z warn: [ConnectorConverterHandler]: Connector (wordtToegerekendDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.673Z warn: [ConnectorConverterHandler]: Connector (wordtToegerekendDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (toegerekendeBetaling) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.673Z warn: [ConnectorConverterHandler]: Connector (toegerekendeBetaling) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (herschikteSchuldvordering) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.673Z warn: [ConnectorConverterHandler]: Connector (herschikteSchuldvordering) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (afbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.673Z warn: [ConnectorConverterHandler]: Connector (afbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (schuldvorderingscategorie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.673Z warn: [ConnectorConverterHandler]: Connector (schuldvorderingscategorie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (genereertWanbetalingsvergoeding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.674Z warn: [ConnectorConverterHandler]: Connector (genereertWanbetalingsvergoeding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (isGerelateerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.674Z warn: [ConnectorConverterHandler]: Connector (isGerelateerdMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (bedoeldVoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.674Z warn: [ConnectorConverterHandler]: Connector (bedoeldVoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (aanleiding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.674Z warn: [ConnectorConverterHandler]: Connector (aanleiding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (heeftRelatieMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.674Z warn: [ConnectorConverterHandler]: Connector (heeftRelatieMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (Persoon (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.674Z warn: [ConnectorConverterHandler]: Connector (Persoon (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (Persoon (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.675Z warn: [ConnectorConverterHandler]: Connector (Persoon (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (gezinshoofd) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.675Z warn: [ConnectorConverterHandler]: Connector (gezinshoofd) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (isHoofdVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.675Z warn: [ConnectorConverterHandler]: Connector (isHoofdVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (gezinslid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.675Z warn: [ConnectorConverterHandler]: Connector (gezinslid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (isLidVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.675Z warn: [ConnectorConverterHandler]: Connector (isLidVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (voorstel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.675Z warn: [ConnectorConverterHandler]: Connector (voorstel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (voorgesteldAfbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.675Z warn: [ConnectorConverterHandler]: Connector (voorgesteldAfbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (aanvaarding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.675Z warn: [ConnectorConverterHandler]: Connector (aanvaarding) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (aanvaardAfbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.676Z warn: [ConnectorConverterHandler]: Connector (aanvaardAfbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.026Z warn: [ConnectorConverterHandler]: Connector (isDeelVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.676Z warn: [ConnectorConverterHandler]: Connector (isDeelVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.027Z warn: [ConnectorConverterHandler]: Connector (afbetalingsplanonderdeel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.676Z warn: [ConnectorConverterHandler]: Connector (afbetalingsplanonderdeel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.027Z warn: [ConnectorConverterHandler]: Connector (gevolgdAfbetalingsplanonderdeel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.676Z warn: [ConnectorConverterHandler]: Connector (gevolgdAfbetalingsplanonderdeel) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.027Z warn: [ConnectorConverterHandler]: Connector (schrapping) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.676Z warn: [ConnectorConverterHandler]: Connector (schrapping) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.027Z warn: [ConnectorConverterHandler]: Connector (geschraptAfbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.676Z warn: [ConnectorConverterHandler]: Connector (geschraptAfbetalingsplan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.027Z warn: [ConnectorConverterHandler]: Connector (afbetalingsplansaldo) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.676Z warn: [ConnectorConverterHandler]: Connector (afbetalingsplansaldo) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-06-04T12:27:16.027Z warn: [ConnectorConverterHandler]: Connector (schuldvordingssaldo) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-07T10:43:12.677Z warn: [ConnectorConverterHandler]: Connector (schuldvordingssaldo) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 #||# -------------------------------------
 

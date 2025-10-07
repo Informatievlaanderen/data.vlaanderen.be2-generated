@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/schuldbeheer/erkendestandaard/2025-05-15/translation/schuldbeheer_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/schuldbeheer/erkendestandaard/2025-05-15/translation/schuldbeheer_nl.json
+
+TRANSLATIONFILE: schuldbeheer_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
