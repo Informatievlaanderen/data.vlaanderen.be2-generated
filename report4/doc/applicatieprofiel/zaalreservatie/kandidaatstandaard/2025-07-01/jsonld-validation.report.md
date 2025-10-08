@@ -2,15 +2,15 @@
 
 #||# -------------------------------------  
 
-2025-09-03T14:04:07.320Z info: Loaded 45 URI prefixes into whitelist
+2025-10-08T08:12:38.849Z info: Loaded 47 URI prefixes into whitelist
 
-Error: Unknown specification type: undefined
+2025-10-08T08:12:39.166Z info: Validation successful! All assigned URIs are whitelisted.
 
-    at JsonldValidationService.validateMissingClasses (/usr/local/lib/node_modules/@oslo-flanders/jsonld-validator/lib/JsonldValidationService.js:312:27)
+2025-10-08T08:12:39.166Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
 
-    at JsonldValidationService.run (/usr/local/lib/node_modules/@oslo-flanders/jsonld-validator/lib/JsonldValidationService.js:37:43)
+2025-10-08T08:12:39.166Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-    at /usr/local/lib/node_modules/@oslo-flanders/jsonld-validator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+2025-10-08T08:12:39.166Z info: Validation successful! All base URIs seem to be valid.
 
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-08T08:12:39.166Z info: Validation successful! All referenced classes and attributes seem to be included.
 
