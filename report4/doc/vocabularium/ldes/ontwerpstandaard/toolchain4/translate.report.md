@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/ldes/ontwerpstandaard/toolchain4/translation/ldes_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/ldes/ontwerpstandaard/toolchain4/translation/ldes_nl.json
+
+TRANSLATIONFILE: ldes_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
