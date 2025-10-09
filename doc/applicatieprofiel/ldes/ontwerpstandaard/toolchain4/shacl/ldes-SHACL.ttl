@@ -1,4 +1,5 @@
 @prefix dc: <http://purl.org/dc/terms/> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -25,10 +26,12 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#VeranderlijkobjectShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#ObjectShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#CollectielidShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#ViewdescriptionShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#DatasetShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#DataserviceShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#DataserviceldesShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#SnapshotShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#UriShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#LiteralShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#DurationShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#IntegerShape>,
@@ -103,7 +106,7 @@
     rdfs:label "endpointURL"@nl;
     rdfs:comment "De rootlocatie of het primaire endpoint van de dienst (een web-resolvable URi)."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Dataservice.Endpointurl>;
-    shacl:class rdfs:Resource;
+    shacl:datatype xsd:anyURI;
     shacl:description "De rootlocatie of het primaire endpoint van de dienst (een web-resolvable URi)."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
@@ -197,6 +200,17 @@
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
+    rdfs:label "timestampPath"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Een SHACL property path naar de timestamp wanneer het versie-object een element werd van de event stream."@nl;
+    rdfs:comment "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tijdstip."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Durationagopolicy.Timestamppath>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tijdstip."@nl;
+    shacl:maxCount "1";
+    shacl:name "timestampPath"@nl;
+    shacl:path <https://w3id.org/ldes#timestampPath>
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "value"@nl;
     rdfs:comment "De waarde waarmee de gelinkte node in de relatie tussen de nodes is vergeleken."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Durationagopolicy.Value>;
@@ -206,17 +220,6 @@
     shacl:minCount "1";
     shacl:name "value"@nl;
     shacl:path <https://w3id.org/tree#value>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "timestampPath"@nl;
-    <http://purl.org/vocab/vann/usageNote> "Een SHACL property path naar de timestamp wanneer het versie-object een element werd van de event stream."@nl;
-    rdfs:comment "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tijdstip."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Durationagopolicy.Timestamppath>;
-    shacl:class rdfs:Resource;
-    shacl:description "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tijdstip."@nl;
-    shacl:maxCount "1";
-    shacl:name "timestampPath"@nl;
-    shacl:path <https://w3id.org/ldes#timestampPath>
   ];
   shacl:targetClass <https://w3id.org/ldes#DurationAgoPolicy> .
 
@@ -230,7 +233,7 @@
     <http://purl.org/vocab/vann/usageNote> "Een SHACL property path naar de timestamp wanneer het versie-object een element werd van de event stream."@nl;
     rdfs:comment "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een specifiek tijdstip."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Eventstream.Timestamppath>;
-    shacl:class rdfs:Resource;
+    shacl:datatype xsd:anyURI;
     shacl:description "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een specifiek tijdstip."@nl;
     shacl:maxCount "1";
     shacl:name "timestampPath"@nl;
@@ -241,7 +244,7 @@
     <http://purl.org/vocab/vann/usageNote> "Een SHACL property path naar de niet-geversioneerde identifier van een element."@nl;
     rdfs:comment "Geeft de versie van het element weer."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Eventstream.Versionofpath>;
-    shacl:class rdfs:Resource;
+    shacl:datatype xsd:anyURI;
     shacl:description "Geeft de versie van het element weer."@nl;
     shacl:maxCount "1";
     shacl:name "versionOfPath"@nl;
@@ -284,7 +287,7 @@
     shacl:class <https://data.vlaanderen.be/ns/ldes#EventstreamView>;
     shacl:description "De event stream view connecteert de collectie met de rootnode zodanig dat alle leden van de collectie gevonden kunnen worden."@nl;
     shacl:name "eventstreamView"@nl;
-    shacl:path <http://todo.com/eventStreamView>
+    shacl:path <https://data.vlaanderen.be/ns/ldes#eventstreamView>
   ];
   shacl:targetClass <https://w3id.org/ldes#EventStream> .
 
@@ -312,7 +315,7 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "eventstream"@nl;
-    shacl:path <http://todo.com/eventStream>
+    shacl:path <https://data.vlaanderen.be/ns/ldes#eventstream>
   ], [
     a shacl:PropertyShape;
     rdfs:label "rootNode"@nl;
@@ -338,6 +341,28 @@
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
+    rdfs:label "timestampPath"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Een SHACL property path naar de timestamp wanneer het versie-object een element werd van de event stream."@nl;
+    rdfs:comment "Geeft weer hoe elementen van een Linked Data Event Stream zich tot elkaar verhouden door een tijdstip."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Latestversionsubset.Timestamppath>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Geeft weer hoe elementen van een Linked Data Event Stream zich tot elkaar verhouden door een tijdstip."@nl;
+    shacl:maxCount "1";
+    shacl:name "timestampPath"@nl;
+    shacl:path <https://w3id.org/ldes#timestampPath>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "versionOfPath"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Een SHACL property path naar de niet-geversioneerde identifier van een element."@nl;
+    rdfs:comment "Geeft de versie van het element weer."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Latestversionsubset.Versionofpath>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Geeft de versie van het element weer."@nl;
+    shacl:maxCount "1";
+    shacl:name "versionOfPath"@nl;
+    shacl:path <https://w3id.org/ldes#versionOfPath>
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "amount"@nl;
     rdfs:comment "Aantal versies van één element die behouden mogen worden."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Latestversionsubset.Amount>;
@@ -349,32 +374,10 @@
     shacl:path <https://w3id.org/ldes#amount>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "timestampPath"@nl;
-    <http://purl.org/vocab/vann/usageNote> "Een SHACL property path naar de timestamp wanneer het versie-object een element werd van de event stream."@nl;
-    rdfs:comment "Geeft weer hoe elementen van een Linked Data Event Stream zich tot elkaar verhouden door een tijdstip."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Latestversionsubset.Timestamppath>;
-    shacl:class rdfs:Resource;
-    shacl:description "Geeft weer hoe elementen van een Linked Data Event Stream zich tot elkaar verhouden door een tijdstip."@nl;
-    shacl:maxCount "1";
-    shacl:name "timestampPath"@nl;
-    shacl:path <https://w3id.org/ldes#timestampPath>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "versionOfPath"@nl;
-    <http://purl.org/vocab/vann/usageNote> "Een SHACL property path naar de niet-geversioneerde identifier van een element."@nl;
-    rdfs:comment "Geeft de versie van het element weer."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Latestversionsubset.Versionofpath>;
-    shacl:class rdfs:Resource;
-    shacl:description "Geeft de versie van het element weer."@nl;
-    shacl:maxCount "1";
-    shacl:name "versionOfPath"@nl;
-    shacl:path <https://w3id.org/ldes#versionOfPath>
-  ], [
-    a shacl:PropertyShape;
     rdfs:label "versionKey"@nl;
     rdfs:comment "Een lijst van SHACL property paths die samen een version key vormen."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Latestversionsubset.Versionkey>;
-    shacl:class rdfs:Resource;
+    shacl:datatype xsd:anyURI;
     shacl:description "Een lijst van SHACL property paths die samen een version key vormen."@nl;
     shacl:name "versionKey"@nl;
     shacl:path <https://w3id.org/ldes#versionKey>
@@ -392,13 +395,15 @@
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
-    rdfs:label "viewDescription";
+    rdfs:label "viewDescription"@nl;
+    rdfs:comment "Verbind de TREE:Node met de beschrijving van de TREE:structure."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Node.Viewdescription>;
-    shacl:class <http://todo.com/ViewDescription>;
+    shacl:class <https://data.vlaanderen.be/ns/ldes#ViewDescription>;
+    shacl:description "Verbind de TREE:Node met de beschrijving van de TREE:structure."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "viewDescription";
-    shacl:path <http://todo.com/viewDescription>
+    shacl:name "viewDescription"@nl;
+    shacl:path dc11:description
   ], [
     a shacl:PropertyShape;
     rdfs:label "lid"@nl;
@@ -416,7 +421,7 @@
     shacl:class <https://w3id.org/tree#Relation>;
     shacl:description "Een klasse die de relatie tussen twee nodes beschrijft."@nl;
     shacl:name "relatie"@nl;
-    shacl:path <http://todo.com/relatie>
+    shacl:path dc:relation
   ];
   shacl:targetClass <https://w3id.org/tree#Node> .
 
@@ -428,10 +433,9 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#ObservatieShape> a shacl:NodeShape;
   rdfs:label "Observatie"@nl;
-  <http://purl.org/vocab/vann/usageNote> "OPMERKING: Deze klasse wordt meer uitgebreid  beschreven in  het OSLO-applicatieprofiel <a href='https://data.vlaanderen.be/standaarden/standaard-in-ontwikkeling/vocabularium-observaties-en-metingen.html'> Observaties en Metingen</a>."@nl;
   rdfs:comment "Het vaststellen van de waarde van een bepaald kenmerk van een object op een bepaald tijdstip of tussen twee tijdstippen."@nl;
   shacl:closed false;
-  shacl:targetClass <http://def.isotc211.org/iso19156/2011/Observation#OM_Observation> .
+  shacl:targetClass <http://www.w3.org/ns/sosa/Observation> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#OnveranderlijkobjectShape> a shacl:NodeShape;
   rdfs:label "OnveranderlijkObject"@nl;
@@ -447,6 +451,18 @@
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
+    rdfs:label "pad"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Binnen SHACL zijn er RDF terms die een subset van SPARQL property paths beschrijven. Meer informatie kan [zie <a href=\"https://www.w3.org/TR/shacl/#x2.3.1-shacl-property-paths\">hier</a>] teruggevonden worden."@nl;
+    rdfs:comment "Een property path, gedefinieerd door een SHACL, die weergeeft welke zaken beïnvloed worden door tree:value."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Relatie.Pad>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Een property path, gedefinieerd door een SHACL, die weergeeft welke zaken beïnvloed worden door tree:value."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "pad"@nl;
+    shacl:path <https://w3id.org/tree#path>
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "waarde"@nl;
     <http://purl.org/vocab/vann/usageNote> "De tree:value is de contextuele waarde van de node. Deze waarde is vrij in te vullen door bijvoorbeeld een string, een integer of een link naar een andere resource waar een duidelijke vergelijkingsregel werd gedefinieerd."@nl;
     rdfs:comment "De waarde in de node waarmee de relatie gaat vergelijken om een volgende node aan te linken."@nl;
@@ -457,18 +473,6 @@
     shacl:minCount "1";
     shacl:name "waarde"@nl;
     shacl:path <https://w3id.org/tree#value>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "pad"@nl;
-    <http://purl.org/vocab/vann/usageNote> "Binnen SHACL zijn er RDF terms die een subset van SPARQL property paths beschrijven. Meer informatie kan [zie <a href=\"https://www.w3.org/TR/shacl/#x2.3.1-shacl-property-paths\">hier</a>] teruggevonden worden."@nl;
-    rdfs:comment "Een property path, gedefinieerd door een SHACL, die weergeeft welke zaken beïnvloed worden door tree:value."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Relatie.Pad>;
-    shacl:class rdfs:Resource;
-    shacl:description "Een property path, gedefinieerd door een SHACL, die weergeeft welke zaken beïnvloed worden door tree:value."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "pad"@nl;
-    shacl:path <https://w3id.org/tree#path>
   ], [
     a shacl:PropertyShape;
     rdfs:label "node"@nl;
@@ -504,7 +508,7 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "viewOf"@nl;
-    shacl:path <http://todo.com/viewOf>
+    shacl:path <https://data.vlaanderen.be/ns/ldes#viewOf>
   ], [
     a shacl:PropertyShape;
     rdfs:label "viewOf"@nl;
@@ -515,7 +519,7 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "viewOf"@nl;
-    shacl:path <http://todo.com/viewOf>
+    shacl:path <https://data.vlaanderen.be/ns/ldes#viewOf>
   ], [
     a shacl:PropertyShape;
     rdfs:label "eventstreamView"@nl;
@@ -586,6 +590,11 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/ldes#Snapshot> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#UriShape> a shacl:NodeShape;
+  rdfs:label "URI";
+  shacl:closed false;
+  shacl:targetClass xsd:anyURI .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#VeranderlijkobjectShape> a shacl:NodeShape;
   rdfs:label "VeranderlijkObject"@nl;
   <http://purl.org/vocab/vann/usageNote> "Een veranderlijk object wordt gebruikt als basiselement van een dataset."@nl;
@@ -610,7 +619,7 @@
     <http://purl.org/vocab/vann/usageNote> "Een SHACL property path naar de timestamp wanneer het versie-object een element werd van de event stream."@nl;
     rdfs:comment "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tijdstip."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Versieeventstream.Timestamppath>;
-    shacl:class rdfs:Resource;
+    shacl:datatype xsd:anyURI;
     shacl:description "Geeft weer hoe elementen van een LDES zich tot elkaar verhouden door een tijdstip."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
@@ -622,7 +631,7 @@
     <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld een SHACL property path naar de niet-geversioneerde identifier van een element."@nl;
     rdfs:comment "Geeft de versie van het element weer."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#Versieeventstream.Versionofpath>;
-    shacl:class rdfs:Resource;
+    shacl:datatype xsd:anyURI;
     shacl:description "Geeft de versie van het element weer."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
@@ -681,3 +690,9 @@
     shacl:path <https://data.vlaanderen.be/ns/ldes#versiematerialisatieVan>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/ldes#VersieMaterialisatie> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/ldes/ontwerpstandaard/toolchain4#ViewdescriptionShape> a shacl:NodeShape;
+  rdfs:label "ViewDescription"@nl;
+  rdfs:comment "Verbind de TREE:Node met de beschrijving van de TREE:structure."@nl;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/ldes#ViewDescription> .

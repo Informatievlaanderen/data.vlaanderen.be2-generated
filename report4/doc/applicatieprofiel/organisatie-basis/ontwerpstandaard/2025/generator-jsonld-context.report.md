@@ -2,13 +2,13 @@
 
 #||# -------------------------------------  
 
-2025-10-06T08:26:30.444Z error: Found [urn:oslo-toolchain:c44841797c8029b1806e79a46e7ca084af9d0705f774c6af9a52b01f7722a8e8](all-organisatie.jsonld#L225) in duplicates, meaning "Organisatie" is used multiple times as label.
+2025-10-09T07:11:53.091Z error: Found [[urn:oslo-toolchain:efa684849f990ecc6958e6b72d4b19a69647231a0e0679289a2965f695f9a88e](all-organisatie.jsonld#L5043)](all-organisatie.jsonld#L132) in duplicates, meaning "Agent" is used multiple times as label.
 
-2025-10-06T08:26:30.446Z error: Found [[urn:oslo-toolchain:c80ed1f8970a40fc04f39a1b65e457da0179c264b2eb4b87949840dd98a9db5a](all-organisatie.jsonld#L5019)](all-organisatie.jsonld#L254) in duplicates, meaning "Agent" is used multiple times as label.
+2025-10-09T07:11:53.093Z error: Found [[urn:oslo-toolchain:f4d4156ba67eefb9002e9a692d143bfedf6be8564bd99cf76a99a0bb90e0a67b](all-organisatie.jsonld#L5070)](all-organisatie.jsonld#L167) in duplicates, meaning "Agent" is used multiple times as label.
 
-2025-10-06T08:26:30.446Z error: Found [[urn:oslo-toolchain:ce101a7c19fd2907d0fa9896c415d0628c54c68d5310bd296f8207826c692bf5](all-organisatie.jsonld#L5023)](all-organisatie.jsonld#L694) in duplicates, meaning "Agent" is used multiple times as label.
+2025-10-09T07:11:53.093Z error: Found [urn:oslo-toolchain:1a5d11580fc42d42bf464c4a73a9970b630c125bb102c959b57ef346f7f9e14e](all-organisatie.jsonld#L266) in duplicates, meaning "Organisatie" is used multiple times as label.
 
-2025-10-06T08:26:30.446Z error: Found [[urn:oslo-toolchain:4956b6de693c758999d48fd57d7b8cd9bf8c2cdd8e888453a179999ada4c9999](all-organisatie.jsonld#L5064)](all-organisatie.jsonld#L822) in duplicates, meaning "Agent" is used multiple times as label.
+2025-10-09T07:11:53.093Z error: Found [urn:oslo-toolchain:6cf417b5c73f6fb95698782bab8653ac899024580f6061d1253a0574e7400853](all-organisatie.jsonld#L694) in duplicates, meaning "Organisatie" is used multiple times as label.
 
-2025-10-06T08:26:30.446Z error: Found [urn:oslo-toolchain:96d08770133a54b6d2c9a6ceb9d2d0f13f21f404435867be018242bb9ed8f391](all-organisatie.jsonld#L857) in duplicates, meaning "Organisatie" is used multiple times as label.
+2025-10-09T07:11:53.093Z error: Found [[urn:oslo-toolchain:9c1d768a0ebba312f9c8c0f1c8633a9d1030db9e8f69f343c4c12fad75e14b06](all-organisatie.jsonld#L5098)](all-organisatie.jsonld#L723) in duplicates, meaning "Agent" is used multiple times as label.
 
