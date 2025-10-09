@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-10-09T07:40:27.936Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/shacl#path which acts as a parent. Using original URI as fallback.
+2025-10-09T08:06:51.822Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/shacl#path which acts as a parent. Using original URI as fallback.
 
-2025-10-09T07:40:27.938Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/shacl#path which acts as a parent. Using original URI as fallback.
+2025-10-09T08:06:51.824Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/shacl#path which acts as a parent. Using original URI as fallback.
 
