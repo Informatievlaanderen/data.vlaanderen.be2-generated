@@ -2,17 +2,17 @@
 
 #||# -------------------------------------  
 
-2025-10-09T07:40:49.859Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-persoon.jsonld#L5338)".
+2025-10-09T08:14:58.699Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-persoon.jsonld#L5335)".
 
-2025-10-09T07:40:49.861Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-persoon.jsonld#L5349)".
+2025-10-09T08:14:58.701Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-persoon.jsonld#L5346)".
 
-2025-10-09T07:40:49.861Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-persoon.jsonld#L5360)".
+2025-10-09T08:14:58.702Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-persoon.jsonld#L5357)".
 
-2025-10-09T07:40:49.861Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-persoon.jsonld#L5371)".
+2025-10-09T08:14:58.702Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-persoon.jsonld#L5368)".
 
-2025-10-09T07:40:49.862Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
+2025-10-09T08:14:58.703Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:10c1050eeb8cf570d0f1ff1916a37b0a378a5f8addbd544eb99d6b7c045b1eaa".
+Error: Unable to find the assigned URI for range "urn:oslo-toolchain:18ae1cc42d2c88bf9a4a89edf89bc455859fe15df7120fc8f5f039b78eaab185".
 
     at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:52:19)
 

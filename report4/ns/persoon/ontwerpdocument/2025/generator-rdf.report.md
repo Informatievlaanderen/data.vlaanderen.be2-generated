@@ -2,29 +2,11 @@
 
 #||# -------------------------------------  
 
-2025-10-09T07:40:33.225Z error: Unable to find assigned URI for range of property [urn:oslo-toolchain:75a0fea4745e6d5526e3b44f69a0f0119338f80423f7ccc28e6595072e3bf315](all-persoon.jsonld#L3227).
+2025-10-09T08:15:04.248Z error: Unable to find assigned URI for range of property [urn:oslo-toolchain:8ee4ef7cb753a3453fd2ba094826c129150c7eae031327c6977881d0a0412612](all-persoon.jsonld#L3224).
 
-2025-10-09T07:40:33.227Z error: Unable to find assigned URI for range of property [urn:oslo-toolchain:e84464c6aa2cbd27c723c0cb401c4e800c6e67fc09cab42f4e8b3a4cab713e19](all-persoon.jsonld#L3485).
+2025-10-09T08:15:04.250Z error: Unable to find assigned URI for range of property [urn:oslo-toolchain:69a1da2d23ac3bd127729f686053799bfa2793603b07abc867d62425e6f28e00](all-persoon.jsonld#L3482).
 
-2025-10-09T07:40:33.228Z error: Unable to find the definition for property [urn:oslo-toolchain:6f143da326a08cd286352d46f7649b07acefd0bfce29f23d1b48b24dcd03b10f](all-persoon.jsonld#L3523).
+2025-10-09T08:15:04.251Z error: Unable to find the definition for property [urn:oslo-toolchain:a0cf858b7406f323687d74e299688e381d2391b5f8a8b00b815fb51466967bd4](all-persoon.jsonld#L3520).
 
-2025-10-09T07:40:33.228Z error: Unable to find assigned URI for range of property [urn:oslo-toolchain:53c0b45043c1be8ccaae864b98303c7b300302e2379e51e5369769804ebc5073](all-persoon.jsonld#L3684).
-
-Error: Unable to find the assigned URI for parent http://www.w3.org/ns/person#Person of class [urn:oslo-toolchain:e896275fd1d9088e91769a648eae4e869a93812eec23058219d7973e8606e293](all-persoon.jsonld#L214).
-
-    at /usr/local/lib/node_modules/@oslo-flanders/rdf-vocabulary-generator/lib/RdfVocabularyGenerationService.js:90:27
-
-    at Array.forEach (<anonymous>)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/rdf-vocabulary-generator/lib/RdfVocabularyGenerationService.js:87:21
-
-    at Array.forEach (<anonymous>)
-
-    at RdfVocabularyGenerationService.extractClassQuads (/usr/local/lib/node_modules/@oslo-flanders/rdf-vocabulary-generator/lib/RdfVocabularyGenerationService.js:72:23)
-
-    at RdfVocabularyGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/rdf-vocabulary-generator/lib/RdfVocabularyGenerationService.js:48:18)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/rdf-vocabulary-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-09T08:15:04.251Z error: Unable to find assigned URI for range of property [urn:oslo-toolchain:b1b1dbcc59089b63cb9807ff1d986debec6f0a89ef3eb643d4a2955daa97d748](all-persoon.jsonld#L3681).
 
