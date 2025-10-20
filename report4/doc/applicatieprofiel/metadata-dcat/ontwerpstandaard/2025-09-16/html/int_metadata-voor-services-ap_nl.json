@@ -1599,9 +1599,6 @@
           "applicationProfileDefinition": {
             "nl": "Een alternatieve identificator (dan de unieke identificator) voor een dataset kan hier beschreven worden."
           },
-          "applicationProfileUsageNote": {
-            "nl": "[Zie <a href=\"https://github.com/SEMICeu/DCAT-AP/tree/master/releases/2.0.1\">DCAT-AP</a>]"
-          },
           "scope": "https://data.vlaanderen.be/id/concept/scope/External",
           "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
           "domain": "http://www.w3.org/ns/dcat#Dataset",
@@ -2231,11 +2228,38 @@
         "nl": "Een verzameling die onafhankelijk gepubliceerde datasets groepeert rond gedeelde eigenschappen."
       },
       "applicationProfileUsageNote": {
-        "nl": "Een Dataset Serie is een verzameling van datasets waarvan slechts een enkele dimentie veranderd. Momenteel worden enkel temporele, ruimtelijke bereik, data model, en ruimtelijke resolutie als dimenties voor Dataset Serie erkend. \r\n\r\nVoor verzamelingen van datasets waarbij meer dimenties tegelijk of andere dimenties wijzigen worden catalogi gebruikt."
+        "nl": "Een Dataset Serie is een verzameling van datasets waarvan slechts een enkele dimentie veranderd. Momenteel worden enkel temporele, ruimtelijke bereik, data model, en ruimtelijke resolutie als dimenties voor Dataset Serie erkend. \r\n<br/>\r\nVoor verzamelingen van datasets waarbij meer dimenties tegelijk of andere dimenties wijzigen worden catalogi gebruikt.\r\n<br/>\r\nVoor DCAT-AP Vlaanderen zijn Dataset Series dus een specifieke variant van verzamelingen van datasets. De eigenschappen van de datasets zijn dus net zoals die van een catalogus gericht op de verzameling, i.p.v. gericht op de mogelijkheid om een dataset serie als opdeling te zien van 1 dataset in kleinere onderdelen. \r\n<br/>\r\nHet aanduiden van een verzameling als een Dataset Serie heeft als voordeel dat er een verwachtingspatroon kan gekoppeld worden hieraan. Omdat in de praktijk dit verwachtingspatroon erg gekoppeld is aan de striktheid van van de interpretatie van een een-dimentionale wijziging is er een eigenschap dit dit aanduid."
       },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
       "properties": [
+        {
+          "id": "http://www.w3.org/ns/adms#identifier",
+          "vocabularyLabel": {
+            "nl": "alternatieveIdentificator"
+          },
+          "applicationProfileLabel": {
+            "nl": "alternatieve identificator"
+          },
+          "applicationProfileDefinition": {
+            "nl": "Een alternatieve identificator (dan de unieke identificator) voor een dataset serie kan hier beschreven worden."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "http://www.w3.org/ns/dcat#DatasetSeries",
+          "range": {
+            "id": "http://www.w3.org/ns/adms#Identifier",
+            "listedInDocument": true,
+            "vocabularyLabel": {
+              "nl": "Identificator"
+            },
+            "applicationProfileLabel": {
+              "nl": "Identificator"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
         {
           "id": "http://data.europa.eu/r5r/applicableLegislation",
           "vocabularyLabel": {
@@ -2293,10 +2317,10 @@
         {
           "id": "http://www.w3.org/ns/dcat#contactPoint",
           "vocabularyLabel": {
-            "nl": "contactpunt"
+            "nl": "contactinformatie"
           },
           "applicationProfileLabel": {
-            "nl": "contactpunt"
+            "nl": "contactinformatie"
           },
           "applicationProfileDefinition": {
             "nl": "De relevante contactinformatie waarmee een eindgebruiker in contact kan treden met de verantwoordelijken van de Dataset Serie."
@@ -2314,8 +2338,8 @@
               "nl": "Contactinfo"
             }
           },
-          "minCount": "0",
-          "maxCount": "*"
+          "minCount": "1",
+          "maxCount": "1"
         },
         {
           "id": "http://purl.org/dc/terms/spatial",
@@ -2324,6 +2348,12 @@
           },
           "applicationProfileLabel": {
             "nl": "geografische dekking"
+          },
+          "applicationProfileDefinition": {
+            "nl": "Het geografische gebied waarover de dataset serie informatie heeft."
+          },
+          "applicationProfileUsageNote": {
+            "nl": "Wanneer geografische dekking een dimensie is in de datasetserie, moet de geografische dekking van elke dataset in de collectie deel uitmaken van de geografisch dekking. Er wordt een waarde met een open einde aanbevolen, b.v. EU of een alomvattende bouding box dat de verwachte waarden bevat."
           },
           "scope": "https://data.vlaanderen.be/id/concept/scope/External",
           "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
@@ -2342,12 +2372,45 @@
           "maxCount": "*"
         },
         {
+          "id": "http://purl.org/dc/terms/identifier",
+          "vocabularyLabel": {
+            "nl": "identificator"
+          },
+          "applicationProfileLabel": {
+            "nl": "identificator"
+          },
+          "applicationProfileDefinition": {
+            "nl": "De unieke identificator van de dataset serie."
+          },
+          "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+          "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
+          "domain": "http://www.w3.org/ns/dcat#DatasetSeries",
+          "range": {
+            "id": "http://www.w3.org/2000/01/rdf-schema#Literal",
+            "listedInDocument": false,
+            "vocabularyLabel": {
+              "nl": "Literal"
+            },
+            "applicationProfileLabel": {
+              "nl": "Literal"
+            }
+          },
+          "minCount": "1",
+          "maxCount": "1"
+        },
+        {
           "id": "http://purl.org/dc/terms/accrualPeriodicity",
           "vocabularyLabel": {
             "nl": "periodiciteit"
           },
           "applicationProfileLabel": {
             "nl": "periodiciteit"
+          },
+          "applicationProfileDefinition": {
+            "nl": "De maat waarmee de dataset serie wordt bijgewerkt."
+          },
+          "applicationProfileUsageNote": {
+            "nl": "De periodiciteit van een dataset serie is niet gelijk aan de periodiciteit van de datasets in de verzameling."
           },
           "scope": "https://data.vlaanderen.be/id/concept/scope/External",
           "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
@@ -2373,6 +2436,12 @@
           "applicationProfileLabel": {
             "nl": "publicatie datum"
           },
+          "applicationProfileDefinition": {
+            "nl": "Het tijdsmoment waarop de dataset serie werd gepubliceerd door de uitgever."
+          },
+          "applicationProfileUsageNote": {
+            "nl": "Dit is het moment wanneer de dataset serie voor het eerst publiekelijk kenbaar gemaakt is. Het is niet noodzakelijk gekijk aan de publicatie datum van de oudste dataset in de verzameling."
+          },
           "scope": "https://data.vlaanderen.be/id/concept/scope/External",
           "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
           "domain": "http://www.w3.org/ns/dcat#DatasetSeries",
@@ -2393,6 +2462,9 @@
           },
           "applicationProfileLabel": {
             "nl": "temporele dekking"
+          },
+          "applicationProfileDefinition": {
+            "nl": "De tijdsperiode die de dataset serie bestrijkt."
           },
           "scope": "https://data.vlaanderen.be/id/concept/scope/External",
           "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
@@ -2417,6 +2489,9 @@
           },
           "applicationProfileLabel": {
             "nl": "titel"
+          },
+          "applicationProfileDefinition": {
+            "nl": "De naam van de dataset serie."
           },
           "scope": "https://data.vlaanderen.be/id/concept/scope/External",
           "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
@@ -2471,6 +2546,12 @@
           },
           "applicationProfileLabel": {
             "nl": "wijzigingsdatum"
+          },
+          "applicationProfileDefinition": {
+            "nl": "Het meest recente moment waarop de dataset series is bijgewerkt."
+          },
+          "applicationProfileUsageNote": {
+            "nl": "Dit is niet noodzakelijk hetzelfde moment als de meest recente wijzigingsdatum van de datasets die de dataset serie bevat."
           },
           "scope": "https://data.vlaanderen.be/id/concept/scope/External",
           "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",

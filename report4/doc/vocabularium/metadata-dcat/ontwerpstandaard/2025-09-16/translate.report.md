@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/vocabularium/metadata-dcat/ontwerpstandaard/2025-09-16/translation/metadata-dcat_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/vocabularium/metadata-dcat/ontwerpstandaard/2025-09-16/translation/metadata-dcat_nl.json
+
+TRANSLATIONFILE: metadata-dcat_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
