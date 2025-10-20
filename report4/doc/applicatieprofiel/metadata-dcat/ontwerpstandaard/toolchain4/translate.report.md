@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4/translation/metadata-voor-services-ap_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4/translation/metadata-voor-services-ap_nl.json
+
+TRANSLATIONFILE: metadata-voor-services-ap_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  

@@ -2,453 +2,453 @@
 
 #||# -------------------------------------
 
-2025-09-16T09:31:15.422Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
+2025-10-20T21:49:52.747Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
 
-2025-09-16T09:31:15.424Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
+2025-10-20T21:49:52.749Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
 
-2025-09-16T09:31:15.424Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+2025-10-20T21:49:52.749Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-09-16T09:31:15.424Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent))
+2025-10-20T21:49:52.749Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent))
 
-2025-09-16T09:31:15.424Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
+2025-10-20T21:49:52.749Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
 
-2025-09-16T09:31:15.424Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Object))
+2025-10-20T21:49:52.749Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Object))
 
-2025-09-16T09:31:15.424Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent))
+2025-10-20T21:49:52.749Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent))
 
-2025-09-16T09:31:15.424Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2025-10-20T21:49:52.749Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-09-16T09:31:15.425Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:isGerelateerdAan)
+2025-10-20T21:49:52.749Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:isGerelateerdAan)
 
-2025-09-16T09:31:15.425Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> CatalogusResource))
+2025-10-20T21:49:52.749Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> CatalogusResource))
 
-2025-09-16T09:31:15.430Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:(CatalogusRecord -> CatalogusResource) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.751Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:(CatalogusRecord -> CatalogusResource) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.432Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> CatalogusRecord) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.752Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> CatalogusRecord) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.432Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.752Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.432Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:(DataService -> Dataset) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.753Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:(DataService -> Dataset) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.432Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:(DataService -> CatalogusResource) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.753Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:(DataService -> CatalogusResource) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.432Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> CatalogusResource) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.753Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> CatalogusResource) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.433Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:(Distributie -> DataService) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.753Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:(Distributie -> DataService) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.433Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.753Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.433Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> Dataset) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.753Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> Dataset) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.433Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> Distributie) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.753Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> Distributie) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.433Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> DataService) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.753Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> DataService) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.433Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.754Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.434Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:(Distributie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.754Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:(Distributie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.434Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> DatasetSerie) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.754Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> DatasetSerie) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.434Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> CatalogusResource) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.754Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> CatalogusResource) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.434Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:ContactinfoVCard:(ContactinfoVCard -> Contactinfo) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.754Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:ContactinfoVCard:(ContactinfoVCard -> Contactinfo) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.434Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Contactinfo:(Contactinfo -> ContactInfo) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.754Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Contactinfo:(Contactinfo -> ContactInfo) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.434Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:(DatasetSerie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-20T21:49:52.755Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:(DatasetSerie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-09-16T09:31:15.435Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-10-20T21:49:52.755Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-09-16T09:31:15.435Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model). Using fallback URI (http://todo.com/) instead.
+2025-10-20T21:49:52.756Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model). Using fallback URI (http://todo.com/) instead.
 
-2025-09-16T09:31:15.435Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium). Using fallback URI (http://todo.com/) instead.
+2025-10-20T21:49:52.756Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium). Using fallback URI (http://todo.com/) instead.
 
-2025-09-16T09:31:15.435Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium:External). Using fallback URI (http://todo.com/) instead.
+2025-10-20T21:49:52.756Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium:External). Using fallback URI (http://todo.com/) instead.
 
-2025-09-16T09:31:15.436Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium:OSLO-DCATAPVL-2.0). Using fallback URI (http://todo.com/) instead.
+2025-10-20T21:49:52.756Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium:OSLO-DCATAPVL-2.0). Using fallback URI (http://todo.com/) instead.
 
-2025-09-16T09:31:15.440Z warn: [ConnectorConverterHandler]: Connector (CatalogusResource (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-20T21:49:52.759Z warn: [ConnectorConverterHandler]: Connector (CatalogusResource (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-09-16T09:31:15.440Z warn: [ConnectorConverterHandler]: Connector (CatalogusResource (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-20T21:49:52.759Z warn: [ConnectorConverterHandler]: Connector (CatalogusResource (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-09-16T09:31:15.442Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus): reuse, DCATAP. These tags will be added.
+2025-10-20T21:49:52.761Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus): reuse, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.443Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord): reuse, DCATAP. These tags will be added.
+2025-10-20T21:49:52.762Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord): reuse, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.443Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource): reuse, DCATAP. These tags will be added.
+2025-10-20T21:49:52.763Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource): reuse, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.443Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset): reuse, DCAT, DCATAP. These tags will be added.
+2025-10-20T21:49:52.763Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset): reuse, DCAT, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.443Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.763Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.444Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie): reuse, DCAT, DCATAP. These tags will be added.
+2025-10-20T21:49:52.763Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie): reuse, DCAT, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.444Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.763Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.444Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService): reuse, DCAT, DCATAP. These tags will be added.
+2025-10-20T21:49:52.764Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService): reuse, DCAT, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.444Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.764Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.444Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:JuridischeBepaling): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.764Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:JuridischeBepaling): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.445Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.764Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.445Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie): reuse, DCAT, class-usage-scope, DCATAP. These tags will be added.
+2025-10-20T21:49:52.764Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie): reuse, DCAT, class-usage-scope, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.445Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.764Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.445Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:TemporalLiteral): reuse, class-usage-scope. These tags will be added.
+2025-10-20T21:49:52.765Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:TemporalLiteral): reuse, class-usage-scope. These tags will be added.
 
-2025-09-16T09:31:15.446Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Rechtsgrond): reuse, class-usage-scope, DCATAP. These tags will be added.
+2025-10-20T21:49:52.765Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Rechtsgrond): reuse, class-usage-scope, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.446Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Contactinfo): DCATAP. These tags will be added.
+2025-10-20T21:49:52.765Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Contactinfo): DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.446Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Standaard): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.765Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Standaard): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.446Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:LicentieDocument): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.765Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:LicentieDocument): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.446Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.765Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.446Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator): DCATAP. These tags will be added.
+2025-10-20T21:49:52.765Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator): DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.447Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:RelatieQualificatie): DCATAP, reuse, DCAT, source-label-nl, target-label-nl, source-definition-nl, source-reuse, target-reuse, uri-source-attribute, uri-target-attribute, target-definition-nl. These tags will be added.
+2025-10-20T21:49:52.766Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:RelatieQualificatie): DCATAP, reuse, DCAT, source-label-nl, target-label-nl, source-definition-nl, source-reuse, target-reuse, uri-source-attribute, uri-target-attribute, target-definition-nl. These tags will be added.
 
-2025-09-16T09:31:15.447Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:RelatieQualificatie has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.766Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:RelatieQualificatie has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.447Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime): reuse, DCAT, class-usage-scope, DCATAP. These tags will be added.
+2025-10-20T21:49:52.766Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime): reuse, DCAT, class-usage-scope, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.447Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.766Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.447Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Frequency): class-usage-scope. These tags will be added.
+2025-10-20T21:49:52.766Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Frequency): class-usage-scope. These tags will be added.
 
-2025-09-16T09:31:15.448Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:contactinformatie): DCAT, DCATAP. These tags will be added.
+2025-10-20T21:49:52.767Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:contactinformatie): DCAT, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.448Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:contactinformatie has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.767Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:contactinformatie has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.448Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:endpointURL): reuse, DCAT, DCATAP. These tags will be added.
+2025-10-20T21:49:52.767Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:endpointURL): reuse, DCAT, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.448Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:endpointURL has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.767Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:endpointURL has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.449Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:endpointbeschrijving): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.767Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:endpointbeschrijving): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.449Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:endpointbeschrijving has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.767Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:endpointbeschrijving has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.449Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:landingspagina): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.768Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:landingspagina): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.450Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:identificator): DCAT. These tags will be added.
+2025-10-20T21:49:52.768Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:identificator): DCAT. These tags will be added.
 
-2025-09-16T09:31:15.450Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:titel has already a value for ap-usageNote-nl in language nl, but will be overwritten.
+2025-10-20T21:49:52.768Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:titel has already a value for ap-usageNote-nl in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.450Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:titel): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.768Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:titel): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.450Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:beschrijving): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.769Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:beschrijving): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.451Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:contactinformatie): DCAT. These tags will be added.
+2025-10-20T21:49:52.769Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:contactinformatie): DCAT. These tags will be added.
 
-2025-09-16T09:31:15.451Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:toegankelijkheid): DCATAP, DCAT. These tags will be added.
+2025-10-20T21:49:52.769Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:toegankelijkheid): DCATAP, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.451Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:toegankelijkheid has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.769Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:toegankelijkheid has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.451Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:identificator): DCAT. These tags will be added.
+2025-10-20T21:49:52.770Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:identificator): DCAT. These tags will be added.
 
-2025-09-16T09:31:15.451Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:naam): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.770Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:naam): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.452Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:licentie): DCATAP. These tags will be added.
+2025-10-20T21:49:52.770Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:licentie): DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.452Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:alternatieve idenficator): reuse, DCATAP, DCAT. These tags will be added.
+2025-10-20T21:49:52.770Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:alternatieve idenficator): reuse, DCATAP, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.452Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:alternatieve idenficator has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.771Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:alternatieve idenficator has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.452Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:versie): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.771Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:versie): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.452Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:versie has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.771Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:versie has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.453Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:rechten): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.771Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:rechten): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.453Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:contactpunt): reuse, DCAT, property-usage-scope, DCATAP. These tags will be added.
+2025-10-20T21:49:52.771Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:contactpunt): reuse, DCAT, property-usage-scope, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.453Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:contactpunt has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.771Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:contactpunt has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.453Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:belanghebbendewetgeving): property-usage-scope, reuse, DCATAP. These tags will be added.
+2025-10-20T21:49:52.772Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:belanghebbendewetgeving): property-usage-scope, reuse, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.453Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:alternatieveIdentificator): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.772Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:alternatieveIdentificator): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.454Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:alternatieveIdentificator has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.772Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:alternatieveIdentificator has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.454Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator:gestructureerdeIdentificator): reuse. These tags will be added.
+2025-10-20T21:49:52.772Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator:gestructureerdeIdentificator): reuse. These tags will be added.
 
-2025-09-16T09:31:15.454Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator:identificator): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.772Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator:identificator): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.454Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator:toegekendDoor): reuse. These tags will be added.
+2025-10-20T21:49:52.772Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator:toegekendDoor): reuse. These tags will be added.
 
-2025-09-16T09:31:15.454Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator:toegekendDoorString): reuse. These tags will be added.
+2025-10-20T21:49:52.772Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator:toegekendDoorString): reuse. These tags will be added.
 
-2025-09-16T09:31:15.454Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator:toegekendOp): reuse. These tags will be added.
+2025-10-20T21:49:52.773Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Identificator:toegekendOp): reuse. These tags will be added.
 
-2025-09-16T09:31:15.455Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:alternatieveIdentificator): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.773Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:alternatieveIdentificator): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.455Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:alternatieveIdentificator has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.773Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:alternatieveIdentificator has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.455Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:alternatieveIdentificator): DCATAP, DCAT. These tags will be added.
+2025-10-20T21:49:52.773Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:alternatieveIdentificator): DCATAP, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.455Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:alternatieveIdentificator has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.773Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:alternatieveIdentificator has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.455Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:identificator): reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.773Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:identificator): reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.455Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:aanmaakdatum): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.773Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:aanmaakdatum): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.456Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:titel): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.774Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:titel): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.456Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:beschrijving): reuse, DCATAP. These tags will be added.
+2025-10-20T21:49:52.774Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:beschrijving): reuse, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.456Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:wijzigingsdatum has already a value for ap-usageNote-nl in language nl, but will be overwritten.
+2025-10-20T21:49:52.774Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:wijzigingsdatum has already a value for ap-usageNote-nl in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.456Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:wijzigingsdatum): reuse, DCATAP. These tags will be added.
+2025-10-20T21:49:52.774Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:wijzigingsdatum): reuse, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.456Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:toegankelijkheid): DCAT, DCATAP, ap-usage-nl. These tags will be added.
+2025-10-20T21:49:52.774Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:toegankelijkheid): DCAT, DCATAP, ap-usage-nl. These tags will be added.
 
-2025-09-16T09:31:15.456Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:toegankelijkheid has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.774Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:toegankelijkheid has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.456Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:toegankelijkheid has already a value for ap-usage-nl in language nl, but will be overwritten.
+2025-10-20T21:49:52.774Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:toegankelijkheid has already a value for ap-usage-nl in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.457Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:conform): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.777Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:conform): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.457Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:versie): DCAT, reuse. These tags will be added.
+2025-10-20T21:49:52.777Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:versie): DCAT, reuse. These tags will be added.
 
-2025-09-16T09:31:15.457Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:identificator): DCAT. These tags will be added.
+2025-10-20T21:49:52.777Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:identificator): DCAT. These tags will be added.
 
-2025-09-16T09:31:15.457Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:beschrijving): DCAT, DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.778Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:beschrijving): DCAT, DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.457Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:beschrijving has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.778Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:beschrijving has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.457Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:conform aan protocol): DCATAP. These tags will be added.
+2025-10-20T21:49:52.778Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:conform aan protocol): DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.457Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:trefwoord): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.778Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:trefwoord): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.458Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:trefwoord has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.778Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:trefwoord has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.458Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:conform): DCATAP. These tags will be added.
+2025-10-20T21:49:52.778Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:conform): DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.458Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:periodiciteit): DCAT, property-usage-scope, reuse, DCATAP. These tags will be added.
+2025-10-20T21:49:52.778Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:periodiciteit): DCAT, property-usage-scope, reuse, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.458Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:periodiciteit has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.778Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:periodiciteit has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.459Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:voorbeeldweergave): DCATAP. These tags will be added.
+2025-10-20T21:49:52.779Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:voorbeeldweergave): DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.459Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:formaat): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.779Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:formaat): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.459Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:RelatieQualificatie:rol): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.779Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:RelatieQualificatie:rol): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.459Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:RelatieQualificatie:rol has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.779Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:RelatieQualificatie:rol has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.459Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:trefwoord): DCATAP, DCAT, reuse. These tags will be added.
+2025-10-20T21:49:52.780Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:trefwoord): DCATAP, DCAT, reuse. These tags will be added.
 
-2025-09-16T09:31:15.459Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:trefwoord has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.780Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:trefwoord has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.460Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:thema): DCATAP, DCAT. These tags will be added.
+2025-10-20T21:49:52.780Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:thema): DCATAP, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.460Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:thema has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.780Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:thema has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.460Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:landingspagina): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.780Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:landingspagina): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.460Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:titel): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.780Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:titel): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.460Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:titel): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.780Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:titel): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.461Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:licentie): DCATAP, DCAT, reuse. These tags will be added.
+2025-10-20T21:49:52.781Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:licentie): DCATAP, DCAT, reuse. These tags will be added.
 
-2025-09-16T09:31:15.461Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:licentie has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.781Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:licentie has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.461Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:titel): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.781Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:titel): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.461Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:identificator): DCAT. These tags will be added.
+2025-10-20T21:49:52.781Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:identificator): DCAT. These tags will be added.
 
-2025-09-16T09:31:15.461Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:rechten): DCAT, reuse. These tags will be added.
+2025-10-20T21:49:52.781Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:rechten): DCAT, reuse. These tags will be added.
 
-2025-09-16T09:31:15.461Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:thema): DCAT, DCATAP. These tags will be added.
+2025-10-20T21:49:52.781Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:thema): DCAT, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.461Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:thema has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.781Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:thema has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.461Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:licentie): reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.781Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:licentie): reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.462Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:publicatiedatum): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.782Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:publicatiedatum): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.462Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:publicatiedatum has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.782Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:publicatiedatum has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.462Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:beschrijving): property-usage-scope, DCAT, DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.782Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:beschrijving): property-usage-scope, DCAT, DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.462Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:beschrijving has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.782Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:beschrijving has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.462Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:geometrie): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.782Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:geometrie): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.462Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:geometrie has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.782Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:geometrie has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.463Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:boundingBox): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.782Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:boundingBox): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.463Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:boundingBox has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.782Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:boundingBox has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.463Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:centroid): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.782Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:centroid): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.463Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:centroid has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.782Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Plaats:centroid has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.466Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:conform): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.783Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:conform): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.466Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:conform has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.783Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:conform has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.467Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:bronMetadataRecord has an empty value for tag ap-usageNote-nl.
+2025-10-20T21:49:52.784Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:bronMetadataRecord has an empty value for tag ap-usageNote-nl.
 
-2025-09-16T09:31:15.467Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:bronMetadataRecord): reuse, DCATAP. These tags will be added.
+2025-10-20T21:49:52.784Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:bronMetadataRecord): reuse, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.468Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:publicatiedatum): reuse, DCAT, property-usage-scope, DCATAP. These tags will be added.
+2025-10-20T21:49:52.785Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:publicatiedatum): reuse, DCAT, property-usage-scope, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.468Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:publicatiedatum has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.785Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:publicatiedatum has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.468Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:wijzigingsdatum): property-usage-scope, reuse, DCAT, DCATAP. These tags will be added.
+2025-10-20T21:49:52.785Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:wijzigingsdatum): property-usage-scope, reuse, DCAT, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.468Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:wijzigingsdatum has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.785Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:wijzigingsdatum has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.469Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:geografischedekking): DCAT, reuse, property-usage-scope, DCATAP. These tags will be added.
+2025-10-20T21:49:52.785Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:geografischedekking): DCAT, reuse, property-usage-scope, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.469Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:geografischedekking has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.785Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:geografischedekking has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.469Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:temporeledekking): DCAT, property-usage-scope, reuse, DCATAP. These tags will be added.
+2025-10-20T21:49:52.785Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:temporeledekking): DCAT, property-usage-scope, reuse, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.469Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:temporeledekking has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.785Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:temporeledekking has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.469Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:titel): DCAT, property-usage-scope, reuse, DCATAP. These tags will be added.
+2025-10-20T21:49:52.785Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:titel): DCAT, property-usage-scope, reuse, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.469Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:titel has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.785Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DatasetSerie:titel has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.470Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:dcat:endDate): reuse, property-usage-scope, DCAT, DCATAP. These tags will be added.
+2025-10-20T21:49:52.792Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:dcat:endDate): reuse, property-usage-scope, DCAT, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.470Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:dcat:endDate has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.793Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:dcat:endDate has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.470Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:dcat:startDate): DCATAP, property-usage-scope, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.793Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:dcat:startDate): DCATAP, property-usage-scope, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.470Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:dcat:startDate has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.793Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:dcat:startDate has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.470Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:time:hasBeginning): DCATAP, reuse, DCAT, property-usage-scope. These tags will be added.
+2025-10-20T21:49:52.793Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:time:hasBeginning): DCATAP, reuse, DCAT, property-usage-scope. These tags will be added.
 
-2025-09-16T09:31:15.470Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:time:hasBeginning has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.793Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:time:hasBeginning has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.470Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:TimeInstant): reuse, class-usage-scope. These tags will be added.
+2025-10-20T21:49:52.793Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:TimeInstant): reuse, class-usage-scope. These tags will be added.
 
-2025-09-16T09:31:15.477Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:time:hasEnd): DCATAP, DCAT, property-usage-scope, reuse. These tags will be added.
+2025-10-20T21:49:52.793Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:time:hasEnd): DCATAP, DCAT, property-usage-scope, reuse. These tags will be added.
 
-2025-09-16T09:31:15.478Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:time:hasEnd has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.793Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:dct:PeriodOfTime:time:hasEnd has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.478Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:TimeInstant): reuse, class-usage-scope. These tags will be added.
+2025-10-20T21:49:52.793Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:TimeInstant): reuse, class-usage-scope. These tags will be added.
 
-2025-09-16T09:31:15.479Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:downloadURL has already a value for ap-usageNote-nl in language nl, but will be overwritten.
+2025-10-20T21:49:52.794Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:downloadURL has already a value for ap-usageNote-nl in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.479Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:downloadURL): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.794Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:downloadURL): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.479Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:downloadURL has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.794Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:downloadURL has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.480Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:toegangsURL has already a value for ap-usageNote-nl in language nl, but will be overwritten.
+2025-10-20T21:49:52.794Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:toegangsURL has already a value for ap-usageNote-nl in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.480Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:toegangsURL): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.794Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:toegangsURL): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.480Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:toegangsURL has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.794Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:toegangsURL has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.481Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:contactinformatie): DCATAP, DCAT. These tags will be added.
+2025-10-20T21:49:52.794Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:contactinformatie): DCATAP, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.481Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:contactinformatie has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.794Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:contactinformatie has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.482Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:wijzigingdatum): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.794Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:wijzigingdatum): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.482Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:wijzigingdatum has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.794Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:wijzigingdatum has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.483Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:publicatiedatum): DCAT. These tags will be added.
+2025-10-20T21:49:52.795Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:publicatiedatum): DCAT. These tags will be added.
 
-2025-09-16T09:31:15.483Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:wijzigingsdatum): DCAT, reuse. These tags will be added.
+2025-10-20T21:49:52.795Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:wijzigingsdatum): DCAT, reuse. These tags will be added.
 
-2025-09-16T09:31:15.484Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:geografischeDekking): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.795Z info: [ElementConverterHandler]: Unknown tags for element (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:geografischeDekking): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.484Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:geografischeDekking has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.795Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:geografischeDekking has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.485Z info: [ElementConverterHandler]: Unknown tags for element (hoofdonderwerp): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.796Z info: [ElementConverterHandler]: Unknown tags for element (hoofdonderwerp): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.485Z info: [ElementConverterHandler]: Unknown tags for element (hoofdonderwerp): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.796Z info: [ElementConverterHandler]: Unknown tags for element (hoofdonderwerp): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.486Z info: [ElementConverterHandler]: Unknown tags for element (record): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.796Z info: [ElementConverterHandler]: Unknown tags for element (record): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.486Z info: [ElementConverterHandler]: Unknown tags for element (record): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.796Z info: [ElementConverterHandler]: Unknown tags for element (record): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.486Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): DCAT. These tags will be added.
+2025-10-20T21:49:52.796Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): DCAT. These tags will be added.
 
-2025-09-16T09:31:15.486Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): DCAT. These tags will be added.
+2025-10-20T21:49:52.796Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): DCAT. These tags will be added.
 
-2025-09-16T09:31:15.487Z info: [ElementConverterHandler]: Unknown tags for element (biedtInformatieAanOver): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.796Z info: [ElementConverterHandler]: Unknown tags for element (biedtInformatieAanOver): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.487Z warn: [ConverterHandler]: Entity with path biedtInformatieAanOver has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.797Z warn: [ConverterHandler]: Entity with path biedtInformatieAanOver has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.487Z info: [ElementConverterHandler]: Unknown tags for element (biedtInformatieAanOver): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.797Z info: [ElementConverterHandler]: Unknown tags for element (biedtInformatieAanOver): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.487Z warn: [ConverterHandler]: Entity with path biedtInformatieAanOver has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.797Z warn: [ConverterHandler]: Entity with path biedtInformatieAanOver has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.488Z info: [ElementConverterHandler]: Unknown tags for element (wordtAangebodenDoor): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.797Z info: [ElementConverterHandler]: Unknown tags for element (wordtAangebodenDoor): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.488Z warn: [ConverterHandler]: Entity with path wordtAangebodenDoor has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.797Z warn: [ConverterHandler]: Entity with path wordtAangebodenDoor has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.488Z info: [ElementConverterHandler]: Unknown tags for element (wordtAangebodenDoor): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.797Z info: [ElementConverterHandler]: Unknown tags for element (wordtAangebodenDoor): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.488Z warn: [ConverterHandler]: Entity with path wordtAangebodenDoor has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.797Z warn: [ConverterHandler]: Entity with path wordtAangebodenDoor has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.488Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.797Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.488Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.797Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.489Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataset): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.797Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataset): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.489Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataset): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.797Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataset): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.489Z info: [ElementConverterHandler]: Unknown tags for element (distributie): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.797Z info: [ElementConverterHandler]: Unknown tags for element (distributie): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.489Z warn: [ConverterHandler]: Entity with path distributie has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.797Z warn: [ConverterHandler]: Entity with path distributie has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.489Z info: [ElementConverterHandler]: Unknown tags for element (distributie): DCATAP, reuse, DCAT. These tags will be added.
+2025-10-20T21:49:52.798Z info: [ElementConverterHandler]: Unknown tags for element (distributie): DCATAP, reuse, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.489Z warn: [ConverterHandler]: Entity with path distributie has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.798Z warn: [ConverterHandler]: Entity with path distributie has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.490Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataService): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.798Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataService): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.490Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataService): DCATAP, reuse. These tags will be added.
+2025-10-20T21:49:52.798Z info: [ElementConverterHandler]: Unknown tags for element (heeftDataService): DCATAP, reuse. These tags will be added.
 
-2025-09-16T09:31:15.491Z warn: [ConverterHandler]: Entity with path eigenaar has an empty value for tag definition-nl.
+2025-10-20T21:49:52.798Z warn: [ConverterHandler]: Entity with path eigenaar has an empty value for tag definition-nl.
 
-2025-09-16T09:31:15.491Z warn: [ConverterHandler]: Entity with path eigenaar has already a value for label-ap-nl in language nl, but will be overwritten.
+2025-10-20T21:49:52.798Z warn: [ConverterHandler]: Entity with path eigenaar has already a value for label-ap-nl in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.491Z info: [ElementConverterHandler]: Unknown tags for element (eigenaar): label-ap-nl. These tags will be added.
+2025-10-20T21:49:52.798Z info: [ElementConverterHandler]: Unknown tags for element (eigenaar): label-ap-nl. These tags will be added.
 
-2025-09-16T09:31:15.491Z info: [ElementConverterHandler]: Unknown tags for element (eigenaar): label-ap-nl. These tags will be added.
+2025-10-20T21:49:52.798Z info: [ElementConverterHandler]: Unknown tags for element (eigenaar): label-ap-nl. These tags will be added.
 
-2025-09-16T09:31:15.498Z warn: [ConverterHandler]: Entity with path verdeler has already a value for label-ap-nl in language nl, but will be overwritten.
+2025-10-20T21:49:52.798Z warn: [ConverterHandler]: Entity with path verdeler has already a value for label-ap-nl in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.498Z info: [ElementConverterHandler]: Unknown tags for element (verdeler): label-ap-nl. These tags will be added.
+2025-10-20T21:49:52.798Z info: [ElementConverterHandler]: Unknown tags for element (verdeler): label-ap-nl. These tags will be added.
 
-2025-09-16T09:31:15.499Z info: [ElementConverterHandler]: Unknown tags for element (verdeler): label-ap-nl. These tags will be added.
+2025-10-20T21:49:52.799Z info: [ElementConverterHandler]: Unknown tags for element (verdeler): label-ap-nl. These tags will be added.
 
-2025-09-16T09:31:15.499Z info: [ElementConverterHandler]: Unknown tags for element (inserie): DCAT, reuse, DCATAP. These tags will be added.
+2025-10-20T21:49:52.799Z info: [ElementConverterHandler]: Unknown tags for element (inserie): DCAT, reuse, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.499Z warn: [ConverterHandler]: Entity with path inserie has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.799Z warn: [ConverterHandler]: Entity with path inserie has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.499Z info: [ElementConverterHandler]: Unknown tags for element (inserie): DCAT, reuse, DCATAP. These tags will be added.
+2025-10-20T21:49:52.799Z info: [ElementConverterHandler]: Unknown tags for element (inserie): DCAT, reuse, DCATAP. These tags will be added.
 
-2025-09-16T09:31:15.499Z warn: [ConverterHandler]: Entity with path inserie has already a value for DCATAP in language nl, but will be overwritten.
+2025-10-20T21:49:52.799Z warn: [ConverterHandler]: Entity with path inserie has already a value for DCATAP in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.499Z info: [ElementConverterHandler]: Unknown tags for element (relatie): DCAT. These tags will be added.
+2025-10-20T21:49:52.799Z info: [ElementConverterHandler]: Unknown tags for element (relatie): DCAT. These tags will be added.
 
-2025-09-16T09:31:15.500Z info: [ElementConverterHandler]: Unknown tags for element (relatie): DCAT. These tags will be added.
+2025-10-20T21:49:52.799Z info: [ElementConverterHandler]: Unknown tags for element (relatie): DCAT. These tags will be added.
 
-2025-09-16T09:31:15.500Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): reuse, DCATAP, DCAT. These tags will be added.
+2025-10-20T21:49:52.800Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): reuse, DCATAP, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.500Z warn: [ConverterHandler]: Entity with path uitgever has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.800Z warn: [ConverterHandler]: Entity with path uitgever has already a value for DCAT in language nl, but will be overwritten.
 
-2025-09-16T09:31:15.500Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): reuse, DCATAP, DCAT. These tags will be added.
+2025-10-20T21:49:52.800Z info: [ElementConverterHandler]: Unknown tags for element (uitgever): reuse, DCATAP, DCAT. These tags will be added.
 
-2025-09-16T09:31:15.500Z warn: [ConverterHandler]: Entity with path uitgever has already a value for DCAT in language nl, but will be overwritten.
+2025-10-20T21:49:52.800Z warn: [ConverterHandler]: Entity with path uitgever has already a value for DCAT in language nl, but will be overwritten.
 
 #||# -------------------------------------
 
