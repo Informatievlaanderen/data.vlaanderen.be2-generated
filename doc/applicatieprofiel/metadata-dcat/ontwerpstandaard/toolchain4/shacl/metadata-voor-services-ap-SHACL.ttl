@@ -655,8 +655,12 @@ De condities die enkel als doel hebben om de correcte werking van de dataservice
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerieShape> a shacl:NodeShape;
   rdfs:label "Dataset Serie"@nl;
   <http://purl.org/vocab/vann/usageNote> """Een Dataset Serie is een verzameling van datasets waarvan slechts een enkele dimentie veranderd. Momenteel worden enkel temporele, ruimtelijke bereik, data model, en ruimtelijke resolutie als dimenties voor Dataset Serie erkend. 
-
-Voor verzamelingen van datasets waarbij meer dimenties tegelijk of andere dimenties wijzigen worden catalogi gebruikt."""@nl;
+<br/>
+Voor verzamelingen van datasets waarbij meer dimenties tegelijk of andere dimenties wijzigen worden catalogi gebruikt.
+<br/>
+Voor DCAT-AP Vlaanderen zijn Dataset Series dus een specifieke variant van verzamelingen van datasets. De eigenschappen van de datasets zijn dus net zoals die van een catalogus gericht op de verzameling, i.p.v. gericht op de mogelijkheid om een dataset serie als opdeling te zien van 1 dataset in kleinere onderdelen. 
+<br/>
+Het aanduiden van een verzameling als een Dataset Serie heeft als voordeel dat er een verwachtingspatroon kan gekoppeld worden hieraan. Omdat in de praktijk dit verwachtingspatroon erg gekoppeld is aan de striktheid van van de interpretatie van een een-dimentionale wijziging is er een eigenschap dit dit aanduid."""@nl;
   rdfs:comment "Een verzameling die onafhankelijk gepubliceerde datasets groepeert rond gedeelde eigenschappen."@nl;
   shacl:closed false;
   shacl:property [
@@ -672,7 +676,10 @@ Voor verzamelingen van datasets waarbij meer dimenties tegelijk of andere diment
   ], [
     a shacl:PropertyShape;
     rdfs:label "publicatie datum"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Dit is het moment wanneer de dataset serie voor het eerst publiekelijk kenbaar gemaakt is. Het is niet noodzakelijk gekijk aan de publicatie datum van de oudste dataset in de verzameling."@nl;
+    rdfs:comment "Het tijdsmoment waarop de dataset serie werd gepubliceerd door de uitgever."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.PublicatieDatum>;
+    shacl:description "Het tijdsmoment waarop de dataset serie werd gepubliceerd door de uitgever."@nl;
     shacl:maxCount "1";
     shacl:name "publicatie datum"@nl;
     shacl:nodeKind shacl:Literal;
@@ -680,7 +687,10 @@ Voor verzamelingen van datasets waarbij meer dimenties tegelijk of andere diment
   ], [
     a shacl:PropertyShape;
     rdfs:label "wijzigingsdatum"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Dit is niet noodzakelijk hetzelfde moment als de meest recente wijzigingsdatum van de datasets die de dataset serie bevat."@nl;
+    rdfs:comment "Het meest recente moment waarop de dataset series is bijgewerkt."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.Wijzigingsdatum>;
+    shacl:description "Het meest recente moment waarop de dataset series is bijgewerkt."@nl;
     shacl:maxCount "1";
     shacl:name "wijzigingsdatum"@nl;
     shacl:nodeKind shacl:Literal;
@@ -688,19 +698,34 @@ Voor verzamelingen van datasets waarbij meer dimenties tegelijk of andere diment
   ], [
     a shacl:PropertyShape;
     rdfs:label "titel"@nl;
+    rdfs:comment "De naam van de dataset serie."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.Titel>;
+    shacl:description "De naam van de dataset serie."@nl;
     shacl:minCount "1";
     shacl:name "titel"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:title
   ], [
     a shacl:PropertyShape;
-    rdfs:label "contactpunt"@nl;
+    rdfs:label "identificator"@nl;
+    rdfs:comment "De unieke identificator van de dataset serie."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.Identificator>;
+    shacl:description "De unieke identificator van de dataset serie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "identificator"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path dc:identifier
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "contactinformatie"@nl;
     rdfs:comment "De relevante contactinformatie waarmee een eindgebruiker in contact kan treden met de verantwoordelijken van de Dataset Serie."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.Contactpunt>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.Contactinformatie>;
     shacl:class vcard:Kind;
     shacl:description "De relevante contactinformatie waarmee een eindgebruiker in contact kan treden met de verantwoordelijken van de Dataset Serie."@nl;
-    shacl:name "contactpunt"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "contactinformatie"@nl;
     shacl:path dcat:contactPoint
   ], [
     a shacl:PropertyShape;
@@ -714,25 +739,44 @@ Voor verzamelingen van datasets waarbij meer dimenties tegelijk of andere diment
   ], [
     a shacl:PropertyShape;
     rdfs:label "periodiciteit"@nl;
+    <http://purl.org/vocab/vann/usageNote> "De periodiciteit van een dataset serie is niet gelijk aan de periodiciteit van de datasets in de verzameling."@nl;
+    rdfs:comment "De maat waarmee de dataset serie wordt bijgewerkt."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.Periodiciteit>;
     shacl:class dc:Frequency;
+    shacl:description "De maat waarmee de dataset serie wordt bijgewerkt."@nl;
     shacl:maxCount "1";
     shacl:name "periodiciteit"@nl;
     shacl:path dc:accrualPeriodicity
   ], [
     a shacl:PropertyShape;
     rdfs:label "geografische dekking"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Wanneer geografische dekking een dimensie is in de datasetserie, moet de geografische dekking van elke dataset in de collectie deel uitmaken van de geografisch dekking. Er wordt een waarde met een open einde aanbevolen, b.v. EU of een alomvattende bouding box dat de verwachte waarden bevat."@nl;
+    rdfs:comment "Het geografische gebied waarover de dataset serie informatie heeft."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.GeografischeDekking>;
     shacl:class dc:Location;
+    shacl:description "Het geografische gebied waarover de dataset serie informatie heeft."@nl;
     shacl:name "geografische dekking"@nl;
     shacl:path dc:spatial
   ], [
     a shacl:PropertyShape;
     rdfs:label "temporele dekking"@nl;
+    rdfs:comment "De tijdsperiode die de dataset serie bestrijkt."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.TemporeleDekking>;
     shacl:class dc:PeriodOfTime;
+    shacl:description "De tijdsperiode die de dataset serie bestrijkt."@nl;
     shacl:name "temporele dekking"@nl;
     shacl:path dc:temporal
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "alternatieve identificator"@nl;
+    rdfs:comment "Een alternatieve identificator (dan de unieke identificator) voor een dataset serie kan hier beschreven worden."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#DatasetSerie.AlternatieveIdentificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Een alternatieve identificator (dan de unieke identificator) voor een dataset serie kan hier beschreven worden."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "alternatieve identificator"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
     a shacl:PropertyShape;
     rdfs:label "uitgever"@nl;
@@ -861,7 +905,6 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
   ], [
     a shacl:PropertyShape;
     rdfs:label "alternatieve identificator"@nl;
-    <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://github.com/SEMICeu/DCAT-AP/tree/master/releases/2.0.1\">DCAT-AP</a>]"@nl;
     rdfs:comment "Een alternatieve identificator (dan de unieke identificator) voor een dataset kan hier beschreven worden."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/toolchain4#Dataset.AlternatieveIdentificator>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
