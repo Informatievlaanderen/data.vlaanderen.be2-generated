@@ -2,19 +2,19 @@
 
 #||# -------------------------------------  
 
-2025-10-21T09:16:08.982Z warn: Unable to find the assigned URI for external class http://www.w3.org/2004/02/skos/core#Concept which acts as a parent. Using original URI as fallback.
+2025-10-22T15:29:13.985Z warn: Unable to find the assigned URI for external class http://www.w3.org/2004/02/skos/core#Concept which acts as a parent. Using original URI as fallback.
 
-2025-10-21T09:16:09.010Z warn: Unable to find the assigned URI for external class http://schema.org/ListItem which acts as a parent. Using original URI as fallback.
+2025-10-22T15:29:14.004Z warn: Unable to find the assigned URI for external class http://schema.org/ListItem which acts as a parent. Using original URI as fallback.
 
-2025-10-21T09:16:09.013Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2025-10-22T15:29:14.006Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-2025-10-21T09:16:09.013Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2025-10-22T15:29:14.006Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-2025-10-21T09:16:09.014Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
+2025-10-22T15:29:14.007Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
 
-2025-10-21T09:16:09.015Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
+2025-10-22T15:29:14.008Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
 
-2025-10-21T09:16:09.016Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/Document which acts as a parent. Using original URI as fallback.
+2025-10-22T15:29:14.008Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/Document which acts as a parent. Using original URI as fallback.
 
 Error: Unable to find the assigned URI for range urn:oslo-toolchain:4387492f3a65a8c4bcc134c1aca977a941a4e63a6d7f4242c57813044ddb3573 of attribute [urn:oslo-toolchain:d36afb27557d439549efc2d104ea709e0be651ea5c6fe8f3e2374a66e34f998e](all-besluit-mobiliteit-ap.jsonld#L3315).
 
