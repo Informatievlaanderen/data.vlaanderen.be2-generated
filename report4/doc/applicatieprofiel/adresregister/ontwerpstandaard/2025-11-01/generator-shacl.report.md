@@ -2,15 +2,15 @@
 
 #||# -------------------------------------  
 
-2025-10-23T21:20:53.322Z warn: Unable to find the description for subject "[urn:oslo-toolchain:d9d8ed0bd91d5ea14c4e783966363a08505b5596e03686969776d3c064ae059b](all-adressenregister.jsonld#L396)".
+2025-10-23T21:22:58.292Z warn: Unable to find the description for subject "[urn:oslo-toolchain:d9d8ed0bd91d5ea14c4e783966363a08505b5596e03686969776d3c064ae059b](all-adressenregister.jsonld#L396)".
 
-2025-10-23T21:20:53.324Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-adressenregister.jsonld#L3491)".
+2025-10-23T21:22:58.294Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-adressenregister.jsonld#L3491)".
 
-2025-10-23T21:20:53.324Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-adressenregister.jsonld#L3502)".
+2025-10-23T21:22:58.295Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-adressenregister.jsonld#L3502)".
 
-2025-10-23T21:20:53.325Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-adressenregister.jsonld#L3513)".
+2025-10-23T21:22:58.295Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-adressenregister.jsonld#L3513)".
 
-2025-10-23T21:20:53.325Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
+2025-10-23T21:22:58.296Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
 
 Error: Unable to find the assigned URI for range "urn:oslo-toolchain:0842308883e461019be67a63c31d615663bf107094da246f872139874cb5de0c".
 
