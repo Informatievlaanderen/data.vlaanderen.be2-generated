@@ -11,7 +11,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/adresregister/ontwerpstandaard/2025-11-01/index.html'
 
 #||#    + checking /home/circleci/project/config/test/bedrijventerrein.publication.json
 #||# 
