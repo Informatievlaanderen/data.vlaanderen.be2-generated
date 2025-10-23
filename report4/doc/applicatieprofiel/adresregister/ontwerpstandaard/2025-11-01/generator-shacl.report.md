@@ -2,17 +2,19 @@
 
 #||# -------------------------------------  
 
-2025-10-23T21:14:18.214Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-adressenregister.jsonld#L3479)".
+2025-10-23T21:20:53.322Z warn: Unable to find the description for subject "[urn:oslo-toolchain:d9d8ed0bd91d5ea14c4e783966363a08505b5596e03686969776d3c064ae059b](all-adressenregister.jsonld#L396)".
 
-2025-10-23T21:14:18.216Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-adressenregister.jsonld#L3490)".
+2025-10-23T21:20:53.324Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-adressenregister.jsonld#L3491)".
 
-2025-10-23T21:14:18.218Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-adressenregister.jsonld#L3501)".
+2025-10-23T21:20:53.324Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-adressenregister.jsonld#L3502)".
 
-2025-10-23T21:14:18.218Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
+2025-10-23T21:20:53.325Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-adressenregister.jsonld#L3513)".
 
-Error: Unable to find the range for subject "[urn:oslo-toolchain:caf2d7eb930365a87bafc0d0df7f9651773363c5bf71237b951793a931341b26](all-adressenregister.jsonld#L2824)".
+2025-10-23T21:20:53.325Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:49:19)
+Error: Unable to find the assigned URI for range "urn:oslo-toolchain:0842308883e461019be67a63c31d615663bf107094da246f872139874cb5de0c".
+
+    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
 
     at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
 
