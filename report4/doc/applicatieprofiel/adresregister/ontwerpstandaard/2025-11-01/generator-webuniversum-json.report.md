@@ -2,15 +2,15 @@
 
 #||# -------------------------------------  
 
-2025-10-23T14:06:55.292Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#geometry which acts as a parent. Using original URI as fallback.
+2025-10-23T14:38:25.747Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#geometry which acts as a parent. Using original URI as fallback.
 
-2025-10-23T14:06:55.301Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2025-10-23T14:38:25.754Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-2025-10-23T14:06:55.302Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
+2025-10-23T14:38:25.754Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
 
-2025-10-23T14:06:55.303Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2025-10-23T14:38:25.755Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-2025-10-23T14:06:55.303Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
+2025-10-23T14:38:25.755Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
 
 Error: Unable to find the assigned URI for range urn:oslo-toolchain:0842308883e461019be67a63c31d615663bf107094da246f872139874cb5de0c of attribute [urn:oslo-toolchain:b932a89d4508b4b915e231f445def5668cd184fc84f261670ad92d5ec62b4546](all-adressenregister.jsonld#L2164).
 
