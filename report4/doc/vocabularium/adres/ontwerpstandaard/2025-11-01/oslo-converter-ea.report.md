@@ -1,128 +1,66 @@
-#||# oslo-converter-ea for diagram OSLO-Adres
+#||# oslo-converter-ea for diagram OSLO-Adresregister
 
 #||# -------------------------------------
 
-2025-10-24T08:44:01.275Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):isGerelateerdMet)
+2025-10-24T08:55:57.771Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Adres_adresregister:dcterms:Agent:rapporteertAan)
 
-2025-10-24T08:44:01.277Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):vereist)
+2025-10-24T08:55:57.774Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Gebouw:Gebouw:(Gebouw -> Gebouweenheid) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.277Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftRelatieMet)
+2025-10-24T08:55:57.775Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Gebouw:Gebouw:(Gebouw -> Perceel) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.277Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
+2025-10-24T08:55:57.775Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adresuitbreiding:(Adresuitbreiding -> Plaats) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.277Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
+2025-10-24T08:55:57.776Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Gemeentenaam:(Gemeentenaam -> Gemeente) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.277Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+2025-10-24T08:55:57.776Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Straatnaam:(Straatnaam -> Gemeente) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.277Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersmaatregel:verwijstNaar)
+2025-10-24T08:55:57.776Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Adresuitbreiding) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.278Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):wordtUitgevoerdDoor)
+2025-10-24T08:55:57.776Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Gemeentenaam) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.278Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isHoofdVan)
+2025-10-24T08:55:57.776Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adresvoorstelling:(Adresvoorstelling -> Adres) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.278Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:rapporteertAan)
+2025-10-24T08:55:57.776Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Gemeente) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.278Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
+2025-10-24T08:55:57.777Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Straatnaam) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.278Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:PubliekeOrganisatie:heeftVerwerkersovereenkomstMet)
+2025-10-24T08:55:57.777Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Postinfo) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.278Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersbordbasis:(Verkeersbordbasis -> OSLO-OpenbaarDomein::Verkeersbord))
+2025-10-24T08:55:57.777Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Standplaats:(Standplaats -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.278Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
+2025-10-24T08:55:57.777Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.279Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Object))
+2025-10-24T08:55:57.777Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Perceel:Perceel:(Perceel -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.279Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2025-10-24T08:55:57.777Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Gebouw:Gebouweenheid:(Gebouweenheid -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.279Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:isGerelateerdAan)
+2025-10-24T08:55:57.777Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Ligplaats:(Ligplaats -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.279Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
+2025-10-24T08:55:57.777Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:SF:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-10-24T08:44:01.279Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Gemeente:(Gemeente -> Object))
+2025-10-24T08:55:57.778Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-10-24T08:44:01.279Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftParticiperende)
+2025-10-24T08:55:57.778Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO²_applicatieprofiel_Adres_adresregister). Using fallback URI (http://todo.com/) instead.
 
-2025-10-24T08:44:01.279Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke)
+2025-10-24T08:55:57.778Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO²_applicatieprofiel_Adres_adresregister:SF). Using fallback URI (http://todo.com/) instead.
 
-2025-10-24T08:44:01.279Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:vereist)
+2025-10-24T08:55:57.778Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO²_applicatieprofiel_Adres_adresregister:ADMS). Using fallback URI (http://todo.com/) instead.
 
-2025-10-24T08:44:01.279Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet)
+2025-10-24T08:55:57.778Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO²_applicatieprofiel_Adres_adresregister:dcterms). Using fallback URI (http://todo.com/) instead.
 
-2025-10-24T08:44:01.280Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:Kost:isGedefinieerdDoor)
+2025-10-24T08:55:57.779Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO²_applicatieprofiel_Adres_adresregister:PROV). Using fallback URI (http://todo.com/) instead.
 
-2025-10-24T08:44:01.280Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:wordtUitgevoerdDoor)
+2025-10-24T08:55:57.782Z warn: [ConnectorConverterHandler]: Connector (isVerrijktMet) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-24T08:44:01.283Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Gebouw:Gebouw:bestaatUit is not an association with a source role. Ignoring this connector.
+2025-10-24T08:55:57.782Z warn: [ConnectorConverterHandler]: Connector (heeftGemeentenaam) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-24T08:44:01.283Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Gebouw:Gebouw:bestaatUit has name "bestaatUit". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-24T08:55:57.782Z warn: [ConnectorConverterHandler]: Connector (heeftPostinfo) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-24T08:44:01.284Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Gebouw:Gebouw:ligtOp is not an association with a source role. Ignoring this connector.
+2025-10-24T08:55:57.782Z warn: [ConnectorConverterHandler]: Connector (verwijstNaar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-24T08:44:01.284Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Gebouw:Gebouw:ligtOp has name "ligtOp". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-10-24T08:55:57.782Z warn: [ConnectorConverterHandler]: Connector (heeftStraatnaam) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-24T08:44:01.284Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Gemeentenaam:isAfgeleidVan is not an association with a source role. Ignoring this connector.
-
-2025-10-24T08:44:01.284Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Gemeentenaam:isAfgeleidVan has name "isAfgeleidVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
-
-2025-10-24T08:44:01.284Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Standplaats:(Standplaats -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
-
-2025-10-24T08:44:01.284Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Perceel:Perceel:(Perceel -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
-
-2025-10-24T08:44:01.284Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Gebouw:Gebouweenheid:(Gebouweenheid -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
-
-2025-10-24T08:44:01.287Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adresuitbreiding:adresIsGelegenIn is not an association with a source role. Ignoring this connector.
-
-2025-10-24T08:44:01.287Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adresuitbreiding:adresIsGelegenIn has name "adresIsGelegenIn". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
-
-2025-10-24T08:44:01.287Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Ligplaats:(Ligplaats -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
-
-2025-10-24T08:44:01.287Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:isVerrijktMet is not an association with a source role. Ignoring this connector.
-
-2025-10-24T08:44:01.287Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:isVerrijktMet has name "isVerrijktMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
-
-2025-10-24T08:44:01.287Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adresvoorstelling:verwijstNaar is not an association with a source role. Ignoring this connector.
-
-2025-10-24T08:44:01.287Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adresvoorstelling:verwijstNaar has name "verwijstNaar". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
-
-2025-10-24T08:44:01.287Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:isToegekendAan is not an association with a source role. Ignoring this connector.
-
-2025-10-24T08:44:01.288Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:isToegekendAan has name "isToegekendAan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
-
-2025-10-24T08:44:01.288Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:isToegekendDoor is not an association with a source role. Ignoring this connector.
-
-2025-10-24T08:44:01.288Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:isToegekendDoor has name "isToegekendDoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
-
-2025-10-24T08:44:01.288Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:heeftGemeentenaam is not an association with a source role. Ignoring this connector.
-
-2025-10-24T08:44:01.288Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:heeftGemeentenaam has name "heeftGemeentenaam". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
-
-2025-10-24T08:44:01.288Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:heeftPostinfo is not an association with a source role. Ignoring this connector.
-
-2025-10-24T08:44:01.288Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:heeftPostinfo has name "heeftPostinfo". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
-
-2025-10-24T08:44:01.288Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Straatnaam:isToegekendDoor is not an association with a source role. Ignoring this connector.
-
-2025-10-24T08:44:01.288Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Straatnaam:isToegekendDoor has name "isToegekendDoor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
-
-2025-10-24T08:44:01.288Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:heeftStraatnaam is not an association with a source role. Ignoring this connector.
-
-2025-10-24T08:44:01.288Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:heeftStraatnaam has name "heeftStraatnaam". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
-
-2025-10-24T08:44:01.289Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
-
-2025-10-24T08:44:01.290Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model). Using fallback URI (http://todo.com/) instead.
-
-2025-10-24T08:44:01.290Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium). Using fallback URI (http://todo.com/) instead.
-
-2025-10-24T08:44:01.299Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Locatieaanduidingtype) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-10-24T08:44:01.299Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Statuswaarde) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-10-24T08:44:01.299Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Locatorniveauwaarde) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-10-24T08:44:01.299Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Locatienaamtype) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-10-24T08:44:01.313Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-Adres:Adres:positie has already a value for usageNote-nl in language nl, but will be overwritten.
+2025-10-24T08:55:57.782Z warn: [ConnectorConverterHandler]: Connector (isToegekendAan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 #||# -------------------------------------
 

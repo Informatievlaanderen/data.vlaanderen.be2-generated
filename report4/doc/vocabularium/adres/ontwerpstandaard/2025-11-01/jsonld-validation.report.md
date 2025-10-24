@@ -2,87 +2,137 @@
 
 #||# -------------------------------------  
 
-2025-10-24T08:45:19.974Z info: Loaded 47 URI prefixes into whitelist
+2025-10-24T08:56:39.936Z info: Loaded 47 URI prefixes into whitelist
 
-2025-10-24T08:45:20.156Z warn: Found sentence without a '.': 'Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is' for subject: [urn:oslo-toolchain:2ea96878995ca2d53cf5e99c411c805d7e04e87391542a75fb60267e770a4f22](all-adres.jsonld#L769)
+2025-10-24T08:56:40.096Z warn: Found sentence without a '.': 'Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is' for subject: [urn:oslo-toolchain:76f8f1e73f6f7a27d42d87a5f429d5384c657f53344e47a6d1248a275a7e4e8e](all-adres.jsonld#L1156)
 
-2025-10-24T08:45:20.156Z warn: Found sentence without a '.': 'Een door het bevoegde gemeentelijke orgaan als zodanig aangewezen terrein of gedeelte daarvan dat bestemd is voor het permanent plaatsen van een niet direct en niet duurzaam met de aarde verbonden en voor woon -, bedrijfsmatige, of recreatieve doeleinden' for subject: [[urn:oslo-toolchain:3cd5dddae0443d5b1ef4eb46801b22b0149e8aefb59d503a948c9f8946e30df8](all-adres.jsonld#L3238)](all-adres.jsonld#L365)
+2025-10-24T08:56:40.096Z warn: Found sentence without a '.': 'Een door het bevoegde gemeentelijke orgaan als zodanig aangewezen terrein of gedeelte daarvan dat bestemd is voor het permanent plaatsen van een niet direct en niet duurzaam met de aarde verbonden en voor woon -, bedrijfsmatige, of recreatieve doeleinden' for subject: [[urn:oslo-toolchain:d9394d2e07d06334b5464e86daec641f7335783c440124126f30d24c604f822e](all-adres.jsonld#L3726)](all-adres.jsonld#L328)
 
-2025-10-24T08:45:20.156Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:18b5ed600c65d462d5631fb75f3243b548d7784cf25f9749f6be8c70ab864544](all-adres.jsonld#L3411)
+2025-10-24T08:56:40.096Z warn: Found empty sentence for subject: [urn:oslo-toolchain:f6cd6977df4c0913d936b7d0ec1f7bf9e65d8b6a25f07c09d62eb34703438b54](all-adres.jsonld#L457)
 
-2025-10-24T08:45:20.156Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:7ad9406e26750d521768c2b3cca6c36d91e1a732d3c7ccc574d66321f265b297](all-adres.jsonld#L3434)
+2025-10-24T08:56:40.096Z warn: Found empty sentence for subject: [urn:oslo-toolchain:753d2ef67c079b6083f2434281f05ca6631e4e60012d7863a3f72039cb2971d4](all-adres.jsonld#L604)
 
-2025-10-24T08:45:20.156Z warn: Found empty sentence for subject: [[urn:oslo-toolchain:b89fbc018165f29c4afab95a3a78bb8504b6fe5a61fb6d56f99b2d83fd6a3e8f](all-adres.jsonld#L3205)](all-adres.jsonld#L132)
+2025-10-24T08:56:40.096Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d462e22acfeaca355714da999a1069a5ce35194e24a52ded169708d4b7906adb](all-adres.jsonld#L692)
 
-2025-10-24T08:45:20.156Z warn: Found empty sentence for subject: [[urn:oslo-toolchain:ee0fa75c0021fcb643fa4de2ac4057281151c8f2c0e7131893d4147e8bb871c2](all-adres.jsonld#L3226)](all-adres.jsonld#L173)
+2025-10-24T08:56:40.096Z warn: Found empty sentence for subject: [urn:oslo-toolchain:bf525a78370b105b0b3c656285d2e8ab45ddefaa86a83f585de725855bc02ccb](all-adres.jsonld#L736)
 
-2025-10-24T08:45:20.156Z warn: Found empty sentence for subject: [[urn:oslo-toolchain:3b099f7be8c2b7d3f0f57dd1b464657f2008371d7cc2e949a49843f9ec4c355c](all-adres.jsonld#L3242)](all-adres.jsonld#L403)
+2025-10-24T08:56:40.096Z warn: Found empty sentence for subject: [urn:oslo-toolchain:b6a5d205bed67d0664d93d9cd23be0688194a25f2771491ba561143fe2b1a51c](all-adres.jsonld#L824)
 
-2025-10-24T08:45:20.156Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d5f59fe100bfb6516ab3b2f24c4efb13a5659c5a8882bd071ab5a7fc53ae1b65](all-adres.jsonld#L860)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8a627879c0b6aba31523217f1d0acba94fdf8736f351771bb88f0c350eeee605](all-adres.jsonld#L868)
 
-2025-10-24T08:45:20.156Z warn: Found empty sentence for subject: [urn:oslo-toolchain:00f5c7fbfaf33a30582b5fdd41780807098ae5d3586f16ec11f23f6f975f1134](all-adres.jsonld#L966)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:cb526e40f06b3a77f7001190eae0388c0324e18bdc328ee0de9cd491a634f222](all-adres.jsonld#L918)
 
-2025-10-24T08:45:20.156Z warn: Found empty sentence for subject: [urn:oslo-toolchain:25f3f046cb9f6021b6196e1c7019df3333dcaf80dab17132c11c579d8db4bd86](all-adres.jsonld#L1285)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:f636e2353a08f46c2ea755594d33c978f360edd498250482baa9524bd49a58b7](all-adres.jsonld#L968)
 
-2025-10-24T08:45:20.156Z warn: Found empty sentence for subject: [urn:oslo-toolchain:648af4ab9d3baea2056cbecb02644a50ab1f614282b2c670cfdff0c23c6c1172](all-adres.jsonld#L3092)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:a33d4f8bf4586ee08a6cd2ae3dba2dd2e01ae11dcdae76299721b4a2bb92d80b](all-adres.jsonld#L1018)
 
-2025-10-24T08:45:20.156Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8786252d7bfe70c4b1f88392c46a4e8742a779a6f2b64ac77525f6595f93be7d](all-adres.jsonld#L3128)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e01d69cd9fa5b7081abe0b20b36c806e00d1307b88ddda13ef4e96b9487764f6](all-adres.jsonld#L1068)
 
-2025-10-24T08:45:20.157Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e90b6b6e9d405ee0233899401d96741505596fe06dc71855a5a52e36025b8496](all-adres.jsonld#L1575)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:602242990fc288362c69919ec5105f20adb3498a08d91ca67c7b770536718466](all-adres.jsonld#L1112)
 
-2025-10-24T08:45:20.157Z warn: Found empty sentence for subject: [urn:oslo-toolchain:77ee6448c8bdba608cf2134cb9c94357e051402248dc9d563bd49816115066bf](all-adres.jsonld#L1675)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:53e80330ffe66043220a981f89d2a840b839ca9cbbf2f6c13b64dc9013bdec07](all-adres.jsonld#L1247)
 
-2025-10-24T08:45:20.157Z warn: Found empty sentence for subject: [urn:oslo-toolchain:6fc4bb28c5c326e1cca44fd1a1b476f904de165374df120ea60a433564df078e](all-adres.jsonld#L1775)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:18c70fc134b768c7dc0979e094bf5d166705eec570c0f809c8eb08fdd152474c](all-adres.jsonld#L1341)
 
-2025-10-24T08:45:20.157Z warn: Found empty sentence for subject: [urn:oslo-toolchain:9a0477adc311a5ae0d25c3dea396936ba2bdc42223ef0a359e56dd7a7898d498](all-adres.jsonld#L1825)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4849b176c4a4f10d51db8384c729a4acfba783ae44e2b9777c3637c42a51b0c3](all-adres.jsonld#L1388)
 
-2025-10-24T08:45:20.157Z warn: Found empty sentence for subject: [urn:oslo-toolchain:56bb80cf0b31faeadd81fcb6fd89117c30fbec5196806deba8c79a85b768bd8c](all-adres.jsonld#L1925)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:73d8450c8ba2bb584d3507322893ca85962c7d9b8a6764359e44fc73e1a2200e](all-adres.jsonld#L1432)
 
-2025-10-24T08:45:20.157Z warn: Found empty sentence for subject: [urn:oslo-toolchain:9332e574444d76fc4364d094a80142ab6b566357e46a7d2e53ca09ab1d978e3a](all-adres.jsonld#L1975)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:ce6f2be4d1f40a56ca61b97879dcd3c4e985ba89ae1ad92834abca1a1a2856ba](all-adres.jsonld#L1476)
 
-2025-10-24T08:45:20.157Z warn: Found empty sentence for subject: [urn:oslo-toolchain:0ff557e5408f29329fd27d78a500da7141790a87778b714b36cb1dc133ed0647](all-adres.jsonld#L2996)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:822fa79f5d3ed87b0a46372135b7bd81abfe21a4012e90d88493785c9e59e062](all-adres.jsonld#L1520)
 
-2025-10-24T08:45:20.157Z warn: Found empty sentence for subject: [urn:oslo-toolchain:9ea4980e5c96f8d4f31cab604cf58bd4a007ce55c207018d2734053e18a4856a](all-adres.jsonld#L2025)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:82a1e0bcf8b07d766a70f481304e35c6cc02817e17265e3130049f751cafcebc](all-adres.jsonld#L1564)
 
-2025-10-24T08:45:20.157Z warn: Found empty sentence for subject: [urn:oslo-toolchain:5a8ef9a2abdab920c196c139b64f2a8a37ead31e7b6cbd3b10671879e7e9bdd5](all-adres.jsonld#L2169)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d28ada77c93fd836878bcc0d745557a9304de75972f0cccd1e22a556adf46acf](all-adres.jsonld#L1608)
 
-2025-10-24T08:45:20.157Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e6b822041e5aafaeea416f67247eab7960413fcc965b0f3b4b87a79f27808a59](all-adres.jsonld#L2219)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8a802d82e5ea277f3729dc2d1aad92ddc8df6b66d070271e3bc68b757a8ab500](all-adres.jsonld#L1790)
 
-2025-10-24T08:45:20.157Z warn: Found empty sentence for subject: [urn:oslo-toolchain:9c80d14a1be1882208a84a4c970ea1dcc32b398956e083f078e214e459b32261](all-adres.jsonld#L2891)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:30a3489d12ceb1f5ce6da8bc433977fc4959419546e2dadbcb80767ffece51e5](all-adres.jsonld#L1840)
 
-2025-10-24T08:45:20.157Z warn: Found sentence without a '.': 'Gegevens die officieel geen deel uitmaken ve adres, bv de verdieping of de provincie…' for subject: [urn:oslo-toolchain:412d9c2057bc00f9566535c695ba79d8208285196c275bf8b1c141097972fb90](all-adres.jsonld#L329)
+2025-10-24T08:56:40.097Z warn: Found empty sentence for subject: [urn:oslo-toolchain:b932a89d4508b4b915e231f445def5668cd184fc84f261670ad92d5ec62b4546](all-adres.jsonld#L2239)
 
-2025-10-24T08:45:20.157Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:18b5ed600c65d462d5631fb75f3243b548d7784cf25f9749f6be8c70ab864544](all-adres.jsonld#L3411)
+2025-10-24T08:56:40.098Z warn: Found empty sentence for subject: [urn:oslo-toolchain:0842308883e461019be67a63c31d615663bf107094da246f872139874cb5de0c](all-adres.jsonld#L3746)
 
-2025-10-24T08:45:20.157Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:7ad9406e26750d521768c2b3cca6c36d91e1a732d3c7ccc574d66321f265b297](all-adres.jsonld#L3434)
+2025-10-24T08:56:40.098Z warn: Found empty sentence for subject: [urn:oslo-toolchain:796c2a0c87b09200f25f2d39cf1ef5b3ae22855450ae48aed1f209e209c944d0](all-adres.jsonld#L2283)
 
-2025-10-24T08:45:20.158Z warn: Labels must only contain alphabetical characters: '2D-Gebouwgeometrie' for subject: [urn:oslo-toolchain:689c12058db484d741715ee2db1c3fdf1b2ecbfd12bdf11061b72ba4ab33d24f](all-adres.jsonld#L3303)
+2025-10-24T08:56:40.098Z warn: Found empty sentence for subject: [urn:oslo-toolchain:249015964cef8d0b621e5760629182afb8f21964a8d4c75687f12489949dda77](all-adres.jsonld#L3804)
 
-2025-10-24T08:45:20.160Z error: Found missing class or attribute (adres): [urn:oslo-toolchain:91f0056eea7b02037e0533be20f01b53b5738cedb6d69ed6cd81b19e897159d6](all-adres.jsonld#L2839)
+2025-10-24T08:56:40.098Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4814a7188bb60dec1d992b79f4b3ac462d1bb70eee9e07c0bd80975855b7828d](all-adres.jsonld#L2327)
 
-2025-10-24T08:45:20.160Z error: Found missing class or attribute (geometrie): [urn:oslo-toolchain:b672749b1d2acd4c4c3f626c9f16b3bd1a76193efa6bc8db364757a967aacdd7](all-adres.jsonld#L2865)
+2025-10-24T08:56:40.098Z warn: Found empty sentence for subject: [urn:oslo-toolchain:5d6dafc9d4d37885f27aaa5cb374541b7ef35f871bf795be9fdc6c9fa6cf3465](all-adres.jsonld#L2371)
 
-2025-10-24T08:45:20.161Z error: Found missing class or attribute (geldigheidsperiode): [urn:oslo-toolchain:d25fe31d101396768c5e97fd5e9a6ed4f95e9da016575b91d0f821d206849914](all-adres.jsonld#L2813)
+2025-10-24T08:56:40.098Z warn: Found empty sentence for subject: [urn:oslo-toolchain:3569025df7b68ca7c6eefd9d8fdfaf19edf537262ab3713aa10c877669550e32](all-adres.jsonld#L3833)
 
-2025-10-24T08:45:20.161Z error: Found missing class or attribute (GebouwstatusWaarde): [urn:oslo-toolchain:9b09deb166a9731b18252a412f9f4b756fa5b731b6af416b62c0c83268a88806](all-adres.jsonld#L3326)
+2025-10-24T08:56:40.098Z warn: Found empty sentence for subject: [urn:oslo-toolchain:5ab8506491047580cfd3382d8bd34e9422a2bf28c5df57fafff110be39e9e275](all-adres.jsonld#L2465)
 
-2025-10-24T08:45:20.161Z error: Found missing class or attribute (FunctieWaarde): [urn:oslo-toolchain:5e039f103629c47b18b9007b8a2d1332c87c3634139a21919f132170060044bd](all-adres.jsonld#L3343)
+2025-10-24T08:56:40.098Z warn: Found empty sentence for subject: [urn:oslo-toolchain:3966ff771f90fe510656161d15a0a634935580ad74a8867354937c3ead099de9](all-adres.jsonld#L3862)
 
-2025-10-24T08:45:20.161Z error: Found missing class or attribute (GebouweenheidstatusWaarde): [urn:oslo-toolchain:e443c533fca9c1bcfd91d5dc5e4e019ddf5e081db38b11701b0b3181cb6a4db8](all-adres.jsonld#L3377)
+2025-10-24T08:56:40.098Z warn: Found empty sentence for subject: [urn:oslo-toolchain:37c8d1ee3533020bd05aa641f49047f3e539a87d008e4865a2504c25ed5b6be0](all-adres.jsonld#L2509)
 
-2025-10-24T08:45:20.161Z error: Found missing class or attribute (GeometrieMethodeWaarde): [urn:oslo-toolchain:18b5ed600c65d462d5631fb75f3243b548d7784cf25f9749f6be8c70ab864544](all-adres.jsonld#L3411)
+2025-10-24T08:56:40.098Z warn: Found empty sentence for subject: [urn:oslo-toolchain:c53d2f7cd8165382348580bb5d6bc284d7e49a13268b90ac0a70c6c4fc868a9f](all-adres.jsonld#L2553)
 
-2025-10-24T08:45:20.162Z error: Found missing class or attribute (GeometrieSpecificatieWaarde): [urn:oslo-toolchain:7ad9406e26750d521768c2b3cca6c36d91e1a732d3c7ccc574d66321f265b297](all-adres.jsonld#L3434)
+2025-10-24T08:56:40.098Z warn: Found empty sentence for subject: [urn:oslo-toolchain:578b610c184a1740ca0c5fb9aea325c9f2368a0d1c45549eab483fe0ccf928fa](all-adres.jsonld#L2635)
 
-2025-10-24T08:45:20.162Z error: Found missing class or attribute (Periode): [urn:oslo-toolchain:15752ac80671b2a687740dc3c9ffb69411b0bf4b2b43f9d827abecead910fe4b](all-adres.jsonld#L3457)
+2025-10-24T08:56:40.098Z warn: Found empty sentence for subject: [urn:oslo-toolchain:cad97e10fcdb2304ab6d4f7bb58410bcbfe27144b9302d399f42402c33ad41f1](all-adres.jsonld#L2735)
 
-2025-10-24T08:45:20.162Z info: Validation successful! All assigned URIs are whitelisted.
+2025-10-24T08:56:40.099Z warn: Labels must only contain alphabetical characters: 'toegekend door (String)' for subject: [urn:oslo-toolchain:8a802d82e5ea277f3729dc2d1aad92ddc8df6b66d070271e3bc68b757a8ab500](all-adres.jsonld#L1790)
 
-2025-10-24T08:45:20.162Z info: Validation found 26 sentences with spelling mistakes.
+2025-10-24T08:56:40.099Z warn: Labels must only contain alphabetical characters: 'versie-identificator' for subject: [urn:oslo-toolchain:c27dae4143ce075172115b285a7697749038dc66dd30c16334747c4bd6dba100](all-adres.jsonld#L1972)
 
-2025-10-24T08:45:20.162Z info: Validation found 1 labels with spelling mistakes.
+2025-10-24T08:56:40.099Z warn: Labels must not end with a '.': 'Geometrie van de plaats of het gebied.' for subject: [urn:oslo-toolchain:19580dbebca21881ec689e158351997795054291b42ff2b3c9fd77c65a3a7b9b](all-adres.jsonld#L2685)
 
-2025-10-24T08:45:20.162Z info: Validation successful! All base URIs seem to be valid.
+2025-10-24T08:56:40.100Z error: Found missing class or attribute (Perceel): [[urn:oslo-toolchain:c182391bd3a746b3c52cdb5dcceb45d51a1659a62a838f7aa8fa1b5f0b6a7349](all-adres.jsonld#L3742)](all-adres.jsonld#L546)
 
-2025-10-24T08:45:20.162Z info: Validation found 9 missing referenced classes or attributes.
+2025-10-24T08:56:40.100Z error: Found missing class or attribute (Object): [urn:oslo-toolchain:64826ceb433316b96f25dc337b5052e1155f2cd4c507d3937899b4f3870bc3a7](all-adres.jsonld#L3699)
+
+2025-10-24T08:56:40.101Z error: Found missing class or attribute (lokaleIdentificator): [urn:oslo-toolchain:d162fcd1d57b71219bdf5d2855213ad7598d6319effb32b77934ab925ac0643a](all-adres.jsonld#L1890)
+
+2025-10-24T08:56:40.101Z error: Found missing class or attribute (naamruimte): [urn:oslo-toolchain:a03c29627d3997ea687d4281279ae2a0d65eff6081cb7f7e4416bd4f41a62498](all-adres.jsonld#L1928)
+
+2025-10-24T08:56:40.101Z error: Found missing class or attribute (versieIdentificator): [urn:oslo-toolchain:c27dae4143ce075172115b285a7697749038dc66dd30c16334747c4bd6dba100](all-adres.jsonld#L1972)
+
+2025-10-24T08:56:40.101Z error: Found missing class or attribute (gml): [urn:oslo-toolchain:d7b341e6b038bffce2ccc376e3f4296ca716b8dc5c397e928dfdbd963e8a2dc1](all-adres.jsonld#L2098)
+
+2025-10-24T08:56:40.102Z error: Found missing class or attribute (wkt): [urn:oslo-toolchain:e8e29eecc4d01ffa478827eb11dce9552bceb9a7ee87520a60ce006a320a2ae8](all-adres.jsonld#L2142)
+
+2025-10-24T08:56:40.102Z error: Found missing class or attribute (gestructureerdedentificator): [urn:oslo-toolchain:8f4a02f8b45947e370e4bb43cf51998789a06d5271d245708c4a2b071c9cf464](all-adres.jsonld#L2597)
+
+2025-10-24T08:56:40.102Z error: Found missing class or attribute (methode): [urn:oslo-toolchain:e69d9943b97405056a24a5ee54ece77fdc1ea523046ec8a7cdad03cd6345b067](all-adres.jsonld#L2779)
+
+2025-10-24T08:56:40.102Z error: Found missing class or attribute (adresIsGelegenIn): [urn:oslo-toolchain:489a5360fc03646b45b29a6189e7e515d61cecb8ff582a86193100675078bfd3](all-adres.jsonld#L2987)
+
+2025-10-24T08:56:40.102Z error: Found missing class or attribute (isAfgeleidVan): [urn:oslo-toolchain:f2c434a2351be456ff3d91c31f41b1582f82855c54b53ee0abdd443113ff7fed](all-adres.jsonld#L3025)
+
+2025-10-24T08:56:40.102Z error: Found missing class or attribute (isToegekendDoor): [urn:oslo-toolchain:5171d2922f0dee46fec1ca1ec74c2b2db485d47d1ffbc1d79a1a9fdba5298d49](all-adres.jsonld#L3063)
+
+2025-10-24T08:56:40.102Z error: Found missing class or attribute (isToegekendDoor): [urn:oslo-toolchain:658212a278f47515d0bf3e6e658d48627d44730bbcf572ff9373f39a412fa055](all-adres.jsonld#L3209)
+
+2025-10-24T08:56:40.102Z error: Found missing class or attribute (verwijstNaar): [urn:oslo-toolchain:0fc8435b473a9a8d41770657e357949fad8073407e8a1bb57f678d39d50dc933](all-adres.jsonld#L3183)
+
+2025-10-24T08:56:40.103Z error: Found missing class or attribute (GestructureerdeIdentificator): [urn:oslo-toolchain:56e263695176d84ec13ebbc4968e8ded4e39088851fbe772c66505ab3e70f6f5](all-adres.jsonld#L3507)
+
+2025-10-24T08:56:40.103Z error: Found missing class or attribute (Geometrie): [urn:oslo-toolchain:181c18eb9e266585a45a06feaf73cc84f2a30e67eb33f74cf09d68d7a348eaaa](all-adres.jsonld#L3579)
+
+2025-10-24T08:56:40.103Z error: Found missing class or attribute (Statuswaarde): [urn:oslo-toolchain:0842308883e461019be67a63c31d615663bf107094da246f872139874cb5de0c](all-adres.jsonld#L3746)
+
+2025-10-24T08:56:40.103Z error: Found missing class or attribute (Locatieaanduidingtype): [urn:oslo-toolchain:249015964cef8d0b621e5760629182afb8f21964a8d4c75687f12489949dda77](all-adres.jsonld#L3804)
+
+2025-10-24T08:56:40.103Z error: Found missing class or attribute (Locatorniveauwaarde): [urn:oslo-toolchain:3569025df7b68ca7c6eefd9d8fdfaf19edf537262ab3713aa10c877669550e32](all-adres.jsonld#L3833)
+
+2025-10-24T08:56:40.103Z error: Found missing class or attribute (Locatienaamtype): [urn:oslo-toolchain:3966ff771f90fe510656161d15a0a634935580ad74a8867354937c3ead099de9](all-adres.jsonld#L3862)
+
+2025-10-24T08:56:40.103Z error: Found missing class or attribute (GeometrieMethodeWaarde): [urn:oslo-toolchain:0d0aa2450e97b7a5a76d78c5b2968755b851e62d58d0d9ce9db1ee31e093116b](all-adres.jsonld#L3891)
+
+2025-10-24T08:56:40.103Z error: Found missing class or attribute (GeometrieSpecificatieWaarde): [urn:oslo-toolchain:6a16a0c66c5193f4bedc8eb1e0c445e484357fbf54bdd80b8d418902ad4321e6](all-adres.jsonld#L3902)
+
+2025-10-24T08:56:40.103Z info: Validation successful! All assigned URIs are whitelisted.
+
+2025-10-24T08:56:40.103Z info: Validation found 36 sentences with spelling mistakes.
+
+2025-10-24T08:56:40.103Z info: Validation found 3 labels with spelling mistakes.
+
+2025-10-24T08:56:40.103Z info: Validation successful! All base URIs seem to be valid.
+
+2025-10-24T08:56:40.103Z info: Validation found 22 missing referenced classes or attributes.
 
