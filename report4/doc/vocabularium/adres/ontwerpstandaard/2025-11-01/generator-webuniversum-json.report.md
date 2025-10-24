@@ -2,15 +2,15 @@
 
 #||# -------------------------------------  
 
-2025-10-24T07:05:01.457Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#geometry which acts as a parent. Using original URI as fallback.
+2025-10-24T08:44:33.796Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#geometry which acts as a parent. Using original URI as fallback.
 
-2025-10-24T07:05:01.477Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2025-10-24T08:44:33.813Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-2025-10-24T07:05:01.478Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
+2025-10-24T08:44:33.814Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
 
-2025-10-24T07:05:01.478Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2025-10-24T08:44:33.814Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-2025-10-24T07:05:01.478Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
+2025-10-24T08:44:33.814Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
 
 Error: Unable to find the assigned URI for range urn:oslo-toolchain:fb12f40627ad6be1e5fc69eca3011bac84f8d9f99626f9bd4852dba7f34ea377 of attribute [urn:oslo-toolchain:9c80d14a1be1882208a84a4c970ea1dcc32b398956e083f078e214e459b32261](all-adres.jsonld#L2891).
 
