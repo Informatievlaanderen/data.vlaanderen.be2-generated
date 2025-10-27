@@ -66,6 +66,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/kindfiche.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/kvs.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/kwaliteit-wegen-en-markeringen.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/ldes.publication.json
