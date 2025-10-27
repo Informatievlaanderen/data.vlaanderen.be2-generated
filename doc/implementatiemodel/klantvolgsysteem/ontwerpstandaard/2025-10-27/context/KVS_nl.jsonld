@@ -1,3 +1,558 @@
 {
-  "@context": {}
+  "@context": {
+    "Activeringstraject": "http://todo.com/Activeringstraject",
+    "Activeringstraject.jobdoelwit": {
+      "@container": "@set",
+      "@id": "http://todo.com/jobdoelwit",
+      "@type": "@id"
+    },
+    "Advies": "http://todo.com/Advies",
+    "Advies.adviestype": {
+      "@container": "@set",
+      "@id": "http://todo.com/adviestype",
+      "@type": "@id"
+    },
+    "Advies.motivatie": {
+      "@container": "@set",
+      "@id": "http://todo.com/motivatie",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Adviestype": "http://todo.com/Adviestype",
+    "Agent": "http://xmlns.com/foaf/0.1/Agent",
+    "Agent.participeert": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/participeert",
+      "@type": "@id"
+    },
+    "Arbeidshandicaptype": "http://todo.com/Arbeidshandicaptype",
+    "Beroeptype": "http://todo.com/Beroeptype",
+    "Competentie": "http://todo.com/Competentie",
+    "Competentie.competentie": {
+      "@container": "@set",
+      "@id": "http://todo.com/competentie",
+      "@type": "@id"
+    },
+    "Competentietype": "http://todo.com/Competentietype",
+    "Contactpunt": "https://schema.org/ContactPoint",
+    "Contactpunt.aanschrijfvorm": {
+      "@id": "http://www.w3.org/2006/vcard/ns#honorific-prefix",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Contactpunt.adres": {
+      "@id": "http://www.w3.org/ns/locn#address",
+      "@type": "@id"
+    },
+    "Contactpunt.beschikbaarheid": {
+      "@id": "https://schema.org/hoursAvailable",
+      "@type": "@id"
+    },
+    "Contactpunt.email": {
+      "@id": "https://schema.org/email",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactpunt.faxnummer": {
+      "@id": "https://schema.org/faxNumber",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactpunt.naam": {
+      "@id": "http://xmlns.com/foaf/0.1/name",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactpunt.openingsuren": {
+      "@id": "https://schema.org/openingHours",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Contactpunt.taal": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/language",
+      "@type": "@id"
+    },
+    "Contactpunt.telefoon": {
+      "@id": "https://schema.org/telephone",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contactpunt.website": {
+      "@id": "http://xmlns.com/foaf/0.1/homepage",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Cursustype": "http://todo.com/Cursustype",
+    "Date": "http://www.w3.org/2001/XMLSchema#date",
+    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "Deeltraject": "http://todo.com/Deeltraject",
+    "Deeltraject.advies": {
+      "@container": "@set",
+      "@id": "http://todo.com/advies",
+      "@type": "@id"
+    },
+    "Deeltraject.einddatum": {
+      "@id": "http://todo.com/einddatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Deeltraject.heeftParticipant": {
+      "@container": "@set",
+      "@id": "http://todo.com/heeftParticipant",
+      "@type": "@id"
+    },
+    "Deeltraject.startdatum": {
+      "@id": "http://todo.com/startdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Deeltraject.status": {
+      "@id": "http://todo.com/status",
+      "@type": "@id"
+    },
+    "Deeltraject.trajecttype": {
+      "@id": "http://todo.com/trajecttype",
+      "@type": "@id"
+    },
+    "Diplomatype": "http://todo.com/Diplomatype",
+    "Domicilie": "https://data.vlaanderen.be/ns/persoon#Domicilie",
+    "Functietype": "http://todo.com/Functietype",
+    "Geboorte": "https://data.vlaanderen.be/ns/persoon#Geboorte",
+    "Geboorte.datum": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#datum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Geboorte.land": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#land",
+      "@type": "@id"
+    },
+    "Geboorte.plaats": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#plaats",
+      "@type": "@id"
+    },
+    "GeregistreerdPersoon": "https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon",
+    "GeregistreerdPersoon.registratie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#registratie",
+      "@type": "@id"
+    },
+    "GeregistreerdeOrganisatie": "http://todo.com/GeregistreerdeOrganisatie",
+    "GeregistreerdeOrganisatie.registratie": {
+      "@container": "@set",
+      "@id": "http://todo.com/registratie",
+      "@type": "@id"
+    },
+    "Gezin": "https://data.vlaanderen.be/ns/persoon#Gezin",
+    "Gezin.gezinsadres": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#gezinsadres",
+      "@type": "@id"
+    },
+    "Gezin.gezinshoofd": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#gezinshoofd",
+      "@type": "@id"
+    },
+    "Gezin.gezinslid": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#hasMember",
+      "@type": "@id"
+    },
+    "Gezinsrelatie": "https://data.vlaanderen.be/ns/persoon#Gezinsrelatie",
+    "Identificatortype": "http://todo.com/Identificatortype",
+    "Inburgeringstraject": "http://todo.com/Inburgeringstraject",
+    "Inburgeringstraject.attest": {
+      "@id": "http://todo.com/attest",
+      "@type": "@id"
+    },
+    "Inburgeringstraject.contract": {
+      "@id": "http://todo.com/contract",
+      "@type": "@id"
+    },
+    "Input": "http://todo.com/Input",
+    "Input.naam": {
+      "@id": "http://todo.com/naam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Input.type": {
+      "@container": "@set",
+      "@id": "http://todo.com/type",
+      "@type": "@id"
+    },
+    "Inputtype": "http://todo.com/Inputtype",
+    "Inwonerschap": "https://data.vlaanderen.be/ns/persoon#Inwonerschap",
+    "Inwonerschap.heeftVerblijfplaats": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/persoon#heeftVerblijfplaats",
+      "@type": "@id"
+    },
+    "Inwonerschap.jurisdictie": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#jurisdictie",
+      "@type": "@id"
+    },
+    "Jobdoelwit": "http://todo.com/Jobdoelwit",
+    "Jobdoelwit.functie": {
+      "@container": "@set",
+      "@id": "http://todo.com/functie",
+      "@type": "@id"
+    },
+    "Jobdoelwit.opleiding": {
+      "@container": "@set",
+      "@id": "http://todo.com/opleiding",
+      "@type": "@id"
+    },
+    "Jobdoelwit.type": {
+      "@id": "http://todo.com/type",
+      "@type": "@id"
+    },
+    "Jobdoelwittype": "http://todo.com/Jobdoelwittype",
+    "Kwalificatie": "http://todo.com/Kwalificatie",
+    "Kwalificatie.cursus": {
+      "@container": "@set",
+      "@id": "http://todo.com/cursus",
+      "@type": "@id"
+    },
+    "Kwalificatie.diploma": {
+      "@container": "@set",
+      "@id": "http://todo.com/diploma",
+      "@type": "@id"
+    },
+    "Kwalificatie.opleiding": {
+      "@container": "@set",
+      "@id": "http://todo.com/opleiding",
+      "@type": "@id"
+    },
+    "Kwalificatietype": "http://todo.com/Kwalificatietype",
+    "LangString": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "Motivatietype": "http://todo.com/Motivatietype",
+    "Opleidingtype": "http://todo.com/Opleidingtype",
+    "Organisatie": "http://www.w3.org/ns/org#Organization",
+    "Organisatie.activiteit": {
+      "@id": "http://www.w3.org/ns/regorg#orgActivity",
+      "@type": "@id"
+    },
+    "Organisatie.alternatieveNaam": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Organisatie.beschrijving": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Organisatie.classificatie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#classification",
+      "@type": "@id"
+    },
+    "Organisatie.contactinfo": {
+      "@container": "@set",
+      "@id": "https://schema.org/contactPoint",
+      "@type": "@id"
+    },
+    "Organisatie.doel": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#purpose",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Organisatie.heeftSuborganisatie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#subOrganizationOf",
+      "@type": "@id"
+    },
+    "Organisatie.homepage": {
+      "@id": "http://xmlns.com/foaf/0.1/homepage",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Organisatie.isGeassocieerdMet": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#linkedTo",
+      "@type": "@id"
+    },
+    "Organisatie.isSuborganisatieVan": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#subOrganizationOf",
+      "@type": "@id"
+    },
+    "Organisatie.logo": {
+      "@id": "https://schema.org/logo",
+      "@type": "@id"
+    },
+    "Organisatie.status": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/regorg#orgStatus",
+      "@type": "@id"
+    },
+    "Organisatie.type": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/regorg#orgType",
+      "@type": "@id"
+    },
+    "Organisatie.voorkeursnaam": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Output": "http://todo.com/Output",
+    "Output.naam": {
+      "@id": "http://todo.com/naam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Output.type": {
+      "@container": "@set",
+      "@id": "http://todo.com/type",
+      "@type": "@id"
+    },
+    "Outputtype": "http://todo.com/Outputtype",
+    "Participatie": "http://todo.com/Participatie",
+    "Participatie.agent": {
+      "@id": "http://todo.com/agent",
+      "@type": "@id"
+    },
+    "Participatie.dienstverlening": {
+      "@id": "http://todo.com/dienstverlening",
+      "@type": "@id"
+    },
+    "Participatie.rol": {
+      "@container": "@set",
+      "@id": "http://todo.com/rol",
+      "@type": "@id"
+    },
+    "Participatietype": "http://todo.com/Participatietype",
+    "Persoon": "http://www.w3.org/ns/person#Person",
+    "Persoon.achternaam": {
+      "@id": "http://xmlns.com/foaf/0.1/familyName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Persoon.alternatieveNaam": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/alternative",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Persoon.contactinfo": {
+      "@id": "https://schema.org/contactPoint",
+      "@type": "@id"
+    },
+    "Persoon.geboortenaam": {
+      "@id": "http://www.w3.org/ns/person#birthName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Persoon.gebruikteVoornaam": {
+      "@id": "http://todo.com/gebruikteVoornaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Persoon.geslacht": {
+      "@id": "http://data.europa.eu/m8g/gender",
+      "@type": "@id"
+    },
+    "Persoon.heeftGeboorte": {
+      "@id": "http://todo.com/heeftGeboorte",
+      "@type": "@id"
+    },
+    "Persoon.heeftRelatieMet": {
+      "@container": "@set",
+      "@id": "http://todo.com/heeftRelatieMet",
+      "@type": "@id"
+    },
+    "Persoon.heeftrelatieMet": {
+      "@id": "http://todo.com/heeftrelatieMet",
+      "@type": "@id"
+    },
+    "Persoon.inwonerschap": {
+      "@container": "@set",
+      "@id": "http://todo.com/inwonerschap",
+      "@type": "@id"
+    },
+    "Persoon.isHoofdVan": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#isHoofdVan",
+      "@type": "@id"
+    },
+    "Persoon.isLidVan": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/org#memberOf",
+      "@type": "@id"
+    },
+    "Persoon.profiel": {
+      "@container": "@set",
+      "@id": "http://todo.com/profiel",
+      "@type": "@id"
+    },
+    "Persoon.volledigeNaam": {
+      "@id": "http://todo.com/volledigeNaam",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Persoon.voornaam": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/givenName",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "PerssonlijkKenmerk": "http://todo.com/PerssonlijkKenmerk",
+    "PerssonlijkKenmerk.leervoorkeur": {
+      "@container": "@set",
+      "@id": "http://todo.com/leervoorkeur",
+      "@type": "@id"
+    },
+    "PerssonlijkKenmerk.motivatie": {
+      "@container": "@set",
+      "@id": "http://todo.com/motivatie",
+      "@type": "@id"
+    },
+    "PerssonlijkKenmerk.werkstijl": {
+      "@container": "@set",
+      "@id": "http://todo.com/werkstijl",
+      "@type": "@id"
+    },
+    "PerssonlijkKenmerk.werkvoorkeur": {
+      "@container": "@set",
+      "@id": "http://todo.com/werkvoorkeur",
+      "@type": "@id"
+    },
+    "PubliekeDienstverlening": "http://todo.com/PubliekeDienstverlening",
+    "PubliekeDienstverlening.gebruikt": {
+      "@container": "@set",
+      "@id": "http://todo.com/gebruikt",
+      "@type": "@id"
+    },
+    "PubliekeDienstverlening.heeftParticipant": {
+      "@container": "@set",
+      "@id": "http://todo.com/heeftParticipant",
+      "@type": "@id"
+    },
+    "PubliekeDienstverlening.heeftVerantwoordelijke": {
+      "@id": "http://todo.com/heeftVerantwoordelijke",
+      "@type": "@id"
+    },
+    "PubliekeDienstverlening.naam": {
+      "@id": "http://todo.com/naam",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "PubliekeDienstverlening.produceert": {
+      "@container": "@set",
+      "@id": "http://todo.com/produceert",
+      "@type": "@id"
+    },
+    "PubliekeDienstverlening.type": {
+      "@container": "@set",
+      "@id": "http://todo.com/type",
+      "@type": "@id"
+    },
+    "PubliekeDienstverleningtype": "http://todo.com/PubliekeDienstverleningtype",
+    "PubliekeOrganisatie": "http://todo.com/PubliekeOrganisatie",
+    "PubliekeOrganisatie.werkingsgebied": {
+      "@id": "http://todo.com/werkingsgebied",
+      "@type": "@id"
+    },
+    "Sectortype": "http://todo.com/Sectortype",
+    "String": "http://www.w3.org/2001/XMLSchema#string",
+    "Stuk": "https://data.vlaanderen.be/ns/dossier#Stuk",
+    "Stuk.auteur": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/dossier#auteur",
+      "@type": "@id"
+    },
+    "Stuk.datum": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/date",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Stuk.informatieclassificatie": {
+      "@id": "https://data.vlaanderen.be/ns/dossier#informatieclassificatie",
+      "@type": "@id"
+    },
+    "Stuk.inhoud": {
+      "@id": "http://www.w3.org/ns/prov#value",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Stuk.naam": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Stuk.type": {
+      "@id": "https://data.vlaanderen.be/ns/dossier#type",
+      "@type": "@id"
+    },
+    "Stuktype": "http://todo.com/Stuktype",
+    "Taalcode": "http://www.w3.org/2001/XMLSchema#language",
+    "Traject": "http://todo.com/Traject",
+    "Traject.advies": {
+      "@container": "@set",
+      "@id": "http://todo.com/advies",
+      "@type": "@id"
+    },
+    "Traject.deel": {
+      "@container": "@set",
+      "@id": "http://todo.com/deel",
+      "@type": "@id"
+    },
+    "Traject.einddatum": {
+      "@id": "http://todo.com/einddatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Traject.heeftParticipant": {
+      "@container": "@set",
+      "@id": "http://todo.com/heeftParticipant",
+      "@type": "@id"
+    },
+    "Traject.startdatum": {
+      "@id": "http://todo.com/startdatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Traject.status": {
+      "@id": "http://todo.com/status",
+      "@type": "@id"
+    },
+    "Traject.trajecttype": {
+      "@id": "http://todo.com/trajecttype",
+      "@type": "@id"
+    },
+    "Trajectstatustype": "http://todo.com/Trajectstatustype",
+    "Trajecttype": "http://todo.com/Trajecttype",
+    "URI": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "Verblijfplaats": "https://data.vlaanderen.be/ns/persoon#Verblijfplaats",
+    "Verblijfplaats.verblijfsadres": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#verblijfsadres",
+      "@type": "@id"
+    },
+    "Voogdij": "https://data.vlaanderen.be/ns/persoon#Voogdij",
+    "Voogdij.persoon": {
+      "@id": "https://data.vlaanderen.be/ns/persoon#persoon",
+      "@type": "@id"
+    },
+    "Werkervaring": "http://todo.com/Werkervaring",
+    "Werkervaring.functie": {
+      "@container": "@set",
+      "@id": "http://todo.com/functie",
+      "@type": "@id"
+    },
+    "Werkervaring.projectbeschrijving": {
+      "@container": "@set",
+      "@id": "http://todo.com/projectbeschrijving",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Werkervaring.sector": {
+      "@container": "@set",
+      "@id": "http://todo.com/sector",
+      "@type": "@id"
+    },
+    "Werknemerprofiel": "http://todo.com/Werknemerprofiel",
+    "Werknemerprofiel.arbeidshandicap": {
+      "@container": "@set",
+      "@id": "http://todo.com/arbeidshandicap",
+      "@type": "@id"
+    },
+    "Werknemerprofiel.competentie": {
+      "@container": "@set",
+      "@id": "http://todo.com/competentie",
+      "@type": "@id"
+    },
+    "Werknemerprofiel.ervaring": {
+      "@id": "http://todo.com/ervaring",
+      "@type": "@id"
+    },
+    "Werknemerprofiel.kwalificatie": {
+      "@container": "@set",
+      "@id": "http://todo.com/kwalificatie",
+      "@type": "@id"
+    },
+    "Werknemerprofiel.persoonlijkKenmerk": {
+      "@container": "@set",
+      "@id": "http://todo.com/persoonlijkKenmerk",
+      "@type": "@id"
+    },
+    "Werknemerprofiel.stuk": {
+      "@container": "@set",
+      "@id": "http://todo.com/stuk",
+      "@type": "@id"
+    },
+    "Werkstijltype": "http://todo.com/Werkstijltype"
+  }
 }
