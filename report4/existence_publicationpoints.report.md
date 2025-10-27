@@ -208,11 +208,8 @@ index.html check
 #||#    + checking /home/circleci/project/config/test/kvs.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27'
-error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem'
 
 index.html check
-error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27/index.html'
 error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem/index.html'
 
 #||#    + checking /home/circleci/project/config/test/kwaliteit-wegen-en-markeringen.publication.json
