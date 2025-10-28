@@ -41,6 +41,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#VerkeerslichtconceptShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#MobiliteitsmaatregelconceptShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#VerkeerstekenontwerpstatusShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#BesluittypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#VariabeleTypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#VerkeerstekenconceptStatusShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#ZonaliteitShape>,
@@ -57,7 +58,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#PictogramShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#SignalisatieOntwerpShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#VerkeerstekenstatusShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#MaatregelVerkeerstekenlijstItemShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#MaatregelVerkeerstekenLijstItemShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#VariabeleinstantiemetlocatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#IntShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#AdresvoorstellingShape>,
@@ -365,8 +366,22 @@
     shacl:minCount "1";
     shacl:name "publicatiedatum"@nl;
     shacl:path <http://data.europa.eu/eli/ontology#date_publication>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    rdfs:comment "Type van het besluit."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Besluit.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Type van het besluit."@nl;
+    shacl:name "type"@nl;
+    shacl:path rdf:type
   ];
   shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Besluit> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#BesluittypeShape> a shacl:NodeShape;
+  rdfs:label "Besluittype"@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#BooleanShape> a shacl:NodeShape;
   rdfs:label "Boolean";
@@ -465,7 +480,7 @@
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "waarde"@nl;
-    shacl:path crm:P90_has_value
+    shacl:path rdf:value
   ], [
     a shacl:PropertyShape;
     rdfs:label "type grootheid"@nl;
@@ -503,18 +518,30 @@
   shacl:closed false;
   shacl:targetClass xsd:integer .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#MaatregelVerkeerstekenlijstItemShape> a shacl:NodeShape;
-  rdfs:label "Maatregel Verkeerstekenlijst Item"@nl;
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#MaatregelVerkeerstekenLijstItemShape> a shacl:NodeShape;
+  rdfs:label "Maatregel Verkeersteken Lijst item"@nl;
+  rdfs:comment "Een entiteit om de geprefereerde oplijstingsvolgorde van een Verkeerstekenconcept in een Mobiliteitsmaatregel aan te geven."@nl;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "positie"@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#MaatregelVerkeerstekenlijstItem.Positie>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#MaatregelVerkeerstekenLijstItem.Positie>;
     shacl:datatype xsd:int;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "positie"@nl;
     shacl:path schemas:position
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft verkeersteken lijstitem"@nl;
+    rdfs:comment "Verkeerstekenconcept dat wordt opgelijst."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#MaatregelVerkeerstekenLijstItem.HeeftVerkeerstekenLijstitem>;
+    shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>;
+    shacl:description "Verkeerstekenconcept dat wordt opgelijst."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "heeft verkeersteken lijstitem"@nl;
+    shacl:path schema:item
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit#MaatregelVerkeerstekenLijstItem> .
 
@@ -670,12 +697,15 @@
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
-    rdfs:label "label"@nl;
+    rdfs:label "Label"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld bij opsomming van de borden: \"B1-B9-B11-C47n\""@nl;
+    rdfs:comment "Beschrijving van een mobiliteitsmaatregelconcept aan de hand van gebruikte verkeerstekens."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Mobiliteitsmaatregelconcept.Label>;
     shacl:datatype xsd:string;
+    shacl:description "Beschrijving van een mobiliteitsmaatregelconcept aan de hand van gebruikte verkeerstekens."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "label"@nl;
+    shacl:name "Label"@nl;
     shacl:path skos:prefLabel
   ], [
     a shacl:PropertyShape;
@@ -708,8 +738,10 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "heeft verkeersteken lijstitem"@nl;
+    rdfs:comment "Toewijzing van een positie aan een Verkeerstekenconcept."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Mobiliteitsmaatregelconcept.HeeftVerkeerstekenLijstitem>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit#MaatregelVerkeerstekenLijstItem>;
+    shacl:description "Toewijzing van een positie aan een Verkeerstekenconcept."@nl;
     shacl:name "heeft verkeersteken lijstitem"@nl;
     shacl:path schema:item
   ];
@@ -983,6 +1015,7 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#TijdelijkReglementShape> a shacl:NodeShape;
   rdfs:label "Tijdelijk Reglement"@nl;
+  <http://purl.org/vocab/vann/usageNote> "In de praktijk wordt Besluit getypeerd met https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9 ."@nl;
   rdfs:comment "Een aanvullend reglement op de politie van het wegverkeer met een tijdelijke geldigheid."@nl;
   shacl:closed false;
   shacl:property [
@@ -1395,7 +1428,7 @@
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "AR-plichtig"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/mobiliteit#aRplichtig>
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept.ARplichtig>
   ], [
     a shacl:PropertyShape;
     rdfs:label "regelgevend kader"@nl;
@@ -1446,13 +1479,6 @@
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#heeftStandaardVorm>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "heeftVerkeerstekenLijstItem";
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Verkeerstekenconcept.Heeftverkeerstekenlijstitem>;
-    shacl:class <https://data.vlaanderen.be/ns/mobiliteit#MaatregelVerkeerstekenLijstItem>;
-    shacl:name "heeftVerkeerstekenLijstItem";
-    shacl:path <https://data.vlaanderen.be/ns/mobiliteit#heeftVerkeerstekenLijstItem>
-  ], [
-    a shacl:PropertyShape;
     rdfs:label "mag verkeerstekenconcept bevatten"@nl;
     <http://purl.org/vocab/vann/usageNote> "Gebruikt om aan te duiden welke verkeerstekens kunnen worden toegevoegd op wegmarkeringen,  Z-borden en F89/91."@nl;
     rdfs:comment "Geeft aan welke verkeerstekenconcepten  dit verkeersteken kan bevatten of weergeven. Het betreft een toegestane compositie (drager ? opgenomen concept)."@nl;
@@ -1471,10 +1497,12 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "definieert"@nl;
+    rdfs:comment "Variabele dat gebruikt wordt in Verkeerstekenconcept."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Verkeerstekenconcept.Definieert>;
     shacl:class <http://lblod.data.gift/vocabularies/variables/Variable>;
+    shacl:description "Variabele dat gebruikt wordt in Verkeerstekenconcept."@nl;
     shacl:name "definieert"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/mobiliteit#definieert>
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit#variabele>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept> .
 
