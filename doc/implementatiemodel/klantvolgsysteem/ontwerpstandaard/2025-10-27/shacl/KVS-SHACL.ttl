@@ -64,6 +64,7 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#LangstringShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#ContactpuntShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#UriShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#GeografischenaamShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#GeometrieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#AdresvoorstellingShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#DateShape>,
@@ -565,6 +566,12 @@
     shacl:path <https://data.vlaanderen.be/ns/persoon#plaats>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Geboorte> .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#GeografischenaamShape> a shacl:NodeShape;
+  rdfs:label "GeografischeNaam"@nl;
+  rdfs:comment "Benaming toegekend aan of gebruikt voor een geografisch object."@nl;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#GeometrieShape> a shacl:NodeShape;
   rdfs:label "Geometrie"@nl;
@@ -1390,6 +1397,17 @@
   rdfs:comment "Een ruimtelijk gebied of benoemde plaats."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "plaatsnaam"@nl;
+    rdfs:comment "Naam van de plaats of van het gebied."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Plaats.Plaatsnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van de plaats of van het gebied."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "plaatsnaam"@nl;
+    shacl:path rdfs:label
+  ], [
     a shacl:PropertyShape;
     rdfs:label "geometrie"@nl;
     rdfs:comment "Geometrie van de plaats of het gebied."@nl;
