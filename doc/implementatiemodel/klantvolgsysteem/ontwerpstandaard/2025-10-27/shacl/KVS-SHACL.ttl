@@ -21,12 +21,14 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#DomicilieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#WerkzoekendeprofielShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#InputShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#FormeleorganisatieShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#OrganisatieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#ParticipatieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#OutputShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#TrajectShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#DeeltrajectShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#GeregistreerdeorganisatieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#GeboorteShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#OrganisatieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#StukShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#InburgeringstrajectShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#ActiveringstrajectShape>,
@@ -37,7 +39,9 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#LangstringShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#ContactpuntShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#UriShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#AdresvoorstellingShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#DateShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#IdentificatorShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#AdviesShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#WerkervaringShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#CompetentieShape>,
@@ -60,6 +64,156 @@
     shacl:path <https://data.vlaanderen.be/ns/klantvolgsysteem/jobdoelwit>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/klantvolgsysteem/Activeringstraject> .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#AdresvoorstellingShape> a shacl:NodeShape;
+  rdfs:label "Adresvoorstelling"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld als attribuut van een persoon of gebouw, ... De adresvoorstelling heeft niet enkel betrekking op Belgische adressen, ze kan gebruikt worden om buitenlandse adressen weer te geven (waar mogelijk andere adresaanduidingen dan huisnummer of busnummer worden gebruikt of waar adrescomponenten zoals adresgebieden voorkomen)."@nl;
+  rdfs:comment "Meer leesbare voorstelling met enkel de basisgegevens van het adres, bedoeld voor het gebruik van een adres als attribuut van een ander object."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "administratieve eenheid niveau 1"@nl;
+    rdfs:comment "Hoogste Administratieve eenheid van het adres, doorgaans een land."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Adresvoorstelling.AdministratieveEenheidNiveau1>;
+    shacl:datatype rdf:langString;
+    shacl:description "Hoogste Administratieve eenheid van het adres, doorgaans een land."@nl;
+    shacl:maxCount "1";
+    shacl:name "administratieve eenheid niveau 1"@nl;
+    shacl:path <http://www.w3.org/ns/locn#adminUnitL1>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "administratieve eenheid niveau 2"@nl;
+    rdfs:comment "De regio van het adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Adresvoorstelling.AdministratieveEenheidNiveau2>;
+    shacl:datatype rdf:langString;
+    shacl:description "De regio van het adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat."@nl;
+    shacl:maxCount "1";
+    shacl:name "administratieve eenheid niveau 2"@nl;
+    shacl:path <http://www.w3.org/ns/locn#adminUnitL2>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "adresgebied"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb de naam van het gehucht waarin het adres ligt."@nl;
+    rdfs:comment "Naam van een geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Adresvoorstelling.Adresgebied>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam van een geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is."@nl;
+    shacl:maxCount "1";
+    shacl:name "adresgebied"@nl;
+    shacl:path <http://www.w3.org/ns/locn#addressArea>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "busnummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Specialisatie van Adresvoorstelling:locatieaanduiding ten behoeve van Belgische adressen."@nl;
+    rdfs:comment "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Adresvoorstelling.Busnummer>;
+    shacl:datatype xsd:string;
+    shacl:description "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."@nl;
+    shacl:maxCount "1";
+    shacl:name "busnummer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#busnummer>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "gemeentenaam"@nl;
+    rdfs:comment "Gemeentenaam van het adres."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Adresvoorstelling.Gemeentenaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Gemeentenaam van het adres."@nl;
+    shacl:maxCount "1";
+    shacl:name "gemeentenaam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Gemeentenaam>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "huisnummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Specialisatie van Adresvoorstelling:locatieaanduiding tbv Belgische adressen."@nl;
+    rdfs:comment "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Adresvoorstelling.Huisnummer>;
+    shacl:datatype xsd:string;
+    shacl:description "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."@nl;
+    shacl:maxCount "1";
+    shacl:name "huisnummer"@nl;
+    shacl:path rdfs:label
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "land"@nl;
+    rdfs:comment "Land waarin het adres gelegen is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Adresvoorstelling.Land>;
+    shacl:datatype rdf:langString;
+    shacl:description "Land waarin het adres gelegen is."@nl;
+    shacl:maxCount "1";
+    shacl:name "land"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#land>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "locatieaanduiding"@nl;
+    rdfs:comment "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Adresvoorstelling.Locatieaanduiding>;
+    shacl:datatype xsd:string;
+    shacl:description "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc."@nl;
+    shacl:name "locatieaanduiding"@nl;
+    shacl:path <http://www.w3.org/ns/locn#locatorDesignator>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "locatienaam"@nl;
+    rdfs:comment "Naam of omschrijving van het het geografisch object dat de adreslocator aanduidt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Adresvoorstelling.Locatienaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam of omschrijving van het het geografisch object dat de adreslocator aanduidt."@nl;
+    shacl:name "locatienaam"@nl;
+    shacl:path <http://www.w3.org/ns/locn#locatorName>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "postbus"@nl;
+    rdfs:comment "Postbusnummer in een postkantoor."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Adresvoorstelling.Postbus>;
+    shacl:datatype xsd:string;
+    shacl:description "Postbusnummer in een postkantoor."@nl;
+    shacl:maxCount "1";
+    shacl:name "postbus"@nl;
+    shacl:path <http://www.w3.org/ns/locn#poBox>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "postcode"@nl;
+    rdfs:comment "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Adresvoorstelling.Postcode>;
+    shacl:datatype xsd:string;
+    shacl:description "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:name "postcode"@nl;
+    shacl:path <http://www.w3.org/ns/locn#postCode>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "postnaam"@nl;
+    rdfs:comment "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Adresvoorstelling.Postnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:name "postnaam"@nl;
+    shacl:path <http://www.w3.org/ns/locn#postName>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "straatnaam"@nl;
+    rdfs:comment "Straatnaam van het adres."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Adresvoorstelling.Straatnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Straatnaam van het adres."@nl;
+    shacl:maxCount "1";
+    shacl:name "straatnaam"@nl;
+    shacl:path <http://www.w3.org/ns/locn#thoroughfare>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "volledigAdres"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Vermijdt fouten ten gevolge van het opsplitsen van een adres in zijn onderdelen. Geeft de voorgeschreven volgorde van de verschillende onderdelen weer."@nl;
+    rdfs:comment "Het complete adres in één string, al dan niet geformatteerd."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Adresvoorstelling.Volledigadres>;
+    shacl:datatype rdf:langString;
+    shacl:description "Het complete adres in één string, al dan niet geformatteerd."@nl;
+    shacl:maxCount "1";
+    shacl:name "volledigAdres"@nl;
+    shacl:path <http://www.w3.org/ns/locn#fullAddress>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Address> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#AdviesShape> a shacl:NodeShape;
   rdfs:label "Advies"@nl;
@@ -310,6 +464,13 @@
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Domicilie> .
 
+<https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#FormeleorganisatieShape> a shacl:NodeShape;
+  rdfs:label "FormeleOrganisatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld een bedrijf, een vzw, een overheidsorgaan, een kerkgemeenschap."@nl;
+  rdfs:comment "Een erkende Organisatie, erkend in brede zin of  meer specifiek in juridische zin met bijbehorende rechten en plichten."@nl;
+  shacl:closed false;
+  shacl:targetClass org:FormalOrganization .
+
 <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#GeboorteShape> a shacl:NodeShape;
   rdfs:label "Geboorte";
   shacl:closed false;
@@ -342,6 +503,71 @@
     shacl:path <https://data.vlaanderen.be/ns/persoon#plaats>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Geboorte> .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#GeregistreerdeorganisatieShape> a shacl:NodeShape;
+  rdfs:label "GeregistreerdeOrganisatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "In België moeten onder andere volgende Organisaties zich registreren: vennootschap (NV, BV, etc), eenmanszaak, overheidsorgaan, stichting, … Bij registratie krijgt de Organisatie een ondernemingsnummer en worden zijn gegevens ingevoerd in de Kruispuntbank van Ondernemingen (KBO)."@nl;
+  rdfs:comment "Organisatie met een juridisch statuut vastgelegd door registratie. Vergelijk met een FormeleOrganisatie waarbij dit statuut ook op een andere manier verkregen kan zijn."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "wettelijke naam"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Evt in verschillende talen."@nl;
+    rdfs:comment "Wettelijk geregistreerde naam vd organisatie."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Geregistreerdeorganisatie.WettelijkeNaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Wettelijk geregistreerde naam vd organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "wettelijke naam"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#legalName>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "rechtspersoonlijkheid"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Rechtspersoonlijkheid betekent dat men een rechtssubject is, dit wil zeggen drager van rechten en plichten. Natuurlijke personen hebben vanzelf rechtspersoonlijkheid, rechtspersonen (bvb venootschappen) moeten die van rechtswege toegekend krijgen."@nl;
+    rdfs:comment "Aard van de rechtspersoonlijkheid."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Geregistreerdeorganisatie.Rechtspersoonlijkheid>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van de rechtspersoonlijkheid."@nl;
+    shacl:maxCount "1";
+    shacl:name "rechtspersoonlijkheid"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#rechtspersoonlijkheid>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "rechtstoestand"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Stemt in de KBO overeen met de rechtstoestand van de Organisatie, bijvoorbeeld normale toestand, gerechtelijk akkoord, opening faillissement etc."@nl;
+    rdfs:comment "Status van een GeregistreerdeOrganisatie."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Geregistreerdeorganisatie.Rechtstoestand>;
+    shacl:class skos:Concept;
+    shacl:description "Status van een GeregistreerdeOrganisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "rechtstoestand"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#rechtstoestand>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "rechtsvorm"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Stemt in de KBO overeen met rechtsvorm, bvb NV, VZW, Stad/Gemeente, OCMW etc."@nl;
+    rdfs:comment "Juridisch statuut van de geregistreerde organisatie."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Geregistreerdeorganisatie.Rechtsvorm>;
+    shacl:class skos:Concept;
+    shacl:description "Juridisch statuut van de geregistreerde organisatie."@nl;
+    shacl:maxCount "1";
+    shacl:name "rechtsvorm"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#rechtsvorm>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "registratie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "In de KBO is dit het ondernemingsnummer."@nl;
+    rdfs:comment "Identificator dat de organisatie verkreeg bij registratie."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Geregistreerdeorganisatie.Registratie>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificator dat de organisatie verkreeg bij registratie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "registratie"@nl;
+    shacl:path <http://www.w3.org/ns/regorg#registration>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/regorg#RegisteredOrganization> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#GeregistreerdpersoonShape> a shacl:NodeShape;
   rdfs:label "GeregistreerdPersoon"@nl;
@@ -399,6 +625,54 @@
     shacl:path <https://data.vlaanderen.be/ns/persoon#gezinsrelatietype>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Gezinsrelatie> .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#IdentificatorShape> a shacl:NodeShape;
+  rdfs:label "Identificator"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem."@nl;
+  rdfs:comment "Informatie gebruikt om een object uniek te identificeren."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "identificator"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator."@nl;
+    rdfs:comment "String gebruikt om het object uniek te identificeren."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Identificator.Identificator>;
+    shacl:description "String gebruikt om het object uniek te identificeren."@nl;
+    shacl:maxCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path skos:notation
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "toegekendDoor(String)"@nl;
+    rdfs:comment "Naam vd agent die de identificator heeft toegekend."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Identificator.Toegekenddoor(string)>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekendDoor(String)"@nl;
+    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "toegekendOp"@nl;
+    rdfs:comment "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Identificator.Toegekendop>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekendOp"@nl;
+    shacl:path dc:issued
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "toegekendDoor"@nl;
+    rdfs:comment "Link naar de agent die de identificator heeft uitgegeven."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#Identificator.Toegekenddoor>;
+    shacl:class dc:Agent;
+    shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekendDoor"@nl;
+    shacl:path dc:creator
+  ];
+  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem/ontwerpstandaard/2025-10-27#InburgeringstrajectShape> a shacl:NodeShape;
   rdfs:label "Inburgeringstraject"@nl;
