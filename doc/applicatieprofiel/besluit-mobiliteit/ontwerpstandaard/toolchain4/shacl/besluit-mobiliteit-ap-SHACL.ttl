@@ -93,7 +93,7 @@
     shacl:description "Mobiliteitsmaatregel die deel uitmaakt van het ontwerp"@nl;
     shacl:minCount 1;
     shacl:name "is ontwerp voor"@nl;
-    shacl:path <http://todo.com/isOntwerpVoor>
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit#isOntwerpVoor>
   ], [
     a shacl:PropertyShape;
     rdfs:label "bevat maatregel ontwerp"@nl;
@@ -312,6 +312,8 @@
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Artikel.IsOnderdeelVan>;
     shacl:class <http://data.vlaanderen.be/ns/besluit#Besluit>;
     shacl:description "Het besluit waarvan het artikel een onderdeel is."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "is onderdeel van"@nl;
     shacl:path dc:isPartOf
   ];
@@ -390,6 +392,7 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#CodelijstShape> a shacl:NodeShape;
   rdfs:label "Codelijst"@nl;
+  rdfs:comment "Een reeks concepten, eventueel inclusief uitspraken over semantische relaties tussen die concepten."@nl;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -409,13 +412,6 @@
     shacl:minCount "1";
     shacl:name "type"@nl;
     shacl:path dc:type
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "behoort tot";
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Codelijst.BehoortTot>;
-    shacl:class skos:Concept;
-    shacl:name "behoort tot";
-    shacl:path <https://data.vlaanderen.be/ns/mobiliteit#Codelijst.behoortTot>
   ];
   shacl:targetClass skos:ConceptScheme .
 
@@ -426,6 +422,7 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#ConceptShape> a shacl:NodeShape;
   rdfs:label "Concept"@nl;
+  rdfs:comment "Een idee of begrip; een eenheid van gedachte."@nl;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -447,11 +444,11 @@
     shacl:path <http://www.w3.org/2024/02/skos/core#prefLabel>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "behoort tot";
+    rdfs:label "behoort tot"@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Concept.BehoortTot>;
     shacl:class skos:ConceptScheme;
-    shacl:name "behoort tot";
-    shacl:path <https://data.vlaanderen.be/ns/mobiliteit#Concept.behoortTot>
+    shacl:name "behoort tot"@nl;
+    shacl:path skos:inScheme
   ];
   shacl:targetClass skos:Concept .
 
@@ -675,17 +672,10 @@
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#wordtAangeduidDoor>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "isGebaseerdOp";
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Mobiliteitsmaatregel.Isgebaseerdop>;
-    shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Mobiliteitsmaatregelconcept>;
-    shacl:maxCount 1;
-    shacl:name "isGebaseerdOp";
-    shacl:path <https://data.vlaanderen.be/ns/mobiliteit#isGebaseerdOp>
-  ], [
-    a shacl:PropertyShape;
     rdfs:label "is gebaseerd op maatregel ontwerp"@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Mobiliteitsmaatregel.IsGebaseerdOpMaatregelOntwerp>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit#MobliteitsmaatregelOntwerp>;
+    shacl:maxCount 1;
     shacl:name "is gebaseerd op maatregel ontwerp"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#isGebaseerdOpMaatregelOntwerp>
   ];
@@ -770,10 +760,13 @@
     shacl:path prov:wasDerivedFrom
   ], [
     a shacl:PropertyShape;
-    rdfs:label "ontwerpVanMaatregel";
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Mobliteitsmaatregelontwerp.Ontwerpvanmaatregel>;
+    rdfs:label "ontwerp van maatregel"@nl;
+    rdfs:comment "Verwijst naar de maatregel die dit ontwerp implementeerd."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Mobliteitsmaatregelontwerp.OntwerpVanMaatregel>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Mobiliteitsmaatregel>;
-    shacl:name "ontwerpVanMaatregel";
+    shacl:description "Verwijst naar de maatregel die dit ontwerp implementeerd."@nl;
+    shacl:maxCount 1;
+    shacl:name "ontwerp van maatregel"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#ontwerpVanMaatregel>
   ], [
     a shacl:PropertyShape;
@@ -782,14 +775,6 @@
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>;
     shacl:name "wordt aangeduid door"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#wordtAangeduidDoor>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "verwijdertMaatregel";
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Mobliteitsmaatregelontwerp.Verwijdertmaatregel>;
-    shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Mobiliteitsmaatregel>;
-    shacl:maxCount 1;
-    shacl:name "verwijdertMaatregel";
-    shacl:path <https://data.vlaanderen.be/ns/mobiliteit#verwijdertMaatregel>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit#MobliteitsmaatregelOntwerp> .
 
@@ -900,6 +885,7 @@
     rdfs:label "bevat ontwerp"@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#SignalisatieOntwerp.BevatOntwerp>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit#AanvullendReglementOntwerp>;
+    shacl:minCount 1;
     shacl:name "bevat ontwerp"@nl;
     shacl:path dc:hasPart
   ], [
@@ -956,21 +942,6 @@
     shacl:minCount "1";
     shacl:name "vergunt type"@nl;
     shacl:path <http://data.vlaanderen.be/ns/besluit#Signalisatievergunning.verguntType>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "vergunt";
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Signalisatievergunning.Vergunt>;
-    shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>;
-    shacl:minCount 1;
-    shacl:name "vergunt";
-    shacl:path <http://todo.com/vergunt>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "heeftSignalisatieplan";
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Signalisatievergunning.Heeftsignalisatieplan>;
-    shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Signalisatieplan>;
-    shacl:name "heeftSignalisatieplan";
-    shacl:path <http://todo.com/heeftSignalisatieplan>
   ];
   shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Signalisatievergunning> .
 
@@ -991,6 +962,7 @@
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#TemplateShape> a shacl:NodeShape;
   rdfs:label "Template"@nl;
+  rdfs:comment "TODO"@nl;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -1046,6 +1018,8 @@
     rdfs:label "verkeersteken"@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#VariabeleInstantie.Verkeersteken>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "verkeersteken"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#verkeersteken>
   ], [
@@ -1376,13 +1350,6 @@
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#inwerkingstijd>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "heeftGerelateerdVerkeersteken";
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Verkeersteken.Heeftgerelateerdverkeersteken>;
-    shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>;
-    shacl:name "heeftGerelateerdVerkeersteken";
-    shacl:path <https://data.vlaanderen.be/ns/mobiliteit#heeftGerelateerdVerkeersteken>
-  ], [
-    a shacl:PropertyShape;
     rdfs:label "bevat verkeersteken"@nl;
     rdfs:comment "Geeft aan dat een concreet verkeersteken één of meer andere verkeerstekens fysiek bevat, weergeeft of draagt op een specifieke locatie."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Verkeersteken.BevatVerkeersteken>;
@@ -1453,8 +1420,10 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "instructie"@nl;
+    rdfs:comment "Verwijzing naar Template van het Verkeerstekenconcept."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Verkeerstekenconcept.Instructie>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Template>;
+    shacl:description "Verwijzing naar Template van het Verkeerstekenconcept."@nl;
     shacl:name "instructie"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#heeftInstructie>
   ], [
