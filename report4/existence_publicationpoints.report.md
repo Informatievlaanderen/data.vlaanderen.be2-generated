@@ -208,8 +208,12 @@ index.html check
 #||#    + checking /home/circleci/project/config/test/kvs.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem-magda-magdaonline-r1/ontwerpstandaard/2025-10-30'
+error: missing '/tmp/generated/doc/vocabularium/klantvolgsysteem-magda-magdaonline-r1/ontwerpstandaard/2025-10-30'
 
 index.html check
+error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem-magda-magdaonline-r1/ontwerpstandaard/2025-10-30/index.html'
+error: missing '/tmp/generated/doc/vocabularium/klantvolgsysteem-magda-magdaonline-r1/ontwerpstandaard/2025-10-30/index.html'
 
 #||#    + checking /home/circleci/project/config/test/kwaliteit-wegen-en-markeringen.publication.json
 #||# 
