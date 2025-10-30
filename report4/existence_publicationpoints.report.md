@@ -208,7 +208,6 @@ index.html check
 #||#    + checking /home/circleci/project/config/test/kvs.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/vocabularium/klantvolgsysteem1/ontwerpstandaard/2025-10-30'
 
 index.html check
 error: missing '/tmp/generated/doc/vocabularium/klantvolgsysteem1/ontwerpstandaard/2025-10-30/index.html'
