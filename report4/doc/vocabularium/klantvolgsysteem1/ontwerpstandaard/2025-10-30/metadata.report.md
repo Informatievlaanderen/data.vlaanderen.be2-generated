@@ -16,5 +16,5 @@ Warning: no navigation defined for this rendering
 
 #||# start writing  
 
-#||# The file has been saved to /tmp/workspace/report4/doc/vocabularium/klantvolgsysteem1/ontwerpstandaard/2025-10-30/html/meta_klantvolgsysteem1_nl.json  
+#||# The file has been saved to /tmp/workspace/report4/doc/vocabularium/klantvolgsysteem1/ontwerpstandaard/2025-10-30/html/meta_KVS-MAGDA-MAGDAOnline-R1_nl.json  
 
