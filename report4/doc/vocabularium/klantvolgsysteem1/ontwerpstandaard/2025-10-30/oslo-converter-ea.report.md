@@ -2,65 +2,65 @@
 
 #||# -------------------------------------
 
-2025-10-30T15:44:49.056Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-Person:Persoon:(Persoon -> Persoon))
+2025-10-30T15:56:49.623Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-Person:Persoon:(Persoon -> Persoon))
 
-2025-10-30T15:44:49.058Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-Person:Persoon:(Persoon -> Gezin))
+2025-10-30T15:56:49.625Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-Person:Persoon:(Persoon -> Gezin))
 
-2025-10-30T15:44:49.058Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-Person:Persoon:(Persoon -> Gezin))
+2025-10-30T15:56:49.625Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-Person:Persoon:(Persoon -> Gezin))
 
-2025-10-30T15:44:49.058Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-Person:Persoon:(Persoon -> Jurisdictie))
+2025-10-30T15:56:49.625Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-Person:Persoon:(Persoon -> Jurisdictie))
 
-2025-10-30T15:44:49.058Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-ORG:Organisatie:(Organisatie -> Organisatie))
+2025-10-30T15:56:49.627Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-ORG:Organisatie:(Organisatie -> Organisatie))
 
-2025-10-30T15:44:49.058Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-ORG:Organisatie:(Organisatie -> Organisatie))
+2025-10-30T15:56:49.627Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-ORG:Organisatie:(Organisatie -> Organisatie))
 
-2025-10-30T15:44:49.058Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-ORG:Organisatie:(Organisatie -> Organisatie))
+2025-10-30T15:56:49.627Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-ORG:Organisatie:(Organisatie -> Organisatie))
 
-2025-10-30T15:44:49.058Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Persoon:Gezin:(Gezin -> Organisatie))
+2025-10-30T15:56:49.628Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Persoon:Gezin:(Gezin -> Organisatie))
 
-2025-10-30T15:44:49.058Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-ORG:Organisatie:(Organisatie -> Agent))
+2025-10-30T15:56:49.628Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:W3C-ORG:Organisatie:(Organisatie -> Agent))
 
-2025-10-30T15:44:49.058Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Dossier:Stuk:(Stuk -> Stuk))
+2025-10-30T15:56:49.628Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Dossier:Stuk:(Stuk -> Stuk))
 
-2025-10-30T15:44:49.058Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Dossier:Activiteit:vindtPlaatsTijdens)
+2025-10-30T15:56:49.628Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Dossier:Activiteit:vindtPlaatsTijdens)
 
-2025-10-30T15:44:49.059Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Dossier:Stukonderdeel:(Stukonderdeel -> Representatie))
+2025-10-30T15:56:49.628Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Dossier:Stukonderdeel:(Stukonderdeel -> Representatie))
 
-2025-10-30T15:44:49.059Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Dossier:Activiteit:(Activiteit -> EenheidVanWerk))
+2025-10-30T15:56:49.629Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Dossier:Activiteit:(Activiteit -> EenheidVanWerk))
 
-2025-10-30T15:44:49.059Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-Release-V1:OSLO-Dossier:Agent:(Agent -> Agent))
+2025-10-30T15:56:49.629Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-Release-V1:OSLO-Dossier:Agent:(Agent -> Agent))
 
-2025-10-30T15:44:49.059Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-Release-V1:OSLO-Dossier:Activiteit:vindtPlaatsTijdens)
+2025-10-30T15:56:49.629Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model-Release-V1:OSLO-Dossier:Activiteit:vindtPlaatsTijdens)
 
-2025-10-30T15:44:49.061Z info: Connector Model-Release-V1:EU-CPSV:PubliekeDienstverlening:(PubliekeDienstverlening -> Werkvoorkeuren) is not an association with a source role. Ignoring this connector.
+2025-10-30T15:56:49.632Z info: Connector Model-Release-V1:EU-CPSV:PubliekeDienstverlening:(PubliekeDienstverlening -> Werkvoorkeuren) is not an association with a source role. Ignoring this connector.
 
-2025-10-30T15:44:49.062Z info: Connector Model-Release-V1:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Werkvoorkeuren) is not an association with a source role. Ignoring this connector.
+2025-10-30T15:56:49.632Z info: Connector Model-Release-V1:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Werkvoorkeuren) is not an association with a source role. Ignoring this connector.
 
-2025-10-30T15:44:49.062Z info: Connector Model-Release-V1:EU-M8G:PubliekeOrganisatie:(PubliekeOrganisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-30T15:56:49.632Z info: Connector Model-Release-V1:EU-M8G:PubliekeOrganisatie:(PubliekeOrganisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-30T15:44:49.062Z info: Connector Model-Release-V1:W3C-Person:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+2025-10-30T15:56:49.632Z info: Connector Model-Release-V1:W3C-Person:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-30T15:44:49.062Z info: Connector Model-Release-V1:OSLO-Persoon:Inwonerschap:(Inwonerschap -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
+2025-10-30T15:56:49.632Z info: Connector Model-Release-V1:OSLO-Persoon:Inwonerschap:(Inwonerschap -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
 
-2025-10-30T15:44:49.062Z info: Connector Model-Release-V1:OSLO-Persoon:Domicilie:(Domicilie -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
+2025-10-30T15:56:49.633Z info: Connector Model-Release-V1:OSLO-Persoon:Domicilie:(Domicilie -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
 
-2025-10-30T15:44:49.062Z info: Connector Model-Release-V1:EU-CPSV:PubliekeDienstverlening:(PubliekeDienstverlening -> Activeringstraject) is not an association with a source role. Ignoring this connector.
+2025-10-30T15:56:49.633Z info: Connector Model-Release-V1:EU-CPSV:PubliekeDienstverlening:(PubliekeDienstverlening -> Activeringstraject) is not an association with a source role. Ignoring this connector.
 
-2025-10-30T15:44:49.063Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-10-30T15:56:49.634Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-10-30T15:44:49.063Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:W3C-Person). Using fallback URI (http://todo.com/) instead.
+2025-10-30T15:56:49.634Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:W3C-Person). Using fallback URI (http://todo.com/) instead.
 
-2025-10-30T15:44:49.064Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model-Release-V1). Using fallback URI (http://todo.com/) instead.
+2025-10-30T15:56:49.634Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model-Release-V1). Using fallback URI (http://todo.com/) instead.
 
-2025-10-30T15:44:49.064Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model-Release-V1:W3C-Person). Using fallback URI (http://todo.com/) instead.
+2025-10-30T15:56:49.634Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model-Release-V1:W3C-Person). Using fallback URI (http://todo.com/) instead.
 
-2025-10-30T15:44:49.069Z warn: [ConnectorConverterHandler]: Connector (Participatie.Agent) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-30T15:56:49.639Z warn: [ConnectorConverterHandler]: Connector (Participatie.Agent) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-30T15:44:49.069Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Participatie.Agent) and the fallback URI (http://todo.com/) will be assigned.
+2025-10-30T15:56:49.639Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Participatie.Agent) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-30T15:44:49.069Z warn: [ConnectorConverterHandler]: Connector (Participatie.PubliekeDienstverlening) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-30T15:56:49.639Z warn: [ConnectorConverterHandler]: Connector (Participatie.PubliekeDienstverlening) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-30T15:44:49.069Z warn: [ConnectorConverterHandler]: Connector (deeltraject) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-10-30T15:56:49.639Z warn: [ConnectorConverterHandler]: Connector (deeltraject) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 #||# -------------------------------------
 
