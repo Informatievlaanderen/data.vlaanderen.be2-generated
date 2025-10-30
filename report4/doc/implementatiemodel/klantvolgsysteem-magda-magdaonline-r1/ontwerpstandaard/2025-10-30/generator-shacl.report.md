@@ -2,49 +2,33 @@
 
 #||# -------------------------------------  
 
-2025-10-30T09:49:27.295Z warn: Unable to find the description for subject "[urn:oslo-toolchain:4db51d4f5cd45406fa19cae2259d2b2163164bdff8637e20a5685005a96d460e](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L132)".
+2025-10-30T09:59:29.862Z warn: Unable to find the description for subject "[[urn:oslo-toolchain:7a4793b1cccc9fe31d788c8489cb86a7b0d0c418dc88fdc673b6d4f10de2aec8](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2932)](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L400)".
 
-2025-10-30T09:49:27.298Z warn: Unable to find the description for subject "[urn:oslo-toolchain:292572e4e6129b3818b0232961d3932cc3cf6139821dc028e940644ce5393f34](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L324)".
+2025-10-30T09:59:29.866Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2795)".
 
-2025-10-30T09:49:27.299Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b523137ecece376293a77e902cf280b7f20d87c633447a75afcd6048bc418234](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L389)".
+2025-10-30T09:59:29.866Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2806)".
 
-2025-10-30T09:49:27.301Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5be6177bce6b88114c9ed6e09320229ccdf93133001c1c8f9eb0cd04bdfebdca](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L436)".
+2025-10-30T09:59:29.866Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2817)".
 
-2025-10-30T09:49:27.301Z warn: Unable to find the description for subject "[urn:oslo-toolchain:dccc82bfd432bb7d73011f80a546e00a86bf81c42db8b5258b0b99b617d9497e](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L448)".
+2025-10-30T09:59:29.867Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
 
-2025-10-30T09:49:27.302Z warn: Unable to find the description for subject "[[urn:oslo-toolchain:7a4793b1cccc9fe31d788c8489cb86a7b0d0c418dc88fdc673b6d4f10de2aec8](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L3004)](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L460)".
+2025-10-30T09:59:29.873Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b761c1dc859d8393f98feec06a93486db8e2427c1d62e2cbe6056daafe6b3436](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L715)".
 
-2025-10-30T09:49:27.302Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8a4aad462112495e7f042632541161819f0eb4524fa93db3c2270b2be1e30c2a](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L477)".
+2025-10-30T09:59:29.878Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8606bd559703722e57e0bc8ee8e03838a3932a6523e806573447e272b00b2811](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L1227)".
 
-2025-10-30T09:49:27.303Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2867)".
+2025-10-30T09:59:29.878Z warn: Unable to find the description for subject "[urn:oslo-toolchain:242f0d18db1cbbde65655b7c2076b4f48edcfaca5ec97c53462c0e5fc7cbec16](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L1253)".
 
-2025-10-30T09:49:27.304Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2878)".
+2025-10-30T09:59:29.883Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5356ccf48be705305f1862bae46617474ef62f4cf25077fee3dd3091d1ab8829](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L1812)".
 
-2025-10-30T09:49:27.304Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2889)".
+2025-10-30T09:59:29.884Z warn: Unable to find the description for subject "[urn:oslo-toolchain:203b5382c9fcc689e3d6f5a7f18813f7a172c642f534bb2757b83d306911db48](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L1838)".
 
-2025-10-30T09:49:27.304Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
+2025-10-30T09:59:29.886Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b8277eea9cb2ac8f6c87bef70a04dc86f7fe92677da571e4c4853be62c7e13b7](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2022)".
 
-2025-10-30T09:49:27.306Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b761c1dc859d8393f98feec06a93486db8e2427c1d62e2cbe6056daafe6b3436](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L787)".
+2025-10-30T09:59:29.887Z warn: Unable to find the description for subject "[urn:oslo-toolchain:08fe22ab045a0c5f48223c478205643595a9dd4c7d2672b70caef66a4664046f](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2168)".
 
-2025-10-30T09:49:27.309Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8606bd559703722e57e0bc8ee8e03838a3932a6523e806573447e272b00b2811](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L1299)".
+2025-10-30T09:59:29.889Z warn: Unable to find the description for subject "[urn:oslo-toolchain:febe34bf04aafc4ecb67f410d3dcfb345bdd9d2063a04056ed2df93ccdc3f29a](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2370)".
 
-2025-10-30T09:49:27.310Z warn: Unable to find the description for subject "[urn:oslo-toolchain:242f0d18db1cbbde65655b7c2076b4f48edcfaca5ec97c53462c0e5fc7cbec16](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L1325)".
+2025-10-30T09:59:29.890Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9a713dbf996bc2408662ad71e4a188a38c20d64ee448698de5494d0b55fb1116](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2586)".
 
-2025-10-30T09:49:27.313Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5356ccf48be705305f1862bae46617474ef62f4cf25077fee3dd3091d1ab8829](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L1884)".
-
-2025-10-30T09:49:27.313Z warn: Unable to find the description for subject "[urn:oslo-toolchain:203b5382c9fcc689e3d6f5a7f18813f7a172c642f534bb2757b83d306911db48](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L1910)".
-
-2025-10-30T09:49:27.315Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b8277eea9cb2ac8f6c87bef70a04dc86f7fe92677da571e4c4853be62c7e13b7](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2094)".
-
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:6eea722400788e63c8a9e735dd45cd3a3aba5fc3eabc7f75e68e9c4f400517d9".
-
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
-
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
-
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:63:51)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-10-30T09:59:29.891Z warn: Unable to find the description for subject "[urn:oslo-toolchain:73bb33d9cf5d23c80ae17001ce42d40366c30dcee3d95bdfc3e4f0c3429905a5](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2612)".
 
