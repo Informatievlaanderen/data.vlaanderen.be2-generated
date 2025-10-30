@@ -28,7 +28,7 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#ContactpuntShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#GeografischenaamShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#AdresvoorstellingShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#PersoonlijkkenmerkShape> .
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#BeroepstoestandShape> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#ActiveringstrajectShape> a shacl:NodeShape;
   rdfs:label "Activeringstraject"@nl;
@@ -150,6 +150,36 @@
   rdfs:comment "Een agent zoals een Persoon, groep, software of fysiek artifact."@nl;
   shacl:closed false;
   shacl:targetClass foaf:Agent .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#BeroepstoestandShape> a shacl:NodeShape;
+  rdfs:label "Beroepstoestand"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld: voorkeur of afkeur voor een bepaald beroep."@nl;
+  rdfs:comment "Voorkeur voor een bepaald beroep."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "werkafkeur"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Afkeurredenen kunnen gelinkt worden via het attribuut 'motivatie'."@nl;
+    rdfs:comment "Jobs die een Persoon wenst te mijden om bepaalde redenen."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#Beroepstoestand.Werkafkeur>;
+    shacl:datatype rdf:langString;
+    shacl:description "Jobs die een Persoon wenst te mijden om bepaalde redenen."@nl;
+    shacl:maxCount "1";
+    shacl:name "werkafkeur"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/klantvolgsysteem/werkafkeur>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "leerafkeur"@nl;
+    <http://purl.org/vocab/vann/usageNote> "De redenen kunnen gelinkt worden via het attribuut 'motivatie'."@nl;
+    rdfs:comment "Opleidingen die vermeden worden door een Persoon voor bepaalde redenen."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#Beroepstoestand.Leerafkeur>;
+    shacl:class <https://data.vlaanderen.be/ns/klantvolgsysteem/Voorkeurtype>;
+    shacl:description "Opleidingen die vermeden worden door een Persoon voor bepaalde redenen."@nl;
+    shacl:maxCount "1";
+    shacl:name "leerafkeur"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/klantvolgsysteem/leerafkeur>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/klantvolgsysteem/Beroepstoestand> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#ContactpuntShape> a shacl:NodeShape;
   rdfs:label "Contactpunt"@nl;
@@ -380,36 +410,6 @@
   ];
   shacl:targetClass <http://data.europa.eu/m8g/Participation> .
 
-<https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#PersoonlijkkenmerkShape> a shacl:NodeShape;
-  rdfs:label "PersoonlijkKenmerk"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld: voorkeur voor bepaalde job."@nl;
-  rdfs:comment "Kernmerk specifiek voor een bepaalde Persoon."@nl;
-  shacl:closed false;
-  shacl:property [
-    a shacl:PropertyShape;
-    rdfs:label "werkafkeur"@nl;
-    <http://purl.org/vocab/vann/usageNote> "Afkeurredenen kunnen gelinkt worden via het attribuut 'motivatie'."@nl;
-    rdfs:comment "Jobs die een Persoon wenst te mijden om bepaalde redenen."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#Persoonlijkkenmerk.Werkafkeur>;
-    shacl:datatype rdf:langString;
-    shacl:description "Jobs die een Persoon wenst te mijden om bepaalde redenen."@nl;
-    shacl:maxCount "1";
-    shacl:name "werkafkeur"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/klantvolgsysteem/werkafkeur>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "leerafkeur"@nl;
-    <http://purl.org/vocab/vann/usageNote> "De redenen kunnen gelinkt worden via het attribuut 'motivatie'."@nl;
-    rdfs:comment "Opleidingen die vermeden worden door een Persoon voor bepaalde redenen."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#Persoonlijkkenmerk.Leerafkeur>;
-    shacl:class <https://data.vlaanderen.be/ns/klantvolgsysteem/Voorkeurtype>;
-    shacl:description "Opleidingen die vermeden worden door een Persoon voor bepaalde redenen."@nl;
-    shacl:maxCount "1";
-    shacl:name "leerafkeur"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/klantvolgsysteem/leerafkeur>
-  ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/klantvolgsysteem/PersoonlijkKenmerk> .
-
 <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#PlaatsShape> a shacl:NodeShape;
   rdfs:label "Plaats"@nl;
   rdfs:comment "Een ruimtelijk gebied of benoemde plaats."@nl;
@@ -593,7 +593,7 @@
     rdfs:label "beroep"@nl;
     rdfs:comment "Voorkeuren voor bepaalde beroepen."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#Werkvoorkeuren.Beroep>;
-    shacl:class <https://data.vlaanderen.be/ns/klantvolgsysteem/PersoonlijkKenmerk>;
+    shacl:class <https://data.vlaanderen.be/ns/klantvolgsysteem/Beroepstoestand>;
     shacl:description "Voorkeuren voor bepaalde beroepen."@nl;
     shacl:name "beroep"@nl;
     shacl:path <https://data.vlaanderen.be/ns/klantvolgsysteem/beroep>
