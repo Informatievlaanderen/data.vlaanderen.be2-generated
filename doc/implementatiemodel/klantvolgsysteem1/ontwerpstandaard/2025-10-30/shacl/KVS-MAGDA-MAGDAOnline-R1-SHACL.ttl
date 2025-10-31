@@ -10,9 +10,9 @@
 <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#> rdfs:member <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#VerblijfplaatsShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#InwonerschapShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#GeregistreerdpersoonShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#AgentShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#DomicilieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#WerkvoorkeurenShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#AgentShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#PlaatsShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#ActiveringstrajectShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#DeeltrajectShape>,
@@ -192,6 +192,16 @@
   <http://purl.org/vocab/vann/usageNote> "Te vervangen door een niet-abstracte klasse."@nl;
   rdfs:comment "Een agent zoals een Persoon, groep, software of fysiek artifact."@nl;
   shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "participeert"@nl;
+    rdfs:comment "De Participatie waarin de Agent betrokken is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#Agent.Participeert>;
+    shacl:class <http://purl.org/vocab/cpsv#PublicService>;
+    shacl:description "De Participatie waarin de Agent betrokken is."@nl;
+    shacl:name "participeert"@nl;
+    shacl:path <http://data.europa.eu/m8g/participates>
+  ];
   shacl:targetClass foaf:Agent .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#BeroepstoestandShape> a shacl:NodeShape;
@@ -274,27 +284,6 @@
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
-    rdfs:label "status"@nl;
-    rdfs:comment "De status van het Traject."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#Deeltraject.Status>;
-    shacl:class <https://data.vlaanderen.be/ns/klantvolgsysteem/Trajectstatustype>;
-    shacl:description "De status van het Traject."@nl;
-    shacl:maxCount "1";
-    shacl:name "status"@nl;
-    shacl:path <http://www.w3.org/ns/adms#status>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "type"@nl;
-    <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld: Opleiding, Interview, etc."@nl;
-    rdfs:comment "Het soort Traject."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#Deeltraject.Type>;
-    shacl:class <https://data.vlaanderen.be/ns/klantvolgsysteem/Deeltrajectype>;
-    shacl:description "Het soort Traject."@nl;
-    shacl:maxCount "1";
-    shacl:name "type"@nl;
-    shacl:path dc:type
-  ], [
-    a shacl:PropertyShape;
     rdfs:label "einddatum"@nl;
     rdfs:comment "De datum waarop het Traject eindigt."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#Deeltraject.Einddatum>;
@@ -324,6 +313,27 @@
     shacl:maxCount "1";
     shacl:name "startdatum"@nl;
     shacl:path schemas:startDate
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "status"@nl;
+    rdfs:comment "De status van het Traject."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#Deeltraject.Status>;
+    shacl:class <https://data.vlaanderen.be/ns/klantvolgsysteem/Trajectstatustype>;
+    shacl:description "De status van het Traject."@nl;
+    shacl:maxCount "1";
+    shacl:name "status"@nl;
+    shacl:path <http://www.w3.org/ns/adms#status>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld: Opleiding, Interview, etc."@nl;
+    rdfs:comment "Het soort Traject."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#Deeltraject.Type>;
+    shacl:class <https://data.vlaanderen.be/ns/klantvolgsysteem/Deeltrajectype>;
+    shacl:description "Het soort Traject."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/klantvolgsysteem/Deeltraject> .
 
@@ -475,13 +485,13 @@
     shacl:path <http://data.europa.eu/m8g/role>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "Participatie.Persoon";
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#Participatie.Participatie.persoon>;
-    shacl:class <http://www.w3.org/ns/person#Person>;
+    rdfs:label "Participatie.Agent";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#Participatie.Participatie.agent>;
+    shacl:class foaf:Agent;
     shacl:maxCount 1;
     shacl:minCount 1;
-    shacl:name "Participatie.Persoon";
-    shacl:path <http://todo.com/Participatie.Persoon>
+    shacl:name "Participatie.Agent";
+    shacl:path <http://todo.com/Participatie.Agent>
   ], [
     a shacl:PropertyShape;
     rdfs:label "Participatie.PubliekeDienstverlening";
@@ -582,7 +592,7 @@
     rdfs:label "participeert"@nl;
     rdfs:comment "De Participatie van Agenten in de Publieke Dienstverlening."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#Publiekedienstverlening.Participeert>;
-    shacl:class <http://www.w3.org/ns/person#Person>;
+    shacl:class foaf:Agent;
     shacl:description "De Participatie van Agenten in de Publieke Dienstverlening."@nl;
     shacl:name "participeert"@nl;
     shacl:path <http://data.europa.eu/m8g/hasParticipation>
@@ -683,14 +693,3 @@
     shacl:path <https://data.vlaanderen.be/ns/klantvolgsysteem/beroep>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/klantvolgsysteem/Werkzoekendeprofiel> .
-
- [
-    a shacl:PropertyShape;
-    rdfs:label "participeert"@nl;
-    rdfs:comment "De Participatie waarin de Agent betrokken is."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30#Persoon.Participeert>;
-    shacl:class <http://purl.org/vocab/cpsv#PublicService>;
-    shacl:description "De Participatie waarin de Agent betrokken is."@nl;
-    shacl:name "participeert"@nl;
-    shacl:path <http://data.europa.eu/m8g/participates>
-  ] .
