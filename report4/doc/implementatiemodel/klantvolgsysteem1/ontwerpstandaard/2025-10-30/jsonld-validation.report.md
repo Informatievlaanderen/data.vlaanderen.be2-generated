@@ -2,47 +2,47 @@
 
 #||# -------------------------------------  
 
-2025-10-30T17:34:34.809Z info: Loaded 47 URI prefixes into whitelist
+2025-10-31T09:22:40.658Z info: Loaded 47 URI prefixes into whitelist
 
-2025-10-30T17:34:34.965Z warn: Found non-whitelisted assigned URI: https://publications.europa.eu/resource/authority/Taalcode for subject: [urn:oslo-toolchain:937fba9ecd2eb4135d76b552b22f592e2fb97325efe5c1fe2116624a8ca92e31](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L414)
+2025-10-31T09:22:40.826Z warn: Found non-whitelisted assigned URI: https://publications.europa.eu/resource/authority/Taalcode for subject: [urn:oslo-toolchain:937fba9ecd2eb4135d76b552b22f592e2fb97325efe5c1fe2116624a8ca92e31](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L414)
 
-2025-10-30T17:34:34.965Z warn: Found non-whitelisted assigned URI: http://todo.com/Participatie.Persoon for subject: [urn:oslo-toolchain:e7b3bade5dbcf499da75c01896bd7def5ccb5907770df541a5d08d4b40b7d131](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2429)
+2025-10-31T09:22:40.827Z warn: Found non-whitelisted assigned URI: http://todo.com/Participatie.Persoon for subject: [urn:oslo-toolchain:e7b3bade5dbcf499da75c01896bd7def5ccb5907770df541a5d08d4b40b7d131](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2467)
 
-2025-10-30T17:34:34.967Z warn: Labels must only contain alphabetical characters: 'toegekendDoor(String)' for subject: [urn:oslo-toolchain:cdc8c1b011e4b92be9973c15f4b8ae34ca7451547d172aec49ffe4819e0d32a6](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L624)
+2025-10-31T09:22:40.829Z warn: Labels must only contain alphabetical characters: 'toegekendDoor(String)' for subject: [urn:oslo-toolchain:cdc8c1b011e4b92be9973c15f4b8ae34ca7451547d172aec49ffe4819e0d32a6](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L624)
 
-2025-10-30T17:34:34.968Z error: Found missing class or attribute (Geboorte): [[urn:oslo-toolchain:7a4793b1cccc9fe31d788c8489cb86a7b0d0c418dc88fdc673b6d4f10de2aec8](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2764)](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L397)
+2025-10-31T09:22:40.831Z error: Found missing class or attribute (Geboorte): [[urn:oslo-toolchain:7a4793b1cccc9fe31d788c8489cb86a7b0d0c418dc88fdc673b6d4f10de2aec8](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2802)](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L397)
 
-2025-10-30T17:34:34.969Z error: Found missing class or attribute (datum): [urn:oslo-toolchain:b761c1dc859d8393f98feec06a93486db8e2427c1d62e2cbe6056daafe6b3436](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L750)
+2025-10-31T09:22:40.832Z error: Found missing class or attribute (datum): [urn:oslo-toolchain:b761c1dc859d8393f98feec06a93486db8e2427c1d62e2cbe6056daafe6b3436](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L750)
 
-2025-10-30T17:34:34.969Z error: Found missing class or attribute (plaats): [urn:oslo-toolchain:203b5382c9fcc689e3d6f5a7f18813f7a172c642f534bb2757b83d306911db48](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L1695)
+2025-10-31T09:22:40.833Z error: Found missing class or attribute (plaats): [urn:oslo-toolchain:203b5382c9fcc689e3d6f5a7f18813f7a172c642f534bb2757b83d306911db48](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L1695)
 
-2025-10-30T17:34:34.970Z error: Found missing class or attribute (Participatie.Persoon): [urn:oslo-toolchain:e7b3bade5dbcf499da75c01896bd7def5ccb5907770df541a5d08d4b40b7d131](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2429)
+2025-10-31T09:22:40.834Z error: Found missing class or attribute (Participatie.Persoon): [urn:oslo-toolchain:e7b3bade5dbcf499da75c01896bd7def5ccb5907770df541a5d08d4b40b7d131](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2467)
 
-2025-10-30T17:34:34.970Z error: Found missing class or attribute (Participatie.PubliekeDienstverlening): [urn:oslo-toolchain:73bb33d9cf5d23c80ae17001ce42d40366c30dcee3d95bdfc3e4f0c3429905a5](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2455)
+2025-10-31T09:22:40.835Z error: Found missing class or attribute (Participatie.PubliekeDienstverlening): [urn:oslo-toolchain:73bb33d9cf5d23c80ae17001ce42d40366c30dcee3d95bdfc3e4f0c3429905a5](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2493)
 
-2025-10-30T17:34:34.971Z error: Found missing class or attribute (Persoonsgebeurtenis): [urn:oslo-toolchain:777864d1fcd4a8d4994be3d092e5cad9e26dd0a6c3745174bd03209d1f67347f](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2768)
+2025-10-31T09:22:40.836Z error: Found missing class or attribute (Persoonsgebeurtenis): [urn:oslo-toolchain:777864d1fcd4a8d4994be3d092e5cad9e26dd0a6c3745174bd03209d1f67347f](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2806)
 
-2025-10-30T17:34:34.971Z error: Found missing class or attribute (Participatietype): [urn:oslo-toolchain:5be6177bce6b88114c9ed6e09320229ccdf93133001c1c8f9eb0cd04bdfebdca](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2808)
+2025-10-31T09:22:40.836Z error: Found missing class or attribute (Participatietype): [urn:oslo-toolchain:5be6177bce6b88114c9ed6e09320229ccdf93133001c1c8f9eb0cd04bdfebdca](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2846)
 
-2025-10-30T17:34:34.971Z error: Found missing class or attribute (Trajectstatustype): [urn:oslo-toolchain:4db51d4f5cd45406fa19cae2259d2b2163164bdff8637e20a5685005a96d460e](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2819)
+2025-10-31T09:22:40.836Z error: Found missing class or attribute (Trajectstatustype): [urn:oslo-toolchain:4db51d4f5cd45406fa19cae2259d2b2163164bdff8637e20a5685005a96d460e](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2857)
 
-2025-10-30T17:34:34.971Z error: Found missing class or attribute (FinaliteitType): [urn:oslo-toolchain:b523137ecece376293a77e902cf280b7f20d87c633447a75afcd6048bc418234](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2830)
+2025-10-31T09:22:40.836Z error: Found missing class or attribute (FinaliteitType): [urn:oslo-toolchain:b523137ecece376293a77e902cf280b7f20d87c633447a75afcd6048bc418234](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2868)
 
-2025-10-30T17:34:34.972Z error: Found missing class or attribute (OrganisatieType): [urn:oslo-toolchain:6eea722400788e63c8a9e735dd45cd3a3aba5fc3eabc7f75e68e9c4f400517d9](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2841)
+2025-10-31T09:22:40.836Z error: Found missing class or attribute (OrganisatieType): [urn:oslo-toolchain:6eea722400788e63c8a9e735dd45cd3a3aba5fc3eabc7f75e68e9c4f400517d9](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2879)
 
-2025-10-30T17:34:34.972Z error: Found missing class or attribute (PubliekeDienstverleningtype): [urn:oslo-toolchain:dccc82bfd432bb7d73011f80a546e00a86bf81c42db8b5258b0b99b617d9497e](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2852)
+2025-10-31T09:22:40.836Z error: Found missing class or attribute (PubliekeDienstverleningtype): [urn:oslo-toolchain:dccc82bfd432bb7d73011f80a546e00a86bf81c42db8b5258b0b99b617d9497e](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2890)
 
-2025-10-30T17:34:34.972Z error: Found missing class or attribute (Deeltrajectype): [urn:oslo-toolchain:8a4aad462112495e7f042632541161819f0eb4524fa93db3c2270b2be1e30c2a](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2863)
+2025-10-31T09:22:40.837Z error: Found missing class or attribute (Deeltrajectype): [urn:oslo-toolchain:8a4aad462112495e7f042632541161819f0eb4524fa93db3c2270b2be1e30c2a](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2901)
 
-2025-10-30T17:34:34.972Z error: Found missing class or attribute (Voorkeurtype): [urn:oslo-toolchain:292572e4e6129b3818b0232961d3932cc3cf6139821dc028e940644ce5393f34](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2874)
+2025-10-31T09:22:40.837Z error: Found missing class or attribute (Voorkeurtype): [urn:oslo-toolchain:292572e4e6129b3818b0232961d3932cc3cf6139821dc028e940644ce5393f34](all-KVS-MAGDA-MAGDAOnline-R1.jsonld#L2912)
 
-2025-10-30T17:34:34.972Z info: Validation found 2 non-whitelisted assigned URIs
+2025-10-31T09:22:40.837Z info: Validation found 2 non-whitelisted assigned URIs
 
-2025-10-30T17:34:34.972Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
+2025-10-31T09:22:40.837Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
 
-2025-10-30T17:34:34.972Z info: Validation found 1 labels with spelling mistakes.
+2025-10-31T09:22:40.837Z info: Validation found 1 labels with spelling mistakes.
 
-2025-10-30T17:34:34.972Z info: Validation successful! All base URIs seem to be valid.
+2025-10-31T09:22:40.837Z info: Validation successful! All base URIs seem to be valid.
 
-2025-10-30T17:34:34.972Z info: Validation found 13 missing referenced classes or attributes.
+2025-10-31T09:22:40.837Z info: Validation found 13 missing referenced classes or attributes.
 
