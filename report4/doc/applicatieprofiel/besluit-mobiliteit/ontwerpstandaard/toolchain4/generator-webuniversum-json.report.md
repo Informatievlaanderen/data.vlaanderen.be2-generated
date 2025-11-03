@@ -2,19 +2,19 @@
 
 #||# -------------------------------------  
 
-2025-10-29T16:10:08.244Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasDerivedFrom which acts as a parent. Using original URI as fallback.
+2025-11-03T10:21:03.837Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasDerivedFrom which acts as a parent. Using original URI as fallback.
 
-2025-10-29T16:10:08.246Z warn: Unable to find the assigned URI for external class http://www.w3.org/2004/02/skos/core#Concept which acts as a parent. Using original URI as fallback.
+2025-11-03T10:21:03.839Z warn: Unable to find the assigned URI for external class http://www.w3.org/2004/02/skos/core#Concept which acts as a parent. Using original URI as fallback.
 
-2025-10-29T16:10:08.262Z warn: Unable to find the assigned URI for external class http://schema.org/ListItem which acts as a parent. Using original URI as fallback.
+2025-11-03T10:21:03.858Z warn: Unable to find the assigned URI for external class http://schema.org/ListItem which acts as a parent. Using original URI as fallback.
 
-2025-10-29T16:10:08.264Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2025-11-03T10:21:03.860Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-2025-10-29T16:10:08.264Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2025-11-03T10:21:03.860Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-2025-10-29T16:10:08.265Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
+2025-11-03T10:21:03.861Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
 
-2025-10-29T16:10:08.265Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
+2025-11-03T10:21:03.861Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
 
-2025-10-29T16:10:08.266Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/Document which acts as a parent. Using original URI as fallback.
+2025-11-03T10:21:03.862Z warn: Unable to find the assigned URI for external class http://xmlns.com/foaf/0.1/Document which acts as a parent. Using original URI as fallback.
 
