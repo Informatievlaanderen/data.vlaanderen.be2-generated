@@ -176,6 +176,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/production/kvs.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/production/kwaliteit-wegen-en-markeringen.publication.json
 #||# 
 Directory check
