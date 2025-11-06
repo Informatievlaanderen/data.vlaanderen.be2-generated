@@ -1,0 +1,154 @@
+openapi: 3.1.0
+info:
+  title: KlantVolgSysteem Release 1
+  description: |-
+    KlantVolgSysteem 1.0 uitwisseling tussen VDAB en OCMWs via MAGDA.
+    Deze Swagger beschrijft de API voor Release 1.
+  version: 1.0.0
+externalDocs:
+  description: Contacteer MAGDA via de Servicedesk
+  url: https://vlaamseoverheid.atlassian.net/servicedesk/customer/portal/9/group/125/create/471
+servers:
+  - url: https://magda.vlaanderen.be
+tags:
+  - name: Dienstverlening
+    description: 'De dienstverlening die men verleent aan Personen vanuit de Organisatie, bijvoorbeeld: activering van naar werk van een werkzoekende door de begeleider van de VDAB.'
+paths:
+  /v1/dienstverleningen/{Type}?tijdstip={tijdstip}:
+    get:
+      tags:
+        - Dienstverlening
+      summary: Dienstverlening informatie opvragen.
+      description: Vraag alle informatie op over een Dienstverlening tussen Organisaties en Personen zoals een Activeringstraject van een Werkzoekende door de Organisatie VDAB. Iedere Dienstverlening tussen Organisatie - Personen heeft zijn eigen ID.
+      operationId: getService
+      parameters:
+        - name: X-Correlation-Id
+          in: header
+          description: 'Random UUID om het request te identificeren.'
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: X-INSZ
+          in: header
+          description: 'INSZ code van de Werkzoekende.'
+          required: true
+          schema:
+            type: string
+          examples:
+            JanaDeHinde:
+              value: '77501820360'
+              summary: INSZ nummer Jana De Hinde
+        - name: Type
+          in: path
+          description: 'Type van de Dienstverlening.'
+          required: true
+          schema:
+            type: string
+          examples:
+            Dienstverlening001:
+              value: 'ActiveringNaarWerk'
+              summary: Dienstverlening Activering Naar Werk
+        - name: tijdstip
+          in: path
+          description: 'Tijdstip wanneer de dienstverlening heeft plaatsgevonden.'
+          required: true
+          schema:
+            type: string
+          examples:
+            Tijdstip001:
+              value: '2024-10-15T15:00:00'
+              summary: 2024-10-15T15:00:00
+      responses:
+        '200':
+          description: Opvraging succesvol.
+          content:
+            application/ld+json:
+              schema:
+                type: object
+              examples:
+                Dienstverlening001:
+                  summary: 'Publieke Dienstverlening Activering Naar Werk.'
+                  externalValue: https://raw.githubusercontent.com/Informatievlaanderen/OSLOthema-KVS/refs/heads/main/resources/swagger/R1/release1.json
+            application/json:
+              schema:
+                type: object
+              examples:
+                Dienstverlening001:
+                  summary: 'Publieke Dienstverlening Activering Naar Werk.'
+                  externalValue: https://raw.githubusercontent.com/Informatievlaanderen/OSLOthema-KVS/refs/heads/main/resources/swagger/R1/release1.json
+        '401':
+          description: Toegang geweigerd. Token is ongeldig of niet toegekend in de infrastructuur.
+        '404':
+          description: Dienstverlening bestaat niet.
+        '502':
+          description: Business dienst of gateway is niet beschikbaar.
+        '204':
+          description: Ophalen van de dienstverlening is gelukt maar er is geen data.
+        '400':
+          description: Parameter of validatie van de vraag is gefaald. Controleer de parameters.
+        default:
+          description: Onbekende fout.
+      security:
+        - bearerAuth: []
+  /v1/dienstverlening/{Type}:
+    post:
+      tags:
+        - Dienstverlening
+      summary: Dienstverlening informatie insturen.
+      description: Stuur alle informatie op over een Dienstverlening tussen Organisaties en Personen zoals een Activeringstraject van een Werkzoekende door de Organisatie VDAB. Iedere Dienstverlening tussen Organisatie - Personen heeft zijn eigen ID.
+      operationId: getService
+      parameters:
+        - name: X-Correlation-Id
+          in: header
+          description: 'Random UUID om het request te identificeren.'
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: X-INSZ
+          in: header
+          description: 'INSZ code van de Werkzoekende.'
+          required: true
+          schema:
+            type: string
+          examples:
+            JanaDeHinde:
+              value: '77501820360'
+              summary: INSZ nummer Jana De Hinde
+        - name: Type
+          in: path
+          description: 'Type van de Dienstverlening.'
+          required: true
+          schema:
+            type: string
+          examples:
+            Dienstverlening001:
+              value: 'ActiveringNaarWerk'
+              summary: Dienstverlening Activering Naar Werk
+      requestBody:
+        required: true
+        content:
+          application/json:
+            examples:
+              Dienstverlening001:
+                externalValue: https://raw.githubusercontent.com/Informatievlaanderen/OSLOthema-KVS/refs/heads/main/resources/swagger/R1/release1.json
+          application/ld+json:
+            examples:
+              Dienstverlening001:
+                externalValue: https://raw.githubusercontent.com/Informatievlaanderen/OSLOthema-KVS/refs/heads/main/resources/swagger/R1/release1.json
+      responses:
+        '200':
+          description: Dienstverlening aangemaakt.
+        '204':
+          description: Dienstverlening aangemaakt.
+        '401':
+          description: Toegang geweigerd. Token is ongeldig of niet toegekend in de infrastructuur.
+        '404':
+          description: Dienstverlening bestaat niet.
+        '502':
+          description: Business dienst of gateway is niet beschikbaar.
+        '400':
+          description: Parameter of validatie van de vraag is gefaald. Controleer de parameters.
+      security:
+        - bearerAuth: []

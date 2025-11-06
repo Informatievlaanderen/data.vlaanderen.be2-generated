@@ -210,6 +210,7 @@ index.html check
 Directory check
 
 index.html check
+error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/index.html'
 
 #||#    + checking /home/circleci/project/config/test/kwaliteit-wegen-en-markeringen.publication.json
 #||# 
