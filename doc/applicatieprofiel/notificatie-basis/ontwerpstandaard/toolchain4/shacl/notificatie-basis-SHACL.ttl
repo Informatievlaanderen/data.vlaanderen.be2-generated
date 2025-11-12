@@ -18,7 +18,6 @@
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#MerkShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#ContactinfoShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#StringShape>,
-    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#GetypeerdeStringShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#UriShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#TijdsintervalShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#GeometrieShape>,
@@ -125,10 +124,10 @@
     <http://purl.org/vocab/vann/usageNote> "Syntax volgens schema.org voor openingsuren. Bv als contact kan worden opgenomen tussen 8 en 20u maandag tot zaterdag en tussen 8 en 18u op zondag wordt dit gecodeerd als Ma-za 08:00-20:00, zo 08:00-18:00."@nl;
     rdfs:comment "Uren waarbinnen contact kan worden opgenomen."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Contactinfo.Openingsuren>;
-    shacl:datatype rdfs:Literal;
     shacl:description "Uren waarbinnen contact kan worden opgenomen."@nl;
     shacl:maxCount "1";
     shacl:name "openingsuren"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path schema:openingHours
   ], [
     a shacl:PropertyShape;
@@ -237,10 +236,10 @@
     <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype."@nl;
     rdfs:comment "Geometrie uitgedrukt in gml-formaat."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Geometrie.Gml>;
-    shacl:datatype rdfs:Literal;
     shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
     shacl:maxCount "1";
     shacl:name "gml"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path <http://www.opengis.net/ont/geosparql#asGML>
   ], [
     a shacl:PropertyShape;
@@ -248,20 +247,13 @@
     <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype."@nl;
     rdfs:comment "Geometrie uitgedrukt in wkt-formaat."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Geometrie.Wkt>;
-    shacl:datatype rdfs:Literal;
     shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
     shacl:maxCount "1";
     shacl:name "wkt"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
   ];
   shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
-
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#GetypeerdeStringShape> a shacl:NodeShape;
-  rdfs:label "Getypeerde String"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Bvb '20170901' als string en 'datum' als type. Laat automatische interpretatie vd string toe."@nl;
-  rdfs:comment "Combinatie van een string en het type van wat de string voorstelt."@nl;
-  shacl:closed false;
-  shacl:targetClass rdfs:Literal .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActieShape> a shacl:NodeShape;
   rdfs:label "Informeer Actie"@nl;
@@ -346,8 +338,8 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#InformeerActie.Agent>;
     shacl:class <http://data.europa.eu/m8g/PublicOrganisation>;
     shacl:description "Duidt de agent aan die aanleiding gaf tot de InformeerActie."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "agent"@nl;
     shacl:path schemas:agent
   ], [
@@ -529,8 +521,8 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.Afzender>;
     shacl:class schemas:Brand;
     shacl:description "De afzender van het Notificatiebericht."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "afzender"@nl;
     shacl:path schema:sender
   ], [
@@ -540,8 +532,8 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Notificatiebericht.ResulteertIn>;
     shacl:class schemas:InformAction;
     shacl:description "De relatie tussen een Informeer Actie en het (de) Notificatiebericht(en) die hier uit voortkomen."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "resulteert in"@nl;
     shacl:path <https://data.vlaanderen.be/ns/notificatie#Notificatiebericht.resulteertIn>
   ];
@@ -575,7 +567,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#PubliekeOrganisatie.HeeftMerk>;
     shacl:class schemas:Brand;
     shacl:description "Het merk dat geassocieerd is met één of meerdere Publieke Organisatie(s), in de context van Publieke Dienstverlening."@nl;
-    shacl:minCount "1";
+    shacl:minCount 1;
     shacl:name "heeft merk"@nl;
     shacl:path schema:brand
   ];
@@ -626,11 +618,11 @@
     <http://purl.org/vocab/vann/usageNote> ""@nl;
     rdfs:comment "Moment waarop het tijdsinterval begint."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Tijdsinterval.Begin>;
-    shacl:datatype rdfs:Literal;
     shacl:description "Moment waarop het tijdsinterval begint."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "begin"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path <http://data.europa.eu/m8g/startTime>
   ], [
     a shacl:PropertyShape;
@@ -638,10 +630,10 @@
     <http://purl.org/vocab/vann/usageNote> ""@nl;
     rdfs:comment "Moment waarop het tijdsinterval eindigt."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/notificatie-basis/ontwerpstandaard/toolchain4#Tijdsinterval.Einde>;
-    shacl:datatype rdfs:Literal;
     shacl:description "Moment waarop het tijdsinterval eindigt."@nl;
     shacl:maxCount "1";
     shacl:name "einde"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path <http://data.europa.eu/m8g/endTime>
   ];
   shacl:targetClass <http://data.europa.eu/m8g/PeriodOfTime> .

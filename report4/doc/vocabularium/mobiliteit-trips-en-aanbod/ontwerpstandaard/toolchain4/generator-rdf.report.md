@@ -2,11 +2,13 @@
 
 #||# -------------------------------------  
 
-2025-10-02T21:49:51.998Z error: Unable to find the definition for property [urn:oslo-toolchain:41b3a0db6dd10537c535a75f996793967257fc089e4a1a034b296127d1c8039a](all-trips-en-aanbod.jsonld#L4440).
+2025-11-12T20:05:07.961Z error: Unable to find the definition for property [urn:oslo-toolchain:41b3a0db6dd10537c535a75f996793967257fc089e4a1a034b296127d1c8039a](all-trips-en-aanbod.jsonld#L5034).
 
-2025-10-02T21:49:52.000Z error: Unable to find the definition for property [urn:oslo-toolchain:e51ed4a9ded70c512394e08f685d2613187edfa7ea419744d5d9c46c49482dbd](all-trips-en-aanbod.jsonld#L4842).
+2025-11-12T20:05:07.963Z error: Unable to find the definition for property [urn:oslo-toolchain:e51ed4a9ded70c512394e08f685d2613187edfa7ea419744d5d9c46c49482dbd](all-trips-en-aanbod.jsonld#L5508).
 
-2025-10-02T21:49:52.000Z error: Unable to find the definition for property [urn:oslo-toolchain:b98903d2278a3540cc01b7e3021a410086f4f98d6cb736d6adf577e3ff830dba](all-trips-en-aanbod.jsonld#L4862).
+2025-11-12T20:05:07.965Z error: Unable to find the definition for property [urn:oslo-toolchain:dd1e23765173cb9e7fd2e304bf22635db0874bc3c0c48918b28a51f7b0e62217](all-trips-en-aanbod.jsonld#L6026).
+
+2025-11-12T20:05:07.966Z error: Unable to find the definition for property [urn:oslo-toolchain:a67a34e362c94e5cb4537b23c110343e1ffd39f12a8b0e2b21c2bc272449dc99](all-trips-en-aanbod.jsonld#L6052).
 
 Error: Unable to find the assigned URI for parent https://schema.org/Reservation of class [urn:oslo-toolchain:39b4c0572330043d7591e22ffb3993609aef0bbd475ac00ebda6f87f73bd6ca2](all-trips-en-aanbod.jsonld#L304).
 
@@ -30,11 +32,13 @@ Error: Unable to find the assigned URI for parent https://schema.org/Reservation
 
 #||# -------------------------------------  
 
-2025-10-02T21:49:52.858Z error: Unable to find the definition for property [urn:oslo-toolchain:41b3a0db6dd10537c535a75f996793967257fc089e4a1a034b296127d1c8039a](all-trips-en-aanbod.jsonld#L4440).
+2025-11-12T20:05:08.884Z error: Unable to find the definition for property [urn:oslo-toolchain:41b3a0db6dd10537c535a75f996793967257fc089e4a1a034b296127d1c8039a](all-trips-en-aanbod.jsonld#L5034).
 
-2025-10-02T21:49:52.861Z error: Unable to find the definition for property [urn:oslo-toolchain:e51ed4a9ded70c512394e08f685d2613187edfa7ea419744d5d9c46c49482dbd](all-trips-en-aanbod.jsonld#L4842).
+2025-11-12T20:05:08.887Z error: Unable to find the definition for property [urn:oslo-toolchain:e51ed4a9ded70c512394e08f685d2613187edfa7ea419744d5d9c46c49482dbd](all-trips-en-aanbod.jsonld#L5508).
 
-2025-10-02T21:49:52.861Z error: Unable to find the definition for property [urn:oslo-toolchain:b98903d2278a3540cc01b7e3021a410086f4f98d6cb736d6adf577e3ff830dba](all-trips-en-aanbod.jsonld#L4862).
+2025-11-12T20:05:08.888Z error: Unable to find the definition for property [urn:oslo-toolchain:dd1e23765173cb9e7fd2e304bf22635db0874bc3c0c48918b28a51f7b0e62217](all-trips-en-aanbod.jsonld#L6026).
+
+2025-11-12T20:05:08.888Z error: Unable to find the definition for property [urn:oslo-toolchain:a67a34e362c94e5cb4537b23c110343e1ffd39f12a8b0e2b21c2bc272449dc99](all-trips-en-aanbod.jsonld#L6052).
 
 Error: Unable to find the assigned URI for parent https://schema.org/Reservation of class [urn:oslo-toolchain:39b4c0572330043d7591e22ffb3993609aef0bbd475ac00ebda6f87f73bd6ca2](all-trips-en-aanbod.jsonld#L304).
 

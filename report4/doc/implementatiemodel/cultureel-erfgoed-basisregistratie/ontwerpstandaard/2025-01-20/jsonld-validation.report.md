@@ -2,307 +2,283 @@
 
 #||# -------------------------------------  
 
-2025-10-02T21:51:47.747Z info: Loaded 45 URI prefixes into whitelist
+2025-11-12T20:05:33.594Z info: Loaded 47 URI prefixes into whitelist
 
-2025-10-02T21:51:48.191Z warn: Found non-whitelisted assigned URI: https://qudt.org/schema/qudt/QuantityKind for subject: [urn:oslo-toolchain:6f8ddccb111148693f0e2a2af0c14dea4d21fd5acf8b3bd862553fad2a9f46b8](all-cultureel-erfgoed-basisregistratie.jsonld#L533)
+2025-11-12T20:05:34.057Z warn: Found non-whitelisted assigned URI: https://qudt.org/schema/qudt/QuantityKind for subject: [urn:oslo-toolchain:6f8ddccb111148693f0e2a2af0c14dea4d21fd5acf8b3bd862553fad2a9f46b8](all-cultureel-erfgoed-basisregistratie.jsonld#L509)
 
-2025-10-02T21:51:48.191Z warn: Found non-whitelisted assigned URI: https://linked.art/Set for subject: [[urn:oslo-toolchain:98957be21f797852a66a95aa04fce6c5d5b78ba1315a0c325ad9613060a9fcea](all-cultureel-erfgoed-basisregistratie.jsonld#L8648)](all-cultureel-erfgoed-basisregistratie.jsonld#L1752)
+2025-11-12T20:05:34.058Z warn: Found non-whitelisted assigned URI: https://linked.art/Set for subject: [[urn:oslo-toolchain:98957be21f797852a66a95aa04fce6c5d5b78ba1315a0c325ad9613060a9fcea](all-cultureel-erfgoed-basisregistratie.jsonld#L9288)](all-cultureel-erfgoed-basisregistratie.jsonld#L1578)
 
-2025-10-02T21:51:48.192Z warn: Found non-whitelisted assigned URI: https://qudt.org/schema/qudt/Unit for subject: [urn:oslo-toolchain:fa162fedd2c0aa51bbb1a05d01477fc7a1536ebc7158d1ab84a6763c0131ce81](all-cultureel-erfgoed-basisregistratie.jsonld#L1805)
+2025-11-12T20:05:34.058Z warn: Found non-whitelisted assigned URI: https://qudt.org/schema/qudt/Unit for subject: [urn:oslo-toolchain:fa162fedd2c0aa51bbb1a05d01477fc7a1536ebc7158d1ab84a6763c0131ce81](all-cultureel-erfgoed-basisregistratie.jsonld#L1631)
 
-2025-10-02T21:51:48.192Z warn: Found non-whitelisted assigned URI: http://schema.org/email for subject: [urn:oslo-toolchain:7ed6590918d8c1ce6143d16178d826182429e1f9367731b3e00ad1e48e64f89c](all-cultureel-erfgoed-basisregistratie.jsonld#L2157)
+2025-11-12T20:05:34.058Z warn: Found non-whitelisted assigned URI: http://schema.org/email for subject: [urn:oslo-toolchain:7ed6590918d8c1ce6143d16178d826182429e1f9367731b3e00ad1e48e64f89c](all-cultureel-erfgoed-basisregistratie.jsonld#L2013)
 
-2025-10-02T21:51:48.192Z warn: Found non-whitelisted assigned URI: http://schema.org/faxNumber for subject: [urn:oslo-toolchain:44dcc71992766b5178d19b1bd70b09543bb06d0533db10ab241ba481a32d469e](all-cultureel-erfgoed-basisregistratie.jsonld#L2207)
+2025-11-12T20:05:34.058Z warn: Found non-whitelisted assigned URI: http://schema.org/faxNumber for subject: [urn:oslo-toolchain:44dcc71992766b5178d19b1bd70b09543bb06d0533db10ab241ba481a32d469e](all-cultureel-erfgoed-basisregistratie.jsonld#L2069)
 
-2025-10-02T21:51:48.192Z warn: Found non-whitelisted assigned URI: http://schema.org/telephone for subject: [urn:oslo-toolchain:cc3d51adab79e8c8875e252c8d2995f0730a10652142fe7377137a2718f18c96](all-cultureel-erfgoed-basisregistratie.jsonld#L2257)
+2025-11-12T20:05:34.058Z warn: Found non-whitelisted assigned URI: http://schema.org/telephone for subject: [urn:oslo-toolchain:cc3d51adab79e8c8875e252c8d2995f0730a10652142fe7377137a2718f18c96](all-cultureel-erfgoed-basisregistratie.jsonld#L2125)
 
-2025-10-02T21:51:48.192Z warn: Found non-whitelisted assigned URI: http://schema.org/contactPoint for subject: [urn:oslo-toolchain:01ae4f5d79ef87304bbaacce3d18f1b862212559c9da67bee04e117c87646069](all-cultureel-erfgoed-basisregistratie.jsonld#L4941)
+2025-11-12T20:05:34.059Z warn: Found non-whitelisted assigned URI: http://schema.org/contactPoint for subject: [urn:oslo-toolchain:01ae4f5d79ef87304bbaacce3d18f1b862212559c9da67bee04e117c87646069](all-cultureel-erfgoed-basisregistratie.jsonld#L5333)
 
-2025-10-02T21:51:48.192Z warn: Found non-whitelisted assigned URI: http://schema.org/contactPoint for subject: [urn:oslo-toolchain:e7d1dd4708f5f3b0f4f1e091979b210132ca22fe74d687f3bb85587d19429ab0](all-cultureel-erfgoed-basisregistratie.jsonld#L4991)
+2025-11-12T20:05:34.059Z warn: Found non-whitelisted assigned URI: http://schema.org/contactPoint for subject: [urn:oslo-toolchain:e7d1dd4708f5f3b0f4f1e091979b210132ca22fe74d687f3bb85587d19429ab0](all-cultureel-erfgoed-basisregistratie.jsonld#L5389)
 
-2025-10-02T21:51:48.193Z warn: Found non-whitelisted assigned URI: http://todo.com/Rol.Agent for subject: [urn:oslo-toolchain:504210c7fe919023bb0d200c015bab43ec883d0449754d6d268521017101e19d](all-cultureel-erfgoed-basisregistratie.jsonld#L7495)
+2025-11-12T20:05:34.059Z warn: Found non-whitelisted assigned URI: http://todo.com/Activiteit.Rol for subject: [urn:oslo-toolchain:75ad30f0d6164c9c02a58fc9753901e5a78d632c872ea14ea9b1169a0f34b9f2](all-cultureel-erfgoed-basisregistratie.jsonld#L8097)
 
-2025-10-02T21:51:48.193Z warn: Found non-whitelisted assigned URI: https://linked.art/ns/terms/member_of for subject: [urn:oslo-toolchain:c120d6e13f4f01d9b8d10a92dca68944480e6120943c44a6508f6e3fc4cb5c19](all-cultureel-erfgoed-basisregistratie.jsonld#L7515)
+2025-11-12T20:05:34.059Z warn: Found non-whitelisted assigned URI: https://linked.art/ns/terms/member_of for subject: [urn:oslo-toolchain:c120d6e13f4f01d9b8d10a92dca68944480e6120943c44a6508f6e3fc4cb5c19](all-cultureel-erfgoed-basisregistratie.jsonld#L8123)
 
-2025-10-02T21:51:48.193Z warn: Found non-whitelisted assigned URI: https://linked.art/ns/terms/has_member for subject: [urn:oslo-toolchain:32e455337c90c9a30477658600c1e14704041180b686f847ff68c8e0e17575c7](all-cultureel-erfgoed-basisregistratie.jsonld#L7559)
+2025-11-12T20:05:34.059Z warn: Found non-whitelisted assigned URI: https://linked.art/ns/terms/has_member for subject: [urn:oslo-toolchain:32e455337c90c9a30477658600c1e14704041180b686f847ff68c8e0e17575c7](all-cultureel-erfgoed-basisregistratie.jsonld#L8173)
 
-2025-10-02T21:51:48.193Z warn: Found non-whitelisted assigned URI: http://schema.org/ContactPoint for subject: [urn:oslo-toolchain:354ae5779f8297eafdfcb049446165da4621cc46b9b2eaa9862fb9970d34aed3](all-cultureel-erfgoed-basisregistratie.jsonld#L7699)
+2025-11-12T20:05:34.059Z warn: Found non-whitelisted assigned URI: http://schema.org/ContactPoint for subject: [urn:oslo-toolchain:354ae5779f8297eafdfcb049446165da4621cc46b9b2eaa9862fb9970d34aed3](all-cultureel-erfgoed-basisregistratie.jsonld#L8331)
 
-2025-10-02T21:51:48.194Z warn: Found non-whitelisted assigned URI: http://id.loc.gov/datatypes/edtf/EDTF for subject: [urn:oslo-toolchain:172a87294b9f6c1ba29d4ea18087f816339f8e906ffbc9fe0afc572c14560aaf](all-cultureel-erfgoed-basisregistratie.jsonld#L8681)
+2025-11-12T20:05:34.059Z warn: Found non-whitelisted assigned URI: http://id.loc.gov/datatypes/edtf/EDTF for subject: [urn:oslo-toolchain:a0d31d425047cfa341cf3e5d3bd1e10ae5833a061d5934e76971f5bba5a503f6](all-cultureel-erfgoed-basisregistratie.jsonld#L8907)
 
-2025-10-02T21:51:48.194Z warn: Found non-whitelisted assigned URI: http://id.loc.gov/datatypes/edtf/EDTF for subject: [urn:oslo-toolchain:a0d31d425047cfa341cf3e5d3bd1e10ae5833a061d5934e76971f5bba5a503f6](all-cultureel-erfgoed-basisregistratie.jsonld#L8275)
+2025-11-12T20:05:34.059Z warn: Found non-whitelisted assigned URI: https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html#E90 for subject: [urn:oslo-toolchain:ffe14edc8934183ff512d3a927a166e464a746924474b4279f12423cff20792f](all-cultureel-erfgoed-basisregistratie.jsonld#L9181)
 
-2025-10-02T21:51:48.194Z warn: Found non-whitelisted assigned URI: https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html#E90 for subject: [urn:oslo-toolchain:ffe14edc8934183ff512d3a927a166e464a746924474b4279f12423cff20792f](all-cultureel-erfgoed-basisregistratie.jsonld#L8498)
+2025-11-12T20:05:34.062Z warn: Found sentence without a '.': 'Immateriële dingen die sets van stellingen over echte of denkbeeldige dingen zijn of deze vertegenwoordigen en die als afzonderlijke eenheden worden gedocumenteerd of als onderwerp van discussie dienen' for subject: [urn:oslo-toolchain:5a1b9893dae327a65df62881a0dd3f6589c20715341213d2ede9ecb5bb414265](all-cultureel-erfgoed-basisregistratie.jsonld#L168)
 
-2025-10-02T21:51:48.194Z warn: Found non-whitelisted assigned URI: https://wherever/TODO for subject: [urn:oslo-toolchain:f443fd7f143c68ffbf12a3190a185e28dbdda5ff376029a2baa6a2f1d3f890d7](all-cultureel-erfgoed-basisregistratie.jsonld#L8710)
+2025-11-12T20:05:34.062Z warn: Found sentence without a '.': 'Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is' for subject: [urn:oslo-toolchain:d88585df79011be0ff75858098d9b3a4c122ca6320496f9dff8dca29260cd3d1](all-cultureel-erfgoed-basisregistratie.jsonld#L2785)
 
-2025-10-02T21:51:48.199Z warn: Found sentence without a '.': 'Immateriële dingen die sets van stellingen over echte of denkbeeldige dingen zijn of deze vertegenwoordigen en die als afzonderlijke eenheden worden gedocumenteerd of als onderwerp van discussie dienen' for subject: [urn:oslo-toolchain:5a1b9893dae327a65df62881a0dd3f6589c20715341213d2ede9ecb5bb414265](all-cultureel-erfgoed-basisregistratie.jsonld#L192)
+2025-11-12T20:05:34.062Z warn: Found sentence without a '.': 'Agent die een Recht bezit op het InformatieObject' for subject: [urn:oslo-toolchain:7ba727c629d74b73cefc2c7bf7ac3927a3903baf99cab488b4a5bdea7b97e4ef](all-cultureel-erfgoed-basisregistratie.jsonld#L4081)
 
-2025-10-02T21:51:48.199Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:3d7d634090483350ca48e333690959a8a2be37e58d1b255adb467ff9981ca955](all-cultureel-erfgoed-basisregistratie.jsonld#L1388)
+2025-11-12T20:05:34.062Z warn: Found sentence without a '.': 'Structureel onderdeel van het InformatieObject' for subject: [urn:oslo-toolchain:4e7c38326241c2306435ab066f4844c727f3a60d422f86db2bc2f8c2e004d40d](all-cultureel-erfgoed-basisregistratie.jsonld#L7409)
 
-2025-10-02T21:51:48.199Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:5e7e336a5a5b3a9880c097b4035a6240399ea32d4b212d6dd5a025be4a7e84e7](all-cultureel-erfgoed-basisregistratie.jsonld#L1584)
+2025-11-12T20:05:34.063Z warn: Found sentence without a '.': 'Structureel onderdeel van de Set' for subject: [urn:oslo-toolchain:c077eb311f580536eed77a2620f76defe07ac674288f3ddb9110be53d7a90e04](all-cultureel-erfgoed-basisregistratie.jsonld#L8223)
 
-2025-10-02T21:51:48.199Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:f443fd7f143c68ffbf12a3190a185e28dbdda5ff376029a2baa6a2f1d3f890d7](all-cultureel-erfgoed-basisregistratie.jsonld#L8710)
+2025-11-12T20:05:34.063Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:736caab6b12af589d95315dbf53eb07a95dbf677d2e5ba0c8aafcf073df5f3fa](all-cultureel-erfgoed-basisregistratie.jsonld#L9222)
 
-2025-10-02T21:51:48.200Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:ba9a9ff9a8f6855d4288c60b8b53459bf46e937c3aee7da8fe97275109b046f8](all-cultureel-erfgoed-basisregistratie.jsonld#L8809)
+2025-11-12T20:05:34.063Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:5e7e336a5a5b3a9880c097b4035a6240399ea32d4b212d6dd5a025be4a7e84e7](all-cultureel-erfgoed-basisregistratie.jsonld#L9436)
 
-2025-10-02T21:51:48.200Z warn: Found sentence without a '.': 'Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is' for subject: [urn:oslo-toolchain:d88585df79011be0ff75858098d9b3a4c122ca6320496f9dff8dca29260cd3d1](all-cultureel-erfgoed-basisregistratie.jsonld#L2889)
+2025-11-12T20:05:34.063Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:ba9a9ff9a8f6855d4288c60b8b53459bf46e937c3aee7da8fe97275109b046f8](all-cultureel-erfgoed-basisregistratie.jsonld#L9506)
 
-2025-10-02T21:51:48.200Z warn: Found sentence without a '.': 'Agent die een Recht bezit op het InformatieObject' for subject: [urn:oslo-toolchain:7ba727c629d74b73cefc2c7bf7ac3927a3903baf99cab488b4a5bdea7b97e4ef](all-cultureel-erfgoed-basisregistratie.jsonld#L3871)
+2025-11-12T20:05:34.063Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:3d7d634090483350ca48e333690959a8a2be37e58d1b255adb467ff9981ca955](all-cultureel-erfgoed-basisregistratie.jsonld#L9535)
 
-2025-10-02T21:51:48.200Z warn: Found sentence without a '.': 'Structureel onderdeel van het InformatieObject' for subject: [urn:oslo-toolchain:4e7c38326241c2306435ab066f4844c727f3a60d422f86db2bc2f8c2e004d40d](all-cultureel-erfgoed-basisregistratie.jsonld#L6915)
+2025-11-12T20:05:34.063Z warn: Found sentence without a '.': 'Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is' for subject: [urn:oslo-toolchain:d88585df79011be0ff75858098d9b3a4c122ca6320496f9dff8dca29260cd3d1](all-cultureel-erfgoed-basisregistratie.jsonld#L2785)
 
-2025-10-02T21:51:48.200Z warn: Found sentence without a '.': 'Structureel onderdeel van de Set' for subject: [urn:oslo-toolchain:c077eb311f580536eed77a2620f76defe07ac674288f3ddb9110be53d7a90e04](all-cultureel-erfgoed-basisregistratie.jsonld#L7603)
+2025-11-12T20:05:34.063Z warn: Found sentence without a '.': 'Structureel onderdeel van het InformatieObject' for subject: [urn:oslo-toolchain:4e7c38326241c2306435ab066f4844c727f3a60d422f86db2bc2f8c2e004d40d](all-cultureel-erfgoed-basisregistratie.jsonld#L7409)
 
-2025-10-02T21:51:48.200Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:736caab6b12af589d95315dbf53eb07a95dbf677d2e5ba0c8aafcf073df5f3fa](all-cultureel-erfgoed-basisregistratie.jsonld#L8539)
+2025-11-12T20:05:34.063Z warn: Found sentence without a '.': 'Structureel onderdeel van de Set' for subject: [urn:oslo-toolchain:c077eb311f580536eed77a2620f76defe07ac674288f3ddb9110be53d7a90e04](all-cultureel-erfgoed-basisregistratie.jsonld#L8223)
 
-2025-10-02T21:51:48.200Z warn: Found sentence without a '.': 'Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is' for subject: [urn:oslo-toolchain:d88585df79011be0ff75858098d9b3a4c122ca6320496f9dff8dca29260cd3d1](all-cultureel-erfgoed-basisregistratie.jsonld#L2889)
+2025-11-12T20:05:34.063Z warn: Found sentence without a '.': 'Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112),maar deze locatie kan ook een niet-geografische locatie zijn,zoals een directory,rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt,zoals d' for subject: [urn:oslo-toolchain:efdb86d0a87735db9900626f7bcb77e2b1a83d07a8411a7a0b2e48fbc528693d](all-cultureel-erfgoed-basisregistratie.jsonld#L8421)
 
-2025-10-02T21:51:48.201Z warn: Found sentence without a '.': 'Structureel onderdeel van het InformatieObject' for subject: [urn:oslo-toolchain:4e7c38326241c2306435ab066f4844c727f3a60d422f86db2bc2f8c2e004d40d](all-cultureel-erfgoed-basisregistratie.jsonld#L6915)
+2025-11-12T20:05:34.063Z warn: Found empty sentence for subject: [urn:oslo-toolchain:057e72db619c449860fc370c363f87358e033f0b2754a2be73001666d9937cbc](all-cultureel-erfgoed-basisregistratie.jsonld#L1845)
 
-2025-10-02T21:51:48.201Z warn: Found sentence without a '.': 'Structureel onderdeel van de Set' for subject: [urn:oslo-toolchain:c077eb311f580536eed77a2620f76defe07ac674288f3ddb9110be53d7a90e04](all-cultureel-erfgoed-basisregistratie.jsonld#L7603)
+2025-11-12T20:05:34.063Z warn: Found empty sentence for subject: [urn:oslo-toolchain:340864fd1caa225bde981a9f489ea80366da5150fdbb8827d71db6f173f0c560](all-cultureel-erfgoed-basisregistratie.jsonld#L1901)
 
-2025-10-02T21:51:48.201Z warn: Found sentence without a '.': 'Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112),maar deze locatie kan ook een niet-geografische locatie zijn,zoals een directory,rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt,zoals d' for subject: [urn:oslo-toolchain:efdb86d0a87735db9900626f7bcb77e2b1a83d07a8411a7a0b2e48fbc528693d](all-cultureel-erfgoed-basisregistratie.jsonld#L7789)
+2025-11-12T20:05:34.063Z warn: Found empty sentence for subject: [urn:oslo-toolchain:fcd58d28db6e0f3d1f949ff77f893bd28695e83beb27e65accb8967e6514b6ac](all-cultureel-erfgoed-basisregistratie.jsonld#L1957)
 
-2025-10-02T21:51:48.201Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:3d7d634090483350ca48e333690959a8a2be37e58d1b255adb467ff9981ca955](all-cultureel-erfgoed-basisregistratie.jsonld#L1388)
+2025-11-12T20:05:34.063Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7ed6590918d8c1ce6143d16178d826182429e1f9367731b3e00ad1e48e64f89c](all-cultureel-erfgoed-basisregistratie.jsonld#L2013)
 
-2025-10-02T21:51:48.201Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:5e7e336a5a5b3a9880c097b4035a6240399ea32d4b212d6dd5a025be4a7e84e7](all-cultureel-erfgoed-basisregistratie.jsonld#L1584)
+2025-11-12T20:05:34.063Z warn: Found empty sentence for subject: [urn:oslo-toolchain:44dcc71992766b5178d19b1bd70b09543bb06d0533db10ab241ba481a32d469e](all-cultureel-erfgoed-basisregistratie.jsonld#L2069)
 
-2025-10-02T21:51:48.201Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:f443fd7f143c68ffbf12a3190a185e28dbdda5ff376029a2baa6a2f1d3f890d7](all-cultureel-erfgoed-basisregistratie.jsonld#L8710)
+2025-11-12T20:05:34.063Z warn: Found empty sentence for subject: [urn:oslo-toolchain:cc3d51adab79e8c8875e252c8d2995f0730a10652142fe7377137a2718f18c96](all-cultureel-erfgoed-basisregistratie.jsonld#L2125)
 
-2025-10-02T21:51:48.201Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:ba9a9ff9a8f6855d4288c60b8b53459bf46e937c3aee7da8fe97275109b046f8](all-cultureel-erfgoed-basisregistratie.jsonld#L8809)
+2025-11-12T20:05:34.063Z warn: Found empty sentence for subject: [urn:oslo-toolchain:c54ddd4e52cf3583596c8280995c6a2fade353324099db06b0ee85e5f0903fed](all-cultureel-erfgoed-basisregistratie.jsonld#L2281)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:057e72db619c449860fc370c363f87358e033f0b2754a2be73001666d9937cbc](all-cultureel-erfgoed-basisregistratie.jsonld#L2007)
+2025-11-12T20:05:34.063Z warn: Found empty sentence for subject: [urn:oslo-toolchain:5a2973f369cc69b6448d9d99f1e7700018ca09394da13aba321ebfd845982d6f](all-cultureel-erfgoed-basisregistratie.jsonld#L2443)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:340864fd1caa225bde981a9f489ea80366da5150fdbb8827d71db6f173f0c560](all-cultureel-erfgoed-basisregistratie.jsonld#L2057)
+2025-11-12T20:05:34.063Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d3e2ccf7d32db1051a76ef6fc383150bdf97840b00d5dbd51506eff859d6724f](all-cultureel-erfgoed-basisregistratie.jsonld#L2499)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:fcd58d28db6e0f3d1f949ff77f893bd28695e83beb27e65accb8967e6514b6ac](all-cultureel-erfgoed-basisregistratie.jsonld#L2107)
+2025-11-12T20:05:34.064Z warn: Found empty sentence for subject: [urn:oslo-toolchain:950276b43c125f5b8c1a5926401e0d7e6f904481868dde5c65ab3f59e54d0b86](all-cultureel-erfgoed-basisregistratie.jsonld#L2555)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7ed6590918d8c1ce6143d16178d826182429e1f9367731b3e00ad1e48e64f89c](all-cultureel-erfgoed-basisregistratie.jsonld#L2157)
+2025-11-12T20:05:34.064Z warn: Found empty sentence for subject: [urn:oslo-toolchain:0b8db339a01c72a1972d7892dd07f373d879f420560ae16c597f7305e320f5dd](all-cultureel-erfgoed-basisregistratie.jsonld#L2729)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:44dcc71992766b5178d19b1bd70b09543bb06d0533db10ab241ba481a32d469e](all-cultureel-erfgoed-basisregistratie.jsonld#L2207)
+2025-11-12T20:05:34.064Z warn: Found empty sentence for subject: [urn:oslo-toolchain:dad40612ec07129beb5d54bec62fc149d2ac757438e043650168f92a6b3582c0](all-cultureel-erfgoed-basisregistratie.jsonld#L2841)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:cc3d51adab79e8c8875e252c8d2995f0730a10652142fe7377137a2718f18c96](all-cultureel-erfgoed-basisregistratie.jsonld#L2257)
+2025-11-12T20:05:34.064Z warn: Found empty sentence for subject: [urn:oslo-toolchain:1823acdeecbbdb1aafaddadcc14d07697158af68a1da3cf795025f69549d7fe1](all-cultureel-erfgoed-basisregistratie.jsonld#L2897)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:c54ddd4e52cf3583596c8280995c6a2fade353324099db06b0ee85e5f0903fed](all-cultureel-erfgoed-basisregistratie.jsonld#L2395)
+2025-11-12T20:05:34.064Z warn: Found empty sentence for subject: [urn:oslo-toolchain:a4349eac36ce15e3bbfffc66b9775f5f4ba9a2c710a3b1ddb3294186a1298bbe](all-cultureel-erfgoed-basisregistratie.jsonld#L2956)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:5a2973f369cc69b6448d9d99f1e7700018ca09394da13aba321ebfd845982d6f](all-cultureel-erfgoed-basisregistratie.jsonld#L2583)
+2025-11-12T20:05:34.064Z warn: Found empty sentence for subject: [urn:oslo-toolchain:40aa294bce642993b667e36df4f19d55980113bf12ef3a0103f48040f173e483](all-cultureel-erfgoed-basisregistratie.jsonld#L3012)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d3e2ccf7d32db1051a76ef6fc383150bdf97840b00d5dbd51506eff859d6724f](all-cultureel-erfgoed-basisregistratie.jsonld#L2633)
+2025-11-12T20:05:34.064Z warn: Found empty sentence for subject: [urn:oslo-toolchain:34efa7f57c8462bf63c864730b68ab67d87de6fe20ae417263d00ca6de1def82](all-cultureel-erfgoed-basisregistratie.jsonld#L3068)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:950276b43c125f5b8c1a5926401e0d7e6f904481868dde5c65ab3f59e54d0b86](all-cultureel-erfgoed-basisregistratie.jsonld#L2683)
+2025-11-12T20:05:34.064Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7f61004847af090ed41446d29a214e7ebce96c7d4bda6ae9ff77ef79c4ccc7a7](all-cultureel-erfgoed-basisregistratie.jsonld#L3127)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:0b8db339a01c72a1972d7892dd07f373d879f420560ae16c597f7305e320f5dd](all-cultureel-erfgoed-basisregistratie.jsonld#L2839)
+2025-11-12T20:05:34.064Z warn: Found empty sentence for subject: [urn:oslo-toolchain:67b184949dff7319cd770960fc0047ee1a5b9bec6d241b1c27263b83ecc8f953](all-cultureel-erfgoed-basisregistratie.jsonld#L3227)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:dad40612ec07129beb5d54bec62fc149d2ac757438e043650168f92a6b3582c0](all-cultureel-erfgoed-basisregistratie.jsonld#L2939)
+2025-11-12T20:05:34.064Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4ec018d2e5dfb3de59781372661295df33de7ecb4a5c1b753851169cba590f6d](all-cultureel-erfgoed-basisregistratie.jsonld#L3719)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:1823acdeecbbdb1aafaddadcc14d07697158af68a1da3cf795025f69549d7fe1](all-cultureel-erfgoed-basisregistratie.jsonld#L2989)
+2025-11-12T20:05:34.064Z warn: Found empty sentence for subject: [urn:oslo-toolchain:fceda39821c89baaa3e5333cfb6ed2484bf4ff8219183cbdf01d81ca7e4e0a51](all-cultureel-erfgoed-basisregistratie.jsonld#L4461)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:a4349eac36ce15e3bbfffc66b9775f5f4ba9a2c710a3b1ddb3294186a1298bbe](all-cultureel-erfgoed-basisregistratie.jsonld#L3042)
+2025-11-12T20:05:34.064Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8516ffa20545568b837e0a189cd5242164222ee81fc291307a6f73621394b953](all-cultureel-erfgoed-basisregistratie.jsonld#L4673)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:40aa294bce642993b667e36df4f19d55980113bf12ef3a0103f48040f173e483](all-cultureel-erfgoed-basisregistratie.jsonld#L3092)
+2025-11-12T20:05:34.064Z warn: Found empty sentence for subject: [urn:oslo-toolchain:01ae4f5d79ef87304bbaacce3d18f1b862212559c9da67bee04e117c87646069](all-cultureel-erfgoed-basisregistratie.jsonld#L5333)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:34efa7f57c8462bf63c864730b68ab67d87de6fe20ae417263d00ca6de1def82](all-cultureel-erfgoed-basisregistratie.jsonld#L3142)
+2025-11-12T20:05:34.064Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e7d1dd4708f5f3b0f4f1e091979b210132ca22fe74d687f3bb85587d19429ab0](all-cultureel-erfgoed-basisregistratie.jsonld#L5389)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7f61004847af090ed41446d29a214e7ebce96c7d4bda6ae9ff77ef79c4ccc7a7](all-cultureel-erfgoed-basisregistratie.jsonld#L3195)
+2025-11-12T20:05:34.064Z warn: Found empty sentence for subject: [urn:oslo-toolchain:f9a7e47d83dbfff655e422c9a64364689e1173dc448ae117961a9cd8f1e4ee86](all-cultureel-erfgoed-basisregistratie.jsonld#L6057)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:67b184949dff7319cd770960fc0047ee1a5b9bec6d241b1c27263b83ecc8f953](all-cultureel-erfgoed-basisregistratie.jsonld#L3245)
+2025-11-12T20:05:34.064Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:736caab6b12af589d95315dbf53eb07a95dbf677d2e5ba0c8aafcf073df5f3fa](all-cultureel-erfgoed-basisregistratie.jsonld#L9222)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4ec018d2e5dfb3de59781372661295df33de7ecb4a5c1b753851169cba590f6d](all-cultureel-erfgoed-basisregistratie.jsonld#L3551)
+2025-11-12T20:05:34.064Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:5e7e336a5a5b3a9880c097b4035a6240399ea32d4b212d6dd5a025be4a7e84e7](all-cultureel-erfgoed-basisregistratie.jsonld#L9436)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:fceda39821c89baaa3e5333cfb6ed2484bf4ff8219183cbdf01d81ca7e4e0a51](all-cultureel-erfgoed-basisregistratie.jsonld#L4209)
+2025-11-12T20:05:34.064Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:ba9a9ff9a8f6855d4288c60b8b53459bf46e937c3aee7da8fe97275109b046f8](all-cultureel-erfgoed-basisregistratie.jsonld#L9506)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8516ffa20545568b837e0a189cd5242164222ee81fc291307a6f73621394b953](all-cultureel-erfgoed-basisregistratie.jsonld#L4397)
+2025-11-12T20:05:34.064Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:3d7d634090483350ca48e333690959a8a2be37e58d1b255adb467ff9981ca955](all-cultureel-erfgoed-basisregistratie.jsonld#L9535)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:01ae4f5d79ef87304bbaacce3d18f1b862212559c9da67bee04e117c87646069](all-cultureel-erfgoed-basisregistratie.jsonld#L4941)
+2025-11-12T20:05:34.066Z warn: Labels must only contain alphabetical characters: 'toegekend door (String)' for subject: [urn:oslo-toolchain:057e72db619c449860fc370c363f87358e033f0b2754a2be73001666d9937cbc](all-cultureel-erfgoed-basisregistratie.jsonld#L1845)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e7d1dd4708f5f3b0f4f1e091979b210132ca22fe74d687f3bb85587d19429ab0](all-cultureel-erfgoed-basisregistratie.jsonld#L4991)
+2025-11-12T20:05:34.066Z warn: Labels must not end with a '.': 'Geometrie van de plaats of het gebied.' for subject: [urn:oslo-toolchain:b7f5a1c63c091109ec33c2cc8e4365ef620bda7338dc0d3150b9d1e18f158085](all-cultureel-erfgoed-basisregistratie.jsonld#L4953)
 
-2025-10-02T21:51:48.202Z warn: Found empty sentence for subject: [urn:oslo-toolchain:f9a7e47d83dbfff655e422c9a64364689e1173dc448ae117961a9cd8f1e4ee86](all-cultureel-erfgoed-basisregistratie.jsonld#L5669)
+2025-11-12T20:05:34.068Z error: Found missing class or attribute (MensgemaaktDing): [urn:oslo-toolchain:e28e800a3ef71e71a926f710d827fc568f63ec1cb345c8b93133d6a83102b09c](all-cultureel-erfgoed-basisregistratie.jsonld#L9192)
 
-2025-10-02T21:51:48.203Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:736caab6b12af589d95315dbf53eb07a95dbf677d2e5ba0c8aafcf073df5f3fa](all-cultureel-erfgoed-basisregistratie.jsonld#L8539)
+2025-11-12T20:05:34.068Z error: Found missing class or attribute (PropositioneelObject): [urn:oslo-toolchain:8f3038f4de4d4fc0f356040ce19af3f39a52f444e4a90284293de8c9e7ef1589](all-cultureel-erfgoed-basisregistratie.jsonld#L9166)
 
-2025-10-02T21:51:48.206Z warn: Labels must only contain alphabetical characters: 'toegekend door (String)' for subject: [urn:oslo-toolchain:057e72db619c449860fc370c363f87358e033f0b2754a2be73001666d9937cbc](all-cultureel-erfgoed-basisregistratie.jsonld#L2007)
+2025-11-12T20:05:34.068Z error: Found missing class or attribute (SymbolischObject): [urn:oslo-toolchain:ffe14edc8934183ff512d3a927a166e464a746924474b4279f12423cff20792f](all-cultureel-erfgoed-basisregistratie.jsonld#L9181)
 
-2025-10-02T21:51:48.207Z warn: Labels must not end with a '.': 'Geometrie van de plaats of het gebied.' for subject: [urn:oslo-toolchain:b7f5a1c63c091109ec33c2cc8e4365ef620bda7338dc0d3150b9d1e18f158085](all-cultureel-erfgoed-basisregistratie.jsonld#L4603)
+2025-11-12T20:05:34.068Z error: Found missing class or attribute (MaterieelObject): [urn:oslo-toolchain:0dc72fc6fcab9164c4992859fd7e82642f481bb1c47731e6163cd5f091f5e20f](all-cultureel-erfgoed-basisregistratie.jsonld#L9211)
 
-2025-10-02T21:51:48.213Z error: Found missing class or attribute (MensgemaaktDing): [urn:oslo-toolchain:e28e800a3ef71e71a926f710d827fc568f63ec1cb345c8b93133d6a83102b09c](all-cultureel-erfgoed-basisregistratie.jsonld#L8509)
+2025-11-12T20:05:34.076Z error: Found missing class or attribute (Activiteit.Rol): [urn:oslo-toolchain:5d3da9c7825779ce7b2df55121c21fc357ca2f6b09c613f94521fbe4f6505f0d](all-cultureel-erfgoed-basisregistratie.jsonld#L8071)
 
-2025-10-02T21:51:48.213Z error: Found missing class or attribute (PropositioneelObject): [urn:oslo-toolchain:8f3038f4de4d4fc0f356040ce19af3f39a52f444e4a90284293de8c9e7ef1589](all-cultureel-erfgoed-basisregistratie.jsonld#L8483)
+2025-11-12T20:05:34.076Z error: Found missing class or attribute (Activiteit.Rol): [urn:oslo-toolchain:75ad30f0d6164c9c02a58fc9753901e5a78d632c872ea14ea9b1169a0f34b9f2](all-cultureel-erfgoed-basisregistratie.jsonld#L8097)
 
-2025-10-02T21:51:48.214Z error: Found missing class or attribute (SymbolischObject): [urn:oslo-toolchain:ffe14edc8934183ff512d3a927a166e464a746924474b4279f12423cff20792f](all-cultureel-erfgoed-basisregistratie.jsonld#L8498)
+2025-11-12T20:05:34.078Z info: Validation found 14 non-whitelisted assigned URIs
 
-2025-10-02T21:51:48.214Z error: Found missing class or attribute (MaterieelObject): [urn:oslo-toolchain:0dc72fc6fcab9164c4992859fd7e82642f481bb1c47731e6163cd5f091f5e20f](all-cultureel-erfgoed-basisregistratie.jsonld#L8528)
+2025-11-12T20:05:34.078Z info: Validation found 41 sentences with spelling mistakes.
 
-2025-10-02T21:51:48.225Z error: Found missing class or attribute (Persoon (source)): [urn:oslo-toolchain:eb2957bf629021190e4301047979467f09996bf3b372420938b35ec580ba5687](all-cultureel-erfgoed-basisregistratie.jsonld#L7391)
+2025-11-12T20:05:34.078Z info: Validation found 2 labels with spelling mistakes.
 
-2025-10-02T21:51:48.225Z error: Found missing class or attribute (Persoon (target)): [urn:oslo-toolchain:918ce1d663b0377c188cd1fb8a78a097fbfbc801db96470ae05886d4498bfcf3](all-cultureel-erfgoed-basisregistratie.jsonld#L7411)
+2025-11-12T20:05:34.078Z info: Validation successful! All base URIs seem to be valid.
 
-2025-10-02T21:51:48.226Z error: Found missing class or attribute (Rol.Activiteit): [urn:oslo-toolchain:a61710466866557d5a225e2c5756f616981dde925a322a005c3ec3a704510480](all-cultureel-erfgoed-basisregistratie.jsonld#L7475)
-
-2025-10-02T21:51:48.226Z error: Found missing class or attribute (Rol.Agent): [urn:oslo-toolchain:504210c7fe919023bb0d200c015bab43ec883d0449754d6d268521017101e19d](all-cultureel-erfgoed-basisregistratie.jsonld#L7495)
-
-2025-10-02T21:51:48.228Z info: Validation found 16 non-whitelisted assigned URIs
-
-2025-10-02T21:51:48.228Z info: Validation found 43 sentences with spelling mistakes.
-
-2025-10-02T21:51:48.228Z info: Validation found 2 labels with spelling mistakes.
-
-2025-10-02T21:51:48.228Z info: Validation successful! All base URIs seem to be valid.
-
-2025-10-02T21:51:48.228Z info: Validation found 8 missing referenced classes or attributes.
+2025-11-12T20:05:34.078Z info: Validation found 6 missing referenced classes or attributes.
 
 #||# oslo-jsonld-validator   
 
 #||# -------------------------------------  
 
-2025-10-02T21:51:48.982Z info: Loaded 45 URI prefixes into whitelist
+2025-11-12T20:05:34.564Z info: Loaded 47 URI prefixes into whitelist
 
-2025-10-02T21:51:49.534Z warn: Found non-whitelisted assigned URI: https://qudt.org/schema/qudt/QuantityKind for subject: [urn:oslo-toolchain:6f8ddccb111148693f0e2a2af0c14dea4d21fd5acf8b3bd862553fad2a9f46b8](all-cultureel-erfgoed-basisregistratie.jsonld#L533)
+2025-11-12T20:05:34.903Z warn: Found non-whitelisted assigned URI: https://qudt.org/schema/qudt/QuantityKind for subject: [urn:oslo-toolchain:6f8ddccb111148693f0e2a2af0c14dea4d21fd5acf8b3bd862553fad2a9f46b8](all-cultureel-erfgoed-basisregistratie.jsonld#L509)
 
-2025-10-02T21:51:49.534Z warn: Found non-whitelisted assigned URI: https://linked.art/Set for subject: [[urn:oslo-toolchain:98957be21f797852a66a95aa04fce6c5d5b78ba1315a0c325ad9613060a9fcea](all-cultureel-erfgoed-basisregistratie.jsonld#L8648)](all-cultureel-erfgoed-basisregistratie.jsonld#L1752)
+2025-11-12T20:05:34.904Z warn: Found non-whitelisted assigned URI: https://linked.art/Set for subject: [[urn:oslo-toolchain:98957be21f797852a66a95aa04fce6c5d5b78ba1315a0c325ad9613060a9fcea](all-cultureel-erfgoed-basisregistratie.jsonld#L9288)](all-cultureel-erfgoed-basisregistratie.jsonld#L1578)
 
-2025-10-02T21:51:49.534Z warn: Found non-whitelisted assigned URI: https://qudt.org/schema/qudt/Unit for subject: [urn:oslo-toolchain:fa162fedd2c0aa51bbb1a05d01477fc7a1536ebc7158d1ab84a6763c0131ce81](all-cultureel-erfgoed-basisregistratie.jsonld#L1805)
+2025-11-12T20:05:34.904Z warn: Found non-whitelisted assigned URI: https://qudt.org/schema/qudt/Unit for subject: [urn:oslo-toolchain:fa162fedd2c0aa51bbb1a05d01477fc7a1536ebc7158d1ab84a6763c0131ce81](all-cultureel-erfgoed-basisregistratie.jsonld#L1631)
 
-2025-10-02T21:51:49.534Z warn: Found non-whitelisted assigned URI: http://schema.org/email for subject: [urn:oslo-toolchain:7ed6590918d8c1ce6143d16178d826182429e1f9367731b3e00ad1e48e64f89c](all-cultureel-erfgoed-basisregistratie.jsonld#L2157)
+2025-11-12T20:05:34.904Z warn: Found non-whitelisted assigned URI: http://schema.org/email for subject: [urn:oslo-toolchain:7ed6590918d8c1ce6143d16178d826182429e1f9367731b3e00ad1e48e64f89c](all-cultureel-erfgoed-basisregistratie.jsonld#L2013)
 
-2025-10-02T21:51:49.535Z warn: Found non-whitelisted assigned URI: http://schema.org/faxNumber for subject: [urn:oslo-toolchain:44dcc71992766b5178d19b1bd70b09543bb06d0533db10ab241ba481a32d469e](all-cultureel-erfgoed-basisregistratie.jsonld#L2207)
+2025-11-12T20:05:34.904Z warn: Found non-whitelisted assigned URI: http://schema.org/faxNumber for subject: [urn:oslo-toolchain:44dcc71992766b5178d19b1bd70b09543bb06d0533db10ab241ba481a32d469e](all-cultureel-erfgoed-basisregistratie.jsonld#L2069)
 
-2025-10-02T21:51:49.535Z warn: Found non-whitelisted assigned URI: http://schema.org/telephone for subject: [urn:oslo-toolchain:cc3d51adab79e8c8875e252c8d2995f0730a10652142fe7377137a2718f18c96](all-cultureel-erfgoed-basisregistratie.jsonld#L2257)
+2025-11-12T20:05:34.904Z warn: Found non-whitelisted assigned URI: http://schema.org/telephone for subject: [urn:oslo-toolchain:cc3d51adab79e8c8875e252c8d2995f0730a10652142fe7377137a2718f18c96](all-cultureel-erfgoed-basisregistratie.jsonld#L2125)
 
-2025-10-02T21:51:49.535Z warn: Found non-whitelisted assigned URI: http://schema.org/contactPoint for subject: [urn:oslo-toolchain:01ae4f5d79ef87304bbaacce3d18f1b862212559c9da67bee04e117c87646069](all-cultureel-erfgoed-basisregistratie.jsonld#L4941)
+2025-11-12T20:05:34.904Z warn: Found non-whitelisted assigned URI: http://schema.org/contactPoint for subject: [urn:oslo-toolchain:01ae4f5d79ef87304bbaacce3d18f1b862212559c9da67bee04e117c87646069](all-cultureel-erfgoed-basisregistratie.jsonld#L5333)
 
-2025-10-02T21:51:49.535Z warn: Found non-whitelisted assigned URI: http://schema.org/contactPoint for subject: [urn:oslo-toolchain:e7d1dd4708f5f3b0f4f1e091979b210132ca22fe74d687f3bb85587d19429ab0](all-cultureel-erfgoed-basisregistratie.jsonld#L4991)
+2025-11-12T20:05:34.904Z warn: Found non-whitelisted assigned URI: http://schema.org/contactPoint for subject: [urn:oslo-toolchain:e7d1dd4708f5f3b0f4f1e091979b210132ca22fe74d687f3bb85587d19429ab0](all-cultureel-erfgoed-basisregistratie.jsonld#L5389)
 
-2025-10-02T21:51:49.535Z warn: Found non-whitelisted assigned URI: http://todo.com/Rol.Agent for subject: [urn:oslo-toolchain:504210c7fe919023bb0d200c015bab43ec883d0449754d6d268521017101e19d](all-cultureel-erfgoed-basisregistratie.jsonld#L7495)
+2025-11-12T20:05:34.905Z warn: Found non-whitelisted assigned URI: http://todo.com/Activiteit.Rol for subject: [urn:oslo-toolchain:75ad30f0d6164c9c02a58fc9753901e5a78d632c872ea14ea9b1169a0f34b9f2](all-cultureel-erfgoed-basisregistratie.jsonld#L8097)
 
-2025-10-02T21:51:49.536Z warn: Found non-whitelisted assigned URI: https://linked.art/ns/terms/member_of for subject: [urn:oslo-toolchain:c120d6e13f4f01d9b8d10a92dca68944480e6120943c44a6508f6e3fc4cb5c19](all-cultureel-erfgoed-basisregistratie.jsonld#L7515)
+2025-11-12T20:05:34.905Z warn: Found non-whitelisted assigned URI: https://linked.art/ns/terms/member_of for subject: [urn:oslo-toolchain:c120d6e13f4f01d9b8d10a92dca68944480e6120943c44a6508f6e3fc4cb5c19](all-cultureel-erfgoed-basisregistratie.jsonld#L8123)
 
-2025-10-02T21:51:49.536Z warn: Found non-whitelisted assigned URI: https://linked.art/ns/terms/has_member for subject: [urn:oslo-toolchain:32e455337c90c9a30477658600c1e14704041180b686f847ff68c8e0e17575c7](all-cultureel-erfgoed-basisregistratie.jsonld#L7559)
+2025-11-12T20:05:34.905Z warn: Found non-whitelisted assigned URI: https://linked.art/ns/terms/has_member for subject: [urn:oslo-toolchain:32e455337c90c9a30477658600c1e14704041180b686f847ff68c8e0e17575c7](all-cultureel-erfgoed-basisregistratie.jsonld#L8173)
 
-2025-10-02T21:51:49.536Z warn: Found non-whitelisted assigned URI: http://schema.org/ContactPoint for subject: [urn:oslo-toolchain:354ae5779f8297eafdfcb049446165da4621cc46b9b2eaa9862fb9970d34aed3](all-cultureel-erfgoed-basisregistratie.jsonld#L7699)
+2025-11-12T20:05:34.905Z warn: Found non-whitelisted assigned URI: http://schema.org/ContactPoint for subject: [urn:oslo-toolchain:354ae5779f8297eafdfcb049446165da4621cc46b9b2eaa9862fb9970d34aed3](all-cultureel-erfgoed-basisregistratie.jsonld#L8331)
 
-2025-10-02T21:51:49.536Z warn: Found non-whitelisted assigned URI: http://id.loc.gov/datatypes/edtf/EDTF for subject: [urn:oslo-toolchain:172a87294b9f6c1ba29d4ea18087f816339f8e906ffbc9fe0afc572c14560aaf](all-cultureel-erfgoed-basisregistratie.jsonld#L8681)
+2025-11-12T20:05:34.905Z warn: Found non-whitelisted assigned URI: http://id.loc.gov/datatypes/edtf/EDTF for subject: [urn:oslo-toolchain:a0d31d425047cfa341cf3e5d3bd1e10ae5833a061d5934e76971f5bba5a503f6](all-cultureel-erfgoed-basisregistratie.jsonld#L8907)
 
-2025-10-02T21:51:49.537Z warn: Found non-whitelisted assigned URI: http://id.loc.gov/datatypes/edtf/EDTF for subject: [urn:oslo-toolchain:a0d31d425047cfa341cf3e5d3bd1e10ae5833a061d5934e76971f5bba5a503f6](all-cultureel-erfgoed-basisregistratie.jsonld#L8275)
+2025-11-12T20:05:34.905Z warn: Found non-whitelisted assigned URI: https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html#E90 for subject: [urn:oslo-toolchain:ffe14edc8934183ff512d3a927a166e464a746924474b4279f12423cff20792f](all-cultureel-erfgoed-basisregistratie.jsonld#L9181)
 
-2025-10-02T21:51:49.537Z warn: Found non-whitelisted assigned URI: https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html#E90 for subject: [urn:oslo-toolchain:ffe14edc8934183ff512d3a927a166e464a746924474b4279f12423cff20792f](all-cultureel-erfgoed-basisregistratie.jsonld#L8498)
+2025-11-12T20:05:34.908Z warn: Found sentence without a '.': 'Immateriële dingen die sets van stellingen over echte of denkbeeldige dingen zijn of deze vertegenwoordigen en die als afzonderlijke eenheden worden gedocumenteerd of als onderwerp van discussie dienen' for subject: [urn:oslo-toolchain:5a1b9893dae327a65df62881a0dd3f6589c20715341213d2ede9ecb5bb414265](all-cultureel-erfgoed-basisregistratie.jsonld#L168)
 
-2025-10-02T21:51:49.537Z warn: Found non-whitelisted assigned URI: https://wherever/TODO for subject: [urn:oslo-toolchain:f443fd7f143c68ffbf12a3190a185e28dbdda5ff376029a2baa6a2f1d3f890d7](all-cultureel-erfgoed-basisregistratie.jsonld#L8710)
+2025-11-12T20:05:34.908Z warn: Found sentence without a '.': 'Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is' for subject: [urn:oslo-toolchain:d88585df79011be0ff75858098d9b3a4c122ca6320496f9dff8dca29260cd3d1](all-cultureel-erfgoed-basisregistratie.jsonld#L2785)
 
-2025-10-02T21:51:49.541Z warn: Found sentence without a '.': 'Immateriële dingen die sets van stellingen over echte of denkbeeldige dingen zijn of deze vertegenwoordigen en die als afzonderlijke eenheden worden gedocumenteerd of als onderwerp van discussie dienen' for subject: [urn:oslo-toolchain:5a1b9893dae327a65df62881a0dd3f6589c20715341213d2ede9ecb5bb414265](all-cultureel-erfgoed-basisregistratie.jsonld#L192)
+2025-11-12T20:05:34.908Z warn: Found sentence without a '.': 'Agent die een Recht bezit op het InformatieObject' for subject: [urn:oslo-toolchain:7ba727c629d74b73cefc2c7bf7ac3927a3903baf99cab488b4a5bdea7b97e4ef](all-cultureel-erfgoed-basisregistratie.jsonld#L4081)
 
-2025-10-02T21:51:49.541Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:3d7d634090483350ca48e333690959a8a2be37e58d1b255adb467ff9981ca955](all-cultureel-erfgoed-basisregistratie.jsonld#L1388)
+2025-11-12T20:05:34.908Z warn: Found sentence without a '.': 'Structureel onderdeel van het InformatieObject' for subject: [urn:oslo-toolchain:4e7c38326241c2306435ab066f4844c727f3a60d422f86db2bc2f8c2e004d40d](all-cultureel-erfgoed-basisregistratie.jsonld#L7409)
 
-2025-10-02T21:51:49.541Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:5e7e336a5a5b3a9880c097b4035a6240399ea32d4b212d6dd5a025be4a7e84e7](all-cultureel-erfgoed-basisregistratie.jsonld#L1584)
+2025-11-12T20:05:34.908Z warn: Found sentence without a '.': 'Structureel onderdeel van de Set' for subject: [urn:oslo-toolchain:c077eb311f580536eed77a2620f76defe07ac674288f3ddb9110be53d7a90e04](all-cultureel-erfgoed-basisregistratie.jsonld#L8223)
 
-2025-10-02T21:51:49.541Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:f443fd7f143c68ffbf12a3190a185e28dbdda5ff376029a2baa6a2f1d3f890d7](all-cultureel-erfgoed-basisregistratie.jsonld#L8710)
+2025-11-12T20:05:34.908Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:736caab6b12af589d95315dbf53eb07a95dbf677d2e5ba0c8aafcf073df5f3fa](all-cultureel-erfgoed-basisregistratie.jsonld#L9222)
 
-2025-10-02T21:51:49.541Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:ba9a9ff9a8f6855d4288c60b8b53459bf46e937c3aee7da8fe97275109b046f8](all-cultureel-erfgoed-basisregistratie.jsonld#L8809)
+2025-11-12T20:05:34.908Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:5e7e336a5a5b3a9880c097b4035a6240399ea32d4b212d6dd5a025be4a7e84e7](all-cultureel-erfgoed-basisregistratie.jsonld#L9436)
 
-2025-10-02T21:51:49.542Z warn: Found sentence without a '.': 'Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is' for subject: [urn:oslo-toolchain:d88585df79011be0ff75858098d9b3a4c122ca6320496f9dff8dca29260cd3d1](all-cultureel-erfgoed-basisregistratie.jsonld#L2889)
+2025-11-12T20:05:34.908Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:ba9a9ff9a8f6855d4288c60b8b53459bf46e937c3aee7da8fe97275109b046f8](all-cultureel-erfgoed-basisregistratie.jsonld#L9506)
 
-2025-10-02T21:51:49.542Z warn: Found sentence without a '.': 'Agent die een Recht bezit op het InformatieObject' for subject: [urn:oslo-toolchain:7ba727c629d74b73cefc2c7bf7ac3927a3903baf99cab488b4a5bdea7b97e4ef](all-cultureel-erfgoed-basisregistratie.jsonld#L3871)
+2025-11-12T20:05:34.908Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:3d7d634090483350ca48e333690959a8a2be37e58d1b255adb467ff9981ca955](all-cultureel-erfgoed-basisregistratie.jsonld#L9535)
 
-2025-10-02T21:51:49.542Z warn: Found sentence without a '.': 'Structureel onderdeel van het InformatieObject' for subject: [urn:oslo-toolchain:4e7c38326241c2306435ab066f4844c727f3a60d422f86db2bc2f8c2e004d40d](all-cultureel-erfgoed-basisregistratie.jsonld#L6915)
+2025-11-12T20:05:34.909Z warn: Found sentence without a '.': 'Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is' for subject: [urn:oslo-toolchain:d88585df79011be0ff75858098d9b3a4c122ca6320496f9dff8dca29260cd3d1](all-cultureel-erfgoed-basisregistratie.jsonld#L2785)
 
-2025-10-02T21:51:49.542Z warn: Found sentence without a '.': 'Structureel onderdeel van de Set' for subject: [urn:oslo-toolchain:c077eb311f580536eed77a2620f76defe07ac674288f3ddb9110be53d7a90e04](all-cultureel-erfgoed-basisregistratie.jsonld#L7603)
+2025-11-12T20:05:34.909Z warn: Found sentence without a '.': 'Structureel onderdeel van het InformatieObject' for subject: [urn:oslo-toolchain:4e7c38326241c2306435ab066f4844c727f3a60d422f86db2bc2f8c2e004d40d](all-cultureel-erfgoed-basisregistratie.jsonld#L7409)
 
-2025-10-02T21:51:49.542Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:736caab6b12af589d95315dbf53eb07a95dbf677d2e5ba0c8aafcf073df5f3fa](all-cultureel-erfgoed-basisregistratie.jsonld#L8539)
+2025-11-12T20:05:34.909Z warn: Found sentence without a '.': 'Structureel onderdeel van de Set' for subject: [urn:oslo-toolchain:c077eb311f580536eed77a2620f76defe07ac674288f3ddb9110be53d7a90e04](all-cultureel-erfgoed-basisregistratie.jsonld#L8223)
 
-2025-10-02T21:51:49.542Z warn: Found sentence without a '.': 'Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is' for subject: [urn:oslo-toolchain:d88585df79011be0ff75858098d9b3a4c122ca6320496f9dff8dca29260cd3d1](all-cultureel-erfgoed-basisregistratie.jsonld#L2889)
+2025-11-12T20:05:34.909Z warn: Found sentence without a '.': 'Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112),maar deze locatie kan ook een niet-geografische locatie zijn,zoals een directory,rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt,zoals d' for subject: [urn:oslo-toolchain:efdb86d0a87735db9900626f7bcb77e2b1a83d07a8411a7a0b2e48fbc528693d](all-cultureel-erfgoed-basisregistratie.jsonld#L8421)
 
-2025-10-02T21:51:49.542Z warn: Found sentence without a '.': 'Structureel onderdeel van het InformatieObject' for subject: [urn:oslo-toolchain:4e7c38326241c2306435ab066f4844c727f3a60d422f86db2bc2f8c2e004d40d](all-cultureel-erfgoed-basisregistratie.jsonld#L6915)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:057e72db619c449860fc370c363f87358e033f0b2754a2be73001666d9937cbc](all-cultureel-erfgoed-basisregistratie.jsonld#L1845)
 
-2025-10-02T21:51:49.543Z warn: Found sentence without a '.': 'Structureel onderdeel van de Set' for subject: [urn:oslo-toolchain:c077eb311f580536eed77a2620f76defe07ac674288f3ddb9110be53d7a90e04](all-cultureel-erfgoed-basisregistratie.jsonld#L7603)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:340864fd1caa225bde981a9f489ea80366da5150fdbb8827d71db6f173f0c560](all-cultureel-erfgoed-basisregistratie.jsonld#L1901)
 
-2025-10-02T21:51:49.543Z warn: Found sentence without a '.': 'Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112),maar deze locatie kan ook een niet-geografische locatie zijn,zoals een directory,rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt,zoals d' for subject: [urn:oslo-toolchain:efdb86d0a87735db9900626f7bcb77e2b1a83d07a8411a7a0b2e48fbc528693d](all-cultureel-erfgoed-basisregistratie.jsonld#L7789)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:fcd58d28db6e0f3d1f949ff77f893bd28695e83beb27e65accb8967e6514b6ac](all-cultureel-erfgoed-basisregistratie.jsonld#L1957)
 
-2025-10-02T21:51:49.543Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:3d7d634090483350ca48e333690959a8a2be37e58d1b255adb467ff9981ca955](all-cultureel-erfgoed-basisregistratie.jsonld#L1388)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7ed6590918d8c1ce6143d16178d826182429e1f9367731b3e00ad1e48e64f89c](all-cultureel-erfgoed-basisregistratie.jsonld#L2013)
 
-2025-10-02T21:51:49.543Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:5e7e336a5a5b3a9880c097b4035a6240399ea32d4b212d6dd5a025be4a7e84e7](all-cultureel-erfgoed-basisregistratie.jsonld#L1584)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:44dcc71992766b5178d19b1bd70b09543bb06d0533db10ab241ba481a32d469e](all-cultureel-erfgoed-basisregistratie.jsonld#L2069)
 
-2025-10-02T21:51:49.543Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:f443fd7f143c68ffbf12a3190a185e28dbdda5ff376029a2baa6a2f1d3f890d7](all-cultureel-erfgoed-basisregistratie.jsonld#L8710)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:cc3d51adab79e8c8875e252c8d2995f0730a10652142fe7377137a2718f18c96](all-cultureel-erfgoed-basisregistratie.jsonld#L2125)
 
-2025-10-02T21:51:49.543Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:ba9a9ff9a8f6855d4288c60b8b53459bf46e937c3aee7da8fe97275109b046f8](all-cultureel-erfgoed-basisregistratie.jsonld#L8809)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:c54ddd4e52cf3583596c8280995c6a2fade353324099db06b0ee85e5f0903fed](all-cultureel-erfgoed-basisregistratie.jsonld#L2281)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:057e72db619c449860fc370c363f87358e033f0b2754a2be73001666d9937cbc](all-cultureel-erfgoed-basisregistratie.jsonld#L2007)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:5a2973f369cc69b6448d9d99f1e7700018ca09394da13aba321ebfd845982d6f](all-cultureel-erfgoed-basisregistratie.jsonld#L2443)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:340864fd1caa225bde981a9f489ea80366da5150fdbb8827d71db6f173f0c560](all-cultureel-erfgoed-basisregistratie.jsonld#L2057)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d3e2ccf7d32db1051a76ef6fc383150bdf97840b00d5dbd51506eff859d6724f](all-cultureel-erfgoed-basisregistratie.jsonld#L2499)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:fcd58d28db6e0f3d1f949ff77f893bd28695e83beb27e65accb8967e6514b6ac](all-cultureel-erfgoed-basisregistratie.jsonld#L2107)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:950276b43c125f5b8c1a5926401e0d7e6f904481868dde5c65ab3f59e54d0b86](all-cultureel-erfgoed-basisregistratie.jsonld#L2555)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7ed6590918d8c1ce6143d16178d826182429e1f9367731b3e00ad1e48e64f89c](all-cultureel-erfgoed-basisregistratie.jsonld#L2157)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:0b8db339a01c72a1972d7892dd07f373d879f420560ae16c597f7305e320f5dd](all-cultureel-erfgoed-basisregistratie.jsonld#L2729)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:44dcc71992766b5178d19b1bd70b09543bb06d0533db10ab241ba481a32d469e](all-cultureel-erfgoed-basisregistratie.jsonld#L2207)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:dad40612ec07129beb5d54bec62fc149d2ac757438e043650168f92a6b3582c0](all-cultureel-erfgoed-basisregistratie.jsonld#L2841)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:cc3d51adab79e8c8875e252c8d2995f0730a10652142fe7377137a2718f18c96](all-cultureel-erfgoed-basisregistratie.jsonld#L2257)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:1823acdeecbbdb1aafaddadcc14d07697158af68a1da3cf795025f69549d7fe1](all-cultureel-erfgoed-basisregistratie.jsonld#L2897)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:c54ddd4e52cf3583596c8280995c6a2fade353324099db06b0ee85e5f0903fed](all-cultureel-erfgoed-basisregistratie.jsonld#L2395)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:a4349eac36ce15e3bbfffc66b9775f5f4ba9a2c710a3b1ddb3294186a1298bbe](all-cultureel-erfgoed-basisregistratie.jsonld#L2956)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:5a2973f369cc69b6448d9d99f1e7700018ca09394da13aba321ebfd845982d6f](all-cultureel-erfgoed-basisregistratie.jsonld#L2583)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:40aa294bce642993b667e36df4f19d55980113bf12ef3a0103f48040f173e483](all-cultureel-erfgoed-basisregistratie.jsonld#L3012)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d3e2ccf7d32db1051a76ef6fc383150bdf97840b00d5dbd51506eff859d6724f](all-cultureel-erfgoed-basisregistratie.jsonld#L2633)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:34efa7f57c8462bf63c864730b68ab67d87de6fe20ae417263d00ca6de1def82](all-cultureel-erfgoed-basisregistratie.jsonld#L3068)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:950276b43c125f5b8c1a5926401e0d7e6f904481868dde5c65ab3f59e54d0b86](all-cultureel-erfgoed-basisregistratie.jsonld#L2683)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7f61004847af090ed41446d29a214e7ebce96c7d4bda6ae9ff77ef79c4ccc7a7](all-cultureel-erfgoed-basisregistratie.jsonld#L3127)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:0b8db339a01c72a1972d7892dd07f373d879f420560ae16c597f7305e320f5dd](all-cultureel-erfgoed-basisregistratie.jsonld#L2839)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:67b184949dff7319cd770960fc0047ee1a5b9bec6d241b1c27263b83ecc8f953](all-cultureel-erfgoed-basisregistratie.jsonld#L3227)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:dad40612ec07129beb5d54bec62fc149d2ac757438e043650168f92a6b3582c0](all-cultureel-erfgoed-basisregistratie.jsonld#L2939)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4ec018d2e5dfb3de59781372661295df33de7ecb4a5c1b753851169cba590f6d](all-cultureel-erfgoed-basisregistratie.jsonld#L3719)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:1823acdeecbbdb1aafaddadcc14d07697158af68a1da3cf795025f69549d7fe1](all-cultureel-erfgoed-basisregistratie.jsonld#L2989)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:fceda39821c89baaa3e5333cfb6ed2484bf4ff8219183cbdf01d81ca7e4e0a51](all-cultureel-erfgoed-basisregistratie.jsonld#L4461)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:a4349eac36ce15e3bbfffc66b9775f5f4ba9a2c710a3b1ddb3294186a1298bbe](all-cultureel-erfgoed-basisregistratie.jsonld#L3042)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8516ffa20545568b837e0a189cd5242164222ee81fc291307a6f73621394b953](all-cultureel-erfgoed-basisregistratie.jsonld#L4673)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:40aa294bce642993b667e36df4f19d55980113bf12ef3a0103f48040f173e483](all-cultureel-erfgoed-basisregistratie.jsonld#L3092)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:01ae4f5d79ef87304bbaacce3d18f1b862212559c9da67bee04e117c87646069](all-cultureel-erfgoed-basisregistratie.jsonld#L5333)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:34efa7f57c8462bf63c864730b68ab67d87de6fe20ae417263d00ca6de1def82](all-cultureel-erfgoed-basisregistratie.jsonld#L3142)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e7d1dd4708f5f3b0f4f1e091979b210132ca22fe74d687f3bb85587d19429ab0](all-cultureel-erfgoed-basisregistratie.jsonld#L5389)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7f61004847af090ed41446d29a214e7ebce96c7d4bda6ae9ff77ef79c4ccc7a7](all-cultureel-erfgoed-basisregistratie.jsonld#L3195)
+2025-11-12T20:05:34.909Z warn: Found empty sentence for subject: [urn:oslo-toolchain:f9a7e47d83dbfff655e422c9a64364689e1173dc448ae117961a9cd8f1e4ee86](all-cultureel-erfgoed-basisregistratie.jsonld#L6057)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:67b184949dff7319cd770960fc0047ee1a5b9bec6d241b1c27263b83ecc8f953](all-cultureel-erfgoed-basisregistratie.jsonld#L3245)
+2025-11-12T20:05:34.910Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:736caab6b12af589d95315dbf53eb07a95dbf677d2e5ba0c8aafcf073df5f3fa](all-cultureel-erfgoed-basisregistratie.jsonld#L9222)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4ec018d2e5dfb3de59781372661295df33de7ecb4a5c1b753851169cba590f6d](all-cultureel-erfgoed-basisregistratie.jsonld#L3551)
+2025-11-12T20:05:34.910Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:5e7e336a5a5b3a9880c097b4035a6240399ea32d4b212d6dd5a025be4a7e84e7](all-cultureel-erfgoed-basisregistratie.jsonld#L9436)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:fceda39821c89baaa3e5333cfb6ed2484bf4ff8219183cbdf01d81ca7e4e0a51](all-cultureel-erfgoed-basisregistratie.jsonld#L4209)
+2025-11-12T20:05:34.910Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:ba9a9ff9a8f6855d4288c60b8b53459bf46e937c3aee7da8fe97275109b046f8](all-cultureel-erfgoed-basisregistratie.jsonld#L9506)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8516ffa20545568b837e0a189cd5242164222ee81fc291307a6f73621394b953](all-cultureel-erfgoed-basisregistratie.jsonld#L4397)
+2025-11-12T20:05:34.910Z warn: Found sentence without a '.': 'TO DO' for subject: [urn:oslo-toolchain:3d7d634090483350ca48e333690959a8a2be37e58d1b255adb467ff9981ca955](all-cultureel-erfgoed-basisregistratie.jsonld#L9535)
 
-2025-10-02T21:51:49.543Z warn: Found empty sentence for subject: [urn:oslo-toolchain:01ae4f5d79ef87304bbaacce3d18f1b862212559c9da67bee04e117c87646069](all-cultureel-erfgoed-basisregistratie.jsonld#L4941)
+2025-11-12T20:05:34.911Z warn: Labels must only contain alphabetical characters: 'toegekend door (String)' for subject: [urn:oslo-toolchain:057e72db619c449860fc370c363f87358e033f0b2754a2be73001666d9937cbc](all-cultureel-erfgoed-basisregistratie.jsonld#L1845)
 
-2025-10-02T21:51:49.544Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e7d1dd4708f5f3b0f4f1e091979b210132ca22fe74d687f3bb85587d19429ab0](all-cultureel-erfgoed-basisregistratie.jsonld#L4991)
+2025-11-12T20:05:34.912Z warn: Labels must not end with a '.': 'Geometrie van de plaats of het gebied.' for subject: [urn:oslo-toolchain:b7f5a1c63c091109ec33c2cc8e4365ef620bda7338dc0d3150b9d1e18f158085](all-cultureel-erfgoed-basisregistratie.jsonld#L4953)
 
-2025-10-02T21:51:49.544Z warn: Found empty sentence for subject: [urn:oslo-toolchain:f9a7e47d83dbfff655e422c9a64364689e1173dc448ae117961a9cd8f1e4ee86](all-cultureel-erfgoed-basisregistratie.jsonld#L5669)
+2025-11-12T20:05:34.913Z error: Found missing class or attribute (MensgemaaktDing): [urn:oslo-toolchain:e28e800a3ef71e71a926f710d827fc568f63ec1cb345c8b93133d6a83102b09c](all-cultureel-erfgoed-basisregistratie.jsonld#L9192)
 
-2025-10-02T21:51:49.544Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:736caab6b12af589d95315dbf53eb07a95dbf677d2e5ba0c8aafcf073df5f3fa](all-cultureel-erfgoed-basisregistratie.jsonld#L8539)
+2025-11-12T20:05:34.914Z error: Found missing class or attribute (PropositioneelObject): [urn:oslo-toolchain:8f3038f4de4d4fc0f356040ce19af3f39a52f444e4a90284293de8c9e7ef1589](all-cultureel-erfgoed-basisregistratie.jsonld#L9166)
 
-2025-10-02T21:51:49.546Z warn: Labels must only contain alphabetical characters: 'toegekend door (String)' for subject: [urn:oslo-toolchain:057e72db619c449860fc370c363f87358e033f0b2754a2be73001666d9937cbc](all-cultureel-erfgoed-basisregistratie.jsonld#L2007)
+2025-11-12T20:05:34.914Z error: Found missing class or attribute (SymbolischObject): [urn:oslo-toolchain:ffe14edc8934183ff512d3a927a166e464a746924474b4279f12423cff20792f](all-cultureel-erfgoed-basisregistratie.jsonld#L9181)
 
-2025-10-02T21:51:49.547Z warn: Labels must not end with a '.': 'Geometrie van de plaats of het gebied.' for subject: [urn:oslo-toolchain:b7f5a1c63c091109ec33c2cc8e4365ef620bda7338dc0d3150b9d1e18f158085](all-cultureel-erfgoed-basisregistratie.jsonld#L4603)
+2025-11-12T20:05:34.914Z error: Found missing class or attribute (MaterieelObject): [urn:oslo-toolchain:0dc72fc6fcab9164c4992859fd7e82642f481bb1c47731e6163cd5f091f5e20f](all-cultureel-erfgoed-basisregistratie.jsonld#L9211)
 
-2025-10-02T21:51:49.553Z error: Found missing class or attribute (MensgemaaktDing): [urn:oslo-toolchain:e28e800a3ef71e71a926f710d827fc568f63ec1cb345c8b93133d6a83102b09c](all-cultureel-erfgoed-basisregistratie.jsonld#L8509)
+2025-11-12T20:05:34.926Z error: Found missing class or attribute (Activiteit.Rol): [urn:oslo-toolchain:5d3da9c7825779ce7b2df55121c21fc357ca2f6b09c613f94521fbe4f6505f0d](all-cultureel-erfgoed-basisregistratie.jsonld#L8071)
 
-2025-10-02T21:51:49.554Z error: Found missing class or attribute (PropositioneelObject): [urn:oslo-toolchain:8f3038f4de4d4fc0f356040ce19af3f39a52f444e4a90284293de8c9e7ef1589](all-cultureel-erfgoed-basisregistratie.jsonld#L8483)
+2025-11-12T20:05:34.926Z error: Found missing class or attribute (Activiteit.Rol): [urn:oslo-toolchain:75ad30f0d6164c9c02a58fc9753901e5a78d632c872ea14ea9b1169a0f34b9f2](all-cultureel-erfgoed-basisregistratie.jsonld#L8097)
 
-2025-10-02T21:51:49.555Z error: Found missing class or attribute (SymbolischObject): [urn:oslo-toolchain:ffe14edc8934183ff512d3a927a166e464a746924474b4279f12423cff20792f](all-cultureel-erfgoed-basisregistratie.jsonld#L8498)
+2025-11-12T20:05:34.928Z info: Validation found 14 non-whitelisted assigned URIs
 
-2025-10-02T21:51:49.555Z error: Found missing class or attribute (MaterieelObject): [urn:oslo-toolchain:0dc72fc6fcab9164c4992859fd7e82642f481bb1c47731e6163cd5f091f5e20f](all-cultureel-erfgoed-basisregistratie.jsonld#L8528)
+2025-11-12T20:05:34.928Z info: Validation found 41 sentences with spelling mistakes.
 
-2025-10-02T21:51:49.565Z error: Found missing class or attribute (Persoon (source)): [urn:oslo-toolchain:eb2957bf629021190e4301047979467f09996bf3b372420938b35ec580ba5687](all-cultureel-erfgoed-basisregistratie.jsonld#L7391)
+2025-11-12T20:05:34.928Z info: Validation found 2 labels with spelling mistakes.
 
-2025-10-02T21:51:49.566Z error: Found missing class or attribute (Persoon (target)): [urn:oslo-toolchain:918ce1d663b0377c188cd1fb8a78a097fbfbc801db96470ae05886d4498bfcf3](all-cultureel-erfgoed-basisregistratie.jsonld#L7411)
+2025-11-12T20:05:34.928Z info: Validation successful! All base URIs seem to be valid.
 
-2025-10-02T21:51:49.566Z error: Found missing class or attribute (Rol.Activiteit): [urn:oslo-toolchain:a61710466866557d5a225e2c5756f616981dde925a322a005c3ec3a704510480](all-cultureel-erfgoed-basisregistratie.jsonld#L7475)
-
-2025-10-02T21:51:49.566Z error: Found missing class or attribute (Rol.Agent): [urn:oslo-toolchain:504210c7fe919023bb0d200c015bab43ec883d0449754d6d268521017101e19d](all-cultureel-erfgoed-basisregistratie.jsonld#L7495)
-
-2025-10-02T21:51:49.569Z info: Validation found 16 non-whitelisted assigned URIs
-
-2025-10-02T21:51:49.569Z info: Validation found 43 sentences with spelling mistakes.
-
-2025-10-02T21:51:49.569Z info: Validation found 2 labels with spelling mistakes.
-
-2025-10-02T21:51:49.569Z info: Validation successful! All base URIs seem to be valid.
-
-2025-10-02T21:51:49.569Z info: Validation found 8 missing referenced classes or attributes.
+2025-11-12T20:05:34.928Z info: Validation found 6 missing referenced classes or attributes.
 

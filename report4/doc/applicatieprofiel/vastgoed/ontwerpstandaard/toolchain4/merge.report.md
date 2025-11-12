@@ -12,5 +12,5 @@
 
 #||# start processing  
 
-#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/merged/merged_OSLO-Vastgoed-AP_en.jsonld  
+#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/merged/merged_vastgoed_en.jsonld  
 

@@ -98,10 +98,6 @@ https://data.vlaanderen.be/ns/persoon#Inwonerschap
 
 new term introduced, no translation found
 
-http://www.w3.org/2004/02/skos/core#Concept
-
-new term introduced, no translation found
-
 https://data.vlaanderen.be/ns/persoon#Overlijden
 
 new term introduced, no translation found
@@ -122,19 +118,7 @@ https://data.vlaanderen.be/ns/persoon#Gezinsrelatie
 
 new term introduced, no translation found
 
-http://www.w3.org/2004/02/skos/core#Concept
-
-new term introduced, no translation found
-
 https://data.vlaanderen.be/ns/persoon#Samenwonen
-
-new term introduced, no translation found
-
-http://www.w3.org/2004/02/skos/core#Concept
-
-new term introduced, no translation found
-
-http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -159,10 +143,6 @@ https://data.vlaanderen.be/ns/persoon#BurgerlijkeStaat
 new term introduced, no translation found
 
 https://data.vlaanderen.be/ns/persoon#PermanentInwoner
-
-new term introduced, no translation found
-
-http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 

@@ -2,231 +2,291 @@
 
 #||# -------------------------------------
 
-2025-10-02T21:40:45.114Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Generiek:Gemeente:(Gemeente -> Object))
+2025-11-12T19:56:24.843Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2025-10-02T21:40:45.116Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2025-11-12T19:56:24.846Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-10-02T21:40:45.118Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:Persoon:(Persoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.849Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:Persoon:(Persoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.119Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
+[ { tagName: 'name', tagValue: 'Persoonsrelatie.persoon.source' } ] []
 
-2025-10-02T21:40:45.119Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:Inwonerschap:(Inwonerschap -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.853Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.119Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:Arts:(Arts -> Zorgverlener) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.853Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:Inwonerschap:(Inwonerschap -> Verblijfplaats) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.119Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):produceert is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.853Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:Arts:(Arts -> Zorgverlener) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.120Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):produceert has name "produceert". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-11-12T19:56:24.854Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):produceert is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.120Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):vereist is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.854Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):produceert has name "produceert". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-02T21:40:45.120Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):vereist has name "vereist". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-11-12T19:56:24.854Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):vereist is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.120Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):isGerelateerdMet is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.854Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):vereist has name "vereist". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-02T21:40:45.121Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):isGerelateerdMet has name "isGerelateerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2025-11-12T19:56:24.855Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):isGerelateerdMet is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.121Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:Foetus:(Foetus -> Persoon) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.855Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):isGerelateerdMet has name "isGerelateerdMet". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-10-02T21:40:45.121Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:MedischVerslag:(MedischVerslag -> Bewijs) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.856Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:Foetus:(Foetus -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.122Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:Persoon:(Persoon -> Zwangerschap) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.856Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:MedischVerslag:(MedischVerslag -> Bewijs) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.122Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:Persoon:(Persoon -> Bevalling) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.857Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:Persoon:(Persoon -> Zwangerschap) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.122Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:MedischVerslagOverlijden:(MedischVerslagOverlijden -> MedischVerslag) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.857Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:Persoon:(Persoon -> Bevalling) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.122Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:Teraardestelling:(Teraardestelling -> StoffelijkeRestverwerking) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.857Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:MedischVerslagOverlijden:(MedischVerslagOverlijden -> MedischVerslag) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.123Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:Crematie:(Crematie -> StoffelijkeRestverwerking) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.858Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:Teraardestelling:(Teraardestelling -> StoffelijkeRestverwerking) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.123Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:OverlijdensfhandelingOutput:(OverlijdensfhandelingOutput -> Bewijs) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.858Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:Crematie:(Crematie -> StoffelijkeRestverwerking) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.123Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:OverlijdensafhandelingDienst:(OverlijdensafhandelingDienst -> PubliekeDienstverlening (Consumptie)) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.858Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:OverlijdensfhandelingOutput:(OverlijdensfhandelingOutput -> Bewijs) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.123Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:Overlijdenstoestand:(Overlijdenstoestand -> Gezondheidstoestand) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.858Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:OverlijdensafhandelingDienst:(OverlijdensafhandelingDienst -> PubliekeDienstverlening (Consumptie)) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.123Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:OverlijdensfhandelingOutput:(OverlijdensfhandelingOutput -> Output) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.858Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:Overlijdenstoestand:(Overlijdenstoestand -> Gezondheidstoestand) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.124Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:Geboortetoestand:(Geboortetoestand -> Gezondheidstoestand) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.859Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:OverlijdensfhandelingOutput:(OverlijdensfhandelingOutput -> Output) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.124Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:Zwangerschapstoestand:(Zwangerschapstoestand -> Gezondheidstoestand) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.859Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:Geboortetoestand:(Geboortetoestand -> Gezondheidstoestand) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.124Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:Bevallingstoestand:(Bevallingstoestand -> Gezondheidstoestand) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.859Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:Zwangerschapstoestand:(Zwangerschapstoestand -> Gezondheidstoestand) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.124Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.859Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:Bevallingstoestand:(Bevallingstoestand -> Gezondheidstoestand) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.124Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:Borstvoeding:(Borstvoeding -> Voedingsinname) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.859Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.124Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:Doodgeboorte:(Doodgeboorte -> Overlijden) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.859Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:Borstvoeding:(Borstvoeding -> Voedingsinname) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.124Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Generiek:Agent:(Agent -> Participatie) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.860Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:Doodgeboorte:(Doodgeboorte -> Overlijden) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.124Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):(PubliekeDienstverlening (Consumptie) -> Participatie) is not an association with a source role. Ignoring this connector.
+2025-11-12T19:56:24.860Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Generiek:Agent:(Agent -> Participatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.125Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-11-12T19:56:24.860Z info: Connector Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):(PubliekeDienstverlening (Consumptie) -> Participatie) is not an association with a source role. Ignoring this connector.
 
-2025-10-02T21:40:45.125Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Overlijdensaangifte). Using fallback URI (http://todo.com/) instead.
+2025-11-12T19:56:24.861Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-10-02T21:40:45.125Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon). Using fallback URI (http://todo.com/) instead.
+2025-11-12T19:56:24.861Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Overlijdensaangifte). Using fallback URI (http://todo.com/) instead.
 
-2025-10-02T21:40:45.125Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Overlijdensaangifte:Hulppakket). Using fallback URI (http://todo.com/) instead.
+2025-11-12T19:56:24.861Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon). Using fallback URI (http://todo.com/) instead.
 
-2025-10-02T21:40:45.125Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Cultuurparticipatie). Using fallback URI (http://todo.com/) instead.
+2025-11-12T19:56:24.861Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Overlijdensaangifte:Hulppakket). Using fallback URI (http://todo.com/) instead.
 
-2025-10-02T21:40:45.125Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Organisatie). Using fallback URI (http://todo.com/) instead.
+2025-11-12T19:56:24.862Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Cultuurparticipatie). Using fallback URI (http://todo.com/) instead.
 
-2025-10-02T21:40:45.125Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Overlijdensaangifte:CCCEV). Using fallback URI (http://todo.com/) instead.
+2025-11-12T19:56:24.862Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Organisatie). Using fallback URI (http://todo.com/) instead.
 
-2025-10-02T21:40:45.125Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Adres). Using fallback URI (http://todo.com/) instead.
+2025-11-12T19:56:24.862Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Overlijdensaangifte:CCCEV). Using fallback URI (http://todo.com/) instead.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Connector (wordtGeobserveerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.862Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Adres). Using fallback URI (http://todo.com/) instead.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Connector (leidtTot) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.868Z warn: [ConnectorConverterHandler]: Connector (wordtGeobserveerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (leidtTot) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-12T19:56:24.868Z warn: [ConnectorConverterHandler]: Connector (leidtTot) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Connector (gevolgVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.869Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (leidtTot) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (gevolgVan) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-12T19:56:24.869Z warn: [ConnectorConverterHandler]: Connector (gevolgVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Connector (leidtTot) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.869Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (gevolgVan) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Connector (produceert) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.869Z warn: [ConnectorConverterHandler]: Connector (leidtTot) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Connector (wordtGeproduceerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.869Z warn: [ConnectorConverterHandler]: Connector (produceert) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Connector (wordtGeorganiseerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.869Z warn: [ConnectorConverterHandler]: Connector (wordtGeproduceerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Connector (organiseert) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.869Z warn: [ConnectorConverterHandler]: Connector (wordtGeorganiseerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Connector (heeftInput) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.869Z warn: [ConnectorConverterHandler]: Connector (organiseert) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftInput) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-12T19:56:24.869Z warn: [ConnectorConverterHandler]: Connector (heeftInput) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Connector (heeftKenmerk) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.869Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftInput) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftKenmerk) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-12T19:56:24.869Z warn: [ConnectorConverterHandler]: Connector (heeftKenmerk) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Connector (beeindigt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.869Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftKenmerk) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-02T21:40:45.130Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (beeindigt) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Connector (beeindigt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (wordtBeeindigdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (beeindigt) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (wordtBeeindigdDoor) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Connector (wordtBeeindigdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (stoptOntwikkeling) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (wordtBeeindigdDoor) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (stoptOntwikkeling) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Connector (stoptOntwikkeling) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (ontwikkelingStoptDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (stoptOntwikkeling) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (ontwikkelingStoptDoor) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Connector (ontwikkelingStoptDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (gedocumenteerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (ontwikkelingStoptDoor) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (komtVoortUit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Connector (gedocumenteerdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (komtVoortUit) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Connector (komtVoortUit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (deelVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (komtVoortUit) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (heeftFoetus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Connector (deelVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (doetOntstaan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Connector (heeftFoetus) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (ontstaatDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Connector (doetOntstaan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (heeftBevallingstoestand) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Connector (ontstaatDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (heeftAssistentie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Connector (heeftBevallingstoestand) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (Persoon (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Connector (heeftAssistentie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (Persoon (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Connector (Persoon (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (bewijst) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Connector (bewijst) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (bewijst) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (bewijst) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (wordtBewezenDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.870Z warn: [ConnectorConverterHandler]: Connector (wordtBewezenDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (wordtBewezenDoor) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (wordtBewezenDoor) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (bepaalt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Connector (bepaalt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (wordtBepaaldDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Connector (wordtBepaaldDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (isInBezitVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Connector (isInBezitVan) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (isInBezitVan) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (isInBezitVan) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (heeftInBezit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Connector (heeftInBezit) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftInBezit) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (heeftInBezit) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (opgesteldDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Connector (opgesteldDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (opgesteldDoor) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (opgesteldDoor) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (steltOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Connector (steltOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (steltOp) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (steltOp) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (voedt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Connector (voedt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.131Z warn: [ConnectorConverterHandler]: Connector (wordtGevoedDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Connector (wordtGevoedDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.132Z warn: [ConnectorConverterHandler]: Connector (volgtOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Connector (volgtOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.132Z warn: [ConnectorConverterHandler]: Connector (steltOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Connector (steltOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.132Z warn: [ConnectorConverterHandler]: Connector (opgesteldDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Connector (opgesteldDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.132Z warn: [ConnectorConverterHandler]: Connector (wordtGevolgdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Connector (wordtGevolgdDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.132Z warn: [ConnectorConverterHandler]: Connector (volgtOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Connector (volgtOp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.132Z warn: [ConnectorConverterHandler]: Connector (veroorzaakt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Connector (veroorzaakt) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.132Z warn: [ConnectorConverterHandler]: Connector (veroorzaaktDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-12T19:56:24.871Z warn: [ConnectorConverterHandler]: Connector (veroorzaaktDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-10-02T21:40:45.134Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:Geboorte has an empty value for tag ap-usageNote-nl.
+2025-11-12T19:56:24.873Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:Nationaliteitscode) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.135Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:Output has an empty value for tag ap-usageNote-nl.
+2025-11-12T19:56:24.873Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:LocatieOverlijdenType) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.140Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:MedischVerslag has an empty value for tag ap-usageNote-nl.
+2025-11-12T19:56:24.873Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Cultuurparticipatie:Inkomensniveau) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.140Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:MedischVerslag has an empty value for tag usageNote-nl.
+2025-11-12T19:56:24.873Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:VoedingsinnameItem) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.142Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:OverlijdensfhandelingOutput has an empty value for tag ap-usageNote-nl.
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:RisicoType) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.148Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:Geslacht has an empty value for tag ap-usageNote-nl.
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:BezwaarType) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.149Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:Verblijfplaats:type has an empty value for tag ap-usageNote-nl.
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:Observatiestatus) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.149Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):beschrijving has already a value for ap-usageNote in language nl, but will be overwritten.
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:AardOverlijden) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.149Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:Kost has an empty value for tag ap-usageNote-nl.
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:LijkbezorgingType) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.151Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:BewijsType has an empty value for tag ap-usageNote-nl.
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:RitueelType) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.156Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:ParticipatieRol has an empty value for tag ap-usageNote-nl.
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:DosisFormaat) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.166Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Generiek:Tijdsinterval has an empty value for tag ap-usageNote-nl.
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO-Cultuurparticipatie:Onderwijsniveau) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.188Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:MedischeObservatie:effectiefTijdstip has an empty value for tag ap-label-nl.
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:ProcedureZorgType) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.188Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:FoetaalOverlijden:doodsoorzaak has already a value for ap-label-nl in language nl, but will be overwritten.
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:ArtsType) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.191Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:GeassocieerdeOorzaak:gelinktAan has an empty value for tag ap-usageNote-nl.
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:OverlijdenAfhandelingOutput) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.194Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:Doodsoorzaak:gelinktAan has an empty value for tag ap-usageNote-nl.
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:AssistentieBevallingType) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.202Z warn: [ConverterHandler]: Entity with path vastgesteld has an empty value for tag definition-nl.
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:ICD) with URI http://www.w3.org/2004/02/skos/core#Concept
 
-2025-10-02T21:40:45.211Z warn: [ConverterHandler]: Entity with path veroorzaaktDoor has an empty value for tag definition-nl.
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:MedischVerslagOverlijdenType) with URI http://www.w3.org/2004/02/skos/core#Concept
+
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:Conceptietechniek) with URI http://www.w3.org/2004/02/skos/core#Concept
+
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:DoodgeboorteType) with URI http://www.w3.org/2004/02/skos/core#Concept
+
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:LiggingKindType) with URI http://www.w3.org/2004/02/skos/core#Concept
+
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:Bevallingswijze) with URI http://www.w3.org/2004/02/skos/core#Concept
+
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:OverlijdenAfhandelingDienst) with URI http://www.w3.org/2004/02/skos/core#Concept
+
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:ObservatieType) with URI http://www.w3.org/2004/02/skos/core#Concept
+
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:StoffelijkRestType) with URI http://www.w3.org/2004/02/skos/core#Concept
+
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:FoetaleBewakingType) with URI http://www.w3.org/2004/02/skos/core#Concept
+
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:IndicatieAssistentieType) with URI http://www.w3.org/2004/02/skos/core#Concept
+
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:StatusMedischVerslag) with URI http://www.w3.org/2004/02/skos/core#Concept
+
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:StatusZwangerschap) with URI http://www.w3.org/2004/02/skos/core#Concept
+
+2025-11-12T19:56:24.874Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:MaatregelMedischVerslag) with URI http://www.w3.org/2004/02/skos/core#Concept
+
+2025-11-12T19:56:24.876Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:Geboorte has an empty value for tag ap-usageNote-nl.
+
+2025-11-12T19:56:24.877Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:Output has an empty value for tag ap-usageNote-nl.
+
+2025-11-12T19:56:24.882Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:MedischVerslag has an empty value for tag ap-usageNote-nl.
+
+2025-11-12T19:56:24.883Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:MedischVerslag has an empty value for tag usageNote-nl.
+
+2025-11-12T19:56:24.884Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:OverlijdensfhandelingOutput has an empty value for tag ap-usageNote-nl.
+
+2025-11-12T19:56:24.890Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:Geslacht has an empty value for tag ap-usageNote-nl.
+
+2025-11-12T19:56:24.891Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Persoon:Verblijfplaats:type has an empty value for tag ap-usageNote-nl.
+
+2025-11-12T19:56:24.892Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:PubliekeDienstverlening (Consumptie):beschrijving has already a value for ap-usageNote in language nl, but will be overwritten.
+
+2025-11-12T19:56:24.892Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:Kost has an empty value for tag ap-usageNote-nl.
+
+2025-11-12T19:56:24.895Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:BewijsType has an empty value for tag ap-usageNote-nl.
+
+2025-11-12T19:56:24.896Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Dienst:ParticipatieRol has an empty value for tag ap-usageNote-nl.
+
+2025-11-12T19:56:24.901Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Generiek:Tijdsinterval has an empty value for tag ap-usageNote-nl.
+
+2025-11-12T19:56:24.918Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO-Gezondheidstoestand:MedischeObservatie:effectiefTijdstip has an empty value for tag ap-label-nl.
+
+2025-11-12T19:56:24.920Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:FoetaalOverlijden:doodsoorzaak has already a value for ap-label-nl in language nl, but will be overwritten.
+
+2025-11-12T19:56:24.935Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:GeassocieerdeOorzaak:gelinktAan has an empty value for tag ap-usageNote-nl.
+
+2025-11-12T19:56:24.939Z warn: [ConverterHandler]: Entity with path Model:applicatieprofiel_Overlijdensaangifte:OSLO_Overlijdensaangifte:Doodsoorzaak:gelinktAan has an empty value for tag ap-usageNote-nl.
+
+2025-11-12T19:56:24.949Z warn: [ConverterHandler]: Entity with path vastgesteld has an empty value for tag definition-nl.
+
+2025-11-12T19:56:24.951Z warn: [ConverterHandler]: Entity with path veroorzaaktDoor has an empty value for tag definition-nl.
 
 #||# -------------------------------------
 

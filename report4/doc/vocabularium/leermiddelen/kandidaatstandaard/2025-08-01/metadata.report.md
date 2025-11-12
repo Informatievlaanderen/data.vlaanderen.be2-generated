@@ -8,8 +8,6 @@
 
 #||# start processing  
 
-Warning: no navigation defined for this rendering  
-
 #||# Checking Namespaces  
 
 #||# Finished  
@@ -27,8 +25,6 @@ Warning: no navigation defined for this rendering
 #||# done  
 
 #||# start processing  
-
-Warning: no navigation defined for this rendering  
 
 #||# Checking Namespaces  
 

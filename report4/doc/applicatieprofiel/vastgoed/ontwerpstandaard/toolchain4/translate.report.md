@@ -1,8 +1,8 @@
-INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/translation/OSLO-Vastgoed-AP_nl.json
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/translation/vastgoed_nl.json
 
-OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/translation/OSLO-Vastgoed-AP_nl.json
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/translation/vastgoed_nl.json
 
-TRANSLATIONFILE: OSLO-Vastgoed-AP_nl.json
+TRANSLATIONFILE: vastgoed_nl.json
 
 #||# translate for language nl  
 
@@ -18,13 +18,13 @@ WARNING The entered language values are the same!
 
 #||# Write complete  
 
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/translation/OSLO-Vastgoed-AP_nl.json  
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/translation/vastgoed_nl.json  
 
-INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/translation/OSLO-Vastgoed-AP_en.json
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/translation/vastgoed_en.json
 
-OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/translation/OSLO-Vastgoed-AP_en.json
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/translation/vastgoed_en.json
 
-TRANSLATIONFILE: OSLO-Vastgoed-AP_en.json
+TRANSLATIONFILE: vastgoed_en.json
 
 #||# translate for language en  
 
@@ -38,5 +38,5 @@ TRANSLATIONFILE: OSLO-Vastgoed-AP_en.json
 
 #||# Write complete  
 
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/translation/OSLO-Vastgoed-AP_en.json  
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/vastgoed/ontwerpstandaard/toolchain4/translation/vastgoed_en.json  
 

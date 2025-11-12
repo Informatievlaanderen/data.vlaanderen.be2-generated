@@ -2,79 +2,35 @@
 
 #||# -------------------------------------  
 
-2025-10-02T21:51:32.326Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2f8074d7c2466a5130e85b1f28002c4d9fd0f2daea1bd0c9637dc607ba5c2038](all-verkeersmeldingen.jsonld#L553)".
+2025-11-12T20:05:54.608Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-verkeersmeldingen.jsonld#L5771)".
 
-2025-10-02T21:51:32.329Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5f5a13564cf762a41dcb8b0976a3b1343f191ccbfda0b4bdb0cef830de959149](all-verkeersmeldingen.jsonld#L685)".
+2025-11-12T20:05:54.611Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-verkeersmeldingen.jsonld#L5793)".
 
-2025-10-02T21:51:32.329Z warn: Unable to find the description for subject "[urn:oslo-toolchain:83f7fa8c2374d98e571d0e7454e4bc3e0d4d6a58c82fbef6a27db3a9e61eebc8](all-verkeersmeldingen.jsonld#L804)".
+2025-11-12T20:05:54.612Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-verkeersmeldingen.jsonld#L5804)".
 
-2025-10-02T21:51:32.330Z warn: Unable to find the description for subject "[urn:oslo-toolchain:580bd2c32d57291cdfb4c84600776ed70d587740102dd46119257bca90e9fd29](all-verkeersmeldingen.jsonld#L896)".
+2025-11-12T20:05:54.612Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-verkeersmeldingen.jsonld#L5815)".
 
-2025-10-02T21:51:32.330Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9e201c8ff62a60f3c299c6bbe12b345c7c8d90ceff2144056801f53c0ec5cbb1](all-verkeersmeldingen.jsonld#L920)".
+2025-11-12T20:05:54.613Z warn: Unable to find the description for subject "urn:oslo-toolchain:474715019".
 
-2025-10-02T21:51:32.330Z warn: Unable to find the description for subject "[urn:oslo-toolchain:7e3338cea6fb98914cb1bbb2504b01874239972fb9b7827313a0dc1f13a01ec5](all-verkeersmeldingen.jsonld#L944)".
+2025-11-12T20:05:54.651Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c9ac5d2a121458d9ec6a69b9e59d2b036199ce728a37a613efb23117a70b3693](all-verkeersmeldingen.jsonld#L5289)".
 
-2025-10-02T21:51:32.331Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-verkeersmeldingen.jsonld#L3233)".
-
-2025-10-02T21:51:32.331Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-verkeersmeldingen.jsonld#L3244)".
-
-2025-10-02T21:51:32.331Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-verkeersmeldingen.jsonld#L3255)".
-
-2025-10-02T21:51:32.332Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-verkeersmeldingen.jsonld#L3266)".
-
-2025-10-02T21:51:32.332Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-verkeersmeldingen.jsonld#L3277)".
-
-2025-10-02T21:51:32.333Z warn: Unable to find the description for subject "urn:oslo-toolchain:474715019".
-
-Error: Unable to find the range for subject "[urn:oslo-toolchain:17f63c93429513422fb077a05af5351957e068e4271b03c6e33d0969c2a26011](all-verkeersmeldingen.jsonld#L2461)".
-
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:48:19)
-
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
-
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:51)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-11-12T20:05:54.652Z warn: Unable to find the description for subject "[urn:oslo-toolchain:d48f9f93510fca41c65f4134271b39dbf522a41841bca48ce27ce76b111bdb54](all-verkeersmeldingen.jsonld#L5315)".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2025-10-02T21:51:33.400Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2f8074d7c2466a5130e85b1f28002c4d9fd0f2daea1bd0c9637dc607ba5c2038](all-verkeersmeldingen.jsonld#L553)".
+2025-11-12T20:05:55.629Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-verkeersmeldingen.jsonld#L5771)".
 
-2025-10-02T21:51:33.402Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5f5a13564cf762a41dcb8b0976a3b1343f191ccbfda0b4bdb0cef830de959149](all-verkeersmeldingen.jsonld#L685)".
+2025-11-12T20:05:55.631Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-verkeersmeldingen.jsonld#L5793)".
 
-2025-10-02T21:51:33.404Z warn: Unable to find the description for subject "[urn:oslo-toolchain:83f7fa8c2374d98e571d0e7454e4bc3e0d4d6a58c82fbef6a27db3a9e61eebc8](all-verkeersmeldingen.jsonld#L804)".
+2025-11-12T20:05:55.631Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-verkeersmeldingen.jsonld#L5804)".
 
-2025-10-02T21:51:33.404Z warn: Unable to find the description for subject "[urn:oslo-toolchain:580bd2c32d57291cdfb4c84600776ed70d587740102dd46119257bca90e9fd29](all-verkeersmeldingen.jsonld#L896)".
+2025-11-12T20:05:55.632Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-verkeersmeldingen.jsonld#L5815)".
 
-2025-10-02T21:51:33.405Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9e201c8ff62a60f3c299c6bbe12b345c7c8d90ceff2144056801f53c0ec5cbb1](all-verkeersmeldingen.jsonld#L920)".
+2025-11-12T20:05:55.632Z warn: Unable to find the description for subject "urn:oslo-toolchain:474715019".
 
-2025-10-02T21:51:33.405Z warn: Unable to find the description for subject "[urn:oslo-toolchain:7e3338cea6fb98914cb1bbb2504b01874239972fb9b7827313a0dc1f13a01ec5](all-verkeersmeldingen.jsonld#L944)".
+2025-11-12T20:05:55.657Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c9ac5d2a121458d9ec6a69b9e59d2b036199ce728a37a613efb23117a70b3693](all-verkeersmeldingen.jsonld#L5289)".
 
-2025-10-02T21:51:33.405Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-verkeersmeldingen.jsonld#L3233)".
-
-2025-10-02T21:51:33.405Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-verkeersmeldingen.jsonld#L3244)".
-
-2025-10-02T21:51:33.406Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-verkeersmeldingen.jsonld#L3255)".
-
-2025-10-02T21:51:33.406Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-verkeersmeldingen.jsonld#L3266)".
-
-2025-10-02T21:51:33.408Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-verkeersmeldingen.jsonld#L3277)".
-
-2025-10-02T21:51:33.409Z warn: Unable to find the description for subject "urn:oslo-toolchain:474715019".
-
-Error: Unable to find the range for subject "[urn:oslo-toolchain:17f63c93429513422fb077a05af5351957e068e4271b03c6e33d0969c2a26011](all-verkeersmeldingen.jsonld#L2461)".
-
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:48:19)
-
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
-
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:51)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-11-12T20:05:55.658Z warn: Unable to find the description for subject "[urn:oslo-toolchain:d48f9f93510fca41c65f4134271b39dbf522a41841bca48ce27ce76b111bdb54](all-verkeersmeldingen.jsonld#L5315)".
 

@@ -12,5 +12,5 @@
 
 #||# start processing  
 
-#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/vocabularium/openbaardomein/infrastructuur/ontwerpstandaard/toolchain4/merged/merged_openbaardomein_en.jsonld  
+#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/vocabularium/openbaardomein/infrastructuur/ontwerpstandaard/toolchain4/merged/merged_infrastructuur_en.jsonld  
 

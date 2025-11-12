@@ -1,32 +1,16 @@
 #||# merge for language nl   
 
-
-
 #||# -------------------------------------  
-
-
 
 #||# merge for language en   
 
-
-
 #||# -------------------------------------  
 
+#||# start reading  
 
+#||# done  
 
-#||# merge for language nl   
+#||# start processing  
 
-
-
-#||# -------------------------------------  
-
-
-
-#||# merge for language en   
-
-
-
-#||# -------------------------------------  
-
-
+#||# Write complete; The original file was updated to: /tmp/workspace/report4/doc/vocabularium/toestemming/ontwerpstandaard/toolchain4/merged/merged_toestemming_en.jsonld  
 

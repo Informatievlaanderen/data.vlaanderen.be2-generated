@@ -2,67 +2,31 @@
 
 #||# -------------------------------------  
 
-2025-10-02T21:51:20.369Z warn: Unable to find the description for subject "[urn:oslo-toolchain:3f34c8b54882bf0e45278d0a576e53d8e11853d6e81cec95664c62ce72048df5](all-waterkwaliteit-ap.jsonld#L792)".
+Error: Unable to find the assigned URI for range "urn:oslo-toolchain:56dbeecc51b7d30799db2e45b2009294953a3d0854c120297a1e39b7692a7c15".
 
-2025-10-02T21:51:20.370Z warn: Unable to find the description for subject "[urn:oslo-toolchain:a4399bb51c2a687f18c7f1d541552fcc8ba2a2ee28e7a6c2be0fde8b19aeed3e](all-waterkwaliteit-ap.jsonld#L810)".
+    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
 
-2025-10-02T21:51:20.371Z warn: Unable to find the description for subject "[urn:oslo-toolchain:025c4ff129a72d3ba834206314601cb0c70e02f592f1a8e84c520b44142d0d54](all-waterkwaliteit-ap.jsonld#L828)".
+    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
 
-2025-10-02T21:51:20.371Z warn: Unable to find the description for subject "[urn:oslo-toolchain:56dbeecc51b7d30799db2e45b2009294953a3d0854c120297a1e39b7692a7c15](all-waterkwaliteit-ap.jsonld#L846)".
+    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
 
-2025-10-02T21:51:20.371Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10ffac374519d9da98778d9721a90fcc28f3f96872f6466c0d93f494dd11c987](all-waterkwaliteit-ap.jsonld#L864)".
+    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
 
-2025-10-02T21:51:20.372Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5ee92c92fbb556fcf6d32ba042248033464414fbab8f0386bdfcf027735e1224](all-waterkwaliteit-ap.jsonld#L1047)".
-
-2025-10-02T21:51:20.372Z warn: Unable to find the description for subject "[urn:oslo-toolchain:e3cb0ca30d1db3118ac90038ef64f3c4cf18ee28f56f4bbe0e4698cf5957a224](all-waterkwaliteit-ap.jsonld#L1313)".
-
-2025-10-02T21:51:20.373Z warn: Unable to find the description for subject "[urn:oslo-toolchain:d37f50da571ca51a1cc07b7dacbf97effaab8315a669c046cd46ca80a3d50b95](all-waterkwaliteit-ap.jsonld#L1403)".
-
-2025-10-02T21:51:20.373Z warn: Unable to find the description for subject "[urn:oslo-toolchain:44f07b53925e3ed9a6f0de0966549ddf5942d9269117c41c253a1f1ffabc1e24](all-waterkwaliteit-ap.jsonld#L1546)".
-
-2025-10-02T21:51:20.373Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8cdae4a9c91fe2e30aecfade8af94f22211c6c7d7e28124a07479c5b268fd3e7](all-waterkwaliteit-ap.jsonld#L1564)".
-
-2025-10-02T21:51:20.374Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b4a02e679001f068fb59a74fc92cb35ab5ff3923b731f9309d2d12e10caa036e](all-waterkwaliteit-ap.jsonld#L1582)".
-
-2025-10-02T21:51:20.374Z warn: Unable to find the description for subject "[urn:oslo-toolchain:58eb4b17c778c358cec4e571d8a5a9f49f903a905f5ee1ae36f0953a58073cd4](all-waterkwaliteit-ap.jsonld#L1600)".
-
-2025-10-02T21:51:20.374Z warn: Unable to find the description for subject "[urn:oslo-toolchain:62575d6eaac5af9a2eb21f705566098d18564987b0e6561ad7508c66fc7d4db8](all-waterkwaliteit-ap.jsonld#L1624)".
-
-2025-10-02T21:51:20.394Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-waterkwaliteit-ap.jsonld#L3952)".
-
-2025-10-02T21:51:20.395Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5d7518db4509aefc3135b19b233e3c4c8166f2d44618b8be66ab096d5bea2d8d](all-waterkwaliteit-ap.jsonld#L3972)".
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2025-10-02T21:51:21.347Z warn: Unable to find the description for subject "[urn:oslo-toolchain:56dbeecc51b7d30799db2e45b2009294953a3d0854c120297a1e39b7692a7c15](all-waterkwaliteit-ap.jsonld#L846)".
+Error: Unable to find the assigned URI for range "urn:oslo-toolchain:56dbeecc51b7d30799db2e45b2009294953a3d0854c120297a1e39b7692a7c15".
 
-2025-10-02T21:51:21.349Z warn: Unable to find the description for subject "[urn:oslo-toolchain:3f34c8b54882bf0e45278d0a576e53d8e11853d6e81cec95664c62ce72048df5](all-waterkwaliteit-ap.jsonld#L792)".
+    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
 
-2025-10-02T21:51:21.350Z warn: Unable to find the description for subject "[urn:oslo-toolchain:a4399bb51c2a687f18c7f1d541552fcc8ba2a2ee28e7a6c2be0fde8b19aeed3e](all-waterkwaliteit-ap.jsonld#L810)".
+    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
 
-2025-10-02T21:51:21.350Z warn: Unable to find the description for subject "[urn:oslo-toolchain:025c4ff129a72d3ba834206314601cb0c70e02f592f1a8e84c520b44142d0d54](all-waterkwaliteit-ap.jsonld#L828)".
+    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
 
-2025-10-02T21:51:21.351Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10ffac374519d9da98778d9721a90fcc28f3f96872f6466c0d93f494dd11c987](all-waterkwaliteit-ap.jsonld#L864)".
+    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
 
-2025-10-02T21:51:21.351Z warn: Unable to find the description for subject "[urn:oslo-toolchain:d37f50da571ca51a1cc07b7dacbf97effaab8315a669c046cd46ca80a3d50b95](all-waterkwaliteit-ap.jsonld#L1403)".
-
-2025-10-02T21:51:21.352Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5ee92c92fbb556fcf6d32ba042248033464414fbab8f0386bdfcf027735e1224](all-waterkwaliteit-ap.jsonld#L1047)".
-
-2025-10-02T21:51:21.352Z warn: Unable to find the description for subject "[urn:oslo-toolchain:e3cb0ca30d1db3118ac90038ef64f3c4cf18ee28f56f4bbe0e4698cf5957a224](all-waterkwaliteit-ap.jsonld#L1313)".
-
-2025-10-02T21:51:21.353Z warn: Unable to find the description for subject "[urn:oslo-toolchain:44f07b53925e3ed9a6f0de0966549ddf5942d9269117c41c253a1f1ffabc1e24](all-waterkwaliteit-ap.jsonld#L1546)".
-
-2025-10-02T21:51:21.353Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8cdae4a9c91fe2e30aecfade8af94f22211c6c7d7e28124a07479c5b268fd3e7](all-waterkwaliteit-ap.jsonld#L1564)".
-
-2025-10-02T21:51:21.353Z warn: Unable to find the description for subject "[urn:oslo-toolchain:58eb4b17c778c358cec4e571d8a5a9f49f903a905f5ee1ae36f0953a58073cd4](all-waterkwaliteit-ap.jsonld#L1600)".
-
-2025-10-02T21:51:21.353Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b4a02e679001f068fb59a74fc92cb35ab5ff3923b731f9309d2d12e10caa036e](all-waterkwaliteit-ap.jsonld#L1582)".
-
-2025-10-02T21:51:21.354Z warn: Unable to find the description for subject "[urn:oslo-toolchain:62575d6eaac5af9a2eb21f705566098d18564987b0e6561ad7508c66fc7d4db8](all-waterkwaliteit-ap.jsonld#L1624)".
-
-2025-10-02T21:51:21.368Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-waterkwaliteit-ap.jsonld#L3952)".
-
-2025-10-02T21:51:21.369Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5d7518db4509aefc3135b19b233e3c4c8166f2d44618b8be66ab096d5bea2d8d](all-waterkwaliteit-ap.jsonld#L3972)".
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 

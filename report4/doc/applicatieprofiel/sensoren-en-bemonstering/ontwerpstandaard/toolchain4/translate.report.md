@@ -1,8 +1,8 @@
-INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/translation/ap-sensoren-en-bemonstering_nl.json
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/translation/sensoren-en-bemonstering_nl.json
 
-OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/translation/ap-sensoren-en-bemonstering_nl.json
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/translation/sensoren-en-bemonstering_nl.json
 
-TRANSLATIONFILE: ap-sensoren-en-bemonstering_nl.json
+TRANSLATIONFILE: sensoren-en-bemonstering_nl.json
 
 #||# translate for language nl  
 
@@ -18,13 +18,13 @@ WARNING The entered language values are the same!
 
 #||# Write complete  
 
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/translation/ap-sensoren-en-bemonstering_nl.json  
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/translation/sensoren-en-bemonstering_nl.json  
 
-INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/translation/ap-sensoren-en-bemonstering_en.json
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/translation/sensoren-en-bemonstering_en.json
 
-OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/translation/ap-sensoren-en-bemonstering_en.json
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/translation/sensoren-en-bemonstering_en.json
 
-TRANSLATIONFILE: ap-sensoren-en-bemonstering_en.json
+TRANSLATIONFILE: sensoren-en-bemonstering_en.json
 
 #||# translate for language en  
 
@@ -38,5 +38,5 @@ TRANSLATIONFILE: ap-sensoren-en-bemonstering_en.json
 
 #||# Write complete  
 
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/translation/ap-sensoren-en-bemonstering_en.json  
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/sensoren-en-bemonstering/ontwerpstandaard/toolchain4/translation/sensoren-en-bemonstering_en.json  
 

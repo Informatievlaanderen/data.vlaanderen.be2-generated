@@ -2,135 +2,91 @@
 
 #||# -------------------------------------  
 
-2025-10-02T21:49:54.666Z warn: Unable to find the description for subject "[urn:oslo-toolchain:25c6a80d31a302cbf2ad03cc28729e523163ecd97f214154ec92674040848c02](all-leercredential-ap.jsonld#L598)".
+2025-11-12T20:04:26.004Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-leercredential-ap.jsonld#L11162)".
 
-2025-10-02T21:49:54.674Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5abdcf7c21313dbda244f791097599dd17a15820ade731dd38d1b5fe703e4746](all-leercredential-ap.jsonld#L1126)".
+2025-11-12T20:04:26.006Z warn: Unable to find the description for subject "[urn:oslo-toolchain:88f1cc99b7c4e4a1c0e2d74bdc91d437f7e6de9fb6b59149d36c114bc9bd8748](all-leercredential-ap.jsonld#L11018)".
 
-2025-10-02T21:49:54.678Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cd8ba3117842bae63bc0908159ee90f5ea5c86f109b5279358e63026fe3f2d47](all-leercredential-ap.jsonld#L1709)".
+2025-11-12T20:04:26.006Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-leercredential-ap.jsonld#L11173)".
 
-2025-10-02T21:49:54.678Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-leercredential-ap.jsonld#L10460)".
+2025-11-12T20:04:26.006Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-leercredential-ap.jsonld#L11184)".
 
-2025-10-02T21:49:54.678Z warn: Unable to find the description for subject "[urn:oslo-toolchain:88f1cc99b7c4e4a1c0e2d74bdc91d437f7e6de9fb6b59149d36c114bc9bd8748](all-leercredential-ap.jsonld#L10316)".
+2025-11-12T20:04:26.006Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-leercredential-ap.jsonld#L11195)".
 
-2025-10-02T21:49:54.678Z warn: Unable to find the description for subject "[urn:oslo-toolchain:6cff644c61504cb3d0df186d9e94ada8696d6a0e4adc6ec24f43750a996adfc8](all-leercredential-ap.jsonld#L10184)".
+2025-11-12T20:04:26.007Z warn: Unable to find the description for subject "[urn:oslo-toolchain:4b26a58d138826612c690c9a69e7b582973c7a714d5e0b7f985048a6839201bf](all-leercredential-ap.jsonld#L10940)".
 
-2025-10-02T21:49:54.679Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-leercredential-ap.jsonld#L10471)".
+2025-11-12T20:04:26.007Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-leercredential-ap.jsonld#L11206)".
 
-2025-10-02T21:49:54.679Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-leercredential-ap.jsonld#L10482)".
+2025-11-12T20:04:26.007Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-leercredential-ap.jsonld#L11217)".
 
-2025-10-02T21:49:54.680Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-leercredential-ap.jsonld#L10493)".
+2025-11-12T20:04:26.008Z warn: Unable to find the description for subject "urn:oslo-toolchain:474715019".
 
-2025-10-02T21:49:54.680Z warn: Unable to find the description for subject "[urn:oslo-toolchain:4b26a58d138826612c690c9a69e7b582973c7a714d5e0b7f985048a6839201bf](all-leercredential-ap.jsonld#L10238)".
+2025-11-12T20:04:26.009Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9f3041b4ee96fa54ff23e3fa617fe6d7f7b5de41790211437097180f69752c5d](all-leercredential-ap.jsonld#L1185)".
 
-2025-10-02T21:49:54.681Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-leercredential-ap.jsonld#L10504)".
+2025-11-12T20:04:26.010Z warn: Unable to find the description for subject "[urn:oslo-toolchain:4b213e62ab7ef0d647989e8f7e09b044cedb33d26b1b83f083692a592928fe8a](all-leercredential-ap.jsonld#L1217)".
 
-2025-10-02T21:49:54.681Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-leercredential-ap.jsonld#L10515)".
+2025-11-12T20:04:26.012Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b4bf11c11355d94edf80457f0119891bf4260ff6a679d2104a92a9534e0721d2](all-leercredential-ap.jsonld#L1823)".
 
-2025-10-02T21:49:54.683Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-leercredential-ap.jsonld#L10526)".
+2025-11-12T20:04:26.021Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1053f01607c15594ffba2347866da2acaedd89def9fcbc5c13a46dff35371b87](all-leercredential-ap.jsonld#L3325)".
 
-2025-10-02T21:49:54.683Z warn: Unable to find the description for subject "urn:oslo-toolchain:474715019".
+2025-11-12T20:04:26.022Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1612a5500796f4cda20fe625dc7876647a9421eb2c60849f9e740188d35358a9](all-leercredential-ap.jsonld#L3613)".
 
-2025-10-02T21:49:54.687Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9f3041b4ee96fa54ff23e3fa617fe6d7f7b5de41790211437097180f69752c5d](all-leercredential-ap.jsonld#L1863)".
+2025-11-12T20:04:26.022Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fb923015b0d71b2a43c199ea6260b2601911bc9f1fc0a249a2e3863e5b178b0f](all-leercredential-ap.jsonld#L3645)".
 
-2025-10-02T21:49:54.687Z warn: Unable to find the description for subject "[urn:oslo-toolchain:4b213e62ab7ef0d647989e8f7e09b044cedb33d26b1b83f083692a592928fe8a](all-leercredential-ap.jsonld#L1889)".
+Error: Unable to find the assigned URI for range "urn:oslo-toolchain:1c319898a3054fa01de1505a2a7bf96bb86d7b32c4a872000be73b24b35f736f".
 
-2025-10-02T21:49:54.693Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b4bf11c11355d94edf80457f0119891bf4260ff6a679d2104a92a9534e0721d2](all-leercredential-ap.jsonld#L2417)".
+    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
 
-2025-10-02T21:49:54.708Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1053f01607c15594ffba2347866da2acaedd89def9fcbc5c13a46dff35371b87](all-leercredential-ap.jsonld#L3703)".
+    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
 
-2025-10-02T21:49:54.718Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1612a5500796f4cda20fe625dc7876647a9421eb2c60849f9e740188d35358a9](all-leercredential-ap.jsonld#L3949)".
+    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
 
-2025-10-02T21:49:54.719Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fb923015b0d71b2a43c199ea6260b2601911bc9f1fc0a249a2e3863e5b178b0f](all-leercredential-ap.jsonld#L3975)".
+    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
 
-2025-10-02T21:49:54.756Z warn: Unable to find the description for subject "[urn:oslo-toolchain:d763bb0d0c3c7104a19cc18a4823c6538290661038360f9ffe9b80a141601ee7](all-leercredential-ap.jsonld#L5390)".
-
-2025-10-02T21:49:54.789Z warn: Unable to find the description for subject "[urn:oslo-toolchain:858fccfc1ccdfcf4f304e47ace48ec1f13744db47231a93872aa73612f0de3c2](all-leercredential-ap.jsonld#L7258)".
-
-2025-10-02T21:49:54.790Z warn: Unable to find the description for subject "[urn:oslo-toolchain:0853fd58d49a4174c5f94a6b5b60e3ced621a8e34660acc679f32ccf6f814eff](all-leercredential-ap.jsonld#L7322)".
-
-2025-10-02T21:49:54.790Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5ebb94331ca2530c535f85b47e0a580b6c7ee09354970f3dc3f8e5bc05c97570](all-leercredential-ap.jsonld#L7348)".
-
-2025-10-02T21:49:54.793Z warn: Unable to find the description for subject "[urn:oslo-toolchain:a80e66b5a1e9f80d4167385ea6f94776215075b8d1d430013fa159c62dd756ba](all-leercredential-ap.jsonld#L7670)".
-
-2025-10-02T21:49:54.793Z warn: Unable to find the description for subject "[urn:oslo-toolchain:494dd35f434e405efd48b75e519d3884553b27bfd55eab29711226fb002a5816](all-leercredential-ap.jsonld#L7696)".
-
-2025-10-02T21:49:54.798Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1129871c2b902f66a61b35292af5939e8e066267682649aba488098c595d5aa4](all-leercredential-ap.jsonld#L8382)".
-
-2025-10-02T21:49:54.799Z warn: Unable to find the description for subject "[urn:oslo-toolchain:30a73fe0d016533bd6625fadde871e0fe7e73e9031bfa66c9734d1c3f9bdc520](all-leercredential-ap.jsonld#L8492)".
-
-2025-10-02T21:49:54.799Z warn: Unable to find the description for subject "[urn:oslo-toolchain:72112ac291d92860ec029db6cad1702580775f0f6289b8e677806c6b3dfd8c57](all-leercredential-ap.jsonld#L8556)".
-
-2025-10-02T21:49:54.800Z warn: Unable to find the description for subject "[urn:oslo-toolchain:0a355355125604802cc86a5046b5c3e02c15a3a821cd90901a228af68cdc007e](all-leercredential-ap.jsonld#L8582)".
-
-2025-10-02T21:49:54.800Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b98b4b30972ae5aa7d17bb6c5a79c60fd92e4143a8309cbaf06e47cc18781ae8](all-leercredential-ap.jsonld#L8608)".
-
-2025-10-02T21:49:54.813Z warn: Unable to find the description for subject "[urn:oslo-toolchain:871ed7a841ab1aa213bcec471728c87fe749b6db9796d1592c153b4aa0e645ad](all-leercredential-ap.jsonld#L9974)".
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2025-10-02T21:49:56.317Z warn: Unable to find the description for subject "[urn:oslo-toolchain:25c6a80d31a302cbf2ad03cc28729e523163ecd97f214154ec92674040848c02](all-leercredential-ap.jsonld#L598)".
+2025-11-12T20:04:27.056Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-leercredential-ap.jsonld#L11162)".
 
-2025-10-02T21:49:56.319Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cd8ba3117842bae63bc0908159ee90f5ea5c86f109b5279358e63026fe3f2d47](all-leercredential-ap.jsonld#L1709)".
+2025-11-12T20:04:27.059Z warn: Unable to find the description for subject "[urn:oslo-toolchain:88f1cc99b7c4e4a1c0e2d74bdc91d437f7e6de9fb6b59149d36c114bc9bd8748](all-leercredential-ap.jsonld#L11018)".
 
-2025-10-02T21:49:56.321Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5abdcf7c21313dbda244f791097599dd17a15820ade731dd38d1b5fe703e4746](all-leercredential-ap.jsonld#L1126)".
+2025-11-12T20:04:27.059Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-leercredential-ap.jsonld#L11173)".
 
-2025-10-02T21:49:56.323Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-leercredential-ap.jsonld#L10460)".
+2025-11-12T20:04:27.059Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-leercredential-ap.jsonld#L11184)".
 
-2025-10-02T21:49:56.323Z warn: Unable to find the description for subject "[urn:oslo-toolchain:88f1cc99b7c4e4a1c0e2d74bdc91d437f7e6de9fb6b59149d36c114bc9bd8748](all-leercredential-ap.jsonld#L10316)".
+2025-11-12T20:04:27.060Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-leercredential-ap.jsonld#L11195)".
 
-2025-10-02T21:49:56.323Z warn: Unable to find the description for subject "[urn:oslo-toolchain:6cff644c61504cb3d0df186d9e94ada8696d6a0e4adc6ec24f43750a996adfc8](all-leercredential-ap.jsonld#L10184)".
+2025-11-12T20:04:27.060Z warn: Unable to find the description for subject "[urn:oslo-toolchain:4b26a58d138826612c690c9a69e7b582973c7a714d5e0b7f985048a6839201bf](all-leercredential-ap.jsonld#L10940)".
 
-2025-10-02T21:49:56.323Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-leercredential-ap.jsonld#L10471)".
+2025-11-12T20:04:27.060Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-leercredential-ap.jsonld#L11206)".
 
-2025-10-02T21:49:56.323Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-leercredential-ap.jsonld#L10482)".
+2025-11-12T20:04:27.060Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-leercredential-ap.jsonld#L11217)".
 
-2025-10-02T21:49:56.324Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-leercredential-ap.jsonld#L10493)".
+2025-11-12T20:04:27.061Z warn: Unable to find the description for subject "urn:oslo-toolchain:474715019".
 
-2025-10-02T21:49:56.324Z warn: Unable to find the description for subject "[urn:oslo-toolchain:4b26a58d138826612c690c9a69e7b582973c7a714d5e0b7f985048a6839201bf](all-leercredential-ap.jsonld#L10238)".
+2025-11-12T20:04:27.062Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9f3041b4ee96fa54ff23e3fa617fe6d7f7b5de41790211437097180f69752c5d](all-leercredential-ap.jsonld#L1185)".
 
-2025-10-02T21:49:56.324Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-leercredential-ap.jsonld#L10504)".
+2025-11-12T20:04:27.063Z warn: Unable to find the description for subject "[urn:oslo-toolchain:4b213e62ab7ef0d647989e8f7e09b044cedb33d26b1b83f083692a592928fe8a](all-leercredential-ap.jsonld#L1217)".
 
-2025-10-02T21:49:56.324Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-leercredential-ap.jsonld#L10515)".
+2025-11-12T20:04:27.065Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b4bf11c11355d94edf80457f0119891bf4260ff6a679d2104a92a9534e0721d2](all-leercredential-ap.jsonld#L1823)".
 
-2025-10-02T21:49:56.325Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-leercredential-ap.jsonld#L10526)".
+2025-11-12T20:04:27.070Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1053f01607c15594ffba2347866da2acaedd89def9fcbc5c13a46dff35371b87](all-leercredential-ap.jsonld#L3325)".
 
-2025-10-02T21:49:56.325Z warn: Unable to find the description for subject "urn:oslo-toolchain:474715019".
+2025-11-12T20:04:27.071Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1612a5500796f4cda20fe625dc7876647a9421eb2c60849f9e740188d35358a9](all-leercredential-ap.jsonld#L3613)".
 
-2025-10-02T21:49:56.327Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9f3041b4ee96fa54ff23e3fa617fe6d7f7b5de41790211437097180f69752c5d](all-leercredential-ap.jsonld#L1863)".
+2025-11-12T20:04:27.071Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fb923015b0d71b2a43c199ea6260b2601911bc9f1fc0a249a2e3863e5b178b0f](all-leercredential-ap.jsonld#L3645)".
 
-2025-10-02T21:49:56.327Z warn: Unable to find the description for subject "[urn:oslo-toolchain:4b213e62ab7ef0d647989e8f7e09b044cedb33d26b1b83f083692a592928fe8a](all-leercredential-ap.jsonld#L1889)".
+Error: Unable to find the assigned URI for range "urn:oslo-toolchain:1c319898a3054fa01de1505a2a7bf96bb86d7b32c4a872000be73b24b35f736f".
 
-2025-10-02T21:49:56.330Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b4bf11c11355d94edf80457f0119891bf4260ff6a679d2104a92a9534e0721d2](all-leercredential-ap.jsonld#L2417)".
+    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
 
-2025-10-02T21:49:56.339Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1053f01607c15594ffba2347866da2acaedd89def9fcbc5c13a46dff35371b87](all-leercredential-ap.jsonld#L3703)".
+    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
 
-2025-10-02T21:49:56.344Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1612a5500796f4cda20fe625dc7876647a9421eb2c60849f9e740188d35358a9](all-leercredential-ap.jsonld#L3949)".
+    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
 
-2025-10-02T21:49:56.344Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fb923015b0d71b2a43c199ea6260b2601911bc9f1fc0a249a2e3863e5b178b0f](all-leercredential-ap.jsonld#L3975)".
+    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
 
-2025-10-02T21:49:56.357Z warn: Unable to find the description for subject "[urn:oslo-toolchain:d763bb0d0c3c7104a19cc18a4823c6538290661038360f9ffe9b80a141601ee7](all-leercredential-ap.jsonld#L5390)".
-
-2025-10-02T21:49:56.378Z warn: Unable to find the description for subject "[urn:oslo-toolchain:858fccfc1ccdfcf4f304e47ace48ec1f13744db47231a93872aa73612f0de3c2](all-leercredential-ap.jsonld#L7258)".
-
-2025-10-02T21:49:56.379Z warn: Unable to find the description for subject "[urn:oslo-toolchain:0853fd58d49a4174c5f94a6b5b60e3ced621a8e34660acc679f32ccf6f814eff](all-leercredential-ap.jsonld#L7322)".
-
-2025-10-02T21:49:56.379Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5ebb94331ca2530c535f85b47e0a580b6c7ee09354970f3dc3f8e5bc05c97570](all-leercredential-ap.jsonld#L7348)".
-
-2025-10-02T21:49:56.391Z warn: Unable to find the description for subject "[urn:oslo-toolchain:a80e66b5a1e9f80d4167385ea6f94776215075b8d1d430013fa159c62dd756ba](all-leercredential-ap.jsonld#L7670)".
-
-2025-10-02T21:49:56.393Z warn: Unable to find the description for subject "[urn:oslo-toolchain:494dd35f434e405efd48b75e519d3884553b27bfd55eab29711226fb002a5816](all-leercredential-ap.jsonld#L7696)".
-
-2025-10-02T21:49:56.414Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1129871c2b902f66a61b35292af5939e8e066267682649aba488098c595d5aa4](all-leercredential-ap.jsonld#L8382)".
-
-2025-10-02T21:49:56.415Z warn: Unable to find the description for subject "[urn:oslo-toolchain:30a73fe0d016533bd6625fadde871e0fe7e73e9031bfa66c9734d1c3f9bdc520](all-leercredential-ap.jsonld#L8492)".
-
-2025-10-02T21:49:56.416Z warn: Unable to find the description for subject "[urn:oslo-toolchain:72112ac291d92860ec029db6cad1702580775f0f6289b8e677806c6b3dfd8c57](all-leercredential-ap.jsonld#L8556)".
-
-2025-10-02T21:49:56.416Z warn: Unable to find the description for subject "[urn:oslo-toolchain:0a355355125604802cc86a5046b5c3e02c15a3a821cd90901a228af68cdc007e](all-leercredential-ap.jsonld#L8582)".
-
-2025-10-02T21:49:56.416Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b98b4b30972ae5aa7d17bb6c5a79c60fd92e4143a8309cbaf06e47cc18781ae8](all-leercredential-ap.jsonld#L8608)".
-
-2025-10-02T21:49:56.422Z warn: Unable to find the description for subject "[urn:oslo-toolchain:871ed7a841ab1aa213bcec471728c87fe749b6db9796d1592c153b4aa0e645ad](all-leercredential-ap.jsonld#L9974)".
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 

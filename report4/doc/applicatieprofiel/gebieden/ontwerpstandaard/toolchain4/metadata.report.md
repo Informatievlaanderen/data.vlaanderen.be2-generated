@@ -14,7 +14,7 @@
 
 #||# start writing  
 
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/gebieden/ontwerpstandaard/toolchain4/html/meta_openbaardomein_nl.json  
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/gebieden/ontwerpstandaard/toolchain4/html/meta_gebieden-ap_nl.json  
 
 #||# metadata for language en   
 
@@ -32,5 +32,5 @@
 
 #||# start writing  
 
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/gebieden/ontwerpstandaard/toolchain4/html/meta_openbaardomein_en.json  
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/gebieden/ontwerpstandaard/toolchain4/html/meta_gebieden-ap_en.json  
 

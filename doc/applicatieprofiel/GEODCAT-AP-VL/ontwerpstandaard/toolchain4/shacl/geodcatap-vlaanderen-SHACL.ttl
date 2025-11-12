@@ -24,7 +24,6 @@
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#LicentieDocumentShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#AgentShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#RelatieQualificatieShape>,
-    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#LiteralShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#StringShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#IdentificatorShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#DatetimeShape>,
@@ -63,11 +62,11 @@
     <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:resource_identifier\">DCAT</a>]"@nl;
     rdfs:comment "De unieke identificator van het record in de catalogus."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#CatalogusRecord.Identificator>;
-    shacl:datatype rdfs:Literal;
     shacl:description "De unieke identificator van het record in de catalogus."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "identificator"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path dc:identifier
   ], [
     a shacl:PropertyShape;
@@ -163,8 +162,8 @@ wordt."""@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#CatalogusRecord.Hoofdonderwerp>;
     shacl:class dcat:Resource;
     shacl:description "De resource (dataset of dataservice) beschreven in het record."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "hoofdonderwerp"@nl;
     shacl:path foaf:primaryTopic
   ];
@@ -183,8 +182,8 @@ wordt."""@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#CatalogusResource.Uitgever>;
     shacl:class dc:Agent;
     shacl:description "De uitgever, de entiteit die verantwoordelijk is voor het beschikbaar stellen, van de resource in de catalogus."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "uitgever"@nl;
     shacl:path dc:publisher
   ], [
@@ -195,7 +194,7 @@ wordt."""@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#CatalogusResource.Relatie>;
     shacl:class dcat:Resource;
     shacl:description "een verband tussen twee resources."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "relatie"@nl;
     shacl:path dc:relation
   ];
@@ -212,11 +211,11 @@ wordt."""@nl;
     <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:resource_identifier\">DCAT</a>]"@nl;
     rdfs:comment "De unieke identificator voor de catalogus."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Catalogus.Identificator>;
-    shacl:datatype rdfs:Literal;
     shacl:description "De unieke identificator voor de catalogus."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "identificator"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path dc:identifier
   ], [
     a shacl:PropertyShape;
@@ -292,7 +291,7 @@ Meer informatie zie <a href=\"#wettelijkeinformatie\">hieronder</a>."""@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Catalogus.Record>;
     shacl:class dcat:CatalogRecord;
     shacl:description "Een record beschrijft de registratie van één enkele dataset of dataservice die onderdeel is van de catalogus."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "record"@nl;
     shacl:path dcat:record
   ], [
@@ -303,8 +302,8 @@ Meer informatie zie <a href=\"#wettelijkeinformatie\">hieronder</a>."""@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Catalogus.Uitgever>;
     shacl:class dc:Agent;
     shacl:description "De uitgever, de entiteit die verantwoordelijk is voor het beschikbaar stellen, van de catalogus."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "uitgever"@nl;
     shacl:path dc:publisher
   ], [
@@ -315,7 +314,7 @@ Meer informatie zie <a href=\"#wettelijkeinformatie\">hieronder</a>."""@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Catalogus.HeeftDataset>;
     shacl:class dcat:Dataset;
     shacl:description "Een dataset die deel uitmaakt van de catalogus."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "heeft Dataset"@nl;
     shacl:path dcat:dataset
   ], [
@@ -326,7 +325,7 @@ Meer informatie zie <a href=\"#wettelijkeinformatie\">hieronder</a>."""@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Catalogus.HeeftDataservice>;
     shacl:class dcat:DataService;
     shacl:description "Een dataservice die deel uitmaakt van de catalogus."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "heeft DataService"@nl;
     shacl:path dcat:service
   ];
@@ -406,11 +405,11 @@ Voor dataservices wordt dikwijls <a href=\"https://semver.org/lang/nl/\">semanti
     <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:resource_identifier\">DCAT</a>]"@nl;
     rdfs:comment "De unieke identificator van de dataservice."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Dataservice.Identificator>;
-    shacl:datatype rdfs:Literal;
     shacl:description "De unieke identificator van de dataservice."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "identificator"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path dc:identifier
   ], [
     a shacl:PropertyShape;
@@ -701,7 +700,7 @@ dataservice behoort"""@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Dataservice.BiedtInformatieAanOver>;
     shacl:class dcat:Dataset;
     shacl:description "De data die via deze dataservice worden aangeboden."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "biedt informatie aan over"@nl;
     shacl:path dcat:servesdataset
   ];
@@ -770,11 +769,11 @@ Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interp
     <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:resource_identifier\">DCAT</a>]"@nl;
     rdfs:comment "De unieke identificator van de dataset."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Dataset.Identificator>;
-    shacl:datatype rdfs:Literal;
     shacl:description "De unieke identificator van de dataset."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "identificator"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path dc:identifier
   ], [
     a shacl:PropertyShape;
@@ -1013,7 +1012,7 @@ GEMET thesaurus."""@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Dataset.Distributie>;
     shacl:class dcat:Distribution;
     shacl:description "Een beschikbare distributie van de dataset."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "distributie"@nl;
     shacl:path dcat:distribution
   ], [
@@ -1024,7 +1023,7 @@ GEMET thesaurus."""@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Dataset.Eigenaar>;
     shacl:class dc:Agent;
     shacl:description "de agent die de eigendomsrechten heeft"@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "eigenaar"@nl;
     shacl:path dc:rightsHolder
   ];
@@ -1046,11 +1045,11 @@ GEMET thesaurus."""@nl;
     <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:resource_identifier\">DCAT</a>]"@nl;
     rdfs:comment "De unieke identificator van de distributie."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Distributie.Identificator>;
-    shacl:datatype rdfs:Literal;
     shacl:description "De unieke identificator van de distributie."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "identificator"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path dc:identifier
   ], [
     a shacl:PropertyShape;
@@ -1157,7 +1156,7 @@ waaraan de distributie voldoet."""@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Distributie.WordtAangebodenDoor>;
     shacl:class dcat:DataService;
     shacl:description "Een dataservice die deze distributie aanbiedt."@nl;
-    shacl:maxCount "n";
+    shacl:maxCount "n"^^xsd:integer;
     shacl:name "wordt aangeboden door"@nl;
     shacl:path dcat:accessService
   ], [
@@ -1168,7 +1167,7 @@ waaraan de distributie voldoet."""@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Distributie.Verdeler>;
     shacl:class dc:Agent;
     shacl:description "de agent die instaat voor de verdeling"@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "verdeler"@nl;
     shacl:path <http://data.europa.eu/930/distributor>
   ];
@@ -1251,11 +1250,6 @@ waaraan de distributie voldoet."""@nl;
   shacl:closed false;
   shacl:targetClass dc:LicenseDocument .
 
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#LiteralShape> a shacl:NodeShape;
-  rdfs:label "Literal";
-  shacl:closed false;
-  shacl:targetClass rdfs:Literal .
-
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#PlaatsShape> a shacl:NodeShape;
   rdfs:label "Plaats"@nl;
   rdfs:comment "Een ruimtelijk gebied dat geïdentificeerd wordt door zijn benaming of geografische beschrijving."@nl;
@@ -1266,10 +1260,10 @@ waaraan de distributie voldoet."""@nl;
     <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:location_geometry\">DCAT</a>]"@nl;
     rdfs:comment "de geografische beschrijving van een plaats"@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Plaats.Geometrie>;
-    shacl:datatype rdfs:Literal;
     shacl:description "de geografische beschrijving van een plaats"@nl;
     shacl:maxCount "n";
     shacl:name "geometrie"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path <http://www.w3.org/ns/locn#geometry>
   ], [
     a shacl:PropertyShape;
@@ -1277,10 +1271,10 @@ waaraan de distributie voldoet."""@nl;
     <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:location_bbox\">DCAT</a>]"@nl;
     rdfs:comment "de afgrenzing van een plaats als een geografische rechthoek"@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Plaats.BoundingBox>;
-    shacl:datatype rdfs:Literal;
     shacl:description "de afgrenzing van een plaats als een geografische rechthoek"@nl;
     shacl:maxCount "n";
     shacl:name "bounding box"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path dcat:bbox
   ], [
     a shacl:PropertyShape;
@@ -1288,10 +1282,10 @@ waaraan de distributie voldoet."""@nl;
     <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:location_centroid\">DCAT</a>]"@nl;
     rdfs:comment "het geografische middelpunt van een plaats"@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Plaats.Centroïde>;
-    shacl:datatype rdfs:Literal;
     shacl:description "het geografische middelpunt van een plaats"@nl;
     shacl:maxCount "n";
     shacl:name "centroïde"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path dcat:centroid
   ], [
     a shacl:PropertyShape;
@@ -1329,19 +1323,10 @@ waaraan de distributie voldoet."""@nl;
     rdfs:label "CatalogusResource (source)";
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#RelatieQualificatie.Catalogusresource(source)>;
     shacl:class dcat:Resource;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "CatalogusResource (source)";
     shacl:path <http://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.source>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "CatalogusResource (target)";
-    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#RelatieQualificatie.Catalogusresource(target)>;
-    shacl:class dcat:Resource;
-    shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "CatalogusResource (target)";
-    shacl:path <http://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.target>
   ];
   shacl:targetClass dcat:Relationship .
 
