@@ -211,6 +211,7 @@ Directory check
 
 index.html check
 error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/index.html'
+error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/codelijsten/index.html'
 
 #||#    + checking /home/circleci/project/config/test/kwaliteit-wegen-en-markeringen.publication.json
 #||# 
