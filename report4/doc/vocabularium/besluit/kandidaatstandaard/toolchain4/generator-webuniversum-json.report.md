@@ -2,19 +2,19 @@
 
 #||# -------------------------------------  
 
-2025-11-07T20:36:47.314Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/mobiliteit#periode which acts as a parent. Using original URI as fallback.
+2025-11-13T10:40:16.998Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/mobiliteit#periode which acts as a parent. Using original URI as fallback.
 
-2025-11-07T20:36:47.322Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasDerivedFrom which acts as a parent. Using original URI as fallback.
+2025-11-13T10:40:17.008Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasDerivedFrom which acts as a parent. Using original URI as fallback.
 
-2025-11-07T20:36:47.323Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/date which acts as a parent. Using original URI as fallback.
+2025-11-13T10:40:17.009Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/date which acts as a parent. Using original URI as fallback.
 
-2025-11-07T20:36:47.325Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/date which acts as a parent. Using original URI as fallback.
+2025-11-13T10:40:17.011Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/date which acts as a parent. Using original URI as fallback.
 
-2025-11-07T20:36:47.330Z warn: Unable to find the assigned URI for external class http://purl.org/dc/elements/1.1/date which acts as a parent. Using original URI as fallback.
+2025-11-13T10:40:17.017Z warn: Unable to find the assigned URI for external class http://purl.org/dc/elements/1.1/date which acts as a parent. Using original URI as fallback.
 
-2025-11-07T20:36:47.330Z warn: Unable to find the assigned URI for external class http://purl.org/dc/elements/1.1/date which acts as a parent. Using original URI as fallback.
+2025-11-13T10:40:17.017Z warn: Unable to find the assigned URI for external class http://purl.org/dc/elements/1.1/date which acts as a parent. Using original URI as fallback.
 
-2025-11-07T20:36:47.336Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/date which acts as a parent. Using original URI as fallback.
+2025-11-13T10:40:17.025Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/date which acts as a parent. Using original URI as fallback.
 
-2025-11-07T20:36:47.338Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#endedAtTime which acts as a parent. Using original URI as fallback.
+2025-11-13T10:40:17.027Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#endedAtTime which acts as a parent. Using original URI as fallback.
 
