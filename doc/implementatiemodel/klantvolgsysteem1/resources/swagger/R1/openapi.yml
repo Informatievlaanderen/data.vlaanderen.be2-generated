@@ -30,6 +30,10 @@ paths:
           schema:
             type: string
             format: uuid
+          examples:
+            RandomUUID:
+              value: '568ff498-e468-4ca9-9633-2e2473bd8904'
+              summary: 'Random UUID value'
         - name: X-INSZ
           in: header
           description: 'INSZ code van de Werkzoekende.'
@@ -198,20 +202,11 @@ components:
           type: array
           description: "JSON-LD's context which defines how the JSON-LD keys are mapped to URIs."
           items:
-            oneOf:
+            anyOf:
               - type: string
                 format: uri
                 description: "JSON-LD's external contexts as URIs."
                 enum: ['https://data.vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/context/KVS-R1.jsonld']
-              - type: object
-                properties:
-                  'SKOS.prefLabel':
-                    type: string
-                    description: "URI for W3C SKOS Core prefLabel attribute."
-                    format: uri
-                    enum: ['http://www.w3.org/2004/02/skos/core#prefLabel']
-                required:
-                  - 'SKOS.prefLabel'
         # JSON-LD @graph contains the data objects which is an array with a specific list of possible objects.
         # "@graph": [
         #  ...
@@ -233,6 +228,9 @@ components:
               - $ref: "#/components/schemas/Domicilie"
               - $ref: "#/components/schemas/Adresvoorstelling"
           minItems: 0
+      required:
+        - '@context'
+        - '@graph'
 
     Beroepstoestand:
       type: object
@@ -268,25 +266,8 @@ components:
                      'http://data.vlaanderen.be/id/concept/Voorkeurtype/TeVerkennenBeroep',
                      'http://data.vlaanderen.be/id/concept/Voorkeurtype/GewenstBeroep',
                      'http://data.vlaanderen.be/id/concept/Voorkeurtype/TeLerenBeroep']
-            'SKOS.prefLabel':
-              properties:
-                '@value':
-                  type: string
-                  description: "Voorkeurtype enum value string."
-                  enum: ['Uitgesloten Beroep',
-                         'Te Verkennen Beroep',
-                         'Gewenst Beroep',
-                         'Te Leren Beroep']
-                '@language':
-                  type: string
-                  description: "Literal's language tag."
-                  enum: ['nl']
-              required:
-                - '@value'
-                - '@language'
           required:
             - '@id'
-            - 'SKOS.prefLabel'
       required:
         - '@type'
 
@@ -649,22 +630,8 @@ components:
               format: uri
               enum: ['https://data.vlaanderen.be/id/concept/OrganisatieType/VDAB',
                      'https://data.vlaanderen.be/id/concept/OrganisatieType/OCMW']
-            'SKOS.prefLabel':
-              properties:
-                '@value':
-                  type: string
-                  description: "OrganisatieType enum value string."
-                  enum: ['VDAB',
-                         'OCMW']
-                '@language':
-                  type: string
-                  enum: ['nl']
-              required:
-                - '@value'
-                - '@language'
           required:
             - '@id'
-            - 'SKOS.prefLabel'
 
       required:
         - '@id'
@@ -716,22 +683,8 @@ components:
               format: uri
               enum: ['https://data.vlaanderen.be/id/concept/OrganisatieType/VDAB',
                      'https://data.vlaanderen.be/id/concept/OrganisatieType/OCMW']
-            'SKOS.prefLabel':
-              properties:
-                '@value':
-                  type: string
-                  description: "OrganisatieType enum value string."
-                  enum: ['VDAB',
-                         'OCMW']
-                '@language':
-                  type: string
-                  enum: ['nl']
-              required:
-                - '@value'
-                - '@language'
           required:
             - '@id'
-            - 'SKOS.prefLabel'
       required:
         - '@id'
         - '@type'
@@ -760,24 +713,8 @@ components:
                      'https://data.vlaanderen.be/id/concept/Participatietype/Bemiddelaar',
                      'https://data.vlaanderen.be/id/concept/Participatietype/Begeleider',
                      'https://data.vlaanderen.be/id/concept/Participatietype/Contactpersoon']
-            'SKOS.prefLabel':
-              properties:
-                '@value':
-                  type: string
-                  description: "Participatietype enum value string."
-                  enum: ['Werkzoekende',
-                         'Bemiddelaar',
-                         'Begeleider',
-                         'Contactpersoon']
-                '@language':
-                  type: string
-                  enum: ['nl']
-              required:
-                - '@value'
-                - '@language'
           required:
             - '@id'
-            - 'SKOS.prefLabel'
         Participatie.heeftParticipant:
           type: object
           description: 'De Agenten die deelnemen.'
@@ -867,21 +804,8 @@ components:
               description: 'Object ID. Can be an URI or internal reference such as _:MyID. Must point to a PubliekeDienstverleningType enum value URI.'
               format: uri
               enum: ['https://data.vlaanderen.be/id/concept/PubliekeDienstverleningType/ActiveringNaarWerk']
-            'SKOS.prefLabel':
-              properties:
-                '@value':
-                  type: string
-                  description: "PubliekeDienstverleningType enum value string."
-                  enum: ['Activering Naar Werk']
-                '@language':
-                  type: string
-                  enum: ['nl']
-              required:
-                - '@value'
-                - '@language'
           required:
             - '@id'
-            - 'SKOS.prefLabel'
         PubliekeDienstverlening.finaliteit:
           type: object
           description: 'Wettelijk kader waarvoor de informatie wordt bevraagd.'
@@ -892,22 +816,8 @@ components:
               format: uri
               enum: ['https://data.vlaanderen.be/id/concept/FinaliteitType/SociaalOnderzoek',
                      'https://data.vlaanderen.be/id/concept/FinaliteitType/GPMI']
-            'SKOS.prefLabel':
-              properties:
-                '@value':
-                  type: string
-                  description: "FinaliteitType enum value string."
-                  enum: ['Sociaal Onderzoek',
-                         'GPMI']
-                '@language':
-                  type: string
-                  enum: ['nl']
-              required:
-                - '@value'
-                - '@language'
           required:
             - '@id'
-            - 'SKOS.prefLabel'
       required:
         - '@id'
         - '@type'
@@ -980,24 +890,8 @@ components:
                      'https://data.vlaanderen.be/id/concept/TrajectStatus/Stopgezet',
                      'https://data.vlaanderen.be/id/concept/TrajectStatus/Passief',
                      'https://data.vlaanderen.be/id/concept/TrajectStatus/Uitgevoerd']
-            'SKOS.prefLabel':
-              properties:
-                '@value':
-                  type: string
-                  description: "TrajectStatus enum value string."
-                  enum: ['Actief',
-                         'Stopgezet',
-                         'Passief',
-                         'Uitgevoerd']
-                '@language':
-                  type: string
-                  enum: ['nl']
-              required:
-                - '@value'
-                - '@language'
           required:
             - '@id'
-            - 'SKOS.prefLabel'
         Activeringstraject.deeltraject:
           type: array
           description: 'De Deeltrajecten gelinkt aan dit Traject.'
@@ -1084,22 +978,8 @@ components:
               enum: ['https://data.vlaanderen.be/id/concept/Deeltrajecttype/Opleiding',
                      'https://data.vlaanderen.be/id/concept/Deeltrajecttype/Tender',
                      'https://data.vlaanderen.be/id/concept/Deeltrajecttype/Orientering']
-            'SKOS.prefLabel':
-              properties:
-                '@value':
-                  type: string
-                  enum: ['Opleiding',
-                         'Tender',
-                         'Oriëntering']
-                '@language':
-                  type: string
-                  enum: ['nl']
-              required:
-                - '@value'
-                - '@language'
           required:
             - '@id'
-            - 'SKOS.prefLabel'
         Deeltraject.status:
           type: object
           properties:
@@ -1111,23 +991,8 @@ components:
                      'https://data.vlaanderen.be/id/concept/TrajectStatus/Stopgezet',
                      'https://data.vlaanderen.be/id/concept/TrajectStatus/Passief',
                      'https://data.vlaanderen.be/id/concept/TrajectStatus/Uitgevoerd']
-            'SKOS.prefLabel':
-              properties:
-                '@value':
-                  type: string
-                  enum: ['Actief',
-                         'Stopgezet',
-                         'Passief',
-                         'Uitgevoerd']
-                '@language':
-                  type: string
-                  enum: ['nl']
-              required:
-                - '@value'
-                - '@language'
           required:
             - '@id'
-            - 'SKOS.prefLabel'
         Deeltraject.heeftParticipatie:
           type: array
           items:
