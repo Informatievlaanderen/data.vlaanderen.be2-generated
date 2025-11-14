@@ -2,69 +2,65 @@
 
 #||# -------------------------------------
 
-2025-11-14T10:18:07.122Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Verkeersmeldingen:OSLO-Dossier:Activiteit:(Activiteit -> AgentInRol))
+2025-11-14T10:40:03.713Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Verkeersmeldingen:OSLO-Dossier:Activiteit:(Activiteit -> AgentInRol))
 
-2025-11-14T10:18:07.124Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Verkeersmeldingen:OSLO-Dossier:Activiteit:vindtPlaatsTijdens)
+2025-11-14T10:40:03.715Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Verkeersmeldingen:OSLO-Dossier:Activiteit:vindtPlaatsTijdens)
 
-2025-11-14T10:18:07.125Z info: Connector Verkeersmeldingen:OSLO-Verkeersmetingen:Verkeersobject:(Verkeersobject -> Object) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.717Z info: Connector Verkeersmeldingen:OSLO-Verkeersmetingen:Verkeersobject:(Verkeersobject -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.126Z info: Connector Model:Verkeersmeldingen:W3C Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.717Z info: Connector Model:Verkeersmeldingen:W3C Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.126Z info: Connector Model:Verkeersmeldingen:W3C Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.717Z info: Connector Model:Verkeersmeldingen:W3C Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.126Z info: Connector Model:Verkeersmeldingen:DATEX:Verkeerssituatie:(Verkeerssituatie -> Object) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.717Z info: Connector Model:Verkeersmeldingen:DATEX:Verkeerssituatie:(Verkeerssituatie -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.126Z info: Connector Verkeersmeldingen:SSN/SOSA:Observatie:(Observatie -> Kenmerktype) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.717Z info: Connector Verkeersmeldingen:SSN/SOSA:Observatie:(Observatie -> Kenmerktype) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.127Z info: Connector Model:Verkeersmeldingen:OSLO-Mobiliteit:Mobiliteitshinder:(Mobiliteitshinder -> Object) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.718Z info: Connector Model:Verkeersmeldingen:OSLO-Mobiliteit:Mobiliteitshinder:(Mobiliteitshinder -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.127Z info: Connector Model:Verkeersmeldingen:OSLO-Melding:Melding:(Melding -> Object) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.718Z info: Connector Model:Verkeersmeldingen:OSLO-Melding:Melding:(Melding -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.127Z info: Connector Model:Verkeersmeldingen:OSLO-Melding:Melding:(Melding -> Agent) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.718Z info: Connector Model:Verkeersmeldingen:OSLO-Melding:Melding:(Melding -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.128Z info: Connector Verkeersmeldingen:OSLO-Verkeersmetingen:Verkeersmeting:(Verkeersmeting -> Observatie) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.719Z info: Connector Verkeersmeldingen:OSLO-Verkeersmetingen:Verkeersmeting:(Verkeersmeting -> Observatie) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.128Z info: Connector Model:Verkeersmeldingen:OSLO-Melding:Melding:(Melding -> Agent) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.719Z info: Connector Model:Verkeersmeldingen:OSLO-Melding:Melding:(Melding -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.128Z info: Connector Model:Verkeersmeldingen:OSLO-Melding:Melding:(Melding -> Object) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.719Z info: Connector Model:Verkeersmeldingen:OSLO-Melding:Melding:(Melding -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.128Z info: Connector Verkeersmeldingen:SSN/SOSA:Observatieverzameling:(Observatieverzameling -> Observatie) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.719Z info: Connector Verkeersmeldingen:SSN/SOSA:Observatieverzameling:(Observatieverzameling -> Observatie) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.128Z info: Connector Verkeersmeldingen:DCMI:Verzameling:(Verzameling -> Object) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.719Z info: Connector Verkeersmeldingen:DCMI:Verzameling:(Verzameling -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.129Z info: Connector Verkeersmeldingen:DCMI:Verzameling:(Verzameling -> Object) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.720Z info: Connector Verkeersmeldingen:DCMI:Verzameling:(Verzameling -> Object) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.129Z info: Connector Model:Verkeersmeldingen:OSLO-Dossier:Activiteit:(Activiteit -> Zaak) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.720Z info: Connector Model:Verkeersmeldingen:OSLO-Dossier:Activiteit:(Activiteit -> Zaak) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.129Z info: Connector Model:Verkeersmeldingen:OSLO-Dossier:Zaak:(Zaak -> Resource) is not an association with a source role. Ignoring this connector.
+2025-11-14T10:40:03.720Z info: Connector Model:Verkeersmeldingen:OSLO-Dossier:Zaak:(Zaak -> Resource) is not an association with a source role. Ignoring this connector.
 
-2025-11-14T10:18:07.130Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2025-11-14T10:40:03.721Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-11-14T10:18:07.130Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Verkeersmeldingen:Dump). Using fallback URI (http://todo.com/) instead.
+2025-11-14T10:40:03.721Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Verkeersmeldingen:Dump). Using fallback URI (http://todo.com/) instead.
 
-2025-11-14T10:18:07.130Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Verkeersmeldingen:DCTERMS2). Using fallback URI (http://todo.com/) instead.
+2025-11-14T10:40:03.721Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Verkeersmeldingen:DCTERMS2). Using fallback URI (http://todo.com/) instead.
 
-2025-11-14T10:18:07.130Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Verkeersmeldingen:Schema.org). Using fallback URI (http://todo.com/) instead.
+2025-11-14T10:40:03.721Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Verkeersmeldingen:Schema.org). Using fallback URI (http://todo.com/) instead.
 
-2025-11-14T10:18:07.130Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Verkeersmeldingen). Using fallback URI (http://todo.com/) instead.
+2025-11-14T10:40:03.721Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Verkeersmeldingen). Using fallback URI (http://todo.com/) instead.
 
-2025-11-14T10:18:07.133Z warn: [ConnectorConverterHandler]: Connector (vindtPlaatsTijdens) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-14T10:40:03.724Z warn: [ConnectorConverterHandler]: Connector (vindtPlaatsTijdens) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-14T10:18:07.133Z warn: [ConnectorConverterHandler]: Connector (AgentInRol.Zaak) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-14T10:40:03.724Z warn: [ConnectorConverterHandler]: Connector (AgentInRol.Zaak) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-14T10:18:07.133Z warn: [ConnectorConverterHandler]: Connector (Zaak.AgentInRol) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-14T10:40:03.724Z warn: [ConnectorConverterHandler]: Connector (Zaak.AgentInRol) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-14T10:18:07.133Z warn: [ConnectorConverterHandler]: Connector (Zaak.AgentInRol) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-11-14T10:40:03.724Z warn: [ConnectorConverterHandler]: Connector (Zaak.AgentInRol) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-14T10:18:07.133Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Zaak.AgentInRol) and the fallback URI (http://todo.com/) will be assigned.
+2025-11-14T10:40:03.724Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (Zaak.AgentInRol) and the fallback URI (http://todo.com/) will be assigned.
 
-2025-11-14T10:18:07.140Z warn: [ConverterHandler]: Entity with path Model:Verkeersmeldingen:OSLO-Dossier:AgentInRol has an empty value for tag ap-usageNote-nl.
+2025-11-14T10:40:03.729Z warn: [ConverterHandler]: Entity with path Model:Verkeersmeldingen:OSLO-Dossier:AgentInRol has an empty value for tag ap-usageNote-nl.
 
-2025-11-14T10:18:07.147Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Verkeersmeldingen:SSN/SOSA:Observatie:geldigeTijd).
-
-2025-11-14T10:18:07.148Z error: [AttributeConverterHandler]: Unable to determine the range for attribute (Verkeersmeldingen:SSN/SOSA:Observatie:resultaattijd).
-
-2025-11-14T10:18:07.151Z warn: [ConverterHandler]: Entity with path Model:Verkeersmeldingen:OSLO-Dossier:Zaak:identificator has an empty value for tag ap-usageNote-nl.
+2025-11-14T10:40:03.740Z warn: [ConverterHandler]: Entity with path Model:Verkeersmeldingen:OSLO-Dossier:Zaak:identificator has an empty value for tag ap-usageNote-nl.
 
 #||# -------------------------------------
 
