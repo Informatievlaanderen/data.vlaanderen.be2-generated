@@ -284,6 +284,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-10-30",
   "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/swagger",
   "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/swagger/R1",
+  "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/swagger/R1/SKOS",
   "/tmp/generated/doc/implementatiemodel/smart-innovation-factory",
   "/tmp/generated/doc/implementatiemodel/smart-innovation-factory/ontwerpstandaard/2025-06-04",
   "/tmp/generated/doc/vocabularium/Persoon/ontwerpstandaard/2023-06-01",

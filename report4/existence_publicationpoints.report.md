@@ -208,7 +208,6 @@ index.html check
 #||#    + checking /home/circleci/project/config/test/kvs.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/codelijsten'
 
 index.html check
 error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/index.html'
