@@ -35,7 +35,6 @@
     <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Agent(inRol)Shape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#DatetimeShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#GeometrieShape>,
-    <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#LiteralShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#UriShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#MomentShape>,
     <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#AdresvoorstellingShape>,
@@ -280,8 +279,8 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Agent(inRol).Zaak>;
     shacl:class dbo:Case;
     shacl:description "De Zaak die in behandeling is door de Agent."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "zaak"@nl;
     shacl:path <https://data.vlaanderen.be/ns/dossier#AgentInRol.Zaak>
   ], [
@@ -291,8 +290,8 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Agent(inRol).Agent>;
     shacl:class dc:Agent;
     shacl:description "De Agent die de zaak behandelt."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "agent"@nl;
     shacl:path prov:agent
   ];
@@ -311,6 +310,15 @@
     shacl:description "De Zaak die de Agent behandelt."@nl;
     shacl:name "zaak"@nl;
     shacl:path dbo:Case
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "Zaak.AgentInRol";
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Agent.Zaak.agentinrol>;
+    shacl:class prov:Association;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "Zaak.AgentInRol";
+    shacl:path <http://todo.com/Zaak.AgentInRol>
   ];
   shacl:targetClass dc:Agent .
 
@@ -331,11 +339,11 @@
     rdfs:label "naam"@nl;
     rdfs:comment "Naam vh type van de waarde."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Benoemdewaarde.Naam>;
-    shacl:datatype rdfs:Literal;
     shacl:description "Naam vh type van de waarde."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "naam"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path schemas:name
   ], [
     a shacl:PropertyShape;
@@ -379,10 +387,10 @@
     <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype."@nl;
     rdfs:comment "Geometrie uitgedrukt in gml-formaat."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Geometrie.Gml>;
-    shacl:datatype rdfs:Literal;
     shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
     shacl:maxCount "1";
     shacl:name "gml"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path <http://www.opengis.net/ont/geosparql#asGML>
   ], [
     a shacl:PropertyShape;
@@ -390,10 +398,10 @@
     <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype."@nl;
     rdfs:comment "Geometrie uitgedrukt in wkt-formaat."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Geometrie.Wkt>;
-    shacl:datatype rdfs:Literal;
     shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
     shacl:maxCount "1";
     shacl:name "wkt"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
   ];
   shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
@@ -493,11 +501,6 @@
   shacl:closed false;
   shacl:targetClass rdf:langString .
 
-<https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#LiteralShape> a shacl:NodeShape;
-  rdfs:label "Literal";
-  shacl:closed false;
-  shacl:targetClass rdfs:Literal .
-
 <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#LocatieShape> a shacl:NodeShape;
   rdfs:label "Locatie"@nl;
   <http://purl.org/vocab/vann/usageNote> "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet dit datatype gesubstitueerd worden door klassen of datatypes zoals Geometrie, GeografischeNaam, Adres etc. OPMERKING: Meer info over deze klassen/datatypes in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/\">OSLO Generiek - basis</a>."@nl;
@@ -545,6 +548,17 @@
     shacl:path <https://data.vlaanderen.be/ns/melding#webpagina>
   ], [
     a shacl:PropertyShape;
+    rdfs:label "identificator"@nl;
+    rdfs:comment "De identificator die de Melding uniek identificeert."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Melding.Identificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "De identificator die de Melding uniek identificeert."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "heeft body"@nl;
     rdfs:comment "Het object van deze associatie is een resource die de body van de Melding beschrijft (MeldingBody)."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Melding.HeeftBody>;
@@ -588,8 +602,8 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Melding.Behandelaar>;
     shacl:class dc:Agent;
     shacl:description "Agent die werd aangewezen om de melding op te volgen en af te handelen."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "behandelaar"@nl;
     shacl:path <https://data.vlaanderen.be/ns/melding#behandelaar>
   ], [
@@ -599,8 +613,8 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Melding.Indiener>;
     shacl:class dc:Agent;
     shacl:description "Agent die de Melding heeft aangemaakt en/of ingediend."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "indiener"@nl;
     shacl:path <https://data.vlaanderen.be/ns/melding#indiener>
   ];
@@ -833,8 +847,8 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Observatie.GeobserveerdKenmerk>;
     shacl:class <http://www.w3.org/ns/sosa/Property>;
     shacl:description "Kenmerk dat men observeert vh geobserveerdObject."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "geobserveerd kenmerk"@nl;
     shacl:path <http://www.w3.org/ns/sosa/observedProperty>
   ], [
@@ -845,8 +859,8 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Observatie.GeobserveerdObject>;
     shacl:class <http://www.w3.org/ns/sosa/FeatureOfInterest>;
     shacl:description "Object dat men observeert."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "geobserveerd object"@nl;
     shacl:path <http://www.w3.org/ns/sosa/hasFeatureOfInterest>
   ], [
@@ -856,8 +870,8 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Observatie.UitgevoerdMet>;
     shacl:class <http://www.w3.org/ns/sosa/Sensor>;
     shacl:description "De Sensor waarmee de Verkeersmeting werd uitgevoerd."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "uitgevoerd met"@nl;
     shacl:path <http://www.w3.org/ns/sosa/madeBySensor>
   ], [
@@ -998,7 +1012,7 @@
     rdfs:seeAlso <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Observatieverzameling.HeeftLid>;
     shacl:class <http://www.w3.org/ns/sosa/Observation>;
     shacl:description "Observatie die deel uitmaakt van de collectie."@nl;
-    shacl:minCount "1";
+    shacl:minCount 1;
     shacl:name "heeft lid"@nl;
     shacl:path <http://www.w3.org/ns/sosa/hasMember>
   ];
@@ -1240,5 +1254,14 @@
     shacl:description "De Agent die de Zaak behandelt."@nl;
     shacl:name "agent"@nl;
     shacl:path dc:agent
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "Zaak.AgentInRol";
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04#Zaak.Zaak.agentinrol>;
+    shacl:class prov:Association;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "Zaak.AgentInRol";
+    shacl:path <https://data.vlaanderen.be/ns/dossier#Zaak.AgentInRol>
   ];
   shacl:targetClass dbo:Case .

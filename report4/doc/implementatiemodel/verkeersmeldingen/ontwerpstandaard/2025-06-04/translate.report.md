@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/translation/verkeersmeldingen_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/translation/verkeersmeldingen_nl.json
+
+TRANSLATIONFILE: verkeersmeldingen_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
