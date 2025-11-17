@@ -156,6 +156,10 @@ index.html check
 #||#    + checking /home/circleci/project/config/dev/fietsinfrastructuur.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05'
+error: missing '/tmp/generated/doc/vocabularium/fietsinfrastructuur/kandidaatstandaard/2025-03-05'
+error: missing '/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05'
+error: missing '/tmp/generated/doc/vocabularium/fietsinfrastructuur/kandidaatstandaard/2025-03-05'
 
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/fietsinfrastructuur/kandidaatstandaard/2025-03-05/index.html'
