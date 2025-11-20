@@ -198,6 +198,7 @@ index.html check
 Directory check
 
 index.html check
+error: missing '/tmp/generated/doc/vocabularium/nutsvoorzieningen/ontwerpstandaard/test/index.html'
 
 #||#    + checking /home/circleci/project/config/test/kindfiche.publication.json
 #||# 
@@ -208,6 +209,7 @@ index.html check
 #||#    + checking /home/circleci/project/config/test/kvs.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/codelijsten'
 
 index.html check
 error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/index.html'
