@@ -44,6 +44,14 @@ https://data.vlaanderen.be/ns/nutsvoorzieningen#Kanaal
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglink
 
 new term introduced, no translation found
@@ -52,7 +60,23 @@ https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieninglinksequentie
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 http://def.isotc211.org/iso19157/2013/DataQuality_2#DQ_PositionalAccuracy
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -65,6 +89,10 @@ https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningnetwerk
 new term introduced, no translation found
 
 https://data.vlaanderen.be/ns/nutsvoorzieningen#Nutsvoorzieningknoopcontainer
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -112,11 +140,19 @@ https://data.vlaanderen.be/ns/nutsvoorzieningen#Kast
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://data.vlaanderen.be/ns/netwerk#GeneriekeLink
 
 new term introduced, no translation found
 
 http://purl.org/dc/terms/Agent
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -128,7 +164,43 @@ https://data.vlaanderen.be/ns/generiek#Functie
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 http://www.w3.org/ns/prov#Entity
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -136,7 +208,23 @@ https://data.vlaanderen.be/ns/nutsvoorzieningen#TopografischElement
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://data.vlaanderen.be/ns/nutsvoorzieningen#KabelEnLeidingContainer
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -148,7 +236,19 @@ https://data.vlaanderen.be/ns/adres#Adres
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 http://def.isotc211.org/iso19103/2015/MeasureTypes#UnitOfMeasure
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -164,7 +264,15 @@ https://data.vlaanderen.be/ns/nutsvoorzieningen#BeschermdGebied
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://data.vlaanderen.be/ns/nutsvoorzieningen#Maataanduiding
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
