@@ -289,6 +289,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/implementatiemodel/smart-innovation-factory/ontwerpstandaard/2025-06-04",
   "/tmp/generated/doc/vocabularium/Persoon/ontwerpstandaard/2023-06-01",
   "/tmp/generated/doc/vocabularium/SIF/ontwerpstandaard/2025-06-04",
+  "/tmp/generated/doc/vocabularium/besluit/kandidaatstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/besluit/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/bestuur/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01",
