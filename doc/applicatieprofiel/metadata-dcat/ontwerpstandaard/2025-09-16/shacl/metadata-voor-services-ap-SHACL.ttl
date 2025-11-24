@@ -654,13 +654,11 @@ De condities die enkel als doel hebben om de correcte werking van de dataservice
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/2025-09-16#DatasetSerieShape> a shacl:NodeShape;
   rdfs:label "Dataset Serie"@nl;
-  <http://purl.org/vocab/vann/usageNote> """Een Dataset Serie is een verzameling van datasets waarvan slechts een enkele dimentie veranderd. Momenteel worden enkel temporele, ruimtelijke bereik, data model, en ruimtelijke resolutie als dimenties voor Dataset Serie erkend. 
+  <http://purl.org/vocab/vann/usageNote> """In DCAT-AP VL 3.0 worden datasetseries opgevat in hun zuivere betekenis: een verzameling van datasets die dezelfde specificaties delen, waarbij de enige variërende eigenschap typisch ruimte of tijd/versie is. Dit sluit nauw aan bij ISO 19115-1 en INSPIRE, waar een datasetserie wordt gedefinieerd als een collectie datasets met een gemeenschappelijke productspecificatie. Deze zuivere vorm wordt in DCAT-AP VL 3.0 volledig ondersteund. 
 <br/>
-Voor verzamelingen van datasets waarbij meer dimenties tegelijk of andere dimenties wijzigen worden catalogi gebruikt.
+Daarnaast bestaan in de praktijk verschillende tussenvormen - zoals verzamelingen van datasets over eenzelfde thema, verzamelingen van datasets, series en services, of collecties gebaseerd op bron- of eigenschapsgelijkheid. Deze structuren hebben een grotere “vrijheidsgraad” (variatie in versie, gebied, specificaties, brontypes of eigenschappen) en voldoen daardoor niet aan de formele definitie van datasetseries. Deze tussenvormen worden daarom niet als datasetseries ondersteund, maar wel vindbaar gemaakt via passende DCAT-structuren (bv. thema-gebaseerde groepering of catalogusstructuren). 
 <br/>
-Voor DCAT-AP Vlaanderen zijn Dataset Series dus een specifieke variant van verzamelingen van datasets. De eigenschappen van de datasets zijn dus net zoals die van een catalogus gericht op de verzameling, i.p.v. gericht op de mogelijkheid om een dataset serie als opdeling te zien van 1 dataset in kleinere onderdelen. 
-<br/>
-Het aanduiden van een verzameling als een Dataset Serie heeft als voordeel dat er een verwachtingspatroon kan gekoppeld worden hieraan. Omdat in de praktijk dit verwachtingspatroon erg gekoppeld is aan de striktheid van van de interpretatie van een een-dimentionale wijziging is er een eigenschap dit dit aanduid."""@nl;
+Voor complexe of expliciet gestructureerde groeperingen is de correcte representatie een (sub)catalogus, waarbij de verbindende eigenschap expliciet door de catalogus zelf wordt bepaald. Subcatalogi worden wél ondersteund in DCAT-AP VL 3.0."""@nl;
   rdfs:comment "Een verzameling die onafhankelijk gepubliceerde datasets groepeert rond gedeelde eigenschappen."@nl;
   shacl:closed false;
   shacl:property [
@@ -1441,7 +1439,9 @@ vinden"""@nl;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "eind datum"@nl;
+    rdfs:comment "Het einde van de periode."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/2025-09-16#Tijdsperiode.EindDatum>;
+    shacl:description "Het einde van de periode."@nl;
     shacl:maxCount "1";
     shacl:name "eind datum"@nl;
     shacl:nodeKind shacl:Literal;
@@ -1449,7 +1449,9 @@ vinden"""@nl;
   ], [
     a shacl:PropertyShape;
     rdfs:label "start datum"@nl;
+    rdfs:comment "De start van de periode."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/2025-09-16#Tijdsperiode.StartDatum>;
+    shacl:description "De start van de periode."@nl;
     shacl:maxCount "1";
     shacl:name "start datum"@nl;
     shacl:nodeKind shacl:Literal;
@@ -1457,16 +1459,20 @@ vinden"""@nl;
   ], [
     a shacl:PropertyShape;
     rdfs:label "heeft start"@nl;
+    rdfs:comment "Het begin van een periode of interval."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/2025-09-16#Tijdsperiode.HeeftStart>;
     shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:description "Het begin van een periode of interval."@nl;
     shacl:maxCount "1";
     shacl:name "heeft start"@nl;
     shacl:path <http://www.w3.org/2006/time#hasBeginning>
   ], [
     a shacl:PropertyShape;
     rdfs:label "heeft einde"@nl;
+    rdfs:comment "Het einde van een periode of interval."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/2025-09-16#Tijdsperiode.HeeftEinde>;
     shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:description "Het einde van een periode of interval."@nl;
     shacl:maxCount "1";
     shacl:name "heeft einde"@nl;
     shacl:path <http://www.w3.org/2006/time#hasEnd>
