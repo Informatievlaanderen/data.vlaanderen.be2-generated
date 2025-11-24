@@ -2,15 +2,15 @@
 
 #||# -------------------------------------  
 
-2025-11-24T14:46:03.262Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-cultureel-erfgoed-basisregistratie.jsonld#L9058)".
+2025-11-24T14:55:26.410Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-cultureel-erfgoed-basisregistratie.jsonld#L9058)".
 
-2025-11-24T14:46:03.263Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-cultureel-erfgoed-basisregistratie.jsonld#L9069)".
+2025-11-24T14:55:26.412Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-cultureel-erfgoed-basisregistratie.jsonld#L9069)".
 
-2025-11-24T14:46:03.264Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-cultureel-erfgoed-basisregistratie.jsonld#L9080)".
+2025-11-24T14:55:26.412Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-cultureel-erfgoed-basisregistratie.jsonld#L9080)".
 
-2025-11-24T14:46:03.264Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
+2025-11-24T14:55:26.413Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
 
-2025-11-24T14:46:03.335Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5d3da9c7825779ce7b2df55121c21fc357ca2f6b09c613f94521fbe4f6505f0d](all-cultureel-erfgoed-basisregistratie.jsonld#L8163)".
+2025-11-24T14:55:26.477Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5d3da9c7825779ce7b2df55121c21fc357ca2f6b09c613f94521fbe4f6505f0d](all-cultureel-erfgoed-basisregistratie.jsonld#L8163)".
 
-2025-11-24T14:46:03.336Z warn: Unable to find the description for subject "[urn:oslo-toolchain:75ad30f0d6164c9c02a58fc9753901e5a78d632c872ea14ea9b1169a0f34b9f2](all-cultureel-erfgoed-basisregistratie.jsonld#L8189)".
+2025-11-24T14:55:26.478Z warn: Unable to find the description for subject "[urn:oslo-toolchain:75ad30f0d6164c9c02a58fc9753901e5a78d632c872ea14ea9b1169a0f34b9f2](all-cultureel-erfgoed-basisregistratie.jsonld#L8189)".
 
