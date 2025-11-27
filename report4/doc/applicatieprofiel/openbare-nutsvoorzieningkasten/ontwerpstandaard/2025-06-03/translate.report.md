@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/openbare-nutsvoorzieningkasten/ontwerpstandaard/2025-06-03/translation/openbare-nutsvoorzieningkasten_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/openbare-nutsvoorzieningkasten/ontwerpstandaard/2025-06-03/translation/openbare-nutsvoorzieningkasten_nl.json
+
+TRANSLATIONFILE: openbare-nutsvoorzieningkasten_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
