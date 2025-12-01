@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/translation/rooilijnplannen_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/translation/rooilijnplannen_nl.json
+
+TRANSLATIONFILE: rooilijnplannen_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
