@@ -34,6 +34,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/dossier.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/dev/dummy.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/energiehuis.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/energiemanagementsysteem.publication.json

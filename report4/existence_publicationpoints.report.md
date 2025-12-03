@@ -115,6 +115,13 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/dev/dummy.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/vocabularium/weg/ontwerpstandaard/2026-01-01/index.html'
+
 #||#    + checking /home/circleci/project/config/dev/energiehuis.publication.json
 #||# 
 Directory check
