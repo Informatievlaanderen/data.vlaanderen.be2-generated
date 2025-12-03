@@ -512,6 +512,12 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/test/weg2.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/test/wetgeving.publication.json
 #||# 
 Directory check

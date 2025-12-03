@@ -166,6 +166,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/weg.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/weg2.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/wetgeving.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/zaalreservatie.publication.json
