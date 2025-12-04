@@ -355,6 +355,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/toestemming",
   "/tmp/generated/doc/vocabularium/toestemming/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/vrachtwagenparkeren/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/vocabularium/weg/ontwerpstandaard/2026-01-01",
   "/tmp/generated/ns/FeitelijkeVerenigingen",
   "/tmp/generated/ns/SIF",
   "/tmp/generated/ns/bodem-en-ondergrond",
