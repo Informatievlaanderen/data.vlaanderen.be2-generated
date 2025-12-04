@@ -164,9 +164,9 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/waterkwaliteit.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/test/weg-twee.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/test/weg.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/weg2.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/wetgeving.publication.json
 #||#  
