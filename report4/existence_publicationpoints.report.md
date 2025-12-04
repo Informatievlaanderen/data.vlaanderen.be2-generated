@@ -506,13 +506,13 @@ Directory check
 
 index.html check
 
-#||#    + checking /home/circleci/project/config/test/weg.publication.json
+#||#    + checking /home/circleci/project/config/test/weg-twee.publication.json
 #||# 
 Directory check
 
 index.html check
 
-#||#    + checking /home/circleci/project/config/test/weg2.publication.json
+#||#    + checking /home/circleci/project/config/test/weg.publication.json
 #||# 
 Directory check
 
