@@ -2,5 +2,5 @@
 
 #||# -------------------------------------  
 
-2025-12-05T13:07:33.955Z error: Unable to find the assigned URI of parent (https://schema.org/CreatiefWerk) of class [urn:oslo-toolchain:b29768b46da60810e17a90d420fb4063cb2e0a3ef468ae1dfef8b5390a2fb854](all-leermiddelen.jsonld#L401).
+2025-12-08T08:48:49.913Z error: Unable to find the assigned URI of parent (https://schema.org/CreatiefWerk) of class [urn:oslo-toolchain:b29768b46da60810e17a90d420fb4063cb2e0a3ef468ae1dfef8b5390a2fb854](all-leermiddelen.jsonld#L401).
 
