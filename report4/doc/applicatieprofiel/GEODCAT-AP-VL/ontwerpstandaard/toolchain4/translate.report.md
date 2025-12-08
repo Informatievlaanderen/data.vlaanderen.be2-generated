@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4/translation/geodcatap-vlaanderen_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4/translation/geodcatap-vlaanderen_nl.json
+
+TRANSLATIONFILE: geodcatap-vlaanderen_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  

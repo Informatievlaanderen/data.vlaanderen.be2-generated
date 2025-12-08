@@ -2,7 +2,25 @@
 
 #||# -------------------------------------  
 
-2025-05-20T08:48:38.035Z warn: Unable to find the description for subject "[urn:oslo-toolchain:95838aa419b0cc36c1447acd0939b6a412f4645b4a83982e84b62ba1b9cf6319](all-geodcatap-vlaanderen.jsonld#L4859)".
+/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/OutputHandlerService.js:28
 
-2025-05-20T08:48:38.037Z warn: Unable to find the description for subject "[urn:oslo-toolchain:0512a862d47557595179f9f7164576c83752a10d3eac0ceac42ada2fe7aebccc](all-geodcatap-vlaanderen.jsonld#L4879)".
+const serializer_turtle_1 = __importDefault(require("@rdfjs/serializer-turtle"));
+
+                                            ^
+
+
+
+Error [ERR_REQUIRE_ESM]: require() of ES Module /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@rdfjs/serializer-turtle/index.js from /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/OutputHandlerService.js not supported.
+
+Instead change the require of index.js in /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/OutputHandlerService.js to a dynamic import() which is available in all CommonJS modules.
+
+    at Object.<anonymous> (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/OutputHandlerService.js:28:45) {
+
+  code: 'ERR_REQUIRE_ESM'
+
+}
+
+
+
+Node.js v20.15.1
 

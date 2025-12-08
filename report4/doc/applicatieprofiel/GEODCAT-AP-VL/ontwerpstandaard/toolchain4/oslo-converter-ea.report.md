@@ -2,83 +2,81 @@
 
 #||# -------------------------------------
 
-2025-05-20T08:36:30.919Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
+2025-12-08T09:01:02.474Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
 
-2025-05-20T08:36:30.920Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
+2025-12-08T09:01:02.476Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
 
-2025-05-20T08:36:30.920Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+2025-12-08T09:01:02.476Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-05-20T08:36:30.920Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent))
+2025-12-08T09:01:02.476Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent))
 
-2025-05-20T08:36:30.920Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
+2025-12-08T09:01:02.476Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
 
-2025-05-20T08:36:30.920Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Object))
+2025-12-08T09:01:02.476Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Object))
 
-2025-05-20T08:36:30.921Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent))
+2025-12-08T09:01:02.476Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent))
 
-2025-05-20T08:36:30.921Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2025-12-08T09:01:02.476Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-05-20T08:36:30.921Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:isGerelateerdAan)
+2025-12-08T09:01:02.476Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:isGerelateerdAan)
 
-2025-05-20T08:36:30.921Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> CatalogusResource))
+2025-12-08T09:01:02.476Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> CatalogusResource))
 
-2025-05-20T08:36:30.923Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:(CatalogusRecord -> CatalogusResource) is not an association with a source role. Ignoring this connector.
+2025-12-08T09:01:02.478Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:(CatalogusRecord -> CatalogusResource) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:36:30.924Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> CatalogusRecord) is not an association with a source role. Ignoring this connector.
+2025-12-08T09:01:02.479Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> CatalogusRecord) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:36:30.924Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent) is not an association with a source role. Ignoring this connector.
+2025-12-08T09:01:02.479Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:36:30.924Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:(DataService -> Dataset) is not an association with a source role. Ignoring this connector.
+2025-12-08T09:01:02.479Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:(DataService -> Dataset) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:36:30.924Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:(DataService -> CatalogusResource) is not an association with a source role. Ignoring this connector.
+2025-12-08T09:01:02.480Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:DataService:(DataService -> CatalogusResource) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:36:30.924Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> CatalogusResource) is not an association with a source role. Ignoring this connector.
+2025-12-08T09:01:02.480Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> CatalogusResource) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:36:30.924Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:(Distributie -> DataService) is not an association with a source role. Ignoring this connector.
+2025-12-08T09:01:02.480Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:(Distributie -> DataService) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:36:30.925Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> Agent) is not an association with a source role. Ignoring this connector.
+2025-12-08T09:01:02.480Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:36:30.925Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> Dataset) is not an association with a source role. Ignoring this connector.
+2025-12-08T09:01:02.480Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> Dataset) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:36:30.925Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> Distributie) is not an association with a source role. Ignoring this connector.
+2025-12-08T09:01:02.480Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> Distributie) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:36:30.925Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> DataService) is not an association with a source role. Ignoring this connector.
+2025-12-08T09:01:02.480Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:(Catalogus -> DataService) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:36:30.925Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> Agent) is not an association with a source role. Ignoring this connector.
+2025-12-08T09:01:02.480Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Dataset:(Dataset -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:36:30.925Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:(Distributie -> Agent) is not an association with a source role. Ignoring this connector.
+2025-12-08T09:01:02.481Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:(Distributie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:36:30.925Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> CatalogusResource) is not an association with a source role. Ignoring this connector.
+2025-12-08T09:01:02.481Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusResource:(CatalogusResource -> CatalogusResource) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:36:30.926Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Contactinfo:(Contactinfo -> ContactInfo) is not an association with a source role. Ignoring this connector.
+2025-12-08T09:01:02.481Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Contactinfo:(Contactinfo -> ContactInfo) is not an association with a source role. Ignoring this connector.
 
-2025-05-20T08:36:30.926Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model) and fallback URI (http://todo.com/) will be assigned.
+2025-12-08T09:01:02.482Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:36:30.926Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model) and fallback URI (http://todo.com/) will be assigned.
+2025-12-08T09:01:02.482Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:36:30.926Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium) and fallback URI (http://todo.com/) will be assigned.
+2025-12-08T09:01:02.482Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:36:30.927Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium:External) and fallback URI (http://todo.com/) will be assigned.
+2025-12-08T09:01:02.482Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium:External). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:36:30.927Z warn: [PackageConverterHandler]: No value found for tag "baseUri" in package (Model:Domain Model:OSLO²_vocabularium:OSLO-DCATAPVL-2.0) and fallback URI (http://todo.com/) will be assigned.
+2025-12-08T09:01:02.482Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium:OSLO-DCATAPVL-2.0). Using fallback URI (http://todo.com/) instead.
 
-2025-05-20T08:36:30.930Z warn: [ConnectorConverterHandler]: Connector (CatalogusResource (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-12-08T09:01:02.485Z warn: [ConnectorConverterHandler]: Connector (CatalogusResource (source)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-05-20T08:36:30.930Z warn: [ConnectorConverterHandler]: Connector (CatalogusResource (target)) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2025-12-08T09:01:02.491Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:titel has already a value for ap-usageNote-nl in language nl, but will be overwritten.
 
-2025-05-20T08:36:30.936Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Catalogus:titel has already a value for ap-usageNote-nl in language nl, but will be overwritten.
+2025-12-08T09:01:02.494Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:wijzigingsdatum has already a value for ap-usageNote-nl in language nl, but will be overwritten.
 
-2025-05-20T08:36:30.941Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:CatalogusRecord:wijzigingsdatum has already a value for ap-usageNote-nl in language nl, but will be overwritten.
+2025-12-08T09:01:02.502Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:downloadURL has already a value for ap-usageNote-nl in language nl, but will be overwritten.
 
-2025-05-20T08:36:30.946Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:downloadURL has already a value for ap-usageNote-nl in language nl, but will be overwritten.
+2025-12-08T09:01:02.502Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:toegangsURL has already a value for ap-usageNote-nl in language nl, but will be overwritten.
 
-2025-05-20T08:36:30.946Z warn: [ConverterHandler]: Entity with path Model:Domain Model:OSLO²_vocabularium:OSLO-metadataVoorServices:Distributie:toegangsURL has already a value for ap-usageNote-nl in language nl, but will be overwritten.
+2025-12-08T09:01:02.504Z warn: [ConverterHandler]: Entity with path eigenaar has an empty value for tag definition-nl.
 
-2025-05-20T08:36:30.948Z warn: [ConverterHandler]: Entity with path eigenaar has an empty value for tag definition-nl.
+2025-12-08T09:01:02.504Z warn: [ConverterHandler]: Entity with path eigenaar has already a value for label-ap-nl in language nl, but will be overwritten.
 
-2025-05-20T08:36:30.948Z warn: [ConverterHandler]: Entity with path eigenaar has already a value for label-ap-nl in language nl, but will be overwritten.
-
-2025-05-20T08:36:30.949Z warn: [ConverterHandler]: Entity with path verdeler has already a value for label-ap-nl in language nl, but will be overwritten.
+2025-12-08T09:01:02.504Z warn: [ConverterHandler]: Entity with path verdeler has already a value for label-ap-nl in language nl, but will be overwritten.
 
 #||# -------------------------------------
 
