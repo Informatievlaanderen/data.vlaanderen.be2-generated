@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/DCAT-AP-VL/ontwerpstandaard/toolchain4/translation/DCAT-AP-VL-20_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/DCAT-AP-VL/ontwerpstandaard/toolchain4/translation/DCAT-AP-VL-20_nl.json
+
+TRANSLATIONFILE: DCAT-AP-VL-20_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
