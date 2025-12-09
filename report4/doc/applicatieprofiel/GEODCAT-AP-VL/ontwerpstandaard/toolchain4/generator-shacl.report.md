@@ -2,25 +2,17 @@
 
 #||# -------------------------------------  
 
-/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/OutputHandlerService.js:28
+2025-12-09T12:26:16.098Z warn: Unable to find the description for subject "[urn:oslo-toolchain:85e46c96ce3f899fa2151147f8f3631652ce41d02c2cfcb187304965703e34b5](all-geodcatap-vlaanderen.jsonld#L576)".
 
-const serializer_turtle_1 = __importDefault(require("@rdfjs/serializer-turtle"));
+2025-12-09T12:26:16.100Z warn: Unable to find the description for subject "[urn:oslo-toolchain:07e9d622e4e63c339e69e2fbb78e6843dcca58179ee9882bb349aac78937db24](all-geodcatap-vlaanderen.jsonld#L600)".
 
-                                            ^
+2025-12-09T12:26:16.100Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-geodcatap-vlaanderen.jsonld#L6089)".
 
+2025-12-09T12:26:16.100Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cd1a08986ade75e4719baf40c57773149a315dac2dc2d62d7bfba1439367ce4f](all-geodcatap-vlaanderen.jsonld#L6030)".
 
+2025-12-09T12:26:16.100Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
 
-Error [ERR_REQUIRE_ESM]: require() of ES Module /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@rdfjs/serializer-turtle/index.js from /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/OutputHandlerService.js not supported.
+2025-12-09T12:26:16.101Z warn: Unable to find the description for subject "[urn:oslo-toolchain:013904af3189e8feae623d00dc7bb9c3fc4235f0964568a9c92ff9e4cc851bb2](all-geodcatap-vlaanderen.jsonld#L5977)".
 
-Instead change the require of index.js in /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/OutputHandlerService.js to a dynamic import() which is available in all CommonJS modules.
-
-    at Object.<anonymous> (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/OutputHandlerService.js:28:45) {
-
-  code: 'ERR_REQUIRE_ESM'
-
-}
-
-
-
-Node.js v20.15.1
+2025-12-09T12:26:16.133Z warn: Unable to find the description for subject "[urn:oslo-toolchain:95838aa419b0cc36c1447acd0939b6a412f4645b4a83982e84b62ba1b9cf6319](all-geodcatap-vlaanderen.jsonld#L5907)".
 
