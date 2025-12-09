@@ -1,0 +1,28 @@
+#||# oslo-webuniversum-json-generator for language nl  
+
+#||# -------------------------------------  
+
+2025-12-09T15:21:39.344Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/adms#status which acts as a parent. Using original URI as fallback.
+
+2025-12-09T15:21:39.346Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
+
+2025-12-09T15:21:39.347Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
+
+2025-12-09T15:21:39.348Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
+
+2025-12-09T15:21:39.348Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
+
+2025-12-09T15:21:39.356Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/dcat#landingPage which acts as a parent. Using original URI as fallback.
+
+2025-12-09T15:21:39.356Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/dcat#landingPage which acts as a parent. Using original URI as fallback.
+
+2025-12-09T15:21:39.357Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/conformsTo which acts as a parent. Using original URI as fallback.
+
+2025-12-09T15:21:39.358Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
+
+2025-12-09T15:21:39.358Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/dcat#landingPage which acts as a parent. Using original URI as fallback.
+
+2025-12-09T15:21:39.359Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/type which acts as a parent. Using original URI as fallback.
+
+2025-12-09T15:21:39.359Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/type which acts as a parent. Using original URI as fallback.
+
