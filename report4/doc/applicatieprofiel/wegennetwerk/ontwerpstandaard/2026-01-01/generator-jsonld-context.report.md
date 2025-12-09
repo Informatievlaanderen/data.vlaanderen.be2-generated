@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-12-09T15:02:33.067Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:f42077b565ce487fdd064db7a066efeda99436a7943b5f625e3074f93a946288](all-wegennetwerk.jsonld#L1712).
+2025-12-09T15:08:14.244Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:bae6dbc0b657c6096a1f44282c8c3e16887ebf744221f06988dc0b777d105f53](all-wegennetwerk.jsonld#L4247).
 
-2025-12-09T15:02:33.069Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:daecc751a299b2ce1f7de1430fda91db9553d8c829f45eae18066a74e6fb289f](all-wegennetwerk.jsonld#L1730).
+2025-12-09T15:08:14.246Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:9d4205f317b426c98d3e2e62c067c5b3402c0c9868c45a13f74739b39b8867c2](all-wegennetwerk.jsonld#L4277).
 
