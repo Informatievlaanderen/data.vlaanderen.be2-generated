@@ -168,6 +168,7 @@ Error: the following directories are unsupported
 [
   "/tmp/generated/doc/applicatieprofiel/AirAndWater/Core/ontwerpstandaard/2021-10-01",
   "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL",
+  "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-04-30",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-08-30",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-11-28",
