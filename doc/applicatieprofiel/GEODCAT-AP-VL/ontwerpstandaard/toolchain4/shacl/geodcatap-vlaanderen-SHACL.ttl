@@ -26,11 +26,13 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#AgentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#RelatieQualificatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#TijdsperiodeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#RechtsgrondShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#StringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#IdentificatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#DatetimeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#ResolutieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#ContactinfoShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#TijdsmomentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#ContactpuntShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#AgentShape> a shacl:NodeShape;
@@ -761,6 +763,15 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     shacl:path <http://www.w3.org/ns/adms#identifier>
   ], [
     a shacl:PropertyShape;
+    rdfs:label "belanghebbende wetgeving"@nl;
+    rdfs:comment "De wetgeving die aanzet tot het aanmaken of het beheren van de Dataset Serie."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#DatasetSerie.BelanghebbendeWetgeving>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description "De wetgeving die aanzet tot het aanmaken of het beheren van de Dataset Serie."@nl;
+    shacl:name "belanghebbende wetgeving"@nl;
+    shacl:path <http://data.europa.eu/r5r/applicableLegislation>
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "contactinformatie"@nl;
     rdfs:comment "De relevante contactinformatie waarmee een eindgebruiker in contact kan treden met de verantwoordelijken van de Dataset Serie."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#DatasetSerie.Contactinformatie>;
@@ -770,6 +781,15 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     shacl:minCount "1";
     shacl:name "contactinformatie"@nl;
     shacl:path dcat:contactPoint
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "temporele dekking"@nl;
+    rdfs:comment "De tijdsperiode die de dataset serie bestrijkt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#DatasetSerie.TemporeleDekking>;
+    shacl:class dc:PeriodOfTime;
+    shacl:description "De tijdsperiode die de dataset serie bestrijkt."@nl;
+    shacl:name "temporele dekking"@nl;
+    shacl:path dc:temporal
   ], [
     a shacl:PropertyShape;
     rdfs:label "geografische dekking"@nl;
@@ -1378,6 +1398,13 @@ waaraan de distributie voldoet."""@nl;
   ];
   shacl:targetClass dc:Location .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#RechtsgrondShape> a shacl:NodeShape;
+  rdfs:label "Rechtsgrond"@nl;
+  <http://purl.org/vocab/vann/usageNote> "De waarden die hier gebruikt worden zijn the PURIs van de wetgeving volgens de ELI URI richtlijnen."@nl;
+  rdfs:comment "Een legaal concept dat los staat van een bepaalde vorm (het achterliggende idee)."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResource> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#RelatieQualificatieShape> a shacl:NodeShape;
   rdfs:label "Relatie Qualificatie"@nl;
   <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/vocab-dcat-2/#Class:Relationship\">DCAT</a> en <a href=\"https://www.w3.org/TR/vocab-dcat-2/#qualified-forms\">DCAT</a>]"@nl;
@@ -1531,9 +1558,46 @@ vinden"""@nl;
   shacl:closed false;
   shacl:targetClass xsd:string .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#TijdsmomentShape> a shacl:NodeShape;
+  rdfs:label "Tijdsmoment"@nl;
+  rdfs:comment "Een temporele entiteit zonder omvang of duur."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/2006/time#Instant> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#TijdsperiodeShape> a shacl:NodeShape;
   rdfs:label "Tijdsperiode"@nl;
   shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "eind datum"@nl;
+    rdfs:comment "Het einde van de periode."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Tijdsperiode.EindDatum>;
+    shacl:description "Het einde van de periode."@nl;
+    shacl:maxCount "1";
+    shacl:name "eind datum"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path dcat:endDate
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft start"@nl;
+    rdfs:comment "Het begin van een periode of interval."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Tijdsperiode.HeeftStart>;
+    shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:description "Het begin van een periode of interval."@nl;
+    shacl:maxCount "1";
+    shacl:name "heeft start"@nl;
+    shacl:path <http://www.w3.org/2006/time#hasBeginning>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft einde"@nl;
+    rdfs:comment "Het einde van een periode of interval."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Tijdsperiode.HeeftEinde>;
+    shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:description "Het einde van een periode of interval."@nl;
+    shacl:maxCount "1";
+    shacl:name "heeft einde"@nl;
+    shacl:path <http://www.w3.org/2006/time#hasEnd>
+  ];
   shacl:targetClass dc:PeriodOfTime .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#VoorbeeldweergaveShape> a shacl:NodeShape;
