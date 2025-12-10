@@ -794,6 +794,17 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     shacl:path dc:accrualPeriodicity
   ], [
     a shacl:PropertyShape;
+    rdfs:label "publicatie datum"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Dit is het moment wanneer de dataset serie voor het eerst publiekelijk kenbaar gemaakt is. Het is niet noodzakelijk gekijk aan de publicatie datum van de oudste dataset in de verzameling."@nl;
+    rdfs:comment "Het tijdsmoment waarop de dataset serie werd gepubliceerd door de uitgever."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09#DatasetSerie.PublicatieDatum>;
+    shacl:description "Het tijdsmoment waarop de dataset serie werd gepubliceerd door de uitgever."@nl;
+    shacl:maxCount "1";
+    shacl:name "publicatie datum"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path dc:issued
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "temporele dekking"@nl;
     rdfs:comment "De tijdsperiode die de dataset serie bestrijkt."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09#DatasetSerie.TemporeleDekking>;
@@ -822,6 +833,14 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     shacl:description "Het geografische gebied waarover de dataset serie informatie heeft."@nl;
     shacl:name "geografische dekking"@nl;
     shacl:path dc:spatial
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "uitgever";
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09#DatasetSerie.Uitgever>;
+    shacl:class dc:Agent;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "uitgever";
+    shacl:path <http://todo.com/uitgever>
   ];
   shacl:targetClass dcat:DatasetSeries .
 
@@ -1145,6 +1164,14 @@ GEMET thesaurus."""@nl;
     shacl:maxCount "n"^^xsd:integer;
     shacl:name "eigenaar"@nl;
     shacl:path dc:rightsHolder
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "inserie";
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09#Dataset.Inserie>;
+    shacl:class dcat:DatasetSeries;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "inserie";
+    shacl:path <http://data.vlaanderen.be/ns/metadata-dcat#inserie>
   ];
   shacl:targetClass dcat:Dataset .
 
@@ -1161,7 +1188,6 @@ GEMET thesaurus."""@nl;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "identificator"@nl;
-    <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:resource_identifier\">DCAT</a>]"@nl;
     rdfs:comment "De unieke identificator van de distributie."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09#Distributie.Identificator>;
     shacl:description "De unieke identificator van de distributie."@nl;
@@ -1173,9 +1199,7 @@ GEMET thesaurus."""@nl;
   ], [
     a shacl:PropertyShape;
     rdfs:label "titel"@nl;
-    <http://purl.org/vocab/vann/usageNote> """[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:distribution_title\">DCAT</a>]
-
-Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde."""@nl;
+    <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde."@nl;
     rdfs:comment "De naam van de distributie."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09#Distributie.Titel>;
     shacl:datatype rdf:langString;
@@ -1186,8 +1210,7 @@ Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interp
   ], [
     a shacl:PropertyShape;
     rdfs:label "rechten"@nl;
-    <http://purl.org/vocab/vann/usageNote> """[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:resource_rights\">DCAT</a>]
-Met deze eigenschap kunnen rechten uitgedrukt worden zoals bronvermeldingen, copyright of specifieke gebruiksbepalingen. Indien deze rechten reeds opgenomen zijn in de licentie dan moeten ze niet hier herhaald worden."""@nl;
+    <http://purl.org/vocab/vann/usageNote> "Met deze eigenschap kunnen rechten uitgedrukt worden zoals bronvermeldingen, copyright of specifieke gebruiksbepalingen. Indien deze rechten reeds opgenomen zijn in de licentie dan moeten ze niet hier herhaald worden."@nl;
     rdfs:comment "Bepalingen van juridische aard die gelden op de distributie."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09#Distributie.Rechten>;
     shacl:class dc:RightsStatement;
@@ -1198,9 +1221,7 @@ Met deze eigenschap kunnen rechten uitgedrukt worden zoals bronvermeldingen, cop
   ], [
     a shacl:PropertyShape;
     rdfs:label "alternatieve identificator"@nl;
-    <http://purl.org/vocab/vann/usageNote> """[Zie <a href=\"https://github.com/SEMICeu/DCAT-AP/tree/master/releases/2.0.1\">DCAT-AP</a>]
-
-De mapping van ISO metadata kan resulteren in een bijkomende alternatieve identificator. Bepaalde distributies zijn downloadbaar vanuit een geografische data service met kennis van de identificator van deze distributie. B.v. de laag bepaald een volledige datasetdistributie in een WMS. Deze identificator is een lokale benaming in de context van de geassocieerde dataservice."""@nl;
+    <http://purl.org/vocab/vann/usageNote> "De mapping van ISO metadata kan resulteren in een bijkomende alternatieve identificator. Bepaalde distributies zijn downloadbaar vanuit een geografische data service met kennis van de identificator van deze distributie. B.v. de laag bepaald een volledige datasetdistributie in een WMS. Deze identificator is een lokale benaming in de context van de geassocieerde dataservice."@nl;
     rdfs:comment "Een alternatieve identificator (dan de unieke identificator) voor een distributie kan hier beschreven worden."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09#Distributie.AlternatieveIdentificator>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
@@ -1221,7 +1242,6 @@ De mapping van ISO metadata kan resulteren in een bijkomende alternatieve identi
   ], [
     a shacl:PropertyShape;
     rdfs:label "licentie"@nl;
-    <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:resource_license\">DCAT</a>]"@nl;
     rdfs:comment "De licentie van de distributie."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09#Distributie.Licentie>;
     shacl:class dc:LicenseDocument;
@@ -1232,7 +1252,6 @@ De mapping van ISO metadata kan resulteren in een bijkomende alternatieve identi
   ], [
     a shacl:PropertyShape;
     rdfs:label "conform"@nl;
-    <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:distribution_conforms_to\">DCAT</a>]"@nl;
     rdfs:comment """Een standaard, schema, implementatie-
 model, applicatieprofiel, vocabularium
 waaraan de distributie voldoet."""@nl;
@@ -1599,6 +1618,16 @@ vinden"""@nl;
     shacl:name "eind datum"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dcat:endDate
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "start datum"@nl;
+    rdfs:comment "De start van de periode."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09#Tijdsperiode.StartDatum>;
+    shacl:description "De start van de periode."@nl;
+    shacl:maxCount "1";
+    shacl:name "start datum"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path dcat:startDate
   ], [
     a shacl:PropertyShape;
     rdfs:label "heeft start"@nl;
