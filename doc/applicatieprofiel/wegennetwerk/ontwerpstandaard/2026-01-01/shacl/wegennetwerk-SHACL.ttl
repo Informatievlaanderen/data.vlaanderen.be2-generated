@@ -7,7 +7,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#> rdfs:member <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#ToegangShape>,
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#> rdfs:member <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#EenheidShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#ToegangShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#TransporteigenschapShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#ConnectieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#OngelijkgrondsekruisingShape>,
@@ -41,13 +42,21 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#ServiceShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#WegnaamShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#WegverhardingShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GeometrieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#KwantitatievewaardeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GeographicalnameShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#StringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#IntegerShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#IdentificatorShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#DatetimeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#VlakShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GerichtelinkShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#PuntShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#NetwerkreferentieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#LinkreferentieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#PuntreferentieShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#LineairereferentieShape> .
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#LineairereferentieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#CurveShape> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#AantalrijstrokenShape> a shacl:NodeShape;
   rdfs:label "AantalRijstroken"@nl;
@@ -163,6 +172,25 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#Connectie> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#CurveShape> a shacl:NodeShape;
+  rdfs:label "Curve"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."@nl;
+  rdfs:comment "Een 1-dimensionele geometrische primitieve."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://www.opengis.net/ont/sf#Curve> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#DatetimeShape> a shacl:NodeShape;
+  rdfs:label "DateTime";
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#EenheidShape> a shacl:NodeShape;
+  rdfs:label "Eenheid"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Te gebruiken ipv Concept als een voorgedefinieerde eenheid van QUDT beschikbaar is, bvb <a href=\"http://qudt.org/vocab/unit/M\">meter</a>. Zie <a href=\"https://www.qudt.org/doc/DOC_VOCAB-UNITS.html\">QUDT-units</a> voor meer info."@nl;
+  rdfs:comment "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."@nl;
+  shacl:closed false;
+  shacl:targetClass <https://qudt.org/schema/qudt/Unit> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#EigenaarShape> a shacl:NodeShape;
   rdfs:label "Eigenaar"@nl;
   rdfs:comment "Agent die het transportobject bezit."@nl;
@@ -202,6 +230,42 @@ nummer."""@nl;
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#EuropeseWeg> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GeographicalnameShape> a shacl:NodeShape;
+  rdfs:label "GeographicalName"@nl;
+  <http://purl.org/vocab/vann/usageNote> "To be implemented as Langstring."@nl;
+  rdfs:comment "Name assigned to or used for a geographical object."@nl;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GeometrieShape> a shacl:NodeShape;
+  rdfs:label "Geometrie"@nl;
+  rdfs:comment "Vorm- en positiekenmerken van een object."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "wkt"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype."@nl;
+    rdfs:comment "Geometrie uitgedrukt in wkt-formaat."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Geometrie.Wkt>;
+    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "wkt"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "gml"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype."@nl;
+    rdfs:comment "Geometrie uitgedrukt in gml-formaat."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Geometrie.Gml>;
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:name "gml"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GerichtelinkShape> a shacl:NodeShape;
   rdfs:label "GerichteLink"@nl;
   rdfs:comment "Link in hetzij zijn positieve, hetzij zijn negatieve richting."@nl;
@@ -231,10 +295,77 @@ nummer."""@nl;
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#GerichteLink> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#IdentificatorShape> a shacl:NodeShape;
+  rdfs:label "Identificator"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Uitgangspunt hier is dat deze string door een organisatie wordt toegekend en dat dit gebeurt volgens een welbepaald systeem."@nl;
+  rdfs:comment "Informatie gebruikt om een object uniek te identificeren."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "toegekend op"@nl;
+    rdfs:comment "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Identificator.ToegekendOp>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend op"@nl;
+    shacl:path dc:issued
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "identificator"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator."@nl;
+    rdfs:comment "String gebruikt om het object uniek te identificeren."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Identificator.Identificator>;
+    shacl:description "String gebruikt om het object uniek te identificeren."@nl;
+    shacl:maxCount "1";
+    shacl:name "identificator"@nl;
+    shacl:path skos:notation
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "toegekend door (String)"@nl;
+    rdfs:comment "Naam vd agent die de identificator heeft toegekend."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Identificator.ToegekendDoor(string)>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
+    shacl:maxCount "1";
+    shacl:name "toegekend door (String)"@nl;
+    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#IntegerShape> a shacl:NodeShape;
   rdfs:label "Integer";
   shacl:closed false;
   shacl:targetClass xsd:integer .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#KwantitatievewaardeShape> a shacl:NodeShape;
+  rdfs:label "KwantitatieveWaarde"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bv de hoogte van een object,het gewicht,de temperatuur etc. Het gaat om een kenmerk dat numeriek uitgedrukt kan worden en in een bepaalde eenheid. Kwalitatieve aanduidingen zoals hoog,laag ed vallen hier dus niet onder."@nl;
+  rdfs:comment "Aanduiding van de kwantiteit van een bepaald kenmerk van een object."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "waarde"@nl;
+    rdfs:comment "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Kwantitatievewaarde.Waarde>;
+    shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path schemas:value
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "eenheid"@nl;
+    rdfs:comment "De eenheid waarin de waarde is uitgedrukt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Kwantitatievewaarde.Eenheid>;
+    shacl:class <https://qudt.org/schema/qudt/Unit>;
+    shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "eenheid"@nl;
+    shacl:path schemas:unitCode
+  ];
+  shacl:targetClass schemas:QuantitativeValue .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#LineairereferentieShape> a shacl:NodeShape;
   rdfs:label "LineaireReferentie"@nl;
@@ -362,6 +493,11 @@ nummer."""@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#kruisingVan>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#OngelijkgrondseKruising> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#PuntShape> a shacl:NodeShape;
+  rdfs:label "Punt"@nl;
+  shacl:closed false;
+  shacl:targetClass <http://www.opengis.net/ont/sf#Point> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#PuntreferentieShape> a shacl:NodeShape;
   rdfs:label "Puntreferentie"@nl;
@@ -1048,6 +1184,13 @@ specifieke diensten aan te bieden."""@nl;
     shacl:path <https://data.vlaanderen.be/ns/transportnetwerk#verticaleLigging>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/transportnetwerk#VerticaleLigging> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#VlakShape> a shacl:NodeShape;
+  rdfs:label "Vlak"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Vlak zelf wordt gevormd heb je minimaal twee coördinaten nodig om een willekeurig punt aan te duiden, bv de lengtegraad en de breedtegraad als het Vlak een bol is. Een Vlak heeft een lengte en een breedte. Analoog aan de polylijn (di een Curve onstaan door interpolatie tussen twee of meer punten) bestaan er ook in 2 dimensies vormen die gedefinieerd worden door sets van controlepunten, bv een cirkel wordt gedefinieerd door zijn middelpunt (en de straal). Een Vlak wordt begrensd door Curves, bv in het eenvoudigste geval door 1 gesloten Curve. Is die Curve een Lijnstring dan noemen we het bekomen Vlak een Polygoon. Meedere elementaire Polygonen aaneen (een zgn 3Dmesh) vormen eveneens een Vlak, bv om een oppervlak in de 3-dimensionale ruimte voor te stellen (bv om reliëf te beschrijven). Als de samenstellende vlakken driehoekig zijn spreken we van een TIN (Triangulated Irregular Network). Behalve een buitengrens hebben Vlakken soms ook binnengrenzen die dan gaten in het Vlak vormen. Om binnen- en buitengrenzen van elkaar te kunnen onderscheiden bij het vormen van een Vlak geldt doorgaans de afspraak dat het Vlak links ligt van de Curves waardoor het wordt begrensd."@nl;
+  rdfs:comment "Een 2-dimensionele geometrische primitieve."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://www.opengis.net/ont/geosparql#Surface> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#WegShape> a shacl:NodeShape;
   rdfs:label "Weg"@nl;
