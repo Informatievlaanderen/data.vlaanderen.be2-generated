@@ -1,11 +1,15 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
 @prefix schemas: <https://schema.org/> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#> rdfs:member <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#StraatnaamShape>,
@@ -29,6 +33,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#TransportpuntShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#AfstandspaalShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#TransportnetwerkShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#PersoonShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#WegShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#EuropesewegShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#WeglinksequentieShape>,
@@ -46,14 +51,18 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#WegnaamShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#WegverhardingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GemeenteShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#OrganisatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GeometrieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#KwantitatievewaardeShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GeographicalnameShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GeografischenaamShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#StringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#IntegerShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#IdentificatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#DatetimeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#ContactinfoShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#LangstringShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#UriShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#AdresvoorstellingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#VlakShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GerichtelinkShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#PuntShape>,
@@ -101,6 +110,166 @@
     shacl:path dc11:type
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#AantalRijstroken> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#AdresvoorstellingShape> a shacl:NodeShape;
+  rdfs:label "Adresvoorstelling"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bv als attribuut ve persoon of gebouw... De adresvoorstelling heeft niet enkel betrekking op Belgische adressen, ze kan gebruikt worden om buitenlandse adressen weer te geven (waar mogelijk andere adresaanduidingen dan huisnummer of busnummer worden gebruikt of waar adrescomponenten zoals adresgebieden voorkomen)."@nl;
+  rdfs:comment "Meer leesbare voorstelling met enkel de basisgegevens van het adres, bedoeld voor het gebruik van een adres als attribuut van een ander object."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "administratieve eenheid niveau 1"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Hoogste Administratieve eenheid vh adres, doorgaans een land."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Adresvoorstelling.AdministratieveEenheidNiveau1>;
+    shacl:datatype rdf:langString;
+    shacl:description "Hoogste Administratieve eenheid vh adres, doorgaans een land."@nl;
+    shacl:maxCount "1";
+    shacl:name "administratieve eenheid niveau 1"@nl;
+    shacl:path <http://www.w3.org/ns/locn#adminUnitL1>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "administratieve eenheid niveau 2"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "De regio vh adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Adresvoorstelling.AdministratieveEenheidNiveau2>;
+    shacl:datatype rdf:langString;
+    shacl:description "De regio vh adres, doorgaans een provincie of deelstaat of gelijkaardig gebied dat typisch meerdere plaatsen omvat."@nl;
+    shacl:maxCount "1";
+    shacl:name "administratieve eenheid niveau 2"@nl;
+    shacl:path <http://www.w3.org/ns/locn#adminUnitL2>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "adresgebied"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb de naam vh gehucht waarin het adres ligt."@nl;
+    rdfs:comment "Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Adresvoorstelling.Adresgebied>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is"@nl;
+    shacl:maxCount "1";
+    shacl:name "adresgebied"@nl;
+    shacl:path <http://www.w3.org/ns/locn#addressArea>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "busnummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Specialisatie van Adresvoorstelling:locatieaanduiding tbv Belgische adressen."@nl;
+    rdfs:comment "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Adresvoorstelling.Busnummer>;
+    shacl:datatype xsd:string;
+    shacl:description "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die eenzelfde huisnummer hebben."@nl;
+    shacl:maxCount "1";
+    shacl:name "busnummer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "gemeentenaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Gemeentenaam vh adres."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Adresvoorstelling.Gemeentenaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Gemeentenaam vh adres."@nl;
+    shacl:maxCount "1";
+    shacl:name "gemeentenaam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#gemeentenaam>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "huisnummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Specialisatie van Adresvoorstelling:locatieaanduiding tbv Belgische adressen."@nl;
+    rdfs:comment "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Adresvoorstelling.Huisnummer>;
+    shacl:datatype xsd:string;
+    shacl:description "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."@nl;
+    shacl:maxCount "1";
+    shacl:name "huisnummer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "land"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Land waarin het adres gelegen is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Adresvoorstelling.Land>;
+    shacl:datatype rdf:langString;
+    shacl:description "Land waarin het adres gelegen is."@nl;
+    shacl:maxCount "1";
+    shacl:name "land"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#land>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "locatieaanduiding"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Adresvoorstelling.Locatieaanduiding>;
+    shacl:datatype xsd:string;
+    shacl:description "Alfanumerieke code die de adreslocator uniek identificeert binnen de straat, administratieve eenheid etc."@nl;
+    shacl:name "locatieaanduiding"@nl;
+    shacl:path <http://www.w3.org/ns/locn#locatorDesignator>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "locatienaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Naam of omschrijving vh het geografisch object dat de adreslocator aanduidt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Adresvoorstelling.Locatienaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam of omschrijving vh het geografisch object dat de adreslocator aanduidt."@nl;
+    shacl:name "locatienaam"@nl;
+    shacl:path <http://www.w3.org/ns/locn#locatorName>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "postbus"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Postbusnummer in een postkantoor."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Adresvoorstelling.Postbus>;
+    shacl:datatype xsd:string;
+    shacl:description "Postbusnummer in een postkantoor."@nl;
+    shacl:maxCount "1";
+    shacl:name "postbus"@nl;
+    shacl:path <http://www.w3.org/ns/locn#poBox>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "postcode"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Adresvoorstelling.Postcode>;
+    shacl:datatype xsd:string;
+    shacl:description "Code waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:name "postcode"@nl;
+    shacl:path <http://www.w3.org/ns/locn#postCode>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "postnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Adresvoorstelling.Postnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam waarmee het geografisch gebied dat adressen voor postale doeleinden groepeert wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:name "postnaam"@nl;
+    shacl:path <http://www.w3.org/ns/locn#postName>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "straatnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Straatnaam vh adres."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Adresvoorstelling.Straatnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Straatnaam vh adres."@nl;
+    shacl:maxCount "1";
+    shacl:name "straatnaam"@nl;
+    shacl:path <http://www.w3.org/ns/locn#thoroughfare>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "volledig adres"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Vermijdt fouten tgv het opsplitsen ve adres in zijn onderdelen. Geeft de voorgeschreven volgorde vd verschillende onderdelen weer."@nl;
+    rdfs:comment "Het complete adres in één string, al dan niet geformatteerd."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Adresvoorstelling.VolledigAdres>;
+    shacl:class rdf:langString;
+    shacl:description "Het complete adres in één string, al dan niet geformatteerd."@nl;
+    shacl:maxCount "1";
+    shacl:name "volledig adres"@nl;
+    shacl:path <http://www.w3.org/ns/locn#fullAddress>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Address> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#AfstandspaalShape> a shacl:NodeShape;
   rdfs:label "Afstandspaal"@nl;
@@ -183,6 +352,80 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#Connectie> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#ContactinfoShape> a shacl:NodeShape;
+  rdfs:label "Contactinfo"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb een persoon of organisatie of dienstverlening... Mogelijke vormen van contact: bellen,mailen etc."@nl;
+  rdfs:comment "Informatie zoals email,telefoon,adres die toelaat om iemand of iets te contacteren."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "aanschrijfvorm"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb De heer/Mevrouw, Excellentie, Dokter..."@nl;
+    rdfs:comment "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Contactinfo.Aanschrijfvorm>;
+    shacl:datatype rdf:langString;
+    shacl:description "Titel waarmee iemand wordt aangeschreven of aangesproken of waarmee naar iemand wordt verwezen."@nl;
+    shacl:maxCount "1";
+    shacl:name "aanschrijfvorm"@nl;
+    shacl:path vcard:honorific-prefix
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "contactnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Naam van bvb de persoon die men kan contacteren."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Contactinfo.Contactnaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam van bvb de persoon die men kan contacteren."@nl;
+    shacl:maxCount "1";
+    shacl:name "contactnaam"@nl;
+    shacl:path foaf:name
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "email"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Email-adres waarnaar men kan mailen."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Contactinfo.Email>;
+    shacl:datatype xsd:string;
+    shacl:description "Email-adres waarnaar men kan mailen."@nl;
+    shacl:maxCount "1";
+    shacl:name "email"@nl;
+    shacl:path schemas:email
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "telefoon"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Telefoonnummer waarop men kan bellen."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Contactinfo.Telefoon>;
+    shacl:datatype xsd:string;
+    shacl:description "Telefoonnummer waarop men kan bellen."@nl;
+    shacl:maxCount "1";
+    shacl:name "telefoon"@nl;
+    shacl:path schemas:telephone
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "website"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Website waarnaar men kan surfen."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Contactinfo.Website>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Website waarnaar men kan surfen."@nl;
+    shacl:maxCount "1";
+    shacl:name "website"@nl;
+    shacl:path foaf:page
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "adres"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Adres dat men kan aanschrijven of bezoeken."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Contactinfo.Adres>;
+    shacl:class <http://www.w3.org/ns/locn#Address>;
+    shacl:description "Adres dat men kan aanschrijven of bezoeken."@nl;
+    shacl:maxCount "1";
+    shacl:name "adres"@nl;
+    shacl:path <http://www.w3.org/ns/locn#address>
+  ];
+  shacl:targetClass schemas:ContactPoint .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#CurveShape> a shacl:NodeShape;
   rdfs:label "Curve"@nl;
   <http://purl.org/vocab/vann/usageNote> "Dimensie is te verstaan in wiskundige zin: het minimum aantal coördinaten nodig om een willekeurig punt voor te stellen dat deel uitmaakt van de primitieve. In het coördinaatsysteem dat door een Curve zelf gevormd wordt volstaat 1 coördinaat om een punt op de Curve te lokaliseren, bv de afstand langs de Curve vanaf het vertrekpunt. Een Curve heeft een lengte maar geen breedte of hoogte, wat niet wegneemt dat ze door de 3D ruimte kan kronkelen. Curves worden doorgaans voorgesteld door polylijnen, dit zijn sets van opeenvolgende punten waarbij de tussenliggende punten van de Curve bekomen worden dmv interpolatie. Als de interpolatiemethode lineair is krijg je een Lijnstring (een hoekige lijn die de opeenvolgende punten verbindt middels een rechte lijn), andere manieren om te interpoleren resulteren in circulaire bogen, cubic splines, Bézier curves etc (waarbij de controlepunten niet noodzakelijk op de Curve liggen). Een Curve wordt begrensd door zijn begin- en eindpunt."@nl;
@@ -247,10 +490,10 @@ nummer."""@nl;
   shacl:closed false;
   shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Gemeente> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GeographicalnameShape> a shacl:NodeShape;
-  rdfs:label "GeographicalName"@nl;
-  <http://purl.org/vocab/vann/usageNote> "To be implemented as Langstring."@nl;
-  rdfs:comment "Name assigned to or used for a geographical object."@nl;
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GeografischenaamShape> a shacl:NodeShape;
+  rdfs:label "GeografischeNaam"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Te implementeren als Langstring."@nl;
+  rdfs:comment "Naam toegekend aan of gebruikt voor een geografisch object."@nl;
   shacl:closed false;
   shacl:targetClass rdf:langString .
 
@@ -526,6 +769,86 @@ nummer."""@nl;
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/netwerk#OngelijkgrondseKruising> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#OrganisatieShape> a shacl:NodeShape;
+  rdfs:label "Organisatie"@nl;
+  rdfs:comment "Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaansreden die de individuele leden ervan overstijgt en kan handelen als agent. Een organisatie heeft dikwijls een hiërarchische structuur."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "voorkeursnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Naam waarmee de organisatie bij voorkeur wordt aangeduid."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Organisatie.Voorkeursnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam waarmee de organisatie bij voorkeur wordt aangeduid."@nl;
+    shacl:maxCount "1";
+    shacl:name "voorkeursnaam"@nl;
+    shacl:path skos:prefLabel
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "contactinfo"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Organisatie.Contactinfo>;
+    shacl:class schemas:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren."@nl;
+    shacl:name "contactinfo"@nl;
+    shacl:path schema:contactPoint
+  ];
+  shacl:targetClass org:Organization .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#PersoonShape> a shacl:NodeShape;
+  rdfs:label "Persoon"@nl;
+  <http://purl.org/vocab/vann/usageNote> "In de rechtspraak betreft het een persoon (in de wettelijke betekenis, ttz met eigen rechtspersoonlijkheid) van de menselijke soort, ttz een fysiek persoon. Tegenhanger is de rechtspersoon, een juridische constructie die een private of publieke organisatie dezelfde rechtspersoonlijkheid geeft als een natuurlijk persoon (kan bv ook schulden hebben, contracten afsluiten, aangeklaagd worden etc)."@nl;
+  rdfs:comment "Natuurlijk persoon."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "achternaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Ook wel familienaam genoemd omdat de achternaam een familiale verwantschap aanduidt."@nl;
+    rdfs:comment "Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Persoon.Achternaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Gedeelte van de volledige naam vd persoon ontvangen van de vorige generatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "achternaam"@nl;
+    shacl:path foaf:familyName
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "voornaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Naam die een kind bij geboorte wordt gegeven. Onderscheidt het kind van de andere kinderen in de familie."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Persoon.Voornaam>;
+    shacl:datatype xsd:string;
+    shacl:description "Naam die een kind bij geboorte wordt gegeven. Onderscheidt het kind van de andere kinderen in de familie."@nl;
+    shacl:name "voornaam"@nl;
+    shacl:path foaf:givenName
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "volledige naam"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Gebruik dit attribuut wanneer het niet mogelijk is om een opsplitsing te maken tussen voor- en achternaam."@nl;
+    rdfs:comment "De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Persoon.VolledigeNaam>;
+    shacl:datatype xsd:string;
+    shacl:description "De volledige naam vd persoon, doorgaans de combinatie van voornamen en achternaam."@nl;
+    shacl:maxCount "1";
+    shacl:name "volledige naam"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/persoon#volledigeNaam>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "contactinfo"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Informatie zoals email, telefoon... die toelaat de Persoon te contacteren."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Persoon.Contactinfo>;
+    shacl:class schemas:ContactPoint;
+    shacl:description "Informatie zoals email, telefoon... die toelaat de Persoon te contacteren."@nl;
+    shacl:maxCount "1";
+    shacl:name "contactinfo"@nl;
+    shacl:path schema:contactPoint
+  ];
+  shacl:targetClass <http://www.w3.org/ns/person#Person> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#PuntShape> a shacl:NodeShape;
   rdfs:label "Punt"@nl;
   shacl:closed false;
@@ -742,19 +1065,7 @@ specifieke diensten aan te bieden."""@nl;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
-    rdfs:label "homoniem toevoeging"@nl;
-    <http://purl.org/vocab/vann/usageNote> ""@nl;
-    rdfs:comment "Toevoeging om dubbele straatnamen (straatnamen met dezelfde naam maar andere ligging in de gemeente en eigen adressen) van elkaar te onderscheiden."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Straatnaam.HomoniemToevoeging>;
-    shacl:datatype xsd:string;
-    shacl:description "Toevoeging om dubbele straatnamen (straatnamen met dezelfde naam maar andere ligging in de gemeente en eigen adressen) van elkaar te onderscheiden."@nl;
-    shacl:maxCount "1";
-    shacl:name "homoniem toevoeging"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/adres#homoniemToevoeging>
-  ], [
-    a shacl:PropertyShape;
     rdfs:label "straatnaam"@nl;
-    <http://purl.org/vocab/vann/usageNote> ""@nl;
     rdfs:comment "Naam vd straat."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Straatnaam.Straatnaam>;
     shacl:datatype rdf:langString;
@@ -762,18 +1073,6 @@ specifieke diensten aan te bieden."""@nl;
     shacl:minCount "1";
     shacl:name "straatnaam"@nl;
     shacl:path rdfs:label
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "status"@nl;
-    <http://purl.org/vocab/vann/usageNote> ""@nl;
-    rdfs:comment "Actuele toestand van de straatnaam."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Straatnaam.Status>;
-    shacl:class skos:Concept;
-    shacl:description "Actuele toestand van de straatnaam."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "status"@nl;
-    shacl:path <https://data.vlaanderen.be/ns/adres#Straatnaam.status>
   ], [
     a shacl:PropertyShape;
     rdfs:label "is toegekend door"@nl;
@@ -1244,6 +1543,11 @@ specifieke diensten aan te bieden."""@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#referentie>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/transportnetwerk#Transportpunt> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#UriShape> a shacl:NodeShape;
+  rdfs:label "URI";
+  shacl:closed false;
+  shacl:targetClass xsd:anyURI .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#VerkeerszoneShape> a shacl:NodeShape;
   rdfs:label "Verkeerszone"@nl;
