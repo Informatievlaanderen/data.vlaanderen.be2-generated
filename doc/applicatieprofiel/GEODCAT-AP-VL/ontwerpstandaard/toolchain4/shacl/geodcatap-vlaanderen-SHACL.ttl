@@ -794,6 +794,17 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     shacl:path dc:accrualPeriodicity
   ], [
     a shacl:PropertyShape;
+    rdfs:label "publicatie datum"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Dit is het moment wanneer de dataset serie voor het eerst publiekelijk kenbaar gemaakt is. Het is niet noodzakelijk gekijk aan de publicatie datum van de oudste dataset in de verzameling."@nl;
+    rdfs:comment "Het tijdsmoment waarop de dataset serie werd gepubliceerd door de uitgever."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#DatasetSerie.PublicatieDatum>;
+    shacl:description "Het tijdsmoment waarop de dataset serie werd gepubliceerd door de uitgever."@nl;
+    shacl:maxCount "1";
+    shacl:name "publicatie datum"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path dc:issued
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "temporele dekking"@nl;
     rdfs:comment "De tijdsperiode die de dataset serie bestrijkt."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#DatasetSerie.TemporeleDekking>;
@@ -822,6 +833,14 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     shacl:description "Het geografische gebied waarover de dataset serie informatie heeft."@nl;
     shacl:name "geografische dekking"@nl;
     shacl:path dc:spatial
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "uitgever";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#DatasetSerie.Uitgever>;
+    shacl:class dc:Agent;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "uitgever";
+    shacl:path <http://todo.com/uitgever>
   ];
   shacl:targetClass dcat:DatasetSeries .
 
@@ -1145,6 +1164,14 @@ GEMET thesaurus."""@nl;
     shacl:maxCount "n"^^xsd:integer;
     shacl:name "eigenaar"@nl;
     shacl:path dc:rightsHolder
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "inserie";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Dataset.Inserie>;
+    shacl:class dcat:DatasetSeries;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "inserie";
+    shacl:path <http://data.vlaanderen.be/ns/metadata-dcat#inserie>
   ];
   shacl:targetClass dcat:Dataset .
 
@@ -1599,6 +1626,16 @@ vinden"""@nl;
     shacl:name "eind datum"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dcat:endDate
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "start datum"@nl;
+    rdfs:comment "De start van de periode."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Tijdsperiode.StartDatum>;
+    shacl:description "De start van de periode."@nl;
+    shacl:maxCount "1";
+    shacl:name "start datum"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path dcat:startDate
   ], [
     a shacl:PropertyShape;
     rdfs:label "heeft start"@nl;
