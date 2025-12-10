@@ -1,5 +1,6 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schemas: <https://schema.org/> .
@@ -7,10 +8,11 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#> rdfs:member <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#EenheidShape>,
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#> rdfs:member <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#StraatnaamShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#TransporteigenschapShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#EenheidShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#AgentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#ToegangShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#TransporteigenschapShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#ConnectieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#OngelijkgrondsekruisingShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#BeheerderShape>,
@@ -43,6 +45,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#ServiceShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#WegnaamShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#WegverhardingShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GemeenteShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GeometrieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#KwantitatievewaardeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GeographicalnameShape>,
@@ -50,6 +53,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#IntegerShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#IdentificatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#DatetimeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#LangstringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#VlakShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GerichtelinkShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#PuntShape>,
@@ -237,6 +241,12 @@ nummer."""@nl;
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#EuropeseWeg> .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GemeenteShape> a shacl:NodeShape;
+  rdfs:label "Gemeente"@nl;
+  rdfs:comment "Officiële administratieve zone van het Belgisch grondgebied. De gemeente is het kleinste administratieve deel van het Belgisch grondgebied waarvan de grenzen enkel door de wetgever kunnen worden gewijzigd."@nl;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Gemeente> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#GeographicalnameShape> a shacl:NodeShape;
   rdfs:label "GeographicalName"@nl;
   <http://purl.org/vocab/vann/usageNote> "To be implemented as Langstring."@nl;
@@ -383,6 +393,11 @@ nummer."""@nl;
     shacl:path schemas:unitCode
   ];
   shacl:targetClass schemas:QuantitativeValue .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#LangstringShape> a shacl:NodeShape;
+  rdfs:label "LangString";
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#LineairereferentieShape> a shacl:NodeShape;
   rdfs:label "LineaireReferentie"@nl;
@@ -720,6 +735,59 @@ specifieke diensten aan te bieden."""@nl;
     shacl:path <https://data.vlaanderen.be/ns/weg#voertuigtype>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/weg#Snelheidsbeperking> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#StraatnaamShape> a shacl:NodeShape;
+  rdfs:label "Straatnaam"@nl;
+  rdfs:comment "Adrescomponent met de naam die officieel werd toegekend aan een straat (baan, doorgang, plein) of aan een gehucht en waaraan adressen kunnen zijn gekoppeld."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "homoniem toevoeging"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Toevoeging om dubbele straatnamen (straatnamen met dezelfde naam maar andere ligging in de gemeente en eigen adressen) van elkaar te onderscheiden."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Straatnaam.HomoniemToevoeging>;
+    shacl:datatype xsd:string;
+    shacl:description "Toevoeging om dubbele straatnamen (straatnamen met dezelfde naam maar andere ligging in de gemeente en eigen adressen) van elkaar te onderscheiden."@nl;
+    shacl:maxCount "1";
+    shacl:name "homoniem toevoeging"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#homoniemToevoeging>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "straatnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Naam vd straat."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Straatnaam.Straatnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "Naam vd straat."@nl;
+    shacl:minCount "1";
+    shacl:name "straatnaam"@nl;
+    shacl:path rdfs:label
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "status"@nl;
+    <http://purl.org/vocab/vann/usageNote> ""@nl;
+    rdfs:comment "Actuele toestand van de straatnaam."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Straatnaam.Status>;
+    shacl:class skos:Concept;
+    shacl:description "Actuele toestand van de straatnaam."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "status"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/adres#Straatnaam.status>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "is toegekend door"@nl;
+    <http://purl.org/vocab/vann/usageNote> "In België is dit de gemeente."@nl;
+    rdfs:comment "Agent die de straatnaam heeft toegekend."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#Straatnaam.IsToegekendDoor>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#Gemeente>;
+    shacl:description "Agent die de straatnaam heeft toegekend."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "is toegekend door"@nl;
+    shacl:path prov:wasAttributedTo
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/adres#Straatnaam> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/wegennetwerk/ontwerpstandaard/2026-01-01#StringShape> a shacl:NodeShape;
   rdfs:label "String";
