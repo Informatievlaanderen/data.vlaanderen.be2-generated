@@ -1,8 +1,8 @@
-INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/translation/rooilijnplannen_nl.json
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/translation/rooilijnplannen-ap_nl.json
 
-OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/translation/rooilijnplannen_nl.json
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/translation/rooilijnplannen-ap_nl.json
 
-TRANSLATIONFILE: rooilijnplannen_nl.json
+TRANSLATIONFILE: rooilijnplannen-ap_nl.json
 
 #||# translate for language nl  
 
@@ -18,5 +18,5 @@ WARNING The entered language values are the same!
 
 #||# Write complete  
 
-#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/translation/rooilijnplannen_nl.json  
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/translation/rooilijnplannen-ap_nl.json  
 
