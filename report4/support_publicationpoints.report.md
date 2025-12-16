@@ -348,7 +348,7 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/metadata-dcat",
   "/tmp/generated/ns/observaties-en-metingen",
   "/tmp/generated/ns/perceel",
-  "/tmp/generated/ns/rooilijn",
+  "/tmp/generated/ns/rooilijnplannen",
   "/tmp/generated/ns/ruimtelijke-bereiken",
   "/tmp/generated/ns/sensoren-en-bemonstering",
   "/tmp/generated/ns/thermografische-gebouwanalyse"

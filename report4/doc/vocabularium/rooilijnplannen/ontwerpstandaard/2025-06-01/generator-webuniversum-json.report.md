@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2025-12-16T16:03:15.594Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/rooilijn#element which acts as a parent. Using original URI as fallback.
+2025-12-16T16:33:09.129Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/rooilijn#element which acts as a parent. Using original URI as fallback.
 
-2025-12-16T16:03:15.597Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/rooilijn#element which acts as a parent. Using original URI as fallback.
+2025-12-16T16:33:09.131Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/rooilijn#element which acts as a parent. Using original URI as fallback.
 
