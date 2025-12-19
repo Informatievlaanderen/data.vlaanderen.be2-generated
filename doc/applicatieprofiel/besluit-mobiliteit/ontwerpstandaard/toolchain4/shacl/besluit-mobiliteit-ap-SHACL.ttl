@@ -313,6 +313,16 @@
   rdfs:label "Agent"@nl;
   rdfs:comment "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."@nl;
   shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "SignalisatieOntwerp.HeeftBetrokkene";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Agent.Signalisatieontwerp.heeftbetrokkene>;
+    shacl:class <https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HeeftBetrokkene>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "SignalisatieOntwerp.HeeftBetrokkene";
+    shacl:path <http://todo.com/SignalisatieOntwerp.HeeftBetrokkene>
+  ];
   shacl:targetClass dc:Agent .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#ArtikelShape> a shacl:NodeShape;
@@ -612,6 +622,29 @@
   rdfs:label "Heeft Betrokkene"@nl;
   rdfs:comment "Geeft Agent aan die betrokken is bij het SignalisatieOntwerp."@nl;
   shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "signalisatieOntwerp"@nl;
+    rdfs:comment "SignalisatieOntwerp dat een betrokken Agent heeft."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#HeeftBetrokkene.Signalisatieontwerp>;
+    shacl:class <https://data.vlaanderen.be/ns/mobiliteit#SignalisatieOntwerp>;
+    shacl:description "SignalisatieOntwerp dat een betrokken Agent heeft."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "signalisatieOntwerp"@nl;
+    shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#RelatieObject.bron>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "Agent"@nl;
+    rdfs:comment "Agent die betrokken is bij SignalisatieOntwerp."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#HeeftBetrokkene.Agent>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die betrokken is bij SignalisatieOntwerp."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "Agent"@nl;
+    shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#RelatieObject.doel>
+  ];
   shacl:targetClass <https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HeeftBetrokkene> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#HeeftOntwerpShape> a shacl:NodeShape;
@@ -740,7 +773,6 @@
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Mobiliteitsmaatregel.Zone>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Zone>;
     shacl:description "Zone van de mobiliteitsmaatregel"@nl;
-    shacl:minCount "1";
     shacl:name "zone"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#zone>
   ], [
@@ -780,7 +812,6 @@
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Mobiliteitsmaatregel.Periode>;
     shacl:class <http://data.europa.eu/m8g/PeriodOfTime>;
     shacl:description "Periode van de mobiliteitsmaatregel."@nl;
-    shacl:minCount "1";
     shacl:name "periode"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#periode>
   ], [
@@ -1086,6 +1117,15 @@
     shacl:path dc:publisher
   ], [
     a shacl:PropertyShape;
+    rdfs:label "SignalisatieOntwerp.HeeftBetrokkene";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#SignalisatieOntwerp.Signalisatieontwerp.heeftbetrokkene>;
+    shacl:class <https://wegenenverkeer.data.vlaanderen.be/ns/onderdeel#HeeftBetrokkene>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "SignalisatieOntwerp.HeeftBetrokkene";
+    shacl:path <https://data.vlaanderen.be/ns/mobiliteit#SignalisatieOntwerp.HeeftBetrokkene>
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "bevat ontwerp"@nl;
     rdfs:comment "Aanvullend reglement in ontwerp dat het signalisatie ontwerp bevat."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#SignalisatieOntwerp.BevatOntwerp>;
@@ -1340,8 +1380,10 @@
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "label"@nl;
+    rdfs:comment "Naam van de variabele."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Variabele.Label>;
     shacl:datatype xsd:string;
+    shacl:description "Naam van de variabele."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "label"@nl;
@@ -1360,8 +1402,10 @@
   ], [
     a shacl:PropertyShape;
     rdfs:label "type"@nl;
+    rdfs:comment "Classificatie van de variabele."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/toolchain4#Variabele.Type>;
     shacl:class skos:Concept;
+    shacl:description "Classificatie van de variabele."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "type"@nl;
