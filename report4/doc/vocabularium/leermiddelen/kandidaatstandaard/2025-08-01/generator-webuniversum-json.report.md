@@ -2,13 +2,13 @@
 
 #||# -------------------------------------  
 
-2025-09-29T09:36:39.555Z warn: Unable to find the assigned URI for external class https://schema.org/CreatiefWerk which acts as a parent. Using original URI as fallback.
+2026-01-05T08:13:52.884Z warn: Unable to find the assigned URI for external class https://schema.org/CreatiefWerk which acts as a parent. Using original URI as fallback.
 
-2025-09-29T09:36:39.561Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2026-01-05T08:13:52.890Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-2025-09-29T09:36:39.561Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
+2026-01-05T08:13:52.891Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
 
-2025-09-29T09:36:39.562Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
+2026-01-05T08:13:52.891Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
 
-2025-09-29T09:36:39.563Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2026-01-05T08:13:52.892Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
