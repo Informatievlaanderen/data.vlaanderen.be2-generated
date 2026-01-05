@@ -20,15 +20,19 @@
     <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#PlaatsShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#HerkomstVerklaringShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#VoorbeeldweergaveShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatasetSerieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#StandaardShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#LicentieDocumentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#AgentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#RelatieQualificatieShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#TijdsperiodeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#RechtsgrondShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#StringShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#IdentificatorShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatetimeShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#ResolutieShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#ContactinfoShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#TijdsmomentShape>,
     <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#ContactpuntShape> .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#AgentShape> a shacl:NodeShape;
@@ -706,6 +710,140 @@ dataservice behoort"""@nl;
   ];
   shacl:targetClass dcat:DataService .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatasetSerieShape> a shacl:NodeShape;
+  rdfs:label "Dataset Serie"@nl;
+  <http://purl.org/vocab/vann/usageNote> """In DCAT-AP VL 3.0 worden datasetseries opgevat in hun zuivere betekenis: een verzameling van datasets die dezelfde specificaties delen, waarbij de enige variërende eigenschap typisch ruimte of tijd/versie is. Dit sluit nauw aan bij ISO 19115-1 en INSPIRE, waar een datasetserie wordt gedefinieerd als een collectie datasets met een gemeenschappelijke productspecificatie. Deze zuivere vorm wordt in DCAT-AP VL 3.0 volledig ondersteund. 
+<br/>
+Daarnaast bestaan in de praktijk verschillende tussenvormen - zoals verzamelingen van datasets over eenzelfde thema, verzamelingen van datasets, series en services, of collecties gebaseerd op bron- of eigenschapsgelijkheid. Deze structuren hebben een grotere “vrijheidsgraad” (variatie in versie, gebied, specificaties, brontypes of eigenschappen) en voldoen daardoor niet aan de formele definitie van datasetseries. Deze tussenvormen worden daarom niet als datasetseries ondersteund, maar wel vindbaar gemaakt via passende DCAT-structuren (bv. thema-gebaseerde groepering of catalogusstructuren). 
+<br/>
+Voor complexe of expliciet gestructureerde groeperingen is de correcte representatie een (sub)catalogus, waarbij de verbindende eigenschap expliciet door de catalogus zelf wordt bepaald. Subcatalogi worden wél ondersteund in DCAT-AP VL 3.0."""@nl;
+  rdfs:comment "Een verzameling die onafhankelijk gepubliceerde datasets groepeert rond gedeelde eigenschappen."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "beschrijving"@nl;
+    rdfs:comment "Een bondige tekstuele bescrhijving van de Dataset Serie."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatasetSerie.Beschrijving>;
+    shacl:description "Een bondige tekstuele bescrhijving van de Dataset Serie."@nl;
+    shacl:minCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path dc:description
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "identificator"@nl;
+    rdfs:comment "De unieke identificator van de dataset serie."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatasetSerie.Identificator>;
+    shacl:description "De unieke identificator van de dataset serie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "identificator"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path dc:identifier
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "titel"@nl;
+    rdfs:comment "De naam van de dataset serie."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatasetSerie.Titel>;
+    shacl:description "De naam van de dataset serie."@nl;
+    shacl:minCount "1";
+    shacl:name "titel"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path dc:title
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "alternatieve identificator"@nl;
+    rdfs:comment "Een alternatieve identificator (dan de unieke identificator) voor een dataset serie kan hier beschreven worden."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatasetSerie.AlternatieveIdentificator>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Een alternatieve identificator (dan de unieke identificator) voor een dataset serie kan hier beschreven worden."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "alternatieve identificator"@nl;
+    shacl:path <http://www.w3.org/ns/adms#identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "belanghebbende wetgeving"@nl;
+    rdfs:comment "De wetgeving die aanzet tot het aanmaken of het beheren van de Dataset Serie."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatasetSerie.BelanghebbendeWetgeving>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description "De wetgeving die aanzet tot het aanmaken of het beheren van de Dataset Serie."@nl;
+    shacl:name "belanghebbende wetgeving"@nl;
+    shacl:path <http://data.europa.eu/r5r/applicableLegislation>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "contactinformatie"@nl;
+    rdfs:comment "De relevante contactinformatie waarmee een eindgebruiker in contact kan treden met de verantwoordelijken van de Dataset Serie."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatasetSerie.Contactinformatie>;
+    shacl:class vcard:Kind;
+    shacl:description "De relevante contactinformatie waarmee een eindgebruiker in contact kan treden met de verantwoordelijken van de Dataset Serie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "contactinformatie"@nl;
+    shacl:path dcat:contactPoint
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "periodiciteit"@nl;
+    <http://purl.org/vocab/vann/usageNote> "De periodiciteit van een dataset serie is niet gelijk aan de periodiciteit van de datasets in de verzameling."@nl;
+    rdfs:comment "De maat waarmee de dataset serie wordt bijgewerkt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatasetSerie.Periodiciteit>;
+    shacl:class dc:Frequency;
+    shacl:description "De maat waarmee de dataset serie wordt bijgewerkt."@nl;
+    shacl:maxCount "1";
+    shacl:name "periodiciteit"@nl;
+    shacl:path dc:accrualPeriodicity
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "publicatie datum"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Dit is het moment wanneer de dataset serie voor het eerst publiekelijk kenbaar gemaakt is. Het is niet noodzakelijk gekijk aan de publicatie datum van de oudste dataset in de verzameling."@nl;
+    rdfs:comment "Het tijdsmoment waarop de dataset serie werd gepubliceerd door de uitgever."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatasetSerie.PublicatieDatum>;
+    shacl:description "Het tijdsmoment waarop de dataset serie werd gepubliceerd door de uitgever."@nl;
+    shacl:maxCount "1";
+    shacl:name "publicatie datum"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path dc:issued
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "temporele dekking"@nl;
+    rdfs:comment "De tijdsperiode die de dataset serie bestrijkt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatasetSerie.TemporeleDekking>;
+    shacl:class dc:PeriodOfTime;
+    shacl:description "De tijdsperiode die de dataset serie bestrijkt."@nl;
+    shacl:name "temporele dekking"@nl;
+    shacl:path dc:temporal
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "wijzigingsdatum"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Dit is niet noodzakelijk hetzelfde moment als de meest recente wijzigingsdatum van de datasets die de dataset serie bevat."@nl;
+    rdfs:comment "Het meest recente moment waarop de dataset series is bijgewerkt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatasetSerie.Wijzigingsdatum>;
+    shacl:description "Het meest recente moment waarop de dataset series is bijgewerkt."@nl;
+    shacl:maxCount "1";
+    shacl:name "wijzigingsdatum"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path dc:modified
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "geografische dekking"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Wanneer geografische dekking een dimensie is in de datasetserie, moet de geografische dekking van elke dataset in de collectie deel uitmaken van de geografisch dekking. Er wordt een waarde met een open einde aanbevolen, b.v. EU of een alomvattende bouding box dat de verwachte waarden bevat."@nl;
+    rdfs:comment "Het geografische gebied waarover de dataset serie informatie heeft."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatasetSerie.GeografischeDekking>;
+    shacl:class dc:Location;
+    shacl:description "Het geografische gebied waarover de dataset serie informatie heeft."@nl;
+    shacl:name "geografische dekking"@nl;
+    shacl:path dc:spatial
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "uitgever";
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatasetSerie.Uitgever>;
+    shacl:class dc:Agent;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "uitgever";
+    shacl:path <http://todo.com/uitgever>
+  ];
+  shacl:targetClass dcat:DatasetSeries .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#DatasetShape> a shacl:NodeShape;
   rdfs:label "Dataset"@nl;
   <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Class:Dataset\">DCAT</a>]"@nl;
@@ -1026,6 +1164,14 @@ GEMET thesaurus."""@nl;
     shacl:maxCount "n"^^xsd:integer;
     shacl:name "eigenaar"@nl;
     shacl:path dc:rightsHolder
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "inserie";
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#Dataset.Inserie>;
+    shacl:class dcat:DatasetSeries;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "inserie";
+    shacl:path <http://data.vlaanderen.be/ns/metadata-dcat#inserie>
   ];
   shacl:targetClass dcat:Dataset .
 
@@ -1042,7 +1188,6 @@ GEMET thesaurus."""@nl;
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "identificator"@nl;
-    <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:resource_identifier\">DCAT</a>]"@nl;
     rdfs:comment "De unieke identificator van de distributie."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#Distributie.Identificator>;
     shacl:description "De unieke identificator van de distributie."@nl;
@@ -1054,9 +1199,7 @@ GEMET thesaurus."""@nl;
   ], [
     a shacl:PropertyShape;
     rdfs:label "titel"@nl;
-    <http://purl.org/vocab/vann/usageNote> """[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:distribution_title\">DCAT</a>]
-
-Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde."""@nl;
+    <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde."@nl;
     rdfs:comment "De naam van de distributie."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#Distributie.Titel>;
     shacl:datatype rdf:langString;
@@ -1067,8 +1210,7 @@ Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interp
   ], [
     a shacl:PropertyShape;
     rdfs:label "rechten"@nl;
-    <http://purl.org/vocab/vann/usageNote> """[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:resource_rights\">DCAT</a>]
-Met deze eigenschap kunnen rechten uitgedrukt worden zoals bronvermeldingen, copyright of specifieke gebruiksbepalingen. Indien deze rechten reeds opgenomen zijn in de licentie dan moeten ze niet hier herhaald worden."""@nl;
+    <http://purl.org/vocab/vann/usageNote> "Met deze eigenschap kunnen rechten uitgedrukt worden zoals bronvermeldingen, copyright of specifieke gebruiksbepalingen. Indien deze rechten reeds opgenomen zijn in de licentie dan moeten ze niet hier herhaald worden."@nl;
     rdfs:comment "Bepalingen van juridische aard die gelden op de distributie."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#Distributie.Rechten>;
     shacl:class dc:RightsStatement;
@@ -1079,9 +1221,7 @@ Met deze eigenschap kunnen rechten uitgedrukt worden zoals bronvermeldingen, cop
   ], [
     a shacl:PropertyShape;
     rdfs:label "alternatieve identificator"@nl;
-    <http://purl.org/vocab/vann/usageNote> """[Zie <a href=\"https://github.com/SEMICeu/DCAT-AP/tree/master/releases/2.0.1\">DCAT-AP</a>]
-
-De mapping van ISO metadata kan resulteren in een bijkomende alternatieve identificator. Bepaalde distributies zijn downloadbaar vanuit een geografische data service met kennis van de identificator van deze distributie. B.v. de laag bepaald een volledige datasetdistributie in een WMS. Deze identificator is een lokale benaming in de context van de geassocieerde dataservice."""@nl;
+    <http://purl.org/vocab/vann/usageNote> "De mapping van ISO metadata kan resulteren in een bijkomende alternatieve identificator. Bepaalde distributies zijn downloadbaar vanuit een geografische data service met kennis van de identificator van deze distributie. B.v. de laag bepaald een volledige datasetdistributie in een WMS. Deze identificator is een lokale benaming in de context van de geassocieerde dataservice."@nl;
     rdfs:comment "Een alternatieve identificator (dan de unieke identificator) voor een distributie kan hier beschreven worden."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#Distributie.AlternatieveIdentificator>;
     shacl:class <http://www.w3.org/ns/adms#Identifier>;
@@ -1102,7 +1242,6 @@ De mapping van ISO metadata kan resulteren in een bijkomende alternatieve identi
   ], [
     a shacl:PropertyShape;
     rdfs:label "licentie"@nl;
-    <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:resource_license\">DCAT</a>]"@nl;
     rdfs:comment "De licentie van de distributie."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#Distributie.Licentie>;
     shacl:class dc:LicenseDocument;
@@ -1113,7 +1252,6 @@ De mapping van ISO metadata kan resulteren in een bijkomende alternatieve identi
   ], [
     a shacl:PropertyShape;
     rdfs:label "conform"@nl;
-    <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:distribution_conforms_to\">DCAT</a>]"@nl;
     rdfs:comment """Een standaard, schema, implementatie-
 model, applicatieprofiel, vocabularium
 waaraan de distributie voldoet."""@nl;
@@ -1301,6 +1439,13 @@ waaraan de distributie voldoet."""@nl;
   ];
   shacl:targetClass dc:Location .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#RechtsgrondShape> a shacl:NodeShape;
+  rdfs:label "Rechtsgrond"@nl;
+  <http://purl.org/vocab/vann/usageNote> "De waarden die hier gebruikt worden zijn the PURIs van de wetgeving volgens de ELI URI richtlijnen."@nl;
+  rdfs:comment "Een legaal concept dat los staat van een bepaalde vorm (het achterliggende idee)."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResource> .
+
 <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#RelatieQualificatieShape> a shacl:NodeShape;
   rdfs:label "Relatie Qualificatie"@nl;
   <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/vocab-dcat-2/#Class:Relationship\">DCAT</a> en <a href=\"https://www.w3.org/TR/vocab-dcat-2/#qualified-forms\">DCAT</a>]"@nl;
@@ -1453,6 +1598,58 @@ vinden"""@nl;
   rdfs:label "String";
   shacl:closed false;
   shacl:targetClass xsd:string .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#TijdsmomentShape> a shacl:NodeShape;
+  rdfs:label "Tijdsmoment"@nl;
+  rdfs:comment "Een temporele entiteit zonder omvang of duur."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/2006/time#Instant> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#TijdsperiodeShape> a shacl:NodeShape;
+  rdfs:label "Tijdsperiode"@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "eind datum"@nl;
+    rdfs:comment "Het einde van de periode."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#Tijdsperiode.EindDatum>;
+    shacl:description "Het einde van de periode."@nl;
+    shacl:maxCount "1";
+    shacl:name "eind datum"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path dcat:endDate
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "start datum"@nl;
+    rdfs:comment "De start van de periode."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#Tijdsperiode.StartDatum>;
+    shacl:description "De start van de periode."@nl;
+    shacl:maxCount "1";
+    shacl:name "start datum"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path dcat:startDate
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft start"@nl;
+    rdfs:comment "Het begin van een periode of interval."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#Tijdsperiode.HeeftStart>;
+    shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:description "Het begin van een periode of interval."@nl;
+    shacl:maxCount "1";
+    shacl:name "heeft start"@nl;
+    shacl:path <http://www.w3.org/2006/time#hasBeginning>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft einde"@nl;
+    rdfs:comment "Het einde van een periode of interval."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#Tijdsperiode.HeeftEinde>;
+    shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:description "Het einde van een periode of interval."@nl;
+    shacl:maxCount "1";
+    shacl:name "heeft einde"@nl;
+    shacl:path <http://www.w3.org/2006/time#hasEnd>
+  ];
+  shacl:targetClass dc:PeriodOfTime .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13#VoorbeeldweergaveShape> a shacl:NodeShape;
   rdfs:label "Voorbeeldweergave"@nl;
