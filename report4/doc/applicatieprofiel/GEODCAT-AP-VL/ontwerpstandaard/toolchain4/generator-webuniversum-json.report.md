@@ -2,27 +2,27 @@
 
 #||# -------------------------------------  
 
-2026-01-05T16:24:20.119Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/adms#status which acts as a parent. Using original URI as fallback.
+2026-01-05T16:48:02.577Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/adms#status which acts as a parent. Using original URI as fallback.
 
-2026-01-05T16:24:20.122Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
+2026-01-05T16:48:02.581Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
 
-2026-01-05T16:24:20.125Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
+2026-01-05T16:48:02.582Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
 
-2026-01-05T16:24:20.125Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
+2026-01-05T16:48:02.582Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
 
-2026-01-05T16:24:20.126Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
+2026-01-05T16:48:02.583Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
 
-2026-01-05T16:24:20.134Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/dcat#landingPage which acts as a parent. Using original URI as fallback.
+2026-01-05T16:48:02.591Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/dcat#landingPage which acts as a parent. Using original URI as fallback.
 
-2026-01-05T16:24:20.135Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/dcat#landingPage which acts as a parent. Using original URI as fallback.
+2026-01-05T16:48:02.591Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/dcat#landingPage which acts as a parent. Using original URI as fallback.
 
-2026-01-05T16:24:20.137Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/conformsTo which acts as a parent. Using original URI as fallback.
+2026-01-05T16:48:02.594Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/conformsTo which acts as a parent. Using original URI as fallback.
 
-2026-01-05T16:24:20.138Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
+2026-01-05T16:48:02.594Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/subject which acts as a parent. Using original URI as fallback.
 
-2026-01-05T16:24:20.138Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/dcat#landingPage which acts as a parent. Using original URI as fallback.
+2026-01-05T16:48:02.595Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/dcat#landingPage which acts as a parent. Using original URI as fallback.
 
-2026-01-05T16:24:20.140Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/type which acts as a parent. Using original URI as fallback.
+2026-01-05T16:48:02.596Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/type which acts as a parent. Using original URI as fallback.
 
-2026-01-05T16:24:20.140Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/type which acts as a parent. Using original URI as fallback.
+2026-01-05T16:48:02.597Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/type which acts as a parent. Using original URI as fallback.
 
