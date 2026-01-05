@@ -1,38 +1,64 @@
 | Execution | Existence | Support |
 | --- | --- | --- |
-| [commit 5f1d347cd572f6ac2620165e225b3553de52453a](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/5f1d347cd572f6ac2620165e225b3553de52453a) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
+| [commit cd46b2b4cdee9ce3e9ad07aae32eb0af74c286ef](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/cd46b2b4cdee9ce3e9ad07aae32eb0af74c286ef) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
  
-### Legende
+# Calculate statistics
 
-<details>
+This repository holds a number of scripts to calculate the statistics of a generated repository.
 
-| Term | Betekenis |
-| --- | --- |
-| mrg | Merge translations to create for each language a single source of truth |
-| aut | Autotranslate the translation files, if active |
-| uml | Extraction of the data out of the UML |
-| rdf | RDF file generation |
-| issu | Open Issues |
-| trns | Translation files generation, based on existing translation files |
-| shcl | SHACL file generation |
-| web | Extract all data model for html rendering  |
-| rspc | Render html using specific RESPEC integration  |
-| stak | Validate and convert the stakeholders |
-| tag | Branchtag check |
-| val | Validate the jsonld |
-| ctx | JSON-LD Context file generation |
-| met | Extract metadata for html rendering |
-| html | Render html using generic nunjuncks |
+There are 2 Dockers defined in this:
 
-</details>
+1. A testing docker to evaluate the scripts locally
+2. A CircleCI docker that can be used to evaluate a repository
 
 
-| Specification | tag | uml | val | stak | trns | aut | mrg | web | met | html | rspc | ctx | rdf | shcl | issu |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [implementatiemodel/cultureel-erfgoed-basisregistratie/ ontwerpstandaard/2025-01-20](https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20) <br/> [&#9883;](/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20) [&#9884;](https://data.vlaanderen.be/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20) | [&#9736;](/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/branchtag.report.md) | [&#9729;](/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/oslo-converter-ea.report.md) | [&#9736;](/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/jsonld-validation.report.md) | [&#9729;](/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/oslo-stakeholders-converter.report.md) | [&#9729;](/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/translate.report.md) |  | [&#9728;](/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/merge.report.md) | [&#9729;](/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/metadata.report.md) | [&#9728;](/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/generator-html.report.md) | [&#9728;](/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/generator-respec.report.md) | [&#9728;](/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/generator-jsonld-context.report.md) |  | [&#9729;](/report4/doc/implementatiemodel/cultureel-erfgoed-basisregistratie/ontwerpstandaard/2025-01-20/generator-shacl.report.md) | [ 23 ](https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues) |
-| [applicatieprofiel/leermiddelen/ kandidaatstandaard/2025-08-01](https://data.vlaanderen.be/doc/applicatieprofiel/leermiddelen/kandidaatstandaard/2025-08-01) <br/> [&#9883;](/report4/doc/applicatieprofiel/leermiddelen/kandidaatstandaard/2025-08-01) [&#9884;](https://data.vlaanderen.be/doc/applicatieprofiel/leermiddelen/kandidaatstandaard/2025-08-01) |  | [&#9729;](/report4/doc/applicatieprofiel/leermiddelen/kandidaatstandaard/2025-08-01/oslo-converter-ea.report.md) | [&#9736;](/report4/doc/applicatieprofiel/leermiddelen/kandidaatstandaard/2025-08-01/jsonld-validation.report.md) | [&#9728;](/report4/doc/applicatieprofiel/leermiddelen/kandidaatstandaard/2025-08-01/oslo-stakeholders-converter.report.md) | [&#9729;](/report4/doc/applicatieprofiel/leermiddelen/kandidaatstandaard/2025-08-01/translate.report.md) |  | [&#9728;](/report4/doc/applicatieprofiel/leermiddelen/kandidaatstandaard/2025-08-01/merge.report.md) | [&#9729;](/report4/doc/applicatieprofiel/leermiddelen/kandidaatstandaard/2025-08-01/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/applicatieprofiel/leermiddelen/kandidaatstandaard/2025-08-01/metadata.report.md) | [&#9728;](/report4/doc/applicatieprofiel/leermiddelen/kandidaatstandaard/2025-08-01/generator-html.report.md) | [&#9736;](/report4/doc/applicatieprofiel/leermiddelen/kandidaatstandaard/2025-08-01/generator-respec.report.md) | [&#9728;](/report4/doc/applicatieprofiel/leermiddelen/kandidaatstandaard/2025-08-01/generator-jsonld-context.report.md) |  | [&#9729;](/report4/doc/applicatieprofiel/leermiddelen/kandidaatstandaard/2025-08-01/generator-shacl.report.md) | [ 2 ](https://github.com/Informatievlaanderen/OSLOthema-leermiddelen/issues) |
-| [vocabularium/leermiddelen/ kandidaatstandaard/2025-08-01](https://data.vlaanderen.be/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01) <br/> [&#9883;](/report4/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01) [&#9884;](https://data.vlaanderen.be/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01) |  | [&#9729;](/report4/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/oslo-converter-ea.report.md) | [&#9736;](/report4/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/jsonld-validation.report.md) | [&#9728;](/report4/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/oslo-stakeholders-converter.report.md) | [&#9729;](/report4/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/translate.report.md) |  | [&#9728;](/report4/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/merge.report.md) | [&#9729;](/report4/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/metadata.report.md) | [&#9728;](/report4/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/generator-html.report.md) | [&#9736;](/report4/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/generator-respec.report.md) |  | [&#9728;](/report4/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01/generator-rdf.report.md) |  | [ 2 ](https://github.com/Informatievlaanderen/OSLOthema-leermiddelen/issues) |
-| [applicatieprofiel/GEODCAT-AP-VL/ ontwerpstandaard/2025-11-13](https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13) <br/> [&#9883;](/report4/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13) [&#9884;](https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13) | [&#9736;](/report4/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13/branchtag.report.md) | [&#9729;](/report4/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13/oslo-converter-ea.report.md) | [&#9736;](/report4/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13/jsonld-validation.report.md) | [&#9728;](/report4/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13/oslo-stakeholders-converter.report.md) | [&#9729;](/report4/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13/translate.report.md) |  | [&#9728;](/report4/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13/merge.report.md) | [&#9729;](/report4/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13/metadata.report.md) | [&#9728;](/report4/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13/generator-html.report.md) | [&#9728;](/report4/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13/generator-respec.report.md) | [&#9728;](/report4/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13/generator-jsonld-context.report.md) |  | [&#9729;](/report4/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13/generator-shacl.report.md) | [ 7 ](https://github.com/Informatievlaanderen/OSLOthema-GEODCATAPVlaanderen/issues) |
-| [implementatiemodel/klantvolgsysteem1/ ontwerpstandaard/2025-11-04](https://data.vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04) <br/> [&#9883;](/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04) [&#9884;](https://data.vlaanderen.be/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04) |  | [&#9729;](/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/oslo-converter-ea.report.md) | [&#9736;](/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/jsonld-validation.report.md) | [&#9728;](/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/oslo-stakeholders-converter.report.md) | [&#9729;](/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/translate.report.md) |  | [&#9728;](/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/merge.report.md) | [&#9729;](/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/generator-webuniversum-json.report.md) | [&#9729;](/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/metadata.report.md) | [&#9728;](/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/generator-html.report.md) | [&#9728;](/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/generator-respec.report.md) | [&#9728;](/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/generator-jsonld-context.report.md) |  | [&#9729;](/report4/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/generator-shacl.report.md) | [ 0 ](https://github.com/Informatievlaanderen/OSLOthema-KVS/issues) |
-| [applicatieprofiel/rooilijnplannen/ ontwerpstandaard/2025-06-01](https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01) <br/> [&#9883;](/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01) [&#9884;](https://data.vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01) |  | [&#9729;](/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/oslo-converter-ea.report.md) | [&#9736;](/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/jsonld-validation.report.md) | [&#9728;](/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/oslo-stakeholders-converter.report.md) | [&#9729;](/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/translate.report.md) |  | [&#9728;](/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/merge.report.md) | [&#9729;](/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/metadata.report.md) | [&#9728;](/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/generator-html.report.md) | [&#9728;](/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/generator-respec.report.md) | [&#9728;](/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/generator-jsonld-context.report.md) |  | [&#9729;](/report4/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/generator-shacl.report.md) | [ 2 ](https://github.com/Informatievlaanderen/OSLOthema-rooilijnplannen/issues) |
-| [vocabularium/rooilijnplannen/ ontwerpstandaard/2025-06-01](https://data.vlaanderen.be/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-06-01) <br/> [&#9883;](/report4/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-06-01) [&#9884;](https://data.vlaanderen.be/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-06-01) |  | [&#9729;](/report4/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-06-01/oslo-converter-ea.report.md) | [&#9736;](/report4/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-06-01/jsonld-validation.report.md) | [&#9728;](/report4/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-06-01/oslo-stakeholders-converter.report.md) | [&#9729;](/report4/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-06-01/translate.report.md) |  | [&#9728;](/report4/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-06-01/merge.report.md) | [&#9729;](/report4/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-06-01/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-06-01/metadata.report.md) | [&#9728;](/report4/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-06-01/generator-html.report.md) | [&#9728;](/report4/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-06-01/generator-respec.report.md) |  | [&#9728;](/report4/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-06-01/generator-rdf.report.md) |  | [ 2 ](https://github.com/Informatievlaanderen/OSLOthema-rooilijnplannen/issues) |
+# Deployment of CircleCI solution
+
+Let GENERATED be the source generated repository.
+For that repository a new repository STATISTICS has to be created.
+The objective is that the CircleCI that will be deployed in the GENERATED repository will store the resulting statistics on the STATISTICS repository.
+
+It also may be an option to use for STATISTICS a branch on the GENERATED.
+
+
+# the supported statistics
+
+
+Let NAMESPACE be the namespace on which the terms of GENERATED are published.
+
+
+1. the number of classes published in NAMESPACE 
+2. the number of properties publised in NAMESPACE 
+3. the number of classes using a different namespace as NAMESPACE (external terms)
+4. the number of properties using a different namespace as NAMESPACE (external terms)
+5. the total number of terms (sum of the above)
+6. the number of authors
+7. the number of editors
+8. the number of contributors
+9. the total number of participants (less of equal to the sum of the above)
+10. the organisations and their number of participants (grouped by their name)
+11. the total number of organisations contributing
+12. the number of specifications per status and per year / month (only for the aggregation)
+
+
+## considerations
+
+The statistics are calculated per specifications and as an aggregated statistic.
+The aggregated statistic is not equal to the mathematical sum of the numbers of each specification specific statistic.
+This is because there is an high overlap between the values between the specifications.
+The aggregated statistics are therefore substantially lower than the mathematical sum.
+
+The aggregated statistics also contain an overview per specification status.
+Each status provides the number of specifications in a year and then per month.
+This allows to picture a evolutionary figure.
+
+If there is interest this aggregation could be augemented with the references to the specifications.
+
+## limitations
+These scripts are designed to run upon a GENERATED repository. 
+For specifications that are listed in the standardsregisters outside this repository are not included in the overview.
+
+
+
+
+
