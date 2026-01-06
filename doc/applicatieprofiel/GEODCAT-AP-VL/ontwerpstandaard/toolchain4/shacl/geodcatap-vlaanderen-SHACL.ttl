@@ -156,11 +156,11 @@ wordt."""@nl;
     rdfs:label "hoofdonderwerp"@nl;
     rdfs:comment "De resource (dataset of dataservice) beschreven in het record."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#CatalogusRecord.Hoofdonderwerp>;
-    shacl:class dcat:Resource;
     shacl:description "De resource (dataset of dataservice) beschreven in het record."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "hoofdonderwerp"@nl;
+    shacl:or ([shacl:class dcat:Resource] [shacl:class dcat:Dataset] [shacl:class dcat:DataService]);
     shacl:path foaf:primaryTopic
   ];
   shacl:targetClass dcat:CatalogRecord .
@@ -186,13 +186,15 @@ wordt."""@nl;
     rdfs:label "relatie"@nl;
     rdfs:comment "een verband tussen twee resources."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#CatalogusResource.Relatie>;
-    shacl:class dcat:Resource;
     shacl:description "een verband tussen twee resources."@nl;
     shacl:maxCount "n"^^xsd:integer;
     shacl:name "relatie"@nl;
+    shacl:or ([shacl:class dcat:Resource] [shacl:class dcat:Dataset] [shacl:class dcat:DataService]);
     shacl:path dc:relation
   ];
-  shacl:targetClass dcat:Resource .
+  shacl:targetClass dcat:Resource,
+    dcat:Dataset,
+    dcat:DataService .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#CatalogusShape> a shacl:NodeShape;
   rdfs:label "Catalogus"@nl;
@@ -348,7 +350,8 @@ Om het verband tussen beiden zichtbaar te maken in het UML model, is de generiek
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#ContactpuntShape> a shacl:NodeShape;
   rdfs:label "Contactpunt"@nl;
   shacl:closed false;
-  shacl:targetClass schema:ContactPoint .
+  shacl:targetClass vcard:Kind,
+    schema:ContactPoint .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#DataserviceShape> a shacl:NodeShape;
   rdfs:label "Dataservice"@nl;
@@ -1085,7 +1088,6 @@ GEMET thesaurus."""@nl;
   ], [
     a shacl:PropertyShape;
     rdfs:label "eigenaar"@nl;
-    <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/#dataset-rights-holder\">GeoDCAT-AP</a>]"@nl;
     rdfs:comment "de agent die de eigendomsrechten heeft"@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#Dataset.Eigenaar>;
     shacl:class dc:Agent;
@@ -1390,10 +1392,10 @@ waaraan de distributie voldoet."""@nl;
     a shacl:PropertyShape;
     rdfs:label "CatalogusResource (source)";
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4#RelatieQualificatie.Catalogusresource(source)>;
-    shacl:class dcat:Resource;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "CatalogusResource (source)";
+    shacl:or ([shacl:class dcat:Resource] [shacl:class dcat:Dataset] [shacl:class dcat:DataService]);
     shacl:path <http://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.source>
   ];
   shacl:targetClass dcat:Relationship .
