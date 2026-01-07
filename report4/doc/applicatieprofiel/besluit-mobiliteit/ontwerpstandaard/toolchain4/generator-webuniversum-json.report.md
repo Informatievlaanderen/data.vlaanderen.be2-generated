@@ -2,17 +2,17 @@
 
 #||# -------------------------------------  
 
-2025-12-19T12:09:15.349Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasDerivedFrom which acts as a parent. Using original URI as fallback.
+2026-01-07T12:58:10.709Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasDerivedFrom which acts as a parent. Using original URI as fallback.
 
-2025-12-19T12:09:15.374Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2026-01-07T12:58:10.734Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-2025-12-19T12:09:15.374Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2026-01-07T12:58:10.734Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-2025-12-19T12:09:15.375Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
+2026-01-07T12:58:10.735Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
 
-2025-12-19T12:09:15.376Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
+2026-01-07T12:58:10.735Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
 
-Error: Unable to find the assigned URI for range http://www.w3.org/2000/01/rdf-schema#Resource of attribute [urn:oslo-toolchain:593a0626d98db31a4d06adbd005fc82b4e7366875e79be955ca1b8d24c48a62f](all-besluit-mobiliteit-ap.jsonld#L3862).
+Error: Unable to find the assigned URI for range http://www.w3.org/2000/01/rdf-schema#Resource of attribute [urn:oslo-toolchain:593a0626d98db31a4d06adbd005fc82b4e7366875e79be955ca1b8d24c48a62f](all-besluit-mobiliteit-ap.jsonld#L3874).
 
     at JsonWebuniversumGenerationService.addPropertySpecificInformation (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:272:19)
 
