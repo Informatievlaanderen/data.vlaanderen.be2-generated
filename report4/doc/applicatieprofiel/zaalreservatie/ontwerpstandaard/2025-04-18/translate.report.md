@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18/translation/zaalreservatie_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/zaalreservatie/ontwerpstandaard/2025-04-18/translation/zaalreservatie_nl.json
+
+TRANSLATIONFILE: zaalreservatie_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
