@@ -2,21 +2,21 @@
 
 #||# -------------------------------------  
 
-2025-12-10T13:19:59.148Z warn: Unable to find the description for subject "[urn:oslo-toolchain:85e46c96ce3f899fa2151147f8f3631652ce41d02c2cfcb187304965703e34b5](all-geodcatap-vlaanderen.jsonld#L646)".
+2026-01-07T15:17:43.119Z warn: Unable to find the description for subject "[urn:oslo-toolchain:85e46c96ce3f899fa2151147f8f3631652ce41d02c2cfcb187304965703e34b5](all-geodcatap-vlaanderen.jsonld#L1032)".
 
-2025-12-10T13:19:59.150Z warn: Unable to find the description for subject "[urn:oslo-toolchain:07e9d622e4e63c339e69e2fbb78e6843dcca58179ee9882bb349aac78937db24](all-geodcatap-vlaanderen.jsonld#L694)".
+2026-01-07T15:17:43.122Z warn: Unable to find the description for subject "[urn:oslo-toolchain:07e9d622e4e63c339e69e2fbb78e6843dcca58179ee9882bb349aac78937db24](all-geodcatap-vlaanderen.jsonld#L1113)".
 
-2025-12-10T13:19:59.150Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-geodcatap-vlaanderen.jsonld#L7891)".
+2026-01-07T15:17:43.123Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-geodcatap-vlaanderen.jsonld#L11037)".
 
-2025-12-10T13:19:59.150Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cd1a08986ade75e4719baf40c57773149a315dac2dc2d62d7bfba1439367ce4f](all-geodcatap-vlaanderen.jsonld#L7832)".
+2026-01-07T15:17:43.123Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cd1a08986ade75e4719baf40c57773149a315dac2dc2d62d7bfba1439367ce4f](all-geodcatap-vlaanderen.jsonld#L10936)".
 
-2025-12-10T13:19:59.151Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
+2026-01-07T15:17:43.123Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
 
-2025-12-10T13:19:59.151Z warn: Unable to find the description for subject "[urn:oslo-toolchain:013904af3189e8feae623d00dc7bb9c3fc4235f0964568a9c92ff9e4cc851bb2](all-geodcatap-vlaanderen.jsonld#L7779)".
+2026-01-07T15:17:43.124Z warn: Unable to find the description for subject "[urn:oslo-toolchain:013904af3189e8feae623d00dc7bb9c3fc4235f0964568a9c92ff9e4cc851bb2](all-geodcatap-vlaanderen.jsonld#L10846)".
 
-2025-12-10T13:19:59.198Z warn: Unable to find the description for subject "[urn:oslo-toolchain:94195f610528333e47ff3e1617b3806def8e9fb888ffc94d0c222b747900b535](all-geodcatap-vlaanderen.jsonld#L7533)".
+2026-01-07T15:17:43.182Z warn: Unable to find the description for subject "[urn:oslo-toolchain:94195f610528333e47ff3e1617b3806def8e9fb888ffc94d0c222b747900b535](all-geodcatap-vlaanderen.jsonld#L10462)".
 
-2025-12-10T13:19:59.199Z warn: Unable to find the description for subject "[urn:oslo-toolchain:95838aa419b0cc36c1447acd0939b6a412f4645b4a83982e84b62ba1b9cf6319](all-geodcatap-vlaanderen.jsonld#L7603)".
+2026-01-07T15:17:43.183Z warn: Unable to find the description for subject "[urn:oslo-toolchain:95838aa419b0cc36c1447acd0939b6a412f4645b4a83982e84b62ba1b9cf6319](all-geodcatap-vlaanderen.jsonld#L10613)".
 
-2025-12-10T13:19:59.200Z warn: Unable to find the description for subject "[urn:oslo-toolchain:ae52df18501f645ab427bb8a18100b19a2bbdb4700b7277288e006e6fd2da7e0](all-geodcatap-vlaanderen.jsonld#L7629)".
+2026-01-07T15:17:43.184Z warn: Unable to find the description for subject "[urn:oslo-toolchain:ae52df18501f645ab427bb8a18100b19a2bbdb4700b7277288e006e6fd2da7e0](all-geodcatap-vlaanderen.jsonld#L10639)".
 
