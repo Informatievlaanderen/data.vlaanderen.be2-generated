@@ -391,8 +391,10 @@ index.html check
 #||#    + checking /home/circleci/project/config/production/shok.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated/doc/applicatieprofiel/openbare-nutsvoorzieningkasten/erkendestandaard/2026-01-03'
 
 index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/openbare-nutsvoorzieningkasten/erkendestandaard/2026-01-03/index.html'
 
 #||#    + checking /home/circleci/project/config/production/slim-ruimtelijk-plannen.publication.json
 #||# 
