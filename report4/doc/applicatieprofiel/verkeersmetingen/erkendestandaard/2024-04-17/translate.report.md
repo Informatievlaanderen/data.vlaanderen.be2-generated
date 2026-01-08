@@ -124,11 +124,39 @@ http://def.isotc211.org/iso19156/2011/Observation#OM_Observation
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://www.w3.org/TR/vocab-ssn/#ssn-system
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -180,11 +208,19 @@ https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdeelnemer
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel
 
 new term introduced, no translation found
 
 http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -336,11 +372,39 @@ http://def.isotc211.org/iso19156/2011/Observation#OM_Observation
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://www.w3.org/TR/vocab-ssn/#ssn-system
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -392,11 +456,19 @@ https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdeelnemer
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://data.vlaanderen.be/ns/verkeersmetingen#Wegdeel
 
 new term introduced, no translation found
 
 http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 

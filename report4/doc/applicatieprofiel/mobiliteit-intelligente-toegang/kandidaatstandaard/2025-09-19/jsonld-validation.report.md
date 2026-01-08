@@ -2,99 +2,99 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:35.054Z info: Loaded 47 URI prefixes into whitelist
+2026-01-08T13:02:34.192Z info: Loaded 47 URI prefixes into whitelist
 
-2025-11-12T20:04:35.211Z warn: Found non-whitelisted assigned URI: https://www.w3.org/2004/02/skos/core#Concept for subject: [urn:oslo-toolchain:11db0c10cb061a55a35d95f61b42dcdf5fe133bdae705a03a3ec3689d0e1c2eb](all-mobiliteit-intelligente-toegang.jsonld#L684)
+2026-01-08T13:02:34.350Z warn: Found non-whitelisted assigned URI: https://www.w3.org/2004/02/skos/core#Concept for subject: [urn:oslo-toolchain:11db0c10cb061a55a35d95f61b42dcdf5fe133bdae705a03a3ec3689d0e1c2eb](all-mobiliteit-intelligente-toegang.jsonld#L772)
 
-2025-11-12T20:04:35.211Z warn: Found non-whitelisted assigned URI: https://www.w3.org/2004/02/skos/core#Concept for subject: [urn:oslo-toolchain:cca1940b98e9eeb2fe36922c023a5cc791b0a0ea5384e3eefae328fcf4760e2a](all-mobiliteit-intelligente-toegang.jsonld#L702)
+2026-01-08T13:02:34.350Z warn: Found non-whitelisted assigned URI: https://www.w3.org/2004/02/skos/core#Concept for subject: [urn:oslo-toolchain:cca1940b98e9eeb2fe36922c023a5cc791b0a0ea5384e3eefae328fcf4760e2a](all-mobiliteit-intelligente-toegang.jsonld#L808)
 
-2025-11-12T20:04:35.212Z warn: Found non-whitelisted assigned URI: https://www.w3.org/2004/02/skos/core#Concept for subject: [urn:oslo-toolchain:8b640bb4527f0074e62f795b30351fbfa41a0eac8b3dcee52767b65fa2accb5e](all-mobiliteit-intelligente-toegang.jsonld#L720)
+2026-01-08T13:02:34.350Z warn: Found non-whitelisted assigned URI: https://www.w3.org/2004/02/skos/core#Concept for subject: [urn:oslo-toolchain:8b640bb4527f0074e62f795b30351fbfa41a0eac8b3dcee52767b65fa2accb5e](all-mobiliteit-intelligente-toegang.jsonld#L826)
 
-2025-11-12T20:04:35.212Z warn: Found non-whitelisted assigned URI: http://todo.com/Date for subject: [urn:oslo-toolchain:7c98b60427965d0c341981407dfaa7ddac9b738fe26e8870aa374c4ca690fd5b](all-mobiliteit-intelligente-toegang.jsonld#L3951)
+2026-01-08T13:02:34.350Z warn: Found non-whitelisted assigned URI: http://todo.com/Date for subject: [urn:oslo-toolchain:7c98b60427965d0c341981407dfaa7ddac9b738fe26e8870aa374c4ca690fd5b](all-mobiliteit-intelligente-toegang.jsonld#L4075)
 
-2025-11-12T20:04:35.212Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/prov#Agent for subject: [urn:oslo-toolchain:2c255300b252bbdf49c196ffa9f246c5b52d791414f497b9db37d357765b6479](all-mobiliteit-intelligente-toegang.jsonld#L3990)
+2026-01-08T13:02:34.351Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/prov#Agent for subject: [urn:oslo-toolchain:2c255300b252bbdf49c196ffa9f246c5b52d791414f497b9db37d357765b6479](all-mobiliteit-intelligente-toegang.jsonld#L4114)
 
-2025-11-12T20:04:35.213Z warn: Found empty sentence for subject: [urn:oslo-toolchain:107a84541a5c2f1242261d85bb9af50844b07e9d563ad3641435b73b0c561f3d](all-mobiliteit-intelligente-toegang.jsonld#L1048)
+2026-01-08T13:02:34.352Z warn: Found empty sentence for subject: [urn:oslo-toolchain:107a84541a5c2f1242261d85bb9af50844b07e9d563ad3641435b73b0c561f3d](all-mobiliteit-intelligente-toegang.jsonld#L1172)
 
-2025-11-12T20:04:35.213Z warn: Found empty sentence for subject: [urn:oslo-toolchain:29c356a875927094f1033600ceabc3a8d73f9b7c0e9d29adb338d5217f4ca9c7](all-mobiliteit-intelligente-toegang.jsonld#L1104)
+2026-01-08T13:02:34.352Z warn: Found empty sentence for subject: [urn:oslo-toolchain:29c356a875927094f1033600ceabc3a8d73f9b7c0e9d29adb338d5217f4ca9c7](all-mobiliteit-intelligente-toegang.jsonld#L1228)
 
-2025-11-12T20:04:35.213Z warn: Found empty sentence for subject: [urn:oslo-toolchain:53a6753be8b71ccbd21eb7e01feb27a9a9ce5ba4629a0087a2b4be3fc17940ff](all-mobiliteit-intelligente-toegang.jsonld#L2361)
+2026-01-08T13:02:34.352Z warn: Found empty sentence for subject: [urn:oslo-toolchain:53a6753be8b71ccbd21eb7e01feb27a9a9ce5ba4629a0087a2b4be3fc17940ff](all-mobiliteit-intelligente-toegang.jsonld#L2485)
 
-2025-11-12T20:04:35.218Z error: Found missing class or attribute (Date): [urn:oslo-toolchain:7c98b60427965d0c341981407dfaa7ddac9b738fe26e8870aa374c4ca690fd5b](all-mobiliteit-intelligente-toegang.jsonld#L3951)
+2026-01-08T13:02:34.357Z error: Found missing class or attribute (Date): [urn:oslo-toolchain:7c98b60427965d0c341981407dfaa7ddac9b738fe26e8870aa374c4ca690fd5b](all-mobiliteit-intelligente-toegang.jsonld#L4075)
 
-2025-11-12T20:04:35.218Z error: Found missing class or attribute (Rechtshandeling): [urn:oslo-toolchain:c7dc62009ddf219ebacb74e14e7546133887f2cbf0bc093dbf66676e2509f6a6](all-mobiliteit-intelligente-toegang.jsonld#L3821)
+2026-01-08T13:02:34.359Z error: Found missing class or attribute (Rechtshandeling): [urn:oslo-toolchain:c7dc62009ddf219ebacb74e14e7546133887f2cbf0bc093dbf66676e2509f6a6](all-mobiliteit-intelligente-toegang.jsonld#L3945)
 
-2025-11-12T20:04:35.218Z error: Found missing class or attribute (Zaakhandeling): [urn:oslo-toolchain:162d2e83c702b39847a97e243503dbfc8e8b63a14aabdf817a2f4cc6fb7db70f](all-mobiliteit-intelligente-toegang.jsonld#L3832)
+2026-01-08T13:02:34.359Z error: Found missing class or attribute (Zaakhandeling): [urn:oslo-toolchain:162d2e83c702b39847a97e243503dbfc8e8b63a14aabdf817a2f4cc6fb7db70f](all-mobiliteit-intelligente-toegang.jsonld#L3956)
 
-2025-11-12T20:04:35.219Z error: Found missing class or attribute (Output): [urn:oslo-toolchain:406af6a1f863d6dbc37db351fb921dffe680b9d45db2a3ac0bc4bcb918b5e49a](all-mobiliteit-intelligente-toegang.jsonld#L3843)
+2026-01-08T13:02:34.359Z error: Found missing class or attribute (Output): [urn:oslo-toolchain:406af6a1f863d6dbc37db351fb921dffe680b9d45db2a3ac0bc4bcb918b5e49a](all-mobiliteit-intelligente-toegang.jsonld#L3967)
 
-2025-11-12T20:04:35.219Z error: Found missing class or attribute (Recht): [urn:oslo-toolchain:1c84fc96c1073dd62b0015c1d016fe4e1fd9e6fd1d4df6d530e01a52990b3b83](all-mobiliteit-intelligente-toegang.jsonld#L3862)
+2026-01-08T13:02:34.360Z error: Found missing class or attribute (Recht): [urn:oslo-toolchain:1c84fc96c1073dd62b0015c1d016fe4e1fd9e6fd1d4df6d530e01a52990b3b83](all-mobiliteit-intelligente-toegang.jsonld#L3986)
 
-2025-11-12T20:04:35.219Z error: Found missing class or attribute (Locatie): [urn:oslo-toolchain:a880d597f366ef2b0d73402b5d414ab7391df570865478b00d5f79ea327774e4](all-mobiliteit-intelligente-toegang.jsonld#L3881)
+2026-01-08T13:02:34.360Z error: Found missing class or attribute (Locatie): [urn:oslo-toolchain:a880d597f366ef2b0d73402b5d414ab7391df570865478b00d5f79ea327774e4](all-mobiliteit-intelligente-toegang.jsonld#L4005)
 
-2025-11-12T20:04:35.219Z error: Found missing class or attribute (Rule): [urn:oslo-toolchain:24373750851886a4f9aff903b3cfe994325808d2fab993bc37d4f71fe875b6be](all-mobiliteit-intelligente-toegang.jsonld#L3896)
+2026-01-08T13:02:34.360Z error: Found missing class or attribute (Rule): [urn:oslo-toolchain:24373750851886a4f9aff903b3cfe994325808d2fab993bc37d4f71fe875b6be](all-mobiliteit-intelligente-toegang.jsonld#L4020)
 
-2025-11-12T20:04:35.219Z error: Found missing class or attribute (Document): [urn:oslo-toolchain:f4973026a31fd9e2628daf44f7d81e349b5c7fb5f92d585d902172a9cc6793c6](all-mobiliteit-intelligente-toegang.jsonld#L3979)
+2026-01-08T13:02:34.360Z error: Found missing class or attribute (Document): [urn:oslo-toolchain:f4973026a31fd9e2628daf44f7d81e349b5c7fb5f92d585d902172a9cc6793c6](all-mobiliteit-intelligente-toegang.jsonld#L4103)
 
-2025-11-12T20:04:35.219Z error: Found missing class or attribute (Geometrie): [urn:oslo-toolchain:121e806a0d9601a9548698ccc04abbf81a3d5ebb2b25ca24b919cf8f1995a421](all-mobiliteit-intelligente-toegang.jsonld#L4007)
+2026-01-08T13:02:34.361Z error: Found missing class or attribute (Geometrie): [urn:oslo-toolchain:121e806a0d9601a9548698ccc04abbf81a3d5ebb2b25ca24b919cf8f1995a421](all-mobiliteit-intelligente-toegang.jsonld#L4131)
 
-2025-11-12T20:04:35.219Z info: Validation found 5 non-whitelisted assigned URIs
+2026-01-08T13:02:34.361Z info: Validation found 5 non-whitelisted assigned URIs
 
-2025-11-12T20:04:35.220Z info: Validation found 3 sentences with spelling mistakes.
+2026-01-08T13:02:34.361Z info: Validation found 3 sentences with spelling mistakes.
 
-2025-11-12T20:04:35.220Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2026-01-08T13:02:34.361Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-2025-11-12T20:04:35.220Z info: Validation successful! All base URIs seem to be valid.
+2026-01-08T13:02:34.361Z info: Validation successful! All base URIs seem to be valid.
 
-2025-11-12T20:04:35.220Z info: Validation found 9 missing referenced classes or attributes.
+2026-01-08T13:02:34.361Z info: Validation found 9 missing referenced classes or attributes.
 
 #||# oslo-jsonld-validator   
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:35.647Z info: Loaded 47 URI prefixes into whitelist
+2026-01-08T13:02:34.829Z info: Loaded 47 URI prefixes into whitelist
 
-2025-11-12T20:04:35.811Z warn: Found non-whitelisted assigned URI: https://www.w3.org/2004/02/skos/core#Concept for subject: [urn:oslo-toolchain:11db0c10cb061a55a35d95f61b42dcdf5fe133bdae705a03a3ec3689d0e1c2eb](all-mobiliteit-intelligente-toegang.jsonld#L684)
+2026-01-08T13:02:34.990Z warn: Found non-whitelisted assigned URI: https://www.w3.org/2004/02/skos/core#Concept for subject: [urn:oslo-toolchain:11db0c10cb061a55a35d95f61b42dcdf5fe133bdae705a03a3ec3689d0e1c2eb](all-mobiliteit-intelligente-toegang.jsonld#L772)
 
-2025-11-12T20:04:35.811Z warn: Found non-whitelisted assigned URI: https://www.w3.org/2004/02/skos/core#Concept for subject: [urn:oslo-toolchain:cca1940b98e9eeb2fe36922c023a5cc791b0a0ea5384e3eefae328fcf4760e2a](all-mobiliteit-intelligente-toegang.jsonld#L702)
+2026-01-08T13:02:34.990Z warn: Found non-whitelisted assigned URI: https://www.w3.org/2004/02/skos/core#Concept for subject: [urn:oslo-toolchain:cca1940b98e9eeb2fe36922c023a5cc791b0a0ea5384e3eefae328fcf4760e2a](all-mobiliteit-intelligente-toegang.jsonld#L808)
 
-2025-11-12T20:04:35.811Z warn: Found non-whitelisted assigned URI: https://www.w3.org/2004/02/skos/core#Concept for subject: [urn:oslo-toolchain:8b640bb4527f0074e62f795b30351fbfa41a0eac8b3dcee52767b65fa2accb5e](all-mobiliteit-intelligente-toegang.jsonld#L720)
+2026-01-08T13:02:34.990Z warn: Found non-whitelisted assigned URI: https://www.w3.org/2004/02/skos/core#Concept for subject: [urn:oslo-toolchain:8b640bb4527f0074e62f795b30351fbfa41a0eac8b3dcee52767b65fa2accb5e](all-mobiliteit-intelligente-toegang.jsonld#L826)
 
-2025-11-12T20:04:35.811Z warn: Found non-whitelisted assigned URI: http://todo.com/Date for subject: [urn:oslo-toolchain:7c98b60427965d0c341981407dfaa7ddac9b738fe26e8870aa374c4ca690fd5b](all-mobiliteit-intelligente-toegang.jsonld#L3951)
+2026-01-08T13:02:34.991Z warn: Found non-whitelisted assigned URI: http://todo.com/Date for subject: [urn:oslo-toolchain:7c98b60427965d0c341981407dfaa7ddac9b738fe26e8870aa374c4ca690fd5b](all-mobiliteit-intelligente-toegang.jsonld#L4075)
 
-2025-11-12T20:04:35.811Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/prov#Agent for subject: [urn:oslo-toolchain:2c255300b252bbdf49c196ffa9f246c5b52d791414f497b9db37d357765b6479](all-mobiliteit-intelligente-toegang.jsonld#L3990)
+2026-01-08T13:02:34.991Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/prov#Agent for subject: [urn:oslo-toolchain:2c255300b252bbdf49c196ffa9f246c5b52d791414f497b9db37d357765b6479](all-mobiliteit-intelligente-toegang.jsonld#L4114)
 
-2025-11-12T20:04:35.813Z warn: Found empty sentence for subject: [urn:oslo-toolchain:107a84541a5c2f1242261d85bb9af50844b07e9d563ad3641435b73b0c561f3d](all-mobiliteit-intelligente-toegang.jsonld#L1048)
+2026-01-08T13:02:34.992Z warn: Found empty sentence for subject: [urn:oslo-toolchain:107a84541a5c2f1242261d85bb9af50844b07e9d563ad3641435b73b0c561f3d](all-mobiliteit-intelligente-toegang.jsonld#L1172)
 
-2025-11-12T20:04:35.813Z warn: Found empty sentence for subject: [urn:oslo-toolchain:29c356a875927094f1033600ceabc3a8d73f9b7c0e9d29adb338d5217f4ca9c7](all-mobiliteit-intelligente-toegang.jsonld#L1104)
+2026-01-08T13:02:34.992Z warn: Found empty sentence for subject: [urn:oslo-toolchain:29c356a875927094f1033600ceabc3a8d73f9b7c0e9d29adb338d5217f4ca9c7](all-mobiliteit-intelligente-toegang.jsonld#L1228)
 
-2025-11-12T20:04:35.813Z warn: Found empty sentence for subject: [urn:oslo-toolchain:53a6753be8b71ccbd21eb7e01feb27a9a9ce5ba4629a0087a2b4be3fc17940ff](all-mobiliteit-intelligente-toegang.jsonld#L2361)
+2026-01-08T13:02:34.992Z warn: Found empty sentence for subject: [urn:oslo-toolchain:53a6753be8b71ccbd21eb7e01feb27a9a9ce5ba4629a0087a2b4be3fc17940ff](all-mobiliteit-intelligente-toegang.jsonld#L2485)
 
-2025-11-12T20:04:35.818Z error: Found missing class or attribute (Date): [urn:oslo-toolchain:7c98b60427965d0c341981407dfaa7ddac9b738fe26e8870aa374c4ca690fd5b](all-mobiliteit-intelligente-toegang.jsonld#L3951)
+2026-01-08T13:02:34.999Z error: Found missing class or attribute (Date): [urn:oslo-toolchain:7c98b60427965d0c341981407dfaa7ddac9b738fe26e8870aa374c4ca690fd5b](all-mobiliteit-intelligente-toegang.jsonld#L4075)
 
-2025-11-12T20:04:35.818Z error: Found missing class or attribute (Rechtshandeling): [urn:oslo-toolchain:c7dc62009ddf219ebacb74e14e7546133887f2cbf0bc093dbf66676e2509f6a6](all-mobiliteit-intelligente-toegang.jsonld#L3821)
+2026-01-08T13:02:34.999Z error: Found missing class or attribute (Rechtshandeling): [urn:oslo-toolchain:c7dc62009ddf219ebacb74e14e7546133887f2cbf0bc093dbf66676e2509f6a6](all-mobiliteit-intelligente-toegang.jsonld#L3945)
 
-2025-11-12T20:04:35.818Z error: Found missing class or attribute (Zaakhandeling): [urn:oslo-toolchain:162d2e83c702b39847a97e243503dbfc8e8b63a14aabdf817a2f4cc6fb7db70f](all-mobiliteit-intelligente-toegang.jsonld#L3832)
+2026-01-08T13:02:34.999Z error: Found missing class or attribute (Zaakhandeling): [urn:oslo-toolchain:162d2e83c702b39847a97e243503dbfc8e8b63a14aabdf817a2f4cc6fb7db70f](all-mobiliteit-intelligente-toegang.jsonld#L3956)
 
-2025-11-12T20:04:35.819Z error: Found missing class or attribute (Output): [urn:oslo-toolchain:406af6a1f863d6dbc37db351fb921dffe680b9d45db2a3ac0bc4bcb918b5e49a](all-mobiliteit-intelligente-toegang.jsonld#L3843)
+2026-01-08T13:02:35.000Z error: Found missing class or attribute (Output): [urn:oslo-toolchain:406af6a1f863d6dbc37db351fb921dffe680b9d45db2a3ac0bc4bcb918b5e49a](all-mobiliteit-intelligente-toegang.jsonld#L3967)
 
-2025-11-12T20:04:35.819Z error: Found missing class or attribute (Recht): [urn:oslo-toolchain:1c84fc96c1073dd62b0015c1d016fe4e1fd9e6fd1d4df6d530e01a52990b3b83](all-mobiliteit-intelligente-toegang.jsonld#L3862)
+2026-01-08T13:02:35.000Z error: Found missing class or attribute (Recht): [urn:oslo-toolchain:1c84fc96c1073dd62b0015c1d016fe4e1fd9e6fd1d4df6d530e01a52990b3b83](all-mobiliteit-intelligente-toegang.jsonld#L3986)
 
-2025-11-12T20:04:35.819Z error: Found missing class or attribute (Locatie): [urn:oslo-toolchain:a880d597f366ef2b0d73402b5d414ab7391df570865478b00d5f79ea327774e4](all-mobiliteit-intelligente-toegang.jsonld#L3881)
+2026-01-08T13:02:35.000Z error: Found missing class or attribute (Locatie): [urn:oslo-toolchain:a880d597f366ef2b0d73402b5d414ab7391df570865478b00d5f79ea327774e4](all-mobiliteit-intelligente-toegang.jsonld#L4005)
 
-2025-11-12T20:04:35.819Z error: Found missing class or attribute (Rule): [urn:oslo-toolchain:24373750851886a4f9aff903b3cfe994325808d2fab993bc37d4f71fe875b6be](all-mobiliteit-intelligente-toegang.jsonld#L3896)
+2026-01-08T13:02:35.000Z error: Found missing class or attribute (Rule): [urn:oslo-toolchain:24373750851886a4f9aff903b3cfe994325808d2fab993bc37d4f71fe875b6be](all-mobiliteit-intelligente-toegang.jsonld#L4020)
 
-2025-11-12T20:04:35.819Z error: Found missing class or attribute (Document): [urn:oslo-toolchain:f4973026a31fd9e2628daf44f7d81e349b5c7fb5f92d585d902172a9cc6793c6](all-mobiliteit-intelligente-toegang.jsonld#L3979)
+2026-01-08T13:02:35.000Z error: Found missing class or attribute (Document): [urn:oslo-toolchain:f4973026a31fd9e2628daf44f7d81e349b5c7fb5f92d585d902172a9cc6793c6](all-mobiliteit-intelligente-toegang.jsonld#L4103)
 
-2025-11-12T20:04:35.820Z error: Found missing class or attribute (Geometrie): [urn:oslo-toolchain:121e806a0d9601a9548698ccc04abbf81a3d5ebb2b25ca24b919cf8f1995a421](all-mobiliteit-intelligente-toegang.jsonld#L4007)
+2026-01-08T13:02:35.000Z error: Found missing class or attribute (Geometrie): [urn:oslo-toolchain:121e806a0d9601a9548698ccc04abbf81a3d5ebb2b25ca24b919cf8f1995a421](all-mobiliteit-intelligente-toegang.jsonld#L4131)
 
-2025-11-12T20:04:35.820Z info: Validation found 5 non-whitelisted assigned URIs
+2026-01-08T13:02:35.001Z info: Validation found 5 non-whitelisted assigned URIs
 
-2025-11-12T20:04:35.820Z info: Validation found 3 sentences with spelling mistakes.
+2026-01-08T13:02:35.001Z info: Validation found 3 sentences with spelling mistakes.
 
-2025-11-12T20:04:35.820Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2026-01-08T13:02:35.001Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-2025-11-12T20:04:35.820Z info: Validation successful! All base URIs seem to be valid.
+2026-01-08T13:02:35.001Z info: Validation successful! All base URIs seem to be valid.
 
-2025-11-12T20:04:35.820Z info: Validation found 9 missing referenced classes or attributes.
+2026-01-08T13:02:35.001Z info: Validation found 9 missing referenced classes or attributes.
 

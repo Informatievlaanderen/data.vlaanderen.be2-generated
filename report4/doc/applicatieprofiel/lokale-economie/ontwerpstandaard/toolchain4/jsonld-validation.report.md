@@ -2,271 +2,279 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:23.878Z info: Loaded 47 URI prefixes into whitelist
+2026-01-08T13:02:21.599Z info: Loaded 47 URI prefixes into whitelist
 
-2025-11-12T20:04:24.223Z warn: Found non-whitelisted assigned URI: https://def.isotc211.org/iso19156/2011/Observation#ObservationContext for subject: [urn:oslo-toolchain:7cbc29d0aecc3ad9d46897490791db1d16b0a05506b258adbbe263f9888ad1a6](all-lokale-economie-ap.jsonld#L168)
+2026-01-08T13:02:21.946Z warn: Found non-whitelisted assigned URI: https://def.isotc211.org/iso19156/2011/Observation#ObservationContext for subject: [urn:oslo-toolchain:7cbc29d0aecc3ad9d46897490791db1d16b0a05506b258adbbe263f9888ad1a6](all-lokale-economie-ap.jsonld#L184)
 
-2025-11-12T20:04:24.223Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation for subject: [urn:oslo-toolchain:c8beb0d2b68f2a97b410aee19377d4232c1f88b589ff6376c85ce26ea41484d7](all-lokale-economie-ap.jsonld#L275)
+2026-01-08T13:02:21.946Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation for subject: [urn:oslo-toolchain:c8beb0d2b68f2a97b410aee19377d4232c1f88b589ff6376c85ce26ea41484d7](all-lokale-economie-ap.jsonld#L363)
 
-2025-11-12T20:04:24.223Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType for subject: [urn:oslo-toolchain:df7f62d7b92691d897290d7f19662a3844fac51c60e0b4b23b3ffc3221823a98](all-lokale-economie-ap.jsonld#L435)
+2026-01-08T13:02:21.947Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType for subject: [urn:oslo-toolchain:df7f62d7b92691d897290d7f19662a3844fac51c60e0b4b23b3ffc3221823a98](all-lokale-economie-ap.jsonld#L559)
 
-2025-11-12T20:04:24.223Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature for subject: [urn:oslo-toolchain:d223c26fd5a2eca2faf489b1f8b9069337e926601039a8a3887d6b2c3ba97ce6](all-lokale-economie-ap.jsonld#L702)
+2026-01-08T13:02:21.947Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature for subject: [urn:oslo-toolchain:d223c26fd5a2eca2faf489b1f8b9069337e926601039a8a3887d6b2c3ba97ce6](all-lokale-economie-ap.jsonld#L970)
 
-2025-11-12T20:04:24.223Z warn: Found non-whitelisted assigned URI: http://schema.org/email for subject: [urn:oslo-toolchain:9ab272c091045582c7b3c4200f51639934b261b2bbd46f187e5b31164e090d90](all-lokale-economie-ap.jsonld#L2096)
+2026-01-08T13:02:21.947Z warn: Found non-whitelisted assigned URI: http://schema.org/email for subject: [urn:oslo-toolchain:9ab272c091045582c7b3c4200f51639934b261b2bbd46f187e5b31164e090d90](all-lokale-economie-ap.jsonld#L2832)
 
-2025-11-12T20:04:24.223Z warn: Found non-whitelisted assigned URI: http://schema.org/faxNumber for subject: [urn:oslo-toolchain:e9e21a5ae97648e9c7ec1392f61741317cd66c2191cfbe5193fb3b02e332dcdd](all-lokale-economie-ap.jsonld#L2152)
+2026-01-08T13:02:21.947Z warn: Found non-whitelisted assigned URI: http://schema.org/faxNumber for subject: [urn:oslo-toolchain:e9e21a5ae97648e9c7ec1392f61741317cd66c2191cfbe5193fb3b02e332dcdd](all-lokale-economie-ap.jsonld#L2888)
 
-2025-11-12T20:04:24.223Z warn: Found non-whitelisted assigned URI: http://schema.org/openingHours for subject: [urn:oslo-toolchain:a411215a74a05cfa989c8a58c88dac8a1615e79fe387cf57f2921503943daa5e](all-lokale-economie-ap.jsonld#L2208)
+2026-01-08T13:02:21.947Z warn: Found non-whitelisted assigned URI: http://schema.org/openingHours for subject: [urn:oslo-toolchain:a411215a74a05cfa989c8a58c88dac8a1615e79fe387cf57f2921503943daa5e](all-lokale-economie-ap.jsonld#L2944)
 
-2025-11-12T20:04:24.224Z warn: Found non-whitelisted assigned URI: http://schema.org/telephone for subject: [urn:oslo-toolchain:47f42fcea39f6c175f3990250dc1db06df549dbd52015a3a65e541bf5715e2d7](all-lokale-economie-ap.jsonld#L2270)
+2026-01-08T13:02:21.947Z warn: Found non-whitelisted assigned URI: http://schema.org/telephone for subject: [urn:oslo-toolchain:47f42fcea39f6c175f3990250dc1db06df549dbd52015a3a65e541bf5715e2d7](all-lokale-economie-ap.jsonld#L3006)
 
-2025-11-12T20:04:24.224Z warn: Found non-whitelisted assigned URI: http://schema.org/validThrough for subject: [urn:oslo-toolchain:e6674e85a7ac81079c6699325a84f01c234a8f295531e25e85752bcdf58e2f88](all-lokale-economie-ap.jsonld#L3162)
+2026-01-08T13:02:21.947Z warn: Found non-whitelisted assigned URI: http://schema.org/validThrough for subject: [urn:oslo-toolchain:e6674e85a7ac81079c6699325a84f01c234a8f295531e25e85752bcdf58e2f88](all-lokale-economie-ap.jsonld#L3898)
 
-2025-11-12T20:04:24.224Z warn: Found non-whitelisted assigned URI: http://schema.org/validFrom for subject: [urn:oslo-toolchain:4f4ec4a4447f4a358132009dd58bff56605bbdd7650875e83bb679f8a899d39c](all-lokale-economie-ap.jsonld#L3206)
+2026-01-08T13:02:21.947Z warn: Found non-whitelisted assigned URI: http://schema.org/validFrom for subject: [urn:oslo-toolchain:4f4ec4a4447f4a358132009dd58bff56605bbdd7650875e83bb679f8a899d39c](all-lokale-economie-ap.jsonld#L3942)
 
-2025-11-12T20:04:24.224Z warn: Found non-whitelisted assigned URI: http://schema.org/closes for subject: [urn:oslo-toolchain:100723dfae914dc359843fc1d3925194d4bd6ae4aa1c27ba62e58e64e15117b3](all-lokale-economie-ap.jsonld#L3250)
+2026-01-08T13:02:21.947Z warn: Found non-whitelisted assigned URI: http://schema.org/closes for subject: [urn:oslo-toolchain:100723dfae914dc359843fc1d3925194d4bd6ae4aa1c27ba62e58e64e15117b3](all-lokale-economie-ap.jsonld#L3986)
 
-2025-11-12T20:04:24.224Z warn: Found non-whitelisted assigned URI: http://schema.org/opens for subject: [urn:oslo-toolchain:8014e608bc8d6e616d2f5aa257dcf75e6ee87e2e9a53714180d3abb25c77856c](all-lokale-economie-ap.jsonld#L3294)
+2026-01-08T13:02:21.947Z warn: Found non-whitelisted assigned URI: http://schema.org/opens for subject: [urn:oslo-toolchain:8014e608bc8d6e616d2f5aa257dcf75e6ee87e2e9a53714180d3abb25c77856c](all-lokale-economie-ap.jsonld#L4030)
 
-2025-11-12T20:04:24.224Z warn: Found non-whitelisted assigned URI: http://schema.org/dayOfWeek for subject: [urn:oslo-toolchain:57f6c7ddb4ce8dd48b4814f46e5596c1478f8f3800544a01b6fd6c241827c628](all-lokale-economie-ap.jsonld#L3652)
+2026-01-08T13:02:21.947Z warn: Found non-whitelisted assigned URI: http://schema.org/dayOfWeek for subject: [urn:oslo-toolchain:57f6c7ddb4ce8dd48b4814f46e5596c1478f8f3800544a01b6fd6c241827c628](all-lokale-economie-ap.jsonld#L4388)
 
-2025-11-12T20:04:24.224Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role for subject: [urn:oslo-toolchain:0ca53fb3af596f28f8eb8bc0aa4ca3d58be93a769d694ec5d4cf8e42b27de609](all-lokale-economie-ap.jsonld#L3752)
+2026-01-08T13:02:21.947Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role for subject: [urn:oslo-toolchain:0ca53fb3af596f28f8eb8bc0aa4ca3d58be93a769d694ec5d4cf8e42b27de609](all-lokale-economie-ap.jsonld#L4488)
 
-2025-11-12T20:04:24.224Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/prov#atLocation for subject: [urn:oslo-toolchain:5c127ccb54ef6ab29afd4a40b11869df613b46ae219b1e7f2bd67fc24b114b5c](all-lokale-economie-ap.jsonld#L3802)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/prov#atLocation for subject: [urn:oslo-toolchain:5c127ccb54ef6ab29afd4a40b11869df613b46ae219b1e7f2bd67fc24b114b5c](all-lokale-economie-ap.jsonld#L4538)
 
-2025-11-12T20:04:24.224Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/prov#atLocation for subject: [urn:oslo-toolchain:eb7efc4172c470a60ad69ae52aeac4a364a7dcb8cd94c6374a32d73bf6a37a72](all-lokale-economie-ap.jsonld#L5026)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/prov#atLocation for subject: [urn:oslo-toolchain:eb7efc4172c470a60ad69ae52aeac4a364a7dcb8cd94c6374a32d73bf6a37a72](all-lokale-economie-ap.jsonld#L5762)
 
-2025-11-12T20:04:24.225Z warn: Found non-whitelisted assigned URI: http://schema.org/contactPoint for subject: [urn:oslo-toolchain:23a6a02916aca6b6132ee22913d3871117c259cb4c88a73c22e344d7a4106fec](all-lokale-economie-ap.jsonld#L5282)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: http://schema.org/contactPoint for subject: [urn:oslo-toolchain:23a6a02916aca6b6132ee22913d3871117c259cb4c88a73c22e344d7a4106fec](all-lokale-economie-ap.jsonld#L6018)
 
-2025-11-12T20:04:24.225Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime for subject: [urn:oslo-toolchain:435d2451884438c721e3aa1f060ca41d4c97e6f496f93ba6cd1c057d0c43f20e](all-lokale-economie-ap.jsonld#L5494)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime for subject: [urn:oslo-toolchain:435d2451884438c721e3aa1f060ca41d4c97e6f496f93ba6cd1c057d0c43f20e](all-lokale-economie-ap.jsonld#L6230)
 
-2025-11-12T20:04:24.225Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter for subject: [urn:oslo-toolchain:d3607aec8dd45c1186dc83803e9c28fe76993da4b139bd716f1050592f4e34bc](all-lokale-economie-ap.jsonld#L5600)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter for subject: [urn:oslo-toolchain:d3607aec8dd45c1186dc83803e9c28fe76993da4b139bd716f1050592f4e34bc](all-lokale-economie-ap.jsonld#L6336)
 
-2025-11-12T20:04:24.225Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result for subject: [urn:oslo-toolchain:f67e370699e5ffe20483c090cd79827bb1814726b8bec36bfd2e788e7b92d63a](all-lokale-economie-ap.jsonld#L5656)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result for subject: [urn:oslo-toolchain:f67e370699e5ffe20483c090cd79827bb1814726b8bec36bfd2e788e7b92d63a](all-lokale-economie-ap.jsonld#L6392)
 
-2025-11-12T20:04:24.225Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality for subject: [urn:oslo-toolchain:f9ce716a2ff70abd562f4d4955043cdd13a8bd746ce51c64e20a9f7eedf22119](all-lokale-economie-ap.jsonld#L5712)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality for subject: [urn:oslo-toolchain:f9ce716a2ff70abd562f4d4955043cdd13a8bd746ce51c64e20a9f7eedf22119](all-lokale-economie-ap.jsonld#L6448)
 
-2025-11-12T20:04:24.225Z warn: Found non-whitelisted assigned URI: http://schema.org/hoursAvailable for subject: [urn:oslo-toolchain:5ae71decedfb34c4e8139640df93e48fe95e8bcc7cc73debd61c4a26d7d30644](all-lokale-economie-ap.jsonld#L6780)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: http://schema.org/hoursAvailable for subject: [urn:oslo-toolchain:5ae71decedfb34c4e8139640df93e48fe95e8bcc7cc73debd61c4a26d7d30644](all-lokale-economie-ap.jsonld#L7516)
 
-2025-11-12T20:04:24.225Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty for subject: [urn:oslo-toolchain:0a2dc3bd0e06aac91054a05647428b40730c862094338c2bb74233f4085923e9](all-lokale-economie-ap.jsonld#L8048)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty for subject: [urn:oslo-toolchain:0a2dc3bd0e06aac91054a05647428b40730c862094338c2bb74233f4085923e9](all-lokale-economie-ap.jsonld#L8784)
 
-2025-11-12T20:04:24.225Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest for subject: [urn:oslo-toolchain:3078c87f111b65d25623b19ddd106ec6955e94ba91fd17595f83063b153c523f](all-lokale-economie-ap.jsonld#L8098)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest for subject: [urn:oslo-toolchain:3078c87f111b65d25623b19ddd106ec6955e94ba91fd17595f83063b153c523f](all-lokale-economie-ap.jsonld#L8834)
 
-2025-11-12T20:04:24.225Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation for subject: [urn:oslo-toolchain:1aa320dc5946f50bae2405ba2962032af58d63f0fbf81782a580826dbad9a5eb](all-lokale-economie-ap.jsonld#L8274)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation for subject: [urn:oslo-toolchain:1aa320dc5946f50bae2405ba2962032af58d63f0fbf81782a580826dbad9a5eb](all-lokale-economie-ap.jsonld#L9010)
 
-2025-11-12T20:04:24.225Z warn: Found non-whitelisted assigned URI: http://schema.org/ContactPoint for subject: [urn:oslo-toolchain:378ddffa7ab776798a8a7195e85d3eae33d0458da530eacaec556210238b96a6](all-lokale-economie-ap.jsonld#L8674)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: http://schema.org/ContactPoint for subject: [urn:oslo-toolchain:378ddffa7ab776798a8a7195e85d3eae33d0458da530eacaec556210238b96a6](all-lokale-economie-ap.jsonld#L9410)
 
-2025-11-12T20:04:24.225Z warn: Found non-whitelisted assigned URI: http://schema.org/OpeningHoursSpecification for subject: [urn:oslo-toolchain:a305a77fba3af2fd9d3afa6ef044bb2b5fae3a0deb04f5380ca22e2518892593](all-lokale-economie-ap.jsonld#L9083)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: http://schema.org/OpeningHoursSpecification for subject: [urn:oslo-toolchain:a305a77fba3af2fd9d3afa6ef044bb2b5fae3a0deb04f5380ca22e2518892593](all-lokale-economie-ap.jsonld#L9819)
 
-2025-11-12T20:04:24.225Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19103/2005/Names#GenericName for subject: [urn:oslo-toolchain:b8db2eabd31d087f9d96056d359fb1198dd45d8bb2de79028114ad32354b808d](all-lokale-economie-ap.jsonld#L9240)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19103/2005/Names#GenericName for subject: [urn:oslo-toolchain:b8db2eabd31d087f9d96056d359fb1198dd45d8bb2de79028114ad32354b808d](all-lokale-economie-ap.jsonld#L9976)
 
-2025-11-12T20:04:24.225Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object for subject: [urn:oslo-toolchain:5a24b213027bb5ba459a950944afb01632887c349d0790ce67914c40a6058cec](all-lokale-economie-ap.jsonld#L9384)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object for subject: [urn:oslo-toolchain:5a24b213027bb5ba459a950944afb01632887c349d0790ce67914c40a6058cec](all-lokale-economie-ap.jsonld#L10120)
 
-2025-11-12T20:04:24.225Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#NamedValue for subject: [urn:oslo-toolchain:212653523e321b8dc28806fea6ee89ada0a54d8c5a99e12b8447821747f2719d](all-lokale-economie-ap.jsonld#L9419)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#NamedValue for subject: [urn:oslo-toolchain:212653523e321b8dc28806fea6ee89ada0a54d8c5a99e12b8447821747f2719d](all-lokale-economie-ap.jsonld#L10155)
 
-2025-11-12T20:04:24.225Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element for subject: [urn:oslo-toolchain:52bde4d47d935f31fea9273254628f99c1f8422c7d66b3f05e5a2eb2a7f440f0](all-lokale-economie-ap.jsonld#L9489)
+2026-01-08T13:02:21.948Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element for subject: [urn:oslo-toolchain:52bde4d47d935f31fea9273254628f99c1f8422c7d66b3f05e5a2eb2a7f440f0](all-lokale-economie-ap.jsonld#L10225)
 
-2025-11-12T20:04:24.228Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:0a2dc3bd0e06aac91054a05647428b40730c862094338c2bb74233f4085923e9](all-lokale-economie-ap.jsonld#L8048)
+2026-01-08T13:02:21.951Z warn: Found sentence without a '.': 'Classificatie van onderwijsniveaus' for subject: [urn:oslo-toolchain:a8cbd82ad3ec2a831a1d1392f3458cea38da7f2ac7be1c0be08e7d48ddf70a2a](all-lokale-economie-ap.jsonld#L1851)
 
-2025-11-12T20:04:24.228Z warn: Found empty sentence for subject: [urn:oslo-toolchain:88783d0bc9657c1b7f950735c9e87c13c8447b32dfb2c894d302208df6970f6e](all-lokale-economie-ap.jsonld#L1766)
+2026-01-08T13:02:21.951Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:0a2dc3bd0e06aac91054a05647428b40730c862094338c2bb74233f4085923e9](all-lokale-economie-ap.jsonld#L8784)
 
-2025-11-12T20:04:24.228Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8dfa39642ecf685b025247b9547af8976fa2382493d8a493a9d8a9c212fc2d24](all-lokale-economie-ap.jsonld#L1822)
+2026-01-08T13:02:21.951Z warn: Found sentence without a '.': 'Classificatie van onderwijsniveaus' for subject: [urn:oslo-toolchain:a8cbd82ad3ec2a831a1d1392f3458cea38da7f2ac7be1c0be08e7d48ddf70a2a](all-lokale-economie-ap.jsonld#L1851)
 
-2025-11-12T20:04:24.228Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7b2a9c24a16bc597204dd6a4fa01f8d6aec5d7bf66436648ebadbfdbdedf23a3](all-lokale-economie-ap.jsonld#L2040)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:88783d0bc9657c1b7f950735c9e87c13c8447b32dfb2c894d302208df6970f6e](all-lokale-economie-ap.jsonld#L2502)
 
-2025-11-12T20:04:24.228Z warn: Found empty sentence for subject: [urn:oslo-toolchain:9ab272c091045582c7b3c4200f51639934b261b2bbd46f187e5b31164e090d90](all-lokale-economie-ap.jsonld#L2096)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8dfa39642ecf685b025247b9547af8976fa2382493d8a493a9d8a9c212fc2d24](all-lokale-economie-ap.jsonld#L2558)
 
-2025-11-12T20:04:24.228Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e9e21a5ae97648e9c7ec1392f61741317cd66c2191cfbe5193fb3b02e332dcdd](all-lokale-economie-ap.jsonld#L2152)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7b2a9c24a16bc597204dd6a4fa01f8d6aec5d7bf66436648ebadbfdbdedf23a3](all-lokale-economie-ap.jsonld#L2776)
 
-2025-11-12T20:04:24.228Z warn: Found empty sentence for subject: [urn:oslo-toolchain:47f42fcea39f6c175f3990250dc1db06df549dbd52015a3a65e541bf5715e2d7](all-lokale-economie-ap.jsonld#L2270)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:9ab272c091045582c7b3c4200f51639934b261b2bbd46f187e5b31164e090d90](all-lokale-economie-ap.jsonld#L2832)
 
-2025-11-12T20:04:24.228Z warn: Found empty sentence for subject: [urn:oslo-toolchain:1e8cd2f6a9e6eb44bb66d5f5bcc993436cfbeadbb9abc2a50ce760df38aacdec](all-lokale-economie-ap.jsonld#L2326)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e9e21a5ae97648e9c7ec1392f61741317cd66c2191cfbe5193fb3b02e332dcdd](all-lokale-economie-ap.jsonld#L2888)
 
-2025-11-12T20:04:24.228Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e6674e85a7ac81079c6699325a84f01c234a8f295531e25e85752bcdf58e2f88](all-lokale-economie-ap.jsonld#L3162)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:47f42fcea39f6c175f3990250dc1db06df549dbd52015a3a65e541bf5715e2d7](all-lokale-economie-ap.jsonld#L3006)
 
-2025-11-12T20:04:24.229Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4f4ec4a4447f4a358132009dd58bff56605bbdd7650875e83bb679f8a899d39c](all-lokale-economie-ap.jsonld#L3206)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:1e8cd2f6a9e6eb44bb66d5f5bcc993436cfbeadbb9abc2a50ce760df38aacdec](all-lokale-economie-ap.jsonld#L3062)
 
-2025-11-12T20:04:24.229Z warn: Found empty sentence for subject: [urn:oslo-toolchain:100723dfae914dc359843fc1d3925194d4bd6ae4aa1c27ba62e58e64e15117b3](all-lokale-economie-ap.jsonld#L3250)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e6674e85a7ac81079c6699325a84f01c234a8f295531e25e85752bcdf58e2f88](all-lokale-economie-ap.jsonld#L3898)
 
-2025-11-12T20:04:24.229Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8014e608bc8d6e616d2f5aa257dcf75e6ee87e2e9a53714180d3abb25c77856c](all-lokale-economie-ap.jsonld#L3294)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4f4ec4a4447f4a358132009dd58bff56605bbdd7650875e83bb679f8a899d39c](all-lokale-economie-ap.jsonld#L3942)
 
-2025-11-12T20:04:24.229Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e6294fea43ac053a943711e9aa484d9c5a1181577662bbaeceb4ce3fee4ea048](all-lokale-economie-ap.jsonld#L3385)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:100723dfae914dc359843fc1d3925194d4bd6ae4aa1c27ba62e58e64e15117b3](all-lokale-economie-ap.jsonld#L3986)
 
-2025-11-12T20:04:24.229Z warn: Found empty sentence for subject: [urn:oslo-toolchain:f7c1ded772c31601ef9f864d79be19f71c787eeaecb40e07e0e85bd8d93d7ad1](all-lokale-economie-ap.jsonld#L3479)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8014e608bc8d6e616d2f5aa257dcf75e6ee87e2e9a53714180d3abb25c77856c](all-lokale-economie-ap.jsonld#L4030)
 
-2025-11-12T20:04:24.229Z warn: Found empty sentence for subject: [urn:oslo-toolchain:ddd470110cea37b625e3f31446765afa3c8fcf8a759f26913fc70742e1270f3c](all-lokale-economie-ap.jsonld#L3526)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e6294fea43ac053a943711e9aa484d9c5a1181577662bbaeceb4ce3fee4ea048](all-lokale-economie-ap.jsonld#L4121)
 
-2025-11-12T20:04:24.229Z warn: Found empty sentence for subject: [urn:oslo-toolchain:6cffac1e9db5e1cb75d8914a6dd5bebc6e67d3a90d6ba4d4d6d902e689b6e99b](all-lokale-economie-ap.jsonld#L3570)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:f7c1ded772c31601ef9f864d79be19f71c787eeaecb40e07e0e85bd8d93d7ad1](all-lokale-economie-ap.jsonld#L4215)
 
-2025-11-12T20:04:24.229Z warn: Found empty sentence for subject: [urn:oslo-toolchain:a8606a90297037d328992a66a91f4c30d4c4e30f178a52686f600572cd848ce3](all-lokale-economie-ap.jsonld#L4408)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:ddd470110cea37b625e3f31446765afa3c8fcf8a759f26913fc70742e1270f3c](all-lokale-economie-ap.jsonld#L4262)
 
-2025-11-12T20:04:24.229Z warn: Found empty sentence for subject: [urn:oslo-toolchain:23a6a02916aca6b6132ee22913d3871117c259cb4c88a73c22e344d7a4106fec](all-lokale-economie-ap.jsonld#L5282)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:6cffac1e9db5e1cb75d8914a6dd5bebc6e67d3a90d6ba4d4d6d902e689b6e99b](all-lokale-economie-ap.jsonld#L4306)
 
-2025-11-12T20:04:24.229Z warn: Found empty sentence for subject: [urn:oslo-toolchain:461603521444b268093530c8f1e367cf503473f03b0ce2706a30fd3025c743a1](all-lokale-economie-ap.jsonld#L5338)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:a8606a90297037d328992a66a91f4c30d4c4e30f178a52686f600572cd848ce3](all-lokale-economie-ap.jsonld#L5144)
 
-2025-11-12T20:04:24.229Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8ff564799634ab8ec857d2b78aef994a77a7051cff7993314a56d4041a3cd74f](all-lokale-economie-ap.jsonld#L6100)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:23a6a02916aca6b6132ee22913d3871117c259cb4c88a73c22e344d7a4106fec](all-lokale-economie-ap.jsonld#L6018)
 
-2025-11-12T20:04:24.229Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d0bc4331337fbccf3ef432f2c27c5d309aad32db73d979d483c68ebf2f777d7f](all-lokale-economie-ap.jsonld#L6156)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:461603521444b268093530c8f1e367cf503473f03b0ce2706a30fd3025c743a1](all-lokale-economie-ap.jsonld#L6074)
 
-2025-11-12T20:04:24.229Z warn: Found empty sentence for subject: [urn:oslo-toolchain:9603fce98d392ad72d43ea8a37a0b0cae70711951e52abba403a0572f2302588](all-lokale-economie-ap.jsonld#L6724)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8ff564799634ab8ec857d2b78aef994a77a7051cff7993314a56d4041a3cd74f](all-lokale-economie-ap.jsonld#L6836)
 
-2025-11-12T20:04:24.229Z warn: Found empty sentence for subject: [urn:oslo-toolchain:041a77033f89eaf2fe50ac8b8b6313877363bf98de14224562dd006579456cb6](all-lokale-economie-ap.jsonld#L6992)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d0bc4331337fbccf3ef432f2c27c5d309aad32db73d979d483c68ebf2f777d7f](all-lokale-economie-ap.jsonld#L6892)
 
-2025-11-12T20:04:24.229Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:0a2dc3bd0e06aac91054a05647428b40730c862094338c2bb74233f4085923e9](all-lokale-economie-ap.jsonld#L8048)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:9603fce98d392ad72d43ea8a37a0b0cae70711951e52abba403a0572f2302588](all-lokale-economie-ap.jsonld#L7460)
 
-2025-11-12T20:04:24.243Z error: Found missing class or attribute (Persoon (source)): [urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8248)
+2026-01-08T13:02:21.952Z warn: Found empty sentence for subject: [urn:oslo-toolchain:041a77033f89eaf2fe50ac8b8b6313877363bf98de14224562dd006579456cb6](all-lokale-economie-ap.jsonld#L7728)
 
-2025-11-12T20:04:24.243Z error: Found missing class or attribute (Observatie (source)): [urn:oslo-toolchain:1e02d7002d604b384a8ca061993ef7609f8be5f91dab96d0e5e55c26bfd95b11](all-lokale-economie-ap.jsonld#L8330)
+2026-01-08T13:02:21.952Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:0a2dc3bd0e06aac91054a05647428b40730c862094338c2bb74233f4085923e9](all-lokale-economie-ap.jsonld#L8784)
 
-2025-11-12T20:04:24.244Z error: Found missing class or attribute (Locatie): [urn:oslo-toolchain:317fbc2765e63af0e94b62eaa109c08e9f695d13bd447d0dcc4694c9fd27c00b](all-lokale-economie-ap.jsonld#L9292)
+2026-01-08T13:02:21.957Z error: Found missing class or attribute (OrganisatieClassificatie): [urn:oslo-toolchain:bb087c797d2a4adf4f4d43dc47a35e68ed190ab97c25c3e0e9235dadc8378aa3](all-lokale-economie-ap.jsonld#L10011)
 
-2025-11-12T20:04:24.245Z error: Found missing class or attribute (OrganisatieClassificatie): [urn:oslo-toolchain:bb087c797d2a4adf4f4d43dc47a35e68ed190ab97c25c3e0e9235dadc8378aa3](all-lokale-economie-ap.jsonld#L9275)
+2026-01-08T13:02:21.965Z error: Found missing class or attribute (Persoon (source)): [urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8984)
 
-2025-11-12T20:04:24.245Z error: Found missing class or attribute (Geslacht): [urn:oslo-toolchain:2b0c2ba61a611657462b26bda3d7c705d05529ec1d6831109421cab1f6ee63b1](all-lokale-economie-ap.jsonld#L9326)
+2026-01-08T13:02:21.965Z error: Found missing class or attribute (Observatie (source)): [urn:oslo-toolchain:1e02d7002d604b384a8ca061993ef7609f8be5f91dab96d0e5e55c26bfd95b11](all-lokale-economie-ap.jsonld#L9066)
 
-2025-11-12T20:04:24.245Z info: Validation found 31 non-whitelisted assigned URIs
+2026-01-08T13:02:21.966Z error: Found missing class or attribute (Locatie): [urn:oslo-toolchain:317fbc2765e63af0e94b62eaa109c08e9f695d13bd447d0dcc4694c9fd27c00b](all-lokale-economie-ap.jsonld#L10028)
 
-2025-11-12T20:04:24.245Z info: Validation found 24 sentences with spelling mistakes.
+2026-01-08T13:02:21.967Z error: Found missing class or attribute (Geslacht): [urn:oslo-toolchain:2b0c2ba61a611657462b26bda3d7c705d05529ec1d6831109421cab1f6ee63b1](all-lokale-economie-ap.jsonld#L10062)
 
-2025-11-12T20:04:24.246Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2026-01-08T13:02:21.967Z info: Validation found 31 non-whitelisted assigned URIs
 
-2025-11-12T20:04:24.246Z info: Validation successful! All base URIs seem to be valid.
+2026-01-08T13:02:21.967Z info: Validation found 26 sentences with spelling mistakes.
 
-2025-11-12T20:04:24.246Z info: Validation found 5 missing referenced classes or attributes.
+2026-01-08T13:02:21.967Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+
+2026-01-08T13:02:21.967Z info: Validation successful! All base URIs seem to be valid.
+
+2026-01-08T13:02:21.967Z info: Validation found 5 missing referenced classes or attributes.
 
 #||# oslo-jsonld-validator   
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:24.776Z info: Loaded 47 URI prefixes into whitelist
+2026-01-08T13:02:22.403Z info: Loaded 47 URI prefixes into whitelist
 
-2025-11-12T20:04:25.120Z warn: Found non-whitelisted assigned URI: https://def.isotc211.org/iso19156/2011/Observation#ObservationContext for subject: [urn:oslo-toolchain:7cbc29d0aecc3ad9d46897490791db1d16b0a05506b258adbbe263f9888ad1a6](all-lokale-economie-ap.jsonld#L168)
+2026-01-08T13:02:22.764Z warn: Found non-whitelisted assigned URI: https://def.isotc211.org/iso19156/2011/Observation#ObservationContext for subject: [urn:oslo-toolchain:7cbc29d0aecc3ad9d46897490791db1d16b0a05506b258adbbe263f9888ad1a6](all-lokale-economie-ap.jsonld#L184)
 
-2025-11-12T20:04:25.120Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation for subject: [urn:oslo-toolchain:c8beb0d2b68f2a97b410aee19377d4232c1f88b589ff6376c85ce26ea41484d7](all-lokale-economie-ap.jsonld#L275)
+2026-01-08T13:02:22.765Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation for subject: [urn:oslo-toolchain:c8beb0d2b68f2a97b410aee19377d4232c1f88b589ff6376c85ce26ea41484d7](all-lokale-economie-ap.jsonld#L363)
 
-2025-11-12T20:04:25.120Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType for subject: [urn:oslo-toolchain:df7f62d7b92691d897290d7f19662a3844fac51c60e0b4b23b3ffc3221823a98](all-lokale-economie-ap.jsonld#L435)
+2026-01-08T13:02:22.765Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType for subject: [urn:oslo-toolchain:df7f62d7b92691d897290d7f19662a3844fac51c60e0b4b23b3ffc3221823a98](all-lokale-economie-ap.jsonld#L559)
 
-2025-11-12T20:04:25.120Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature for subject: [urn:oslo-toolchain:d223c26fd5a2eca2faf489b1f8b9069337e926601039a8a3887d6b2c3ba97ce6](all-lokale-economie-ap.jsonld#L702)
+2026-01-08T13:02:22.765Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature for subject: [urn:oslo-toolchain:d223c26fd5a2eca2faf489b1f8b9069337e926601039a8a3887d6b2c3ba97ce6](all-lokale-economie-ap.jsonld#L970)
 
-2025-11-12T20:04:25.120Z warn: Found non-whitelisted assigned URI: http://schema.org/email for subject: [urn:oslo-toolchain:9ab272c091045582c7b3c4200f51639934b261b2bbd46f187e5b31164e090d90](all-lokale-economie-ap.jsonld#L2096)
+2026-01-08T13:02:22.765Z warn: Found non-whitelisted assigned URI: http://schema.org/email for subject: [urn:oslo-toolchain:9ab272c091045582c7b3c4200f51639934b261b2bbd46f187e5b31164e090d90](all-lokale-economie-ap.jsonld#L2832)
 
-2025-11-12T20:04:25.121Z warn: Found non-whitelisted assigned URI: http://schema.org/faxNumber for subject: [urn:oslo-toolchain:e9e21a5ae97648e9c7ec1392f61741317cd66c2191cfbe5193fb3b02e332dcdd](all-lokale-economie-ap.jsonld#L2152)
+2026-01-08T13:02:22.765Z warn: Found non-whitelisted assigned URI: http://schema.org/faxNumber for subject: [urn:oslo-toolchain:e9e21a5ae97648e9c7ec1392f61741317cd66c2191cfbe5193fb3b02e332dcdd](all-lokale-economie-ap.jsonld#L2888)
 
-2025-11-12T20:04:25.121Z warn: Found non-whitelisted assigned URI: http://schema.org/openingHours for subject: [urn:oslo-toolchain:a411215a74a05cfa989c8a58c88dac8a1615e79fe387cf57f2921503943daa5e](all-lokale-economie-ap.jsonld#L2208)
+2026-01-08T13:02:22.765Z warn: Found non-whitelisted assigned URI: http://schema.org/openingHours for subject: [urn:oslo-toolchain:a411215a74a05cfa989c8a58c88dac8a1615e79fe387cf57f2921503943daa5e](all-lokale-economie-ap.jsonld#L2944)
 
-2025-11-12T20:04:25.121Z warn: Found non-whitelisted assigned URI: http://schema.org/telephone for subject: [urn:oslo-toolchain:47f42fcea39f6c175f3990250dc1db06df549dbd52015a3a65e541bf5715e2d7](all-lokale-economie-ap.jsonld#L2270)
+2026-01-08T13:02:22.765Z warn: Found non-whitelisted assigned URI: http://schema.org/telephone for subject: [urn:oslo-toolchain:47f42fcea39f6c175f3990250dc1db06df549dbd52015a3a65e541bf5715e2d7](all-lokale-economie-ap.jsonld#L3006)
 
-2025-11-12T20:04:25.121Z warn: Found non-whitelisted assigned URI: http://schema.org/validThrough for subject: [urn:oslo-toolchain:e6674e85a7ac81079c6699325a84f01c234a8f295531e25e85752bcdf58e2f88](all-lokale-economie-ap.jsonld#L3162)
+2026-01-08T13:02:22.765Z warn: Found non-whitelisted assigned URI: http://schema.org/validThrough for subject: [urn:oslo-toolchain:e6674e85a7ac81079c6699325a84f01c234a8f295531e25e85752bcdf58e2f88](all-lokale-economie-ap.jsonld#L3898)
 
-2025-11-12T20:04:25.121Z warn: Found non-whitelisted assigned URI: http://schema.org/validFrom for subject: [urn:oslo-toolchain:4f4ec4a4447f4a358132009dd58bff56605bbdd7650875e83bb679f8a899d39c](all-lokale-economie-ap.jsonld#L3206)
+2026-01-08T13:02:22.765Z warn: Found non-whitelisted assigned URI: http://schema.org/validFrom for subject: [urn:oslo-toolchain:4f4ec4a4447f4a358132009dd58bff56605bbdd7650875e83bb679f8a899d39c](all-lokale-economie-ap.jsonld#L3942)
 
-2025-11-12T20:04:25.121Z warn: Found non-whitelisted assigned URI: http://schema.org/closes for subject: [urn:oslo-toolchain:100723dfae914dc359843fc1d3925194d4bd6ae4aa1c27ba62e58e64e15117b3](all-lokale-economie-ap.jsonld#L3250)
+2026-01-08T13:02:22.765Z warn: Found non-whitelisted assigned URI: http://schema.org/closes for subject: [urn:oslo-toolchain:100723dfae914dc359843fc1d3925194d4bd6ae4aa1c27ba62e58e64e15117b3](all-lokale-economie-ap.jsonld#L3986)
 
-2025-11-12T20:04:25.121Z warn: Found non-whitelisted assigned URI: http://schema.org/opens for subject: [urn:oslo-toolchain:8014e608bc8d6e616d2f5aa257dcf75e6ee87e2e9a53714180d3abb25c77856c](all-lokale-economie-ap.jsonld#L3294)
+2026-01-08T13:02:22.765Z warn: Found non-whitelisted assigned URI: http://schema.org/opens for subject: [urn:oslo-toolchain:8014e608bc8d6e616d2f5aa257dcf75e6ee87e2e9a53714180d3abb25c77856c](all-lokale-economie-ap.jsonld#L4030)
 
-2025-11-12T20:04:25.121Z warn: Found non-whitelisted assigned URI: http://schema.org/dayOfWeek for subject: [urn:oslo-toolchain:57f6c7ddb4ce8dd48b4814f46e5596c1478f8f3800544a01b6fd6c241827c628](all-lokale-economie-ap.jsonld#L3652)
+2026-01-08T13:02:22.765Z warn: Found non-whitelisted assigned URI: http://schema.org/dayOfWeek for subject: [urn:oslo-toolchain:57f6c7ddb4ce8dd48b4814f46e5596c1478f8f3800544a01b6fd6c241827c628](all-lokale-economie-ap.jsonld#L4388)
 
-2025-11-12T20:04:25.121Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role for subject: [urn:oslo-toolchain:0ca53fb3af596f28f8eb8bc0aa4ca3d58be93a769d694ec5d4cf8e42b27de609](all-lokale-economie-ap.jsonld#L3752)
+2026-01-08T13:02:22.765Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role for subject: [urn:oslo-toolchain:0ca53fb3af596f28f8eb8bc0aa4ca3d58be93a769d694ec5d4cf8e42b27de609](all-lokale-economie-ap.jsonld#L4488)
 
-2025-11-12T20:04:25.122Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/prov#atLocation for subject: [urn:oslo-toolchain:5c127ccb54ef6ab29afd4a40b11869df613b46ae219b1e7f2bd67fc24b114b5c](all-lokale-economie-ap.jsonld#L3802)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/prov#atLocation for subject: [urn:oslo-toolchain:5c127ccb54ef6ab29afd4a40b11869df613b46ae219b1e7f2bd67fc24b114b5c](all-lokale-economie-ap.jsonld#L4538)
 
-2025-11-12T20:04:25.122Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/prov#atLocation for subject: [urn:oslo-toolchain:eb7efc4172c470a60ad69ae52aeac4a364a7dcb8cd94c6374a32d73bf6a37a72](all-lokale-economie-ap.jsonld#L5026)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/prov#atLocation for subject: [urn:oslo-toolchain:eb7efc4172c470a60ad69ae52aeac4a364a7dcb8cd94c6374a32d73bf6a37a72](all-lokale-economie-ap.jsonld#L5762)
 
-2025-11-12T20:04:25.122Z warn: Found non-whitelisted assigned URI: http://schema.org/contactPoint for subject: [urn:oslo-toolchain:23a6a02916aca6b6132ee22913d3871117c259cb4c88a73c22e344d7a4106fec](all-lokale-economie-ap.jsonld#L5282)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: http://schema.org/contactPoint for subject: [urn:oslo-toolchain:23a6a02916aca6b6132ee22913d3871117c259cb4c88a73c22e344d7a4106fec](all-lokale-economie-ap.jsonld#L6018)
 
-2025-11-12T20:04:25.122Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime for subject: [urn:oslo-toolchain:435d2451884438c721e3aa1f060ca41d4c97e6f496f93ba6cd1c057d0c43f20e](all-lokale-economie-ap.jsonld#L5494)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime for subject: [urn:oslo-toolchain:435d2451884438c721e3aa1f060ca41d4c97e6f496f93ba6cd1c057d0c43f20e](all-lokale-economie-ap.jsonld#L6230)
 
-2025-11-12T20:04:25.122Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter for subject: [urn:oslo-toolchain:d3607aec8dd45c1186dc83803e9c28fe76993da4b139bd716f1050592f4e34bc](all-lokale-economie-ap.jsonld#L5600)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter for subject: [urn:oslo-toolchain:d3607aec8dd45c1186dc83803e9c28fe76993da4b139bd716f1050592f4e34bc](all-lokale-economie-ap.jsonld#L6336)
 
-2025-11-12T20:04:25.122Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result for subject: [urn:oslo-toolchain:f67e370699e5ffe20483c090cd79827bb1814726b8bec36bfd2e788e7b92d63a](all-lokale-economie-ap.jsonld#L5656)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result for subject: [urn:oslo-toolchain:f67e370699e5ffe20483c090cd79827bb1814726b8bec36bfd2e788e7b92d63a](all-lokale-economie-ap.jsonld#L6392)
 
-2025-11-12T20:04:25.122Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality for subject: [urn:oslo-toolchain:f9ce716a2ff70abd562f4d4955043cdd13a8bd746ce51c64e20a9f7eedf22119](all-lokale-economie-ap.jsonld#L5712)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality for subject: [urn:oslo-toolchain:f9ce716a2ff70abd562f4d4955043cdd13a8bd746ce51c64e20a9f7eedf22119](all-lokale-economie-ap.jsonld#L6448)
 
-2025-11-12T20:04:25.122Z warn: Found non-whitelisted assigned URI: http://schema.org/hoursAvailable for subject: [urn:oslo-toolchain:5ae71decedfb34c4e8139640df93e48fe95e8bcc7cc73debd61c4a26d7d30644](all-lokale-economie-ap.jsonld#L6780)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: http://schema.org/hoursAvailable for subject: [urn:oslo-toolchain:5ae71decedfb34c4e8139640df93e48fe95e8bcc7cc73debd61c4a26d7d30644](all-lokale-economie-ap.jsonld#L7516)
 
-2025-11-12T20:04:25.122Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty for subject: [urn:oslo-toolchain:0a2dc3bd0e06aac91054a05647428b40730c862094338c2bb74233f4085923e9](all-lokale-economie-ap.jsonld#L8048)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty for subject: [urn:oslo-toolchain:0a2dc3bd0e06aac91054a05647428b40730c862094338c2bb74233f4085923e9](all-lokale-economie-ap.jsonld#L8784)
 
-2025-11-12T20:04:25.122Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest for subject: [urn:oslo-toolchain:3078c87f111b65d25623b19ddd106ec6955e94ba91fd17595f83063b153c523f](all-lokale-economie-ap.jsonld#L8098)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest for subject: [urn:oslo-toolchain:3078c87f111b65d25623b19ddd106ec6955e94ba91fd17595f83063b153c523f](all-lokale-economie-ap.jsonld#L8834)
 
-2025-11-12T20:04:25.122Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation for subject: [urn:oslo-toolchain:1aa320dc5946f50bae2405ba2962032af58d63f0fbf81782a580826dbad9a5eb](all-lokale-economie-ap.jsonld#L8274)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation for subject: [urn:oslo-toolchain:1aa320dc5946f50bae2405ba2962032af58d63f0fbf81782a580826dbad9a5eb](all-lokale-economie-ap.jsonld#L9010)
 
-2025-11-12T20:04:25.122Z warn: Found non-whitelisted assigned URI: http://schema.org/ContactPoint for subject: [urn:oslo-toolchain:378ddffa7ab776798a8a7195e85d3eae33d0458da530eacaec556210238b96a6](all-lokale-economie-ap.jsonld#L8674)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: http://schema.org/ContactPoint for subject: [urn:oslo-toolchain:378ddffa7ab776798a8a7195e85d3eae33d0458da530eacaec556210238b96a6](all-lokale-economie-ap.jsonld#L9410)
 
-2025-11-12T20:04:25.122Z warn: Found non-whitelisted assigned URI: http://schema.org/OpeningHoursSpecification for subject: [urn:oslo-toolchain:a305a77fba3af2fd9d3afa6ef044bb2b5fae3a0deb04f5380ca22e2518892593](all-lokale-economie-ap.jsonld#L9083)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: http://schema.org/OpeningHoursSpecification for subject: [urn:oslo-toolchain:a305a77fba3af2fd9d3afa6ef044bb2b5fae3a0deb04f5380ca22e2518892593](all-lokale-economie-ap.jsonld#L9819)
 
-2025-11-12T20:04:25.122Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19103/2005/Names#GenericName for subject: [urn:oslo-toolchain:b8db2eabd31d087f9d96056d359fb1198dd45d8bb2de79028114ad32354b808d](all-lokale-economie-ap.jsonld#L9240)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19103/2005/Names#GenericName for subject: [urn:oslo-toolchain:b8db2eabd31d087f9d96056d359fb1198dd45d8bb2de79028114ad32354b808d](all-lokale-economie-ap.jsonld#L9976)
 
-2025-11-12T20:04:25.123Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object for subject: [urn:oslo-toolchain:5a24b213027bb5ba459a950944afb01632887c349d0790ce67914c40a6058cec](all-lokale-economie-ap.jsonld#L9384)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object for subject: [urn:oslo-toolchain:5a24b213027bb5ba459a950944afb01632887c349d0790ce67914c40a6058cec](all-lokale-economie-ap.jsonld#L10120)
 
-2025-11-12T20:04:25.123Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#NamedValue for subject: [urn:oslo-toolchain:212653523e321b8dc28806fea6ee89ada0a54d8c5a99e12b8447821747f2719d](all-lokale-economie-ap.jsonld#L9419)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/Observation#NamedValue for subject: [urn:oslo-toolchain:212653523e321b8dc28806fea6ee89ada0a54d8c5a99e12b8447821747f2719d](all-lokale-economie-ap.jsonld#L10155)
 
-2025-11-12T20:04:25.123Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element for subject: [urn:oslo-toolchain:52bde4d47d935f31fea9273254628f99c1f8422c7d66b3f05e5a2eb2a7f440f0](all-lokale-economie-ap.jsonld#L9489)
+2026-01-08T13:02:22.766Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element for subject: [urn:oslo-toolchain:52bde4d47d935f31fea9273254628f99c1f8422c7d66b3f05e5a2eb2a7f440f0](all-lokale-economie-ap.jsonld#L10225)
 
-2025-11-12T20:04:25.125Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:0a2dc3bd0e06aac91054a05647428b40730c862094338c2bb74233f4085923e9](all-lokale-economie-ap.jsonld#L8048)
+2026-01-08T13:02:22.769Z warn: Found sentence without a '.': 'Classificatie van onderwijsniveaus' for subject: [urn:oslo-toolchain:a8cbd82ad3ec2a831a1d1392f3458cea38da7f2ac7be1c0be08e7d48ddf70a2a](all-lokale-economie-ap.jsonld#L1851)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:88783d0bc9657c1b7f950735c9e87c13c8447b32dfb2c894d302208df6970f6e](all-lokale-economie-ap.jsonld#L1766)
+2026-01-08T13:02:22.769Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:0a2dc3bd0e06aac91054a05647428b40730c862094338c2bb74233f4085923e9](all-lokale-economie-ap.jsonld#L8784)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8dfa39642ecf685b025247b9547af8976fa2382493d8a493a9d8a9c212fc2d24](all-lokale-economie-ap.jsonld#L1822)
+2026-01-08T13:02:22.769Z warn: Found sentence without a '.': 'Classificatie van onderwijsniveaus' for subject: [urn:oslo-toolchain:a8cbd82ad3ec2a831a1d1392f3458cea38da7f2ac7be1c0be08e7d48ddf70a2a](all-lokale-economie-ap.jsonld#L1851)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7b2a9c24a16bc597204dd6a4fa01f8d6aec5d7bf66436648ebadbfdbdedf23a3](all-lokale-economie-ap.jsonld#L2040)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:88783d0bc9657c1b7f950735c9e87c13c8447b32dfb2c894d302208df6970f6e](all-lokale-economie-ap.jsonld#L2502)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:9ab272c091045582c7b3c4200f51639934b261b2bbd46f187e5b31164e090d90](all-lokale-economie-ap.jsonld#L2096)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8dfa39642ecf685b025247b9547af8976fa2382493d8a493a9d8a9c212fc2d24](all-lokale-economie-ap.jsonld#L2558)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e9e21a5ae97648e9c7ec1392f61741317cd66c2191cfbe5193fb3b02e332dcdd](all-lokale-economie-ap.jsonld#L2152)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:7b2a9c24a16bc597204dd6a4fa01f8d6aec5d7bf66436648ebadbfdbdedf23a3](all-lokale-economie-ap.jsonld#L2776)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:47f42fcea39f6c175f3990250dc1db06df549dbd52015a3a65e541bf5715e2d7](all-lokale-economie-ap.jsonld#L2270)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:9ab272c091045582c7b3c4200f51639934b261b2bbd46f187e5b31164e090d90](all-lokale-economie-ap.jsonld#L2832)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:1e8cd2f6a9e6eb44bb66d5f5bcc993436cfbeadbb9abc2a50ce760df38aacdec](all-lokale-economie-ap.jsonld#L2326)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e9e21a5ae97648e9c7ec1392f61741317cd66c2191cfbe5193fb3b02e332dcdd](all-lokale-economie-ap.jsonld#L2888)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e6674e85a7ac81079c6699325a84f01c234a8f295531e25e85752bcdf58e2f88](all-lokale-economie-ap.jsonld#L3162)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:47f42fcea39f6c175f3990250dc1db06df549dbd52015a3a65e541bf5715e2d7](all-lokale-economie-ap.jsonld#L3006)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4f4ec4a4447f4a358132009dd58bff56605bbdd7650875e83bb679f8a899d39c](all-lokale-economie-ap.jsonld#L3206)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:1e8cd2f6a9e6eb44bb66d5f5bcc993436cfbeadbb9abc2a50ce760df38aacdec](all-lokale-economie-ap.jsonld#L3062)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:100723dfae914dc359843fc1d3925194d4bd6ae4aa1c27ba62e58e64e15117b3](all-lokale-economie-ap.jsonld#L3250)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e6674e85a7ac81079c6699325a84f01c234a8f295531e25e85752bcdf58e2f88](all-lokale-economie-ap.jsonld#L3898)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8014e608bc8d6e616d2f5aa257dcf75e6ee87e2e9a53714180d3abb25c77856c](all-lokale-economie-ap.jsonld#L3294)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4f4ec4a4447f4a358132009dd58bff56605bbdd7650875e83bb679f8a899d39c](all-lokale-economie-ap.jsonld#L3942)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e6294fea43ac053a943711e9aa484d9c5a1181577662bbaeceb4ce3fee4ea048](all-lokale-economie-ap.jsonld#L3385)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:100723dfae914dc359843fc1d3925194d4bd6ae4aa1c27ba62e58e64e15117b3](all-lokale-economie-ap.jsonld#L3986)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:f7c1ded772c31601ef9f864d79be19f71c787eeaecb40e07e0e85bd8d93d7ad1](all-lokale-economie-ap.jsonld#L3479)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8014e608bc8d6e616d2f5aa257dcf75e6ee87e2e9a53714180d3abb25c77856c](all-lokale-economie-ap.jsonld#L4030)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:ddd470110cea37b625e3f31446765afa3c8fcf8a759f26913fc70742e1270f3c](all-lokale-economie-ap.jsonld#L3526)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e6294fea43ac053a943711e9aa484d9c5a1181577662bbaeceb4ce3fee4ea048](all-lokale-economie-ap.jsonld#L4121)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:6cffac1e9db5e1cb75d8914a6dd5bebc6e67d3a90d6ba4d4d6d902e689b6e99b](all-lokale-economie-ap.jsonld#L3570)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:f7c1ded772c31601ef9f864d79be19f71c787eeaecb40e07e0e85bd8d93d7ad1](all-lokale-economie-ap.jsonld#L4215)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:a8606a90297037d328992a66a91f4c30d4c4e30f178a52686f600572cd848ce3](all-lokale-economie-ap.jsonld#L4408)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:ddd470110cea37b625e3f31446765afa3c8fcf8a759f26913fc70742e1270f3c](all-lokale-economie-ap.jsonld#L4262)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:23a6a02916aca6b6132ee22913d3871117c259cb4c88a73c22e344d7a4106fec](all-lokale-economie-ap.jsonld#L5282)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:6cffac1e9db5e1cb75d8914a6dd5bebc6e67d3a90d6ba4d4d6d902e689b6e99b](all-lokale-economie-ap.jsonld#L4306)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:461603521444b268093530c8f1e367cf503473f03b0ce2706a30fd3025c743a1](all-lokale-economie-ap.jsonld#L5338)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:a8606a90297037d328992a66a91f4c30d4c4e30f178a52686f600572cd848ce3](all-lokale-economie-ap.jsonld#L5144)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8ff564799634ab8ec857d2b78aef994a77a7051cff7993314a56d4041a3cd74f](all-lokale-economie-ap.jsonld#L6100)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:23a6a02916aca6b6132ee22913d3871117c259cb4c88a73c22e344d7a4106fec](all-lokale-economie-ap.jsonld#L6018)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d0bc4331337fbccf3ef432f2c27c5d309aad32db73d979d483c68ebf2f777d7f](all-lokale-economie-ap.jsonld#L6156)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:461603521444b268093530c8f1e367cf503473f03b0ce2706a30fd3025c743a1](all-lokale-economie-ap.jsonld#L6074)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:9603fce98d392ad72d43ea8a37a0b0cae70711951e52abba403a0572f2302588](all-lokale-economie-ap.jsonld#L6724)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8ff564799634ab8ec857d2b78aef994a77a7051cff7993314a56d4041a3cd74f](all-lokale-economie-ap.jsonld#L6836)
 
-2025-11-12T20:04:25.126Z warn: Found empty sentence for subject: [urn:oslo-toolchain:041a77033f89eaf2fe50ac8b8b6313877363bf98de14224562dd006579456cb6](all-lokale-economie-ap.jsonld#L6992)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d0bc4331337fbccf3ef432f2c27c5d309aad32db73d979d483c68ebf2f777d7f](all-lokale-economie-ap.jsonld#L6892)
 
-2025-11-12T20:04:25.127Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:0a2dc3bd0e06aac91054a05647428b40730c862094338c2bb74233f4085923e9](all-lokale-economie-ap.jsonld#L8048)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:9603fce98d392ad72d43ea8a37a0b0cae70711951e52abba403a0572f2302588](all-lokale-economie-ap.jsonld#L7460)
 
-2025-11-12T20:04:25.139Z error: Found missing class or attribute (Persoon (source)): [urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8248)
+2026-01-08T13:02:22.770Z warn: Found empty sentence for subject: [urn:oslo-toolchain:041a77033f89eaf2fe50ac8b8b6313877363bf98de14224562dd006579456cb6](all-lokale-economie-ap.jsonld#L7728)
 
-2025-11-12T20:04:25.140Z error: Found missing class or attribute (Observatie (source)): [urn:oslo-toolchain:1e02d7002d604b384a8ca061993ef7609f8be5f91dab96d0e5e55c26bfd95b11](all-lokale-economie-ap.jsonld#L8330)
+2026-01-08T13:02:22.770Z warn: Found a TODO or FIXME in sentence: 'TODO' for subject: [urn:oslo-toolchain:0a2dc3bd0e06aac91054a05647428b40730c862094338c2bb74233f4085923e9](all-lokale-economie-ap.jsonld#L8784)
 
-2025-11-12T20:04:25.140Z error: Found missing class or attribute (Locatie): [urn:oslo-toolchain:317fbc2765e63af0e94b62eaa109c08e9f695d13bd447d0dcc4694c9fd27c00b](all-lokale-economie-ap.jsonld#L9292)
+2026-01-08T13:02:22.775Z error: Found missing class or attribute (OrganisatieClassificatie): [urn:oslo-toolchain:bb087c797d2a4adf4f4d43dc47a35e68ed190ab97c25c3e0e9235dadc8378aa3](all-lokale-economie-ap.jsonld#L10011)
 
-2025-11-12T20:04:25.142Z error: Found missing class or attribute (OrganisatieClassificatie): [urn:oslo-toolchain:bb087c797d2a4adf4f4d43dc47a35e68ed190ab97c25c3e0e9235dadc8378aa3](all-lokale-economie-ap.jsonld#L9275)
+2026-01-08T13:02:22.783Z error: Found missing class or attribute (Persoon (source)): [urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8984)
 
-2025-11-12T20:04:25.142Z error: Found missing class or attribute (Geslacht): [urn:oslo-toolchain:2b0c2ba61a611657462b26bda3d7c705d05529ec1d6831109421cab1f6ee63b1](all-lokale-economie-ap.jsonld#L9326)
+2026-01-08T13:02:22.783Z error: Found missing class or attribute (Observatie (source)): [urn:oslo-toolchain:1e02d7002d604b384a8ca061993ef7609f8be5f91dab96d0e5e55c26bfd95b11](all-lokale-economie-ap.jsonld#L9066)
 
-2025-11-12T20:04:25.142Z info: Validation found 31 non-whitelisted assigned URIs
+2026-01-08T13:02:22.784Z error: Found missing class or attribute (Locatie): [urn:oslo-toolchain:317fbc2765e63af0e94b62eaa109c08e9f695d13bd447d0dcc4694c9fd27c00b](all-lokale-economie-ap.jsonld#L10028)
 
-2025-11-12T20:04:25.142Z info: Validation found 24 sentences with spelling mistakes.
+2026-01-08T13:02:22.785Z error: Found missing class or attribute (Geslacht): [urn:oslo-toolchain:2b0c2ba61a611657462b26bda3d7c705d05529ec1d6831109421cab1f6ee63b1](all-lokale-economie-ap.jsonld#L10062)
 
-2025-11-12T20:04:25.142Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2026-01-08T13:02:22.785Z info: Validation found 31 non-whitelisted assigned URIs
 
-2025-11-12T20:04:25.142Z info: Validation successful! All base URIs seem to be valid.
+2026-01-08T13:02:22.785Z info: Validation found 26 sentences with spelling mistakes.
 
-2025-11-12T20:04:25.142Z info: Validation found 5 missing referenced classes or attributes.
+2026-01-08T13:02:22.785Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+
+2026-01-08T13:02:22.785Z info: Validation successful! All base URIs seem to be valid.
+
+2026-01-08T13:02:22.785Z info: Validation found 5 missing referenced classes or attributes.
 

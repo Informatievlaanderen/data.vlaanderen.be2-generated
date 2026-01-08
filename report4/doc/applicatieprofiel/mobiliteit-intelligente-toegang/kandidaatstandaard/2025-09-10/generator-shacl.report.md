@@ -2,55 +2,55 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:45.353Z warn: Unable to find the description for subject "[urn:oslo-toolchain:11db0c10cb061a55a35d95f61b42dcdf5fe133bdae705a03a3ec3689d0e1c2eb](all-mobiliteit-intelligente-toegang-ap.jsonld#L684)".
+2026-01-08T13:02:59.463Z warn: Unable to find the description for subject "[urn:oslo-toolchain:76753a71f341c452ce35cb47bf31c39dca7ff9fa2ecade0c254e6799d772ba00](all-mobiliteit-intelligente-toegang-ap.jsonld#L307)".
 
-2025-11-12T20:04:45.354Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cca1940b98e9eeb2fe36922c023a5cc791b0a0ea5384e3eefae328fcf4760e2a](all-mobiliteit-intelligente-toegang-ap.jsonld#L702)".
+2026-01-08T13:02:59.465Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c220e4e6d3920d738680c6d1f99dfebbcf80279add36e16f1bc9760e242bbc78](all-mobiliteit-intelligente-toegang-ap.jsonld#L445)".
 
-2025-11-12T20:04:45.354Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8b640bb4527f0074e62f795b30351fbfa41a0eac8b3dcee52767b65fa2accb5e](all-mobiliteit-intelligente-toegang-ap.jsonld#L720)".
+2026-01-08T13:02:59.466Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fb784d93436846e42439d66985466855293ec36ec736ab143eeef23ae45d3fb8](all-mobiliteit-intelligente-toegang-ap.jsonld#L647)".
 
-2025-11-12T20:04:45.354Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-mobiliteit-intelligente-toegang-ap.jsonld#L3771)".
+2026-01-08T13:02:59.466Z warn: Unable to find the description for subject "[urn:oslo-toolchain:31a20e5348dd617b7f3456ea78c8ebf6d9517e97bbba9998ade71d79b6a3f263](all-mobiliteit-intelligente-toegang-ap.jsonld#L713)".
 
-2025-11-12T20:04:45.355Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mobiliteit-intelligente-toegang-ap.jsonld#L3793)".
+2026-01-08T13:02:59.466Z warn: Unable to find the description for subject "[urn:oslo-toolchain:11db0c10cb061a55a35d95f61b42dcdf5fe133bdae705a03a3ec3689d0e1c2eb](all-mobiliteit-intelligente-toegang-ap.jsonld#L772)".
 
-2025-11-12T20:04:45.355Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
+2026-01-08T13:02:59.467Z warn: Unable to find the description for subject "[urn:oslo-toolchain:bf5fd8f5000dd58ffc1d63c0ed5eb8de3fe755601167c646b88d05a10b60f63e](all-mobiliteit-intelligente-toegang-ap.jsonld#L790)".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:76753a71f341c452ce35cb47bf31c39dca7ff9fa2ecade0c254e6799d772ba00".
+2026-01-08T13:02:59.467Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cca1940b98e9eeb2fe36922c023a5cc791b0a0ea5384e3eefae328fcf4760e2a](all-mobiliteit-intelligente-toegang-ap.jsonld#L808)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
+2026-01-08T13:02:59.467Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8b640bb4527f0074e62f795b30351fbfa41a0eac8b3dcee52767b65fa2accb5e](all-mobiliteit-intelligente-toegang-ap.jsonld#L826)".
 
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+2026-01-08T13:02:59.467Z warn: Unable to find the description for subject "[urn:oslo-toolchain:6a2263ed8138860e8bff3edbb99210046e6e03025e3d42c2345d9617c99f81f4](all-mobiliteit-intelligente-toegang-ap.jsonld#L850)".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
+2026-01-08T13:02:59.467Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-mobiliteit-intelligente-toegang-ap.jsonld#L3895)".
 
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+2026-01-08T13:02:59.467Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mobiliteit-intelligente-toegang-ap.jsonld#L3917)".
 
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-01-08T13:02:59.468Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:46.035Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cca1940b98e9eeb2fe36922c023a5cc791b0a0ea5384e3eefae328fcf4760e2a](all-mobiliteit-intelligente-toegang-ap.jsonld#L702)".
+2026-01-08T13:03:00.369Z warn: Unable to find the description for subject "[urn:oslo-toolchain:76753a71f341c452ce35cb47bf31c39dca7ff9fa2ecade0c254e6799d772ba00](all-mobiliteit-intelligente-toegang-ap.jsonld#L307)".
 
-2025-11-12T20:04:46.037Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8b640bb4527f0074e62f795b30351fbfa41a0eac8b3dcee52767b65fa2accb5e](all-mobiliteit-intelligente-toegang-ap.jsonld#L720)".
+2026-01-08T13:03:00.371Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cca1940b98e9eeb2fe36922c023a5cc791b0a0ea5384e3eefae328fcf4760e2a](all-mobiliteit-intelligente-toegang-ap.jsonld#L808)".
 
-2025-11-12T20:04:46.037Z warn: Unable to find the description for subject "[urn:oslo-toolchain:11db0c10cb061a55a35d95f61b42dcdf5fe133bdae705a03a3ec3689d0e1c2eb](all-mobiliteit-intelligente-toegang-ap.jsonld#L684)".
+2026-01-08T13:03:00.372Z warn: Unable to find the description for subject "[urn:oslo-toolchain:31a20e5348dd617b7f3456ea78c8ebf6d9517e97bbba9998ade71d79b6a3f263](all-mobiliteit-intelligente-toegang-ap.jsonld#L713)".
 
-2025-11-12T20:04:46.038Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-mobiliteit-intelligente-toegang-ap.jsonld#L3771)".
+2026-01-08T13:03:00.372Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c220e4e6d3920d738680c6d1f99dfebbcf80279add36e16f1bc9760e242bbc78](all-mobiliteit-intelligente-toegang-ap.jsonld#L445)".
 
-2025-11-12T20:04:46.038Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mobiliteit-intelligente-toegang-ap.jsonld#L3793)".
+2026-01-08T13:03:00.373Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8b640bb4527f0074e62f795b30351fbfa41a0eac8b3dcee52767b65fa2accb5e](all-mobiliteit-intelligente-toegang-ap.jsonld#L826)".
 
-2025-11-12T20:04:46.038Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
+2026-01-08T13:03:00.373Z warn: Unable to find the description for subject "[urn:oslo-toolchain:11db0c10cb061a55a35d95f61b42dcdf5fe133bdae705a03a3ec3689d0e1c2eb](all-mobiliteit-intelligente-toegang-ap.jsonld#L772)".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:76753a71f341c452ce35cb47bf31c39dca7ff9fa2ecade0c254e6799d772ba00".
+2026-01-08T13:03:00.373Z warn: Unable to find the description for subject "[urn:oslo-toolchain:6a2263ed8138860e8bff3edbb99210046e6e03025e3d42c2345d9617c99f81f4](all-mobiliteit-intelligente-toegang-ap.jsonld#L850)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
+2026-01-08T13:03:00.373Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fb784d93436846e42439d66985466855293ec36ec736ab143eeef23ae45d3fb8](all-mobiliteit-intelligente-toegang-ap.jsonld#L647)".
 
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+2026-01-08T13:03:00.373Z warn: Unable to find the description for subject "[urn:oslo-toolchain:bf5fd8f5000dd58ffc1d63c0ed5eb8de3fe755601167c646b88d05a10b60f63e](all-mobiliteit-intelligente-toegang-ap.jsonld#L790)".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
+2026-01-08T13:03:00.374Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-mobiliteit-intelligente-toegang-ap.jsonld#L3895)".
 
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+2026-01-08T13:03:00.374Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mobiliteit-intelligente-toegang-ap.jsonld#L3917)".
 
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-01-08T13:03:00.374Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
 

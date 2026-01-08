@@ -2,63 +2,43 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:03:43.117Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-dienstverlening-aan-personen-ap.jsonld#L5312)".
+2026-01-08T13:01:43.766Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-dienstverlening-aan-personen-ap.jsonld#L5694)".
 
-2025-11-12T20:03:43.119Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-dienstverlening-aan-personen-ap.jsonld#L5323)".
+2026-01-08T13:01:43.768Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-dienstverlening-aan-personen-ap.jsonld#L5705)".
 
-2025-11-12T20:03:43.119Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-dienstverlening-aan-personen-ap.jsonld#L5334)".
+2026-01-08T13:01:43.768Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-dienstverlening-aan-personen-ap.jsonld#L5716)".
 
-2025-11-12T20:03:43.119Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-dienstverlening-aan-personen-ap.jsonld#L5345)".
+2026-01-08T13:01:43.768Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-dienstverlening-aan-personen-ap.jsonld#L5727)".
 
-2025-11-12T20:03:43.119Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-dienstverlening-aan-personen-ap.jsonld#L5356)".
+2026-01-08T13:01:43.768Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-dienstverlening-aan-personen-ap.jsonld#L5738)".
 
-2025-11-12T20:03:43.120Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-dienstverlening-aan-personen-ap.jsonld#L5367)".
+2026-01-08T13:01:43.770Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-dienstverlening-aan-personen-ap.jsonld#L5749)".
 
-2025-11-12T20:03:43.120Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474230892](all-dienstverlening-aan-personen-ap.jsonld#L5378)".
+2026-01-08T13:01:43.771Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474230892](all-dienstverlening-aan-personen-ap.jsonld#L5760)".
 
-2025-11-12T20:03:43.120Z warn: Unable to find the description for subject "urn:oslo-toolchain:286333439".
+2026-01-08T13:01:43.771Z warn: Unable to find the description for subject "urn:oslo-toolchain:286333439".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:2a86a2697d64fe6c80092018c58eb7ef71bc4c104828cce57bf0053f9fc01bea".
-
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
-
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
-
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-01-08T13:01:43.790Z warn: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-dienstverlening-aan-personen-ap.jsonld#L4014)".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2025-11-12T20:03:43.895Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-dienstverlening-aan-personen-ap.jsonld#L5312)".
+2026-01-08T13:01:44.821Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-dienstverlening-aan-personen-ap.jsonld#L5694)".
 
-2025-11-12T20:03:43.897Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-dienstverlening-aan-personen-ap.jsonld#L5323)".
+2026-01-08T13:01:44.823Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-dienstverlening-aan-personen-ap.jsonld#L5705)".
 
-2025-11-12T20:03:43.898Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-dienstverlening-aan-personen-ap.jsonld#L5334)".
+2026-01-08T13:01:44.823Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-dienstverlening-aan-personen-ap.jsonld#L5716)".
 
-2025-11-12T20:03:43.898Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-dienstverlening-aan-personen-ap.jsonld#L5345)".
+2026-01-08T13:01:44.824Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-dienstverlening-aan-personen-ap.jsonld#L5727)".
 
-2025-11-12T20:03:43.898Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-dienstverlening-aan-personen-ap.jsonld#L5356)".
+2026-01-08T13:01:44.824Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-dienstverlening-aan-personen-ap.jsonld#L5738)".
 
-2025-11-12T20:03:43.898Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-dienstverlening-aan-personen-ap.jsonld#L5367)".
+2026-01-08T13:01:44.824Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-dienstverlening-aan-personen-ap.jsonld#L5749)".
 
-2025-11-12T20:03:43.899Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474230892](all-dienstverlening-aan-personen-ap.jsonld#L5378)".
+2026-01-08T13:01:44.824Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474230892](all-dienstverlening-aan-personen-ap.jsonld#L5760)".
 
-2025-11-12T20:03:43.899Z warn: Unable to find the description for subject "urn:oslo-toolchain:286333439".
+2026-01-08T13:01:44.824Z warn: Unable to find the description for subject "urn:oslo-toolchain:286333439".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:2a86a2697d64fe6c80092018c58eb7ef71bc4c104828cce57bf0053f9fc01bea".
-
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
-
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
-
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-01-08T13:01:44.839Z warn: Unable to find the description for subject "[urn:oslo-toolchain:47e0ba2314eb8a43350ad5291db84c0f863bd703244beea474b917b1eb8a82d3](all-dienstverlening-aan-personen-ap.jsonld#L4014)".
 

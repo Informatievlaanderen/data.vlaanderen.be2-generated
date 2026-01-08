@@ -2,23 +2,23 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:03:54.807Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-energiemanagementsysteem.jsonld#L7323)".
+2026-01-08T13:01:57.308Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-energiemanagementsysteem.jsonld#L7339)".
 
-2025-11-12T20:03:54.808Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-energiemanagementsysteem.jsonld#L7334)".
+2026-01-08T13:01:57.310Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-energiemanagementsysteem.jsonld#L7350)".
 
-2025-11-12T20:03:54.809Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-energiemanagementsysteem.jsonld#L7356)".
+2026-01-08T13:01:57.310Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-energiemanagementsysteem.jsonld#L7372)".
 
-2025-11-12T20:03:54.811Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
+2026-01-08T13:01:57.311Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2025-11-12T20:03:55.746Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-energiemanagementsysteem.jsonld#L7323)".
+2026-01-08T13:01:58.360Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-energiemanagementsysteem.jsonld#L7339)".
 
-2025-11-12T20:03:55.748Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-energiemanagementsysteem.jsonld#L7334)".
+2026-01-08T13:01:58.362Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-energiemanagementsysteem.jsonld#L7350)".
 
-2025-11-12T20:03:55.749Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-energiemanagementsysteem.jsonld#L7356)".
+2026-01-08T13:01:58.362Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-energiemanagementsysteem.jsonld#L7372)".
 
-2025-11-12T20:03:55.749Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
+2026-01-08T13:01:58.363Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
 

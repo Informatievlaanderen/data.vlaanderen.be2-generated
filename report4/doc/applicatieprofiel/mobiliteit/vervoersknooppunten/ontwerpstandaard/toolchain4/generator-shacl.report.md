@@ -2,47 +2,59 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:56.202Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-OSLO-Vervoersknooppunten-ap.jsonld#L13192)".
+2026-01-08T13:03:14.174Z warn: Unable to find the description for subject "[urn:oslo-toolchain:eb1189e1633ec4a3dd53f49693b85eb635a1f765e3d554c0599e70cf192a5fda](all-OSLO-Vervoersknooppunten-ap.jsonld#L2488)".
 
-2025-11-12T20:04:56.204Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-OSLO-Vervoersknooppunten-ap.jsonld#L13203)".
+2026-01-08T13:03:14.176Z warn: Unable to find the description for subject "[urn:oslo-toolchain:31b640ece68248c63c41d5211a44f32bc716b9c95e0e457612ccac57aa76d080](all-OSLO-Vervoersknooppunten-ap.jsonld#L2565)".
 
-2025-11-12T20:04:56.205Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-OSLO-Vervoersknooppunten-ap.jsonld#L13214)".
+2026-01-08T13:03:14.176Z warn: Unable to find the description for subject "[urn:oslo-toolchain:ae153c6477c2ec4e80873487f6e08c7ec2210996627a44d1bd0043b75ce41bc8](all-OSLO-Vervoersknooppunten-ap.jsonld#L2589)".
 
-2025-11-12T20:04:56.205Z warn: Unable to find the description for subject "urn:oslo-toolchain:10489563".
+2026-01-08T13:03:14.176Z warn: Unable to find the description for subject "[urn:oslo-toolchain:7374e2a2f36f00442f6aeba818a07d5c79d0ccbeba864ae5e8d0bb5db512a6a6](all-OSLO-Vervoersknooppunten-ap.jsonld#L2613)".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:a2c2cd37ef4d88b144df885ca8b6a90037fd9e82978891a1f8c7a23fc9ef5eb3".
+2026-01-08T13:03:14.177Z warn: Unable to find the description for subject "[urn:oslo-toolchain:923d7866aaff0ae3061078527119071c61fa68c37322c848b222ec45e86e62a6](all-OSLO-Vervoersknooppunten-ap.jsonld#L3022)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
+2026-01-08T13:03:14.179Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9ccda4ca90fa5e363419ef76432d8ca914013a6844071f6b3ef2e03f4c8664a7](all-OSLO-Vervoersknooppunten-ap.jsonld#L3437)".
 
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+2026-01-08T13:03:14.179Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-OSLO-Vervoersknooppunten-ap.jsonld#L14216)".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
+2026-01-08T13:03:14.180Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-OSLO-Vervoersknooppunten-ap.jsonld#L14227)".
 
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+2026-01-08T13:03:14.180Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-OSLO-Vervoersknooppunten-ap.jsonld#L14238)".
 
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-01-08T13:03:14.180Z warn: Unable to find the description for subject "urn:oslo-toolchain:10489563".
+
+2026-01-08T13:03:14.246Z warn: Unable to find the description for subject "[urn:oslo-toolchain:710dd35ccb1e7f03774cd84af7c23cfb2e1951022b0127291e6d7f9adbe55fa3](all-OSLO-Vervoersknooppunten-ap.jsonld#L11216)".
+
+2026-01-08T13:03:14.247Z warn: Unable to find the description for subject "[urn:oslo-toolchain:835aa03727b47db35664c7f2ec634976fd3f68a21106983113bb18e86a69d019](all-OSLO-Vervoersknooppunten-ap.jsonld#L11572)".
+
+2026-01-08T13:03:14.251Z warn: Unable to find the description for subject "[urn:oslo-toolchain:4a01c6cda70cddc325c955b9356350360cc7b283a11e8d9f8b3515e3334d55bf](all-OSLO-Vervoersknooppunten-ap.jsonld#L12698)".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:57.314Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-OSLO-Vervoersknooppunten-ap.jsonld#L13192)".
+2026-01-08T13:03:15.600Z warn: Unable to find the description for subject "[urn:oslo-toolchain:eb1189e1633ec4a3dd53f49693b85eb635a1f765e3d554c0599e70cf192a5fda](all-OSLO-Vervoersknooppunten-ap.jsonld#L2488)".
 
-2025-11-12T20:04:57.316Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-OSLO-Vervoersknooppunten-ap.jsonld#L13203)".
+2026-01-08T13:03:15.601Z warn: Unable to find the description for subject "[urn:oslo-toolchain:31b640ece68248c63c41d5211a44f32bc716b9c95e0e457612ccac57aa76d080](all-OSLO-Vervoersknooppunten-ap.jsonld#L2565)".
 
-2025-11-12T20:04:57.317Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-OSLO-Vervoersknooppunten-ap.jsonld#L13214)".
+2026-01-08T13:03:15.602Z warn: Unable to find the description for subject "[urn:oslo-toolchain:ae153c6477c2ec4e80873487f6e08c7ec2210996627a44d1bd0043b75ce41bc8](all-OSLO-Vervoersknooppunten-ap.jsonld#L2589)".
 
-2025-11-12T20:04:57.317Z warn: Unable to find the description for subject "urn:oslo-toolchain:10489563".
+2026-01-08T13:03:15.602Z warn: Unable to find the description for subject "[urn:oslo-toolchain:923d7866aaff0ae3061078527119071c61fa68c37322c848b222ec45e86e62a6](all-OSLO-Vervoersknooppunten-ap.jsonld#L3022)".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:a2c2cd37ef4d88b144df885ca8b6a90037fd9e82978891a1f8c7a23fc9ef5eb3".
+2026-01-08T13:03:15.602Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9ccda4ca90fa5e363419ef76432d8ca914013a6844071f6b3ef2e03f4c8664a7](all-OSLO-Vervoersknooppunten-ap.jsonld#L3437)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
+2026-01-08T13:03:15.603Z warn: Unable to find the description for subject "[urn:oslo-toolchain:7374e2a2f36f00442f6aeba818a07d5c79d0ccbeba864ae5e8d0bb5db512a6a6](all-OSLO-Vervoersknooppunten-ap.jsonld#L2613)".
 
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+2026-01-08T13:03:15.605Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-OSLO-Vervoersknooppunten-ap.jsonld#L14216)".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
+2026-01-08T13:03:15.606Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-OSLO-Vervoersknooppunten-ap.jsonld#L14227)".
 
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+2026-01-08T13:03:15.606Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-OSLO-Vervoersknooppunten-ap.jsonld#L14238)".
 
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-01-08T13:03:15.606Z warn: Unable to find the description for subject "urn:oslo-toolchain:10489563".
+
+2026-01-08T13:03:15.639Z warn: Unable to find the description for subject "[urn:oslo-toolchain:710dd35ccb1e7f03774cd84af7c23cfb2e1951022b0127291e6d7f9adbe55fa3](all-OSLO-Vervoersknooppunten-ap.jsonld#L11216)".
+
+2026-01-08T13:03:15.643Z warn: Unable to find the description for subject "[urn:oslo-toolchain:835aa03727b47db35664c7f2ec634976fd3f68a21106983113bb18e86a69d019](all-OSLO-Vervoersknooppunten-ap.jsonld#L11572)".
+
+2026-01-08T13:03:15.647Z warn: Unable to find the description for subject "[urn:oslo-toolchain:4a01c6cda70cddc325c955b9356350360cc7b283a11e8d9f8b3515e3334d55bf](all-OSLO-Vervoersknooppunten-ap.jsonld#L12698)".
 

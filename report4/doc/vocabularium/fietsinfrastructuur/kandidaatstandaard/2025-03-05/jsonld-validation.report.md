@@ -6,7 +6,7 @@
 
 
 
-2025-11-12T20:06:08.838Z info: Loaded 47 URI prefixes into whitelist
+2026-01-08T13:04:13.110Z info: Loaded 47 URI prefixes into whitelist
 
 
 
@@ -18,7 +18,7 @@ Error: Path does not refer to a valid file: /tmp/workspace/report4/doc/vocabular
 
 
 
-    at QuadStore.addQuadsFromFile (/usr/local/lib/node_modules/@oslo-flanders/jsonld-validator/node_modules/@oslo-flanders/core/lib/store/QuadStore.js:55:66)
+    at QuadStore.addQuadsFromFile (/usr/local/lib/node_modules/@oslo-flanders/jsonld-validator/node_modules/@oslo-flanders/core/lib/store/QuadStore.js:61:66)
 
 
 
@@ -38,7 +38,7 @@ Error: Path does not refer to a valid file: /tmp/workspace/report4/doc/vocabular
 
 
 
-2025-11-12T20:06:09.260Z info: Loaded 47 URI prefixes into whitelist
+2026-01-08T13:04:13.533Z info: Loaded 47 URI prefixes into whitelist
 
 
 
@@ -50,7 +50,7 @@ Error: Path does not refer to a valid file: /tmp/workspace/report4/doc/vocabular
 
 
 
-    at QuadStore.addQuadsFromFile (/usr/local/lib/node_modules/@oslo-flanders/jsonld-validator/node_modules/@oslo-flanders/core/lib/store/QuadStore.js:55:66)
+    at QuadStore.addQuadsFromFile (/usr/local/lib/node_modules/@oslo-flanders/jsonld-validator/node_modules/@oslo-flanders/core/lib/store/QuadStore.js:61:66)
 
 
 

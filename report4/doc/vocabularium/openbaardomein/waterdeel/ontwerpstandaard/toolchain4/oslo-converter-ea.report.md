@@ -2,55 +2,55 @@
 
 #||# -------------------------------------
 
-2025-11-12T19:56:20.487Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:(Waterdeel -> Deel) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.204Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:(Waterdeel -> Deel) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.490Z info: Connector Applicatieprofiel:Waterdeel:Waterloop:(Waterloop -> Waterdeel) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.206Z info: Connector Applicatieprofiel:Waterdeel:Waterloop:(Waterloop -> Waterdeel) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.490Z info: Connector Applicatieprofiel:Waterdeel:Watervlak:(Watervlak -> Waterdeel) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.206Z info: Connector Applicatieprofiel:Waterdeel:Watervlak:(Watervlak -> Waterdeel) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.491Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:voorkomen is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.207Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:voorkomen is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.491Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:voorkomen has name "voorkomen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:54:33.207Z info: Connector Applicatieprofiel:Waterdeel:Waterdeel:voorkomen has name "voorkomen". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:56:20.491Z info: Connector Model:OSLO-OpenbaarDomein:BasisModel:Deel:(Deel -> FysiekObject) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.207Z info: Connector Model:OSLO-OpenbaarDomein:BasisModel:Deel:(Deel -> FysiekObject) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.491Z info: Connector Applicatieprofiel:Waterdeel:NatuurlijkeWaterloop:(NatuurlijkeWaterloop -> Waterloop) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.207Z info: Connector Applicatieprofiel:Waterdeel:NatuurlijkeWaterloop:(NatuurlijkeWaterloop -> Waterloop) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.491Z info: Connector Applicatieprofiel:Waterdeel:Gracht:(Gracht -> Waterloop) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.207Z info: Connector Applicatieprofiel:Waterdeel:Gracht:(Gracht -> Waterloop) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.491Z info: Connector Applicatieprofiel:Waterdeel:Rivier:(Rivier -> NatuurlijkeWaterloop) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.207Z info: Connector Applicatieprofiel:Waterdeel:Rivier:(Rivier -> NatuurlijkeWaterloop) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.491Z info: Connector Applicatieprofiel:Waterdeel:Kanaal:(Kanaal -> KunstmatigeWaterloop) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.207Z info: Connector Applicatieprofiel:Waterdeel:Kanaal:(Kanaal -> KunstmatigeWaterloop) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.492Z info: Connector Applicatieprofiel:Waterdeel:Beek:(Beek -> NatuurlijkeWaterloop) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.208Z info: Connector Applicatieprofiel:Waterdeel:Beek:(Beek -> NatuurlijkeWaterloop) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.492Z info: Connector Applicatieprofiel:Waterdeel:Vijver:(Vijver -> Watervlak) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.208Z info: Connector Applicatieprofiel:Waterdeel:Vijver:(Vijver -> Watervlak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.492Z info: Connector Applicatieprofiel:Waterdeel:Meer:(Meer -> Watervlak) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.208Z info: Connector Applicatieprofiel:Waterdeel:Meer:(Meer -> Watervlak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.492Z info: Connector Applicatieprofiel:Waterdeel:Poel:(Poel -> Watervlak) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.208Z info: Connector Applicatieprofiel:Waterdeel:Poel:(Poel -> Watervlak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.492Z info: Connector Applicatieprofiel:Waterdeel:Ven:(Ven -> Watervlak) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.208Z info: Connector Applicatieprofiel:Waterdeel:Ven:(Ven -> Watervlak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.492Z info: Connector Applicatieprofiel:Waterdeel:Slotgracht:(Slotgracht -> Watervlak) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.208Z info: Connector Applicatieprofiel:Waterdeel:Slotgracht:(Slotgracht -> Watervlak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.492Z info: Connector Applicatieprofiel:Waterdeel:Sloot:(Sloot -> Waterloop) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.208Z info: Connector Applicatieprofiel:Waterdeel:Sloot:(Sloot -> Waterloop) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.492Z info: Connector Applicatieprofiel:Waterdeel:KunstmatigeWaterloop:(KunstmatigeWaterloop -> Waterloop) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.208Z info: Connector Applicatieprofiel:Waterdeel:KunstmatigeWaterloop:(KunstmatigeWaterloop -> Waterloop) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.493Z info: Connector Applicatieprofiel:Waterdeel:NatuurlijkeGracht:(NatuurlijkeGracht -> Gracht) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.208Z info: Connector Applicatieprofiel:Waterdeel:NatuurlijkeGracht:(NatuurlijkeGracht -> Gracht) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.493Z info: Connector Applicatieprofiel:Waterdeel:KunstmatigeGracht:(KunstmatigeGracht -> Gracht) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:54:33.208Z info: Connector Applicatieprofiel:Waterdeel:KunstmatigeGracht:(KunstmatigeGracht -> Gracht) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:56:20.493Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:54:33.209Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:56:20.494Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:54:33.209Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:56:20.494Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:54:33.209Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:56:20.494Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:54:33.209Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:56:20.494Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:54:33.209Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst). Using fallback URI (http://todo.com/) instead.
 
 #||# -------------------------------------
 

@@ -2,31 +2,11 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:04330c8f00dafdefb17d47a3301c764996e9c27d01340737d5e198a5d13eed41".
-
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
-
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
-
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-01-08T13:02:06.247Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5522d1354886b26271b7610292312730e7bfc84ab7a6c6f8e845ea698650e0d9](all-erosiepoel-ap.jsonld#L565)".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:04330c8f00dafdefb17d47a3301c764996e9c27d01340737d5e198a5d13eed41".
-
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
-
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
-
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-01-08T13:02:07.063Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5522d1354886b26271b7610292312730e7bfc84ab7a6c6f8e845ea698650e0d9](all-erosiepoel-ap.jsonld#L565)".
 

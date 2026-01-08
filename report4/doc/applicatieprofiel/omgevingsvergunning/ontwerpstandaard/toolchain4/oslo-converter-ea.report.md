@@ -2,163 +2,163 @@
 
 #||# -------------------------------------
 
-2025-11-12T19:52:20.857Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Besluit:Besluit:volgtUit)
+2026-01-08T12:51:06.824Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Besluit:Besluit:volgtUit)
 
-2025-11-12T19:52:20.859Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Besluit:BehandelingVanAgendapunt:geeftAanleidingTot)
+2026-01-08T12:51:06.825Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Besluit:BehandelingVanAgendapunt:geeftAanleidingTot)
 
-2025-11-12T19:52:20.859Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Dossier:Stuk:(Stuk -> Stuk))
+2026-01-08T12:51:06.825Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Dossier:Stuk:(Stuk -> Stuk))
 
-2025-11-12T19:52:20.860Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Besluit:Vergaderactiviteit:heeftAanwezigeBijStart)
+2026-01-08T12:51:06.826Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Besluit:Vergaderactiviteit:heeftAanwezigeBijStart)
 
-2025-11-12T19:52:20.860Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Besluit:Agendapunt:heeftAanwezige)
+2026-01-08T12:51:06.826Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Besluit:Agendapunt:heeftAanwezige)
 
-2025-11-12T19:52:20.860Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Dossier:Activiteit:vindtPlaatsTijdens)
+2026-01-08T12:51:06.826Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Dossier:Activiteit:vindtPlaatsTijdens)
 
-2025-11-12T19:52:20.860Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Generiek:Agent:isLidVan)
+2026-01-08T12:51:06.826Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Generiek:Agent:isLidVan)
 
-2025-11-12T19:52:20.860Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
+2026-01-08T12:51:06.826Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
 
-2025-11-12T19:52:20.860Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
+2026-01-08T12:51:06.826Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
 
-2025-11-12T19:52:20.860Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+2026-01-08T12:51:06.826Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-11-12T19:52:20.860Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Generiek:Agent:isLidVan)
+2026-01-08T12:51:06.826Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Generiek:Agent:isLidVan)
 
-2025-11-12T19:52:20.860Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Wetgeving:Rechtsgrond:aangenomenDoor)
+2026-01-08T12:51:06.826Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Wetgeving:Rechtsgrond:aangenomenDoor)
 
-2025-11-12T19:52:20.860Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Wetgeving:Rechtsgrond:heeftDeel)
+2026-01-08T12:51:06.826Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Wetgeving:Rechtsgrond:heeftDeel)
 
-2025-11-12T19:52:20.861Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Generiek:Gemeente:(Gemeente -> Object))
+2026-01-08T12:51:06.826Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2025-11-12T19:52:20.861Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2026-01-08T12:51:06.826Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-11-12T19:52:20.861Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Besluitvorming:Verslag:(Verslag -> Besluit))
+2026-01-08T12:51:06.826Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Besluitvorming:Verslag:(Verslag -> Besluit))
 
-2025-11-12T19:52:20.861Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Wetgeving:Rechtsgrond:isDeelVan)
+2026-01-08T12:51:06.827Z info: [ConnectorConverterHandler]: Ignoring hidden connector (OSLO:OSLO-Wetgeving:Rechtsgrond:isDeelVan)
 
-2025-11-12T19:52:20.861Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Omgevingsvergunning:Rechtshandeling:(Rechtshandeling -> JuridischWerk))
+2026-01-08T12:51:06.827Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Omgevingsvergunning:Rechtshandeling:(Rechtshandeling -> JuridischWerk))
 
-2025-11-12T19:52:20.861Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Omgevingsvergunning:Inhoud:(Inhoud -> JuridischWerk))
+2026-01-08T12:51:06.827Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Omgevingsvergunning:Inhoud:(Inhoud -> JuridischWerk))
 
-2025-11-12T19:52:20.861Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Omgevingsvergunning:Bekendmaking:(Bekendmaking -> Zaakhandeling))
+2026-01-08T12:51:06.827Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Omgevingsvergunning:Bekendmaking:(Bekendmaking -> Zaakhandeling))
 
-2025-11-12T19:52:20.865Z info: Connector OSLO:OSLO-Wetgeving:Rechtsgrond:(Rechtsgrond -> JuridischWerk) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.829Z info: Connector OSLO:OSLO-Wetgeving:Rechtsgrond:(Rechtsgrond -> JuridischWerk) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.865Z info: Connector Model:OSLO-Omgevingsvergunning:JuridischeCategorie:(JuridischeCategorie -> JuridischWerk) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.830Z info: Connector Model:OSLO-Omgevingsvergunning:JuridischeCategorie:(JuridischeCategorie -> JuridischWerk) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.866Z info: Connector Model:OSLO-Omgevingsvergunning:Beroepsmogelijkheid:(Beroepsmogelijkheid -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.830Z info: Connector Model:OSLO-Omgevingsvergunning:Beroepsmogelijkheid:(Beroepsmogelijkheid -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.866Z info: Connector OSLO:OSLO-Persoon:Persoon:(Persoon -> Rechtssubject) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.830Z info: Connector OSLO:OSLO-Persoon:Persoon:(Persoon -> Rechtssubject) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.867Z info: Connector Model:OSLO-Omgevingsvergunning:Activiteit:(Activiteit -> Activiteit) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.830Z info: Connector Model:OSLO-Omgevingsvergunning:Activiteit:(Activiteit -> Activiteit) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.867Z info: Connector Model:OSLO-Omgevingsvergunning:Rechtshandeling:(Rechtshandeling -> JuridischeGebeurtenis) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.831Z info: Connector Model:OSLO-Omgevingsvergunning:Rechtshandeling:(Rechtshandeling -> JuridischeGebeurtenis) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.867Z info: Connector Model:OSLO-Omgevingsvergunning:Zaak:(Zaak -> Dossier) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.831Z info: Connector Model:OSLO-Omgevingsvergunning:Zaak:(Zaak -> Dossier) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.867Z info: Connector Model:OSLO-Omgevingsvergunning:Verbintenis:(Verbintenis -> NormatieveBepaling) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.831Z info: Connector Model:OSLO-Omgevingsvergunning:Verbintenis:(Verbintenis -> NormatieveBepaling) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.867Z info: Connector Model:OSLO-Omgevingsvergunning:Recht:(Recht -> NormatieveBepaling) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.831Z info: Connector Model:OSLO-Omgevingsvergunning:Recht:(Recht -> NormatieveBepaling) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.867Z info: Connector Model:OSLO-Omgevingsvergunning:Zaak:(Zaak -> Procedure) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.831Z info: Connector Model:OSLO-Omgevingsvergunning:Zaak:(Zaak -> Procedure) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.868Z info: Connector Model:OSLO-Omgevingsvergunning:Procedure:(Procedure -> Procedurestap) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.831Z info: Connector Model:OSLO-Omgevingsvergunning:Procedure:(Procedure -> Procedurestap) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.868Z info: Connector Model:OSLO-Omgevingsvergunning:Zaakhandeling:(Zaakhandeling -> Procedurestap) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.831Z info: Connector Model:OSLO-Omgevingsvergunning:Zaakhandeling:(Zaakhandeling -> Procedurestap) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.868Z info: Connector Model:OSLO-Omgevingsvergunning:Beroepsmogelijkheid:(Beroepsmogelijkheid -> Procedurestap) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.831Z info: Connector Model:OSLO-Omgevingsvergunning:Beroepsmogelijkheid:(Beroepsmogelijkheid -> Procedurestap) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.868Z info: Connector Model:OSLO-Omgevingsvergunning:Rechtshandeling:(Rechtshandeling -> Inhoud) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.831Z info: Connector Model:OSLO-Omgevingsvergunning:Rechtshandeling:(Rechtshandeling -> Inhoud) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.868Z info: Connector OSLO:OSLO-Organisatie:Organisatie:(Organisatie -> Rechtssubject) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.831Z info: Connector OSLO:OSLO-Organisatie:Organisatie:(Organisatie -> Rechtssubject) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.868Z info: Connector Model:OSLO-Omgevingsvergunning:InstellingBeroep:(InstellingBeroep -> Beroepsmogelijkheid) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.831Z info: Connector Model:OSLO-Omgevingsvergunning:InstellingBeroep:(InstellingBeroep -> Beroepsmogelijkheid) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.868Z info: Connector Model:OSLO-Omgevingsvergunning:Zaak:(Zaak -> Zaak) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.832Z info: Connector Model:OSLO-Omgevingsvergunning:Zaak:(Zaak -> Zaak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.868Z info: Connector Model:OSLO-Omgevingsvergunning:Vergunning:(Vergunning -> BestuurlijkeRechtshandeling) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.832Z info: Connector Model:OSLO-Omgevingsvergunning:Vergunning:(Vergunning -> BestuurlijkeRechtshandeling) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.868Z info: Connector Model:OSLO-Omgevingsvergunning:NormatieveBepaling:(NormatieveBepaling -> Inhoud) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.832Z info: Connector Model:OSLO-Omgevingsvergunning:NormatieveBepaling:(NormatieveBepaling -> Inhoud) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.868Z info: Connector Model:OSLO-Omgevingsvergunning:RechterlijkeUitspraak:(RechterlijkeUitspraak -> Rechtshandeling) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.832Z info: Connector Model:OSLO-Omgevingsvergunning:RechterlijkeUitspraak:(RechterlijkeUitspraak -> Rechtshandeling) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.868Z info: Connector Model:OSLO-Omgevingsvergunning:VergundeToestand:(VergundeToestand -> NormatieveBepaling) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.832Z info: Connector Model:OSLO-Omgevingsvergunning:VergundeToestand:(VergundeToestand -> NormatieveBepaling) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.869Z info: Connector Model:OSLO-Omgevingsvergunning:InstellingBeroep:(InstellingBeroep -> Rechtshandeling) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.832Z info: Connector Model:OSLO-Omgevingsvergunning:InstellingBeroep:(InstellingBeroep -> Rechtshandeling) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.869Z info: Connector Model:OSLO-Omgevingsvergunning:NormatieveBepaling:(NormatieveBepaling -> Activiteit) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.832Z info: Connector Model:OSLO-Omgevingsvergunning:NormatieveBepaling:(NormatieveBepaling -> Activiteit) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.869Z info: Connector Model:OSLO-Omgevingsvergunning:Rechtscollege:(Rechtscollege -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.832Z info: Connector Model:OSLO-Omgevingsvergunning:Rechtscollege:(Rechtscollege -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.869Z info: Connector Model:OSLO-Omgevingsvergunning:Aanvraag:(Aanvraag -> Rechtshandeling) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.832Z info: Connector Model:OSLO-Omgevingsvergunning:Aanvraag:(Aanvraag -> Rechtshandeling) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.869Z info: Connector Model:OSLO-Omgevingsvergunning:BestuurlijkeRechtshandeling:(BestuurlijkeRechtshandeling -> Rechtshandeling) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.832Z info: Connector Model:OSLO-Omgevingsvergunning:BestuurlijkeRechtshandeling:(BestuurlijkeRechtshandeling -> Rechtshandeling) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.869Z info: Connector Model:OSLO-Omgevingsvergunning:InstellingBeroep:(InstellingBeroep -> Zaakhandeling) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.832Z info: Connector Model:OSLO-Omgevingsvergunning:InstellingBeroep:(InstellingBeroep -> Zaakhandeling) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.869Z info: Connector Model:OSLO-Omgevingsvergunning:Aanvraag:(Aanvraag -> Zaakhandeling) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.832Z info: Connector Model:OSLO-Omgevingsvergunning:Aanvraag:(Aanvraag -> Zaakhandeling) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.869Z info: Connector Model:OSLO-Omgevingsvergunning:Vergunning:(Vergunning -> Zaakhandeling) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.832Z info: Connector Model:OSLO-Omgevingsvergunning:Vergunning:(Vergunning -> Zaakhandeling) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.869Z info: Connector Model:OSLO-Omgevingsvergunning:Procedure:(Procedure -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:51:06.832Z info: Connector Model:OSLO-Omgevingsvergunning:Procedure:(Procedure -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:20.870Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.833Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.870Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:W3C). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.833Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:W3C). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:W3C:PROV). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.833Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:W3C:PROV). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:W3C:xsd). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.833Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:W3C:xsd). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OGC). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.833Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OGC). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (SEMIC:CPSV). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.833Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (SEMIC:CPSV). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (EUPO:CDM). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.833Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (EUPO:CDM). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Omgevingsvergunning:visualization). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.833Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-Omgevingsvergunning:visualization). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OGC:geosparql). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.833Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OGC:geosparql). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:dcterms). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.834Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:dcterms). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OSLO:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.834Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (OSLO:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:EUPO). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.834Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:EUPO). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:EUPO:ELI). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.834Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:EUPO:ELI). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:W3C:SKOS). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.834Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:W3C:SKOS). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.834Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:W3C:time). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.834Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:W3C:time). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO:OSLO-Recht). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.834Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO:OSLO-Recht). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:SEMIC). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.834Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:SEMIC). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:SEMIC:ADMS). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.834Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:SEMIC:ADMS). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.871Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO:OSLO-Slim-Ruimtelijk-Plannen). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:51:06.834Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO:OSLO-Slim-Ruimtelijk-Plannen). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:20.880Z warn: [ConnectorConverterHandler]: Connector (normatieveBepaling) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:51:06.840Z warn: [ConnectorConverterHandler]: Connector (normatieveBepaling) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:52:20.880Z warn: [ConnectorConverterHandler]: Connector (inhoud) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:51:06.840Z warn: [ConnectorConverterHandler]: Connector (inhoud) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:52:20.880Z warn: [ConnectorConverterHandler]: Connector (procedurestap) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:51:06.840Z warn: [ConnectorConverterHandler]: Connector (procedurestap) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:52:20.881Z warn: [ConnectorConverterHandler]: Connector (voorwerp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:51:06.840Z warn: [ConnectorConverterHandler]: Connector (voorwerp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:52:20.881Z warn: [ConnectorConverterHandler]: Connector (vaststellingVergundeToestand) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:51:06.840Z warn: [ConnectorConverterHandler]: Connector (vaststellingVergundeToestand) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:52:20.881Z warn: [ConnectorConverterHandler]: Connector (zaak) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:51:06.840Z warn: [ConnectorConverterHandler]: Connector (zaak) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:52:20.881Z warn: [ConnectorConverterHandler]: Connector (zaakhandeling) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:51:06.840Z warn: [ConnectorConverterHandler]: Connector (zaakhandeling) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:52:20.881Z warn: [ConnectorConverterHandler]: Connector (procedure) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:51:06.840Z warn: [ConnectorConverterHandler]: Connector (procedure) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:52:20.881Z warn: [ConnectorConverterHandler]: Connector (ingesteldeBeroepsmogelijkheid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:51:06.840Z warn: [ConnectorConverterHandler]: Connector (ingesteldeBeroepsmogelijkheid) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 #||# -------------------------------------
 

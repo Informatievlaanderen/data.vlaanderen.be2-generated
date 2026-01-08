@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find a label for subject "[urn:oslo-toolchain:85ae57ebcc5b4856841bcdc4babcdac7b1e1cf378d93146a45aa2bb9fa5dd2fb](all-tijdstabellen-ap.jsonld#L1889)".
+Error: Unable to find a label for subject "[urn:oslo-toolchain:bad536dff41cdaf7a93602947b92701aea31125e16bb9bbe234f0663348967ad](all-tijdstabellen-ap.jsonld#L1410)".
 
     at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:104:23)
 
@@ -16,33 +16,75 @@ Error: Unable to find a label for subject "[urn:oslo-toolchain:85ae57ebcc5b48568
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:53.112Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474230892](all-tijdstabellen-ap.jsonld#L17439)".
+2026-01-08T13:03:09.935Z warn: Unable to find the description for subject "[urn:oslo-toolchain:ea5a624914556a9c6b195fb46234c9728698cef7af034e32d760667e2e05c50a](all-tijdstabellen-ap.jsonld#L1819)".
 
-2025-11-12T20:04:53.114Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-tijdstabellen-ap.jsonld#L17450)".
+2026-01-08T13:03:09.937Z warn: Unable to find the description for subject "[urn:oslo-toolchain:ca57301fe1ce24ed25ba406f90131a4747b4fd029375f1380c2bfa649a615b41](all-tijdstabellen-ap.jsonld#L849)".
 
-2025-11-12T20:04:53.114Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-tijdstabellen-ap.jsonld#L17461)".
+2026-01-08T13:03:09.937Z warn: Unable to find the description for subject "[urn:oslo-toolchain:4c850bfcae242f3f5d3194ed7dd763089ffe73a1016c957b6bac4568053c7481](all-tijdstabellen-ap.jsonld#L871)".
 
-2025-11-12T20:04:53.114Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-tijdstabellen-ap.jsonld#L17472)".
+2026-01-08T13:03:09.938Z warn: Unable to find the description for subject "[urn:oslo-toolchain:ec429928294eeeba241441f407e530e7fc3121bb9846ff49245edb35a158de88](all-tijdstabellen-ap.jsonld#L1107)".
 
-2025-11-12T20:04:53.115Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-tijdstabellen-ap.jsonld#L17483)".
+2026-01-08T13:03:09.938Z warn: Unable to find the description for subject "[urn:oslo-toolchain:de4df481a7b4a2deca741abfa6a7aae9e424d2b27b7eb57fc4ed466f3db42f2d](all-tijdstabellen-ap.jsonld#L1063)".
 
-2025-11-12T20:04:53.115Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-tijdstabellen-ap.jsonld#L17494)".
+2026-01-08T13:03:09.938Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cdfd0b08b4615bbb3af8c0f8082a513f981d02c5c5d8484eed050c04621326a3](all-tijdstabellen-ap.jsonld#L1085)".
 
-2025-11-12T20:04:53.115Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-tijdstabellen-ap.jsonld#L17505)".
+2026-01-08T13:03:09.938Z warn: Unable to find the description for subject "[urn:oslo-toolchain:e98f53c8a950a3f660766a53687c750a5a49d01c0f6c868c9d60356eed3712e2](all-tijdstabellen-ap.jsonld#L1733)".
 
-2025-11-12T20:04:53.117Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-tijdstabellen-ap.jsonld#L17516)".
+2026-01-08T13:03:09.938Z warn: Unable to find the description for subject "[urn:oslo-toolchain:e193ddee17a7bc4b455d2dd77fe059b716e3f9d0a4dd47e0fe4fe4debfcb2936](all-tijdstabellen-ap.jsonld#L1585)".
 
-2025-11-12T20:04:53.117Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-tijdstabellen-ap.jsonld#L17527)".
+2026-01-08T13:03:09.939Z warn: Unable to find the description for subject "[urn:oslo-toolchain:7b92a2b7c416c06e336c259e055464dedf122a0072976c72edcb2a77eb4aeced](all-tijdstabellen-ap.jsonld#L1937)".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:ea5a624914556a9c6b195fb46234c9728698cef7af034e32d760667e2e05c50a".
+2026-01-08T13:03:09.939Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2791dc6811cfad8e4e71c2124706212d0c3ae67d8169ceb2964bda9165841cca](all-tijdstabellen-ap.jsonld#L1959)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
+2026-01-08T13:03:09.939Z warn: Unable to find the description for subject "[urn:oslo-toolchain:59b0e2904567aee6dcaca2cf1a97ca87c4f647067f2f78dbb1bcadea7f13743f](all-tijdstabellen-ap.jsonld#L2018)".
 
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+2026-01-08T13:03:09.939Z warn: Unable to find the description for subject "[urn:oslo-toolchain:e4efec31eba498ed8ca978ba72cb6153e8f1d5ac4c21fb8f5860418be9257aed](all-tijdstabellen-ap.jsonld#L2147)".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
+2026-01-08T13:03:09.939Z warn: Unable to find the description for subject "[urn:oslo-toolchain:a34aed59966fdeece28712eb7963bf2917dea4b4aeb69603c0f88c49b77ac4fc](all-tijdstabellen-ap.jsonld#L1711)".
 
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+2026-01-08T13:03:09.940Z warn: Unable to find the description for subject "[urn:oslo-toolchain:a1280c45f4ad3a485c38068ed302729219122b5b72977cdc555e9ea9666ad568](all-tijdstabellen-ap.jsonld#L2211)".
 
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-01-08T13:03:09.940Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cc510fdd84dad9dca98dee81865e260ccd37dff32b83e05c9814ee2ef7941e24](all-tijdstabellen-ap.jsonld#L1280)".
+
+2026-01-08T13:03:09.940Z warn: Unable to find the description for subject "[urn:oslo-toolchain:ab6c1c01d70da43dc8ab745ed6fb39cf3cc45775342016e3767fb277f518f0da](all-tijdstabellen-ap.jsonld#L1302)".
+
+2026-01-08T13:03:09.940Z warn: Unable to find the description for subject "[urn:oslo-toolchain:465e1782e34d3bd8c984c073aa479ded817724685c9c4c5a8332e46c97735885](all-tijdstabellen-ap.jsonld#L2515)".
+
+2026-01-08T13:03:09.940Z warn: Unable to find the description for subject "[urn:oslo-toolchain:32be1782e9e8f763fcd3bafa9e1c92088baef4ad36266a91007394ce5ef40217](all-tijdstabellen-ap.jsonld#L2449)".
+
+2026-01-08T13:03:09.940Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8b7a51f20705a4ad167b6327c17033de0849702bb3bd0646bfefbf393a92789e](all-tijdstabellen-ap.jsonld#L2533)".
+
+2026-01-08T13:03:09.940Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2583f752b74121610019cab40c4e3cf508540bde6a5d33a4227a5e21ba794715](all-tijdstabellen-ap.jsonld#L2555)".
+
+2026-01-08T13:03:09.941Z warn: Unable to find the description for subject "[urn:oslo-toolchain:d443d2078574a416f67458ca148c52237cc2bb6b84053b7ba6ce81ef3a8a354a](all-tijdstabellen-ap.jsonld#L2573)".
+
+2026-01-08T13:03:09.941Z warn: Unable to find the description for subject "[urn:oslo-toolchain:7d9594f2e69900f793f8a24ae01918ada10dda7d4b2a846f08dc12a4508c7660](all-tijdstabellen-ap.jsonld#L2625)".
+
+2026-01-08T13:03:09.941Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2694fe06726d240c74d1c831f1ab28aee5091abdc210840145df45b04551a6dd](all-tijdstabellen-ap.jsonld#L2643)".
+
+2026-01-08T13:03:09.941Z warn: Unable to find the description for subject "[urn:oslo-toolchain:522181d5614b3cbdbc54bedf0e2cb246b618fb38d66a205deb9ee7de0aff995a](all-tijdstabellen-ap.jsonld#L2661)".
+
+2026-01-08T13:03:09.941Z warn: Unable to find the description for subject "[urn:oslo-toolchain:99095c40b965421ab77d199371e66ac5c3ee16d1907992fbf2bec65a6fcacfa3](all-tijdstabellen-ap.jsonld#L2683)".
+
+2026-01-08T13:03:09.941Z warn: Unable to find the description for subject "[urn:oslo-toolchain:bfcb45697ac2dae05b30330317c2120bbb4632bf100d47b02f9d71e1fb54080e](all-tijdstabellen-ap.jsonld#L2784)".
+
+2026-01-08T13:03:09.941Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8b6e779412053ae93dba3eb4ad9b41a0b6c581110ff6a6b43951151f5ce43aed](all-tijdstabellen-ap.jsonld#L2934)".
+
+2026-01-08T13:03:09.943Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474230892](all-tijdstabellen-ap.jsonld#L17937)".
+
+2026-01-08T13:03:09.943Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-tijdstabellen-ap.jsonld#L17948)".
+
+2026-01-08T13:03:09.943Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-tijdstabellen-ap.jsonld#L17959)".
+
+2026-01-08T13:03:09.943Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-tijdstabellen-ap.jsonld#L17970)".
+
+2026-01-08T13:03:09.943Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-tijdstabellen-ap.jsonld#L17981)".
+
+2026-01-08T13:03:09.943Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-tijdstabellen-ap.jsonld#L17992)".
+
+2026-01-08T13:03:09.944Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-tijdstabellen-ap.jsonld#L18003)".
+
+2026-01-08T13:03:09.944Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-tijdstabellen-ap.jsonld#L18014)".
+
+2026-01-08T13:03:09.944Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-tijdstabellen-ap.jsonld#L18025)".
 

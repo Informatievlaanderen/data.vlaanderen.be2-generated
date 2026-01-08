@@ -2,55 +2,51 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:06.310Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-financieledata-ap.jsonld#L7353)".
+2026-01-08T13:02:10.736Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8db988f93759646907a1de2d18ae54ccb429492e6b52e33b180858695ca4c9b4](all-financieledata-ap.jsonld#L1508)".
 
-2025-11-12T20:04:06.312Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-financieledata-ap.jsonld#L7364)".
+2026-01-08T13:02:10.738Z warn: Unable to find the description for subject "[urn:oslo-toolchain:11f57ba1a428971965b8ef5917cbf8be503ea5eab78d7434a14f9873277d6ab3](all-financieledata-ap.jsonld#L1520)".
 
-2025-11-12T20:04:06.312Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-financieledata-ap.jsonld#L7375)".
+2026-01-08T13:02:10.739Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-financieledata-ap.jsonld#L7693)".
 
-2025-11-12T20:04:06.312Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-financieledata-ap.jsonld#L7386)".
+2026-01-08T13:02:10.739Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-financieledata-ap.jsonld#L7704)".
 
-2025-11-12T20:04:06.313Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-financieledata-ap.jsonld#L7397)".
+2026-01-08T13:02:10.739Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-financieledata-ap.jsonld#L7715)".
 
-2025-11-12T20:04:06.313Z warn: Unable to find the description for subject "urn:oslo-toolchain:286333439".
+2026-01-08T13:02:10.739Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-financieledata-ap.jsonld#L7726)".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:d949f9370aa61b67597439db10da3acaf7887034f59d59c4073db5d9f067c4c2".
+2026-01-08T13:02:10.740Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-financieledata-ap.jsonld#L7737)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
+2026-01-08T13:02:10.740Z warn: Unable to find the description for subject "urn:oslo-toolchain:286333439".
 
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+2026-01-08T13:02:10.809Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9abf633b0270a18ba89cbb56cb3065aeee147d6a2986bb8b40c7cce0d71da90f](all-financieledata-ap.jsonld#L6793)".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
+2026-01-08T13:02:10.810Z warn: Unable to find the description for subject "[urn:oslo-toolchain:e27ca794ec4f379359a8aca8550a80063c74dd3b1fca6e22b6cad8fd0ababa84](all-financieledata-ap.jsonld#L6945)".
 
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-01-08T13:02:10.811Z warn: Unable to find the description for subject "[urn:oslo-toolchain:ac642ad2038db30dbcb4e6e50e7f831f9ba9570bbaf82f8028cb2ffa0138787c](all-financieledata-ap.jsonld#L7015)".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:07.148Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-financieledata-ap.jsonld#L7353)".
+2026-01-08T13:02:11.809Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8db988f93759646907a1de2d18ae54ccb429492e6b52e33b180858695ca4c9b4](all-financieledata-ap.jsonld#L1508)".
 
-2025-11-12T20:04:07.149Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-financieledata-ap.jsonld#L7364)".
+2026-01-08T13:02:11.811Z warn: Unable to find the description for subject "[urn:oslo-toolchain:11f57ba1a428971965b8ef5917cbf8be503ea5eab78d7434a14f9873277d6ab3](all-financieledata-ap.jsonld#L1520)".
 
-2025-11-12T20:04:07.150Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-financieledata-ap.jsonld#L7375)".
+2026-01-08T13:02:11.811Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-financieledata-ap.jsonld#L7693)".
 
-2025-11-12T20:04:07.150Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-financieledata-ap.jsonld#L7386)".
+2026-01-08T13:02:11.813Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-financieledata-ap.jsonld#L7704)".
 
-2025-11-12T20:04:07.150Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-financieledata-ap.jsonld#L7397)".
+2026-01-08T13:02:11.813Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-financieledata-ap.jsonld#L7715)".
 
-2025-11-12T20:04:07.150Z warn: Unable to find the description for subject "urn:oslo-toolchain:286333439".
+2026-01-08T13:02:11.814Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-financieledata-ap.jsonld#L7726)".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:d949f9370aa61b67597439db10da3acaf7887034f59d59c4073db5d9f067c4c2".
+2026-01-08T13:02:11.814Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-financieledata-ap.jsonld#L7737)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
+2026-01-08T13:02:11.814Z warn: Unable to find the description for subject "urn:oslo-toolchain:286333439".
 
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+2026-01-08T13:02:11.845Z warn: Unable to find the description for subject "[urn:oslo-toolchain:9abf633b0270a18ba89cbb56cb3065aeee147d6a2986bb8b40c7cce0d71da90f](all-financieledata-ap.jsonld#L6793)".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
+2026-01-08T13:02:11.846Z warn: Unable to find the description for subject "[urn:oslo-toolchain:e27ca794ec4f379359a8aca8550a80063c74dd3b1fca6e22b6cad8fd0ababa84](all-financieledata-ap.jsonld#L6945)".
 
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-01-08T13:02:11.847Z warn: Unable to find the description for subject "[urn:oslo-toolchain:ac642ad2038db30dbcb4e6e50e7f831f9ba9570bbaf82f8028cb2ffa0138787c](all-financieledata-ap.jsonld#L7015)".
 

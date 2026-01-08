@@ -2,23 +2,29 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:03:34.143Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-cultuurenjeugdinfrastructuur-ap.jsonld#L9199)".
+2026-01-08T13:01:32.522Z warn: Unable to find the description for subject "[urn:oslo-toolchain:7d83e3ca0ca11ce58e036f591062927f8edbb9d8220a9b827403f333292ecf8a](all-cultuurenjeugdinfrastructuur-ap.jsonld#L249)".
 
-2025-11-12T20:03:34.144Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-cultuurenjeugdinfrastructuur-ap.jsonld#L9210)".
+2026-01-08T13:01:32.524Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fce6739b9ec76d49af19268e6ba9d6e51652f88905808c6fcd9982283b0ea41f](all-cultuurenjeugdinfrastructuur-ap.jsonld#L422)".
 
-2025-11-12T20:03:34.145Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-cultuurenjeugdinfrastructuur-ap.jsonld#L9221)".
+2026-01-08T13:01:32.530Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-cultuurenjeugdinfrastructuur-ap.jsonld#L10037)".
 
-2025-11-12T20:03:34.146Z warn: Unable to find the description for subject "urn:oslo-toolchain:286333439".
+2026-01-08T13:01:32.530Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-cultuurenjeugdinfrastructuur-ap.jsonld#L10048)".
 
-2025-11-12T20:03:34.146Z warn: Unable to find the description for subject "[urn:oslo-toolchain:37142537afb3010f392bf5a95057100c9abf7deb2eac1c9ad034891ac2a64f5d](all-cultuurenjeugdinfrastructuur-ap.jsonld#L8659)".
+2026-01-08T13:01:32.531Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-cultuurenjeugdinfrastructuur-ap.jsonld#L10059)".
 
-2025-11-12T20:03:34.153Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c17f79376b45c43d2a90a6dde622b8f8ade2385daea3b7d251d1b43eb6b400f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2318)".
+2026-01-08T13:01:32.531Z warn: Unable to find the description for subject "urn:oslo-toolchain:286333439".
 
-2025-11-12T20:03:34.153Z warn: Unable to find the description for subject "[urn:oslo-toolchain:a8710628e3b032c5e9d7781213d90bce924c9217fa3b84f2d0dd7b45c0fd9c8b](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2356)".
+2026-01-08T13:01:32.532Z warn: Unable to find the description for subject "[urn:oslo-toolchain:37142537afb3010f392bf5a95057100c9abf7deb2eac1c9ad034891ac2a64f5d](all-cultuurenjeugdinfrastructuur-ap.jsonld#L9497)".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:569253c8ce483fd3b3025dedd94b4b6c6ba10b2fc5613b1a1fb7b550fb46e47a".
+2026-01-08T13:01:32.542Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c17f79376b45c43d2a90a6dde622b8f8ade2385daea3b7d251d1b43eb6b400f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L3156)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
+2026-01-08T13:01:32.543Z warn: Unable to find the description for subject "[urn:oslo-toolchain:a8710628e3b032c5e9d7781213d90bce924c9217fa3b84f2d0dd7b45c0fd9c8b](all-cultuurenjeugdinfrastructuur-ap.jsonld#L3194)".
+
+2026-01-08T13:01:32.608Z warn: Unable to find the description for subject "[urn:oslo-toolchain:12df0742a2601744ba4aa9e4a6364c992cadec9836cfb9221541af3fc8c5a5f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L9251)".
+
+Error: Unable to find the assigned URI for subject "[urn:oslo-toolchain:d0e7c2f4381a5ec692e122db2003d284e48d493a596140a591f04adac0d766b4](all-cultuurenjeugdinfrastructuur-ap.jsonld#L9277)".
+
+    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:34:19)
 
     at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
 
@@ -32,23 +38,29 @@ Error: Unable to find the assigned URI for range "urn:oslo-toolchain:569253c8ce4
 
 #||# -------------------------------------  
 
-2025-11-12T20:03:35.045Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-cultuurenjeugdinfrastructuur-ap.jsonld#L9199)".
+2026-01-08T13:01:33.592Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fce6739b9ec76d49af19268e6ba9d6e51652f88905808c6fcd9982283b0ea41f](all-cultuurenjeugdinfrastructuur-ap.jsonld#L422)".
 
-2025-11-12T20:03:35.047Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-cultuurenjeugdinfrastructuur-ap.jsonld#L9210)".
+2026-01-08T13:01:33.595Z warn: Unable to find the description for subject "[urn:oslo-toolchain:7d83e3ca0ca11ce58e036f591062927f8edbb9d8220a9b827403f333292ecf8a](all-cultuurenjeugdinfrastructuur-ap.jsonld#L249)".
 
-2025-11-12T20:03:35.047Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-cultuurenjeugdinfrastructuur-ap.jsonld#L9221)".
+2026-01-08T13:01:33.596Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-cultuurenjeugdinfrastructuur-ap.jsonld#L10037)".
 
-2025-11-12T20:03:35.048Z warn: Unable to find the description for subject "urn:oslo-toolchain:286333439".
+2026-01-08T13:01:33.596Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-cultuurenjeugdinfrastructuur-ap.jsonld#L10048)".
 
-2025-11-12T20:03:35.048Z warn: Unable to find the description for subject "[urn:oslo-toolchain:37142537afb3010f392bf5a95057100c9abf7deb2eac1c9ad034891ac2a64f5d](all-cultuurenjeugdinfrastructuur-ap.jsonld#L8659)".
+2026-01-08T13:01:33.596Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-cultuurenjeugdinfrastructuur-ap.jsonld#L10059)".
 
-2025-11-12T20:03:35.054Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c17f79376b45c43d2a90a6dde622b8f8ade2385daea3b7d251d1b43eb6b400f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2318)".
+2026-01-08T13:01:33.597Z warn: Unable to find the description for subject "urn:oslo-toolchain:286333439".
 
-2025-11-12T20:03:35.054Z warn: Unable to find the description for subject "[urn:oslo-toolchain:a8710628e3b032c5e9d7781213d90bce924c9217fa3b84f2d0dd7b45c0fd9c8b](all-cultuurenjeugdinfrastructuur-ap.jsonld#L2356)".
+2026-01-08T13:01:33.597Z warn: Unable to find the description for subject "[urn:oslo-toolchain:37142537afb3010f392bf5a95057100c9abf7deb2eac1c9ad034891ac2a64f5d](all-cultuurenjeugdinfrastructuur-ap.jsonld#L9497)".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:569253c8ce483fd3b3025dedd94b4b6c6ba10b2fc5613b1a1fb7b550fb46e47a".
+2026-01-08T13:01:33.603Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c17f79376b45c43d2a90a6dde622b8f8ade2385daea3b7d251d1b43eb6b400f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L3156)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
+2026-01-08T13:01:33.603Z warn: Unable to find the description for subject "[urn:oslo-toolchain:a8710628e3b032c5e9d7781213d90bce924c9217fa3b84f2d0dd7b45c0fd9c8b](all-cultuurenjeugdinfrastructuur-ap.jsonld#L3194)".
+
+2026-01-08T13:01:33.627Z warn: Unable to find the description for subject "[urn:oslo-toolchain:12df0742a2601744ba4aa9e4a6364c992cadec9836cfb9221541af3fc8c5a5f6](all-cultuurenjeugdinfrastructuur-ap.jsonld#L9251)".
+
+Error: Unable to find the assigned URI for subject "[urn:oslo-toolchain:d0e7c2f4381a5ec692e122db2003d284e48d493a596140a591f04adac0d766b4](all-cultuurenjeugdinfrastructuur-ap.jsonld#L9277)".
+
+    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:34:19)
 
     at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
 

@@ -2,19 +2,19 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:08:11.400Z error: Unable to find the assigned URI of range (http://www.w3.org/2004/02/skos/core#Concept) of attribute [urn:oslo-toolchain:48fd69595541e6947938e337da557594782da17d83ad17d831419c196b9aea7d](all-transactie.jsonld#L2651).
+2026-01-08T13:06:08.813Z error: Unable to find the assigned URI of range (http://www.w3.org/2004/02/skos/core#Concept) of attribute [urn:oslo-toolchain:48fd69595541e6947938e337da557594782da17d83ad17d831419c196b9aea7d](all-transactie.jsonld#L2680).
 
-2025-11-12T20:08:11.402Z error: Unable to find the assigned URI of range (http://www.w3.org/2004/02/skos/core#Concept) of attribute [urn:oslo-toolchain:4478a45dd3d1ffe1ef388769a6093741f31c84e409082a6bf2ba86b643489125](all-transactie.jsonld#L2696).
+2026-01-08T13:06:08.815Z error: Unable to find the assigned URI of range (http://www.w3.org/2004/02/skos/core#Concept) of attribute [urn:oslo-toolchain:4478a45dd3d1ffe1ef388769a6093741f31c84e409082a6bf2ba86b643489125](all-transactie.jsonld#L2725).
 
-2025-11-12T20:08:11.402Z error: Unable to find the assigned URI of range (http://www.w3.org/2004/02/skos/core#Concept) of attribute [urn:oslo-toolchain:118da3fc94f8a746b99a91c3d397d44d81de565646ebc0eb61795ef71d3d05f2](all-transactie.jsonld#L2741).
+2026-01-08T13:06:08.815Z error: Unable to find the assigned URI of range (http://www.w3.org/2004/02/skos/core#Concept) of attribute [urn:oslo-toolchain:118da3fc94f8a746b99a91c3d397d44d81de565646ebc0eb61795ef71d3d05f2](all-transactie.jsonld#L2770).
 
 #||# oslo-generator-respec for language en  
 
 #||# -------------------------------------  
 
-2025-11-12T20:08:12.178Z error: Unable to find the assigned URI of range (http://www.w3.org/2004/02/skos/core#Concept) of attribute [urn:oslo-toolchain:48fd69595541e6947938e337da557594782da17d83ad17d831419c196b9aea7d](all-transactie.jsonld#L2651).
+2026-01-08T13:06:09.531Z error: Unable to find the assigned URI of range (http://www.w3.org/2004/02/skos/core#Concept) of attribute [urn:oslo-toolchain:48fd69595541e6947938e337da557594782da17d83ad17d831419c196b9aea7d](all-transactie.jsonld#L2680).
 
-2025-11-12T20:08:12.179Z error: Unable to find the assigned URI of range (http://www.w3.org/2004/02/skos/core#Concept) of attribute [urn:oslo-toolchain:4478a45dd3d1ffe1ef388769a6093741f31c84e409082a6bf2ba86b643489125](all-transactie.jsonld#L2696).
+2026-01-08T13:06:09.533Z error: Unable to find the assigned URI of range (http://www.w3.org/2004/02/skos/core#Concept) of attribute [urn:oslo-toolchain:4478a45dd3d1ffe1ef388769a6093741f31c84e409082a6bf2ba86b643489125](all-transactie.jsonld#L2725).
 
-2025-11-12T20:08:12.180Z error: Unable to find the assigned URI of range (http://www.w3.org/2004/02/skos/core#Concept) of attribute [urn:oslo-toolchain:118da3fc94f8a746b99a91c3d397d44d81de565646ebc0eb61795ef71d3d05f2](all-transactie.jsonld#L2741).
+2026-01-08T13:06:09.533Z error: Unable to find the assigned URI of range (http://www.w3.org/2004/02/skos/core#Concept) of attribute [urn:oslo-toolchain:118da3fc94f8a746b99a91c3d397d44d81de565646ebc0eb61795ef71d3d05f2](all-transactie.jsonld#L2770).
 

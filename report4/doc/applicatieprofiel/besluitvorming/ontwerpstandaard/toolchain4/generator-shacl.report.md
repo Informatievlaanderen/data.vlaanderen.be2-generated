@@ -2,27 +2,27 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:03:26.534Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-besluitvorming-ap.jsonld#L5897)".
+2026-01-08T13:01:23.380Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-besluitvorming-ap.jsonld#L5913)".
 
-2025-11-12T20:03:26.536Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-besluitvorming-ap.jsonld#L5908)".
+2026-01-08T13:01:23.382Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-besluitvorming-ap.jsonld#L5924)".
 
-2025-11-12T20:03:26.536Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-besluitvorming-ap.jsonld#L5919)".
+2026-01-08T13:01:23.383Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-besluitvorming-ap.jsonld#L5935)".
 
-2025-11-12T20:03:26.536Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-besluitvorming-ap.jsonld#L5930)".
+2026-01-08T13:01:23.383Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-besluitvorming-ap.jsonld#L5946)".
 
-2025-11-12T20:03:26.537Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
+2026-01-08T13:01:23.383Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2025-11-12T20:03:27.452Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-besluitvorming-ap.jsonld#L5897)".
+2026-01-08T13:01:24.366Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-besluitvorming-ap.jsonld#L5913)".
 
-2025-11-12T20:03:27.453Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-besluitvorming-ap.jsonld#L5908)".
+2026-01-08T13:01:24.368Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-besluitvorming-ap.jsonld#L5924)".
 
-2025-11-12T20:03:27.454Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-besluitvorming-ap.jsonld#L5919)".
+2026-01-08T13:01:24.368Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-besluitvorming-ap.jsonld#L5935)".
 
-2025-11-12T20:03:27.454Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-besluitvorming-ap.jsonld#L5930)".
+2026-01-08T13:01:24.368Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-besluitvorming-ap.jsonld#L5946)".
 
-2025-11-12T20:03:27.454Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
+2026-01-08T13:01:24.369Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
 

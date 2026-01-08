@@ -12,11 +12,15 @@
     "sh": "http://www.w3.org/ns/shacl#",
     "prov": "http://www.w3.org/ns/prov#",
     "adms": "http://www.w3.org/ns/adms#",
+    "schema": "https://schema.org/",
     "packages": "@included",
     "classes": "@included",
     "datatypes": "@included",
     "attributes": "@included",
     "referencedEntities": "@included",
+    "redefinedAttributes": "@included",
+    "subsettedAttributes": "@included",
+    "enumerations": "@included",
     "baseURI": {
       "@id": "oslo:baseURI",
       "@type": "@id"
@@ -41,7 +45,8 @@
       "@id": "oslo:diagramLabel"
     },
     "scope": {
-      "@id": "oslo:scope"
+      "@id": "oslo:scope",
+      "@type": "@id"
     },
     "vocUsageNote": {
       "@id": "oslo:vocUsageNote",
@@ -94,7 +99,7 @@
       "@id": "dcterms:contributor"
     },
     "affiliation": {
-      "@id": "http://schema.org/affiliation"
+      "@id": "schema:affiliation"
     },
     "assignedURI": {
       "@id": "oslo:assignedURI",
@@ -102,6 +107,9 @@
     },
     "Datatype": {
       "@id": "rdfs:Datatype"
+    },
+    "Enumeration": {
+      "@id": "skos:Concept"
     },
     "codelist": {
       "@id": "oslo:codelist",
@@ -114,10 +122,18 @@
     "extensions": {
       "@id": "oslo:extensions",
       "@container": "@set"
+    },
+    "parentAttribute": {
+      "@id": "oslo:parentAttribute",
+      "@type": "@id"
+    },
+    "childAttribute": {
+      "@id": "oslo:childAttribute",
+      "@type": "@id"
     }
   },
   "@id": "https://data.dev-vlaanderen.be/doc/applicatieprofiel/voorwaarden-dienstverlening/ontwerpstandaard/toolchain4",
-  "generatedAtTime": "2025-11-12T19:53:19.081Z",
+  "generatedAtTime": "2026-01-08T12:52:00.433Z",
   "packages": [
     {
       "@id": "urn:oslo-toolchain:c0c1bb61008b26a9500854679420279d74ccf94d98286fe33055c4eea0a81942",
@@ -433,6 +449,40 @@
         {
           "@language": "nl",
           "@value": "Het Bewijstype en de kenmerken die het beschrijft zijn geen concrete individuele antwoorden op een voorwaarde, maar beschrijvingen over de gewenste vorm, inhoud, bron en/of andere kenmerken die een feitelijk antwoord zou moeten hebben en verschaffen (bijv. lidmaatschap van een klasse van Bewijzen)."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c07d9f0afef2d818e8360eb4e57e8c6f9c691df80dc746b7fed8f5ece3b4ad88",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Code"
+        },
+        {
+          "@language": "en",
+          "@value": "Code"
+        }
+      ],
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "Code"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Code"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "en",
+          "@value": "A concept in a codelist."
         }
       ],
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
@@ -1086,6 +1136,360 @@
         {
           "@language": "nl",
           "@value": "Classificaties moeten door een organisatie/land worden vastgesteld als resultaat van een beveiligingsbeoordeling."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:317b6f326eed58180cab5920e08c496fdf7a223811e4a55950864673919a3c26",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "VoorwaardeType"
+        }
+      ],
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "VoorwaardeType"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "VoorwaardeType"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De lijst met categorieën waartoe de voorwaarde hoort."
+        }
+      ],
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "De lijst met categorieën waartoe de voorwaarde hoort."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b117f8a7bccf13101155dc87d8a2c7f5e7a77019ce2a1b36788a2bbb938fadbf",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "VertrouwelijkheidLevelType"
+        }
+      ],
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "VertrouwelijkheidLevelType"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "VertrouwelijkheidLevelType"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beveiligingsclassificatie toegewezen aan een Bewijs, bijv. geclassificeerd, gevoelig, openbaar."
+        }
+      ],
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Beveiligingsclassificatie toegewezen aan een Bewijs, bijv. geclassificeerd, gevoelig, openbaar."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Classificaties moeten door een organisatie/land worden vastgesteld als resultaat van een beveiligingsbeoordeling."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2a57fb11d36b094ed26854639fa6a469a69080c91401eadd39470510246aea3d",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "SectorCode"
+        }
+      ],
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "SectorCode"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "SectorCode"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst van industriën waartoe een overheidsdienst betrekking op heeft of voor bedoeld is."
+        }
+      ],
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst van industriën waartoe een overheidsdienst betrekking op heeft of voor bedoeld is."
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Bijvoorbeeld: milieu, veiligheid, huisvesting. Merk op dat een enkele Overheidsdienst betrekking kan hebben op meerdere sectoren. De mogelijke waarden voor deze eigenschap worden verschaft als een gecontroleerd vocabulaire. De mogelijke waarden voor deze eigenschap worden beschreven in de gecontroleerde woordenlijst Data theme Authority Table van het Publicatiebureau."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:513b70c38025535db2cc8092d16bc085406e8c08d88dd49a30e45da3e0686536",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "StatusCode"
+        }
+      ],
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "StatusCode"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "StatusCode"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het geeft aan of een Publieke Dienstverlening actief, inactief, in ontwikkeling enz. is volgens een gecontroleerde woordenlijst."
+        }
+      ],
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het geeft aan of een Publieke Dienstverlening actief, inactief, in ontwikkeling enz. is volgens een gecontroleerde woordenlijst."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:686561b431e0ee24cfebb3cef338947438c8d253d2e11923ae5dca763eee98e3",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "ProcedureType"
+        }
+      ],
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "ProcedureType"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "ProcedureType"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst met verschillende soorten Procedures"
+        }
+      ],
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst met verschillende soorten Procedures"
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Bijvoorbeeld: een Procedure voor niet-openbaarmaking van een dataset"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:684c9210c940dbcdbc625dc9d7538d21ced9c7573e9abc4103423d78dd65e03a",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "DoelpubliekType"
+        }
+      ],
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "DoelpubliekType"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "DoelpubliekType"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst met verschillende soorten doelpublieken"
+        }
+      ],
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst met verschillende soorten doelpublieken"
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "Bijvoobeeld: Studenten, senioren"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f6fc5a8e11407c783ccba83f04cd0e59ee278c1095efa64c7588cb9805b8b07e",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Overheidsfunctie"
+        }
+      ],
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "Overheidsfunctie"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Overheidsfunctie"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst met overheidsactiviteiten waarvoor de Publieke Dienstverlening bedoeld is"
+        }
+      ],
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst met overheidsactiviteiten waarvoor de Publieke Dienstverlening bedoeld is"
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "De mogelijke waarden voor deze eigenschap worden beschreven in de gecontroleerde woordenlijst COFOG hoofdactiviteit Authority Table van het Publicatiebureau."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:bfdaf93ec4e79c0be8a13f9965f6204667a3c4e9aca5357df2e1666dde2dc45f",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "InformatieConceptType"
+        }
+      ],
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "InformatieConceptType"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "InformatieConceptType"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst met categorieën waartoe het Informatieconcept behoort"
+        }
+      ],
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Lijst met categorieën waartoe het Informatieconcept behoort"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:747107ad6074854d13d3abc77e829be656552e8cebb296973fb8ec651ffac9bd",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "Dienstverleningstype"
+        }
+      ],
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "Dienstverleningstype"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Dienstverleningstype"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het type/soort van public service (bv advies, financieel voordeel, ...)"
+        }
+      ],
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het type/soort van public service (bv advies, financieel voordeel, ...)"
         }
       ],
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
@@ -4616,58 +5020,6 @@
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
     {
-      "@id": "urn:oslo-toolchain:8215d4c12596200989deb5928c29193d636a6f69963ee3901e5aafcb632ffdaa",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "assignedURI": "http://purl.org/vocab/cpsv#PubliekeDienstverlening.Participatie",
-      "diagramLabel": [
-        {
-          "@value": "PubliekeDienstverlening.Participatie"
-        }
-      ],
-      "domain": {
-        "@id": "urn:oslo-toolchain:0dc530b3d921e3decd5e2369cc90ddae9ce9029e92ba53e58582ff7b5450e519"
-      },
-      "range": {
-        "@id": "urn:oslo-toolchain:b6616b824ed332cfcddab8b4eb5464c0dcf7ad33e8b27e359f75359ed397669c"
-      },
-      "minCount": {
-        "@value": "1",
-        "@type": "http://www.w3.org/2001/XMLSchema#integer"
-      },
-      "maxCount": {
-        "@value": "1",
-        "@type": "http://www.w3.org/2001/XMLSchema#integer"
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
-    },
-    {
-      "@id": "urn:oslo-toolchain:c8dd3e11e127bf6be4a4f8e6e1a3e7a410152a4cd3fd15012e09b97d93037d69",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "assignedURI": "http://todo.com/PubliekeDienstverlening.Participatie",
-      "diagramLabel": [
-        {
-          "@value": "PubliekeDienstverlening.Participatie"
-        }
-      ],
-      "domain": {
-        "@id": "urn:oslo-toolchain:4087c293a1886940504db8b6841598ddee39ed800361c37474c58eaf7a9f5d1a"
-      },
-      "range": {
-        "@id": "urn:oslo-toolchain:b6616b824ed332cfcddab8b4eb5464c0dcf7ad33e8b27e359f75359ed397669c"
-      },
-      "minCount": {
-        "@value": "1",
-        "@type": "http://www.w3.org/2001/XMLSchema#integer"
-      },
-      "maxCount": {
-        "@value": "1",
-        "@type": "http://www.w3.org/2001/XMLSchema#integer"
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
-    },
-    {
       "@id": "urn:oslo-toolchain:69d2e72254d615db124fa42c98357882d209ce2d5f7802fbe795c289d362fb94",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "assignedURI": "http://todo.com/heeftVerantwoordelijke",
@@ -6247,6 +6599,76 @@
         }
       ],
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    }
+  ],
+  "redefinedAttributes": [],
+  "subsettedAttributes": [],
+  "enumerations": [
+    {
+      "@id": "urn:oslo-toolchain:c07d9f0afef2d818e8360eb4e57e8c6f9c691df80dc746b7fed8f5ece3b4ad88",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:620a028aa37462e05c3bcfca75a72d26f5547a4ccf0459f32c1729ff4ad17523",
+      "@type": "Enumeration",
+      "assignedURI": "http://data.europa.eu/m8g/cccev#confidentionalityLevelType",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:317b6f326eed58180cab5920e08c496fdf7a223811e4a55950864673919a3c26",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:b117f8a7bccf13101155dc87d8a2c7f5e7a77019ce2a1b36788a2bbb938fadbf",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:2a57fb11d36b094ed26854639fa6a469a69080c91401eadd39470510246aea3d",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:513b70c38025535db2cc8092d16bc085406e8c08d88dd49a30e45da3e0686536",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:686561b431e0ee24cfebb3cef338947438c8d253d2e11923ae5dca763eee98e3",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:684c9210c940dbcdbc625dc9d7538d21ced9c7573e9abc4103423d78dd65e03a",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:f6fc5a8e11407c783ccba83f04cd0e59ee278c1095efa64c7588cb9805b8b07e",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:bfdaf93ec4e79c0be8a13f9965f6204667a3c4e9aca5357df2e1666dde2dc45f",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:747107ad6074854d13d3abc77e829be656552e8cebb296973fb8ec651ffac9bd",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     }
   ]

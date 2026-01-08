@@ -2,23 +2,25 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:34.150Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-lokale-economie-ap.jsonld#L9107)".
+2026-01-08T13:02:43.215Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-lokale-economie-ap.jsonld#L9843)".
 
-2025-11-12T20:04:34.152Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-lokale-economie-ap.jsonld#L9118)".
+2026-01-08T13:02:43.217Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-lokale-economie-ap.jsonld#L9854)".
 
-2025-11-12T20:04:34.152Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-lokale-economie-ap.jsonld#L9129)".
+2026-01-08T13:02:43.218Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-lokale-economie-ap.jsonld#L9865)".
 
-2025-11-12T20:04:34.153Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-lokale-economie-ap.jsonld#L9151)".
+2026-01-08T13:02:43.219Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-lokale-economie-ap.jsonld#L9887)".
 
-2025-11-12T20:04:34.153Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-lokale-economie-ap.jsonld#L9162)".
+2026-01-08T13:02:43.219Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-lokale-economie-ap.jsonld#L9898)".
 
-2025-11-12T20:04:34.153Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-lokale-economie-ap.jsonld#L9173)".
+2026-01-08T13:02:43.220Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-lokale-economie-ap.jsonld#L9909)".
 
-2025-11-12T20:04:34.154Z warn: Unable to find the description for subject "urn:oslo-toolchain:474230892".
+2026-01-08T13:02:43.220Z warn: Unable to find the description for subject "urn:oslo-toolchain:474230892".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:e4e20e2ff48d61a2837fc071303f90ce48efec236f590c1809eec77289f742cc".
+2026-01-08T13:02:43.306Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8984)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
+Error: Unable to find a label for the domain "urn:oslo-toolchain:41606a73ee77f1a70d17fe06204ad584ba23dfa1bcba4c3b6b168faa75360a57" of subject "[urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8984)".
+
+    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:122:23)
 
     at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
 
@@ -32,23 +34,25 @@ Error: Unable to find the assigned URI for range "urn:oslo-toolchain:e4e20e2ff48
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:35.080Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-lokale-economie-ap.jsonld#L9107)".
+2026-01-08T13:02:44.401Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-lokale-economie-ap.jsonld#L9843)".
 
-2025-11-12T20:04:35.082Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-lokale-economie-ap.jsonld#L9118)".
+2026-01-08T13:02:44.404Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-lokale-economie-ap.jsonld#L9854)".
 
-2025-11-12T20:04:35.082Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-lokale-economie-ap.jsonld#L9129)".
+2026-01-08T13:02:44.404Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-lokale-economie-ap.jsonld#L9865)".
 
-2025-11-12T20:04:35.083Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-lokale-economie-ap.jsonld#L9151)".
+2026-01-08T13:02:44.405Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-lokale-economie-ap.jsonld#L9887)".
 
-2025-11-12T20:04:35.084Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-lokale-economie-ap.jsonld#L9162)".
+2026-01-08T13:02:44.405Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-lokale-economie-ap.jsonld#L9898)".
 
-2025-11-12T20:04:35.084Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-lokale-economie-ap.jsonld#L9173)".
+2026-01-08T13:02:44.405Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-lokale-economie-ap.jsonld#L9909)".
 
-2025-11-12T20:04:35.085Z warn: Unable to find the description for subject "urn:oslo-toolchain:474230892".
+2026-01-08T13:02:44.405Z warn: Unable to find the description for subject "urn:oslo-toolchain:474230892".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:e4e20e2ff48d61a2837fc071303f90ce48efec236f590c1809eec77289f742cc".
+2026-01-08T13:02:44.443Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8984)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
+Error: Unable to find a label for the domain "urn:oslo-toolchain:41606a73ee77f1a70d17fe06204ad584ba23dfa1bcba4c3b6b168faa75360a57" of subject "[urn:oslo-toolchain:fe16b29b9162806c85c64b07b5f518074da9a305af76904540eb8f65c792b8e5](all-lokale-economie-ap.jsonld#L8984)".
+
+    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:122:23)
 
     at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
 

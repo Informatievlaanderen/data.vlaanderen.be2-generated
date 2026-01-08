@@ -2,55 +2,55 @@
 
 #||# -------------------------------------  
 
-2026-01-08T10:40:11.538Z warn: Unable to find the description for subject "[urn:oslo-toolchain:76753a71f341c452ce35cb47bf31c39dca7ff9fa2ecade0c254e6799d772ba00](all-mobiliteit-intelligente-toegang.jsonld#L307)".
+2026-01-08T13:02:50.919Z warn: Unable to find the description for subject "[urn:oslo-toolchain:76753a71f341c452ce35cb47bf31c39dca7ff9fa2ecade0c254e6799d772ba00](all-mobiliteit-intelligente-toegang.jsonld#L307)".
 
-2026-01-08T10:40:11.542Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c220e4e6d3920d738680c6d1f99dfebbcf80279add36e16f1bc9760e242bbc78](all-mobiliteit-intelligente-toegang.jsonld#L445)".
+2026-01-08T13:02:50.921Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c220e4e6d3920d738680c6d1f99dfebbcf80279add36e16f1bc9760e242bbc78](all-mobiliteit-intelligente-toegang.jsonld#L445)".
 
-2026-01-08T10:40:11.543Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fb784d93436846e42439d66985466855293ec36ec736ab143eeef23ae45d3fb8](all-mobiliteit-intelligente-toegang.jsonld#L647)".
+2026-01-08T13:02:50.922Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fb784d93436846e42439d66985466855293ec36ec736ab143eeef23ae45d3fb8](all-mobiliteit-intelligente-toegang.jsonld#L647)".
 
-2026-01-08T10:40:11.543Z warn: Unable to find the description for subject "[urn:oslo-toolchain:31a20e5348dd617b7f3456ea78c8ebf6d9517e97bbba9998ade71d79b6a3f263](all-mobiliteit-intelligente-toegang.jsonld#L713)".
+2026-01-08T13:02:50.922Z warn: Unable to find the description for subject "[urn:oslo-toolchain:31a20e5348dd617b7f3456ea78c8ebf6d9517e97bbba9998ade71d79b6a3f263](all-mobiliteit-intelligente-toegang.jsonld#L713)".
 
-2026-01-08T10:40:11.544Z warn: Unable to find the description for subject "[urn:oslo-toolchain:11db0c10cb061a55a35d95f61b42dcdf5fe133bdae705a03a3ec3689d0e1c2eb](all-mobiliteit-intelligente-toegang.jsonld#L772)".
+2026-01-08T13:02:50.923Z warn: Unable to find the description for subject "[urn:oslo-toolchain:11db0c10cb061a55a35d95f61b42dcdf5fe133bdae705a03a3ec3689d0e1c2eb](all-mobiliteit-intelligente-toegang.jsonld#L772)".
 
-2026-01-08T10:40:11.544Z warn: Unable to find the description for subject "[urn:oslo-toolchain:bf5fd8f5000dd58ffc1d63c0ed5eb8de3fe755601167c646b88d05a10b60f63e](all-mobiliteit-intelligente-toegang.jsonld#L790)".
+2026-01-08T13:02:50.923Z warn: Unable to find the description for subject "[urn:oslo-toolchain:bf5fd8f5000dd58ffc1d63c0ed5eb8de3fe755601167c646b88d05a10b60f63e](all-mobiliteit-intelligente-toegang.jsonld#L790)".
 
-2026-01-08T10:40:11.544Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cca1940b98e9eeb2fe36922c023a5cc791b0a0ea5384e3eefae328fcf4760e2a](all-mobiliteit-intelligente-toegang.jsonld#L808)".
+2026-01-08T13:02:50.923Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cca1940b98e9eeb2fe36922c023a5cc791b0a0ea5384e3eefae328fcf4760e2a](all-mobiliteit-intelligente-toegang.jsonld#L808)".
 
-2026-01-08T10:40:11.545Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8b640bb4527f0074e62f795b30351fbfa41a0eac8b3dcee52767b65fa2accb5e](all-mobiliteit-intelligente-toegang.jsonld#L826)".
+2026-01-08T13:02:50.923Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8b640bb4527f0074e62f795b30351fbfa41a0eac8b3dcee52767b65fa2accb5e](all-mobiliteit-intelligente-toegang.jsonld#L826)".
 
-2026-01-08T10:40:11.545Z warn: Unable to find the description for subject "[urn:oslo-toolchain:6a2263ed8138860e8bff3edbb99210046e6e03025e3d42c2345d9617c99f81f4](all-mobiliteit-intelligente-toegang.jsonld#L850)".
+2026-01-08T13:02:50.923Z warn: Unable to find the description for subject "[urn:oslo-toolchain:6a2263ed8138860e8bff3edbb99210046e6e03025e3d42c2345d9617c99f81f4](all-mobiliteit-intelligente-toegang.jsonld#L850)".
 
-2026-01-08T10:40:11.545Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-mobiliteit-intelligente-toegang.jsonld#L3895)".
+2026-01-08T13:02:50.923Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-mobiliteit-intelligente-toegang.jsonld#L3895)".
 
-2026-01-08T10:40:11.545Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mobiliteit-intelligente-toegang.jsonld#L3917)".
+2026-01-08T13:02:50.924Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mobiliteit-intelligente-toegang.jsonld#L3917)".
 
-2026-01-08T10:40:11.546Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
+2026-01-08T13:02:50.924Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2026-01-08T10:40:12.517Z warn: Unable to find the description for subject "[urn:oslo-toolchain:76753a71f341c452ce35cb47bf31c39dca7ff9fa2ecade0c254e6799d772ba00](all-mobiliteit-intelligente-toegang.jsonld#L307)".
+2026-01-08T13:02:51.814Z warn: Unable to find the description for subject "[urn:oslo-toolchain:76753a71f341c452ce35cb47bf31c39dca7ff9fa2ecade0c254e6799d772ba00](all-mobiliteit-intelligente-toegang.jsonld#L307)".
 
-2026-01-08T10:40:12.519Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cca1940b98e9eeb2fe36922c023a5cc791b0a0ea5384e3eefae328fcf4760e2a](all-mobiliteit-intelligente-toegang.jsonld#L808)".
+2026-01-08T13:02:51.816Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cca1940b98e9eeb2fe36922c023a5cc791b0a0ea5384e3eefae328fcf4760e2a](all-mobiliteit-intelligente-toegang.jsonld#L808)".
 
-2026-01-08T10:40:12.519Z warn: Unable to find the description for subject "[urn:oslo-toolchain:31a20e5348dd617b7f3456ea78c8ebf6d9517e97bbba9998ade71d79b6a3f263](all-mobiliteit-intelligente-toegang.jsonld#L713)".
+2026-01-08T13:02:51.817Z warn: Unable to find the description for subject "[urn:oslo-toolchain:31a20e5348dd617b7f3456ea78c8ebf6d9517e97bbba9998ade71d79b6a3f263](all-mobiliteit-intelligente-toegang.jsonld#L713)".
 
-2026-01-08T10:40:12.520Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c220e4e6d3920d738680c6d1f99dfebbcf80279add36e16f1bc9760e242bbc78](all-mobiliteit-intelligente-toegang.jsonld#L445)".
+2026-01-08T13:02:51.818Z warn: Unable to find the description for subject "[urn:oslo-toolchain:c220e4e6d3920d738680c6d1f99dfebbcf80279add36e16f1bc9760e242bbc78](all-mobiliteit-intelligente-toegang.jsonld#L445)".
 
-2026-01-08T10:40:12.520Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8b640bb4527f0074e62f795b30351fbfa41a0eac8b3dcee52767b65fa2accb5e](all-mobiliteit-intelligente-toegang.jsonld#L826)".
+2026-01-08T13:02:51.818Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8b640bb4527f0074e62f795b30351fbfa41a0eac8b3dcee52767b65fa2accb5e](all-mobiliteit-intelligente-toegang.jsonld#L826)".
 
-2026-01-08T10:40:12.520Z warn: Unable to find the description for subject "[urn:oslo-toolchain:11db0c10cb061a55a35d95f61b42dcdf5fe133bdae705a03a3ec3689d0e1c2eb](all-mobiliteit-intelligente-toegang.jsonld#L772)".
+2026-01-08T13:02:51.819Z warn: Unable to find the description for subject "[urn:oslo-toolchain:11db0c10cb061a55a35d95f61b42dcdf5fe133bdae705a03a3ec3689d0e1c2eb](all-mobiliteit-intelligente-toegang.jsonld#L772)".
 
-2026-01-08T10:40:12.520Z warn: Unable to find the description for subject "[urn:oslo-toolchain:6a2263ed8138860e8bff3edbb99210046e6e03025e3d42c2345d9617c99f81f4](all-mobiliteit-intelligente-toegang.jsonld#L850)".
+2026-01-08T13:02:51.819Z warn: Unable to find the description for subject "[urn:oslo-toolchain:6a2263ed8138860e8bff3edbb99210046e6e03025e3d42c2345d9617c99f81f4](all-mobiliteit-intelligente-toegang.jsonld#L850)".
 
-2026-01-08T10:40:12.521Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fb784d93436846e42439d66985466855293ec36ec736ab143eeef23ae45d3fb8](all-mobiliteit-intelligente-toegang.jsonld#L647)".
+2026-01-08T13:02:51.819Z warn: Unable to find the description for subject "[urn:oslo-toolchain:fb784d93436846e42439d66985466855293ec36ec736ab143eeef23ae45d3fb8](all-mobiliteit-intelligente-toegang.jsonld#L647)".
 
-2026-01-08T10:40:12.521Z warn: Unable to find the description for subject "[urn:oslo-toolchain:bf5fd8f5000dd58ffc1d63c0ed5eb8de3fe755601167c646b88d05a10b60f63e](all-mobiliteit-intelligente-toegang.jsonld#L790)".
+2026-01-08T13:02:51.819Z warn: Unable to find the description for subject "[urn:oslo-toolchain:bf5fd8f5000dd58ffc1d63c0ed5eb8de3fe755601167c646b88d05a10b60f63e](all-mobiliteit-intelligente-toegang.jsonld#L790)".
 
-2026-01-08T10:40:12.521Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-mobiliteit-intelligente-toegang.jsonld#L3895)".
+2026-01-08T13:02:51.820Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-mobiliteit-intelligente-toegang.jsonld#L3895)".
 
-2026-01-08T10:40:12.521Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mobiliteit-intelligente-toegang.jsonld#L3917)".
+2026-01-08T13:02:51.820Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mobiliteit-intelligente-toegang.jsonld#L3917)".
 
-2026-01-08T10:40:12.522Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
+2026-01-08T13:02:51.820Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
 

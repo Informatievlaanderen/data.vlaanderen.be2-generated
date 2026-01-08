@@ -2,63 +2,63 @@
 
 #||# -------------------------------------  
 
-2026-01-08T10:40:28.930Z info: Loaded 47 URI prefixes into whitelist
+2026-01-08T13:03:40.560Z info: Loaded 47 URI prefixes into whitelist
 
-2026-01-08T10:40:29.114Z warn: Labels must only contain alphabetical characters: 'toegekendDoor(String)' for subject: [urn:oslo-toolchain:cdc8c1b011e4b92be9973c15f4b8ae34ca7451547d172aec49ffe4819e0d32a6](all-KVS-R1.jsonld#L686)
+2026-01-08T13:03:40.718Z warn: Labels must only contain alphabetical characters: 'toegekendDoor(String)' for subject: [urn:oslo-toolchain:cdc8c1b011e4b92be9973c15f4b8ae34ca7451547d172aec49ffe4819e0d32a6](all-KVS-R1.jsonld#L686)
 
-2026-01-08T10:40:29.118Z error: Found missing class or attribute (Trajectstatustype): [urn:oslo-toolchain:4db51d4f5cd45406fa19cae2259d2b2163164bdff8637e20a5685005a96d460e](all-KVS-R1.jsonld#L3400)
+2026-01-08T13:03:40.723Z error: Found missing class or attribute (Trajectstatustype): [urn:oslo-toolchain:4db51d4f5cd45406fa19cae2259d2b2163164bdff8637e20a5685005a96d460e](all-KVS-R1.jsonld#L3400)
 
-2026-01-08T10:40:29.118Z error: Found missing class or attribute (Participatietype): [urn:oslo-toolchain:5be6177bce6b88114c9ed6e09320229ccdf93133001c1c8f9eb0cd04bdfebdca](all-KVS-R1.jsonld#L3434)
+2026-01-08T13:03:40.723Z error: Found missing class or attribute (Participatietype): [urn:oslo-toolchain:5be6177bce6b88114c9ed6e09320229ccdf93133001c1c8f9eb0cd04bdfebdca](all-KVS-R1.jsonld#L3434)
 
-2026-01-08T10:40:29.119Z error: Found missing class or attribute (OrganisatieType): [urn:oslo-toolchain:6eea722400788e63c8a9e735dd45cd3a3aba5fc3eabc7f75e68e9c4f400517d9](all-KVS-R1.jsonld#L3445)
+2026-01-08T13:03:40.723Z error: Found missing class or attribute (OrganisatieType): [urn:oslo-toolchain:6eea722400788e63c8a9e735dd45cd3a3aba5fc3eabc7f75e68e9c4f400517d9](all-KVS-R1.jsonld#L3445)
 
-2026-01-08T10:40:29.119Z error: Found missing class or attribute (FinaliteitType): [urn:oslo-toolchain:b523137ecece376293a77e902cf280b7f20d87c633447a75afcd6048bc418234](all-KVS-R1.jsonld#L3456)
+2026-01-08T13:03:40.723Z error: Found missing class or attribute (FinaliteitType): [urn:oslo-toolchain:b523137ecece376293a77e902cf280b7f20d87c633447a75afcd6048bc418234](all-KVS-R1.jsonld#L3456)
 
-2026-01-08T10:40:29.119Z error: Found missing class or attribute (PubliekeDienstverleningtype): [urn:oslo-toolchain:dccc82bfd432bb7d73011f80a546e00a86bf81c42db8b5258b0b99b617d9497e](all-KVS-R1.jsonld#L3467)
+2026-01-08T13:03:40.723Z error: Found missing class or attribute (PubliekeDienstverleningtype): [urn:oslo-toolchain:dccc82bfd432bb7d73011f80a546e00a86bf81c42db8b5258b0b99b617d9497e](all-KVS-R1.jsonld#L3467)
 
-2026-01-08T10:40:29.119Z error: Found missing class or attribute (Deeltrajecttype): [urn:oslo-toolchain:93f328af990ada84707cd3cb5d2f36d2920c466070d0035919e48c3a05f46ed1](all-KVS-R1.jsonld#L3478)
+2026-01-08T13:03:40.723Z error: Found missing class or attribute (Deeltrajecttype): [urn:oslo-toolchain:93f328af990ada84707cd3cb5d2f36d2920c466070d0035919e48c3a05f46ed1](all-KVS-R1.jsonld#L3478)
 
-2026-01-08T10:40:29.119Z error: Found missing class or attribute (Voorkeurtype): [urn:oslo-toolchain:292572e4e6129b3818b0232961d3932cc3cf6139821dc028e940644ce5393f34](all-KVS-R1.jsonld#L3489)
+2026-01-08T13:03:40.723Z error: Found missing class or attribute (Voorkeurtype): [urn:oslo-toolchain:292572e4e6129b3818b0232961d3932cc3cf6139821dc028e940644ce5393f34](all-KVS-R1.jsonld#L3489)
 
-2026-01-08T10:40:29.119Z info: Validation successful! All assigned URIs are whitelisted.
+2026-01-08T13:03:40.724Z info: Validation successful! All assigned URIs are whitelisted.
 
-2026-01-08T10:40:29.119Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
+2026-01-08T13:03:40.724Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
 
-2026-01-08T10:40:29.119Z info: Validation found 1 labels with spelling mistakes.
+2026-01-08T13:03:40.724Z info: Validation found 1 labels with spelling mistakes.
 
-2026-01-08T10:40:29.119Z info: Validation successful! All base URIs seem to be valid.
+2026-01-08T13:03:40.724Z info: Validation successful! All base URIs seem to be valid.
 
-2026-01-08T10:40:29.119Z info: Validation found 7 missing referenced classes or attributes.
+2026-01-08T13:03:40.724Z info: Validation found 7 missing referenced classes or attributes.
 
 #||# oslo-jsonld-validator   
 
 #||# -------------------------------------  
 
-2026-01-08T10:40:29.614Z info: Loaded 47 URI prefixes into whitelist
+2026-01-08T13:03:41.147Z info: Loaded 47 URI prefixes into whitelist
 
-2026-01-08T10:40:29.786Z warn: Labels must only contain alphabetical characters: 'toegekendDoor(String)' for subject: [urn:oslo-toolchain:cdc8c1b011e4b92be9973c15f4b8ae34ca7451547d172aec49ffe4819e0d32a6](all-KVS-R1.jsonld#L686)
+2026-01-08T13:03:41.286Z warn: Labels must only contain alphabetical characters: 'toegekendDoor(String)' for subject: [urn:oslo-toolchain:cdc8c1b011e4b92be9973c15f4b8ae34ca7451547d172aec49ffe4819e0d32a6](all-KVS-R1.jsonld#L686)
 
-2026-01-08T10:40:29.793Z error: Found missing class or attribute (Trajectstatustype): [urn:oslo-toolchain:4db51d4f5cd45406fa19cae2259d2b2163164bdff8637e20a5685005a96d460e](all-KVS-R1.jsonld#L3400)
+2026-01-08T13:03:41.290Z error: Found missing class or attribute (Trajectstatustype): [urn:oslo-toolchain:4db51d4f5cd45406fa19cae2259d2b2163164bdff8637e20a5685005a96d460e](all-KVS-R1.jsonld#L3400)
 
-2026-01-08T10:40:29.794Z error: Found missing class or attribute (Participatietype): [urn:oslo-toolchain:5be6177bce6b88114c9ed6e09320229ccdf93133001c1c8f9eb0cd04bdfebdca](all-KVS-R1.jsonld#L3434)
+2026-01-08T13:03:41.290Z error: Found missing class or attribute (Participatietype): [urn:oslo-toolchain:5be6177bce6b88114c9ed6e09320229ccdf93133001c1c8f9eb0cd04bdfebdca](all-KVS-R1.jsonld#L3434)
 
-2026-01-08T10:40:29.794Z error: Found missing class or attribute (OrganisatieType): [urn:oslo-toolchain:6eea722400788e63c8a9e735dd45cd3a3aba5fc3eabc7f75e68e9c4f400517d9](all-KVS-R1.jsonld#L3445)
+2026-01-08T13:03:41.290Z error: Found missing class or attribute (OrganisatieType): [urn:oslo-toolchain:6eea722400788e63c8a9e735dd45cd3a3aba5fc3eabc7f75e68e9c4f400517d9](all-KVS-R1.jsonld#L3445)
 
-2026-01-08T10:40:29.794Z error: Found missing class or attribute (FinaliteitType): [urn:oslo-toolchain:b523137ecece376293a77e902cf280b7f20d87c633447a75afcd6048bc418234](all-KVS-R1.jsonld#L3456)
+2026-01-08T13:03:41.290Z error: Found missing class or attribute (FinaliteitType): [urn:oslo-toolchain:b523137ecece376293a77e902cf280b7f20d87c633447a75afcd6048bc418234](all-KVS-R1.jsonld#L3456)
 
-2026-01-08T10:40:29.794Z error: Found missing class or attribute (PubliekeDienstverleningtype): [urn:oslo-toolchain:dccc82bfd432bb7d73011f80a546e00a86bf81c42db8b5258b0b99b617d9497e](all-KVS-R1.jsonld#L3467)
+2026-01-08T13:03:41.290Z error: Found missing class or attribute (PubliekeDienstverleningtype): [urn:oslo-toolchain:dccc82bfd432bb7d73011f80a546e00a86bf81c42db8b5258b0b99b617d9497e](all-KVS-R1.jsonld#L3467)
 
-2026-01-08T10:40:29.794Z error: Found missing class or attribute (Deeltrajecttype): [urn:oslo-toolchain:93f328af990ada84707cd3cb5d2f36d2920c466070d0035919e48c3a05f46ed1](all-KVS-R1.jsonld#L3478)
+2026-01-08T13:03:41.291Z error: Found missing class or attribute (Deeltrajecttype): [urn:oslo-toolchain:93f328af990ada84707cd3cb5d2f36d2920c466070d0035919e48c3a05f46ed1](all-KVS-R1.jsonld#L3478)
 
-2026-01-08T10:40:29.795Z error: Found missing class or attribute (Voorkeurtype): [urn:oslo-toolchain:292572e4e6129b3818b0232961d3932cc3cf6139821dc028e940644ce5393f34](all-KVS-R1.jsonld#L3489)
+2026-01-08T13:03:41.291Z error: Found missing class or attribute (Voorkeurtype): [urn:oslo-toolchain:292572e4e6129b3818b0232961d3932cc3cf6139821dc028e940644ce5393f34](all-KVS-R1.jsonld#L3489)
 
-2026-01-08T10:40:29.795Z info: Validation successful! All assigned URIs are whitelisted.
+2026-01-08T13:03:41.291Z info: Validation successful! All assigned URIs are whitelisted.
 
-2026-01-08T10:40:29.795Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
+2026-01-08T13:03:41.291Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
 
-2026-01-08T10:40:29.795Z info: Validation found 1 labels with spelling mistakes.
+2026-01-08T13:03:41.291Z info: Validation found 1 labels with spelling mistakes.
 
-2026-01-08T10:40:29.795Z info: Validation successful! All base URIs seem to be valid.
+2026-01-08T13:03:41.291Z info: Validation successful! All base URIs seem to be valid.
 
-2026-01-08T10:40:29.795Z info: Validation found 7 missing referenced classes or attributes.
+2026-01-08T13:03:41.291Z info: Validation found 7 missing referenced classes or attributes.
 

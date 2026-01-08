@@ -2,183 +2,133 @@
 
 #||# -------------------------------------
 
-2025-11-12T19:49:53.308Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mandaat:Mandataris:isTijdelijkVervangenDoor)
+2026-01-08T12:48:42.436Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mandaat:Mandataris:isTijdelijkVervangenDoor)
 
-2025-11-12T19:49:53.310Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+2026-01-08T12:48:42.438Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-11-12T19:49:53.310Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
+2026-01-08T12:48:42.438Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
 
-2025-11-12T19:49:53.310Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
+2026-01-08T12:48:42.438Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
 
-2025-11-12T19:49:53.310Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Organisatie:Organisatie:(Organisatie -> Agent))
+2026-01-08T12:48:42.438Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Organisatie:Organisatie:(Organisatie -> Agent))
 
-2025-11-12T19:49:53.310Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Generiek:Agent:isLidVan)
+2026-01-08T12:48:42.438Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Generiek:Agent:isLidVan)
 
-2025-11-12T19:49:53.310Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Generiek:Agent:isHoofdVan)
+2026-01-08T12:48:42.438Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Generiek:Agent:isHoofdVan)
 
-2025-11-12T19:49:53.310Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Generiek:FormeelKader:isGerelateerdAan)
+2026-01-08T12:48:42.438Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Generiek:FormeelKader:isGerelateerdAan)
 
-2025-11-12T19:49:53.311Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
+2026-01-08T12:48:42.438Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
 
-2025-11-12T19:49:53.311Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Persoon:Persoon:(Persoon -> Object))
+2026-01-08T12:48:42.439Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Persoon:Persoon:(Persoon -> Object))
 
-2025-11-12T19:49:53.311Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2026-01-08T12:48:42.439Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-11-12T19:49:53.311Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Generiek:Agent:isLidVan)
+2026-01-08T12:48:42.439Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Generiek:Agent:isLidVan)
 
-2025-11-12T19:49:53.311Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Generiek:Agent:rapporteertAan)
+2026-01-08T12:48:42.439Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-11-12T19:49:53.315Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleMetVerwijzing:(VariabeleMetVerwijzing -> Variabele) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.441Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleMetVerwijzing:(VariabeleMetVerwijzing -> Variabele) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.315Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleMetWaarde:(VariabeleMetWaarde -> Variabele) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.442Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleMetWaarde:(VariabeleMetWaarde -> Variabele) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.316Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleInstantie:(VariabeleInstantie -> Verkeersteken) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.442Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleInstantie:(VariabeleInstantie -> Verkeersteken) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.316Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeerstekenconcept:(Verkeerstekenconcept -> Vorm) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.442Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeerstekenconcept:(Verkeerstekenconcept -> Vorm) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.317Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleInstantie:(VariabeleInstantie -> Variabele) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.443Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleInstantie:(VariabeleInstantie -> Variabele) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.317Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleInstantieMetWaarde:(VariabeleInstantieMetWaarde -> VariabeleInstantie) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.443Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleInstantieMetWaarde:(VariabeleInstantieMetWaarde -> VariabeleInstantie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.317Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeerstekenconcept:(Verkeerstekenconcept -> Vorm) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.443Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeerstekenconcept:(Verkeerstekenconcept -> Vorm) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.317Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleInstantieMetVerwijzing:(VariabeleInstantieMetVerwijzing -> VariabeleInstantie) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.443Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleInstantieMetVerwijzing:(VariabeleInstantieMetVerwijzing -> VariabeleInstantie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.317Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:SignalisatieOntwerp:(SignalisatieOntwerp -> Agent) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.443Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:SignalisatieOntwerp:(SignalisatieOntwerp -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.318Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:OntwerpVerkeersteken:(OntwerpVerkeersteken -> Verkeersteken) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.443Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:OntwerpVerkeersteken:(OntwerpVerkeersteken -> Verkeersteken) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.318Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Mobiliteitsmaatregel:(Mobiliteitsmaatregel -> Rechtsgrondonderdeel) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.443Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Mobiliteitsmaatregel:(Mobiliteitsmaatregel -> Rechtsgrondonderdeel) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.318Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Mobiliteitsmaatregel:(Mobiliteitsmaatregel -> Verkeersteken) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.444Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Mobiliteitsmaatregel:(Mobiliteitsmaatregel -> Verkeersteken) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.318Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VerkeersbordVerkeersteken:(VerkeersbordVerkeersteken -> VerkeersbordVerkeersteken) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.444Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VerkeersbordVerkeersteken:(VerkeersbordVerkeersteken -> VerkeersbordVerkeersteken) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.319Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VerkeersbordVerkeersteken:(VerkeersbordVerkeersteken -> Verkeersteken) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.444Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VerkeersbordVerkeersteken:(VerkeersbordVerkeersteken -> Verkeersteken) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.319Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VerkeersbordVerkeersteken:(VerkeersbordVerkeersteken -> Verkeersbordconcept) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.444Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VerkeersbordVerkeersteken:(VerkeersbordVerkeersteken -> Verkeersbordconcept) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.319Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleMetLocatie:(VariabeleMetLocatie -> Variabele) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.444Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleMetLocatie:(VariabeleMetLocatie -> Variabele) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.319Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:MaatregelVerkeerstekenLijstItem:(MaatregelVerkeerstekenLijstItem -> Verkeerstekenconcept) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.444Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:MaatregelVerkeerstekenLijstItem:(MaatregelVerkeerstekenLijstItem -> Verkeerstekenconcept) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.319Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Mobiliteitsmaatregelconcept:(Mobiliteitsmaatregelconcept -> MaatregelVerkeerstekenLijstItem) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.444Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Mobiliteitsmaatregelconcept:(Mobiliteitsmaatregelconcept -> MaatregelVerkeerstekenLijstItem) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.319Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleInstantieMetLocatie:(VariabeleInstantieMetLocatie -> VariabeleInstantie) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.444Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleInstantieMetLocatie:(VariabeleInstantieMetLocatie -> VariabeleInstantie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.319Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Besluit:AanvullendReglement:(AanvullendReglement -> Besluit) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.444Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Besluit:AanvullendReglement:(AanvullendReglement -> Besluit) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.319Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Besluit:Artikel:(Artikel -> Mobiliteitsmaatregel) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.444Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Besluit:Artikel:(Artikel -> Mobiliteitsmaatregel) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.320Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Besluit:Artikel:(Artikel -> Besluit) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.444Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Besluit:Artikel:(Artikel -> Besluit) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.320Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Besluit:TijdelijkReglement:(TijdelijkReglement -> AanvullendReglement) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.444Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Besluit:TijdelijkReglement:(TijdelijkReglement -> AanvullendReglement) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.320Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:AanvullendReglementOntwerp:(AanvullendReglementOntwerp -> AanvullendReglement) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:AanvullendReglementOntwerp:(AanvullendReglementOntwerp -> AanvullendReglement) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.320Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeerstekenconcept:(Verkeerstekenconcept -> Verkeerstekenconcept) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeerstekenconcept:(Verkeerstekenconcept -> Verkeerstekenconcept) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.320Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeersbordconcept:(Verkeersbordconcept -> Verkeerstekenconcept) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeersbordconcept:(Verkeersbordconcept -> Verkeerstekenconcept) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.320Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeersbordconcept:(Verkeersbordconcept -> Verkeersbordconcept) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeersbordconcept:(Verkeersbordconcept -> Verkeersbordconcept) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.320Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Wegmarkeringconcept:(Wegmarkeringconcept -> Verkeerstekenconcept) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Wegmarkeringconcept:(Wegmarkeringconcept -> Verkeerstekenconcept) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.320Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeerslichtconcept:(Verkeerslichtconcept -> Verkeerstekenconcept) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeerslichtconcept:(Verkeerslichtconcept -> Verkeerstekenconcept) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.320Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeerstekenconcept:(Verkeerstekenconcept -> Mobiliteitsmaatregelconcept) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeerstekenconcept:(Verkeerstekenconcept -> Mobiliteitsmaatregelconcept) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.321Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:WegmarkeringVerkeersteken:(WegmarkeringVerkeersteken -> Verkeersteken) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:WegmarkeringVerkeersteken:(WegmarkeringVerkeersteken -> Verkeersteken) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.321Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VerkeerslichtVerkeersteken:(VerkeerslichtVerkeersteken -> Verkeersteken) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VerkeerslichtVerkeersteken:(VerkeerslichtVerkeersteken -> Verkeersteken) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.321Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:WegmarkeringVerkeersteken:(WegmarkeringVerkeersteken -> Wegmarkeringconcept) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:WegmarkeringVerkeersteken:(WegmarkeringVerkeersteken -> Wegmarkeringconcept) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.321Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VerkeerslichtVerkeersteken:(VerkeerslichtVerkeersteken -> Verkeerslichtconcept) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VerkeerslichtVerkeersteken:(VerkeerslichtVerkeersteken -> Verkeerslichtconcept) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.321Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Concept:(Concept -> Codelijst) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Concept:(Concept -> Codelijst) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.321Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Pictogram:(Pictogram -> Concept) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Pictogram:(Pictogram -> Concept) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.321Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:SignalisatieOntwerp:(SignalisatieOntwerp -> AanvullendReglementOntwerp) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:SignalisatieOntwerp:(SignalisatieOntwerp -> AanvullendReglementOntwerp) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.321Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:HeeftOntwerp:(HeeftOntwerp -> AWV-Implementatieelement:RelatieObject) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeerstekenconcept:(Verkeerstekenconcept -> Variabele) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.321Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeerstekenconcept:(Verkeerstekenconcept -> Variabele) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.445Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:MobiliteitsmaatregelOntwerp:(MobiliteitsmaatregelOntwerp -> Mobiliteitsmaatregelconcept) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.321Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:MobiliteitsmaatregelOntwerp:(MobiliteitsmaatregelOntwerp -> Mobiliteitsmaatregelconcept) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.446Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:MobiliteitsmaatregelOntwerp:(MobiliteitsmaatregelOntwerp -> Verkeersteken) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.321Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:MobiliteitsmaatregelOntwerp:(MobiliteitsmaatregelOntwerp -> Verkeersteken) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.446Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeersteken:(Verkeersteken -> Verkeersteken) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.321Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeersteken:(Verkeersteken -> Verkeersteken) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.446Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:OntwerpVerkeersteken:(OntwerpVerkeersteken -> AanvullendReglementOntwerp) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.321Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:OntwerpVerkeersteken:(OntwerpVerkeersteken -> AanvullendReglementOntwerp) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.446Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:AanvullendReglementOntwerp:(AanvullendReglementOntwerp -> MobiliteitsmaatregelOntwerp) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.322Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:AanvullendReglementOntwerp:(AanvullendReglementOntwerp -> MobiliteitsmaatregelOntwerp) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.446Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:SignalisatieOntwerp:(SignalisatieOntwerp -> OntwerpVerkeersteken) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:49:53.322Z info: Connector Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:SignalisatieOntwerp:(SignalisatieOntwerp -> OntwerpVerkeersteken) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:48:42.447Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:49:53.323Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:48:42.447Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:Hulppakket). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:49:53.324Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:Hulppakket). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:48:42.452Z warn: [ConnectorConverterHandler]: Connector (bevatVerkeersteken) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:49:53.331Z warn: [ConnectorConverterHandler]: Connector (OntwerpVerkeersteken.HeeftOntwerp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:48:42.458Z warn: [ConverterHandler]: Entity with path Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:BevatVerkeersteken has already a value for ap-definition-nl in language nl, but will be overwritten.
 
-2025-11-12T19:49:53.331Z warn: [ConnectorConverterHandler]: Connector (OntwerpVerkeersteken.HeeftOntwerp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:48:42.469Z warn: [ConverterHandler]: Entity with path Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Mobiliteitsmaatregelconcept:template has already a value for definition-nl in language nl, but will be overwritten.
 
-2025-11-12T19:49:53.331Z warn: [ConnectorConverterHandler]: Connector (SignalisatieOntwerp.HeeftBetrokkene) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:48:42.510Z warn: [ConverterHandler]: Entity with path isGebaseerdOp has an empty value for tag ap-definition-nl.
 
-2025-11-12T19:49:53.331Z warn: [ConnectorConverterHandler]: Connector (SignalisatieOntwerp.HeeftBetrokkene) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-11-12T19:49:53.331Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (SignalisatieOntwerp.HeeftBetrokkene) and the fallback URI (http://todo.com/) will be assigned.
-
-2025-11-12T19:49:53.331Z warn: [ConnectorConverterHandler]: Connector (SignalisatieOntwerp.BevatVerkeersteken) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-11-12T19:49:53.331Z warn: [ConnectorConverterHandler]: Connector (SignalisatieOntwerp.BevatVerkeersteken) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-11-12T19:49:53.331Z warn: [ConnectorConverterHandler]: Connector (AanvullendReglementOntwerp.BevatMaatregelOntwerp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-11-12T19:49:53.331Z warn: [ConnectorConverterHandler]: Connector (AanvullendReglementOntwerp.BevatMaatregelOntwerp) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-11-12T19:49:53.331Z warn: [ConnectorConverterHandler]: Connector (bevatVerkeersteken) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-11-12T19:49:53.333Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Wegcode) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-11-12T19:49:53.333Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:MaatregelontwerpStatus) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-11-12T19:49:53.333Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:SignalisatieOntwerpStatus) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-11-12T19:49:53.333Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VerkeerstekenOntwerpStatus) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-11-12T19:49:53.333Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:BesluitType) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-11-12T19:49:53.333Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VariabeleType) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-11-12T19:49:53.333Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VerkeerstekenconceptStatus) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-11-12T19:49:53.333Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Zonaliteit) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-11-12T19:49:53.333Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Verkeersbordcategorie) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-11-12T19:49:53.333Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:TypeGrootheid) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-11-12T19:49:53.333Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:CodelijstType) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-11-12T19:49:53.333Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:Standaardeenheid) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-11-12T19:49:53.333Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VormType) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-11-12T19:49:53.333Z info: [ElementConverterHandler]: Ignoring SKOS Concept element (Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:VerkeerstekenStatus) with URI http://www.w3.org/2004/02/skos/core#Concept
-
-2025-11-12T19:49:53.336Z warn: [ConverterHandler]: Incorrect status found for Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:AanvullendReglementOntwerp. The status will be ignored.
-
-2025-11-12T19:49:53.341Z warn: [ConverterHandler]: Incorrect status found for Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:MaatregelVerkeerstekenLijstItem. The status will be ignored.
-
-2025-11-12T19:49:53.341Z warn: [ConverterHandler]: Entity with path Model:OSLO²_applicatieprofiel_Mobiliteit_besluit_mobiliteit:OSLO-Mobiliteit:BevatVerkeersteken has already a value for ap-definition-nl in language nl, but will be overwritten.
-
-2025-11-12T19:49:53.378Z warn: [ConverterHandler]: Entity with path isGebaseerdOp has an empty value for tag ap-definition-nl.
-
-2025-11-12T19:49:53.380Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (heeftOntwerp).
+2026-01-08T12:48:42.511Z warn: [ConnectorConverterHandler]: Unable to determine cardinality for connector (heeftOntwerp).
 
 #||# -------------------------------------
 

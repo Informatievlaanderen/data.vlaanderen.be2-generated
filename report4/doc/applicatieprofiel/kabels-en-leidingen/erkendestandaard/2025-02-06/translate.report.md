@@ -44,6 +44,14 @@ https://vocab.belgif.be/ns/utility-services#Duct
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://vocab.belgif.be/ns/utility-services#UtilityLink
 
 new term introduced, no translation found
@@ -52,7 +60,23 @@ https://vocab.belgif.be/ns/utility-services#UtilityLinkSequence
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 http://def.isotc211.org/iso19157/2013/DataQuality_2#DQ_PositionalAccuracy
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -65,6 +89,10 @@ https://vocab.belgif.be/ns/utility-services#UtilityNetwork
 new term introduced, no translation found
 
 https://vocab.belgif.be/ns/utility-services#UtilityNodeContainer
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -112,11 +140,19 @@ https://vocab.belgif.be/ns/utility-services#Cabinet
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://vocab.belgif.be/ns/network#GenericLink
 
 new term introduced, no translation found
 
 http://purl.org/dc/terms/Agent
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -128,7 +164,43 @@ https://vocab.belgif.be/ns/generic#Function
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 http://www.w3.org/ns/prov#Entity
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -136,7 +208,23 @@ https://vocab.belgif.be/ns/utility-services#TopographicalElement
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://vocab.belgif.be/ns/utility-services#CableAndPipeContainer
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -148,7 +236,19 @@ https://vocab.belgif.be/ns/address#Adress
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 http://def.isotc211.org/iso19103/2015/MeasureTypes#UnitOfMeasure
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -164,7 +264,15 @@ https://vocab.belgif.be/ns/utility-services#ProtectedArea
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://vocab.belgif.be/ns/utility-services#Dimension
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -252,6 +360,14 @@ https://vocab.belgif.be/ns/utility-services#Duct
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://vocab.belgif.be/ns/utility-services#UtilityLink
 
 new term introduced, no translation found
@@ -260,7 +376,23 @@ https://vocab.belgif.be/ns/utility-services#UtilityLinkSequence
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 http://def.isotc211.org/iso19157/2013/DataQuality_2#DQ_PositionalAccuracy
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -273,6 +405,10 @@ https://vocab.belgif.be/ns/utility-services#UtilityNetwork
 new term introduced, no translation found
 
 https://vocab.belgif.be/ns/utility-services#UtilityNodeContainer
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -320,11 +456,19 @@ https://vocab.belgif.be/ns/utility-services#Cabinet
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://vocab.belgif.be/ns/network#GenericLink
 
 new term introduced, no translation found
 
 http://purl.org/dc/terms/Agent
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -336,7 +480,43 @@ https://vocab.belgif.be/ns/generic#Function
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 http://www.w3.org/ns/prov#Entity
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -344,7 +524,23 @@ https://vocab.belgif.be/ns/utility-services#TopographicalElement
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://vocab.belgif.be/ns/utility-services#CableAndPipeContainer
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -356,7 +552,19 @@ https://vocab.belgif.be/ns/address#Adress
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 http://def.isotc211.org/iso19103/2015/MeasureTypes#UnitOfMeasure
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 
@@ -372,7 +580,15 @@ https://vocab.belgif.be/ns/utility-services#ProtectedArea
 
 new term introduced, no translation found
 
+http://www.w3.org/2004/02/skos/core#Concept
+
+new term introduced, no translation found
+
 https://vocab.belgif.be/ns/utility-services#Dimension
+
+new term introduced, no translation found
+
+http://www.w3.org/2004/02/skos/core#Concept
 
 new term introduced, no translation found
 

@@ -2,25 +2,25 @@
 
 #||# -------------------------------------
 
-2025-11-12T19:50:21.175Z warn: Unable to find the contributor type for "Barbara Van Gogh" using column "Dienst". Please make sure this column has a value set for this person.
+2026-01-08T12:49:08.700Z warn: Unable to find the contributor type for "Barbara Van Gogh" using column "Dienst". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:21.178Z warn: Unable to find the contributor type for "Goedele Van der Spiegel" using column "Dienst". Please make sure this column has a value set for this person.
+2026-01-08T12:49:08.702Z warn: Unable to find the contributor type for "Goedele Van der Spiegel" using column "Dienst". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:21.178Z warn: Unable to find the contributor type for "Guy Rammant" using column "Dienst". Please make sure this column has a value set for this person.
+2026-01-08T12:49:08.702Z warn: Unable to find the contributor type for "Guy Rammant" using column "Dienst". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:21.179Z warn: Unable to find the contributor type for "Jasmin De Rijcker" using column "Dienst". Please make sure this column has a value set for this person.
+2026-01-08T12:49:08.703Z warn: Unable to find the contributor type for "Jasmin De Rijcker" using column "Dienst". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:21.179Z warn: Unable to find the contributor type for "Jens Scheerlinck" using column "Dienst". Please make sure this column has a value set for this person.
+2026-01-08T12:49:08.703Z warn: Unable to find the contributor type for "Jens Scheerlinck" using column "Dienst". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:21.179Z warn: Unable to find the contributor type for "Joost De Weghe" using column "Dienst". Please make sure this column has a value set for this person.
+2026-01-08T12:49:08.703Z warn: Unable to find the contributor type for "Joost De Weghe" using column "Dienst". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:21.179Z warn: Unable to find the contributor type for "Katrien Mostaert" using column "Dienst". Please make sure this column has a value set for this person.
+2026-01-08T12:49:08.703Z warn: Unable to find the contributor type for "Katrien Mostaert" using column "Dienst". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:21.180Z warn: Unable to find the contributor type for "Michiel De Keyzer" using column "Dienst". Please make sure this column has a value set for this person.
+2026-01-08T12:49:08.704Z warn: Unable to find the contributor type for "Michiel De Keyzer" using column "Dienst". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:21.180Z warn: Unable to find the contributor type for "Niko Tanghe" using column "Dienst". Please make sure this column has a value set for this person.
+2026-01-08T12:49:08.704Z warn: Unable to find the contributor type for "Niko Tanghe" using column "Dienst". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:21.180Z warn: Unable to find the contributor type for "Nikolaos Loutas" using column "Dienst". Please make sure this column has a value set for this person.
+2026-01-08T12:49:08.704Z warn: Unable to find the contributor type for "Nikolaos Loutas" using column "Dienst". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:21.180Z warn: Unable to find the contributor type for "Toon Timbermont" using column "Dienst". Please make sure this column has a value set for this person.
+2026-01-08T12:49:08.704Z warn: Unable to find the contributor type for "Toon Timbermont" using column "Dienst". Please make sure this column has a value set for this person.
 

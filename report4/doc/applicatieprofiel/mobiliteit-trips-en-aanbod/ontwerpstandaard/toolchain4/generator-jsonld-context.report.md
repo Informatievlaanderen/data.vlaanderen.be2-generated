@@ -2,209 +2,107 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:51.850Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:5ca6d2bbf9ed39c29e824c4372ea065c3865db3f5166bf19e488c514d8182e09.
-
-2025-11-12T20:04:51.852Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:88333ae5108aab47c3cea77644437af1633d9bd1b83a9a275435331642388b07.
-
-2025-11-12T20:04:51.852Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:cb11fab7c90c983fe18b7f2415e110b4173855648a0e93ea06a1d33e7712722b.
-
-2025-11-12T20:04:51.853Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:a19c600651dc14cd08c03415bb9ec62e9bebe0ff2dd61f69736adaff44250037.
-
-2025-11-12T20:04:51.854Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:cf310c5faabe231f639d0ef1b664875c1098f7cba987348e42e1a1f77d561dac.
-
-2025-11-12T20:04:51.854Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:adb3a4f9f4d1490b96f0f4ec7807cc6417cc3e39ceafc1683d8251c0338a3d40.
-
-2025-11-12T20:04:51.854Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:139e390c4682b6e932ac79aae15ec29eee29f310d0e123941e49951dcb7b874c.
-
-2025-11-12T20:04:51.854Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:3d69992c21ff16cc19a4828c63e4161454373b4739f8795390f049eed17ddbdc.
-
-2025-11-12T20:04:51.854Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:fd6c61e720c543eeab1d7a89dbc71c77bc49acd2d0946de09706300d8a47ae31.
-
-2025-11-12T20:04:51.855Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:34026df587dad93275bfec56232e4911f305b38c9295ee63a82efe913339d873.
-
-2025-11-12T20:04:51.856Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:30901ba686962061df38f8c65387c4103f8ca38dbdc4a4f6a9f7f25c2c7d9235.
-
-2025-11-12T20:04:51.856Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:1cbaa5a12dd4cd558bacaaba95093ee55e5fca4dcf0e0435bfc6077efe35a928.
-
-2025-11-12T20:04:51.857Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:5620d54b4d1688927eaedb40e233af83c0157c08438e40ca43ea4317ed06654b.
-
-2025-11-12T20:04:51.857Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:cf310c5faabe231f639d0ef1b664875c1098f7cba987348e42e1a1f77d561dac.
-
-2025-11-12T20:04:51.858Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:99163fe7d2c672837cf4ae515184b2c3a37a3a37f8ac50d7e670336e03dde6c5.
-
-2025-11-12T20:04:51.858Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:89e83b4e6e93b3d6bfbe3578b065a4b16723727ad72f3a8c97fec4cc8a397161.
-
-2025-11-12T20:04:51.859Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:cb11fab7c90c983fe18b7f2415e110b4173855648a0e93ea06a1d33e7712722b.
-
-2025-11-12T20:04:51.860Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:cb11fab7c90c983fe18b7f2415e110b4173855648a0e93ea06a1d33e7712722b.
-
-2025-11-12T20:04:51.860Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:9890a27c67a9de9cc7f5a5d59b9e802d0a68d39a53d22bee1ed9d586264db9f8.
-
-2025-11-12T20:04:51.860Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:37fea324f765ae241ffe9eeeb3a7b435d2af29372b4951e6776c6152aaad6db5.
-
-2025-11-12T20:04:51.861Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:5c32b61285937ed839de6c294e0659f37e411896a2c2cf14159dbbc4d1353347.
-
-2025-11-12T20:04:51.861Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:5c32b61285937ed839de6c294e0659f37e411896a2c2cf14159dbbc4d1353347.
-
-2025-11-12T20:04:51.861Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:5c32b61285937ed839de6c294e0659f37e411896a2c2cf14159dbbc4d1353347.
-
-2025-11-12T20:04:51.862Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:2d59ab3ec6a13c62bbe4a158b703564935c79aed817e7c402bd585668b2f7b64.
-
-2025-11-12T20:04:51.862Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:cb11fab7c90c983fe18b7f2415e110b4173855648a0e93ea06a1d33e7712722b.
-
-2025-11-12T20:04:51.862Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:5c32b61285937ed839de6c294e0659f37e411896a2c2cf14159dbbc4d1353347.
-
 #||# oslo-jsonld-context-generator for language en  
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:52.756Z error: Found [urn:oslo-toolchain:b19fba0d90aa3b3e92fb2773e88dc525a9d2bb981ce15122ca820232d0f16b1d](all-mobiliteit-trips-en-aanbod-ap.jsonld#L333) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.870Z error: Found [urn:oslo-toolchain:b19fba0d90aa3b3e92fb2773e88dc525a9d2bb981ce15122ca820232d0f16b1d](all-mobiliteit-trips-en-aanbod-ap.jsonld#L374) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.758Z error: Found [urn:oslo-toolchain:2b82250c1c38cc6412b33ae4288f68eea977cd80f86406a2771b08d02faf4c12](all-mobiliteit-trips-en-aanbod-ap.jsonld#L156) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.871Z error: Found [urn:oslo-toolchain:2b82250c1c38cc6412b33ae4288f68eea977cd80f86406a2771b08d02faf4c12](all-mobiliteit-trips-en-aanbod-ap.jsonld#L172) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.758Z error: Found [urn:oslo-toolchain:bd9ef17674bf894f041ccbf3c5516ae974e6282d9a9019ef85a124dfbdbff36c](all-mobiliteit-trips-en-aanbod-ap.jsonld#L132) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.871Z error: Found [urn:oslo-toolchain:bd9ef17674bf894f041ccbf3c5516ae974e6282d9a9019ef85a124dfbdbff36c](all-mobiliteit-trips-en-aanbod-ap.jsonld#L148) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.758Z error: Found [urn:oslo-toolchain:5f68ab512bc99156d03cfe9197683b48901517ed400b5b382c6140fa8bf4fb44](all-mobiliteit-trips-en-aanbod-ap.jsonld#L214) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.872Z error: Found [urn:oslo-toolchain:5f68ab512bc99156d03cfe9197683b48901517ed400b5b382c6140fa8bf4fb44](all-mobiliteit-trips-en-aanbod-ap.jsonld#L230) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.758Z error: Found [[urn:oslo-toolchain:38580b7bab806a421f29e4ae7227d6f417e4670b4c4b4eaa628730efc2c75e67](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7838)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L546) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.872Z error: Found [[urn:oslo-toolchain:38580b7bab806a421f29e4ae7227d6f417e4670b4c4b4eaa628730efc2c75e67](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8229)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L712) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.758Z error: Found [urn:oslo-toolchain:e370ede61cc886c3c21a02db8c124138cd093431b953f2176aadeb1cb4705edf](all-mobiliteit-trips-en-aanbod-ap.jsonld#L487) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.872Z error: Found [urn:oslo-toolchain:e370ede61cc886c3c21a02db8c124138cd093431b953f2176aadeb1cb4705edf](all-mobiliteit-trips-en-aanbod-ap.jsonld#L628) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.759Z error: Found [urn:oslo-toolchain:220002e153a9dad806206750e87f915a435d74b029aba3baf00332f3e0b95013](all-mobiliteit-trips-en-aanbod-ap.jsonld#L733) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.872Z error: Found [urn:oslo-toolchain:220002e153a9dad806206750e87f915a435d74b029aba3baf00332f3e0b95013](all-mobiliteit-trips-en-aanbod-ap.jsonld#L949) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.759Z error: Found [urn:oslo-toolchain:49aad29400f7023e0542036b59652169ac30051ef3b70a5b7b579354f3002e40](all-mobiliteit-trips-en-aanbod-ap.jsonld#L244) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.872Z error: Found [urn:oslo-toolchain:49aad29400f7023e0542036b59652169ac30051ef3b70a5b7b579354f3002e40](all-mobiliteit-trips-en-aanbod-ap.jsonld#L260) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.759Z error: Found [urn:oslo-toolchain:3f2f8ace091c994c982b989fc54330e07fc5fd175b339a58e973cedd55238951](all-mobiliteit-trips-en-aanbod-ap.jsonld#L823) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.872Z error: Found [urn:oslo-toolchain:3f2f8ace091c994c982b989fc54330e07fc5fd175b339a58e973cedd55238951](all-mobiliteit-trips-en-aanbod-ap.jsonld#L1114) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.759Z error: Found [urn:oslo-toolchain:21630a217bc8b812197afba677598a2774a9f6ba7e02ece5b1c25164716ce738](all-mobiliteit-trips-en-aanbod-ap.jsonld#L793) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.872Z error: Found [urn:oslo-toolchain:21630a217bc8b812197afba677598a2774a9f6ba7e02ece5b1c25164716ce738](all-mobiliteit-trips-en-aanbod-ap.jsonld#L1084) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.759Z error: Found [[urn:oslo-toolchain:93899c9c81a0cff1853628fed6ea94f028fe13c492066d0532a41566179870de](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7774)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L387) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.872Z error: Found [[urn:oslo-toolchain:93899c9c81a0cff1853628fed6ea94f028fe13c492066d0532a41566179870de](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8165)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L478) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.759Z error: Found [urn:oslo-toolchain:06968dd2236806558bf19878734c04e13b6adbb1f658e806c0a3abeffd0e91d4](all-mobiliteit-trips-en-aanbod-ap.jsonld#L274) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.873Z error: Found [urn:oslo-toolchain:06968dd2236806558bf19878734c04e13b6adbb1f658e806c0a3abeffd0e91d4](all-mobiliteit-trips-en-aanbod-ap.jsonld#L290) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.760Z error: Found [urn:oslo-toolchain:4c6cff27cdf914be1f2d05be93ccfea3e4d94d163e9242cc1662810df7ffc1b8](all-mobiliteit-trips-en-aanbod-ap.jsonld#L451) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.873Z error: Found [urn:oslo-toolchain:4c6cff27cdf914be1f2d05be93ccfea3e4d94d163e9242cc1662810df7ffc1b8](all-mobiliteit-trips-en-aanbod-ap.jsonld#L567) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.760Z error: Found [[urn:oslo-toolchain:94313052c39f34175a8c5cc80c14db10743aa9f711c4017b489ed9d5588633a3](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7952)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L674) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.873Z error: Found [[urn:oslo-toolchain:94313052c39f34175a8c5cc80c14db10743aa9f711c4017b489ed9d5588633a3](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8343)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L890) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.760Z error: Found [urn:oslo-toolchain:3415a30c312fe3895a2bf416035e3500429cef190e50d70c10077764cbd3722e](all-mobiliteit-trips-en-aanbod-ap.jsonld#L909) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.873Z error: Found [urn:oslo-toolchain:3415a30c312fe3895a2bf416035e3500429cef190e50d70c10077764cbd3722e](all-mobiliteit-trips-en-aanbod-ap.jsonld#L1326) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.760Z error: Found [urn:oslo-toolchain:39b4c0572330043d7591e22ffb3993609aef0bbd475ac00ebda6f87f73bd6ca2](all-mobiliteit-trips-en-aanbod-ap.jsonld#L304) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.873Z error: Found [urn:oslo-toolchain:5ca6d2bbf9ed39c29e824c4372ea065c3865db3f5166bf19e488c514d8182e09](all-mobiliteit-trips-en-aanbod-ap.jsonld#L603) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.760Z error: Found [[urn:oslo-toolchain:837f080e006430fdf67b20b25557bf34a4d8395ee7b65ee89cfe6284b8355410](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7811)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L517) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.873Z error: Found [urn:oslo-toolchain:39b4c0572330043d7591e22ffb3993609aef0bbd475ac00ebda6f87f73bd6ca2](all-mobiliteit-trips-en-aanbod-ap.jsonld#L320) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.760Z error: Found [urn:oslo-toolchain:8ccb1cb4148e181c40b039fe9455483eef6c953f59814374d38cead26bea527b](all-mobiliteit-trips-en-aanbod-ap.jsonld#L363) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.874Z error: Found [[urn:oslo-toolchain:837f080e006430fdf67b20b25557bf34a4d8395ee7b65ee89cfe6284b8355410](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8202)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L683) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.760Z error: Found [[urn:oslo-toolchain:68cb7a3dc288ecf1ad5da413e2f242b22f1391675234bd04534b1e5b1f46ca41](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7956)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L877) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.874Z error: Found [urn:oslo-toolchain:8ccb1cb4148e181c40b039fe9455483eef6c953f59814374d38cead26bea527b](all-mobiliteit-trips-en-aanbod-ap.jsonld#L454) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.760Z error: Found [[urn:oslo-toolchain:8e02e9e2deb97afcc40c8926a238ccf512a8616692c792c410cd153039e76f59](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7919)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L639) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.874Z error: Found [[urn:oslo-toolchain:68cb7a3dc288ecf1ad5da413e2f242b22f1391675234bd04534b1e5b1f46ca41](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8347)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L1218) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.761Z error: Found [urn:oslo-toolchain:2a550f026b9f5f3332d0c6ccc1f78e91fcd7497bec9cf5359833ef012e90ba40](all-mobiliteit-trips-en-aanbod-ap.jsonld#L703) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.874Z error: Found [[urn:oslo-toolchain:8e02e9e2deb97afcc40c8926a238ccf512a8616692c792c410cd153039e76f59](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8310)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L805) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.761Z error: Found [urn:oslo-toolchain:be3ea7c344a446897be6472368836b108fa41247df13e810d613eed590a403d2](all-mobiliteit-trips-en-aanbod-ap.jsonld#L763) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.874Z error: Found [urn:oslo-toolchain:2a550f026b9f5f3332d0c6ccc1f78e91fcd7497bec9cf5359833ef012e90ba40](all-mobiliteit-trips-en-aanbod-ap.jsonld#L919) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.761Z error: Found [[urn:oslo-toolchain:ebec0201d52eeaee98c92c6031d89b77ada3215714b44f77f2112327cfaf4a15](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7747)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L185) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.875Z error: Found [urn:oslo-toolchain:be3ea7c344a446897be6472368836b108fa41247df13e810d613eed590a403d2](all-mobiliteit-trips-en-aanbod-ap.jsonld#L1004) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.761Z error: Found [urn:oslo-toolchain:df7b5e0a4090b70335927127a9233250fd5f849ad188be259f081b3e520803a8](all-mobiliteit-trips-en-aanbod-ap.jsonld#L853) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.875Z error: Found [[urn:oslo-toolchain:ebec0201d52eeaee98c92c6031d89b77ada3215714b44f77f2112327cfaf4a15](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8138)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L201) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.761Z error: Found [[urn:oslo-toolchain:471a8c240503e05ad9533eebdd16deb4ed532c2ff20a2ff1cac8196dc12d0703](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7865)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L575) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.875Z error: Found [urn:oslo-toolchain:df7b5e0a4090b70335927127a9233250fd5f849ad188be259f081b3e520803a8](all-mobiliteit-trips-en-aanbod-ap.jsonld#L1144) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.761Z error: Found [[urn:oslo-toolchain:a61c5d95e66bb6ce7cb62bbfbcf932fbbd6aca40ab0592169af6784a43ea338c](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7892)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L607) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.875Z error: Found [[urn:oslo-toolchain:471a8c240503e05ad9533eebdd16deb4ed532c2ff20a2ff1cac8196dc12d0703](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8256)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L741) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.761Z error: Found [[urn:oslo-toolchain:308ff7e7cb12715faed45ae3054e4260790d62145e6c1bba0ba0973bb743eade](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7807)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L422) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.875Z error: Found [[urn:oslo-toolchain:a61c5d95e66bb6ce7cb62bbfbcf932fbbd6aca40ab0592169af6784a43ea338c](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8283)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L773) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.763Z error: Found [urn:oslo-toolchain:f4f929b95cd4be45f7f51c36cd520d98de61980a34c66cb137ccef97289a5088](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7551) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.875Z error: Found [[urn:oslo-toolchain:308ff7e7cb12715faed45ae3054e4260790d62145e6c1bba0ba0973bb743eade](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8198)](all-mobiliteit-trips-en-aanbod-ap.jsonld#L513) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.763Z error: Found [urn:oslo-toolchain:a4d45d0f699a73658be6530b6de102d2fcf3c987e23aff00c6a1e76e2e328dcc](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7098) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.877Z error: Found [urn:oslo-toolchain:f4f929b95cd4be45f7f51c36cd520d98de61980a34c66cb137ccef97289a5088](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7942) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.763Z error: Found [urn:oslo-toolchain:faf0e2dfdac0bccb919287921af350dacf96ca84cd114347076568cfc1019035](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7491) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.877Z error: Found [urn:oslo-toolchain:a4d45d0f699a73658be6530b6de102d2fcf3c987e23aff00c6a1e76e2e328dcc](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7489) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.763Z error: Found [urn:oslo-toolchain:a70b4bc0a370241da5316b6f13a1f9d42a5e9c5f78205029e782dafe04a6ad92](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7152) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.877Z error: Found [urn:oslo-toolchain:faf0e2dfdac0bccb919287921af350dacf96ca84cd114347076568cfc1019035](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7882) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.763Z error: Found [urn:oslo-toolchain:d1e68a17f387626977ff89a5c9aec41a6e4e44b550e2cf12529ec5fc9e8bb531](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7377) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.877Z error: Found [urn:oslo-toolchain:a70b4bc0a370241da5316b6f13a1f9d42a5e9c5f78205029e782dafe04a6ad92](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7543) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.763Z error: Found [urn:oslo-toolchain:eba06e58428bb4ba0dc4e1cb8401f21538b71e70deeae9b67287e0df154486d8](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7014) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.877Z error: Found [urn:oslo-toolchain:d1e68a17f387626977ff89a5c9aec41a6e4e44b550e2cf12529ec5fc9e8bb531](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7768) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.763Z error: Found [urn:oslo-toolchain:2b110cf685c7c1bf85f7e152ae117064abda41fb48faa724e2d574e8cff132a9](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7044) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.877Z error: Found [urn:oslo-toolchain:eba06e58428bb4ba0dc4e1cb8401f21538b71e70deeae9b67287e0df154486d8](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7405) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.764Z error: Found [urn:oslo-toolchain:3f0b4105662d756ff04b9892149e1f59fabac3db25682f73c8e110715b6e91df](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7677) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.877Z error: Found [urn:oslo-toolchain:2b110cf685c7c1bf85f7e152ae117064abda41fb48faa724e2d574e8cff132a9](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7435) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.764Z error: Found [urn:oslo-toolchain:3d52583fb3a7e4c593104efef987eb2e8c69246f0317312d5c18ca452662d76c](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7311) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.877Z error: Found [urn:oslo-toolchain:3f0b4105662d756ff04b9892149e1f59fabac3db25682f73c8e110715b6e91df](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8068) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.764Z error: Found [urn:oslo-toolchain:cf7c1a6f049f89da9aa5e6ca98ea590ee25bfe83e8463a7b08e10f6012620b56](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7074) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.878Z error: Found [urn:oslo-toolchain:3d52583fb3a7e4c593104efef987eb2e8c69246f0317312d5c18ca452662d76c](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7702) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.764Z error: Found [urn:oslo-toolchain:7834971565f275e9b3c812a6a02e612120efb12c62b7afeb3c836fae42666098](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7128) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.878Z error: Found [urn:oslo-toolchain:cf7c1a6f049f89da9aa5e6ca98ea590ee25bfe83e8463a7b08e10f6012620b56](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7465) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.764Z error: Found [urn:oslo-toolchain:76b36b48283e352ce3daf59375dd4a0f8ea851285b90376f27c340aa3efb642a](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7182) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.878Z error: Found [urn:oslo-toolchain:7834971565f275e9b3c812a6a02e612120efb12c62b7afeb3c836fae42666098](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7519) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.764Z error: Found [urn:oslo-toolchain:b1b7f07c30723cfcd82c353c0dfabafc3d7d8a6d8363e0800e85e51571d699cb](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7347) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.878Z error: Found [urn:oslo-toolchain:76b36b48283e352ce3daf59375dd4a0f8ea851285b90376f27c340aa3efb642a](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7573) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.764Z error: Found [urn:oslo-toolchain:a8ebfab743a5ccaf880a7cba5b9aaf8926587c67eb7464dbf53eecfd396e7014](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7407) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.878Z error: Found [urn:oslo-toolchain:b1b7f07c30723cfcd82c353c0dfabafc3d7d8a6d8363e0800e85e51571d699cb](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7738) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.764Z error: Found [urn:oslo-toolchain:9b0880629b93bcf2372bc1480412bf6e16f0996a175294bcf608542cc1de7116](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7437) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.878Z error: Found [urn:oslo-toolchain:a8ebfab743a5ccaf880a7cba5b9aaf8926587c67eb7464dbf53eecfd396e7014](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7798) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.764Z error: Found [urn:oslo-toolchain:c4943454cd51863dd148283126151f8f9df43319dc30f88e4279e41451c2e909](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7252) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.878Z error: Found [urn:oslo-toolchain:9b0880629b93bcf2372bc1480412bf6e16f0996a175294bcf608542cc1de7116](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7828) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.764Z error: Found [urn:oslo-toolchain:c8eab1534513ff82d0bcd233b39a447a2f2196e7493e64b5310e6a6cacd94855](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7647) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.878Z error: Found [urn:oslo-toolchain:c4943454cd51863dd148283126151f8f9df43319dc30f88e4279e41451c2e909](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7643) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.764Z error: Found [urn:oslo-toolchain:19ff6d2383843f9d91f003dcb43814955d306caf740c226abf9be0f023a416e6](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7467) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.878Z error: Found [urn:oslo-toolchain:c8eab1534513ff82d0bcd233b39a447a2f2196e7493e64b5310e6a6cacd94855](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8038) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.764Z error: Found [urn:oslo-toolchain:09b02f0c4d5690746fcf51e4c28e167e1f5a3d0acd6a682584c3a0a7de1b88e4](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7521) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.878Z error: Found [urn:oslo-toolchain:19ff6d2383843f9d91f003dcb43814955d306caf740c226abf9be0f023a416e6](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7858) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.765Z error: Found [urn:oslo-toolchain:9be422eb592f0ed6365996a53e1a9a9eb17cf68029d110be41ba471ca2721360](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7217) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.878Z error: Found [urn:oslo-toolchain:09b02f0c4d5690746fcf51e4c28e167e1f5a3d0acd6a682584c3a0a7de1b88e4](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7912) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.765Z error: Found [urn:oslo-toolchain:beae772f5df6aba3a307762af9f0976f21cd6c49330f9f14afaa00c3e05c119f](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7617) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.878Z error: Found [urn:oslo-toolchain:9be422eb592f0ed6365996a53e1a9a9eb17cf68029d110be41ba471ca2721360](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7608) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.765Z error: Found [urn:oslo-toolchain:08deb7563f03cce154e6e08730827ab77712f5e64b08b66701d1cd9ce214f46d](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7581) in duplicates, meaning "Enter your translation here" is used multiple times as label.
+2026-01-08T13:02:35.879Z error: Found [urn:oslo-toolchain:beae772f5df6aba3a307762af9f0976f21cd6c49330f9f14afaa00c3e05c119f](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8008) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 
-2025-11-12T20:04:52.775Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:5ca6d2bbf9ed39c29e824c4372ea065c3865db3f5166bf19e488c514d8182e09.
-
-2025-11-12T20:04:52.775Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:88333ae5108aab47c3cea77644437af1633d9bd1b83a9a275435331642388b07.
-
-2025-11-12T20:04:52.775Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:cb11fab7c90c983fe18b7f2415e110b4173855648a0e93ea06a1d33e7712722b.
-
-2025-11-12T20:04:52.775Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:a19c600651dc14cd08c03415bb9ec62e9bebe0ff2dd61f69736adaff44250037.
-
-2025-11-12T20:04:52.776Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:cf310c5faabe231f639d0ef1b664875c1098f7cba987348e42e1a1f77d561dac.
-
-2025-11-12T20:04:52.776Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:adb3a4f9f4d1490b96f0f4ec7807cc6417cc3e39ceafc1683d8251c0338a3d40.
-
-2025-11-12T20:04:52.776Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:139e390c4682b6e932ac79aae15ec29eee29f310d0e123941e49951dcb7b874c.
-
-2025-11-12T20:04:52.776Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:3d69992c21ff16cc19a4828c63e4161454373b4739f8795390f049eed17ddbdc.
-
-2025-11-12T20:04:52.776Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:fd6c61e720c543eeab1d7a89dbc71c77bc49acd2d0946de09706300d8a47ae31.
-
-2025-11-12T20:04:52.777Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:34026df587dad93275bfec56232e4911f305b38c9295ee63a82efe913339d873.
-
-2025-11-12T20:04:52.777Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:30901ba686962061df38f8c65387c4103f8ca38dbdc4a4f6a9f7f25c2c7d9235.
-
-2025-11-12T20:04:52.777Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:1cbaa5a12dd4cd558bacaaba95093ee55e5fca4dcf0e0435bfc6077efe35a928.
-
-2025-11-12T20:04:52.777Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:5620d54b4d1688927eaedb40e233af83c0157c08438e40ca43ea4317ed06654b.
-
-2025-11-12T20:04:52.778Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:cf310c5faabe231f639d0ef1b664875c1098f7cba987348e42e1a1f77d561dac.
-
-2025-11-12T20:04:52.778Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:99163fe7d2c672837cf4ae515184b2c3a37a3a37f8ac50d7e670336e03dde6c5.
-
-2025-11-12T20:04:52.778Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:89e83b4e6e93b3d6bfbe3578b065a4b16723727ad72f3a8c97fec4cc8a397161.
-
-2025-11-12T20:04:52.779Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:cb11fab7c90c983fe18b7f2415e110b4173855648a0e93ea06a1d33e7712722b.
-
-2025-11-12T20:04:52.779Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:cb11fab7c90c983fe18b7f2415e110b4173855648a0e93ea06a1d33e7712722b.
-
-2025-11-12T20:04:52.780Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:9890a27c67a9de9cc7f5a5d59b9e802d0a68d39a53d22bee1ed9d586264db9f8.
-
-2025-11-12T20:04:52.780Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:37fea324f765ae241ffe9eeeb3a7b435d2af29372b4951e6776c6152aaad6db5.
-
-2025-11-12T20:04:52.780Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:5c32b61285937ed839de6c294e0659f37e411896a2c2cf14159dbbc4d1353347.
-
-2025-11-12T20:04:52.780Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:5c32b61285937ed839de6c294e0659f37e411896a2c2cf14159dbbc4d1353347.
-
-2025-11-12T20:04:52.780Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:5c32b61285937ed839de6c294e0659f37e411896a2c2cf14159dbbc4d1353347.
-
-2025-11-12T20:04:52.781Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:2d59ab3ec6a13c62bbe4a158b703564935c79aed817e7c402bd585668b2f7b64.
-
-2025-11-12T20:04:52.781Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:cb11fab7c90c983fe18b7f2415e110b4173855648a0e93ea06a1d33e7712722b.
-
-2025-11-12T20:04:52.781Z error: Unable to find the assigned URI of range with id urn:oslo-toolchain:5c32b61285937ed839de6c294e0659f37e411896a2c2cf14159dbbc4d1353347.
+2026-01-08T13:02:35.879Z error: Found [urn:oslo-toolchain:08deb7563f03cce154e6e08730827ab77712f5e64b08b66701d1cd9ce214f46d](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7972) in duplicates, meaning "Enter your translation here" is used multiple times as label.
 

@@ -58,7 +58,6 @@
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#DatetimeShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#DurationShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#BeschikbaarheidShape>,
-    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#GetypeerdeStringShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#GeometrieShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#GeografischeNaamShape>,
     <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#KwantitatieveWaardeShape>,
@@ -138,10 +137,10 @@
     <http://purl.org/vocab/vann/usageNote> "Syntax volgens schema.org voor openingsuren. Bv als contact kan worden opgenomen tussen 8 en 20u maandag tot zaterdag en tussen 8 en 18u op zondag wordt dit gecodeerd als Ma-za 08:00-20:00, zo 08:00-18:00."@nl;
     rdfs:comment "Uren waarop iets beschikbaar is."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Beschikbaarheid.Openingsurenstring>;
-    shacl:datatype rdfs:Literal;
     shacl:description "Uren waarop iets beschikbaar is."@nl;
     shacl:maxCount "1";
     shacl:name "openingsurenString"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path schema:openingHours
   ], [
     a shacl:PropertyShape;
@@ -232,8 +231,8 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Boeking.Reis>;
     shacl:class schemas:Trip;
     shacl:description "Reis die geboekt wordt."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "reis"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#reis>
   ], [
@@ -375,10 +374,10 @@
     <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype."@nl;
     rdfs:comment "Geometrie uitgedrukt in wkt-formaat."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Geometrie.Wkt>;
-    shacl:datatype rdfs:Literal;
     shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
     shacl:maxCount "1";
     shacl:name "wkt"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
   ], [
     a shacl:PropertyShape;
@@ -386,10 +385,10 @@
     <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype."@nl;
     rdfs:comment "Geometrie uitgedrukt in gml-formaat."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Geometrie.Gml>;
-    shacl:datatype rdfs:Literal;
     shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
     shacl:maxCount "1";
     shacl:name "gml"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path <http://www.opengis.net/ont/geosparql#asGML>
   ];
   shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
@@ -416,8 +415,8 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#GerichteLink.Link>;
     shacl:class <https://data.vlaanderen.be/ns/netwerk#Link>;
     shacl:description "Verwijzing naar de Link."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "link"@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#GerichteLink.link>
   ];
@@ -429,13 +428,6 @@
   rdfs:comment "Aanduiding van een hoeveelheid."@nl;
   shacl:closed false;
   shacl:targetClass schemas:Number .
-
-<https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#GetypeerdeStringShape> a shacl:NodeShape;
-  rdfs:label "Getypeerde String"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Bvb '20170901' als string en 'datum' als type. Laat automatische interpretatie vd string toe. Te implementeren als Literal."@nl;
-  rdfs:comment "Combinatie van een string en het type van wat de string voorstelt."@nl;
-  shacl:closed false;
-  shacl:targetClass rdfs:Literal .
 
 <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#IdentificatorShape> a shacl:NodeShape;
   rdfs:label "Identificator"@nl;
@@ -683,8 +675,8 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Mobiliteitsdienst.Aanbieder>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Aanbieder>;
     shacl:description "De aanbieder van de Mobiliteitsdienst."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "aanbieder"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#aanbieder>
   ], [
@@ -704,7 +696,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Mobiliteitsdienst.UitgevoerdDoor>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Uitvoerder>;
     shacl:description "Uitvoerder van de Mobiliteitsdienst."@nl;
-    shacl:minCount "1";
+    shacl:minCount 1;
     shacl:name "uitgevoerd door"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#uitgevoerdDoor>
   ], [
@@ -806,19 +798,10 @@
     rdfs:label "Routeknoop (source)";
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Overstap.Routeknoop(source)>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routeknoop>;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "Routeknoop (source)";
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Overstap.routeknoop.source>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "Routeknoop (target)";
-    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Overstap.Routeknoop(target)>;
-    shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routeknoop>;
-    shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "Routeknoop (target)";
-    shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Overstap.routeknoop.target>
   ], [
     a shacl:PropertyShape;
     rdfs:label "gerealiseerd op"@nl;
@@ -826,7 +809,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Overstap.GerealiseerdOp>;
     shacl:class <https://data.vlaanderen.be/ns/transportnetwerk#Transportobject>;
     shacl:description "Transportobject waarmee de Routeconnectie samenvalt."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "gerealiseerd op"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Overstap.gerealiseerdOp>
   ];
@@ -1071,7 +1054,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Reis.UitgevoerdeRoute>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Route>;
     shacl:description "Route die uiteindelijk uitgevoerd is om de Reis te realiseren."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "uitgevoerde route"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#uitgevoerdeRoute>
   ], [
@@ -1197,8 +1180,8 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Reservatie.Boeking>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Boeking>;
     shacl:description "de boeking van de reservatie."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "boeking"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Reservatie.Boeking>
   ], [
@@ -1209,8 +1192,8 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Reservatie.Resource>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Resource>;
     shacl:description "de resource die geboekt wordt door de reservatie"@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "resource"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Reservatie.Resource>
   ];
@@ -1227,10 +1210,10 @@
     <http://purl.org/vocab/vann/usageNote> "Bv nummerplaat van de huurauto, nummer vd zitplaats..."@nl;
     rdfs:comment "Identificator van de Resource."@nl;
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Resource.Identificator>;
-    shacl:datatype rdfs:Literal;
     shacl:description "Identificator van de Resource."@nl;
     shacl:maxCount "1";
     shacl:name "identificator"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#identificator>
   ], [
     a shacl:PropertyShape;
@@ -1293,7 +1276,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Resource.Dienst>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst>;
     shacl:description "Mobiliteitsdienst van de Resource."@nl;
-    shacl:minCount "1";
+    shacl:minCount 1;
     shacl:name "dienst"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#dienst>
   ];
@@ -1417,7 +1400,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Route.BestaatUit>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment>;
     shacl:description "Opeenvolging van Routesegmenten waaruit de Route bestaat."@nl;
-    shacl:minCount "1";
+    shacl:minCount 1;
     shacl:name "bestaat uit"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#bestaatUit>
   ], [
@@ -1427,7 +1410,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Route.BerekendMet>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routeplanner>;
     shacl:description "Routeplanner waarmee de Route is berekend."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "berekend met"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#berekendMet>
   ];
@@ -1472,7 +1455,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Routeknoop.Overstap>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routeknoop>;
     shacl:description "Routeknoop waarnaar wordt overgestapt."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "overstap"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#overstap>
   ], [
@@ -1482,7 +1465,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Routeknoop.GerealiseerdOp>;
     shacl:class <https://data.vlaanderen.be/ns/transportnetwerk#Transportobject>;
     shacl:description "Transportobject dat met de Routeknoop samenvalt."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "gerealiseerd op"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routeknoop.gerealiseerdOp>
   ], [
@@ -1493,7 +1476,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Routeknoop.GerealiseerdMet>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Resource>;
     shacl:description "Resource van de Mobiliteitsdienst die de reiziger heeft gebruikt in de Routeknoop."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "gerealiseerd met"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routeknoop.gerealiseerdMet>
   ], [
@@ -1504,7 +1487,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Routeknoop.GerealiseerdDoor>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst>;
     shacl:description "Mobiliteitsdienst die de Reiziger heeft gebruikt in de Routeknoop."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "gerealiseerd door"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routeknoop.gerealiseerdDoor>
   ], [
@@ -1515,7 +1498,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Routeknoop.Vervoersbewijs>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Vervoersbewijs>;
     shacl:description "Vervoersbewijs dat nodig is of gebruikt is in de Routeknoop."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "vervoersbewijs"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routeknoop.vervoersbewijs>
   ];
@@ -1613,7 +1596,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Routesegment.Vertrekknoop>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routeknoop>;
     shacl:description "Knoop waar het Routesegment begint."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "vertrekknoop"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#vertrekknoop>
   ], [
@@ -1624,7 +1607,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Routesegment.Aankomstknoop>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routeknoop>;
     shacl:description "Knoop waar het Routesegment eindigt."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "aankomstknoop"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#aankomstknoop>
   ], [
@@ -1634,7 +1617,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Routesegment.Vervoersbewijs>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Vervoersbewijs>;
     shacl:description "Vervoersbewijs waarmee het Routesegment kan worden afgelegd of is afgelegd."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "vervoersbewijs"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment.vervoersbewijs>
   ], [
@@ -1644,7 +1627,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Routesegment.GerealiseerdMet>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Resource>;
     shacl:description "Resource van de Mobiliteitsdienst die de Reiziger heeft gebruikt bij het afleggen van het Routesegment."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "gerealiseerd met"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment.gerealiseerdMet>
   ], [
@@ -1654,7 +1637,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Routesegment.GerealiseerdDoor>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst>;
     shacl:description "Mobiliteitsdienst die de Reiziger heeft gebruikt bij het afleggen van het Routesegment."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "gerealiseerd door"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Routesegment.gerealiseerdDoor>
   ], [
@@ -1664,7 +1647,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Routesegment.Uitvoerder>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Uitvoerder>;
     shacl:description "Uitvoerder van het Routesegment."@nl;
-    shacl:maxCount "1";
+    shacl:maxCount 1;
     shacl:name "uitvoerder"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#uitvoerder>
   ];
@@ -1789,7 +1772,7 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Transportconnectie.Verbindt>;
     shacl:class <https://data.vlaanderen.be/ns/transportnetwerk#Transportobject>;
     shacl:description "Transportobjecten die door deTransportconnectie verbonden zijn."@nl;
-    shacl:minCount "2";
+    shacl:minCount 2;
     shacl:name "verbindt"@nl;
     shacl:path <https://data.vlaanderen.be/ns/netwerk#verbindt>
   ];
@@ -2073,8 +2056,8 @@
     rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/ontwerpstandaard/toolchain4#Vervoersbewijs.Dienst>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst>;
     shacl:description "Mobiliteitsdienst waarvan men met het Vervoersbewijs gebruik mag maken."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
+    shacl:maxCount 1;
+    shacl:minCount 1;
     shacl:name "dienst"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Vervoersbewijs.dienst>
   ];

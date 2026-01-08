@@ -2,47 +2,47 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:48.080Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7701)".
+2026-01-08T13:03:03.148Z warn: Unable to find the description for subject "[urn:oslo-toolchain:37fea324f765ae241ffe9eeeb3a7b435d2af29372b4951e6776c6152aaad6db5](all-mobiliteit-trips-en-aanbod-ap.jsonld#L1300)".
 
-2025-11-12T20:04:48.081Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7712)".
+2026-01-08T13:03:03.150Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5c32b61285937ed839de6c294e0659f37e411896a2c2cf14159dbbc4d1353347](all-mobiliteit-trips-en-aanbod-ap.jsonld#L1313)".
 
-2025-11-12T20:04:48.082Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7723)".
+2026-01-08T13:03:03.150Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2d59ab3ec6a13c62bbe4a158b703564935c79aed817e7c402bd585668b2f7b64](all-mobiliteit-trips-en-aanbod-ap.jsonld#L1356)".
 
-2025-11-12T20:04:48.082Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
+2026-01-08T13:03:03.151Z warn: Unable to find the description for subject "[urn:oslo-toolchain:34026df587dad93275bfec56232e4911f305b38c9295ee63a82efe913339d873](all-mobiliteit-trips-en-aanbod-ap.jsonld#L1369)".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:5ca6d2bbf9ed39c29e824c4372ea065c3865db3f5166bf19e488c514d8182e09".
+2026-01-08T13:03:03.151Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8092)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
+2026-01-08T13:03:03.151Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8103)".
 
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+2026-01-08T13:03:03.152Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8114)".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
+2026-01-08T13:03:03.153Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
 
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+2026-01-08T13:03:03.200Z warn: Unable to find the description for subject "[urn:oslo-toolchain:41b3a0db6dd10537c535a75f996793967257fc089e4a1a034b296127d1c8039a](all-mobiliteit-trips-en-aanbod-ap.jsonld#L5477)".
 
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-01-08T13:03:03.203Z warn: Unable to find the description for subject "[urn:oslo-toolchain:e51ed4a9ded70c512394e08f685d2613187edfa7ea419744d5d9c46c49482dbd](all-mobiliteit-trips-en-aanbod-ap.jsonld#L5951)".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:48.929Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7701)".
+2026-01-08T13:03:04.493Z warn: Unable to find the description for subject "[urn:oslo-toolchain:34026df587dad93275bfec56232e4911f305b38c9295ee63a82efe913339d873](all-mobiliteit-trips-en-aanbod-ap.jsonld#L1369)".
 
-2025-11-12T20:04:48.931Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7712)".
+2026-01-08T13:03:04.498Z warn: Unable to find the description for subject "[urn:oslo-toolchain:37fea324f765ae241ffe9eeeb3a7b435d2af29372b4951e6776c6152aaad6db5](all-mobiliteit-trips-en-aanbod-ap.jsonld#L1300)".
 
-2025-11-12T20:04:48.931Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mobiliteit-trips-en-aanbod-ap.jsonld#L7723)".
+2026-01-08T13:03:04.499Z warn: Unable to find the description for subject "[urn:oslo-toolchain:5c32b61285937ed839de6c294e0659f37e411896a2c2cf14159dbbc4d1353347](all-mobiliteit-trips-en-aanbod-ap.jsonld#L1313)".
 
-2025-11-12T20:04:48.931Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
+2026-01-08T13:03:04.499Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2d59ab3ec6a13c62bbe4a158b703564935c79aed817e7c402bd585668b2f7b64](all-mobiliteit-trips-en-aanbod-ap.jsonld#L1356)".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:5ca6d2bbf9ed39c29e824c4372ea065c3865db3f5166bf19e488c514d8182e09".
+2026-01-08T13:03:04.499Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8092)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
+2026-01-08T13:03:04.500Z warn: Unable to find the description for subject "[urn:oslo-toolchain:10489563](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8103)".
 
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+2026-01-08T13:03:04.501Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-mobiliteit-trips-en-aanbod-ap.jsonld#L8114)".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
+2026-01-08T13:03:04.501Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
 
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
+2026-01-08T13:03:04.519Z warn: Unable to find the description for subject "[urn:oslo-toolchain:41b3a0db6dd10537c535a75f996793967257fc089e4a1a034b296127d1c8039a](all-mobiliteit-trips-en-aanbod-ap.jsonld#L5477)".
 
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-01-08T13:03:04.522Z warn: Unable to find the description for subject "[urn:oslo-toolchain:e51ed4a9ded70c512394e08f685d2613187edfa7ea419744d5d9c46c49482dbd](all-mobiliteit-trips-en-aanbod-ap.jsonld#L5951)".
 

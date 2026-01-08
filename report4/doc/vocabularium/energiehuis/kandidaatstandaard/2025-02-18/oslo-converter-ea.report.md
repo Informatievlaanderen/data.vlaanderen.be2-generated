@@ -2,123 +2,117 @@
 
 #||# -------------------------------------
 
-2025-11-12T19:54:23.238Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Generiek:Gemeente:(Gemeente -> Object))
+2026-01-08T12:52:55.957Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2025-11-12T19:54:23.240Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2026-01-08T12:52:55.958Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-11-12T19:54:23.240Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Energiehuis:Plaatsbezoek:(Plaatsbezoek -> Basistaak))
+2026-01-08T12:52:55.958Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Energiehuis:Plaatsbezoek:(Plaatsbezoek -> Basistaak))
 
-2025-11-12T19:54:23.240Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Persoon:Persoon:(Persoon -> Persoon))
+2026-01-08T12:52:55.958Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Persoon:Persoon:(Persoon -> Persoon))
 
-2025-11-12T19:54:23.242Z info: Connector Model:Model:OSLO-Energiehuis:Energiehuis:(Energiehuis -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.961Z info: Connector Model:Model:OSLO-Energiehuis:Energiehuis:(Energiehuis -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.243Z info: Connector Model:Model:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.961Z info: Connector Model:Model:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.243Z info: Connector Model:Model:OSLO-Dienst:PubliekeDienstverlening:(PubliekeDienstverlening -> Output) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.961Z info: Connector Model:Model:OSLO-Dienst:PubliekeDienstverlening:(PubliekeDienstverlening -> Output) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.243Z info: Connector Model:Model:OSLO-Dienst:PubliekeDienstverlening:(PubliekeDienstverlening -> Kanaal) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.962Z info: Connector Model:Model:OSLO-Dienst:PubliekeDienstverlening:(PubliekeDienstverlening -> Kanaal) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.244Z info: Connector Model:Model:OSLO-Dienst:PubliekeDienstverlening:(PubliekeDienstverlening -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.962Z info: Connector Model:Model:OSLO-Dienst:PubliekeDienstverlening:(PubliekeDienstverlening -> PubliekeOrganisatie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.244Z info: Connector Model:Model:OSLO-Energiehuis:WoonEnEnergieloket:(WoonEnEnergieloket -> Kanaal) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.962Z info: Connector Model:Model:OSLO-Energiehuis:WoonEnEnergieloket:(WoonEnEnergieloket -> Kanaal) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.244Z info: Connector Model:Model:OSLO-Energiehuis:Lening:(Lening -> Financieringsoutput) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.962Z info: Connector Model:Model:OSLO-Energiehuis:Lening:(Lening -> Financieringsoutput) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.245Z info: Connector Model:Model:OSLO-Energiehuis:Premie:(Premie -> Financieringsoutput) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.963Z info: Connector Model:Model:OSLO-Energiehuis:Premie:(Premie -> Financieringsoutput) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.245Z info: Connector Model:Model:OSLO-Energiehuis:Plaatsbezoek:(Plaatsbezoek -> Contact) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.963Z info: Connector Model:Model:OSLO-Energiehuis:Plaatsbezoek:(Plaatsbezoek -> Contact) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.245Z info: Connector Model:Model:OSLO-Energiehuis:InteresseOpwekking:(InteresseOpwekking -> Basistaak) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.963Z info: Connector Model:Model:OSLO-Energiehuis:InteresseOpwekking:(InteresseOpwekking -> Basistaak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.245Z info: Connector Model:Model:OSLO-Energiehuis:Informatievoorziening:(Informatievoorziening -> Basistaak) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.963Z info: Connector Model:Model:OSLO-Energiehuis:Informatievoorziening:(Informatievoorziening -> Basistaak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.245Z info: Connector Model:Model:OSLO-Energiehuis:Adviesverlening:(Adviesverlening -> Basistaak) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.963Z info: Connector Model:Model:OSLO-Energiehuis:Adviesverlening:(Adviesverlening -> Basistaak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.245Z info: Connector Model:Model:OSLO-Energiehuis:Begeleiding:(Begeleiding -> Basistaak) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.963Z info: Connector Model:Model:OSLO-Energiehuis:Begeleiding:(Begeleiding -> Basistaak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.245Z info: Connector Model:Model:OSLO-Energiehuis:Contact:(Contact -> Basistaak) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.963Z info: Connector Model:Model:OSLO-Energiehuis:Contact:(Contact -> Basistaak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.245Z info: Connector Model:Model:OSLO-Energiehuis:GeregistreerdContact:(GeregistreerdContact -> Contact) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.963Z info: Connector Model:Model:OSLO-Energiehuis:GeregistreerdContact:(GeregistreerdContact -> Contact) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.246Z info: Connector Model:Model:OSLO-Energiehuis:Basistaak:(Basistaak -> PubliekeDienstverlening) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.964Z info: Connector Model:Model:OSLO-Energiehuis:Basistaak:(Basistaak -> PubliekeDienstverlening) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.246Z info: Connector Model:Model:OSLO-Energiehuis:Financiering:(Financiering -> Basistaak) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.964Z info: Connector Model:Model:OSLO-Energiehuis:Financiering:(Financiering -> Basistaak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.246Z info: Connector Model:Model:OSLO-Energiehuis:Renovatieproject:(Renovatieproject -> Project) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.964Z info: Connector Model:Model:OSLO-Energiehuis:Renovatieproject:(Renovatieproject -> Project) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.246Z info: Connector Model:Model:OSLO-Energiehuis:Renovatiebegeleiding:(Renovatiebegeleiding -> Begeleiding) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.964Z info: Connector Model:Model:OSLO-Energiehuis:Renovatiebegeleiding:(Renovatiebegeleiding -> Begeleiding) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.246Z info: Connector Model:Model:OSLO-Energiehuis:Energiescan:(Energiescan -> Adviesverlening) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.964Z info: Connector Model:Model:OSLO-Energiehuis:Energiescan:(Energiescan -> Adviesverlening) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.246Z info: Connector Model:Model:OSLO-Energiehuis:Financieringsoutput:(Financieringsoutput -> Output) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.964Z info: Connector Model:Model:OSLO-Energiehuis:Financieringsoutput:(Financieringsoutput -> Output) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.246Z info: Connector Model:Model:OSLO-Energiehuis:Renovatieproject:(Renovatieproject -> Gebouw) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.964Z info: Connector Model:Model:OSLO-Energiehuis:Renovatieproject:(Renovatieproject -> Gebouw) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:OSLO-Energiehuis:Renovatieproject:(Renovatieproject -> Gebouweenheid) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.964Z info: Connector Model:Model:OSLO-Energiehuis:Renovatieproject:(Renovatieproject -> Gebouweenheid) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.964Z info: Connector Model:Model:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.964Z info: Connector Model:Model:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:OSLO-Gebouw:Gebouw:(Gebouw -> Gebouweenheid) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.965Z info: Connector Model:Model:OSLO-Gebouw:Gebouw:(Gebouw -> Gebouweenheid) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:OSLO-Adres:Adresvoorstelling:(Adresvoorstelling -> Adres) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.965Z info: Connector Model:Model:OSLO-Adres:Adresvoorstelling:(Adresvoorstelling -> Adres) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:OSLO-Generiek:GeografischeNaam:(GeografischeNaam -> Locatie) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.965Z info: Connector Model:Model:OSLO-Generiek:GeografischeNaam:(GeografischeNaam -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:OSLO-Adres:Adresvoorstelling:(Adresvoorstelling -> Locatie) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.965Z info: Connector Model:Model:OSLO-Adres:Adresvoorstelling:(Adresvoorstelling -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:OSLO-Generiek:Plaats:(Plaats -> Locatie) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.965Z info: Connector Model:Model:OSLO-Generiek:Plaats:(Plaats -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:OSLO-Adres:Adres:(Adres -> Locatie) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.965Z info: Connector Model:Model:OSLO-Adres:Adres:(Adres -> Locatie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.965Z info: Connector Model:Model:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:QUDT:Valuta:(Valuta -> Eenheid) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.965Z info: Connector Model:Model:QUDT:Valuta:(Valuta -> Eenheid) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:Schema.org:Geldbedrag:(Geldbedrag -> KwantitatieveWaarde) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.965Z info: Connector Model:Model:Schema.org:Geldbedrag:(Geldbedrag -> KwantitatieveWaarde) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:QUDT:Eenheid:(Eenheid -> Concept) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.965Z info: Connector Model:Model:QUDT:Eenheid:(Eenheid -> Concept) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:OSLO-Energiehuis:Klantencontact:(Klantencontact -> Contact) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.965Z info: Connector Model:Model:OSLO-Energiehuis:Klantencontact:(Klantencontact -> Contact) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:OSLO-Energiehuis:ProfessioneelContact:(ProfessioneelContact -> Contact) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.965Z info: Connector Model:Model:OSLO-Energiehuis:ProfessioneelContact:(ProfessioneelContact -> Contact) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.247Z info: Connector Model:Model:W3C-Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:52:55.965Z info: Connector Model:Model:W3C-Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:54:23.249Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:52:55.966Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:54:23.249Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:52:55.966Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:54:23.249Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:52:55.966Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:OSLO-Organisatie:OSLO²_usecase_Organisatie_publiekeOrganisatie). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:54:23.249Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:RDFS). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:52:55.966Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:RDFS). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:54:23.249Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:EDTF). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:52:55.966Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:EDTF). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:54:23.249Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:W3C-Time). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:52:55.966Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:W3C-Time). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:54:23.249Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:52:55.966Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:OSLO-Persoon:OSLO²_usecase_Persoon_identificatiePersoon). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:54:23.249Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:QUDT). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:52:55.966Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:QUDT). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:54:23.249Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:skos). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:52:55.966Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:skos). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:54:23.249Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:Schema.org). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:52:55.966Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:Schema.org). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:54:23.249Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:FOAF). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:52:55.966Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:FOAF). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:54:23.254Z warn: [ConnectorConverterHandler]: Connector (PubliekeDienstverlening.Participatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:52:55.970Z warn: [ConnectorConverterHandler]: Connector (verrichtDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:54:23.254Z warn: [ConnectorConverterHandler]: Connector (PubliekeDienstverlening.Participatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:52:55.970Z warn: [ConnectorConverterHandler]: Connector (verricht) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:54:23.254Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (PubliekeDienstverlening.Participatie) and the fallback URI (http://todo.com/) will be assigned.
-
-2025-11-12T19:54:23.254Z warn: [ConnectorConverterHandler]: Connector (verrichtDoor) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-11-12T19:54:23.254Z warn: [ConnectorConverterHandler]: Connector (verricht) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-11-12T19:54:23.254Z warn: [ConnectorConverterHandler]: Connector (verwijstNaar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:52:55.970Z warn: [ConnectorConverterHandler]: Connector (verwijstNaar) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 #||# -------------------------------------
 

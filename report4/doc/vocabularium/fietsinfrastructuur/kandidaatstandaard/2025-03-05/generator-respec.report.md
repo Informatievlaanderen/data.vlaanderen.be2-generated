@@ -14,7 +14,7 @@ Error: Path does not refer to a valid file: /tmp/workspace/report4/doc/vocabular
 
 
 
-    at QuadStore.addQuadsFromFile (/usr/local/lib/node_modules/@oslo-flanders/html-respec-generator/node_modules/@oslo-flanders/core/lib/store/QuadStore.js:55:66)
+    at QuadStore.addQuadsFromFile (/usr/local/lib/node_modules/@oslo-flanders/html-respec-generator/node_modules/@oslo-flanders/core/lib/store/QuadStore.js:61:66)
 
 
 
@@ -42,7 +42,7 @@ Error: Path does not refer to a valid file: /tmp/workspace/report4/doc/vocabular
 
 
 
-    at QuadStore.addQuadsFromFile (/usr/local/lib/node_modules/@oslo-flanders/html-respec-generator/node_modules/@oslo-flanders/core/lib/store/QuadStore.js:55:66)
+    at QuadStore.addQuadsFromFile (/usr/local/lib/node_modules/@oslo-flanders/html-respec-generator/node_modules/@oslo-flanders/core/lib/store/QuadStore.js:61:66)
 
 
 

@@ -2,47 +2,23 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:03:20.567Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-begraafplaatsen-ap.jsonld#L1349)".
+2026-01-08T13:01:16.812Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-begraafplaatsen-ap.jsonld#L1413)".
 
-2025-11-12T20:03:20.569Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-begraafplaatsen-ap.jsonld#L1360)".
+2026-01-08T13:01:16.814Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-begraafplaatsen-ap.jsonld#L1424)".
 
-2025-11-12T20:03:20.569Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-begraafplaatsen-ap.jsonld#L1371)".
+2026-01-08T13:01:16.814Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-begraafplaatsen-ap.jsonld#L1435)".
 
-2025-11-12T20:03:20.569Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
-
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:65ecd59cbcf704a32aef92c2e4ac8e029df9b390a10c31ba8ee0bd05e9119500".
-
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
-
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
-
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-01-08T13:01:16.815Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2025-11-12T20:03:21.146Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-begraafplaatsen-ap.jsonld#L1349)".
+2026-01-08T13:01:17.520Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-begraafplaatsen-ap.jsonld#L1413)".
 
-2025-11-12T20:03:21.147Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-begraafplaatsen-ap.jsonld#L1360)".
+2026-01-08T13:01:17.522Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-begraafplaatsen-ap.jsonld#L1424)".
 
-2025-11-12T20:03:21.148Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-begraafplaatsen-ap.jsonld#L1371)".
+2026-01-08T13:01:17.522Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-begraafplaatsen-ap.jsonld#L1435)".
 
-2025-11-12T20:03:21.148Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
-
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:65ecd59cbcf704a32aef92c2e4ac8e029df9b390a10c31ba8ee0bd05e9119500".
-
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:53:19)
-
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
-
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:62:51)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-01-08T13:01:17.522Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
 

@@ -2,59 +2,59 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:03:53.220Z info: Loaded 47 URI prefixes into whitelist
+2026-01-08T13:01:51.651Z info: Loaded 47 URI prefixes into whitelist
 
-2025-11-12T20:03:53.326Z warn: Found non-whitelisted assigned URI: http://qudt.org/2.1/schema/qudt/Unit for subject: [[urn:oslo-toolchain:300a9e572a2b5899e2ec42b40e7022b07d93ec9aedde478076b950e75458989b](all-erosiepoel-ap.jsonld#L2160)](all-erosiepoel-ap.jsonld#L490)
+2026-01-08T13:01:51.815Z warn: Found non-whitelisted assigned URI: http://qudt.org/2.1/schema/qudt/Unit for subject: [[urn:oslo-toolchain:300a9e572a2b5899e2ec42b40e7022b07d93ec9aedde478076b950e75458989b](all-erosiepoel-ap.jsonld#L2212)](all-erosiepoel-ap.jsonld#L506)
 
-2025-11-12T20:03:53.326Z warn: Found non-whitelisted assigned URI: http://www.linkedmodel.org/schema/dtype#numericUnion for subject: [urn:oslo-toolchain:9ee27019bb8eece113e95f3f5e51095c5ed719c3048b631957ba10690739df47](all-erosiepoel-ap.jsonld#L725)
+2026-01-08T13:01:51.815Z warn: Found non-whitelisted assigned URI: http://www.linkedmodel.org/schema/dtype#numericUnion for subject: [urn:oslo-toolchain:9ee27019bb8eece113e95f3f5e51095c5ed719c3048b631957ba10690739df47](all-erosiepoel-ap.jsonld#L777)
 
-2025-11-12T20:03:53.327Z warn: Found non-whitelisted assigned URI: http://todo.com/Activity for subject: [urn:oslo-toolchain:1c943cd3e64e76fac800e881c1a71fcf13493b3fa1e117b49f3da466a289a632](all-erosiepoel-ap.jsonld#L2191)
+2026-01-08T13:01:51.816Z warn: Found non-whitelisted assigned URI: http://todo.com/Activity for subject: [urn:oslo-toolchain:1c943cd3e64e76fac800e881c1a71fcf13493b3fa1e117b49f3da466a289a632](all-erosiepoel-ap.jsonld#L2243)
 
-2025-11-12T20:03:53.327Z warn: Found sentence without a '.': 'Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112), maar deze locatie kan ook een niet-geografische locatie zijn, zoals een directory, rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt, zoals d' for subject: urn:oslo-toolchain:34596398d25ad30cf6d878c00d41cc3683c0e4af557e0548e23bb0f8d613c353
+2026-01-08T13:01:51.816Z warn: Found sentence without a '.': 'Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112), maar deze locatie kan ook een niet-geografische locatie zijn, zoals een directory, rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt, zoals d' for subject: urn:oslo-toolchain:34596398d25ad30cf6d878c00d41cc3683c0e4af557e0548e23bb0f8d613c353
 
-2025-11-12T20:03:53.333Z error: Found missing class or attribute (Activity): [urn:oslo-toolchain:1c943cd3e64e76fac800e881c1a71fcf13493b3fa1e117b49f3da466a289a632](all-erosiepoel-ap.jsonld#L2191)
+2026-01-08T13:01:51.820Z error: Found missing class or attribute (Activity): [urn:oslo-toolchain:1c943cd3e64e76fac800e881c1a71fcf13493b3fa1e117b49f3da466a289a632](all-erosiepoel-ap.jsonld#L2243)
 
-2025-11-12T20:03:53.333Z error: Found missing class or attribute (Literal): [urn:oslo-toolchain:3721f6d3ea71a2d1f1f139b552a84a293f186eb844ce2d0eb43f2c2426dd9b70](all-erosiepoel-ap.jsonld#L2202)
+2026-01-08T13:01:51.820Z error: Found missing class or attribute (Literal): [urn:oslo-toolchain:3721f6d3ea71a2d1f1f139b552a84a293f186eb844ce2d0eb43f2c2426dd9b70](all-erosiepoel-ap.jsonld#L2254)
 
-2025-11-12T20:03:53.333Z error: Found missing class or attribute (DateTime): [urn:oslo-toolchain:bfd925e5f617300c93140d1dd43c8123ff2f8d676c9519a9394096a712029dde](all-erosiepoel-ap.jsonld#L2213)
+2026-01-08T13:01:51.821Z error: Found missing class or attribute (DateTime): [urn:oslo-toolchain:bfd925e5f617300c93140d1dd43c8123ff2f8d676c9519a9394096a712029dde](all-erosiepoel-ap.jsonld#L2265)
 
-2025-11-12T20:03:53.333Z info: Validation found 3 non-whitelisted assigned URIs
+2026-01-08T13:01:51.821Z info: Validation found 3 non-whitelisted assigned URIs
 
-2025-11-12T20:03:53.333Z info: Validation found 1 sentences with spelling mistakes.
+2026-01-08T13:01:51.821Z info: Validation found 1 sentences with spelling mistakes.
 
-2025-11-12T20:03:53.333Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2026-01-08T13:01:51.821Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-2025-11-12T20:03:53.333Z info: Validation successful! All base URIs seem to be valid.
+2026-01-08T13:01:51.821Z info: Validation successful! All base URIs seem to be valid.
 
-2025-11-12T20:03:53.333Z info: Validation found 3 missing referenced classes or attributes.
+2026-01-08T13:01:51.821Z info: Validation found 3 missing referenced classes or attributes.
 
 #||# oslo-jsonld-validator   
 
 #||# -------------------------------------  
 
-2025-11-12T20:03:53.763Z info: Loaded 47 URI prefixes into whitelist
+2026-01-08T13:01:52.301Z info: Loaded 47 URI prefixes into whitelist
 
-2025-11-12T20:03:53.880Z warn: Found non-whitelisted assigned URI: http://qudt.org/2.1/schema/qudt/Unit for subject: [[urn:oslo-toolchain:300a9e572a2b5899e2ec42b40e7022b07d93ec9aedde478076b950e75458989b](all-erosiepoel-ap.jsonld#L2160)](all-erosiepoel-ap.jsonld#L490)
+2026-01-08T13:01:52.485Z warn: Found non-whitelisted assigned URI: http://qudt.org/2.1/schema/qudt/Unit for subject: [[urn:oslo-toolchain:300a9e572a2b5899e2ec42b40e7022b07d93ec9aedde478076b950e75458989b](all-erosiepoel-ap.jsonld#L2212)](all-erosiepoel-ap.jsonld#L506)
 
-2025-11-12T20:03:53.880Z warn: Found non-whitelisted assigned URI: http://www.linkedmodel.org/schema/dtype#numericUnion for subject: [urn:oslo-toolchain:9ee27019bb8eece113e95f3f5e51095c5ed719c3048b631957ba10690739df47](all-erosiepoel-ap.jsonld#L725)
+2026-01-08T13:01:52.485Z warn: Found non-whitelisted assigned URI: http://www.linkedmodel.org/schema/dtype#numericUnion for subject: [urn:oslo-toolchain:9ee27019bb8eece113e95f3f5e51095c5ed719c3048b631957ba10690739df47](all-erosiepoel-ap.jsonld#L777)
 
-2025-11-12T20:03:53.880Z warn: Found non-whitelisted assigned URI: http://todo.com/Activity for subject: [urn:oslo-toolchain:1c943cd3e64e76fac800e881c1a71fcf13493b3fa1e117b49f3da466a289a632](all-erosiepoel-ap.jsonld#L2191)
+2026-01-08T13:01:52.486Z warn: Found non-whitelisted assigned URI: http://todo.com/Activity for subject: [urn:oslo-toolchain:1c943cd3e64e76fac800e881c1a71fcf13493b3fa1e117b49f3da466a289a632](all-erosiepoel-ap.jsonld#L2243)
 
-2025-11-12T20:03:53.881Z warn: Found sentence without a '.': 'Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112), maar deze locatie kan ook een niet-geografische locatie zijn, zoals een directory, rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt, zoals d' for subject: urn:oslo-toolchain:34596398d25ad30cf6d878c00d41cc3683c0e4af557e0548e23bb0f8d613c353
+2026-01-08T13:01:52.488Z warn: Found sentence without a '.': 'Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112), maar deze locatie kan ook een niet-geografische locatie zijn, zoals een directory, rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt, zoals d' for subject: urn:oslo-toolchain:34596398d25ad30cf6d878c00d41cc3683c0e4af557e0548e23bb0f8d613c353
 
-2025-11-12T20:03:53.887Z error: Found missing class or attribute (Activity): [urn:oslo-toolchain:1c943cd3e64e76fac800e881c1a71fcf13493b3fa1e117b49f3da466a289a632](all-erosiepoel-ap.jsonld#L2191)
+2026-01-08T13:01:52.491Z error: Found missing class or attribute (Activity): [urn:oslo-toolchain:1c943cd3e64e76fac800e881c1a71fcf13493b3fa1e117b49f3da466a289a632](all-erosiepoel-ap.jsonld#L2243)
 
-2025-11-12T20:03:53.887Z error: Found missing class or attribute (Literal): [urn:oslo-toolchain:3721f6d3ea71a2d1f1f139b552a84a293f186eb844ce2d0eb43f2c2426dd9b70](all-erosiepoel-ap.jsonld#L2202)
+2026-01-08T13:01:52.491Z error: Found missing class or attribute (Literal): [urn:oslo-toolchain:3721f6d3ea71a2d1f1f139b552a84a293f186eb844ce2d0eb43f2c2426dd9b70](all-erosiepoel-ap.jsonld#L2254)
 
-2025-11-12T20:03:53.887Z error: Found missing class or attribute (DateTime): [urn:oslo-toolchain:bfd925e5f617300c93140d1dd43c8123ff2f8d676c9519a9394096a712029dde](all-erosiepoel-ap.jsonld#L2213)
+2026-01-08T13:01:52.491Z error: Found missing class or attribute (DateTime): [urn:oslo-toolchain:bfd925e5f617300c93140d1dd43c8123ff2f8d676c9519a9394096a712029dde](all-erosiepoel-ap.jsonld#L2265)
 
-2025-11-12T20:03:53.887Z info: Validation found 3 non-whitelisted assigned URIs
+2026-01-08T13:01:52.491Z info: Validation found 3 non-whitelisted assigned URIs
 
-2025-11-12T20:03:53.887Z info: Validation found 1 sentences with spelling mistakes.
+2026-01-08T13:01:52.492Z info: Validation found 1 sentences with spelling mistakes.
 
-2025-11-12T20:03:53.887Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2026-01-08T13:01:52.492Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-2025-11-12T20:03:53.887Z info: Validation successful! All base URIs seem to be valid.
+2026-01-08T13:01:52.492Z info: Validation successful! All base URIs seem to be valid.
 
-2025-11-12T20:03:53.888Z info: Validation found 3 missing referenced classes or attributes.
+2026-01-08T13:01:52.492Z info: Validation found 3 missing referenced classes or attributes.
 

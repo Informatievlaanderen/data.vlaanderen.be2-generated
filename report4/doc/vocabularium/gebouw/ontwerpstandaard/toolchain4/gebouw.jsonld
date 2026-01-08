@@ -12,11 +12,15 @@
     "sh": "http://www.w3.org/ns/shacl#",
     "prov": "http://www.w3.org/ns/prov#",
     "adms": "http://www.w3.org/ns/adms#",
+    "schema": "https://schema.org/",
     "packages": "@included",
     "classes": "@included",
     "datatypes": "@included",
     "attributes": "@included",
     "referencedEntities": "@included",
+    "redefinedAttributes": "@included",
+    "subsettedAttributes": "@included",
+    "enumerations": "@included",
     "baseURI": {
       "@id": "oslo:baseURI",
       "@type": "@id"
@@ -41,7 +45,8 @@
       "@id": "oslo:diagramLabel"
     },
     "scope": {
-      "@id": "oslo:scope"
+      "@id": "oslo:scope",
+      "@type": "@id"
     },
     "vocUsageNote": {
       "@id": "oslo:vocUsageNote",
@@ -94,7 +99,7 @@
       "@id": "dcterms:contributor"
     },
     "affiliation": {
-      "@id": "http://schema.org/affiliation"
+      "@id": "schema:affiliation"
     },
     "assignedURI": {
       "@id": "oslo:assignedURI",
@@ -102,6 +107,9 @@
     },
     "Datatype": {
       "@id": "rdfs:Datatype"
+    },
+    "Enumeration": {
+      "@id": "skos:Concept"
     },
     "codelist": {
       "@id": "oslo:codelist",
@@ -114,10 +122,18 @@
     "extensions": {
       "@id": "oslo:extensions",
       "@container": "@set"
+    },
+    "parentAttribute": {
+      "@id": "oslo:parentAttribute",
+      "@type": "@id"
+    },
+    "childAttribute": {
+      "@id": "oslo:childAttribute",
+      "@type": "@id"
     }
   },
   "@id": "https://data.dev-vlaanderen.be/doc/vocabularium/gebouw/ontwerpstandaard/toolchain4",
-  "generatedAtTime": "2025-11-12T19:54:49.073Z",
+  "generatedAtTime": "2026-01-08T12:53:20.085Z",
   "packages": [
     {
       "@id": "urn:oslo-toolchain:2fbbc94ad103cb12332856717cc1e1f220fb0e91faa5ed07301bde6e80d52203",
@@ -167,6 +183,31 @@
           "@id": "urn:oslo-toolchain:89ba6dfdea37f7481ada000e19ebe4efe886d68373a4fdc5cfcf0f9844d56da6"
         }
       ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:3eb3b8577799ff57c0fc562f2b7b32cfb33626a5b4600e4dcf884ceb79a98417",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "Locatieaanduidingtype"
+        }
+      ],
+      "diagramLabel": [
+        {
+          "@value": "Locatieaanduidingtype"
+        }
+      ],
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aard vd locatieaanduiding."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "http://inspire.ec.europa.eu/codelist/LocatorDesignatorTypeValue",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
     {
@@ -235,6 +276,24 @@
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
     {
+      "@id": "urn:oslo-toolchain:9b09deb166a9731b18252a412f9f4b756fa5b731b6af416b62c0c83268a88806",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "diagramLabel": [
+        {
+          "@value": "GebouwstatusWaarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Waarden die de status van een gebouw weergeven."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
       "@id": "urn:oslo-toolchain:f7a69f66b2e97781120cc691988b01aea24e3812656abb186fef6726f2adc99b",
       "@type": "Class",
       "assignedURI": "https://data.vlaanderen.be/ns/gebouw#Gebouweenheid",
@@ -264,6 +323,110 @@
           "@id": "urn:oslo-toolchain:fef8ba4eeb3ea221b8e4333cd903a672e75653f41cb6353dad16e01de49e5709"
         }
       ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5e039f103629c47b18b9007b8a2d1332c87c3634139a21919f132170060044bd",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "diagramLabel": [
+        {
+          "@value": "FunctieWaarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Waarden die het huidig gebruik weergeven."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e443c533fca9c1bcfd91d5dc5e4e019ddf5e081db38b11701b0b3181cb6a4db8",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "diagramLabel": [
+        {
+          "@value": "GebouweenheidstatusWaarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Waarden die de status van een gebouweenheid weergeven."
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c103c4b6d2db442633d04e4fd2d6a5aa096b6ba3070f9b815f5ac6ee3d3b6858",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "diagramLabel": [
+        {
+          "@value": "2DGeometrieMethodeWaarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "TODO"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:eddf0e10d354dfa1682ba5acad06ea7f6c8e46bc368389a91ade674c90b0b122",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "diagramLabel": [
+        {
+          "@value": "VerticaleReferentieWaarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "TODO"
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "TODO"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "http://inspire.ec.europa.eu/codelist/VerticalReferenceValue",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:21fd2218fd5876947b6848e4f5c84cd429614e893bf845842a6800a6834f42de",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "diagramLabel": [
+        {
+          "@value": "HorizontaleReferentieWaarde"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "TODO"
+        }
+      ],
+      "vocUsageNote": [
+        {
+          "@language": "nl",
+          "@value": "TODO"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "http://inspire.ec.europa.eu/codelist/HorizontalGeometryReferenceValue",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
     {
@@ -2504,6 +2667,52 @@
         }
       ],
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    }
+  ],
+  "redefinedAttributes": [],
+  "subsettedAttributes": [],
+  "enumerations": [
+    {
+      "@id": "urn:oslo-toolchain:3eb3b8577799ff57c0fc562f2b7b32cfb33626a5b4600e4dcf884ceb79a98417",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:9b09deb166a9731b18252a412f9f4b756fa5b731b6af416b62c0c83268a88806",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:5e039f103629c47b18b9007b8a2d1332c87c3634139a21919f132170060044bd",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:e443c533fca9c1bcfd91d5dc5e4e019ddf5e081db38b11701b0b3181cb6a4db8",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:c103c4b6d2db442633d04e4fd2d6a5aa096b6ba3070f9b815f5ac6ee3d3b6858",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:eddf0e10d354dfa1682ba5acad06ea7f6c8e46bc368389a91ade674c90b0b122",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:21fd2218fd5876947b6848e4f5c84cd429614e893bf845842a6800a6834f42de",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     }
   ]

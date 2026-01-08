@@ -12,11 +12,15 @@
     "sh": "http://www.w3.org/ns/shacl#",
     "prov": "http://www.w3.org/ns/prov#",
     "adms": "http://www.w3.org/ns/adms#",
+    "schema": "https://schema.org/",
     "packages": "@included",
     "classes": "@included",
     "datatypes": "@included",
     "attributes": "@included",
     "referencedEntities": "@included",
+    "redefinedAttributes": "@included",
+    "subsettedAttributes": "@included",
+    "enumerations": "@included",
     "baseURI": {
       "@id": "oslo:baseURI",
       "@type": "@id"
@@ -41,7 +45,8 @@
       "@id": "oslo:diagramLabel"
     },
     "scope": {
-      "@id": "oslo:scope"
+      "@id": "oslo:scope",
+      "@type": "@id"
     },
     "vocUsageNote": {
       "@id": "oslo:vocUsageNote",
@@ -94,7 +99,7 @@
       "@id": "dcterms:contributor"
     },
     "affiliation": {
-      "@id": "http://schema.org/affiliation"
+      "@id": "schema:affiliation"
     },
     "assignedURI": {
       "@id": "oslo:assignedURI",
@@ -102,6 +107,9 @@
     },
     "Datatype": {
       "@id": "rdfs:Datatype"
+    },
+    "Enumeration": {
+      "@id": "skos:Concept"
     },
     "codelist": {
       "@id": "oslo:codelist",
@@ -114,10 +122,18 @@
     "extensions": {
       "@id": "oslo:extensions",
       "@container": "@set"
+    },
+    "parentAttribute": {
+      "@id": "oslo:parentAttribute",
+      "@type": "@id"
+    },
+    "childAttribute": {
+      "@id": "oslo:childAttribute",
+      "@type": "@id"
     }
   },
   "@id": "https://data.dev-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/toolchain4",
-  "generatedAtTime": "2025-11-12T19:52:37.681Z",
+  "generatedAtTime": "2026-01-08T12:51:23.499Z",
   "packages": [
     {
       "@id": "urn:oslo-toolchain:321482a48d74cbcfb66c72ce987780426a3ce8b0b7a4b50f4520fa69c3863e2b",
@@ -676,6 +692,30 @@
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
     },
     {
+      "@id": "urn:oslo-toolchain:bf338339be254242c2c52013df05ad72d7c8085d1d324a20c39b9ebc34fb4507",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "diagramLabel": [
+        {
+          "@value": "Afstammingstype"
+        }
+      ],
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aard vd afstamming tussen twee personen."
+        }
+      ],
+      "apUsageNote": [
+        {
+          "@language": "nl",
+          "@value": ""
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
       "@id": "urn:oslo-toolchain:7d716cca668586f3748435bfda61d3fc63be7fec48bd75ae78d823ee627f4991",
       "@type": "Class",
       "assignedURI": "https://data.vlaanderen.be/ns/persoon#Overlijden",
@@ -899,6 +939,19 @@
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
     },
     {
+      "@id": "urn:oslo-toolchain:ead03005cf2f07f8db3f94cec05dea5b976be666cf787dd765564ebfc66b6fc5",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "diagramLabel": [
+        {
+          "@value": "Nationaliteitscode"
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "http://publications.europa.eu/mdr/authority/country/",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
       "@id": "urn:oslo-toolchain:39edaee72fd923acb3ec3e607d0abe503b25da4b30a9829fd93ee06feb596309",
       "@type": "Class",
       "assignedURI": "https://data.vlaanderen.be/ns/persoon#Samenwonen",
@@ -943,6 +996,55 @@
           "@id": "urn:oslo-toolchain:fb1bf758591d378737e4b7cf4f7551ec01fe2a403dbe387319181d2f0c204f43"
         }
       ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:32d5678099d6b9e6a3ed8eb6fff0a0410c0162f8b4addb0462d4121ca1c1c9d4",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "diagramLabel": [
+        {
+          "@value": "Geslacht"
+        }
+      ],
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Het feit of men een man of een vrouw is."
+        }
+      ],
+      "apUsageNote": [
+        {
+          "@language": "nl",
+          "@value": ""
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
+      "codelist": "http://publications.europa.eu/mdr/authority/human-sex/",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:887ae8c4b15bd3599cfdd13801627538d9a9819335174b6d42ec5b7913f83fe8",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "diagramLabel": [
+        {
+          "@value": "BurgerlijkeStaatType"
+        }
+      ],
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aard vd burgerlijke staat ve persoon."
+        }
+      ],
+      "apUsageNote": [
+        {
+          "@language": "nl",
+          "@value": ""
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
     },
     {
@@ -1215,6 +1317,30 @@
           "@id": "urn:oslo-toolchain:c43f009ed2ef893ef7eb6d73a4eb75e195a0dcf6c55e943fb8f32b29a0f5a517"
         }
       ],
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:595d5d294846fd5084ad979dacbf087002d6c3ee636a07367010463f1861b99f",
+      "@type": "Class",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "diagramLabel": [
+        {
+          "@value": "Gezinsrelatietype"
+        }
+      ],
+      "apDefinition": [
+        {
+          "@language": "nl",
+          "@value": "Aard vd gezinsrelatie tussen twee personen."
+        }
+      ],
+      "apUsageNote": [
+        {
+          "@language": "nl",
+          "@value": ""
+        }
+      ],
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
     },
     {
@@ -2596,9 +2722,21 @@
       "@id": "urn:oslo-toolchain:8982ab2f1b81978adced8ad6620969886ad3497f191753aeb162bd4addceedb4",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "assignedURI": "https://data.vlaanderen.be/ns/persoon#Persoonsrelatie.persoon.source",
+      "vocLabel": [
+        {
+          "@language": "nl",
+          "@value": "van persoon"
+        }
+      ],
       "diagramLabel": [
         {
           "@value": "Persoon (source)"
+        }
+      ],
+      "vocDefinition": [
+        {
+          "@language": "nl",
+          "@value": "de persoon van waaruit de relatie bekenen wordt."
         }
       ],
       "domain": {
@@ -3000,58 +3138,6 @@
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
     },
     {
-      "@id": "urn:oslo-toolchain:f3bca3be95306faef9986f81739f5a53ed036ed7c515b173da19d4212b8fce2f",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "assignedURI": "https://data.vlaanderen.be/ns/persoon#Persoon.Staatsburgerschap",
-      "diagramLabel": [
-        {
-          "@value": "Persoon.Staatsburgerschap"
-        }
-      ],
-      "domain": {
-        "@id": "urn:oslo-toolchain:a7fc195803ce9250e5a75cea13d960768c3d0eaf08da7e27dedc0da391869fb7"
-      },
-      "range": {
-        "@id": "urn:oslo-toolchain:408333cfe5186f1f28168c46fe1cb6c81500bb13048564d614f21f59b61e8128"
-      },
-      "minCount": {
-        "@value": "1",
-        "@type": "http://www.w3.org/2001/XMLSchema#integer"
-      },
-      "maxCount": {
-        "@value": "1",
-        "@type": "http://www.w3.org/2001/XMLSchema#integer"
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "@id": "urn:oslo-toolchain:11885eec9548666196f5212e981d28d91dc01402fdedd83b694d1cabad1a6029",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "assignedURI": "http://todo.com/Persoon.Staatsburgerschap",
-      "diagramLabel": [
-        {
-          "@value": "Persoon.Staatsburgerschap"
-        }
-      ],
-      "domain": {
-        "@id": "urn:oslo-toolchain:43ddeb680a416c04c6dd491271bb78ddc81c97d67932f1b7b11b659ec4dc8376"
-      },
-      "range": {
-        "@id": "urn:oslo-toolchain:408333cfe5186f1f28168c46fe1cb6c81500bb13048564d614f21f59b61e8128"
-      },
-      "minCount": {
-        "@value": "1",
-        "@type": "http://www.w3.org/2001/XMLSchema#integer"
-      },
-      "maxCount": {
-        "@value": "1",
-        "@type": "http://www.w3.org/2001/XMLSchema#integer"
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
       "@id": "urn:oslo-toolchain:27dc53fb1b51f4b980673eafa96d129c7cea9749876dd161620225c9e991aa64",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
       "assignedURI": "http://www.w3.org/ns/person#residency",
@@ -3163,58 +3249,6 @@
         "@type": "http://www.w3.org/2001/XMLSchema#integer"
       },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "@id": "urn:oslo-toolchain:e4a7f61194e4ce9310426a8557ec3eccc360ae5717358312c67c318ee2394c7b",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "assignedURI": "https://data.vlaanderen.be/ns/persoon#Persoon.Inwonerschap",
-      "diagramLabel": [
-        {
-          "@value": "Persoon.Inwonerschap"
-        }
-      ],
-      "domain": {
-        "@id": "urn:oslo-toolchain:a7fc195803ce9250e5a75cea13d960768c3d0eaf08da7e27dedc0da391869fb7"
-      },
-      "range": {
-        "@id": "urn:oslo-toolchain:8a7c19838d7a8fafa513faaacb67aaba01318da63a1d971fac320fe7901a086c"
-      },
-      "minCount": {
-        "@value": "1",
-        "@type": "http://www.w3.org/2001/XMLSchema#integer"
-      },
-      "maxCount": {
-        "@value": "1",
-        "@type": "http://www.w3.org/2001/XMLSchema#integer"
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
-    },
-    {
-      "@id": "urn:oslo-toolchain:0f8c380f41ad9e403fba844708fc12e8e6710e602a75fe2e991e49fc8b6f4a93",
-      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "assignedURI": "http://todo.com/Persoon.Inwonerschap",
-      "diagramLabel": [
-        {
-          "@value": "Persoon.Inwonerschap"
-        }
-      ],
-      "domain": {
-        "@id": "urn:oslo-toolchain:43ddeb680a416c04c6dd491271bb78ddc81c97d67932f1b7b11b659ec4dc8376"
-      },
-      "range": {
-        "@id": "urn:oslo-toolchain:8a7c19838d7a8fafa513faaacb67aaba01318da63a1d971fac320fe7901a086c"
-      },
-      "minCount": {
-        "@value": "1",
-        "@type": "http://www.w3.org/2001/XMLSchema#integer"
-      },
-      "maxCount": {
-        "@value": "1",
-        "@type": "http://www.w3.org/2001/XMLSchema#integer"
-      },
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
     }
   ],
@@ -3380,6 +3414,40 @@
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
     }
   ],
+  "redefinedAttributes": [],
+  "subsettedAttributes": [],
+  "enumerations": [
+    {
+      "@id": "urn:oslo-toolchain:bf338339be254242c2c52013df05ad72d7c8085d1d324a20c39b9ebc34fb4507",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:ead03005cf2f07f8db3f94cec05dea5b976be666cf787dd765564ebfc66b6fc5",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:32d5678099d6b9e6a3ed8eb6fff0a0410c0162f8b4addb0462d4121ca1c1c9d4",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:887ae8c4b15bd3599cfdd13801627538d9a9819335174b6d42ec5b7913f83fe8",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    },
+    {
+      "@id": "urn:oslo-toolchain:595d5d294846fd5084ad979dacbf087002d6c3ee636a07367010463f1861b99f",
+      "@type": "Enumeration",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard"
+    }
+  ],
   "name": "persoon-basis",
   "type": "ap",
   "eap": "OSLO-Persoon-Basis-AP.eap",
@@ -3420,6 +3488,6 @@
   "repository": "https://github.com/Informatievlaanderen/OSLOthema-persoon",
   "urlref": "/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/toolchain4",
   "documentcommit": "36d3695cb809ee836571b8dd0550b0b0c9911ee3",
-  "toolchaincommit": "2ec42eb9f66516444ddef42da02c5fd5225d76ec",
+  "toolchaincommit": "e11a92dbee8227b9c452a686e6ee535af1d149b5",
   "hostname": "https://data.dev-vlaanderen.be"
 }

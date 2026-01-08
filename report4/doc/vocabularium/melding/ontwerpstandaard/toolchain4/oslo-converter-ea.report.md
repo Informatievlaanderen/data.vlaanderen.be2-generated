@@ -2,151 +2,151 @@
 
 #||# -------------------------------------
 
-2025-11-12T19:55:30.883Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):isGerelateerdMet)
+2026-01-08T12:53:49.602Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):isGerelateerdMet)
 
-2025-11-12T19:55:30.884Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):vereist)
+2026-01-08T12:53:49.604Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):vereist)
 
-2025-11-12T19:55:30.884Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftRelatieMet)
+2026-01-08T12:53:49.604Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:heeftRelatieMet)
 
-2025-11-12T19:55:30.884Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
+2026-01-08T12:53:49.604Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
 
-2025-11-12T19:55:30.884Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
+2026-01-08T12:53:49.604Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
 
-2025-11-12T19:55:30.884Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+2026-01-08T12:53:49.604Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-11-12T19:55:30.885Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersmaatregel:verwijstNaar)
+2026-01-08T12:53:49.604Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersmaatregel:verwijstNaar)
 
-2025-11-12T19:55:30.885Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):wordtUitgevoerdDoor)
+2026-01-08T12:53:49.604Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Transactie:PubliekeDienstverlening (consumptie):wordtUitgevoerdDoor)
 
-2025-11-12T19:55:30.885Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isHoofdVan)
+2026-01-08T12:53:49.604Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isHoofdVan)
 
-2025-11-12T19:55:30.885Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:rapporteertAan)
+2026-01-08T12:53:49.604Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-11-12T19:55:30.885Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
+2026-01-08T12:53:49.604Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
 
-2025-11-12T19:55:30.885Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:PubliekeOrganisatie:heeftVerwerkersovereenkomstMet)
+2026-01-08T12:53:49.605Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:PubliekeOrganisatie:heeftVerwerkersovereenkomstMet)
 
-2025-11-12T19:55:30.885Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersbordbasis:(Verkeersbordbasis -> OSLO-OpenbaarDomein::Verkeersbord))
+2026-01-08T12:53:49.605Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Mobiliteit:Verkeersbordbasis:(Verkeersbordbasis -> OSLO-OpenbaarDomein::Verkeersbord))
 
-2025-11-12T19:55:30.885Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
+2026-01-08T12:53:49.605Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
 
-2025-11-12T19:55:30.885Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Object))
+2026-01-08T12:53:49.605Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Object))
 
-2025-11-12T19:55:30.885Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+2026-01-08T12:53:49.605Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
 
-2025-11-12T19:55:30.885Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:isGerelateerdAan)
+2026-01-08T12:53:49.605Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:FormeelKader:isGerelateerdAan)
 
-2025-11-12T19:55:30.885Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
+2026-01-08T12:53:49.605Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Agent:isLidVan)
 
-2025-11-12T19:55:30.886Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Gemeente:(Gemeente -> Object))
+2026-01-08T12:53:49.605Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Generiek:Gemeente:(Gemeente -> Object))
 
-2025-11-12T19:55:30.886Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftParticiperende)
+2026-01-08T12:53:49.605Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftParticiperende)
 
-2025-11-12T19:55:30.886Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke)
+2026-01-08T12:53:49.605Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:heeftVerantwoordelijke)
 
-2025-11-12T19:55:30.886Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:vereist)
+2026-01-08T12:53:49.606Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:vereist)
 
-2025-11-12T19:55:30.886Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet)
+2026-01-08T12:53:49.606Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:isGerelateerdMet)
 
-2025-11-12T19:55:30.886Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:Kost:isGedefinieerdDoor)
+2026-01-08T12:53:49.606Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:Kost:isGedefinieerdDoor)
 
-2025-11-12T19:55:30.886Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:wordtUitgevoerdDoor)
+2026-01-08T12:53:49.606Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Domain Model:OSLO²_vocabularium:OSLO-Dienst:PubliekeDienstverlening:wordtUitgevoerdDoor)
 
-2025-11-12T19:55:30.888Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.609Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:GeregistreerdPersoon:(GeregistreerdPersoon -> Persoon) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.889Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Meldingsobject:bronhouder is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.610Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Meldingsobject:bronhouder is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.889Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Meldingsobject:bronhouder has name "bronhouder". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.610Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Meldingsobject:bronhouder has name "bronhouder". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.889Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:meldingsorganisatie is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.610Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:meldingsorganisatie is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.889Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:meldingsorganisatie has name "meldingsorganisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.610Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:meldingsorganisatie has name "meldingsorganisatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.890Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:meldingsapplicatie is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.611Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:meldingsapplicatie is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.890Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:meldingsapplicatie has name "meldingsapplicatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.611Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:meldingsapplicatie has name "meldingsapplicatie". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.890Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Meldingsobject:heeftBron is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.611Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Meldingsobject:heeftBron is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.890Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Meldingsobject:heeftBron has name "heeftBron". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.612Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Meldingsobject:heeftBron has name "heeftBron". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.890Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Terugmelding:(Terugmelding -> Melding) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.612Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Terugmelding:(Terugmelding -> Melding) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.890Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Terugmelding:heeftDoelwit is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.612Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Terugmelding:heeftDoelwit is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.890Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Terugmelding:heeftDoelwit has name "heeftDoelwit". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.612Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Terugmelding:heeftDoelwit has name "heeftDoelwit". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.890Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:melder is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.612Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:melder is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.890Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:melder has name "melder". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.612Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:melder has name "melder". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.893Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.612Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Persoon:Persoon:(Persoon -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.893Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Hoedanigheid:(Hoedanigheid -> Agent) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.612Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Hoedanigheid:(Hoedanigheid -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.893Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:behandelaar is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.612Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:behandelaar is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.894Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:behandelaar has name "behandelaar". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.613Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:behandelaar has name "behandelaar". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.894Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.613Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:(Organisatie -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.894Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Applicatie:isDisjoint is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.613Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Applicatie:isDisjoint is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.894Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Applicatie:isDisjoint has name "isDisjoint". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.613Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Applicatie:isDisjoint has name "isDisjoint". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.894Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:indiener is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.613Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:indiener is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.894Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:indiener has name "indiener". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.613Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:indiener has name "indiener". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.894Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.613Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:PubliekeOrganisatie:(PubliekeOrganisatie -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.894Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftEenheid is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.613Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftEenheid is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.894Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftEenheid has name "heeftEenheid". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.613Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:Organisatie:heeftEenheid has name "heeftEenheid". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.894Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:OrganisatieEenheid:isEenheidVan is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.613Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:OrganisatieEenheid:isEenheidVan is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.895Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:OrganisatieEenheid:isEenheidVan has name "isEenheidVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.613Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:OrganisatieEenheid:isEenheidVan has name "isEenheidVan". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.895Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:OrganisatieEenheid:(OrganisatieEenheid -> Organisatie) is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.613Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Organisatie:OrganisatieEenheid:(OrganisatieEenheid -> Organisatie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.895Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Meldingsobject:heeftToestand is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.614Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Meldingsobject:heeftToestand is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.895Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Meldingsobject:heeftToestand has name "heeftToestand". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.614Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Meldingsobject:heeftToestand has name "heeftToestand". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.895Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Eigenschap:mogelijkeWaarden is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.614Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Eigenschap:mogelijkeWaarden is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.895Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Eigenschap:mogelijkeWaarden has name "mogelijkeWaarden". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.614Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Eigenschap:mogelijkeWaarden has name "mogelijkeWaarden". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.895Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Dataset:eigenschap is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.614Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Dataset:eigenschap is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.895Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Dataset:eigenschap has name "eigenschap". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.614Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Dataset:eigenschap has name "eigenschap". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.895Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:MeldingsobjectAttribuut:eigenschap is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.614Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:MeldingsobjectAttribuut:eigenschap is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.895Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:MeldingsobjectAttribuut:eigenschap has name "eigenschap". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.614Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:MeldingsobjectAttribuut:eigenschap has name "eigenschap". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.895Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:betrokkene is not an association with a source role. Ignoring this connector.
+2026-01-08T12:53:49.614Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:betrokkene is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:55:30.895Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:betrokkene has name "betrokkene". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-01-08T12:53:49.614Z info: Connector Model:Domain Model:OSLO²_vocabularium:OSLO-Melding:Melding:betrokkene has name "betrokkene". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2025-11-12T19:55:30.896Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:53:49.615Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:55:30.896Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:53:49.615Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:55:30.896Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium). Using fallback URI (http://todo.com/) instead.
+2026-01-08T12:53:49.615Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Domain Model:OSLO²_vocabularium). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:55:30.903Z warn: [ConnectorConverterHandler]: Connector (meldingsapplicatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:53:49.622Z warn: [ConnectorConverterHandler]: Connector (meldingsapplicatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:55:30.903Z warn: [ConnectorConverterHandler]: Connector (meldingsapplicatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:53:49.622Z warn: [ConnectorConverterHandler]: Connector (meldingsapplicatie) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:55:30.903Z warn: [ConnectorConverterHandler]: Connector (eigenschap) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:53:49.622Z warn: [ConnectorConverterHandler]: Connector (eigenschap) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:55:30.903Z warn: [ConnectorConverterHandler]: Connector (eigenschap) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:53:49.622Z warn: [ConnectorConverterHandler]: Connector (eigenschap) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:55:30.903Z warn: [ConnectorConverterHandler]: Connector (mogelijkeWaarden) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:53:49.622Z warn: [ConnectorConverterHandler]: Connector (mogelijkeWaarden) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2025-11-12T19:55:30.903Z warn: [ConnectorConverterHandler]: Connector (mogelijkeWaarden) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-01-08T12:53:49.622Z warn: [ConnectorConverterHandler]: Connector (mogelijkeWaarden) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
 #||# -------------------------------------
 

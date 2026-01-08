@@ -2,43 +2,43 @@
 
 #||# -------------------------------------
 
-2025-11-12T19:50:07.162Z warn: Unable to find the contributor type for "Chloë Van Gelder" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.390Z warn: Unable to find the contributor type for "Chloë Van Gelder" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.164Z warn: Unable to find the contributor type for "Louise Ysewijn" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.392Z warn: Unable to find the contributor type for "Louise Ysewijn" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.166Z warn: Unable to find the contributor type for "Astrid Vergauwe" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.393Z warn: Unable to find the contributor type for "Astrid Vergauwe" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.168Z warn: Unable to find the contributor type for "Filip Borloo" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.394Z warn: Unable to find the contributor type for "Filip Borloo" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.168Z warn: Unable to find the contributor type for "Jelle Kleevens" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.394Z warn: Unable to find the contributor type for "Jelle Kleevens" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.168Z warn: Unable to find the contributor type for "Marek Fenner" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.394Z warn: Unable to find the contributor type for "Marek Fenner" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.168Z warn: Unable to find the contributor type for "Annelies Valgaeren" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.394Z warn: Unable to find the contributor type for "Annelies Valgaeren" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.169Z warn: Unable to find the contributor type for "Jeroen Cortvriendt" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.394Z warn: Unable to find the contributor type for "Jeroen Cortvriendt" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.169Z warn: Unable to find the contributor type for "Tobias Hendrickx" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.395Z warn: Unable to find the contributor type for "Tobias Hendrickx" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.169Z warn: Unable to find the contributor type for "Ron Van den Branden" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.395Z warn: Unable to find the contributor type for "Ron Van den Branden" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.169Z warn: Unable to find the contributor type for "Vincent Ducatteeuw" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.395Z warn: Unable to find the contributor type for "Vincent Ducatteeuw" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.170Z warn: Unable to find the contributor type for "Tom Cobbaert" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.395Z warn: Unable to find the contributor type for "Tom Cobbaert" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.170Z warn: Unable to find the contributor type for "Diantha Osseweijer" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.395Z warn: Unable to find the contributor type for "Diantha Osseweijer" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.170Z warn: Unable to find the contributor type for "Michaël Meersmans" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.395Z warn: Unable to find the contributor type for "Michaël Meersmans" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.170Z warn: Unable to find the contributor type for "Rein Meus" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.396Z warn: Unable to find the contributor type for "Rein Meus" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.171Z warn: Unable to find the contributor type for "Stan Vertessen" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.396Z warn: Unable to find the contributor type for "Stan Vertessen" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.171Z warn: Unable to find the contributor type for "Toon Tabruyn" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.396Z warn: Unable to find the contributor type for "Toon Tabruyn" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.171Z warn: Unable to find the contributor type for "Sofie Teugels" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.396Z warn: Unable to find the contributor type for "Sofie Teugels" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.171Z warn: Unable to find the contributor type for "Olivier D'huynslager" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.396Z warn: Unable to find the contributor type for "Olivier D'huynslager" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
-2025-11-12T19:50:07.172Z warn: Unable to find the contributor type for "Valérie Adriaens" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
+2026-01-08T12:48:56.396Z warn: Unable to find the contributor type for "Valérie Adriaens" using column "CultureelErfgoed". Please make sure this column has a value set for this person.
 
