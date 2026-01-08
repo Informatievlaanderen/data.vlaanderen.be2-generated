@@ -115,13 +115,6 @@ Directory check
 
 index.html check
 
-#||#    + checking /home/circleci/project/config/dev/dummy.publication.json
-#||# 
-Directory check
-
-index.html check
-error: missing '/tmp/generated/doc/vocabularium/weg/ontwerpstandaard/2026-01-01/index.html'
-
 #||#    + checking /home/circleci/project/config/dev/energiehuis.publication.json
 #||# 
 Directory check
@@ -231,11 +224,8 @@ error: missing '/tmp/generated/doc/applicatieprofiel/dienstverlening-aan-persone
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/ontwerpstandaard/2025-11-04/index.html'
-error: missing '/tmp/generated/doc/vocabularium/klantvolgsysteem1/ontwerpstandaard/2025-11-04/index.html'
 error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/index.html'
-error: missing '/tmp/generated/ns/klantvolgsysteem1/index.html'
-error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/index.html'
+error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/codelijsten/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/kwaliteit-wegen-en-markeringen.publication.json
 #||# 
@@ -268,10 +258,6 @@ Directory check
 
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2025-03-21/index.html'
-error: missing '/tmp/generated/doc/vocabularium/leermiddelen/ontwerpstandaard/2025-03-21/index.html'
-error: missing '/tmp/generated/doc/vocabularium/leermiddelen/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/leermiddelen/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/leermiddelen/kandidaatstandaard/2025-08-01/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/logies.publication.json
 #||# 
@@ -323,8 +309,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/metadata-dcat/ontwerpstandaard/2025-09-16/index.html'
-error: missing '/tmp/generated/doc/vocabularium/metadata-dcat/ontwerpstandaard/2025-09-16/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/metadata-geo-dcat-vl.publication.json
 #||# 
@@ -465,10 +449,6 @@ error: missing '/tmp/generated/doc/vocabularium/persoon/ontwerpstandaard/toolcha
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01/index.html'
-error: missing '/tmp/generated/doc/vocabularium/rooilijnplannen/ontwerpstandaard/2025-06-01/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/rooilijnplannen/index.html'
-error: missing '/tmp/generated/ns/rooilijnplannen/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/sb.publication.json
 #||# 
@@ -491,8 +471,6 @@ error: missing '/tmp/generated/doc/applicatieprofiel/schuldbeheer/erkendestandaa
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/openbare-nutsvoorzieningkasten/ontwerpstandaard/2025-06-03/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/openbare-nutsvoorzieningkasten/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/slim-ruimtelijk-plannen.publication.json
 #||# 
@@ -553,8 +531,6 @@ error: missing '/tmp/generated/doc/applicatieprofiel/verkeersborden/ontwerpstand
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/index.html'
-error: missing '/tmp/generated/doc/implementatiemodel/verkeersmeldingen/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/verkeersmetingen.publication.json
 #||# 
@@ -613,6 +589,4 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/zaalreservatie/kandidaatstandaard/2025-07-01/index.html'
-error: missing '/tmp/generated/doc/vocabularium/zaalreservatie/kandidaatstandaard/2025-07-01/index.html'
 

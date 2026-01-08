@@ -2,31 +2,31 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:05:46.314Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-zaalreservatie.jsonld#L7939)".
+2026-01-08T10:40:20.272Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-zaalreservatie.jsonld#L7955)".
 
-2025-11-12T20:05:46.316Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-zaalreservatie.jsonld#L7961)".
+2026-01-08T10:40:20.274Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-zaalreservatie.jsonld#L7977)".
 
-2025-11-12T20:05:46.317Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-zaalreservatie.jsonld#L7972)".
+2026-01-08T10:40:20.275Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-zaalreservatie.jsonld#L7988)".
 
-2025-11-12T20:05:46.318Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-zaalreservatie.jsonld#L7983)".
+2026-01-08T10:40:20.276Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-zaalreservatie.jsonld#L7999)".
 
-2025-11-12T20:05:46.318Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474230892](all-zaalreservatie.jsonld#L7994)".
+2026-01-08T10:40:20.276Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474230892](all-zaalreservatie.jsonld#L8010)".
 
-2025-11-12T20:05:46.318Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
+2026-01-08T10:40:20.276Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2025-11-12T20:05:47.356Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-zaalreservatie.jsonld#L7939)".
+2026-01-08T10:40:21.417Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-zaalreservatie.jsonld#L7955)".
 
-2025-11-12T20:05:47.358Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-zaalreservatie.jsonld#L7961)".
+2026-01-08T10:40:21.419Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-zaalreservatie.jsonld#L7977)".
 
-2025-11-12T20:05:47.358Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-zaalreservatie.jsonld#L7972)".
+2026-01-08T10:40:21.420Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1607006999](all-zaalreservatie.jsonld#L7988)".
 
-2025-11-12T20:05:47.359Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-zaalreservatie.jsonld#L7983)".
+2026-01-08T10:40:21.423Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-zaalreservatie.jsonld#L7999)".
 
-2025-11-12T20:05:47.359Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474230892](all-zaalreservatie.jsonld#L7994)".
+2026-01-08T10:40:21.424Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474230892](all-zaalreservatie.jsonld#L8010)".
 
-2025-11-12T20:05:47.359Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
+2026-01-08T10:40:21.424Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
 

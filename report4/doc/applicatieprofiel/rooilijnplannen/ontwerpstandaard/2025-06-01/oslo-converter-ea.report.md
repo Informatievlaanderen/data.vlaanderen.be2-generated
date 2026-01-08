@@ -2,201 +2,195 @@
 
 #||# -------------------------------------
 
-2025-11-12T19:52:40.406Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
+2026-01-08T10:38:00.639Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
 
-2025-11-12T19:52:40.408Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
+2026-01-08T10:38:00.641Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
 
-2025-11-12T19:52:40.408Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+2026-01-08T10:38:00.641Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
 
-2025-11-12T19:52:40.409Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Positie:rapporteertAan)
+2026-01-08T10:38:00.641Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Positie:rapporteertAan)
 
-2025-11-12T19:52:40.409Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:CPSV:FormeelKader:isGerelateerdAan)
+2026-01-08T10:38:00.641Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:CPSV:FormeelKader:isGerelateerdAan)
 
-2025-11-12T19:52:40.409Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Persoon:Persoon:heeftRelatieMet)
+2026-01-08T10:38:00.641Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Persoon:Persoon:heeftRelatieMet)
 
-2025-11-12T19:52:40.409Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Generiek:Agent:isLidVan)
+2026-01-08T10:38:00.641Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Generiek:Agent:isLidVan)
 
-2025-11-12T19:52:40.409Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Generiek:Agent:isHoofdVan)
+2026-01-08T10:38:00.641Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Generiek:Agent:isHoofdVan)
 
-2025-11-12T19:52:40.409Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Generiek:Agent:rapporteertAan)
+2026-01-08T10:38:00.641Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Generiek:Agent:rapporteertAan)
 
-2025-11-12T19:52:40.409Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Generiek:Agent:isLidVan)
+2026-01-08T10:38:00.641Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Generiek:Agent:isLidVan)
 
-2025-11-12T19:52:40.409Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Organisatie:(Organisatie -> Agent))
+2026-01-08T10:38:00.642Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Organisatie:(Organisatie -> Agent))
 
-2025-11-12T19:52:40.410Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Persoon:Persoon:(Persoon -> Object))
+2026-01-08T10:38:00.642Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Persoon:Persoon:(Persoon -> Object))
 
-2025-11-12T19:52:40.410Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
+2026-01-08T10:38:00.642Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Dump:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
 
-2025-11-12T19:52:40.410Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:CPSV:FormeelKader:(FormeelKader -> Object))
+2026-01-08T10:38:00.642Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:CPSV:FormeelKader:(FormeelKader -> Object))
 
-2025-11-12T19:52:40.410Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Rooilijnplannen:Rooilijn:(Rooilijn -> Bouwlijn))
+2026-01-08T10:38:00.642Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-Rooilijnplannen:Rooilijn:(Rooilijn -> Bouwlijn))
 
-2025-11-12T19:52:40.416Z info: Connector Model:Model:OSLO-Perceel:KadastraalPatrimoniumperceel:(KadastraalPatrimoniumperceel -> Agent) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.646Z info: Connector Model:Model:OSLO-Perceel:KadastraalPatrimoniumperceel:(KadastraalPatrimoniumperceel -> Agent) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.418Z info: Connector Model:Model:SF:MultiLijnstring:(MultiLijnstring -> Multicurve) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.647Z info: Connector Model:Model:SF:MultiLijnstring:(MultiLijnstring -> Multicurve) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.418Z info: Connector Model:Model:SF:Curve:(Curve -> Geometrie) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.647Z info: Connector Model:Model:OSLO-Rooilijnplannen:RuimtelijkUitvoeringsplan:(RuimtelijkUitvoeringsplan -> LegaleVerschijningsvorm) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.418Z info: Connector Model:Model:OSLO-Rooilijnplannen:OpenbareWeg:(OpenbareWeg -> Rooilijnkenmerk) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:OSLO-Rooilijnplannen:Omgevingsvergunning:(Omgevingsvergunning -> LegaleVerschijningsvorm) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.418Z info: Connector Model:Model:OSLO-Rooilijnplannen:AangelandeEigendommen:(AangelandeEigendommen -> Rooilijnkenmerk) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:SF:Curve:(Curve -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.419Z info: Connector Model:Model:OSLO-Rooilijnplannen:OpenbareWegreferentie:(OpenbareWegreferentie -> Objectreferentie) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:OSLO-Rooilijnplannen:OpenbareWeg:(OpenbareWeg -> Rooilijnkenmerk) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.419Z info: Connector Model:Model:OSLO-Rooilijnplannen:Perceelreferentie:(Perceelreferentie -> Objectreferentie) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:OSLO-Rooilijnplannen:AangelandeEigendommen:(AangelandeEigendommen -> Rooilijnkenmerk) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.419Z info: Connector Model:Model:OSLO-Rooilijnplannen:Rooilijn:(Rooilijn -> Planelement) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:OSLO-Rooilijnplannen:OpenbareWegreferentie:(OpenbareWegreferentie -> Objectreferentie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.419Z info: Connector Model:Model:OSLO-Rooilijnplannen:Bouwlijn:(Bouwlijn -> Planelement) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:OSLO-Rooilijnplannen:Perceelreferentie:(Perceelreferentie -> Objectreferentie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.419Z info: Connector Model:Model:OSLO-Rooilijnplannen:GeenBouwverbod:(GeenBouwverbod -> Bouwlijnkenmerk) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:OSLO-Rooilijnplannen:Rooilijn:(Rooilijn -> Planelement) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.419Z info: Connector Model:Model:OSLO-Rooilijnplannen:Bouwverbod:(Bouwverbod -> Bouwlijnkenmerk) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:OSLO-Rooilijnplannen:Bouwlijn:(Bouwlijn -> Planelement) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.419Z info: Connector Model:Model:OSLO-Rooilijnplannen:GetroffenOppervlak:(GetroffenOppervlak -> Planelement) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:OSLO-Rooilijnplannen:GeenBouwverbod:(GeenBouwverbod -> Bouwlijnkenmerk) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.419Z info: Connector Model:Model:OSLO-Rooilijnplannen:Bouwlijnreferentie:(Bouwlijnreferentie -> Objectreferentie) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:OSLO-Rooilijnplannen:Bouwverbod:(Bouwverbod -> Bouwlijnkenmerk) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.419Z info: Connector Model:Model:QUDT:Valuta:(Valuta -> Eenheid) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:OSLO-Rooilijnplannen:GetroffenOppervlak:(GetroffenOppervlak -> Planelement) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.419Z info: Connector Model:Model:QUDT:Eenheid:(Eenheid -> Concept) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:OSLO-Rooilijnplannen:Bouwlijnreferentie:(Bouwlijnreferentie -> Objectreferentie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.419Z info: Connector Model:Model:SF:MultiPolygoon:(MultiPolygoon -> Multivlak) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:QUDT:Valuta:(Valuta -> Eenheid) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.419Z info: Connector Model:Model:SF:Multicurve:(Multicurve -> Geometrie) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:QUDT:Eenheid:(Eenheid -> Concept) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.419Z info: Connector Model:Model:OSLO-Rooilijnplannen:Rooilijnplaninventaris:(Rooilijnplaninventaris -> Planelement) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:OSLO-Besluit:Besluit:(Besluit -> LegaleVerschijningsvorm) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:SF:Multivlak:(Multivlak -> Geometrie) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:SF:MultiPolygoon:(MultiPolygoon -> Multivlak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:SF:Curve:(Curve -> GeneriekeCurve) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:SF:Multicurve:(Multicurve -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:SF:Vlak:(Vlak -> Geometrie) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:OSLO-Rooilijnplannen:Rooilijnplaninventaris:(Rooilijnplaninventaris -> Planelement) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:SF:LijnString:(LijnString -> Curve) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:SF:Multivlak:(Multivlak -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:SF:Polygoon:(Polygoon -> Vlak) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:SF:Curve:(Curve -> GeneriekeCurve) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:OSLO-Rooilijnplannen:Rooilijnkenmerk:(Rooilijnkenmerk -> Lijnkenmerk) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:SF:Vlak:(Vlak -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:OSLO-Rooilijnplannen:Bouwlijnkenmerk:(Bouwlijnkenmerk -> Lijnkenmerk) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.648Z info: Connector Model:Model:SF:LijnString:(LijnString -> Curve) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:OSLO-Rooilijnplannen:RuimtelijkUitvoeringsplan:(RuimtelijkUitvoeringsplan -> Verordening) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.649Z info: Connector Model:Model:SF:Polygoon:(Polygoon -> Vlak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:OSLO-Rooilijnplannen:Omgevingsvergunning:(Omgevingsvergunning -> Verordening) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.649Z info: Connector Model:Model:OSLO-Rooilijnplannen:Rooilijnkenmerk:(Rooilijnkenmerk -> Lijnkenmerk) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:SF:Multicurve:(Multicurve -> GeneriekeCurve) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.649Z info: Connector Model:Model:OSLO-Rooilijnplannen:Bouwlijnkenmerk:(Bouwlijnkenmerk -> Lijnkenmerk) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:SF:Vlak:(Vlak -> Generiekvlak) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.649Z info: Connector Model:Model:SF:Multicurve:(Multicurve -> GeneriekeCurve) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:SF:Multivlak:(Multivlak -> Generiekvlak) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.649Z info: Connector Model:Model:SF:Vlak:(Vlak -> Generiekvlak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:Schema.org:Geldbedrag:(Geldbedrag -> KwantitatieveWaarde) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.649Z info: Connector Model:Model:SF:Multivlak:(Multivlak -> Generiekvlak) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:OSLO-Rooilijnplannen:Rooilijnplan:(Rooilijnplan -> Plan) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.649Z info: Connector Model:Model:Schema.org:Geldbedrag:(Geldbedrag -> KwantitatieveWaarde) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:OSLO-Besluit:Besluit:(Besluit -> Verordening) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.649Z info: Connector Model:Model:OSLO-Rooilijnplannen:Rooilijnplan:(Rooilijnplan -> Plan) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.649Z info: Connector Model:Model:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.420Z info: Connector Model:Model:W3C-Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2026-01-08T10:38:00.649Z info: Connector Model:Model:W3C-Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2025-11-12T19:52:40.421Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.649Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.421Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.422Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:LOCN). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:LOCN). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.422Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:geoSPARQL). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:geoSPARQL). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.422Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:SKOS). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:SKOS). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.422Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein:OSLO-Dienst). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein:OSLO-Dienst). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.422Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein:OSLO-Adres). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein:OSLO-Adres). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.422Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein:Applicatieprofiel). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein:Applicatieprofiel). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.422Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.422Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein original:Applicatieprofiel). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein original:Applicatieprofiel). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.422Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein original:Applicatieprofiel:Deprecated). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein original:Applicatieprofiel:Deprecated). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.422Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein original:OSLO-Adres). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein original:OSLO-Adres). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.422Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein original:OSLO-Dienst). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO-OpenbaarDomein original:OSLO-Dienst). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.422Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:Schema.org). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:Schema.org). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:QUDT). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:QUDT). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO²_applicatieprofiel_Besluit_publicatie). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:OSLO²_applicatieprofiel_Besluit_publicatie). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Objectdiagrammen:Kleinhoefpad). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Objectdiagrammen:Kleinhoefpad). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Objectdiagrammen:Bouwlijn). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Objectdiagrammen:Bouwlijn). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:Illustraties). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:Illustraties). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:INSPIRE-AdministratieveEenheid). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:INSPIRE-AdministratieveEenheid). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model2). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model2). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model2:Package1). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model2:Package1). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model2:Package2). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model2:Package2). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model2:Package3). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model2:Package3). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model2:Package4). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model2:Package4). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model3). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.650Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model3). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model3:Package1). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model3:Package1). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model4). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model4). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model4:Package1). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Dump:Model4:Package1). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:IMKL-LD). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:IMKL-LD). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:W3C-Time). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:W3C-Time). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:Dummy). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:Dummy). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:SF). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:SF). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:Objectdiagrammen). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:Objectdiagrammen). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:Objectdiagrammen:Dijkstraat). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:Objectdiagrammen:Dijkstraat). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:RDFS). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:RDFS). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:Objectdiagrammen:QUDT-Units). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:Objectdiagrammen:QUDT-Units). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:OSLO-OpenbaarDomein). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:OSLO-OpenbaarDomein). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.423Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:GML). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:GML). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.424Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:FOAF). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:FOAF). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.424Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:ADMS). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:ADMS). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.424Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Dump). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Dump). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.424Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:CPSV). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:CPSV). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.424Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:ELI). Using fallback URI (http://todo.com/) instead.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:ELI). Using fallback URI (http://todo.com/) instead.
 
-2025-11-12T19:52:40.424Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:DCTerms). Using fallback URI (http://todo.com/) instead.
-
-2025-11-12T19:52:40.447Z warn: [ConnectorConverterHandler]: Connector (KadastraalPatrimoniumperceel.ZakelijkRecht) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-11-12T19:52:40.447Z warn: [ConnectorConverterHandler]: Connector (KadastraalPatrimoniumperceel.ZakelijkRecht) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
-
-2025-11-12T19:52:40.447Z warn: [ConnectorConverterHandler]: Can not determine the correct base URI for connector (KadastraalPatrimoniumperceel.ZakelijkRecht) and the fallback URI (http://todo.com/) will be assigned.
+2026-01-08T10:38:00.651Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:Model:DCTerms). Using fallback URI (http://todo.com/) instead.
 
 #||# -------------------------------------
 

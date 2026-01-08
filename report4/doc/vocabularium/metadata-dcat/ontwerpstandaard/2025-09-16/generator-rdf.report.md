@@ -2,19 +2,15 @@
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:57.656Z error: Unable to find the definition for property [urn:oslo-toolchain:7168b6e0ab1ad7e95d819fc07a8711b6709ed080086b782e6e31e8f9e20a39d6](all-metadata-dcat.jsonld#L4348).
+2026-01-08T10:40:03.017Z error: Unable to find the definition for property [urn:oslo-toolchain:c4b7b33c5218fbe960b142441fa3fbe13fe7d8dbf78195e11426189ad2f5e00e](all-metadata-dcat.jsonld#L1072).
 
-2025-11-12T20:04:57.659Z error: Unable to find the definition for property [urn:oslo-toolchain:7c463a9fa88cd8877517674ce6f4c1977a60aa0f1900a32be868065f41238a0d](all-metadata-dcat.jsonld#L4390).
-
-2025-11-12T20:04:57.659Z error: Unable to find the definition for property [urn:oslo-toolchain:95838aa419b0cc36c1447acd0939b6a412f4645b4a83982e84b62ba1b9cf6319](all-metadata-dcat.jsonld#L5993).
+2026-01-08T10:40:03.020Z error: Unable to find the definition for property [urn:oslo-toolchain:684a70de990792580dce9be1bf78b644b6f72e8a68e90658ec94e48a9a085724](all-metadata-dcat.jsonld#L1114).
 
 #||# oslo-generator-rdf for language en  
 
 #||# -------------------------------------  
 
-2025-11-12T20:04:58.454Z error: Unable to find the definition for property [urn:oslo-toolchain:7168b6e0ab1ad7e95d819fc07a8711b6709ed080086b782e6e31e8f9e20a39d6](all-metadata-dcat.jsonld#L4348).
+2026-01-08T10:40:03.743Z error: Unable to find the definition for property [urn:oslo-toolchain:c4b7b33c5218fbe960b142441fa3fbe13fe7d8dbf78195e11426189ad2f5e00e](all-metadata-dcat.jsonld#L1072).
 
-2025-11-12T20:04:58.456Z error: Unable to find the definition for property [urn:oslo-toolchain:7c463a9fa88cd8877517674ce6f4c1977a60aa0f1900a32be868065f41238a0d](all-metadata-dcat.jsonld#L4390).
-
-2025-11-12T20:04:58.457Z error: Unable to find the definition for property [urn:oslo-toolchain:95838aa419b0cc36c1447acd0939b6a412f4645b4a83982e84b62ba1b9cf6319](all-metadata-dcat.jsonld#L5993).
+2026-01-08T10:40:03.745Z error: Unable to find the definition for property [urn:oslo-toolchain:684a70de990792580dce9be1bf78b644b6f72e8a68e90658ec94e48a9a085724](all-metadata-dcat.jsonld#L1114).
 

@@ -34,8 +34,6 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/dossier.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/dev/dummy.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/energiehuis.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/energiemanagementsysteem.publication.json
@@ -170,6 +168,8 @@ Error: the following directories are unsupported
 [
   "/tmp/generated/doc/applicatieprofiel/AirAndWater/Core/ontwerpstandaard/2021-10-01",
   "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL",
+  "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL/kandidaatstandaard/2025-12-17",
+  "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-04-30",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-08-30",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-11-28",
@@ -178,6 +178,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-12-17",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/latest",
   "/tmp/generated/doc/applicatieprofiel/FeitelijkeVerenigingen",
+  "/tmp/generated/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/begraafplaatsen",
   "/tmp/generated/doc/applicatieprofiel/begraafplaatsenbeheer",
   "/tmp/generated/doc/applicatieprofiel/begroeid-voorkomen",
@@ -271,6 +272,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/wegenregister",
   "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/swagger",
   "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/swagger/R1",
+  "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/swagger/R1/SKOS",
   "/tmp/generated/doc/vocabularium/besluit/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/bestuur/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01",
@@ -292,6 +294,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/generiek/zonderstatus/2018-10-04",
   "/tmp/generated/doc/vocabularium/generiek/zonderstatus/2019-07-01",
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
+  "/tmp/generated/doc/vocabularium/leermiddelen/kandidaatstandaard/2025-08-01",
   "/tmp/generated/doc/vocabularium/mandaat/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/metadata-dcat/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/mobiliteit/Hoppinpunten/kandidaatstandaard/2022-04-01",
