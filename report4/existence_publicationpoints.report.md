@@ -263,8 +263,16 @@ index.html check
 #||#    + checking /home/circleci/project/config/production/metadata-geo-dcat-vl.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09/'
+error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09/'
+error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09/'
+error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09/'
 
 index.html check
+error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09//index.html'
+error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09//index.html'
+error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09//index.html'
+error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09//index.html'
 
 #||#    + checking /home/circleci/project/config/production/mobiliteit-intelligente-toegang.publication.json
 #||# 
