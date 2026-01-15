@@ -2,15 +2,15 @@
 
 #||# -------------------------------------  
 
-2026-01-07T12:58:10.709Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasDerivedFrom which acts as a parent. Using original URI as fallback.
+2026-01-15T12:46:30.192Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasDerivedFrom which acts as a parent. Using original URI as fallback.
 
-2026-01-07T12:58:10.734Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2026-01-15T12:46:30.220Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-2026-01-07T12:58:10.734Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+2026-01-15T12:46:30.220Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
 
-2026-01-07T12:58:10.735Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
+2026-01-15T12:46:30.221Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
 
-2026-01-07T12:58:10.735Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
+2026-01-15T12:46:30.221Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
 
 Error: Unable to find the assigned URI for range http://www.w3.org/2000/01/rdf-schema#Resource of attribute [urn:oslo-toolchain:593a0626d98db31a4d06adbd005fc82b4e7366875e79be955ca1b8d24c48a62f](all-besluit-mobiliteit-ap.jsonld#L3874).
 
