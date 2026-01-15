@@ -2,7 +2,5 @@
 
 #||# -------------------------------------  
 
-2026-01-15T12:46:27.362Z error: Unable to find the assigned URI of range with id http://www.w3.org/2000/01/rdf-schema#Resource.
-
-2026-01-15T12:46:27.373Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:6964eb5a0474c5f7eff19487d8f9af4f5b35924f1e591dea1b0ca1324f133bbb](all-besluit-mobiliteit-ap.jsonld#L6540).
+2026-01-15T12:53:46.955Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:6964eb5a0474c5f7eff19487d8f9af4f5b35924f1e591dea1b0ca1324f133bbb](all-besluit-mobiliteit.jsonld#L6584).
 
