@@ -190,6 +190,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/begraafplaatsen",
   "/tmp/generated/doc/applicatieprofiel/begraafplaatsenbeheer",
   "/tmp/generated/doc/applicatieprofiel/begroeid-voorkomen",
+  "/tmp/generated/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/kristof-toolchain4",
   "/tmp/generated/doc/applicatieprofiel/besluit-publicatie/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/applicatieprofiel/besluitvorming",
   "/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond",

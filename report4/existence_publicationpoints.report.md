@@ -29,6 +29,7 @@ index.html check
 Directory check
 
 index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/kristof/index.html'
 
 #||#    + checking /home/circleci/project/config/test/besluit-publicatie.publication.json
 #||# 
