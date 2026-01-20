@@ -168,6 +168,7 @@ Error: the following directories are unsupported
 [
   "/tmp/generated/doc/applicatieprofiel/AirAndWater/Core/ontwerpstandaard/2021-10-01",
   "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL",
+  "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL/kandidaatstandaard/2025-12-09",
   "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-04-30",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-08-30",
@@ -303,6 +304,8 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/generiek/zonderstatus/2019-07-01",
   "/tmp/generated/doc/vocabularium/hulp-dienstverlening-gedetineerden/ontwerpstandaard/2024-07-22",
   "/tmp/generated/doc/vocabularium/mandaat/ontwerpdocument/2020-01-06",
+  "/tmp/generated/doc/vocabularium/metadata-dcat",
+  "/tmp/generated/doc/vocabularium/metadata-dcat/ontwerpstandaard/2025-09-16",
   "/tmp/generated/doc/vocabularium/metadata-dcat/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/mobiliteit-intelligente-toegang/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/mobiliteit/Hoppinpunten/kandidaatstandaard/2022-04-01",
