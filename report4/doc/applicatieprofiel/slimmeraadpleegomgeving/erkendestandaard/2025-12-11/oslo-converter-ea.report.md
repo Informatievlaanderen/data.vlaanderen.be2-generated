@@ -1,0 +1,212 @@
+#||# oslo-converter-ea for diagram OSLO-SlimmeRaadpleegomgeving
+
+#||# -------------------------------------
+
+2026-01-28T14:54:32.677Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Generiek:Agent:rapporteertAan)
+
+2026-01-28T14:54:32.679Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Wetgeving:Rechtsgrond:veranderdDoor)
+
+2026-01-28T14:54:32.679Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Wetgeving:Rechtsgrond:corrigeert)
+
+2026-01-28T14:54:32.679Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Wetgeving:Rechtsgrond:citeert)
+
+2026-01-28T14:54:32.679Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Wetgeving:Rechtsgrond:verandert)
+
+2026-01-28T14:54:32.679Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Wetgeving:Rechtsgrond:gecorrigeerdDoor)
+
+2026-01-28T14:54:32.679Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Bestuur:Bestuursorgaan:houdtZitting)
+
+2026-01-28T14:54:32.679Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Persoon:Persoon:heeftRelatieMet)
+
+2026-01-28T14:54:32.679Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Organisatie:heeftSuborganisatie)
+
+2026-01-28T14:54:32.679Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Organisatie:isSuborganisatieVan)
+
+2026-01-28T14:54:32.679Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Organisatie:isGeassocieerdMet)
+
+2026-01-28T14:54:32.679Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Positie:rapporteertAan)
+
+2026-01-28T14:54:32.679Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Generiek:FormeelKader:isGerelateerdAan)
+
+2026-01-28T14:54:32.679Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Generiek:Agent:isLidVan)
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Generiek:Agent:isHoofdVan)
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Generiek:Agent:isLidVan)
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Persoon:Persoon:(Persoon -> Object))
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Organisatie:Organisatie:(Organisatie -> Object))
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Generiek:FormeelKader:(FormeelKader -> Object))
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Persoon:Persoon:inwonerschap)
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Besluit:Besluit:volgtUit)
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:IPDC-LPDC:InstantiePubliekeDienstverlening:(InstantiePubliekeDienstverlening -> Rechtsgrond))
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Notificatie:Notificatiebericht:(Notificatiebericht -> LegaleVerschijningsvorm))
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Besluit:BehandelingVanAgendapunt:(BehandelingVanAgendapunt -> Beslissingsactiviteit))
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:FLINT:Handeling:(Handeling -> Activiteit))
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:FLINT:Handeling:(Handeling -> Object))
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-CultureelErfgoed-Object:MensgemaaktObject:BestaatUit)
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-CultureelErfgoed-Object:MensgemaaktObject:OnderworpenAan)
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:OnderworpenAan)
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:HeeftItem)
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-CultureelErfgoed-Object:GecureerdeCollectie:Bestaatuit)
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> GecureerdeCollectie))
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> VisueelItem))
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-CultureelErfgoed-Object:InformatieObject:OnderworpenAan)
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-CultureelErfgoed-Object:InformatieObject:HeeftComponent)
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-CultureelErfgoed-Object:InformatieObject:BestaatUit)
+
+2026-01-28T14:54:32.680Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-CultureelErfgoed-Object:InformatieObject:(InformatieObject -> GecureerdeCollectie))
+
+2026-01-28T14:54:32.681Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-CultureelErfgoed-Object:Werk:HeeftComponent)
+
+2026-01-28T14:54:32.681Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-CultureelErfgoed-Object:MensgemaaktKenmerk:BestaatUit)
+
+2026-01-28T14:54:32.681Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-CultureelErfgoed-Object:MensgemaaktObject:(MensgemaaktObject -> MensgemaaktKenmerk))
+
+2026-01-28T14:54:32.681Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Omgevingsvergunning:Rechtshandeling:(Rechtshandeling -> JuridischWerk))
+
+2026-01-28T14:54:32.681Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Omgevingsvergunning:Inhoud:(Inhoud -> JuridischWerk))
+
+2026-01-28T14:54:32.683Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:Annotatie:(Annotatie -> Resource) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.684Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:Annotatie:(Annotatie -> Resource) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.684Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:TekstQuoteSelector:(TekstQuoteSelector -> Selector) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.685Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:ResourceOnderdeel:(ResourceOnderdeel -> Selector) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.685Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Generiek:Activiteit:(Activiteit -> Annotatie) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.685Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:TekstPositieSelector:(TekstPositieSelector -> Selector) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.685Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:Selector:(Selector -> Selector) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.685Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:ShaclPathSelector:(ShaclPathSelector -> Selector) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.685Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Dossier:Stuk:(Stuk -> Website) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.685Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Omgevingsvergunning:Recht:(Recht -> Agent) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.685Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:FragmentSelector:(FragmentSelector -> Selector) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.685Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Besluit-SRO:LegaleVerschijningsvorm:(LegaleVerschijningsvorm -> InstantiePubliekeDienstverlening) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.685Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Besluit:Artikel:(Artikel -> LegaleVerschijningsvorm) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.685Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Besluit:BehandelingVanAgendapunt:geeftAanleidingTot is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.685Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Besluit:BehandelingVanAgendapunt:geeftAanleidingTot has name "geeftAanleidingTot". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+
+2026-01-28T14:54:32.686Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:Code:(Code -> Code) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.686Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:AdviesVraag:(AdviesVraag -> LegaleActiviteit) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.686Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Besluit:BehandelingVanAgendapunt:(BehandelingVanAgendapunt -> InstantiePubliekeDienstverlening) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.686Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:ResourceOnderdeel:(ResourceOnderdeel -> Resource) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.686Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Besluit:BehandelingVanAgendapunt:(BehandelingVanAgendapunt -> LegaleVerschijningsvorm) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.686Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:Code:(Code -> Code) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.686Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Generiek:Activiteit:(Activiteit -> Agent) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.686Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Dossier:Stuk:(Stuk -> AdviesAntwoord) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.686Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Dossier:Stuk:(Stuk -> AdviesVraag) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.687Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Besluit-SRO:LegaleVerschijningsvorm:(LegaleVerschijningsvorm -> Rechtsgrond) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.687Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Besluit-SRO:LegaleVerschijningsvorm:(LegaleVerschijningsvorm -> AdministratieveEenheid) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.687Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Dossier:Stuk:(Stuk -> LegaleVerschijningsvorm) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.687Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Besluit-SRO:LegaleVerschijningsvorm:(LegaleVerschijningsvorm -> Stuk) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.687Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Besluit-SRO:LegaleVerschijningsvorm:(LegaleVerschijningsvorm -> Stuk) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.687Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Dossier:Stuk:(Stuk -> Stuk) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.687Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:IPDC-LPDC:InstantiePubliekeDienstverlening:(InstantiePubliekeDienstverlening -> ConceptueelPubliekeDienstverlening) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.687Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:FLINT:Handeling:(Handeling -> Feit) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.687Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:FLINT:Handeling:(Handeling -> Feit) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.687Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:FLINT:Handeling:(Handeling -> Feit) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.687Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Omgevingsvergunning:Verbintenis:(Verbintenis -> Agent) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.687Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Omgevingsvergunning:Verbintenis:(Verbintenis -> Agent) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.687Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Besluit:BehandelingVanAgendapunt:(BehandelingVanAgendapunt -> NormatieveBepaling) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.688Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Besluit:BehandelingVanAgendapunt:(BehandelingVanAgendapunt -> NormatieveBepaling) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.688Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:IPDC-LPDC:InstantiePubliekeDienstverlening:(InstantiePubliekeDienstverlening -> Rechtsgrond) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.688Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Besluit:BehandelingVanAgendapunt:(BehandelingVanAgendapunt -> Stuk) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.688Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:InitiatiefrechtVraag:(InitiatiefrechtVraag -> LegaleActiviteit) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.688Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:InitiatiefrechtAntwoord:(InitiatiefrechtAntwoord -> LegaleActiviteit) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.688Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:ELI:LegaleActiviteit:(LegaleActiviteit -> Participatie) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.688Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:InitiatiefrechtVraag:(InitiatiefrechtVraag -> Stuk) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.688Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Besluitvorming:Beslissingsactiviteit:(Beslissingsactiviteit -> LegaleActiviteit) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.688Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Besluit:BehandelingVanAgendapunt:(BehandelingVanAgendapunt -> LegaleActiviteit) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.688Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Besluit:BehandelingVanAgendapunt:(BehandelingVanAgendapunt -> Beslissingsactiviteit) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.688Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Besluit-SRO:LegaleVerschijningsvorm:(LegaleVerschijningsvorm -> LegaleVerschijningsvorm) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.688Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Dossier:Stuk:(Stuk -> InitiatiefrechtVraag) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.688Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Dossier:Stuk:(Stuk -> InitiatiefrechtAntwoord) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.688Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Besluit:BehandelingVanAgendapunt:(BehandelingVanAgendapunt -> InitiatiefrechtVraag) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.689Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Besluit:BehandelingVanAgendapunt:(BehandelingVanAgendapunt -> InitiatiefrechtAntwoord) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.689Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:ELI:LegaalProces:(LegaalProces -> LegaleActiviteit) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.689Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO²_applicatieprofiel_Besluit_publicatie:OSLO-Besluit:Besluit:(Besluit -> LegaleVerschijningsvorm) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.689Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-SlimmeRaadpleegomgeving:AdviesAntwoord:(AdviesAntwoord -> LegaleActiviteit) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.689Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Omgevingsvergunning:Activiteit:(Activiteit -> Activiteit) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.689Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Omgevingsvergunning:Toelating:(Toelating -> Recht) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.689Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Omgevingsvergunning:Verbintenis:(Verbintenis -> NormatieveBepaling) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.689Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Omgevingsvergunning:Recht:(Recht -> NormatieveBepaling) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.689Z info: Connector Model:applicatieprofiel_SlimmeRaadpleegomgeving:OSLO-Omgevingsvergunning:NormatieveBepaling:(NormatieveBepaling -> Activiteit) is not an association with a source role. Ignoring this connector.
+
+2026-01-28T14:54:32.690Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+
+#||# -------------------------------------
+
