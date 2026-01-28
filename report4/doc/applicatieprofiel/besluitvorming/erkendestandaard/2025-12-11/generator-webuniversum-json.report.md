@@ -2,51 +2,51 @@
 
 #||# -------------------------------------  
 
-2026-01-28T14:35:14.851Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/accessRights which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.898Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/accessRights which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.853Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/creator which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.900Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/creator which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.854Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.901Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.855Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasInfluencedBy which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.902Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasInfluencedBy which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.855Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/requires which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.902Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/requires which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.858Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.905Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.859Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/relation which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.906Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/relation which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.859Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/besluitvorming#heeftBeslissing which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.906Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/besluitvorming#heeftBeslissing which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.860Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasAssociatedWith which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.907Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasAssociatedWith which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.861Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasStartedBy which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.908Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasStartedBy which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.861Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#startedAtTime which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.908Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#startedAtTime which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.862Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#endedAtTime which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.909Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#endedAtTime which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.863Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.909Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.866Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#hadMember which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.911Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#hadMember which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.870Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/spatial which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.913Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/spatial which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.871Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasInfluencedBy which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.914Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasInfluencedBy which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.873Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/type which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.915Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/type which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.877Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasGeneratedBy which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.919Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasGeneratedBy which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.882Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.924Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.901Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/alternative which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.944Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/alternative which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.902Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.945Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.902Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/references which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.945Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/references which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.909Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.949Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
 
-2026-01-28T14:35:14.909Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasGeneratedBy which acts as a parent. Using original URI as fallback.
+2026-01-28T15:11:57.950Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#wasGeneratedBy which acts as a parent. Using original URI as fallback.
 
