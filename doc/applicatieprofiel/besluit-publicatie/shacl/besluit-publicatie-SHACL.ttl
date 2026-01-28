@@ -1,637 +1,973 @@
-@prefix sh:      <http://www.w3.org/ns/shacl#> .
-@prefix qb:      <http://purl.org/linked-data/cube#> .
-<https://data.vlaanderen.be/shacl/besluit-publicatie#Rechtsgrond(Besluit)Shape>
-	a sh:NodeShape ;
-	sh:targetClass <http://data.europa.eu/eli/ontology#LegalResource> ;
-	sh:property [
-		sh:name "heeftDeel" ;
-		sh:description "Duidt een artikel aan van dit besluit." ;
-		sh:path <http://data.europa.eu/eli/ontology#has_part> ;
-		sh:class <http://data.europa.eu/eli/ontology#LegalResourceSubdivision> ;
-		sh:minCount 1 ;
-	] ;
-	sh:property [
-		sh:name "aangenomenDoor" ;
-		sh:description "Het orgaan dat de rechtsgrond heeft goedgekeurd, waardoor er een rechtsgevolg ontstond." ;
-		sh:path <http://data.europa.eu/eli/ontology#passed_by> ;
-		sh:class <http://data.vlaanderen.be/ns/besluit#Bestuursorgaan> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:closed false .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#Rechtsgrondonderdeel(Artikel)Shape>
-	a sh:NodeShape ;
-	sh:targetClass <http://data.europa.eu/eli/ontology#LegalResourceSubdivision> ;
-	sh:property [
-		sh:name "isDeelVan" ;
-		sh:description "Het besluit waar dit artikel onderdeel van is." ;
-		sh:path <http://data.europa.eu/eli/ontology#is_part_of> ;
-		sh:class <http://data.europa.eu/eli/ontology#LegalResource> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#> rdfs:member <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#StemmingShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#VergaderactiviteitShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#ZittingShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#ArtikelShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#LegaleVerschijningsvormShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BehandelingVanAgendapuntShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#AgendapuntShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BesluitShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#DocumentShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrondonderdeel(artikel)Shape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#RechtsgrondonderdeelShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#RechtsgrondShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrond(besluit)Shape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BestuurseenheidShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BestuursorgaanShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#DocumentonderdeelShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#AgentShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#MandatarisShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#IntegerShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BooleanShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#DatetimeShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#StringShape>,
+    <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#DateShape> .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#LegaleVerschijningsvormShape>
-	a sh:NodeShape ;
-	sh:targetClass <http://data.europa.eu/eli/ontology#LegalExpression> ;
-	sh:property [
-		sh:name "veranderdDoor" ;
-		sh:description "Duidt aan dat deze legale verschijningsvorm een verandering met legale gevolgen heeft ondergaan door een andere legale verschijningsvorm. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering." ;
-		sh:path <http://data.europa.eu/eli/ontology#changed_by> ;
-		sh:class <http://data.europa.eu/eli/ontology#LegalExpression> ;
-	] ;
-	sh:property [
-		sh:name "citeert" ;
-		sh:description "Een citatie in de wettelijke tekst. Dit omvat zowel woordelijke citaten als citaten in verwijzingen." ;
-		sh:path <http://data.europa.eu/eli/ontology#cites> ;
-		sh:class <http://data.europa.eu/eli/ontology#LegalExpression> ;
-	] ;
-	sh:property [
-		sh:name "gecorrigeerdDoor" ;
-		sh:description "Duidt een legale verschijningsvorm aan die een tekstuele verandering zonder legale impact aan deze legale verschijningsvorm aanbrengt." ;
-		sh:path <http://data.europa.eu/eli/ontology#corrected_by> ;
-		sh:class <http://data.europa.eu/eli/ontology#LegalExpression> ;
-	] ;
-	sh:property [
-		sh:name "verandert" ;
-		sh:description "Duidt aan dat deze legale verschijningsvorm een verandering met legale gevolgen doorvoert op een andere legale verschijningsvorm. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering." ;
-		sh:path <http://data.europa.eu/eli/ontology#changes> ;
-		sh:class <http://data.europa.eu/eli/ontology#LegalExpression> ;
-	] ;
-	sh:property [
-		sh:name "corrigeert" ;
-		sh:description "Duidt aan dat deze legale verschijningsvorm tekstuele veranderingen zonder legale impact aanbrengt in een andere legale verschijningsvorm." ;
-		sh:path <http://data.europa.eu/eli/ontology#corrects> ;
-		sh:class <http://data.europa.eu/eli/ontology#LegalExpression> ;
-	] ;
-	sh:property [
-		sh:name "inhoud" ;
-		sh:description "De beschrijving van de beoogde rechtsgevolgen, het zogenaamde beschikkend gedeelte." ;
-		sh:path <http://www.w3.org/ns/prov#value> ;
-		sh:datatype <http://www.w3.org/2000/01/rdf-schema#Literal> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "taal" ;
-		sh:description "De taal van de verschijningsvorm." ;
-		sh:path <http://data.europa.eu/eli/ontology#language> ;
-		sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-		qb:codeList <http://publications.europa.eu/mdr/authority/language/index.html> ;
-	] ;
-	sh:property [
-		sh:name "titel" ;
-		sh:description "Titel van de legale verschijningsvorm." ;
-		sh:path <http://data.europa.eu/eli/ontology#title> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
-		sh:minCount 1 ;
-	] ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#AgendapuntShape> a shacl:NodeShape;
+  rdfs:label "Agendapunt"@nl;
+  rdfs:comment "Formeel aanvaard te behandelen onderwerp op een zitting."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "beschrijving"@nl;
+    rdfs:comment "Korte beschrijving van het agendapunt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Agendapunt.Beschrijving>;
+    shacl:datatype xsd:string;
+    shacl:description "Korte beschrijving van het agendapunt."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "gepland openbaar"@nl;
+    rdfs:comment "Geeft aan of het agendapunt al dan niet bedoeld is om openbaar te bespreken."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Agendapunt.GeplandOpenbaar>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Geeft aan of het agendapunt al dan niet bedoeld is om openbaar te bespreken."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "gepland openbaar"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#geplandOpenbaar>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "titel"@nl;
+    rdfs:comment "De naam van het agendapunt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Agendapunt.Titel>;
+    shacl:datatype xsd:string;
+    shacl:description "De naam van het agendapunt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "titel"@nl;
+    shacl:path dc:title
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    rdfs:comment "Type van het agendapunt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Agendapunt.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Type van het agendapunt."@nl;
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#Agendapunt.type>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "refereert aan"@nl;
+    rdfs:comment "Een ander agendapunt waarnaar verwezen wordt vanuit dit agendapunt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Agendapunt.RefereertAan>;
+    shacl:class <http://data.vlaanderen.be/ns/besluit#Agendapunt>;
+    shacl:description "Een ander agendapunt waarnaar verwezen wordt vanuit dit agendapunt."@nl;
+    shacl:name "refereert aan"@nl;
+    shacl:path dc:references
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft ontwerpbesluit"@nl;
+    rdfs:comment "Een (mogelijks nog aan te vullen of aan te passen) ontwerp voor het besluit dat uit dit agendapunt zou voortkomen."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Agendapunt.HeeftOntwerpbesluit>;
+    shacl:class foaf:Document;
+    shacl:description "Een (mogelijks nog aan te vullen of aan te passen) ontwerp voor het besluit dat uit dit agendapunt zou voortkomen."@nl;
+    shacl:name "heeft ontwerpbesluit"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftOntwerpbesluit>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "aangebracht na"@nl;
+    rdfs:comment "Het agendapunt dat op de agenda direct dit agendapunt voorafging."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Agendapunt.AangebrachtNa>;
+    shacl:class <http://data.vlaanderen.be/ns/besluit#Agendapunt>;
+    shacl:description "Het agendapunt dat op de agenda direct dit agendapunt voorafging."@nl;
+    shacl:maxCount 1;
+    shacl:name "aangebracht na"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#aangebrachtNa>
+  ];
+  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Agendapunt> .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#DocumentOnderdeelShape>
-	a sh:NodeShape ;
-	sh:targetClass <https://data.vlaanderen.be/ns/generiek#DocumentOnderdeel> ;
-	sh:property [
-		sh:name "isOnderdeelVan" ;
-		sh:description "Een verwante bron waarin de beschreven bron fysiek of logisch is opgenomen." ;
-		sh:path <http://purl.org/dc/terms/isPartOf> ;
-		sh:class <http://xmlns.com/foaf/0.1/Document> ;
-	] ;
-	sh:property [
-		sh:name "isDeelVan" ;
-		sh:description "Een verwante bron waarin de beschreven bron fysiek of logisch is opgenomen." ;
-		sh:path <http://purl.org/dc/terms/isPartOf> ;
-		sh:class <https://data.vlaanderen.be/ns/generiek#DocumentOnderdeel> ;
-	] ;
-	sh:property [
-		sh:name "nummer" ;
-		sh:description "Nummer vh documentonderdeel." ;
-		sh:path <https://data.vlaanderen.be/ns/generiek#nummer> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#integer> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "type" ;
-		sh:description "Aard van het documentonderdeel." ;
-		sh:path <http://purl.org/dc/terms/type> ;
-		sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#AgentShape> a shacl:NodeShape;
+  rdfs:label "Agent"@nl;
+  rdfs:comment "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."@nl;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#AgentShape>
-	a sh:NodeShape ;
-	sh:targetClass <http://purl.org/dc/terms/Agent> ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#ArtikelShape> a shacl:NodeShape;
+  rdfs:label "Artikel"@nl;
+  rdfs:comment "Formeel afgebakend onderdeel van een besluit,dat een of meer van de beoogde rechtsgevolgen beschrijft."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "nummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Voorbeeld voor onderscheid met titel te verduidelijken: 'Artikel 1' is het nummer, 'Artikel 1 van het Gemeentedecreet' is de titel."@nl;
+    rdfs:comment "Het nummer van het artikel."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Artikel.Nummer>;
+    shacl:datatype xsd:string;
+    shacl:description "Het nummer van het artikel."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "nummer"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#number>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "realiseert"@nl;
+    rdfs:comment "De rechtsgrond beschreven door dit artikel."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Artikel.Realiseert>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResourceSubdivision>;
+    shacl:description "De rechtsgrond beschreven door dit artikel."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "realiseert"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#realizes>
+  ];
+  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Artikel> .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#BestuurseenheidShape>
-	a sh:NodeShape ;
-	sh:targetClass <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> ;
-	sh:property [
-		sh:name "classificatie" ;
-		sh:description "Classificatie van de bestuurseenheid." ;
-		sh:path <http://www.w3.org/ns/org#classification> ;
-		sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "naam" ;
-		sh:description "Naam van de bestuurseenheid." ;
-		sh:path <http://www.w3.org/2004/02/skos/core#prefLabel> ;
-		sh:datatype <http://www.w3.org/2000/01/rdf-schema#Literal> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "werkingsgebied" ;
-		sh:description "Geografische gebied waarbinnen de bestuurseenheid bepaalde verantwoordelijkheden heeft waarbinnen het bestuurshandelingen kan stellen." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#werkingsgebied> ;
-		sh:class <http://www.w3.org/ns/prov#Location> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BehandelingVanAgendapuntShape> a shacl:NodeShape;
+  rdfs:label "Behandeling van Agendapunt"@nl;
+  rdfs:comment "De uitvoering van de acties om een agendapunt te verwerken tijdens een zitting."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "openbaar"@nl;
+    rdfs:comment "Geeft aan of de bespreking effectief openbaar verlopen is."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BehandelingVanAgendapunt.Openbaar>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Geeft aan of de bespreking effectief openbaar verlopen is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "openbaar"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#openbaar>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft aanwezige"@nl;
+    rdfs:comment "Een mandataris (van het orgaan dat de zitting houdt) die aanwezig was tijdens (een deel van) de behandeling."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BehandelingVanAgendapunt.HeeftAanwezige>;
+    shacl:class <http://data.vlaanderen.be/ns/mandaat#Mandataris>;
+    shacl:description "Een mandataris (van het orgaan dat de zitting houdt) die aanwezig was tijdens (een deel van) de behandeling."@nl;
+    shacl:minCount 1;
+    shacl:name "heeft aanwezige"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftAanwezige>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft secretaris"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Verplicht te gebruiken wanneer de secretaris tijdens de behandeling van het agendapunt verschilt van de secretaris van de zitting; anders optioneel."@nl;
+    rdfs:comment "De mandataris die de rol van secretaris heeft gedurende de behandeling van het agendapunt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BehandelingVanAgendapunt.HeeftSecretaris>;
+    shacl:class <http://data.vlaanderen.be/ns/mandaat#Mandataris>;
+    shacl:description "De mandataris die de rol van secretaris heeft gedurende de behandeling van het agendapunt."@nl;
+    shacl:maxCount 1;
+    shacl:name "heeft secretaris"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftSecretaris>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft voorzitter"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Verplicht te gebruiken wanneer de voorzitter tijdens de behandeling van het agendapunt verschilt van de voorzitter van de zitting; anders optioneel."@nl;
+    rdfs:comment "De mandataris die de rol als voorzitter heeft gedurende de behandeling van het agendapunt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BehandelingVanAgendapunt.HeeftVoorzitter>;
+    shacl:class <http://data.vlaanderen.be/ns/mandaat#Mandataris>;
+    shacl:description "De mandataris die de rol als voorzitter heeft gedurende de behandeling van het agendapunt."@nl;
+    shacl:maxCount 1;
+    shacl:name "heeft voorzitter"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftVoorzitter>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "geeft aanleiding tot"@nl;
+    rdfs:comment "Een besluit dat is opgemaakt naar aanleiding van de behandeling van het agendapunt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BehandelingVanAgendapunt.GeeftAanleidingTot>;
+    shacl:class <http://data.vlaanderen.be/ns/besluit#Besluit>;
+    shacl:description "Een besluit dat is opgemaakt naar aanleiding van de behandeling van het agendapunt."@nl;
+    shacl:name "geeft aanleiding tot"@nl;
+    shacl:path prov:generated
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "gebeurt na"@nl;
+    rdfs:comment "Verwijzing naar het voorgaand behandeld agendapunt binnen dezelfde zitting. Laat toe om de volgorde van de behandelingen op te bouwen."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BehandelingVanAgendapunt.GebeurtNa>;
+    shacl:class <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>;
+    shacl:description "Verwijzing naar het voorgaand behandeld agendapunt binnen dezelfde zitting. Laat toe om de volgorde van de behandelingen op te bouwen."@nl;
+    shacl:maxCount 1;
+    shacl:name "gebeurt na"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#gebeurtNa>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft onderwerp"@nl;
+    rdfs:comment "Het onderwerp van de activiteit."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BehandelingVanAgendapunt.HeeftOnderwerp>;
+    shacl:class <http://data.vlaanderen.be/ns/besluit#Agendapunt>;
+    shacl:description "Het onderwerp van de activiteit."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "heeft onderwerp"@nl;
+    shacl:path dc:subject
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft stemming"@nl;
+    rdfs:comment "Een stemming die plaatsvond tijdens de behandeling van het agendapunt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BehandelingVanAgendapunt.HeeftStemming>;
+    shacl:class <http://data.vlaanderen.be/ns/besluit#Stemming>;
+    shacl:description "Een stemming die plaatsvond tijdens de behandeling van het agendapunt."@nl;
+    shacl:name "heeft stemming"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftStemming>
+  ];
+  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt> .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#RechtsgrondonderdeelShape>
-	a sh:NodeShape ;
-	sh:targetClass <http://data.europa.eu/eli/ontology#LegalResourceSubdivision> ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BesluitShape> a shacl:NodeShape;
+  rdfs:label "Besluit"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Hieronder vallen zowel individuele besluiten (rechtshandelingen met een individueel karakter zoals het toekennen van een subsidie) als besluiten van algemene strekking (beslissingen van algemene reglementaire strekking die niet gericht zijn op een individu maar op een groep, zoals de verkeersregels)."@nl;
+  rdfs:comment "De authentieke schriftelijke neerslag van een beslissing van een bestuursorgaan. Deze beslissing houdt een rechtshandeling in waarbij sprake is van een beoogd rechtsgevolg."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "beschrijving"@nl;
+    rdfs:comment "Een beknopte beschrijving van het besluit."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Besluit.Beschrijving>;
+    shacl:datatype xsd:string;
+    shacl:description "Een beknopte beschrijving van het besluit."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#description>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "citeeropschrift"@nl;
+    rdfs:comment "De beknopte titel of officiële korte naam van een decreet, wet, besluit... Deze wordt officieel vastgelegd. Deze benaming wordt in de praktijk gebruikt om naar de rechtsgrond te verwijzen."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Besluit.Citeeropschrift>;
+    shacl:datatype xsd:string;
+    shacl:description "De beknopte titel of officiële korte naam van een decreet, wet, besluit... Deze wordt officieel vastgelegd. Deze benaming wordt in de praktijk gebruikt om naar de rechtsgrond te verwijzen."@nl;
+    shacl:maxCount "1";
+    shacl:name "citeeropschrift"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#title_short>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "motivering"@nl;
+    rdfs:comment "Beschrijving van de juridische en feitelijke motivering achter de beslissing die wordt uitgedrukt in het besluit."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Besluit.Motivering>;
+    shacl:datatype rdf:langString;
+    shacl:description "Beschrijving van de juridische en feitelijke motivering achter de beslissing die wordt uitgedrukt in het besluit."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "motivering"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#motivering>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "publicatiedatum"@nl;
+    rdfs:comment "De officiële publicatiedatum van het besluit."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Besluit.Publicatiedatum>;
+    shacl:datatype xsd:date;
+    shacl:description "De officiële publicatiedatum van het besluit."@nl;
+    shacl:maxCount "1";
+    shacl:name "publicatiedatum"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#date_publication>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "realiseert"@nl;
+    rdfs:comment "De rechtsgrond beschreven door dit besluit."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Besluit.Realiseert>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description "De rechtsgrond beschreven door dit besluit."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "realiseert"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#realizes>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "volgt uit"@nl;
+    rdfs:comment "De behandeling van het agendapunt die tot dit besluit heeft geleid."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Besluit.VolgtUit>;
+    shacl:class <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt>;
+    shacl:description "De behandeling van het agendapunt die tot dit besluit heeft geleid."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "volgt uit"@nl;
+    shacl:path prov:wasGeneratedBy
+  ];
+  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Besluit> .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#RechtsgrondShape>
-	a sh:NodeShape ;
-	sh:targetClass <http://data.europa.eu/eli/ontology#LegalResource> ;
-	sh:property [
-		sh:name "gecorrigeerdDoor" ;
-		sh:description "Duidt een rechtsgrond aan die een tekstuele verandering zonder legale impact aan deze rechtsgrond aanbrengt." ;
-		sh:path <http://data.europa.eu/eli/ontology#corrected_by> ;
-		sh:class <http://data.europa.eu/eli/ontology#LegalResource> ;
-	] ;
-	sh:property [
-		sh:name "verandert" ;
-		sh:description "Duidt aan dat deze rechtsgrond een verandering met legale gevolgen doorvoert op een andere rechtsgrond. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering." ;
-		sh:path <http://data.europa.eu/eli/ontology#changes> ;
-		sh:class <http://data.europa.eu/eli/ontology#LegalResource> ;
-	] ;
-	sh:property [
-		sh:name "veranderdDoor" ;
-		sh:description "Duidt aan dat deze rechtsgrond een verandering met legale gevolgen heeft ondergaan door een andere rechtsgrond. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering." ;
-		sh:path <http://data.europa.eu/eli/ontology#changed_by> ;
-		sh:class <http://data.europa.eu/eli/ontology#LegalResource> ;
-	] ;
-	sh:property [
-		sh:name "citeert" ;
-		sh:description "Een citatie in de wettelijke tekst. Dit omvat zowel woordelijke citaten als citaten in verwijzingen." ;
-		sh:path <http://data.europa.eu/eli/ontology#cites> ;
-		sh:class <http://data.europa.eu/eli/ontology#LegalResource> ;
-	] ;
-	sh:property [
-		sh:name "corrigeert" ;
-		sh:description "Duidt aan dat deze rechtsgrond tekstuele veranderingen zonder legale impact aanbrengt in een andere rechtsgrond." ;
-		sh:path <http://data.europa.eu/eli/ontology#corrects> ;
-		sh:class <http://data.europa.eu/eli/ontology#LegalResource> ;
-	] ;
-	sh:property [
-		sh:name "heeft bijlage" ;
-		sh:description "Een bijlage waarnaar verwezen wordt." ;
-		sh:path <http://data.europa.eu/eli/ontology#cites> ;
-		sh:class <http://xmlns.com/foaf/0.1/Document> ;
-	] ;
-	sh:property [
-		sh:name "buitenwerkingtreding" ;
-		sh:description "De laatste dag waarop de regelgeving nog van kracht is." ;
-		sh:path <http://data.europa.eu/eli/ontology#date_no_longer_in_force> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#date> ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "inwerkingtreding" ;
-		sh:description "De datum waarop de regelgeving van kracht wordt." ;
-		sh:path <http://data.europa.eu/eli/ontology#first_date_entry_in_force> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#date> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "typeDocument" ;
-		sh:description "Het type van de rechtsgrond." ;
-		sh:path <http://data.europa.eu/eli/ontology#type_document> ;
-		sh:class <http://data.europa.eu/eli/ontology#ResourceType> ;
-		sh:minCount 1 ;
-	] ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BestuurseenheidShape> a shacl:NodeShape;
+  rdfs:label "Bestuurseenheid"@nl;
+  rdfs:comment "Publieke,bestuurlijke organisatie verbonden aan een territoriaal omschreven gebied met bepaalde verantwoordelijkheden waarbinnen het bestuurshandelingen kan stellen."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "naam"@nl;
+    rdfs:comment "Naam van de bestuurseenheid."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Bestuurseenheid.Naam>;
+    shacl:description "Naam van de bestuurseenheid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path skos:prefLabel
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "classificatie"@nl;
+    rdfs:comment "Classificatie van de bestuurseenheid."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Bestuurseenheid.Classificatie>;
+    shacl:class skos:Concept;
+    shacl:description "Classificatie van de bestuurseenheid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "classificatie"@nl;
+    shacl:path org:classification
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "werkingsgebied"@nl;
+    rdfs:comment "Geografische gebied waarbinnen de bestuurseenheid bepaalde verantwoordelijkheden heeft waarbinnen het bestuurshandelingen kan stellen."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Bestuurseenheid.Werkingsgebied>;
+    shacl:class prov:Location;
+    shacl:description "Geografische gebied waarbinnen de bestuurseenheid bepaalde verantwoordelijkheden heeft waarbinnen het bestuurshandelingen kan stellen."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "werkingsgebied"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#werkingsgebied>
+  ];
+  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#VergaderactiviteitShape>
-	a sh:NodeShape ;
-	sh:targetClass <http://data.vlaanderen.be/ns/besluit#Vergaderactiviteit> ;
-	sh:property [
-		sh:name "heeftAanwezige" ;
-		sh:description "Een agent (bvb: mandataris) die aanwezig was tijdens (een deel van) de activiteit waar hij een zekere verantwoordelijkheid had." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftAanwezige> ;
-		sh:class <http://purl.org/dc/terms/Agent> ;
-	] ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BestuursorgaanShape> a shacl:NodeShape;
+  rdfs:label "Bestuursorgaan"@nl;
+  rdfs:comment "Een formeel orgaan van een rechtspersoon dat bevoegd is om rechtshandelingen te stellen."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "naam"@nl;
+    rdfs:comment "Naam van de eenheid."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Bestuursorgaan.Naam>;
+    shacl:description "Naam van de eenheid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path skos:prefLabel
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "classificatie"@nl;
+    rdfs:comment "Het type bestuursorgaan."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Bestuursorgaan.Classificatie>;
+    shacl:class skos:Concept;
+    shacl:description "Het type bestuursorgaan."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "classificatie"@nl;
+    shacl:path org:classification
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "bestuurt"@nl;
+    rdfs:comment "De bestuurseenheid die door het orgaan bestuurd wordt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Bestuursorgaan.Bestuurt>;
+    shacl:class <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid>;
+    shacl:description "De bestuurseenheid die door het orgaan bestuurd wordt."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "bestuurt"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#bestuurt>
+  ];
+  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Bestuursorgaan> .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#BehandelingVanAgendapuntShape>
-	a sh:NodeShape ;
-	sh:targetClass <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt> ;
-	sh:property [
-		sh:name "heeftAanwezige" ;
-		sh:description "Een mandataris (van het orgaan dat de zitting houdt) die aanwezig was tijdens (een deel van) de behandeling." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftAanwezige> ;
-		sh:class <http://data.vlaanderen.be/ns/mandaat#Mandataris> ;
-		sh:minCount 1 ;
-	] ;
-	sh:property [
-		sh:name "heeftOnderwerp" ;
-		sh:description "Het onderwerp van de activiteit." ;
-		sh:path <http://purl.org/dc/terms/subject> ;
-		sh:class <http://data.vlaanderen.be/ns/besluit#Agendapunt> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "gebeurtNa" ;
-		sh:description "Verwijzing naar het voorgaand behandeld agendapunt binnen dezelfde zitting. Laat toe om de volgorde van de behandelingen op te bouwen." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#gebeurtNa> ;
-		sh:class <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt> ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "geeftAanleidingTot" ;
-		sh:description "Een besluit dat is opgemaakt naar aanleiding van de behandeling van het agendapunt." ;
-		sh:path <http://www.w3.org/ns/prov#generated> ;
-		sh:class <http://data.vlaanderen.be/ns/besluit#Besluit> ;
-	] ;
-	sh:property [
-		sh:name "heeftVoorzitter" ;
-		sh:description "De mandataris die de rol als voorzitter heeft gedurende de behandeling van het agendapunt." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftVoorzitter> ;
-		sh:class <http://data.vlaanderen.be/ns/mandaat#Mandataris> ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "heeftStemming" ;
-		sh:description "Een stemming die plaatsvond tijdens de behandeling van het agendapunt." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftStemming> ;
-		sh:class <http://data.vlaanderen.be/ns/besluit#Stemming> ;
-	] ;
-	sh:property [
-		sh:name "heeftSecretaris" ;
-		sh:description "De mandataris die de rol van secretaris heeft gedurende de behandeling van het agendapunt." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftSecretaris> ;
-		sh:class <http://data.vlaanderen.be/ns/mandaat#Mandataris> ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "openbaar" ;
-		sh:description "Geeft aan of de bespreking effectief openbaar verlopen is." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#openbaar> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#boolean> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#BooleanShape> a shacl:NodeShape;
+  rdfs:label "Boolean";
+  shacl:closed false;
+  shacl:targetClass xsd:boolean .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#DocumentShape>
-	a sh:NodeShape ;
-	sh:targetClass <http://xmlns.com/foaf/0.1/Document> ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#DateShape> a shacl:NodeShape;
+  rdfs:label "Date";
+  shacl:closed false;
+  shacl:targetClass xsd:date .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#BestuursorgaanShape>
-	a sh:NodeShape ;
-	sh:targetClass <http://data.vlaanderen.be/ns/besluit#Bestuursorgaan> ;
-	sh:property [
-		sh:name "bestuurt" ;
-		sh:description "De bestuurseenheid die door het orgaan bestuurd wordt." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#bestuurt> ;
-		sh:class <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "classificatie" ;
-		sh:description "Het type bestuursorgaan." ;
-		sh:path <http://www.w3.org/ns/org#classification> ;
-		sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "naam" ;
-		sh:description "Naam van de eenheid." ;
-		sh:path <http://www.w3.org/2004/02/skos/core#prefLabel> ;
-		sh:datatype <http://www.w3.org/2000/01/rdf-schema#Literal> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#DatetimeShape> a shacl:NodeShape;
+  rdfs:label "DateTime";
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#AgendapuntShape>
-	a sh:NodeShape ;
-	sh:targetClass <http://data.vlaanderen.be/ns/besluit#Agendapunt> ;
-	sh:property [
-		sh:name "aangebrachtNa" ;
-		sh:description "Het agendapunt dat op de agenda direct dit agendapunt voorafging." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#aangebrachtNa> ;
-		sh:class <http://data.vlaanderen.be/ns/besluit#Agendapunt> ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "heeftOntwerpbesluit" ;
-		sh:description "Een (mogelijks nog aan te vullen of aan te passen) ontwerp voor het besluit dat uit dit agendapunt zou voortkomen." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftOntwerpbesluit> ;
-		sh:class <http://xmlns.com/foaf/0.1/Document> ;
-	] ;
-	sh:property [
-		sh:name "refereertAan" ;
-		sh:description "Een ander agendapunt waarnaar verwezen wordt vanuit dit agendapunt." ;
-		sh:path <http://purl.org/dc/terms/references> ;
-		sh:class <http://data.vlaanderen.be/ns/besluit#Agendapunt> ;
-	] ;
-	sh:property [
-		sh:name "beschrijving" ;
-		sh:description "Korte beschrijving van het agendapunt." ;
-		sh:path <http://purl.org/dc/terms/description> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "geplandOpenbaar" ;
-		sh:description "Geeft aan of het agendapunt al dan niet bedoeld is om openbaar te bespreken." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#geplandOpenbaar> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#boolean> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "titel" ;
-		sh:description "De naam van het agendapunt." ;
-		sh:path <http://purl.org/dc/terms/title> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "type" ;
-		sh:description "Type van het agendapunt." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#Agendapunt.type> ;
-		sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
-		sh:minCount 1 ;
-	] ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#DocumentShape> a shacl:NodeShape;
+  rdfs:label "Document"@nl;
+  rdfs:comment "Een origineel werk in de brede zin (een verslag,een opname,een boek...)."@nl;
+  shacl:closed false;
+  shacl:targetClass foaf:Document .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#MandatarisShape>
-	a sh:NodeShape ;
-	sh:targetClass <http://data.vlaanderen.be/ns/mandaat#Mandataris> ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#DocumentonderdeelShape> a shacl:NodeShape;
+  rdfs:label "Documentonderdeel"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bv artikel,hoofdstuk,paragraaf..."@nl;
+  rdfs:comment "Een apart onderdeel van een groter document of verzameld document."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "nummer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bv nummer vh artikel, paragraaf, hoofdstuk..."@nl;
+    rdfs:comment "Nummer vh documentonderdeel."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Documentonderdeel.Nummer>;
+    shacl:datatype xsd:integer;
+    shacl:description "Nummer vh documentonderdeel."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "nummer"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/generiek#nummer>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bv artikel, paragraaf, hoofdstuk..."@nl;
+    rdfs:comment "Aard van het documentonderdeel."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Documentonderdeel.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Aard van het documentonderdeel."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "is deel van"@nl;
+    rdfs:comment "Een verwante bron waarin de beschreven bron fysiek of logisch is opgenomen."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Documentonderdeel.IsDeelVan>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#DocumentOnderdeel>;
+    shacl:description "Een verwante bron waarin de beschreven bron fysiek of logisch is opgenomen."@nl;
+    shacl:name "is deel van"@nl;
+    shacl:path dc:isPartOf
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#DocumentOnderdeel> .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#ZittingShape>
-	a sh:NodeShape ;
-	sh:targetClass <http://data.vlaanderen.be/ns/besluit#Zitting> ;
-	sh:property [
-		sh:name "heeftAanwezigeBijStart" ;
-		sh:description "Een mandataris (van het bestuursorsgaan die de zitting hield) die aanwezig was bij de start van de zitting." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftAanwezigeBijStart> ;
-		sh:class <http://data.vlaanderen.be/ns/mandaat#Mandataris> ;
-		sh:minCount 1 ;
-	] ;
-	sh:property [
-		sh:name "heeftVoorzitter" ;
-		sh:description "De mandataris die de rol als voorzitter heeft gedurende de zitting." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftVoorzitter> ;
-		sh:class <http://data.vlaanderen.be/ns/mandaat#Mandataris> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "heeftZittingsverslag" ;
-		sh:description "Een verslag van de zitting." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftZittingsverslag> ;
-		sh:class <http://xmlns.com/foaf/0.1/Document> ;
-	] ;
-	sh:property [
-		sh:name "heeftSecretaris" ;
-		sh:description "De mandataris die de rol van secretaris heeft gedurende de zitting." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftSecretaris> ;
-		sh:class <http://data.vlaanderen.be/ns/mandaat#Mandataris> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "heeftNotulen" ;
-		sh:description "De formele notulen van de zitting." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftNotulen> ;
-		sh:class <http://xmlns.com/foaf/0.1/Document> ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "behandelt" ;
-		sh:description "Een formeel vastgelegd agendapunt van de zitting." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#behandelt> ;
-		sh:class <http://data.vlaanderen.be/ns/besluit#Agendapunt> ;
-		sh:minCount 1 ;
-	] ;
-	sh:property [
-		sh:name "isGehoudenDoor" ;
-		sh:description "Duidt aan door welk orgaan de zitting is gehouden." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#isGehoudenDoor> ;
-		sh:class <http://data.vlaanderen.be/ns/besluit#Bestuursorgaan> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "eind" ;
-		sh:description "Tijdstip waarop de zitting eindigt." ;
-		sh:path <http://www.w3.org/ns/prov#endedAtTime> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#dateTime> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "geplandeStart" ;
-		sh:description "Het tijdstip waarop de zitting gepland is om te beginnen." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#geplandeStart> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#dateTime> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "locatie" ;
-		sh:description "Locatie waar de zitting plaatsvindt. Doorgaans is dit een zaal in een gebouw." ;
-		sh:path <http://www.w3.org/ns/prov#atLocation> ;
-		sh:class <http://www.w3.org/ns/prov#Location> ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "start" ;
-		sh:description "Tijdstip waarop de zitting begint." ;
-		sh:path <http://www.w3.org/ns/prov#startedAtTime> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#dateTime> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#IntegerShape> a shacl:NodeShape;
+  rdfs:label "Integer";
+  shacl:closed false;
+  shacl:targetClass xsd:integer .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#StemmingShape>
-	a sh:NodeShape ;
-	sh:targetClass <http://data.vlaanderen.be/ns/besluit#Stemming> ;
-	sh:property [
-		sh:name "heeftOnthouder" ;
-		sh:description "Een mandataris die als onthouder heeft gestemd op het onderwerp van de stemming." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftOnthouder> ;
-		sh:class <http://data.vlaanderen.be/ns/mandaat#Mandataris> ;
-	] ;
-	sh:property [
-		sh:name "heeftaanwezige" ;
-		sh:description "Een mandataris (van het orgaan dat de zitting houdt) die aanwezig was tijdens de stemming." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftAanwezige> ;
-		sh:class <http://data.vlaanderen.be/ns/mandaat#Mandataris> ;
-		sh:minCount 1 ;
-	] ;
-	sh:property [
-		sh:name "heeftStemmer" ;
-		sh:description "Een mandataris die deelneemt aan de stemming." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftStemmer> ;
-		sh:class <http://data.vlaanderen.be/ns/mandaat#Mandataris> ;
-		sh:minCount 1 ;
-	] ;
-	sh:property [
-		sh:name "heeftTegenstander" ;
-		sh:description "Een mandataris die als tegenstander heeft gestemd op het onderwerp van de stemming." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftTegenstander> ;
-		sh:class <http://data.vlaanderen.be/ns/mandaat#Mandataris> ;
-	] ;
-	sh:property [
-		sh:name "heeftVoorstander" ;
-		sh:description "Een mandataris die als voorstander heeft gestemd op het onderwerp van de stemming." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#heeftVoorstander> ;
-		sh:class <http://data.vlaanderen.be/ns/mandaat#Mandataris> ;
-	] ;
-	sh:property [
-		sh:name "aantalOnthouders" ;
-		sh:description "Het aantal stemmers dat als onthouding heeft gestemd." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#aantalOnthouders> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#integer> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "aantalTegenstanders" ;
-		sh:description "Het aantal stemmers dat als tegenstander heeft gestemd." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#aantalTegenstanders> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#integer> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "aantalVoorstanders" ;
-		sh:description "Het aantal stemmers dat als voorstander heeft gestemd." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#aantalVoorstanders> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#integer> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "geheim" ;
-		sh:description "Geeft aan of de stemming geheim was. Bij een geheime stemming wordt niet individueel bekend gemaakt wie op wat heeft gestemd." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#geheim> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#boolean> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "gevolg" ;
-		sh:description "Het gevolg van de stemming." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#gevolg> ;
-		sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "onderwerp" ;
-		sh:description "De beschrijving van het onderwerp waarover de stemming gaat." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#onderwerp> ;
-		sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#LegaleVerschijningsvormShape> a shacl:NodeShape;
+  rdfs:label "Legale Verschijningsvorm"@nl;
+  rdfs:comment "Een legale verschijningsvorm is een intellectuele realisatie van een rechtsgrond onder de vorm van een opeenvolging van tekens (meestal alphanumerieke tekens)."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "inhoud"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld de beschrijving van een verkeersregel die wordt ingevoerd of de beslissing om een subsidie toe te kennen aan iemand."@nl;
+    rdfs:comment "De beschrijving van de beoogde rechtsgevolgen, het zogenaamde beschikkend gedeelte."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#LegaleVerschijningsvorm.Inhoud>;
+    shacl:description "De beschrijving van de beoogde rechtsgevolgen, het zogenaamde beschikkend gedeelte."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "inhoud"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path prov:value
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "titel"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Voor een besluit is dit het opschrift, voor een artikel de benaming van het artikel."@nl;
+    rdfs:comment "Titel van de legale verschijningsvorm."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#LegaleVerschijningsvorm.Titel>;
+    shacl:datatype xsd:string;
+    shacl:description "Titel van de legale verschijningsvorm."@nl;
+    shacl:minCount "1";
+    shacl:name "titel"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#title>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "taal"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Deze eigenschap is aanwezig voor compatibiliteit met European Legislation Identifier (ELI)."@nl;
+    rdfs:comment "De taal van de verschijningsvorm."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#LegaleVerschijningsvorm.Taal>;
+    shacl:class skos:Concept;
+    shacl:description "De taal van de verschijningsvorm."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "taal"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#language>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "veranderd door"@nl;
+    rdfs:comment "Duidt aan dat deze legale verschijningsvorm een verandering met legale gevolgen heeft ondergaan door een andere legale verschijningsvorm. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#LegaleVerschijningsvorm.VeranderdDoor>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalExpression>;
+    shacl:description "Duidt aan dat deze legale verschijningsvorm een verandering met legale gevolgen heeft ondergaan door een andere legale verschijningsvorm. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering."@nl;
+    shacl:name "veranderd door"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#changed_by>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "corrigeert"@nl;
+    rdfs:comment "Duidt aan dat deze legale verschijningsvorm tekstuele veranderingen zonder legale impact aanbrengt in een andere legale verschijningsvorm."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#LegaleVerschijningsvorm.Corrigeert>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalExpression>;
+    shacl:description "Duidt aan dat deze legale verschijningsvorm tekstuele veranderingen zonder legale impact aanbrengt in een andere legale verschijningsvorm."@nl;
+    shacl:name "corrigeert"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#corrects>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "verandert"@nl;
+    rdfs:comment "Duidt aan dat deze legale verschijningsvorm een verandering met legale gevolgen doorvoert op een andere legale verschijningsvorm. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#LegaleVerschijningsvorm.Verandert>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalExpression>;
+    shacl:description "Duidt aan dat deze legale verschijningsvorm een verandering met legale gevolgen doorvoert op een andere legale verschijningsvorm. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering."@nl;
+    shacl:name "verandert"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#changes>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "citeert"@nl;
+    rdfs:comment "Een citatie in de wettelijke tekst. Dit omvat zowel woordelijke citaten als citaten in verwijzingen."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#LegaleVerschijningsvorm.Citeert>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalExpression>;
+    shacl:description "Een citatie in de wettelijke tekst. Dit omvat zowel woordelijke citaten als citaten in verwijzingen."@nl;
+    shacl:name "citeert"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#cites>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "gecorrigeerd door"@nl;
+    rdfs:comment "Duidt een legale verschijningsvorm aan die een tekstuele verandering zonder legale impact aan deze legale verschijningsvorm aanbrengt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#LegaleVerschijningsvorm.GecorrigeerdDoor>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalExpression>;
+    shacl:description "Duidt een legale verschijningsvorm aan die een tekstuele verandering zonder legale impact aan deze legale verschijningsvorm aanbrengt."@nl;
+    shacl:name "gecorrigeerd door"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#corrected_by>
+  ];
+  shacl:targetClass <http://data.europa.eu/eli/ontology#LegalExpression> .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#ArtikelShape>
-	a sh:NodeShape ;
-	sh:targetClass <http://data.vlaanderen.be/ns/besluit#Artikel> ;
-	sh:property [
-		sh:name "realiseert" ;
-		sh:description "De rechtsgrond beschreven door dit artikel." ;
-		sh:path <http://data.europa.eu/eli/ontology#realizes> ;
-		sh:class <http://data.europa.eu/eli/ontology#LegalResourceSubdivision> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "nummer" ;
-		sh:description "Het nummer van het artikel." ;
-		sh:path <http://data.europa.eu/eli/ontology#number> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#MandatarisShape> a shacl:NodeShape;
+  rdfs:label "Mandataris"@nl;
+  rdfs:comment "Een persoon in zijn rol als houder van een mandaat."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "is tijdelijk vervangen door"@nl;
+    <http://purl.org/vocab/vann/usageNote> "De periode van vervanging komt overeen met de start-/einddatum van de opname van het mandaat van de vervanger."@nl;
+    rdfs:comment "Duidt een mandataris aan die tijdelijk de uitvoering van het mandaat heeft overgenomen."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Mandataris.IsTijdelijkVervangenDoor>;
+    shacl:class <http://data.vlaanderen.be/ns/mandaat#Mandataris>;
+    shacl:description "Duidt een mandataris aan die tijdelijk de uitvoering van het mandaat heeft overgenomen."@nl;
+    shacl:name "is tijdelijk vervangen door"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/mandaat#isTijdelijkVervangenDoor>
+  ];
+  shacl:targetClass <http://data.vlaanderen.be/ns/mandaat#Mandataris> .
 
-<https://data.vlaanderen.be/shacl/besluit-publicatie#BesluitShape>
-	a sh:NodeShape ;
-	sh:targetClass <http://data.vlaanderen.be/ns/besluit#Besluit> ;
-	sh:property [
-		sh:name "realiseert" ;
-		sh:description "De rechtsgrond beschreven door dit besluit." ;
-		sh:path <http://data.europa.eu/eli/ontology#realizes> ;
-		sh:class <http://data.europa.eu/eli/ontology#LegalResource> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "volgtUit" ;
-		sh:description "De behandeling van het agendapunt die tot dit besluit heeft geleid." ;
-		sh:path <http://www.w3.org/ns/prov#wasGeneratedBy> ;
-		sh:class <http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "beschrijving" ;
-		sh:description "Een beknopte beschrijving van het besluit." ;
-		sh:path <http://data.europa.eu/eli/ontology#description> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "citeeropschrift" ;
-		sh:description "De beknopte titel of officiële korte naam van een decreet, wet, besluit... Deze wordt officieel vastgelegd. Deze benaming wordt in de praktijk gebruikt om naar de rechtsgrond te verwijzen." ;
-		sh:path <http://data.europa.eu/eli/ontology#title_short> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#string> ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "motivering" ;
-		sh:description "Beschrijving van de juridische en feitelijke motivering achter de beslissing die wordt uitgedrukt in het besluit." ;
-		sh:path <http://data.vlaanderen.be/ns/besluit#motivering> ;
-		sh:datatype <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> ;
-		sh:minCount 1 ;
-		sh:maxCount 1 ;
-	] ;
-	sh:property [
-		sh:name "publicatiedatum" ;
-		sh:description "De officiële publicatiedatum van het besluit." ;
-		sh:path <http://data.europa.eu/eli/ontology#date_publication> ;
-		sh:datatype <http://www.w3.org/2001/XMLSchema#date> ;
-		sh:maxCount 1 ;
-	] ;
-	sh:closed false .
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrond(besluit)Shape> a shacl:NodeShape;
+  rdfs:label "Rechtsgrond (Besluit)"@nl;
+  rdfs:comment "Het legale concept van een besluit dat los staat van een bepaalde vorm (het achterliggende idee)."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "aangenomen door"@nl;
+    rdfs:comment "Het orgaan dat de rechtsgrond heeft goedgekeurd, waardoor er een rechtsgevolg ontstond."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrond(besluit).AangenomenDoor>;
+    shacl:class <http://data.vlaanderen.be/ns/besluit#Bestuursorgaan>;
+    shacl:description "Het orgaan dat de rechtsgrond heeft goedgekeurd, waardoor er een rechtsgevolg ontstond."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "aangenomen door"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#passed_by>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft deel"@nl;
+    rdfs:comment "Duidt een artikel aan van dit besluit."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrond(besluit).HeeftDeel>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResourceSubdivision>;
+    shacl:description "Duidt een artikel aan van dit besluit."@nl;
+    shacl:minCount 1;
+    shacl:name "heeft deel"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#has_part>
+  ];
+  shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResource> .
 
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#RechtsgrondShape> a shacl:NodeShape;
+  rdfs:label "Rechtsgrond"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Een rechtsgrond kan zowel een geheel (bvb: wet,besluit) voorstellen als een onderdeel eruit (bvb: artikel)."@nl;
+  rdfs:comment "Een legaal concept dat los staat van een bepaalde vorm (het achterliggende idee)."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "buitenwerkingtreding"@nl;
+    rdfs:comment "De laatste dag waarop de regelgeving nog van kracht is."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrond.Buitenwerkingtreding>;
+    shacl:datatype xsd:date;
+    shacl:description "De laatste dag waarop de regelgeving nog van kracht is."@nl;
+    shacl:maxCount "1";
+    shacl:name "buitenwerkingtreding"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#date_no_longer_in_force>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "inwerkingtreding"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Dit is niet hetzelfde als wanneer de regelgeving toepasbaar (in de praktijk uitvoerbaar) wordt. De toepasbaarheid van de regelgeving kan op of na de inwerkingtreding liggen."@nl;
+    rdfs:comment "De datum waarop de regelgeving van kracht wordt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrond.Inwerkingtreding>;
+    shacl:datatype xsd:date;
+    shacl:description "De datum waarop de regelgeving van kracht wordt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "inwerkingtreding"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#first_date_entry_in_force>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "type document"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld: reglement, wet, voorstel."@nl;
+    rdfs:comment "Het type van de rechtsgrond."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrond.TypeDocument>;
+    shacl:class <http://data.europa.eu/eli/ontology#ResourceType>;
+    shacl:description "Het type van de rechtsgrond."@nl;
+    shacl:minCount "1";
+    shacl:name "type document"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#type_document>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "veranderd door"@nl;
+    rdfs:comment "Duidt aan dat deze rechtsgrond een verandering met legale gevolgen heeft ondergaan door een andere rechtsgrond. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrond.VeranderdDoor>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description "Duidt aan dat deze rechtsgrond een verandering met legale gevolgen heeft ondergaan door een andere rechtsgrond. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering."@nl;
+    shacl:name "veranderd door"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#changed_by>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "corrigeert"@nl;
+    rdfs:comment "Duidt aan dat deze rechtsgrond tekstuele veranderingen zonder legale impact aanbrengt in een andere rechtsgrond."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrond.Corrigeert>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description "Duidt aan dat deze rechtsgrond tekstuele veranderingen zonder legale impact aanbrengt in een andere rechtsgrond."@nl;
+    shacl:name "corrigeert"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#corrects>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "citeert"@nl;
+    rdfs:comment "Een citatie in de wettelijke tekst. Dit omvat zowel woordelijke citaten als citaten in verwijzingen."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrond.Citeert>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description "Een citatie in de wettelijke tekst. Dit omvat zowel woordelijke citaten als citaten in verwijzingen."@nl;
+    shacl:name "citeert"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#cites>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "verandert"@nl;
+    rdfs:comment "Duidt aan dat deze rechtsgrond een verandering met legale gevolgen doorvoert op een andere rechtsgrond. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrond.Verandert>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description "Duidt aan dat deze rechtsgrond een verandering met legale gevolgen doorvoert op een andere rechtsgrond. Dit omvat amendementen, vervangingen, herroepingen en andere types verandering."@nl;
+    shacl:name "verandert"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#changes>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "gecorrigeerd door"@nl;
+    rdfs:comment "Duidt een rechtsgrond aan die een tekstuele verandering zonder legale impact aan deze rechtsgrond aanbrengt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrond.GecorrigeerdDoor>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description "Duidt een rechtsgrond aan die een tekstuele verandering zonder legale impact aan deze rechtsgrond aanbrengt."@nl;
+    shacl:name "gecorrigeerd door"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#corrected_by>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft bijlage"@nl;
+    rdfs:comment "Een bijlage waarnaar verwezen wordt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrond.HeeftBijlage>;
+    shacl:class foaf:Document;
+    shacl:description "Een bijlage waarnaar verwezen wordt."@nl;
+    shacl:name "heeft bijlage"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#cites>
+  ];
+  shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResource> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrondonderdeel(artikel)Shape> a shacl:NodeShape;
+  rdfs:label "Rechtsgrondonderdeel (Artikel)"@nl;
+  rdfs:comment "et legale concept van een artikel dat los staat van een bepaalde vorm (het achterliggende idee)."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "is deel van"@nl;
+    rdfs:comment "Het besluit waar dit artikel onderdeel van is."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Rechtsgrondonderdeel(artikel).IsDeelVan>;
+    shacl:class <http://data.europa.eu/eli/ontology#LegalResource>;
+    shacl:description "Het besluit waar dit artikel onderdeel van is."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "is deel van"@nl;
+    shacl:path <http://data.europa.eu/eli/ontology#is_part_of>
+  ];
+  shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResourceSubdivision> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#RechtsgrondonderdeelShape> a shacl:NodeShape;
+  rdfs:label "Rechtsgrondonderdeel"@nl;
+  rdfs:comment "Een deel van een rechtsgrond,op een arbitrair niveau van precisie,zoals een hoofdstuk,artikel,paragraaf of lijst element."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/eli/ontology#LegalResourceSubdivision> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#StemmingShape> a shacl:NodeShape;
+  rdfs:label "Stemming"@nl;
+  rdfs:comment "Geformaliseerde handeling waarbij de stemgerechtigde leden van een bestuursorgaan hun keuze te kennen geven."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "aantal onthouders"@nl;
+    rdfs:comment "Het aantal stemmers dat als onthouding heeft gestemd."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Stemming.AantalOnthouders>;
+    shacl:datatype xsd:integer;
+    shacl:description "Het aantal stemmers dat als onthouding heeft gestemd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "aantal onthouders"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#aantalOnthouders>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "aantal tegenstanders"@nl;
+    rdfs:comment "Het aantal stemmers dat als tegenstander heeft gestemd."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Stemming.AantalTegenstanders>;
+    shacl:datatype xsd:integer;
+    shacl:description "Het aantal stemmers dat als tegenstander heeft gestemd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "aantal tegenstanders"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#aantalTegenstanders>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "aantal voorstanders"@nl;
+    rdfs:comment "Het aantal stemmers dat als voorstander heeft gestemd."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Stemming.AantalVoorstanders>;
+    shacl:datatype xsd:integer;
+    shacl:description "Het aantal stemmers dat als voorstander heeft gestemd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "aantal voorstanders"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#aantalVoorstanders>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "geheim"@nl;
+    rdfs:comment "Geeft aan of de stemming geheim was. Bij een geheime stemming wordt niet individueel bekend gemaakt wie op wat heeft gestemd."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Stemming.Geheim>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Geeft aan of de stemming geheim was. Bij een geheime stemming wordt niet individueel bekend gemaakt wie op wat heeft gestemd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geheim"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#geheim>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "gevolg"@nl;
+    rdfs:comment "Het gevolg van de stemming."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Stemming.Gevolg>;
+    shacl:datatype rdf:langString;
+    shacl:description "Het gevolg van de stemming."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "gevolg"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#gevolg>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "onderwerp"@nl;
+    rdfs:comment "De beschrijving van het onderwerp waarover de stemming gaat."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Stemming.Onderwerp>;
+    shacl:datatype rdf:langString;
+    shacl:description "De beschrijving van het onderwerp waarover de stemming gaat."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "onderwerp"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#onderwerp>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft stemmer"@nl;
+    <http://purl.org/vocab/vann/usageNote> "In geval van een niet-geheime stemming kunnen de meer gespecialisseerde versies (bvb. heeft voorstander) gebruikt worden."@nl;
+    rdfs:comment "Een mandataris die deelneemt aan de stemming."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Stemming.HeeftStemmer>;
+    shacl:class <http://data.vlaanderen.be/ns/mandaat#Mandataris>;
+    shacl:description "Een mandataris die deelneemt aan de stemming."@nl;
+    shacl:minCount 1;
+    shacl:name "heeft stemmer"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftStemmer>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft tegenstander"@nl;
+    rdfs:comment "Een mandataris die als tegenstander heeft gestemd op het onderwerp van de stemming."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Stemming.HeeftTegenstander>;
+    shacl:class <http://data.vlaanderen.be/ns/mandaat#Mandataris>;
+    shacl:description "Een mandataris die als tegenstander heeft gestemd op het onderwerp van de stemming."@nl;
+    shacl:name "heeft tegenstander"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftTegenstander>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft onthouder"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Dit omvat ook ongeldige stemmen, blanco stemmen of het weigeren om deel te nemen aan de stemming."@nl;
+    rdfs:comment "Een mandataris die als onthouder heeft gestemd op het onderwerp van de stemming."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Stemming.HeeftOnthouder>;
+    shacl:class <http://data.vlaanderen.be/ns/mandaat#Mandataris>;
+    shacl:description "Een mandataris die als onthouder heeft gestemd op het onderwerp van de stemming."@nl;
+    shacl:name "heeft onthouder"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftOnthouder>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft voorstander"@nl;
+    rdfs:comment "Een mandataris die als voorstander heeft gestemd op het onderwerp van de stemming."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Stemming.HeeftVoorstander>;
+    shacl:class <http://data.vlaanderen.be/ns/mandaat#Mandataris>;
+    shacl:description "Een mandataris die als voorstander heeft gestemd op het onderwerp van de stemming."@nl;
+    shacl:name "heeft voorstander"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftVoorstander>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft aanwezige"@nl;
+    rdfs:comment "Een mandataris (van het orgaan dat de zitting houdt) die aanwezig was tijdens de stemming."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Stemming.HeeftAanwezige>;
+    shacl:class <http://data.vlaanderen.be/ns/mandaat#Mandataris>;
+    shacl:description "Een mandataris (van het orgaan dat de zitting houdt) die aanwezig was tijdens de stemming."@nl;
+    shacl:minCount 1;
+    shacl:name "heeft aanwezige"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftAanwezige>
+  ];
+  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Stemming> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#StringShape> a shacl:NodeShape;
+  rdfs:label "String";
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#VergaderactiviteitShape> a shacl:NodeShape;
+  rdfs:label "Vergaderactiviteit"@nl;
+  rdfs:comment "Een vergadering of fase ervan."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "heeft aanwezige"@nl;
+    rdfs:comment "Een agent (bvb: mandataris) die aanwezig was tijdens (een deel van) de activiteit waar hij een zekere verantwoordelijkheid had."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Vergaderactiviteit.HeeftAanwezige>;
+    shacl:class dc:Agent;
+    shacl:description "Een agent (bvb: mandataris) die aanwezig was tijdens (een deel van) de activiteit waar hij een zekere verantwoordelijkheid had."@nl;
+    shacl:name "heeft aanwezige"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftAanwezige>
+  ];
+  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Vergaderactiviteit> .
+
+<https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#ZittingShape> a shacl:NodeShape;
+  rdfs:label "Zitting"@nl;
+  rdfs:comment "Een geformaliseerde samenkomst van de leden van een bestuursorgaan met het doel om de aangelegenheden te regelen waarvoor het bevoegd is."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "geëindigd op tijdstip"@nl;
+    rdfs:comment "Tijdstip waarop de zitting eindigt."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Zitting.GeëindigdOpTijdstip>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de zitting eindigt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geëindigd op tijdstip"@nl;
+    shacl:path prov:endedAtTime
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "geplande start"@nl;
+    rdfs:comment "Het tijdstip waarop de zitting gepland is om te beginnen."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Zitting.GeplandeStart>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Het tijdstip waarop de zitting gepland is om te beginnen."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geplande start"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#geplandeStart>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "gestart op tijdstip"@nl;
+    rdfs:comment "Tijdstip waarop de zitting begint."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Zitting.GestartOpTijdstip>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Tijdstip waarop de zitting begint."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "gestart op tijdstip"@nl;
+    shacl:path prov:startedAtTime
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "op locatie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Wegens digitale vergaderingen, locaties zonder URI of gebrek aan eenduidigheid (bvb: blank node met naam \"Zaal 1B\") zorgen dat deze eigenschap niet verplicht is."@nl;
+    rdfs:comment "Locatie waar de zitting plaatsvindt. Doorgaans is dit een zaal in een gebouw."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Zitting.OpLocatie>;
+    shacl:class prov:Location;
+    shacl:description "Locatie waar de zitting plaatsvindt. Doorgaans is dit een zaal in een gebouw."@nl;
+    shacl:maxCount "1";
+    shacl:name "op locatie"@nl;
+    shacl:path prov:atLocation
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft zittingsverslag"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld een transcript of audio- of video-opname."@nl;
+    rdfs:comment "Een verslag van de zitting."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Zitting.HeeftZittingsverslag>;
+    shacl:class foaf:Document;
+    shacl:description "Een verslag van de zitting."@nl;
+    shacl:name "heeft zittingsverslag"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftZittingsverslag>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft aanwezige bij start"@nl;
+    rdfs:comment "Een mandataris (van het bestuursorsgaan die de zitting hield) die aanwezig was bij de start van de zitting."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Zitting.HeeftAanwezigeBijStart>;
+    shacl:class <http://data.vlaanderen.be/ns/mandaat#Mandataris>;
+    shacl:description "Een mandataris (van het bestuursorsgaan die de zitting hield) die aanwezig was bij de start van de zitting."@nl;
+    shacl:minCount 1;
+    shacl:name "heeft aanwezige bij start"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftAanwezigeBijStart>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "behandelt"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Ook punten die kunnen ingepland worden (voorafgaand aan de zitting) en er eventueel weer afgehaald worden, vallen hieronder."@nl;
+    rdfs:comment "Een formeel vastgelegd agendapunt van de zitting."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Zitting.Behandelt>;
+    shacl:class <http://data.vlaanderen.be/ns/besluit#Agendapunt>;
+    shacl:description "Een formeel vastgelegd agendapunt van de zitting."@nl;
+    shacl:minCount 1;
+    shacl:name "behandelt"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#behandelt>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft notulen"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Geen verplichting wegens onzekerheid of gemeenteraadscommissies notulen maken of niet."@nl;
+    rdfs:comment "De formele notulen van de zitting."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Zitting.HeeftNotulen>;
+    shacl:class foaf:Document;
+    shacl:description "De formele notulen van de zitting."@nl;
+    shacl:maxCount 1;
+    shacl:name "heeft notulen"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftNotulen>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft secretaris"@nl;
+    rdfs:comment "De mandataris die de rol van secretaris heeft gedurende de zitting."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Zitting.HeeftSecretaris>;
+    shacl:class <http://data.vlaanderen.be/ns/mandaat#Mandataris>;
+    shacl:description "De mandataris die de rol van secretaris heeft gedurende de zitting."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "heeft secretaris"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftSecretaris>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft voorzitter"@nl;
+    rdfs:comment "De mandataris die de rol als voorzitter heeft gedurende de zitting."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Zitting.HeeftVoorzitter>;
+    shacl:class <http://data.vlaanderen.be/ns/mandaat#Mandataris>;
+    shacl:description "De mandataris die de rol als voorzitter heeft gedurende de zitting."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "heeft voorzitter"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#heeftVoorzitter>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "is gehouden door"@nl;
+    rdfs:comment "Duidt aan door welk orgaan de zitting is gehouden."@nl;
+    rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/besluit-publicatie/erkendestandaard/2025-12-11#Zitting.IsGehoudenDoor>;
+    shacl:class <http://data.vlaanderen.be/ns/besluit#Bestuursorgaan>;
+    shacl:description "Duidt aan door welk orgaan de zitting is gehouden."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "is gehouden door"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/besluit#isGehoudenDoor>
+  ];
+  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Zitting> .
