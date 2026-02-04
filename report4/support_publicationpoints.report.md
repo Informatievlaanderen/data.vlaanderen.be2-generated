@@ -247,6 +247,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/leerinschrijfcredential/kandidaatstandaard/2024-05-16",
   "/tmp/generated/doc/applicatieprofiel/leermiddelen/ontwerpstandaard/2026-02-24",
   "/tmp/generated/doc/applicatieprofiel/lokale-economie/ontwerpstandaard/2024-01-17",
+  "/tmp/generated/doc/applicatieprofiel/magda/persoon",
   "/tmp/generated/doc/applicatieprofiel/metadata-dcat",
   "/tmp/generated/doc/applicatieprofiel/mobiliteit-intelligente-toegang/kandidaatstandaard/2025-09-09",
   "/tmp/generated/doc/applicatieprofiel/mobiliteitsbudget/ontwerpstandaard/2023-01-16",
