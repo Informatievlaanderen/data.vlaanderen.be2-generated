@@ -122,6 +122,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/perceel.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/persoon-im.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/persoon.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/publicatie-advertentie.publication.json
