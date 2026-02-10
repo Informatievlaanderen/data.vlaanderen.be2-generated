@@ -437,6 +437,12 @@ Directory check
 index.html check
 error: missing '/tmp/generated/doc/vocabularium/gezondheidstoestand/ontwerpstandaard/2025-03-12/index.html'
 
+#||#    + checking /home/circleci/project/config/dev/persoon-im.publication.json
+#||# 
+Directory check
+
+index.html check
+
 #||#    + checking /home/circleci/project/config/dev/persoon.publication.json
 #||# 
 Directory check

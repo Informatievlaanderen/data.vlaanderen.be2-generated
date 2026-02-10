@@ -118,6 +118,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/overlijdensaangifte.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/dev/persoon-im.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/persoon.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/rooilijnplannen.publication.json
