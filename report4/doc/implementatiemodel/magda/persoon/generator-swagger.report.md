@@ -2,11 +2,11 @@
 
 #||#  -------------------------------------  
 
-'Hello
+Hello
 
 #||#  oslo-generator-swagger for language en  
 
 #||#  -------------------------------------  
 
-'Hello
+Hello
 
