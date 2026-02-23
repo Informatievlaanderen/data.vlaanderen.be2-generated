@@ -2,11 +2,11 @@
 
 #||# -------------------------------------  
 
-2026-02-23T10:10:52.717Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-persoon-IM.jsonld#L4364)".
+2026-02-23T10:33:55.054Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-persoon-IM.jsonld#L4364)".
 
-2026-02-23T10:10:52.720Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-persoon-IM.jsonld#L4386)".
+2026-02-23T10:33:55.056Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-persoon-IM.jsonld#L4386)".
 
-2026-02-23T10:10:52.720Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-persoon-IM.jsonld#L4397)".
+2026-02-23T10:33:55.056Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-persoon-IM.jsonld#L4397)".
 
-2026-02-23T10:10:52.720Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
+2026-02-23T10:33:55.057Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
 
