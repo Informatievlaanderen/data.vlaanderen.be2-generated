@@ -27,9 +27,11 @@ index.html check
 #||#    + checking /home/circleci/project/config/test/besluit-mobiliteit.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11'
 
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/besluit-mobiliteit/ontwerpstandaard/kristof/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11/index.html'
 
 #||#    + checking /home/circleci/project/config/test/besluit-publicatie.publication.json
 #||# 
