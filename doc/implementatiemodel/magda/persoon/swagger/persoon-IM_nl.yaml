@@ -1050,6 +1050,124 @@
         ],
         "type": "object"
       },
+      "HttpApiProbleemdetail": {
+        "description": "Meer getedailleerde beschrijving van de fout in een HTTP response.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/context/persoon-IM.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/HttpApiProbleemdetail\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "HttpApiProbleemdetail type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "HttpApiProbleemdetail.detail": {
+            "description": "Mensleesbare beschrijving van de fout.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          },
+          "HttpApiProbleemdetail.instantie": {
+            "description": "Verwijzing naar de instantie van het object waarop de fout betrekking heeft. Bvb verwijzing naar de request.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "HttpApiProbleemdetail.status": {
+            "description": "HTTP foutcode. Zoals beschreven in <a href=\"https://www.rfc-editor.org/rfc/rfc7231\">rfc7231</a>. Bvb 404 voor \"Not Found\".",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Integer"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "int64",
+                "type": "number"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "HttpApiProbleemdetail.titel": {
+            "description": "Korte mensleesbare beschrijving van de fout.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          },
+          "HttpApiProbleemdetail.type": {
+            "description": "Aard van de fout.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "HttpApiProbleemdetail.type",
+          "HttpApiProbleemdetail.titel"
+        ],
+        "type": "object"
+      },
       "Huwelijk": {
         "description": "Een door burgerlijk of religieus recht geregelde samenlevingsvorm van twee personen.",
         "properties": {
@@ -3150,6 +3268,46 @@
           }
         },
         "summary": "Relatie tussen leden van eenzelfde gezin.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/HttpApiProbleemdetail/{id}": {
+      "get": {
+        "description": "Meer getedailleerde beschrijving van de fout in een HTTP response.",
+        "operationId": "HttpApiProbleemdetailGET",
+        "parameters": [
+          {
+            "description": "Identificator van een HttpApiProbleemdetail object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HttpApiProbleemdetail"
+                }
+              }
+            },
+            "description": "HttpApiProbleemdetail object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een HttpApiProbleemdetail object."
+          },
+          "404": {
+            "description": "HttpApiProbleemdetail object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Meer getedailleerde beschrijving van de fout in een HTTP response.",
         "tags": [
           "Externe datastandaarden"
         ]

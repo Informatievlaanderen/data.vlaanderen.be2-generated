@@ -22,6 +22,7 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#RegistratieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#VersieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#FormeleorganisatieShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#HttpapiprobleemdetailShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#InwonerschapShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#GeregistreerdeorganisatieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#OrganisatieShape>,
@@ -51,7 +52,8 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#StringShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#DatetimeShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#ContactinfoShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#UriShape> .
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#UriShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#IntegerShape> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#AangegevenadresShape> a shacl:NodeShape;
   rdfs:label "AangegevenAdres"@nl;
@@ -561,6 +563,68 @@
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/persoon#Gezinsrelatie> .
 
+<https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#HttpapiprobleemdetailShape> a shacl:NodeShape;
+  rdfs:label "httpApiProbleemdetail"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Dit ter aanvulling van een HTTP statuscode, bvb bij een 400 (Bad request) statuscode om aan te geven waarom de request slecht was."@nl;
+  rdfs:comment "Meer getedailleerde beschrijving van de fout in een HTTP response."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    rdfs:comment "Aard van de fout."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#Httpapiprobleemdetail.Type>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Aard van de fout."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path <https://test.data.vlaanderen.be/ns/magda/persoon#type>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "titel"@nl;
+    rdfs:comment "Korte mensleesbare beschrijving van de fout."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#Httpapiprobleemdetail.Titel>;
+    shacl:datatype rdf:langString;
+    shacl:description "Korte mensleesbare beschrijving van de fout."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "titel"@nl;
+    shacl:path <https://test.data.vlaanderen.be/ns/magda/persoon#titel>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "status"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Zoals beschreven in <a href=\"https://www.rfc-editor.org/rfc/rfc7231\">rfc7231</a>. Bvb 404 voor \"Not Found\"."@nl;
+    rdfs:comment "HTTP foutcode."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#Httpapiprobleemdetail.Status>;
+    shacl:datatype xsd:integer;
+    shacl:description "HTTP foutcode."@nl;
+    shacl:maxCount "1";
+    shacl:name "status"@nl;
+    shacl:path <https://test.data.vlaanderen.be/ns/magda/persoon#status>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "detail"@nl;
+    rdfs:comment "Mensleesbare beschrijving van de fout."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#Httpapiprobleemdetail.Detail>;
+    shacl:datatype rdf:langString;
+    shacl:description "Mensleesbare beschrijving van de fout."@nl;
+    shacl:maxCount "1";
+    shacl:name "detail"@nl;
+    shacl:path <https://test.data.vlaanderen.be/ns/magda/persoon#detail>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "instantie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bvb verwijzing naar de request."@nl;
+    rdfs:comment "Verwijzing naar de instantie van het object waarop de fout betrekking heeft."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#Httpapiprobleemdetail.Instantie>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Verwijzing naar de instantie van het object waarop de fout betrekking heeft."@nl;
+    shacl:maxCount "1";
+    shacl:name "instantie"@nl;
+    shacl:path <https://test.data.vlaanderen.be/ns/magda/persoon#instantie>
+  ];
+  shacl:targetClass <https://test.data.vlaanderen.be/ns/magda/persoon#HttpApiProbleemdetail> .
+
 <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#HuwelijkShape> a shacl:NodeShape;
   rdfs:label "Huwelijk"@nl;
   <http://purl.org/vocab/vann/usageNote> "Kan, net als bijvoorbeeld Samenwonen, de basis vormen van een Gezin."@nl;
@@ -615,6 +679,11 @@
     shacl:path dc:creator
   ];
   shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#IntegerShape> a shacl:NodeShape;
+  rdfs:label "Integer";
+  shacl:closed false;
+  shacl:targetClass xsd:integer .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#InwonerschapShape> a shacl:NodeShape;
   rdfs:label "Inwonerschap"@nl;
