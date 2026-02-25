@@ -1281,7 +1281,7 @@
             "type": "array"
           },
           "MobiliteitsmaatregelOntwerp.isGebaseerdOp": {
-            "description": "undefined",
+            "description": "Concept waarop de mobiliteitsmaatregelontwerp gebaseerd is.",
             "properties": {
               "@id": {
                 "format": "uri",
@@ -1487,6 +1487,25 @@
             "minItems": 1,
             "type": "array"
           },
+          "OntwerpVoorVerkeersteken.heeftOntwerp": {
+            "description": "Lijst van Aanvullend reglement ontwerp items.",
+            "items": {
+              "description": "Het ontwerp waarin het verkeersteken is opgenomen.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Aanvullend reglement ontwerp\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
           "OntwerpVoorVerkeersteken.heeftVerkeersteken": {
             "description": "het verkeersteken dat is opgenomen in het ontwerp",
             "properties": {
@@ -1550,7 +1569,7 @@
             "type": "array"
           },
           "Pictogram.afbeelding": {
-            "description": "undefined",
+            "description": "Link naar afbeelding.",
             "properties": {
               "@id": {
                 "format": "uri",
@@ -5992,6 +6011,13 @@
             },
             "description": "OntwerpVoorVerkeersteken object gevonden.",
             "links": {
+              "Aanvullend reglement ontwerpGET": {
+                "description": "Het `@id` attribuut van de waarde van `OntwerpVoorVerkeersteken.heeftOntwerp` kan gebruikt worden om het gerefereerde object van het type `Aanvullend reglement ontwerp` op te halen.",
+                "operationId": "Aanvullend reglement ontwerpGET",
+                "parameters": {
+                  "id": "$response.body#/OntwerpVoorVerkeersteken.heeftOntwerp/@id"
+                }
+              },
               "VerkeerstekenGET": {
                 "description": "Het `@id` attribuut van de waarde van `OntwerpVoorVerkeersteken.heeftVerkeersteken` kan gebruikt worden om het gerefereerde object van het type `Verkeersteken` op te halen.",
                 "operationId": "VerkeerstekenGET",

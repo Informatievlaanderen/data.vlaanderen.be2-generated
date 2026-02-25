@@ -95,10 +95,10 @@
     rdfs:label "is ontwerp voor"@nl;
     rdfs:comment "Mobiliteitsmaatregel die deel uitmaakt van het ontwerp"@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#AanvullendReglementOntwerp.IsOntwerpVoor>;
-    shacl:class <http://data.vlaanderen.be/ns/besluit#AanvullendReglement>;
     shacl:description "Mobiliteitsmaatregel die deel uitmaakt van het ontwerp"@nl;
     shacl:minCount 1;
     shacl:name "is ontwerp voor"@nl;
+    shacl:or ([shacl:class <http://data.vlaanderen.be/ns/besluit#AanvullendReglement>] [shacl:class <http://data.vlaanderen.be/ns/besluit#TijdelijkReglement>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#isOntwerpVoor>
   ], [
     a shacl:PropertyShape;
@@ -127,7 +127,8 @@
     shacl:name "tijdsinterval"@nl;
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#periode>
   ];
-  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#AanvullendReglement> .
+  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#TijdelijkReglement>,
+    <http://data.vlaanderen.be/ns/besluit#AanvullendReglement> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#AdresvoorstellingShape> a shacl:NodeShape;
   rdfs:label "Adresvoorstelling"@nl;
@@ -327,11 +328,11 @@
     <http://purl.org/vocab/vann/usageNote> "Gebruik eli:has_part voor compatibiliteit met LBLOD ecosysteem."@nl;
     rdfs:comment "Het besluit waarvan het artikel een onderdeel is."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Artikel.IsOnderdeelVan>;
-    shacl:class <http://data.vlaanderen.be/ns/besluit#Besluit>;
     shacl:description "Het besluit waarvan het artikel een onderdeel is."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "is onderdeel van"@nl;
+    shacl:or ([shacl:class <http://data.vlaanderen.be/ns/besluit#Besluit>] [shacl:class <http://data.vlaanderen.be/ns/besluit#AanvullendReglement>] [shacl:class <http://data.vlaanderen.be/ns/besluit#TijdelijkReglement>]);
     shacl:path dc:isPartOf
   ];
   shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Artikel> .
@@ -390,12 +391,14 @@
     rdfs:label "type"@nl;
     rdfs:comment "Type van het besluit."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Besluit.Type>;
-    shacl:class skos:Concept;
     shacl:description "Type van het besluit."@nl;
     shacl:name "type"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path rdf:type
   ];
-  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Besluit> .
+  shacl:targetClass <http://data.vlaanderen.be/ns/besluit#TijdelijkReglement>,
+    <http://data.vlaanderen.be/ns/besluit#AanvullendReglement>,
+    <http://data.vlaanderen.be/ns/besluit#Besluit> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#BesluittypeShape> a shacl:NodeShape;
   rdfs:label "Besluittype"@nl;
@@ -485,11 +488,11 @@
     rdfs:label "type"@nl;
     rdfs:comment "Geeft het type codelijst aan, waarbij wordt bepaald of de codelijst als single of multiselect kan worden gebruikt."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Codelijst.Type>;
-    shacl:class skos:Concept;
     shacl:description "Geeft het type codelijst aan, waarbij wordt bepaald of de codelijst als single of multiselect kan worden gebruikt."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "type"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path dc:type
   ];
   shacl:targetClass skos:ConceptScheme .
@@ -535,7 +538,8 @@
     shacl:name "behoort tot"@nl;
     shacl:path skos:inScheme
   ];
-  shacl:targetClass skos:Concept .
+  shacl:targetClass skos:Concept,
+    <https://data.vlaanderen.be/ns/mobiliteit#Pictogram> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#DateShape> a shacl:NodeShape;
   rdfs:label "Date";
@@ -569,11 +573,11 @@
     <http://purl.org/vocab/vann/usageNote> "Het wordt aangeraden QUDT te gebruiken, bv https://qudt.org/vocab/quantitykind/Height"@nl;
     rdfs:comment "Grootheid van de Dimensie. bv hoogte, lengte, breedte, diameter,..."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Dimensie.TypeGrootheid>;
-    shacl:class skos:Concept;
     shacl:description "Grootheid van de Dimensie. bv hoogte, lengte, breedte, diameter,..."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "type grootheid"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path <http://qudt.org/schema/qudt/hasQuantityKind>
   ], [
     a shacl:PropertyShape;
@@ -581,11 +585,11 @@
     <http://purl.org/vocab/vann/usageNote> "Het is aangeraden gebruik te maken van op het web gepubliceerde eenheden, bij voorkeur deze van qudt. bv http://qudt.org/vocab/unit/M voor mete"@nl;
     rdfs:comment "Het type eenheid waarin de dimensie werd uitgedrukt."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Dimensie.StandaardEenheid>;
-    shacl:class skos:Concept;
     shacl:description "Het type eenheid waarin de dimensie werd uitgedrukt."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "standaard eenheid"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path <http://qudt.org/schema/qudt/hasUnit>
   ];
   shacl:targetClass crm:E54_Dimension .
@@ -678,11 +682,11 @@
     rdfs:label "heeft verkeersteken lijstitem"@nl;
     rdfs:comment "Verkeerstekenconcept dat wordt opgelijst."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#MaatregelVerkeerstekenLijstItem.HeeftVerkeerstekenLijstitem>;
-    shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>;
     shacl:description "Verkeerstekenconcept dat wordt opgelijst."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "heeft verkeersteken lijstitem"@nl;
+    shacl:or ([shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>]);
     shacl:path schema:item
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit#MaatregelVerkeerstekenLijstItem> .
@@ -733,10 +737,10 @@
     <http://purl.org/vocab/vann/usageNote> "Voorbeelden: straat afzetten, trager rijden, extra fietsstallingen, shuttledienst etc."@nl;
     rdfs:comment "Type mobiliteitsmaatregel."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Mobiliteitsmaatregel.Type>;
-    shacl:class skos:Concept;
     shacl:description "Type mobiliteitsmaatregel."@nl;
     shacl:maxCount "1";
     shacl:name "type"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#Mobiliteitsmaatregel.type>
   ], [
     a shacl:PropertyShape;
@@ -765,9 +769,9 @@
     <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld: alle bewoners uit een bepaalde straat"@nl;
     rdfs:comment "Groep of categorie die belang hebben bij de mobiliteitsmaatregel."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Mobiliteitsmaatregel.Doelgroep>;
-    shacl:class skos:Concept;
     shacl:description "Groep of categorie die belang hebben bij de mobiliteitsmaatregel."@nl;
     shacl:name "doelgroep"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#Mobiliteitsmaatregel.doelgroep>
   ], [
     a shacl:PropertyShape;
@@ -801,9 +805,9 @@
     rdfs:label "wordt aangeduid door"@nl;
     rdfs:comment "Een verkeersteken dat bijdraagt tot de aanduiding van een mobiliteitsmaatregel."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Mobiliteitsmaatregel.WordtAangeduidDoor>;
-    shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>;
     shacl:description "Een verkeersteken dat bijdraagt tot de aanduiding van een mobiliteitsmaatregel."@nl;
     shacl:name "wordt aangeduid door"@nl;
+    shacl:or ([shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#VerkeersbordVerkeersteken>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#WegmarkeringVerkeersteken>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#VerkeerslichtVerkeersteken>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#wordtAangeduidDoor>
   ], [
     a shacl:PropertyShape;
@@ -850,10 +854,10 @@
     rdfs:label "zonaliteit"@nl;
     rdfs:comment "Geeft aan of de maatregel kan worden toegepast op een zone."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Mobiliteitsmaatregelconcept.Zonaliteit>;
-    shacl:class skos:Concept;
     shacl:description "Geeft aan of de maatregel kan worden toegepast op een zone."@nl;
     shacl:maxCount "1";
     shacl:name "zonaliteit"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#zonaliteit>
   ], [
     a shacl:PropertyShape;
@@ -887,17 +891,19 @@
     rdfs:label "status"@nl;
     rdfs:comment "Toestand van Mobiliteitsmaatregel ontwerp."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Mobiliteitsmaatregelontwerp.Status>;
-    shacl:class skos:Concept;
     shacl:description "Toestand van Mobiliteitsmaatregel ontwerp."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "status"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path <http://www.w3.org/ns/adms#status>
   ], [
     a shacl:PropertyShape;
     rdfs:label "is gebaseerd op"@nl;
+    rdfs:comment "Concept waarop de mobiliteitsmaatregelontwerp gebaseerd is."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Mobiliteitsmaatregelontwerp.IsGebaseerdOp>;
     shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Mobiliteitsmaatregelconcept>;
+    shacl:description "Concept waarop de mobiliteitsmaatregelontwerp gebaseerd is."@nl;
     shacl:maxCount 1;
     shacl:name "is gebaseerd op"@nl;
     shacl:path prov:wasDerivedFrom
@@ -916,9 +922,9 @@
     rdfs:label "wordt aangeduid door"@nl;
     rdfs:comment "Verkeersteken waarmee mobiliteitsmaatregel ontwerp aangeduid wordt."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Mobiliteitsmaatregelontwerp.WordtAangeduidDoor>;
-    shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>;
     shacl:description "Verkeersteken waarmee mobiliteitsmaatregel ontwerp aangeduid wordt."@nl;
     shacl:name "wordt aangeduid door"@nl;
+    shacl:or ([shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#VerkeersbordVerkeersteken>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#WegmarkeringVerkeersteken>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#VerkeerslichtVerkeersteken>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#wordtAangeduidDoor>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit#MobiliteitsmaatregelOntwerp> .
@@ -932,22 +938,22 @@
     rdfs:label "status"@nl;
     rdfs:comment "Status van het verkeersteken ontwerp."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#OntwerpVoorVerkeersteken.Status>;
-    shacl:class skos:Concept;
     shacl:description "Status van het verkeersteken ontwerp."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "status"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path <http://www.w3.org/ns/adms#status>
   ], [
     a shacl:PropertyShape;
     rdfs:label "heeft verkeersteken"@nl;
     rdfs:comment "het verkeersteken dat is opgenomen in het ontwerp"@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#OntwerpVoorVerkeersteken.HeeftVerkeersteken>;
-    shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>;
     shacl:description "het verkeersteken dat is opgenomen in het ontwerp"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "heeft verkeersteken"@nl;
+    shacl:or ([shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#VerkeersbordVerkeersteken>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#WegmarkeringVerkeersteken>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#VerkeerslichtVerkeersteken>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#heeftVerkeersteken>
   ], [
     a shacl:PropertyShape;
@@ -968,11 +974,13 @@
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "afbeelding"@nl;
+    rdfs:comment "Link naar afbeelding."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Pictogram.Afbeelding>;
-    shacl:class foaf:Document;
+    shacl:description "Link naar afbeelding."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "afbeelding"@nl;
+    shacl:or ([shacl:class foaf:Document] [shacl:class <http://data.vlaanderen.be/ns/besluit#Besluit>] [shacl:class <http://data.vlaanderen.be/ns/besluit#AanvullendReglement>] [shacl:class <http://data.vlaanderen.be/ns/besluit#TijdelijkReglement>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Template>]);
     shacl:path skos:prefSymbol
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit#Pictogram> .
@@ -1044,11 +1052,11 @@
     rdfs:label "status"@nl;
     rdfs:comment "Status van het ontwerp"@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#SignalisatieOntwerp.Status>;
-    shacl:class skos:Concept;
     shacl:description "Status van het ontwerp"@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "status"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path <https://wegenenverkeer.data.vlaanderen.be/ns/implementatieelement#VLAGAIMToestand.toestand>
   ], [
     a shacl:PropertyShape;
@@ -1108,11 +1116,11 @@
     rdfs:label "grafische weergave"@nl;
     rdfs:comment "Afbeelding van de resource."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Signalisatieplan.GrafischeWeergave>;
-    shacl:class foaf:Document;
     shacl:description "Afbeelding van de resource."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "grafische weergave"@nl;
+    shacl:or ([shacl:class foaf:Document] [shacl:class <http://data.vlaanderen.be/ns/besluit#Besluit>] [shacl:class <http://data.vlaanderen.be/ns/besluit#AanvullendReglement>] [shacl:class <http://data.vlaanderen.be/ns/besluit#TijdelijkReglement>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Template>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#grafischeWeergave>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit#Signalisatieplan> .
@@ -1126,11 +1134,11 @@
     rdfs:label "vergunt type"@nl;
     rdfs:comment "Type signalisatievergunning dat vergund wordt."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Signalisatievergunning.VerguntType>;
-    shacl:class skos:Concept;
     shacl:description "Type signalisatievergunning dat vergund wordt."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "vergunt type"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path <http://data.vlaanderen.be/ns/besluit#Signalisatievergunning.verguntType>
   ];
   shacl:targetClass <http://data.vlaanderen.be/ns/besluit#Signalisatievergunning> .
@@ -1165,9 +1173,9 @@
     rdfs:label "variabele"@nl;
     rdfs:comment "Variabele van een Template."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Template.Variabele>;
-    shacl:class <http://lblod.data.gift/vocabularies/variables/Variable>;
     shacl:description "Variabele van een Template."@nl;
     shacl:name "variabele"@nl;
+    shacl:or ([shacl:class <http://lblod.data.gift/vocabularies/variables/Variable>] [shacl:class <http://lblod.data.gift/vocabularies/variables/VariableWithResourceValue>] [shacl:class <http://lblod.data.gift/vocabularies/variables/VariableWithLiteralValue>] [shacl:class <http://lblod.data.gift/vocabularies/variables/VariableWithLocationValue>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#variabele>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit#Template> .
@@ -1230,14 +1238,17 @@
     rdfs:label "verkeersteken"@nl;
     rdfs:comment "Verkeersteken waarop de invullen van de variabele invloed heeft."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#VariabeleInstantie.Verkeersteken>;
-    shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>;
     shacl:description "Verkeersteken waarop de invullen van de variabele invloed heeft."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "verkeersteken"@nl;
+    shacl:or ([shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#VerkeersbordVerkeersteken>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#WegmarkeringVerkeersteken>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#VerkeerslichtVerkeersteken>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#verkeersteken>
   ];
-  shacl:targetClass <http://lblod.data.gift/vocabularies/variables/VariableInstance> .
+  shacl:targetClass <http://lblod.data.gift/vocabularies/variables/VariableInstanceWithLiteralValue>,
+    <http://lblod.data.gift/vocabularies/variables/VariableInstance>,
+    <http://lblod.data.gift/vocabularies/variables/VariableInstanceWithResourceValue>,
+    <http://lblod.data.gift/vocabularies/variables/VariableInstanceWithLocationValue> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#VariabeleMetLocatieShape> a shacl:NodeShape;
   rdfs:label "Variabele met locatie"@nl;
@@ -1330,14 +1341,17 @@
     rdfs:label "type"@nl;
     rdfs:comment "Classificatie van de variabele."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Variabele.Type>;
-    shacl:class skos:Concept;
     shacl:description "Classificatie van de variabele."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "type"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path dc:type
   ];
-  shacl:targetClass <http://lblod.data.gift/vocabularies/variables/Variable> .
+  shacl:targetClass <http://lblod.data.gift/vocabularies/variables/VariableWithResourceValue>,
+    <http://lblod.data.gift/vocabularies/variables/Variable>,
+    <http://lblod.data.gift/vocabularies/variables/VariableWithLiteralValue>,
+    <http://lblod.data.gift/vocabularies/variables/VariableWithLocationValue> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#VariabeleTypeShape> a shacl:NodeShape;
   rdfs:label "Variabele Type"@nl;
@@ -1424,21 +1438,21 @@
     rdfs:label "classificatie"@nl;
     rdfs:comment "Categorie van het verkeersbordconcept."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Verkeersbordconcept.Classificatie>;
-    shacl:class skos:Concept;
     shacl:description "Categorie van het verkeersbordconcept."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "classificatie"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path dc:type
   ], [
     a shacl:PropertyShape;
     rdfs:label "zonaliteit"@nl;
     rdfs:comment "Geeft aan of en hoe een verkeerstekentype toegepast mag worden voor een gehele zone of gebied."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Verkeersbordconcept.Zonaliteit>;
-    shacl:class skos:Concept;
     shacl:description "Geeft aan of en hoe een verkeerstekentype toegepast mag worden voor een gehele zone of gebied."@nl;
     shacl:maxCount "1";
     shacl:name "zonaliteit"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path rdfs:Resource
   ], [
     a shacl:PropertyShape;
@@ -1509,11 +1523,11 @@
     <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld: vergund"@nl;
     rdfs:comment "Wettelijke status van het verkeersteken."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Verkeersteken.WettelijkeStatus>;
-    shacl:class skos:Concept;
     shacl:description "Wettelijke status van het verkeersteken."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "wettelijke status"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken.wettelijkeStatus>
   ], [
     a shacl:PropertyShape;
@@ -1531,9 +1545,9 @@
     rdfs:label "afbeelding"@nl;
     rdfs:comment "Foto van het verkeersteken."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Verkeersteken.Afbeelding>;
-    shacl:class foaf:Document;
     shacl:description "Foto van het verkeersteken."@nl;
     shacl:name "afbeelding"@nl;
+    shacl:or ([shacl:class foaf:Document] [shacl:class <http://data.vlaanderen.be/ns/besluit#Besluit>] [shacl:class <http://data.vlaanderen.be/ns/besluit#AanvullendReglement>] [shacl:class <http://data.vlaanderen.be/ns/besluit#TijdelijkReglement>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Template>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#grafischeWeergave>
   ], [
     a shacl:PropertyShape;
@@ -1558,12 +1572,15 @@
     rdfs:label "bevat verkeersteken"@nl;
     rdfs:comment "Geeft aan dat een concreet verkeersteken één of meer andere verkeerstekens fysiek bevat, weergeeft of draagt op een specifieke locatie."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Verkeersteken.BevatVerkeersteken>;
-    shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>;
     shacl:description "Geeft aan dat een concreet verkeersteken één of meer andere verkeerstekens fysiek bevat, weergeeft of draagt op een specifieke locatie."@nl;
     shacl:name "bevat verkeersteken"@nl;
+    shacl:or ([shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#VerkeersbordVerkeersteken>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#WegmarkeringVerkeersteken>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#VerkeerslichtVerkeersteken>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#bevatVerkeersteken>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit#VerkeersbordVerkeersteken>,
+    <https://data.vlaanderen.be/ns/mobiliteit#Verkeersteken>,
+    <https://data.vlaanderen.be/ns/mobiliteit#WegmarkeringVerkeersteken>,
+    <https://data.vlaanderen.be/ns/mobiliteit#VerkeerslichtVerkeersteken> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#VerkeerstekenconceptShape> a shacl:NodeShape;
   rdfs:label "Verkeerstekenconcept"@nl;
@@ -1606,11 +1623,11 @@
     rdfs:label "regelgevend kader"@nl;
     rdfs:comment "Link tussen een verkeerstekenconcept en het regelgevend kader waaronder het valt, zoals bepaald door een specifieke versie van de verkeersregels of wegcode. Dit kader bepaalt de formele betekenis, toepassing en uitvoering van het concept."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Verkeerstekenconcept.RegelgevendKader>;
-    shacl:class skos:Concept;
     shacl:description "Link tussen een verkeerstekenconcept en het regelgevend kader waaronder het valt, zoals bepaald door een specifieke versie van de verkeersregels of wegcode. Dit kader bepaalt de formele betekenis, toepassing en uitvoering van het concept."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "regelgevend kader"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#regelgevendKader>
   ], [
     a shacl:PropertyShape;
@@ -1618,9 +1635,9 @@
     <http://purl.org/vocab/vann/usageNote> "In geval van variabel opschrift kan een default afbeelding gebruikt worden."@nl;
     rdfs:comment "Afbeelding van het verkeersbordconcept."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Verkeerstekenconcept.Afbeelding>;
-    shacl:class foaf:Document;
     shacl:description "Afbeelding van het verkeersbordconcept."@nl;
     shacl:name "afbeelding"@nl;
+    shacl:or ([shacl:class foaf:Document] [shacl:class <http://data.vlaanderen.be/ns/besluit#Besluit>] [shacl:class <http://data.vlaanderen.be/ns/besluit#AanvullendReglement>] [shacl:class <http://data.vlaanderen.be/ns/besluit#TijdelijkReglement>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Template>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#grafischeWeergave>
   ], [
     a shacl:PropertyShape;
@@ -1657,9 +1674,9 @@
     <http://purl.org/vocab/vann/usageNote> "Gebruikt om aan te duiden welke verkeerstekens kunnen worden toegevoegd op wegmarkeringen,  Z-borden en F89/91."@nl;
     rdfs:comment "Geeft aan welke verkeerstekenconcepten  dit verkeersteken kan bevatten of weergeven. Het betreft een toegestane compositie (drager ? opgenomen concept)."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Verkeerstekenconcept.MagVerkeerstekenconceptBevatten>;
-    shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>;
     shacl:description "Geeft aan welke verkeerstekenconcepten  dit verkeersteken kan bevatten of weergeven. Het betreft een toegestane compositie (drager ? opgenomen concept)."@nl;
     shacl:name "mag verkeerstekenconcept bevatten"@nl;
+    shacl:or ([shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#magVerkeerstekenconceptBevatten>
   ], [
     a shacl:PropertyShape;
@@ -1675,12 +1692,15 @@
     rdfs:label "definieert"@nl;
     rdfs:comment "Variabele dat gebruikt wordt in Verkeerstekenconcept."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Verkeerstekenconcept.Definieert>;
-    shacl:class <http://lblod.data.gift/vocabularies/variables/Variable>;
     shacl:description "Variabele dat gebruikt wordt in Verkeerstekenconcept."@nl;
     shacl:name "definieert"@nl;
+    shacl:or ([shacl:class <http://lblod.data.gift/vocabularies/variables/Variable>] [shacl:class <http://lblod.data.gift/vocabularies/variables/VariableWithResourceValue>] [shacl:class <http://lblod.data.gift/vocabularies/variables/VariableWithLiteralValue>] [shacl:class <http://lblod.data.gift/vocabularies/variables/VariableWithLocationValue>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#variabele>
   ];
-  shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>,
+    <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>,
+    <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>,
+    <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#VerkeerstekenconceptStatusShape> a shacl:NodeShape;
   rdfs:label "Verkeerstekenconcept Status"@nl;
@@ -1707,11 +1727,11 @@
     rdfs:label "vorm type"@nl;
     rdfs:comment "Type van de vorm: cirkel, driehoek, rechthoek,..."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Vorm.VormType>;
-    shacl:class skos:Concept;
     shacl:description "Type van de vorm: cirkel, driehoek, rechthoek,..."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "vorm type"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path crm:P2_has_type
   ], [
     a shacl:PropertyShape;
@@ -1774,9 +1794,9 @@
     <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld: corridor, evenementzone"@nl;
     rdfs:comment "Soort zone."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/besluit-mobiliteit/erkendestandaard/2025-12-11#Zone.Type>;
-    shacl:class skos:Concept;
     shacl:description "Soort zone."@nl;
     shacl:name "type"@nl;
+    shacl:or ([shacl:class skos:Concept] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerstekenconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeersbordconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Wegmarkeringconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Verkeerslichtconcept>] [shacl:class <https://data.vlaanderen.be/ns/mobiliteit#Pictogram>]);
     shacl:path <https://data.vlaanderen.be/ns/mobiliteit#Zone.type>
   ], [
     a shacl:PropertyShape;
