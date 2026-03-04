@@ -414,10 +414,10 @@
     <https://test.data.vlaanderen.be/ns/magda/persoon#Referentieadres>,
     <https://test.data.vlaanderen.be/ns/magda/persoon#VerblijfplaatsBuitenlandDomicilie>;
   shacl:xone ([
-      shacl:not _:df_1_80;
-      shacl:property _:df_1_37
-    ] [shacl:property _:df_1_50,
-        _:df_1_80]) .
+      shacl:not _:df_1_78;
+      shacl:property _:df_1_35
+    ] [shacl:property _:df_1_47,
+        _:df_1_78]) .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#FormeleorganisatieShape> a shacl:NodeShape;
   rdfs:label "FormeleOrganisatie"@nl;
@@ -516,6 +516,14 @@
     shacl:maxCount "1";
     shacl:name "gezinsadres"@nl;
     shacl:path <https://data.vlaanderen.be/ns/persoon#gezinsadres>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "woonvorm";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#Gezin.Woonvorm>;
+    shacl:class <https://test.data.vlaanderen.be/ns/magda/persoon#Woonvormtype>;
+    shacl:maxCount "1";
+    shacl:name "woonvorm";
+    shacl:path <https://data.vlaanderen.be/ns/persoon#woonvorm>
   ], [
     a shacl:PropertyShape;
     rdfs:label "gezinshoofd"@nl;
@@ -641,36 +649,6 @@
     shacl:maxCount "1";
     shacl:name "identificator"@nl;
     shacl:path skos:notation
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "toegekendDoor(String)"@nl;
-    rdfs:comment "Naam vd agent die de identificator heeft toegekend."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#Identificator.Toegekenddoor(string)>;
-    shacl:datatype xsd:string;
-    shacl:description "Naam vd agent die de identificator heeft toegekend."@nl;
-    shacl:maxCount "1";
-    shacl:name "toegekendDoor(String)"@nl;
-    shacl:path <http://www.w3.org/ns/adms#schemaAgency>
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "toegekendOp"@nl;
-    rdfs:comment "Datum waarop de identificator werd uitgegeven."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#Identificator.Toegekendop>;
-    shacl:datatype xsd:date;
-    shacl:description "Datum waarop de identificator werd uitgegeven."@nl;
-    shacl:maxCount "1";
-    shacl:name "toegekendOp"@nl;
-    shacl:path dc:issued
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "toegekendDoor"@nl;
-    rdfs:comment "Link naar de agent die de identificator heeft uitgegeven."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#Identificator.Toegekenddoor>;
-    shacl:class dc:Agent;
-    shacl:description "Link naar de agent die de identificator heeft uitgegeven."@nl;
-    shacl:maxCount "1";
-    shacl:name "toegekendDoor"@nl;
-    shacl:path dc:creator
   ];
   shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
 
@@ -888,13 +866,13 @@
     shacl:path <http://www.w3.org/ns/person#residency>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "inwonerschapdetail"@nl;
+    rdfs:label "heeftInwonerschap"@nl;
     rdfs:comment "Inwonerschap van de persoon."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#Persoon.Inwonerschapdetail>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#Persoon.Heeftinwonerschap>;
     shacl:class <https://data.vlaanderen.be/ns/persoon#Inwonerschap>;
     shacl:description "Inwonerschap van de persoon."@nl;
-    shacl:name "inwonerschapdetail"@nl;
-    shacl:path <https://test.data.vlaanderen.be/ns/magda/persoon#inwonerschapdetail>
+    shacl:name "heeftInwonerschap"@nl;
+    shacl:path <https://test.data.vlaanderen.be/ns/magda/persoon#heeftInwonerschap>
   ], [
     a shacl:PropertyShape;
     rdfs:label "heeftRelatieMet"@nl;
@@ -906,13 +884,13 @@
     shacl:path <https://data.vlaanderen.be/ns/persoon#heeftPersoonsrelatie>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "persoonsrelatiedetail"@nl;
+    rdfs:label "heeftPersoonsrelatie"@nl;
     rdfs:comment "Persoonsrelatie van de persoon."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#Persoon.Persoonsrelatiedetail>;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#Persoon.Heeftpersoonsrelatie>;
     shacl:description "Persoonsrelatie van de persoon."@nl;
-    shacl:name "persoonsrelatiedetail"@nl;
+    shacl:name "heeftPersoonsrelatie"@nl;
     shacl:or ([shacl:class <https://data.vlaanderen.be/ns/persoon#Persoonsrelatie>] [shacl:class <https://data.vlaanderen.be/ns/persoon#Gezinsrelatie>] [shacl:class <https://data.vlaanderen.be/ns/persoon#Huwelijk>] [shacl:class <https://data.vlaanderen.be/ns/persoon#Samenwonen>] [shacl:class <https://data.vlaanderen.be/ns/persoon#Afstamming>]);
-    shacl:path <https://test.data.vlaanderen.be/ns/magda/persoon#persoonsrelatiedetail>
+    shacl:path <https://test.data.vlaanderen.be/ns/magda/persoon#heeftPersoonsrelatie>
   ], [
     a shacl:PropertyShape;
     rdfs:label "isLidVan"@nl;
@@ -1110,7 +1088,7 @@
     <https://test.data.vlaanderen.be/ns/magda/persoon#VerblijfplaatsBuitenland>,
     <https://test.data.vlaanderen.be/ns/magda/persoon#WettelijkVerblijf>;
   shacl:xone ([
-      shacl:not _:df_1_85;
+      shacl:not _:df_1_83;
       shacl:property [
         a shacl:PropertyShape;
         rdfs:label "verblijfsadres"@nl;
@@ -1122,8 +1100,8 @@
         shacl:name "verblijfsadres"@nl;
         shacl:path <https://data.vlaanderen.be/ns/persoon#verblijfsadres>
       ]
-    ] [shacl:property _:df_1_37,
-        _:df_1_85]) .
+    ] [shacl:property _:df_1_35,
+        _:df_1_83]) .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#VerblijfplaatsbuitenlandShape> a shacl:NodeShape;
   rdfs:label "VerblijfplaatsBuitenland"@nl;
@@ -1137,7 +1115,7 @@
   <http://purl.org/vocab/vann/usageNote> "Persoon in het buitenland gedomicilieerd bij een diplomatieke post ipv op een BelgischAdres, ttz zonder nog een hoofdverblijfplaats in België en dus ook niet daar tijdelijk afwezig."@nl;
   rdfs:comment "Hoofdverblijplaats in het buitenland."@nl;
   shacl:closed false;
-  shacl:property _:df_1_50;
+  shacl:property _:df_1_47;
   shacl:targetClass <https://test.data.vlaanderen.be/ns/magda/persoon#VerblijfplaatsBuitenlandDomicilie> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#VersieShape> a shacl:NodeShape;
@@ -1186,7 +1164,7 @@
   shacl:closed false;
   shacl:targetClass <https://test.data.vlaanderen.be/ns/magda/persoon#WettelijkVerblijf> .
 
-_:df_1_37 a shacl:PropertyShape;
+_:df_1_35 a shacl:PropertyShape;
   rdfs:label "verblijfsadres"@nl;
   <http://purl.org/vocab/vann/usageNote> "In principe een Belgisch adres."@nl;
   rdfs:comment "Adres van de hoofdverblijfplaats."@nl;
@@ -1197,7 +1175,7 @@ _:df_1_37 a shacl:PropertyShape;
   shacl:name "verblijfsadres"@nl;
   shacl:path <https://data.vlaanderen.be/ns/persoon#verblijfsadres> .
 
-_:df_1_50 a shacl:PropertyShape;
+_:df_1_47 a shacl:PropertyShape;
   rdfs:label "verblijfsadres"@nl;
   rdfs:comment "Adres van de hoofdverblijfplaats."@nl;
   rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon#Verblijfplaatsbuitenlanddomicilie.Verblijfsadres>;
@@ -1207,8 +1185,8 @@ _:df_1_50 a shacl:PropertyShape;
   shacl:name "verblijfsadres"@nl;
   shacl:path <https://data.vlaanderen.be/ns/persoon#verblijfsadres> .
 
-_:df_1_80 a shacl:PropertyShape;
+_:df_1_78 a shacl:PropertyShape;
   shacl:class <https://test.data.vlaanderen.be/ns/magda/persoon#VerblijfplaatsBuitenlandDomicilie> .
 
-_:df_1_85 a shacl:PropertyShape;
+_:df_1_83 a shacl:PropertyShape;
   shacl:class <https://data.vlaanderen.be/ns/persoon#Domicilie> .
