@@ -1,0 +1,3465 @@
+{
+  "components": {
+    "schemas": {
+      "Activiteit": {
+        "description": "Handeling van bepaalde duur op of met entiteiten.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Activiteit\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Activiteit type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Activiteit.einddatum": {
+            "description": "De einddatum van de activiteit.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "DateTime"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date-time",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Activiteit.naam": {
+            "description": "De naam van de activiteit.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ],
+            "type": "object"
+          },
+          "Activiteit.startdatum": {
+            "description": "De startdatum van de activiteit.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "DateTime"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date-time",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Activiteit.vindtPlaatsTijdens": {
+            "description": "Lijst van Zaak items.",
+            "items": {
+              "description": "Een activiteit vindt plaats tijdens een eenheid van werk.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Zaak\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Activiteit.naam",
+          "Activiteit.startdatum",
+          "Activiteit.einddatum"
+        ],
+        "type": "object"
+      },
+      "Agent": {
+        "description": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Agent type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Agent.zaak": {
+            "description": "Lijst van Zaak items.",
+            "items": {
+              "description": "De Zaak die de Agent behandelt.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Zaak\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Agent(InRol)": {
+        "description": "Een toewijzing van verantwoordelijkheid aan een agent voor een activiteit, wat aangeeft dat de agent een rol in de activiteit had.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent(InRol)\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Agent(InRol) type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Agent(InRol).agent": {
+            "description": "De Agent die de zaak behandelt.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Agent(InRol).rol": {
+            "description": "De functie van een agent met betrekking tot een activiteit.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Rol\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Agent(InRol).zaak": {
+            "description": "De Zaak die in behandeling is door de Agent.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Zaak\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Agent(InRol).rol",
+          "Agent(InRol).zaak",
+          "Agent(InRol).agent"
+        ],
+        "type": "object"
+      },
+      "Any": {
+        "description": "Instanties van  om het even welk type.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Any\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Any type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Concept": {
+        "description": "Idee of begrip.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Concept\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Concept type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Input": {
+        "description": "Informatie die door een procedure wordt gebruikt.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Input\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Input type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Input.referentie": {
+            "description": "Verwijzing naar originele Input.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Input.type": {
+            "description": "Aard van de input.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/InputType\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Kenmerktype": {
+        "description": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Kenmerktype\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Kenmerktype type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Melding": {
+        "description": "Beschrijft de melding van een probleem of een vaststelling die mogelijks aanleiding geeft tot een actie van de overheid.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Melding\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Melding type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Melding.behandelaar": {
+            "description": "Agent die werd aangewezen om de melding op te volgen en af te handelen.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Melding.heeftBody": {
+            "description": "Lijst van MeldingBody items.",
+            "items": {
+              "description": "Het object van deze associatie is een resource die de body van de Melding beschrijft (MeldingBody).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/MeldingBody\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Melding.heeftDoelwit": {
+            "description": "Lijst van Object items.",
+            "items": {
+              "description": "De relatie tussen de Melding en het doelwit, het Meldingsobject waarop de melding slaat.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Object\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Melding.heeftStatus": {
+            "description": "Lijst van Meldingstatus items.",
+            "items": {
+              "description": "De Status verbonden aan de Melding.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Meldingstatus\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Melding.identificator": {
+            "description": "De identificator die de Melding uniek identificeert.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identificator\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Melding.indiener": {
+            "description": "Agent die de Melding heeft aangemaakt en/of ingediend.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Melding.meldingstype": {
+            "description": "Lijst van Meldingstype items.",
+            "items": {
+              "description": "De relatie tussen de Melding en het Meldingstype dat gebruikt worden om de melding te categoriseren. Er wordt verwacht dat het meldingstype gedefinieerd is in een codelijst. Het bepalen en ontlsuiten van deze codelijst kan applicatie-specifiek worden ingevuld.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Meldingstype\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Melding.samenvatting": {
+            "description": "Een samenvatting van de Melding. Deze eigenschap kan gebruikt worden als een tekstveld om de Melding en de informatie die eraan gekoppeld is samen te vatten en de behandeling ervan te vergemakkelijken.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          },
+          "Melding.titel": {
+            "description": "De titel van de Melding.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          },
+          "Melding.type": {
+            "description": "Aard van het Domeinobject.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Domeinobjecttype\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Melding.waardeverschaffer": {
+            "description": "Lijst van Observatie items.",
+            "items": {
+              "description": "Observaties die op het Object gebeuren.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Melding.webpagina": {
+            "description": "Een doorverwijzing naar een webpagina over deze Melding. Deze eigenschap kan gebruikt worden om een gebruiker door te verwijzen naar een applicatie waar de actuele status van de Melding kan geraadpleegd worden.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Melding.titel",
+          "Melding.identificator",
+          "Melding.meldingstype",
+          "Melding.behandelaar",
+          "Melding.indiener"
+        ],
+        "type": "object"
+      },
+      "Mobiliteitshinder": {
+        "description": "Verstoring van de normale mobiliteit op het openbaar domein of privé domein met openbaar karakter.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Mobiliteitshinder\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Mobiliteitshinder type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Mobiliteitshinder.type": {
+            "description": "Aard van het Domeinobject.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Domeinobjecttype\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Mobiliteitshinder.waardeverschaffer": {
+            "description": "Lijst van Observatie items.",
+            "items": {
+              "description": "Observaties die op het Object gebeuren.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Object": {
+        "description": "Klasse die instanties van om het even welk type vertegenwoordigt.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Object\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Object type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Object.type": {
+            "description": "Aard van het Domeinobject.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Domeinobjecttype\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Object.waardeverschaffer": {
+            "description": "Lijst van Observatie items.",
+            "items": {
+              "description": "Observaties die op het Object gebeuren.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Observatie": {
+        "description": "Het vaststellen van de waarde van een bepaald kenmerk van een Object op een bepaald tijdstip of tussen twee tijdstippen.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatie\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Observatie type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Observatie.fenomeentijd": {
+            "description": "Het moment waarop het resultaat van de Observatie van toepassing was. Typisch het moment waarop geobserveerd of bemonsterd werd. Als de Observatie temporeel is en het moment waarop iets plaatsvindt wordt geregistreerd dan is dit meteen ook de fenomeentijd.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/TemporeleEntiteit\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Observatie.gebruikteProcedure": {
+            "description": "Lijst van Observatieprocedure items.",
+            "items": {
+              "description": "Procedure gebruikt voor de Verkeersmeting.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatieprocedure\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Observatie.geldigeTijd": {
+            "description": "Periode waarvoor het resultaat van de Observatie geldt. Bv nuttig voor weersvoorspellingen.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Periode\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Observatie.geobserveerdKenmerk": {
+            "description": "Kenmerk dat men observeert vh geobserveerdObject. Kan een proxy zijn vh kenmerk dat men werkelijk wil observeren, bvb kleurreflectie op het aardoppervlak als subsituut voopr vegetatie. CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Bv de zuurtegraad van een Bron is eigenlijk de zuurtegraad van het Waterlichaam van de Aquifer die door de Bron is aangeboord.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Kenmerktype\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Observatie.geobserveerdObject": {
+            "description": "Object dat men observeert. Dat kan het Object zelf zijn of een proxy ervan, ttz een Bemonsteringsobject. OPMERKING: In dat laatste geval weet men soms pas na het observeren welke real-world Objecten men juist geobserveerd heeft.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Object\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Observatie.identificator": {
+            "description": "Lijst van Identificator items.",
+            "items": {
+              "description": "De persoon of het ding dat dient om de observatie vast te stellen.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identificator\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Observatie.parameter": {
+            "description": "Lijst van BenoemdeWaarde items.",
+            "items": {
+              "description": "Willekeurig gegeven gassocieerd met het gebeuren van de Observatie. Het gaat hier niet om kenmerken van het geobserveerdObject (die worden al beschreven door het geobserveerdKenmerk) of om parameters geassocieerd met het observatieproces (zoals een instelling van een instrument). Het gaat hier bv om omgevingsparameters die het resultaat kunnen beïnvloeden en van belang zijn om het resultaat correct te interpreteren.  Een voorbeeld is de diepte in een waterput waarop de waterkwaliteit is gemeten of de omgevingstemperatuur bij het meten van de vochtigheidsgraad.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/BenoemdeWaarde\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Observatie.resultaat": {
+            "description": "De waarde van het geobserveerdeKenmerk als resultaat van de Observatie. Het resultaat kan van om het even welk type zijn aangezien om het even welk Kenmerk van om het even welk type Object kan worden geobserveerd. CONSTRAINT: Het type van het resultaat van de Observatie moet kloppen met het geobserveerdKenmerk en de verkregen waarde moet binnen het bereik vallen van het geobserveerdKenmerk.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Any\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Observatie.resultaatkwaliteit": {
+            "description": "Lijst van Kwaliteitselement items.",
+            "items": {
+              "description": "Mate waarin het resultaat van de Observatie voldoet aan de vereisten of verwachtingen. Het gaat hier om gegevens die eigen zijn aan de Observatie en complementair aan de beschrijving van de procedure die bij de Observatie is gevolgd (analysemethode edm, zie klasse Proces) wat op zich ook al iets zegt over de kwaliteit van het resultaat.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Kwaliteitselement\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Observatie.resultaattijd": {
+            "description": "Tijdstip waarop het resultaat van de Observatie werd bekomen. Is voor sommige Observaties gelijk aan de fenomeentijd maar kan ook verschillen, bv bij het uitvoeren van een analyse op een Monster dat eerder (en doorgaans dan ook eders) werd genomen of bij sensormetingen die pas later worden verwerkt. Ook bruikbaar om herhaalde Observaties bv op eenzelfde Monster uiteen te houden. Is het resultaat een voorspelling dan is de fenomeentijd het moment waarop deze van toepassing zou moeten zijn.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Moment\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Observatie.type": {
+            "description": "Lijst van Observatietype items.",
+            "items": {
+              "description": "Het type van observatie.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatietype\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Observatie.uitgevoerdDoor": {
+            "description": "Lijst van Agent items.",
+            "items": {
+              "description": "Agent die de Observatie heeft uitgevoerd.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Observatie.uitgevoerdMet": {
+            "description": "De Sensor waarmee de Verkeersmeting werd uitgevoerd.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Sensor\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Observatie.fenomeentijd",
+          "Observatie.resultaat",
+          "Observatie.resultaattijd",
+          "Observatie.geobserveerdKenmerk",
+          "Observatie.geobserveerdObject",
+          "Observatie.uitgevoerdMet"
+        ],
+        "type": "object"
+      },
+      "Observatieprocedure": {
+        "description": "Een workflow, protocol, plan, algoritme, of berekeningswijze waarin wordt gespecifieerd hoe een Observatie moet worden uitgevoerd.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatieprocedure\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Observatieprocedure type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Observatieprocedure.input": {
+            "description": "Lijst van Input items.",
+            "items": {
+              "description": "Verwijzing naar de Input die de procedure vereist.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Input\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Observatieprocedure.output": {
+            "description": "Lijst van BenoemdeWaarde items.",
+            "items": {
+              "description": "Verwijzing naar de Output die de Procedure genereert.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/BenoemdeWaarde\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Observatieprocedure.parameter": {
+            "description": "Lijst van BenoemdeWaarde items.",
+            "items": {
+              "description": "Willekeurig gegeven geassocieerd met de Observatieprocedure. Bv een parameter die een aspect van de Observatieprocedure beschrijft (bv de vereiste hoogte voor het observeren van windsnelheid) of een noodzakelijke omgevingsparameter (bv temperatuurbereik waarbinnen een labo-analyse moet plaatsvinden).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/BenoemdeWaarde\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Observatieprocedure.specificatie": {
+            "description": "Lijst van URI items.",
+            "items": {
+              "description": "Verwijzing naar een document dat de Observatieprocedure beschrijft.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Observatieprocedure.type": {
+            "description": "Lijst van Observatieproceduretype items.",
+            "items": {
+              "description": "Aard van de Observatieprocedure.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatieproceduretype\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Observatieverzameling": {
+        "description": "Collectie van Observaties met dezelfde kenmerken.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatieverzameling\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Observatieverzameling type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Observatieverzameling.fenomeentijd": {
+            "description": "De fenomeentijd vd Observaties.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/TemporeleEntiteit\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Observatieverzameling.gebruikteProcedure": {
+            "description": "De Procedure die de Observaties gebruikten.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatieprocedure\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Observatieverzameling.geobserveerdKenmerk": {
+            "description": "Het Kenmerk dat de Observaties observeerden.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Kenmerktype\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Observatieverzameling.geobserveerdObject": {
+            "description": "Het Object dat werd geobserveerd.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Object\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Observatieverzameling.heeftLid": {
+            "description": "Lijst van Observatie items.",
+            "items": {
+              "description": "Observatie die deel uitmaakt van de collectie.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Observatieverzameling.resultaattijd": {
+            "description": "De resultaattijd van de Observaties.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "DateTime"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date-time",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Observatieverzameling.uitgevoerdMetsensor": {
+            "description": "De sensor waarmee de Observaties in de collectie zijn uitgevoerd.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Sensor\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Observatieverzameling.heeftLid"
+        ],
+        "type": "object"
+      },
+      "Output": {
+        "description": "Informatie die door een procedure wordt gegenereerd.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Output\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Output type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Output.referentie": {
+            "description": "Verwijzing naar originele Output.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Output.type": {
+            "description": "Aard van de Output.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/OutputType\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Resource": {
+        "description": "Entiteit waarvan alle entiteiten zijn afgeleid.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Resource\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Resource type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Resource.identificator": {
+            "description": "Lijst van Identificator items.",
+            "items": {
+              "description": "Een identificator voor de resource.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identificator\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Resource.identificator"
+        ],
+        "type": "object"
+      },
+      "Sensor": {
+        "description": "Toestel of Agent (incl Personen of software) waarmee Observaties gemaakt worden.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Sensor\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Sensor type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Sensor.ligging": {
+            "description": "Lijst van Locatie items.",
+            "items": {
+              "description": "Locatie van de Sensor. Bvb de coördinaten of het adres of een verwijzing naar een meetpunt of ander Bemonsteringsobject. Meerdere verschillende types van locaties kunnen worden opgegeven (bvb adres èn coördinaten). Als de Sensor een meetinstallatie is evt de verschillende meetpunten die worden omvat of een omschrijvende polygoon. OPGELET: De locatie van de Sensor is niet noodzakelijk de positie waar de Observatie gebeurt, die wordt in de eerste plaats gegeven door de ligging vh Bemonsteringsobject of het Domeinobject. Dit attribuut laat vooral toe om posities van Sensoren te beschrijven los vd metingen die er gebeuren.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Locatie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Sensor.type": {
+            "description": "Lijst van Systeemtype items.",
+            "items": {
+              "description": "Aard vh Systeem.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Systeemtype\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Sensor.uitgevoerdeObservatie": {
+            "description": "Lijst van Observatie items.",
+            "items": {
+              "description": "Verkeersmeting die met de Sensor is uitgevoerd.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Verkeersmeting": {
+        "description": "Het vaststellen van de waarde van een bepaald kenmerk van het verkeer op een bepaald tijdstip of tussen twee tijdstippen.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Verkeersmeting\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Verkeersmeting type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Verkeersmeting.fenomeentijd": {
+            "description": "Het moment waarop het resultaat van de Observatie van toepassing was. Typisch het moment waarop geobserveerd of bemonsterd werd. Als de Observatie temporeel is en het moment waarop iets plaatsvindt wordt geregistreerd dan is dit meteen ook de fenomeentijd.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/TemporeleEntiteit\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Verkeersmeting.gebruikteProcedure": {
+            "description": "Lijst van Observatieprocedure items.",
+            "items": {
+              "description": "Procedure gebruikt voor de Verkeersmeting.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatieprocedure\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Verkeersmeting.geldigeTijd": {
+            "description": "Periode waarvoor het resultaat van de Observatie geldt. Bv nuttig voor weersvoorspellingen.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Periode\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Verkeersmeting.geobserveerdKenmerk": {
+            "description": "Kenmerk dat men observeert vh geobserveerdObject. Kan een proxy zijn vh kenmerk dat men werkelijk wil observeren, bvb kleurreflectie op het aardoppervlak als subsituut voopr vegetatie. CONSTRAINT: Het geobserveerdKenmerk moet werkelijk een kenmerk zijn van het geobserveerdObject of van een (onder)deel ervan. Bv de zuurtegraad van een Bron is eigenlijk de zuurtegraad van het Waterlichaam van de Aquifer die door de Bron is aangeboord.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Kenmerktype\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Verkeersmeting.geobserveerdObject": {
+            "description": "Object dat men observeert. Dat kan het Object zelf zijn of een proxy ervan, ttz een Bemonsteringsobject. OPMERKING: In dat laatste geval weet men soms pas na het observeren welke real-world Objecten men juist geobserveerd heeft.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Object\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Verkeersmeting.identificator": {
+            "description": "Lijst van Identificator items.",
+            "items": {
+              "description": "De persoon of het ding dat dient om de observatie vast te stellen.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identificator\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Verkeersmeting.parameter": {
+            "description": "Lijst van BenoemdeWaarde items.",
+            "items": {
+              "description": "Willekeurig gegeven gassocieerd met het gebeuren van de Observatie. Het gaat hier niet om kenmerken van het geobserveerdObject (die worden al beschreven door het geobserveerdKenmerk) of om parameters geassocieerd met het observatieproces (zoals een instelling van een instrument). Het gaat hier bv om omgevingsparameters die het resultaat kunnen beïnvloeden en van belang zijn om het resultaat correct te interpreteren.  Een voorbeeld is de diepte in een waterput waarop de waterkwaliteit is gemeten of de omgevingstemperatuur bij het meten van de vochtigheidsgraad.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/BenoemdeWaarde\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Verkeersmeting.resultaat": {
+            "description": "De waarde van het geobserveerdeKenmerk als resultaat van de Observatie. Het resultaat kan van om het even welk type zijn aangezien om het even welk Kenmerk van om het even welk type Object kan worden geobserveerd. CONSTRAINT: Het type van het resultaat van de Observatie moet kloppen met het geobserveerdKenmerk en de verkregen waarde moet binnen het bereik vallen van het geobserveerdKenmerk.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Any\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Verkeersmeting.resultaatkwaliteit": {
+            "description": "Lijst van Kwaliteitselement items.",
+            "items": {
+              "description": "Mate waarin het resultaat van de Observatie voldoet aan de vereisten of verwachtingen. Het gaat hier om gegevens die eigen zijn aan de Observatie en complementair aan de beschrijving van de procedure die bij de Observatie is gevolgd (analysemethode edm, zie klasse Proces) wat op zich ook al iets zegt over de kwaliteit van het resultaat.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Kwaliteitselement\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Verkeersmeting.resultaattijd": {
+            "description": "Tijdstip waarop het resultaat van de Observatie werd bekomen. Is voor sommige Observaties gelijk aan de fenomeentijd maar kan ook verschillen, bv bij het uitvoeren van een analyse op een Monster dat eerder (en doorgaans dan ook eders) werd genomen of bij sensormetingen die pas later worden verwerkt. Ook bruikbaar om herhaalde Observaties bv op eenzelfde Monster uiteen te houden. Is het resultaat een voorspelling dan is de fenomeentijd het moment waarop deze van toepassing zou moeten zijn.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Moment\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Verkeersmeting.type": {
+            "description": "Lijst van Observatietype items.",
+            "items": {
+              "description": "Het type van observatie.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatietype\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Verkeersmeting.uitgevoerdDoor": {
+            "description": "Lijst van Agent items.",
+            "items": {
+              "description": "Agent die de Observatie heeft uitgevoerd.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Verkeersmeting.uitgevoerdMet": {
+            "description": "De Sensor waarmee de Verkeersmeting werd uitgevoerd.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Sensor\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Verkeersmeting.fenomeentijd",
+          "Verkeersmeting.resultaat",
+          "Verkeersmeting.resultaattijd",
+          "Verkeersmeting.geobserveerdKenmerk",
+          "Verkeersmeting.geobserveerdObject",
+          "Verkeersmeting.uitgevoerdMet"
+        ],
+        "type": "object"
+      },
+      "Verkeersobject": {
+        "description": "Object waarop of waarlangs zich verkeer voordoet of dat deel uitmaakt vh verkeer.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Verkeersobject\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Verkeersobject type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Verkeersobject.type": {
+            "description": "Aard van het Domeinobject.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Domeinobjecttype\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Verkeersobject.waardeverschaffer": {
+            "description": "Lijst van Observatie items.",
+            "items": {
+              "description": "Observaties die op het Object gebeuren.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Verkeerssituatie": {
+        "description": "Een verzameling van verkeersomstandigheden die een bepaalde situatie in het verkeer verklaren zoals file, ongeval, etc.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Verkeerssituatie\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Verkeerssituatie type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Verkeerssituatie.type": {
+            "description": "Aard van het Domeinobject.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Domeinobjecttype\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Verkeerssituatie.waardeverschaffer": {
+            "description": "Lijst van Observatie items.",
+            "items": {
+              "description": "Observaties die op het Object gebeuren.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Verzameling": {
+        "description": "Een verzameling van resources.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Verzameling\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Verzameling type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Verzameling.heeftLid": {
+            "description": "Lijst van Object items.",
+            "items": {
+              "description": "Domeinobject zoals een Verkeersobject, Verkeerssituatie, etc. dat deel uitmaakt van de collectie.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Object\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Verzameling.type": {
+            "description": "Aard van het Domeinobject.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Domeinobjecttype\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Verzameling.waardeverschaffer": {
+            "description": "Lijst van Observatie items.",
+            "items": {
+              "description": "Observaties die op het Object gebeuren.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Zaak": {
+        "description": "Een zaak is het geheel aan werk gedaan om tot een bestuurlijke of zakelijke beslissing te komen. Een zaak slaat doorgaans neer in een verzameling documenten.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/2025-06-04/context/verkeersmeldingen.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Zaak\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Zaak type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Zaak.agent": {
+            "description": "Lijst van Agent items.",
+            "items": {
+              "description": "De Agent die de Zaak behandelt.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Zaak.behandelt": {
+            "description": "Lijst van Resource items.",
+            "items": {
+              "description": "Een zaak behandelt een resource.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Resource\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Zaak.identificator": {
+            "description": "Lijst van Identificator items.",
+            "items": {
+              "description": "Een identificator voor de zaak.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identificator\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Zaak.naam": {
+            "description": "De naam van de zaak.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          },
+          "Zaak.openingsdatum": {
+            "description": "De openingsdatum van de zaak.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Date"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Zaak.procedure": {
+            "description": "De naam die verwijst naar de formele definitie van een verzameling stappen die in de juiste volgorde leiden tot de afronding van de zaak.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          },
+          "Zaak.sluitingsdatum": {
+            "description": "De sluitingsdatum van de zaak.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Date"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Zaak.naam",
+          "Zaak.openingsdatum",
+          "Zaak.sluitingsdatum",
+          "Zaak.procedure"
+        ],
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "description": "This is a inspirational OpenAPI Swagger publication",
+    "title": "OpenAPI Swagger publication",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.4",
+  "paths": {
+    "/id/Activiteit/{id}": {
+      "get": {
+        "description": "Handeling van bepaalde duur op of met entiteiten.",
+        "operationId": "ActiviteitGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Activiteit object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Activiteit"
+                }
+              }
+            },
+            "description": "Activiteit object gevonden.",
+            "links": {
+              "ZaakGET": {
+                "description": "Het `@id` attribuut van de waarde van `Activiteit.vindtPlaatsTijdens` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen.",
+                "operationId": "ZaakGET",
+                "parameters": {
+                  "id": "$response.body#/Activiteit.vindtPlaatsTijdens/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Activiteit object."
+          },
+          "404": {
+            "description": "Activiteit object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Handeling van bepaalde duur op of met entiteiten.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Agent(InRol)/{id}": {
+      "get": {
+        "description": "Een toewijzing van verantwoordelijkheid aan een agent voor een activiteit, wat aangeeft dat de agent een rol in de activiteit had.",
+        "operationId": "Agent(InRol)GET",
+        "parameters": [
+          {
+            "description": "Identificator van een Agent(InRol) object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Agent(InRol)"
+                }
+              }
+            },
+            "description": "Agent(InRol) object gevonden.",
+            "links": {
+              "AgentGET": {
+                "description": "Het `@id` attribuut van de waarde van `Agent(InRol).agent` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen.",
+                "operationId": "AgentGET",
+                "parameters": {
+                  "id": "$response.body#/Agent(InRol).agent/@id"
+                }
+              },
+              "RolGET": {
+                "description": "Het `@id` attribuut van de waarde van `Agent(InRol).rol` kan gebruikt worden om het gerefereerde object van het type `Rol` op te halen.",
+                "operationId": "RolGET",
+                "parameters": {
+                  "id": "$response.body#/Agent(InRol).rol/@id"
+                }
+              },
+              "ZaakGET": {
+                "description": "Het `@id` attribuut van de waarde van `Agent(InRol).zaak` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen.",
+                "operationId": "ZaakGET",
+                "parameters": {
+                  "id": "$response.body#/Agent(InRol).zaak/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Agent(InRol) object."
+          },
+          "404": {
+            "description": "Agent(InRol) object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Een toewijzing van verantwoordelijkheid aan een agent voor een activiteit, wat aangeeft dat de agent een rol in de activiteit had.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Agent/{id}": {
+      "get": {
+        "description": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
+        "operationId": "AgentGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Agent object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Agent"
+                }
+              }
+            },
+            "description": "Agent object gevonden.",
+            "links": {
+              "ZaakGET": {
+                "description": "Het `@id` attribuut van de waarde van `Agent.zaak` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen.",
+                "operationId": "ZaakGET",
+                "parameters": {
+                  "id": "$response.body#/Agent.zaak/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Agent object."
+          },
+          "404": {
+            "description": "Agent object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Any/{id}": {
+      "get": {
+        "description": "Instanties van  om het even welk type.",
+        "operationId": "AnyGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Any object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Any"
+                }
+              }
+            },
+            "description": "Any object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Any object."
+          },
+          "404": {
+            "description": "Any object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Instanties van  om het even welk type.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Concept/{id}": {
+      "get": {
+        "description": "Idee of begrip.",
+        "operationId": "ConceptGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Concept object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Concept"
+                }
+              }
+            },
+            "description": "Concept object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Concept object."
+          },
+          "404": {
+            "description": "Concept object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Idee of begrip.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Input/{id}": {
+      "get": {
+        "description": "Informatie die door een procedure wordt gebruikt.",
+        "operationId": "InputGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Input object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Input"
+                }
+              }
+            },
+            "description": "Input object gevonden.",
+            "links": {
+              "InputTypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Input.type` kan gebruikt worden om het gerefereerde object van het type `InputType` op te halen.",
+                "operationId": "InputTypeGET",
+                "parameters": {
+                  "id": "$response.body#/Input.type/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Input object."
+          },
+          "404": {
+            "description": "Input object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Informatie die door een procedure wordt gebruikt.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Kenmerktype/{id}": {
+      "get": {
+        "description": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt.",
+        "operationId": "KenmerktypeGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Kenmerktype object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kenmerktype"
+                }
+              }
+            },
+            "description": "Kenmerktype object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Kenmerktype object."
+          },
+          "404": {
+            "description": "Kenmerktype object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Melding/{id}": {
+      "get": {
+        "description": "Beschrijft de melding van een probleem of een vaststelling die mogelijks aanleiding geeft tot een actie van de overheid.",
+        "operationId": "MeldingGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Melding object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Melding"
+                }
+              }
+            },
+            "description": "Melding object gevonden.",
+            "links": {
+              "AgentGET": {
+                "description": "Het `@id` attribuut van de waarde van `Melding.indiener` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen.",
+                "operationId": "AgentGET",
+                "parameters": {
+                  "id": "$response.body#/Melding.indiener/@id"
+                }
+              },
+              "DomeinobjecttypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Melding.type` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen.",
+                "operationId": "DomeinobjecttypeGET",
+                "parameters": {
+                  "id": "$response.body#/Melding.type/@id"
+                }
+              },
+              "IdentificatorGET": {
+                "description": "Het `@id` attribuut van de waarde van `Melding.identificator` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen.",
+                "operationId": "IdentificatorGET",
+                "parameters": {
+                  "id": "$response.body#/Melding.identificator/@id"
+                }
+              },
+              "MeldingBodyGET": {
+                "description": "Het `@id` attribuut van de waarde van `Melding.heeftBody` kan gebruikt worden om het gerefereerde object van het type `MeldingBody` op te halen.",
+                "operationId": "MeldingBodyGET",
+                "parameters": {
+                  "id": "$response.body#/Melding.heeftBody/@id"
+                }
+              },
+              "MeldingstatusGET": {
+                "description": "Het `@id` attribuut van de waarde van `Melding.heeftStatus` kan gebruikt worden om het gerefereerde object van het type `Meldingstatus` op te halen.",
+                "operationId": "MeldingstatusGET",
+                "parameters": {
+                  "id": "$response.body#/Melding.heeftStatus/@id"
+                }
+              },
+              "MeldingstypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Melding.meldingstype` kan gebruikt worden om het gerefereerde object van het type `Meldingstype` op te halen.",
+                "operationId": "MeldingstypeGET",
+                "parameters": {
+                  "id": "$response.body#/Melding.meldingstype/@id"
+                }
+              },
+              "ObjectGET": {
+                "description": "Het `@id` attribuut van de waarde van `Melding.heeftDoelwit` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen.",
+                "operationId": "ObjectGET",
+                "parameters": {
+                  "id": "$response.body#/Melding.heeftDoelwit/@id"
+                }
+              },
+              "ObservatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Melding.waardeverschaffer` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen.",
+                "operationId": "ObservatieGET",
+                "parameters": {
+                  "id": "$response.body#/Melding.waardeverschaffer/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Melding object."
+          },
+          "404": {
+            "description": "Melding object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Beschrijft de melding van een probleem of een vaststelling die mogelijks aanleiding geeft tot een actie van de overheid.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Mobiliteitshinder/{id}": {
+      "get": {
+        "description": "Verstoring van de normale mobiliteit op het openbaar domein of privé domein met openbaar karakter.",
+        "operationId": "MobiliteitshinderGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Mobiliteitshinder object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Mobiliteitshinder"
+                }
+              }
+            },
+            "description": "Mobiliteitshinder object gevonden.",
+            "links": {
+              "DomeinobjecttypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Mobiliteitshinder.type` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen.",
+                "operationId": "DomeinobjecttypeGET",
+                "parameters": {
+                  "id": "$response.body#/Mobiliteitshinder.type/@id"
+                }
+              },
+              "ObservatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Mobiliteitshinder.waardeverschaffer` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen.",
+                "operationId": "ObservatieGET",
+                "parameters": {
+                  "id": "$response.body#/Mobiliteitshinder.waardeverschaffer/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Mobiliteitshinder object."
+          },
+          "404": {
+            "description": "Mobiliteitshinder object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Verstoring van de normale mobiliteit op het openbaar domein of privé domein met openbaar karakter.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Object/{id}": {
+      "get": {
+        "description": "Klasse die instanties van om het even welk type vertegenwoordigt.",
+        "operationId": "ObjectGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Object object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Object"
+                }
+              }
+            },
+            "description": "Object object gevonden.",
+            "links": {
+              "DomeinobjecttypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Object.type` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen.",
+                "operationId": "DomeinobjecttypeGET",
+                "parameters": {
+                  "id": "$response.body#/Object.type/@id"
+                }
+              },
+              "ObservatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Object.waardeverschaffer` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen.",
+                "operationId": "ObservatieGET",
+                "parameters": {
+                  "id": "$response.body#/Object.waardeverschaffer/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Object object."
+          },
+          "404": {
+            "description": "Object object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Klasse die instanties van om het even welk type vertegenwoordigt.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Observatie/{id}": {
+      "get": {
+        "description": "Het vaststellen van de waarde van een bepaald kenmerk van een Object op een bepaald tijdstip of tussen twee tijdstippen.",
+        "operationId": "ObservatieGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Observatie object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Observatie"
+                }
+              }
+            },
+            "description": "Observatie object gevonden.",
+            "links": {
+              "AgentGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatie.uitgevoerdDoor` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen.",
+                "operationId": "AgentGET",
+                "parameters": {
+                  "id": "$response.body#/Observatie.uitgevoerdDoor/@id"
+                }
+              },
+              "AnyGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatie.resultaat` kan gebruikt worden om het gerefereerde object van het type `Any` op te halen.",
+                "operationId": "AnyGET",
+                "parameters": {
+                  "id": "$response.body#/Observatie.resultaat/@id"
+                }
+              },
+              "BenoemdeWaardeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatie.parameter` kan gebruikt worden om het gerefereerde object van het type `BenoemdeWaarde` op te halen.",
+                "operationId": "BenoemdeWaardeGET",
+                "parameters": {
+                  "id": "$response.body#/Observatie.parameter/@id"
+                }
+              },
+              "IdentificatorGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatie.identificator` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen.",
+                "operationId": "IdentificatorGET",
+                "parameters": {
+                  "id": "$response.body#/Observatie.identificator/@id"
+                }
+              },
+              "KenmerktypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatie.geobserveerdKenmerk` kan gebruikt worden om het gerefereerde object van het type `Kenmerktype` op te halen.",
+                "operationId": "KenmerktypeGET",
+                "parameters": {
+                  "id": "$response.body#/Observatie.geobserveerdKenmerk/@id"
+                }
+              },
+              "KwaliteitselementGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatie.resultaatkwaliteit` kan gebruikt worden om het gerefereerde object van het type `Kwaliteitselement` op te halen.",
+                "operationId": "KwaliteitselementGET",
+                "parameters": {
+                  "id": "$response.body#/Observatie.resultaatkwaliteit/@id"
+                }
+              },
+              "MomentGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatie.resultaattijd` kan gebruikt worden om het gerefereerde object van het type `Moment` op te halen.",
+                "operationId": "MomentGET",
+                "parameters": {
+                  "id": "$response.body#/Observatie.resultaattijd/@id"
+                }
+              },
+              "ObjectGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatie.geobserveerdObject` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen.",
+                "operationId": "ObjectGET",
+                "parameters": {
+                  "id": "$response.body#/Observatie.geobserveerdObject/@id"
+                }
+              },
+              "ObservatieprocedureGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatie.gebruikteProcedure` kan gebruikt worden om het gerefereerde object van het type `Observatieprocedure` op te halen.",
+                "operationId": "ObservatieprocedureGET",
+                "parameters": {
+                  "id": "$response.body#/Observatie.gebruikteProcedure/@id"
+                }
+              },
+              "ObservatietypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatie.type` kan gebruikt worden om het gerefereerde object van het type `Observatietype` op te halen.",
+                "operationId": "ObservatietypeGET",
+                "parameters": {
+                  "id": "$response.body#/Observatie.type/@id"
+                }
+              },
+              "PeriodeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatie.geldigeTijd` kan gebruikt worden om het gerefereerde object van het type `Periode` op te halen.",
+                "operationId": "PeriodeGET",
+                "parameters": {
+                  "id": "$response.body#/Observatie.geldigeTijd/@id"
+                }
+              },
+              "SensorGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatie.uitgevoerdMet` kan gebruikt worden om het gerefereerde object van het type `Sensor` op te halen.",
+                "operationId": "SensorGET",
+                "parameters": {
+                  "id": "$response.body#/Observatie.uitgevoerdMet/@id"
+                }
+              },
+              "TemporeleEntiteitGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatie.fenomeentijd` kan gebruikt worden om het gerefereerde object van het type `TemporeleEntiteit` op te halen.",
+                "operationId": "TemporeleEntiteitGET",
+                "parameters": {
+                  "id": "$response.body#/Observatie.fenomeentijd/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Observatie object."
+          },
+          "404": {
+            "description": "Observatie object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Het vaststellen van de waarde van een bepaald kenmerk van een Object op een bepaald tijdstip of tussen twee tijdstippen.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Observatieprocedure/{id}": {
+      "get": {
+        "description": "Een workflow, protocol, plan, algoritme, of berekeningswijze waarin wordt gespecifieerd hoe een Observatie moet worden uitgevoerd.",
+        "operationId": "ObservatieprocedureGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Observatieprocedure object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Observatieprocedure"
+                }
+              }
+            },
+            "description": "Observatieprocedure object gevonden.",
+            "links": {
+              "BenoemdeWaardeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatieprocedure.parameter` kan gebruikt worden om het gerefereerde object van het type `BenoemdeWaarde` op te halen.",
+                "operationId": "BenoemdeWaardeGET",
+                "parameters": {
+                  "id": "$response.body#/Observatieprocedure.parameter/@id"
+                }
+              },
+              "InputGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatieprocedure.input` kan gebruikt worden om het gerefereerde object van het type `Input` op te halen.",
+                "operationId": "InputGET",
+                "parameters": {
+                  "id": "$response.body#/Observatieprocedure.input/@id"
+                }
+              },
+              "ObservatieproceduretypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatieprocedure.type` kan gebruikt worden om het gerefereerde object van het type `Observatieproceduretype` op te halen.",
+                "operationId": "ObservatieproceduretypeGET",
+                "parameters": {
+                  "id": "$response.body#/Observatieprocedure.type/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Observatieprocedure object."
+          },
+          "404": {
+            "description": "Observatieprocedure object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Een workflow, protocol, plan, algoritme, of berekeningswijze waarin wordt gespecifieerd hoe een Observatie moet worden uitgevoerd.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Observatieverzameling/{id}": {
+      "get": {
+        "description": "Collectie van Observaties met dezelfde kenmerken.",
+        "operationId": "ObservatieverzamelingGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Observatieverzameling object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Observatieverzameling"
+                }
+              }
+            },
+            "description": "Observatieverzameling object gevonden.",
+            "links": {
+              "KenmerktypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatieverzameling.geobserveerdKenmerk` kan gebruikt worden om het gerefereerde object van het type `Kenmerktype` op te halen.",
+                "operationId": "KenmerktypeGET",
+                "parameters": {
+                  "id": "$response.body#/Observatieverzameling.geobserveerdKenmerk/@id"
+                }
+              },
+              "ObjectGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatieverzameling.geobserveerdObject` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen.",
+                "operationId": "ObjectGET",
+                "parameters": {
+                  "id": "$response.body#/Observatieverzameling.geobserveerdObject/@id"
+                }
+              },
+              "ObservatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatieverzameling.heeftLid` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen.",
+                "operationId": "ObservatieGET",
+                "parameters": {
+                  "id": "$response.body#/Observatieverzameling.heeftLid/@id"
+                }
+              },
+              "ObservatieprocedureGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatieverzameling.gebruikteProcedure` kan gebruikt worden om het gerefereerde object van het type `Observatieprocedure` op te halen.",
+                "operationId": "ObservatieprocedureGET",
+                "parameters": {
+                  "id": "$response.body#/Observatieverzameling.gebruikteProcedure/@id"
+                }
+              },
+              "SensorGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatieverzameling.uitgevoerdMetsensor` kan gebruikt worden om het gerefereerde object van het type `Sensor` op te halen.",
+                "operationId": "SensorGET",
+                "parameters": {
+                  "id": "$response.body#/Observatieverzameling.uitgevoerdMetsensor/@id"
+                }
+              },
+              "TemporeleEntiteitGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatieverzameling.fenomeentijd` kan gebruikt worden om het gerefereerde object van het type `TemporeleEntiteit` op te halen.",
+                "operationId": "TemporeleEntiteitGET",
+                "parameters": {
+                  "id": "$response.body#/Observatieverzameling.fenomeentijd/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Observatieverzameling object."
+          },
+          "404": {
+            "description": "Observatieverzameling object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Collectie van Observaties met dezelfde kenmerken.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Output/{id}": {
+      "get": {
+        "description": "Informatie die door een procedure wordt gegenereerd.",
+        "operationId": "OutputGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Output object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Output"
+                }
+              }
+            },
+            "description": "Output object gevonden.",
+            "links": {
+              "OutputTypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Output.type` kan gebruikt worden om het gerefereerde object van het type `OutputType` op te halen.",
+                "operationId": "OutputTypeGET",
+                "parameters": {
+                  "id": "$response.body#/Output.type/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Output object."
+          },
+          "404": {
+            "description": "Output object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Informatie die door een procedure wordt gegenereerd.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Resource/{id}": {
+      "get": {
+        "description": "Entiteit waarvan alle entiteiten zijn afgeleid.",
+        "operationId": "ResourceGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Resource object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Resource"
+                }
+              }
+            },
+            "description": "Resource object gevonden.",
+            "links": {
+              "IdentificatorGET": {
+                "description": "Het `@id` attribuut van de waarde van `Resource.identificator` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen.",
+                "operationId": "IdentificatorGET",
+                "parameters": {
+                  "id": "$response.body#/Resource.identificator/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Resource object."
+          },
+          "404": {
+            "description": "Resource object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Entiteit waarvan alle entiteiten zijn afgeleid.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Sensor/{id}": {
+      "get": {
+        "description": "Toestel of Agent (incl Personen of software) waarmee Observaties gemaakt worden.",
+        "operationId": "SensorGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Sensor object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Sensor"
+                }
+              }
+            },
+            "description": "Sensor object gevonden.",
+            "links": {
+              "LocatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Sensor.ligging` kan gebruikt worden om het gerefereerde object van het type `Locatie` op te halen.",
+                "operationId": "LocatieGET",
+                "parameters": {
+                  "id": "$response.body#/Sensor.ligging/@id"
+                }
+              },
+              "ObservatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Sensor.uitgevoerdeObservatie` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen.",
+                "operationId": "ObservatieGET",
+                "parameters": {
+                  "id": "$response.body#/Sensor.uitgevoerdeObservatie/@id"
+                }
+              },
+              "SysteemtypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Sensor.type` kan gebruikt worden om het gerefereerde object van het type `Systeemtype` op te halen.",
+                "operationId": "SysteemtypeGET",
+                "parameters": {
+                  "id": "$response.body#/Sensor.type/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Sensor object."
+          },
+          "404": {
+            "description": "Sensor object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Toestel of Agent (incl Personen of software) waarmee Observaties gemaakt worden.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Verkeersmeting/{id}": {
+      "get": {
+        "description": "Het vaststellen van de waarde van een bepaald kenmerk van het verkeer op een bepaald tijdstip of tussen twee tijdstippen.",
+        "operationId": "VerkeersmetingGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Verkeersmeting object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Verkeersmeting"
+                }
+              }
+            },
+            "description": "Verkeersmeting object gevonden.",
+            "links": {
+              "AgentGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeersmeting.uitgevoerdDoor` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen.",
+                "operationId": "AgentGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeersmeting.uitgevoerdDoor/@id"
+                }
+              },
+              "AnyGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeersmeting.resultaat` kan gebruikt worden om het gerefereerde object van het type `Any` op te halen.",
+                "operationId": "AnyGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeersmeting.resultaat/@id"
+                }
+              },
+              "BenoemdeWaardeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeersmeting.parameter` kan gebruikt worden om het gerefereerde object van het type `BenoemdeWaarde` op te halen.",
+                "operationId": "BenoemdeWaardeGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeersmeting.parameter/@id"
+                }
+              },
+              "IdentificatorGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeersmeting.identificator` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen.",
+                "operationId": "IdentificatorGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeersmeting.identificator/@id"
+                }
+              },
+              "KenmerktypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeersmeting.geobserveerdKenmerk` kan gebruikt worden om het gerefereerde object van het type `Kenmerktype` op te halen.",
+                "operationId": "KenmerktypeGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeersmeting.geobserveerdKenmerk/@id"
+                }
+              },
+              "KwaliteitselementGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeersmeting.resultaatkwaliteit` kan gebruikt worden om het gerefereerde object van het type `Kwaliteitselement` op te halen.",
+                "operationId": "KwaliteitselementGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeersmeting.resultaatkwaliteit/@id"
+                }
+              },
+              "MomentGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeersmeting.resultaattijd` kan gebruikt worden om het gerefereerde object van het type `Moment` op te halen.",
+                "operationId": "MomentGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeersmeting.resultaattijd/@id"
+                }
+              },
+              "ObjectGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeersmeting.geobserveerdObject` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen.",
+                "operationId": "ObjectGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeersmeting.geobserveerdObject/@id"
+                }
+              },
+              "ObservatieprocedureGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeersmeting.gebruikteProcedure` kan gebruikt worden om het gerefereerde object van het type `Observatieprocedure` op te halen.",
+                "operationId": "ObservatieprocedureGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeersmeting.gebruikteProcedure/@id"
+                }
+              },
+              "ObservatietypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeersmeting.type` kan gebruikt worden om het gerefereerde object van het type `Observatietype` op te halen.",
+                "operationId": "ObservatietypeGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeersmeting.type/@id"
+                }
+              },
+              "PeriodeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeersmeting.geldigeTijd` kan gebruikt worden om het gerefereerde object van het type `Periode` op te halen.",
+                "operationId": "PeriodeGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeersmeting.geldigeTijd/@id"
+                }
+              },
+              "SensorGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeersmeting.uitgevoerdMet` kan gebruikt worden om het gerefereerde object van het type `Sensor` op te halen.",
+                "operationId": "SensorGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeersmeting.uitgevoerdMet/@id"
+                }
+              },
+              "TemporeleEntiteitGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeersmeting.fenomeentijd` kan gebruikt worden om het gerefereerde object van het type `TemporeleEntiteit` op te halen.",
+                "operationId": "TemporeleEntiteitGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeersmeting.fenomeentijd/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Verkeersmeting object."
+          },
+          "404": {
+            "description": "Verkeersmeting object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Het vaststellen van de waarde van een bepaald kenmerk van het verkeer op een bepaald tijdstip of tussen twee tijdstippen.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Verkeersobject/{id}": {
+      "get": {
+        "description": "Object waarop of waarlangs zich verkeer voordoet of dat deel uitmaakt vh verkeer.",
+        "operationId": "VerkeersobjectGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Verkeersobject object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Verkeersobject"
+                }
+              }
+            },
+            "description": "Verkeersobject object gevonden.",
+            "links": {
+              "DomeinobjecttypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeersobject.type` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen.",
+                "operationId": "DomeinobjecttypeGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeersobject.type/@id"
+                }
+              },
+              "ObservatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeersobject.waardeverschaffer` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen.",
+                "operationId": "ObservatieGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeersobject.waardeverschaffer/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Verkeersobject object."
+          },
+          "404": {
+            "description": "Verkeersobject object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Object waarop of waarlangs zich verkeer voordoet of dat deel uitmaakt vh verkeer.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Verkeerssituatie/{id}": {
+      "get": {
+        "description": "Een verzameling van verkeersomstandigheden die een bepaalde situatie in het verkeer verklaren zoals file, ongeval, etc.",
+        "operationId": "VerkeerssituatieGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Verkeerssituatie object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Verkeerssituatie"
+                }
+              }
+            },
+            "description": "Verkeerssituatie object gevonden.",
+            "links": {
+              "DomeinobjecttypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeerssituatie.type` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen.",
+                "operationId": "DomeinobjecttypeGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeerssituatie.type/@id"
+                }
+              },
+              "ObservatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verkeerssituatie.waardeverschaffer` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen.",
+                "operationId": "ObservatieGET",
+                "parameters": {
+                  "id": "$response.body#/Verkeerssituatie.waardeverschaffer/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Verkeerssituatie object."
+          },
+          "404": {
+            "description": "Verkeerssituatie object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Een verzameling van verkeersomstandigheden die een bepaalde situatie in het verkeer verklaren zoals file, ongeval, etc.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Verzameling/{id}": {
+      "get": {
+        "description": "Een verzameling van resources.",
+        "operationId": "VerzamelingGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Verzameling object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Verzameling"
+                }
+              }
+            },
+            "description": "Verzameling object gevonden.",
+            "links": {
+              "DomeinobjecttypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verzameling.type` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen.",
+                "operationId": "DomeinobjecttypeGET",
+                "parameters": {
+                  "id": "$response.body#/Verzameling.type/@id"
+                }
+              },
+              "ObjectGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verzameling.heeftLid` kan gebruikt worden om het gerefereerde object van het type `Object` op te halen.",
+                "operationId": "ObjectGET",
+                "parameters": {
+                  "id": "$response.body#/Verzameling.heeftLid/@id"
+                }
+              },
+              "ObservatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Verzameling.waardeverschaffer` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen.",
+                "operationId": "ObservatieGET",
+                "parameters": {
+                  "id": "$response.body#/Verzameling.waardeverschaffer/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Verzameling object."
+          },
+          "404": {
+            "description": "Verzameling object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Een verzameling van resources.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Zaak/{id}": {
+      "get": {
+        "description": "Een zaak is het geheel aan werk gedaan om tot een bestuurlijke of zakelijke beslissing te komen. Een zaak slaat doorgaans neer in een verzameling documenten.",
+        "operationId": "ZaakGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Zaak object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Zaak"
+                }
+              }
+            },
+            "description": "Zaak object gevonden.",
+            "links": {
+              "AgentGET": {
+                "description": "Het `@id` attribuut van de waarde van `Zaak.agent` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen.",
+                "operationId": "AgentGET",
+                "parameters": {
+                  "id": "$response.body#/Zaak.agent/@id"
+                }
+              },
+              "IdentificatorGET": {
+                "description": "Het `@id` attribuut van de waarde van `Zaak.identificator` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen.",
+                "operationId": "IdentificatorGET",
+                "parameters": {
+                  "id": "$response.body#/Zaak.identificator/@id"
+                }
+              },
+              "ResourceGET": {
+                "description": "Het `@id` attribuut van de waarde van `Zaak.behandelt` kan gebruikt worden om het gerefereerde object van het type `Resource` op te halen.",
+                "operationId": "ResourceGET",
+                "parameters": {
+                  "id": "$response.body#/Zaak.behandelt/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Zaak object."
+          },
+          "404": {
+            "description": "Zaak object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Een zaak is het geheel aan werk gedaan om tot een bestuurlijke of zakelijke beslissing te komen. Een zaak slaat doorgaans neer in een verzameling documenten.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    }
+  },
+  "servers": [
+    {
+      "description": "Basis URL",
+      "url": "https://data.test-vlaanderen.be"
+    }
+  ]
+}

@@ -12,11 +12,15 @@
     "sh": "http://www.w3.org/ns/shacl#",
     "prov": "http://www.w3.org/ns/prov#",
     "adms": "http://www.w3.org/ns/adms#",
+    "schema": "https://schema.org/",
     "packages": "@included",
     "classes": "@included",
     "datatypes": "@included",
     "attributes": "@included",
     "referencedEntities": "@included",
+    "redefinedAttributes": "@included",
+    "subsettedAttributes": "@included",
+    "enumerations": "@included",
     "baseURI": {
       "@id": "oslo:baseURI",
       "@type": "@id"
@@ -41,7 +45,8 @@
       "@id": "oslo:diagramLabel"
     },
     "scope": {
-      "@id": "oslo:scope"
+      "@id": "oslo:scope",
+      "@type": "@id"
     },
     "vocUsageNote": {
       "@id": "oslo:vocUsageNote",
@@ -94,7 +99,7 @@
       "@id": "dcterms:contributor"
     },
     "affiliation": {
-      "@id": "http://schema.org/affiliation"
+      "@id": "schema:affiliation"
     },
     "assignedURI": {
       "@id": "oslo:assignedURI",
@@ -102,6 +107,9 @@
     },
     "Datatype": {
       "@id": "rdfs:Datatype"
+    },
+    "Enumeration": {
+      "@id": "skos:Concept"
     },
     "codelist": {
       "@id": "oslo:codelist",
@@ -114,10 +122,18 @@
     "extensions": {
       "@id": "oslo:extensions",
       "@container": "@set"
+    },
+    "parentAttribute": {
+      "@id": "oslo:parentAttribute",
+      "@type": "@id"
+    },
+    "childAttribute": {
+      "@id": "oslo:childAttribute",
+      "@type": "@id"
     }
   },
   "@id": "https://data.test-vlaanderen.be/doc/applicatieprofiel/rooilijnplannen/ontwerpstandaard/2025-06-01",
-  "generatedAtTime": "2025-09-02T06:46:01.340Z",
+  "generatedAtTime": "2026-03-10T14:12:06.343Z",
   "packages": [
     {
       "@id": "urn:oslo-toolchain:088f502c512d67c147bb10fdc44733f0ff65142047eae3a5ab539c69fa2cd0f8",
@@ -282,13 +298,13 @@
       "vocDefinition": [
         {
           "@language": "nl",
-          "@value": "Verordenend grafisch plan dat de huidige of de toekomstige grens tussen de AangelandeEigendommen en de OpenbareWegen vastlegt."
+          "@value": "Verordenend grafisch plan dat de huidige of de toekomstige grens tussen de OpenbareWegen en de AangelandeEigendommen vastlegt."
         }
       ],
       "vocUsageNote": [
         {
           "@language": "nl",
-          "@value": "Die grenzen zijn de zgn Rooilijnen die de huidige of de toekomstige ligging en breedte van de OpenbareWeg vastleggen. Het plan bevat een Rooilijn die declaratief, indien deze samenvalt met de huidige grens van de openbare weg, zijn of constitutief, als het over een toekomstige grens gaat. Bijkomend kan op een rooilijnplan ook de oude af te schaffen rooilijn worden aangegeven, wanneer het plan een wettelijke rooilijn vervangt. Gevallen van Rooilijnplannen zijn de gemeentelijke Rooilijnplannen en de Gewestelijke Rooilijnplannen, resp beschreven in het <a href=\"https://codex.vlaanderen.be/PrintDocument.ashx?id=1032035&datum=&geannoteerd=true&print=false\">Decreet gemeentewegen</a> en het <a href=\"https://codex.vlaanderen.be/Portals/Codex/documenten/1018076.html\">Decreet vaststelling en realisatie van gewestelijke rooilijnen</a>."
+          "@value": "Het plan bevat declaratieve en/of constitutieve Rooilijnen, die resp de huidige en/of de toekomstige grens van de openbare weg aangeven. Bijkomend kan worden aangegeven welke (delen van) de Rooilijn daarbij worden afgeschaft. Gevallen van Rooilijnplannen zijn de gemeentelijke Rooilijnplannen en de Gewestelijke Rooilijnplannen, resp beschreven in het <a href=\"https://codex.vlaanderen.be/PrintDocument.ashx?id=1032035&datum=&geannoteerd=true&print=false\">Decreet gemeentewegen</a> en het <a href=\"https://codex.vlaanderen.be/Portals/Codex/documenten/1018076.html\">Decreet vaststelling en realisatie van gewestelijke rooilijnen</a>."
         }
       ],
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
@@ -609,7 +625,7 @@
       "vocUsageNote": [
         {
           "@language": "nl",
-          "@value": "Impliceert in principe een onbelemmerd, vrij gebruik voor alle verkeersdeelnemers op alle denkbare momenten. Staat los van openbaar of privaat eigendom, een weg kan op een privaat eigendom liggen maar toch openbaar zijn, bvb trage wegen (nu gemeentewegen, zie <a href=\"https://codex.vlaanderen.be/PrintDocument.ashx?id=1032035&datum=&geannoteerd=true&print=false\">Decreet gemeentewegen</a>). OPGELET: Subklasse van Rooilijnkenmerk waardoor deze klasse dus niet de OpenbareWeg voorsteld als een apart object maar als een kenmerk (van een Rooilijn)."
+          "@value": "Impliceert in principe een onbelemmerd, vrij gebruik voor alle verkeersdeelnemers op alle denkbare momenten. Staat los van openbaar of privaat eigendom, een weg kan op een privaat eigendom liggen maar toch openbaar zijn, bvb trage wegen (nu gemeentewegen, zie <a href=\"https://codex.vlaanderen.be/PrintDocument.ashx?id=1032035&datum=&geannoteerd=true&print=false\">Decreet gemeentewegen</a>). OPGELET: Subklasse van Rooilijnkenmerk waardoor deze klasse dus niet de OpenbareWeg voorstelt als een apart object maar als een kenmerk (van een Rooilijn)."
         }
       ],
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
@@ -638,13 +654,13 @@
       "vocDefinition": [
         {
           "@language": "nl",
-          "@value": "Private eigendommen die grenzen aan of doorkruist worden door de OpenbareWeg."
+          "@value": "Eigendommen die grenzen aan of doorkruist worden door de OpenbareWeg."
         }
       ],
       "vocUsageNote": [
         {
           "@language": "nl",
-          "@value": "Onder private eigendommen worden in praktijk KadastralePartrimoniumPercelen verstaan. Het doorkruisen van AangelandeEigendommen door een OpenbareWeg doet zich voor wanneer de ondergrond privaat eigendom is en de openbare weg op het privaat perceel wordt aangelegd. OPGELET: Subklasse van Rooilijnkenmerk en dus stelt deze klasse niet de AangelandeEigendommen als object maar als kenmerk (van een Rooilijn) voor."
+          "@value": "Eigendommen kunnen juridisch zowel privaat als publiek zijn. Onder eigendommen worden in praktijk KadastralePatrimoniumPercelen verstaan. Het doorkruisen van AangelandeEigendommen door een OpenbareWeg doet zich voor wanneer de ondergrond privaat eigendom is en de openbare weg op het privaat perceel wordt aangelegd. OPGELET: Subklasse van Rooilijnkenmerk en dus stelt deze klasse niet de AangelandeEigendommen als object maar als kenmerk (van een Rooilijn) voor."
         }
       ],
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
@@ -957,41 +973,32 @@
         },
         {
           "@id": "urn:oslo-toolchain:8ecf89cc058fd3da9b969754b2a6b4b3592e32f590ab1665310c975ef311f0a0"
-        },
-        {
-          "@id": "urn:oslo-toolchain:00edbf40e1636327eaa66e4394ac433af0fc952e7606002b5536c4a2fd520c81"
         }
       ],
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
     {
-      "@id": "urn:oslo-toolchain:00edbf40e1636327eaa66e4394ac433af0fc952e7606002b5536c4a2fd520c81",
+      "@id": "urn:oslo-toolchain:1783fb717d604679e39bc7e716703154234fd3496a6a6810c8006e5be59cac2e",
       "@type": "Class",
-      "assignedURI": "https://data.vlaanderen.be/ns/rooilijn#Verordening",
+      "assignedURI": "http://data.europa.eu/eli/ontology#LegalExpression",
       "vocLabel": [
         {
           "@language": "nl",
-          "@value": "Verordening"
+          "@value": "Legale Verschijningsvorm"
         }
       ],
       "diagramLabel": [
         {
-          "@value": "Verordening"
+          "@value": "LegaleVerschijningsvorm"
         }
       ],
-      "vocDefinition": [
+      "apDefinition": [
         {
           "@language": "nl",
-          "@value": "Juridisch bindende regeling die door een overheidsorgaan wordt vastgesteld."
+          "@value": "Een legale verschijningsvorm is een intellectuele realisatie van een rechtsgrond onder de vorm van een opeenvolging van tekens (meestal alphanumerieke tekens)."
         }
       ],
-      "vocUsageNote": [
-        {
-          "@language": "nl",
-          "@value": "In deze context gaat het over de Besluiten, RuimtelijkeUitvoeringsplannen of Omgevingsvergunningen die naar het Rooilijnplan verwijzen."
-        }
-      ],
-      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
     {
@@ -1012,19 +1019,19 @@
       "vocDefinition": [
         {
           "@language": "nl",
-          "@value": "Plan waarin de overheid de bestemming van de ruimte en de geldende regels of voorschriften vastlegt."
+          "@value": "Plan waarin de overheid stedenbouwkundige voorschriften over de bestemming, inrichting en/of beheer van de ruimte vastlegt."
         }
       ],
       "vocUsageNote": [
         {
           "@language": "nl",
-          "@value": "Onder bestemming wordt verstaan voor welke functies de ruimte mag worden gebruikt bvb wonen, kantoren, verkeer, groen etc. Dat wordt dmv een grafisch plan weergegeven. Daarnaast bevat een RuimtelijkUitvoeringsplan de regels en voorschriften die voor elke bestemming van toepassing zijn, bvb hoe hoog er gebouwd mag worden, hoever van de straat etc. In deze context gaat het over RuimtelijkeUitvoeringsplannen waarin Rooilijnen worden vastgelegd."
+          "@value": "Onder bestemming wordt verstaan voor welke functies de ruimte mag worden gebruikt bvb wonen, kantoren, verkeer, groen etc. Dat wordt dmv een grafisch plan weergegeven. Daarnaast bevat een RuimtelijkUitvoeringsplan de stedenbouwkundige voorschriften over inrichting en/of het beheer die van toepassing zijn, bvb hoe hoog er gebouwd mag worden, hoever van de straat etc. In deze context gaat het over RuimtelijkeUitvoeringsplannen waarin Rooilijnen worden vastgelegd."
         }
       ],
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "parent": [
         {
-          "@id": "urn:oslo-toolchain:00edbf40e1636327eaa66e4394ac433af0fc952e7606002b5536c4a2fd520c81"
+          "@id": "urn:oslo-toolchain:1783fb717d604679e39bc7e716703154234fd3496a6a6810c8006e5be59cac2e"
         }
       ],
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
@@ -1053,13 +1060,13 @@
       "vocUsageNote": [
         {
           "@language": "nl",
-          "@value": "Het gaat over activiteiten die potentieel hinderlijk zijn voor mens en milieu en daarom door de overheid vergund moeten worden, bvb het oprichten van een bouwwerk, het uitvoeren van een bedrijfsactiviteit, het verkavelen van een grond etc. In deze context gaat het over Omgevingsvergunningen waarin Rooilijnen worden vastgelegd. Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/\">OSLO-Omgevingsvergunningen</a>."
+          "@value": "Het gaat over activiteiten die oa hinderlijk zijn voor mens en milieu of met ruimtelijke implicaties en daarom door de overheid vergund moeten worden, bvb het oprichten van een bouwwerk, het uitvoeren van een bedrijfsactiviteit, het verkavelen van een grond etc. In deze context gaat het over Omgevingsvergunningen waarbij Rooilijnen worden vastgelegd. Meer info over deze klasse in het applicatieprofiel <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/\">OSLO-Omgevingsvergunningen</a>."
         }
       ],
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "parent": [
         {
-          "@id": "urn:oslo-toolchain:00edbf40e1636327eaa66e4394ac433af0fc952e7606002b5536c4a2fd520c81"
+          "@id": "urn:oslo-toolchain:1783fb717d604679e39bc7e716703154234fd3496a6a6810c8006e5be59cac2e"
         },
         {
           "@id": "urn:oslo-toolchain:eaf7c873f6bf76e8acfde86f454b36200e55100cd24cb67fea71f8a6652275aa"
@@ -1085,13 +1092,13 @@
       "vocDefinition": [
         {
           "@language": "nl",
-          "@value": "Oplijsting van de OpenbareWegen of AangelandeEigendommen die door een toekomstige Rooilijnen op een Rooilijnplan worden getroffen."
+          "@value": "Oplijsting van de OpenbareWegen of AangelandeEigendommen die door een toekomstige Rooilijn op een Rooilijnplan worden getroffen."
         }
       ],
       "vocUsageNote": [
         {
           "@language": "nl",
-          "@value": "Typisch loopt een constitutieve Rooilijn door bestaande AangelandeEigendommen of OpenbareWeg, dit zijn de door deze Rooilijn getroffen percelen of wegen. De Rooilijninventaris heeft tot doel om de impact van alle Rooilijnen op het Rooilijnplan weer te geven: welke delen van percelen zullen worden onteigend en/of welke delen van de weg komen in privaat bezit. Dat gebeurt oa door een opsomming van de getroffen percelen en/of wegen, evt met vermelding van eigenaars en de in totaal getroffen oppervlakte en/of aanduiding van de geometrie van het totaal getroffen oppervlak."
+          "@value": "Typisch loopt een constitutieve Rooilijn door bestaande AangelandeEigendommen of OpenbareWeg, dit zijn de door deze Rooilijn getroffen percelen of wegen. Het Rooilijnplaninventaris heeft tot doel om de impact van alle Rooilijnen op het Rooilijnplan weer te geven: welke delen van percelen zullen worden onteigend en/of welke delen van de weg komen in privaat bezit. Dat gebeurt oa door een opsomming van de getroffen percelen en/of wegen, evt met vermelding van eigenaars en de in totaal getroffen oppervlakte en/of aanduiding van de geometrie van het totaal getroffen oppervlak."
         }
       ],
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
@@ -1304,8 +1311,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:2049156247"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1342,8 +1355,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:2049156247"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1374,8 +1393,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:499715870"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1406,8 +1431,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:499715870"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1438,8 +1469,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:2049156247"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1456,7 +1493,7 @@
       "apLabel": [
         {
           "@language": "nl",
-          "@value": "toegekend op"
+          "@value": "toegekendOp"
         }
       ],
       "diagramLabel": [
@@ -1476,8 +1513,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:499715870"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1520,8 +1563,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:2049156247"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1552,8 +1601,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:2049156247"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1590,8 +1645,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:474715019"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1622,8 +1683,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:1727880001"
       },
-      "minCount": "1",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1654,8 +1721,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:1727880001"
       },
-      "minCount": "1",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1686,8 +1759,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:1727880001"
       },
-      "minCount": "1",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1718,8 +1797,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:1727880001"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1750,8 +1835,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:474715019"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1788,8 +1879,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:487667944"
       },
-      "minCount": "1",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1820,8 +1917,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:474715019"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1832,7 +1935,7 @@
       "apLabel": [
         {
           "@language": "nl",
-          "@value": "in XSD datumTijd"
+          "@value": "inXSDDatumTijd"
         }
       ],
       "diagramLabel": [
@@ -1852,8 +1955,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:499715870"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1864,7 +1973,7 @@
       "apLabel": [
         {
           "@language": "nl",
-          "@value": "in EDTF"
+          "@value": "inEDTF"
         }
       ],
       "diagramLabel": [
@@ -1890,8 +1999,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:2049156247"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1902,7 +2017,7 @@
       "apLabel": [
         {
           "@language": "nl",
-          "@value": "in EDTF"
+          "@value": "inEDTF"
         }
       ],
       "diagramLabel": [
@@ -1928,8 +2043,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:2049156247"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1966,8 +2087,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:7c632a889f38b1501ac4c839087f937ae68458e89113289f7a8c7f2785c56778"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -1998,8 +2125,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:0ce025bb48a7625ff2db1234afcff853b4f9b6520b38d1c9a66cb97a4d14c95f"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2048,8 +2181,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:8115d855c3ea94ca391ac9596f7f015fb4a9732c5fe1b67389ccddfe2a39d17a"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2086,8 +2225,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:414edd3556dc98805ceb46e7bd325a8c7812e465b80c20bb82889b3d75307eee"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2118,8 +2263,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:93201f0c4eefa6311c988bcfd6baa0ecafeadb4ff3df48ae14fc16595a8e86c6"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2156,8 +2307,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:87cefb4a4023b99aeba90e6e4fd18b7a3145e9d71f3180b0986a3594479f94cf"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2188,8 +2345,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:93201f0c4eefa6311c988bcfd6baa0ecafeadb4ff3df48ae14fc16595a8e86c6"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2220,8 +2383,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:f826d079a3ee7d3361cd347f16022f28afce13dcdc30fcc6464a4477bba3101b"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2258,8 +2427,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:f826d079a3ee7d3361cd347f16022f28afce13dcdc30fcc6464a4477bba3101b"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2290,8 +2465,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:5dff2ef4b977aa84d9efb4a773984932156db7fa1a81378434d497893c9da94d"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2328,8 +2509,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:aca5b9c901b55ead95f6cf2201b6ea9df645e79638cbb097857e02082cdc3210"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2360,8 +2547,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:a703ab3a0e90f2b16cbddf6231218e90c33785ed3b374c53ffca4d3beb3073dd"
       },
-      "minCount": "1",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2392,8 +2585,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:5adf7ba7776badaa4e85e934acb94a0cac4f765e4e4e08b491a93cf6b7308b8d"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2410,7 +2609,7 @@
       "apLabel": [
         {
           "@language": "nl",
-          "@value": "toegekend door"
+          "@value": "toegekendDoor"
         }
       ],
       "diagramLabel": [
@@ -2430,8 +2629,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:fd3c82f9b50498ebad8b14917354572e49db41bc8dbe809100c6b3a1da5e7a66"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2448,7 +2653,7 @@
       "apLabel": [
         {
           "@language": "nl",
-          "@value": "toegekend door (String)"
+          "@value": "toegekendDoor(String)"
         }
       ],
       "diagramLabel": [
@@ -2468,8 +2673,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:fd3c82f9b50498ebad8b14917354572e49db41bc8dbe809100c6b3a1da5e7a66"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2506,8 +2717,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:414edd3556dc98805ceb46e7bd325a8c7812e465b80c20bb82889b3d75307eee"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2538,8 +2755,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:747a819027057d09262a2dcdc5ffdb761e15122ba4607d42b47cdf6c26b9cfb9"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2570,8 +2793,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:26baddc8c3410a8b61fb7a79c16c48e4c22a0e47f832b802554874899d2c910e"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2608,8 +2837,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:c7152f09ca546dee68215c45d0638da5f71f495993805eb72fcb1c9d67063a9b"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2640,8 +2875,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:e5c4528ceea70f4fb2d58ccf50f1eb218b4413a039e5cb569c037ea24299c1a1"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2672,8 +2913,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:eee7cf89b9d605a8bbcc43f65bce64d7e4fc3444a18e84fe87113609acfca175"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2710,8 +2957,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:87cefb4a4023b99aeba90e6e4fd18b7a3145e9d71f3180b0986a3594479f94cf"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2742,8 +2995,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:e0f21057d3ba08dcc4f88035ddf7a5f4a0cc7fcc6d127d8d8220adb125a1230e"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2780,8 +3039,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:5adf7ba7776badaa4e85e934acb94a0cac4f765e4e4e08b491a93cf6b7308b8d"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2818,8 +3083,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:977347ff1bf31ee6b71091644ea87de132aec11d751afb986c87198e16e5025a"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2850,8 +3121,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:5adf7ba7776badaa4e85e934acb94a0cac4f765e4e4e08b491a93cf6b7308b8d"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2882,8 +3159,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:4ed1bafbf4a32869e4098432b512f5bf18cdf5c907cdaa9220f0c295d25757b1"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2914,8 +3197,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:08ba2b195a90f008d37eb220bc55dca9230a5318993db908c070f46fa585a391"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2946,8 +3235,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:f826d079a3ee7d3361cd347f16022f28afce13dcdc30fcc6464a4477bba3101b"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -2978,8 +3273,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:747a819027057d09262a2dcdc5ffdb761e15122ba4607d42b47cdf6c26b9cfb9"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3010,8 +3311,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:26baddc8c3410a8b61fb7a79c16c48e4c22a0e47f832b802554874899d2c910e"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3042,8 +3349,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:eee7cf89b9d605a8bbcc43f65bce64d7e4fc3444a18e84fe87113609acfca175"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3074,8 +3387,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:6c183cb23162714b8f5f36e90044e2f998ef9ad3faa7ce09ca81545794305c97"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3112,8 +3431,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:0d5144ee31a063f3afa44031b3573bf7b10f838c3d16d85cf1585ad771d12a3d"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3144,8 +3469,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:eee7cf89b9d605a8bbcc43f65bce64d7e4fc3444a18e84fe87113609acfca175"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3176,8 +3507,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:eee7cf89b9d605a8bbcc43f65bce64d7e4fc3444a18e84fe87113609acfca175"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3208,8 +3545,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:51d8aef3ed118900644ea17be243d1a62d09f1464b0ca4bed00821a2ec4c96dc"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3240,8 +3583,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:5adf7ba7776badaa4e85e934acb94a0cac4f765e4e4e08b491a93cf6b7308b8d"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3278,8 +3627,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:5adf7ba7776badaa4e85e934acb94a0cac4f765e4e4e08b491a93cf6b7308b8d"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3316,8 +3671,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:5adf7ba7776badaa4e85e934acb94a0cac4f765e4e4e08b491a93cf6b7308b8d"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3354,8 +3715,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:4705fd677e0427e19035508c170066cf91fc6c52473a1ef05f7ab991e69b17aa"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3386,8 +3753,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:f826d079a3ee7d3361cd347f16022f28afce13dcdc30fcc6464a4477bba3101b"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3418,8 +3791,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:f826d079a3ee7d3361cd347f16022f28afce13dcdc30fcc6464a4477bba3101b"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3450,8 +3829,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:f826d079a3ee7d3361cd347f16022f28afce13dcdc30fcc6464a4477bba3101b"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3482,15 +3867,21 @@
       "range": {
         "@id": "urn:oslo-toolchain:f826d079a3ee7d3361cd347f16022f28afce13dcdc30fcc6464a4477bba3101b"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
     {
       "@id": "urn:oslo-toolchain:c4f5f91b773799268e8b34611acd70f79f36ecd90d04c2c3a4a8d4af259ce238",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "assignedURI": "https://data.vlaanderen.be/ns/rooilijn#rooilijntype",
+      "assignedURI": "http://purl.org/dc/terms/type",
       "vocLabel": [
         {
           "@language": "nl",
@@ -3520,9 +3911,15 @@
       "range": {
         "@id": "urn:oslo-toolchain:bd735f657f51c7d05418586f0f709510cd6005e88a180229bb6f4e81d1b38e38"
       },
-      "minCount": "1",
-      "maxCount": "*",
-      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "codelist": "https://data.vlaanderen.be/doc/conceptscheme/Rooilijntype",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3553,8 +3950,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:b16e86bffc7ed0fd8b822e4589d89950d39b8834205daac4bbd22427d5b0ff38"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3585,8 +3988,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:e2d5a984af1a0f388cb5d575bf9b165c96210c5971bef2c63acc13033ae96356"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3617,8 +4026,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:eee7cf89b9d605a8bbcc43f65bce64d7e4fc3444a18e84fe87113609acfca175"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3649,8 +4064,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:eee7cf89b9d605a8bbcc43f65bce64d7e4fc3444a18e84fe87113609acfca175"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3681,8 +4102,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:4e87db0b385575e0df499ef8c1c19a2b8a37edcf55ca480b388ee93fe1c38f2a"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3713,8 +4140,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:b16e86bffc7ed0fd8b822e4589d89950d39b8834205daac4bbd22427d5b0ff38"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3745,8 +4178,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:b16e86bffc7ed0fd8b822e4589d89950d39b8834205daac4bbd22427d5b0ff38"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3777,8 +4216,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:b16e86bffc7ed0fd8b822e4589d89950d39b8834205daac4bbd22427d5b0ff38"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3809,8 +4254,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:b16e86bffc7ed0fd8b822e4589d89950d39b8834205daac4bbd22427d5b0ff38"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3841,8 +4292,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:00abebbdfcddaedd032037af793f44887140b746f663058eb8dd651a6a56883d"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3876,8 +4333,14 @@
       "parent": {
         "@id": "https://data.vlaanderen.be/ns/rooilijn#element"
       },
-      "minCount": "1",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3911,8 +4374,14 @@
       "parent": {
         "@id": "https://data.vlaanderen.be/ns/rooilijn#element"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -3943,40 +4412,52 @@
       "range": {
         "@id": "urn:oslo-toolchain:baf05adb2c9c3c991a31f3cc336ee41894f8903d6b76b0d4626f666f2ed778fe"
       },
-      "minCount": "0",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
     {
-      "@id": "urn:oslo-toolchain:ad0ca8f2605aea939cade82435ee1786cbf22597d338efe90ef58b1a88923132",
+      "@id": "urn:oslo-toolchain:0810a0b373baff4c6169d385a66b115a26b706bf898507c94f5f6068a8d510f2",
       "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "assignedURI": "https://data.vlaanderen.be/ns/rooilijn#verordening",
+      "assignedURI": "https://data.vlaanderen.be/ns/rooilijn#wettelijkeBasis",
       "vocLabel": [
         {
           "@language": "nl",
-          "@value": "verordening"
+          "@value": "wettelijkeBasis"
         }
       ],
       "diagramLabel": [
         {
-          "@value": "verordening"
+          "@value": "wettelijkeBasis"
         }
       ],
       "vocDefinition": [
         {
           "@language": "nl",
-          "@value": "Verordening van waaruit naar het betrokken Rooilijnplan wordt verwezen."
+          "@value": "Juridisch document van waaruit naar het betrokken Rooilijnplan wordt verwezen."
         }
       ],
       "domain": {
         "@id": "urn:oslo-toolchain:b0394819235dd9d04d8bece8fff340fe6f2b21d013581abd295ac45dc3c9e88a"
       },
       "range": {
-        "@id": "urn:oslo-toolchain:00edbf40e1636327eaa66e4394ac433af0fc952e7606002b5536c4a2fd520c81"
+        "@id": "urn:oslo-toolchain:1783fb717d604679e39bc7e716703154234fd3496a6a6810c8006e5be59cac2e"
       },
-      "minCount": "1",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -4007,8 +4488,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:fa4d77630010bb2beb8b10043586a413b4af0756b760421d28074cd231eedfa9"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -4039,8 +4526,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:d6fed292f4dfc9f6ad9be0e72214ab064812249571f60779701027d878c110a8"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -4077,8 +4570,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:8df8178b2934aa23378ece50cfc443013863cfbdd41867e9c335c4d61cbe16f5"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -4109,8 +4608,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:59242cfff9ead5358ee0d2059d2b9921451e5aad3eafe72db9f593d6c6465ce6"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -4141,8 +4646,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:59242cfff9ead5358ee0d2059d2b9921451e5aad3eafe72db9f593d6c6465ce6"
       },
-      "minCount": "0",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "0",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -4173,8 +4684,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:fd3c82f9b50498ebad8b14917354572e49db41bc8dbe809100c6b3a1da5e7a66"
       },
-      "minCount": "1",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -4205,8 +4722,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:e5c4528ceea70f4fb2d58ccf50f1eb218b4413a039e5cb569c037ea24299c1a1"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -4237,8 +4760,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:fd3c82f9b50498ebad8b14917354572e49db41bc8dbe809100c6b3a1da5e7a66"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/inPublicationNamespace",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -4269,8 +4798,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:e5c4528ceea70f4fb2d58ccf50f1eb218b4413a039e5cb569c037ea24299c1a1"
       },
-      "minCount": "1",
-      "maxCount": "*",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "*",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
@@ -4301,8 +4836,14 @@
       "range": {
         "@id": "urn:oslo-toolchain:e7bb4c663a94303a10f655cfd4edc857de533fe567c6cb3c189170e67de9268a"
       },
-      "minCount": "1",
-      "maxCount": "1",
+      "minCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "maxCount": {
+        "@value": "1",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     }
@@ -5181,29 +5722,6 @@
       "@type": "http://www.w3.org/2002/07/owl#Class"
     },
     {
-      "@id": "urn:oslo-toolchain:1783fb717d604679e39bc7e716703154234fd3496a6a6810c8006e5be59cac2e",
-      "assignedURI": "http://data.europa.eu/eli/ontology#LegalExpression",
-      "vocLabel": [
-        {
-          "@language": "nl",
-          "@value": "Legale Verschijningsvorm"
-        }
-      ],
-      "diagramLabel": [
-        {
-          "@value": "LegaleVerschijningsvorm"
-        }
-      ],
-      "apDefinition": [
-        {
-          "@language": "nl",
-          "@value": "Een legale verschijningsvorm is een intellectuele realisatie van een rechtsgrond onder de vorm van een opeenvolging van tekens (meestal alphanumerieke tekens)."
-        }
-      ],
-      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
-      "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
-    },
-    {
       "@id": "urn:oslo-toolchain:46d1278083ef9dda62a2a9dd336d61e2cf4272506dcdbe8660b721672c7c1ddb",
       "assignedURI": "http://xmlns.com/foaf/0.1/Document",
       "vocLabel": [
@@ -5334,13 +5852,19 @@
     },
     {
       "@id": "urn:oslo-toolchain:4e87db0b385575e0df499ef8c1c19a2b8a37edcf55ca480b388ee93fe1c38f2a",
-      "assignedURI": "https://data.vlaanderen.be/ns/rooilijn#Statustype",
+      "assignedURI": "http://www.w3.org/2004/02/skos/core#Concept",
+      "apLabel": [
+        {
+          "@language": "nl",
+          "@value": "Statustype"
+        }
+      ],
       "diagramLabel": [
         {
           "@value": "Statustype"
         }
       ],
-      "scope": "https://data.vlaanderen.be/id/concept/scope/InPackage",
+      "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     },
     {
@@ -5360,5 +5884,130 @@
       "scope": "https://data.vlaanderen.be/id/concept/scope/External",
       "status": "https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard"
     }
-  ]
+  ],
+  "redefinedAttributes": [
+    {
+      "@id": "urn:oslo-toolchain:a84dddc61f633e9e73255d40676a2b9548de3d82904c0819fe44dd4190ef1cfd",
+      "@type": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#RedefinedAttribute",
+      "parentAttribute": {
+        "@id": "urn:oslo-toolchain:e90cfc0120327f0f6e7bf39bea9f76075958d3f3c7d2c87380d14dfde6ce23a9"
+      },
+      "childAttribute": {
+        "@id": "urn:oslo-toolchain:2056904d9d6115014b0749afb7f92b37b446b1e0da876f784cb53d23ade91397"
+      }
+    },
+    {
+      "@id": "urn:oslo-toolchain:4074e91aaa1acb42f91ea4077b580e68322477d3f272e1f6d3754d74a02a51ef",
+      "@type": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#RedefinedAttribute",
+      "parentAttribute": {
+        "@id": "urn:oslo-toolchain:e5d8d6d284fdb619bbae2f336f9522e4b80a7db561ccc9e8428a266fff40fa4c"
+      },
+      "childAttribute": {
+        "@id": "urn:oslo-toolchain:966a6202a35a46d7fbeebf8236bad3da468b8ebc461e29e8a2991277906a2fb2"
+      }
+    },
+    {
+      "@id": "urn:oslo-toolchain:0398f63acd27f50a3b10731304aa6aa2e15f7e89f7921886927883c86d009499",
+      "@type": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#RedefinedAttribute",
+      "parentAttribute": {
+        "@id": "urn:oslo-toolchain:e90cfc0120327f0f6e7bf39bea9f76075958d3f3c7d2c87380d14dfde6ce23a9"
+      },
+      "childAttribute": {
+        "@id": "urn:oslo-toolchain:a39536d865713547cb458f05ed56b520b573a0bc593f21d76a2b64c183c0bf47"
+      }
+    },
+    {
+      "@id": "urn:oslo-toolchain:0d8e090d7236421c63930ce3c19fbbc6c2eb3a958abcc02c6c1e8e915682bcc9",
+      "@type": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#RedefinedAttribute",
+      "parentAttribute": {
+        "@id": "urn:oslo-toolchain:e5d8d6d284fdb619bbae2f336f9522e4b80a7db561ccc9e8428a266fff40fa4c"
+      },
+      "childAttribute": {
+        "@id": "urn:oslo-toolchain:4fad3fb9a72cfceca6ad23669d6ce755c7116b4001c52acd64833f1b96934b65"
+      }
+    },
+    {
+      "@id": "urn:oslo-toolchain:ca9c556c7830ccac35385cad7699d3c0442ff3c6f7f450a3c70de90b0c5baa95",
+      "@type": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#RedefinedAttribute",
+      "parentAttribute": {
+        "@id": "urn:oslo-toolchain:6384902b19da86ff82d65648901a293fcde744eabbc14d04e5dfe1eace766891"
+      },
+      "childAttribute": {
+        "@id": "urn:oslo-toolchain:6e34bae32c742b46908559addea4078b07bba37c0bf3134453d38238c06d2547"
+      }
+    },
+    {
+      "@id": "urn:oslo-toolchain:87ad59a1a88692e241a05f57f95213a46825c9b901df5298de32615bb3fe22a2",
+      "@type": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#RedefinedAttribute",
+      "parentAttribute": {
+        "@id": "urn:oslo-toolchain:659e6659ba63ce5a5364b40865c00630c3a436454add8102d7a1442eac338ed6"
+      },
+      "childAttribute": {
+        "@id": "urn:oslo-toolchain:45e1e6856283119f4e219901996882075ccd49001192ccf924be9082a68b1247"
+      }
+    },
+    {
+      "@id": "urn:oslo-toolchain:6593f3ffd6c69a60e5175174b971809295efef03569394294b3655bcc0d22219",
+      "@type": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#RedefinedAttribute",
+      "parentAttribute": {
+        "@id": "urn:oslo-toolchain:ac5069a106dc36acfd4fdec81166a92e9d9c2f4b0a489481f5b94f2c7054e241"
+      },
+      "childAttribute": {
+        "@id": "urn:oslo-toolchain:f6bfa7fffc69328594de91670c84d1b99de60e93b56f57ad86376b4ec3646838"
+      }
+    },
+    {
+      "@id": "urn:oslo-toolchain:23eb28249a03d0a590ebdcd3c91137724869bfb7e04191f2f76c9febd6414de1",
+      "@type": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#RedefinedAttribute",
+      "parentAttribute": {
+        "@id": "urn:oslo-toolchain:9addf51371416b58d537167ffee2f4faf700c97f7d5f531a05312fb2ad7a1282"
+      },
+      "childAttribute": {
+        "@id": "urn:oslo-toolchain:cc162c9e653498bed221aa3134b68a75b0b57dbb3166a8b7f793bdcec4ac1b47"
+      }
+    }
+  ],
+  "subsettedAttributes": [
+    {
+      "@id": "urn:oslo-toolchain:7c05b58430e6289605bca77e2d40a2d4a46e4a66a4042fb03c734c20c7fec4fa",
+      "@type": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#SubsettedAttribute",
+      "parentAttribute": {
+        "@id": "urn:oslo-toolchain:a379910101c997c6c1cc1897b5bfb0ab7db1504cbb7be5636ca4a2f6a87464a6"
+      },
+      "childAttribute": {
+        "@id": "urn:oslo-toolchain:adaae43f3b83a73f662d36fb1e3e45fffc9f8dc21eb3ad77429a0c6e373048ce"
+      }
+    },
+    {
+      "@id": "urn:oslo-toolchain:b7d3b059f19fe8c8d416b73d3066df20d82cfe7cf9a3f9756499e05955132b5f",
+      "@type": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#SubsettedAttribute",
+      "parentAttribute": {
+        "@id": "urn:oslo-toolchain:a379910101c997c6c1cc1897b5bfb0ab7db1504cbb7be5636ca4a2f6a87464a6"
+      },
+      "childAttribute": {
+        "@id": "urn:oslo-toolchain:47095639ea9dbf28cf1a8fa8836532f4eb582215a995a9331f6d36b04eda435e"
+      }
+    },
+    {
+      "@id": "urn:oslo-toolchain:a88fd1ad4355d28a16bce18295e71f0035e19129dca4f8e420ba90dc2d9bd09f",
+      "@type": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#SubsettedAttribute",
+      "parentAttribute": {
+        "@id": "urn:oslo-toolchain:1e67b658181109e870a727b5c942a3e22932cafb098e7e1d395ba26885519a1e"
+      },
+      "childAttribute": {
+        "@id": "urn:oslo-toolchain:58b6ad45805c46ef0a113ec6201d481aa6ba9154137fd63cee644867561e5d70"
+      }
+    },
+    {
+      "@id": "urn:oslo-toolchain:377e32029b20a68598439e2f2f05a25c0a2d42864cf689450c695aa7a9677810",
+      "@type": "https://implementatie.data.vlaanderen.be/ns/oslo-toolchain#SubsettedAttribute",
+      "parentAttribute": {
+        "@id": "urn:oslo-toolchain:1e67b658181109e870a727b5c942a3e22932cafb098e7e1d395ba26885519a1e"
+      },
+      "childAttribute": {
+        "@id": "urn:oslo-toolchain:5e7fa06d939e1bd28715c1023a3e6298565b56bbf6e0fd6d350656a99e94e679"
+      }
+    }
+  ],
+  "enumerations": []
 }
