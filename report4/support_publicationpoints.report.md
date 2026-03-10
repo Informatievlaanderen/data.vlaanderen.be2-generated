@@ -259,6 +259,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/publicatie-advertentie",
   "/tmp/generated/doc/applicatieprofiel/publicatie-advertentie/erkendestandaard/2023-11-09",
   "/tmp/generated/doc/applicatieprofiel/publicatie-advertentie/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/applicatieprofiel/rooilijnplannen/erkendestandaard/2026-02-24",
   "/tmp/generated/doc/applicatieprofiel/ruimtelijke-bereiken",
   "/tmp/generated/doc/applicatieprofiel/ruimtelijke-bereiken/kandidaatstandaard/2024-10-01",
   "/tmp/generated/doc/applicatieprofiel/ruimtelijke-bereiken/ontwerpstandaard/2021-08-01",
@@ -332,6 +333,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/vocabularium/perceel/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/vocabularium/publicatie-advertentie/erkendestandaard/2023-11-09",
   "/tmp/generated/doc/vocabularium/publicatie-advertentie/ontwerpstandaard/toolchain4",
+  "/tmp/generated/doc/vocabularium/rooilijnplannen/erkendestandaard/2026-02-24",
   "/tmp/generated/doc/vocabularium/ruimtelijke-bereiken/kandidaatstandaard/2024-10-01",
   "/tmp/generated/doc/vocabularium/ruimtelijke-bereiken/ontwerpstandaard/2021-08-01",
   "/tmp/generated/doc/vocabularium/ruimtelijke-bereiken/ontwerpstandaard/2024-04-15",
@@ -359,7 +361,6 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/metadata-dcat",
   "/tmp/generated/ns/observaties-en-metingen",
   "/tmp/generated/ns/perceel",
-  "/tmp/generated/ns/rooilijnplannen",
   "/tmp/generated/ns/ruimtelijke-bereiken",
   "/tmp/generated/ns/sensoren-en-bemonstering",
   "/tmp/generated/ns/thermografische-gebouwanalyse"
