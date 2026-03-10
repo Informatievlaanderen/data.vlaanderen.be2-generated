@@ -169,7 +169,6 @@
 Error: the following directories are unsupported
 [
   "/tmp/generated/doc/applicatieprofiel/AirAndWater/Core/ontwerpstandaard/2021-10-01",
-  "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL",
   "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL/kandidaatstandaard/2025-12-09",
   "/tmp/generated/doc/applicatieprofiel/DCAT-AP-VL/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/2024-04-30",
@@ -181,6 +180,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/DigitaleWatermeter/kandidaatstandaard/latest",
   "/tmp/generated/doc/applicatieprofiel/FeitelijkeVerenigingen",
   "/tmp/generated/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21",
+  "/tmp/generated/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-24",
   "/tmp/generated/doc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2022-02-03",
   "/tmp/generated/doc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09",
   "/tmp/generated/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/2025-11-13",
