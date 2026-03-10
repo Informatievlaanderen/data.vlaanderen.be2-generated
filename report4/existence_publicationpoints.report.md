@@ -389,8 +389,12 @@ index.html check
 #||#    + checking /home/circleci/project/config/production/rooilijnplannen.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated/doc/applicatieprofiel/rooilijnplannen/erkendestandaard/2026-02-24'
+error: missing '/tmp/generated/doc/vocabularium/rooilijnplannen/erkendestandaard/2026-02-24'
 
 index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/rooilijnplannen/erkendestandaard/2026-02-24/index.html'
+error: missing '/tmp/generated/doc/vocabularium/rooilijnplannen/erkendestandaard/2026-02-24/index.html'
 
 #||#    + checking /home/circleci/project/config/production/sb.publication.json
 #||# 
