@@ -14,5 +14,5 @@
 
 #||# start writing  
 
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12/html/meta_metadata-voor-services-ap_nl.json  
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12/html/meta_DCAT-AP-VL_nl.json  
 
