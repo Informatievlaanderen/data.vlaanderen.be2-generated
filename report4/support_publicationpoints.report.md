@@ -284,6 +284,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/swagger",
   "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/swagger/R1",
   "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/swagger/R1/SKOS",
+  "/tmp/generated/doc/implementatiemodel/verkeersmeldingen/erkendestandaard/2026-02-24",
   "/tmp/generated/doc/vocabularium/besluit/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/bestuur/ontwerpdocument/2020-01-06",
   "/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bo-interpretaties/ontwerpstandaard/2021-08-01",

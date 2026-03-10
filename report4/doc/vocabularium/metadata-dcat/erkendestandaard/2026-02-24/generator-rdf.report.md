@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-2026-03-10T12:48:11.854Z error: Unable to find the definition for property [urn:oslo-toolchain:c4b7b33c5218fbe960b142441fa3fbe13fe7d8dbf78195e11426189ad2f5e00e](all-metadata-dcat.jsonld#L1072).
+2026-03-10T14:21:22.937Z error: Unable to find the definition for property [urn:oslo-toolchain:c4b7b33c5218fbe960b142441fa3fbe13fe7d8dbf78195e11426189ad2f5e00e](all-metadata-dcat.jsonld#L1072).
 
-2026-03-10T12:48:11.856Z error: Unable to find the definition for property [urn:oslo-toolchain:684a70de990792580dce9be1bf78b644b6f72e8a68e90658ec94e48a9a085724](all-metadata-dcat.jsonld#L1114).
+2026-03-10T14:21:22.939Z error: Unable to find the definition for property [urn:oslo-toolchain:684a70de990792580dce9be1bf78b644b6f72e8a68e90658ec94e48a9a085724](all-metadata-dcat.jsonld#L1114).
 
