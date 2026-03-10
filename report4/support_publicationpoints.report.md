@@ -1,5 +1,7 @@
 #||# checking publication points in directory /home/circleci/project/config/production
 #||# 
+#||#   + adding supporting /home/circleci/project/config/production/SSNSOSA.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/production/adres.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/production/bedrijventerrein.publication.json

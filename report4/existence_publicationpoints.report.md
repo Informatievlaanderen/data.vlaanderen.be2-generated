@@ -1,5 +1,15 @@
 #||# checking publication points in directory /home/circleci/project/config/production
 #||# 
+#||#    + checking /home/circleci/project/config/production/SSNSOSA.publication.json
+#||# 
+Directory check
+error: missing '/tmp/generated/doc/applicatieprofiel/SSNSSOSAVL/ontwerpstandaard/2026-02-13'
+error: missing '/tmp/generated/doc/vocabularium/SSNSOSAVL/ontwerpstandaard/2025-06-01'
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/SSNSSOSAVL/ontwerpstandaard/2026-02-13/index.html'
+error: missing '/tmp/generated/doc/vocabularium/SSNSOSAVL/ontwerpstandaard/2025-06-01/index.html'
+
 #||#    + checking /home/circleci/project/config/production/adres.publication.json
 #||# 
 Directory check
@@ -265,14 +275,14 @@ index.html check
 Directory check
 error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09/'
 error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09/'
-error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09/'
-error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09/'
+error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/'
+error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/'
 
 index.html check
 error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09//index.html'
 error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09//index.html'
-error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09//index.html'
-error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09//index.html'
+error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL//index.html'
+error: missing '/tmp/generateddoc/applicatieprofiel/GEODCAT-AP-VL//index.html'
 
 #||#    + checking /home/circleci/project/config/production/mobiliteit-intelligente-toegang.publication.json
 #||# 
