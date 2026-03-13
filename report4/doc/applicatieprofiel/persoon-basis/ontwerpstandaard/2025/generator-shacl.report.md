@@ -2,25 +2,21 @@
 
 #||# -------------------------------------  
 
-2025-10-09T08:14:58.699Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-persoon.jsonld#L5335)".
+2026-03-13T13:19:23.017Z warn: Unable to find the description for subject "[urn:oslo-toolchain:926899fcc4d8529684be7cdf62232af2db07274df0dd3ad3055c9cc282f2b049](all-persoon.jsonld#L212)".
 
-2025-10-09T08:14:58.701Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-persoon.jsonld#L5346)".
+2026-03-13T13:19:23.024Z warn: Unable to find the description for subject "[urn:oslo-toolchain:08af4751776471ece856d64fbc5f99bfd453470eba844b8312298cd724023957](all-persoon.jsonld#L1119)".
 
-2025-10-09T08:14:58.702Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-persoon.jsonld#L5357)".
+2026-03-13T13:19:23.024Z warn: Unable to find the description for subject "[urn:oslo-toolchain:18ae1cc42d2c88bf9a4a89edf89bc455859fe15df7120fc8f5f039b78eaab185](all-persoon.jsonld#L1131)".
 
-2025-10-09T08:14:58.702Z warn: Unable to find the description for subject "[urn:oslo-toolchain:2049156247](all-persoon.jsonld#L5368)".
+2026-03-13T13:19:23.024Z warn: Unable to find the description for subject "[urn:oslo-toolchain:608aa063c7137bcde1c3d91b53b7d086b5567d4fd5c90ecc66abfe85f29516ed](all-persoon.jsonld#L1178)".
 
-2025-10-09T08:14:58.703Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
+2026-03-13T13:19:23.025Z warn: Unable to find the description for subject "[urn:oslo-toolchain:d8814cb8dc23deb6bf91ae5273d496168c0bd88c0f6c68c9703bfdfbee02d6d2](all-persoon.jsonld#L1191)".
 
-Error: Unable to find the assigned URI for range "urn:oslo-toolchain:18ae1cc42d2c88bf9a4a89edf89bc455859fe15df7120fc8f5f039b78eaab185".
+2026-03-13T13:19:23.025Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-persoon.jsonld#L5506)".
 
-    at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:52:19)
+2026-03-13T13:19:23.026Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-persoon.jsonld#L5517)".
 
-    at Pipeline.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/types/Pipeline.js:21:28)
+2026-03-13T13:19:23.026Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-persoon.jsonld#L5528)".
 
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:56:51)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:22:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-03-13T13:19:23.026Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
 
