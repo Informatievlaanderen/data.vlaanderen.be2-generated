@@ -131,7 +131,7 @@
         "type": "object"
       },
       "Agent": {
-        "description": "Een Agent is verantwoordelijk voor een bepaalde Activiteit, bestaan van een Object, of een Activiteit van een andere Agent.",
+        "description": "Een agent zoals een Persoon, groep, software of fysiek artifact.",
         "properties": {
           "@context": {
             "enum": [
@@ -152,6 +152,25 @@
               "type": "string"
             },
             "minItems": 1,
+            "type": "array"
+          },
+          "Agent.isLidVan": {
+            "description": "Lijst van Organisatie items.",
+            "items": {
+              "description": "Niet nader bepaald lidmaatschap van een Agent van een Organisatie. Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Organisatie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
             "type": "array"
           }
         },
@@ -674,7 +693,7 @@
             "type": "array"
           },
           "GeregistreerdPersoon.matrioniem": {
-            "description": "Achternaam gebaseerd op de voornaam van de vader van een Persoon. Bijvoorbeeld in Ijsland: Magnusdottir (dochter van Magnus).",
+            "description": "Achternaam gebaseerd op de voornaam van de moeder van een Persoon. Bijvoorbeeld in Ijsland: Helguson (zoon van Helga).",
             "properties": {
               "@value": {
                 "type": "string"
@@ -735,30 +754,6 @@
             "minItems": 0,
             "type": "array"
           },
-          "GeregistreerdPersoon.titel": {
-            "description": "Lijst van LangString items.",
-            "items": {
-              "description": "Een titel is een eervolle vermelding die gaat over de naam en die deel uitmaakt van de officiële aanwijzing van een Persoon. Bijvoorbeeld: adelijke titels e.g., Baron of academische titels e.g., Dokter.",
-              "properties": {
-                "@language": {
-                  "enum": [
-                    "nl"
-                  ],
-                  "type": "string"
-                },
-                "@value": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@value",
-                "@language"
-              ],
-              "type": "object"
-            },
-            "minItems": 0,
-            "type": "array"
-          },
           "GeregistreerdPersoon.volledigeNaam": {
             "description": "De volledige naam van de Persoon, doorgaans de combinatie van voornamen en achternaam.",
             "properties": {
@@ -794,9 +789,9 @@
           "@id",
           "@type",
           "GeregistreerdPersoon.registratie",
+          "GeregistreerdPersoon.volledigeNaam",
           "GeregistreerdPersoon.geslacht",
-          "GeregistreerdPersoon.heeftGeboorte",
-          "GeregistreerdPersoon.volledigeNaam"
+          "GeregistreerdPersoon.heeftGeboorte"
         ],
         "type": "object"
       },
@@ -2160,6 +2155,134 @@
         ],
         "type": "object"
       },
+      "OrganisatieActiviteit": {
+        "description": "Type activiteit die door een Organisatie wordt uitgeoefend.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025/context/persoon.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/OrganisatieActiviteit\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "OrganisatieActiviteit type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "OrganisatieClassificatie": {
+        "description": "Rangschikking van een Organisatie in een classificatiesysteem.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025/context/persoon.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/OrganisatieClassificatie\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "OrganisatieClassificatie type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "OrganisatieStatus": {
+        "description": "Toestand van een Organisatie.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025/context/persoon.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/OrganisatieStatus\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "OrganisatieStatus type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "OrganisatieType": {
+        "description": "Soort Organisatie.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/persoon-basis/ontwerpstandaard/2025/context/persoon.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/OrganisatieType\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "OrganisatieType type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
       "Overlijden": {
         "description": "Het doodgaan van een Persoon.",
         "properties": {
@@ -2310,7 +2433,7 @@
         "type": "object"
       },
       "Persoon": {
-        "description": "Een Persoon is een Agent die een menselijk wezen voorsteld.",
+        "description": "Natuurlijk persoon.",
         "properties": {
           "@context": {
             "enum": [
@@ -2332,17 +2455,305 @@
             },
             "minItems": 1,
             "type": "array"
+          },
+          "Persoon.achternaam": {
+            "description": "Gedeelte van de volledige naam van de Persoon ontvangen van de vorige generatie. Ook wel familienaam genoemd omdat de achternaam een familiale verwantschap aanduidt.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ],
+            "type": "object"
+          },
+          "Persoon.alternatieveNaam": {
+            "description": "Lijst van String items.",
+            "items": {
+              "description": "Alternatief voor de volledige naam van de Persoon. Bijvoorbeeld pseudoniem.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Persoon.contactinfo": {
+            "description": "Informatie zoals email, telefoon, ... die toelaat de Persoon te contacteren.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Contactpunt\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Persoon.geboortenaam": {
+            "description": "Volledige naam van de Persoon bij geboorte. De namen van een persoon kunnen in de loop van de tijd wijzigen, bijvoorbeeld: de achternaam kan wijzigen door een huwelijk. De oorspronkelijke naam wordt echter vaak ook nog gebruikt.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ],
+            "type": "object"
+          },
+          "Persoon.gebruikteVoornaam": {
+            "description": "Belangrijkste van de voornamen van een Persoon.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ],
+            "type": "object"
+          },
+          "Persoon.geslacht": {
+            "description": "De uiting van een Persoon's indentiteit, expressie en sociale rol. Het geslacht van een Persoon is sterk afhankelijk van de manier waarop dit gedefinieerd is, dit kan op basis van de biologische kenmerken maar ook op basis van gender, genderindentiteit, genderexpressie, etc. Voor meer informatie zie <a href=\"https://www.vlaanderen.be/dienst-diversiteitsbeleid/begrippen-rond-gender-en-seksuele-diversiteit\">Begrippen rond gender- en seksuele diversiteit</a>.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Geslacht\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Persoon.heeftBurgerlijkeStaat": {
+            "description": "Burgerlijke Staat van de Persoon.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/BurgerlijkeStaat\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Persoon.heeftGeboorte": {
+            "description": "Verwijst naar de geboortegebeurtenis van de Persoon. Bevat vaak de geboortegevens van de Persoon.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Geboorte\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Persoon.heeftNationaliteit": {
+            "description": "Lijst van Nationaliteit items.",
+            "items": {
+              "description": "Natioinaliteit van de persoon.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Nationaliteit\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Persoon.heeftOverlijden": {
+            "description": "Verwijst naar de overlijdensgebeurtenis van de Persoon. Bevat vaak de overlijdensgegevens van de Persoon.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Overlijden\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Persoon.heeftRelatieMet": {
+            "description": "Lijst van Persoon items.",
+            "items": {
+              "description": "Persoon waarmee de Persoon gerelateerd is.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Persoon\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Persoon.inwonerschap": {
+            "description": "Lijst van Jurisdictie items.",
+            "items": {
+              "description": "Jurisdictie waarbinnen het Inwonerschap van de Persoon is gedefinieerd.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Jurisdictie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Persoon.isHoofdVan": {
+            "description": "Persoon die standaard het Gezin vertegenwoordigt.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Gezin\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Persoon.isLidVan": {
+            "description": "Lijst van Organisatie items.",
+            "items": {
+              "description": "Niet nader bepaald lidmaatschap van een Agent van een Organisatie. Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Organisatie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Persoon.matrioniem": {
+            "description": "Achternaam gebaseerd op de voornaam van de moeder van een Persoon. Bijvoorbeeld in Ijsland: Helguson (zoon van Helga).",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ],
+            "type": "object"
+          },
+          "Persoon.patroniem": {
+            "description": "Achternaam gebaseerd op de voornaam van de vader van een Persoon. Bijvoorbeeld in Ijsland: Magnusdottir (dochter van Magnus).",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ],
+            "type": "object"
+          },
+          "Persoon.staatsburgerschap": {
+            "description": "Lijst van Jurisdictie items.",
+            "items": {
+              "description": "Jurisdictie waarbinnen het Staatsburgerschap van de Persoon is gedefinieerd.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Jurisdictie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Persoon.volledigeNaam": {
+            "description": "De volledige naam van de Persoon, doorgaans de combinatie van voornamen en achternaam.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ],
+            "type": "object"
+          },
+          "Persoon.voornaam": {
+            "description": "Lijst van String items.",
+            "items": {
+              "description": "Naam die een Persoon bij geboorte wordt gegeven. Onderscheidt de Persoon van de andere personen in de familie.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
           }
         },
         "required": [
           "@context",
           "@id",
-          "@type"
+          "@type",
+          "Persoon.volledigeNaam",
+          "Persoon.geslacht",
+          "Persoon.heeftGeboorte"
         ],
         "type": "object"
       },
       "Persoonsgebeurtenis": {
-        "description": "Belangrijke gebeurtenis ih leven ve persoon.",
+        "description": "Belangrijke gebeurtenis ih leven van een persoon.",
         "properties": {
           "@context": {
             "enum": [
@@ -3171,7 +3582,7 @@
     },
     "/id/Agent/{id}": {
       "get": {
-        "description": "Een Agent is verantwoordelijk voor een bepaalde Activiteit, bestaan van een Object, of een Activiteit van een andere Agent.",
+        "description": "Een agent zoals een Persoon, groep, software of fysiek artifact.",
         "operationId": "AgentGET",
         "parameters": [
           {
@@ -3194,7 +3605,15 @@
               }
             },
             "description": "Agent object gevonden.",
-            "links": {}
+            "links": {
+              "OrganisatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Agent.isLidVan` kan gebruikt worden om het gerefereerde object van het type `Organisatie` op te halen.",
+                "operationId": "OrganisatieGET",
+                "parameters": {
+                  "id": "$response.body#/Agent.isLidVan/@id"
+                }
+              }
+            }
           },
           "400": {
             "description": "Ontbrekende informatie bij het opvragen een Agent object."
@@ -3203,7 +3622,7 @@
             "description": "Agent object met gegeven ID niet gevonden."
           }
         },
-        "summary": "Een Agent is verantwoordelijk voor een bepaalde Activiteit, bestaan van een Object, of een Activiteit van een andere Agent.",
+        "summary": "Een agent zoals een Persoon, groep, software of fysiek artifact.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -4339,6 +4758,166 @@
         ]
       }
     },
+    "/id/OrganisatieActiviteit/{id}": {
+      "get": {
+        "description": "Type activiteit die door een Organisatie wordt uitgeoefend.",
+        "operationId": "OrganisatieActiviteitGET",
+        "parameters": [
+          {
+            "description": "Identificator van een OrganisatieActiviteit object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganisatieActiviteit"
+                }
+              }
+            },
+            "description": "OrganisatieActiviteit object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een OrganisatieActiviteit object."
+          },
+          "404": {
+            "description": "OrganisatieActiviteit object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Type activiteit die door een Organisatie wordt uitgeoefend.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/OrganisatieClassificatie/{id}": {
+      "get": {
+        "description": "Rangschikking van een Organisatie in een classificatiesysteem.",
+        "operationId": "OrganisatieClassificatieGET",
+        "parameters": [
+          {
+            "description": "Identificator van een OrganisatieClassificatie object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganisatieClassificatie"
+                }
+              }
+            },
+            "description": "OrganisatieClassificatie object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een OrganisatieClassificatie object."
+          },
+          "404": {
+            "description": "OrganisatieClassificatie object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Rangschikking van een Organisatie in een classificatiesysteem.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/OrganisatieStatus/{id}": {
+      "get": {
+        "description": "Toestand van een Organisatie.",
+        "operationId": "OrganisatieStatusGET",
+        "parameters": [
+          {
+            "description": "Identificator van een OrganisatieStatus object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganisatieStatus"
+                }
+              }
+            },
+            "description": "OrganisatieStatus object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een OrganisatieStatus object."
+          },
+          "404": {
+            "description": "OrganisatieStatus object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Toestand van een Organisatie.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/OrganisatieType/{id}": {
+      "get": {
+        "description": "Soort Organisatie.",
+        "operationId": "OrganisatieTypeGET",
+        "parameters": [
+          {
+            "description": "Identificator van een OrganisatieType object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganisatieType"
+                }
+              }
+            },
+            "description": "OrganisatieType object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een OrganisatieType object."
+          },
+          "404": {
+            "description": "OrganisatieType object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Soort Organisatie.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
     "/id/Overlijden/{id}": {
       "get": {
         "description": "Het doodgaan van een Persoon.",
@@ -4451,7 +5030,7 @@
     },
     "/id/Persoon/{id}": {
       "get": {
-        "description": "Een Persoon is een Agent die een menselijk wezen voorsteld.",
+        "description": "Natuurlijk persoon.",
         "operationId": "PersoonGET",
         "parameters": [
           {
@@ -4474,7 +5053,78 @@
               }
             },
             "description": "Persoon object gevonden.",
-            "links": {}
+            "links": {
+              "BurgerlijkeStaatGET": {
+                "description": "Het `@id` attribuut van de waarde van `Persoon.heeftBurgerlijkeStaat` kan gebruikt worden om het gerefereerde object van het type `BurgerlijkeStaat` op te halen.",
+                "operationId": "BurgerlijkeStaatGET",
+                "parameters": {
+                  "id": "$response.body#/Persoon.heeftBurgerlijkeStaat/@id"
+                }
+              },
+              "ContactpuntGET": {
+                "description": "Het `@id` attribuut van de waarde van `Persoon.contactinfo` kan gebruikt worden om het gerefereerde object van het type `Contactpunt` op te halen.",
+                "operationId": "ContactpuntGET",
+                "parameters": {
+                  "id": "$response.body#/Persoon.contactinfo/@id"
+                }
+              },
+              "GeboorteGET": {
+                "description": "Het `@id` attribuut van de waarde van `Persoon.heeftGeboorte` kan gebruikt worden om het gerefereerde object van het type `Geboorte` op te halen.",
+                "operationId": "GeboorteGET",
+                "parameters": {
+                  "id": "$response.body#/Persoon.heeftGeboorte/@id"
+                }
+              },
+              "GeslachtGET": {
+                "description": "Het `@id` attribuut van de waarde van `Persoon.geslacht` kan gebruikt worden om het gerefereerde object van het type `Geslacht` op te halen.",
+                "operationId": "GeslachtGET",
+                "parameters": {
+                  "id": "$response.body#/Persoon.geslacht/@id"
+                }
+              },
+              "GezinGET": {
+                "description": "Het `@id` attribuut van de waarde van `Persoon.isHoofdVan` kan gebruikt worden om het gerefereerde object van het type `Gezin` op te halen.",
+                "operationId": "GezinGET",
+                "parameters": {
+                  "id": "$response.body#/Persoon.isHoofdVan/@id"
+                }
+              },
+              "JurisdictieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Persoon.inwonerschap` kan gebruikt worden om het gerefereerde object van het type `Jurisdictie` op te halen.",
+                "operationId": "JurisdictieGET",
+                "parameters": {
+                  "id": "$response.body#/Persoon.inwonerschap/@id"
+                }
+              },
+              "NationaliteitGET": {
+                "description": "Het `@id` attribuut van de waarde van `Persoon.heeftNationaliteit` kan gebruikt worden om het gerefereerde object van het type `Nationaliteit` op te halen.",
+                "operationId": "NationaliteitGET",
+                "parameters": {
+                  "id": "$response.body#/Persoon.heeftNationaliteit/@id"
+                }
+              },
+              "OrganisatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Persoon.isLidVan` kan gebruikt worden om het gerefereerde object van het type `Organisatie` op te halen.",
+                "operationId": "OrganisatieGET",
+                "parameters": {
+                  "id": "$response.body#/Persoon.isLidVan/@id"
+                }
+              },
+              "OverlijdenGET": {
+                "description": "Het `@id` attribuut van de waarde van `Persoon.heeftOverlijden` kan gebruikt worden om het gerefereerde object van het type `Overlijden` op te halen.",
+                "operationId": "OverlijdenGET",
+                "parameters": {
+                  "id": "$response.body#/Persoon.heeftOverlijden/@id"
+                }
+              },
+              "PersoonGET": {
+                "description": "Het `@id` attribuut van de waarde van `Persoon.heeftRelatieMet` kan gebruikt worden om het gerefereerde object van het type `Persoon` op te halen.",
+                "operationId": "PersoonGET",
+                "parameters": {
+                  "id": "$response.body#/Persoon.heeftRelatieMet/@id"
+                }
+              }
+            }
           },
           "400": {
             "description": "Ontbrekende informatie bij het opvragen een Persoon object."
@@ -4483,7 +5133,7 @@
             "description": "Persoon object met gegeven ID niet gevonden."
           }
         },
-        "summary": "Een Persoon is een Agent die een menselijk wezen voorsteld.",
+        "summary": "Natuurlijk persoon.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -4491,7 +5141,7 @@
     },
     "/id/Persoonsgebeurtenis/{id}": {
       "get": {
-        "description": "Belangrijke gebeurtenis ih leven ve persoon.",
+        "description": "Belangrijke gebeurtenis ih leven van een persoon.",
         "operationId": "PersoonsgebeurtenisGET",
         "parameters": [
           {
@@ -4531,7 +5181,7 @@
             "description": "Persoonsgebeurtenis object met gegeven ID niet gevonden."
           }
         },
-        "summary": "Belangrijke gebeurtenis ih leven ve persoon.",
+        "summary": "Belangrijke gebeurtenis ih leven van een persoon.",
         "tags": [
           "Externe datastandaarden"
         ]
