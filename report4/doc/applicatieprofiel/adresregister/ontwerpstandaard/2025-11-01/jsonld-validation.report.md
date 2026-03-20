@@ -2,103 +2,103 @@
 
 #||# -------------------------------------  
 
-2025-10-24T12:17:59.030Z info: Loaded 47 URI prefixes into whitelist
+2026-03-20T07:55:31.550Z info: Loaded 47 URI prefixes into whitelist
 
-2025-10-24T12:17:59.233Z warn: Found sentence without a '.': 'Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is' for subject: [urn:oslo-toolchain:76f8f1e73f6f7a27d42d87a5f429d5384c657f53344e47a6d1248a275a7e4e8e](all-adressenregister.jsonld#L1252)
+2026-03-20T07:55:31.755Z warn: Found sentence without a '.': 'Naam ve geografisch gebied of plaats die een aantal adresseerbare objecten groepeert om deze te adresseren zonder dat het gebied of de plaats een administratieve eenheid is' for subject: [urn:oslo-toolchain:76f8f1e73f6f7a27d42d87a5f429d5384c657f53344e47a6d1248a275a7e4e8e](all-adressenregister.jsonld#L1268)
 
-2025-10-24T12:17:59.234Z warn: Found sentence without a '.': 'Een door het bevoegde gemeentelijke orgaan als zodanig aangewezen terrein of gedeelte daarvan dat bestemd is voor het permanent plaatsen van een niet direct en niet duurzaam met de aarde verbonden en voor woon -, bedrijfsmatige, of recreatieve doeleinden' for subject: [[urn:oslo-toolchain:d9394d2e07d06334b5464e86daec641f7335783c440124126f30d24c604f822e](all-adressenregister.jsonld#L4068)](all-adressenregister.jsonld#L364)
+2026-03-20T07:55:31.755Z warn: Found sentence without a '.': 'Een door het bevoegde gemeentelijke orgaan als zodanig aangewezen terrein of gedeelte daarvan dat bestemd is voor het permanent plaatsen van een niet direct en niet duurzaam met de aarde verbonden en voor woon -, bedrijfsmatige, of recreatieve doeleinden' for subject: [[urn:oslo-toolchain:d9394d2e07d06334b5464e86daec641f7335783c440124126f30d24c604f822e](all-adressenregister.jsonld#L4084)](all-adressenregister.jsonld#L380)
 
-2025-10-24T12:17:59.234Z warn: Found empty sentence for subject: [urn:oslo-toolchain:f6cd6977df4c0913d936b7d0ec1f7bf9e65d8b6a25f07c09d62eb34703438b54](all-adressenregister.jsonld#L505)
+2026-03-20T07:55:31.755Z warn: Found empty sentence for subject: [urn:oslo-toolchain:f6cd6977df4c0913d936b7d0ec1f7bf9e65d8b6a25f07c09d62eb34703438b54](all-adressenregister.jsonld#L521)
 
-2025-10-24T12:17:59.234Z warn: Found empty sentence for subject: [urn:oslo-toolchain:753d2ef67c079b6083f2434281f05ca6631e4e60012d7863a3f72039cb2971d4](all-adressenregister.jsonld#L652)
+2026-03-20T07:55:31.755Z warn: Found empty sentence for subject: [urn:oslo-toolchain:753d2ef67c079b6083f2434281f05ca6631e4e60012d7863a3f72039cb2971d4](all-adressenregister.jsonld#L668)
 
-2025-10-24T12:17:59.234Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d462e22acfeaca355714da999a1069a5ce35194e24a52ded169708d4b7906adb](all-adressenregister.jsonld#L758)
+2026-03-20T07:55:31.755Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d462e22acfeaca355714da999a1069a5ce35194e24a52ded169708d4b7906adb](all-adressenregister.jsonld#L774)
 
-2025-10-24T12:17:59.234Z warn: Found empty sentence for subject: [urn:oslo-toolchain:bf525a78370b105b0b3c656285d2e8ab45ddefaa86a83f585de725855bc02ccb](all-adressenregister.jsonld#L808)
+2026-03-20T07:55:31.755Z warn: Found empty sentence for subject: [urn:oslo-toolchain:bf525a78370b105b0b3c656285d2e8ab45ddefaa86a83f585de725855bc02ccb](all-adressenregister.jsonld#L824)
 
-2025-10-24T12:17:59.234Z warn: Found empty sentence for subject: [urn:oslo-toolchain:b6a5d205bed67d0664d93d9cd23be0688194a25f2771491ba561143fe2b1a51c](all-adressenregister.jsonld#L914)
+2026-03-20T07:55:31.755Z warn: Found empty sentence for subject: [urn:oslo-toolchain:b6a5d205bed67d0664d93d9cd23be0688194a25f2771491ba561143fe2b1a51c](all-adressenregister.jsonld#L930)
 
-2025-10-24T12:17:59.234Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8a627879c0b6aba31523217f1d0acba94fdf8736f351771bb88f0c350eeee605](all-adressenregister.jsonld#L964)
+2026-03-20T07:55:31.755Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8a627879c0b6aba31523217f1d0acba94fdf8736f351771bb88f0c350eeee605](all-adressenregister.jsonld#L980)
 
-2025-10-24T12:17:59.234Z warn: Found empty sentence for subject: [urn:oslo-toolchain:cb526e40f06b3a77f7001190eae0388c0324e18bdc328ee0de9cd491a634f222](all-adressenregister.jsonld#L1014)
+2026-03-20T07:55:31.755Z warn: Found empty sentence for subject: [urn:oslo-toolchain:cb526e40f06b3a77f7001190eae0388c0324e18bdc328ee0de9cd491a634f222](all-adressenregister.jsonld#L1030)
 
-2025-10-24T12:17:59.234Z warn: Found empty sentence for subject: [urn:oslo-toolchain:f636e2353a08f46c2ea755594d33c978f360edd498250482baa9524bd49a58b7](all-adressenregister.jsonld#L1064)
+2026-03-20T07:55:31.756Z warn: Found empty sentence for subject: [urn:oslo-toolchain:f636e2353a08f46c2ea755594d33c978f360edd498250482baa9524bd49a58b7](all-adressenregister.jsonld#L1080)
 
-2025-10-24T12:17:59.234Z warn: Found empty sentence for subject: [urn:oslo-toolchain:a33d4f8bf4586ee08a6cd2ae3dba2dd2e01ae11dcdae76299721b4a2bb92d80b](all-adressenregister.jsonld#L1114)
+2026-03-20T07:55:31.756Z warn: Found empty sentence for subject: [urn:oslo-toolchain:a33d4f8bf4586ee08a6cd2ae3dba2dd2e01ae11dcdae76299721b4a2bb92d80b](all-adressenregister.jsonld#L1130)
 
-2025-10-24T12:17:59.234Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e01d69cd9fa5b7081abe0b20b36c806e00d1307b88ddda13ef4e96b9487764f6](all-adressenregister.jsonld#L1164)
+2026-03-20T07:55:31.756Z warn: Found empty sentence for subject: [urn:oslo-toolchain:e01d69cd9fa5b7081abe0b20b36c806e00d1307b88ddda13ef4e96b9487764f6](all-adressenregister.jsonld#L1180)
 
-2025-10-24T12:17:59.234Z warn: Found empty sentence for subject: [urn:oslo-toolchain:602242990fc288362c69919ec5105f20adb3498a08d91ca67c7b770536718466](all-adressenregister.jsonld#L1208)
+2026-03-20T07:55:31.756Z warn: Found empty sentence for subject: [urn:oslo-toolchain:602242990fc288362c69919ec5105f20adb3498a08d91ca67c7b770536718466](all-adressenregister.jsonld#L1224)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:53e80330ffe66043220a981f89d2a840b839ca9cbbf2f6c13b64dc9013bdec07](all-adressenregister.jsonld#L1355)
+2026-03-20T07:55:31.756Z warn: Found empty sentence for subject: [urn:oslo-toolchain:53e80330ffe66043220a981f89d2a840b839ca9cbbf2f6c13b64dc9013bdec07](all-adressenregister.jsonld#L1371)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:18c70fc134b768c7dc0979e094bf5d166705eec570c0f809c8eb08fdd152474c](all-adressenregister.jsonld#L1467)
+2026-03-20T07:55:31.756Z warn: Found empty sentence for subject: [urn:oslo-toolchain:18c70fc134b768c7dc0979e094bf5d166705eec570c0f809c8eb08fdd152474c](all-adressenregister.jsonld#L1483)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4849b176c4a4f10d51db8384c729a4acfba783ae44e2b9777c3637c42a51b0c3](all-adressenregister.jsonld#L1520)
+2026-03-20T07:55:31.756Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4849b176c4a4f10d51db8384c729a4acfba783ae44e2b9777c3637c42a51b0c3](all-adressenregister.jsonld#L1536)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:73d8450c8ba2bb584d3507322893ca85962c7d9b8a6764359e44fc73e1a2200e](all-adressenregister.jsonld#L1564)
+2026-03-20T07:55:31.756Z warn: Found empty sentence for subject: [urn:oslo-toolchain:73d8450c8ba2bb584d3507322893ca85962c7d9b8a6764359e44fc73e1a2200e](all-adressenregister.jsonld#L1580)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:ce6f2be4d1f40a56ca61b97879dcd3c4e985ba89ae1ad92834abca1a1a2856ba](all-adressenregister.jsonld#L1608)
+2026-03-20T07:55:31.756Z warn: Found empty sentence for subject: [urn:oslo-toolchain:ce6f2be4d1f40a56ca61b97879dcd3c4e985ba89ae1ad92834abca1a1a2856ba](all-adressenregister.jsonld#L1624)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:822fa79f5d3ed87b0a46372135b7bd81abfe21a4012e90d88493785c9e59e062](all-adressenregister.jsonld#L1652)
+2026-03-20T07:55:31.756Z warn: Found empty sentence for subject: [urn:oslo-toolchain:822fa79f5d3ed87b0a46372135b7bd81abfe21a4012e90d88493785c9e59e062](all-adressenregister.jsonld#L1668)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:82a1e0bcf8b07d766a70f481304e35c6cc02817e17265e3130049f751cafcebc](all-adressenregister.jsonld#L1696)
+2026-03-20T07:55:31.756Z warn: Found empty sentence for subject: [urn:oslo-toolchain:82a1e0bcf8b07d766a70f481304e35c6cc02817e17265e3130049f751cafcebc](all-adressenregister.jsonld#L1712)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d28ada77c93fd836878bcc0d745557a9304de75972f0cccd1e22a556adf46acf](all-adressenregister.jsonld#L1740)
+2026-03-20T07:55:31.756Z warn: Found empty sentence for subject: [urn:oslo-toolchain:d28ada77c93fd836878bcc0d745557a9304de75972f0cccd1e22a556adf46acf](all-adressenregister.jsonld#L1756)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8a802d82e5ea277f3729dc2d1aad92ddc8df6b66d070271e3bc68b757a8ab500](all-adressenregister.jsonld#L1934)
+2026-03-20T07:55:31.757Z warn: Found empty sentence for subject: [urn:oslo-toolchain:8a802d82e5ea277f3729dc2d1aad92ddc8df6b66d070271e3bc68b757a8ab500](all-adressenregister.jsonld#L1950)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:30a3489d12ceb1f5ce6da8bc433977fc4959419546e2dadbcb80767ffece51e5](all-adressenregister.jsonld#L1984)
+2026-03-20T07:55:31.757Z warn: Found empty sentence for subject: [urn:oslo-toolchain:30a3489d12ceb1f5ce6da8bc433977fc4959419546e2dadbcb80767ffece51e5](all-adressenregister.jsonld#L2000)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:b932a89d4508b4b915e231f445def5668cd184fc84f261670ad92d5ec62b4546](all-adressenregister.jsonld#L2401)
+2026-03-20T07:55:31.757Z warn: Found empty sentence for subject: [urn:oslo-toolchain:b932a89d4508b4b915e231f445def5668cd184fc84f261670ad92d5ec62b4546](all-adressenregister.jsonld#L2417)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:0842308883e461019be67a63c31d615663bf107094da246f872139874cb5de0c](all-adressenregister.jsonld#L4088)
+2026-03-20T07:55:31.757Z warn: Found empty sentence for subject: [urn:oslo-toolchain:0842308883e461019be67a63c31d615663bf107094da246f872139874cb5de0c](all-adressenregister.jsonld#L4104)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:796c2a0c87b09200f25f2d39cf1ef5b3ae22855450ae48aed1f209e209c944d0](all-adressenregister.jsonld#L2451)
+2026-03-20T07:55:31.757Z warn: Found empty sentence for subject: [urn:oslo-toolchain:796c2a0c87b09200f25f2d39cf1ef5b3ae22855450ae48aed1f209e209c944d0](all-adressenregister.jsonld#L2467)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:249015964cef8d0b621e5760629182afb8f21964a8d4c75687f12489949dda77](all-adressenregister.jsonld#L4146)
+2026-03-20T07:55:31.757Z warn: Found empty sentence for subject: [urn:oslo-toolchain:249015964cef8d0b621e5760629182afb8f21964a8d4c75687f12489949dda77](all-adressenregister.jsonld#L4162)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4814a7188bb60dec1d992b79f4b3ac462d1bb70eee9e07c0bd80975855b7828d](all-adressenregister.jsonld#L2501)
+2026-03-20T07:55:31.757Z warn: Found empty sentence for subject: [urn:oslo-toolchain:4814a7188bb60dec1d992b79f4b3ac462d1bb70eee9e07c0bd80975855b7828d](all-adressenregister.jsonld#L2517)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:5d6dafc9d4d37885f27aaa5cb374541b7ef35f871bf795be9fdc6c9fa6cf3465](all-adressenregister.jsonld#L2551)
+2026-03-20T07:55:31.757Z warn: Found empty sentence for subject: [urn:oslo-toolchain:5d6dafc9d4d37885f27aaa5cb374541b7ef35f871bf795be9fdc6c9fa6cf3465](all-adressenregister.jsonld#L2567)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:3569025df7b68ca7c6eefd9d8fdfaf19edf537262ab3713aa10c877669550e32](all-adressenregister.jsonld#L4175)
+2026-03-20T07:55:31.757Z warn: Found empty sentence for subject: [urn:oslo-toolchain:3569025df7b68ca7c6eefd9d8fdfaf19edf537262ab3713aa10c877669550e32](all-adressenregister.jsonld#L4191)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:5ab8506491047580cfd3382d8bd34e9422a2bf28c5df57fafff110be39e9e275](all-adressenregister.jsonld#L2663)
+2026-03-20T07:55:31.757Z warn: Found empty sentence for subject: [urn:oslo-toolchain:5ab8506491047580cfd3382d8bd34e9422a2bf28c5df57fafff110be39e9e275](all-adressenregister.jsonld#L2679)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:3966ff771f90fe510656161d15a0a634935580ad74a8867354937c3ead099de9](all-adressenregister.jsonld#L4204)
+2026-03-20T07:55:31.757Z warn: Found empty sentence for subject: [urn:oslo-toolchain:3966ff771f90fe510656161d15a0a634935580ad74a8867354937c3ead099de9](all-adressenregister.jsonld#L4220)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:37c8d1ee3533020bd05aa641f49047f3e539a87d008e4865a2504c25ed5b6be0](all-adressenregister.jsonld#L2713)
+2026-03-20T07:55:31.757Z warn: Found empty sentence for subject: [urn:oslo-toolchain:37c8d1ee3533020bd05aa641f49047f3e539a87d008e4865a2504c25ed5b6be0](all-adressenregister.jsonld#L2729)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:c53d2f7cd8165382348580bb5d6bc284d7e49a13268b90ac0a70c6c4fc868a9f](all-adressenregister.jsonld#L2763)
+2026-03-20T07:55:31.757Z warn: Found empty sentence for subject: [urn:oslo-toolchain:c53d2f7cd8165382348580bb5d6bc284d7e49a13268b90ac0a70c6c4fc868a9f](all-adressenregister.jsonld#L2779)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:578b610c184a1740ca0c5fb9aea325c9f2368a0d1c45549eab483fe0ccf928fa](all-adressenregister.jsonld#L2851)
+2026-03-20T07:55:31.757Z warn: Found empty sentence for subject: [urn:oslo-toolchain:578b610c184a1740ca0c5fb9aea325c9f2368a0d1c45549eab483fe0ccf928fa](all-adressenregister.jsonld#L2867)
 
-2025-10-24T12:17:59.235Z warn: Found empty sentence for subject: [urn:oslo-toolchain:cad97e10fcdb2304ab6d4f7bb58410bcbfe27144b9302d399f42402c33ad41f1](all-adressenregister.jsonld#L2951)
+2026-03-20T07:55:31.757Z warn: Found empty sentence for subject: [urn:oslo-toolchain:cad97e10fcdb2304ab6d4f7bb58410bcbfe27144b9302d399f42402c33ad41f1](all-adressenregister.jsonld#L2967)
 
-2025-10-24T12:17:59.235Z warn: Found sentence without a '.': 'Gegevens die officieel geen deel uitmaken ve adres, bv de verdieping of de provincie…' for subject: [urn:oslo-toolchain:9b3a20b326ce7ca24c5b1f8bfd587257e22b4c2af8fc5e97da6560b7b38c53e1](all-adressenregister.jsonld#L402)
+2026-03-20T07:55:31.757Z warn: Found sentence without a '.': 'Gegevens die officieel geen deel uitmaken ve adres, bv de verdieping of de provincie…' for subject: [urn:oslo-toolchain:9b3a20b326ce7ca24c5b1f8bfd587257e22b4c2af8fc5e97da6560b7b38c53e1](all-adressenregister.jsonld#L418)
 
-2025-10-24T12:17:59.236Z warn: Labels must only contain alphabetical characters: 'toegekend door (String)' for subject: [urn:oslo-toolchain:8a802d82e5ea277f3729dc2d1aad92ddc8df6b66d070271e3bc68b757a8ab500](all-adressenregister.jsonld#L1934)
+2026-03-20T07:55:31.758Z warn: Labels must only contain alphabetical characters: 'toegekend door (String)' for subject: [urn:oslo-toolchain:8a802d82e5ea277f3729dc2d1aad92ddc8df6b66d070271e3bc68b757a8ab500](all-adressenregister.jsonld#L1950)
 
-2025-10-24T12:17:59.236Z warn: Labels must only contain alphabetical characters: 'versie-identificator' for subject: [urn:oslo-toolchain:c27dae4143ce075172115b285a7697749038dc66dd30c16334747c4bd6dba100](all-adressenregister.jsonld#L2116)
+2026-03-20T07:55:31.758Z warn: Labels must only contain alphabetical characters: 'versie-identificator' for subject: [urn:oslo-toolchain:c27dae4143ce075172115b285a7697749038dc66dd30c16334747c4bd6dba100](all-adressenregister.jsonld#L2132)
 
-2025-10-24T12:17:59.236Z warn: Labels must not end with a '.': 'Geometrie van de plaats of het gebied.' for subject: [urn:oslo-toolchain:19580dbebca21881ec689e158351997795054291b42ff2b3c9fd77c65a3a7b9b](all-adressenregister.jsonld#L2901)
+2026-03-20T07:55:31.758Z warn: Labels must not end with a '.': 'Geometrie van de plaats of het gebied.' for subject: [urn:oslo-toolchain:19580dbebca21881ec689e158351997795054291b42ff2b3c9fd77c65a3a7b9b](all-adressenregister.jsonld#L2917)
 
-2025-10-24T12:17:59.238Z error: Found missing class or attribute (Perceel): [[urn:oslo-toolchain:c182391bd3a746b3c52cdb5dcceb45d51a1659a62a838f7aa8fa1b5f0b6a7349](all-adressenregister.jsonld#L4084)](all-adressenregister.jsonld#L594)
+2026-03-20T07:55:31.760Z error: Found missing class or attribute (Perceel): [[urn:oslo-toolchain:c182391bd3a746b3c52cdb5dcceb45d51a1659a62a838f7aa8fa1b5f0b6a7349](all-adressenregister.jsonld#L4100)](all-adressenregister.jsonld#L610)
 
-2025-10-24T12:17:59.238Z error: Found missing class or attribute (Object): [urn:oslo-toolchain:64826ceb433316b96f25dc337b5052e1155f2cd4c507d3937899b4f3870bc3a7](all-adressenregister.jsonld#L4041)
+2026-03-20T07:55:31.760Z error: Found missing class or attribute (Object): [urn:oslo-toolchain:64826ceb433316b96f25dc337b5052e1155f2cd4c507d3937899b4f3870bc3a7](all-adressenregister.jsonld#L4057)
 
-2025-10-24T12:17:59.243Z error: Found missing class or attribute (GeometrieMethodeWaarde): [urn:oslo-toolchain:0d0aa2450e97b7a5a76d78c5b2968755b851e62d58d0d9ce9db1ee31e093116b](all-adressenregister.jsonld#L4233)
+2026-03-20T07:55:31.765Z error: Found missing class or attribute (GeometrieMethodeWaarde): [urn:oslo-toolchain:0d0aa2450e97b7a5a76d78c5b2968755b851e62d58d0d9ce9db1ee31e093116b](all-adressenregister.jsonld#L4249)
 
-2025-10-24T12:17:59.244Z error: Found missing class or attribute (GeometrieSpecificatieWaarde): [urn:oslo-toolchain:6a16a0c66c5193f4bedc8eb1e0c445e484357fbf54bdd80b8d418902ad4321e6](all-adressenregister.jsonld#L4244)
+2026-03-20T07:55:31.766Z error: Found missing class or attribute (GeometrieSpecificatieWaarde): [urn:oslo-toolchain:6a16a0c66c5193f4bedc8eb1e0c445e484357fbf54bdd80b8d418902ad4321e6](all-adressenregister.jsonld#L4260)
 
-2025-10-24T12:17:59.244Z info: Validation successful! All assigned URIs are whitelisted.
+2026-03-20T07:55:31.766Z info: Validation successful! All assigned URIs are whitelisted.
 
-2025-10-24T12:17:59.244Z info: Validation found 37 sentences with spelling mistakes.
+2026-03-20T07:55:31.766Z info: Validation found 37 sentences with spelling mistakes.
 
-2025-10-24T12:17:59.244Z info: Validation found 3 labels with spelling mistakes.
+2026-03-20T07:55:31.766Z info: Validation found 3 labels with spelling mistakes.
 
-2025-10-24T12:17:59.244Z info: Validation successful! All base URIs seem to be valid.
+2026-03-20T07:55:31.766Z info: Validation successful! All base URIs seem to be valid.
 
-2025-10-24T12:17:59.244Z info: Validation found 4 missing referenced classes or attributes.
+2026-03-20T07:55:31.766Z info: Validation found 4 missing referenced classes or attributes.
 

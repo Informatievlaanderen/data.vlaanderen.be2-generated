@@ -80,7 +80,11 @@
   <http://purl.org/vocab/vann/usageNote> "Is abstract, ttz het type adresseerbaar object moet altijd worden opgegeven (vb gebouweenheid, perceel)."@nl;
   rdfs:comment "Geografisch object dat met een adres kan worden geïdentificeerd."@nl;
   shacl:closed false;
-  shacl:targetClass <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject> .
+  shacl:targetClass <https://data.vlaanderen.be/ns/adres#Ligplaats>,
+    <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject>,
+    <https://data.vlaanderen.be/ns/adres#Standplaats>,
+    <https://data.vlaanderen.be/ns/gebouw#Gebouweenheid>,
+    <https://data.vlaanderen.be/ns/perceel#Perceel> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/adresregister/ontwerpstandaard/2025-11-01#AdresuitbreidingShape> a shacl:NodeShape;
   rdfs:label "Adresuitbreiding"@nl;
@@ -421,9 +425,9 @@
     rdfs:label "is toegekend aan"@nl;
     rdfs:comment "Adresseerbaar object waaraan het adres is toegekend."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/adresregister/ontwerpstandaard/2025-11-01#BelgischAdres.IsToegekendAan>;
-    shacl:class <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject>;
     shacl:description "Adresseerbaar object waaraan het adres is toegekend."@nl;
     shacl:name "is toegekend aan"@nl;
+    shacl:or ([shacl:class <https://data.vlaanderen.be/ns/adres#AdresseerbaarObject>] [shacl:class <https://data.vlaanderen.be/ns/adres#Ligplaats>] [shacl:class <https://data.vlaanderen.be/ns/adres#Standplaats>] [shacl:class <https://data.vlaanderen.be/ns/gebouw#Gebouweenheid>] [shacl:class <https://data.vlaanderen.be/ns/perceel#Perceel>]);
     shacl:path <https://data.vlaanderen.be/ns/adres#isToegekendAan>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/adres#Adres> .
@@ -591,7 +595,8 @@
     shacl:nodeKind shacl:Literal;
     shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
   ];
-  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry>,
+    <http://www.opengis.net/ont/sf#Point> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/adresregister/ontwerpstandaard/2025-11-01#GestructureerdeIdentificatorShape> a shacl:NodeShape;
   rdfs:label "Gestructureerde Identificator"@nl;
@@ -811,10 +816,10 @@
     rdfs:label "geometrie"@nl;
     rdfs:comment "Geometrie van de plaats of het gebied."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/adresregister/ontwerpstandaard/2025-11-01#Plaats.Geometrie>;
-    shacl:class <http://www.w3.org/ns/locn#Geometry>;
     shacl:description "Geometrie van de plaats of het gebied."@nl;
     shacl:maxCount "1";
     shacl:name "geometrie"@nl;
+    shacl:or ([shacl:class <http://www.w3.org/ns/locn#Geometry>] [shacl:class <http://www.opengis.net/ont/sf#Point>]);
     shacl:path <http://www.w3.org/ns/locn#geometry>
   ];
   shacl:targetClass dc:Location .
