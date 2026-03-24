@@ -2,11 +2,11 @@
 
 #||# -------------------------------------  
 
-2026-03-24T09:36:53.534Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
+2026-03-24T09:53:45.877Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
 
-2026-03-24T09:36:53.539Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#hadMember which acts as a parent. Using original URI as fallback.
+2026-03-24T09:53:45.881Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#hadMember which acts as a parent. Using original URI as fallback.
 
-2026-03-24T09:36:53.539Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/dossier#isNeerslagVan which acts as a parent. Using original URI as fallback.
+2026-03-24T09:53:45.882Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/dossier#isNeerslagVan which acts as a parent. Using original URI as fallback.
 
 Error: No range found for class [urn:oslo-toolchain:65c7f1c9e2ec2a3ade2852c7ba7bff2cf16fe532acceced4c47f6785d8063448](all-EPBD.jsonld#L1113).
 
