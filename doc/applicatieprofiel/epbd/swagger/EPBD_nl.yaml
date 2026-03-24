@@ -79,11 +79,30 @@
           "Activiteit.genereert": {
             "description": "Lijst van Stuk items.",
             "items": {
-              "description": "Een activiteit kan een stuk genereren.",
+              "description": "Activiteit die het Stuk heeft voortgebracht.",
               "properties": {
                 "@id": {
                   "format": "uri",
                   "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Stuk\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Activiteit.vindPlaatsTijdens": {
+            "description": "Lijst van Zaak items.",
+            "items": {
+              "description": "Verwijzing naar de Zaak in het kader waarvan de Activiteit plaatsvindt.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Zaak\\/\\d",
                   "type": "string"
                 }
               },
@@ -305,7 +324,7 @@
             "minItems": 1,
             "type": "array"
           },
-          "BelgischAdres.isToegekendAan": {
+          "BelgischAdres.isToegekendaan": {
             "description": "Lijst van Adresseerbaar Object items.",
             "items": {
               "description": "Adresseerbaar object waaraan het adres is toegekend.",
@@ -391,7 +410,7 @@
           "Dossier.bestaatUit": {
             "description": "Lijst van Stuk items.",
             "items": {
-              "description": "Een dossier bestaat uit dossierstukken.",
+              "description": "Stuk dat deel uitmaakt van het Dossier.",
               "properties": {
                 "@id": {
                   "format": "uri",
@@ -408,7 +427,7 @@
             "type": "array"
           },
           "Dossier.isNeerslagVan": {
-            "description": "Een dossier is een neerslag van een zaak.",
+            "description": "Zaak in het kader waarvan het Dossier wordt aangelegd.",
             "properties": {
               "@id": {
                 "format": "uri",
@@ -653,6 +672,25 @@
             },
             "minItems": 1,
             "type": "array"
+          },
+          "KadastraalPlanperceel.liggingsadres": {
+            "description": "Lijst van Belgisch Adres items.",
+            "items": {
+              "description": "Adres dat met het KadastraalPlanperceel geassocieerd is.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Belgisch Adres\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
           }
         },
         "required": [
@@ -689,11 +727,30 @@
           "Observatie.genereert": {
             "description": "Lijst van Stuk items.",
             "items": {
-              "description": "Een activiteit kan een stuk genereren.",
+              "description": "Activiteit die het Stuk heeft voortgebracht.",
               "properties": {
                 "@id": {
                   "format": "uri",
                   "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Stuk\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Observatie.vindPlaatsTijdens": {
+            "description": "Lijst van Zaak items.",
+            "items": {
+              "description": "Verwijzing naar de Zaak in het kader waarvan de Activiteit plaatsvindt.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Zaak\\/\\d",
                   "type": "string"
                 }
               },
@@ -971,6 +1028,20 @@
             "minItems": 0,
             "type": "array"
           },
+          "PubliekeDienstverlening.heeftverantwoordelijke": {
+            "description": "PubliekeOrganisatie die of in wiens naam de PubliekeDienstverlening wordt verstrekt.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Publieke Organisatie\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
           "PubliekeDienstverlening.produceert": {
             "description": "Lijst van Output items.",
             "items": {
@@ -994,7 +1065,8 @@
         "required": [
           "@context",
           "@id",
-          "@type"
+          "@type",
+          "PubliekeDienstverlening.heeftverantwoordelijke"
         ],
         "type": "object"
       },
@@ -1221,11 +1293,30 @@
           "Vergunning.genereert": {
             "description": "Lijst van Stuk items.",
             "items": {
-              "description": "Een activiteit kan een stuk genereren.",
+              "description": "Activiteit die het Stuk heeft voortgebracht.",
               "properties": {
                 "@id": {
                   "format": "uri",
                   "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Stuk\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Vergunning.vindPlaatsTijdens": {
+            "description": "Lijst van Zaak items.",
+            "items": {
+              "description": "Verwijzing naar de Zaak in het kader waarvan de Activiteit plaatsvindt.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Zaak\\/\\d",
                   "type": "string"
                 }
               },
@@ -1394,7 +1485,7 @@
           "Zaak.zaakhandeling": {
             "description": "Lijst van Vergunning items.",
             "items": {
-              "description": "De Zaakhandelingen die worden gesteld in het kader van de Zaak.",
+              "description": "Het toekennen van een vergunning in het kader van de zaak.",
               "properties": {
                 "@id": {
                   "format": "uri",
@@ -1575,6 +1666,13 @@
                 "operationId": "StukGET",
                 "parameters": {
                   "id": "$response.body#/Activiteit.genereert/@id"
+                }
+              },
+              "ZaakGET": {
+                "description": "Het `@id` attribuut van de waarde van `Activiteit.vindPlaatsTijdens` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen.",
+                "operationId": "ZaakGET",
+                "parameters": {
+                  "id": "$response.body#/Activiteit.vindPlaatsTijdens/@id"
                 }
               }
             }
@@ -1817,10 +1915,10 @@
             "description": "BelgischAdres object gevonden.",
             "links": {
               "Adresseerbaar ObjectGET": {
-                "description": "Het `@id` attribuut van de waarde van `BelgischAdres.isToegekendAan` kan gebruikt worden om het gerefereerde object van het type `Adresseerbaar Object` op te halen.",
+                "description": "Het `@id` attribuut van de waarde van `BelgischAdres.isToegekendaan` kan gebruikt worden om het gerefereerde object van het type `Adresseerbaar Object` op te halen.",
                 "operationId": "Adresseerbaar ObjectGET",
                 "parameters": {
-                  "id": "$response.body#/BelgischAdres.isToegekendAan/@id"
+                  "id": "$response.body#/BelgischAdres.isToegekendaan/@id"
                 }
               }
             }
@@ -2146,7 +2244,15 @@
               }
             },
             "description": "KadastraalPlanperceel object gevonden.",
-            "links": {}
+            "links": {
+              "Belgisch AdresGET": {
+                "description": "Het `@id` attribuut van de waarde van `KadastraalPlanperceel.liggingsadres` kan gebruikt worden om het gerefereerde object van het type `Belgisch Adres` op te halen.",
+                "operationId": "Belgisch AdresGET",
+                "parameters": {
+                  "id": "$response.body#/KadastraalPlanperceel.liggingsadres/@id"
+                }
+              }
+            }
           },
           "400": {
             "description": "Ontbrekende informatie bij het opvragen een KadastraalPlanperceel object."
@@ -2199,6 +2305,13 @@
                 "operationId": "StukGET",
                 "parameters": {
                   "id": "$response.body#/Observatie.genereert/@id"
+                }
+              },
+              "ZaakGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatie.vindPlaatsTijdens` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen.",
+                "operationId": "ZaakGET",
+                "parameters": {
+                  "id": "$response.body#/Observatie.vindPlaatsTijdens/@id"
                 }
               }
             }
@@ -2458,6 +2571,13 @@
                 "operationId": "OutputGET",
                 "parameters": {
                   "id": "$response.body#/PubliekeDienstverlening.produceert/@id"
+                }
+              },
+              "Publieke OrganisatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `PubliekeDienstverlening.heeftverantwoordelijke` kan gebruikt worden om het gerefereerde object van het type `Publieke Organisatie` op te halen.",
+                "operationId": "Publieke OrganisatieGET",
+                "parameters": {
+                  "id": "$response.body#/PubliekeDienstverlening.heeftverantwoordelijke/@id"
                 }
               },
               "RechtsgrondGET": {
@@ -2735,10 +2855,10 @@
                 }
               },
               "ZaakGET": {
-                "description": "Het `@id` attribuut van de waarde van `Vergunning.zaak` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen.",
+                "description": "Het `@id` attribuut van de waarde van `Vergunning.vindPlaatsTijdens` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen.",
                 "operationId": "ZaakGET",
                 "parameters": {
-                  "id": "$response.body#/Vergunning.zaak/@id"
+                  "id": "$response.body#/Vergunning.vindPlaatsTijdens/@id"
                 }
               }
             }
