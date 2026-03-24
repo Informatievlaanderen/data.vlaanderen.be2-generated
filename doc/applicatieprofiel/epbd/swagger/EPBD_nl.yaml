@@ -153,6 +153,38 @@
         ],
         "type": "object"
       },
+      "AdresseerbaarObject": {
+        "description": "Geografisch object dat met een adres kan worden geïdentificeerd.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/epbd/context/EPBD.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/AdresseerbaarObject\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "AdresseerbaarObject type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
       "Agent": {
         "description": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
         "properties": {
@@ -271,6 +303,25 @@
               "type": "string"
             },
             "minItems": 1,
+            "type": "array"
+          },
+          "BelgischAdres.isToegekendAan": {
+            "description": "Lijst van Adresseerbaar Object items.",
+            "items": {
+              "description": "Adresseerbaar object waaraan het adres is toegekend.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Adresseerbaar Object\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
             "type": "array"
           }
         },
@@ -1250,6 +1301,25 @@
             },
             "minItems": 1,
             "type": "array"
+          },
+          "Vestiging.bestaatUit": {
+            "description": "Lijst van Adresseerbaar Object items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Adresseerbaar Object\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
           }
         },
         "required": [
@@ -1560,6 +1630,46 @@
         ]
       }
     },
+    "/id/AdresseerbaarObject/{id}": {
+      "get": {
+        "description": "Geografisch object dat met een adres kan worden geïdentificeerd.",
+        "operationId": "AdresseerbaarObjectGET",
+        "parameters": [
+          {
+            "description": "Identificator van een AdresseerbaarObject object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdresseerbaarObject"
+                }
+              }
+            },
+            "description": "AdresseerbaarObject object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een AdresseerbaarObject object."
+          },
+          "404": {
+            "description": "AdresseerbaarObject object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Geografisch object dat met een adres kan worden geïdentificeerd.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
     "/id/Agent/{id}": {
       "get": {
         "description": "Iemand die of iets dat kan handelen of een effect kan teweeg brengen.",
@@ -1705,7 +1815,15 @@
               }
             },
             "description": "BelgischAdres object gevonden.",
-            "links": {}
+            "links": {
+              "Adresseerbaar ObjectGET": {
+                "description": "Het `@id` attribuut van de waarde van `BelgischAdres.isToegekendAan` kan gebruikt worden om het gerefereerde object van het type `Adresseerbaar Object` op te halen.",
+                "operationId": "Adresseerbaar ObjectGET",
+                "parameters": {
+                  "id": "$response.body#/BelgischAdres.isToegekendAan/@id"
+                }
+              }
+            }
           },
           "400": {
             "description": "Ontbrekende informatie bij het opvragen een BelgischAdres object."
@@ -2663,7 +2781,15 @@
               }
             },
             "description": "Vestiging object gevonden.",
-            "links": {}
+            "links": {
+              "Adresseerbaar ObjectGET": {
+                "description": "Het `@id` attribuut van de waarde van `Vestiging.bestaatUit` kan gebruikt worden om het gerefereerde object van het type `Adresseerbaar Object` op te halen.",
+                "operationId": "Adresseerbaar ObjectGET",
+                "parameters": {
+                  "id": "$response.body#/Vestiging.bestaatUit/@id"
+                }
+              }
+            }
           },
           "400": {
             "description": "Ontbrekende informatie bij het opvragen een Vestiging object."
