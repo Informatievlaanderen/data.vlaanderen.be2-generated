@@ -2,9 +2,9 @@
 
 #||# -------------------------------------  
 
-2026-03-24T18:05:41.448Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
+2026-03-24T18:13:07.820Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
 
-2026-03-24T18:05:41.452Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#hadMember which acts as a parent. Using original URI as fallback.
+2026-03-24T18:13:07.824Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#hadMember which acts as a parent. Using original URI as fallback.
 
-2026-03-24T18:05:41.452Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/dossier#isNeerslagVan which acts as a parent. Using original URI as fallback.
+2026-03-24T18:13:07.824Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/dossier#isNeerslagVan which acts as a parent. Using original URI as fallback.
 
