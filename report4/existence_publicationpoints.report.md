@@ -132,10 +132,8 @@ index.html check
 #||#    + checking /home/circleci/project/config/test/epbd.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/applicatieprofiel/epbd'
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/epbd/index.html'
 
 #||#    + checking /home/circleci/project/config/test/erosiepoel.publication.json
 #||# 
