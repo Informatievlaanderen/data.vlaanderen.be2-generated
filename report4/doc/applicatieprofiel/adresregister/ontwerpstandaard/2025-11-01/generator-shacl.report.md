@@ -2,11 +2,11 @@
 
 #||# -------------------------------------  
 
-2026-03-24T15:18:00.107Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-adressenregister.jsonld#L3754)".
+2026-03-24T15:18:03.296Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-adressenregister.jsonld#L3754)".
 
-2026-03-24T15:18:00.109Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-adressenregister.jsonld#L3765)".
+2026-03-24T15:18:03.298Z warn: Unable to find the description for subject "[urn:oslo-toolchain:286333439](all-adressenregister.jsonld#L3765)".
 
-2026-03-24T15:18:00.109Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-adressenregister.jsonld#L3776)".
+2026-03-24T15:18:03.299Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-adressenregister.jsonld#L3776)".
 
-2026-03-24T15:18:00.110Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
+2026-03-24T15:18:03.299Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
 
