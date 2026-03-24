@@ -1451,6 +1451,20 @@
             ],
             "type": "object"
           },
+          "Stuk.geldigheid": {
+            "description": "Periode waarop de inhoud van het Stuk betrekking heeft.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Periode\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
           "Stuk.inhoud": {
             "description": "Een waarde die een directe representatie is van de entiteit.",
             "properties": {
@@ -1484,7 +1498,8 @@
           "@context",
           "@id",
           "@type",
-          "Stuk.type"
+          "Stuk.type",
+          "Stuk.geldigheid"
         ],
         "type": "object"
       },
@@ -3242,6 +3257,13 @@
                 "operationId": "GebouweenheidGET",
                 "parameters": {
                   "id": "$response.body#/Stuk.beschrijft/@id"
+                }
+              },
+              "PeriodeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Stuk.geldigheid` kan gebruikt worden om het gerefereerde object van het type `Periode` op te halen.",
+                "operationId": "PeriodeGET",
+                "parameters": {
+                  "id": "$response.body#/Stuk.geldigheid/@id"
                 }
               },
               "StuktypeGET": {
