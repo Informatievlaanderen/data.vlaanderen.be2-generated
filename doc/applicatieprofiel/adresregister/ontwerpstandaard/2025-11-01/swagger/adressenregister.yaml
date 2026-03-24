@@ -403,13 +403,13 @@
             "type": "array"
           },
           "Gebouw.ligtOp": {
-            "description": "Lijst van Perceel items.",
+            "description": "Lijst van RuimtelijkeEenheid items.",
             "items": {
               "description": "Perceel waarop het gebouw gelegen is.",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Perceel\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/RuimtelijkeEenheid\\/\\d",
                   "type": "string"
                 }
               },
@@ -565,6 +565,37 @@
         ],
         "type": "object"
       },
+      "GeometriSpecificatieWaarde": {
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/adresregister/ontwerpstandaard/2025-11-01/context/adressenregister.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/GeometriSpecificatieWaarde\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "GeometriSpecificatieWaarde type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
       "GeometrieMethodeWaarde": {
         "properties": {
           "@context": {
@@ -583,37 +614,6 @@
             "description": "Lijst van object types (klasse)",
             "items": {
               "description": "GeometrieMethodeWaarde type",
-              "type": "string"
-            },
-            "minItems": 1,
-            "type": "array"
-          }
-        },
-        "required": [
-          "@context",
-          "@id",
-          "@type"
-        ],
-        "type": "object"
-      },
-      "GeometrieSpecificatieWaarde": {
-        "properties": {
-          "@context": {
-            "enum": [
-              "https://data.test-vlaanderen.be/doc/applicatieprofiel/adresregister/ontwerpstandaard/2025-11-01/context/adressenregister.jsonld"
-            ],
-            "format": "uri",
-            "type": "string"
-          },
-          "@id": {
-            "format": "uri",
-            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/GeometrieSpecificatieWaarde\\/\\d",
-            "type": "string"
-          },
-          "@type": {
-            "description": "Lijst van object types (klasse)",
-            "items": {
-              "description": "GeometrieSpecificatieWaarde type",
               "type": "string"
             },
             "minItems": 1,
@@ -646,90 +646,6 @@
             "description": "Lijst van object types (klasse)",
             "items": {
               "description": "Ligplaats type",
-              "type": "string"
-            },
-            "minItems": 1,
-            "type": "array"
-          }
-        },
-        "required": [
-          "@context",
-          "@id",
-          "@type"
-        ],
-        "type": "object"
-      },
-      "Object": {
-        "description": "Entiteit waarvan alle entiteiten zijn afgeleid.",
-        "properties": {
-          "@context": {
-            "enum": [
-              "https://data.test-vlaanderen.be/doc/applicatieprofiel/adresregister/ontwerpstandaard/2025-11-01/context/adressenregister.jsonld"
-            ],
-            "format": "uri",
-            "type": "string"
-          },
-          "@id": {
-            "format": "uri",
-            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Object\\/\\d",
-            "type": "string"
-          },
-          "@type": {
-            "description": "Lijst van object types (klasse)",
-            "items": {
-              "description": "Object type",
-              "type": "string"
-            },
-            "minItems": 1,
-            "type": "array"
-          },
-          "Object.identificator": {
-            "description": "Lijst van Identificator items.",
-            "items": {
-              "description": "Identificator van het object. Bij implementatie in RDF is de uri van het object de identificator.",
-              "properties": {
-                "@id": {
-                  "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identificator\\/\\d",
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@id"
-              ],
-              "type": "object"
-            },
-            "minItems": 1,
-            "type": "array"
-          }
-        },
-        "required": [
-          "@context",
-          "@id",
-          "@type",
-          "Object.identificator"
-        ],
-        "type": "object"
-      },
-      "Perceel": {
-        "description": "Deel van het grondgebied officieel vastgesteld met een kadastraal of administratief doel.",
-        "properties": {
-          "@context": {
-            "enum": [
-              "https://data.test-vlaanderen.be/doc/applicatieprofiel/adresregister/ontwerpstandaard/2025-11-01/context/adressenregister.jsonld"
-            ],
-            "format": "uri",
-            "type": "string"
-          },
-          "@id": {
-            "format": "uri",
-            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Perceel\\/\\d",
-            "type": "string"
-          },
-          "@type": {
-            "description": "Lijst van object types (klasse)",
-            "items": {
-              "description": "Perceel type",
               "type": "string"
             },
             "minItems": 1,
@@ -880,6 +796,38 @@
           "@id",
           "@type",
           "Postinfo.postcode"
+        ],
+        "type": "object"
+      },
+      "RuimtelijkeEenheid": {
+        "description": "Eén gebied (of meerdere gebieden) van land en/of water, of één enkel volume (of meerdere volumes) ruimte, afgebakend voor een bepaald doel.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/adresregister/ontwerpstandaard/2025-11-01/context/adressenregister.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/RuimtelijkeEenheid\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "RuimtelijkeEenheid type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
         ],
         "type": "object"
       },
@@ -1288,9 +1236,9 @@
                   "id": "$response.body#/Gebouw.bestaatUit/@id"
                 }
               },
-              "PerceelGET": {
-                "description": "Het `@id` attribuut van de waarde van `Gebouw.ligtOp` kan gebruikt worden om het gerefereerde object van het type `Perceel` op te halen.",
-                "operationId": "PerceelGET",
+              "RuimtelijkeEenheidGET": {
+                "description": "Het `@id` attribuut van de waarde van `Gebouw.ligtOp` kan gebruikt worden om het gerefereerde object van het type `RuimtelijkeEenheid` op te halen.",
+                "operationId": "RuimtelijkeEenheidGET",
                 "parameters": {
                   "id": "$response.body#/Gebouw.ligtOp/@id"
                 }
@@ -1438,6 +1386,44 @@
         ]
       }
     },
+    "/id/GeometriSpecificatieWaarde/{id}": {
+      "get": {
+        "operationId": "GeometriSpecificatieWaardeGET",
+        "parameters": [
+          {
+            "description": "Identificator van een GeometriSpecificatieWaarde object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeometriSpecificatieWaarde"
+                }
+              }
+            },
+            "description": "GeometriSpecificatieWaarde object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een GeometriSpecificatieWaarde object."
+          },
+          "404": {
+            "description": "GeometriSpecificatieWaarde object met gegeven ID niet gevonden."
+          }
+        },
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
     "/id/GeometrieMethodeWaarde/{id}": {
       "get": {
         "operationId": "GeometrieMethodeWaardeGET",
@@ -1469,44 +1455,6 @@
           },
           "404": {
             "description": "GeometrieMethodeWaarde object met gegeven ID niet gevonden."
-          }
-        },
-        "tags": [
-          "Externe datastandaarden"
-        ]
-      }
-    },
-    "/id/GeometrieSpecificatieWaarde/{id}": {
-      "get": {
-        "operationId": "GeometrieSpecificatieWaardeGET",
-        "parameters": [
-          {
-            "description": "Identificator van een GeometrieSpecificatieWaarde object.",
-            "in": "path",
-            "name": "id",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/ld+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GeometrieSpecificatieWaarde"
-                }
-              }
-            },
-            "description": "GeometrieSpecificatieWaarde object gevonden.",
-            "links": {}
-          },
-          "400": {
-            "description": "Ontbrekende informatie bij het opvragen een GeometrieSpecificatieWaarde object."
-          },
-          "404": {
-            "description": "GeometrieSpecificatieWaarde object met gegeven ID niet gevonden."
           }
         },
         "tags": [
@@ -1549,94 +1497,6 @@
           }
         },
         "summary": "Een door het bevoegde gemeentelijke orgaan als zodanig aangewezen plaats in het water al dan niet aangevuld met een op de oever aanwezig terrein of een gedeelte daarvan, die bestemd is voor het permanent afmeren van een voor woon-, bedrijfsmatige of recreatieve doeleinden geschikt vaartuig.",
-        "tags": [
-          "Externe datastandaarden"
-        ]
-      }
-    },
-    "/id/Object/{id}": {
-      "get": {
-        "description": "Entiteit waarvan alle entiteiten zijn afgeleid.",
-        "operationId": "ObjectGET",
-        "parameters": [
-          {
-            "description": "Identificator van een Object object.",
-            "in": "path",
-            "name": "id",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/ld+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Object"
-                }
-              }
-            },
-            "description": "Object object gevonden.",
-            "links": {
-              "IdentificatorGET": {
-                "description": "Het `@id` attribuut van de waarde van `Object.identificator` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen.",
-                "operationId": "IdentificatorGET",
-                "parameters": {
-                  "id": "$response.body#/Object.identificator/@id"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Ontbrekende informatie bij het opvragen een Object object."
-          },
-          "404": {
-            "description": "Object object met gegeven ID niet gevonden."
-          }
-        },
-        "summary": "Entiteit waarvan alle entiteiten zijn afgeleid.",
-        "tags": [
-          "Externe datastandaarden"
-        ]
-      }
-    },
-    "/id/Perceel/{id}": {
-      "get": {
-        "description": "Deel van het grondgebied officieel vastgesteld met een kadastraal of administratief doel.",
-        "operationId": "PerceelGET",
-        "parameters": [
-          {
-            "description": "Identificator van een Perceel object.",
-            "in": "path",
-            "name": "id",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/ld+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Perceel"
-                }
-              }
-            },
-            "description": "Perceel object gevonden.",
-            "links": {}
-          },
-          "400": {
-            "description": "Ontbrekende informatie bij het opvragen een Perceel object."
-          },
-          "404": {
-            "description": "Perceel object met gegeven ID niet gevonden."
-          }
-        },
-        "summary": "Deel van het grondgebied officieel vastgesteld met een kadastraal of administratief doel.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -1725,6 +1585,46 @@
           }
         },
         "summary": "Adrescomponent die verwijst naar informatie toegekend door de aanbieder van de universele postdienst voor de identificatie van een groepering van adressen in een geografisch gebied voor postale doeleinden.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/RuimtelijkeEenheid/{id}": {
+      "get": {
+        "description": "Eén gebied (of meerdere gebieden) van land en/of water, of één enkel volume (of meerdere volumes) ruimte, afgebakend voor een bepaald doel.",
+        "operationId": "RuimtelijkeEenheidGET",
+        "parameters": [
+          {
+            "description": "Identificator van een RuimtelijkeEenheid object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RuimtelijkeEenheid"
+                }
+              }
+            },
+            "description": "RuimtelijkeEenheid object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een RuimtelijkeEenheid object."
+          },
+          "404": {
+            "description": "RuimtelijkeEenheid object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Eén gebied (of meerdere gebieden) van land en/of water, of één enkel volume (of meerdere volumes) ruimte, afgebakend voor een bepaald doel.",
         "tags": [
           "Externe datastandaarden"
         ]
