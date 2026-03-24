@@ -26,13 +26,13 @@
             "type": "array"
           },
           "Aansluiting.leveringsadres": {
-            "description": "Lijst van Belgisch Adres items.",
+            "description": "Lijst van Adres items.",
             "items": {
               "description": "Adres waarop de Aansluiting betrekking heeft.",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Belgisch Adres\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Adres\\/\\d",
                   "type": "string"
                 }
               },
@@ -172,6 +172,57 @@
         ],
         "type": "object"
       },
+      "Adres": {
+        "description": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats,een standplaats of een perceel op basis van een gemeentenaam,een straatnaam,een huisnummer en eventueel een busnummer en een postcode.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/epbd/context/EPBD.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Adres\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Adres type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Adres.isToegekendaan": {
+            "description": "Lijst van AdresseerbaarObject items.",
+            "items": {
+              "description": "Adresseerbaar object waaraan het adres is toegekend.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/AdresseerbaarObject\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
       "AdresseerbaarObject": {
         "description": "Geografisch object dat met een adres kan worden geïdentificeerd.",
         "properties": {
@@ -290,57 +341,6 @@
               "type": "string"
             },
             "minItems": 1,
-            "type": "array"
-          }
-        },
-        "required": [
-          "@context",
-          "@id",
-          "@type"
-        ],
-        "type": "object"
-      },
-      "BelgischAdres": {
-        "description": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats,een standplaats of een perceel op basis van een gemeentenaam,een straatnaam,een huisnummer en eventueel een busnummer en een postcode.",
-        "properties": {
-          "@context": {
-            "enum": [
-              "https://data.test-vlaanderen.be/doc/applicatieprofiel/epbd/context/EPBD.jsonld"
-            ],
-            "format": "uri",
-            "type": "string"
-          },
-          "@id": {
-            "format": "uri",
-            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/BelgischAdres\\/\\d",
-            "type": "string"
-          },
-          "@type": {
-            "description": "Lijst van object types (klasse)",
-            "items": {
-              "description": "BelgischAdres type",
-              "type": "string"
-            },
-            "minItems": 1,
-            "type": "array"
-          },
-          "BelgischAdres.isToegekendaan": {
-            "description": "Lijst van Adresseerbaar Object items.",
-            "items": {
-              "description": "Adresseerbaar object waaraan het adres is toegekend.",
-              "properties": {
-                "@id": {
-                  "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Adresseerbaar Object\\/\\d",
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@id"
-              ],
-              "type": "object"
-            },
-            "minItems": 0,
             "type": "array"
           }
         },
@@ -674,13 +674,13 @@
             "type": "array"
           },
           "KadastraalPlanperceel.liggingsadres": {
-            "description": "Lijst van Belgisch Adres items.",
+            "description": "Lijst van Adres items.",
             "items": {
               "description": "Adres dat met het KadastraalPlanperceel geassocieerd is.",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Belgisch Adres\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Adres\\/\\d",
                   "type": "string"
                 }
               },
@@ -904,7 +904,7 @@
         "type": "object"
       },
       "Project": {
-        "description": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken.",
+        "description": "Een project is een, in de tijd en middelen begrensde, activiteit om iets te creëren.",
         "properties": {
           "@context": {
             "enum": [
@@ -1033,7 +1033,7 @@
             "properties": {
               "@id": {
                 "format": "uri",
-                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Publieke Organisatie\\/\\d",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/PubliekeOrganisatie\\/\\d",
                 "type": "string"
               }
             },
@@ -1394,13 +1394,13 @@
             "type": "array"
           },
           "Vestiging.bestaatUit": {
-            "description": "Lijst van Adresseerbaar Object items.",
+            "description": "Lijst van AdresseerbaarObject items.",
             "items": {
               "description": "AdresseerbaarObject waaruit de Vestiging bestaat. Gebouweenheid of Perceel.",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Adresseerbaar Object\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/AdresseerbaarObject\\/\\d",
                   "type": "string"
                 }
               },
@@ -1466,7 +1466,7 @@
           "Zaak.isDeelVan": {
             "description": "Lijst van Project items.",
             "items": {
-              "description": "Een gerelateerde entiteit waar de beschreven entiteit een fysiek of logisch onderdeel van is.",
+              "description": "Project in het kader waarvan de zaak is gestart.",
               "properties": {
                 "@id": {
                   "format": "uri",
@@ -1606,9 +1606,9 @@
             },
             "description": "Aansluiting object gevonden.",
             "links": {
-              "Belgisch AdresGET": {
-                "description": "Het `@id` attribuut van de waarde van `Aansluiting.leveringsadres` kan gebruikt worden om het gerefereerde object van het type `Belgisch Adres` op te halen.",
-                "operationId": "Belgisch AdresGET",
+              "AdresGET": {
+                "description": "Het `@id` attribuut van de waarde van `Aansluiting.leveringsadres` kan gebruikt worden om het gerefereerde object van het type `Adres` op te halen.",
+                "operationId": "AdresGET",
                 "parameters": {
                   "id": "$response.body#/Aansluiting.leveringsadres/@id"
                 }
@@ -1723,6 +1723,54 @@
             "description": "Activiteittype object met gegeven ID niet gevonden."
           }
         },
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Adres/{id}": {
+      "get": {
+        "description": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats,een standplaats of een perceel op basis van een gemeentenaam,een straatnaam,een huisnummer en eventueel een busnummer en een postcode.",
+        "operationId": "AdresGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Adres object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Adres"
+                }
+              }
+            },
+            "description": "Adres object gevonden.",
+            "links": {
+              "AdresseerbaarObjectGET": {
+                "description": "Het `@id` attribuut van de waarde van `Adres.isToegekendaan` kan gebruikt worden om het gerefereerde object van het type `AdresseerbaarObject` op te halen.",
+                "operationId": "AdresseerbaarObjectGET",
+                "parameters": {
+                  "id": "$response.body#/Adres.isToegekendaan/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Adres object."
+          },
+          "404": {
+            "description": "Adres object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats,een standplaats of een perceel op basis van een gemeentenaam,een straatnaam,een huisnummer en eventueel een busnummer en een postcode.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -1883,54 +1931,6 @@
           }
         },
         "summary": "Structuur die onderdak biedt aan de bewoners of inhoud en op een vaste plek staat.",
-        "tags": [
-          "Externe datastandaarden"
-        ]
-      }
-    },
-    "/id/BelgischAdres/{id}": {
-      "get": {
-        "description": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats,een standplaats of een perceel op basis van een gemeentenaam,een straatnaam,een huisnummer en eventueel een busnummer en een postcode.",
-        "operationId": "BelgischAdresGET",
-        "parameters": [
-          {
-            "description": "Identificator van een BelgischAdres object.",
-            "in": "path",
-            "name": "id",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/ld+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BelgischAdres"
-                }
-              }
-            },
-            "description": "BelgischAdres object gevonden.",
-            "links": {
-              "Adresseerbaar ObjectGET": {
-                "description": "Het `@id` attribuut van de waarde van `BelgischAdres.isToegekendaan` kan gebruikt worden om het gerefereerde object van het type `Adresseerbaar Object` op te halen.",
-                "operationId": "Adresseerbaar ObjectGET",
-                "parameters": {
-                  "id": "$response.body#/BelgischAdres.isToegekendaan/@id"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Ontbrekende informatie bij het opvragen een BelgischAdres object."
-          },
-          "404": {
-            "description": "BelgischAdres object met gegeven ID niet gevonden."
-          }
-        },
-        "summary": "Informatie die toelaat om op een gestructureerde en unieke manier te verwijzen naar een gebouweenheid,een ligplaats,een standplaats of een perceel op basis van een gemeentenaam,een straatnaam,een huisnummer en eventueel een busnummer en een postcode.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -2245,9 +2245,9 @@
             },
             "description": "KadastraalPlanperceel object gevonden.",
             "links": {
-              "Belgisch AdresGET": {
-                "description": "Het `@id` attribuut van de waarde van `KadastraalPlanperceel.liggingsadres` kan gebruikt worden om het gerefereerde object van het type `Belgisch Adres` op te halen.",
-                "operationId": "Belgisch AdresGET",
+              "AdresGET": {
+                "description": "Het `@id` attribuut van de waarde van `KadastraalPlanperceel.liggingsadres` kan gebruikt worden om het gerefereerde object van het type `Adres` op te halen.",
+                "operationId": "AdresGET",
                 "parameters": {
                   "id": "$response.body#/KadastraalPlanperceel.liggingsadres/@id"
                 }
@@ -2457,7 +2457,7 @@
     },
     "/id/Project/{id}": {
       "get": {
-        "description": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken.",
+        "description": "Een project is een, in de tijd en middelen begrensde, activiteit om iets te creëren.",
         "operationId": "ProjectGET",
         "parameters": [
           {
@@ -2489,7 +2489,7 @@
             "description": "Project object met gegeven ID niet gevonden."
           }
         },
-        "summary": "Een project is een tijdelijke inspanning om bepaalde doelstellingen te bereiken.",
+        "summary": "Een project is een, in de tijd en middelen begrensde, activiteit om iets te creëren.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -2573,9 +2573,9 @@
                   "id": "$response.body#/PubliekeDienstverlening.produceert/@id"
                 }
               },
-              "Publieke OrganisatieGET": {
-                "description": "Het `@id` attribuut van de waarde van `PubliekeDienstverlening.heeftverantwoordelijke` kan gebruikt worden om het gerefereerde object van het type `Publieke Organisatie` op te halen.",
-                "operationId": "Publieke OrganisatieGET",
+              "PubliekeOrganisatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `PubliekeDienstverlening.heeftverantwoordelijke` kan gebruikt worden om het gerefereerde object van het type `PubliekeOrganisatie` op te halen.",
+                "operationId": "PubliekeOrganisatieGET",
                 "parameters": {
                   "id": "$response.body#/PubliekeDienstverlening.heeftverantwoordelijke/@id"
                 }
@@ -2902,9 +2902,9 @@
             },
             "description": "Vestiging object gevonden.",
             "links": {
-              "Adresseerbaar ObjectGET": {
-                "description": "Het `@id` attribuut van de waarde van `Vestiging.bestaatUit` kan gebruikt worden om het gerefereerde object van het type `Adresseerbaar Object` op te halen.",
-                "operationId": "Adresseerbaar ObjectGET",
+              "AdresseerbaarObjectGET": {
+                "description": "Het `@id` attribuut van de waarde van `Vestiging.bestaatUit` kan gebruikt worden om het gerefereerde object van het type `AdresseerbaarObject` op te halen.",
+                "operationId": "AdresseerbaarObjectGET",
                 "parameters": {
                   "id": "$response.body#/Vestiging.bestaatUit/@id"
                 }
