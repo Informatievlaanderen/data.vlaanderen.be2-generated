@@ -2,27 +2,25 @@
 
 #||# -------------------------------------  
 
-2026-03-24T08:43:41.727Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#endedAtTime which acts as a parent. Using original URI as fallback.
+2026-03-24T09:36:53.534Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
 
-2026-03-24T08:43:41.729Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#startedAtTime which acts as a parent. Using original URI as fallback.
+2026-03-24T09:36:53.539Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#hadMember which acts as a parent. Using original URI as fallback.
 
-2026-03-24T08:43:41.730Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#generated which acts as a parent. Using original URI as fallback.
+2026-03-24T09:36:53.539Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/dossier#isNeerslagVan which acts as a parent. Using original URI as fallback.
 
-2026-03-24T08:43:41.733Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/date which acts as a parent. Using original URI as fallback.
+Error: No range found for class [urn:oslo-toolchain:65c7f1c9e2ec2a3ade2852c7ba7bff2cf16fe532acceced4c47f6785d8063448](all-EPBD.jsonld#L1113).
 
-2026-03-24T08:43:41.734Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/date which acts as a parent. Using original URI as fallback.
+    at JsonWebuniversumGenerationService.addPropertySpecificInformation (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:268:19)
 
-2026-03-24T08:43:41.740Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/prov#hadMember which acts as a parent. Using original URI as fallback.
+    at /usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:192:95
 
-2026-03-24T08:43:41.741Z warn: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/dossier#isNeerslagVan which acts as a parent. Using original URI as fallback.
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
 
-2026-03-24T08:43:41.742Z warn: Unable to find the assigned URI for external class http://purl.org/dc/terms/creator which acts as a parent. Using original URI as fallback.
+    at async Promise.all (index 0)
 
-2026-03-24T08:43:41.753Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
+    at async JsonWebuniversumGenerationService.generateEntityData (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:194:32)
 
-2026-03-24T08:43:41.754Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#postName which acts as a parent. Using original URI as fallback.
+    at async Promise.all (index 2)
 
-2026-03-24T08:43:41.754Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#locatorDesignator which acts as a parent. Using original URI as fallback.
-
-2026-03-24T08:43:41.754Z warn: Unable to find the assigned URI for external class http://www.w3.org/ns/locn#adminUnitL1 which acts as a parent. Using original URI as fallback.
+    at async JsonWebuniversumGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/json-webuniversum-generator/lib/JsonWebuniversumGenerationService.js:40:25)
 
