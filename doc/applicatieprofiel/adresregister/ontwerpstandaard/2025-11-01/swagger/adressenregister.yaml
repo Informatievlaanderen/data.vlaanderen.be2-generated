@@ -597,6 +597,58 @@
         ],
         "type": "object"
       },
+      "Object": {
+        "description": "Entiteit waarvan alle entiteiten zijn afgeleid.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/adresregister/ontwerpstandaard/2025-11-01/context/adressenregister.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Object\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Object type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Object.identificator": {
+            "description": "Lijst van Identificator items.",
+            "items": {
+              "description": "Identificator van het object. Bij implementatie in RDF is de uri van het object de identificator.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identificator\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Object.identificator"
+        ],
+        "type": "object"
+      },
       "Plaats": {
         "description": "Een ruimtelijk gebied of benoemde plaats.",
         "properties": {
@@ -1359,6 +1411,54 @@
           }
         },
         "summary": "Een door het bevoegde gemeentelijke orgaan als zodanig aangewezen plaats in het water al dan niet aangevuld met een op de oever aanwezig terrein of een gedeelte daarvan, die bestemd is voor het permanent afmeren van een voor woon-, bedrijfsmatige of recreatieve doeleinden geschikt vaartuig.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Object/{id}": {
+      "get": {
+        "description": "Entiteit waarvan alle entiteiten zijn afgeleid.",
+        "operationId": "ObjectGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Object object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Object"
+                }
+              }
+            },
+            "description": "Object object gevonden.",
+            "links": {
+              "IdentificatorGET": {
+                "description": "Het `@id` attribuut van de waarde van `Object.identificator` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen.",
+                "operationId": "IdentificatorGET",
+                "parameters": {
+                  "id": "$response.body#/Object.identificator/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Object object."
+          },
+          "404": {
+            "description": "Object object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Entiteit waarvan alle entiteiten zijn afgeleid.",
         "tags": [
           "Externe datastandaarden"
         ]
