@@ -743,6 +743,25 @@
             "minItems": 0,
             "type": "array"
           },
+          "Observatie.isLidVan": {
+            "description": "Lijst van Observatieverzameling items.",
+            "items": {
+              "description": "De Observatieverzameling waarvan de Oberservatie deel uitmaakt.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatieverzameling\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
           "Observatie.vindPlaatsTijdens": {
             "description": "Lijst van Zaak items.",
             "items": {
@@ -770,6 +789,57 @@
                 "@id": {
                   "format": "uri",
                   "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Observatieverzameling": {
+        "description": "Collectie van Observaties met dezelfde kenmerken.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/epbd/context/EPBD.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatieverzameling\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Observatieverzameling type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Observatieverzameling.heeftLid": {
+            "description": "Lijst van Observatie items.",
+            "items": {
+              "description": "Observatie die deel uitmaakt van de collectie.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Observatie\\/\\d",
                   "type": "string"
                 }
               },
@@ -2300,6 +2370,13 @@
                   "id": "$response.body#/Observatie.wasGeassocieerdMet/@id"
                 }
               },
+              "ObservatieverzamelingGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatie.isLidVan` kan gebruikt worden om het gerefereerde object van het type `Observatieverzameling` op te halen.",
+                "operationId": "ObservatieverzamelingGET",
+                "parameters": {
+                  "id": "$response.body#/Observatie.isLidVan/@id"
+                }
+              },
               "StukGET": {
                 "description": "Het `@id` attribuut van de waarde van `Observatie.genereert` kan gebruikt worden om het gerefereerde object van het type `Stuk` op te halen.",
                 "operationId": "StukGET",
@@ -2324,6 +2401,54 @@
           }
         },
         "summary": "Activiteit waarbij de waarde van een bepaald kenmerk van een Object wordt vastgesteld.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Observatieverzameling/{id}": {
+      "get": {
+        "description": "Collectie van Observaties met dezelfde kenmerken.",
+        "operationId": "ObservatieverzamelingGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Observatieverzameling object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Observatieverzameling"
+                }
+              }
+            },
+            "description": "Observatieverzameling object gevonden.",
+            "links": {
+              "ObservatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Observatieverzameling.heeftLid` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen.",
+                "operationId": "ObservatieGET",
+                "parameters": {
+                  "id": "$response.body#/Observatieverzameling.heeftLid/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Observatieverzameling object."
+          },
+          "404": {
+            "description": "Observatieverzameling object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Collectie van Observaties met dezelfde kenmerken.",
         "tags": [
           "Externe datastandaarden"
         ]
