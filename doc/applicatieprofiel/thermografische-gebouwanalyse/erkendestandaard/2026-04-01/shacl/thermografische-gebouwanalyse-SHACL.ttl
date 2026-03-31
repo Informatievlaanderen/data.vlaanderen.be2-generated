@@ -38,6 +38,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#AnyShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#InputShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#OutputShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#SysteemtypeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#SysteemkenmerkShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#SysteemvermogenShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#WerkingsbereikShape>,
@@ -757,16 +758,8 @@
     shacl:name "creatiedatum"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:created
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "type"@nl;
-    rdfs:comment "De aard of genre van het model."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#MachinelearningModel.Type>;
-    shacl:description "De aard of genre van het model."@nl;
-    shacl:name "type"@nl;
-    shacl:or ([shacl:class skos:Concept] [shacl:class <https://qudt.org/schema/qudt/Unit>]);
-    shacl:path dc:type
-  ], [
+  ],
+    _:df_1_52, [
     a shacl:PropertyShape;
     rdfs:label "getraind op"@nl;
     rdfs:comment "Verwijst naar de dataset waarop het model getraind is."@nl;
@@ -1264,7 +1257,21 @@
     <https://www.w3.org/ns/sosa/Sensor>,
     dbo:Camera,
     <https://w3id.org/okn/o/sd#ConfigurationSetup>,
-    <http://data.europa.eu/it6/MachineLearningModel> .
+    <http://data.europa.eu/it6/MachineLearningModel>;
+  shacl:xone ([
+      shacl:not _:df_1_108;
+      shacl:property [
+        a shacl:PropertyShape;
+        rdfs:label "type"@nl;
+        rdfs:comment "Aard vh Systeem."@nl;
+        rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#Sensor.Type>;
+        shacl:description "Aard vh Systeem."@nl;
+        shacl:name "type"@nl;
+        shacl:or ([shacl:class skos:Concept] [shacl:class <https://qudt.org/schema/qudt/Unit>]);
+        shacl:path dc:type
+      ]
+    ] [shacl:property _:df_1_52,
+        _:df_1_108]) .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#StringShape> a shacl:NodeShape;
   rdfs:label "String";
@@ -1340,6 +1347,11 @@
   rdfs:comment "Capaciteit ve Systeem."@nl;
   shacl:closed false;
   shacl:targetClass <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#SysteemtypeShape> a shacl:NodeShape;
+  rdfs:label "Systeemtype"@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#SysteemvermogenShape> a shacl:NodeShape;
   rdfs:label "Systeemvermogen"@nl;
@@ -1497,3 +1509,17 @@
   rdfs:comment "Aspect van het Systeem dat zijn Werkingsbereik bepaalt."@nl;
   shacl:closed false;
   shacl:targetClass <http://www.w3.org/ns/ssn/systems/OperatingProperty> .
+
+_:df_3_77 .
+
+_:df_1_108 a shacl:PropertyShape;
+  shacl:class <http://data.europa.eu/it6/MachineLearningModel> .
+
+_:df_1_52 a shacl:PropertyShape;
+  rdfs:label "type"@nl;
+  rdfs:comment "De aard of genre van het model."@nl;
+  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#MachinelearningModel.Type>;
+  shacl:description "De aard of genre van het model."@nl;
+  shacl:name "type"@nl;
+  shacl:or ([shacl:class skos:Concept] [shacl:class <https://qudt.org/schema/qudt/Unit>]);
+  shacl:path dc:type .
