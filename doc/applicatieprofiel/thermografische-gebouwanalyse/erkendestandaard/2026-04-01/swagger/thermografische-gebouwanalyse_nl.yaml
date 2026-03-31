@@ -2434,6 +2434,37 @@
         ],
         "type": "object"
       },
+      "Systeemtype": {
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01/context/thermografische-gebouwanalyse.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Systeemtype\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Systeemtype type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
       "Systeemvermogen": {
         "description": "Capaciteiten ve Systeem.",
         "properties": {
@@ -4770,6 +4801,44 @@
           }
         },
         "summary": "Capaciteit ve Systeem.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Systeemtype/{id}": {
+      "get": {
+        "operationId": "SysteemtypeGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Systeemtype object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Systeemtype"
+                }
+              }
+            },
+            "description": "Systeemtype object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Systeemtype object."
+          },
+          "404": {
+            "description": "Systeemtype object met gegeven ID niet gevonden."
+          }
+        },
         "tags": [
           "Externe datastandaarden"
         ]
