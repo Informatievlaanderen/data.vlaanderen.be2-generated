@@ -800,23 +800,27 @@
   rdfs:label "Object"@nl;
   rdfs:comment "Klasse die instanties van om het even welk type vertegenwoordigt."@nl;
   shacl:closed false;
-  shacl:property [
-    a shacl:PropertyShape;
-    rdfs:label "type"@nl;
-    rdfs:comment "Aard van het Domeinobject."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#Object.Type>;
-    shacl:description "Aard van het Domeinobject."@nl;
-    shacl:name "type"@nl;
-    shacl:or ([shacl:class skos:Concept] [shacl:class <https://qudt.org/schema/qudt/Unit>]);
-    shacl:path dc:type
-  ];
   shacl:targetClass <http://www.w3.org/ns/sosa/FeatureOfInterest>,
     <https://data.vlaanderen.be/ns/gebouw#Gebouw>,
     <https://data.vlaanderen.be/ns/gebouw#Gebouweenheid>,
     schemas:Photograph,
     <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcBuilding>,
     <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcElement>,
-    schemas:VideoObject .
+    schemas:VideoObject;
+  shacl:xone ([
+      shacl:not _:df_1_107;
+      shacl:property [
+        a shacl:PropertyShape;
+        rdfs:label "type"@nl;
+        rdfs:comment "Aard van het Domeinobject."@nl;
+        rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#Object.Type>;
+        shacl:description "Aard van het Domeinobject."@nl;
+        shacl:name "type"@nl;
+        shacl:or ([shacl:class skos:Concept] [shacl:class <https://qudt.org/schema/qudt/Unit>]);
+        shacl:path dc:type
+      ]
+    ] [shacl:property _:df_1_52,
+        _:df_1_107]) .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#ObservatieShape> a shacl:NodeShape;
   rdfs:label "Observatie"@nl;
@@ -1456,16 +1460,7 @@
   rdfs:label "Video"@nl;
   rdfs:comment "Reeks van stilstaande beelden die snel achter elkaar worden afgespeeld om de illusie van beweging te creëren, vastgelegd dmv een videocamera of bekomen door animatie."@nl;
   shacl:closed false;
-  shacl:property [
-    a shacl:PropertyShape;
-    rdfs:label "type"@nl;
-    rdfs:comment "Aard van de Video."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#Video.Type>;
-    shacl:description "Aard van de Video."@nl;
-    shacl:name "type"@nl;
-    shacl:or ([shacl:class skos:Concept] [shacl:class <https://qudt.org/schema/qudt/Unit>]);
-    shacl:path dc:type
-  ];
+  shacl:property _:df_1_52;
   shacl:targetClass schemas:VideoObject .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#WerkingsbereikShape> a shacl:NodeShape;
@@ -1503,3 +1498,17 @@
   rdfs:comment "Aspect van het Systeem dat zijn Werkingsbereik bepaalt."@nl;
   shacl:closed false;
   shacl:targetClass <http://www.w3.org/ns/ssn/systems/OperatingProperty> .
+
+_:df_3_77 .
+
+_:df_1_107 a shacl:PropertyShape;
+  shacl:class schemas:VideoObject .
+
+_:df_1_52 a shacl:PropertyShape;
+  rdfs:label "type"@nl;
+  rdfs:comment "Aard van de Video."@nl;
+  rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/thermografische-gebouwanalyse/erkendestandaard/2026-04-01#Video.Type>;
+  shacl:description "Aard van de Video."@nl;
+  shacl:name "type"@nl;
+  shacl:or ([shacl:class skos:Concept] [shacl:class <https://qudt.org/schema/qudt/Unit>]);
+  shacl:path dc:type .
