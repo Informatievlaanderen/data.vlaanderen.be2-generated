@@ -2,23 +2,13 @@
 
 #||# -------------------------------------  
 
-2026-03-31T15:24:38.410Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-thermografische-gebouwanalyse.jsonld#L7742)".
+2026-03-31T15:29:23.445Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-thermografische-gebouwanalyse.jsonld#L7742)".
 
-2026-03-31T15:24:38.413Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-thermografische-gebouwanalyse.jsonld#L7753)".
+2026-03-31T15:29:23.447Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-thermografische-gebouwanalyse.jsonld#L7753)".
 
-2026-03-31T15:24:38.414Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-thermografische-gebouwanalyse.jsonld#L7764)".
+2026-03-31T15:29:23.447Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-thermografische-gebouwanalyse.jsonld#L7764)".
 
-2026-03-31T15:24:38.415Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-thermografische-gebouwanalyse.jsonld#L7775)".
+2026-03-31T15:29:23.448Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-thermografische-gebouwanalyse.jsonld#L7775)".
 
-2026-03-31T15:24:38.415Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
-
-Error: Child or parent domain is missing!
-
-    at ShaclTemplateGenerationService.handleRedefinedProperties (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:169:23)
-
-    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:72:14)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:37:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-03-31T15:29:23.448Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
 
