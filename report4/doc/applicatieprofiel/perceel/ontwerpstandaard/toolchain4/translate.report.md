@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4/translation/perceel_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4/translation/perceel_nl.json
+
+TRANSLATIONFILE: perceel_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
