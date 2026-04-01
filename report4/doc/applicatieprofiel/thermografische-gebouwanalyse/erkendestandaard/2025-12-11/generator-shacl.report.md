@@ -2,15 +2,17 @@
 
 #||# -------------------------------------  
 
-2026-04-01T07:29:20.287Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-thermografische-gebouwanalyse.jsonld#L7760)".
+2026-04-01T07:40:49.965Z warn: Unable to find the description for subject "[urn:oslo-toolchain:dfc8f49ad3ed2535986a172943ee7d0b093554118412b678bad153975c9e83fd](all-thermografische-gebouwanalyse.jsonld#L1374)".
 
-2026-04-01T07:29:20.291Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-thermografische-gebouwanalyse.jsonld#L7771)".
+2026-04-01T07:40:49.968Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-thermografische-gebouwanalyse.jsonld#L7778)".
 
-2026-04-01T07:29:20.291Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-thermografische-gebouwanalyse.jsonld#L7782)".
+2026-04-01T07:40:49.969Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-thermografische-gebouwanalyse.jsonld#L7789)".
 
-2026-04-01T07:29:20.291Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-thermografische-gebouwanalyse.jsonld#L7793)".
+2026-04-01T07:40:49.969Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-thermografische-gebouwanalyse.jsonld#L7800)".
 
-2026-04-01T07:29:20.292Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
+2026-04-01T07:40:49.969Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-thermografische-gebouwanalyse.jsonld#L7811)".
+
+2026-04-01T07:40:49.970Z warn: Unable to find the description for subject "urn:oslo-toolchain:487667944".
 
 Error: Child ([object Object]) or parent ([object Object]) domain is missing!
 
