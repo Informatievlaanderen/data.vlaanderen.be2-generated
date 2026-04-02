@@ -2576,25 +2576,6 @@
             "minItems": 0,
             "type": "array"
           },
-          "Toestel.deployment": {
-            "description": "Lijst van Deployment items.",
-            "items": {
-              "description": "Een platform heeft een bepaalde Deployment.",
-              "properties": {
-                "@id": {
-                  "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Deployment\\/\\d",
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@id"
-              ],
-              "type": "object"
-            },
-            "minItems": 0,
-            "type": "array"
-          },
           "Toestel.fabrikant": {
             "description": "Naam van de fabrikant.",
             "properties": {
@@ -2671,39 +2652,6 @@
             "minItems": 0,
             "type": "array"
           },
-          "Toestel.hostVan": {
-            "description": "Lijst van Systeem items.",
-            "items": {
-              "description": "Systeem dat door het Platform wordt gehost.",
-              "properties": {
-                "@id": {
-                  "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Systeem\\/\\d",
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@id"
-              ],
-              "type": "object"
-            },
-            "minItems": 0,
-            "type": "array"
-          },
-          "Toestel.locatie": {
-            "description": "De plek waar een bepaald Platform zich bevindt.",
-            "properties": {
-              "@id": {
-                "format": "uri",
-                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Geometrie\\/\\d",
-                "type": "string"
-              }
-            },
-            "required": [
-              "@id"
-            ],
-            "type": "object"
-          },
           "Toestel.model": {
             "description": "Naam vh model vh Toestel.",
             "properties": {
@@ -2762,18 +2710,23 @@
             "type": "array"
           },
           "Toestel.type": {
-            "description": "Aard vh Platform.",
-            "properties": {
-              "@id": {
-                "format": "uri",
-                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Platformtype\\/\\d",
-                "type": "string"
-              }
+            "description": "Lijst van Systeemtype items.",
+            "items": {
+              "description": "Aard vh Systeem.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Systeemtype\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
             },
-            "required": [
-              "@id"
-            ],
-            "type": "object"
+            "minItems": 0,
+            "type": "array"
           },
           "Toestel.werkingsbereik": {
             "description": "Lijst van Werkingsbereik items.",
@@ -2800,8 +2753,7 @@
           "@id",
           "@type",
           "Toestel.functie",
-          "Toestel.taak",
-          "Toestel.type"
+          "Toestel.taak"
         ],
         "type": "object"
       },
@@ -4945,10 +4897,10 @@
             "description": "Toestel object gevonden.",
             "links": {
               "DeploymentGET": {
-                "description": "Het `@id` attribuut van de waarde van `Toestel.deployment` kan gebruikt worden om het gerefereerde object van het type `Deployment` op te halen.",
+                "description": "Het `@id` attribuut van de waarde van `Toestel.heeftDeployment` kan gebruikt worden om het gerefereerde object van het type `Deployment` op te halen.",
                 "operationId": "DeploymentGET",
                 "parameters": {
-                  "id": "$response.body#/Toestel.deployment/@id"
+                  "id": "$response.body#/Toestel.heeftDeployment/@id"
                 }
               },
               "FunctieGET": {
@@ -4956,13 +4908,6 @@
                 "operationId": "FunctieGET",
                 "parameters": {
                   "id": "$response.body#/Toestel.functie/@id"
-                }
-              },
-              "GeometrieGET": {
-                "description": "Het `@id` attribuut van de waarde van `Toestel.locatie` kan gebruikt worden om het gerefereerde object van het type `Geometrie` op te halen.",
-                "operationId": "GeometrieGET",
-                "parameters": {
-                  "id": "$response.body#/Toestel.locatie/@id"
                 }
               },
               "OverlevingscapaciteitGET": {
@@ -4977,20 +4922,6 @@
                 "operationId": "PlatformGET",
                 "parameters": {
                   "id": "$response.body#/Toestel.gehostDoor/@id"
-                }
-              },
-              "PlatformtypeGET": {
-                "description": "Het `@id` attribuut van de waarde van `Toestel.type` kan gebruikt worden om het gerefereerde object van het type `Platformtype` op te halen.",
-                "operationId": "PlatformtypeGET",
-                "parameters": {
-                  "id": "$response.body#/Toestel.type/@id"
-                }
-              },
-              "SysteemGET": {
-                "description": "Het `@id` attribuut van de waarde van `Toestel.hostVan` kan gebruikt worden om het gerefereerde object van het type `Systeem` op te halen.",
-                "operationId": "SysteemGET",
-                "parameters": {
-                  "id": "$response.body#/Toestel.hostVan/@id"
                 }
               },
               "SysteemtypeGET": {
