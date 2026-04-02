@@ -97,7 +97,7 @@
         ],
         "type": "object"
       },
-      "BIM_Element": {
+      "BIMElement": {
         "description": "Component van de ruimtelijke structuur van een bouwproject.",
         "properties": {
           "@context": {
@@ -109,19 +109,19 @@
           },
           "@id": {
             "format": "uri",
-            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/BIM_Element\\/\\d",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/BIMElement\\/\\d",
             "type": "string"
           },
           "@type": {
             "description": "Lijst van object types (klasse)",
             "items": {
-              "description": "BIM_Element type",
+              "description": "BIMElement type",
               "type": "string"
             },
             "minItems": 1,
             "type": "array"
           },
-          "BIM_Element.type": {
+          "BIMElement.type": {
             "description": "Lijst van Domeinobjecttype items.",
             "items": {
               "description": "Aard van het Domeinobject.",
@@ -148,7 +148,7 @@
         ],
         "type": "object"
       },
-      "BIM_Gebouw": {
+      "BIMGebouw": {
         "description": "Structuur die onderdak biedt aan de bewoners of inhoud en op een vaste plek staat.",
         "properties": {
           "@context": {
@@ -160,19 +160,19 @@
           },
           "@id": {
             "format": "uri",
-            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/BIM_Gebouw\\/\\d",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/BIMGebouw\\/\\d",
             "type": "string"
           },
           "@type": {
             "description": "Lijst van object types (klasse)",
             "items": {
-              "description": "BIM_Gebouw type",
+              "description": "BIMGebouw type",
               "type": "string"
             },
             "minItems": 1,
             "type": "array"
           },
-          "BIM_Gebouw.type": {
+          "BIMGebouw.type": {
             "description": "Lijst van Domeinobjecttype items.",
             "items": {
               "description": "Aard van het Domeinobject.",
@@ -1141,7 +1141,7 @@
             "type": "object"
           },
           "MachineLearningModel.naam": {
-            "description": "Naam van het model",
+            "description": "Naam van het model.",
             "properties": {
               "@id": {
                 "format": "uri",
@@ -2576,6 +2576,25 @@
             "minItems": 0,
             "type": "array"
           },
+          "Toestel.deployment": {
+            "description": "Lijst van Deployment items.",
+            "items": {
+              "description": "Een platform heeft een bepaalde Deployment.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Deployment\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
           "Toestel.fabrikant": {
             "description": "Naam van de fabrikant.",
             "properties": {
@@ -2652,6 +2671,39 @@
             "minItems": 0,
             "type": "array"
           },
+          "Toestel.hostVan": {
+            "description": "Lijst van Systeem items.",
+            "items": {
+              "description": "Systeem dat door het Platform wordt gehost.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Systeem\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Toestel.locatie": {
+            "description": "De plek waar een bepaald Platform zich bevindt.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Geometrie\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
           "Toestel.model": {
             "description": "Naam vh model vh Toestel.",
             "properties": {
@@ -2710,23 +2762,18 @@
             "type": "array"
           },
           "Toestel.type": {
-            "description": "Lijst van Systeemtype items.",
-            "items": {
-              "description": "Aard vh Systeem.",
-              "properties": {
-                "@id": {
-                  "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Systeemtype\\/\\d",
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@id"
-              ],
-              "type": "object"
+            "description": "Aard vh Platform.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Platformtype\\/\\d",
+                "type": "string"
+              }
             },
-            "minItems": 0,
-            "type": "array"
+            "required": [
+              "@id"
+            ],
+            "type": "object"
           },
           "Toestel.werkingsbereik": {
             "description": "Lijst van Werkingsbereik items.",
@@ -2753,7 +2800,8 @@
           "@id",
           "@type",
           "Toestel.functie",
-          "Toestel.taak"
+          "Toestel.taak",
+          "Toestel.type"
         ],
         "type": "object"
       },
@@ -3036,13 +3084,13 @@
         ]
       }
     },
-    "/id/BIM_Element/{id}": {
+    "/id/BIMElement/{id}": {
       "get": {
         "description": "Component van de ruimtelijke structuur van een bouwproject.",
-        "operationId": "BIM_ElementGET",
+        "operationId": "BIMElementGET",
         "parameters": [
           {
-            "description": "Identificator van een BIM_Element object.",
+            "description": "Identificator van een BIMElement object.",
             "in": "path",
             "name": "id",
             "required": true,
@@ -3056,33 +3104,33 @@
             "content": {
               "application/ld+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BIM_Element"
+                  "$ref": "#/components/schemas/BIMElement"
                 }
               }
             },
-            "description": "BIM_Element object gevonden.",
+            "description": "BIMElement object gevonden.",
             "links": {
               "DomeinobjecttypeGET": {
-                "description": "Het `@id` attribuut van de waarde van `BIM_Element.type` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen.",
+                "description": "Het `@id` attribuut van de waarde van `BIMElement.type` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen.",
                 "operationId": "DomeinobjecttypeGET",
                 "parameters": {
-                  "id": "$response.body#/BIM_Element.type/@id"
+                  "id": "$response.body#/BIMElement.type/@id"
                 }
               },
               "ElementtypeGET": {
-                "description": "Het `@id` attribuut van de waarde van `BIM_Element.type` kan gebruikt worden om het gerefereerde object van het type `Elementtype` op te halen.",
+                "description": "Het `@id` attribuut van de waarde van `BIMElement.type` kan gebruikt worden om het gerefereerde object van het type `Elementtype` op te halen.",
                 "operationId": "ElementtypeGET",
                 "parameters": {
-                  "id": "$response.body#/BIM_Element.type/@id"
+                  "id": "$response.body#/BIMElement.type/@id"
                 }
               }
             }
           },
           "400": {
-            "description": "Ontbrekende informatie bij het opvragen een BIM_Element object."
+            "description": "Ontbrekende informatie bij het opvragen een BIMElement object."
           },
           "404": {
-            "description": "BIM_Element object met gegeven ID niet gevonden."
+            "description": "BIMElement object met gegeven ID niet gevonden."
           }
         },
         "summary": "Component van de ruimtelijke structuur van een bouwproject.",
@@ -3091,13 +3139,13 @@
         ]
       }
     },
-    "/id/BIM_Gebouw/{id}": {
+    "/id/BIMGebouw/{id}": {
       "get": {
         "description": "Structuur die onderdak biedt aan de bewoners of inhoud en op een vaste plek staat.",
-        "operationId": "BIM_GebouwGET",
+        "operationId": "BIMGebouwGET",
         "parameters": [
           {
-            "description": "Identificator van een BIM_Gebouw object.",
+            "description": "Identificator van een BIMGebouw object.",
             "in": "path",
             "name": "id",
             "required": true,
@@ -3111,33 +3159,33 @@
             "content": {
               "application/ld+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BIM_Gebouw"
+                  "$ref": "#/components/schemas/BIMGebouw"
                 }
               }
             },
-            "description": "BIM_Gebouw object gevonden.",
+            "description": "BIMGebouw object gevonden.",
             "links": {
               "DomeinobjecttypeGET": {
-                "description": "Het `@id` attribuut van de waarde van `BIM_Gebouw.type` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen.",
+                "description": "Het `@id` attribuut van de waarde van `BIMGebouw.type` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen.",
                 "operationId": "DomeinobjecttypeGET",
                 "parameters": {
-                  "id": "$response.body#/BIM_Gebouw.type/@id"
+                  "id": "$response.body#/BIMGebouw.type/@id"
                 }
               },
               "GebouwtypeGET": {
-                "description": "Het `@id` attribuut van de waarde van `BIM_Gebouw.type` kan gebruikt worden om het gerefereerde object van het type `Gebouwtype` op te halen.",
+                "description": "Het `@id` attribuut van de waarde van `BIMGebouw.type` kan gebruikt worden om het gerefereerde object van het type `Gebouwtype` op te halen.",
                 "operationId": "GebouwtypeGET",
                 "parameters": {
-                  "id": "$response.body#/BIM_Gebouw.type/@id"
+                  "id": "$response.body#/BIMGebouw.type/@id"
                 }
               }
             }
           },
           "400": {
-            "description": "Ontbrekende informatie bij het opvragen een BIM_Gebouw object."
+            "description": "Ontbrekende informatie bij het opvragen een BIMGebouw object."
           },
           "404": {
-            "description": "BIM_Gebouw object met gegeven ID niet gevonden."
+            "description": "BIMGebouw object met gegeven ID niet gevonden."
           }
         },
         "summary": "Structuur die onderdak biedt aan de bewoners of inhoud en op een vaste plek staat.",
@@ -4897,10 +4945,10 @@
             "description": "Toestel object gevonden.",
             "links": {
               "DeploymentGET": {
-                "description": "Het `@id` attribuut van de waarde van `Toestel.heeftDeployment` kan gebruikt worden om het gerefereerde object van het type `Deployment` op te halen.",
+                "description": "Het `@id` attribuut van de waarde van `Toestel.deployment` kan gebruikt worden om het gerefereerde object van het type `Deployment` op te halen.",
                 "operationId": "DeploymentGET",
                 "parameters": {
-                  "id": "$response.body#/Toestel.heeftDeployment/@id"
+                  "id": "$response.body#/Toestel.deployment/@id"
                 }
               },
               "FunctieGET": {
@@ -4908,6 +4956,13 @@
                 "operationId": "FunctieGET",
                 "parameters": {
                   "id": "$response.body#/Toestel.functie/@id"
+                }
+              },
+              "GeometrieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Toestel.locatie` kan gebruikt worden om het gerefereerde object van het type `Geometrie` op te halen.",
+                "operationId": "GeometrieGET",
+                "parameters": {
+                  "id": "$response.body#/Toestel.locatie/@id"
                 }
               },
               "OverlevingscapaciteitGET": {
@@ -4922,6 +4977,20 @@
                 "operationId": "PlatformGET",
                 "parameters": {
                   "id": "$response.body#/Toestel.gehostDoor/@id"
+                }
+              },
+              "PlatformtypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Toestel.type` kan gebruikt worden om het gerefereerde object van het type `Platformtype` op te halen.",
+                "operationId": "PlatformtypeGET",
+                "parameters": {
+                  "id": "$response.body#/Toestel.type/@id"
+                }
+              },
+              "SysteemGET": {
+                "description": "Het `@id` attribuut van de waarde van `Toestel.hostVan` kan gebruikt worden om het gerefereerde object van het type `Systeem` op te halen.",
+                "operationId": "SysteemGET",
+                "parameters": {
+                  "id": "$response.body#/Toestel.hostVan/@id"
                 }
               },
               "SysteemtypeGET": {
