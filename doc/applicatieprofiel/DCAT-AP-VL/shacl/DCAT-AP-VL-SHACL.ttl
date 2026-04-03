@@ -149,11 +149,11 @@
     rdfs:label "hoofdonderwerp"@nl;
     rdfs:comment "De resource (dataset of dataservice) beschreven in het record."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusRecord.Hoofdonderwerp>;
-    shacl:class dcat:Resource;
     shacl:description "De resource (dataset of dataservice) beschreven in het record."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "hoofdonderwerp"@nl;
+    shacl:or ([shacl:class dcat:Resource] [shacl:class dcat:Dataset] [shacl:class dcat:DataService]);
     shacl:path foaf:primaryTopic
   ];
   shacl:targetClass dcat:CatalogRecord .
@@ -180,13 +180,15 @@
     <http://purl.org/vocab/vann/usageNote> "[zie <a href=\"https://www.w3.org/TR/vocab-dcat-3/\">DCAT</a>]."@nl;
     rdfs:comment "Een verband tussen twee resources."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusResource.Relatie>;
-    shacl:class dcat:Resource;
     shacl:description "Een verband tussen twee resources."@nl;
     shacl:maxCount "n"^^xsd:integer;
     shacl:name "relatie"@nl;
+    shacl:or ([shacl:class dcat:Resource] [shacl:class dcat:Dataset] [shacl:class dcat:DataService]);
     shacl:path dc:relation
   ];
-  shacl:targetClass dcat:Resource .
+  shacl:targetClass dcat:Resource,
+    dcat:Dataset,
+    dcat:DataService .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusShape> a shacl:NodeShape;
   rdfs:label "Catalogus"@nl;
@@ -341,7 +343,8 @@ Om het verband tussen beiden zichtbaar te maken in het UML model, is de generiek
 <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#ContactpuntShape> a shacl:NodeShape;
   rdfs:label "Contactpunt"@nl;
   shacl:closed false;
-  shacl:targetClass schema:ContactPoint .
+  shacl:targetClass vcard:Kind,
+    schema:ContactPoint .
 
 <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#DataserviceShape> a shacl:NodeShape;
   rdfs:label "Dataservice"@nl;
@@ -1292,22 +1295,22 @@ waaraan de distributie voldoet."""@nl;
     rdfs:label "bronresource"@nl;
     rdfs:comment "De catalogus resource waarvan de relatie start."@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#RelatieQualificatie.Bronresource>;
-    shacl:class dcat:Resource;
     shacl:description "De catalogus resource waarvan de relatie start."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "bronresource"@nl;
+    shacl:or ([shacl:class dcat:Resource] [shacl:class dcat:Dataset] [shacl:class dcat:DataService]);
     shacl:path <https://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.source>
   ], [
     a shacl:PropertyShape;
     rdfs:label "doelresource"@nl;
     rdfs:comment "De catalogus resource waarin de relatie eindigt"@nl;
     rdfs:seeAlso <https://data.vlaanderen.be/doc/applicatieprofiel/DCAT-AP-VL/erkendestandaard/2026-02-12#RelatieQualificatie.Doelresource>;
-    shacl:class dcat:Resource;
     shacl:description "De catalogus resource waarin de relatie eindigt"@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "doelresource"@nl;
+    shacl:or ([shacl:class dcat:Resource] [shacl:class dcat:Dataset] [shacl:class dcat:DataService]);
     shacl:path <https://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.target>
   ];
   shacl:targetClass dcat:Relationship .
