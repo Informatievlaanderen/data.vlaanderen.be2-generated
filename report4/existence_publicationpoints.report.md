@@ -507,12 +507,6 @@ Directory check
 
 index.html check
 
-#||#    + checking /home/circleci/project/config/test/weg.publication.json
-#||# 
-Directory check
-
-index.html check
-
 #||#    + checking /home/circleci/project/config/test/voorwaarden-dienstverlening.publication.json
 #||# 
 Directory check
@@ -520,6 +514,12 @@ Directory check
 index.html check
 
 #||#    + checking /home/circleci/project/config/test/waterkwaliteit.publication.json
+#||# 
+Directory check
+
+index.html check
+
+#||#    + checking /home/circleci/project/config/test/weg.publication.json
 #||# 
 Directory check
 
