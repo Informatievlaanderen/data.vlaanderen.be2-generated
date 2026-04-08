@@ -1,5 +1,4 @@
 @prefix dc: <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -9,12 +8,15 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#> rdfs:member <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#AgentShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#GeregistreerdeorganisatieShape>,
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#> rdfs:member <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#GeregistreerdeorganisatieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#FormeleorganisatieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#OrganisatieShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#LidmaatschapShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#VeranderingsgebeurtenisShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#StopzettingShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#PlaatsShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#OprichtingShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#AfsluitingShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#DoorhalingShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#LocatieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#LangstringShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#IdentificatorShape>,
@@ -23,10 +25,10 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#GeometrieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#GeografischenaamShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#AdresvoorstellingShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#OpeningsurenspecificatieShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#UriShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#TimeShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#ContactpuntShape> .
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#MomentShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#ContactpuntShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#PeriodeShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#TemporeleentiteitShape> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#AdresvoorstellingShape> a shacl:NodeShape;
   rdfs:label "Adresvoorstelling"@nl;
@@ -178,26 +180,12 @@
   ];
   shacl:targetClass <http://www.w3.org/ns/locn#Address> .
 
-<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#AgentShape> a shacl:NodeShape;
-  rdfs:label "Agent"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Te vervangen door een niet-abstracte klasse."@nl;
-  rdfs:comment "Een agent zoals een Persoon, groep, software of fysiek artifact."@nl;
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#AfsluitingShape> a shacl:NodeShape;
+  rdfs:label "Afsluiting"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Na afsluiting kan er een stopzetting plaatsvinden."@nl;
+  rdfs:comment "Gebeurtenis waarbij een Organisatie wordt afgesloten en geen verdere activiteit zal uitvoeren"@nl;
   shacl:closed false;
-  shacl:property [
-    a shacl:PropertyShape;
-    rdfs:label "isLidVan"@nl;
-    <http://purl.org/vocab/vann/usageNote> "Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering)."@nl;
-    rdfs:comment "Niet nader bepaald lidmaatschap van een Agent van een Organisatie."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Agent.Islidvan>;
-    shacl:description "Niet nader bepaald lidmaatschap van een Agent van een Organisatie."@nl;
-    shacl:name "isLidVan"@nl;
-    shacl:or ([shacl:class org:Organization] [shacl:class org:FormalOrganization] [shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>]);
-    shacl:path org:memberOf
-  ];
-  shacl:targetClass foaf:Agent,
-    org:Organization,
-    org:FormalOrganization,
-    <http://www.w3.org/ns/regorg#RegisteredOrganization> .
+  shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/organisatie#Doorhaling> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#ContactpuntShape> a shacl:NodeShape;
   rdfs:label "Contactpunt"@nl;
@@ -252,13 +240,48 @@
   shacl:closed false;
   shacl:targetClass xsd:dateTime .
 
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#DoorhalingShape> a shacl:NodeShape;
+  rdfs:label "Doorhaling"@nl;
+  rdfs:comment "Gebeurtenis waarbij een Organisatie is geschrapt in het KBO."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "doorhalingstype"@nl;
+    rdfs:comment "Reden waarom de Organisatie is geschrapt"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Doorhaling.Doorhalingstype>;
+    shacl:class skos:Concept;
+    shacl:description "Reden waarom de Organisatie is geschrapt"@nl;
+    shacl:maxCount "1";
+    shacl:name "doorhalingstype"@nl;
+    shacl:path dc:type
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "redenDoorhaling";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Doorhaling.Redendoorhaling>;
+    shacl:class skos:Concept;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "redenDoorhaling";
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#redenDoorhaling>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "Refereert naar de periode van tijd waarin de Doorhaling van kracht is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Doorhaling.RefereertNaarDePeriodeVanTijdWaarinDeDoorhalingVanKrachtIs.>;
+    shacl:class <http://www.w3.org/2006/time#ProperInterval>;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Refereert naar de periode van tijd waarin de Doorhaling van kracht is."@nl;
+    shacl:path <https://www.w3.org/ns/prov#time>
+  ];
+  shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/organisatie#Doorhaling> .
+
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#FormeleorganisatieShape> a shacl:NodeShape;
   rdfs:label "FormeleOrganisatie"@nl;
   <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld een bedrijf, een vzw, een overheidsorgaan, een kerkgemeenschap."@nl;
   rdfs:comment "Een erkende Organisatie, erkend in brede zin of  meer specifiek in juridische zin met bijbehorende rechten en plichten."@nl;
   shacl:closed false;
-  shacl:targetClass org:FormalOrganization,
-    <http://www.w3.org/ns/regorg#RegisteredOrganization> .
+  shacl:targetClass <http://www.w3.org/ns/regorg#RegisteredOrganization>,
+    org:FormalOrganization .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#GeografischenaamShape> a shacl:NodeShape;
   rdfs:label "GeografischeNaam"@nl;
@@ -404,56 +427,6 @@
   shacl:closed false;
   shacl:targetClass rdf:langString .
 
-<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#LidmaatschapShape> a shacl:NodeShape;
-  rdfs:label "Lidmaatschap"@nl;
-  rdfs:comment "Geeft de kenmerken weer van het Lidmaatschap van een Agent van een Organisatie."@nl;
-  shacl:closed false;
-  shacl:property [
-    a shacl:PropertyShape;
-    rdfs:label "lidVanTot"@nl;
-    rdfs:comment "Periode waarin de agent lid was van de Organisatie."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Lidmaatschap.Lidvantot>;
-    shacl:class <http://www.w3.org/2006/time#ProperInterval>;
-    shacl:description "Periode waarin de agent lid was van de Organisatie."@nl;
-    shacl:maxCount "1";
-    shacl:name "lidVanTot"@nl;
-    shacl:path org:memberDuring
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "rol"@nl;
-    rdfs:comment "Rol die de Agent vervult als lid van de Organisatie."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Lidmaatschap.Rol>;
-    shacl:class org:Role;
-    shacl:description "Rol die de Agent vervult als lid van de Organisatie."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "rol"@nl;
-    shacl:path org:role
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "lid"@nl;
-    rdfs:comment "Lidmaatschap van een Agent (van een Organisatie)."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Lidmaatschap.Lid>;
-    shacl:description "Lidmaatschap van een Agent (van een Organisatie)."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "lid"@nl;
-    shacl:or ([shacl:class org:Organization] [shacl:class org:FormalOrganization] [shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>]);
-    shacl:path org:member
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "isLidBij"@nl;
-    rdfs:comment "Organisatie waarop het Lidmaatschap (van een Agent) betrekking heeft."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Lidmaatschap.Islidbij>;
-    shacl:description "Organisatie waarop het Lidmaatschap (van een Agent) betrekking heeft."@nl;
-    shacl:maxCount 1;
-    shacl:minCount 1;
-    shacl:name "isLidBij"@nl;
-    shacl:or ([shacl:class foaf:Agent] [shacl:class org:Organization] [shacl:class org:FormalOrganization] [shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>]);
-    shacl:path org:organization
-  ];
-  shacl:targetClass org:Membership .
-
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#LocatieShape> a shacl:NodeShape;
   rdfs:label "Locatie"@nl;
   <http://purl.org/vocab/vann/usageNote> "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie, GeografischeNaam, Adres, etc."@nl;
@@ -475,63 +448,28 @@
     prov:Location,
     <http://www.w3.org/ns/locn#Address> .
 
-<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#OpeningsurenspecificatieShape> a shacl:NodeShape;
-  rdfs:label "Openingsurenspecificatie"@nl;
-  rdfs:comment "Informatie over de openingsuren van een plaats of dienst."@nl;
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#MomentShape> a shacl:NodeShape;
+  rdfs:label "Moment"@nl;
+  rdfs:comment "Moment met omvang en duur nul."@nl;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
-    rdfs:label "dagVanDeWeek"@nl;
-    <http://purl.org/vocab/vann/usageNote> "Zie https://schema.org/DayOfWeek voor lijst van mogelijke waarden."@nl;
-    rdfs:comment "Dag van de week waarvoor de openingsuren geldig zijn."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Openingsurenspecificatie.Dagvandeweek>;
-    shacl:datatype xsd:anyURI;
-    shacl:description "Dag van de week waarvoor de openingsuren geldig zijn."@nl;
-    shacl:maxCount "1";
-    shacl:name "dagVanDeWeek"@nl;
-    shacl:path schemas:dayOfWeek
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "geldigTot"@nl;
-    rdfs:comment "Datum tot wanneer de opgegeven openingsuren gelden."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Openingsurenspecificatie.Geldigtot>;
+    rdfs:label "inXSDdatumTijd"@nl;
+    rdfs:comment "Positie in de tijd uitgedrukt door middel van xsd:dateTime."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Moment.Inxsddatumtijd>;
     shacl:datatype xsd:dateTime;
-    shacl:description "Datum tot wanneer de opgegeven openingsuren gelden."@nl;
+    shacl:description "Positie in de tijd uitgedrukt door middel van xsd:dateTime."@nl;
     shacl:maxCount "1";
-    shacl:name "geldigTot"@nl;
-    shacl:path schemas:validThrough
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "geldigVan"@nl;
-    rdfs:comment "Datum vanaf wanneer de opgegeven openingsuren gelden."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Openingsurenspecificatie.Geldigvan>;
-    shacl:datatype xsd:dateTime;
-    shacl:description "Datum vanaf wanneer de opgegeven openingsuren gelden."@nl;
-    shacl:maxCount "1";
-    shacl:name "geldigVan"@nl;
-    shacl:path schemas:validFrom
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "gesloten"@nl;
-    rdfs:comment "Sluitingsuur van de plaats of dienst op de opgegeven dag van de week."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Openingsurenspecificatie.Gesloten>;
-    shacl:datatype xsd:time;
-    shacl:description "Sluitingsuur van de plaats of dienst op de opgegeven dag van de week."@nl;
-    shacl:maxCount "1";
-    shacl:name "gesloten"@nl;
-    shacl:path schemas:closes
-  ], [
-    a shacl:PropertyShape;
-    rdfs:label "open"@nl;
-    rdfs:comment "Openingsuur van de plaats of dienst op de opgegeven dag van de week."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Openingsurenspecificatie.Open>;
-    shacl:datatype xsd:time;
-    shacl:description "Openingsuur van de plaats of dienst op de opgegeven dag van de week."@nl;
-    shacl:maxCount "1";
-    shacl:name "open"@nl;
-    shacl:path schemas:opens
+    shacl:name "inXSDdatumTijd"@nl;
+    shacl:path <http://www.w3.org/2006/time#inXSDDateTime>
   ];
-  shacl:targetClass schemas:OpeningHoursSpecification .
+  shacl:targetClass <http://www.w3.org/2006/time#Instant> .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#OprichtingShape> a shacl:NodeShape;
+  rdfs:label "Oprichting"@nl;
+  rdfs:comment "Gebeurtenis waarbij een Organisatie is opgericht."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/m8g/FoundationEvent> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#OrganisatieShape> a shacl:NodeShape;
   rdfs:label "Organisatie"@nl;
@@ -600,27 +538,45 @@
     shacl:path <http://www.w3.org/ns/regorg#orgType>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "lid"@nl;
-    <http://purl.org/vocab/vann/usageNote> "Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering)."@nl;
-    rdfs:comment "Agent die lid is (van een Organisatie)."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Organisatie.Lid>;
-    shacl:description "Agent die lid is (van een Organisatie)."@nl;
-    shacl:name "lid"@nl;
-    shacl:or ([shacl:class foaf:Agent] [shacl:class org:Organization] [shacl:class org:FormalOrganization] [shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>]);
-    shacl:path org:hasMember
+    rdfs:label "isVeranderdDoor"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Als het Veranderingsmoment bijvoorbeeld een Stopzetting is hield de Organisatie daarna op met bestaan. Merk op dat deze relatie zinloos is als het Veranderingsmoment een Oprichting is (de Organisatie bestond nog niet en kan dus niet veranderd zijn ten gevolge van de Oprichting)."@nl;
+    rdfs:comment "Verwijst naar het Veranderingsmoment dat deze Organisatie heeft veranderd."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Organisatie.Isveranderddoor>;
+    shacl:description "Verwijst naar het Veranderingsmoment dat deze Organisatie heeft veranderd."@nl;
+    shacl:name "isVeranderdDoor"@nl;
+    shacl:or ([shacl:class org:ChangeEvent] [shacl:class <https://data.vlaanderen.be/ns/organisatie#Stopzetting>] [shacl:class <http://data.europa.eu/m8g/FoundationEvent>] [shacl:class <https://implementatie.data.vlaanderen.be/ns/organisatie#Doorhaling>]);
+    shacl:path org:changedBy
+  ];
+  shacl:targetClass <http://www.w3.org/ns/regorg#RegisteredOrganization>,
+    org:FormalOrganization,
+    org:Organization .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#PeriodeShape> a shacl:NodeShape;
+  rdfs:label "Periode"@nl;
+  rdfs:comment "Temporele Entiteit waarvan de omvang en duurtijd verschilt van nul, dit wil zeggen, waarvoor de begin- en eindtijd verschillend zijn."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "tot"@nl;
+    rdfs:comment "Einde van een TemporeleEntiteit."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Periode.Tot>;
+    shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:description "Einde van een TemporeleEntiteit."@nl;
+    shacl:maxCount "1";
+    shacl:name "tot"@nl;
+    shacl:path <http://www.w3.org/2006/time#hasEnd>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "heeftLid"@nl;
-    rdfs:comment "Lidmaatschap van een Agent van een Organisatie."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Organisatie.Heeftlid>;
-    shacl:class org:Membership;
-    shacl:description "Lidmaatschap van een Agent van een Organisatie."@nl;
-    shacl:name "heeftLid"@nl;
-    shacl:path org:hasMembership
+    rdfs:label "van"@nl;
+    rdfs:comment "Start van een TemporeleEntiteit."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Periode.Van>;
+    shacl:class <http://www.w3.org/2006/time#Instant>;
+    shacl:description "Start van een TemporeleEntiteit."@nl;
+    shacl:maxCount "1";
+    shacl:name "van"@nl;
+    shacl:path <http://www.w3.org/2006/time#hasBeginning>
   ];
-  shacl:targetClass org:Organization,
-    org:FormalOrganization,
-    <http://www.w3.org/ns/regorg#RegisteredOrganization> .
+  shacl:targetClass <http://www.w3.org/2006/time#ProperInterval> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#PlaatsShape> a shacl:NodeShape;
   rdfs:label "Plaats"@nl;
@@ -634,7 +590,6 @@
     shacl:datatype rdf:langString;
     shacl:description "Naam van de plaats of van het gebied."@nl;
     shacl:maxCount "1";
-    shacl:minCount "1";
     shacl:name "plaatsnaam"@nl;
     shacl:path rdfs:label
   ], [
@@ -650,17 +605,57 @@
   ];
   shacl:targetClass dc:Location .
 
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#StopzettingShape> a shacl:NodeShape;
+  rdfs:label "Stopzetting"@nl;
+  rdfs:comment "Gebeurtenis waarbij een Organisatie is stopgezet."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "redenStopzetting"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld pensionering, faillissement, etc."@nl;
+    rdfs:comment "Reden waarom de Organisatie is stopgezet."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Stopzetting.Redenstopzetting>;
+    shacl:class skos:Concept;
+    shacl:description "Reden waarom de Organisatie is stopgezet."@nl;
+    shacl:maxCount "1";
+    shacl:name "redenStopzetting"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/organisatie#redenStopzetting>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#Stopzetting> .
+
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#StringShape> a shacl:NodeShape;
   rdfs:label "String";
   shacl:closed false;
   shacl:targetClass xsd:string .
 
-<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#TimeShape> a shacl:NodeShape;
-  rdfs:label "Time";
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#TemporeleentiteitShape> a shacl:NodeShape;
+  rdfs:label "TemporeleEntiteit"@nl;
+  <http://purl.org/vocab/vann/usageNote> "TemporeleEntiteiten zijn temporele geometrische primitieven zoals Moment of Periode. Dit datatype is abstract, gebruik één van de subklassen."@nl;
+  rdfs:comment "Abstracte klasse voor temporele objecten."@nl;
   shacl:closed false;
-  shacl:targetClass xsd:time .
+  shacl:targetClass <http://www.w3.org/2006/time#Instant>,
+    <http://www.w3.org/2006/time#ProperInterval>,
+    <http://www.w3.org/2006/time#TemporalEntity> .
 
-<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#UriShape> a shacl:NodeShape;
-  rdfs:label "URI";
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#VeranderingsgebeurtenisShape> a shacl:NodeShape;
+  rdfs:label "Veranderingsgebeurtenis"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Is bedoeld voor situaties waarbij de de resulterende Organisatie zodanig verschilt van de oorspronkelijke dat ze beschouwd kan worden als een nieuwe Organisatie."@nl;
+  rdfs:comment "Gebeurtenis waardoor een Organisatie een belangrijke wijziging ondergaat zoals een fusie of een herstructurering."@nl;
   shacl:closed false;
-  shacl:targetClass xsd:anyURI .
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "datum"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Zie Time and date & Recurring and partial dates van <a href=\"https://www.w3.org/TR/rdf11-concepts/#h2_section-Datatypes\"> XSD Datatypes</a>."@nl;
+    rdfs:comment "Datum waarop de Veranderingsgebeurtenis plaatsvond."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Veranderingsgebeurtenis.Datum>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum waarop de Veranderingsgebeurtenis plaatsvond."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "datum"@nl;
+    shacl:path dc:date
+  ];
+  shacl:targetClass org:ChangeEvent,
+    <https://data.vlaanderen.be/ns/organisatie#Stopzetting>,
+    <http://data.europa.eu/m8g/FoundationEvent>,
+    <https://implementatie.data.vlaanderen.be/ns/organisatie#Doorhaling> .

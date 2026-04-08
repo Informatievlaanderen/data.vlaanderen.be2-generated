@@ -1,8 +1,8 @@
 {
   "components": {
     "schemas": {
-      "Agent": {
-        "description": "Een agent zoals een Persoon, groep, software of fysiek artifact.",
+      "Afsluiting": {
+        "description": "Gebeurtenis waarbij een Organisatie wordt afgesloten en geen verdere activiteit zal uitvoeren",
         "properties": {
           "@context": {
             "enum": [
@@ -13,42 +13,143 @@
           },
           "@id": {
             "format": "uri",
-            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Afsluiting\\/\\d",
             "type": "string"
           },
           "@type": {
             "description": "Lijst van object types (klasse)",
             "items": {
-              "description": "Agent type",
+              "description": "Afsluiting type",
               "type": "string"
             },
             "minItems": 1,
             "type": "array"
           },
-          "Agent.isLidVan": {
-            "description": "Lijst van Organisatie items.",
-            "items": {
-              "description": "Niet nader bepaald lidmaatschap van een Agent van een Organisatie. Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
-              "properties": {
-                "@id": {
-                  "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Organisatie\\/\\d",
-                  "type": "string"
-                }
+          "Afsluiting.datum": {
+            "description": "Datum waarop de Veranderingsgebeurtenis plaatsvond. Zie Time and date & Recurring and partial dates van <a href=\"https://www.w3.org/TR/rdf11-concepts/#h2_section-Datatypes\"> XSD Datatypes</a>.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "DateTime"
+                ],
+                "type": "string"
               },
-              "required": [
-                "@id"
-              ],
-              "type": "object"
+              "@value": {
+                "format": "date-time",
+                "type": "string"
+              }
             },
-            "minItems": 0,
-            "type": "array"
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
           }
         },
         "required": [
           "@context",
           "@id",
-          "@type"
+          "@type",
+          "Afsluiting.datum",
+          "Afsluiting.datum"
+        ],
+        "type": "object"
+      },
+      "Doorhaling": {
+        "description": "Gebeurtenis waarbij een Organisatie is geschrapt in het KBO.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Doorhaling\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Doorhaling type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Doorhaling.datum": {
+            "description": "Datum waarop de Veranderingsgebeurtenis plaatsvond. Zie Time and date & Recurring and partial dates van <a href=\"https://www.w3.org/TR/rdf11-concepts/#h2_section-Datatypes\"> XSD Datatypes</a>.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "DateTime"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date-time",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Doorhaling.doorhalingstype": {
+            "description": "Reden waarom de Organisatie is geschrapt",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Doorhalingstype\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Doorhaling.redenDoorhaling": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/RedenDoorhaling\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Doorhaling.refereertNaarDePeriodeVanTijdWaarinDeDoorhalingVanKrachtIs.": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Periode\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Doorhaling.redenDoorhaling",
+          "Doorhaling.refereertNaarDePeriodeVanTijdWaarinDeDoorhalingVanKrachtIs.",
+          "Doorhaling.datum",
+          "Doorhaling.datum"
         ],
         "type": "object"
       },
@@ -133,52 +234,14 @@
             "minItems": 0,
             "type": "array"
           },
-          "FormeleOrganisatie.heeftLid": {
-            "description": "Lijst van Lidmaatschap items.",
+          "FormeleOrganisatie.isVeranderdDoor": {
+            "description": "Lijst van Veranderingsgebeurtenis items.",
             "items": {
-              "description": "Lidmaatschap van een Agent van een Organisatie.",
+              "description": "Verwijst naar het Veranderingsmoment dat deze Organisatie heeft veranderd. Als het Veranderingsmoment bijvoorbeeld een Stopzetting is hield de Organisatie daarna op met bestaan. Merk op dat deze relatie zinloos is als het Veranderingsmoment een Oprichting is (de Organisatie bestond nog niet en kan dus niet veranderd zijn ten gevolge van de Oprichting).",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Lidmaatschap\\/\\d",
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@id"
-              ],
-              "type": "object"
-            },
-            "minItems": 0,
-            "type": "array"
-          },
-          "FormeleOrganisatie.isLidVan": {
-            "description": "Lijst van Organisatie items.",
-            "items": {
-              "description": "Niet nader bepaald lidmaatschap van een Agent van een Organisatie. Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
-              "properties": {
-                "@id": {
-                  "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Organisatie\\/\\d",
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@id"
-              ],
-              "type": "object"
-            },
-            "minItems": 0,
-            "type": "array"
-          },
-          "FormeleOrganisatie.lid": {
-            "description": "Lijst van Agent items.",
-            "items": {
-              "description": "Agent die lid is (van een Organisatie). Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
-              "properties": {
-                "@id": {
-                  "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Veranderingsgebeurtenis\\/\\d",
                   "type": "string"
                 }
               },
@@ -338,52 +401,14 @@
             "minItems": 0,
             "type": "array"
           },
-          "GeregistreerdeOrganisatie.heeftLid": {
-            "description": "Lijst van Lidmaatschap items.",
+          "GeregistreerdeOrganisatie.isVeranderdDoor": {
+            "description": "Lijst van Veranderingsgebeurtenis items.",
             "items": {
-              "description": "Lidmaatschap van een Agent van een Organisatie.",
+              "description": "Verwijst naar het Veranderingsmoment dat deze Organisatie heeft veranderd. Als het Veranderingsmoment bijvoorbeeld een Stopzetting is hield de Organisatie daarna op met bestaan. Merk op dat deze relatie zinloos is als het Veranderingsmoment een Oprichting is (de Organisatie bestond nog niet en kan dus niet veranderd zijn ten gevolge van de Oprichting).",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Lidmaatschap\\/\\d",
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@id"
-              ],
-              "type": "object"
-            },
-            "minItems": 0,
-            "type": "array"
-          },
-          "GeregistreerdeOrganisatie.isLidVan": {
-            "description": "Lijst van Organisatie items.",
-            "items": {
-              "description": "Niet nader bepaald lidmaatschap van een Agent van een Organisatie. Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
-              "properties": {
-                "@id": {
-                  "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Organisatie\\/\\d",
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@id"
-              ],
-              "type": "object"
-            },
-            "minItems": 0,
-            "type": "array"
-          },
-          "GeregistreerdeOrganisatie.lid": {
-            "description": "Lijst van Agent items.",
-            "items": {
-              "description": "Agent die lid is (van een Organisatie). Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
-              "properties": {
-                "@id": {
-                  "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Veranderingsgebeurtenis\\/\\d",
                   "type": "string"
                 }
               },
@@ -541,8 +566,8 @@
         ],
         "type": "object"
       },
-      "Lidmaatschap": {
-        "description": "Geeft de kenmerken weer van het Lidmaatschap van een Agent van een Organisatie.",
+      "Oprichting": {
+        "description": "Gebeurtenis waarbij een Organisatie is opgericht.",
         "properties": {
           "@context": {
             "enum": [
@@ -553,71 +578,35 @@
           },
           "@id": {
             "format": "uri",
-            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Lidmaatschap\\/\\d",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Oprichting\\/\\d",
             "type": "string"
           },
           "@type": {
             "description": "Lijst van object types (klasse)",
             "items": {
-              "description": "Lidmaatschap type",
+              "description": "Oprichting type",
               "type": "string"
             },
             "minItems": 1,
             "type": "array"
           },
-          "Lidmaatschap.isLidBij": {
-            "description": "Organisatie waarop het Lidmaatschap (van een Agent) betrekking heeft.",
+          "Oprichting.datum": {
+            "description": "Datum waarop de Veranderingsgebeurtenis plaatsvond. Zie Time and date & Recurring and partial dates van <a href=\"https://www.w3.org/TR/rdf11-concepts/#h2_section-Datatypes\"> XSD Datatypes</a>.",
             "properties": {
-              "@id": {
-                "format": "uri",
-                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+              "@type": {
+                "enum": [
+                  "DateTime"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date-time",
                 "type": "string"
               }
             },
             "required": [
-              "@id"
-            ],
-            "type": "object"
-          },
-          "Lidmaatschap.lid": {
-            "description": "Lidmaatschap van een Agent (van een Organisatie).",
-            "properties": {
-              "@id": {
-                "format": "uri",
-                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Organisatie\\/\\d",
-                "type": "string"
-              }
-            },
-            "required": [
-              "@id"
-            ],
-            "type": "object"
-          },
-          "Lidmaatschap.lidVanTot": {
-            "description": "Periode waarin de agent lid was van de Organisatie.",
-            "properties": {
-              "@id": {
-                "format": "uri",
-                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Periode\\/\\d",
-                "type": "string"
-              }
-            },
-            "required": [
-              "@id"
-            ],
-            "type": "object"
-          },
-          "Lidmaatschap.rol": {
-            "description": "Rol die de Agent vervult als lid van de Organisatie.",
-            "properties": {
-              "@id": {
-                "format": "uri",
-                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Rol\\/\\d",
-                "type": "string"
-              }
-            },
-            "required": [
-              "@id"
+              "@value",
+              "@type"
             ],
             "type": "object"
           }
@@ -626,9 +615,8 @@
           "@context",
           "@id",
           "@type",
-          "Lidmaatschap.rol",
-          "Lidmaatschap.lid",
-          "Lidmaatschap.isLidBij"
+          "Oprichting.datum",
+          "Oprichting.datum"
         ],
         "type": "object"
       },
@@ -713,52 +701,14 @@
             "minItems": 0,
             "type": "array"
           },
-          "Organisatie.heeftLid": {
-            "description": "Lijst van Lidmaatschap items.",
+          "Organisatie.isVeranderdDoor": {
+            "description": "Lijst van Veranderingsgebeurtenis items.",
             "items": {
-              "description": "Lidmaatschap van een Agent van een Organisatie.",
+              "description": "Verwijst naar het Veranderingsmoment dat deze Organisatie heeft veranderd. Als het Veranderingsmoment bijvoorbeeld een Stopzetting is hield de Organisatie daarna op met bestaan. Merk op dat deze relatie zinloos is als het Veranderingsmoment een Oprichting is (de Organisatie bestond nog niet en kan dus niet veranderd zijn ten gevolge van de Oprichting).",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Lidmaatschap\\/\\d",
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@id"
-              ],
-              "type": "object"
-            },
-            "minItems": 0,
-            "type": "array"
-          },
-          "Organisatie.isLidVan": {
-            "description": "Lijst van Organisatie items.",
-            "items": {
-              "description": "Niet nader bepaald lidmaatschap van een Agent van een Organisatie. Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
-              "properties": {
-                "@id": {
-                  "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Organisatie\\/\\d",
-                  "type": "string"
-                }
-              },
-              "required": [
-                "@id"
-              ],
-              "type": "object"
-            },
-            "minItems": 0,
-            "type": "array"
-          },
-          "Organisatie.lid": {
-            "description": "Lijst van Agent items.",
-            "items": {
-              "description": "Agent die lid is (van een Organisatie). Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
-              "properties": {
-                "@id": {
-                  "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Veranderingsgebeurtenis\\/\\d",
                   "type": "string"
                 }
               },
@@ -910,9 +860,129 @@
           "@context",
           "@id",
           "@type",
-          "Plaats.plaatsnaam",
           "Plaats.beschrijving",
           "Plaats.beschrijving"
+        ],
+        "type": "object"
+      },
+      "Stopzetting": {
+        "description": "Gebeurtenis waarbij een Organisatie is stopgezet.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Stopzetting\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Stopzetting type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Stopzetting.datum": {
+            "description": "Datum waarop de Veranderingsgebeurtenis plaatsvond. Zie Time and date & Recurring and partial dates van <a href=\"https://www.w3.org/TR/rdf11-concepts/#h2_section-Datatypes\"> XSD Datatypes</a>.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "DateTime"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date-time",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Stopzetting.redenStopzetting": {
+            "description": "Reden waarom de Organisatie is stopgezet. Bijvoorbeeld pensionering, faillissement, etc.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/StopzettingType\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Stopzetting.datum",
+          "Stopzetting.datum"
+        ],
+        "type": "object"
+      },
+      "Veranderingsgebeurtenis": {
+        "description": "Gebeurtenis waardoor een Organisatie een belangrijke wijziging ondergaat zoals een fusie of een herstructurering.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Veranderingsgebeurtenis\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Veranderingsgebeurtenis type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Veranderingsgebeurtenis.datum": {
+            "description": "Datum waarop de Veranderingsgebeurtenis plaatsvond. Zie Time and date & Recurring and partial dates van <a href=\"https://www.w3.org/TR/rdf11-concepts/#h2_section-Datatypes\"> XSD Datatypes</a>.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "DateTime"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date-time",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Veranderingsgebeurtenis.datum"
         ],
         "type": "object"
       }
@@ -925,13 +995,13 @@
   },
   "openapi": "3.0.4",
   "paths": {
-    "/id/Agent/{id}": {
+    "/id/Afsluiting/{id}": {
       "get": {
-        "description": "Een agent zoals een Persoon, groep, software of fysiek artifact.",
-        "operationId": "AgentGET",
+        "description": "Gebeurtenis waarbij een Organisatie wordt afgesloten en geen verdere activiteit zal uitvoeren",
+        "operationId": "AfsluitingGET",
         "parameters": [
           {
-            "description": "Identificator van een Agent object.",
+            "description": "Identificator van een Afsluiting object.",
             "in": "path",
             "name": "id",
             "required": true,
@@ -945,29 +1015,83 @@
             "content": {
               "application/ld+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Agent"
+                  "$ref": "#/components/schemas/Afsluiting"
                 }
               }
             },
-            "description": "Agent object gevonden.",
+            "description": "Afsluiting object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Afsluiting object."
+          },
+          "404": {
+            "description": "Afsluiting object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Gebeurtenis waarbij een Organisatie wordt afgesloten en geen verdere activiteit zal uitvoeren",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Doorhaling/{id}": {
+      "get": {
+        "description": "Gebeurtenis waarbij een Organisatie is geschrapt in het KBO.",
+        "operationId": "DoorhalingGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Doorhaling object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Doorhaling"
+                }
+              }
+            },
+            "description": "Doorhaling object gevonden.",
             "links": {
-              "OrganisatieGET": {
-                "description": "Het `@id` attribuut van de waarde van `Agent.isLidVan` kan gebruikt worden om het gerefereerde object van het type `Organisatie` op te halen.",
-                "operationId": "OrganisatieGET",
+              "DoorhalingstypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Doorhaling.doorhalingstype` kan gebruikt worden om het gerefereerde object van het type `Doorhalingstype` op te halen.",
+                "operationId": "DoorhalingstypeGET",
                 "parameters": {
-                  "id": "$response.body#/Agent.isLidVan/@id"
+                  "id": "$response.body#/Doorhaling.doorhalingstype/@id"
+                }
+              },
+              "PeriodeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Doorhaling.refereertNaarDePeriodeVanTijdWaarinDeDoorhalingVanKrachtIs.` kan gebruikt worden om het gerefereerde object van het type `Periode` op te halen.",
+                "operationId": "PeriodeGET",
+                "parameters": {
+                  "id": "$response.body#/Doorhaling.refereertNaarDePeriodeVanTijdWaarinDeDoorhalingVanKrachtIs./@id"
+                }
+              },
+              "RedenDoorhalingGET": {
+                "description": "Het `@id` attribuut van de waarde van `Doorhaling.redenDoorhaling` kan gebruikt worden om het gerefereerde object van het type `RedenDoorhaling` op te halen.",
+                "operationId": "RedenDoorhalingGET",
+                "parameters": {
+                  "id": "$response.body#/Doorhaling.redenDoorhaling/@id"
                 }
               }
             }
           },
           "400": {
-            "description": "Ontbrekende informatie bij het opvragen een Agent object."
+            "description": "Ontbrekende informatie bij het opvragen een Doorhaling object."
           },
           "404": {
-            "description": "Agent object met gegeven ID niet gevonden."
+            "description": "Doorhaling object met gegeven ID niet gevonden."
           }
         },
-        "summary": "Een agent zoals een Persoon, groep, software of fysiek artifact.",
+        "summary": "Gebeurtenis waarbij een Organisatie is geschrapt in het KBO.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -999,13 +1123,6 @@
             },
             "description": "FormeleOrganisatie object gevonden.",
             "links": {
-              "AgentGET": {
-                "description": "Het `@id` attribuut van de waarde van `FormeleOrganisatie.lid` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen.",
-                "operationId": "AgentGET",
-                "parameters": {
-                  "id": "$response.body#/FormeleOrganisatie.lid/@id"
-                }
-              },
               "ContactpuntGET": {
                 "description": "Het `@id` attribuut van de waarde van `FormeleOrganisatie.contactinfo` kan gebruikt worden om het gerefereerde object van het type `Contactpunt` op te halen.",
                 "operationId": "ContactpuntGET",
@@ -1013,25 +1130,11 @@
                   "id": "$response.body#/FormeleOrganisatie.contactinfo/@id"
                 }
               },
-              "LidmaatschapGET": {
-                "description": "Het `@id` attribuut van de waarde van `FormeleOrganisatie.heeftLid` kan gebruikt worden om het gerefereerde object van het type `Lidmaatschap` op te halen.",
-                "operationId": "LidmaatschapGET",
-                "parameters": {
-                  "id": "$response.body#/FormeleOrganisatie.heeftLid/@id"
-                }
-              },
               "NACEBEL2025GET": {
                 "description": "Het `@id` attribuut van de waarde van `FormeleOrganisatie.activiteit` kan gebruikt worden om het gerefereerde object van het type `NACEBEL2025` op te halen.",
                 "operationId": "NACEBEL2025GET",
                 "parameters": {
                   "id": "$response.body#/FormeleOrganisatie.activiteit/@id"
-                }
-              },
-              "OrganisatieGET": {
-                "description": "Het `@id` attribuut van de waarde van `FormeleOrganisatie.isLidVan` kan gebruikt worden om het gerefereerde object van het type `Organisatie` op te halen.",
-                "operationId": "OrganisatieGET",
-                "parameters": {
-                  "id": "$response.body#/FormeleOrganisatie.isLidVan/@id"
                 }
               },
               "OrganisatieStatusGET": {
@@ -1046,6 +1149,13 @@
                 "operationId": "OrganisatieTypeGET",
                 "parameters": {
                   "id": "$response.body#/FormeleOrganisatie.type/@id"
+                }
+              },
+              "VeranderingsgebeurtenisGET": {
+                "description": "Het `@id` attribuut van de waarde van `FormeleOrganisatie.isVeranderdDoor` kan gebruikt worden om het gerefereerde object van het type `Veranderingsgebeurtenis` op te halen.",
+                "operationId": "VeranderingsgebeurtenisGET",
+                "parameters": {
+                  "id": "$response.body#/FormeleOrganisatie.isVeranderdDoor/@id"
                 }
               }
             }
@@ -1089,13 +1199,6 @@
             },
             "description": "GeregistreerdeOrganisatie object gevonden.",
             "links": {
-              "AgentGET": {
-                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.lid` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen.",
-                "operationId": "AgentGET",
-                "parameters": {
-                  "id": "$response.body#/GeregistreerdeOrganisatie.lid/@id"
-                }
-              },
               "ContactpuntGET": {
                 "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.contactinfo` kan gebruikt worden om het gerefereerde object van het type `Contactpunt` op te halen.",
                 "operationId": "ContactpuntGET",
@@ -1110,25 +1213,11 @@
                   "id": "$response.body#/GeregistreerdeOrganisatie.registratie/@id"
                 }
               },
-              "LidmaatschapGET": {
-                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.heeftLid` kan gebruikt worden om het gerefereerde object van het type `Lidmaatschap` op te halen.",
-                "operationId": "LidmaatschapGET",
-                "parameters": {
-                  "id": "$response.body#/GeregistreerdeOrganisatie.heeftLid/@id"
-                }
-              },
               "NACEBEL2025GET": {
                 "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.activiteit` kan gebruikt worden om het gerefereerde object van het type `NACEBEL2025` op te halen.",
                 "operationId": "NACEBEL2025GET",
                 "parameters": {
                   "id": "$response.body#/GeregistreerdeOrganisatie.activiteit/@id"
-                }
-              },
-              "OrganisatieGET": {
-                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.isLidVan` kan gebruikt worden om het gerefereerde object van het type `Organisatie` op te halen.",
-                "operationId": "OrganisatieGET",
-                "parameters": {
-                  "id": "$response.body#/GeregistreerdeOrganisatie.isLidVan/@id"
                 }
               },
               "OrganisatieStatusGET": {
@@ -1165,6 +1254,13 @@
                 "parameters": {
                   "id": "$response.body#/GeregistreerdeOrganisatie.rechtsvorm/@id"
                 }
+              },
+              "VeranderingsgebeurtenisGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.isVeranderdDoor` kan gebruikt worden om het gerefereerde object van het type `Veranderingsgebeurtenis` op te halen.",
+                "operationId": "VeranderingsgebeurtenisGET",
+                "parameters": {
+                  "id": "$response.body#/GeregistreerdeOrganisatie.isVeranderdDoor/@id"
+                }
               }
             }
           },
@@ -1181,13 +1277,13 @@
         ]
       }
     },
-    "/id/Lidmaatschap/{id}": {
+    "/id/Oprichting/{id}": {
       "get": {
-        "description": "Geeft de kenmerken weer van het Lidmaatschap van een Agent van een Organisatie.",
-        "operationId": "LidmaatschapGET",
+        "description": "Gebeurtenis waarbij een Organisatie is opgericht.",
+        "operationId": "OprichtingGET",
         "parameters": [
           {
-            "description": "Identificator van een Lidmaatschap object.",
+            "description": "Identificator van een Oprichting object.",
             "in": "path",
             "name": "id",
             "required": true,
@@ -1201,50 +1297,21 @@
             "content": {
               "application/ld+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Lidmaatschap"
+                  "$ref": "#/components/schemas/Oprichting"
                 }
               }
             },
-            "description": "Lidmaatschap object gevonden.",
-            "links": {
-              "AgentGET": {
-                "description": "Het `@id` attribuut van de waarde van `Lidmaatschap.isLidBij` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen.",
-                "operationId": "AgentGET",
-                "parameters": {
-                  "id": "$response.body#/Lidmaatschap.isLidBij/@id"
-                }
-              },
-              "OrganisatieGET": {
-                "description": "Het `@id` attribuut van de waarde van `Lidmaatschap.lid` kan gebruikt worden om het gerefereerde object van het type `Organisatie` op te halen.",
-                "operationId": "OrganisatieGET",
-                "parameters": {
-                  "id": "$response.body#/Lidmaatschap.lid/@id"
-                }
-              },
-              "PeriodeGET": {
-                "description": "Het `@id` attribuut van de waarde van `Lidmaatschap.lidVanTot` kan gebruikt worden om het gerefereerde object van het type `Periode` op te halen.",
-                "operationId": "PeriodeGET",
-                "parameters": {
-                  "id": "$response.body#/Lidmaatschap.lidVanTot/@id"
-                }
-              },
-              "RolGET": {
-                "description": "Het `@id` attribuut van de waarde van `Lidmaatschap.rol` kan gebruikt worden om het gerefereerde object van het type `Rol` op te halen.",
-                "operationId": "RolGET",
-                "parameters": {
-                  "id": "$response.body#/Lidmaatschap.rol/@id"
-                }
-              }
-            }
+            "description": "Oprichting object gevonden.",
+            "links": {}
           },
           "400": {
-            "description": "Ontbrekende informatie bij het opvragen een Lidmaatschap object."
+            "description": "Ontbrekende informatie bij het opvragen een Oprichting object."
           },
           "404": {
-            "description": "Lidmaatschap object met gegeven ID niet gevonden."
+            "description": "Oprichting object met gegeven ID niet gevonden."
           }
         },
-        "summary": "Geeft de kenmerken weer van het Lidmaatschap van een Agent van een Organisatie.",
+        "summary": "Gebeurtenis waarbij een Organisatie is opgericht.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -1276,13 +1343,6 @@
             },
             "description": "Organisatie object gevonden.",
             "links": {
-              "AgentGET": {
-                "description": "Het `@id` attribuut van de waarde van `Organisatie.lid` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen.",
-                "operationId": "AgentGET",
-                "parameters": {
-                  "id": "$response.body#/Organisatie.lid/@id"
-                }
-              },
               "ContactpuntGET": {
                 "description": "Het `@id` attribuut van de waarde van `Organisatie.contactinfo` kan gebruikt worden om het gerefereerde object van het type `Contactpunt` op te halen.",
                 "operationId": "ContactpuntGET",
@@ -1290,25 +1350,11 @@
                   "id": "$response.body#/Organisatie.contactinfo/@id"
                 }
               },
-              "LidmaatschapGET": {
-                "description": "Het `@id` attribuut van de waarde van `Organisatie.heeftLid` kan gebruikt worden om het gerefereerde object van het type `Lidmaatschap` op te halen.",
-                "operationId": "LidmaatschapGET",
-                "parameters": {
-                  "id": "$response.body#/Organisatie.heeftLid/@id"
-                }
-              },
               "NACEBEL2025GET": {
                 "description": "Het `@id` attribuut van de waarde van `Organisatie.activiteit` kan gebruikt worden om het gerefereerde object van het type `NACEBEL2025` op te halen.",
                 "operationId": "NACEBEL2025GET",
                 "parameters": {
                   "id": "$response.body#/Organisatie.activiteit/@id"
-                }
-              },
-              "OrganisatieGET": {
-                "description": "Het `@id` attribuut van de waarde van `Organisatie.isLidVan` kan gebruikt worden om het gerefereerde object van het type `Organisatie` op te halen.",
-                "operationId": "OrganisatieGET",
-                "parameters": {
-                  "id": "$response.body#/Organisatie.isLidVan/@id"
                 }
               },
               "OrganisatieStatusGET": {
@@ -1323,6 +1369,13 @@
                 "operationId": "OrganisatieTypeGET",
                 "parameters": {
                   "id": "$response.body#/Organisatie.type/@id"
+                }
+              },
+              "VeranderingsgebeurtenisGET": {
+                "description": "Het `@id` attribuut van de waarde van `Organisatie.isVeranderdDoor` kan gebruikt worden om het gerefereerde object van het type `Veranderingsgebeurtenis` op te halen.",
+                "operationId": "VeranderingsgebeurtenisGET",
+                "parameters": {
+                  "id": "$response.body#/Organisatie.isVeranderdDoor/@id"
                 }
               }
             }
@@ -1383,6 +1436,94 @@
           }
         },
         "summary": "Een ruimtelijk gebied of benoemde plaats.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Stopzetting/{id}": {
+      "get": {
+        "description": "Gebeurtenis waarbij een Organisatie is stopgezet.",
+        "operationId": "StopzettingGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Stopzetting object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Stopzetting"
+                }
+              }
+            },
+            "description": "Stopzetting object gevonden.",
+            "links": {
+              "StopzettingTypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Stopzetting.redenStopzetting` kan gebruikt worden om het gerefereerde object van het type `StopzettingType` op te halen.",
+                "operationId": "StopzettingTypeGET",
+                "parameters": {
+                  "id": "$response.body#/Stopzetting.redenStopzetting/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Stopzetting object."
+          },
+          "404": {
+            "description": "Stopzetting object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Gebeurtenis waarbij een Organisatie is stopgezet.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Veranderingsgebeurtenis/{id}": {
+      "get": {
+        "description": "Gebeurtenis waardoor een Organisatie een belangrijke wijziging ondergaat zoals een fusie of een herstructurering.",
+        "operationId": "VeranderingsgebeurtenisGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Veranderingsgebeurtenis object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Veranderingsgebeurtenis"
+                }
+              }
+            },
+            "description": "Veranderingsgebeurtenis object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Veranderingsgebeurtenis object."
+          },
+          "404": {
+            "description": "Veranderingsgebeurtenis object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Gebeurtenis waardoor een Organisatie een belangrijke wijziging ondergaat zoals een fusie of een herstructurering.",
         "tags": [
           "Externe datastandaarden"
         ]
