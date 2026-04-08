@@ -71,6 +71,20 @@
             "minItems": 1,
             "type": "array"
           },
+          "AdministratiefBeheerder.identificator": {
+            "description": "Unieke code waarmee de Organisatie kan worden aangeduid.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identificator\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
           "AdministratiefBeheerder.type": {
             "description": "Aard van de AdministratiefBeheerder.",
             "properties": {
@@ -82,6 +96,25 @@
             },
             "required": [
               "@id"
+            ],
+            "type": "object"
+          },
+          "AdministratiefBeheerder.voorkeursnaam": {
+            "description": "Naam waarmee de Organisatie bij voorkeur wordt aangeduid.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
             ],
             "type": "object"
           }
@@ -151,6 +184,20 @@
               "@id": {
                 "format": "uri",
                 "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/AdministratieveEenheidniveau\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "AdministratieveEenheid.plaats": {
+            "description": "Ruimtelijk gebied of benoemde plaats waarmee de Jurisdictie samenvalt. Typisch een land.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Plaats\\/\\d",
                 "type": "string"
               }
             },
@@ -278,53 +325,9 @@
           "@id",
           "@type",
           "Afstamming.vanPersoon",
+          "Afstamming.metPersoon",
+          "Afstamming.vanPersoon",
           "Afstamming.metPersoon"
-        ],
-        "type": "object"
-      },
-      "Afwezig": {
-        "description": "Verblijfplaats van een persoon die afwezig is verklaard.",
-        "properties": {
-          "@context": {
-            "enum": [
-              "https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/context/persoon-IM.jsonld"
-            ],
-            "format": "uri",
-            "type": "string"
-          },
-          "@id": {
-            "format": "uri",
-            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Afwezig\\/\\d",
-            "type": "string"
-          },
-          "@type": {
-            "description": "Lijst van object types (klasse)",
-            "items": {
-              "description": "Afwezig type",
-              "type": "string"
-            },
-            "minItems": 1,
-            "type": "array"
-          },
-          "Afwezig.verblijfsadres": {
-            "description": "Adres van de Verblijfplaats.",
-            "properties": {
-              "@id": {
-                "format": "uri",
-                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Adresvoorstelling\\/\\d",
-                "type": "string"
-              }
-            },
-            "required": [
-              "@id"
-            ],
-            "type": "object"
-          }
-        },
-        "required": [
-          "@context",
-          "@id",
-          "@type"
         ],
         "type": "object"
       },
@@ -637,6 +640,20 @@
             ],
             "type": "object"
           },
+          "GeregistreerdPersoon.bron": {
+            "description": "Verantwoordelijke voor het aanmaken van de gegevens.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Organisatie\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
           "GeregistreerdPersoon.contactinfo": {
             "description": "Informatie zoals email, telefoon, ... die toelaat de Persoon te contacteren.",
             "properties": {
@@ -651,24 +668,39 @@
             ],
             "type": "object"
           },
-          "GeregistreerdPersoon.dossierstatus": {
-            "description": "Lijst van Dossierstatustype items.",
-            "items": {
-              "description": "Toestand van het dossier van de Registratie. In het Rijksregister gebruikt wanneer de inschrijving in het register niet meer geldig is, bvb omdat de persoon uit het register is geschrapt of een eerdere registratie werd geannuleerd of de persoon is overleden etc.",
-              "properties": {
-                "@id": {
-                  "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Dossierstatustype\\/\\d",
-                  "type": "string"
-                }
+          "GeregistreerdPersoon.creatiedatum": {
+            "description": "Datum waarop de gegevens zijn ingevoerd.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Date"
+                ],
+                "type": "string"
               },
-              "required": [
-                "@id"
-              ],
-              "type": "object"
+              "@value": {
+                "format": "date",
+                "type": "string"
+              }
             },
-            "minItems": 0,
-            "type": "array"
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "GeregistreerdPersoon.dossierstatus": {
+            "description": "Toestand van het dossier van de Registratie. In het Rijksregister gebruikt wanneer de inschrijving in het register niet meer geldig is, bvb omdat de persoon uit het register is geschrapt of een eerdere registratie werd geannuleerd of de persoon is overleden etc.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Dossierstatustype\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
           },
           "GeregistreerdPersoon.geslacht": {
             "description": "De uiting van een Persoon's indentiteit, expressie en sociale rol. Het geslacht van een Persoon is sterk afhankelijk van de manier waarop dit gedefinieerd is, dit kan op basis van de biologische kenmerken maar ook op basis van gender, genderindentiteit, genderexpressie, etc. Voor meer informatie zie <a href=\"https://www.vlaanderen.be/dienst-diversiteitsbeleid/begrippen-rond-gender-en-seksuele-diversiteit\">Begrippen rond gender- en seksuele diversiteit</a>.",
@@ -797,6 +829,26 @@
             "minItems": 0,
             "type": "array"
           },
+          "GeregistreerdPersoon.modificatiedatum": {
+            "description": "Datum waarop de gegevens werden bijgewerkt.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Date"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
           "GeregistreerdPersoon.redenAfwezigheid": {
             "description": "Reden waarom de Persoon afwezig is.",
             "properties": {
@@ -860,7 +912,11 @@
         "required": [
           "@context",
           "@id",
-          "@type"
+          "@type",
+          "GeregistreerdPersoon.creatiedatum",
+          "GeregistreerdPersoon.bron",
+          "GeregistreerdPersoon.creatiedatum",
+          "GeregistreerdPersoon.bron"
         ],
         "type": "object"
       },
@@ -1029,125 +1085,9 @@
           "@id",
           "@type",
           "Gezinsrelatie.vanPersoon",
+          "Gezinsrelatie.metPersoon",
+          "Gezinsrelatie.vanPersoon",
           "Gezinsrelatie.metPersoon"
-        ],
-        "type": "object"
-      },
-      "HttpApiProbleemdetail": {
-        "description": "Meer getedailleerde beschrijving van de fout in een HTTP response.",
-        "properties": {
-          "@context": {
-            "enum": [
-              "https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/context/persoon-IM.jsonld"
-            ],
-            "format": "uri",
-            "type": "string"
-          },
-          "@id": {
-            "format": "uri",
-            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/HttpApiProbleemdetail\\/\\d",
-            "type": "string"
-          },
-          "@type": {
-            "description": "Lijst van object types (klasse)",
-            "items": {
-              "description": "HttpApiProbleemdetail type",
-              "type": "string"
-            },
-            "minItems": 1,
-            "type": "array"
-          },
-          "HttpApiProbleemdetail.detail": {
-            "description": "Mensleesbare beschrijving van de fout.",
-            "properties": {
-              "@language": {
-                "enum": [
-                  "nl"
-                ],
-                "type": "string"
-              },
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ],
-            "type": "object"
-          },
-          "HttpApiProbleemdetail.instantie": {
-            "description": "Verwijzing naar de instantie van het object waarop de fout betrekking heeft. Bvb verwijzing naar de request.",
-            "properties": {
-              "@id": {
-                "format": "uri",
-                "type": "string"
-              }
-            },
-            "required": [
-              "@id"
-            ],
-            "type": "object"
-          },
-          "HttpApiProbleemdetail.status": {
-            "description": "HTTP foutcode. Zoals beschreven in <a href=\"https://www.rfc-editor.org/rfc/rfc7231\">rfc7231</a>. Bvb 404 voor \"Not Found\".",
-            "properties": {
-              "@type": {
-                "enum": [
-                  "Integer"
-                ],
-                "type": "string"
-              },
-              "@value": {
-                "format": "int64",
-                "type": "number"
-              }
-            },
-            "required": [
-              "@value",
-              "@type"
-            ],
-            "type": "object"
-          },
-          "HttpApiProbleemdetail.titel": {
-            "description": "Korte mensleesbare beschrijving van de fout.",
-            "properties": {
-              "@language": {
-                "enum": [
-                  "nl"
-                ],
-                "type": "string"
-              },
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value",
-              "@language"
-            ],
-            "type": "object"
-          },
-          "HttpApiProbleemdetail.type": {
-            "description": "Aard van de fout.",
-            "properties": {
-              "@id": {
-                "format": "uri",
-                "type": "string"
-              }
-            },
-            "required": [
-              "@id"
-            ],
-            "type": "object"
-          }
-        },
-        "required": [
-          "@context",
-          "@id",
-          "@type",
-          "HttpApiProbleemdetail.type",
-          "HttpApiProbleemdetail.titel"
         ],
         "type": "object"
       },
@@ -1222,6 +1162,8 @@
           "@context",
           "@id",
           "@type",
+          "Huwelijk.vanPersoon",
+          "Huwelijk.metPersoon",
           "Huwelijk.vanPersoon",
           "Huwelijk.metPersoon"
         ],
@@ -1558,6 +1500,20 @@
             "minItems": 0,
             "type": "array"
           },
+          "Persoon.bron": {
+            "description": "Verantwoordelijke voor het aanmaken van de gegevens.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Organisatie\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
           "Persoon.contactinfo": {
             "description": "Informatie zoals email, telefoon, ... die toelaat de Persoon te contacteren.",
             "properties": {
@@ -1569,6 +1525,26 @@
             },
             "required": [
               "@id"
+            ],
+            "type": "object"
+          },
+          "Persoon.creatiedatum": {
+            "description": "Datum waarop de gegevens zijn ingevoerd.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Date"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
             ],
             "type": "object"
           },
@@ -1699,6 +1675,26 @@
             "minItems": 0,
             "type": "array"
           },
+          "Persoon.modificatiedatum": {
+            "description": "Datum waarop de gegevens werden bijgewerkt.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Date"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
           "Persoon.voornaam": {
             "description": "Lijst van String items.",
             "items": {
@@ -1720,7 +1716,9 @@
         "required": [
           "@context",
           "@id",
-          "@type"
+          "@type",
+          "Persoon.creatiedatum",
+          "Persoon.bron"
         ],
         "type": "object"
       },
@@ -1876,6 +1874,20 @@
             "minItems": 1,
             "type": "array"
           },
+          "Plaats.plaats": {
+            "description": "Ruimtelijk gebied of benoemde plaats waarmee de Jurisdictie samenvalt. Typisch een land.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Plaats\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
           "Plaats.plaatsnaam": {
             "description": "Naam van de plaats of van het gebied.",
             "properties": {
@@ -1949,7 +1961,8 @@
         ],
         "type": "object"
       },
-      "RedenAfwezigheid": {
+      "Probleemdetail": {
+        "description": "Meer gedetailleerde beschrijving van de fout in een HTTP response.",
         "properties": {
           "@context": {
             "enum": [
@@ -1960,23 +1973,109 @@
           },
           "@id": {
             "format": "uri",
-            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/RedenAfwezigheid\\/\\d",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Probleemdetail\\/\\d",
             "type": "string"
           },
           "@type": {
             "description": "Lijst van object types (klasse)",
             "items": {
-              "description": "RedenAfwezigheid type",
+              "description": "Probleemdetail type",
               "type": "string"
             },
             "minItems": 1,
             "type": "array"
+          },
+          "Probleemdetail.detail": {
+            "description": "Mensleesbare beschrijving van de fout.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          },
+          "Probleemdetail.instantie": {
+            "description": "Verwijzing naar de instantie van het object waarop de fout betrekking heeft. Bvb verwijzing naar de request.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Probleemdetail.status": {
+            "description": "HTTP foutcode. Zoals beschreven in <a href=\"https://www.rfc-editor.org/rfc/rfc7231\">rfc7231</a>. Bvb 404 voor \"Not Found\".",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Integer"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "int64",
+                "type": "number"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Probleemdetail.titel": {
+            "description": "Korte mensleesbare beschrijving van de fout.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          },
+          "Probleemdetail.type": {
+            "description": "Aard van de fout.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
           }
         },
         "required": [
           "@context",
           "@id",
-          "@type"
+          "@type",
+          "Probleemdetail.type",
+          "Probleemdetail.titel"
         ],
         "type": "object"
       },
@@ -2098,7 +2197,75 @@
           "@id",
           "@type",
           "Samenwonen.vanPersoon",
+          "Samenwonen.metPersoon",
+          "Samenwonen.vanPersoon",
           "Samenwonen.metPersoon"
+        ],
+        "type": "object"
+      },
+      "VdipEnvelope": {
+        "description": "Vlaams Data Integratieplatform (VDIP) data enveloppe volgens de REST richtlijnen.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/magda/persoon/context/persoon-IM.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/VdipEnvelope\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "VdipEnvelope type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "VdipEnvelope.errors": {
+            "description": "Lijst van Probleemdetail items.",
+            "items": {
+              "description": "Foutmeldingen die opgetreden zijn bij het afleveren van de data. Foutmeldingen kunnen ook optreden bij HTTP 200 waarbij validatiefouten worden meegegeven zoals MAGDA Uitzonderingen.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Probleemdetail\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "VdipEnvelope.payload": {
+            "description": "De data die overgedragen werd.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/GeregistreerdPersoon\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "VdipEnvelope.payload"
         ],
         "type": "object"
       },
@@ -2470,6 +2637,13 @@
                 "parameters": {
                   "id": "$response.body#/AdministratiefBeheerder.type/@id"
                 }
+              },
+              "IdentificatorGET": {
+                "description": "Het `@id` attribuut van de waarde van `AdministratiefBeheerder.identificator` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen.",
+                "operationId": "IdentificatorGET",
+                "parameters": {
+                  "id": "$response.body#/AdministratiefBeheerder.identificator/@id"
+                }
               }
             }
           },
@@ -2524,6 +2698,13 @@
                 "operationId": "IdentificatorGET",
                 "parameters": {
                   "id": "$response.body#/AdministratieveEenheid.identificator/@id"
+                }
+              },
+              "PlaatsGET": {
+                "description": "Het `@id` attribuut van de waarde van `AdministratieveEenheid.plaats` kan gebruikt worden om het gerefereerde object van het type `Plaats` op te halen.",
+                "operationId": "PlaatsGET",
+                "parameters": {
+                  "id": "$response.body#/AdministratieveEenheid.plaats/@id"
                 }
               }
             }
@@ -2591,54 +2772,6 @@
           }
         },
         "summary": "Afstamming is de dalende lijn van bloedverwantschap tussen verschillende generaties.",
-        "tags": [
-          "Externe datastandaarden"
-        ]
-      }
-    },
-    "/id/Afwezig/{id}": {
-      "get": {
-        "description": "Verblijfplaats van een persoon die afwezig is verklaard.",
-        "operationId": "AfwezigGET",
-        "parameters": [
-          {
-            "description": "Identificator van een Afwezig object.",
-            "in": "path",
-            "name": "id",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/ld+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Afwezig"
-                }
-              }
-            },
-            "description": "Afwezig object gevonden.",
-            "links": {
-              "AdresvoorstellingGET": {
-                "description": "Het `@id` attribuut van de waarde van `Afwezig.verblijfsadres` kan gebruikt worden om het gerefereerde object van het type `Adresvoorstelling` op te halen.",
-                "operationId": "AdresvoorstellingGET",
-                "parameters": {
-                  "id": "$response.body#/Afwezig.verblijfsadres/@id"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Ontbrekende informatie bij het opvragen een Afwezig object."
-          },
-          "404": {
-            "description": "Afwezig object met gegeven ID niet gevonden."
-          }
-        },
-        "summary": "Verblijfplaats van een persoon die afwezig is verklaard.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -3004,6 +3137,13 @@
                   "id": "$response.body#/GeregistreerdPersoon.heeftInwonerschap/@id"
                 }
               },
+              "OrganisatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeregistreerdPersoon.bron` kan gebruikt worden om het gerefereerde object van het type `Organisatie` op te halen.",
+                "operationId": "OrganisatieGET",
+                "parameters": {
+                  "id": "$response.body#/GeregistreerdPersoon.bron/@id"
+                }
+              },
               "OverlijdenGET": {
                 "description": "Het `@id` attribuut van de waarde van `GeregistreerdPersoon.heeftOverlijden` kan gebruikt worden om het gerefereerde object van het type `Overlijden` op te halen.",
                 "operationId": "OverlijdenGET",
@@ -3152,46 +3292,6 @@
           }
         },
         "summary": "Relatie tussen leden van eenzelfde gezin.",
-        "tags": [
-          "Externe datastandaarden"
-        ]
-      }
-    },
-    "/id/HttpApiProbleemdetail/{id}": {
-      "get": {
-        "description": "Meer getedailleerde beschrijving van de fout in een HTTP response.",
-        "operationId": "HttpApiProbleemdetailGET",
-        "parameters": [
-          {
-            "description": "Identificator van een HttpApiProbleemdetail object.",
-            "in": "path",
-            "name": "id",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/ld+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/HttpApiProbleemdetail"
-                }
-              }
-            },
-            "description": "HttpApiProbleemdetail object gevonden.",
-            "links": {}
-          },
-          "400": {
-            "description": "Ontbrekende informatie bij het opvragen een HttpApiProbleemdetail object."
-          },
-          "404": {
-            "description": "HttpApiProbleemdetail object met gegeven ID niet gevonden."
-          }
-        },
-        "summary": "Meer getedailleerde beschrijving van de fout in een HTTP response.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -3566,6 +3666,13 @@
                   "id": "$response.body#/Persoon.heeftInwonerschap/@id"
                 }
               },
+              "OrganisatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Persoon.bron` kan gebruikt worden om het gerefereerde object van het type `Organisatie` op te halen.",
+                "operationId": "OrganisatieGET",
+                "parameters": {
+                  "id": "$response.body#/Persoon.bron/@id"
+                }
+              },
               "OverlijdenGET": {
                 "description": "Het `@id` attribuut van de waarde van `Persoon.heeftOverlijden` kan gebruikt worden om het gerefereerde object van het type `Overlijden` op te halen.",
                 "operationId": "OverlijdenGET",
@@ -3716,7 +3823,15 @@
               }
             },
             "description": "Plaats object gevonden.",
-            "links": {}
+            "links": {
+              "PlaatsGET": {
+                "description": "Het `@id` attribuut van de waarde van `Plaats.plaats` kan gebruikt worden om het gerefereerde object van het type `Plaats` op te halen.",
+                "operationId": "PlaatsGET",
+                "parameters": {
+                  "id": "$response.body#/Plaats.plaats/@id"
+                }
+              }
+            }
           },
           "400": {
             "description": "Ontbrekende informatie bij het opvragen een Plaats object."
@@ -3779,12 +3894,13 @@
         ]
       }
     },
-    "/id/RedenAfwezigheid/{id}": {
+    "/id/Probleemdetail/{id}": {
       "get": {
-        "operationId": "RedenAfwezigheidGET",
+        "description": "Meer gedetailleerde beschrijving van de fout in een HTTP response.",
+        "operationId": "ProbleemdetailGET",
         "parameters": [
           {
-            "description": "Identificator van een RedenAfwezigheid object.",
+            "description": "Identificator van een Probleemdetail object.",
             "in": "path",
             "name": "id",
             "required": true,
@@ -3798,20 +3914,21 @@
             "content": {
               "application/ld+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/RedenAfwezigheid"
+                  "$ref": "#/components/schemas/Probleemdetail"
                 }
               }
             },
-            "description": "RedenAfwezigheid object gevonden.",
+            "description": "Probleemdetail object gevonden.",
             "links": {}
           },
           "400": {
-            "description": "Ontbrekende informatie bij het opvragen een RedenAfwezigheid object."
+            "description": "Ontbrekende informatie bij het opvragen een Probleemdetail object."
           },
           "404": {
-            "description": "RedenAfwezigheid object met gegeven ID niet gevonden."
+            "description": "Probleemdetail object met gegeven ID niet gevonden."
           }
         },
+        "summary": "Meer gedetailleerde beschrijving van de fout in een HTTP response.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -3922,6 +4039,61 @@
           }
         },
         "summary": "Regeling waarbij twee personen die niet getrouwd zijn samenleven.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/VdipEnvelope/{id}": {
+      "get": {
+        "description": "Vlaams Data Integratieplatform (VDIP) data enveloppe volgens de REST richtlijnen.",
+        "operationId": "VdipEnvelopeGET",
+        "parameters": [
+          {
+            "description": "Identificator van een VdipEnvelope object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VdipEnvelope"
+                }
+              }
+            },
+            "description": "VdipEnvelope object gevonden.",
+            "links": {
+              "GeregistreerdPersoonGET": {
+                "description": "Het `@id` attribuut van de waarde van `VdipEnvelope.payload` kan gebruikt worden om het gerefereerde object van het type `GeregistreerdPersoon` op te halen.",
+                "operationId": "GeregistreerdPersoonGET",
+                "parameters": {
+                  "id": "$response.body#/VdipEnvelope.payload/@id"
+                }
+              },
+              "ProbleemdetailGET": {
+                "description": "Het `@id` attribuut van de waarde van `VdipEnvelope.errors` kan gebruikt worden om het gerefereerde object van het type `Probleemdetail` op te halen.",
+                "operationId": "ProbleemdetailGET",
+                "parameters": {
+                  "id": "$response.body#/VdipEnvelope.errors/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een VdipEnvelope object."
+          },
+          "404": {
+            "description": "VdipEnvelope object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Vlaams Data Integratieplatform (VDIP) data enveloppe volgens de REST richtlijnen.",
         "tags": [
           "Externe datastandaarden"
         ]
