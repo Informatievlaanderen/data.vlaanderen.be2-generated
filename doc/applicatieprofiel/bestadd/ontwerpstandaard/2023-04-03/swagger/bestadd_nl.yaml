@@ -1,0 +1,3134 @@
+{
+  "components": {
+    "schemas": {
+      "AddressHistory": {
+        "description": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/AddressHistory\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "AddressHistory type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "AddressHistory.datumGebeurtenis": {
+            "description": "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Date"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "AddressHistory.opvolger": {
+            "description": "de BeSt identificator van de entiteit die de opvolger is.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "AddressHistory.predecessor": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Adres\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "AddressHistory.successor": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Adres\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "AddressHistory.voorganger": {
+            "description": "De BeSt identifier van de entiteit die de voorganger is.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "AddressHistory.datumGebeurtenis",
+          "AddressHistory.voorganger",
+          "AddressHistory.opvolger",
+          "AddressHistory.successor",
+          "AddressHistory.predecessor"
+        ],
+        "type": "object"
+      },
+      "Adres": {
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Adres\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Adres type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Adres.adresSorteerveld": {
+            "description": "Transformatie van het huisnummer en busnummer (toevoeging van leading 0's) zodat deze waarde kan gesorteerd worden",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ],
+            "type": "object"
+          },
+          "Adres.beginVanDeLevenscyclusVanDezeVersie": {
+            "description": "undefined",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "DateTime"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date-time",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Adres.busnummer": {
+            "description": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die hetzelfde huisnummer hebben.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ],
+            "type": "object"
+          },
+          "Adres.code": {
+            "description": "Unieke identificatie",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Adres.eindeVanDeLevenscyclusVanDezeVersie": {
+            "description": "undefined",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "DateTime"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date-time",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Adres.hasMunicipality": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Gemeente\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Adres.hasPartOfMunicipality": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Deelgemeente\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Adres.hasPostalInfo": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Post informatie\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Adres.hasStreetName": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Straatnaam\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Adres.heeftAlsDeelgemeente": {
+            "description": "BeStIdentifier die de deelgemeente identificeert waar dit adres zich bevindt. Deelgemeentes zijn op dit ogenblik enkel voor Wallonië beschikbaar.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Adres.heeftAlsGemeente": {
+            "description": "BeStIdentifier die de gemeente identificeert waar dit adres zich bevindt. Dit kenmerk is altijd aanwezig.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Adres.heeftAlsPostInformatie": {
+            "description": "BeStIdentifier die de postalInfo identificeert waar dit adres zich bevindt BeStIdentifier die de postalInfo identificeert waar dit adres zich bevindt",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Adres.heeftAlsStraatnaam": {
+            "description": "heeftStraatNaam",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Adres.huisnummer": {
+            "description": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ],
+            "type": "object"
+          },
+          "Adres.isGehechtAan": {
+            "description": "Lijst van Identifier items.",
+            "items": {
+              "description": "het Adresseerbaar object waaraan het adres is toegekend.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Adres.officieelToegekend": {
+            "description": "Geeft aan of het adres is toegekend door een officiële instantie (gewoonlijk de gemeente) (True). Als een afwijking wordt vastgesteld, kan de gemeente ambtenaar dit aanpassen naar \"False\".",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Boolean"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Adres.positie": {
+            "description": "Geografische positie aangegeven dmv een punt.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Geografische positie\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Adres.predecessor": {
+            "description": "Lijst van AddressHistory items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/AddressHistory\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Adres.status": {
+            "description": "Huidige status van het adres.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Status\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Adres.successor": {
+            "description": "Lijst van AddressHistory items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/AddressHistory\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Adres.huisnummer",
+          "Adres.eindeVanDeLevenscyclusVanDezeVersie",
+          "Adres.officieelToegekend",
+          "Adres.beginVanDeLevenscyclusVanDezeVersie",
+          "Adres.heeftAlsPostInformatie",
+          "Adres.status",
+          "Adres.heeftAlsStraatnaam",
+          "Adres.heeftAlsGemeente",
+          "Adres.code",
+          "Adres.positie",
+          "Adres.hasStreetName",
+          "Adres.hasMunicipality",
+          "Adres.hasPostalInfo"
+        ],
+        "type": "object"
+      },
+      "AdresseerbaarObject": {
+        "description": "Ruimtelijk object waaraan een adres kan worden toegekend. De meest voorkomende adresseerbare objecten zijn gebouwen, percelen, gebouwingangen, gemene delen binnen een gebouw etc.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/AdresseerbaarObject\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "AdresseerbaarObject type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "AdresseerbaarObject.code": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "AdresseerbaarObject.code"
+        ],
+        "type": "object"
+      },
+      "Deelgemeente": {
+        "description": "Een deel van een gemeente, zoals een voormalige gemeente (voorafgaand aan de fusie van de gemeenten) of een wijk.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Deelgemeente\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Deelgemeente type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Deelgemeente.code": {
+            "description": "Unieke identificatie; de objectIdentifier is een nummer (niet de NIS-code)",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Deelgemeente.hasPartOfMunicipality": {
+            "description": "Lijst van Adres items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Adres\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Deelgemeente.naam": {
+            "description": "Lijst van GeographicalName items.",
+            "items": {
+              "description": "Naam van de deelgemeente",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/GeographicalName\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "maxItems": 3,
+            "minItems": 1,
+            "type": "array"
+          },
+          "Deelgemeente.predecessor": {
+            "description": "Lijst van PartOfMunicipalityHistory items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/PartOfMunicipalityHistory\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Deelgemeente.status": {
+            "description": "Status van de deelgemeente",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Status\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Deelgemeente.successor": {
+            "description": "Lijst van PartOfMunicipalityHistory items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/PartOfMunicipalityHistory\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Deelgemeente.naam",
+          "Deelgemeente.code",
+          "Deelgemeente.status"
+        ],
+        "type": "object"
+      },
+      "Gemeente": {
+        "description": "Officiële administratieve zone van het Belgisch grondgebied. De gemeente is het kleinste administratieve deel van het Belgisch grondgebied waarvan de grenzen enkel door de wetgever kunnen worden gewijzigd.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Gemeente\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Gemeente type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Gemeente.code": {
+            "description": "Unieke identificatie; de objectIdentifier is momenteel de NIScode",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Gemeente.hasMunicipality": {
+            "description": "Lijst van Adres items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Adres\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Gemeente.isAssignedByMunicipality": {
+            "description": "Lijst van Straatnaam items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Straatnaam\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Gemeente.naam": {
+            "description": "Lijst van GeographicalName items.",
+            "items": {
+              "description": "Gemeentenaam",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/GeographicalName\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "maxItems": 3,
+            "minItems": 1,
+            "type": "array"
+          },
+          "Gemeente.predecessor": {
+            "description": "Lijst van MunicipalityHistory items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/MunicipalityHistory\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Gemeente.status": {
+            "description": "Gemeentelijke status",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Status\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Gemeente.successor": {
+            "description": "Lijst van MunicipalityHistory items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/MunicipalityHistory\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Gemeente.naam",
+          "Gemeente.status",
+          "Gemeente.code"
+        ],
+        "type": "object"
+      },
+      "GeografischePositie": {
+        "description": "Geografische positie aangegeven door een punt.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/GeografischePositie\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "GeografischePositie type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "GeografischePositie.geometrischPunt": {
+            "description": "Een “perceel” is een deel van het grondgebied officieel vastgesteld met een kadastraal of administratief doel.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Point\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "GeografischePositie.positiegeometriemethode": {
+            "description": "Beschrijving van hoe en door wie de geographische positie van het adres werd aangemaakt of afgeleid.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/PositionGeometryMethodValue\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "GeografischePositie.positiespecificatie": {
+            "description": "Beschrijving van het type adreseerbaar object waarnaar de adres positie verwijst",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/PositionSpecificationValue\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "GeografischePositie.positiespecificatie",
+          "GeografischePositie.positiegeometriemethode",
+          "GeografischePositie.geometrischPunt"
+        ],
+        "type": "object"
+      },
+      "LanguageCodeValue": {
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/LanguageCodeValue\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "LanguageCodeValue type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "MunicipalityHistory": {
+        "description": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/MunicipalityHistory\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "MunicipalityHistory type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "MunicipalityHistory.datumGebeurtenis": {
+            "description": "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Date"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "MunicipalityHistory.opvolger": {
+            "description": "de Best identificator van de entiteit die de opvolger is.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "MunicipalityHistory.predecessor": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Gemeente\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "MunicipalityHistory.successor": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Gemeente\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "MunicipalityHistory.voorganger": {
+            "description": "De BeSt identifier van de entiteit die de voorganger is.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "MunicipalityHistory.datumGebeurtenis",
+          "MunicipalityHistory.voorganger",
+          "MunicipalityHistory.opvolger",
+          "MunicipalityHistory.successor",
+          "MunicipalityHistory.predecessor"
+        ],
+        "type": "object"
+      },
+      "PartOfMunicipalityHistory": {
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/PartOfMunicipalityHistory\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "PartOfMunicipalityHistory type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "PartOfMunicipalityHistory.datumGebeurtenis": {
+            "description": "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Date"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "PartOfMunicipalityHistory.opvolger": {
+            "description": "de Best identificator van de entiteit die de opvolger is.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "PartOfMunicipalityHistory.predecessor": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Deelgemeente\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "PartOfMunicipalityHistory.successor": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Deelgemeente\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "PartOfMunicipalityHistory.voorganger": {
+            "description": "De BeSt identifier van de entiteit die de voorganger is.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "PartOfMunicipalityHistory.datumGebeurtenis",
+          "PartOfMunicipalityHistory.opvolger",
+          "PartOfMunicipalityHistory.voorganger",
+          "PartOfMunicipalityHistory.successor",
+          "PartOfMunicipalityHistory.predecessor"
+        ],
+        "type": "object"
+      },
+      "Pos": {
+        "description": "De positie uitgedrukt in Lambert72 en de Lambert08-notatie.\nIn Lambert-notatie is een locatie gedefinieerd met een X- en Y-coördinaat (dubbels) die de afstand aangeven van een gekozen referentiepunt",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Pos\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Pos type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Pos.x": {
+            "description": "undefined",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Double"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "double",
+                "type": "number"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Pos.y": {
+            "description": "undefined",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Double"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "double",
+                "type": "number"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Pos.x",
+          "Pos.y"
+        ],
+        "type": "object"
+      },
+      "PositionGeometryMethodValue": {
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/PositionGeometryMethodValue\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "PositionGeometryMethodValue type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "PositionSpecificationValue": {
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/PositionSpecificationValue\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "PositionSpecificationValue type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "PostInformatie": {
+        "description": "Identificatie van een subset van adressen gecreëerd voor postbedeling. \nIn de meeste gevallen valt de postal code samen met de gemeente of stad, maar dit is niet altijd het geval.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/PostInformatie\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "PostInformatie type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "PostInformatie.code": {
+            "description": "Unieke identificatie;de objectIdentifier is de postcode gedefinieerd door Bpost.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "PostInformatie.hasPostalInfo": {
+            "description": "Lijst van Adres items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Adres\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "PostInformatie.naam": {
+            "description": "Lijst van GeographicalName items.",
+            "items": {
+              "description": "Geografische zone die overeenkomt met de postcode (valt niet noodzakelijkerwijs samen met de gemeente)",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/GeographicalName\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "maxItems": 3,
+            "minItems": 0,
+            "type": "array"
+          },
+          "PostInformatie.predecessor": {
+            "description": "Lijst van PostalInfoHistory items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/PostalInfoHistory\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "PostInformatie.status": {
+            "description": "PostalInfo status",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Status\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "PostInformatie.successor": {
+            "description": "Lijst van PostalInfoHistory items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/PostalInfoHistory\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "PostInformatie.code",
+          "PostInformatie.status"
+        ],
+        "type": "object"
+      },
+      "PostalInfoHistory": {
+        "description": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/PostalInfoHistory\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "PostalInfoHistory type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "PostalInfoHistory.datumGebeurtenis": {
+            "description": "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Date"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "PostalInfoHistory.opvolger": {
+            "description": "de BeSt identificator van de entiteit die de opvolger is.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "PostalInfoHistory.predecessor": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Post informatie\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "PostalInfoHistory.successor": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Post informatie\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "PostalInfoHistory.voorganger": {
+            "description": "De BeSt identifier van de entiteit die de voorganger is.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "PostalInfoHistory.datumGebeurtenis",
+          "PostalInfoHistory.opvolger",
+          "PostalInfoHistory.voorganger",
+          "PostalInfoHistory.successor",
+          "PostalInfoHistory.predecessor"
+        ],
+        "type": "object"
+      },
+      "Status": {
+        "description": "De status bevat de status waarde en de geldigheidsperiode (datum van en datum tot)",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Status\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Status type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Status.geldigTot": {
+            "description": "de einddatum tot wanneer de entiteit geldig is",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Date"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Status.geldigVanaf": {
+            "description": "de startdatum vanaf wanneer de entiteit geldig is.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Date"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Status.status": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/StatusValue\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Status.geldigVanaf",
+          "Status.status"
+        ],
+        "type": "object"
+      },
+      "StatusValue": {
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/StatusValue\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "StatusValue type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Straatnaam": {
+        "description": "Een adrescomponent die de naam is van een passage of een weg van de ene locatie naar een andere.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Straatnaam\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Straatnaam type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Straatnaam.beginVanDeLevenscyclusVanDezeVersie": {
+            "description": "undefined",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "DateTime"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date-time",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Straatnaam.code": {
+            "description": "Unieke identificatie",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Straatnaam.eindeVanDeLevenscyclusVanDezeVersie": {
+            "description": "undefined",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "DateTime"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date-time",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Straatnaam.hasStreetName": {
+            "description": "Lijst van Adres items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Adres\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Straatnaam.homoniemtoevoeging": {
+            "description": "Toevoeging aan de straatnaam om een onderscheid te maken tussen 2 straten die dezelfde naam hebben binnen dezelfde gemeente, bijv. e.g. Groenstraat (ANBO), Groenstraat (HOWI)",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ],
+            "type": "object"
+          },
+          "Straatnaam.isAssignedByMunicipality": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Gemeente\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Straatnaam.name": {
+            "description": "Lijst van GeographicalName items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/GeographicalName\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "maxItems": 3,
+            "minItems": 1,
+            "type": "array"
+          },
+          "Straatnaam.predecessor": {
+            "description": "Lijst van StreetNameHistory items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/StreetNameHistory\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Straatnaam.status": {
+            "description": "Status van de straatnaam",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Status\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Straatnaam.successor": {
+            "description": "Lijst van StreetNameHistory items.",
+            "items": {
+              "description": "undefined",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/StreetNameHistory\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Straatnaam.type": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/StreetNameTypeValue\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Straatnaam.werdToegekendDoorDezeGemeente": {
+            "description": "Een identificatie die een link vormt naar de gemeente waar deze straat zich bevindt",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Straatnaam.homoniemtoevoeging",
+          "Straatnaam.beginVanDeLevenscyclusVanDezeVersie",
+          "Straatnaam.eindeVanDeLevenscyclusVanDezeVersie",
+          "Straatnaam.werdToegekendDoorDezeGemeente",
+          "Straatnaam.status",
+          "Straatnaam.name",
+          "Straatnaam.code",
+          "Straatnaam.type",
+          "Straatnaam.isAssignedByMunicipality"
+        ],
+        "type": "object"
+      },
+      "StreetNameHistory": {
+        "description": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/StreetNameHistory\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "StreetNameHistory type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "StreetNameHistory.datumGebeurtenis": {
+            "description": "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Date"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "StreetNameHistory.opvolger": {
+            "description": "de Best identificator van de entiteit die de opvolger is.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "StreetNameHistory.predecessor": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Straatnaam\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "StreetNameHistory.successor": {
+            "description": "undefined",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Straatnaam\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "StreetNameHistory.voorganger": {
+            "description": "De BeSt identifier van de entiteit die de voorganger is.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identifier\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "StreetNameHistory.datumGebeurtenis",
+          "StreetNameHistory.voorganger",
+          "StreetNameHistory.opvolger",
+          "StreetNameHistory.successor",
+          "StreetNameHistory.predecessor"
+        ],
+        "type": "object"
+      },
+      "StreetNameTypeValue": {
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/context/bestadd.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/StreetNameTypeValue\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "StreetNameTypeValue type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "description": "This is a inspirational OpenAPI Swagger publication",
+    "title": "OpenAPI Swagger publication",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.4",
+  "paths": {
+    "/id/AddressHistory/{id}": {
+      "get": {
+        "description": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "operationId": "AddressHistoryGET",
+        "parameters": [
+          {
+            "description": "Identificator van een AddressHistory object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AddressHistory"
+                }
+              }
+            },
+            "description": "AddressHistory object gevonden.",
+            "links": {
+              "AdresGET": {
+                "description": "Het `@id` attribuut van de waarde van `AddressHistory.predecessor` kan gebruikt worden om het gerefereerde object van het type `Adres` op te halen.",
+                "operationId": "AdresGET",
+                "parameters": {
+                  "id": "$response.body#/AddressHistory.predecessor/@id"
+                }
+              },
+              "IdentifierGET": {
+                "description": "Het `@id` attribuut van de waarde van `AddressHistory.opvolger` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen.",
+                "operationId": "IdentifierGET",
+                "parameters": {
+                  "id": "$response.body#/AddressHistory.opvolger/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een AddressHistory object."
+          },
+          "404": {
+            "description": "AddressHistory object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Adres/{id}": {
+      "get": {
+        "operationId": "AdresGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Adres object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Adres"
+                }
+              }
+            },
+            "description": "Adres object gevonden.",
+            "links": {
+              "AddressHistoryGET": {
+                "description": "Het `@id` attribuut van de waarde van `Adres.predecessor` kan gebruikt worden om het gerefereerde object van het type `AddressHistory` op te halen.",
+                "operationId": "AddressHistoryGET",
+                "parameters": {
+                  "id": "$response.body#/Adres.predecessor/@id"
+                }
+              },
+              "DeelgemeenteGET": {
+                "description": "Het `@id` attribuut van de waarde van `Adres.hasPartOfMunicipality` kan gebruikt worden om het gerefereerde object van het type `Deelgemeente` op te halen.",
+                "operationId": "DeelgemeenteGET",
+                "parameters": {
+                  "id": "$response.body#/Adres.hasPartOfMunicipality/@id"
+                }
+              },
+              "GemeenteGET": {
+                "description": "Het `@id` attribuut van de waarde van `Adres.hasMunicipality` kan gebruikt worden om het gerefereerde object van het type `Gemeente` op te halen.",
+                "operationId": "GemeenteGET",
+                "parameters": {
+                  "id": "$response.body#/Adres.hasMunicipality/@id"
+                }
+              },
+              "Geografische positieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Adres.positie` kan gebruikt worden om het gerefereerde object van het type `Geografische positie` op te halen.",
+                "operationId": "Geografische positieGET",
+                "parameters": {
+                  "id": "$response.body#/Adres.positie/@id"
+                }
+              },
+              "IdentifierGET": {
+                "description": "Het `@id` attribuut van de waarde van `Adres.code` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen.",
+                "operationId": "IdentifierGET",
+                "parameters": {
+                  "id": "$response.body#/Adres.code/@id"
+                }
+              },
+              "Post informatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Adres.hasPostalInfo` kan gebruikt worden om het gerefereerde object van het type `Post informatie` op te halen.",
+                "operationId": "Post informatieGET",
+                "parameters": {
+                  "id": "$response.body#/Adres.hasPostalInfo/@id"
+                }
+              },
+              "StatusGET": {
+                "description": "Het `@id` attribuut van de waarde van `Adres.status` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen.",
+                "operationId": "StatusGET",
+                "parameters": {
+                  "id": "$response.body#/Adres.status/@id"
+                }
+              },
+              "StraatnaamGET": {
+                "description": "Het `@id` attribuut van de waarde van `Adres.hasStreetName` kan gebruikt worden om het gerefereerde object van het type `Straatnaam` op te halen.",
+                "operationId": "StraatnaamGET",
+                "parameters": {
+                  "id": "$response.body#/Adres.hasStreetName/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Adres object."
+          },
+          "404": {
+            "description": "Adres object met gegeven ID niet gevonden."
+          }
+        },
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/AdresseerbaarObject/{id}": {
+      "get": {
+        "description": "Ruimtelijk object waaraan een adres kan worden toegekend. De meest voorkomende adresseerbare objecten zijn gebouwen, percelen, gebouwingangen, gemene delen binnen een gebouw etc.",
+        "operationId": "AdresseerbaarObjectGET",
+        "parameters": [
+          {
+            "description": "Identificator van een AdresseerbaarObject object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdresseerbaarObject"
+                }
+              }
+            },
+            "description": "AdresseerbaarObject object gevonden.",
+            "links": {
+              "IdentifierGET": {
+                "description": "Het `@id` attribuut van de waarde van `AdresseerbaarObject.code` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen.",
+                "operationId": "IdentifierGET",
+                "parameters": {
+                  "id": "$response.body#/AdresseerbaarObject.code/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een AdresseerbaarObject object."
+          },
+          "404": {
+            "description": "AdresseerbaarObject object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Ruimtelijk object waaraan een adres kan worden toegekend. De meest voorkomende adresseerbare objecten zijn gebouwen, percelen, gebouwingangen, gemene delen binnen een gebouw etc.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Deelgemeente/{id}": {
+      "get": {
+        "description": "Een deel van een gemeente, zoals een voormalige gemeente (voorafgaand aan de fusie van de gemeenten) of een wijk.",
+        "operationId": "DeelgemeenteGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Deelgemeente object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Deelgemeente"
+                }
+              }
+            },
+            "description": "Deelgemeente object gevonden.",
+            "links": {
+              "AdresGET": {
+                "description": "Het `@id` attribuut van de waarde van `Deelgemeente.hasPartOfMunicipality` kan gebruikt worden om het gerefereerde object van het type `Adres` op te halen.",
+                "operationId": "AdresGET",
+                "parameters": {
+                  "id": "$response.body#/Deelgemeente.hasPartOfMunicipality/@id"
+                }
+              },
+              "GeographicalNameGET": {
+                "description": "Het `@id` attribuut van de waarde van `Deelgemeente.naam` kan gebruikt worden om het gerefereerde object van het type `GeographicalName` op te halen.",
+                "operationId": "GeographicalNameGET",
+                "parameters": {
+                  "id": "$response.body#/Deelgemeente.naam/@id"
+                }
+              },
+              "IdentifierGET": {
+                "description": "Het `@id` attribuut van de waarde van `Deelgemeente.code` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen.",
+                "operationId": "IdentifierGET",
+                "parameters": {
+                  "id": "$response.body#/Deelgemeente.code/@id"
+                }
+              },
+              "PartOfMunicipalityHistoryGET": {
+                "description": "Het `@id` attribuut van de waarde van `Deelgemeente.predecessor` kan gebruikt worden om het gerefereerde object van het type `PartOfMunicipalityHistory` op te halen.",
+                "operationId": "PartOfMunicipalityHistoryGET",
+                "parameters": {
+                  "id": "$response.body#/Deelgemeente.predecessor/@id"
+                }
+              },
+              "StatusGET": {
+                "description": "Het `@id` attribuut van de waarde van `Deelgemeente.status` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen.",
+                "operationId": "StatusGET",
+                "parameters": {
+                  "id": "$response.body#/Deelgemeente.status/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Deelgemeente object."
+          },
+          "404": {
+            "description": "Deelgemeente object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Een deel van een gemeente, zoals een voormalige gemeente (voorafgaand aan de fusie van de gemeenten) of een wijk.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Gemeente/{id}": {
+      "get": {
+        "description": "Officiële administratieve zone van het Belgisch grondgebied. De gemeente is het kleinste administratieve deel van het Belgisch grondgebied waarvan de grenzen enkel door de wetgever kunnen worden gewijzigd.",
+        "operationId": "GemeenteGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Gemeente object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Gemeente"
+                }
+              }
+            },
+            "description": "Gemeente object gevonden.",
+            "links": {
+              "AdresGET": {
+                "description": "Het `@id` attribuut van de waarde van `Gemeente.hasMunicipality` kan gebruikt worden om het gerefereerde object van het type `Adres` op te halen.",
+                "operationId": "AdresGET",
+                "parameters": {
+                  "id": "$response.body#/Gemeente.hasMunicipality/@id"
+                }
+              },
+              "GeographicalNameGET": {
+                "description": "Het `@id` attribuut van de waarde van `Gemeente.naam` kan gebruikt worden om het gerefereerde object van het type `GeographicalName` op te halen.",
+                "operationId": "GeographicalNameGET",
+                "parameters": {
+                  "id": "$response.body#/Gemeente.naam/@id"
+                }
+              },
+              "IdentifierGET": {
+                "description": "Het `@id` attribuut van de waarde van `Gemeente.code` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen.",
+                "operationId": "IdentifierGET",
+                "parameters": {
+                  "id": "$response.body#/Gemeente.code/@id"
+                }
+              },
+              "MunicipalityHistoryGET": {
+                "description": "Het `@id` attribuut van de waarde van `Gemeente.predecessor` kan gebruikt worden om het gerefereerde object van het type `MunicipalityHistory` op te halen.",
+                "operationId": "MunicipalityHistoryGET",
+                "parameters": {
+                  "id": "$response.body#/Gemeente.predecessor/@id"
+                }
+              },
+              "StatusGET": {
+                "description": "Het `@id` attribuut van de waarde van `Gemeente.status` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen.",
+                "operationId": "StatusGET",
+                "parameters": {
+                  "id": "$response.body#/Gemeente.status/@id"
+                }
+              },
+              "StraatnaamGET": {
+                "description": "Het `@id` attribuut van de waarde van `Gemeente.isAssignedByMunicipality` kan gebruikt worden om het gerefereerde object van het type `Straatnaam` op te halen.",
+                "operationId": "StraatnaamGET",
+                "parameters": {
+                  "id": "$response.body#/Gemeente.isAssignedByMunicipality/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Gemeente object."
+          },
+          "404": {
+            "description": "Gemeente object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Officiële administratieve zone van het Belgisch grondgebied. De gemeente is het kleinste administratieve deel van het Belgisch grondgebied waarvan de grenzen enkel door de wetgever kunnen worden gewijzigd.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/GeografischePositie/{id}": {
+      "get": {
+        "description": "Geografische positie aangegeven door een punt.",
+        "operationId": "GeografischePositieGET",
+        "parameters": [
+          {
+            "description": "Identificator van een GeografischePositie object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeografischePositie"
+                }
+              }
+            },
+            "description": "GeografischePositie object gevonden.",
+            "links": {
+              "PointGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeografischePositie.geometrischPunt` kan gebruikt worden om het gerefereerde object van het type `Point` op te halen.",
+                "operationId": "PointGET",
+                "parameters": {
+                  "id": "$response.body#/GeografischePositie.geometrischPunt/@id"
+                }
+              },
+              "PositionGeometryMethodValueGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeografischePositie.positiegeometriemethode` kan gebruikt worden om het gerefereerde object van het type `PositionGeometryMethodValue` op te halen.",
+                "operationId": "PositionGeometryMethodValueGET",
+                "parameters": {
+                  "id": "$response.body#/GeografischePositie.positiegeometriemethode/@id"
+                }
+              },
+              "PositionSpecificationValueGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeografischePositie.positiespecificatie` kan gebruikt worden om het gerefereerde object van het type `PositionSpecificationValue` op te halen.",
+                "operationId": "PositionSpecificationValueGET",
+                "parameters": {
+                  "id": "$response.body#/GeografischePositie.positiespecificatie/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een GeografischePositie object."
+          },
+          "404": {
+            "description": "GeografischePositie object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Geografische positie aangegeven door een punt.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/LanguageCodeValue/{id}": {
+      "get": {
+        "operationId": "LanguageCodeValueGET",
+        "parameters": [
+          {
+            "description": "Identificator van een LanguageCodeValue object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LanguageCodeValue"
+                }
+              }
+            },
+            "description": "LanguageCodeValue object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een LanguageCodeValue object."
+          },
+          "404": {
+            "description": "LanguageCodeValue object met gegeven ID niet gevonden."
+          }
+        },
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/MunicipalityHistory/{id}": {
+      "get": {
+        "description": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "operationId": "MunicipalityHistoryGET",
+        "parameters": [
+          {
+            "description": "Identificator van een MunicipalityHistory object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MunicipalityHistory"
+                }
+              }
+            },
+            "description": "MunicipalityHistory object gevonden.",
+            "links": {
+              "GemeenteGET": {
+                "description": "Het `@id` attribuut van de waarde van `MunicipalityHistory.predecessor` kan gebruikt worden om het gerefereerde object van het type `Gemeente` op te halen.",
+                "operationId": "GemeenteGET",
+                "parameters": {
+                  "id": "$response.body#/MunicipalityHistory.predecessor/@id"
+                }
+              },
+              "IdentifierGET": {
+                "description": "Het `@id` attribuut van de waarde van `MunicipalityHistory.opvolger` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen.",
+                "operationId": "IdentifierGET",
+                "parameters": {
+                  "id": "$response.body#/MunicipalityHistory.opvolger/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een MunicipalityHistory object."
+          },
+          "404": {
+            "description": "MunicipalityHistory object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/PartOfMunicipalityHistory/{id}": {
+      "get": {
+        "operationId": "PartOfMunicipalityHistoryGET",
+        "parameters": [
+          {
+            "description": "Identificator van een PartOfMunicipalityHistory object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PartOfMunicipalityHistory"
+                }
+              }
+            },
+            "description": "PartOfMunicipalityHistory object gevonden.",
+            "links": {
+              "DeelgemeenteGET": {
+                "description": "Het `@id` attribuut van de waarde van `PartOfMunicipalityHistory.predecessor` kan gebruikt worden om het gerefereerde object van het type `Deelgemeente` op te halen.",
+                "operationId": "DeelgemeenteGET",
+                "parameters": {
+                  "id": "$response.body#/PartOfMunicipalityHistory.predecessor/@id"
+                }
+              },
+              "IdentifierGET": {
+                "description": "Het `@id` attribuut van de waarde van `PartOfMunicipalityHistory.voorganger` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen.",
+                "operationId": "IdentifierGET",
+                "parameters": {
+                  "id": "$response.body#/PartOfMunicipalityHistory.voorganger/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een PartOfMunicipalityHistory object."
+          },
+          "404": {
+            "description": "PartOfMunicipalityHistory object met gegeven ID niet gevonden."
+          }
+        },
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Pos/{id}": {
+      "get": {
+        "description": "De positie uitgedrukt in Lambert72 en de Lambert08-notatie.\nIn Lambert-notatie is een locatie gedefinieerd met een X- en Y-coördinaat (dubbels) die de afstand aangeven van een gekozen referentiepunt",
+        "operationId": "PosGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Pos object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pos"
+                }
+              }
+            },
+            "description": "Pos object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Pos object."
+          },
+          "404": {
+            "description": "Pos object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "De positie uitgedrukt in Lambert72 en de Lambert08-notatie.\nIn Lambert-notatie is een locatie gedefinieerd met een X- en Y-coördinaat (dubbels) die de afstand aangeven van een gekozen referentiepunt",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/PositionGeometryMethodValue/{id}": {
+      "get": {
+        "operationId": "PositionGeometryMethodValueGET",
+        "parameters": [
+          {
+            "description": "Identificator van een PositionGeometryMethodValue object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PositionGeometryMethodValue"
+                }
+              }
+            },
+            "description": "PositionGeometryMethodValue object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een PositionGeometryMethodValue object."
+          },
+          "404": {
+            "description": "PositionGeometryMethodValue object met gegeven ID niet gevonden."
+          }
+        },
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/PositionSpecificationValue/{id}": {
+      "get": {
+        "operationId": "PositionSpecificationValueGET",
+        "parameters": [
+          {
+            "description": "Identificator van een PositionSpecificationValue object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PositionSpecificationValue"
+                }
+              }
+            },
+            "description": "PositionSpecificationValue object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een PositionSpecificationValue object."
+          },
+          "404": {
+            "description": "PositionSpecificationValue object met gegeven ID niet gevonden."
+          }
+        },
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/PostInformatie/{id}": {
+      "get": {
+        "description": "Identificatie van een subset van adressen gecreëerd voor postbedeling. \nIn de meeste gevallen valt de postal code samen met de gemeente of stad, maar dit is niet altijd het geval.",
+        "operationId": "PostInformatieGET",
+        "parameters": [
+          {
+            "description": "Identificator van een PostInformatie object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostInformatie"
+                }
+              }
+            },
+            "description": "PostInformatie object gevonden.",
+            "links": {
+              "AdresGET": {
+                "description": "Het `@id` attribuut van de waarde van `PostInformatie.hasPostalInfo` kan gebruikt worden om het gerefereerde object van het type `Adres` op te halen.",
+                "operationId": "AdresGET",
+                "parameters": {
+                  "id": "$response.body#/PostInformatie.hasPostalInfo/@id"
+                }
+              },
+              "GeographicalNameGET": {
+                "description": "Het `@id` attribuut van de waarde van `PostInformatie.naam` kan gebruikt worden om het gerefereerde object van het type `GeographicalName` op te halen.",
+                "operationId": "GeographicalNameGET",
+                "parameters": {
+                  "id": "$response.body#/PostInformatie.naam/@id"
+                }
+              },
+              "IdentifierGET": {
+                "description": "Het `@id` attribuut van de waarde van `PostInformatie.code` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen.",
+                "operationId": "IdentifierGET",
+                "parameters": {
+                  "id": "$response.body#/PostInformatie.code/@id"
+                }
+              },
+              "PostalInfoHistoryGET": {
+                "description": "Het `@id` attribuut van de waarde van `PostInformatie.predecessor` kan gebruikt worden om het gerefereerde object van het type `PostalInfoHistory` op te halen.",
+                "operationId": "PostalInfoHistoryGET",
+                "parameters": {
+                  "id": "$response.body#/PostInformatie.predecessor/@id"
+                }
+              },
+              "StatusGET": {
+                "description": "Het `@id` attribuut van de waarde van `PostInformatie.status` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen.",
+                "operationId": "StatusGET",
+                "parameters": {
+                  "id": "$response.body#/PostInformatie.status/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een PostInformatie object."
+          },
+          "404": {
+            "description": "PostInformatie object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Identificatie van een subset van adressen gecreëerd voor postbedeling. \nIn de meeste gevallen valt de postal code samen met de gemeente of stad, maar dit is niet altijd het geval.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/PostalInfoHistory/{id}": {
+      "get": {
+        "description": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "operationId": "PostalInfoHistoryGET",
+        "parameters": [
+          {
+            "description": "Identificator van een PostalInfoHistory object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostalInfoHistory"
+                }
+              }
+            },
+            "description": "PostalInfoHistory object gevonden.",
+            "links": {
+              "IdentifierGET": {
+                "description": "Het `@id` attribuut van de waarde van `PostalInfoHistory.voorganger` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen.",
+                "operationId": "IdentifierGET",
+                "parameters": {
+                  "id": "$response.body#/PostalInfoHistory.voorganger/@id"
+                }
+              },
+              "Post informatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `PostalInfoHistory.predecessor` kan gebruikt worden om het gerefereerde object van het type `Post informatie` op te halen.",
+                "operationId": "Post informatieGET",
+                "parameters": {
+                  "id": "$response.body#/PostalInfoHistory.predecessor/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een PostalInfoHistory object."
+          },
+          "404": {
+            "description": "PostalInfoHistory object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Status/{id}": {
+      "get": {
+        "description": "De status bevat de status waarde en de geldigheidsperiode (datum van en datum tot)",
+        "operationId": "StatusGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Status object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            },
+            "description": "Status object gevonden.",
+            "links": {
+              "StatusValueGET": {
+                "description": "Het `@id` attribuut van de waarde van `Status.status` kan gebruikt worden om het gerefereerde object van het type `StatusValue` op te halen.",
+                "operationId": "StatusValueGET",
+                "parameters": {
+                  "id": "$response.body#/Status.status/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Status object."
+          },
+          "404": {
+            "description": "Status object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "De status bevat de status waarde en de geldigheidsperiode (datum van en datum tot)",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/StatusValue/{id}": {
+      "get": {
+        "operationId": "StatusValueGET",
+        "parameters": [
+          {
+            "description": "Identificator van een StatusValue object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusValue"
+                }
+              }
+            },
+            "description": "StatusValue object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een StatusValue object."
+          },
+          "404": {
+            "description": "StatusValue object met gegeven ID niet gevonden."
+          }
+        },
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Straatnaam/{id}": {
+      "get": {
+        "description": "Een adrescomponent die de naam is van een passage of een weg van de ene locatie naar een andere.",
+        "operationId": "StraatnaamGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Straatnaam object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Straatnaam"
+                }
+              }
+            },
+            "description": "Straatnaam object gevonden.",
+            "links": {
+              "AdresGET": {
+                "description": "Het `@id` attribuut van de waarde van `Straatnaam.hasStreetName` kan gebruikt worden om het gerefereerde object van het type `Adres` op te halen.",
+                "operationId": "AdresGET",
+                "parameters": {
+                  "id": "$response.body#/Straatnaam.hasStreetName/@id"
+                }
+              },
+              "GemeenteGET": {
+                "description": "Het `@id` attribuut van de waarde van `Straatnaam.isAssignedByMunicipality` kan gebruikt worden om het gerefereerde object van het type `Gemeente` op te halen.",
+                "operationId": "GemeenteGET",
+                "parameters": {
+                  "id": "$response.body#/Straatnaam.isAssignedByMunicipality/@id"
+                }
+              },
+              "GeographicalNameGET": {
+                "description": "Het `@id` attribuut van de waarde van `Straatnaam.name` kan gebruikt worden om het gerefereerde object van het type `GeographicalName` op te halen.",
+                "operationId": "GeographicalNameGET",
+                "parameters": {
+                  "id": "$response.body#/Straatnaam.name/@id"
+                }
+              },
+              "IdentifierGET": {
+                "description": "Het `@id` attribuut van de waarde van `Straatnaam.code` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen.",
+                "operationId": "IdentifierGET",
+                "parameters": {
+                  "id": "$response.body#/Straatnaam.code/@id"
+                }
+              },
+              "StatusGET": {
+                "description": "Het `@id` attribuut van de waarde van `Straatnaam.status` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen.",
+                "operationId": "StatusGET",
+                "parameters": {
+                  "id": "$response.body#/Straatnaam.status/@id"
+                }
+              },
+              "StreetNameHistoryGET": {
+                "description": "Het `@id` attribuut van de waarde van `Straatnaam.predecessor` kan gebruikt worden om het gerefereerde object van het type `StreetNameHistory` op te halen.",
+                "operationId": "StreetNameHistoryGET",
+                "parameters": {
+                  "id": "$response.body#/Straatnaam.predecessor/@id"
+                }
+              },
+              "StreetNameTypeValueGET": {
+                "description": "Het `@id` attribuut van de waarde van `Straatnaam.type` kan gebruikt worden om het gerefereerde object van het type `StreetNameTypeValue` op te halen.",
+                "operationId": "StreetNameTypeValueGET",
+                "parameters": {
+                  "id": "$response.body#/Straatnaam.type/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Straatnaam object."
+          },
+          "404": {
+            "description": "Straatnaam object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Een adrescomponent die de naam is van een passage of een weg van de ene locatie naar een andere.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/StreetNameHistory/{id}": {
+      "get": {
+        "description": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "operationId": "StreetNameHistoryGET",
+        "parameters": [
+          {
+            "description": "Identificator van een StreetNameHistory object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StreetNameHistory"
+                }
+              }
+            },
+            "description": "StreetNameHistory object gevonden.",
+            "links": {
+              "IdentifierGET": {
+                "description": "Het `@id` attribuut van de waarde van `StreetNameHistory.opvolger` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen.",
+                "operationId": "IdentifierGET",
+                "parameters": {
+                  "id": "$response.body#/StreetNameHistory.opvolger/@id"
+                }
+              },
+              "StraatnaamGET": {
+                "description": "Het `@id` attribuut van de waarde van `StreetNameHistory.predecessor` kan gebruikt worden om het gerefereerde object van het type `Straatnaam` op te halen.",
+                "operationId": "StraatnaamGET",
+                "parameters": {
+                  "id": "$response.body#/StreetNameHistory.predecessor/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een StreetNameHistory object."
+          },
+          "404": {
+            "description": "StreetNameHistory object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/StreetNameTypeValue/{id}": {
+      "get": {
+        "operationId": "StreetNameTypeValueGET",
+        "parameters": [
+          {
+            "description": "Identificator van een StreetNameTypeValue object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StreetNameTypeValue"
+                }
+              }
+            },
+            "description": "StreetNameTypeValue object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een StreetNameTypeValue object."
+          },
+          "404": {
+            "description": "StreetNameTypeValue object met gegeven ID niet gevonden."
+          }
+        },
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    }
+  },
+  "servers": [
+    {
+      "description": "Basis URL",
+      "url": "https://data.test-vlaanderen.be"
+    }
+  ]
+}

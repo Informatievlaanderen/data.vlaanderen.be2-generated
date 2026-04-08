@@ -3,11 +3,8 @@
 #||#    + checking /home/circleci/project/config/test/BeSt-Add.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03'
-error: missing '/tmp/generated/doc/applicatieprofiel/bestadd'
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/bestadd/index.html'
 
 #||#    + checking /home/circleci/project/config/test/Vrachtwagenparkeren.publication.json

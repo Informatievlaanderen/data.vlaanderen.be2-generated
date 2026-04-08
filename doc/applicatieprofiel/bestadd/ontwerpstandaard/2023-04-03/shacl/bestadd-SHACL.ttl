@@ -1,0 +1,1139 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#> rdfs:member <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#StraatnaamShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#GemeenteShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#AdresShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#AddresshistoryShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#StatusShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#StreetnamehistoryShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PostalinfohistoryShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#AdresseerbaarObjectShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#GeografischePositieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#DeelgemeenteShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PartofmunicipalityhistoryShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PostInformatieShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#MunicipalityhistoryShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PosShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PositionspecificationvalueShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PositiongeometrymethodvalueShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#StatusvalueShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#LanguagecodevalueShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#StreetnametypevalueShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#StringShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#DatetimeShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#BooleanShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#GeographicalnameShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#DateShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#IdentifierShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#CoordinatesShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#DoubleShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PointShape> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#AddresshistoryShape> a shacl:NodeShape;
+  rdfs:label "AddressHistory";
+  rdfs:comment """Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.
+Elke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)"""@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "datum gebeurtenis"@nl;
+    rdfs:comment "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Addresshistory.DatumGebeurtenis>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "datum gebeurtenis"@nl;
+    shacl:path <http://todo.com/eventDate>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "voorganger"@nl;
+    rdfs:comment "De BeSt identifier van de entiteit die de voorganger is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Addresshistory.Voorganger>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "De BeSt identifier van de entiteit die de voorganger is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "voorganger"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "opvolger"@nl;
+    rdfs:comment "de BeSt identificator van de entiteit die de opvolger is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Addresshistory.Opvolger>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "de BeSt identificator van de entiteit die de opvolger is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "opvolger"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "successor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Addresshistory.Successor>;
+    shacl:class <http://inspire.ec.europa.eu/ont/ad#Address>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "successor";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "predecessor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Addresshistory.Predecessor>;
+    shacl:class <http://inspire.ec.europa.eu/ont/ad#Address>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "predecessor";
+    shacl:path <http://todo.com/>
+  ];
+  shacl:targetClass <http://todo.com/AddressHistory> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#AdresShape> a shacl:NodeShape;
+  rdfs:label "Adres"@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "Huisnummer"@nl;
+    rdfs:comment "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.Huisnummer>;
+    shacl:datatype xsd:string;
+    shacl:description "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Huisnummer"@nl;
+    shacl:path <http://www.w3.org/ns/locn#locatorDesignator>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "Busnummer"@nl;
+    rdfs:comment "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die hetzelfde huisnummer hebben."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.Busnummer>;
+    shacl:datatype xsd:string;
+    shacl:description "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die hetzelfde huisnummer hebben."@nl;
+    shacl:maxCount "1";
+    shacl:name "Busnummer"@nl;
+    shacl:path <http://www.w3.org/ns/locn#locatorDesignator>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "einde van de levenscyclus van deze versie"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.EindeVanDeLevenscyclusVanDezeVersie>;
+    shacl:datatype xsd:dateTime;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "einde van de levenscyclus van deze versie"@nl;
+    shacl:path <http://todo.com/endLifespanVersion>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "Adres sorteerveld"@nl;
+    rdfs:comment "Transformatie van het huisnummer en busnummer (toevoeging van leading 0's) zodat deze waarde kan gesorteerd worden"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.AdresSorteerveld>;
+    shacl:datatype xsd:string;
+    shacl:description "Transformatie van het huisnummer en busnummer (toevoeging van leading 0's) zodat deze waarde kan gesorteerd worden"@nl;
+    shacl:maxCount "1";
+    shacl:name "Adres sorteerveld"@nl;
+    shacl:path <http://vocab.belgif.be/ns/location#addressSortField>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "Officieel toegekend"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Als een afwijking wordt vastgesteld, kan de gemeente ambtenaar dit aanpassen naar \"False\"."@nl;
+    rdfs:comment "Geeft aan of het adres is toegekend door een officiële instantie (gewoonlijk de gemeente) (True)."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.OfficieelToegekend>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Geeft aan of het adres is toegekend door een officiële instantie (gewoonlijk de gemeente) (True)."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Officieel toegekend"@nl;
+    shacl:path <http://todo.com/officiallyAssigned>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "begin van de levenscyclus van deze versie"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.BeginVanDeLevenscyclusVanDezeVersie>;
+    shacl:datatype xsd:dateTime;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "begin van de levenscyclus van deze versie"@nl;
+    shacl:path <http://todo.com/beginLifespanVersion>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "Is gehecht aan"@nl;
+    rdfs:comment "het Adresseerbaar object waaraan het adres is toegekend."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.IsGehechtAan>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "het Adresseerbaar object waaraan het adres is toegekend."@nl;
+    shacl:name "Is gehecht aan"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft als post informatie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "BeStIdentifier die de postalInfo identificeert waar dit adres zich bevindt"@nl;
+    rdfs:comment "BeStIdentifier die de postalInfo identificeert waar dit adres zich bevindt"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.HeeftAlsPostInformatie>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "BeStIdentifier die de postalInfo identificeert waar dit adres zich bevindt"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "heeft als post informatie"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "status"@nl;
+    rdfs:comment "Huidige status van het adres."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.Status>;
+    shacl:class <http://todo.com/Status>;
+    shacl:description "Huidige status van het adres."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "status"@nl;
+    shacl:path <http://todo.com/status>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft als deelgemeente"@nl;
+    rdfs:comment "BeStIdentifier die de deelgemeente identificeert waar dit adres zich bevindt. Deelgemeentes zijn op dit ogenblik enkel voor Wallonië beschikbaar."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.HeeftAlsDeelgemeente>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "BeStIdentifier die de deelgemeente identificeert waar dit adres zich bevindt. Deelgemeentes zijn op dit ogenblik enkel voor Wallonië beschikbaar."@nl;
+    shacl:maxCount "1";
+    shacl:name "heeft als deelgemeente"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft als straatnaam"@nl;
+    rdfs:comment "heeftStraatNaam"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.HeeftAlsStraatnaam>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "heeftStraatNaam"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "heeft als straatnaam"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft als gemeente"@nl;
+    rdfs:comment "BeStIdentifier die de gemeente identificeert waar dit adres zich bevindt. Dit kenmerk is altijd aanwezig."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.HeeftAlsGemeente>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "BeStIdentifier die de gemeente identificeert waar dit adres zich bevindt. Dit kenmerk is altijd aanwezig."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "heeft als gemeente"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "code"@nl;
+    rdfs:comment "Unieke identificatie"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.Code>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Unieke identificatie"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "code"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "Positie"@nl;
+    rdfs:comment "Geografische positie aangegeven dmv een punt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.Positie>;
+    shacl:class <http://inspire.ec.europa.eu/ont/ad#GeographicPosition>;
+    shacl:description "Geografische positie aangegeven dmv een punt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Positie"@nl;
+    shacl:path <http://inspire.ec.europa.eu/ont/ad#Address.position>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "hasStreetName";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.Hasstreetname>;
+    shacl:class <http://inspire.ec.europa.eu/ont/ad#ThoroughfareName>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "hasStreetName";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "hasMunicipality";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.Hasmunicipality>;
+    shacl:class <http://vocab.belgif.be/ns/location#Municipality>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "hasMunicipality";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "hasPartOfMunicipality";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.Haspartofmunicipality>;
+    shacl:class <http://vocab.belgif.be/ns/location#PartOfMunicipality>;
+    shacl:maxCount 1;
+    shacl:name "hasPartOfMunicipality";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "successor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.Successor>;
+    shacl:class <http://todo.com/AddressHistory>;
+    shacl:name "successor";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "predecessor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.Predecessor>;
+    shacl:class <http://todo.com/AddressHistory>;
+    shacl:name "predecessor";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "hasPostalInfo";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Adres.Haspostalinfo>;
+    shacl:class <http://inspire.ec.europa.eu/ont/ad#PostalDescriptor>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "hasPostalInfo";
+    shacl:path <http://todo.com/>
+  ];
+  shacl:targetClass <http://inspire.ec.europa.eu/ont/ad#Address> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#AdresseerbaarObjectShape> a shacl:NodeShape;
+  rdfs:label "Adresseerbaar object"@nl;
+  rdfs:comment "Ruimtelijk object waaraan een adres kan worden toegekend. De meest voorkomende adresseerbare objecten zijn gebouwen, percelen, gebouwingangen, gemene delen binnen een gebouw etc."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "code";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#AdresseerbaarObject.Code>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "code";
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ];
+  shacl:targetClass <http://vocab.belgif.be/ns/location#AddressableObject> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#BooleanShape> a shacl:NodeShape;
+  rdfs:label "boolean";
+  shacl:closed false;
+  shacl:targetClass xsd:boolean .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#CoordinatesShape> a shacl:NodeShape;
+  rdfs:label "Coordinates";
+  rdfs:comment "Positie uitgedrukt volgens de WGS84 standaard (World Geodetic System 1984 op basis van lengtegraad en breedtegraad)"@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "long";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Coordinates.Long>;
+    shacl:datatype xsd:double;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "long";
+    shacl:path <http://todo.com/long>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "lat";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Coordinates.Lat>;
+    shacl:datatype xsd:double;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "lat";
+    shacl:path <http://todo.com/lat>
+  ];
+  shacl:targetClass <http://todo.com/Coordinates> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#DateShape> a shacl:NodeShape;
+  rdfs:label "date";
+  shacl:closed false;
+  shacl:targetClass xsd:date .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#DatetimeShape> a shacl:NodeShape;
+  rdfs:label "dateTime";
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#DeelgemeenteShape> a shacl:NodeShape;
+  rdfs:label "Deelgemeente"@nl;
+  rdfs:comment "Een deel van een gemeente, zoals een voormalige gemeente (voorafgaand aan de fusie van de gemeenten) of een wijk."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "naam"@nl;
+    rdfs:comment "Naam van de deelgemeente"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Deelgemeente.Naam>;
+    shacl:class <http://todo.com/GeographicalName>;
+    shacl:description "Naam van de deelgemeente"@nl;
+    shacl:maxCount "3";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path <http://todo.com/name>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "code"@nl;
+    rdfs:comment "Unieke identificatie; de objectIdentifier is een nummer (niet de NIS-code)"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Deelgemeente.Code>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Unieke identificatie; de objectIdentifier is een nummer (niet de NIS-code)"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "code"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "status"@nl;
+    rdfs:comment "Status van de deelgemeente"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Deelgemeente.Status>;
+    shacl:class <http://todo.com/Status>;
+    shacl:description "Status van de deelgemeente"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "status"@nl;
+    shacl:path <http://todo.com/status>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "hasPartOfMunicipality";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Deelgemeente.Haspartofmunicipality>;
+    shacl:class <http://inspire.ec.europa.eu/ont/ad#Address>;
+    shacl:name "hasPartOfMunicipality";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "successor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Deelgemeente.Successor>;
+    shacl:class <http://todo.com/PartOfMunicipalityHistory>;
+    shacl:name "successor";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "predecessor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Deelgemeente.Predecessor>;
+    shacl:class <http://todo.com/PartOfMunicipalityHistory>;
+    shacl:name "predecessor";
+    shacl:path <http://todo.com/>
+  ];
+  shacl:targetClass <http://vocab.belgif.be/ns/location#PartOfMunicipality> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#DoubleShape> a shacl:NodeShape;
+  rdfs:label "double";
+  shacl:closed false;
+  shacl:targetClass xsd:double .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#GemeenteShape> a shacl:NodeShape;
+  rdfs:label "Gemeente"@nl;
+  rdfs:comment "Officiële administratieve zone van het Belgisch grondgebied. De gemeente is het kleinste administratieve deel van het Belgisch grondgebied waarvan de grenzen enkel door de wetgever kunnen worden gewijzigd."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "naam"@nl;
+    rdfs:comment "Gemeentenaam"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Gemeente.Naam>;
+    shacl:class <http://todo.com/GeographicalName>;
+    shacl:description "Gemeentenaam"@nl;
+    shacl:maxCount "3";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path <http://todo.com/name>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "status"@nl;
+    rdfs:comment "Gemeentelijke status"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Gemeente.Status>;
+    shacl:class <http://todo.com/Status>;
+    shacl:description "Gemeentelijke status"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "status"@nl;
+    shacl:path <http://todo.com/status>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "code"@nl;
+    rdfs:comment "Unieke identificatie; de objectIdentifier is momenteel de NIScode"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Gemeente.Code>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Unieke identificatie; de objectIdentifier is momenteel de NIScode"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "code"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "hasMunicipality";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Gemeente.Hasmunicipality>;
+    shacl:class <http://inspire.ec.europa.eu/ont/ad#Address>;
+    shacl:name "hasMunicipality";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "isAssignedByMunicipality";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Gemeente.Isassignedbymunicipality>;
+    shacl:class <http://inspire.ec.europa.eu/ont/ad#ThoroughfareName>;
+    shacl:name "isAssignedByMunicipality";
+    shacl:path prov:wasAttributedTo
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "successor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Gemeente.Successor>;
+    shacl:class <http://todo.com/MunicipalityHistory>;
+    shacl:name "successor";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "predecessor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Gemeente.Predecessor>;
+    shacl:class <http://todo.com/MunicipalityHistory>;
+    shacl:name "predecessor";
+    shacl:path <http://todo.com/>
+  ];
+  shacl:targetClass <http://vocab.belgif.be/ns/location#Municipality> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#GeografischePositieShape> a shacl:NodeShape;
+  rdfs:label "Geografische positie"@nl;
+  rdfs:comment "Geografische positie aangegeven door een punt."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "Positiespecificatie"@nl;
+    rdfs:comment "Beschrijving van het type adreseerbaar object waarnaar de adres positie verwijst"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#GeografischePositie.Positiespecificatie>;
+    shacl:class <http://todo.com/PositionSpecificationValue>;
+    shacl:description "Beschrijving van het type adreseerbaar object waarnaar de adres positie verwijst"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Positiespecificatie"@nl;
+    shacl:path <http://inspire.ec.europa.eu/ont/ad#GeographicPosition.specification>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "Positiegeometriemethode"@nl;
+    rdfs:comment "Beschrijving van hoe en door wie de geographische positie van het adres werd aangemaakt of afgeleid."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#GeografischePositie.Positiegeometriemethode>;
+    shacl:class <http://todo.com/PositionGeometryMethodValue>;
+    shacl:description "Beschrijving van hoe en door wie de geographische positie van het adres werd aangemaakt of afgeleid."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Positiegeometriemethode"@nl;
+    shacl:path <http://inspire.ec.europa.eu/ont/ad#GeographicPosition.method>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "Geometrisch punt"@nl;
+    rdfs:comment "Een “perceel” is een deel van het grondgebied officieel vastgesteld met een kadastraal of administratief doel."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#GeografischePositie.GeometrischPunt>;
+    shacl:class <http://todo.com/Point>;
+    shacl:description "Een “perceel” is een deel van het grondgebied officieel vastgesteld met een kadastraal of administratief doel."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Geometrisch punt"@nl;
+    shacl:path <http://todo.com/pointGeometry>
+  ];
+  shacl:targetClass <http://inspire.ec.europa.eu/ont/ad#GeographicPosition> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#GeographicalnameShape> a shacl:NodeShape;
+  rdfs:label "GeographicalName";
+  rdfs:comment """Namen zoals gemeentenamen zijn meertalig in België. Er wordt een speciale klasse gebruikt om deze meertalige situatie uit te drukken.
+De GeographicalName bestaat uit de volgende subelementen: spelling en talen."""@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "geografische naam"@nl;
+    rdfs:comment "De naam uitgeschreven in de gespecifieerde taal"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Geographicalname.GeografischeNaam>;
+    shacl:datatype xsd:string;
+    shacl:description "De naam uitgeschreven in de gespecifieerde taal"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geografische naam"@nl;
+    shacl:path <http://todo.com/spelling>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "naam"@nl;
+    rdfs:comment """Taal waarin de spelling is geschreven. De taal kan drie waarden hebben en wordt gespecificeerd in de taalcodewaarde (languageCodeValue).
+- Nl
+- Fr
+- De
+Elke taal is maximaal één keer per object aanwezig."""@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Geographicalname.Naam>;
+    shacl:class <http://todo.com/LanguageCodeValue>;
+    shacl:description """Taal waarin de spelling is geschreven. De taal kan drie waarden hebben en wordt gespecificeerd in de taalcodewaarde (languageCodeValue).
+- Nl
+- Fr
+- De
+Elke taal is maximaal één keer per object aanwezig."""@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "naam"@nl;
+    shacl:path <http://todo.com/language>
+  ];
+  shacl:targetClass <http://todo.com/GeographicalName> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#IdentifierShape> a shacl:NodeShape;
+  rdfs:label "Identifier"@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "Namespace"@nl;
+    rdfs:comment "De naamruimte die de regio's gebruiken om de regio en het elementtype te identificeren"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Identifier.Namespace>;
+    shacl:datatype xsd:string;
+    shacl:description "De naamruimte die de regio's gebruiken om de regio en het elementtype te identificeren"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Namespace"@nl;
+    shacl:path <http://vocab.belgif.be/ns/location#nameSpace>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "Identificator van een versie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Een versionIdentifier kan een datum/tijdstempel zijn (zoals in Vlaanderen) of een nummer (zoals in Wallonië en Brussel)."@nl;
+    rdfs:comment "Versie van de BeSt identifier; laatste deel van de BeSt identifier"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Identifier.IdentificatorVanEenVersie>;
+    shacl:datatype xsd:string;
+    shacl:description "Versie van de BeSt identifier; laatste deel van de BeSt identifier"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Identificator van een versie"@nl;
+    shacl:path <http://todo.com/versionIdentifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "Identificator van een object"@nl;
+    <http://purl.org/vocab/vann/usageNote> "een nummer dat het object binnen de naamruimte eenduidig identificeert."@nl;
+    rdfs:comment "Een integer die het middelste deel van de BeSt identifier voorstelt"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Identifier.IdentificatorVanEenObject>;
+    shacl:datatype xsd:string;
+    shacl:description "Een integer die het middelste deel van de BeSt identifier voorstelt"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Identificator van een object"@nl;
+    shacl:path <http://todo.com/objectIdentifier>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/adms#Identifier> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#LanguagecodevalueShape> a shacl:NodeShape;
+  rdfs:label "LanguageCodeValue";
+  shacl:closed false;
+  shacl:targetClass <http://todo.com/LanguageCodeValue> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#MunicipalityhistoryShape> a shacl:NodeShape;
+  rdfs:label "MunicipalityHistory";
+  rdfs:comment """Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.
+Elke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)"""@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "datum gebeurtenis"@nl;
+    rdfs:comment "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Municipalityhistory.DatumGebeurtenis>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "datum gebeurtenis"@nl;
+    shacl:path <http://todo.com/eventDate>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "voorganger"@nl;
+    rdfs:comment "De BeSt identifier van de entiteit die de voorganger is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Municipalityhistory.Voorganger>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "De BeSt identifier van de entiteit die de voorganger is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "voorganger"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "opvolger"@nl;
+    rdfs:comment "de Best identificator van de entiteit die de opvolger is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Municipalityhistory.Opvolger>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "de Best identificator van de entiteit die de opvolger is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "opvolger"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "successor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Municipalityhistory.Successor>;
+    shacl:class <http://vocab.belgif.be/ns/location#Municipality>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "successor";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "predecessor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Municipalityhistory.Predecessor>;
+    shacl:class <http://vocab.belgif.be/ns/location#Municipality>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "predecessor";
+    shacl:path <http://todo.com/>
+  ];
+  shacl:targetClass <http://todo.com/MunicipalityHistory> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PartofmunicipalityhistoryShape> a shacl:NodeShape;
+  rdfs:label "PartOfMunicipalityHistory";
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "datum gebeurtenis"@nl;
+    rdfs:comment "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Partofmunicipalityhistory.DatumGebeurtenis>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "datum gebeurtenis"@nl;
+    shacl:path <http://todo.com/eventDate>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "opvolger"@nl;
+    rdfs:comment "de Best identificator van de entiteit die de opvolger is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Partofmunicipalityhistory.Opvolger>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "de Best identificator van de entiteit die de opvolger is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "opvolger"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "voorganger"@nl;
+    rdfs:comment "De BeSt identifier van de entiteit die de voorganger is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Partofmunicipalityhistory.Voorganger>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "De BeSt identifier van de entiteit die de voorganger is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "voorganger"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "successor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Partofmunicipalityhistory.Successor>;
+    shacl:class <http://vocab.belgif.be/ns/location#PartOfMunicipality>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "successor";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "predecessor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Partofmunicipalityhistory.Predecessor>;
+    shacl:class <http://vocab.belgif.be/ns/location#PartOfMunicipality>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "predecessor";
+    shacl:path <http://todo.com/>
+  ];
+  shacl:targetClass <http://todo.com/PartOfMunicipalityHistory> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PointShape> a shacl:NodeShape;
+  rdfs:label "Point";
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "geografische positie (Lam72 - Lam08)"@nl;
+    rdfs:comment """De positie uitgedrukt in Lambert72 en de Lambert08-notatie.
+In Lambert-notatie is een locatie gedefinieerd met een X- en Y-coördinaat (dubbels) die de afstand aangeven van een gekozen referentiepunt"""@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Point.GeografischePositie(lam72-Lam08)>;
+    shacl:class <http://todo.com/Pos>;
+    shacl:description """De positie uitgedrukt in Lambert72 en de Lambert08-notatie.
+In Lambert-notatie is een locatie gedefinieerd met een X- en Y-coördinaat (dubbels) die de afstand aangeven van een gekozen referentiepunt"""@nl;
+    shacl:maxCount "2";
+    shacl:minCount "1";
+    shacl:name "geografische positie (Lam72 - Lam08)"@nl;
+    shacl:path <http://todo.com/pos(Lam72-Lam08)>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "coordinates (WGS84)";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Point.Coordinates(wgs84)>;
+    shacl:class <http://todo.com/Coordinates>;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "coordinates (WGS84)";
+    shacl:path <http://todo.com/coordinates(WGS84)>
+  ];
+  shacl:targetClass <http://todo.com/Point> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PosShape> a shacl:NodeShape;
+  rdfs:label "pos";
+  rdfs:comment """De positie uitgedrukt in Lambert72 en de Lambert08-notatie.
+In Lambert-notatie is een locatie gedefinieerd met een X- en Y-coördinaat (dubbels) die de afstand aangeven van een gekozen referentiepunt"""@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "X";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Pos.X>;
+    shacl:datatype xsd:double;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "X";
+    shacl:path <http://todo.com/x>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "Y";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Pos.Y>;
+    shacl:datatype xsd:double;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Y";
+    shacl:path <http://todo.com/y>
+  ];
+  shacl:targetClass <http://todo.com/Pos> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PositiongeometrymethodvalueShape> a shacl:NodeShape;
+  rdfs:label "PositionGeometryMethodValue";
+  shacl:closed false;
+  shacl:targetClass <http://todo.com/PositionGeometryMethodValue> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PositionspecificationvalueShape> a shacl:NodeShape;
+  rdfs:label "PositionSpecificationValue";
+  shacl:closed false;
+  shacl:targetClass <http://todo.com/PositionSpecificationValue> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PostInformatieShape> a shacl:NodeShape;
+  rdfs:label "Post informatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Enkel Vlaanderen stelt postalInfo ter beschikking: de naam bestaat uit een aaneenschakeling van alle namen van (deel)gemeentes geldig voor dezelfde postcode en is beschikbaar in tenminste 1 taal, bijv."@nl;
+  rdfs:comment """Identificatie van een subset van adressen gecreëerd voor postbedeling. 
+In de meeste gevallen valt de postal code samen met de gemeente of stad, maar dit is niet altijd het geval."""@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "naam"@nl;
+    rdfs:comment "Geografische zone die overeenkomt met de postcode (valt niet noodzakelijkerwijs samen met de gemeente)"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PostInformatie.Naam>;
+    shacl:class <http://todo.com/GeographicalName>;
+    shacl:description "Geografische zone die overeenkomt met de postcode (valt niet noodzakelijkerwijs samen met de gemeente)"@nl;
+    shacl:maxCount "3";
+    shacl:name "naam"@nl;
+    shacl:path <http://todo.com/name>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "code"@nl;
+    rdfs:comment "Unieke identificatie;de objectIdentifier is de postcode gedefinieerd door Bpost."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PostInformatie.Code>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Unieke identificatie;de objectIdentifier is de postcode gedefinieerd door Bpost."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "code"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "status"@nl;
+    rdfs:comment "PostalInfo status"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PostInformatie.Status>;
+    shacl:class <http://todo.com/Status>;
+    shacl:description "PostalInfo status"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "status"@nl;
+    shacl:path <http://todo.com/status>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "successor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PostInformatie.Successor>;
+    shacl:class <http://todo.com/PostalInfoHistory>;
+    shacl:name "successor";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "predecessor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PostInformatie.Predecessor>;
+    shacl:class <http://todo.com/PostalInfoHistory>;
+    shacl:name "predecessor";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "hasPostalInfo";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PostInformatie.Haspostalinfo>;
+    shacl:class <http://inspire.ec.europa.eu/ont/ad#Address>;
+    shacl:name "hasPostalInfo";
+    shacl:path <http://todo.com/>
+  ];
+  shacl:targetClass <http://inspire.ec.europa.eu/ont/ad#PostalDescriptor> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#PostalinfohistoryShape> a shacl:NodeShape;
+  rdfs:label "PostalInfoHistory";
+  rdfs:comment """Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.
+Elke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)"""@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "datum gebeurtenis"@nl;
+    rdfs:comment "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Postalinfohistory.DatumGebeurtenis>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "datum gebeurtenis"@nl;
+    shacl:path <http://todo.com/eventDate>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "opvolger"@nl;
+    rdfs:comment "de BeSt identificator van de entiteit die de opvolger is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Postalinfohistory.Opvolger>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "de BeSt identificator van de entiteit die de opvolger is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "opvolger"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "voorganger"@nl;
+    rdfs:comment "De BeSt identifier van de entiteit die de voorganger is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Postalinfohistory.Voorganger>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "De BeSt identifier van de entiteit die de voorganger is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "voorganger"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "successor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Postalinfohistory.Successor>;
+    shacl:class <http://inspire.ec.europa.eu/ont/ad#PostalDescriptor>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "successor";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "predecessor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Postalinfohistory.Predecessor>;
+    shacl:class <http://inspire.ec.europa.eu/ont/ad#PostalDescriptor>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "predecessor";
+    shacl:path <http://todo.com/>
+  ];
+  shacl:targetClass <http://todo.com/PostalInfoHistory> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#StatusShape> a shacl:NodeShape;
+  rdfs:label "Status";
+  rdfs:comment "De status bevat de status waarde en de geldigheidsperiode (datum van en datum tot)"@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "geldig tot"@nl;
+    rdfs:comment "de einddatum tot wanneer de entiteit geldig is"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Status.GeldigTot>;
+    shacl:datatype xsd:date;
+    shacl:description "de einddatum tot wanneer de entiteit geldig is"@nl;
+    shacl:maxCount "1";
+    shacl:name "geldig tot"@nl;
+    shacl:path <http://todo.com/validTo>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "geldig vanaf"@nl;
+    rdfs:comment "de startdatum vanaf wanneer de entiteit geldig is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Status.GeldigVanaf>;
+    shacl:datatype xsd:date;
+    shacl:description "de startdatum vanaf wanneer de entiteit geldig is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geldig vanaf"@nl;
+    shacl:path <http://todo.com/validFrom>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "status";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Status.Status>;
+    shacl:class <http://todo.com/StatusValue>;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "status";
+    shacl:path <http://todo.com/status>
+  ];
+  shacl:targetClass <http://todo.com/Status> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#StatusvalueShape> a shacl:NodeShape;
+  rdfs:label "StatusValue";
+  shacl:closed false;
+  shacl:targetClass <http://todo.com/StatusValue> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#StraatnaamShape> a shacl:NodeShape;
+  rdfs:label "Straatnaam"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Het kan voorkomen dat één gemeente twee straten met dezelfde naam heeft (bijvoorbeeld na de fusie van twee gemeenten). In Wallonië worden dergelijke straten onderscheiden door een andere identifier en zijn ze gekoppeld aan een ander gemeentedeel."@nl;
+  rdfs:comment "Een adrescomponent die de naam is van een passage of een weg van de ene locatie naar een andere."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "Homoniemtoevoeging"@nl;
+    rdfs:comment "Toevoeging aan de straatnaam om een onderscheid te maken tussen 2 straten die dezelfde naam hebben binnen dezelfde gemeente, bijv. e.g. Groenstraat (ANBO), Groenstraat (HOWI)"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Straatnaam.Homoniemtoevoeging>;
+    shacl:datatype xsd:string;
+    shacl:description "Toevoeging aan de straatnaam om een onderscheid te maken tussen 2 straten die dezelfde naam hebben binnen dezelfde gemeente, bijv. e.g. Groenstraat (ANBO), Groenstraat (HOWI)"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "Homoniemtoevoeging"@nl;
+    shacl:path <http://vocab.belgif.be/ns/location#homonymAddition>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "begin van de levenscyclus van deze versie"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Straatnaam.BeginVanDeLevenscyclusVanDezeVersie>;
+    shacl:datatype xsd:dateTime;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "begin van de levenscyclus van deze versie"@nl;
+    shacl:path <http://todo.com/beginLifespanVersion>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "einde van de levenscyclus van deze versie"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Straatnaam.EindeVanDeLevenscyclusVanDezeVersie>;
+    shacl:datatype xsd:dateTime;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "einde van de levenscyclus van deze versie"@nl;
+    shacl:path <http://todo.com/endLifespanVersion>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "werd toegekend door deze gemeente"@nl;
+    rdfs:comment "Een identificatie die een link vormt naar de gemeente waar deze straat zich bevindt"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Straatnaam.WerdToegekendDoorDezeGemeente>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Een identificatie die een link vormt naar de gemeente waar deze straat zich bevindt"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "werd toegekend door deze gemeente"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "status"@nl;
+    rdfs:comment "Status van de straatnaam"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Straatnaam.Status>;
+    shacl:class <http://todo.com/Status>;
+    shacl:description "Status van de straatnaam"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "status"@nl;
+    shacl:path <http://todo.com/status>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "name";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Straatnaam.Name>;
+    shacl:class <http://todo.com/GeographicalName>;
+    shacl:maxCount "3";
+    shacl:minCount "1";
+    shacl:name "name";
+    shacl:path <http://todo.com/name>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "code"@nl;
+    rdfs:comment "Unieke identificatie"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Straatnaam.Code>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Unieke identificatie"@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "code"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "type";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Straatnaam.Type>;
+    shacl:class <http://todo.com/StreetNameTypeValue>;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type";
+    shacl:path <http://todo.com/type>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "hasStreetName";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Straatnaam.Hasstreetname>;
+    shacl:class <http://inspire.ec.europa.eu/ont/ad#Address>;
+    shacl:name "hasStreetName";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "isAssignedByMunicipality";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Straatnaam.Isassignedbymunicipality>;
+    shacl:class <http://vocab.belgif.be/ns/location#Municipality>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "isAssignedByMunicipality";
+    shacl:path prov:wasAttributedTo
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "successor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Straatnaam.Successor>;
+    shacl:class <http://todo.com/StreetNameHistory>;
+    shacl:name "successor";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "predecessor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Straatnaam.Predecessor>;
+    shacl:class <http://todo.com/StreetNameHistory>;
+    shacl:name "predecessor";
+    shacl:path <http://todo.com/>
+  ];
+  shacl:targetClass <http://inspire.ec.europa.eu/ont/ad#ThoroughfareName> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#StreetnamehistoryShape> a shacl:NodeShape;
+  rdfs:label "StreetNameHistory";
+  rdfs:comment """Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.
+Elke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)"""@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "datum gebeurtenis"@nl;
+    rdfs:comment "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Streetnamehistory.DatumGebeurtenis>;
+    shacl:datatype xsd:date;
+    shacl:description "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "datum gebeurtenis"@nl;
+    shacl:path <http://todo.com/eventDate>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "voorganger"@nl;
+    rdfs:comment "De BeSt identifier van de entiteit die de voorganger is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Streetnamehistory.Voorganger>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "De BeSt identifier van de entiteit die de voorganger is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "voorganger"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "opvolger"@nl;
+    rdfs:comment "de Best identificator van de entiteit die de opvolger is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Streetnamehistory.Opvolger>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "de Best identificator van de entiteit die de opvolger is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "opvolger"@nl;
+    shacl:path <http://www.w3.org/ns/adms#Identifier>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "successor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Streetnamehistory.Successor>;
+    shacl:class <http://inspire.ec.europa.eu/ont/ad#ThoroughfareName>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "successor";
+    shacl:path <http://todo.com/>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "predecessor";
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#Streetnamehistory.Predecessor>;
+    shacl:class <http://inspire.ec.europa.eu/ont/ad#ThoroughfareName>;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "predecessor";
+    shacl:path <http://todo.com/>
+  ];
+  shacl:targetClass <http://todo.com/StreetNameHistory> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#StreetnametypevalueShape> a shacl:NodeShape;
+  rdfs:label "StreetNameTypeValue";
+  shacl:closed false;
+  shacl:targetClass <http://todo.com/StreetNameTypeValue> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/bestadd/ontwerpstandaard/2023-04-03#StringShape> a shacl:NodeShape;
+  rdfs:label "string";
+  shacl:closed false;
+  shacl:targetClass xsd:string .
