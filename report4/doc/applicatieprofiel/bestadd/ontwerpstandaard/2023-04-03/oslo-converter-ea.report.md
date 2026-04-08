@@ -2,71 +2,71 @@
 
 #||# -------------------------------------
 
-2026-04-08T08:21:44.041Z info: Connector Model 2025:BeSt_Domain_model:StreetName:hasStreetName is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.088Z info: Connector Model 2025:BeSt_Domain_model:StreetName:hasStreetName is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.042Z info: Connector Model 2025:BeSt_Domain_model:StreetName:hasStreetName has name "hasStreetName". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.090Z info: Connector Model 2025:BeSt_Domain_model:StreetName:hasStreetName has name "hasStreetName". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.043Z info: Connector Model 2025:BeSt_Domain_model:Municipality:hasMunicipality is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.091Z info: Connector Model 2025:BeSt_Domain_model:Municipality:hasMunicipality is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.043Z info: Connector Model 2025:BeSt_Domain_model:Municipality:hasMunicipality has name "hasMunicipality". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.091Z info: Connector Model 2025:BeSt_Domain_model:Municipality:hasMunicipality has name "hasMunicipality". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.043Z info: Connector Model 2025:BeSt_Domain_model:Municipality:isAssignedByMunicipality is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.091Z info: Connector Model 2025:BeSt_Domain_model:Municipality:isAssignedByMunicipality is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.043Z info: Connector Model 2025:BeSt_Domain_model:Municipality:isAssignedByMunicipality has name "isAssignedByMunicipality". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.091Z info: Connector Model 2025:BeSt_Domain_model:Municipality:isAssignedByMunicipality has name "isAssignedByMunicipality". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.043Z info: Connector Model 2025:BeSt_Domain_model:Address:hasPartOfMunicipality is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.091Z info: Connector Model 2025:BeSt_Domain_model:Address:hasPartOfMunicipality is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.044Z info: Connector Model 2025:BeSt_Domain_model:Address:hasPartOfMunicipality has name "hasPartOfMunicipality". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.091Z info: Connector Model 2025:BeSt_Domain_model:Address:hasPartOfMunicipality has name "hasPartOfMunicipality". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.044Z info: Connector Model 2025:BeSt_Domain_model:Address:isAssignedToAddressableObject is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.092Z info: Connector Model 2025:BeSt_Domain_model:Address:isAssignedToAddressableObject is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.044Z info: Connector Model 2025:BeSt_Domain_model:Address:isAssignedToAddressableObject has name "isAssignedToAddressableObject". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.092Z info: Connector Model 2025:BeSt_Domain_model:Address:isAssignedToAddressableObject has name "isAssignedToAddressableObject". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.044Z info: Connector Model 2025:BeSt_Domain_model:AddressHistory:successor is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.092Z info: Connector Model 2025:BeSt_Domain_model:AddressHistory:successor is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.044Z info: Connector Model 2025:BeSt_Domain_model:AddressHistory:successor has name "successor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.092Z info: Connector Model 2025:BeSt_Domain_model:AddressHistory:successor has name "successor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.044Z info: Connector Model 2025:BeSt_Domain_model:AddressHistory:predecessor is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.092Z info: Connector Model 2025:BeSt_Domain_model:AddressHistory:predecessor is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.044Z info: Connector Model 2025:BeSt_Domain_model:AddressHistory:predecessor has name "predecessor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.092Z info: Connector Model 2025:BeSt_Domain_model:AddressHistory:predecessor has name "predecessor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.045Z info: Connector Model 2025:BeSt_Domain_model:StreetNameHistory:successor is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.092Z info: Connector Model 2025:BeSt_Domain_model:StreetNameHistory:successor is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.045Z info: Connector Model 2025:BeSt_Domain_model:StreetNameHistory:successor has name "successor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.093Z info: Connector Model 2025:BeSt_Domain_model:StreetNameHistory:successor has name "successor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.045Z info: Connector Model 2025:BeSt_Domain_model:StreetNameHistory:predecessor is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.093Z info: Connector Model 2025:BeSt_Domain_model:StreetNameHistory:predecessor is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.045Z info: Connector Model 2025:BeSt_Domain_model:StreetNameHistory:predecessor has name "predecessor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.093Z info: Connector Model 2025:BeSt_Domain_model:StreetNameHistory:predecessor has name "predecessor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.045Z info: Connector Model 2025:BeSt_Domain_model:PostalInfoHistory:successor is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.093Z info: Connector Model 2025:BeSt_Domain_model:PostalInfoHistory:successor is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.045Z info: Connector Model 2025:BeSt_Domain_model:PostalInfoHistory:successor has name "successor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.093Z info: Connector Model 2025:BeSt_Domain_model:PostalInfoHistory:successor has name "successor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.045Z info: Connector Model 2025:BeSt_Domain_model:PostalInfoHistory:predecessor is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.093Z info: Connector Model 2025:BeSt_Domain_model:PostalInfoHistory:predecessor is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.046Z info: Connector Model 2025:BeSt_Domain_model:PostalInfoHistory:predecessor has name "predecessor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.093Z info: Connector Model 2025:BeSt_Domain_model:PostalInfoHistory:predecessor has name "predecessor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.046Z info: Connector Model 2025:BeSt_Domain_model:PartOfMunicipalityHistory:successor is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.094Z info: Connector Model 2025:BeSt_Domain_model:PartOfMunicipalityHistory:successor is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.046Z info: Connector Model 2025:BeSt_Domain_model:PartOfMunicipalityHistory:successor has name "successor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.094Z info: Connector Model 2025:BeSt_Domain_model:PartOfMunicipalityHistory:successor has name "successor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.046Z info: Connector Model 2025:BeSt_Domain_model:PartOfMunicipalityHistory:predecessor is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.094Z info: Connector Model 2025:BeSt_Domain_model:PartOfMunicipalityHistory:predecessor is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.046Z info: Connector Model 2025:BeSt_Domain_model:PartOfMunicipalityHistory:predecessor has name "predecessor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.094Z info: Connector Model 2025:BeSt_Domain_model:PartOfMunicipalityHistory:predecessor has name "predecessor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.046Z info: Connector Model 2025:BeSt_Domain_model:PostalInfo:hasPostalInfo is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.094Z info: Connector Model 2025:BeSt_Domain_model:PostalInfo:hasPostalInfo is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.046Z info: Connector Model 2025:BeSt_Domain_model:PostalInfo:hasPostalInfo has name "hasPostalInfo". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.094Z info: Connector Model 2025:BeSt_Domain_model:PostalInfo:hasPostalInfo has name "hasPostalInfo". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.046Z info: Connector Model 2025:BeSt_Domain_model:MunicipalityHistory:successor is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.094Z info: Connector Model 2025:BeSt_Domain_model:MunicipalityHistory:successor is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.046Z info: Connector Model 2025:BeSt_Domain_model:MunicipalityHistory:successor has name "successor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.094Z info: Connector Model 2025:BeSt_Domain_model:MunicipalityHistory:successor has name "successor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.046Z info: Connector Model 2025:BeSt_Domain_model:MunicipalityHistory:predecessor is not an association with a source role. Ignoring this connector.
+2026-04-08T09:09:54.094Z info: Connector Model 2025:BeSt_Domain_model:MunicipalityHistory:predecessor is not an association with a source role. Ignoring this connector.
 
-2026-04-08T08:21:44.046Z info: Connector Model 2025:BeSt_Domain_model:MunicipalityHistory:predecessor has name "predecessor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-04-08T09:09:54.094Z info: Connector Model 2025:BeSt_Domain_model:MunicipalityHistory:predecessor has name "predecessor". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-04-08T08:21:44.047Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model 2025). Using fallback URI (http://todo.com/) instead.
+2026-04-08T09:09:54.095Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model 2025). Using fallback URI (http://todo.com/) instead.
 
 #||# -------------------------------------
 
