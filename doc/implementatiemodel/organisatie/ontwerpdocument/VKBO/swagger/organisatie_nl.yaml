@@ -1,0 +1,1398 @@
+{
+  "components": {
+    "schemas": {
+      "Agent": {
+        "description": "Een agent zoals een Persoon, groep, software of fysiek artifact.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Agent type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Agent.isLidVan": {
+            "description": "Lijst van Organisatie items.",
+            "items": {
+              "description": "Niet nader bepaald lidmaatschap van een Agent van een Organisatie. Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Organisatie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "FormeleOrganisatie": {
+        "description": "Een erkende Organisatie, erkend in brede zin of  meer specifiek in juridische zin met bijbehorende rechten en plichten.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/FormeleOrganisatie\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "FormeleOrganisatie type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "FormeleOrganisatie.activiteit": {
+            "description": "Type activiteit die door de organisatie wordt uitgeoefend. Specialisatie van het attribuut classificatie (naast type & status).",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/NACEBEL2025\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "FormeleOrganisatie.alternatieveNaam": {
+            "description": "Lijst van LangString items.",
+            "items": {
+              "description": "Andere naam waaronder de Organisatie bekend is. Bijvoorbeeld: commerciële naam, informele naam, etc.",
+              "properties": {
+                "@language": {
+                  "enum": [
+                    "nl"
+                  ],
+                  "type": "string"
+                },
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "FormeleOrganisatie.contactinfo": {
+            "description": "Lijst van Contactpunt items.",
+            "items": {
+              "description": "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Contactpunt\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "FormeleOrganisatie.heeftLid": {
+            "description": "Lijst van Lidmaatschap items.",
+            "items": {
+              "description": "Lidmaatschap van een Agent van een Organisatie.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Lidmaatschap\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "FormeleOrganisatie.isLidVan": {
+            "description": "Lijst van Organisatie items.",
+            "items": {
+              "description": "Niet nader bepaald lidmaatschap van een Agent van een Organisatie. Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Organisatie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "FormeleOrganisatie.lid": {
+            "description": "Lijst van Agent items.",
+            "items": {
+              "description": "Agent die lid is (van een Organisatie). Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "FormeleOrganisatie.status": {
+            "description": "Lijst van OrganisatieStatus items.",
+            "items": {
+              "description": "Toestand van de Organisatie. Specialisatie van classificatie (naast type & activiteit).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/OrganisatieStatus\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "FormeleOrganisatie.type": {
+            "description": "Lijst van OrganisatieType items.",
+            "items": {
+              "description": "Soort Organisatie. Specialisatie van classificatie (naast activiteit & status).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/OrganisatieType\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "FormeleOrganisatie.voorkeursnaam": {
+            "description": "Naam waarmee de Organisatie bij voorkeur wordt aangeduid.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "FormeleOrganisatie.voorkeursnaam",
+          "FormeleOrganisatie.voorkeursnaam"
+        ],
+        "type": "object"
+      },
+      "GeregistreerdeOrganisatie": {
+        "description": "Organisatie met een juridisch statuut vastgelegd door registratie. Vergelijk met een FormeleOrganisatie waarbij dit statuut ook op een andere manier verkregen kan zijn.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/GeregistreerdeOrganisatie\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "GeregistreerdeOrganisatie type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "GeregistreerdeOrganisatie.activiteit": {
+            "description": "Type activiteit die door de organisatie wordt uitgeoefend. Specialisatie van het attribuut classificatie (naast type & status).",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/NACEBEL2025\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "GeregistreerdeOrganisatie.alternatieveNaam": {
+            "description": "Lijst van LangString items.",
+            "items": {
+              "description": "Andere naam waaronder de Organisatie bekend is. Bijvoorbeeld: commerciële naam, informele naam, etc.",
+              "properties": {
+                "@language": {
+                  "enum": [
+                    "nl"
+                  ],
+                  "type": "string"
+                },
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "GeregistreerdeOrganisatie.contactinfo": {
+            "description": "Lijst van Contactpunt items.",
+            "items": {
+              "description": "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Contactpunt\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "GeregistreerdeOrganisatie.heeftLid": {
+            "description": "Lijst van Lidmaatschap items.",
+            "items": {
+              "description": "Lidmaatschap van een Agent van een Organisatie.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Lidmaatschap\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "GeregistreerdeOrganisatie.isLidVan": {
+            "description": "Lijst van Organisatie items.",
+            "items": {
+              "description": "Niet nader bepaald lidmaatschap van een Agent van een Organisatie. Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Organisatie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "GeregistreerdeOrganisatie.lid": {
+            "description": "Lijst van Agent items.",
+            "items": {
+              "description": "Agent die lid is (van een Organisatie). Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "GeregistreerdeOrganisatie.rechtspersoonlijkheid": {
+            "description": "Aard van de rechtspersoonlijkheid. Rechtspersoonlijkheid betekent dat men een rechtssubject is, dit wil zeggen drager van rechten en plichten. Natuurlijke personen hebben vanzelf rechtspersoonlijkheid, rechtspersonen (bvb venootschappen) moeten die van rechtswege toegekend krijgen.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Rechtspersoonlijkheidtype\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "GeregistreerdeOrganisatie.rechtstoestand": {
+            "description": "Status van een GeregistreerdeOrganisatie. Stemt in de KBO overeen met de rechtstoestand van de Organisatie, bijvoorbeeld normale toestand, gerechtelijk akkoord, opening faillissement etc.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Rechtstoestandtype\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "GeregistreerdeOrganisatie.rechtsvorm": {
+            "description": "Juridisch statuut van de geregistreerde organisatie. Stemt in de KBO overeen met rechtsvorm, bvb NV, VZW, Stad/Gemeente, OCMW etc.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Rechtsvormtype\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "GeregistreerdeOrganisatie.registratie": {
+            "description": "Identificator dat de organisatie verkreeg bij registratie. In de KBO is dit het ondernemingsnummer.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Identificator\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "GeregistreerdeOrganisatie.status": {
+            "description": "Lijst van OrganisatieStatus items.",
+            "items": {
+              "description": "Toestand van de Organisatie. Specialisatie van classificatie (naast type & activiteit).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/OrganisatieStatus\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "GeregistreerdeOrganisatie.type": {
+            "description": "Lijst van OrganisatieType items.",
+            "items": {
+              "description": "Soort Organisatie. Specialisatie van classificatie (naast activiteit & status).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/OrganisatieType\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "GeregistreerdeOrganisatie.voorkeursnaam": {
+            "description": "Naam waarmee de Organisatie bij voorkeur wordt aangeduid.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          },
+          "GeregistreerdeOrganisatie.wettelijkeNaam": {
+            "description": "Wettelijk geregistreerde naam vd organisatie. Evt in verschillende talen.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "GeregistreerdeOrganisatie.wettelijkeNaam",
+          "GeregistreerdeOrganisatie.registratie",
+          "GeregistreerdeOrganisatie.voorkeursnaam",
+          "GeregistreerdeOrganisatie.voorkeursnaam",
+          "GeregistreerdeOrganisatie.voorkeursnaam",
+          "GeregistreerdeOrganisatie.voorkeursnaam"
+        ],
+        "type": "object"
+      },
+      "Lidmaatschap": {
+        "description": "Geeft de kenmerken weer van het Lidmaatschap van een Agent van een Organisatie.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Lidmaatschap\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Lidmaatschap type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Lidmaatschap.isLidBij": {
+            "description": "Organisatie waarop het Lidmaatschap (van een Agent) betrekking heeft.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Lidmaatschap.lid": {
+            "description": "Lidmaatschap van een Agent (van een Organisatie).",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Organisatie\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Lidmaatschap.lidVanTot": {
+            "description": "Periode waarin de agent lid was van de Organisatie.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Periode\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Lidmaatschap.rol": {
+            "description": "Rol die de Agent vervult als lid van de Organisatie.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Rol\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Lidmaatschap.rol",
+          "Lidmaatschap.lid",
+          "Lidmaatschap.isLidBij"
+        ],
+        "type": "object"
+      },
+      "Organisatie": {
+        "description": "Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaansreden die de individuele leden ervan overstijgt en kan handelen als agent. Een Organisatie heeft dikwijls een hiërarchische structuur.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Organisatie\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Organisatie type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Organisatie.activiteit": {
+            "description": "Type activiteit die door de organisatie wordt uitgeoefend. Specialisatie van het attribuut classificatie (naast type & status).",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/NACEBEL2025\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Organisatie.alternatieveNaam": {
+            "description": "Lijst van LangString items.",
+            "items": {
+              "description": "Andere naam waaronder de Organisatie bekend is. Bijvoorbeeld: commerciële naam, informele naam, etc.",
+              "properties": {
+                "@language": {
+                  "enum": [
+                    "nl"
+                  ],
+                  "type": "string"
+                },
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Organisatie.contactinfo": {
+            "description": "Lijst van Contactpunt items.",
+            "items": {
+              "description": "Informatie zoals email, telefoon... die toelaat de Organisatie te contacteren.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Contactpunt\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Organisatie.heeftLid": {
+            "description": "Lijst van Lidmaatschap items.",
+            "items": {
+              "description": "Lidmaatschap van een Agent van een Organisatie.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Lidmaatschap\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Organisatie.isLidVan": {
+            "description": "Lijst van Organisatie items.",
+            "items": {
+              "description": "Niet nader bepaald lidmaatschap van een Agent van een Organisatie. Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Organisatie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Organisatie.lid": {
+            "description": "Lijst van Agent items.",
+            "items": {
+              "description": "Agent die lid is (van een Organisatie). Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Organisatie.status": {
+            "description": "Lijst van OrganisatieStatus items.",
+            "items": {
+              "description": "Toestand van de Organisatie. Specialisatie van classificatie (naast type & activiteit).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/OrganisatieStatus\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Organisatie.type": {
+            "description": "Lijst van OrganisatieType items.",
+            "items": {
+              "description": "Soort Organisatie. Specialisatie van classificatie (naast activiteit & status).",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/OrganisatieType\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Organisatie.voorkeursnaam": {
+            "description": "Naam waarmee de Organisatie bij voorkeur wordt aangeduid.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Organisatie.voorkeursnaam"
+        ],
+        "type": "object"
+      },
+      "Plaats": {
+        "description": "Een ruimtelijk gebied of benoemde plaats.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Plaats\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Plaats type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Plaats.beschrijving": {
+            "description": "Schriftelijke weergave van kenmerken van iets of iemand.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ],
+            "type": "object"
+          },
+          "Plaats.geometrie": {
+            "description": "Geometrie van de plaats of het gebied.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Geometrie\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Plaats.plaatsnaam": {
+            "description": "Naam van de plaats of van het gebied.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type",
+          "Plaats.plaatsnaam",
+          "Plaats.beschrijving",
+          "Plaats.beschrijving"
+        ],
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "description": "This is a inspirational OpenAPI Swagger publication",
+    "title": "OpenAPI Swagger publication",
+    "version": "1.0.0"
+  },
+  "openapi": "3.0.4",
+  "paths": {
+    "/id/Agent/{id}": {
+      "get": {
+        "description": "Een agent zoals een Persoon, groep, software of fysiek artifact.",
+        "operationId": "AgentGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Agent object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Agent"
+                }
+              }
+            },
+            "description": "Agent object gevonden.",
+            "links": {
+              "OrganisatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Agent.isLidVan` kan gebruikt worden om het gerefereerde object van het type `Organisatie` op te halen.",
+                "operationId": "OrganisatieGET",
+                "parameters": {
+                  "id": "$response.body#/Agent.isLidVan/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Agent object."
+          },
+          "404": {
+            "description": "Agent object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Een agent zoals een Persoon, groep, software of fysiek artifact.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/FormeleOrganisatie/{id}": {
+      "get": {
+        "description": "Een erkende Organisatie, erkend in brede zin of  meer specifiek in juridische zin met bijbehorende rechten en plichten.",
+        "operationId": "FormeleOrganisatieGET",
+        "parameters": [
+          {
+            "description": "Identificator van een FormeleOrganisatie object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FormeleOrganisatie"
+                }
+              }
+            },
+            "description": "FormeleOrganisatie object gevonden.",
+            "links": {
+              "AgentGET": {
+                "description": "Het `@id` attribuut van de waarde van `FormeleOrganisatie.lid` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen.",
+                "operationId": "AgentGET",
+                "parameters": {
+                  "id": "$response.body#/FormeleOrganisatie.lid/@id"
+                }
+              },
+              "ContactpuntGET": {
+                "description": "Het `@id` attribuut van de waarde van `FormeleOrganisatie.contactinfo` kan gebruikt worden om het gerefereerde object van het type `Contactpunt` op te halen.",
+                "operationId": "ContactpuntGET",
+                "parameters": {
+                  "id": "$response.body#/FormeleOrganisatie.contactinfo/@id"
+                }
+              },
+              "LidmaatschapGET": {
+                "description": "Het `@id` attribuut van de waarde van `FormeleOrganisatie.heeftLid` kan gebruikt worden om het gerefereerde object van het type `Lidmaatschap` op te halen.",
+                "operationId": "LidmaatschapGET",
+                "parameters": {
+                  "id": "$response.body#/FormeleOrganisatie.heeftLid/@id"
+                }
+              },
+              "NACEBEL2025GET": {
+                "description": "Het `@id` attribuut van de waarde van `FormeleOrganisatie.activiteit` kan gebruikt worden om het gerefereerde object van het type `NACEBEL2025` op te halen.",
+                "operationId": "NACEBEL2025GET",
+                "parameters": {
+                  "id": "$response.body#/FormeleOrganisatie.activiteit/@id"
+                }
+              },
+              "OrganisatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `FormeleOrganisatie.isLidVan` kan gebruikt worden om het gerefereerde object van het type `Organisatie` op te halen.",
+                "operationId": "OrganisatieGET",
+                "parameters": {
+                  "id": "$response.body#/FormeleOrganisatie.isLidVan/@id"
+                }
+              },
+              "OrganisatieStatusGET": {
+                "description": "Het `@id` attribuut van de waarde van `FormeleOrganisatie.status` kan gebruikt worden om het gerefereerde object van het type `OrganisatieStatus` op te halen.",
+                "operationId": "OrganisatieStatusGET",
+                "parameters": {
+                  "id": "$response.body#/FormeleOrganisatie.status/@id"
+                }
+              },
+              "OrganisatieTypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `FormeleOrganisatie.type` kan gebruikt worden om het gerefereerde object van het type `OrganisatieType` op te halen.",
+                "operationId": "OrganisatieTypeGET",
+                "parameters": {
+                  "id": "$response.body#/FormeleOrganisatie.type/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een FormeleOrganisatie object."
+          },
+          "404": {
+            "description": "FormeleOrganisatie object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Een erkende Organisatie, erkend in brede zin of  meer specifiek in juridische zin met bijbehorende rechten en plichten.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/GeregistreerdeOrganisatie/{id}": {
+      "get": {
+        "description": "Organisatie met een juridisch statuut vastgelegd door registratie. Vergelijk met een FormeleOrganisatie waarbij dit statuut ook op een andere manier verkregen kan zijn.",
+        "operationId": "GeregistreerdeOrganisatieGET",
+        "parameters": [
+          {
+            "description": "Identificator van een GeregistreerdeOrganisatie object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeregistreerdeOrganisatie"
+                }
+              }
+            },
+            "description": "GeregistreerdeOrganisatie object gevonden.",
+            "links": {
+              "AgentGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.lid` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen.",
+                "operationId": "AgentGET",
+                "parameters": {
+                  "id": "$response.body#/GeregistreerdeOrganisatie.lid/@id"
+                }
+              },
+              "ContactpuntGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.contactinfo` kan gebruikt worden om het gerefereerde object van het type `Contactpunt` op te halen.",
+                "operationId": "ContactpuntGET",
+                "parameters": {
+                  "id": "$response.body#/GeregistreerdeOrganisatie.contactinfo/@id"
+                }
+              },
+              "IdentificatorGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.registratie` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen.",
+                "operationId": "IdentificatorGET",
+                "parameters": {
+                  "id": "$response.body#/GeregistreerdeOrganisatie.registratie/@id"
+                }
+              },
+              "LidmaatschapGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.heeftLid` kan gebruikt worden om het gerefereerde object van het type `Lidmaatschap` op te halen.",
+                "operationId": "LidmaatschapGET",
+                "parameters": {
+                  "id": "$response.body#/GeregistreerdeOrganisatie.heeftLid/@id"
+                }
+              },
+              "NACEBEL2025GET": {
+                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.activiteit` kan gebruikt worden om het gerefereerde object van het type `NACEBEL2025` op te halen.",
+                "operationId": "NACEBEL2025GET",
+                "parameters": {
+                  "id": "$response.body#/GeregistreerdeOrganisatie.activiteit/@id"
+                }
+              },
+              "OrganisatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.isLidVan` kan gebruikt worden om het gerefereerde object van het type `Organisatie` op te halen.",
+                "operationId": "OrganisatieGET",
+                "parameters": {
+                  "id": "$response.body#/GeregistreerdeOrganisatie.isLidVan/@id"
+                }
+              },
+              "OrganisatieStatusGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.status` kan gebruikt worden om het gerefereerde object van het type `OrganisatieStatus` op te halen.",
+                "operationId": "OrganisatieStatusGET",
+                "parameters": {
+                  "id": "$response.body#/GeregistreerdeOrganisatie.status/@id"
+                }
+              },
+              "OrganisatieTypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.type` kan gebruikt worden om het gerefereerde object van het type `OrganisatieType` op te halen.",
+                "operationId": "OrganisatieTypeGET",
+                "parameters": {
+                  "id": "$response.body#/GeregistreerdeOrganisatie.type/@id"
+                }
+              },
+              "RechtspersoonlijkheidtypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.rechtspersoonlijkheid` kan gebruikt worden om het gerefereerde object van het type `Rechtspersoonlijkheidtype` op te halen.",
+                "operationId": "RechtspersoonlijkheidtypeGET",
+                "parameters": {
+                  "id": "$response.body#/GeregistreerdeOrganisatie.rechtspersoonlijkheid/@id"
+                }
+              },
+              "RechtstoestandtypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.rechtstoestand` kan gebruikt worden om het gerefereerde object van het type `Rechtstoestandtype` op te halen.",
+                "operationId": "RechtstoestandtypeGET",
+                "parameters": {
+                  "id": "$response.body#/GeregistreerdeOrganisatie.rechtstoestand/@id"
+                }
+              },
+              "RechtsvormtypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.rechtsvorm` kan gebruikt worden om het gerefereerde object van het type `Rechtsvormtype` op te halen.",
+                "operationId": "RechtsvormtypeGET",
+                "parameters": {
+                  "id": "$response.body#/GeregistreerdeOrganisatie.rechtsvorm/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een GeregistreerdeOrganisatie object."
+          },
+          "404": {
+            "description": "GeregistreerdeOrganisatie object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Organisatie met een juridisch statuut vastgelegd door registratie. Vergelijk met een FormeleOrganisatie waarbij dit statuut ook op een andere manier verkregen kan zijn.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Lidmaatschap/{id}": {
+      "get": {
+        "description": "Geeft de kenmerken weer van het Lidmaatschap van een Agent van een Organisatie.",
+        "operationId": "LidmaatschapGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Lidmaatschap object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Lidmaatschap"
+                }
+              }
+            },
+            "description": "Lidmaatschap object gevonden.",
+            "links": {
+              "AgentGET": {
+                "description": "Het `@id` attribuut van de waarde van `Lidmaatschap.isLidBij` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen.",
+                "operationId": "AgentGET",
+                "parameters": {
+                  "id": "$response.body#/Lidmaatschap.isLidBij/@id"
+                }
+              },
+              "OrganisatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Lidmaatschap.lid` kan gebruikt worden om het gerefereerde object van het type `Organisatie` op te halen.",
+                "operationId": "OrganisatieGET",
+                "parameters": {
+                  "id": "$response.body#/Lidmaatschap.lid/@id"
+                }
+              },
+              "PeriodeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Lidmaatschap.lidVanTot` kan gebruikt worden om het gerefereerde object van het type `Periode` op te halen.",
+                "operationId": "PeriodeGET",
+                "parameters": {
+                  "id": "$response.body#/Lidmaatschap.lidVanTot/@id"
+                }
+              },
+              "RolGET": {
+                "description": "Het `@id` attribuut van de waarde van `Lidmaatschap.rol` kan gebruikt worden om het gerefereerde object van het type `Rol` op te halen.",
+                "operationId": "RolGET",
+                "parameters": {
+                  "id": "$response.body#/Lidmaatschap.rol/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Lidmaatschap object."
+          },
+          "404": {
+            "description": "Lidmaatschap object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Geeft de kenmerken weer van het Lidmaatschap van een Agent van een Organisatie.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Organisatie/{id}": {
+      "get": {
+        "description": "Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaansreden die de individuele leden ervan overstijgt en kan handelen als agent. Een Organisatie heeft dikwijls een hiërarchische structuur.",
+        "operationId": "OrganisatieGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Organisatie object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Organisatie"
+                }
+              }
+            },
+            "description": "Organisatie object gevonden.",
+            "links": {
+              "AgentGET": {
+                "description": "Het `@id` attribuut van de waarde van `Organisatie.lid` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen.",
+                "operationId": "AgentGET",
+                "parameters": {
+                  "id": "$response.body#/Organisatie.lid/@id"
+                }
+              },
+              "ContactpuntGET": {
+                "description": "Het `@id` attribuut van de waarde van `Organisatie.contactinfo` kan gebruikt worden om het gerefereerde object van het type `Contactpunt` op te halen.",
+                "operationId": "ContactpuntGET",
+                "parameters": {
+                  "id": "$response.body#/Organisatie.contactinfo/@id"
+                }
+              },
+              "LidmaatschapGET": {
+                "description": "Het `@id` attribuut van de waarde van `Organisatie.heeftLid` kan gebruikt worden om het gerefereerde object van het type `Lidmaatschap` op te halen.",
+                "operationId": "LidmaatschapGET",
+                "parameters": {
+                  "id": "$response.body#/Organisatie.heeftLid/@id"
+                }
+              },
+              "NACEBEL2025GET": {
+                "description": "Het `@id` attribuut van de waarde van `Organisatie.activiteit` kan gebruikt worden om het gerefereerde object van het type `NACEBEL2025` op te halen.",
+                "operationId": "NACEBEL2025GET",
+                "parameters": {
+                  "id": "$response.body#/Organisatie.activiteit/@id"
+                }
+              },
+              "OrganisatieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Organisatie.isLidVan` kan gebruikt worden om het gerefereerde object van het type `Organisatie` op te halen.",
+                "operationId": "OrganisatieGET",
+                "parameters": {
+                  "id": "$response.body#/Organisatie.isLidVan/@id"
+                }
+              },
+              "OrganisatieStatusGET": {
+                "description": "Het `@id` attribuut van de waarde van `Organisatie.status` kan gebruikt worden om het gerefereerde object van het type `OrganisatieStatus` op te halen.",
+                "operationId": "OrganisatieStatusGET",
+                "parameters": {
+                  "id": "$response.body#/Organisatie.status/@id"
+                }
+              },
+              "OrganisatieTypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Organisatie.type` kan gebruikt worden om het gerefereerde object van het type `OrganisatieType` op te halen.",
+                "operationId": "OrganisatieTypeGET",
+                "parameters": {
+                  "id": "$response.body#/Organisatie.type/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Organisatie object."
+          },
+          "404": {
+            "description": "Organisatie object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaansreden die de individuele leden ervan overstijgt en kan handelen als agent. Een Organisatie heeft dikwijls een hiërarchische structuur.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Plaats/{id}": {
+      "get": {
+        "description": "Een ruimtelijk gebied of benoemde plaats.",
+        "operationId": "PlaatsGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Plaats object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Plaats"
+                }
+              }
+            },
+            "description": "Plaats object gevonden.",
+            "links": {
+              "GeometrieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Plaats.geometrie` kan gebruikt worden om het gerefereerde object van het type `Geometrie` op te halen.",
+                "operationId": "GeometrieGET",
+                "parameters": {
+                  "id": "$response.body#/Plaats.geometrie/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Plaats object."
+          },
+          "404": {
+            "description": "Plaats object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Een ruimtelijk gebied of benoemde plaats.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    }
+  },
+  "servers": [
+    {
+      "description": "Basis URL",
+      "url": "https://data.test-vlaanderen.be"
+    }
+  ]
+}
