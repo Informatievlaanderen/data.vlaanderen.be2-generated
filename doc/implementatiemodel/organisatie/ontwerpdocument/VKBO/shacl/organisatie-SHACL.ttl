@@ -20,14 +20,15 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#LocatieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#LangstringShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#IdentificatorShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#DatetimeShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#StringShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#DateShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#GeometrieShape>,
-    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#GeografischenaamShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#AdresvoorstellingShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#StringShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#MomentShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#DatetimeShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#ContactpuntShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#PeriodeShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#GeografischenaamShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#TemporeleentiteitShape> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#AdresvoorstellingShape> a shacl:NodeShape;
@@ -235,6 +236,11 @@
   ];
   shacl:targetClass schemas:ContactPoint .
 
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#DateShape> a shacl:NodeShape;
+  rdfs:label "Date";
+  shacl:closed false;
+  shacl:targetClass xsd:date .
+
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#DatetimeShape> a shacl:NodeShape;
   rdfs:label "DateTime";
   shacl:closed false;
@@ -265,12 +271,14 @@
     shacl:path <https://data.vlaanderen.be/ns/organisatie#redenDoorhaling>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "Refereert naar de periode van tijd waarin de Doorhaling van kracht is."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Doorhaling.RefereertNaarDePeriodeVanTijdWaarinDeDoorhalingVanKrachtIs.>;
+    rdfs:label "tijd"@nl;
+    rdfs:comment "Refereert naar de periode van tijd waarin de Doorhaling van kracht is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Doorhaling.Tijd>;
     shacl:class <http://www.w3.org/2006/time#ProperInterval>;
+    shacl:description "Refereert naar de periode van tijd waarin de Doorhaling van kracht is."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
-    shacl:name "Refereert naar de periode van tijd waarin de Doorhaling van kracht is."@nl;
+    shacl:name "tijd"@nl;
     shacl:path <https://www.w3.org/ns/prov#time>
   ];
   shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/organisatie#Doorhaling> .
@@ -404,7 +412,7 @@
     rdfs:label "toegekendOp"@nl;
     rdfs:comment "Tijdstip waarop de identificator werd uitgegeven."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Identificator.Toegekendop>;
-    shacl:datatype xsd:dateTime;
+    shacl:datatype xsd:date;
     shacl:description "Tijdstip waarop de identificator werd uitgegeven."@nl;
     shacl:maxCount "1";
     shacl:name "toegekendOp"@nl;
@@ -432,18 +440,6 @@
   <http://purl.org/vocab/vann/usageNote> "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie, GeografischeNaam, Adres, etc."@nl;
   rdfs:comment "Een locatie kan een identificeerbare geografische locatie zijn (ISO 19112), maar deze locatie kan ook een niet-geografische locatie zijn, zoals een directory, rij of kolom. Als zodanig zijn er talloze manieren waarop locatie kan worden uitgedrukt."@nl;
   shacl:closed false;
-  shacl:property [
-    a shacl:PropertyShape;
-    rdfs:label "beschrijving"@nl;
-    rdfs:comment "Schriftelijke weergave van kenmerken van iets of iemand."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Locatie.Beschrijving>;
-    shacl:datatype xsd:string;
-    shacl:description "Schriftelijke weergave van kenmerken van iets of iemand."@nl;
-    shacl:maxCount "1";
-    shacl:minCount "1";
-    shacl:name "beschrijving"@nl;
-    shacl:path dc:description
-  ];
   shacl:targetClass dc:Location,
     prov:Location,
     <http://www.w3.org/ns/locn#Address> .
@@ -584,16 +580,6 @@
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
-    rdfs:label "plaatsnaam"@nl;
-    rdfs:comment "Naam van de plaats of van het gebied."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Plaats.Plaatsnaam>;
-    shacl:datatype rdf:langString;
-    shacl:description "Naam van de plaats of van het gebied."@nl;
-    shacl:maxCount "1";
-    shacl:name "plaatsnaam"@nl;
-    shacl:path rdfs:label
-  ], [
-    a shacl:PropertyShape;
     rdfs:label "geometrie"@nl;
     rdfs:comment "Geometrie van de plaats of het gebied."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Plaats.Geometrie>;
@@ -648,7 +634,7 @@
     <http://purl.org/vocab/vann/usageNote> "Zie Time and date & Recurring and partial dates van <a href=\"https://www.w3.org/TR/rdf11-concepts/#h2_section-Datatypes\"> XSD Datatypes</a>."@nl;
     rdfs:comment "Datum waarop de Veranderingsgebeurtenis plaatsvond."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Veranderingsgebeurtenis.Datum>;
-    shacl:datatype xsd:dateTime;
+    shacl:datatype xsd:date;
     shacl:description "Datum waarop de Veranderingsgebeurtenis plaatsvond."@nl;
     shacl:maxCount "1";
     shacl:minCount "1";
