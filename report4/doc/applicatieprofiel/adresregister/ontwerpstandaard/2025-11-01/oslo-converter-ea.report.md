@@ -2,43 +2,43 @@
 
 #||# -------------------------------------
 
-2026-03-24T15:53:25.385Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Adres_adresregister:dcterms:Agent:rapporteertAan)
+2026-04-14T07:47:13.157Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO²_applicatieprofiel_Adres_adresregister:dcterms:Agent:rapporteertAan)
 
-2026-03-24T15:53:25.391Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Gebouw:Gebouw:(Gebouw -> Gebouweenheid) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.160Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Gebouw:Gebouw:(Gebouw -> Gebouweenheid) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.393Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Gebouw:Gebouw:(Gebouw -> RuimtelijkeEenheid) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.161Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Gebouw:Gebouw:(Gebouw -> RuimtelijkeEenheid) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.393Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adresuitbreiding:(Adresuitbreiding -> Plaats) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.161Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adresuitbreiding:(Adresuitbreiding -> Plaats) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.393Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Gemeentenaam:(Gemeentenaam -> Gemeente) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.161Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Gemeentenaam:(Gemeentenaam -> Gemeente) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.393Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Straatnaam:(Straatnaam -> Gemeente) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.161Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Straatnaam:(Straatnaam -> Gemeente) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.394Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Adresuitbreiding) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.162Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:BelgischAdres:(BelgischAdres -> Adresuitbreiding) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.394Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Gemeentenaam) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.162Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:BelgischAdres:(BelgischAdres -> Gemeentenaam) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.394Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adresvoorstelling:(Adresvoorstelling -> Adres) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.162Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adresvoorstelling:(Adresvoorstelling -> BelgischAdres) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.395Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Gemeente) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.162Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:BelgischAdres:(BelgischAdres -> Gemeente) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.395Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Straatnaam) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.162Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:BelgischAdres:(BelgischAdres -> Straatnaam) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.395Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> Postinfo) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.163Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:BelgischAdres:(BelgischAdres -> Postinfo) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.395Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Standplaats:(Standplaats -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.163Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Standplaats:(Standplaats -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.395Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Adres:(Adres -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.163Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:BelgischAdres:(BelgischAdres -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.396Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Perceel:RuimtelijkeEenheid:(RuimtelijkeEenheid -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.163Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Perceel:RuimtelijkeEenheid:(RuimtelijkeEenheid -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.396Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Gebouw:Gebouweenheid:(Gebouweenheid -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.163Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Gebouw:Gebouweenheid:(Gebouweenheid -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.396Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Ligplaats:(Ligplaats -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.163Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:OSLO-Adres:Ligplaats:(Ligplaats -> AdresseerbaarObject) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.396Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:SF:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
+2026-04-14T07:47:13.163Z info: Connector Model:OSLO²_applicatieprofiel_Adres_adresregister:SF:Punt:(Punt -> Geometrie) is not an association with a source role. Ignoring this connector.
 
-2026-03-24T15:53:25.397Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2026-04-14T07:47:13.164Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
 #||# -------------------------------------
 
