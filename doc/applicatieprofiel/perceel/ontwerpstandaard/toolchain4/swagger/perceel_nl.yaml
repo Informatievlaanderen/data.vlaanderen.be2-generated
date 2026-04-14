@@ -34,6 +34,7 @@
         "type": "object"
       },
       "Dimensie": {
+        "description": "De dimensie van de ruimtelijke eenheid.",
         "properties": {
           "@context": {
             "enum": [
@@ -89,13 +90,13 @@
             "type": "array"
           },
           "Gebouw.ligtOp": {
-            "description": "Lijst van Kadastraal Planperceel items.",
+            "description": "Lijst van KadastraalPlanperceel items.",
             "items": {
               "description": "De kadastrale planpercelen waarmee het gebouw officieel geassocieerd is.",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Kadastraal Planperceel\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/KadastraalPlanperceel\\/\\d",
                   "type": "string"
                 }
               },
@@ -229,7 +230,7 @@
             "properties": {
               "@id": {
                 "format": "uri",
-                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Kadastraal Planperceel\\/\\d",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/KadastraalPlanperceel\\/\\d",
                 "type": "string"
               }
             },
@@ -380,13 +381,13 @@
             "type": "object"
           },
           "KadastraalPlanperceel.geometrie": {
-            "description": "Lijst van Ruimtelijke Eenheid Geometrie items.",
+            "description": "Lijst van RuimtelijkeEenheidGeometrie items.",
             "items": {
               "description": "Geometrie van de ruimtelijke eenheid en metadata over hoe deze werd bepaald.",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Ruimtelijke Eenheid Geometrie\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/RuimtelijkeEenheidGeometrie\\/\\d",
                   "type": "string"
                 }
               },
@@ -466,13 +467,13 @@
             "type": "object"
           },
           "KadastraalPlanperceel.oppervlakte": {
-            "description": "Lijst van Ruimtelijke Eenheid Oppervlakte items.",
+            "description": "Lijst van RuimtelijkeEenheidOppervlakte items.",
             "items": {
               "description": "Oppervlakte van de ruimtelijke eenheid en metadata over de manier waarop deze bepaald werd.",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Ruimtelijke Eenheid Oppervlakte\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/RuimtelijkeEenheidOppervlakte\\/\\d",
                   "type": "string"
                 }
               },
@@ -514,6 +515,7 @@
         "type": "object"
       },
       "Landgebruik": {
+        "description": "Geeft het gebruik aan van de ruimtelijke eenheid.",
         "properties": {
           "@context": {
             "enum": [
@@ -545,6 +547,7 @@
         "type": "object"
       },
       "Oppervlaktetype": {
+        "description": "De methode waarop de oppervlakte bepaald werd.",
         "properties": {
           "@context": {
             "enum": [
@@ -699,6 +702,7 @@
         "type": "object"
       },
       "Rechttype": {
+        "description": "De aard van het recht dat een agent heeft ten opzichte van een ruimtelijke eenheid.",
         "properties": {
           "@context": {
             "enum": [
@@ -716,6 +720,38 @@
             "description": "Lijst van object types (klasse)",
             "items": {
               "description": "Rechttype type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Resrictietype": {
+        "description": "De aard van de restrictie die een agent heeft ten opzichte van een ruimtelijke eenheid.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4/context/perceel.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Resrictietype\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Resrictietype type",
               "type": "string"
             },
             "minItems": 1,
@@ -832,7 +868,7 @@
             "properties": {
               "@id": {
                 "format": "uri",
-                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Restrictietype\\/\\d",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Resrictietype\\/\\d",
                 "type": "string"
               }
             },
@@ -849,37 +885,6 @@
           "Restrictie.type",
           "Restrictie.agent",
           "Restrictie.ruimtelijkeEenheid"
-        ],
-        "type": "object"
-      },
-      "Restrictietype": {
-        "properties": {
-          "@context": {
-            "enum": [
-              "https://data.test-vlaanderen.be/doc/applicatieprofiel/perceel/ontwerpstandaard/toolchain4/context/perceel.jsonld"
-            ],
-            "format": "uri",
-            "type": "string"
-          },
-          "@id": {
-            "format": "uri",
-            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Restrictietype\\/\\d",
-            "type": "string"
-          },
-          "@type": {
-            "description": "Lijst van object types (klasse)",
-            "items": {
-              "description": "Restrictietype type",
-              "type": "string"
-            },
-            "minItems": 1,
-            "type": "array"
-          }
-        },
-        "required": [
-          "@context",
-          "@id",
-          "@type"
         ],
         "type": "object"
       },
@@ -993,13 +998,13 @@
             "type": "object"
           },
           "RuimtelijkeEenheid.geometrie": {
-            "description": "Lijst van Ruimtelijke Eenheid Geometrie items.",
+            "description": "Lijst van RuimtelijkeEenheidGeometrie items.",
             "items": {
               "description": "Geometrie van de ruimtelijke eenheid en metadata over hoe deze werd bepaald.",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Ruimtelijke Eenheid Geometrie\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/RuimtelijkeEenheidGeometrie\\/\\d",
                   "type": "string"
                 }
               },
@@ -1079,13 +1084,13 @@
             "type": "object"
           },
           "RuimtelijkeEenheid.oppervlakte": {
-            "description": "Lijst van Ruimtelijke Eenheid Oppervlakte items.",
+            "description": "Lijst van RuimtelijkeEenheidOppervlakte items.",
             "items": {
               "description": "Oppervlakte van de ruimtelijke eenheid en metadata over de manier waarop deze bepaald werd.",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Ruimtelijke Eenheid Oppervlakte\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/RuimtelijkeEenheidOppervlakte\\/\\d",
                   "type": "string"
                 }
               },
@@ -1123,6 +1128,7 @@
         "type": "object"
       },
       "RuimtelijkeEenheidtype": {
+        "description": "De aard van een ruimtelijke eenheid.",
         "properties": {
           "@context": {
             "enum": [
@@ -1277,6 +1283,7 @@
         "type": "object"
       },
       "Verantwoordelijkheidtype": {
+        "description": "De aard van de verantwoordelijkheid die een agent heeft ten opzichte van een ruimtelijke eenheid.",
         "properties": {
           "@context": {
             "enum": [
@@ -1384,7 +1391,7 @@
             "properties": {
               "@id": {
                 "format": "uri",
-                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Kadastraal Patrimoniumperceel\\/\\d",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/KadastraalPatrimoniumperceel\\/\\d",
                 "type": "string"
               }
             },
@@ -1419,6 +1426,7 @@
         "type": "object"
       },
       "ZakelijkRechttype": {
+        "description": "De aard van het zakelijk recht.",
         "properties": {
           "@context": {
             "enum": [
@@ -1500,6 +1508,7 @@
     },
     "/id/Dimensie/{id}": {
       "get": {
+        "description": "De dimensie van de ruimtelijke eenheid.",
         "operationId": "DimensieGET",
         "parameters": [
           {
@@ -1531,6 +1540,7 @@
             "description": "Dimensie object met gegeven ID niet gevonden."
           }
         },
+        "summary": "De dimensie van de ruimtelijke eenheid.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -1562,9 +1572,9 @@
             },
             "description": "Gebouw object gevonden.",
             "links": {
-              "Kadastraal PlanperceelGET": {
-                "description": "Het `@id` attribuut van de waarde van `Gebouw.ligtOp` kan gebruikt worden om het gerefereerde object van het type `Kadastraal Planperceel` op te halen.",
-                "operationId": "Kadastraal PlanperceelGET",
+              "KadastraalPlanperceelGET": {
+                "description": "Het `@id` attribuut van de waarde van `Gebouw.ligtOp` kan gebruikt worden om het gerefereerde object van het type `KadastraalPlanperceel` op te halen.",
+                "operationId": "KadastraalPlanperceelGET",
                 "parameters": {
                   "id": "$response.body#/Gebouw.ligtOp/@id"
                 }
@@ -1664,9 +1674,9 @@
                   "id": "$response.body#/KadastraalPatrimoniumperceel.identificator/@id"
                 }
               },
-              "Kadastraal PlanperceelGET": {
-                "description": "Het `@id` attribuut van de waarde van `KadastraalPatrimoniumperceel.isGerelateerdAan` kan gebruikt worden om het gerefereerde object van het type `Kadastraal Planperceel` op te halen.",
-                "operationId": "Kadastraal PlanperceelGET",
+              "KadastraalPlanperceelGET": {
+                "description": "Het `@id` attribuut van de waarde van `KadastraalPatrimoniumperceel.isGerelateerdAan` kan gebruikt worden om het gerefereerde object van het type `KadastraalPlanperceel` op te halen.",
+                "operationId": "KadastraalPlanperceelGET",
                 "parameters": {
                   "id": "$response.body#/KadastraalPatrimoniumperceel.isGerelateerdAan/@id"
                 }
@@ -1747,25 +1757,25 @@
                   "id": "$response.body#/KadastraalPlanperceel.geldigheidsperiode/@id"
                 }
               },
-              "Ruimtelijke Eenheid GeometrieGET": {
-                "description": "Het `@id` attribuut van de waarde van `KadastraalPlanperceel.geometrie` kan gebruikt worden om het gerefereerde object van het type `Ruimtelijke Eenheid Geometrie` op te halen.",
-                "operationId": "Ruimtelijke Eenheid GeometrieGET",
-                "parameters": {
-                  "id": "$response.body#/KadastraalPlanperceel.geometrie/@id"
-                }
-              },
-              "Ruimtelijke Eenheid OppervlakteGET": {
-                "description": "Het `@id` attribuut van de waarde van `KadastraalPlanperceel.oppervlakte` kan gebruikt worden om het gerefereerde object van het type `Ruimtelijke Eenheid Oppervlakte` op te halen.",
-                "operationId": "Ruimtelijke Eenheid OppervlakteGET",
-                "parameters": {
-                  "id": "$response.body#/KadastraalPlanperceel.oppervlakte/@id"
-                }
-              },
               "RuimtelijkeEenheidGET": {
                 "description": "Het `@id` attribuut van de waarde van `KadastraalPlanperceel.isGerelateerdAan` kan gebruikt worden om het gerefereerde object van het type `RuimtelijkeEenheid` op te halen.",
                 "operationId": "RuimtelijkeEenheidGET",
                 "parameters": {
                   "id": "$response.body#/KadastraalPlanperceel.isGerelateerdAan/@id"
+                }
+              },
+              "RuimtelijkeEenheidGeometrieGET": {
+                "description": "Het `@id` attribuut van de waarde van `KadastraalPlanperceel.geometrie` kan gebruikt worden om het gerefereerde object van het type `RuimtelijkeEenheidGeometrie` op te halen.",
+                "operationId": "RuimtelijkeEenheidGeometrieGET",
+                "parameters": {
+                  "id": "$response.body#/KadastraalPlanperceel.geometrie/@id"
+                }
+              },
+              "RuimtelijkeEenheidOppervlakteGET": {
+                "description": "Het `@id` attribuut van de waarde van `KadastraalPlanperceel.oppervlakte` kan gebruikt worden om het gerefereerde object van het type `RuimtelijkeEenheidOppervlakte` op te halen.",
+                "operationId": "RuimtelijkeEenheidOppervlakteGET",
+                "parameters": {
+                  "id": "$response.body#/KadastraalPlanperceel.oppervlakte/@id"
                 }
               },
               "RuimtelijkeEenheidtypeGET": {
@@ -1792,6 +1802,7 @@
     },
     "/id/Landgebruik/{id}": {
       "get": {
+        "description": "Geeft het gebruik aan van de ruimtelijke eenheid.",
         "operationId": "LandgebruikGET",
         "parameters": [
           {
@@ -1823,6 +1834,7 @@
             "description": "Landgebruik object met gegeven ID niet gevonden."
           }
         },
+        "summary": "Geeft het gebruik aan van de ruimtelijke eenheid.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -1830,6 +1842,7 @@
     },
     "/id/Oppervlaktetype/{id}": {
       "get": {
+        "description": "De methode waarop de oppervlakte bepaald werd.",
         "operationId": "OppervlaktetypeGET",
         "parameters": [
           {
@@ -1861,6 +1874,7 @@
             "description": "Oppervlaktetype object met gegeven ID niet gevonden."
           }
         },
+        "summary": "De methode waarop de oppervlakte bepaald werd.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -1937,6 +1951,7 @@
     },
     "/id/Rechttype/{id}": {
       "get": {
+        "description": "De aard van het recht dat een agent heeft ten opzichte van een ruimtelijke eenheid.",
         "operationId": "RechttypeGET",
         "parameters": [
           {
@@ -1968,6 +1983,47 @@
             "description": "Rechttype object met gegeven ID niet gevonden."
           }
         },
+        "summary": "De aard van het recht dat een agent heeft ten opzichte van een ruimtelijke eenheid.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Resrictietype/{id}": {
+      "get": {
+        "description": "De aard van de restrictie die een agent heeft ten opzichte van een ruimtelijke eenheid.",
+        "operationId": "ResrictietypeGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Resrictietype object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Resrictietype"
+                }
+              }
+            },
+            "description": "Resrictietype object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Resrictietype object."
+          },
+          "404": {
+            "description": "Resrictietype object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "De aard van de restrictie die een agent heeft ten opzichte van een ruimtelijke eenheid.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -2013,9 +2069,9 @@
                   "id": "$response.body#/Restrictie.geldigheidsperiode/@id"
                 }
               },
-              "RestrictietypeGET": {
-                "description": "Het `@id` attribuut van de waarde van `Restrictie.type` kan gebruikt worden om het gerefereerde object van het type `Restrictietype` op te halen.",
-                "operationId": "RestrictietypeGET",
+              "ResrictietypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Restrictie.type` kan gebruikt worden om het gerefereerde object van het type `Resrictietype` op te halen.",
+                "operationId": "ResrictietypeGET",
                 "parameters": {
                   "id": "$response.body#/Restrictie.type/@id"
                 }
@@ -2037,44 +2093,6 @@
           }
         },
         "summary": "Formele of informele verplichting om zich te weerhouden van iets te doen.",
-        "tags": [
-          "Externe datastandaarden"
-        ]
-      }
-    },
-    "/id/Restrictietype/{id}": {
-      "get": {
-        "operationId": "RestrictietypeGET",
-        "parameters": [
-          {
-            "description": "Identificator van een Restrictietype object.",
-            "in": "path",
-            "name": "id",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "content": {
-              "application/ld+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Restrictietype"
-                }
-              }
-            },
-            "description": "Restrictietype object gevonden.",
-            "links": {}
-          },
-          "400": {
-            "description": "Ontbrekende informatie bij het opvragen een Restrictietype object."
-          },
-          "404": {
-            "description": "Restrictietype object met gegeven ID niet gevonden."
-          }
-        },
         "tags": [
           "Externe datastandaarden"
         ]
@@ -2141,25 +2159,25 @@
                   "id": "$response.body#/RuimtelijkeEenheid.geldigheidsperiode/@id"
                 }
               },
-              "Ruimtelijke Eenheid GeometrieGET": {
-                "description": "Het `@id` attribuut van de waarde van `RuimtelijkeEenheid.geometrie` kan gebruikt worden om het gerefereerde object van het type `Ruimtelijke Eenheid Geometrie` op te halen.",
-                "operationId": "Ruimtelijke Eenheid GeometrieGET",
-                "parameters": {
-                  "id": "$response.body#/RuimtelijkeEenheid.geometrie/@id"
-                }
-              },
-              "Ruimtelijke Eenheid OppervlakteGET": {
-                "description": "Het `@id` attribuut van de waarde van `RuimtelijkeEenheid.oppervlakte` kan gebruikt worden om het gerefereerde object van het type `Ruimtelijke Eenheid Oppervlakte` op te halen.",
-                "operationId": "Ruimtelijke Eenheid OppervlakteGET",
-                "parameters": {
-                  "id": "$response.body#/RuimtelijkeEenheid.oppervlakte/@id"
-                }
-              },
               "RuimtelijkeEenheidGET": {
                 "description": "Het `@id` attribuut van de waarde van `RuimtelijkeEenheid.isGerelateerdAan` kan gebruikt worden om het gerefereerde object van het type `RuimtelijkeEenheid` op te halen.",
                 "operationId": "RuimtelijkeEenheidGET",
                 "parameters": {
                   "id": "$response.body#/RuimtelijkeEenheid.isGerelateerdAan/@id"
+                }
+              },
+              "RuimtelijkeEenheidGeometrieGET": {
+                "description": "Het `@id` attribuut van de waarde van `RuimtelijkeEenheid.geometrie` kan gebruikt worden om het gerefereerde object van het type `RuimtelijkeEenheidGeometrie` op te halen.",
+                "operationId": "RuimtelijkeEenheidGeometrieGET",
+                "parameters": {
+                  "id": "$response.body#/RuimtelijkeEenheid.geometrie/@id"
+                }
+              },
+              "RuimtelijkeEenheidOppervlakteGET": {
+                "description": "Het `@id` attribuut van de waarde van `RuimtelijkeEenheid.oppervlakte` kan gebruikt worden om het gerefereerde object van het type `RuimtelijkeEenheidOppervlakte` op te halen.",
+                "operationId": "RuimtelijkeEenheidOppervlakteGET",
+                "parameters": {
+                  "id": "$response.body#/RuimtelijkeEenheid.oppervlakte/@id"
                 }
               },
               "RuimtelijkeEenheidtypeGET": {
@@ -2186,6 +2204,7 @@
     },
     "/id/RuimtelijkeEenheidtype/{id}": {
       "get": {
+        "description": "De aard van een ruimtelijke eenheid.",
         "operationId": "RuimtelijkeEenheidtypeGET",
         "parameters": [
           {
@@ -2217,6 +2236,7 @@
             "description": "RuimtelijkeEenheidtype object met gegeven ID niet gevonden."
           }
         },
+        "summary": "De aard van een ruimtelijke eenheid.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -2293,6 +2313,7 @@
     },
     "/id/Verantwoordelijkheidtype/{id}": {
       "get": {
+        "description": "De aard van de verantwoordelijkheid die een agent heeft ten opzichte van een ruimtelijke eenheid.",
         "operationId": "VerantwoordelijkheidtypeGET",
         "parameters": [
           {
@@ -2324,6 +2345,7 @@
             "description": "Verantwoordelijkheidtype object met gegeven ID niet gevonden."
           }
         },
+        "summary": "De aard van de verantwoordelijkheid die een agent heeft ten opzichte van een ruimtelijke eenheid.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -2362,9 +2384,9 @@
                   "id": "$response.body#/ZakelijkRecht.agent/@id"
                 }
               },
-              "Kadastraal PatrimoniumperceelGET": {
-                "description": "Het `@id` attribuut van de waarde van `ZakelijkRecht.kadastraalPatrimoniumperceel` kan gebruikt worden om het gerefereerde object van het type `Kadastraal Patrimoniumperceel` op te halen.",
-                "operationId": "Kadastraal PatrimoniumperceelGET",
+              "KadastraalPatrimoniumperceelGET": {
+                "description": "Het `@id` attribuut van de waarde van `ZakelijkRecht.kadastraalPatrimoniumperceel` kan gebruikt worden om het gerefereerde object van het type `KadastraalPatrimoniumperceel` op te halen.",
+                "operationId": "KadastraalPatrimoniumperceelGET",
                 "parameters": {
                   "id": "$response.body#/ZakelijkRecht.kadastraalPatrimoniumperceel/@id"
                 }
@@ -2400,6 +2422,7 @@
     },
     "/id/ZakelijkRechttype/{id}": {
       "get": {
+        "description": "De aard van het zakelijk recht.",
         "operationId": "ZakelijkRechttypeGET",
         "parameters": [
           {
@@ -2431,6 +2454,7 @@
             "description": "ZakelijkRechttype object met gegeven ID niet gevonden."
           }
         },
+        "summary": "De aard van het zakelijk recht.",
         "tags": [
           "Externe datastandaarden"
         ]
