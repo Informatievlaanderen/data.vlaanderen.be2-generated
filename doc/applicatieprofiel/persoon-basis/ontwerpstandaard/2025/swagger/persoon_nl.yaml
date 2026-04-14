@@ -95,6 +95,8 @@
           "Afstamming.datumVanAfstamming",
           "Afstamming.afstammingstype",
           "Afstamming.vanPersoon",
+          "Afstamming.metPersoon",
+          "Afstamming.vanPersoon",
           "Afstamming.metPersoon"
         ],
         "type": "object"
@@ -304,6 +306,7 @@
           "@context",
           "@id",
           "@type",
+          "Domicilie.verblijfsadres",
           "Domicilie.verblijfsadres"
         ],
         "type": "object"
@@ -371,6 +374,8 @@
           "@context",
           "@id",
           "@type",
+          "Geboorte.datum",
+          "Geboorte.plaats",
           "Geboorte.datum",
           "Geboorte.plaats"
         ],
@@ -452,6 +457,8 @@
           "@context",
           "@id",
           "@type",
+          "GeenInwoner.persoon",
+          "GeenInwoner.binnenJurisdictie",
           "GeenInwoner.persoon",
           "GeenInwoner.binnenJurisdictie"
         ],
@@ -791,6 +798,9 @@
           "@id",
           "@type",
           "GeregistreerdPersoon.registratie",
+          "GeregistreerdPersoon.volledigeNaam",
+          "GeregistreerdPersoon.geslacht",
+          "GeregistreerdPersoon.heeftGeboorte",
           "GeregistreerdPersoon.volledigeNaam",
           "GeregistreerdPersoon.geslacht",
           "GeregistreerdPersoon.heeftGeboorte"
@@ -1224,6 +1234,7 @@
           "@type",
           "Gezin.gezinslid",
           "Gezin.gezinshoofd",
+          "Gezin.voorkeursnaam",
           "Gezin.voorkeursnaam"
         ],
         "type": "object"
@@ -1300,6 +1311,8 @@
           "@id",
           "@type",
           "Gezinsrelatie.gezinsrelatietype",
+          "Gezinsrelatie.vanPersoon",
+          "Gezinsrelatie.metPersoon",
           "Gezinsrelatie.vanPersoon",
           "Gezinsrelatie.metPersoon"
         ],
@@ -1395,6 +1408,8 @@
           "@id",
           "@type",
           "Huwelijk.vanPersoon",
+          "Huwelijk.metPersoon",
+          "Huwelijk.vanPersoon",
           "Huwelijk.metPersoon"
         ],
         "type": "object"
@@ -1475,6 +1490,8 @@
           "@context",
           "@id",
           "@type",
+          "Inwoner.persoon",
+          "Inwoner.binnenJurisdictie",
           "Inwoner.persoon",
           "Inwoner.binnenJurisdictie"
         ],
@@ -2352,6 +2369,8 @@
           "@id",
           "@type",
           "Overlijden.datum",
+          "Overlijden.plaats",
+          "Overlijden.datum",
           "Overlijden.plaats"
         ],
         "type": "object"
@@ -2432,6 +2451,12 @@
           "@context",
           "@id",
           "@type",
+          "PermanentInwoner.persoon",
+          "PermanentInwoner.binnenJurisdictie",
+          "PermanentInwoner.persoon",
+          "PermanentInwoner.binnenJurisdictie",
+          "PermanentInwoner.persoon",
+          "PermanentInwoner.binnenJurisdictie",
           "PermanentInwoner.persoon",
           "PermanentInwoner.binnenJurisdictie"
         ],
@@ -2951,6 +2976,20 @@
             ],
             "type": "object"
           },
+          "Plaats.plaats": {
+            "description": "Ruimtelijk gebied of benoemde plaats waarmee de Jurisdictie samenvalt. Typisch een land.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Plaats\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
           "Plaats.plaatsnaam": {
             "description": "Naam van de plaats of van het gebied.",
             "properties": {
@@ -2977,7 +3016,11 @@
           "@type",
           "Plaats.plaatsnaam",
           "Plaats.beschrijving",
-          "Plaats.adres"
+          "Plaats.adres",
+          "Plaats.plaats",
+          "Plaats.beschrijving",
+          "Plaats.adres",
+          "Plaats.plaats"
         ],
         "type": "object"
       },
@@ -3070,6 +3113,8 @@
           "@context",
           "@id",
           "@type",
+          "Samenwonen.vanPersoon",
+          "Samenwonen.metPersoon",
           "Samenwonen.vanPersoon",
           "Samenwonen.metPersoon"
         ],
@@ -3195,6 +3240,8 @@
           "@id",
           "@type",
           "Staatsburger.persoon",
+          "Staatsburger.binnenJurisdictie",
+          "Staatsburger.persoon",
           "Staatsburger.binnenJurisdictie"
         ],
         "type": "object"
@@ -3275,6 +3322,12 @@
           "@context",
           "@id",
           "@type",
+          "TijdelijkInwoner.persoon",
+          "TijdelijkInwoner.binnenJurisdictie",
+          "TijdelijkInwoner.persoon",
+          "TijdelijkInwoner.binnenJurisdictie",
+          "TijdelijkInwoner.persoon",
+          "TijdelijkInwoner.binnenJurisdictie",
           "TijdelijkInwoner.persoon",
           "TijdelijkInwoner.binnenJurisdictie"
         ],
@@ -3385,6 +3438,8 @@
           "@id",
           "@type",
           "Voogdij.vanPersoon",
+          "Voogdij.metPersoon",
+          "Voogdij.vanPersoon",
           "Voogdij.metPersoon"
         ],
         "type": "object"
@@ -3446,6 +3501,8 @@
           "@context",
           "@id",
           "@type",
+          "Vreemdeling.persoon",
+          "Vreemdeling.binnenJurisdictie",
           "Vreemdeling.persoon",
           "Vreemdeling.binnenJurisdictie"
         ],
@@ -5256,6 +5313,13 @@
                 "operationId": "GeometrieGET",
                 "parameters": {
                   "id": "$response.body#/Plaats.geometrie/@id"
+                }
+              },
+              "PlaatsGET": {
+                "description": "Het `@id` attribuut van de waarde van `Plaats.plaats` kan gebruikt worden om het gerefereerde object van het type `Plaats` op te halen.",
+                "operationId": "PlaatsGET",
+                "parameters": {
+                  "id": "$response.body#/Plaats.plaats/@id"
                 }
               }
             }
