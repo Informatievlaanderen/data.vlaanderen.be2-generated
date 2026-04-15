@@ -33,7 +33,6 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#LocatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#LangstringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#IdentificatorShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#LiteralShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#StringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#DatetimeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#UriShape>,
@@ -212,13 +211,20 @@
     <http://purl.org/vocab/vann/usageNote> "Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering)."@nl;
     rdfs:comment "Niet nader bepaald lidmaatschap van een Agent van een Organisatie."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Agent.Islidvan>;
-    shacl:class org:Organization;
     shacl:description "Niet nader bepaald lidmaatschap van een Agent van een Organisatie."@nl;
     shacl:name "isLidVan"@nl;
+    shacl:or ([shacl:class org:Organization] [shacl:class org:FormalOrganization] [shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>] [shacl:class org:OrganizationalCollaboration] [shacl:class org:OrganizationalUnit] [shacl:class <http://data.europa.eu/m8g/PublicOrganisation>]);
     shacl:path org:memberOf
   ];
   shacl:targetClass dc:Agent,
     foaf:Agent,
+    org:Organization,
+    org:FormalOrganization,
+    <http://www.w3.org/ns/regorg#RegisteredOrganization>,
+    org:OrganizationalCollaboration,
+    org:OrganizationalUnit,
+    <http://data.europa.eu/m8g/PublicOrganisation>,
+    prov:Organization,
     prov:Agent .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#ContactpuntShape> a shacl:NodeShape;
@@ -396,7 +402,8 @@
     shacl:name "vereisteTijd";
     shacl:path schemas:timeRequired
   ];
-  shacl:targetClass schemas:CreativeWork .
+  shacl:targetClass schemas:CreativeWork,
+    schemas:MediaObject .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#DateShape> a shacl:NodeShape;
   rdfs:label "Date";
@@ -413,7 +420,8 @@
   <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld een bedrijf, een vzw, een overheidsorgaan, een kerkgemeenschap."@nl;
   rdfs:comment "Een erkende Organisatie, erkend in brede zin of  meer specifiek in juridische zin met bijbehorende rechten en plichten."@nl;
   shacl:closed false;
-  shacl:targetClass org:FormalOrganization .
+  shacl:targetClass org:FormalOrganization,
+    <http://www.w3.org/ns/regorg#RegisteredOrganization> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#FusieShape> a shacl:NodeShape;
   rdfs:label "Fusie"@nl;
@@ -438,10 +446,10 @@
     <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype."@nl;
     rdfs:comment "Geometrie uitgedrukt in GML-formaat."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Geometrie.Gml>;
-    shacl:datatype rdfs:Literal;
     shacl:description "Geometrie uitgedrukt in GML-formaat."@nl;
     shacl:maxCount "1";
     shacl:name "gml"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path <http://www.opengis.net/ont/geosparql#asGML>
   ], [
     a shacl:PropertyShape;
@@ -449,10 +457,10 @@
     <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype."@nl;
     rdfs:comment "Geometrie uitgedrukt in WKT-formaat."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Geometrie.Wkt>;
-    shacl:datatype rdfs:Literal;
     shacl:description "Geometrie uitgedrukt in WKT-formaat."@nl;
     shacl:maxCount "1";
     shacl:name "wkt"@nl;
+    shacl:nodeKind shacl:Literal;
     shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
   ];
   shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
@@ -622,30 +630,25 @@
     rdfs:label "lid"@nl;
     rdfs:comment "Lidmaatschap van een Agent (van een Organisatie)."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Lidmaatschap.Lid>;
-    shacl:class org:Organization;
     shacl:description "Lidmaatschap van een Agent (van een Organisatie)."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "lid"@nl;
+    shacl:or ([shacl:class org:Organization] [shacl:class org:FormalOrganization] [shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>] [shacl:class org:OrganizationalCollaboration] [shacl:class org:OrganizationalUnit] [shacl:class <http://data.europa.eu/m8g/PublicOrganisation>]);
     shacl:path org:member
   ], [
     a shacl:PropertyShape;
     rdfs:label "isLidBij"@nl;
     rdfs:comment "Organisatie waarop het Lidmaatschap (van een Agent) betrekking heeft."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Lidmaatschap.Islidbij>;
-    shacl:class foaf:Agent;
     shacl:description "Organisatie waarop het Lidmaatschap (van een Agent) betrekking heeft."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "isLidBij"@nl;
+    shacl:or ([shacl:class foaf:Agent] [shacl:class org:Organization] [shacl:class org:FormalOrganization] [shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>] [shacl:class org:OrganizationalCollaboration] [shacl:class org:OrganizationalUnit] [shacl:class <http://data.europa.eu/m8g/PublicOrganisation>]);
     shacl:path org:organization
   ];
   shacl:targetClass org:Membership .
-
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#LiteralShape> a shacl:NodeShape;
-  rdfs:label "Literal";
-  shacl:closed false;
-  shacl:targetClass rdfs:Literal .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#LocatieShape> a shacl:NodeShape;
   rdfs:label "Locatie"@nl;
@@ -675,7 +678,9 @@
     shacl:name "adres"@nl;
     shacl:path <http://www.w3.org/ns/locn#address>
   ];
-  shacl:targetClass prov:Location .
+  shacl:targetClass dc:Location,
+    prov:Location,
+    <http://www.w3.org/ns/locn#Address> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#MediaobjectShape> a shacl:NodeShape;
   rdfs:label "Mediaobject"@nl;
@@ -885,9 +890,9 @@
     <http://purl.org/vocab/vann/usageNote> "Wordt gebruikt om een hiërarchie van Organisaties te documenteren."@nl;
     rdfs:comment "Organisatie die deze Organisatie omvat."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Organisatie.Issuborganisatievan>;
-    shacl:class org:Organization;
     shacl:description "Organisatie die deze Organisatie omvat."@nl;
     shacl:name "isSuborganisatieVan"@nl;
+    shacl:or ([shacl:class org:Organization] [shacl:class org:FormalOrganization] [shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>] [shacl:class org:OrganizationalCollaboration] [shacl:class org:OrganizationalUnit] [shacl:class <http://data.europa.eu/m8g/PublicOrganisation>]);
     shacl:path org:subOrganizationOf
   ], [
     a shacl:PropertyShape;
@@ -895,18 +900,18 @@
     <http://purl.org/vocab/vann/usageNote> "Wordt gebruikt om een hiërarchie van organisaties te documenteren."@nl;
     rdfs:comment "Organisatie die dochter of onderdeel is van de Organisatie."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Organisatie.Heeftsuborganisatie>;
-    shacl:class org:Organization;
     shacl:description "Organisatie die dochter of onderdeel is van de Organisatie."@nl;
     shacl:name "heeftSuborganisatie"@nl;
+    shacl:or ([shacl:class org:Organization] [shacl:class org:FormalOrganization] [shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>] [shacl:class org:OrganizationalCollaboration] [shacl:class org:OrganizationalUnit] [shacl:class <http://data.europa.eu/m8g/PublicOrganisation>]);
     shacl:path org:subOrganizationOf
   ], [
     a shacl:PropertyShape;
     rdfs:label "heeftPositie"@nl;
     rdfs:comment "Verwijst naar een Positie in de Organisatie."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Organisatie.Heeftpositie>;
-    shacl:class org:Post;
     shacl:description "Verwijst naar een Positie in de Organisatie."@nl;
     shacl:name "heeftPositie"@nl;
+    shacl:or ([shacl:class org:Post] [shacl:class <https://data.vlaanderen.be/ns/organisatie#Hoedanigheid>]);
     shacl:path org:hasPost
   ], [
     a shacl:PropertyShape;
@@ -952,19 +957,28 @@
     <http://purl.org/vocab/vann/usageNote> "Dekt elk type aansluiting of betrokkenheid van een Agent bij een Organisatie, niet enkel formeel lidmaatschap. Kan eventueel verder gespecialiseerd worden. Het lidmaatschap wordt meer in detail beschreven met de entiteit Lidmaatschap (door middel van associatieklasse modellering)."@nl;
     rdfs:comment "Agent die lid is (van een Organisatie)."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Organisatie.Lid>;
-    shacl:class foaf:Agent;
     shacl:description "Agent die lid is (van een Organisatie)."@nl;
     shacl:name "lid"@nl;
+    shacl:or ([shacl:class foaf:Agent] [shacl:class org:Organization] [shacl:class org:FormalOrganization] [shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>] [shacl:class org:OrganizationalCollaboration] [shacl:class org:OrganizationalUnit] [shacl:class <http://data.europa.eu/m8g/PublicOrganisation>]);
     shacl:path org:hasMember
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeftLid"@nl;
+    rdfs:comment "Lidmaatschap van een Agent van een Organisatie."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Organisatie.Heeftlid>;
+    shacl:class org:Membership;
+    shacl:description "Lidmaatschap van een Agent van een Organisatie."@nl;
+    shacl:name "heeftLid"@nl;
+    shacl:path org:hasMembership
   ], [
     a shacl:PropertyShape;
     rdfs:label "isGeassocieerdMet"@nl;
     <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld om subsidiëring of bevooradingsketens te documenteren. Dient in dat geval verder gespecialiseerd te worden."@nl;
     rdfs:comment "Niet nader bepaalde relatie met een andere Organisatie."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Organisatie.Isgeassocieerdmet>;
-    shacl:class org:Organization;
     shacl:description "Niet nader bepaalde relatie met een andere Organisatie."@nl;
     shacl:name "isGeassocieerdMet"@nl;
+    shacl:or ([shacl:class org:Organization] [shacl:class org:FormalOrganization] [shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>] [shacl:class org:OrganizationalCollaboration] [shacl:class org:OrganizationalUnit] [shacl:class <http://data.europa.eu/m8g/PublicOrganisation>]);
     shacl:path org:linkedTo
   ], [
     a shacl:PropertyShape;
@@ -972,9 +986,9 @@
     <http://purl.org/vocab/vann/usageNote> "Als het Veranderingsmoment bijvoorbeeld een Stopzetting is hield de Organisatie daarna op met bestaan. Merk op dat deze relatie zinloos is als het Veranderingsmoment een Oprichting is (de Organisatie bestond nog niet en kan dus niet veranderd zijn ten gevolge van de Oprichting)."@nl;
     rdfs:comment "Verwijst naar het Veranderingsmoment dat deze Organisatie heeft veranderd."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Organisatie.Isveranderddoor>;
-    shacl:class org:ChangeEvent;
     shacl:description "Verwijst naar het Veranderingsmoment dat deze Organisatie heeft veranderd."@nl;
     shacl:name "isVeranderdDoor"@nl;
+    shacl:or ([shacl:class org:ChangeEvent] [shacl:class <https://data.vlaanderen.be/ns/organisatie#Vervanging>] [shacl:class <https://data.vlaanderen.be/ns/organisatie#Splitsing>] [shacl:class <https://data.vlaanderen.be/ns/organisatie#Fusie>] [shacl:class <https://data.vlaanderen.be/ns/organisatie#Stopzetting>] [shacl:class <http://data.europa.eu/m8g/FoundationEvent>]);
     shacl:path org:changedBy
   ], [
     a shacl:PropertyShape;
@@ -982,12 +996,17 @@
     <http://purl.org/vocab/vann/usageNote> "Voor een publieke Organisatie is een verwijzing naar een Veranderingsmoment van het type Oprichting verplicht. Merk op dat deze relatie zinloos is als het Veranderingsmoment een Stopzetting is."@nl;
     rdfs:comment "Verwijst naar het Veranderingsmoment dat tot de huidige Organisatie heeft geleid."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Organisatie.Ishetresultaatvan>;
-    shacl:class org:ChangeEvent;
     shacl:description "Verwijst naar het Veranderingsmoment dat tot de huidige Organisatie heeft geleid."@nl;
     shacl:name "isHetResultaatVan"@nl;
+    shacl:or ([shacl:class org:ChangeEvent] [shacl:class <https://data.vlaanderen.be/ns/organisatie#Vervanging>] [shacl:class <https://data.vlaanderen.be/ns/organisatie#Splitsing>] [shacl:class <https://data.vlaanderen.be/ns/organisatie#Fusie>] [shacl:class <https://data.vlaanderen.be/ns/organisatie#Stopzetting>] [shacl:class <http://data.europa.eu/m8g/FoundationEvent>]);
     shacl:path org:resultedFrom
   ];
   shacl:targetClass org:Organization,
+    org:FormalOrganization,
+    <http://www.w3.org/ns/regorg#RegisteredOrganization>,
+    org:OrganizationalCollaboration,
+    org:OrganizationalUnit,
+    <http://data.europa.eu/m8g/PublicOrganisation>,
     prov:Organization .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#OrganisatieeenheidShape> a shacl:NodeShape;
@@ -1000,11 +1019,11 @@
     rdfs:label "isEenheidVan"@nl;
     rdfs:comment "Organisatie waarvan de Organisatie-eenheid deel uitmaakt."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Organisatieeenheid.Iseenheidvan>;
-    shacl:class org:Organization;
     shacl:description "Organisatie waarvan de Organisatie-eenheid deel uitmaakt."@nl;
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "isEenheidVan"@nl;
+    shacl:or ([shacl:class org:Organization] [shacl:class org:FormalOrganization] [shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>] [shacl:class org:OrganizationalCollaboration] [shacl:class org:OrganizationalUnit] [shacl:class <http://data.europa.eu/m8g/PublicOrganisation>]);
     shacl:path org:unitOf
   ];
   shacl:targetClass org:OrganizationalUnit .
@@ -1086,21 +1105,22 @@
     <http://purl.org/vocab/vann/usageNote> "Gecombineerd met Agent-rapporteertAan-Agent kan het organogram vd organisatie gedocumenteerd worden."@nl;
     rdfs:comment "Verwijst naar de positie waaraan een positie verantwoording aflegt."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Positie.Rapporteertaan>;
-    shacl:class org:Post;
     shacl:description "Verwijst naar de positie waaraan een positie verantwoording aflegt."@nl;
     shacl:name "rapporteertAan"@nl;
+    shacl:or ([shacl:class org:Post] [shacl:class <https://data.vlaanderen.be/ns/organisatie#Hoedanigheid>]);
     shacl:path org:reportsTo
   ], [
     a shacl:PropertyShape;
     rdfs:label "inPositieIn"@nl;
     rdfs:comment "Organisatie waar de Positie bestaat."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Positie.Inpositiein>;
-    shacl:class org:Organization;
     shacl:description "Organisatie waar de Positie bestaat."@nl;
     shacl:name "inPositieIn"@nl;
+    shacl:or ([shacl:class org:Organization] [shacl:class org:FormalOrganization] [shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>] [shacl:class org:OrganizationalCollaboration] [shacl:class org:OrganizationalUnit] [shacl:class <http://data.europa.eu/m8g/PublicOrganisation>]);
     shacl:path org:postIn
   ];
-  shacl:targetClass org:Post .
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#Hoedanigheid>,
+    org:Post .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#PubliekeorganisatieShape> a shacl:NodeShape;
   rdfs:label "PubliekeOrganisatie"@nl;
@@ -1160,7 +1180,10 @@
   <http://purl.org/vocab/vann/usageNote> "TemporeleEntiteiten zijn temporele geometrische primitieven zoals Moment of Periode. Dit datatype is abstract, gebruik één van de subklassen."@nl;
   rdfs:comment "Abstracte klasse voor temporele objecten."@nl;
   shacl:closed false;
-  shacl:targetClass <http://www.w3.org/2006/time#TemporalEntity> .
+  shacl:targetClass <http://www.w3.org/2006/time#Instant>,
+    <http://www.w3.org/2006/time#ProperInterval>,
+    <http://www.w3.org/2006/time#Duration>,
+    <http://www.w3.org/2006/time#TemporalEntity> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#TijdsduurShape> a shacl:NodeShape;
   rdfs:label "Tijdsduur"@nl;
@@ -1201,9 +1224,9 @@
     <http://purl.org/vocab/vann/usageNote> "Merk op dat deze relatie zinloos is als het Veranderingsmoment een Oprichting is (een Oprichting is geen verandering aan bestaande Organisatie)."@nl;
     rdfs:comment "Organisatie die de Veranderingsgebeurtenis onderging."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Veranderingsgebeurtenis.Oorspronkelijkeorganisatie>;
-    shacl:class org:Organization;
     shacl:description "Organisatie die de Veranderingsgebeurtenis onderging."@nl;
     shacl:name "oorspronkelijkeOrganisatie"@nl;
+    shacl:or ([shacl:class org:Organization] [shacl:class org:FormalOrganization] [shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>] [shacl:class org:OrganizationalCollaboration] [shacl:class org:OrganizationalUnit] [shacl:class <http://data.europa.eu/m8g/PublicOrganisation>]);
     shacl:path org:originalOrganization
   ], [
     a shacl:PropertyShape;
@@ -1211,12 +1234,17 @@
     <http://purl.org/vocab/vann/usageNote> "Merk op dat deze relatie zinloos is als het Veranderingsmoment een Stopzetting is (een Stopzetting kan niet tot een nieuwe Organisatie leiden)."@nl;
     rdfs:comment "Organisatie die uit de Veranderingsgebeurtenis voortkwam."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#Veranderingsgebeurtenis.Resulterendeorganisatie>;
-    shacl:class org:Organization;
     shacl:description "Organisatie die uit de Veranderingsgebeurtenis voortkwam."@nl;
     shacl:name "resulterendeOrganisatie"@nl;
+    shacl:or ([shacl:class org:Organization] [shacl:class org:FormalOrganization] [shacl:class <http://www.w3.org/ns/regorg#RegisteredOrganization>] [shacl:class org:OrganizationalCollaboration] [shacl:class org:OrganizationalUnit] [shacl:class <http://data.europa.eu/m8g/PublicOrganisation>]);
     shacl:path org:resultingOrganization
   ];
-  shacl:targetClass org:ChangeEvent .
+  shacl:targetClass org:ChangeEvent,
+    <https://data.vlaanderen.be/ns/organisatie#Vervanging>,
+    <https://data.vlaanderen.be/ns/organisatie#Splitsing>,
+    <https://data.vlaanderen.be/ns/organisatie#Fusie>,
+    <https://data.vlaanderen.be/ns/organisatie#Stopzetting>,
+    <http://data.europa.eu/m8g/FoundationEvent> .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/organisatie-basis/ontwerpstandaard/2025#VervangingShape> a shacl:NodeShape;
   rdfs:label "Vervanging"@nl;

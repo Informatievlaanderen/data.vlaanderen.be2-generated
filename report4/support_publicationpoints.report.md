@@ -2,6 +2,8 @@
 #||# 
 #||#   + adding supporting /home/circleci/project/config/test/BeSt-Add.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/NDNN.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/Vrachtwagenparkeren.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/adres.publication.json
@@ -164,13 +166,13 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/vervoersknooppunten.publication.json
 #||#  
-#||#   + adding supporting /home/circleci/project/config/test/weg.publication.json
-#||#  
 #||#   + adding supporting /home/circleci/project/config/test/vlaamsecodex.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/voorwaarden-dienstverlening.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/waterkwaliteit.publication.json
+#||#  
+#||#   + adding supporting /home/circleci/project/config/test/weg.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/weg2.publication.json
 #||#  
