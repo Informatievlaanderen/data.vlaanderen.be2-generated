@@ -2,51 +2,31 @@
 
 #||# -------------------------------------  
 
-2026-02-12T13:04:40.247Z warn: Unable to find the description for subject "[urn:oslo-toolchain:81aaace97040ec6857cc67001d2c738d26f13510c3936462e7426b425f5ce705](all-persoon-IM.jsonld#L391)".
+2026-04-21T08:29:34.590Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-persoon-IM.jsonld#L4399)".
 
-2026-02-12T13:04:40.249Z warn: Unable to find the description for subject "[urn:oslo-toolchain:78e124532d337fe4cbf7835baadcdda4e46246a30618375012d428a23a60c870](all-persoon-IM.jsonld#L457)".
+2026-04-21T08:29:34.592Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-persoon-IM.jsonld#L4421)".
 
-2026-02-12T13:04:40.249Z warn: Unable to find the description for subject "[urn:oslo-toolchain:139ed7ac3f12b4b4c458c77285aa14e18e2dc8e3f440b56d6728a28b4be2f438](all-persoon-IM.jsonld#L567)".
+2026-04-21T08:29:34.592Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-persoon-IM.jsonld#L4432)".
 
-2026-02-12T13:04:40.250Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b4709039ca31544489d03ab08b13bbcbad7c3a551cc2a3f94c0490db4e36a598](all-persoon-IM.jsonld#L813)".
+2026-04-21T08:29:34.594Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-persoon-IM.jsonld#L4443)".
 
-2026-02-12T13:04:40.250Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cddde26ddb7e84bb25446d026a10d0b3935e63906e1439a0ca85ac6adea15156](all-persoon-IM.jsonld#L831)".
+2026-04-21T08:29:34.595Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
 
-2026-02-12T13:04:40.251Z warn: Unable to find the description for subject "[urn:oslo-toolchain:bad54e5732341be4c402ec51d10e4b7c74a92fe245c1959e1d2bf029f847176e](all-persoon-IM.jsonld#L1045)".
+2026-04-21T08:29:34.611Z warn: Unable to find the description for subject "[urn:oslo-toolchain:4e33a2f8e33ad17f88eda18ce126d513e28c224f638bbf194b8e9377d510d905](all-persoon-IM.jsonld#L3331)".
 
-2026-02-12T13:04:40.251Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1c07280b11abec2fbdc736a40da39e8a7ca288d2eeb57695906a2416a164d21d](all-persoon-IM.jsonld#L1063)".
-
-2026-02-12T13:04:40.252Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-persoon-IM.jsonld#L4499)".
-
-2026-02-12T13:04:40.253Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-persoon-IM.jsonld#L4521)".
-
-2026-02-12T13:04:40.253Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-persoon-IM.jsonld#L4532)".
-
-2026-02-12T13:04:40.253Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
+2026-04-21T08:29:34.613Z warn: Unable to find the description for subject "[urn:oslo-toolchain:d5c95f81739443139678f5cb408c12e3bbb5bdcb5bebb366d25ea92fda55bd27](all-persoon-IM.jsonld#L3483)".
 
 #||# oslo-shacl-template-generator for language en  
 
 #||# -------------------------------------  
 
-2026-02-12T13:04:41.127Z warn: Unable to find the description for subject "[urn:oslo-toolchain:bad54e5732341be4c402ec51d10e4b7c74a92fe245c1959e1d2bf029f847176e](all-persoon-IM.jsonld#L1045)".
+Error: Unable to find the domain for subject "[urn:oslo-toolchain:99072ac6ed2bdb4341e8ac9959c89778951d9da2fa460562d9e632c1c2926bb6](all-persoon-IM.jsonld#L252)".
 
-2026-02-12T13:04:41.128Z warn: Unable to find the description for subject "[urn:oslo-toolchain:78e124532d337fe4cbf7835baadcdda4e46246a30618375012d428a23a60c870](all-persoon-IM.jsonld#L457)".
+    at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:126:31)
 
-2026-02-12T13:04:41.129Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1c07280b11abec2fbdc736a40da39e8a7ca288d2eeb57695906a2416a164d21d](all-persoon-IM.jsonld#L1063)".
+    at ShaclTemplateGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:48:42)
 
-2026-02-12T13:04:41.129Z warn: Unable to find the description for subject "[urn:oslo-toolchain:139ed7ac3f12b4b4c458c77285aa14e18e2dc8e3f440b56d6728a28b4be2f438](all-persoon-IM.jsonld#L567)".
+    at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:37:33
 
-2026-02-12T13:04:41.130Z warn: Unable to find the description for subject "[urn:oslo-toolchain:b4709039ca31544489d03ab08b13bbcbad7c3a551cc2a3f94c0490db4e36a598](all-persoon-IM.jsonld#L813)".
-
-2026-02-12T13:04:41.130Z warn: Unable to find the description for subject "[urn:oslo-toolchain:cddde26ddb7e84bb25446d026a10d0b3935e63906e1439a0ca85ac6adea15156](all-persoon-IM.jsonld#L831)".
-
-2026-02-12T13:04:41.131Z warn: Unable to find the description for subject "[urn:oslo-toolchain:81aaace97040ec6857cc67001d2c738d26f13510c3936462e7426b425f5ce705](all-persoon-IM.jsonld#L391)".
-
-2026-02-12T13:04:41.132Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-persoon-IM.jsonld#L4499)".
-
-2026-02-12T13:04:41.132Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-persoon-IM.jsonld#L4521)".
-
-2026-02-12T13:04:41.132Z warn: Unable to find the description for subject "[urn:oslo-toolchain:499715870](all-persoon-IM.jsonld#L4532)".
-
-2026-02-12T13:04:41.133Z warn: Unable to find the description for subject "urn:oslo-toolchain:1008345369".
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 
