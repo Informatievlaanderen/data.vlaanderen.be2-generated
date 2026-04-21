@@ -2,7 +2,7 @@
   "components": {
     "schemas": {
       "Afsluiting": {
-        "description": "Gebeurtenis waarbij een Organisatie wordt afgesloten en geen verdere activiteit zal uitvoeren",
+        "description": "Gebeurtenis waarbij een Organisatie wordt afgesloten en geen verdere activiteit zal uitvoeren.",
         "properties": {
           "@context": {
             "enum": [
@@ -100,7 +100,7 @@
             "type": "object"
           },
           "Doorhaling.doorhalingstype": {
-            "description": "Reden waarom de Organisatie is geschrapt",
+            "description": "Reden waarom de Organisatie is geschrapt.",
             "properties": {
               "@id": {
                 "format": "uri",
@@ -114,7 +114,7 @@
             "type": "object"
           },
           "Doorhaling.redenDoorhaling": {
-            "description": "undefined",
+            "description": "undefined Bijvoorbeeld: geen neerlegging van de jaarrekening.",
             "properties": {
               "@id": {
                 "format": "uri",
@@ -150,6 +150,38 @@
           "Doorhaling.tijd",
           "Doorhaling.datum",
           "Doorhaling.datum"
+        ],
+        "type": "object"
+      },
+      "Doorhalingstype": {
+        "description": "Soort van doorhaling van een Organisatie in een register.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Doorhalingstype\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Doorhalingstype type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
         ],
         "type": "object"
       },
@@ -223,6 +255,63 @@
                 "@id": {
                   "format": "uri",
                   "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Contactpunt\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "FormeleOrganisatie.heeftGeregistreerdeVestiging": {
+            "description": "Lijst van Vestiging items.",
+            "items": {
+              "description": "Verwijst naar de wettelijk geregistreerde Vestiging van de Organisatie. Is voor een FormeleOrganisatie doorgaans verplicht. In België verplicht voor een GeregistreerdeOrganisatie en geregistreerd in de KBO.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Vestiging\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "FormeleOrganisatie.heeftPrimaireVestiging": {
+            "description": "Lijst van Vestiging items.",
+            "items": {
+              "description": "Verwijst naar de belangrijkste Vestiging van de Organisatie, niet noodzakelijk het formele hoofdkwartier maar wel de Vestiging waarop de Organisatie standaard kan worden gecontacteerd.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Vestiging\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "FormeleOrganisatie.heeftVestiging": {
+            "description": "Lijst van Vestiging items.",
+            "items": {
+              "description": "Verwijst naar een plek waar de Organisatie op een of andere manier, desnoods indirect, aanwezig is. Indirect bijvoorbeeld een virtueel kantoor waarvan de locatie niet rechtstreeks achterhaald kan worden (bijvoorbeeld een postbus). In België mogen in de KBO GeregistreerdeOrganisaties enkel fysieke locaties als Vestiging registreren.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Vestiging\\/\\d",
                   "type": "string"
                 }
               },
@@ -401,6 +490,63 @@
             "minItems": 0,
             "type": "array"
           },
+          "GeregistreerdeOrganisatie.heeftGeregistreerdeVestiging": {
+            "description": "Lijst van Vestiging items.",
+            "items": {
+              "description": "Verwijst naar de wettelijk geregistreerde Vestiging van de Organisatie. Is voor een FormeleOrganisatie doorgaans verplicht. In België verplicht voor een GeregistreerdeOrganisatie en geregistreerd in de KBO.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Vestiging\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "GeregistreerdeOrganisatie.heeftPrimaireVestiging": {
+            "description": "Lijst van Vestiging items.",
+            "items": {
+              "description": "Verwijst naar de belangrijkste Vestiging van de Organisatie, niet noodzakelijk het formele hoofdkwartier maar wel de Vestiging waarop de Organisatie standaard kan worden gecontacteerd.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Vestiging\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "GeregistreerdeOrganisatie.heeftVestiging": {
+            "description": "Lijst van Vestiging items.",
+            "items": {
+              "description": "Verwijst naar een plek waar de Organisatie op een of andere manier, desnoods indirect, aanwezig is. Indirect bijvoorbeeld een virtueel kantoor waarvan de locatie niet rechtstreeks achterhaald kan worden (bijvoorbeeld een postbus). In België mogen in de KBO GeregistreerdeOrganisaties enkel fysieke locaties als Vestiging registreren.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Vestiging\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
           "GeregistreerdeOrganisatie.isVeranderdDoor": {
             "description": "Lijst van Veranderingsgebeurtenis items.",
             "items": {
@@ -566,6 +712,38 @@
         ],
         "type": "object"
       },
+      "NACEBEL2025": {
+        "description": "Type activiteit die door een Organisatie wordt uitgeoefend volgens NACEBEL 2025.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/NACEBEL2025\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "NACEBEL2025 type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
       "Oprichting": {
         "description": "Gebeurtenis waarbij een Organisatie is opgericht.",
         "properties": {
@@ -701,6 +879,63 @@
             "minItems": 0,
             "type": "array"
           },
+          "Organisatie.heeftGeregistreerdeVestiging": {
+            "description": "Lijst van Vestiging items.",
+            "items": {
+              "description": "Verwijst naar de wettelijk geregistreerde Vestiging van de Organisatie. Is voor een FormeleOrganisatie doorgaans verplicht. In België verplicht voor een GeregistreerdeOrganisatie en geregistreerd in de KBO.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Vestiging\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Organisatie.heeftPrimaireVestiging": {
+            "description": "Lijst van Vestiging items.",
+            "items": {
+              "description": "Verwijst naar de belangrijkste Vestiging van de Organisatie, niet noodzakelijk het formele hoofdkwartier maar wel de Vestiging waarop de Organisatie standaard kan worden gecontacteerd.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Vestiging\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Organisatie.heeftVestiging": {
+            "description": "Lijst van Vestiging items.",
+            "items": {
+              "description": "Verwijst naar een plek waar de Organisatie op een of andere manier, desnoods indirect, aanwezig is. Indirect bijvoorbeeld een virtueel kantoor waarvan de locatie niet rechtstreeks achterhaald kan worden (bijvoorbeeld een postbus). In België mogen in de KBO GeregistreerdeOrganisaties enkel fysieke locaties als Vestiging registreren.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Vestiging\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
           "Organisatie.isVeranderdDoor": {
             "description": "Lijst van Veranderingsgebeurtenis items.",
             "items": {
@@ -786,6 +1021,70 @@
         ],
         "type": "object"
       },
+      "OrganisatieStatus": {
+        "description": "Toestand van een Organisatie.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/OrganisatieStatus\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "OrganisatieStatus type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "OrganisatieType": {
+        "description": "Soort Organisatie.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/OrganisatieType\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "OrganisatieType type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
       "Plaats": {
         "description": "Een ruimtelijk gebied of benoemde plaats.",
         "properties": {
@@ -823,6 +1122,134 @@
               "@id"
             ],
             "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Rechtspersoonlijkheidtype": {
+        "description": "Aard van de rechtspersoonlijkheid.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Rechtspersoonlijkheidtype\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Rechtspersoonlijkheidtype type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Rechtstoestandtype": {
+        "description": "Status van een GeregistreerdeOrganisatie.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Rechtstoestandtype\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Rechtstoestandtype type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "Rechtsvormtype": {
+        "description": "Juridisch statuut van een GeregistreerdeOrganisatie.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Rechtsvormtype\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Rechtsvormtype type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
+      "RedenDoorhaling": {
+        "description": "Reden van de doorhaling in het register.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/RedenDoorhaling\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "RedenDoorhaling type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
           }
         },
         "required": [
@@ -900,6 +1327,38 @@
         ],
         "type": "object"
       },
+      "Taal": {
+        "description": "De taal waarin een document of andere resources zijn opgesteld.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Taal\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Taal type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
       "Veranderingsgebeurtenis": {
         "description": "Gebeurtenis waardoor een Organisatie een belangrijke wijziging ondergaat zoals een fusie of een herstructurering.",
         "properties": {
@@ -952,6 +1411,52 @@
           "Veranderingsgebeurtenis.datum"
         ],
         "type": "object"
+      },
+      "Vestiging": {
+        "description": "Een kantoor of ander pand waar een Organisatie gevestigd is. Organisaties kunnen over meerdere Vestigingen verspreid zijn en Vestigingen kunnen op meerdere locaties slaan.",
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO/context/organisatie.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Vestiging\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Vestiging type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Vestiging.vestigingsadres": {
+            "description": "Adres van de Vestiging. Kan email, telefoon en ook adres zijn (in welk geval ook niet-fysieke adressen mogelijk zijn).",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Contactpunt\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
       }
     }
   },
@@ -964,7 +1469,7 @@
   "paths": {
     "/id/Afsluiting/{id}": {
       "get": {
-        "description": "Gebeurtenis waarbij een Organisatie wordt afgesloten en geen verdere activiteit zal uitvoeren",
+        "description": "Gebeurtenis waarbij een Organisatie wordt afgesloten en geen verdere activiteit zal uitvoeren.",
         "operationId": "AfsluitingGET",
         "parameters": [
           {
@@ -996,7 +1501,7 @@
             "description": "Afsluiting object met gegeven ID niet gevonden."
           }
         },
-        "summary": "Gebeurtenis waarbij een Organisatie wordt afgesloten en geen verdere activiteit zal uitvoeren",
+        "summary": "Gebeurtenis waarbij een Organisatie wordt afgesloten en geen verdere activiteit zal uitvoeren.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -1064,6 +1569,46 @@
         ]
       }
     },
+    "/id/Doorhalingstype/{id}": {
+      "get": {
+        "description": "Soort van doorhaling van een Organisatie in een register.",
+        "operationId": "DoorhalingstypeGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Doorhalingstype object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Doorhalingstype"
+                }
+              }
+            },
+            "description": "Doorhalingstype object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Doorhalingstype object."
+          },
+          "404": {
+            "description": "Doorhalingstype object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Soort van doorhaling van een Organisatie in een register.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
     "/id/FormeleOrganisatie/{id}": {
       "get": {
         "description": "Een erkende Organisatie, erkend in brede zin of  meer specifiek in juridische zin met bijbehorende rechten en plichten.",
@@ -1123,6 +1668,13 @@
                 "operationId": "VeranderingsgebeurtenisGET",
                 "parameters": {
                   "id": "$response.body#/FormeleOrganisatie.isVeranderdDoor/@id"
+                }
+              },
+              "VestigingGET": {
+                "description": "Het `@id` attribuut van de waarde van `FormeleOrganisatie.heeftPrimaireVestiging` kan gebruikt worden om het gerefereerde object van het type `Vestiging` op te halen.",
+                "operationId": "VestigingGET",
+                "parameters": {
+                  "id": "$response.body#/FormeleOrganisatie.heeftPrimaireVestiging/@id"
                 }
               }
             }
@@ -1228,6 +1780,13 @@
                 "parameters": {
                   "id": "$response.body#/GeregistreerdeOrganisatie.isVeranderdDoor/@id"
                 }
+              },
+              "VestigingGET": {
+                "description": "Het `@id` attribuut van de waarde van `GeregistreerdeOrganisatie.heeftPrimaireVestiging` kan gebruikt worden om het gerefereerde object van het type `Vestiging` op te halen.",
+                "operationId": "VestigingGET",
+                "parameters": {
+                  "id": "$response.body#/GeregistreerdeOrganisatie.heeftPrimaireVestiging/@id"
+                }
               }
             }
           },
@@ -1239,6 +1798,46 @@
           }
         },
         "summary": "Organisatie met een juridisch statuut vastgelegd door registratie. Vergelijk met een FormeleOrganisatie waarbij dit statuut ook op een andere manier verkregen kan zijn.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/NACEBEL2025/{id}": {
+      "get": {
+        "description": "Type activiteit die door een Organisatie wordt uitgeoefend volgens NACEBEL 2025.",
+        "operationId": "NACEBEL2025GET",
+        "parameters": [
+          {
+            "description": "Identificator van een NACEBEL2025 object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NACEBEL2025"
+                }
+              }
+            },
+            "description": "NACEBEL2025 object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een NACEBEL2025 object."
+          },
+          "404": {
+            "description": "NACEBEL2025 object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Type activiteit die door een Organisatie wordt uitgeoefend volgens NACEBEL 2025.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -1344,6 +1943,13 @@
                 "parameters": {
                   "id": "$response.body#/Organisatie.isVeranderdDoor/@id"
                 }
+              },
+              "VestigingGET": {
+                "description": "Het `@id` attribuut van de waarde van `Organisatie.heeftPrimaireVestiging` kan gebruikt worden om het gerefereerde object van het type `Vestiging` op te halen.",
+                "operationId": "VestigingGET",
+                "parameters": {
+                  "id": "$response.body#/Organisatie.heeftPrimaireVestiging/@id"
+                }
               }
             }
           },
@@ -1355,6 +1961,86 @@
           }
         },
         "summary": "Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaansreden die de individuele leden ervan overstijgt en kan handelen als agent. Een Organisatie heeft dikwijls een hiërarchische structuur.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/OrganisatieStatus/{id}": {
+      "get": {
+        "description": "Toestand van een Organisatie.",
+        "operationId": "OrganisatieStatusGET",
+        "parameters": [
+          {
+            "description": "Identificator van een OrganisatieStatus object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganisatieStatus"
+                }
+              }
+            },
+            "description": "OrganisatieStatus object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een OrganisatieStatus object."
+          },
+          "404": {
+            "description": "OrganisatieStatus object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Toestand van een Organisatie.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/OrganisatieType/{id}": {
+      "get": {
+        "description": "Soort Organisatie.",
+        "operationId": "OrganisatieTypeGET",
+        "parameters": [
+          {
+            "description": "Identificator van een OrganisatieType object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrganisatieType"
+                }
+              }
+            },
+            "description": "OrganisatieType object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een OrganisatieType object."
+          },
+          "404": {
+            "description": "OrganisatieType object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Soort Organisatie.",
         "tags": [
           "Externe datastandaarden"
         ]
@@ -1408,6 +2094,166 @@
         ]
       }
     },
+    "/id/Rechtspersoonlijkheidtype/{id}": {
+      "get": {
+        "description": "Aard van de rechtspersoonlijkheid.",
+        "operationId": "RechtspersoonlijkheidtypeGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Rechtspersoonlijkheidtype object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rechtspersoonlijkheidtype"
+                }
+              }
+            },
+            "description": "Rechtspersoonlijkheidtype object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Rechtspersoonlijkheidtype object."
+          },
+          "404": {
+            "description": "Rechtspersoonlijkheidtype object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Aard van de rechtspersoonlijkheid.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Rechtstoestandtype/{id}": {
+      "get": {
+        "description": "Status van een GeregistreerdeOrganisatie.",
+        "operationId": "RechtstoestandtypeGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Rechtstoestandtype object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rechtstoestandtype"
+                }
+              }
+            },
+            "description": "Rechtstoestandtype object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Rechtstoestandtype object."
+          },
+          "404": {
+            "description": "Rechtstoestandtype object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Status van een GeregistreerdeOrganisatie.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Rechtsvormtype/{id}": {
+      "get": {
+        "description": "Juridisch statuut van een GeregistreerdeOrganisatie.",
+        "operationId": "RechtsvormtypeGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Rechtsvormtype object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rechtsvormtype"
+                }
+              }
+            },
+            "description": "Rechtsvormtype object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Rechtsvormtype object."
+          },
+          "404": {
+            "description": "Rechtsvormtype object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Juridisch statuut van een GeregistreerdeOrganisatie.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/RedenDoorhaling/{id}": {
+      "get": {
+        "description": "Reden van de doorhaling in het register.",
+        "operationId": "RedenDoorhalingGET",
+        "parameters": [
+          {
+            "description": "Identificator van een RedenDoorhaling object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RedenDoorhaling"
+                }
+              }
+            },
+            "description": "RedenDoorhaling object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een RedenDoorhaling object."
+          },
+          "404": {
+            "description": "RedenDoorhaling object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Reden van de doorhaling in het register.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
     "/id/Stopzetting/{id}": {
       "get": {
         "description": "Gebeurtenis waarbij een Organisatie is stopgezet.",
@@ -1456,6 +2302,46 @@
         ]
       }
     },
+    "/id/Taal/{id}": {
+      "get": {
+        "description": "De taal waarin een document of andere resources zijn opgesteld.",
+        "operationId": "TaalGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Taal object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Taal"
+                }
+              }
+            },
+            "description": "Taal object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Taal object."
+          },
+          "404": {
+            "description": "Taal object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "De taal waarin een document of andere resources zijn opgesteld.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
     "/id/Veranderingsgebeurtenis/{id}": {
       "get": {
         "description": "Gebeurtenis waardoor een Organisatie een belangrijke wijziging ondergaat zoals een fusie of een herstructurering.",
@@ -1491,6 +2377,54 @@
           }
         },
         "summary": "Gebeurtenis waardoor een Organisatie een belangrijke wijziging ondergaat zoals een fusie of een herstructurering.",
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
+    "/id/Vestiging/{id}": {
+      "get": {
+        "description": "Een kantoor of ander pand waar een Organisatie gevestigd is. Organisaties kunnen over meerdere Vestigingen verspreid zijn en Vestigingen kunnen op meerdere locaties slaan.",
+        "operationId": "VestigingGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Vestiging object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Vestiging"
+                }
+              }
+            },
+            "description": "Vestiging object gevonden.",
+            "links": {
+              "ContactpuntGET": {
+                "description": "Het `@id` attribuut van de waarde van `Vestiging.vestigingsadres` kan gebruikt worden om het gerefereerde object van het type `Contactpunt` op te halen.",
+                "operationId": "ContactpuntGET",
+                "parameters": {
+                  "id": "$response.body#/Vestiging.vestigingsadres/@id"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Vestiging object."
+          },
+          "404": {
+            "description": "Vestiging object met gegeven ID niet gevonden."
+          }
+        },
+        "summary": "Een kantoor of ander pand waar een Organisatie gevestigd is. Organisaties kunnen over meerdere Vestigingen verspreid zijn en Vestigingen kunnen op meerdere locaties slaan.",
         "tags": [
           "Externe datastandaarden"
         ]

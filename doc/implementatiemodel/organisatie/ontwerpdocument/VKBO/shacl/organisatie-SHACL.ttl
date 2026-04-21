@@ -12,11 +12,21 @@
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#FormeleorganisatieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#OrganisatieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#VeranderingsgebeurtenisShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#VestigingShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Nacebel2025Shape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#RechtsvormtypeShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#StopzettingShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#RechtstoestandtypeShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#OrganisatiestatusShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#OrganisatietypeShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#RechtspersoonlijkheidtypeShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#PlaatsShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#OprichtingShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#TaalShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#AfsluitingShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#DoorhalingShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#DoorhalingstypeShape>,
+    <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#RedendoorhalingShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#LocatieShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#LangstringShape>,
     <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#IdentificatorShape>,
@@ -184,7 +194,7 @@
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#AfsluitingShape> a shacl:NodeShape;
   rdfs:label "Afsluiting"@nl;
   <http://purl.org/vocab/vann/usageNote> "Na afsluiting kan er een stopzetting plaatsvinden."@nl;
-  rdfs:comment "Gebeurtenis waarbij een Organisatie wordt afgesloten en geen verdere activiteit zal uitvoeren"@nl;
+  rdfs:comment "Gebeurtenis waarbij een Organisatie wordt afgesloten en geen verdere activiteit zal uitvoeren."@nl;
   shacl:closed false;
   shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/organisatie#Doorhaling> .
 
@@ -253,16 +263,17 @@
   shacl:property [
     a shacl:PropertyShape;
     rdfs:label "doorhalingstype"@nl;
-    rdfs:comment "Reden waarom de Organisatie is geschrapt"@nl;
+    rdfs:comment "Reden waarom de Organisatie is geschrapt."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Doorhaling.Doorhalingstype>;
     shacl:class skos:Concept;
-    shacl:description "Reden waarom de Organisatie is geschrapt"@nl;
+    shacl:description "Reden waarom de Organisatie is geschrapt."@nl;
     shacl:maxCount "1";
     shacl:name "doorhalingstype"@nl;
     shacl:path dc:type
   ], [
     a shacl:PropertyShape;
     rdfs:label "redenDoorhaling";
+    <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld: geen neerlegging van de jaarrekening."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Doorhaling.Redendoorhaling>;
     shacl:class skos:Concept;
     shacl:maxCount "1";
@@ -279,9 +290,16 @@
     shacl:maxCount "1";
     shacl:minCount "1";
     shacl:name "tijd"@nl;
-    shacl:path <https://www.w3.org/ns/prov#time>
+    shacl:path prov:time
   ];
   shacl:targetClass <https://implementatie.data.vlaanderen.be/ns/organisatie#Doorhaling> .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#DoorhalingstypeShape> a shacl:NodeShape;
+  rdfs:label "Doorhalingstype";
+  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld: ambstbehalve, adres."@nl;
+  rdfs:comment "Soort van doorhaling van een Organisatie in een register."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#FormeleorganisatieShape> a shacl:NodeShape;
   rdfs:label "FormeleOrganisatie"@nl;
@@ -461,6 +479,12 @@
   ];
   shacl:targetClass <http://www.w3.org/2006/time#Instant> .
 
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Nacebel2025Shape> a shacl:NodeShape;
+  rdfs:label "NACEBEL2025";
+  rdfs:comment "Type activiteit die door een Organisatie wordt uitgeoefend volgens NACEBEL 2025."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#OprichtingShape> a shacl:NodeShape;
   rdfs:label "Oprichting"@nl;
   rdfs:comment "Gebeurtenis waarbij een Organisatie is opgericht."@nl;
@@ -534,6 +558,35 @@
     shacl:path <http://www.w3.org/ns/regorg#orgType>
   ], [
     a shacl:PropertyShape;
+    rdfs:label "heeftVestiging"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Indirect bijvoorbeeld een virtueel kantoor waarvan de locatie niet rechtstreeks achterhaald kan worden (bijvoorbeeld een postbus). In België mogen in de KBO GeregistreerdeOrganisaties enkel fysieke locaties als Vestiging registreren."@nl;
+    rdfs:comment "Verwijst naar een plek waar de Organisatie op een of andere manier, desnoods indirect, aanwezig is."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Organisatie.Heeftvestiging>;
+    shacl:class org:Site;
+    shacl:description "Verwijst naar een plek waar de Organisatie op een of andere manier, desnoods indirect, aanwezig is."@nl;
+    shacl:name "heeftVestiging"@nl;
+    shacl:path org:hasSite
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeftGeregistreerdeVestiging"@nl;
+    <http://purl.org/vocab/vann/usageNote> "In België verplicht voor een GeregistreerdeOrganisatie en geregistreerd in de KBO."@nl;
+    rdfs:comment "Verwijst naar de wettelijk geregistreerde Vestiging van de Organisatie. Is voor een FormeleOrganisatie doorgaans verplicht."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Organisatie.Heeftgeregistreerdevestiging>;
+    shacl:class org:Site;
+    shacl:description "Verwijst naar de wettelijk geregistreerde Vestiging van de Organisatie. Is voor een FormeleOrganisatie doorgaans verplicht."@nl;
+    shacl:name "heeftGeregistreerdeVestiging"@nl;
+    shacl:path org:hasRegisteredSite
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeftPrimaireVestiging"@nl;
+    rdfs:comment "Verwijst naar de belangrijkste Vestiging van de Organisatie, niet noodzakelijk het formele hoofdkwartier maar wel de Vestiging waarop de Organisatie standaard kan worden gecontacteerd."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Organisatie.Heeftprimairevestiging>;
+    shacl:class org:Site;
+    shacl:description "Verwijst naar de belangrijkste Vestiging van de Organisatie, niet noodzakelijk het formele hoofdkwartier maar wel de Vestiging waarop de Organisatie standaard kan worden gecontacteerd."@nl;
+    shacl:name "heeftPrimaireVestiging"@nl;
+    shacl:path org:hasPrimarySite
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "isVeranderdDoor"@nl;
     <http://purl.org/vocab/vann/usageNote> "Als het Veranderingsmoment bijvoorbeeld een Stopzetting is hield de Organisatie daarna op met bestaan. Merk op dat deze relatie zinloos is als het Veranderingsmoment een Oprichting is (de Organisatie bestond nog niet en kan dus niet veranderd zijn ten gevolge van de Oprichting)."@nl;
     rdfs:comment "Verwijst naar het Veranderingsmoment dat deze Organisatie heeft veranderd."@nl;
@@ -546,6 +599,18 @@
   shacl:targetClass <http://www.w3.org/ns/regorg#RegisteredOrganization>,
     org:FormalOrganization,
     org:Organization .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#OrganisatiestatusShape> a shacl:NodeShape;
+  rdfs:label "OrganisatieStatus";
+  rdfs:comment "Toestand van een Organisatie."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#OrganisatietypeShape> a shacl:NodeShape;
+  rdfs:label "OrganisatieType";
+  rdfs:comment "Soort Organisatie."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#PeriodeShape> a shacl:NodeShape;
   rdfs:label "Periode"@nl;
@@ -591,6 +656,34 @@
   ];
   shacl:targetClass dc:Location .
 
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#RechtspersoonlijkheidtypeShape> a shacl:NodeShape;
+  rdfs:label "Rechtspersoonlijkheidtype";
+  <http://purl.org/vocab/vann/usageNote> "Rechtspersoonlijkheid betekent dat men een rechtssubject is, dit wil zeggen drager van rechten en plichten. Natuurlijke personen hebben vanzelf rechtspersoonlijkheid, rechtspersonen (bijvoorbeeld venootschappen) moeten die van rechtswege toegekend krijgen."@nl;
+  rdfs:comment "Aard van de rechtspersoonlijkheid."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#RechtstoestandtypeShape> a shacl:NodeShape;
+  rdfs:label "Rechtstoestandtype";
+  <http://purl.org/vocab/vann/usageNote> "Stemt in de KBO overeen met rechtstoestand, bijvoorbeeld normale toestand, gerechtelijk akkoord, opening faillissement, etc."@nl;
+  rdfs:comment "Status van een GeregistreerdeOrganisatie."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#RechtsvormtypeShape> a shacl:NodeShape;
+  rdfs:label "Rechtsvormtype";
+  <http://purl.org/vocab/vann/usageNote> "Stemt in de KBO overeen met rechtsvorm, bijvoorbeeld: NV, VZW, Stad/Gemeente, OCMW, etc."@nl;
+  rdfs:comment "Juridisch statuut van een GeregistreerdeOrganisatie."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#RedendoorhalingShape> a shacl:NodeShape;
+  rdfs:label "RedenDoorhaling";
+  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld: geen neerlegging van de jaarrekening"@nl;
+  rdfs:comment "Reden van de doorhaling in het register."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#StopzettingShape> a shacl:NodeShape;
   rdfs:label "Stopzetting"@nl;
   rdfs:comment "Gebeurtenis waarbij een Organisatie is stopgezet."@nl;
@@ -613,6 +706,13 @@
   rdfs:label "String";
   shacl:closed false;
   shacl:targetClass xsd:string .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#TaalShape> a shacl:NodeShape;
+  rdfs:label "Taal"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Zie de <a href=\"https://publications.europa.eu/resource/authority/language\">codelijst</a> gepubliceerd door de Europese Unie voor mogelijke waarden."@nl;
+  rdfs:comment "De taal waarin een document of andere resources zijn opgesteld."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#TemporeleentiteitShape> a shacl:NodeShape;
   rdfs:label "TemporeleEntiteit"@nl;
@@ -645,3 +745,22 @@
     <https://data.vlaanderen.be/ns/organisatie#Stopzetting>,
     <http://data.europa.eu/m8g/FoundationEvent>,
     <https://implementatie.data.vlaanderen.be/ns/organisatie#Doorhaling> .
+
+<https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#VestigingShape> a shacl:NodeShape;
+  rdfs:label "Vestiging"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Meestal zal de Vestiging een fysieke locatie zijn. Niet-fysieke locaties worden echter niet uitgesloten, bijvoorbeeld een virtueel kantoor met bijbehorend postnummer en telefonische receptie."@nl;
+  rdfs:comment "Een kantoor of ander pand waar een Organisatie gevestigd is. Organisaties kunnen over meerdere Vestigingen verspreid zijn en Vestigingen kunnen op meerdere locaties slaan."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "vestigingsadres"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Kan email, telefoon en ook adres zijn (in welk geval ook niet-fysieke adressen mogelijk zijn)."@nl;
+    rdfs:comment "Adres van de Vestiging."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/organisatie/ontwerpdocument/VKBO#Vestiging.Vestigingsadres>;
+    shacl:class schemas:ContactPoint;
+    shacl:description "Adres van de Vestiging."@nl;
+    shacl:maxCount "1";
+    shacl:name "vestigingsadres"@nl;
+    shacl:path org:siteAddress
+  ];
+  shacl:targetClass org:Site .
