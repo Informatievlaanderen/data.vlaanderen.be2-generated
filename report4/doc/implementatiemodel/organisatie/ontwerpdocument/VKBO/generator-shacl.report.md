@@ -2,13 +2,13 @@
 
 #||# -------------------------------------  
 
-2026-04-21T18:19:57.291Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-organisatie.jsonld#L2970)".
+2026-04-21T18:25:48.836Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-organisatie.jsonld#L2970)".
 
-2026-04-21T18:19:57.293Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-organisatie.jsonld#L2992)".
+2026-04-21T18:25:48.838Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-organisatie.jsonld#L2992)".
 
-2026-04-21T18:19:57.293Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-organisatie.jsonld#L3003)".
+2026-04-21T18:25:48.838Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-organisatie.jsonld#L3003)".
 
-2026-04-21T18:19:57.294Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
+2026-04-21T18:25:48.838Z warn: Unable to find the description for subject "urn:oslo-toolchain:499715870".
 
-2026-04-21T18:19:57.305Z warn: Unable to find the description for subject "[urn:oslo-toolchain:adb321d45b33830ea647e2daf4e307a94e65696144f73120a34ba2b5b66456f4](all-organisatie.jsonld#L2210)".
+2026-04-21T18:25:48.849Z warn: Unable to find the description for subject "[urn:oslo-toolchain:adb321d45b33830ea647e2daf4e307a94e65696144f73120a34ba2b5b66456f4](all-organisatie.jsonld#L2210)".
 
