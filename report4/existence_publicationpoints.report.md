@@ -442,6 +442,7 @@ error: missing '/tmp/generated/doc/vocabularium/gezondheidstoestand/ontwerpstand
 Directory check
 
 index.html check
+error: missing '/tmp/generated/doc/implementatiemodel/magda/persoon/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/persoon.publication.json
 #||# 
