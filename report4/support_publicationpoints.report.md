@@ -338,6 +338,7 @@ Error: the following directories are unsupported
   "/tmp/generated/ns/grondboringen",
   "/tmp/generated/ns/kindfiche",
   "/tmp/generated/ns/leercredential",
+  "/tmp/generated/ns/magda/persoon",
   "/tmp/generated/ns/metadata-dcat",
   "/tmp/generated/ns/observaties-en-metingen",
   "/tmp/generated/ns/perceel",
