@@ -222,7 +222,6 @@ error: missing '/tmp/generated/doc/applicatieprofiel/dienstverlening-aan-persone
 #||#    + checking /home/circleci/project/config/dev/kvs.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources'
 error: missing '/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/codelijsten'
 
 index.html check

@@ -1,0 +1,411 @@
+@prefix as: <https://www.w3.org/ns/activitystreams#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#> rdfs:member <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#ApplicatieShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#AgentShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#MeldingShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#HoedanigheidShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#OrganisatieShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Organisatie-eenheidShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#PubliekeOrganisatieShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#GeregistreerdPersoonShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#PersoonShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#StringShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#UriShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#MeldingstatusShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#DatetimeShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#GeometrieShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#MeldingBodyShape> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#AgentShape> a shacl:NodeShape;
+  rdfs:label "Agent"@nl;
+  rdfs:comment "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."@nl;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#ApplicatieShape> a shacl:NodeShape;
+  rdfs:label "Applicatie"@nl;
+  rdfs:comment "Een artificiële agent in een softwareomgeving."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "meldingsapplicatie"@nl;
+    rdfs:comment "De applicatie dat de Melding creëerde."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Applicatie.Meldingsapplicatie>;
+    shacl:class <https://data.vlaanderen.be/ns/melding#Melding>;
+    shacl:description "De applicatie dat de Melding creëerde."@nl;
+    shacl:name "meldingsapplicatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#Applicatie.meldingsapplicatie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/melding#Applicatie> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#DatetimeShape> a shacl:NodeShape;
+  rdfs:label "DateTime";
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#GeometrieShape> a shacl:NodeShape;
+  rdfs:label "Geometrie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Beschrijft deze kenmerken dmv punten,lijnen,polygonen en coördinaten."@nl;
+  rdfs:comment "Vorm- en positiekenmerken van een object."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "gml"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#gmlLiteral als datatype."@nl;
+    rdfs:comment "Geometrie uitgedrukt in gml-formaat."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Geometrie.Gml>;
+    shacl:description "Geometrie uitgedrukt in gml-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "gml"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path <http://www.opengis.net/ont/geosparql#asGML>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "wkt"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Gebruik http://www.opengis.net/ont/geosparql#wktLiteral als datatype."@nl;
+    rdfs:comment "Geometrie uitgedrukt in wkt-formaat."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Geometrie.Wkt>;
+    shacl:description "Geometrie uitgedrukt in wkt-formaat."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "wkt"@nl;
+    shacl:nodeKind shacl:Literal;
+    shacl:path <http://www.opengis.net/ont/geosparql#asWKT>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometry> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#GeregistreerdPersoonShape> a shacl:NodeShape;
+  rdfs:label "Geregistreerd Persoon"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Doorgaans is dit register een bevolkingsregister maar het kan bv ook een kiesregister zijn. De ingeschreven gegevens hebben betrekking op de identeit (vb naam en voornaam) en de Verblijfplaats vd persoon en op belangrijke levensgebeurtenissen zoals geboor"@nl;
+  rdfs:comment "Persoon waarvan de gegevens zijn ingeschreven in een register."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "registratie"@nl;
+    rdfs:comment "Identificatiecode van de persoon in het register."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#GeregistreerdPersoon.Registratie>;
+    shacl:class <http://www.w3.org/ns/adms#Identifier>;
+    shacl:description "Identificatiecode van de persoon in het register."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "registratie"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/persoon#registratie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/persoon#GeregistreerdPersoon> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#HoedanigheidShape> a shacl:NodeShape;
+  rdfs:label "Hoedanigheid"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Laat een Functie toe om te handelen,bv ihkv een Dienstverlening (bv diversiteitsplan wordt opgemaakt door diversieteitsambtenaar)."@nl;
+  rdfs:comment "Agent met een Functie."@nl;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/organisatie#Hoedanigheid> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#MeldingBodyShape> a shacl:NodeShape;
+  rdfs:label "Melding Body"@nl;
+  rdfs:comment "De body van de Melding,deze omvat relevante informatie voor de verdere afhandeling van een melding."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "beschrijving"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Deze eigenschap kan gebruikt worden om extra beschrijvende tekst mee te geven over het Meldingsobject."@nl;
+    rdfs:comment "Een tekstuele beschrijving van de melding."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#MeldingBody.Beschrijving>;
+    shacl:datatype xsd:string;
+    shacl:description "Een tekstuele beschrijving van de melding."@nl;
+    shacl:maxCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "bijlage"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Via deze eigenschap is het mogelijk om bv. Foto's of PDF documenten te koppelen aan de Melding."@nl;
+    rdfs:comment "Identificeert een resource die aan de MeldingsBody verbonden is en mogelijks speciale verwerking vraagt."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#MeldingBody.Bijlage>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Identificeert een resource die aan de MeldingsBody verbonden is en mogelijks speciale verwerking vraagt."@nl;
+    shacl:maxCount "1";
+    shacl:name "bijlage"@nl;
+    shacl:path as:attachment
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "geometrie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Wanneer een Agent een Melding aanmaakt kan deze bv. een bounding box tekenen op een map. De geometrie hiervan kan weegegeven worden via de eigenschap geometrie van MeldingBody."@nl;
+    rdfs:comment "De relatie tussen de MeldingBody en een geometrie."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#MeldingBody.Geometrie>;
+    shacl:class <http://www.w3.org/ns/locn#Geometry>;
+    shacl:description "De relatie tussen de MeldingBody en een geometrie."@nl;
+    shacl:maxCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://www.w3.org/ns/locn#geometry>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/melding#MeldingBody> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#MeldingShape> a shacl:NodeShape;
+  rdfs:label "Melding"@nl;
+  <http://purl.org/vocab/vann/usageNote> "De Melding kan gebruikt worden voor het capteren van feedback dat slaat op reële wereld objecten zoals een put in de weg of sluikstort."@nl;
+  rdfs:comment "Beschrijft de melding van een probleem of een vaststelling die mogelijks aanleiding geeft tot een actie van de overheid."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "samenvatting"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Deze eigenschap kan gebruikt worden als een tekstveld om de Melding en de informatie die eraan gekoppeld is samen te vatten en de behandeling ervan te vergemakkelijken."@nl;
+    rdfs:comment "Een samenvatting van de Melding."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Samenvatting>;
+    shacl:datatype xsd:string;
+    shacl:description "Een samenvatting van de Melding."@nl;
+    shacl:maxCount "1";
+    shacl:name "samenvatting"@nl;
+    shacl:path as:summary
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "titel"@nl;
+    rdfs:comment "De titel van de Melding."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Titel>;
+    shacl:datatype xsd:string;
+    shacl:description "De titel van de Melding."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "titel"@nl;
+    shacl:path dc:title
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "webpagina"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Deze eigenschap kan gebruikt worden om een gebruiker door te verwijzen naar een applicatie waar de actuele status van de Melding kan geraadpleegd worden."@nl;
+    rdfs:comment "Een doorverwijzing naar een webpagina over deze Melding."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Webpagina>;
+    shacl:datatype xsd:anyURI;
+    shacl:description "Een doorverwijzing naar een webpagina over deze Melding."@nl;
+    shacl:maxCount "1";
+    shacl:name "webpagina"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#webpagina>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft body"@nl;
+    rdfs:comment "Het object van deze associatie is een resource die de body van de Melding beschrijft (MeldingBody)."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.HeeftBody>;
+    shacl:class <https://data.vlaanderen.be/ns/melding#MeldingBody>;
+    shacl:description "Het object van deze associatie is een resource die de body van de Melding beschrijft (MeldingBody)."@nl;
+    shacl:name "heeft body"@nl;
+    shacl:path oa:hasBody
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft status"@nl;
+    rdfs:comment "De Status verbonden aan de Melding."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.HeeftStatus>;
+    shacl:class <https://data.vlaanderen.be/ns/melding#Meldingstatus>;
+    shacl:description "De Status verbonden aan de Melding."@nl;
+    shacl:name "heeft status"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#heeftStatus>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "meldingstype"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Er wordt verwacht dat het meldingstype gedefinieerd is in een codelijst. Het bepalen en ontlsuiten van deze codelijst kan applicatie-specifiek worden ingevuld."@nl;
+    rdfs:comment "De relatie tussen de Melding en het Meldingstype dat gebruikt worden om de melding te categoriseren."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Meldingstype>;
+    shacl:class skos:Concept;
+    shacl:description "De relatie tussen de Melding en het Meldingstype dat gebruikt worden om de melding te categoriseren."@nl;
+    shacl:minCount "1";
+    shacl:name "meldingstype"@nl;
+    shacl:path oa:motivatedBy
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "meldingsorganisatie"@nl;
+    rdfs:comment "De organisatie die verantwoordelijk is voor de applicatie die werd gebruikt voor de creatie van de melding."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Meldingsorganisatie>;
+    shacl:class <https://www.w3.org/ns/org#Organization>;
+    shacl:description "De organisatie die verantwoordelijk is voor de applicatie die werd gebruikt voor de creatie van de melding."@nl;
+    shacl:maxCount 1;
+    shacl:name "meldingsorganisatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#Melding.meldingsorganisatie>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "meldingsapplicatie"@nl;
+    rdfs:comment "De applicatie dat de Melding creëerde."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Meldingsapplicatie>;
+    shacl:class <https://data.vlaanderen.be/ns/melding#Applicatie>;
+    shacl:description "De applicatie dat de Melding creëerde."@nl;
+    shacl:maxCount 1;
+    shacl:name "meldingsapplicatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#Melding.meldingsapplicatie>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "indiener"@nl;
+    rdfs:comment "Agent die de Melding heeft aangemaakt en/of ingediend."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Indiener>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die de Melding heeft aangemaakt en/of ingediend."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "indiener"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#indiener>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "betrokkene"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld indien de melding werd aangemaakt door een derde, bijvoorbeeld een ambtenaar van de gemeente op vraag van een burger."@nl;
+    rdfs:comment "Agent die belang heeft bij de Melding of geïmpacteerd is door de behandeling ervan."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Betrokkene>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die belang heeft bij de Melding of geïmpacteerd is door de behandeling ervan."@nl;
+    shacl:name "betrokkene"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#betrokkene>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "behandelaar"@nl;
+    rdfs:comment "Agent die werd aangewezen om de melding op te volgen en af te handelen."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Melding.Behandelaar>;
+    shacl:class dc:Agent;
+    shacl:description "Agent die werd aangewezen om de melding op te volgen en af te handelen."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "behandelaar"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#behandelaar>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/melding#Melding> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#MeldingstatusShape> a shacl:NodeShape;
+  rdfs:label "Meldingstatus"@nl;
+  <http://purl.org/vocab/vann/usageNote> "De Melding kan gelinkt zijn aan meerdere Status objecten,elk ervan geeft de status op een bepaald tijdstip weer."@nl;
+  rdfs:comment "De Status van de Melding in het verwerkingsproces op een bepaald tijdstip."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "beschrijving"@nl;
+    rdfs:comment "Een beschrijving van de Status."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Meldingstatus.Beschrijving>;
+    shacl:datatype xsd:string;
+    shacl:description "Een beschrijving van de Status."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "statusdatum"@nl;
+    rdfs:comment "De datum van een Status."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Meldingstatus.Statusdatum>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "De datum van een Status."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "statusdatum"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#statusdatum>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "status type"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Er wordt verwacht dat het status type gedefinieerd is in een codelijst. Het bepalen en ontlsuiten van deze codelijst kan applicatie-specifiek worden ingevuld."@nl;
+    rdfs:comment "Het type van de Status."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Meldingstatus.StatusType>;
+    shacl:class skos:Concept;
+    shacl:description "Het type van de Status."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "status type"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#statuswaarde>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "statuswijziging door"@nl;
+    rdfs:comment "De Agent die deze status heeft geactiveerd."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Meldingstatus.StatuswijzigingDoor>;
+    shacl:class dc:Agent;
+    shacl:description "De Agent die deze status heeft geactiveerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "statuswijziging door"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#statuswijzigingDoor>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/melding#Meldingstatus> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Organisatie-eenheidShape> a shacl:NodeShape;
+  rdfs:label "Organisatie-eenheid"@nl;
+  rdfs:comment "Een organisatie zoals een afdeling of dienst die deel uitmaakt van de grotere organisatie en zijn bestaansreden daaraan ontleent. Heeft geen juridische status op zich."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "is eenheid van"@nl;
+    rdfs:comment "Organisatie waarvan de organisatie-eenheid deel uitmaakt."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Organisatie-eenheid.IsEenheidVan>;
+    shacl:class <https://www.w3.org/ns/org#Organization>;
+    shacl:description "Organisatie waarvan de organisatie-eenheid deel uitmaakt."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "is eenheid van"@nl;
+    shacl:path org:unitOf
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft eenheid"@nl;
+    rdfs:comment "Verwijst naar een organisatie-eenheid die deel uitmaakt van de organisatie, bv een afdeling."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Organisatie-eenheid.HeeftEenheid>;
+    shacl:class <https://www.w3.org/ns/org#Organization>;
+    shacl:description "Verwijst naar een organisatie-eenheid die deel uitmaakt van de organisatie, bv een afdeling."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "heeft eenheid"@nl;
+    shacl:path org:hasUnit
+  ];
+  shacl:targetClass org:OrganizationalUnit .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#OrganisatieShape> a shacl:NodeShape;
+  rdfs:label "Organisatie"@nl;
+  rdfs:comment "Een aantal mensen georganiseerd in een gemeenschap of andere sociale, commerciële of politieke structuur. De groep heeft een gemeenschappelijk doel of bestaanreden die de individuele leden ervan overstijgt en kan handelen als Agent. Een organisatie heeft dikwijls een hiërarchische structuur."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "is eenheid van"@nl;
+    rdfs:comment "Organisatie waarvan de organisatie-eenheid deel uitmaakt."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Organisatie.IsEenheidVan>;
+    shacl:class org:OrganizationalUnit;
+    shacl:description "Organisatie waarvan de organisatie-eenheid deel uitmaakt."@nl;
+    shacl:name "is eenheid van"@nl;
+    shacl:path org:unitOf
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft eenheid"@nl;
+    rdfs:comment "Verwijst naar een organisatie-eenheid die deel uitmaakt van de organisatie, bv een afdeling."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Organisatie.HeeftEenheid>;
+    shacl:class org:OrganizationalUnit;
+    shacl:description "Verwijst naar een organisatie-eenheid die deel uitmaakt van de organisatie, bv een afdeling."@nl;
+    shacl:name "heeft eenheid"@nl;
+    shacl:path org:hasUnit
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "meldingsorganisatie"@nl;
+    rdfs:comment "De organisatie die verantwoordelijk is voor de applicatie die werd gebruikt voor de creatie van de melding."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#Organisatie.Meldingsorganisatie>;
+    shacl:class <https://data.vlaanderen.be/ns/melding#Melding>;
+    shacl:description "De organisatie die verantwoordelijk is voor de applicatie die werd gebruikt voor de creatie van de melding."@nl;
+    shacl:name "meldingsorganisatie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/melding#Organisatie.meldingsorganisatie>
+  ];
+  shacl:targetClass <https://www.w3.org/ns/org#Organization> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#PersoonShape> a shacl:NodeShape;
+  rdfs:label "Persoon"@nl;
+  <http://purl.org/vocab/vann/usageNote> "In de rechtspraak betreft het een persoon (in de wettelijke betekenis, ttz met eigen rechtspersoonlijkheid) van de menselijke soort, ttz een fysiek persoon. Tegenhanger is de rechtspersoon, een juridische constructie die een private of publieke Organisatie dezelfde rechtspersoonlijkheid geeft als een natuurlijk persoon (kan bv ook schulden hebben, contracten afsluiten, aangeklaagd worden etc)."@nl;
+  rdfs:comment "Natuurlijk persoon."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/person#Person> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#PubliekeOrganisatieShape> a shacl:NodeShape;
+  rdfs:label "Publieke Organisatie"@nl;
+  rdfs:comment "Een Organisatie die volgens een wettelijk kader behoort tot de publieke sector,ongeacht het bestuursniveau waarop dat kader van kracht is."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://data.europa.eu/m8g/PublicOrganisation> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#StringShape> a shacl:NodeShape;
+  rdfs:label "String";
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/issue-tracking-voor-burgers-en-organisaties/ontwerpstandaard/toolchain4#UriShape> a shacl:NodeShape;
+  rdfs:label "URI";
+  shacl:closed false;
+  shacl:targetClass xsd:anyURI .

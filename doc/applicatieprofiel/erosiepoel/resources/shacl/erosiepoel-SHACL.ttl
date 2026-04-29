@@ -1,0 +1,543 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#> rdfs:member <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#AgentShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#PlatformShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#GeobserveerdkenmerkShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#SensorShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#OnderhoudShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ActuatieShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ErosiepoelShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ErosiebestrijdingsmaatregelShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#FeatureOfInterestShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ErosiepoelonderdeelShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#GraszoneShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#EenheidShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#OnderhoudstaakShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ObservatieShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ZoneShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ResultaatShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#KwantitatievewaardeShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#HoeveelheidtypeShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ErosiebestrijdingsmaatregelonderdeelShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#HoeveelheidShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#NumeriekeunieShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#LocatieShape> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ActuatieShape> a shacl:NodeShape;
+  rdfs:label "Actuatie"@nl;
+  rdfs:comment "Het veranderen van de staat van een Feature Of Interest."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "uitgevoerd door"@nl;
+    rdfs:comment "De Agent die de Actuatie heeft uitgevoerd."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Actuatie.UitgevoerdDoor>;
+    shacl:class dc:Agent;
+    shacl:description "De Agent die de Actuatie heeft uitgevoerd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "uitgevoerd door"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/madeByActuator>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeft simpel resultaat"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Dit kan gebruikte worden wanneer een instantie van Resultaat te zwaar is. Dit is het geval wanneer het resultaat bijvoorbeeld de boolean \"true\" is."@nl;
+    rdfs:comment "Eenvoudige uitkomst van een actuatie."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Actuatie.HeeftSimpelResultaat>;
+    shacl:class <https://data.vlaanderen.be/ns/erosiepoel#Literal>;
+    shacl:description "Eenvoudige uitkomst van een actuatie."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "heeft simpel resultaat"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/hasSimpleResult>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "feature of interest"@nl;
+    rdfs:comment "De Feature Of Interest waarop de Actuatie is uitgevoerd."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Actuatie.FeatureOfInterest>;
+    shacl:class <http://www.w3.org/ns/sosa/FeatureOfInterest>;
+    shacl:description "De Feature Of Interest waarop de Actuatie is uitgevoerd."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "feature of interest"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/hasFeatureOfInterest>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/sosa/Actuation> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#AgentShape> a shacl:NodeShape;
+  rdfs:label "Agent"@nl;
+  rdfs:comment "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."@nl;
+  shacl:closed false;
+  shacl:targetClass dc:Agent .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#EenheidShape> a shacl:NodeShape;
+  rdfs:label "Eenheid"@nl;
+  rdfs:comment "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://qudt.org/2.1/schema/qudt/Unit> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ErosiebestrijdingsmaatregelShape> a shacl:NodeShape;
+  rdfs:label "Erosiebestrijdingsmaatregel"@nl;
+  rdfs:comment "Werken of natuurlijke elementen die bodemerosie bestrijden, zoals erosiepoelen en graszones."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "beschermde zone"@nl;
+    rdfs:comment "De zone die beschermd wordt tegen bijvoorbeeld een modderstroom door de Erosiebestrijdingsmaatregel."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Erosiebestrijdingsmaatregel.BeschermdeZone>;
+    shacl:class <https://data.vlaanderen.be/ns/erosiepoel#Zone>;
+    shacl:description "De zone die beschermd wordt tegen bijvoorbeeld een modderstroom door de Erosiebestrijdingsmaatregel."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "beschermde zone"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/erosiepoel#Erosiebestrijdingsmaatregel.beschermdeZone>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "aanvoerzone"@nl;
+    rdfs:comment "De zone waarvan water en sediment aangevoerd wordt."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Erosiebestrijdingsmaatregel.Aanvoerzone>;
+    shacl:class <https://data.vlaanderen.be/ns/erosiepoel#Zone>;
+    shacl:description "De zone waarvan water en sediment aangevoerd wordt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "aanvoerzone"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/erosiepoel#Erosiebestrijdingsmaatregel.aanvoerzone>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "afvoerzone"@nl;
+    rdfs:comment "De zone waarnaar overtollig water en sediment afgevoerd wordt."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Erosiebestrijdingsmaatregel.Afvoerzone>;
+    shacl:class <https://data.vlaanderen.be/ns/erosiepoel#Zone>;
+    shacl:description "De zone waarnaar overtollig water en sediment afgevoerd wordt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "afvoerzone"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/erosiepoel#Erosiebestrijdingsmaatregel.afvoerzone>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "locatie"@nl;
+    rdfs:comment "De locatie van een Erosiebestrijdingsmaatregel."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Erosiebestrijdingsmaatregel.Locatie>;
+    shacl:class prov:Location;
+    shacl:description "De locatie van een Erosiebestrijdingsmaatregel."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "locatie"@nl;
+    shacl:path prov:atLocation
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "eigenaar"@nl;
+    rdfs:comment "Persoon of Organisatie aan wie de Erosiebestrijdingsmaatregel toebehoort."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Erosiebestrijdingsmaatregel.Eigenaar>;
+    shacl:class dc:Agent;
+    shacl:description "Persoon of Organisatie aan wie de Erosiebestrijdingsmaatregel toebehoort."@nl;
+    shacl:minCount "1";
+    shacl:name "eigenaar"@nl;
+    shacl:path crm:P52_has_current_owner
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "verantwoordelijke"@nl;
+    rdfs:comment "De verantwoordelijke van een Erosiebestrijdingsmaatregel."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Erosiebestrijdingsmaatregel.Verantwoordelijke>;
+    shacl:class dc:Agent;
+    shacl:description "De verantwoordelijke van een Erosiebestrijdingsmaatregel."@nl;
+    shacl:minCount "1";
+    shacl:name "verantwoordelijke"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/erosiepoel#Erosiebestrijdingsmaatregel.verantwoordelijke>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "bestaat uit"@nl;
+    rdfs:comment "De onderdelen waaruit een Erosiebestrijdingsmaatregel bestaat."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Erosiebestrijdingsmaatregel.BestaatUit>;
+    shacl:class <https://data.vlaanderen.be/ns/erosiepoel#Erosiebestrijdingsmaatregelonderdeel>;
+    shacl:description "De onderdelen waaruit een Erosiebestrijdingsmaatregel bestaat."@nl;
+    shacl:name "bestaat uit"@nl;
+    shacl:path dc:hasPart
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/erosiepoel#Erosiebestrijdingsmaatregel> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ErosiebestrijdingsmaatregelonderdeelShape> a shacl:NodeShape;
+  rdfs:label "Erosiebestrijdingsmaatregelonderdeel"@nl;
+  rdfs:comment "Deel van een Erosiebestrijdingsmaatregel."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    rdfs:comment "Classificering van het Erosiebestrijdingsmaatregelonderdeel aan de hand van een gecontroleerde codelijst."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Erosiebestrijdingsmaatregelonderdeel.Type>;
+    shacl:class <https://data.vlaanderen.be/ns/erosiepoel#Erosiepoelonderdeel>;
+    shacl:description "Classificering van het Erosiebestrijdingsmaatregelonderdeel aan de hand van een gecontroleerde codelijst."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "locatie"@nl;
+    rdfs:comment "De locatie van het Erosiebestrijdingsmaatregelonderdeel."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Erosiebestrijdingsmaatregelonderdeel.Locatie>;
+    shacl:class prov:Location;
+    shacl:description "De locatie van het Erosiebestrijdingsmaatregelonderdeel."@nl;
+    shacl:maxCount "1";
+    shacl:name "locatie"@nl;
+    shacl:path prov:atLocation
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "deel van"@nl;
+    rdfs:comment "De Erosiebestrijdingsmaatregel tot welke het onderdeel behoort."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Erosiebestrijdingsmaatregelonderdeel.DeelVan>;
+    shacl:class <https://data.vlaanderen.be/ns/erosiepoel#Erosiebestrijdingsmaatregel>;
+    shacl:description "De Erosiebestrijdingsmaatregel tot welke het onderdeel behoort."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "deel van"@nl;
+    shacl:path dc:isPartOf
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/erosiepoel#Erosiebestrijdingsmaatregelonderdeel> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ErosiepoelShape> a shacl:NodeShape;
+  rdfs:label "Erosiepoel"@nl;
+  rdfs:comment "Erosiepoelen vangen afstromend (modder)water op en bufferen het tijdelijk zodat de meegevoerde modder kan bezinken. In een aarden dam met erosiepoel wordt water niet permanent gestockeerd. Bij een volgende regenbui moet er immers terug water kunnen worden opgevangen."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "maximaal volume"@nl;
+    rdfs:comment "Het maximaal volume voor er sediment en water afvloeit."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Erosiepoel.MaximaalVolume>;
+    shacl:class <http://qudt.org/schema/qudt/QuantityValue>;
+    shacl:description "Het maximaal volume voor er sediment en water afvloeit."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "maximaal volume"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/erosiepoel#maxVolume>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "dimensie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Dit kan gebruikt worden voor de lengte, breedte, en diepte van de Erosiepoel."@nl;
+    rdfs:comment "Een vaste dimensie van de Erosiepoel net na het uitgraven."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Erosiepoel.Dimensie>;
+    shacl:class <http://qudt.org/schema/qudt/Quantity>;
+    shacl:description "Een vaste dimensie van de Erosiepoel net na het uitgraven."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "dimensie"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/erosiepoel#dimensie>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/erosiepoel#Erosiepoel> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ErosiepoelonderdeelShape> a shacl:NodeShape;
+  rdfs:label "Erosiepoelonderdeel"@nl;
+  rdfs:comment "Een onderdeel van een erosiepoel, zoals ingang en uitgang."@nl;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/erosiepoel#Erosiepoelonderdeel> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#FeatureOfInterestShape> a shacl:NodeShape;
+  rdfs:label "Feature Of Interest"@nl;
+  rdfs:comment "Het object waarvan de eigenschap wordt geschat of berekend tijdens een observatie om tot een resultaat te komen, of waarvan de eigenschap wordt gemanipuleerd door een actuator, of dat wordt bemonsterd of getransformeerd tijdens een bemonsteringshandeling."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#GeobserveerdkenmerkShape> a shacl:NodeShape;
+  rdfs:label "Geobserveerdkenmerk"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Voorbeelden van instanties van deze klasse zijn infiltratiesnelheid, densiteit, vruchtbaarheid, vochtigheid, bodemtype, organisch materiaal, koolstof, grondwaterpeil, vegetatie, en teelt."@nl;
+  rdfs:comment "Een kwaliteit van een entiteit. Een aspect van een entiteit dat intrinsiek is aan en niet kan bestaan zonder de entiteit."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/sosa/ObservableProperty> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#GraszoneShape> a shacl:NodeShape;
+  rdfs:label "Graszone"@nl;
+  rdfs:comment "Een zone met gras om bodemerosie te bestrijden."@nl;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/erosiepoel#Graszone> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#HoeveelheidShape> a shacl:NodeShape;
+  rdfs:label "Hoeveelheid"@nl;
+  <http://purl.org/vocab/vann/usageNote> "De klasse is gelijkaardig aan Resultaat maar heeft een referentie naar het Hoeveelheidstype, terwijl Resultaat geen referentie heeft naar het Geobserveerd Kenmerk. We gebruiken deze klasse in dit applicatieprofiel niet voor uitkomsten van Observaties maar enkel voor de dimensies van een Erosiepoel."@nl;
+  rdfs:comment "Het resultaat van een waarneembare eigenschap van een bepaald object, gebeurtenis of fysiek systeem."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Het is hoog waarschijnlijk dat elk SSN/SOSA GeobserveerdKenmerk ook een Hoeveelheidtype is als we kijken naar beide definities."@nl;
+    rdfs:comment "Meetbare eigenschap die numeriek gemeten en gekwantificeerd kan worden."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Hoeveelheid.Type>;
+    shacl:class <http://qudt.org/schema/qudt/QuantityKind>;
+    shacl:description "Meetbare eigenschap die numeriek gemeten en gekwantificeerd kan worden."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "type"@nl;
+    shacl:path <http://qudt.org/schema/qudt/hasQuantityKind>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "waarde"@nl;
+    rdfs:comment "Kwantitatieve waarde van de Hoeveelheid."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Hoeveelheid.Waarde>;
+    shacl:class <http://qudt.org/schema/qudt/QuantityValue>;
+    shacl:description "Kwantitatieve waarde van de Hoeveelheid."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "waarde"@nl;
+    shacl:path <http://qudt.org/schema/qudt/quantityValue>
+  ];
+  shacl:targetClass <http://qudt.org/schema/qudt/Quantity> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#HoeveelheidtypeShape> a shacl:NodeShape;
+  rdfs:label "Hoeveelheidtype"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Het is hoog waarschijnlijk dat elk SSN/SOSA GeobserveerdKenmerk ook een Hoeveelheidtype is als we kijken naar beide definities."@nl;
+  rdfs:comment "Meetbare eigenschap die numeriek gemeten en gekwantificeerd kan worden."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://qudt.org/schema/qudt/QuantityKind> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#KwantitatievewaardeShape> a shacl:NodeShape;
+  rdfs:label "Kwantitatievewaarde"@nl;
+  rdfs:comment "Dit drukt de grootte en het soort van een hoeveelheid uit."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "eenheid"@nl;
+    rdfs:comment "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Kwantitatievewaarde.Eenheid>;
+    shacl:class <http://qudt.org/2.1/schema/qudt/Unit>;
+    shacl:description "Maat waarin een hoeveelheid van een bepaalde grootheid wordt uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "eenheid"@nl;
+    shacl:path <http://qudt.org/schema/qudt/unit>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "numerieke waarde"@nl;
+    rdfs:comment "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Kwantitatievewaarde.NumeriekeWaarde>;
+    shacl:class <http://www.linkedmodel.org/schema/dtype#numericUnion>;
+    shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "numerieke waarde"@nl;
+    shacl:path <http://qudt.org/schema/qudt/numericValue>
+  ];
+  shacl:targetClass <http://qudt.org/schema/qudt/QuantityValue> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#LocatieShape> a shacl:NodeShape;
+  rdfs:label "Locatie"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet direct gewerkt worden met Geometrie, GeografischeNaam, Adres etc."@nl;
+  rdfs:comment "Aanduiding van een geografische positie, dmv coordinaten, een toponiem, een adreslabel, een verwijzing naar een plaats/regio of verwijzing naar een adres."@nl;
+  shacl:closed false;
+  shacl:targetClass prov:Location .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#NumeriekeunieShape> a shacl:NodeShape;
+  rdfs:label "Numeriekeunie"@nl;
+  rdfs:comment "Unie van de numerieke XSD datatypes."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://www.linkedmodel.org/schema/dtype#numericUnion> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ObservatieShape> a shacl:NodeShape;
+  rdfs:label "Observatie"@nl;
+  rdfs:comment "Het vaststellen van de waarde van een bepaald kenmerk van een Feature Of Interest op een bepaald tijdstip of tussen twee tijdstippen."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "uitgevoerd door Sensor"@nl;
+    rdfs:comment "De Sensor die de Observatie heeft gedaan."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Observatie.UitgevoerdDoorSensor>;
+    shacl:class <http://www.w3.org/ns/sosa/Sensor>;
+    shacl:description "De Sensor die de Observatie heeft gedaan."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "uitgevoerd door Sensor"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/madeBySensor>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "start"@nl;
+    rdfs:comment "Moment waarop de Observatie gestart is."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Observatie.Start>;
+    shacl:class <https://data.vlaanderen.be/ns/erosiepoel#DateTime>;
+    shacl:description "Moment waarop de Observatie gestart is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "start"@nl;
+    shacl:path prov:startedAtTime
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "einde"@nl;
+    rdfs:comment "Moment waarop de Observatie gestopt is."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Observatie.Einde>;
+    shacl:class <https://data.vlaanderen.be/ns/erosiepoel#DateTime>;
+    shacl:description "Moment waarop de Observatie gestopt is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "einde"@nl;
+    shacl:path prov:endedAtTime
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "feature of interest"@nl;
+    rdfs:comment "De Feature Of Interest waarop de Observatie is uitgevoerd."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Observatie.FeatureOfInterest>;
+    shacl:class <http://www.w3.org/ns/sosa/FeatureOfInterest>;
+    shacl:description "De Feature Of Interest waarop de Observatie is uitgevoerd."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "feature of interest"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/hasFeatureOfInterest>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "resultaat"@nl;
+    rdfs:comment "Het resultaat van de Observatie."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Observatie.Resultaat>;
+    shacl:class <http://www.w3.org/ns/sosa/Result>;
+    shacl:description "Het resultaat van de Observatie."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "resultaat"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/hasResult>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "geobserveerd kenmerk"@nl;
+    rdfs:comment "Kenmerk dat geobserveerd werd tijdens de Observatie."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Observatie.GeobserveerdKenmerk>;
+    shacl:class <http://www.w3.org/ns/sosa/ObservableProperty>;
+    shacl:description "Kenmerk dat geobserveerd werd tijdens de Observatie."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "geobserveerd kenmerk"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/observedProperty>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/sosa/Observation> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#OnderhoudShape> a shacl:NodeShape;
+  rdfs:label "Onderhoud"@nl;
+  rdfs:comment "Het in goede staat brengen van een Erosiebestrijdingsmaatregel."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "type"@nl;
+    rdfs:comment "Classificering van het Onderhoud aan de hand van een gecontroleerde codelijst."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Onderhoud.Type>;
+    shacl:class skos:Concept;
+    shacl:description "Classificering van het Onderhoud aan de hand van een gecontroleerde codelijst."@nl;
+    shacl:maxCount "1";
+    shacl:name "type"@nl;
+    shacl:path dc:type
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "start"@nl;
+    rdfs:comment "Moment waarop het Onderhoud gestart is."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Onderhoud.Start>;
+    shacl:class <https://data.vlaanderen.be/ns/erosiepoel#DateTime>;
+    shacl:description "Moment waarop het Onderhoud gestart is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "start"@nl;
+    shacl:path prov:startedAtTime
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "einde"@nl;
+    rdfs:comment "Moment waarop het Onderhound gestopt is."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Onderhoud.Einde>;
+    shacl:class <https://data.vlaanderen.be/ns/erosiepoel#DateTime>;
+    shacl:description "Moment waarop het Onderhound gestopt is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "einde"@nl;
+    shacl:path prov:endedAtTime
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/generiek#Onderhoud> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#OnderhoudstaakShape> a shacl:NodeShape;
+  rdfs:label "Onderhoudstaak"@nl;
+  rdfs:comment "Een taak dat deel uitmaakt van het onderhoud."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#PlatformShape> a shacl:NodeShape;
+  rdfs:label "Platform"@nl;
+  <http://purl.org/vocab/vann/usageNote> "In deze context zijn deze andere entiteiten typisch Sensoren, Bemonsteraars of Actuators. Voorbeelden van Platformen zijn palen, boeien, voertuigen, schepen, vliegtuigen, gsm's en zelfs mensen en dieren."@nl;
+  rdfs:comment "Entiteit die fungeert als basis voor andere Entiteiten."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "host van"@nl;
+    rdfs:comment "De Sensor die het Platform bevat."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Platform.HostVan>;
+    shacl:class <http://www.w3.org/ns/sosa/Sensor>;
+    shacl:description "De Sensor die het Platform bevat."@nl;
+    shacl:name "host van"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/hosts>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/sosa/Platform> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ResultaatShape> a shacl:NodeShape;
+  rdfs:label "Resultaat"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Deze klasse heeft geen referentie naar het Geobserveerd Kenmerk."@nl;
+  rdfs:comment "De uitkomst van een observatie, actuatie of handeling van bemonstering."@nl;
+  shacl:closed false;
+  shacl:targetClass <http://www.w3.org/ns/sosa/Result> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#SensorShape> a shacl:NodeShape;
+  rdfs:label "Sensor"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Sensoren genereren een resultaat op basis van een Stimulus, ttz een verandering in de omgeving, of op basis van resultaten van andere Observaties. Ze worden typisch gehost door een Platform. Voorbeelden zijn snelheidsmeters, gyroscopen, barometers, magnetometers gemonteerd op een smart phone. Ook bv het menselijk oog kan beschouwd worden als een sensor. OPMERKING: Meer info over deze klasse in het <a href=\"https://data.vlaanderen.be/doc/applicatieprofiel/sensoren-en-bemonstering/\">AP Sensoren en Bemonstering</a>."@nl;
+  rdfs:comment "Toestel of Agent (inclusief personen of software) waarmee Observaties gemaakt worden."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "locatie"@nl;
+    rdfs:comment "De Locatie van de Sensor."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Sensor.Locatie>;
+    shacl:class prov:Location;
+    shacl:description "De Locatie van de Sensor."@nl;
+    shacl:maxCount "1";
+    shacl:name "locatie"@nl;
+    shacl:path prov:atLocation
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "gehost door"@nl;
+    rdfs:comment "Het Platform waarop de Sensor zit."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Sensor.GehostDoor>;
+    shacl:class <http://www.w3.org/ns/sosa/Platform>;
+    shacl:description "Het Platform waarop de Sensor zit."@nl;
+    shacl:maxCount 1;
+    shacl:name "gehost door"@nl;
+    shacl:path <http://www.w3.org/ns/sosa/isHostedBy>
+  ];
+  shacl:targetClass <http://www.w3.org/ns/sosa/Sensor> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#ZoneShape> a shacl:NodeShape;
+  rdfs:label "Zone"@nl;
+  rdfs:comment "Een gebied dat aan een Erosiebestrijdingsmaatregel ligt. Dit kan bijvoorbeeld het gebied zijn dat sediment en water aanvoert."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "locatie"@nl;
+    rdfs:comment "De Locatie van de Zone."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Zone.Locatie>;
+    shacl:class prov:Location;
+    shacl:description "De Locatie van de Zone."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "locatie"@nl;
+    shacl:path prov:atLocation
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "verantwoordelijke"@nl;
+    rdfs:comment "De verantwoordelijke van de Zone."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Zone.Verantwoordelijke>;
+    shacl:class dc:Agent;
+    shacl:description "De verantwoordelijke van de Zone."@nl;
+    shacl:name "verantwoordelijke"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/erosiepoel#Zone.verantwoordelijke>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "eigenaar"@nl;
+    rdfs:comment "Persoon of Organisatie aan wie de Zone toebehoort."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/erosiepoel/erkendestandaard/2025-07-23#Zone.Eigenaar>;
+    shacl:class dc:Agent;
+    shacl:description "Persoon of Organisatie aan wie de Zone toebehoort."@nl;
+    shacl:name "eigenaar"@nl;
+    shacl:path crm:P52_has_current_owner
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/erosiepoel#Zone> .
