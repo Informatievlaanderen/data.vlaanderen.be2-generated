@@ -1,0 +1,18 @@
+#||# bundling for /doc/implementatiemodel/magda/persoon/v0.0.2
+
+#||# ----------------------
+
+INFO: resources copied to /tmp/workspace/target/doc/implementatiemodel/magda/persoon/v0.0.2/resources
+
+WARNING: failed to fetch external source http://purl.org/vocab/bio/0.1
+
+WARNING: failed to fetch external source https://implementatie.data.vlaanderen.be/ns/magda
+
+WARNING: failed to fetch external source https://implementatie.data.vlaanderen.be/ns/magda/persoon
+
+WARNING: failed to fetch external source https://www.geonames.org/ontology
+
+WARNING: failed to fetch external source http://www.w3.org/2001/XMLSchema
+
+WARNING: failed to fetch external source http://xmlns.com/foaf/0.1
+
