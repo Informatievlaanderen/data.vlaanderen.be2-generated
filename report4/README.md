@@ -1,6 +1,6 @@
 | Execution | Existence | Support |
 | --- | --- | --- |
-| [commit e8f4798e3136f98fff853fdc86761576d5177169](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/e8f4798e3136f98fff853fdc86761576d5177169) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
+| [commit b20415e3e72d94efe92d507d3cb83d35c1196789](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/b20415e3e72d94efe92d507d3cb83d35c1196789) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
  
 ### Legende
 
@@ -21,15 +21,15 @@
 | tag | Branchtag check |
 | val | Validate the jsonld |
 | ctx | JSON-LD Context file generation |
+| bundle | Resource bundling |
 | met | Extract metadata for html rendering |
-| bndl | Resource bundling |
 | html | Render html using generic nunjuncks |
 | swag | Swagger file generation |
 
 </details>
 
 
-| Specification | tag | uml | val | stak | trns | aut | mrg | web | met | html | rspc | ctx | rdf | shcl | swag | bndl | issu |
+| Specification | tag | uml | val | stak | trns | aut | mrg | web | met | html | rspc | ctx | rdf | shcl | swag | bundle | issu |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | [implementatiemodel/magda/ persoon/v0.0.2](https://data.dev-vlaanderen.be/doc/implementatiemodel/magda/persoon/v0.0.2) <br/> [&#9883;](/report4/doc/implementatiemodel/magda/persoon/v0.0.2) [&#9884;](https://data.dev-vlaanderen.be/doc/implementatiemodel/magda/persoon/v0.0.2) | [&#9736;](/report4/doc/implementatiemodel/magda/persoon/v0.0.2/branchtag.report.md) | [&#9729;](/report4/doc/implementatiemodel/magda/persoon/v0.0.2/oslo-converter-ea.report.md) | [&#9728;](/report4/doc/implementatiemodel/magda/persoon/v0.0.2/jsonld-validation.report.md) | [&#9728;](/report4/doc/implementatiemodel/magda/persoon/v0.0.2/oslo-stakeholders-converter.report.md) | [&#9728;](/report4/doc/implementatiemodel/magda/persoon/v0.0.2/translate.report.md) |  | [&#9728;](/report4/doc/implementatiemodel/magda/persoon/v0.0.2/merge.report.md) | [&#9728;](/report4/doc/implementatiemodel/magda/persoon/v0.0.2/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/implementatiemodel/magda/persoon/v0.0.2/metadata.report.md) | [&#9736;](/report4/doc/implementatiemodel/magda/persoon/v0.0.2/generator-html.report.md) | [&#9728;](/report4/doc/implementatiemodel/magda/persoon/v0.0.2/generator-respec.report.md) | [&#9736;](/report4/doc/implementatiemodel/magda/persoon/v0.0.2/generator-jsonld-context.report.md) |  | [&#9736;](/report4/doc/implementatiemodel/magda/persoon/v0.0.2/generator-shacl.report.md) | [&#9728;](/report4/doc/implementatiemodel/magda/persoon/v0.0.2/generator-swagger.report.md) |  | [ 4 ](https://github.com/Informatievlaanderen/OSLOthema-persoon/issues) |
 | [vocabularium/cultureel-erfgoed/ ontwerpstandaard/pieter](https://data.dev-vlaanderen.be/doc/vocabularium/cultureel-erfgoed/ontwerpstandaard/pieter) <br/> [&#9883;](/report4/doc/vocabularium/cultureel-erfgoed/ontwerpstandaard/pieter) [&#9884;](https://data.dev-vlaanderen.be/doc/vocabularium/cultureel-erfgoed/ontwerpstandaard/pieter) | [&#9736;](/report4/doc/vocabularium/cultureel-erfgoed/ontwerpstandaard/pieter/branchtag.report.md) | [&#9729;](/report4/doc/vocabularium/cultureel-erfgoed/ontwerpstandaard/pieter/oslo-converter-ea.report.md) | [&#9736;](/report4/doc/vocabularium/cultureel-erfgoed/ontwerpstandaard/pieter/jsonld-validation.report.md) | [&#9729;](/report4/doc/vocabularium/cultureel-erfgoed/ontwerpstandaard/pieter/oslo-stakeholders-converter.report.md) | [&#9728;](/report4/doc/vocabularium/cultureel-erfgoed/ontwerpstandaard/pieter/translate.report.md) |  | [&#9728;](/report4/doc/vocabularium/cultureel-erfgoed/ontwerpstandaard/pieter/merge.report.md) | [&#9728;](/report4/doc/vocabularium/cultureel-erfgoed/ontwerpstandaard/pieter/generator-webuniversum-json.report.md) | [&#9728;](/report4/doc/vocabularium/cultureel-erfgoed/ontwerpstandaard/pieter/metadata.report.md) | [&#9736;](/report4/doc/vocabularium/cultureel-erfgoed/ontwerpstandaard/pieter/generator-html.report.md) | [&#9728;](/report4/doc/vocabularium/cultureel-erfgoed/ontwerpstandaard/pieter/generator-respec.report.md) |  | [&#9736;](/report4/doc/vocabularium/cultureel-erfgoed/ontwerpstandaard/pieter/generator-rdf.report.md) |  |  | [ 23 ](https://github.com/Informatievlaanderen/OSLOthema-cultureelErfgoed/issues) |  |

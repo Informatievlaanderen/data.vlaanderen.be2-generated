@@ -2,15 +2,15 @@
 
 #||# -------------------------------------  
 
-2026-04-30T09:41:20.289Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-persoon.jsonld#L4429)".
+2026-04-30T09:59:05.084Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1727880001](all-persoon.jsonld#L4429)".
 
-2026-04-30T09:41:20.291Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-persoon.jsonld#L4451)".
+2026-04-30T09:59:05.087Z warn: Unable to find the description for subject "[urn:oslo-toolchain:487667944](all-persoon.jsonld#L4451)".
 
-2026-04-30T09:41:20.291Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-persoon.jsonld#L4462)".
+2026-04-30T09:59:05.088Z warn: Unable to find the description for subject "[urn:oslo-toolchain:474715019](all-persoon.jsonld#L4462)".
 
-2026-04-30T09:41:20.291Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-persoon.jsonld#L4473)".
+2026-04-30T09:59:05.088Z warn: Unable to find the description for subject "[urn:oslo-toolchain:1008345369](all-persoon.jsonld#L4473)".
 
-2026-04-30T09:41:20.291Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
+2026-04-30T09:59:05.088Z warn: Unable to find the description for subject "urn:oslo-toolchain:1607006999".
 
 #||# oslo-shacl-template-generator for language en  
 
