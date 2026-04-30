@@ -12,7 +12,5 @@ error: failed to fetch external source https://implementatie.data.vlaanderen.be/
 
 error: failed to fetch external source https://www.geonames.org/ontology
 
-error: failed to fetch external source http://www.w3.org/2001/XMLSchema
-
 error: failed to fetch external source http://xmlns.com/foaf/0.1
 
