@@ -11,11 +11,9 @@ error: missing '/tmp/generated/doc/applicatieprofiel/bestadd/index.html'
 #||# 
 Directory check
 error: missing '/tmp/generated/doc/implementatiemodel/nudgingdownnightnoise/ontwerpstandaard/2026-04-14'
-error: missing '/tmp/generated/doc//implementatiemodel/NDNN'
 
 index.html check
 error: missing '/tmp/generated/doc/implementatiemodel/nudgingdownnightnoise/ontwerpstandaard/2026-04-14/index.html'
-error: missing '/tmp/generated/doc//implementatiemodel/NDNN/index.html'
 
 #||#    + checking /home/circleci/project/config/test/Vrachtwagenparkeren.publication.json
 #||# 
