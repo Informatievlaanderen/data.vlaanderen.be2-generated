@@ -10,10 +10,8 @@ error: missing '/tmp/generated/doc/applicatieprofiel/bestadd/index.html'
 #||#    + checking /home/circleci/project/config/test/NDNN.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/implementatiemodel/nudgingdownnightnoise/ontwerpstandaard/2026-04-14'
 
 index.html check
-error: missing '/tmp/generated/doc/implementatiemodel/nudgingdownnightnoise/ontwerpstandaard/2026-04-14/index.html'
 
 #||#    + checking /home/circleci/project/config/test/Vrachtwagenparkeren.publication.json
 #||# 
