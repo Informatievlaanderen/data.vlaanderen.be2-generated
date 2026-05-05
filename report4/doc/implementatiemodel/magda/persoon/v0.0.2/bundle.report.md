@@ -10,5 +10,3 @@ error: failed to fetch external source https://implementatie.data.vlaanderen.be/
 
 error: failed to fetch external source https://implementatie.data.vlaanderen.be/ns/magda/persoon
 
-error: failed to fetch external source http://www.w3.org/2001/XMLSchema
-
