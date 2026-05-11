@@ -388,6 +388,37 @@
         ],
         "type": "object"
       },
+      "Bemonsteringsobjecttype": {
+        "properties": {
+          "@context": {
+            "enum": [
+              "https://data.test-vlaanderen.be/doc/implementatiemodel/nudgingdownnightnoise/ontwerpstandaard/2026-04-14/context/NDNN.jsonld"
+            ],
+            "format": "uri",
+            "type": "string"
+          },
+          "@id": {
+            "format": "uri",
+            "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Bemonsteringsobjecttype\\/\\d",
+            "type": "string"
+          },
+          "@type": {
+            "description": "Lijst van object types (klasse)",
+            "items": {
+              "description": "Bemonsteringsobjecttype type",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "@context",
+          "@id",
+          "@type"
+        ],
+        "type": "object"
+      },
       "BestuurlijkeRechtshandeling": {
         "description": "Handeling,uitgaande van een bestuur,die de rechtstoestand wijzigt,dan wel belet dat deze wordt gewijzigd.",
         "properties": {
@@ -2833,6 +2864,44 @@
         ]
       }
     },
+    "/id/Bemonsteringsobjecttype/{id}": {
+      "get": {
+        "operationId": "BemonsteringsobjecttypeGET",
+        "parameters": [
+          {
+            "description": "Identificator van een Bemonsteringsobjecttype object.",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/ld+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Bemonsteringsobjecttype"
+                }
+              }
+            },
+            "description": "Bemonsteringsobjecttype object gevonden.",
+            "links": {}
+          },
+          "400": {
+            "description": "Ontbrekende informatie bij het opvragen een Bemonsteringsobjecttype object."
+          },
+          "404": {
+            "description": "Bemonsteringsobjecttype object met gegeven ID niet gevonden."
+          }
+        },
+        "tags": [
+          "Externe datastandaarden"
+        ]
+      }
+    },
     "/id/BestuurlijkeRechtshandeling/{id}": {
       "get": {
         "description": "Handeling,uitgaande van een bestuur,die de rechtstoestand wijzigt,dan wel belet dat deze wordt gewijzigd.",
@@ -3187,6 +3256,13 @@
             },
             "description": "Meetpunt object gevonden.",
             "links": {
+              "BemonsteringsobjecttypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Meetpunt.type` kan gebruikt worden om het gerefereerde object van het type `Bemonsteringsobjecttype` op te halen.",
+                "operationId": "BemonsteringsobjecttypeGET",
+                "parameters": {
+                  "id": "$response.body#/Meetpunt.type/@id"
+                }
+              },
               "DomeinobjecttypeGET": {
                 "description": "Het `@id` attribuut van de waarde van `Meetpunt.type` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen.",
                 "operationId": "DomeinobjecttypeGET",
