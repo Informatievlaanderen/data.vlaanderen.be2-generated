@@ -403,8 +403,10 @@ index.html check
 #||#    + checking /home/circleci/project/config/test/persoon-im.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated/doc/implementatiemodel/magda/persoon/test'
 
 index.html check
+error: missing '/tmp/generated/doc/implementatiemodel/magda/persoon/test/index.html'
 
 #||#    + checking /home/circleci/project/config/test/persoon.publication.json
 #||# 
