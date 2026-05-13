@@ -1,0 +1,605 @@
+{
+  "@context": {
+    "Adresvoorstelling": {
+      "@context": {
+        "administratieveEenheidNiveau1": {
+          "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "administratieveEenheidNiveau2": {
+          "@id": "http://www.w3.org/ns/locn#adminUnitL2",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "adresgebied": {
+          "@id": "http://www.w3.org/ns/locn#addressArea",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "busnummer": {
+          "@id": "https://vocab.belgif.be/ns/address#AddressRepresentation.boxNumber",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "gemeentenaam": {
+          "@id": "https://vocab.belgif.be/ns/address#municipalityName",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "huisnummer": {
+          "@id": "https://vocab.belgif.be/ns/address#AddressRepresentation.houseNumber",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "land": {
+          "@id": "https://vocab.belgif.be/ns/address#country",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "locatieaanduiding": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#locatorDesignator",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "locatienaam": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/locn#locatorName",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "postbus": {
+          "@id": "http://www.w3.org/ns/locn#poBox",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "postcode": {
+          "@id": "http://www.w3.org/ns/locn#postCode",
+          "@type": "http://www.w3.org/2001/XMLSchema#string"
+        },
+        "postnaam": {
+          "@id": "http://www.w3.org/ns/locn#postName",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "straatnaam": {
+          "@id": "http://www.w3.org/ns/locn#thoroughfare",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "volledigAdres": {
+          "@id": "http://www.w3.org/ns/locn#fullAddress",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "http://www.w3.org/ns/locn#Address"
+    },
+    "Agent": {
+      "@id": "http://purl.org/dc/terms/Agent"
+    },
+    "Competentie": {
+      "@context": {
+        "beschrijving": {
+          "@id": "http://purl.org/dc/terms/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://ec.europa.eu/esco/lod/static/model.html#Skill"
+    },
+    "CreatiefWerk": {
+      "@context": {
+        "auteur": {
+          "@container": "@set",
+          "@id": "https://schema.org/author",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "auteursrechtHouder": {
+          "@container": "@set",
+          "@id": "https://schema.org/copyrightHolder",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "auteursrechtJaar": {
+          "@id": "https://schema.org/copyrightYear",
+          "@type": "http://www.w3.org/2001/XMLSchema#date"
+        },
+        "licentie": {
+          "@container": "@set",
+          "@id": "https://schema.org/license",
+          "@type": "http://purl.org/dc/terms/LicenseDocument"
+        },
+        "producent": {
+          "@container": "@set",
+          "@id": "https://schema.org/author",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "publicatiedatum": {
+          "@id": "https://schema.org/datePublished",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "taal": {
+          "@container": "@set",
+          "@id": "https://schema.org/inLanguage",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "uitgever": {
+          "@container": "@set",
+          "@id": "https://schema.org/publisher",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "vereisteTijd": {
+          "@id": "https://schema.org/timeRequired",
+          "@type": "http://www.w3.org/2006/time#Duration"
+        },
+        "versie": {
+          "@id": "https://schema.org/version",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "https://schema.org/CreativeWork"
+    },
+    "Date": {
+      "@id": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "DateTime": {
+      "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Doel": {
+      "@context": {
+        "beschrijving": {
+          "@id": "http://purl.org/dc/elements/1.1/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "bestaatUit": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/hasPart",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningAchievement"
+        },
+        "bron": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/elements/1.1/source",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "competentie": {
+          "@container": "@set",
+          "@id": "https://schema.org/assesses",
+          "@type": "https://ec.europa.eu/esco/lod/static/model.html#Skill"
+        },
+        "doelgroep": {
+          "@id": "http://purl.org/dc/terms/audience",
+          "@type": "https://schema.org/Audience"
+        },
+        "gedefinieerdDoor": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/elements/1.1/creator",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "geldigheid": {
+          "@id": "http://purl.org/dc/terms/valid",
+          "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+        },
+        "gelijkaardig": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/2004/02/skos/core#closeMatch",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningAchievement"
+        },
+        "gerelateerdAan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/2004/02/skos/core#related",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningAchievement"
+        },
+        "heeftSpecialisatie": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/2004/02/skos/core#narrower",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningAchievement"
+        },
+        "identificator": {
+          "@id": "http://www.w3.org/ns/adms#identifier",
+          "@type": "http://www.w3.org/ns/adms#Identifier"
+        },
+        "isBrederDan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/2004/02/skos/core#broader",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningAchievement"
+        },
+        "isLidVan": {
+          "@container": "@set",
+          "@id": "https://schema.org/isPartOf",
+          "@type": "http://purl.org/dc/dcmitype/Collection"
+        },
+        "niveau": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/educationLevel",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "onderwerp": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/elements/1.1/subject",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://data.europa.eu/snb/model/elm/LearningAchievement"
+    },
+    "DoelCollectie": {
+      "@context": {
+        "gedefinieerdDoor": {
+          "@id": "http://purl.org/dc/elements/1.1/creator",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "heeftLid": {
+          "@container": "@set",
+          "@id": "https://schema.org/hasPart",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningAchievement"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "niveau": {
+          "@id": "http://purl.org/dc/terms/educationLevel",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "type": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://purl.org/dc/dcmitype/Collection"
+    },
+    "Doelgroep": {
+      "@context": {
+        "doelgroep": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/elements/1.1/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "leeftijdstype": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "onderwijsniveau": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/educationLevel",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "https://schema.org/Audience"
+    },
+    "Eenheid": {
+      "@id": "https://qudt.org/schema/qudt/Unit"
+    },
+    "Geldbedrag": {
+      "@context": {
+        "valuta": {
+          "@id": "http://www.cidoc-crm.org/cidoc-crm/P180_has_currency",
+          "@type": "http://qudt.org/schema/qudt/CurrencyUnit"
+        }
+      },
+      "@id": "https://schema.org/MonetaryAmount"
+    },
+    "Identificator": {
+      "@context": {
+        "toegekendDoor": {
+          "@id": "http://purl.org/dc/terms/creator",
+          "@type": "http://purl.org/dc/terms/Agent"
+        }
+      },
+      "@id": "http://www.w3.org/ns/adms#Identifier"
+    },
+    "KwantitatieveWaarde": {
+      "@context": {
+        "eenheid": {
+          "@id": "https://schema.org/unitCode",
+          "@type": "https://qudt.org/schema/qudt/Unit"
+        },
+        "waarde": {
+          "@id": "https://schema.org/value",
+          "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+        }
+      },
+      "@id": "https://schema.org/QuantitativeValue"
+    },
+    "LangString": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Leeractiviteit": {
+      "@context": {
+        "draagtBijAanHetBehalenVan": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/contributor",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningAchievement"
+        },
+        "heeftDeel": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/snb/model/elm/hasPart",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningActivity"
+        },
+        "ingerichtDoor": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/snb/model/elm/directedBy",
+          "@type": "http://purl.org/dc/terms/Agent"
+        },
+        "isDeelVan": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/snb/model/elm/isPartOf",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningActivity"
+        },
+        "leermiddel": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/references",
+          "@type": "https://schema.org/LearningResource"
+        },
+        "locatie": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/snb/model/elm/location",
+          "@type": "http://www.w3.org/ns/locn#Address"
+        },
+        "periode": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/temporal",
+          "@type": "http://data.europa.eu/m8g/PeriodOfTime"
+        },
+        "specificatie": {
+          "@id": "http://data.europa.eu/snb/model/elm/specifiedBy",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningActivitySpecification"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "werklast": {
+          "@id": "http://data.europa.eu/snb/model/elm/workload",
+          "@type": "http://www.w3.org/2006/time#Duration"
+        }
+      },
+      "@id": "http://data.europa.eu/snb/model/elm/LearningActivity"
+    },
+    "Leeractiviteitspecificatie": {
+      "@context": {
+        "contacturen": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/snb/model/elm/contactHour",
+          "@type": "http://schema.org/OpeningHoursSpecification"
+        },
+        "draagtBijAanHetBehalenVan": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/contributor",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningAchievement"
+        },
+        "generalisatieVan": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/snb/model/elm/generalisationOf",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningActivitySpecification"
+        },
+        "heeftDeel": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/snb/model/elm/hasPart",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningActivitySpecification"
+        },
+        "instructietaal": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/language",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "isDeelVan": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/snb/model/elm/isPartOf",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningActivitySpecification"
+        },
+        "schrijftVoor": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/references",
+          "@type": "https://schema.org/LearningResource"
+        },
+        "specialisatieVan": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/snb/model/elm/specialisationOf",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningActivitySpecification"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://data.europa.eu/snb/model/elm/LearningActivitySpecification"
+    },
+    "Leermiddel": {
+      "@context": {
+        "benodigdMateriaal": {
+          "@container": "@set",
+          "@id": "https://schema.org/material",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "beschrijving": {
+          "@id": "http://purl.org/dc/elements/1.1/description",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "bestaatUit": {
+          "@container": "@set",
+          "@id": "https://schema.org/hasPart",
+          "@type": "https://schema.org/CreativeWork"
+        },
+        "bron": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/elements/1.1/source",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "competentie": {
+          "@container": "@set",
+          "@id": "https://schema.org/assesses",
+          "@type": "https://ec.europa.eu/esco/lod/static/model.html#Skill"
+        },
+        "dient": {
+          "@container": "@set",
+          "@id": "https://schema.org/educationalUse",
+          "@type": "http://data.europa.eu/snb/model/elm/LearningAchievement"
+        },
+        "formaat": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/format",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "instructie": {
+          "@id": "http://purl.org/dc/terms/instructionalMethod",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "instructietaal": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/language",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "interactieType": {
+          "@container": "@set",
+          "@id": "https://schema.org/interactivityType",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "isLidVan": {
+          "@container": "@set",
+          "@id": "https://schema.org/isPartOf",
+          "@type": "https://schema.org/CreativeWorkSeries"
+        },
+        "kost": {
+          "@id": "https://schema.org/estimatedCost",
+          "@type": "https://schema.org/MonetaryAmount"
+        },
+        "naam": {
+          "@id": "http://purl.org/dc/terms/title",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "niveau": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/educationLevel",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "onderwerp": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/elements/1.1/subject",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "resultaat": {
+          "@container": "@set",
+          "@id": "https://schema.org/result",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "sleutelwoord": {
+          "@container": "@set",
+          "@id": "https://schema.org/keywords",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        },
+        "toegankelijkheid": {
+          "@id": "https://schema.org/accessibilityFeature",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        "vereiste": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/requires",
+          "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        }
+      },
+      "@id": "https://schema.org/LearningResource"
+    },
+    "LeermiddelElement": {
+      "@context": {
+        "onderdeelVan": {
+          "@id": "https://schema.org/isPartOf",
+          "@type": "https://schema.org/LearningResource"
+        }
+      },
+      "@id": "https://schema.org/CreativeWork"
+    },
+    "LeermiddelVerzameling": {
+      "@context": {
+        "heeftLid": {
+          "@container": "@set",
+          "@id": "https://schema.org/hasPart",
+          "@type": "https://schema.org/LearningResource"
+        }
+      },
+      "@id": "https://schema.org/CreativeWorkSeries"
+    },
+    "Licentie": {
+      "@context": {
+        "type": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "http://www.w3.org/2004/02/skos/core#Concept"
+        }
+      },
+      "@id": "http://purl.org/dc/terms/LicenseDocument"
+    },
+    "Literal": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Locatie": {
+      "@id": "http://www.w3.org/ns/prov#Location"
+    },
+    "Openingsurenspecificatie": {
+      "@context": {
+        "dagVanDeWeek": {
+          "@id": "http://schema.org/dayOfWeek",
+          "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+        },
+        "geldigTot": {
+          "@id": "http://schema.org/validThrough",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "geldigVan": {
+          "@id": "http://schema.org/validFrom",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        },
+        "gesloten": {
+          "@id": "http://schema.org/closes",
+          "@type": "http://www.w3.org/2001/XMLSchema#time"
+        },
+        "open": {
+          "@id": "http://schema.org/opens",
+          "@type": "http://www.w3.org/2001/XMLSchema#time"
+        }
+      },
+      "@id": "http://schema.org/OpeningHoursSpecification"
+    },
+    "Periode": {
+      "@context": {
+        "tot": {
+          "@id": "http://www.w3.org/2006/time#hasEnd",
+          "@type": "http://www.w3.org/2006/time#Instant"
+        },
+        "van": {
+          "@id": "http://www.w3.org/2006/time#hasBeginning",
+          "@type": "http://www.w3.org/2006/time#Instant"
+        }
+      },
+      "@id": "http://www.w3.org/2006/time#ProperInterval"
+    },
+    "String": {
+      "@id": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "TemporeleEntiteit": {
+      "@id": "http://www.w3.org/2006/time#TemporalEntity"
+    },
+    "Tijdsduur": {
+      "@id": "http://www.w3.org/2006/time#Duration"
+    },
+    "Time": {
+      "@id": "http://www.w3.org/2001/XMLSchema#time"
+    },
+    "URI": {
+      "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Valuta": {
+      "@id": "http://qudt.org/schema/qudt/CurrencyUnit"
+    },
+    "Verzameling": {
+      "@id": "http://purl.org/dc/dcmitype/Collection"
+    }
+  }
+}
