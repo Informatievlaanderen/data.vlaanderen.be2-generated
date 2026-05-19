@@ -387,7 +387,6 @@ error: missing '/tmp/generated/doc/applicatieprofiel/terreindelen/ontwerpstandaa
 #||# 
 Directory check
 error: missing '/tmp/generated/doc/applicatieprofiel/watervoorkomen/ontwerpstandaard/pieter'
-error: missing '/tmp/generated/doc/vocabularium/openbaardomein/watervoorkomen/ontwerpstandaard/pieter'
 
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/begroeid-voorkomen/ontwerpstandaard/toolchain4/index.html'
