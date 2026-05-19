@@ -619,13 +619,32 @@
             "type": "object"
           },
           "DoelCollectie.heeftLid": {
-            "description": "Lijst van Doel items.",
+            "description": "Lijst van DoelCollectie items.",
             "items": {
-              "description": "Een DoelCollectie bestaat uit 0 tot oneindig aantal Doelen.",
+              "description": "Een DoelCollectie bestaat uit 0 tot oneindig aantal DoelCollecties.",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Doel\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/DoelCollectie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "DoelCollectie.isLidVan": {
+            "description": "Lijst van DoelCollectie items.",
+            "items": {
+              "description": "Een DoelCollectie is een onderdeel van een DoelCollectie.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/DoelCollectie\\/\\d",
                   "type": "string"
                 }
               },
@@ -2630,13 +2649,13 @@
             "type": "object"
           },
           "LeermiddelVerzameling.heeftLid": {
-            "description": "Lijst van Doel items.",
+            "description": "Lijst van DoelCollectie items.",
             "items": {
-              "description": "Een DoelCollectie bestaat uit 0 tot oneindig aantal Doelen.",
+              "description": "Een DoelCollectie bestaat uit 0 tot oneindig aantal DoelCollecties.",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Doel\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/DoelCollectie\\/\\d",
                   "type": "string"
                 }
               },
@@ -2706,13 +2725,13 @@
             "type": "array"
           },
           "LeermiddelVerzameling.isLidVan": {
-            "description": "Lijst van LeermiddelVerzameling items.",
+            "description": "Lijst van DoelCollectie items.",
             "items": {
-              "description": "Een Leermiddel is een onderdeel van een LeermiddelVerzameling. Leermiddelen kunnen verzameld worden per categorie, vak, etc. afhankelijk van de gebruiker. Hiervoor kan een LeermiddelVerzameling gebruikt worden. Onderdelen van een Leermiddel worden enkel met LeermiddelElementen aangeven.",
+              "description": "Een DoelCollectie is een onderdeel van een DoelCollectie.",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/LeermiddelVerzameling\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/DoelCollectie\\/\\d",
                   "type": "string"
                 }
               },
@@ -3072,14 +3091,229 @@
             "minItems": 1,
             "type": "array"
           },
-          "Licentie.type": {
-            "description": "Lijst van LicentieType items.",
+          "Licentie.auteur": {
+            "description": "Lijst van Agent items.",
             "items": {
-              "description": "Een classificatie die aangeeft onder welke juridische voorwaarden een leermiddel mag worden gebruikt, gedeeld of aangepast. Voorbeelden zijn Creative Commons BY, Creative Commons BY-NC, publieke domein, gesloten licentie.",
+              "description": "De naam van de auteur van het Creatief Werk.",
               "properties": {
                 "@id": {
                   "format": "uri",
-                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/LicentieType\\/\\d",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.auteursrechtHouder": {
+            "description": "Lijst van Agent items.",
+            "items": {
+              "description": "De partij die het wettelijke auteursrecht op het CreatiefWerk bezit.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.auteursrechtJaar": {
+            "description": "Het jaar waarin het geclaimde auteursrecht voor het CreatiefWerk voor het eerst werd geclaimd.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "Date"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Licentie.benodigdMateriaal": {
+            "description": "Lijst van LangString items.",
+            "items": {
+              "description": "Een overzicht van de fysieke of digitale elementen die nodig zijn om een Leermiddel uit te kunnen voeren of te gebruiken.",
+              "properties": {
+                "@language": {
+                  "enum": [
+                    "nl"
+                  ],
+                  "type": "string"
+                },
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.beschrijving": {
+            "description": "Een textuele beschrijving die de inhoud of het doel van een Leermiddel verklaart.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          },
+          "Licentie.bestaatUit": {
+            "description": "Lijst van LeermiddelElement items.",
+            "items": {
+              "description": "LeermiddelenElementen waaruit dit Leermiddel bestaat. Een Leermiddel zoals een boek kan bestaan uit verschillende LeermiddelElementen zoals hoofdstukken, externe filmpjes, etc. Een verzameling van Leermiddelen worden aangeven met een LeermiddelVerzameling.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/LeermiddelElement\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.bron": {
+            "description": "Lijst van BronType items.",
+            "items": {
+              "description": "De herkomst of referentie waaruit het Leermiddel is afgeleid.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/BronType\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.competentie": {
+            "description": "Lijst van Competentie items.",
+            "items": {
+              "description": "Een specifiek geheel van kennis, vaardigheden en attitudes die door een lerende moet worden beheerst.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Competentie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.dient": {
+            "description": "Lijst van Doel items.",
+            "items": {
+              "description": "Welk Leerdoel het Leermiddel ondersteunt of aan bijdraagt.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Doel\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.formaat": {
+            "description": "Lijst van FormaatType items.",
+            "items": {
+              "description": "De fysieke of digitale structuur waarin een Leermiddel wordt gepresenteerd.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/FormaatType\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.instructie": {
+            "description": "Een reeks aanwijzingen die nodig zijn om een Leermiddel correct uit te voeren of te gebruiken. Dit kan bijvoorbeeld ook een URL zijn die verwijst naar een bepaalde handleiding.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          },
+          "Licentie.instructietaal": {
+            "description": "Lijst van Taal items.",
+            "items": {
+              "description": "Taal waarin het Leermiddel wordt gegeven.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Taal\\/\\d",
                   "type": "string"
                 }
               },
@@ -3090,13 +3324,375 @@
             },
             "minItems": 1,
             "type": "array"
+          },
+          "Licentie.interactieType": {
+            "description": "Lijst van InteractieType items.",
+            "items": {
+              "description": "De aard van de wederzijdse actie of communicatie tussen gebruiker en systeem. Dit kan bijvoorbeeld interactief of niet-interactief zijn.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/InteractieType\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.isLidVan": {
+            "description": "Lijst van LeermiddelVerzameling items.",
+            "items": {
+              "description": "Een Leermiddel is een onderdeel van een LeermiddelVerzameling. Leermiddelen kunnen verzameld worden per categorie, vak, etc. afhankelijk van de gebruiker. Hiervoor kan een LeermiddelVerzameling gebruikt worden. Onderdelen van een Leermiddel worden enkel met LeermiddelElementen aangeven.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/LeermiddelVerzameling\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.kost": {
+            "description": "Het bedrag aan middelen, vaak uitgedrukt in geld, dat nodig is voor het gebruik van het Leermiddel.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Geldbedrag\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Licentie.licentie": {
+            "description": "Lijst van Licentie items.",
+            "items": {
+              "description": "De licentie die rust op het gebruik van de Interactieve Resource.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Licentie\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.naam": {
+            "description": "De aanduiding of titel waarmee een Leermiddel wordt geïdentificeerd.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
+          },
+          "Licentie.niveau": {
+            "description": "Lijst van OpleidingsniveauType items.",
+            "items": {
+              "description": "Het (Opleidings)niveau waarvoor een Leermiddel ontwikkeld werd.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/OpleidingsniveauType\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Licentie.onderdeelVan": {
+            "description": "LeermiddelenElement is een onderdeel van een Leermiddel. Een Leermiddel zoals een boek kan bestaan uit verschillende LeermiddelElementen zoals hoofdstukken, externe filmpjes, etc. Een verzameling van Leermiddelen worden aangeven met een LeermiddelVerzameling.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Leermiddel\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Licentie.onderwerp": {
+            "description": "Lijst van OnderwerpType items.",
+            "items": {
+              "description": "Het onderwerp waarin het Leermiddel aangeboden wordt. In het onderwijslandschap kan dit verwijzen naar het vak, module, leergebied, ....",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/OnderwerpType\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.producent": {
+            "description": "Lijst van Agent items.",
+            "items": {
+              "description": "De Agent die het CreatiefWerk geproduceert heeft.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "Licentie.publicatiedatum": {
+            "description": "Datum van eerste publicatie of uitzending. Dit kan bijvoorbeeld de datum zijn waarop een CreatiefWerk werd uitgezonden of een Certification werd uitgegeven.",
+            "properties": {
+              "@type": {
+                "enum": [
+                  "DateTime"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "format": "date-time",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ],
+            "type": "object"
+          },
+          "Licentie.resultaat": {
+            "description": "Lijst van ResultaatType items.",
+            "items": {
+              "description": "De algemene categorie of classificatie waarin een resultaat van het doorlopen van een Leermiddel kan worden ingedeeld.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/ResultaatType\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.sleutelwoord": {
+            "description": "Lijst van LangString items.",
+            "items": {
+              "description": "Een kernbegrip dat wordt gebruikt om de inhoud van een Leermiddel te beschrijven.",
+              "properties": {
+                "@language": {
+                  "enum": [
+                    "nl"
+                  ],
+                  "type": "string"
+                },
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.taal": {
+            "description": "Lijst van Taal items.",
+            "items": {
+              "description": "De taal waarin het CreatiefWerk ontwikkeld werd.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Taal\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.toegankelijkheid": {
+            "description": "De mate waarin een Leermiddel bruikbaar is voor personen met verschillende behoeften of beperkingen.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/ToegankelijkheidsType\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Licentie.type": {
+            "description": "Lijst van LeermiddelType items.",
+            "items": {
+              "description": "De algemene categorie of classificatie waartoe een Leermiddel behoort.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/LeermiddelType\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.uitgever": {
+            "description": "Lijst van Agent items.",
+            "items": {
+              "description": "De Agent die het CreatiefWerk uitgeeft.",
+              "properties": {
+                "@id": {
+                  "format": "uri",
+                  "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Agent\\/\\d",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@id"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.vereiste": {
+            "description": "Lijst van LangString items.",
+            "items": {
+              "description": "Voorwaarde die moet worden vervuld om toegang of gebruik mogelijk te maken, zonder gewag te maken van een vergoeding.",
+              "properties": {
+                "@language": {
+                  "enum": [
+                    "nl"
+                  ],
+                  "type": "string"
+                },
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ],
+              "type": "object"
+            },
+            "minItems": 0,
+            "type": "array"
+          },
+          "Licentie.vereisteTijd": {
+            "description": "De tijd die nodig is om het Leermiddel te begrijpen.",
+            "properties": {
+              "@id": {
+                "format": "uri",
+                "pattern": "^https:\\/\\/data\\.test-vlaanderen\\.beid\\/Tijdsduur\\/\\d",
+                "type": "string"
+              }
+            },
+            "required": [
+              "@id"
+            ],
+            "type": "object"
+          },
+          "Licentie.versie": {
+            "description": "De versie van het CreatiefWerk.",
+            "properties": {
+              "@language": {
+                "enum": [
+                  "nl"
+                ],
+                "type": "string"
+              },
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ],
+            "type": "object"
           }
         },
         "required": [
           "@context",
           "@id",
           "@type",
-          "Licentie.type"
+          "Licentie.type",
+          "Licentie.vereisteTijd",
+          "Licentie.producent",
+          "Licentie.beschrijving",
+          "Licentie.naam",
+          "Licentie.instructietaal",
+          "Licentie.niveau",
+          "Licentie.vereisteTijd",
+          "Licentie.producent",
+          "Licentie.vereisteTijd",
+          "Licentie.producent"
         ],
         "type": "object"
       },
@@ -3431,6 +4027,13 @@
                 "operationId": "AgentGET",
                 "parameters": {
                   "id": "$response.body#/DoelCollectie.gedefinieerdDoor/@id"
+                }
+              },
+              "DoelCollectieGET": {
+                "description": "Het `@id` attribuut van de waarde van `DoelCollectie.heeftLid` kan gebruikt worden om het gerefereerde object van het type `DoelCollectie` op te halen.",
+                "operationId": "DoelCollectieGET",
+                "parameters": {
+                  "id": "$response.body#/DoelCollectie.heeftLid/@id"
                 }
               },
               "DoelCollectieTypeGET": {
@@ -4077,6 +4680,13 @@
                   "id": "$response.body#/LeermiddelVerzameling.competentie/@id"
                 }
               },
+              "DoelCollectieGET": {
+                "description": "Het `@id` attribuut van de waarde van `LeermiddelVerzameling.heeftLid` kan gebruikt worden om het gerefereerde object van het type `DoelCollectie` op te halen.",
+                "operationId": "DoelCollectieGET",
+                "parameters": {
+                  "id": "$response.body#/LeermiddelVerzameling.heeftLid/@id"
+                }
+              },
               "DoelCollectieTypeGET": {
                 "description": "Het `@id` attribuut van de waarde van `LeermiddelVerzameling.type` kan gebruikt worden om het gerefereerde object van het type `DoelCollectieType` op te halen.",
                 "operationId": "DoelCollectieTypeGET",
@@ -4230,11 +4840,137 @@
             },
             "description": "Licentie object gevonden.",
             "links": {
+              "AgentGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.uitgever` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen.",
+                "operationId": "AgentGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.uitgever/@id"
+                }
+              },
+              "BronTypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.bron` kan gebruikt worden om het gerefereerde object van het type `BronType` op te halen.",
+                "operationId": "BronTypeGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.bron/@id"
+                }
+              },
+              "CompetentieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.competentie` kan gebruikt worden om het gerefereerde object van het type `Competentie` op te halen.",
+                "operationId": "CompetentieGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.competentie/@id"
+                }
+              },
+              "DoelGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.dient` kan gebruikt worden om het gerefereerde object van het type `Doel` op te halen.",
+                "operationId": "DoelGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.dient/@id"
+                }
+              },
+              "FormaatTypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.formaat` kan gebruikt worden om het gerefereerde object van het type `FormaatType` op te halen.",
+                "operationId": "FormaatTypeGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.formaat/@id"
+                }
+              },
+              "GeldbedragGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.kost` kan gebruikt worden om het gerefereerde object van het type `Geldbedrag` op te halen.",
+                "operationId": "GeldbedragGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.kost/@id"
+                }
+              },
+              "InteractieTypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.interactieType` kan gebruikt worden om het gerefereerde object van het type `InteractieType` op te halen.",
+                "operationId": "InteractieTypeGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.interactieType/@id"
+                }
+              },
+              "LeermiddelElementGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.bestaatUit` kan gebruikt worden om het gerefereerde object van het type `LeermiddelElement` op te halen.",
+                "operationId": "LeermiddelElementGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.bestaatUit/@id"
+                }
+              },
+              "LeermiddelGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.onderdeelVan` kan gebruikt worden om het gerefereerde object van het type `Leermiddel` op te halen.",
+                "operationId": "LeermiddelGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.onderdeelVan/@id"
+                }
+              },
+              "LeermiddelTypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.type` kan gebruikt worden om het gerefereerde object van het type `LeermiddelType` op te halen.",
+                "operationId": "LeermiddelTypeGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.type/@id"
+                }
+              },
+              "LeermiddelVerzamelingGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.isLidVan` kan gebruikt worden om het gerefereerde object van het type `LeermiddelVerzameling` op te halen.",
+                "operationId": "LeermiddelVerzamelingGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.isLidVan/@id"
+                }
+              },
+              "LicentieGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.licentie` kan gebruikt worden om het gerefereerde object van het type `Licentie` op te halen.",
+                "operationId": "LicentieGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.licentie/@id"
+                }
+              },
               "LicentieTypeGET": {
                 "description": "Het `@id` attribuut van de waarde van `Licentie.type` kan gebruikt worden om het gerefereerde object van het type `LicentieType` op te halen.",
                 "operationId": "LicentieTypeGET",
                 "parameters": {
                   "id": "$response.body#/Licentie.type/@id"
+                }
+              },
+              "OnderwerpTypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.onderwerp` kan gebruikt worden om het gerefereerde object van het type `OnderwerpType` op te halen.",
+                "operationId": "OnderwerpTypeGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.onderwerp/@id"
+                }
+              },
+              "OpleidingsniveauTypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.niveau` kan gebruikt worden om het gerefereerde object van het type `OpleidingsniveauType` op te halen.",
+                "operationId": "OpleidingsniveauTypeGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.niveau/@id"
+                }
+              },
+              "ResultaatTypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.resultaat` kan gebruikt worden om het gerefereerde object van het type `ResultaatType` op te halen.",
+                "operationId": "ResultaatTypeGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.resultaat/@id"
+                }
+              },
+              "TaalGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.taal` kan gebruikt worden om het gerefereerde object van het type `Taal` op te halen.",
+                "operationId": "TaalGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.taal/@id"
+                }
+              },
+              "TijdsduurGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.vereisteTijd` kan gebruikt worden om het gerefereerde object van het type `Tijdsduur` op te halen.",
+                "operationId": "TijdsduurGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.vereisteTijd/@id"
+                }
+              },
+              "ToegankelijkheidsTypeGET": {
+                "description": "Het `@id` attribuut van de waarde van `Licentie.toegankelijkheid` kan gebruikt worden om het gerefereerde object van het type `ToegankelijkheidsType` op te halen.",
+                "operationId": "ToegankelijkheidsTypeGET",
+                "parameters": {
+                  "id": "$response.body#/Licentie.toegankelijkheid/@id"
                 }
               }
             }
