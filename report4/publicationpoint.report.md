@@ -1,3 +1,3 @@
 | Execution | Existence | Support |
 | --- | --- | --- |
-| [commit 3867b5125fa8da6ff3343d266cbcd765bda66fac](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/3867b5125fa8da6ff3343d266cbcd765bda66fac) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
+| [commit ec4572f2d6e984da3dd90494f8f26b97a42d00b6](https://github.com/Informatievlaanderen/data.vlaanderen.be2/commit/ec4572f2d6e984da3dd90494f8f26b97a42d00b6) | [&#9736;](/report4/existence_publicationpoints.report.md)| [&#9736;](/report4/support_publicationpoints.report.md)|
