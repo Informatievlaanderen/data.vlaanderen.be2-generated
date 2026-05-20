@@ -2,63 +2,63 @@
 
 #||# -------------------------------------
 
-2026-05-19T15:10:05.987Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:SSN/SOSA:ObserveerbaarKenmerk:(ObserveerbaarKenmerk -> Sensor))
+2026-05-20T08:55:54.335Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:SSN/SOSA:ObserveerbaarKenmerk:(ObserveerbaarKenmerk -> Sensor))
 
-2026-05-19T15:10:05.989Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Energiehuis:Plaatsbezoek:(Plaatsbezoek -> Basistaak))
+2026-05-20T08:55:54.337Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:OSLO-Energiehuis:Plaatsbezoek:(Plaatsbezoek -> Basistaak))
 
-2026-05-19T15:10:05.989Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:ML-DCAT:MachineLearningModel:(MachineLearningModel -> MachineLearningModel))
+2026-05-20T08:55:54.337Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:ML-DCAT:MachineLearningModel:(MachineLearningModel -> MachineLearningModel))
 
-2026-05-19T15:10:05.989Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:ML-DCAT:MachineLearningModel:(MachineLearningModel -> MachineLearningModel))
+2026-05-20T08:55:54.337Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:ML-DCAT:MachineLearningModel:(MachineLearningModel -> MachineLearningModel))
 
-2026-05-19T15:10:05.989Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:DCAT:Dataset:(Dataset -> Dataset))
+2026-05-20T08:55:54.337Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:DCAT:Dataset:(Dataset -> Dataset))
 
-2026-05-19T15:10:05.989Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:DCAT:Dataset:(Dataset -> Dataset))
+2026-05-20T08:55:54.337Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:DCAT:Dataset:(Dataset -> Dataset))
 
-2026-05-19T15:10:05.989Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:RDFS:Any:(Any -> Any))
+2026-05-20T08:55:54.337Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:RDFS:Any:(Any -> Any))
 
-2026-05-19T15:10:05.989Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-ObservatiesEnMetingen:Monster:(Monster -> BemonsteringsProces))
+2026-05-20T08:55:54.337Z info: [ConnectorConverterHandler]: Ignoring hidden connector (Model:Model:OSLO-ObservatiesEnMetingen:Monster:(Monster -> BemonsteringsProces))
 
-2026-05-19T15:10:05.991Z info: Connector Model:OSLO-Gebouw:Gebouw:(Gebouw -> Object) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.339Z info: Connector Model:OSLO-Gebouw:Gebouw:(Gebouw -> Object) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.992Z info: Connector Model:Model:schema.org:Video:(Video -> Object) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.340Z info: Connector Model:Model:schema.org:Video:(Video -> Object) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.992Z info: Connector Model:Model:QUDT:Eenheid:(Eenheid -> Concept) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.340Z info: Connector Model:Model:QUDT:Eenheid:(Eenheid -> Concept) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.992Z info: Connector Model:SSN/SOSA:Observatie:(Observatie -> ObserveerbaarKenmerk) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.340Z info: Connector Model:SSN/SOSA:Observatie:(Observatie -> ObserveerbaarKenmerk) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.993Z info: Connector Model:Model:ML-DCAT:MachineLearningModel:(MachineLearningModel -> Sensor) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.341Z info: Connector Model:Model:ML-DCAT:MachineLearningModel:(MachineLearningModel -> Sensor) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.993Z info: Connector Model:SSN/SOSA:Observatie:(Observatie -> Observatieprocedure) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.341Z info: Connector Model:SSN/SOSA:Observatie:(Observatie -> Observatieprocedure) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.993Z info: Connector Model:Model:ThermAI:GNSS Ontvanger:(GNSS Ontvanger -> Sensor) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.341Z info: Connector Model:Model:ThermAI:GNSS Ontvanger:(GNSS Ontvanger -> Sensor) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.994Z info: Connector Model:Model:ThermAI:Camera:(Camera -> Sensor) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.342Z info: Connector Model:Model:ThermAI:Camera:(Camera -> Sensor) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.994Z info: Connector Model:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.342Z info: Connector Model:W3C-Time:Periode:(Periode -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.994Z info: Connector Model:W3C-Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.342Z info: Connector Model:W3C-Time:Moment:(Moment -> TemporeleEntiteit) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.994Z info: Connector Model:Model:SAREF:Toestel:(Toestel -> Systeem) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.342Z info: Connector Model:Model:SAREF:Toestel:(Toestel -> Systeem) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.994Z info: Connector Model:Model:ThermAI:Opstelling:(Opstelling -> Sensor) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.342Z info: Connector Model:Model:ThermAI:Opstelling:(Opstelling -> Sensor) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.994Z info: Connector Model:OSLO-Gebouw:Gebouw:(Gebouw -> Gebouweenheid) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.342Z info: Connector Model:OSLO-Gebouw:Gebouw:(Gebouw -> Gebouweenheid) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.994Z info: Connector Model:OSLO-Adres:Adresvoorstelling:(Adresvoorstelling -> Adres) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.343Z info: Connector Model:OSLO-Adres:Adresvoorstelling:(Adresvoorstelling -> Adres) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.995Z info: Connector Model:OSLO-Gebouw:Gebouweenheid:(Gebouweenheid -> Object) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.343Z info: Connector Model:OSLO-Gebouw:Gebouweenheid:(Gebouweenheid -> Object) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.995Z info: Connector Model:SSN/SOSA:Observatieverzameling:(Observatieverzameling -> Observatieverzameling) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.343Z info: Connector Model:SSN/SOSA:Observatieverzameling:(Observatieverzameling -> Observatieverzameling) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.995Z info: Connector Model:Model:schema.org:Foto:(Foto -> Object) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.343Z info: Connector Model:Model:schema.org:Foto:(Foto -> Object) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.995Z info: Connector Model:Model:IFC:BIM_Element:(BIM_Element -> BIM_Gebouw) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.343Z info: Connector Model:Model:IFC:BIM_Element:(BIM_Element -> BIM_Gebouw) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.995Z info: Connector Model:Model:IFC:BIM_Gebouw:(BIM_Gebouw -> Object) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.343Z info: Connector Model:Model:IFC:BIM_Gebouw:(BIM_Gebouw -> Object) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.995Z info: Connector Model:Model:IFC:BIM_Element:(BIM_Element -> Object) is not an association with a source role. Ignoring this connector.
+2026-05-20T08:55:54.343Z info: Connector Model:Model:IFC:BIM_Element:(BIM_Element -> Object) is not an association with a source role. Ignoring this connector.
 
-2026-05-19T15:10:05.996Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+2026-05-20T08:55:54.344Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
 
 #||# -------------------------------------
 
