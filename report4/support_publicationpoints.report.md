@@ -297,6 +297,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/swagger",
   "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/swagger/R1",
   "/tmp/generated/doc/implementatiemodel/klantvolgsysteem1/resources/swagger/R1/SKOS",
+  "/tmp/generated/doc/implementatiemodel/nudgingdownnightnoise/ontwerpstandaard/2026-04-14",
   "/tmp/generated/doc/implementatiemodel/organisatie/ontwerpdocument/MAGDA",
   "/tmp/generated/doc/implementatiemodel/smart-innovation-factory",
   "/tmp/generated/doc/implementatiemodel/smart-innovation-factory/ontwerpstandaard/2025-06-04",
