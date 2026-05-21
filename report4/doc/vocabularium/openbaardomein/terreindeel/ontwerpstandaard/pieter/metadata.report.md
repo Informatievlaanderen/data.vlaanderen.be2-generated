@@ -14,5 +14,5 @@
 
 #||# start writing  
 
-#||# The file has been saved to /tmp/workspace/report4/doc/vocabularium/openbaardomein/terreindeel/ontwerpstandaard/pieter/html/meta_terreindeel_nl.json  
+#||# The file has been saved to /tmp/workspace/report4/doc/vocabularium/openbaardomein/terreindeel/ontwerpstandaard/pieter/html/meta_terrein_nl.json  
 

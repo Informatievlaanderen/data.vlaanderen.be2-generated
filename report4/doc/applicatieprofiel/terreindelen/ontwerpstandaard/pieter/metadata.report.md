@@ -14,5 +14,5 @@
 
 #||# start writing  
 
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/terreindelen/ontwerpstandaard/pieter/html/meta_terreindelen-ap_nl.json  
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/terreindelen/ontwerpstandaard/pieter/html/meta_terrein_nl.json  
 
