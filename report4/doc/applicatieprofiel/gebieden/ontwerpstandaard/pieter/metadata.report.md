@@ -6,13 +6,9 @@
 
 #||# done  
 
-#||# start processing  
+SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/gebieden/ontwerpstandaard/pieter/all-gebied.jsonld: Unexpected end of JSON input
 
-#||# Checking Namespaces  
+    at JSON.parse (<anonymous>)
 
-#||# Finished  
-
-#||# start writing  
-
-#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/gebieden/ontwerpstandaard/pieter/html/meta_gebieden-ap_nl.json  
+    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
 

@@ -1,44 +1,24 @@
-#||# oslo-converter-ea for diagram OSLO-OpenbaarDomein-Taxonomie-Gebied
+#||# oslo-converter-ea for diagram 
 
 #||# -------------------------------------
 
-2026-05-19T06:50:46.456Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Begraafplaats:(Begraafplaats -> Gebied) is not an association with a source role. Ignoring this connector.
+TypeError: file.startsWith is not a function
 
-2026-05-19T06:50:46.458Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Natuur:(Natuur -> Gebied) is not an association with a source role. Ignoring this connector.
+    at fetchFileOrUrl (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/utils/fetchFileOrUrl.js:11:14)
 
-2026-05-19T06:50:46.461Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Bufferzone:(Bufferzone -> Gebied) is not an association with a source role. Ignoring this connector.
+    at AccessDbFileReader.initDataRegistry (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/ea-uml-extractor/lib/AccessDbFileReader.js:21:56)
 
-2026-05-19T06:50:46.461Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Groenzone:(Groenzone -> Gebied) is not an association with a source role. Ignoring this connector.
+    at FileReaderService.createDataRegistry (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/ea-uml-extractor/lib/FileReaderService.js:15:32)
 
-2026-05-19T06:50:46.461Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Parking:(Parking -> Gebied) is not an association with a source role. Ignoring this connector.
+    at EaUmlConversionService.run (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/EaUmlConversionService.js:36:116)
 
-2026-05-19T06:50:46.461Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Park:(Park -> Gebied) is not an association with a source role. Ignoring this connector.
-
-2026-05-19T06:50:46.461Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Plein:(Plein -> Gebied) is not an association with a source role. Ignoring this connector.
-
-2026-05-19T06:50:46.461Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Recreatiegebied:(Recreatiegebied -> Gebied) is not an association with a source role. Ignoring this connector.
-
-2026-05-19T06:50:46.461Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Recyclagepark:(Recyclagepark -> Gebied) is not an association with a source role. Ignoring this connector.
-
-2026-05-19T06:50:46.461Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Spoorweg:(Spoorweg -> Gebied) is not an association with a source role. Ignoring this connector.
-
-2026-05-19T06:50:46.462Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Wegzone:(Wegzone -> Gebied) is not an association with a source role. Ignoring this connector.
-
-2026-05-19T06:50:46.462Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Tuinzone:(Tuinzone -> Gebied) is not an association with a source role. Ignoring this connector.
-
-2026-05-19T06:50:46.462Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Volkstuin:(Volkstuin -> Gebied) is not an association with a source role. Ignoring this connector.
-
-2026-05-19T06:50:46.462Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Gebied:Waterverkeerzone:(Waterverkeerzone -> Gebied) is not an association with a source role. Ignoring this connector.
-
-2026-05-19T06:50:46.463Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
-
-2026-05-19T06:50:46.463Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel). Using fallback URI (http://todo.com/) instead.
-
-2026-05-19T06:50:46.463Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres). Using fallback URI (http://todo.com/) instead.
-
-2026-05-19T06:50:46.463Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated). Using fallback URI (http://todo.com/) instead.
-
-2026-05-19T06:50:46.463Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst). Using fallback URI (http://todo.com/) instead.
+    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:37:33
 
 #||# -------------------------------------
+
+parse error: Invalid numeric literal at line 2, column 0
+
+cp: missing destination file operand after '/tmp/.1'
+
+Try 'cp --help' for more information.
 
