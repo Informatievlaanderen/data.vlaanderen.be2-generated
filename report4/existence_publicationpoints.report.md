@@ -386,13 +386,11 @@ error: missing '/tmp/generated/doc/applicatieprofiel/terreindelen/ontwerpstandaa
 #||#    + checking /home/circleci/project/config/dev/od-voorkomen.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/applicatieprofiel/watervoorkomen/ontwerpstandaard/pieter'
 
 index.html check
 error: missing '/tmp/generated/doc/applicatieprofiel/begroeid-voorkomen/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/onbegroeid-voorkomen/ontwerpstandaard/toolchain4/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/watervoorkomen/ontwerpstandaard/toolchain4/index.html'
-error: missing '/tmp/generated/doc/applicatieprofiel/watervoorkomen/ontwerpstandaard/pieter/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/od-waterdeel.publication.json
 #||# 
