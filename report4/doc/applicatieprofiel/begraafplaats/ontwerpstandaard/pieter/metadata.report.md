@@ -6,9 +6,13 @@
 
 #||# done  
 
-SyntaxError: /tmp/workspace/report4/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter/all-begraafplaatsen.jsonld: Unexpected end of JSON input
+#||# start processing  
 
-    at JSON.parse (<anonymous>)
+#||# Checking Namespaces  
 
-    at Object._readFile (/app/node_modules/jsonfile/index.js:25:16)
+#||# Finished  
+
+#||# start writing  
+
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter/html/meta_begraafplaats_nl.json  
 

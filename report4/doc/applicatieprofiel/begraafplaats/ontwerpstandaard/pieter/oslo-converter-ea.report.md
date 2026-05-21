@@ -1,24 +1,36 @@
-#||# oslo-converter-ea for diagram 
+#||# oslo-converter-ea for diagram OSLO-OpenbaarDomein-Taxonomie-Begraafplaatsen
 
 #||# -------------------------------------
 
-TypeError: file.startsWith is not a function
+2026-05-21T11:31:13.350Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:(Terreindeel -> Deel) is not an association with a source role. Ignoring this connector.
 
-    at fetchFileOrUrl (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/utils/fetchFileOrUrl.js:11:14)
+2026-05-21T11:31:13.352Z info: Connector Model:OSLO-OpenbaarDomein:BasisModel:Deel:(Deel -> FysiekObject) is not an association with a source role. Ignoring this connector.
 
-    at AccessDbFileReader.initDataRegistry (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/ea-uml-extractor/lib/AccessDbFileReader.js:21:56)
+2026-05-21T11:31:13.352Z info: Connector Model:OSLO-OpenbaarDomein:BasisModel:Element:(Element -> FysiekObject) is not an association with a source role. Ignoring this connector.
 
-    at FileReaderService.createDataRegistry (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/ea-uml-extractor/lib/FileReaderService.js:15:32)
+2026-05-21T11:31:13.352Z info: Connector Applicatieprofiel:Terreindeel:Terreindeel:(Terreindeel -> Element) is not an association with a source role. Ignoring this connector.
 
-    at EaUmlConversionService.run (/usr/local/lib/node_modules/@oslo-flanders/ea-converter/lib/EaUmlConversionService.js:36:116)
+2026-05-21T11:31:13.352Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:BegraafplaatsRij:(BegraafplaatsRij -> Terreindeel) is not an association with a source role. Ignoring this connector.
 
-    at /usr/local/lib/node_modules/@oslo-flanders/ea-converter/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:37:33
+2026-05-21T11:31:13.352Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Graf:(Graf -> Element) is not an association with a source role. Ignoring this connector.
+
+2026-05-21T11:31:13.352Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Columbarium:(Columbarium -> Element) is not an association with a source role. Ignoring this connector.
+
+2026-05-21T11:31:13.353Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Urnenveld:(Urnenveld -> Element) is not an association with a source role. Ignoring this connector.
+
+2026-05-21T11:31:13.353Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:Strooiweide:(Strooiweide -> Terreindeel) is not an association with a source role. Ignoring this connector.
+
+2026-05-21T11:31:13.353Z info: Connector Model:OSLO-OpenbaarDomein:Applicatieprofiel:Begraafplaatsen:BegraafplaatsBlok:(BegraafplaatsBlok -> Terreindeel) is not an association with a source role. Ignoring this connector.
+
+2026-05-21T11:31:13.353Z info: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model). Using fallback URI (http://todo.com/) instead.
+
+2026-05-21T11:31:13.354Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel). Using fallback URI (http://todo.com/) instead.
+
+2026-05-21T11:31:13.354Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:OSLO-Adres). Using fallback URI (http://todo.com/) instead.
+
+2026-05-21T11:31:13.354Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:Applicatieprofiel:Deprecated). Using fallback URI (http://todo.com/) instead.
+
+2026-05-21T11:31:13.354Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model:OSLO-OpenbaarDomein:OSLO-Dienst). Using fallback URI (http://todo.com/) instead.
 
 #||# -------------------------------------
-
-parse error: Invalid numeric literal at line 2, column 0
-
-cp: missing destination file operand after '/tmp/.1'
-
-Try 'cp --help' for more information.
 

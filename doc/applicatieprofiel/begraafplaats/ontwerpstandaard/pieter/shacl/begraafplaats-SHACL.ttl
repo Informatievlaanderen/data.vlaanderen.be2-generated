@@ -1,0 +1,340 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schemas: <https://schema.org/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#> rdfs:member <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#FysiekobjectShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#TerreindeelShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#DeelShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#ElementShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#NauwkeurigheidsklassenShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#BegraafplaatsrijShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#GrafShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#ColumbariumShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#UrnenveldShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#StrooiweideShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#GraftypesShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#BegraafplaatsblokShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#DatetimeShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#IntegerShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#BooleanShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#KwantitatievewaardeShape>,
+    <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#StringShape> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#BegraafplaatsblokShape> a shacl:NodeShape;
+  rdfs:label "BegraafplaatsBlok"@nl;
+  rdfs:comment "Een deel binnen de begraafplaats. Dit blok is op zichzelf staande structuur binnen de begraafplaats en zorgt voor een gebiedsdekkende structuur."@nl;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#BegraafplaatsBlok> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#BegraafplaatsrijShape> a shacl:NodeShape;
+  rdfs:label "BegraafplaatsRij"@nl;
+  rdfs:comment "Een rij is een verzameling graven van hetzelfde type. Een rij ligt typisch volledig binnen een bepaald blok."@nl;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#BegraafplaatsRij> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#BooleanShape> a shacl:NodeShape;
+  rdfs:label "Boolean";
+  shacl:closed false;
+  shacl:targetClass xsd:boolean .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#ColumbariumShape> a shacl:NodeShape;
+  rdfs:label "Columbarium"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Naar GRB-skeletoptie groen- en begraafplaatsenbeheer - BPU1: Columbarium."@nl;
+  rdfs:comment "Een columbarium is een muur met nissen waarin urnen geplaatst worden."@nl;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Columbarium> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#DatetimeShape> a shacl:NodeShape;
+  rdfs:label "DateTime";
+  shacl:closed false;
+  shacl:targetClass xsd:dateTime .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#DeelShape> a shacl:NodeShape;
+  rdfs:label "Deel"@nl;
+  rdfs:comment "Homogeen gedeelte van het aardoppervlak, met een gelijkaardige hoofdfunctie en fysiek voorkomen."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "oppervlakte"@nl;
+    rdfs:comment "De afmeting van het object."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Deel.Oppervlakte>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "De afmeting van het object."@nl;
+    shacl:maxCount "1";
+    shacl:name "oppervlakte"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/openbaardomein#oppervlakte>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein#Deel>,
+    <https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Terreindeel>,
+    <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#BegraafplaatsRij>,
+    <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Strooiweide>,
+    <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#BegraafplaatsBlok> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#ElementShape> a shacl:NodeShape;
+  rdfs:label "Element"@nl;
+  rdfs:comment "Afzonderlijk te onderscheiden element dat ofwel direct of indirect bevestigd is aan het aardoppervlak."@nl;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein#Element>,
+    <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Graf>,
+    <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Columbarium>,
+    <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Urnenveld> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#FysiekobjectShape> a shacl:NodeShape;
+  rdfs:label "FysiekObject"@nl;
+  rdfs:comment "De hoofdklasse waar alle objecten die geïnventariseerd kunnen worden van afgeleid worden."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "begindatum"@nl;
+    rdfs:comment "Datum waarop de huidige versie van het gebied of object in gebruik wordt genomen."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Fysiekobject.Begindatum>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum waarop de huidige versie van het gebied of object in gebruik wordt genomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "begindatum"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/openbaardomein#begindatum>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "einddatum"@nl;
+    rdfs:comment "Datum waarop de huidige versie van het beheerobject uit gebruik wordt genomen."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Fysiekobject.Einddatum>;
+    shacl:datatype xsd:dateTime;
+    shacl:description "Datum waarop de huidige versie van het beheerobject uit gebruik wordt genomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "einddatum"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/openbaardomein#einddatum>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "niveau"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Negatieve waarden worden geassocieerd met ondergronds en positieve waarden met bovengronds. Nul wordt beschouwd als een absolute waarde om het maaiveld aan te duiden."@nl;
+    rdfs:comment "Het niveau waarop het object zich bevindt, relatief ten opzichte van andere objecten."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Fysiekobject.Niveau>;
+    shacl:datatype xsd:integer;
+    shacl:description "Het niveau waarop het object zich bevindt, relatief ten opzichte van andere objecten."@nl;
+    shacl:maxCount "1";
+    shacl:name "niveau"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/openbaardomein#niveau>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "nauwkeurigheid"@nl;
+    rdfs:comment "De precisie waarmee het object opgemeten werd."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Fysiekobject.Nauwkeurigheid>;
+    shacl:class skos:Concept;
+    shacl:description "De precisie waarmee het object opgemeten werd."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "nauwkeurigheid"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/openbaardomein#nauwkeurigheid>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "geometrie"@nl;
+    rdfs:comment "De geometrie overeenkomstig met een bepaald object."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Fysiekobject.Geometrie>;
+    shacl:class <http://www.opengis.net/ont/geosparql#Geometry>;
+    shacl:description "De geometrie overeenkomstig met een bepaald object."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "geometrie"@nl;
+    shacl:path <http://www.w3.org/ns/locn#geometry>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "relatie"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld een verwijzing naar een object uit het wegenregister of grootschalig referentiebestand."@nl;
+    rdfs:comment "Verwijst naar een object in een andere databank dat meer informatie kan verschaffen over het beheerobject."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Fysiekobject.Relatie>;
+    shacl:class rdfs:Resource;
+    shacl:description "Verwijst naar een object in een andere databank dat meer informatie kan verschaffen over het beheerobject."@nl;
+    shacl:name "relatie"@nl;
+    shacl:path dc:relation
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein#FysiekObject>,
+    <https://data.vlaanderen.be/ns/openbaardomein#Deel>,
+    <https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Terreindeel>,
+    <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#BegraafplaatsRij>,
+    <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Strooiweide>,
+    <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#BegraafplaatsBlok>,
+    <https://data.vlaanderen.be/ns/openbaardomein#Element>,
+    <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Graf>,
+    <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Columbarium>,
+    <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Urnenveld> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#GrafShape> a shacl:NodeShape;
+  rdfs:label "Graf"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Naar GRB-skeletoptie groen- en begraafplaatsenbeheer: BPG1 Grafrand (afgeleid)."@nl;
+  rdfs:comment "Plaats waar iemand begraven ligt."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "grafteken"@nl;
+    rdfs:comment "Duidt aan of er al dan niet een grafteken, bijvoorbeeld een zerk, aanwezig is."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Graf.Grafteken>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Duidt aan of er al dan niet een grafteken, bijvoorbeeld een zerk, aanwezig is."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "grafteken"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#grafteken>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "capaciteit"@nl;
+    rdfs:comment "Geeft het aantal beschikbare plaatsen van een graf weer."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Graf.Capaciteit>;
+    shacl:datatype xsd:integer;
+    shacl:description "Geeft het aantal beschikbare plaatsen van een graf weer."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "capaciteit"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#capaciteit>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "bezetting"@nl;
+    rdfs:comment "Geeft het aantal bezette plaatsen van een graf weer."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Graf.Bezetting>;
+    shacl:datatype xsd:integer;
+    shacl:description "Geeft het aantal bezette plaatsen van een graf weer."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "bezetting"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#bezetting>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "grafkelderAanwezig"@nl;
+    rdfs:comment "Duidt aan of het graf voorzien is van een ondergrondse of bovengrondse ruimte."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Graf.Grafkelderaanwezig>;
+    shacl:datatype xsd:boolean;
+    shacl:description "Duidt aan of het graf voorzien is van een ondergrondse of bovengrondse ruimte."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "grafkelderAanwezig"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#grafkelderAanwezig>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "graftype"@nl;
+    rdfs:comment "Het type graf."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Graf.Graftype>;
+    shacl:class skos:Concept;
+    shacl:description "Het type graf."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "graftype"@nl;
+    shacl:path <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#graftype>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Graf> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#GraftypesShape> a shacl:NodeShape;
+  rdfs:label "Graftypes"@nl;
+  rdfs:comment "Types graven."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#IntegerShape> a shacl:NodeShape;
+  rdfs:label "Integer";
+  shacl:closed false;
+  shacl:targetClass xsd:integer .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#KwantitatievewaardeShape> a shacl:NodeShape;
+  rdfs:label "KwantitatieveWaarde"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bijvoorbeeld de hoogte van een object,het gewicht,de temperatuur etc. Het gaat om een kenmerk dat numeriek uitgedrukt kan worden en in een bepaalde eenheid. Kwalitatieve aanduidingen zoals hoog,laag en dergelijke vallen hier dus niet onder."@nl;
+  rdfs:comment "Aanduiding van de kwantiteit van een bepaald kenmerk van een object."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "eenheid"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Te gebruiken als geen standaard eenheid gekend is."@nl;
+    rdfs:comment "De eenheid waarin de waarde is uitgedrukt."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Kwantitatievewaarde.Eenheid>;
+    shacl:datatype xsd:string;
+    shacl:description "De eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "eenheid"@nl;
+    shacl:path schemas:unitText
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "standaardEenheid"@nl;
+    rdfs:comment "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Kwantitatievewaarde.Standaardeenheid>;
+    shacl:class <https://data.vlaanderen.be/ns/generiek#StandaardEenheid>;
+    shacl:description "De gestandaardiseerde eenheid waarin de waarde is uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:name "standaardEenheid"@nl;
+    shacl:path schemas:unitCode
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "waarde"@nl;
+    rdfs:comment "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Kwantitatievewaarde.Waarde>;
+    shacl:class schemas:Number;
+    shacl:description "Getal waarmee de kwantiteit van het kenmerk kan worden uitgedrukt."@nl;
+    shacl:maxCount "1";
+    shacl:minCount "1";
+    shacl:name "waarde"@nl;
+    shacl:path schemas:value
+  ];
+  shacl:targetClass schemas:QuantitativeValue .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#NauwkeurigheidsklassenShape> a shacl:NodeShape;
+  rdfs:label "Nauwkeurigheidsklassen"@nl;
+  rdfs:comment "De nauwkeurigheid waarmee objecten opgemeten worden hangt af van de meetmethode (terrestrisch of via luchtfotogrammetrie) en van de precisie waarmee objecten op het terrein kunnen aangeduid worden. Het GRB definieert 6 nauwkeurigheidsklassen van A tot en met F. Daarnaast werden op basis van het IMKL datamodel ook nog de waarden 'tot 50cm' en 'tot 100cm' opgenomen."@nl;
+  shacl:closed false;
+  shacl:targetClass skos:Concept .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#StringShape> a shacl:NodeShape;
+  rdfs:label "String";
+  shacl:closed false;
+  shacl:targetClass xsd:string .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#StrooiweideShape> a shacl:NodeShape;
+  rdfs:label "Strooiweide"@nl;
+  rdfs:comment "Plaats, meestal grasperkje, op het kerkhof waar assen van overledenen uitgestrooid worden."@nl;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Strooiweide> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#TerreindeelShape> a shacl:NodeShape;
+  rdfs:label "Terreindeel"@nl;
+  rdfs:comment "Zichtbare laag van het aardoppervlak, met een gelijkaardige functie, dat geen deel uitmaakt van 'waterdeel'."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "breedte"@nl;
+    rdfs:comment "De breedte van het object. In geval van een ongelijkmatige breedte wordt de gemiddelde breedte opgenomen."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Terreindeel.Breedte>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "De breedte van het object. In geval van een ongelijkmatige breedte wordt de gemiddelde breedte opgenomen."@nl;
+    shacl:maxCount "1";
+    shacl:name "breedte"@nl;
+    shacl:path schemas:width
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "lengte"@nl;
+    rdfs:comment "De lineare grootte van het object."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Terreindeel.Lengte>;
+    shacl:class schemas:QuantitativeValue;
+    shacl:description "De lineare grootte van het object."@nl;
+    shacl:maxCount "1";
+    shacl:name "lengte"@nl;
+    shacl:path <http://open.vocab.org/terms/length>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "heeftObstakel"@nl;
+    rdfs:comment "Het specifieke Element dat een obstakel vormt."@nl;
+    rdfs:seeAlso <https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#Terreindeel.Heeftobstakel>;
+    shacl:description "Het specifieke Element dat een obstakel vormt."@nl;
+    shacl:name "heeftObstakel"@nl;
+    shacl:or ([shacl:class <https://data.vlaanderen.be/ns/openbaardomein#Element>] [shacl:class <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Graf>] [shacl:class <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Columbarium>] [shacl:class <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Urnenveld>]);
+    shacl:path <https://data.vlaanderen.be/ns/openbaardomein/terreindeel#heeftObstakel>
+  ];
+  shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/terreindeel#Terreindeel>,
+    <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#BegraafplaatsRij>,
+    <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Strooiweide>,
+    <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#BegraafplaatsBlok> .
+
+<https://data.dev-vlaanderen.be/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter#UrnenveldShape> a shacl:NodeShape;
+  rdfs:label "Urnenveld"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Naar GRB-skeletoptie groen- en begraafplaatsenbeheer - BPU2: Urnenveld."@nl;
+  rdfs:comment "Een urnenveld is een constructie in of op de grond met nissen waarin urnen geplaatst worden."@nl;
+  shacl:closed false;
+  shacl:targetClass <https://data.vlaanderen.be/ns/openbaardomein/begraafplaats#Urnenveld> .
