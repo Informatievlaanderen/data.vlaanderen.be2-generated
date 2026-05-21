@@ -360,8 +360,13 @@ error: missing '/tmp/generated/doc/applicatieprofiel/notificatie-basis/ontwerpst
 #||#    + checking /home/circleci/project/config/dev/od-begraafplaats.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated/doc/applicatieprofiel/begraafplaatsenbeheer/ontwerpstandaard/pieter'
+error: missing '/tmp/generated/doc/vocabularium/openbaardomein/begraafplaats/ontwerpstandaard/pieter'
 
 index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/pieter/index.html'
+error: missing '/tmp/generated/doc/applicatieprofiel/begraafplaatsenbeheer/ontwerpstandaard/pieter/index.html'
+error: missing '/tmp/generated/doc/vocabularium/openbaardomein/begraafplaats/ontwerpstandaard/pieter/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/od-gebieden.publication.json
 #||# 
@@ -372,8 +377,12 @@ index.html check
 #||#    + checking /home/circleci/project/config/dev/od-infrastructuur.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated/doc/applicatieprofiel/infrastructuurelementen/ontwerpstandaard/pieter'
+error: missing '/tmp/generated/doc/vocabularium/openbaardomein/infrastructuur/ontwerpstandaard/pieter'
 
 index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/infrastructuurelementen/ontwerpstandaard/pieter/index.html'
+error: missing '/tmp/generated/doc/vocabularium/openbaardomein/infrastructuur/ontwerpstandaard/pieter/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/od-terrein.publication.json
 #||# 
