@@ -62,6 +62,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/hulp-dienst-verlening-gedetineerden.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/test/hydrants.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/test/incentiveringsplatform.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/test/infrastructuur.publication.json
