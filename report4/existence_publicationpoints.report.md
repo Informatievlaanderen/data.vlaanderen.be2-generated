@@ -200,7 +200,6 @@ error: missing '/tmp/generated /index.html'
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/hydrants/index.html'
 
 #||#    + checking /home/circleci/project/config/test/incentiveringsplatform.publication.json
 #||# 
