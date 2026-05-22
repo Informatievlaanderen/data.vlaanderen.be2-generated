@@ -198,11 +198,8 @@ error: missing '/tmp/generated /index.html'
 #||#    + checking /home/circleci/project/config/test/hydrants.publication.json
 #||# 
 Directory check
-error: missing '/tmp/generated/doc/applicatieprofiel/hydrants/ontwerpstandaard/2026-05-22'
-error: missing '/tmp/generated/doc/applicatieprofiel/hydrants'
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/hydrants/ontwerpstandaard/2026-05-22/index.html'
 error: missing '/tmp/generated/doc/applicatieprofiel/hydrants/index.html'
 
 #||#    + checking /home/circleci/project/config/test/incentiveringsplatform.publication.json

@@ -1,0 +1,22 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/hydrants/ontwerpstandaard/2026-05-22/translation/Hydrants_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/hydrants/ontwerpstandaard/2026-05-22/translation/Hydrants_nl.json
+
+TRANSLATIONFILE: Hydrants_nl.json
+
+#||# translate for language nl  
+
+#||# -------------------------------------  
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+WARNING The entered language values are the same!  
+
+#||# Write complete  
+
+#||# the file was saved to: /tmp/workspace/report4/doc/applicatieprofiel/hydrants/ontwerpstandaard/2026-05-22/translation/Hydrants_nl.json  
+
