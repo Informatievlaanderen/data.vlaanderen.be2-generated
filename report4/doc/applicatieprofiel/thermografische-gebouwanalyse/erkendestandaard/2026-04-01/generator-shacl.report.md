@@ -2,7 +2,9 @@
 
 #||# -------------------------------------  
 
-Error: Child (urn:oslo-toolchain:f0f3fb64dcae681c68123f600bc1ecb2c03fae52d16d94fddb7db4841f64e7b4) or parent (urn:oslo-toolchain:ca5a1a3461de5d19666d454bd1368ebd023b49a641b5589252a6fe2e3dac75e5) domain is missing!
+2026-05-26T08:55:47.215Z warn: Unable to find the description for subject "[urn:oslo-toolchain:dfc8f49ad3ed2535986a172943ee7d0b093554118412b678bad153975c9e83fd](all-thermografische-gebouwanalyse.jsonld#L1382)".
+
+Error: Child ([urn:oslo-toolchain:93fce54e9e7ebe433a5e845e5ba6630a57b75888ddeee67d4411c548fc88864d](all-thermografische-gebouwanalyse.jsonld#L4621)) or parent (urn:oslo-toolchain:48b5d578f490d5ea638927f7216a7ec784cfa482d1f50bd54d7ca5f92d466bb1) domain is missing!
 
     at ShaclTemplateGenerationService.handleRedefinedProperties (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:169:23)
 
