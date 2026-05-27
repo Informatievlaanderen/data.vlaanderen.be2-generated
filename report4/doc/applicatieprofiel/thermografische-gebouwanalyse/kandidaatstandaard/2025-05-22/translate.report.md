@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22/translation/thermografische-gebouwanalyse_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/thermografische-gebouwanalyse/kandidaatstandaard/2025-05-22/translation/thermografische-gebouwanalyse_nl.json
+
+TRANSLATIONFILE: thermografische-gebouwanalyse_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
