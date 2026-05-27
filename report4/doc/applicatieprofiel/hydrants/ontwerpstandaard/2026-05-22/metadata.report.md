@@ -16,3 +16,21 @@
 
 #||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/hydrants/ontwerpstandaard/2026-05-22/html/meta_Hydrants_nl.json  
 
+#||# metadata for language en   
+
+#||# -------------------------------------  
+
+#||# start reading  
+
+#||# done  
+
+#||# start processing  
+
+#||# Checking Namespaces  
+
+#||# Finished  
+
+#||# start writing  
+
+#||# The file has been saved to /tmp/workspace/report4/doc/applicatieprofiel/hydrants/ontwerpstandaard/2026-05-22/html/meta_Hydrants_en.json  
+
