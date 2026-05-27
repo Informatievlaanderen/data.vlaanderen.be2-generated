@@ -1,3 +1,9 @@
+INPUTTRANSLATIONFILE: /tmp/workspace/src/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14/translation/energiemanagementsysteem_nl.json
+
+OUTPUTTRANSLATIONFILE: /tmp/workspace/report4/doc/applicatieprofiel/energiemanagementsysteem/ontwerpstandaard/2025-05-14/translation/energiemanagementsysteem_nl.json
+
+TRANSLATIONFILE: energiemanagementsysteem_nl.json
+
 #||# translate for language nl  
 
 #||# -------------------------------------  
