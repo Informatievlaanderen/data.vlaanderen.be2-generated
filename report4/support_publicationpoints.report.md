@@ -14,6 +14,8 @@
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/bestuurlijk-sanctieregister.publication.json
 #||#  
+#||#   + adding supporting /home/circleci/project/config/dev/bodem-en-ondergrond.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/contactvoorkeuren.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/cultureel-erfgoed-basisregistratie.publication.json

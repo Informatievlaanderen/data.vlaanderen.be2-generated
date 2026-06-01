@@ -48,6 +48,14 @@ Directory check
 
 index.html check
 
+#||#    + checking /home/circleci/project/config/dev/bodem-en-ondergrond.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/bodem-en-ondergrond/ontwerpstandaard/pieter/index.html'
+error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/bodem-en-ondergrond/ontwerpstandaard/pieter/index.html'
+
 #||#    + checking /home/circleci/project/config/dev/contactvoorkeuren.publication.json
 #||# 
 Directory check
