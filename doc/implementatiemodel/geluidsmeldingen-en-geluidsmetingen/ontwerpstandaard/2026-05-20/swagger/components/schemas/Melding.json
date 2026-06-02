@@ -1,0 +1,161 @@
+{
+  "title": "Melding",
+  "type": "object",
+  "description": "Beschrijft de melding van een probleem of een vaststelling die mogelijks aanleiding geeft tot een actie van de overheid.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Melding)",
+      "pattern": "^Melding$"
+    },
+    "samenvatting": {
+      "type": "object",
+      "description": "Een samenvatting van de Melding. Deze eigenschap kan gebruikt worden als een tekstveld om de Melding en de informatie die eraan gekoppeld is samen te vatten en de behandeling ervan te vergemakkelijken.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "titel": {
+      "type": "object",
+      "description": "De titel van de Melding.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "webpagina": {
+      "type": "object",
+      "description": "Een doorverwijzing naar een webpagina over deze Melding. Deze eigenschap kan gebruikt worden om een gebruiker door te verwijzen naar een applicatie waar de actuele status van de Melding kan geraadpleegd worden.",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "heeftBody": {
+      "type": "array",
+      "description": "Lijst van MeldingBody items.",
+      "items": {
+        "$ref": "#/components/schemas/MeldingBody"
+      },
+      "minItems": 1
+    },
+    "heeftStatus": {
+      "type": "array",
+      "description": "Lijst van Meldingstatus items.",
+      "items": {
+        "$ref": "#/components/schemas/Meldingstatus"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "meldingstype": {
+      "type": "array",
+      "description": "Lijst van Meldingstype items.",
+      "items": {
+        "$ref": "#/components/schemas/Meldingstype"
+      },
+      "minItems": 1
+    },
+    "behandelaar": {
+      "$ref": "#/components/schemas/Agent"
+    },
+    "indiener": {
+      "$ref": "#/components/schemas/Agent"
+    },
+    "heeftDoelwit": {
+      "type": "array",
+      "description": "Lijst van Object items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Object"
+          },
+          {
+            "$ref": "#/components/schemas/Verzameling"
+          },
+          {
+            "$ref": "#/components/schemas/Melding"
+          },
+          {
+            "$ref": "#/components/schemas/Vergunning"
+          },
+          {
+            "$ref": "#/components/schemas/Activiteit"
+          },
+          {
+            "$ref": "#/components/schemas/Gebeurtenis"
+          },
+          {
+            "$ref": "#/components/schemas/Meetpunt"
+          },
+          {
+            "$ref": "#/components/schemas/Locatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Object": "#/components/schemas/Object",
+            "Verzameling": "#/components/schemas/Verzameling",
+            "Melding": "#/components/schemas/Melding",
+            "Vergunning": "#/components/schemas/Vergunning",
+            "Activiteit": "#/components/schemas/Activiteit",
+            "Gebeurtenis": "#/components/schemas/Gebeurtenis",
+            "Meetpunt": "#/components/schemas/Meetpunt",
+            "Locatie": "#/components/schemas/Locatie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/Domeinobjecttype"
+    },
+    "waardeverschaffer": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatie"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "titel",
+    "identificator",
+    "meldingstype",
+    "behandelaar",
+    "indiener"
+  ]
+}
