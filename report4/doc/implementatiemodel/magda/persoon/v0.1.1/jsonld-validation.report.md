@@ -2,25 +2,19 @@
 
 #||# -------------------------------------  
 
-node:internal/modules/cjs/loader:1205
+2026-06-03T14:43:53.222Z info: Loaded 50 URI prefixes into whitelist
 
-    throw new ERR_REQUIRE_ESM(filename, true);
+2026-06-03T14:43:53.371Z warn: Found non-whitelisted assigned URI: https://w3id.org/dpv#ConfidentialData for subject: [urn:oslo-toolchain:94e3e1672e17217f7086f5f6fb1b6de3e251f757fd2c501a6a783c434a5430e8](all-persoon.jsonld#L4673)
 
-    ^
+2026-06-03T14:43:53.373Z warn: Found sentence without a '.': 'Plaats waar de Persoon het grootste deel van de tijd verblijft binnen de jurisdictie waarvan hij Inwoner is. Dit wordt doorgaans officieel vastgesteld en geregistreerd in het bevolkingsregister. Kan in praktijk verschillend zijn van de feitelijke verblijfplaats' for subject: [urn:oslo-toolchain:de099dc1385d817cf323fe0e3f42c68714378ca9a8014d48935f334518528536](all-persoon.jsonld#L607)
 
+2026-06-03T14:43:53.384Z info: Validation found 1 non-whitelisted assigned URIs
 
+2026-06-03T14:43:53.384Z info: Validation found 1 sentences with spelling mistakes.
 
-Error [ERR_REQUIRE_ESM]: require() of ES Module /usr/local/lib/node_modules/@oslo-flanders/jsonld-validator/node_modules/yargs/index.mjs not supported.
+2026-06-03T14:43:53.384Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-Instead change the require of /usr/local/lib/node_modules/@oslo-flanders/jsonld-validator/node_modules/yargs/index.mjs to a dynamic import() which is available in all CommonJS modules.
+2026-06-03T14:43:53.384Z info: Validation successful! All base URIs seem to be valid.
 
-    at Object.<anonymous> (/usr/local/lib/node_modules/@oslo-flanders/jsonld-validator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:10:33) {
-
-  code: 'ERR_REQUIRE_ESM'
-
-}
-
-
-
-Node.js v20.15.1
+2026-06-03T14:43:53.384Z info: Validation successful! All referenced classes and attributes seem to be included.
 
