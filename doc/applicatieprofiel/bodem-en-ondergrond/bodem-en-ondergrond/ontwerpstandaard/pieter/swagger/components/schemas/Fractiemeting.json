@@ -1,0 +1,49 @@
+{
+  "title": "Fractiemeting",
+  "type": "object",
+  "description": "Meetreeks waarbij het aandeel van iets varieert in functie van iets anders.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Fractiemeting)",
+      "pattern": "^Fractiemeting$"
+    },
+    "meetwaardeparameter": {
+      "$ref": "#/components/schemas/Kenmerktype"
+    },
+    "fractiemetingresultaat": {
+      "$ref": "#/components/schemas/Fractiemetingresultaat"
+    },
+    "meetpuntparameter": {
+      "$ref": "#/components/schemas/Kenmerktype"
+    },
+    "meetreeksresultaat": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Meetreeksresultaat"
+        },
+        {
+          "$ref": "#/components/schemas/Fractiemetingresultaat"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Meetreeksresultaat": "#/components/schemas/Meetreeksresultaat",
+          "Fractiemetingresultaat": "#/components/schemas/Fractiemetingresultaat"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "meetwaardeparameter",
+    "fractiemetingresultaat",
+    "meetpuntparameter",
+    "meetreeksresultaat"
+  ]
+}

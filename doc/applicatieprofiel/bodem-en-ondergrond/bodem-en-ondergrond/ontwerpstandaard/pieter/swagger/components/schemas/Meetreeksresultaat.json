@@ -1,0 +1,42 @@
+{
+  "title": "Meetreeksresultaat",
+  "type": "object",
+  "description": "Resultaat van een Meetreeksobservatie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Meetreeksresultaat)",
+      "pattern": "^Meetreeksresultaat$"
+    },
+    "meetreekswaarde": {
+      "type": "array",
+      "description": "Lijst van Meetreekswaarde items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Meetreekswaarde"
+          },
+          {
+            "$ref": "#/components/schemas/Fractiemetingwaarde"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Meetreekswaarde": "#/components/schemas/Meetreekswaarde",
+            "Fractiemetingwaarde": "#/components/schemas/Fractiemetingwaarde"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "meetreekswaarde"
+  ]
+}

@@ -2,11 +2,5 @@
 
 #||# -------------------------------------  
 
-Error: No package was defined in the OSLO RDF file.
-
-    at RdfVocabularyGenerationService.run (/usr/local/lib/node_modules/@oslo-flanders/rdf-vocabulary-generator/lib/RdfVocabularyGenerationService.js:40:19)
-
-    at /usr/local/lib/node_modules/@oslo-flanders/rdf-vocabulary-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:37:33
-
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2026-06-03T11:32:13.134Z error: Unable to find the definition for property [urn:oslo-toolchain:83109121cb0b81cf810b468927623f6ad611609b094cbd08f1f4b2de7a1a4aba](all-bodem-en-ondergrond.jsonld#L2127).
 

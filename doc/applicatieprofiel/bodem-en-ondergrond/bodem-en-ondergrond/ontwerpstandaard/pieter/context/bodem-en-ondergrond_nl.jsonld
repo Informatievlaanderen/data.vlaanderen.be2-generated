@@ -1,3 +1,226 @@
 {
-  "@context": {}
+  "@context": {
+    "3Dobject": "http://www.opengis.net/ont/gml#Solid",
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Any": "http://www.w3.org/2000/01/rdf-schema#Resource",
+    "Bemonsteringscurve": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve",
+    "Bemonsteringsobject": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
+    "Bemonsteringsobject.identificator": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "Bemonsteringsobjecttype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "BenoemdeWaarde": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
+    "BenoemdeWaarde.waarde": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value",
+      "@type": "@id"
+    },
+    "BoCurveWaardepaar": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_CurveWaardepaar",
+    "BoCurveWaardepaar.geometrie": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair.geometry",
+      "@type": "@id"
+    },
+    "BoCurveWaardepaar.waarde": {
+      "@id": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_GeometryValuePair.value",
+      "@type": "@id"
+    },
+    "BoRuimtelijkBemonsteringsobject": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject",
+    "Boring": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Boring",
+    "Curve": "http://www.opengis.net/ont/sf#Curve",
+    "CurveWaardepaar": "http://def.isotc211.org/iso19123/2005/CoverageCore#CV_CurveValuePair",
+    "DateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "DirectePositie": "https://data.vlaanderen.be/ns/generiek#DirectePositie",
+    "DirectePositie.opmeting": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#DirectePositie.opmeting",
+      "@type": "@id"
+    },
+    "Erkenning": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Erkenning",
+    "Erkenningtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Fractiemeting": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemeting",
+    "Fractiemetingresultaat": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingresultaat",
+    "Fractiemetingwaarde": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Fractiemetingwaarde",
+    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
+    "Geometrie.opmeting": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting",
+      "@type": "@id"
+    },
+    "Herkomst": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage",
+    "Identificator": "http://www.w3.org/ns/adms#Identifier",
+    "Identificator.identificator": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Interpretatie": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Interpretatie",
+    "Interval": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Interval",
+    "Kenmerktype": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+    "Laag": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag",
+    "Laag.waarde": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Laag.waarde",
+      "@type": "@id"
+    },
+    "Literal": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "Locatie": "http://www.w3.org/ns/prov#Location",
+    "Maaiveld": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld",
+    "Maaiveldtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Maat": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
+    "Materiaalklasse": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Meetreeks": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks",
+    "Meetreeksresultaat": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat",
+    "Meetreekswaarde": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde",
+    "Object": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+    "Observatie": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+    "Opdracht": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht",
+    "Opmeting": "https://data.vlaanderen.be/ns/generiek#Opmeting",
+    "Opmetingmethode": "http://www.w3.org/2004/02/skos/core#Concept",
+    "PositioneleNauwkeurigheid": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy",
+    "Proces": "http://def.isotc211.org/iso19156/2011/Observation#OM_Process",
+    "Profiel": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Profile",
+    "Profiel.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingCurve.shape",
+      "@type": "@id"
+    },
+    "Profielelement": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Profielelement",
+    "Punt": "http://www.opengis.net/ont/sf#Point",
+    "Record": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Record",
+    "RuimtelijkBemonsteringsobject": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+    "String": "http://www.w3.org/2001/XMLSchema#string",
+    "Vlak": "http://www.opengis.net/ont/geosparql#Surface",
+    "aanvangspeil": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#aanvangspeil",
+      "@type": "@id"
+    },
+    "diepte": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.diepte",
+      "@type": "@id"
+    },
+    "fractiemetingresultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "fractiemetingwaarde": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde",
+      "@type": "@id"
+    },
+    "geassocieerdBemonsteringsobject": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature",
+      "@type": "@id"
+    },
+    "gehostPlatform": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure",
+      "@type": "@id"
+    },
+    "geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingCurve.shape",
+      "@type": "@id"
+    },
+    "gml": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "herkomst": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage",
+      "@type": "@id"
+    },
+    "hoogte": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Maaiveld.hoogte",
+      "@type": "@id"
+    },
+    "laag": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_Curvewaardepaar.laag",
+      "@type": "@id"
+    },
+    "ligging": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.ligging",
+      "@type": "@id"
+    },
+    "maaiveld": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#BO_RuimtelijkBemonsteringsobject.maaiveld",
+      "@type": "@id"
+    },
+    "meetpunt": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetpunt",
+      "@type": "@id"
+    },
+    "meetpuntBovengrens": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetpuntBovengrens",
+      "@type": "@id"
+    },
+    "meetpuntOndergrens": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetpuntOndergrens",
+      "@type": "@id"
+    },
+    "meetpuntparameter": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeks.meetpuntparameter",
+      "@type": "@id"
+    },
+    "meetreeksresultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "@id"
+    },
+    "meetreekswaarde": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreeksresultaat.meetreekswaarde",
+      "@type": "@id"
+    },
+    "meetwaarde": {
+      "@id": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetwaarde",
+      "@type": "@id"
+    },
+    "meetwaardeparameter": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "@id"
+    },
+    "methode": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting.methode",
+      "@type": "@id"
+    },
+    "naam": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "opnamedatum": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#opnamedatum",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter",
+      "@type": "@id"
+    },
+    "positioneleNauwkeurigheid": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.positionalAccuracy",
+      "@type": "@id"
+    },
+    "profielelement": {
+      "@container": "@set",
+      "@id": "http://todo.com/element",
+      "@type": "@id"
+    },
+    "toegekendDoor(String)": {
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "toegekendOp": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "uitgevoerdDoor": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#Opmeting.uitgevoerdDoor",
+      "@type": "@id"
+    },
+    "wkt": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    }
+  }
 }

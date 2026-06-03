@@ -1,0 +1,45 @@
+{
+  "title": "Meetreeks",
+  "type": "object",
+  "description": "Observatie waarbij wordt nagegaan hoe een bepaald kenmerk verandert in functie van een ander kenmerk.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Meetreeks)",
+      "pattern": "^Meetreeks$"
+    },
+    "meetwaardeparameter": {
+      "$ref": "#/components/schemas/Kenmerktype"
+    },
+    "meetpuntparameter": {
+      "$ref": "#/components/schemas/Kenmerktype"
+    },
+    "meetreeksresultaat": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Meetreeksresultaat"
+        },
+        {
+          "$ref": "#/components/schemas/Fractiemetingresultaat"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Meetreeksresultaat": "#/components/schemas/Meetreeksresultaat",
+          "Fractiemetingresultaat": "#/components/schemas/Fractiemetingresultaat"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "meetwaardeparameter",
+    "meetpuntparameter",
+    "meetreeksresultaat"
+  ]
+}

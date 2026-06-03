@@ -6,7 +6,1926 @@
     "version": "1.0.0"
   },
   "components": {
-    "schemas": {},
-    "links": {}
+    "schemas": {
+      "Erkenningtype": {
+        "title": "Erkenningtype",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Erkenningtype)",
+            "pattern": "^Erkenningtype$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Materiaalklasse": {
+        "title": "Materiaalklasse",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Materiaalklasse)",
+            "pattern": "^Materiaalklasse$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Bemonsteringsobjecttype": {
+        "title": "Bemonsteringsobjecttype",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bemonsteringsobjecttype)",
+            "pattern": "^Bemonsteringsobjecttype$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Maaiveldtype": {
+        "title": "Maaiveldtype",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Maaiveldtype)",
+            "pattern": "^Maaiveldtype$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Opmetingmethode": {
+        "title": "Opmetingmethode",
+        "type": "object",
+        "description": "TODO.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Opmetingmethode)",
+            "pattern": "^Opmetingmethode$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Maat": {
+        "title": "Maat",
+        "type": "object",
+        "description": "Een (af)gemeten hoeveelheid van een bepaalde grootheid, uitgedrukt in een bepaalde eenheid.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Maat)",
+            "pattern": "^Maat$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Kenmerktype": {
+        "title": "Kenmerktype",
+        "type": "object",
+        "description": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Kenmerktype)",
+            "pattern": "^Kenmerktype$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Record": {
+        "title": "Record",
+        "type": "object",
+        "description": "Basis datastructuur bestaande uit een collectie van velden van mogelijk verschillende datatypes, typisch een vast aantal in een bepaalde volgorde.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Record)",
+            "pattern": "^Record$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Meetreeks": {
+        "title": "Meetreeks",
+        "type": "object",
+        "description": "Observatie waarbij wordt nagegaan hoe een bepaald kenmerk verandert in functie van een ander kenmerk.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Meetreeks)",
+            "pattern": "^Meetreeks$"
+          },
+          "meetwaardeparameter": {
+            "$ref": "#/components/schemas/Kenmerktype"
+          },
+          "meetpuntparameter": {
+            "$ref": "#/components/schemas/Kenmerktype"
+          },
+          "meetreeksresultaat": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meetreeksresultaat"
+              },
+              {
+                "$ref": "#/components/schemas/Fractiemetingresultaat"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Meetreeksresultaat": "#/components/schemas/Meetreeksresultaat",
+                "Fractiemetingresultaat": "#/components/schemas/Fractiemetingresultaat"
+              }
+            }
+          }
+        },
+        "required": [
+          "@type",
+          "meetwaardeparameter",
+          "meetpuntparameter",
+          "meetreeksresultaat"
+        ]
+      },
+      "Fractiemeting": {
+        "title": "Fractiemeting",
+        "type": "object",
+        "description": "Meetreeks waarbij het aandeel van iets varieert in functie van iets anders.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Fractiemeting)",
+            "pattern": "^Fractiemeting$"
+          },
+          "meetwaardeparameter": {
+            "$ref": "#/components/schemas/Kenmerktype"
+          },
+          "fractiemetingresultaat": {
+            "$ref": "#/components/schemas/Fractiemetingresultaat"
+          },
+          "meetpuntparameter": {
+            "$ref": "#/components/schemas/Kenmerktype"
+          },
+          "meetreeksresultaat": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Meetreeksresultaat"
+              },
+              {
+                "$ref": "#/components/schemas/Fractiemetingresultaat"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Meetreeksresultaat": "#/components/schemas/Meetreeksresultaat",
+                "Fractiemetingresultaat": "#/components/schemas/Fractiemetingresultaat"
+              }
+            }
+          }
+        },
+        "required": [
+          "@type",
+          "meetwaardeparameter",
+          "fractiemetingresultaat",
+          "meetpuntparameter",
+          "meetreeksresultaat"
+        ]
+      },
+      "Boring": {
+        "title": "Boring",
+        "type": "object",
+        "description": "Het aanbrengen van een gat in iets door middel van een boor.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Boring)",
+            "pattern": "^Boring$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Opdracht": {
+        "title": "Opdracht",
+        "type": "object",
+        "description": "Toegewezen taak.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Opdracht)",
+            "pattern": "^Opdracht$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Observatie": {
+        "title": "Observatie",
+        "type": "object",
+        "description": "Het vaststellen van de waarde van een bepaald kenmerk van een Object op een bepaald tijdstip of tussen twee tijdstippen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Observatie)",
+            "pattern": "^Observatie$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Meetreeksresultaat": {
+        "title": "Meetreeksresultaat",
+        "type": "object",
+        "description": "Resultaat van een Meetreeksobservatie.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Meetreeksresultaat)",
+            "pattern": "^Meetreeksresultaat$"
+          },
+          "meetreekswaarde": {
+            "type": "array",
+            "description": "Lijst van Meetreekswaarde items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Meetreekswaarde"
+                },
+                {
+                  "$ref": "#/components/schemas/Fractiemetingwaarde"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Meetreekswaarde": "#/components/schemas/Meetreekswaarde",
+                  "Fractiemetingwaarde": "#/components/schemas/Fractiemetingwaarde"
+                }
+              }
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "meetreekswaarde"
+        ]
+      },
+      "Fractiemetingresultaat": {
+        "title": "Fractiemetingresultaat",
+        "type": "object",
+        "description": "Resultaat van een Fractiemeting.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Fractiemetingresultaat)",
+            "pattern": "^Fractiemetingresultaat$"
+          },
+          "fractiemetingwaarde": {
+            "type": "array",
+            "description": "Lijst van Fractiemetingwaarde items.",
+            "items": {
+              "$ref": "#/components/schemas/Fractiemetingwaarde"
+            },
+            "minItems": 1
+          },
+          "meetreekswaarde": {
+            "type": "array",
+            "description": "Lijst van Meetreekswaarde items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Meetreekswaarde"
+                },
+                {
+                  "$ref": "#/components/schemas/Fractiemetingwaarde"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Meetreekswaarde": "#/components/schemas/Meetreekswaarde",
+                  "Fractiemetingwaarde": "#/components/schemas/Fractiemetingwaarde"
+                }
+              }
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "fractiemetingwaarde",
+          "meetreekswaarde"
+        ]
+      },
+      "Bemonsteringscurve": {
+        "title": "Bemonsteringscurve",
+        "type": "object",
+        "description": "Een RuimtelijkBemonsteringsobject dat de vorm aanneemt van een Curve.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Bemonsteringscurve)",
+            "pattern": "^Bemonsteringscurve$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Erkenning": {
+        "title": "Erkenning",
+        "type": "object",
+        "description": "Officiële toelating toegekend aan een Persoon of Organisatie om een bepaald soort activiteiten uit te oefenen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Erkenning)",
+            "pattern": "^Erkenning$"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Erkenningtype"
+          }
+        },
+        "required": [
+          "@type",
+          "type"
+        ]
+      },
+      "Profiel": {
+        "title": "Profiel",
+        "type": "object",
+        "description": "Curve waarlangs een continu variërend fenomeen wordt beschreven.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Profiel)",
+            "pattern": "^Profiel$"
+          },
+          "geometrie": {
+            "$ref": "#/components/schemas/Curve"
+          },
+          "profielelement": {
+            "type": "array",
+            "description": "Lijst van Profielelement items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Profielelement"
+                },
+                {
+                  "$ref": "#/components/schemas/Interval"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Profielelement": "#/components/schemas/Profielelement",
+                  "Interval": "#/components/schemas/Interval"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "positioneleNauwkeurigheid": {
+            "type": "array",
+            "description": "Lijst van PositioneleNauwkeurigheid items.",
+            "items": {
+              "$ref": "#/components/schemas/PositioneleNauwkeurigheid"
+            },
+            "minItems": 1,
+            "maxItems": 2
+          },
+          "gehostPlatform": {
+            "type": "array",
+            "description": "Lijst van Proces items.",
+            "items": {
+              "$ref": "#/components/schemas/Proces"
+            },
+            "minItems": 1
+          },
+          "herkomst": {
+            "$ref": "#/components/schemas/Herkomst"
+          },
+          "parameter": {
+            "type": "array",
+            "description": "Lijst van BenoemdeWaarde items.",
+            "items": {
+              "$ref": "#/components/schemas/BenoemdeWaarde"
+            },
+            "minItems": 1
+          },
+          "identificator": {
+            "type": "array",
+            "description": "Lijst van Identificator items.",
+            "items": {
+              "$ref": "#/components/schemas/Identificator"
+            },
+            "minItems": 1
+          },
+          "type": {
+            "$ref": "#/components/schemas/Bemonsteringsobjecttype"
+          },
+          "geassocieerdBemonsteringsobject": {
+            "type": "array",
+            "description": "Lijst van Bemonsteringsobject items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/RuimtelijkBemonsteringsobject"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "RuimtelijkBemonsteringsobject": "#/components/schemas/RuimtelijkBemonsteringsobject"
+                }
+              }
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "geometrie",
+          "identificator"
+        ]
+      },
+      "BoRuimtelijkBemonsteringsobject": {
+        "title": "BoRuimtelijkBemonsteringsobject",
+        "type": "object",
+        "description": "RuimtelijkBemonsteringsobject met bijkomende kenmerken relevant voor het domein Bodem en Ondergrond.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BoRuimtelijkBemonsteringsobject)",
+            "pattern": "^BoRuimtelijkBemonsteringsobject$"
+          },
+          "ligging": {
+            "type": "array",
+            "description": "Lijst van Locatie items.",
+            "items": {
+              "$ref": "#/components/schemas/Locatie"
+            },
+            "minItems": 1
+          },
+          "maaiveld": {
+            "type": "array",
+            "description": "Lijst van Maaiveld items.",
+            "items": {
+              "$ref": "#/components/schemas/Maaiveld"
+            },
+            "minItems": 1
+          },
+          "diepte": {
+            "$ref": "#/components/schemas/Maat"
+          },
+          "aanvangspeil": {
+            "$ref": "#/components/schemas/Maat"
+          },
+          "positioneleNauwkeurigheid": {
+            "type": "array",
+            "description": "Lijst van PositioneleNauwkeurigheid items.",
+            "items": {
+              "$ref": "#/components/schemas/PositioneleNauwkeurigheid"
+            },
+            "minItems": 1,
+            "maxItems": 2
+          },
+          "gehostPlatform": {
+            "type": "array",
+            "description": "Lijst van Proces items.",
+            "items": {
+              "$ref": "#/components/schemas/Proces"
+            },
+            "minItems": 1
+          },
+          "herkomst": {
+            "$ref": "#/components/schemas/Herkomst"
+          },
+          "parameter": {
+            "type": "array",
+            "description": "Lijst van BenoemdeWaarde items.",
+            "items": {
+              "$ref": "#/components/schemas/BenoemdeWaarde"
+            },
+            "minItems": 1
+          },
+          "identificator": {
+            "type": "array",
+            "description": "Lijst van Identificator items.",
+            "items": {
+              "$ref": "#/components/schemas/Identificator"
+            },
+            "minItems": 1
+          },
+          "type": {
+            "$ref": "#/components/schemas/Bemonsteringsobjecttype"
+          },
+          "geassocieerdBemonsteringsobject": {
+            "type": "array",
+            "description": "Lijst van Bemonsteringsobject items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/RuimtelijkBemonsteringsobject"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "RuimtelijkBemonsteringsobject": "#/components/schemas/RuimtelijkBemonsteringsobject"
+                }
+              }
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "identificator"
+        ]
+      },
+      "Profielelement": {
+        "title": "Profielelement",
+        "type": "object",
+        "description": "Onderdeel van het Profiel.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Profielelement)",
+            "pattern": "^Profielelement$"
+          },
+          "geometrie": {
+            "$ref": "#/components/schemas/Curve"
+          },
+          "positioneleNauwkeurigheid": {
+            "type": "array",
+            "description": "Lijst van PositioneleNauwkeurigheid items.",
+            "items": {
+              "$ref": "#/components/schemas/PositioneleNauwkeurigheid"
+            },
+            "minItems": 1,
+            "maxItems": 2
+          },
+          "gehostPlatform": {
+            "type": "array",
+            "description": "Lijst van Proces items.",
+            "items": {
+              "$ref": "#/components/schemas/Proces"
+            },
+            "minItems": 1
+          },
+          "herkomst": {
+            "$ref": "#/components/schemas/Herkomst"
+          },
+          "parameter": {
+            "type": "array",
+            "description": "Lijst van BenoemdeWaarde items.",
+            "items": {
+              "$ref": "#/components/schemas/BenoemdeWaarde"
+            },
+            "minItems": 1
+          },
+          "identificator": {
+            "type": "array",
+            "description": "Lijst van Identificator items.",
+            "items": {
+              "$ref": "#/components/schemas/Identificator"
+            },
+            "minItems": 1
+          },
+          "type": {
+            "$ref": "#/components/schemas/Bemonsteringsobjecttype"
+          },
+          "geassocieerdBemonsteringsobject": {
+            "type": "array",
+            "description": "Lijst van Bemonsteringsobject items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/RuimtelijkBemonsteringsobject"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "RuimtelijkBemonsteringsobject": "#/components/schemas/RuimtelijkBemonsteringsobject"
+                }
+              }
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "geometrie",
+          "identificator"
+        ]
+      },
+      "Any": {
+        "title": "Any",
+        "type": "object",
+        "description": "Instanties van om het even welk type.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Any)",
+            "pattern": "^Any$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Interval": {
+        "title": "Interval",
+        "type": "object",
+        "description": "Curve, louter bepaald door zijn twee uiteinden.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Interval)",
+            "pattern": "^Interval$"
+          },
+          "geometrie": {
+            "$ref": "#/components/schemas/Curve"
+          },
+          "positioneleNauwkeurigheid": {
+            "type": "array",
+            "description": "Lijst van PositioneleNauwkeurigheid items.",
+            "items": {
+              "$ref": "#/components/schemas/PositioneleNauwkeurigheid"
+            },
+            "minItems": 1,
+            "maxItems": 2
+          },
+          "gehostPlatform": {
+            "type": "array",
+            "description": "Lijst van Proces items.",
+            "items": {
+              "$ref": "#/components/schemas/Proces"
+            },
+            "minItems": 1
+          },
+          "herkomst": {
+            "$ref": "#/components/schemas/Herkomst"
+          },
+          "parameter": {
+            "type": "array",
+            "description": "Lijst van BenoemdeWaarde items.",
+            "items": {
+              "$ref": "#/components/schemas/BenoemdeWaarde"
+            },
+            "minItems": 1
+          },
+          "identificator": {
+            "type": "array",
+            "description": "Lijst van Identificator items.",
+            "items": {
+              "$ref": "#/components/schemas/Identificator"
+            },
+            "minItems": 1
+          },
+          "type": {
+            "$ref": "#/components/schemas/Bemonsteringsobjecttype"
+          },
+          "geassocieerdBemonsteringsobject": {
+            "type": "array",
+            "description": "Lijst van Bemonsteringsobject items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/RuimtelijkBemonsteringsobject"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "RuimtelijkBemonsteringsobject": "#/components/schemas/RuimtelijkBemonsteringsobject"
+                }
+              }
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "geometrie",
+          "identificator"
+        ]
+      },
+      "Laag": {
+        "title": "Laag",
+        "type": "object",
+        "description": "Curve, bepaald door de uiteinden van de doorsnede van een Laagobject.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Laag)",
+            "pattern": "^Laag$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/Any"
+          },
+          "geometrie": {
+            "$ref": "#/components/schemas/Curve"
+          },
+          "positioneleNauwkeurigheid": {
+            "type": "array",
+            "description": "Lijst van PositioneleNauwkeurigheid items.",
+            "items": {
+              "$ref": "#/components/schemas/PositioneleNauwkeurigheid"
+            },
+            "minItems": 1,
+            "maxItems": 2
+          },
+          "gehostPlatform": {
+            "type": "array",
+            "description": "Lijst van Proces items.",
+            "items": {
+              "$ref": "#/components/schemas/Proces"
+            },
+            "minItems": 1
+          },
+          "herkomst": {
+            "$ref": "#/components/schemas/Herkomst"
+          },
+          "parameter": {
+            "type": "array",
+            "description": "Lijst van BenoemdeWaarde items.",
+            "items": {
+              "$ref": "#/components/schemas/BenoemdeWaarde"
+            },
+            "minItems": 1
+          },
+          "identificator": {
+            "type": "array",
+            "description": "Lijst van Identificator items.",
+            "items": {
+              "$ref": "#/components/schemas/Identificator"
+            },
+            "minItems": 1
+          },
+          "type": {
+            "$ref": "#/components/schemas/Bemonsteringsobjecttype"
+          },
+          "geassocieerdBemonsteringsobject": {
+            "type": "array",
+            "description": "Lijst van Bemonsteringsobject items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/RuimtelijkBemonsteringsobject"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "RuimtelijkBemonsteringsobject": "#/components/schemas/RuimtelijkBemonsteringsobject"
+                }
+              }
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "geometrie",
+          "identificator"
+        ]
+      },
+      "Identificator": {
+        "title": "Identificator",
+        "type": "object",
+        "description": "Informatie gebruikt om een object uniek te identificeren.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Identificator)",
+            "pattern": "^Identificator$"
+          },
+          "identificator": {
+            "type": "object",
+            "description": "String gebruikt om het object uniek te identificeren. Type van de string slaat op het identificatiesysteem (inclusief de versie ervan), de string zelf op de eigenlijke identificator.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "toegekendDoor(String)": {
+            "type": "object",
+            "description": "Naam van de agent die de identificator heeft toegekend.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "toegekendOp": {
+            "type": "object",
+            "description": "Tijdstip waarop de identificator werd uitgegeven.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Geometrie": {
+        "title": "Geometrie",
+        "type": "object",
+        "description": "Vorm- en positiekenmerken van een object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Geometrie)",
+            "pattern": "^Geometrie$"
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "gml": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in gml-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "opmeting": {
+            "$ref": "#/components/schemas/Opmeting"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "BenoemdeWaarde": {
+        "title": "BenoemdeWaarde",
+        "type": "object",
+        "description": "Generieke, zwak getypeerde waarde.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BenoemdeWaarde)",
+            "pattern": "^BenoemdeWaarde$"
+          },
+          "naam": {
+            "type": "object",
+            "description": "Naam van het type van de waarde.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/Any"
+          }
+        },
+        "required": [
+          "@type",
+          "naam",
+          "waarde"
+        ]
+      },
+      "DirectePositie": {
+        "title": "DirectePositie",
+        "type": "object",
+        "description": "Houder van de coördinaten van een positie in een coördinaatreferentiesysteem.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse DirectePositie)",
+            "pattern": "^DirectePositie$"
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Directe positie uitgedrukt in wkt-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "gml": {
+            "type": "object",
+            "description": "Directe positie uitgedrukt in gml-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "opmeting": {
+            "$ref": "#/components/schemas/Opmeting"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Opmeting": {
+        "title": "Opmeting",
+        "type": "object",
+        "description": "Het bepalen van de precieze omvang van iets door het te meten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Opmeting)",
+            "pattern": "^Opmeting$"
+          },
+          "opnamedatum": {
+            "type": "object",
+            "description": "Datum waarop de Opmeting plaatsvond.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "methode": {
+            "$ref": "#/components/schemas/Opmetingmethode"
+          },
+          "uitgevoerdDoor": {
+            "$ref": "#/components/schemas/Agent"
+          }
+        },
+        "required": [
+          "@type",
+          "methode"
+        ]
+      },
+      "Herkomst": {
+        "title": "Herkomst",
+        "type": "object",
+        "description": "Informatie over de bewerkingen die op de data plaatsvonden of de brondata die werd gebruikt bij het produceren van de data.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Herkomst)",
+            "pattern": "^Herkomst$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "PositioneleNauwkeurigheid": {
+        "title": "PositioneleNauwkeurigheid",
+        "type": "object",
+        "description": "Nauwkeurigheid van de positie van de data in een ruimtelijk referentiesysteem.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PositioneleNauwkeurigheid)",
+            "pattern": "^PositioneleNauwkeurigheid$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Fractiemetingwaarde": {
+        "title": "Fractiemetingwaarde",
+        "type": "object",
+        "description": "Een Meetreekswaarde met een waarde voor de fractie en een waarde voor de parameter.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Fractiemetingwaarde)",
+            "pattern": "^Fractiemetingwaarde$"
+          },
+          "meetpuntOndergrens": {
+            "$ref": "#/components/schemas/Maat"
+          },
+          "meetpuntBovengrens": {
+            "$ref": "#/components/schemas/Maat"
+          },
+          "meetwaarde": {
+            "$ref": "#/components/schemas/Any"
+          },
+          "meetpunt": {
+            "$ref": "#/components/schemas/Any"
+          }
+        },
+        "required": [
+          "@type",
+          "meetpunt",
+          "meetwaarde"
+        ]
+      },
+      "Meetreekswaarde": {
+        "title": "Meetreekswaarde",
+        "type": "object",
+        "description": "Een waardepaar in een Meetreeks met een waarde voor de het geobserveerdKenmerk en een waarde voor de parameter.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Meetreekswaarde)",
+            "pattern": "^Meetreekswaarde$"
+          },
+          "meetpunt": {
+            "$ref": "#/components/schemas/Any"
+          },
+          "meetwaarde": {
+            "$ref": "#/components/schemas/Any"
+          }
+        },
+        "required": [
+          "@type",
+          "meetpunt",
+          "meetwaarde"
+        ]
+      },
+      "Curve": {
+        "title": "Curve",
+        "type": "object",
+        "description": "Een 1-dimensionele geometrische primitieve.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Curve)",
+            "pattern": "^Curve$"
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "gml": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in gml-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "opmeting": {
+            "$ref": "#/components/schemas/Opmeting"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "BoCurveWaardepaar": {
+        "title": "BoCurveWaardepaar",
+        "type": "object",
+        "description": "Een Curvewaardepaar dat overeenstemt met een Profielelement.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse BoCurveWaardepaar)",
+            "pattern": "^BoCurveWaardepaar$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/Record"
+          },
+          "laag": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Profielelement"
+              },
+              {
+                "$ref": "#/components/schemas/Interval"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Profielelement": "#/components/schemas/Profielelement",
+                "Interval": "#/components/schemas/Interval"
+              }
+            }
+          },
+          "geometrie": {
+            "$ref": "#/components/schemas/Curve"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "geometrie"
+        ]
+      },
+      "Locatie": {
+        "title": "Locatie",
+        "type": "object",
+        "description": "Aanduiding van een geografische positie, door middel van coördinaten, een toponiem, een adreslabel, een verwijzing naar een plaats/regio of verwijzing naar een adres.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Locatie)",
+            "pattern": "^Locatie$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Maaiveld": {
+        "title": "Maaiveld",
+        "type": "object",
+        "description": "Het grondoppervlak, waarvan de hoogte vaak opgegeven wordt ten opzichte van een nationaal nul-niveau.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Maaiveld)",
+            "pattern": "^Maaiveld$"
+          },
+          "hoogte": {
+            "$ref": "#/components/schemas/DirectePositie"
+          },
+          "type": {
+            "$ref": "#/components/schemas/Maaiveldtype"
+          }
+        },
+        "required": [
+          "@type",
+          "hoogte"
+        ]
+      },
+      "Vlak": {
+        "title": "Vlak",
+        "type": "object",
+        "description": "Een 2-dimensionele geometrische primitieve.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Vlak)",
+            "pattern": "^Vlak$"
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "gml": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in gml-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "opmeting": {
+            "$ref": "#/components/schemas/Opmeting"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Punt": {
+        "title": "Punt",
+        "type": "object",
+        "description": "Een 0-dimensionele geometrische primitieve.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Punt)",
+            "pattern": "^Punt$"
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "gml": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in gml-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "opmeting": {
+            "$ref": "#/components/schemas/Opmeting"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "3Dobject": {
+        "title": "3Dobject",
+        "type": "object",
+        "description": "Een 3-dimensionele geometrische primitieve.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse 3Dobject)",
+            "pattern": "^3Dobject$"
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "gml": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in gml-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "opmeting": {
+            "$ref": "#/components/schemas/Opmeting"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "CurveWaardepaar": {
+        "title": "CurveWaardepaar",
+        "type": "object",
+        "description": "Element van een DiscreetCurveBereik.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse CurveWaardepaar)",
+            "pattern": "^CurveWaardepaar$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      }
+    },
+    "links": {
+      "Meetreeks.meetwaardeparameter": {
+        "operationId": "MeetreeksGET",
+        "parameters": {
+          "id": "$response.body#/Meetreeks.meetwaardeparameter/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Kenmerktype` op te halen."
+      },
+      "Meetreeks.meetpuntparameter": {
+        "operationId": "MeetreeksGET",
+        "parameters": {
+          "id": "$response.body#/Meetreeks.meetpuntparameter/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Kenmerktype` op te halen."
+      },
+      "Meetreeks.meetreeksresultaat": {
+        "operationId": "MeetreeksGET",
+        "parameters": {
+          "id": "$response.body#/Meetreeks.meetreeksresultaat/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Meetreeksresultaat` op te halen."
+      },
+      "Fractiemeting.meetwaardeparameter": {
+        "operationId": "FractiemetingGET",
+        "parameters": {
+          "id": "$response.body#/Fractiemeting.meetwaardeparameter/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Kenmerktype` op te halen."
+      },
+      "Fractiemeting.fractiemetingresultaat": {
+        "operationId": "FractiemetingGET",
+        "parameters": {
+          "id": "$response.body#/Fractiemeting.fractiemetingresultaat/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Fractiemetingresultaat` op te halen."
+      },
+      "Fractiemeting.meetpuntparameter": {
+        "operationId": "FractiemetingGET",
+        "parameters": {
+          "id": "$response.body#/Fractiemeting.meetpuntparameter/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Kenmerktype` op te halen."
+      },
+      "Fractiemeting.meetreeksresultaat": {
+        "operationId": "FractiemetingGET",
+        "parameters": {
+          "id": "$response.body#/Fractiemeting.meetreeksresultaat/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Meetreeksresultaat` op te halen."
+      },
+      "Meetreeksresultaat.meetreekswaarde": {
+        "operationId": "MeetreeksresultaatGET",
+        "parameters": {
+          "id": "$response.body#/Meetreeksresultaat.meetreekswaarde/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Meetreekswaarde` op te halen."
+      },
+      "Fractiemetingresultaat.fractiemetingwaarde": {
+        "operationId": "FractiemetingresultaatGET",
+        "parameters": {
+          "id": "$response.body#/Fractiemetingresultaat.fractiemetingwaarde/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Fractiemetingwaarde` op te halen."
+      },
+      "Fractiemetingresultaat.meetreekswaarde": {
+        "operationId": "FractiemetingresultaatGET",
+        "parameters": {
+          "id": "$response.body#/Fractiemetingresultaat.meetreekswaarde/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Meetreekswaarde` op te halen."
+      },
+      "Erkenning.type": {
+        "operationId": "ErkenningGET",
+        "parameters": {
+          "id": "$response.body#/Erkenning.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Erkenningtype` op te halen."
+      },
+      "Profiel.geometrie": {
+        "operationId": "ProfielGET",
+        "parameters": {
+          "id": "$response.body#/Profiel.geometrie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Curve` op te halen."
+      },
+      "Profiel.profielelement": {
+        "operationId": "ProfielGET",
+        "parameters": {
+          "id": "$response.body#/Profiel.profielelement/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Profielelement` op te halen."
+      },
+      "Profiel.positioneleNauwkeurigheid": {
+        "operationId": "ProfielGET",
+        "parameters": {
+          "id": "$response.body#/Profiel.positioneleNauwkeurigheid/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PositioneleNauwkeurigheid` op te halen."
+      },
+      "Profiel.gehostPlatform": {
+        "operationId": "ProfielGET",
+        "parameters": {
+          "id": "$response.body#/Profiel.gehostPlatform/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Proces` op te halen."
+      },
+      "Profiel.herkomst": {
+        "operationId": "ProfielGET",
+        "parameters": {
+          "id": "$response.body#/Profiel.herkomst/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Herkomst` op te halen."
+      },
+      "Profiel.parameter": {
+        "operationId": "ProfielGET",
+        "parameters": {
+          "id": "$response.body#/Profiel.parameter/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `BenoemdeWaarde` op te halen."
+      },
+      "Profiel.identificator": {
+        "operationId": "ProfielGET",
+        "parameters": {
+          "id": "$response.body#/Profiel.identificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Profiel.type": {
+        "operationId": "ProfielGET",
+        "parameters": {
+          "id": "$response.body#/Profiel.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bemonsteringsobjecttype` op te halen."
+      },
+      "Profiel.geassocieerdBemonsteringsobject": {
+        "operationId": "ProfielGET",
+        "parameters": {
+          "id": "$response.body#/Profiel.geassocieerdBemonsteringsobject/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bemonsteringsobject` op te halen."
+      },
+      "BoRuimtelijkBemonsteringsobject.ligging": {
+        "operationId": "BoRuimtelijkBemonsteringsobjectGET",
+        "parameters": {
+          "id": "$response.body#/BoRuimtelijkBemonsteringsobject.ligging/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Locatie` op te halen."
+      },
+      "BoRuimtelijkBemonsteringsobject.maaiveld": {
+        "operationId": "BoRuimtelijkBemonsteringsobjectGET",
+        "parameters": {
+          "id": "$response.body#/BoRuimtelijkBemonsteringsobject.maaiveld/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Maaiveld` op te halen."
+      },
+      "BoRuimtelijkBemonsteringsobject.diepte": {
+        "operationId": "BoRuimtelijkBemonsteringsobjectGET",
+        "parameters": {
+          "id": "$response.body#/BoRuimtelijkBemonsteringsobject.diepte/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Maat` op te halen."
+      },
+      "BoRuimtelijkBemonsteringsobject.aanvangspeil": {
+        "operationId": "BoRuimtelijkBemonsteringsobjectGET",
+        "parameters": {
+          "id": "$response.body#/BoRuimtelijkBemonsteringsobject.aanvangspeil/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Maat` op te halen."
+      },
+      "BoRuimtelijkBemonsteringsobject.positioneleNauwkeurigheid": {
+        "operationId": "BoRuimtelijkBemonsteringsobjectGET",
+        "parameters": {
+          "id": "$response.body#/BoRuimtelijkBemonsteringsobject.positioneleNauwkeurigheid/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PositioneleNauwkeurigheid` op te halen."
+      },
+      "BoRuimtelijkBemonsteringsobject.gehostPlatform": {
+        "operationId": "BoRuimtelijkBemonsteringsobjectGET",
+        "parameters": {
+          "id": "$response.body#/BoRuimtelijkBemonsteringsobject.gehostPlatform/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Proces` op te halen."
+      },
+      "BoRuimtelijkBemonsteringsobject.herkomst": {
+        "operationId": "BoRuimtelijkBemonsteringsobjectGET",
+        "parameters": {
+          "id": "$response.body#/BoRuimtelijkBemonsteringsobject.herkomst/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Herkomst` op te halen."
+      },
+      "BoRuimtelijkBemonsteringsobject.parameter": {
+        "operationId": "BoRuimtelijkBemonsteringsobjectGET",
+        "parameters": {
+          "id": "$response.body#/BoRuimtelijkBemonsteringsobject.parameter/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `BenoemdeWaarde` op te halen."
+      },
+      "BoRuimtelijkBemonsteringsobject.identificator": {
+        "operationId": "BoRuimtelijkBemonsteringsobjectGET",
+        "parameters": {
+          "id": "$response.body#/BoRuimtelijkBemonsteringsobject.identificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "BoRuimtelijkBemonsteringsobject.type": {
+        "operationId": "BoRuimtelijkBemonsteringsobjectGET",
+        "parameters": {
+          "id": "$response.body#/BoRuimtelijkBemonsteringsobject.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bemonsteringsobjecttype` op te halen."
+      },
+      "BoRuimtelijkBemonsteringsobject.geassocieerdBemonsteringsobject": {
+        "operationId": "BoRuimtelijkBemonsteringsobjectGET",
+        "parameters": {
+          "id": "$response.body#/BoRuimtelijkBemonsteringsobject.geassocieerdBemonsteringsobject/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bemonsteringsobject` op te halen."
+      },
+      "Profielelement.geometrie": {
+        "operationId": "ProfielelementGET",
+        "parameters": {
+          "id": "$response.body#/Profielelement.geometrie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Curve` op te halen."
+      },
+      "Profielelement.positioneleNauwkeurigheid": {
+        "operationId": "ProfielelementGET",
+        "parameters": {
+          "id": "$response.body#/Profielelement.positioneleNauwkeurigheid/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PositioneleNauwkeurigheid` op te halen."
+      },
+      "Profielelement.gehostPlatform": {
+        "operationId": "ProfielelementGET",
+        "parameters": {
+          "id": "$response.body#/Profielelement.gehostPlatform/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Proces` op te halen."
+      },
+      "Profielelement.herkomst": {
+        "operationId": "ProfielelementGET",
+        "parameters": {
+          "id": "$response.body#/Profielelement.herkomst/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Herkomst` op te halen."
+      },
+      "Profielelement.parameter": {
+        "operationId": "ProfielelementGET",
+        "parameters": {
+          "id": "$response.body#/Profielelement.parameter/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `BenoemdeWaarde` op te halen."
+      },
+      "Profielelement.identificator": {
+        "operationId": "ProfielelementGET",
+        "parameters": {
+          "id": "$response.body#/Profielelement.identificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Profielelement.type": {
+        "operationId": "ProfielelementGET",
+        "parameters": {
+          "id": "$response.body#/Profielelement.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bemonsteringsobjecttype` op te halen."
+      },
+      "Profielelement.geassocieerdBemonsteringsobject": {
+        "operationId": "ProfielelementGET",
+        "parameters": {
+          "id": "$response.body#/Profielelement.geassocieerdBemonsteringsobject/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bemonsteringsobject` op te halen."
+      },
+      "Interval.geometrie": {
+        "operationId": "IntervalGET",
+        "parameters": {
+          "id": "$response.body#/Interval.geometrie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Curve` op te halen."
+      },
+      "Interval.positioneleNauwkeurigheid": {
+        "operationId": "IntervalGET",
+        "parameters": {
+          "id": "$response.body#/Interval.positioneleNauwkeurigheid/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PositioneleNauwkeurigheid` op te halen."
+      },
+      "Interval.gehostPlatform": {
+        "operationId": "IntervalGET",
+        "parameters": {
+          "id": "$response.body#/Interval.gehostPlatform/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Proces` op te halen."
+      },
+      "Interval.herkomst": {
+        "operationId": "IntervalGET",
+        "parameters": {
+          "id": "$response.body#/Interval.herkomst/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Herkomst` op te halen."
+      },
+      "Interval.parameter": {
+        "operationId": "IntervalGET",
+        "parameters": {
+          "id": "$response.body#/Interval.parameter/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `BenoemdeWaarde` op te halen."
+      },
+      "Interval.identificator": {
+        "operationId": "IntervalGET",
+        "parameters": {
+          "id": "$response.body#/Interval.identificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Interval.type": {
+        "operationId": "IntervalGET",
+        "parameters": {
+          "id": "$response.body#/Interval.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bemonsteringsobjecttype` op te halen."
+      },
+      "Interval.geassocieerdBemonsteringsobject": {
+        "operationId": "IntervalGET",
+        "parameters": {
+          "id": "$response.body#/Interval.geassocieerdBemonsteringsobject/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bemonsteringsobject` op te halen."
+      },
+      "Laag.waarde": {
+        "operationId": "LaagGET",
+        "parameters": {
+          "id": "$response.body#/Laag.waarde/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Any` op te halen."
+      },
+      "Laag.geometrie": {
+        "operationId": "LaagGET",
+        "parameters": {
+          "id": "$response.body#/Laag.geometrie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Curve` op te halen."
+      },
+      "Laag.positioneleNauwkeurigheid": {
+        "operationId": "LaagGET",
+        "parameters": {
+          "id": "$response.body#/Laag.positioneleNauwkeurigheid/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PositioneleNauwkeurigheid` op te halen."
+      },
+      "Laag.gehostPlatform": {
+        "operationId": "LaagGET",
+        "parameters": {
+          "id": "$response.body#/Laag.gehostPlatform/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Proces` op te halen."
+      },
+      "Laag.herkomst": {
+        "operationId": "LaagGET",
+        "parameters": {
+          "id": "$response.body#/Laag.herkomst/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Herkomst` op te halen."
+      },
+      "Laag.parameter": {
+        "operationId": "LaagGET",
+        "parameters": {
+          "id": "$response.body#/Laag.parameter/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `BenoemdeWaarde` op te halen."
+      },
+      "Laag.identificator": {
+        "operationId": "LaagGET",
+        "parameters": {
+          "id": "$response.body#/Laag.identificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Laag.type": {
+        "operationId": "LaagGET",
+        "parameters": {
+          "id": "$response.body#/Laag.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bemonsteringsobjecttype` op te halen."
+      },
+      "Laag.geassocieerdBemonsteringsobject": {
+        "operationId": "LaagGET",
+        "parameters": {
+          "id": "$response.body#/Laag.geassocieerdBemonsteringsobject/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Bemonsteringsobject` op te halen."
+      }
+    }
   }
 }

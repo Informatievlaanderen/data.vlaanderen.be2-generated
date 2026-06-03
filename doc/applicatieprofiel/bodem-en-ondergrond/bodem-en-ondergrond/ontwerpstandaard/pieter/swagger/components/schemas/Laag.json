@@ -1,0 +1,85 @@
+{
+  "title": "Laag",
+  "type": "object",
+  "description": "Curve, bepaald door de uiteinden van de doorsnede van een Laagobject.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Laag)",
+      "pattern": "^Laag$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/Any"
+    },
+    "geometrie": {
+      "$ref": "#/components/schemas/Curve"
+    },
+    "positioneleNauwkeurigheid": {
+      "type": "array",
+      "description": "Lijst van PositioneleNauwkeurigheid items.",
+      "items": {
+        "$ref": "#/components/schemas/PositioneleNauwkeurigheid"
+      },
+      "minItems": 1,
+      "maxItems": 2
+    },
+    "gehostPlatform": {
+      "type": "array",
+      "description": "Lijst van Proces items.",
+      "items": {
+        "$ref": "#/components/schemas/Proces"
+      },
+      "minItems": 1
+    },
+    "herkomst": {
+      "$ref": "#/components/schemas/Herkomst"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/Bemonsteringsobjecttype"
+    },
+    "geassocieerdBemonsteringsobject": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/RuimtelijkBemonsteringsobject"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "RuimtelijkBemonsteringsobject": "#/components/schemas/RuimtelijkBemonsteringsobject"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "geometrie",
+    "identificator"
+  ]
+}

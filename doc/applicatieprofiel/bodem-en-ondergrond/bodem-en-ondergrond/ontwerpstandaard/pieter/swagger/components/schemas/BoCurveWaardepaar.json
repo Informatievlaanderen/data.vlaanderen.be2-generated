@@ -1,0 +1,44 @@
+{
+  "title": "BoCurveWaardepaar",
+  "type": "object",
+  "description": "Een Curvewaardepaar dat overeenstemt met een Profielelement.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse BoCurveWaardepaar)",
+      "pattern": "^BoCurveWaardepaar$"
+    },
+    "waarde": {
+      "$ref": "#/components/schemas/Record"
+    },
+    "laag": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Profielelement"
+        },
+        {
+          "$ref": "#/components/schemas/Interval"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Profielelement": "#/components/schemas/Profielelement",
+          "Interval": "#/components/schemas/Interval"
+        }
+      }
+    },
+    "geometrie": {
+      "$ref": "#/components/schemas/Curve"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "geometrie"
+  ]
+}
