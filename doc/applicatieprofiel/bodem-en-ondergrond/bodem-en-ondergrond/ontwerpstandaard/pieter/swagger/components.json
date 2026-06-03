@@ -456,7 +456,33 @@
             "pattern": "^Profiel$"
           },
           "geometrie": {
-            "$ref": "#/components/schemas/Curve"
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Geometrie"
+              },
+              {
+                "$ref": "#/components/schemas/Curve"
+              },
+              {
+                "$ref": "#/components/schemas/Vlak"
+              },
+              {
+                "$ref": "#/components/schemas/Punt"
+              },
+              {
+                "$ref": "#/components/schemas/3Dobject"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Geometrie": "#/components/schemas/Geometrie",
+                "Curve": "#/components/schemas/Curve",
+                "Vlak": "#/components/schemas/Vlak",
+                "Punt": "#/components/schemas/Punt",
+                "3Dobject": "#/components/schemas/3Dobject"
+              }
+            }
           },
           "profielelement": {
             "type": "array",
@@ -580,6 +606,35 @@
           "aanvangspeil": {
             "$ref": "#/components/schemas/Maat"
           },
+          "geometrie": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Geometrie"
+              },
+              {
+                "$ref": "#/components/schemas/Curve"
+              },
+              {
+                "$ref": "#/components/schemas/Vlak"
+              },
+              {
+                "$ref": "#/components/schemas/Punt"
+              },
+              {
+                "$ref": "#/components/schemas/3Dobject"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Geometrie": "#/components/schemas/Geometrie",
+                "Curve": "#/components/schemas/Curve",
+                "Vlak": "#/components/schemas/Vlak",
+                "Punt": "#/components/schemas/Punt",
+                "3Dobject": "#/components/schemas/3Dobject"
+              }
+            }
+          },
           "positioneleNauwkeurigheid": {
             "type": "array",
             "description": "Lijst van PositioneleNauwkeurigheid items.",
@@ -640,6 +695,7 @@
         },
         "required": [
           "@type",
+          "geometrie",
           "identificator"
         ]
       },
@@ -658,7 +714,33 @@
             "pattern": "^Profielelement$"
           },
           "geometrie": {
-            "$ref": "#/components/schemas/Curve"
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Geometrie"
+              },
+              {
+                "$ref": "#/components/schemas/Curve"
+              },
+              {
+                "$ref": "#/components/schemas/Vlak"
+              },
+              {
+                "$ref": "#/components/schemas/Punt"
+              },
+              {
+                "$ref": "#/components/schemas/3Dobject"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Geometrie": "#/components/schemas/Geometrie",
+                "Curve": "#/components/schemas/Curve",
+                "Vlak": "#/components/schemas/Vlak",
+                "Punt": "#/components/schemas/Punt",
+                "3Dobject": "#/components/schemas/3Dobject"
+              }
+            }
           },
           "positioneleNauwkeurigheid": {
             "type": "array",
@@ -758,7 +840,33 @@
             "pattern": "^Interval$"
           },
           "geometrie": {
-            "$ref": "#/components/schemas/Curve"
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Geometrie"
+              },
+              {
+                "$ref": "#/components/schemas/Curve"
+              },
+              {
+                "$ref": "#/components/schemas/Vlak"
+              },
+              {
+                "$ref": "#/components/schemas/Punt"
+              },
+              {
+                "$ref": "#/components/schemas/3Dobject"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Geometrie": "#/components/schemas/Geometrie",
+                "Curve": "#/components/schemas/Curve",
+                "Vlak": "#/components/schemas/Vlak",
+                "Punt": "#/components/schemas/Punt",
+                "3Dobject": "#/components/schemas/3Dobject"
+              }
+            }
           },
           "positioneleNauwkeurigheid": {
             "type": "array",
@@ -842,7 +950,33 @@
             "$ref": "#/components/schemas/Any"
           },
           "geometrie": {
-            "$ref": "#/components/schemas/Curve"
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Geometrie"
+              },
+              {
+                "$ref": "#/components/schemas/Curve"
+              },
+              {
+                "$ref": "#/components/schemas/Vlak"
+              },
+              {
+                "$ref": "#/components/schemas/Punt"
+              },
+              {
+                "$ref": "#/components/schemas/3Dobject"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "Geometrie": "#/components/schemas/Geometrie",
+                "Curve": "#/components/schemas/Curve",
+                "Vlak": "#/components/schemas/Vlak",
+                "Punt": "#/components/schemas/Punt",
+                "3Dobject": "#/components/schemas/3Dobject"
+              }
+            }
           },
           "positioneleNauwkeurigheid": {
             "type": "array",
@@ -964,6 +1098,9 @@
               "@value",
               "@type"
             ]
+          },
+          "toegekendDoor": {
+            "$ref": "#/components/schemas/Agent"
           }
         },
         "required": [
@@ -1616,7 +1753,7 @@
         "parameters": {
           "id": "$response.body#/Profiel.geometrie/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Curve` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geometrie` op te halen."
       },
       "Profiel.profielelement": {
         "operationId": "ProfielGET",
@@ -1702,6 +1839,13 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Maat` op te halen."
       },
+      "BoRuimtelijkBemonsteringsobject.geometrie": {
+        "operationId": "BoRuimtelijkBemonsteringsobjectGET",
+        "parameters": {
+          "id": "$response.body#/BoRuimtelijkBemonsteringsobject.geometrie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geometrie` op te halen."
+      },
       "BoRuimtelijkBemonsteringsobject.positioneleNauwkeurigheid": {
         "operationId": "BoRuimtelijkBemonsteringsobjectGET",
         "parameters": {
@@ -1756,7 +1900,7 @@
         "parameters": {
           "id": "$response.body#/Profielelement.geometrie/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Curve` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geometrie` op te halen."
       },
       "Profielelement.positioneleNauwkeurigheid": {
         "operationId": "ProfielelementGET",
@@ -1812,7 +1956,7 @@
         "parameters": {
           "id": "$response.body#/Interval.geometrie/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Curve` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geometrie` op te halen."
       },
       "Interval.positioneleNauwkeurigheid": {
         "operationId": "IntervalGET",
@@ -1875,7 +2019,7 @@
         "parameters": {
           "id": "$response.body#/Laag.geometrie/@id"
         },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Curve` op te halen."
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geometrie` op te halen."
       },
       "Laag.positioneleNauwkeurigheid": {
         "operationId": "LaagGET",

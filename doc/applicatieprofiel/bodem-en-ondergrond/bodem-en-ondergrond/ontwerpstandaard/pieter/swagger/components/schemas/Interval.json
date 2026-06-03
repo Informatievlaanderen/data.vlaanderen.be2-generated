@@ -13,7 +13,33 @@
       "pattern": "^Interval$"
     },
     "geometrie": {
-      "$ref": "#/components/schemas/Curve"
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Vlak"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        },
+        {
+          "$ref": "#/components/schemas/3Dobject"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Curve": "#/components/schemas/Curve",
+          "Vlak": "#/components/schemas/Vlak",
+          "Punt": "#/components/schemas/Punt",
+          "3Dobject": "#/components/schemas/3Dobject"
+        }
+      }
     },
     "positioneleNauwkeurigheid": {
       "type": "array",
