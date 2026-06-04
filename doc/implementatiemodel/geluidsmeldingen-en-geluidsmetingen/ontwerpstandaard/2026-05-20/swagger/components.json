@@ -149,6 +149,24 @@
           "@id"
         ]
       },
+      "GebeurtenisType": {
+        "title": "GebeurtenisType",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GebeurtenisType)",
+            "pattern": "^GebeurtenisType$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
       "Verzameling": {
         "title": "Verzameling",
         "type": "object",
@@ -995,13 +1013,17 @@
                 "Geometrie": "#/components/schemas/Geometrie"
               }
             }
+          },
+          "gebeurtenistype": {
+            "$ref": "#/components/schemas/GebeurtenisType"
           }
         },
         "required": [
           "@type",
           "uitvoerder",
           "tijd",
-          "plaats"
+          "plaats",
+          "gebeurtenistype"
         ]
       },
       "Resource": {
@@ -1321,6 +1343,9 @@
               }
             }
           },
+          "gebeurtenistype": {
+            "$ref": "#/components/schemas/GebeurtenisType"
+          },
           "type": {
             "$ref": "#/components/schemas/Domeinobjecttype"
           },
@@ -1336,7 +1361,8 @@
         "required": [
           "@type",
           "tijd",
-          "plaats"
+          "plaats",
+          "gebeurtenistype"
         ]
       },
       "Plaats": {
@@ -2580,6 +2606,13 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Locatie` op te halen."
       },
+      "Activiteit.gebeurtenistype": {
+        "operationId": "ActiviteitGET",
+        "parameters": {
+          "id": "$response.body#/Activiteit.gebeurtenistype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GebeurtenisType` op te halen."
+      },
       "Gebeurtenis.tijd": {
         "operationId": "GebeurtenisGET",
         "parameters": {
@@ -2593,6 +2626,13 @@
           "id": "$response.body#/Gebeurtenis.plaats/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Locatie` op te halen."
+      },
+      "Gebeurtenis.gebeurtenistype": {
+        "operationId": "GebeurtenisGET",
+        "parameters": {
+          "id": "$response.body#/Gebeurtenis.gebeurtenistype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GebeurtenisType` op te halen."
       },
       "Gebeurtenis.type": {
         "operationId": "GebeurtenisGET",
