@@ -3075,7 +3075,7 @@
     "/id/Kenmerktype/{id}": {
       "get": {
         "summary": "Klasse die kenmerken van instanties van om het even welk type vertegenwoordigt.",
-        "description": "In de context van Observaties en Metingen is dit een kenmerk van het geobseveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier). Substitueren door een <a href=\"https://www.w3.org/TR/skos-reference/#Concept\">skos:Concept</a> OF een instantie van een equivalente klasse bvb <a href=\"https://qudt.org/schema/qudt/QuantityKind\">qudt:QuantityKind</a> OF eigen subklasse.",
+        "description": "In de context van Observaties en Metingen is dit een kenmerk van het geobserveerdObject (of van het bemonsterdObject of een onderdeel daarvan) en in principe van alle instanties van dat type geobserveerdObject. Bv Lichaamstemperatuur, Lithologie, ChemischeSamenstelling (resp van een Persoon, een GeologischeEenheid en - meer indirect - van een Monster genomen op een bepaalde plek in een Rivier). Substitueren door een <a href=\"https://www.w3.org/TR/skos-reference/#Concept\">skos:Concept</a> OF een instantie van een equivalente klasse bvb <a href=\"https://qudt.org/schema/qudt/QuantityKind\">qudt:QuantityKind</a> OF eigen subklasse.",
         "operationId": "KenmerktypeGET",
         "parameters": [
           {
@@ -4642,7 +4642,7 @@
     },
     "/id/Vergunning/{id}": {
       "get": {
-        "summary": "De Rechtshandeling,zijnde een beslissing,die toelating inhoudt voor een Activiteit.",
+        "summary": "De Rechtshandeling, zijnde een beslissing,die toelating inhoudt voor een Activiteit.",
         "operationId": "VergunningGET",
         "parameters": [
           {
@@ -4858,7 +4858,7 @@
     },
     "/id/Gebeurtenis/{id}": {
       "get": {
-        "summary": "Iets dat gebeurt of plaatsvindt,doorgaans iets van enig belag.",
+        "summary": "Iets dat gebeurt of plaatsvindt,doorgaans iets van enig belang.",
         "description": "Bv een concert,lezing,festival,vergadering,wedstrijd...",
         "operationId": "GebeurtenisGET",
         "parameters": [
@@ -5119,20 +5119,6 @@
                   "id": "$response.body#/Plaats.geometrie/@id"
                 },
                 "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geometrie` op te halen."
-              },
-              "Plaats.type": {
-                "operationId": "PlaatsGET",
-                "parameters": {
-                  "id": "$response.body#/Plaats.type/@id"
-                },
-                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen."
-              },
-              "Plaats.waardeverschaffer": {
-                "operationId": "PlaatsGET",
-                "parameters": {
-                  "id": "$response.body#/Plaats.waardeverschaffer/@id"
-                },
-                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen."
               }
             }
           },
@@ -5774,22 +5760,7 @@
                 }
               }
             },
-            "links": {
-              "BelgischAdres.type": {
-                "operationId": "BelgischAdresGET",
-                "parameters": {
-                  "id": "$response.body#/BelgischAdres.type/@id"
-                },
-                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen."
-              },
-              "BelgischAdres.waardeverschaffer": {
-                "operationId": "BelgischAdresGET",
-                "parameters": {
-                  "id": "$response.body#/BelgischAdres.waardeverschaffer/@id"
-                },
-                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen."
-              }
-            }
+            "links": {}
           },
           "400": {
             "description": "Invalid data supplied.",
@@ -5991,22 +5962,7 @@
                 }
               }
             },
-            "links": {
-              "GeografischeNaam.type": {
-                "operationId": "GeografischeNaamGET",
-                "parameters": {
-                  "id": "$response.body#/GeografischeNaam.type/@id"
-                },
-                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen."
-              },
-              "GeografischeNaam.waardeverschaffer": {
-                "operationId": "GeografischeNaamGET",
-                "parameters": {
-                  "id": "$response.body#/GeografischeNaam.waardeverschaffer/@id"
-                },
-                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen."
-              }
-            }
+            "links": {}
           },
           "400": {
             "description": "Invalid data supplied.",
@@ -6184,6 +6140,7 @@
     },
     "/id/Bemonsteringsobjecttype/{id}": {
       "get": {
+        "summary": "Aard van het bemonsteringsobject.",
         "operationId": "BemonsteringsobjecttypeGET",
         "parameters": [
           {
@@ -6497,6 +6454,7 @@
       "Bemonsteringsobjecttype": {
         "title": "Bemonsteringsobjecttype",
         "type": "object",
+        "description": "Aard van het bemonsteringsobject.",
         "properties": {
           "@id": {
             "type": "string",
@@ -6565,9 +6523,6 @@
                 },
                 {
                   "$ref": "#/components/schemas/Meetpunt"
-                },
-                {
-                  "$ref": "#/components/schemas/Locatie"
                 }
               ],
               "discriminator": {
@@ -6579,8 +6534,7 @@
                   "Vergunning": "#/components/schemas/Vergunning",
                   "Activiteit": "#/components/schemas/Activiteit",
                   "Gebeurtenis": "#/components/schemas/Gebeurtenis",
-                  "Meetpunt": "#/components/schemas/Meetpunt",
-                  "Locatie": "#/components/schemas/Locatie"
+                  "Meetpunt": "#/components/schemas/Meetpunt"
                 }
               }
             },
@@ -6825,9 +6779,6 @@
               },
               {
                 "$ref": "#/components/schemas/Meetpunt"
-              },
-              {
-                "$ref": "#/components/schemas/Locatie"
               }
             ],
             "discriminator": {
@@ -6839,8 +6790,7 @@
                 "Vergunning": "#/components/schemas/Vergunning",
                 "Activiteit": "#/components/schemas/Activiteit",
                 "Gebeurtenis": "#/components/schemas/Gebeurtenis",
-                "Meetpunt": "#/components/schemas/Meetpunt",
-                "Locatie": "#/components/schemas/Locatie"
+                "Meetpunt": "#/components/schemas/Meetpunt"
               }
             }
           },
@@ -6872,9 +6822,6 @@
                 },
                 {
                   "$ref": "#/components/schemas/Meetpunt"
-                },
-                {
-                  "$ref": "#/components/schemas/Locatie"
                 }
               ],
               "discriminator": {
@@ -6886,8 +6833,7 @@
                   "Vergunning": "#/components/schemas/Vergunning",
                   "Activiteit": "#/components/schemas/Activiteit",
                   "Gebeurtenis": "#/components/schemas/Gebeurtenis",
-                  "Meetpunt": "#/components/schemas/Meetpunt",
-                  "Locatie": "#/components/schemas/Locatie"
+                  "Meetpunt": "#/components/schemas/Meetpunt"
                 }
               }
             },
@@ -7027,9 +6973,6 @@
               },
               {
                 "$ref": "#/components/schemas/Meetpunt"
-              },
-              {
-                "$ref": "#/components/schemas/Locatie"
               }
             ],
             "discriminator": {
@@ -7041,8 +6984,7 @@
                 "Vergunning": "#/components/schemas/Vergunning",
                 "Activiteit": "#/components/schemas/Activiteit",
                 "Gebeurtenis": "#/components/schemas/Gebeurtenis",
-                "Meetpunt": "#/components/schemas/Meetpunt",
-                "Locatie": "#/components/schemas/Locatie"
+                "Meetpunt": "#/components/schemas/Meetpunt"
               }
             }
           },
@@ -7544,9 +7486,6 @@
                 },
                 {
                   "$ref": "#/components/schemas/Meetpunt"
-                },
-                {
-                  "$ref": "#/components/schemas/Locatie"
                 }
               ],
               "discriminator": {
@@ -7558,8 +7497,7 @@
                   "Vergunning": "#/components/schemas/Vergunning",
                   "Activiteit": "#/components/schemas/Activiteit",
                   "Gebeurtenis": "#/components/schemas/Gebeurtenis",
-                  "Meetpunt": "#/components/schemas/Meetpunt",
-                  "Locatie": "#/components/schemas/Locatie"
+                  "Meetpunt": "#/components/schemas/Meetpunt"
                 }
               }
             },
@@ -7589,7 +7527,7 @@
       "Vergunning": {
         "title": "Vergunning",
         "type": "object",
-        "description": "De Rechtshandeling,zijnde een beslissing,die toelating inhoudt voor een Activiteit.",
+        "description": "De Rechtshandeling, zijnde een beslissing,die toelating inhoudt voor een Activiteit.",
         "properties": {
           "@id": {
             "type": "string",
@@ -7619,7 +7557,7 @@
       "Gebeurtenis": {
         "title": "Gebeurtenis",
         "type": "object",
-        "description": "Iets dat gebeurt of plaatsvindt,doorgaans iets van enig belag.",
+        "description": "Iets dat gebeurt of plaatsvindt,doorgaans iets van enig belang.",
         "properties": {
           "@id": {
             "type": "string",
@@ -7788,17 +7726,6 @@
                 "Punt": "#/components/schemas/Punt"
               }
             }
-          },
-          "type": {
-            "$ref": "#/components/schemas/Domeinobjecttype"
-          },
-          "waardeverschaffer": {
-            "type": "array",
-            "description": "Lijst van Observatie items.",
-            "items": {
-              "$ref": "#/components/schemas/Observatie"
-            },
-            "minItems": 1
           }
         },
         "required": [
@@ -7877,9 +7804,6 @@
                 },
                 {
                   "$ref": "#/components/schemas/Meetpunt"
-                },
-                {
-                  "$ref": "#/components/schemas/Locatie"
                 }
               ],
               "discriminator": {
@@ -7891,8 +7815,7 @@
                   "Vergunning": "#/components/schemas/Vergunning",
                   "Activiteit": "#/components/schemas/Activiteit",
                   "Gebeurtenis": "#/components/schemas/Gebeurtenis",
-                  "Meetpunt": "#/components/schemas/Meetpunt",
-                  "Locatie": "#/components/schemas/Locatie"
+                  "Meetpunt": "#/components/schemas/Meetpunt"
                 }
               }
             },
@@ -7927,17 +7850,6 @@
             "type": "string",
             "description": "Object type (klasse BelgischAdres)",
             "pattern": "^BelgischAdres$"
-          },
-          "type": {
-            "$ref": "#/components/schemas/Domeinobjecttype"
-          },
-          "waardeverschaffer": {
-            "type": "array",
-            "description": "Lijst van Observatie items.",
-            "items": {
-              "$ref": "#/components/schemas/Observatie"
-            },
-            "minItems": 1
           }
         },
         "required": [
@@ -7957,17 +7869,6 @@
             "type": "string",
             "description": "Object type (klasse Locatie)",
             "pattern": "^Locatie$"
-          },
-          "type": {
-            "$ref": "#/components/schemas/Domeinobjecttype"
-          },
-          "waardeverschaffer": {
-            "type": "array",
-            "description": "Lijst van Observatie items.",
-            "items": {
-              "$ref": "#/components/schemas/Observatie"
-            },
-            "minItems": 1
           }
         },
         "required": [
@@ -8026,7 +7927,7 @@
           },
           "identificator": {
             "type": "object",
-            "description": "String gebruikt om het object uniek te identificeren. Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator.",
+            "description": "String gebruikt om het object uniek te identificeren. Type van de string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator.",
             "properties": {
               "@value": {
                 "type": "string"
@@ -8038,7 +7939,7 @@
           },
           "toegekendDoor(String)": {
             "type": "object",
-            "description": "Naam vd agent die de identificator heeft toegekend.",
+            "description": "Naam van de agent die de identificator heeft toegekend.",
             "properties": {
               "@value": {
                 "type": "string"
@@ -8247,7 +8148,7 @@
           },
           "volledigAdres": {
             "type": "object",
-            "description": "Het complete adres in één string, al dan niet geformatteerd. Vermijdt fouten tgv het opsplitsen ve adres in zijn onderdelen. Geeft de voorgeschreven volgorde vd verschillende onderdelen weer.",
+            "description": "Het complete adres in één string, al dan niet geformatteerd. Vermijdt fouten tgv het opsplitsen ve adres in zijn onderdelen. Geeft de voorgeschreven volgorde van de verschillende onderdelen weer.",
             "properties": {
               "@value": {
                 "type": "string"
@@ -8470,17 +8371,6 @@
           },
           "verwijstNaar": {
             "$ref": "#/components/schemas/BelgischAdres"
-          },
-          "type": {
-            "$ref": "#/components/schemas/Domeinobjecttype"
-          },
-          "waardeverschaffer": {
-            "type": "array",
-            "description": "Lijst van Observatie items.",
-            "items": {
-              "$ref": "#/components/schemas/Observatie"
-            },
-            "minItems": 1
           }
         },
         "required": [
@@ -8524,17 +8414,6 @@
             "required": [
               "@value"
             ]
-          },
-          "type": {
-            "$ref": "#/components/schemas/Domeinobjecttype"
-          },
-          "waardeverschaffer": {
-            "type": "array",
-            "description": "Lijst van Observatie items.",
-            "items": {
-              "$ref": "#/components/schemas/Observatie"
-            },
-            "minItems": 1
           }
         },
         "required": [
@@ -8622,17 +8501,6 @@
             "required": [
               "@value"
             ]
-          },
-          "type": {
-            "$ref": "#/components/schemas/Domeinobjecttype"
-          },
-          "waardeverschaffer": {
-            "type": "array",
-            "description": "Lijst van Observatie items.",
-            "items": {
-              "$ref": "#/components/schemas/Observatie"
-            },
-            "minItems": 1
           }
         },
         "required": [
