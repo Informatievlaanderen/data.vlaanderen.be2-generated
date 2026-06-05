@@ -1,0 +1,41 @@
+{
+  "title": "DiscreetPuntbereik",
+  "type": "object",
+  "description": "DiscreetBereik waarbij het fenomeen puntgewijs varieert in de ruimte.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse DiscreetPuntbereik)",
+      "pattern": "^DiscreetPuntbereik$"
+    },
+    "element": {
+      "type": "array",
+      "description": "Lijst van GeometrieWaardepaar items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/GeometrieWaardepaar"
+          },
+          {
+            "$ref": "#/components/schemas/PuntWaardepaar"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "GeometrieWaardepaar": "#/components/schemas/GeometrieWaardepaar",
+            "PuntWaardepaar": "#/components/schemas/PuntWaardepaar"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

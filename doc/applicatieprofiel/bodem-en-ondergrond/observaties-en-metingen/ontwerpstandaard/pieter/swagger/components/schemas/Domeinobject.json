@@ -1,0 +1,72 @@
+{
+  "title": "Domeinobject",
+  "type": "object",
+  "description": "Object uit de reële wereld dat geen Bemonsteringsobject is.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Domeinobject)",
+      "pattern": "^Domeinobject$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Domeinobjecttype"
+    },
+    "waardeverschaffer": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Telling"
+          },
+          {
+            "$ref": "#/components/schemas/TemporeleObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/DiscreetBereikObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/GeometrieObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/Meting"
+          },
+          {
+            "$ref": "#/components/schemas/WaarheidsObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/Classificatie"
+          },
+          {
+            "$ref": "#/components/schemas/ComplexeObservatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Telling": "#/components/schemas/Telling",
+            "TemporeleObservatie": "#/components/schemas/TemporeleObservatie",
+            "DiscreetBereikObservatie": "#/components/schemas/DiscreetBereikObservatie",
+            "GeometrieObservatie": "#/components/schemas/GeometrieObservatie",
+            "Meting": "#/components/schemas/Meting",
+            "WaarheidsObservatie": "#/components/schemas/WaarheidsObservatie",
+            "Classificatie": "#/components/schemas/Classificatie",
+            "ComplexeObservatie": "#/components/schemas/ComplexeObservatie"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "title": "Bemonsterings3Dobject",
+  "type": "object",
+  "description": "Een RuimtelijkBemonsteringsobject dat de vorm aanneemt van een 3Dobject.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bemonsterings3Dobject)",
+      "pattern": "^Bemonsterings3Dobject$"
+    },
+    "geometrie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        },
+        {
+          "$ref": "#/components/schemas/Vlak"
+        },
+        {
+          "$ref": "#/components/schemas/3Dobject"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Curve": "#/components/schemas/Curve",
+          "Punt": "#/components/schemas/Punt",
+          "Vlak": "#/components/schemas/Vlak",
+          "3Dobject": "#/components/schemas/3Dobject"
+        }
+      }
+    },
+    "positioneleNauwkeurigheid": {
+      "type": "array",
+      "description": "Lijst van PositioneleNauwkeurigheid items.",
+      "items": {
+        "$ref": "#/components/schemas/PositioneleNauwkeurigheid"
+      },
+      "minItems": 1,
+      "maxItems": 2
+    },
+    "gehostPlatform": {
+      "type": "array",
+      "description": "Lijst van Proces items.",
+      "items": {
+        "$ref": "#/components/schemas/Proces"
+      },
+      "minItems": 1
+    },
+    "herkomst": {
+      "$ref": "#/components/schemas/Herkomst"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/Bemonsteringsobjecttype"
+    },
+    "geassocieerdeObservatie": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Telling"
+          },
+          {
+            "$ref": "#/components/schemas/TemporeleObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/DiscreetBereikObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/GeometrieObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/Meting"
+          },
+          {
+            "$ref": "#/components/schemas/WaarheidsObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/Classificatie"
+          },
+          {
+            "$ref": "#/components/schemas/ComplexeObservatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Telling": "#/components/schemas/Telling",
+            "TemporeleObservatie": "#/components/schemas/TemporeleObservatie",
+            "DiscreetBereikObservatie": "#/components/schemas/DiscreetBereikObservatie",
+            "GeometrieObservatie": "#/components/schemas/GeometrieObservatie",
+            "Meting": "#/components/schemas/Meting",
+            "WaarheidsObservatie": "#/components/schemas/WaarheidsObservatie",
+            "Classificatie": "#/components/schemas/Classificatie",
+            "ComplexeObservatie": "#/components/schemas/ComplexeObservatie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "bemonsterdObject": {
+      "type": "array",
+      "description": "Lijst van Object items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bemonsteringsobject"
+          },
+          {
+            "$ref": "#/components/schemas/Domeinobject"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bemonsteringsobject": "#/components/schemas/Bemonsteringsobject",
+            "Domeinobject": "#/components/schemas/Domeinobject"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "geassocieerdBemonsteringsobject": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/RuimtelijkBemonsteringsobject"
+          },
+          {
+            "$ref": "#/components/schemas/Monster"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "RuimtelijkBemonsteringsobject": "#/components/schemas/RuimtelijkBemonsteringsobject",
+            "Monster": "#/components/schemas/Monster"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "waardeverschaffer": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Telling"
+          },
+          {
+            "$ref": "#/components/schemas/TemporeleObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/DiscreetBereikObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/GeometrieObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/Meting"
+          },
+          {
+            "$ref": "#/components/schemas/WaarheidsObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/Classificatie"
+          },
+          {
+            "$ref": "#/components/schemas/ComplexeObservatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Telling": "#/components/schemas/Telling",
+            "TemporeleObservatie": "#/components/schemas/TemporeleObservatie",
+            "DiscreetBereikObservatie": "#/components/schemas/DiscreetBereikObservatie",
+            "GeometrieObservatie": "#/components/schemas/GeometrieObservatie",
+            "Meting": "#/components/schemas/Meting",
+            "WaarheidsObservatie": "#/components/schemas/WaarheidsObservatie",
+            "Classificatie": "#/components/schemas/Classificatie",
+            "ComplexeObservatie": "#/components/schemas/ComplexeObservatie"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "geometrie",
+    "identificator",
+    "bemonsterdObject"
+  ]
+}

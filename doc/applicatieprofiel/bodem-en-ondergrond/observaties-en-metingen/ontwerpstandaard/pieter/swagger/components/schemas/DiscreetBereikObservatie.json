@@ -1,0 +1,161 @@
+{
+  "title": "DiscreetBereikObservatie",
+  "type": "object",
+  "description": "Observatie waarvan het resultaat discreet varieert in ruimte of tijd.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse DiscreetBereikObservatie)",
+      "pattern": "^DiscreetBereikObservatie$"
+    },
+    "resultaat": {
+      "$ref": "#/components/schemas/Any"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "fenomeentijd": {
+      "$ref": "#/components/schemas/TemporeleEntiteit"
+    },
+    "resultaattijd": {
+      "$ref": "#/components/schemas/Moment"
+    },
+    "geldigeTijd": {
+      "$ref": "#/components/schemas/Periode"
+    },
+    "resultaatkwaliteit": {
+      "type": "array",
+      "description": "Lijst van Kwaliteitselement items.",
+      "items": {
+        "$ref": "#/components/schemas/Kwaliteitselement"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Observatietype items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatietype"
+      },
+      "minItems": 1
+    },
+    "opdracht": {
+      "type": "array",
+      "description": "Lijst van Opdracht items.",
+      "items": {
+        "$ref": "#/components/schemas/Opdracht"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdDoor": {
+      "type": "array",
+      "description": "Lijst van Agent items.",
+      "items": {
+        "$ref": "#/components/schemas/Agent"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "geassocieerdeObservatie": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Telling"
+          },
+          {
+            "$ref": "#/components/schemas/TemporeleObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/DiscreetBereikObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/GeometrieObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/Meting"
+          },
+          {
+            "$ref": "#/components/schemas/WaarheidsObservatie"
+          },
+          {
+            "$ref": "#/components/schemas/Classificatie"
+          },
+          {
+            "$ref": "#/components/schemas/ComplexeObservatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Telling": "#/components/schemas/Telling",
+            "TemporeleObservatie": "#/components/schemas/TemporeleObservatie",
+            "DiscreetBereikObservatie": "#/components/schemas/DiscreetBereikObservatie",
+            "GeometrieObservatie": "#/components/schemas/GeometrieObservatie",
+            "Meting": "#/components/schemas/Meting",
+            "WaarheidsObservatie": "#/components/schemas/WaarheidsObservatie",
+            "Classificatie": "#/components/schemas/Classificatie",
+            "ComplexeObservatie": "#/components/schemas/ComplexeObservatie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "gebruiktProces": {
+      "$ref": "#/components/schemas/Proces"
+    },
+    "geobserveerdObject": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Bemonsteringsobject"
+        },
+        {
+          "$ref": "#/components/schemas/Domeinobject"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Bemonsteringsobject": "#/components/schemas/Bemonsteringsobject",
+          "Domeinobject": "#/components/schemas/Domeinobject"
+        }
+      }
+    },
+    "geobserveerdKenmerk": {
+      "$ref": "#/components/schemas/Kenmerktype"
+    },
+    "metadata": {
+      "$ref": "#/components/schemas/Metadata"
+    }
+  },
+  "required": [
+    "@type",
+    "resultaat",
+    "fenomeentijd",
+    "resultaattijd",
+    "gebruiktProces",
+    "geobserveerdObject",
+    "geobserveerdKenmerk"
+  ]
+}
