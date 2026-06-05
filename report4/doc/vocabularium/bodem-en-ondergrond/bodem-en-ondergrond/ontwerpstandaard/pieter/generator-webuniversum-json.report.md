@@ -2,9 +2,9 @@
 
 #||# -------------------------------------  
 
-2026-06-03T15:52:36.239Z info: Unable to find the assigned URI for external class http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter which acts as a parent. Using original URI as fallback.
+2026-06-05T08:43:17.436Z info: Unable to find the assigned URI for external class http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter which acts as a parent. Using original URI as fallback.
 
-2026-06-03T15:52:36.257Z info: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetpunt which acts as a parent. Using original URI as fallback.
+2026-06-05T08:43:17.455Z info: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetpunt which acts as a parent. Using original URI as fallback.
 
-2026-06-03T15:52:36.258Z info: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetpunt which acts as a parent. Using original URI as fallback.
+2026-06-05T08:43:17.456Z info: Unable to find the assigned URI for external class https://data.vlaanderen.be/ns/bodem-en-ondergrond#Meetreekswaarde.meetpunt which acts as a parent. Using original URI as fallback.
 
