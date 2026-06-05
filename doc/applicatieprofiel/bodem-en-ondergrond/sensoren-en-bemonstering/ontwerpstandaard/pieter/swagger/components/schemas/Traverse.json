@@ -106,6 +106,50 @@
       },
       "minItems": 1
     },
+    "bemonsterdObject": {
+      "type": "array",
+      "description": "Lijst van Object items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bemonsteringsobject"
+          },
+          {
+            "$ref": "#/components/schemas/Domeinobject"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bemonsteringsobject": "#/components/schemas/Bemonsteringsobject",
+            "Domeinobject": "#/components/schemas/Domeinobject"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "geassocieerdBemonsteringsobject": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/RuimtelijkBemonsteringsobject"
+          },
+          {
+            "$ref": "#/components/schemas/Monster"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "RuimtelijkBemonsteringsobject": "#/components/schemas/RuimtelijkBemonsteringsobject",
+            "Monster": "#/components/schemas/Monster"
+          }
+        }
+      },
+      "minItems": 1
+    },
     "isResultaatVan": {
       "type": "array",
       "description": "Lijst van Bemonstering items.",
@@ -141,6 +185,7 @@
     "@type",
     "geometrie",
     "identificator",
+    "bemonsterdObject",
     "isResultaatVan"
   ]
 }
