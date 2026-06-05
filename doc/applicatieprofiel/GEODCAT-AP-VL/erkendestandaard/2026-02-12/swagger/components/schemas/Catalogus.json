@@ -1,0 +1,128 @@
+{
+  "title": "Catalogus",
+  "type": "object",
+  "description": "Een beheerde verzameling van metadata over resources (zoals datasets en dataservices in de context van een datacatalogus).",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Catalogus)",
+      "pattern": "^Catalogus$"
+    },
+    "identificator": {
+      "type": "object",
+      "description": "De unieke identificator voor de catalogus.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "titel": {
+      "type": "array",
+      "description": "Lijst van TaalString items.",
+      "items": {
+        "type": "object",
+        "description": "De naam van de catalogus. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "beschrijving": {
+      "type": "array",
+      "description": "Lijst van TaalString items.",
+      "items": {
+        "type": "object",
+        "description": "Een bondige tekstuele omschrijving van de catalogus. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "contactinformatie": {
+      "$ref": "#/components/schemas/Contactinfo"
+    },
+    "licentie": {
+      "$ref": "#/components/schemas/LicentieDocument"
+    },
+    "alternatieveIdentificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "record": {
+      "type": "array",
+      "description": "Lijst van CatalogusRecord items.",
+      "items": {
+        "$ref": "#/components/schemas/CatalogusRecord"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "uitgever": {
+      "$ref": "#/components/schemas/Agent"
+    },
+    "heeftDataset": {
+      "type": "array",
+      "description": "Lijst van Dataset items.",
+      "items": {
+        "$ref": "#/components/schemas/Dataset"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "heeftDataService": {
+      "type": "array",
+      "description": "Lijst van Dataservice items.",
+      "items": {
+        "$ref": "#/components/schemas/Dataservice"
+      },
+      "minItems": 1,
+      "maxItems": null
+    }
+  },
+  "required": [
+    "@type",
+    "identificator",
+    "titel",
+    "beschrijving",
+    "contactinformatie",
+    "licentie",
+    "uitgever"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "CatalogusResource",
+  "type": "object",
+  "description": "Een bron (resource) gepubliceerd of beheerd door één agent.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse CatalogusResource)",
+      "pattern": "^CatalogusResource$"
+    },
+    "uitgever": {
+      "$ref": "#/components/schemas/Agent"
+    },
+    "relatie": {
+      "type": "array",
+      "description": "Lijst van CatalogusResource items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/CatalogusResource"
+          },
+          {
+            "$ref": "#/components/schemas/Dataset"
+          },
+          {
+            "$ref": "#/components/schemas/Dataservice"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "CatalogusResource": "#/components/schemas/CatalogusResource",
+            "Dataset": "#/components/schemas/Dataset",
+            "Dataservice": "#/components/schemas/Dataservice"
+          }
+        }
+      },
+      "minItems": 1,
+      "maxItems": null
+    }
+  },
+  "required": [
+    "@type",
+    "uitgever"
+  ]
+}
