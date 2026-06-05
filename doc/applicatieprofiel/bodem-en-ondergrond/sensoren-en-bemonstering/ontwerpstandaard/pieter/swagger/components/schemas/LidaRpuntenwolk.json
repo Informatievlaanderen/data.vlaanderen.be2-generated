@@ -1,0 +1,146 @@
+{
+  "title": "LidaRpuntenwolk",
+  "type": "object",
+  "description": "Driedimensionele set van meetpunten verkregen door een actief remote sensing systeem van het type LIDAR.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse LidaRpuntenwolk)",
+      "pattern": "^LidaRpuntenwolk$"
+    },
+    "geometrie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Vlak"
+        },
+        {
+          "$ref": "#/components/schemas/3Dobject"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Punt": "#/components/schemas/Punt",
+          "Curve": "#/components/schemas/Curve",
+          "Vlak": "#/components/schemas/Vlak",
+          "3Dobject": "#/components/schemas/3Dobject"
+        }
+      }
+    },
+    "positioneleNauwkeurigheid": {
+      "type": "array",
+      "description": "Lijst van PositioneleNauwkeurigheid items.",
+      "items": {
+        "$ref": "#/components/schemas/PositioneleNauwkeurigheid"
+      },
+      "minItems": 1,
+      "maxItems": 2
+    },
+    "gehostPlatform": {
+      "type": "array",
+      "description": "Lijst van Proces items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Proces"
+          },
+          {
+            "$ref": "#/components/schemas/Observatieprocedure"
+          },
+          {
+            "$ref": "#/components/schemas/Sensor"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Proces": "#/components/schemas/Proces",
+            "Observatieprocedure": "#/components/schemas/Observatieprocedure",
+            "Sensor": "#/components/schemas/Sensor"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "herkomst": {
+      "$ref": "#/components/schemas/Herkomst"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/Bemonsteringsobjecttype"
+    },
+    "geassocieerdeObservatie": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatie"
+      },
+      "minItems": 1
+    },
+    "isResultaatVan": {
+      "type": "array",
+      "description": "Lijst van Bemonstering items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bemonstering"
+          },
+          {
+            "$ref": "#/components/schemas/Monstervoorbereiding"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bemonstering": "#/components/schemas/Bemonstering",
+            "Monstervoorbereiding": "#/components/schemas/Monstervoorbereiding"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "waardeverschaffer": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatie"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "geometrie",
+    "identificator",
+    "isResultaatVan"
+  ]
+}

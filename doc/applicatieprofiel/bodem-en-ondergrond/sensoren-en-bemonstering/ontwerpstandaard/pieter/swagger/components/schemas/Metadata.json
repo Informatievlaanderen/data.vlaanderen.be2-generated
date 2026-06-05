@@ -1,0 +1,247 @@
+{
+  "title": "Metadata",
+  "type": "object",
+  "description": "Data over data.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Metadata)",
+      "pattern": "^Metadata$"
+    },
+    "beschrijving": {
+      "type": "array",
+      "description": "Lijst van LangString items.",
+      "items": {
+        "type": "object",
+        "description": "Verdere uitleg over de data. Bijvoorbeeld een samenvatting, een inhoudstafel, een grafische voorstelling, vrije tekst.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "minItems": 1
+    },
+    "rechten": {
+      "type": "array",
+      "description": "Lijst van URI items.",
+      "items": {
+        "type": "object",
+        "description": "Informatie over de rechten inherent of van toepassing op de data. Bijvoorbeeld intellectuele rechten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "minItems": 1
+    },
+    "onderwerp": {
+      "type": "array",
+      "description": "Lijst van URI items.",
+      "items": {
+        "type": "object",
+        "description": "Waarover de data gaat. Typisch aangeduid door middel van sleutelwoorden of classificatiecodes.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "minItems": 1
+    },
+    "titel": {
+      "type": "array",
+      "description": "Lijst van LangString items.",
+      "items": {
+        "type": "object",
+        "description": "Naam gegeven aan de data.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "minItems": 1
+    },
+    "bron": {
+      "type": "array",
+      "description": "Lijst van URI items.",
+      "items": {
+        "type": "object",
+        "description": "Andere data waarvan deze data zijn afgeleid. Volledig of een subset. De andere data worden best door middel van een identificator aangeduid.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "minItems": 1
+    },
+    "relatie": {
+      "type": "array",
+      "description": "Lijst van URI items.",
+      "items": {
+        "type": "object",
+        "description": "Andere data waarmee deze data geassocieerd zijn.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "minItems": 1
+    },
+    "medeAuteur": {
+      "type": "array",
+      "description": "Lijst van Agent items.",
+      "items": {
+        "$ref": "#/components/schemas/Agent"
+      },
+      "minItems": 1
+    },
+    "auteur": {
+      "type": "array",
+      "description": "Lijst van Agent items.",
+      "items": {
+        "$ref": "#/components/schemas/Agent"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "uitgever": {
+      "type": "array",
+      "description": "Lijst van Agent items.",
+      "items": {
+        "$ref": "#/components/schemas/Agent"
+      },
+      "minItems": 1
+    },
+    "dekking": {
+      "type": "array",
+      "description": "Lijst van Dekking items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Dekking"
+          },
+          {
+            "$ref": "#/components/schemas/Periode"
+          },
+          {
+            "$ref": "#/components/schemas/Locatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Dekking": "#/components/schemas/Dekking",
+            "Periode": "#/components/schemas/Periode",
+            "Locatie": "#/components/schemas/Locatie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "formaat": {
+      "type": "array",
+      "description": "Lijst van Formaat items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Formaat"
+          },
+          {
+            "$ref": "#/components/schemas/Bestandsformaat"
+          },
+          {
+            "$ref": "#/components/schemas/Gegevensdrager"
+          },
+          {
+            "$ref": "#/components/schemas/Dimensie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Formaat": "#/components/schemas/Formaat",
+            "Bestandsformaat": "#/components/schemas/Bestandsformaat",
+            "Gegevensdrager": "#/components/schemas/Gegevensdrager",
+            "Dimensie": "#/components/schemas/Dimensie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "taal": {
+      "type": "array",
+      "description": "Lijst van Taalcode items.",
+      "items": {
+        "$ref": "#/components/schemas/Taalcode"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Informatietype items.",
+      "items": {
+        "$ref": "#/components/schemas/Informatietype"
+      },
+      "minItems": 1
+    },
+    "datum": {
+      "type": "array",
+      "description": "Lijst van TemporeleEntiteit items.",
+      "items": {
+        "$ref": "#/components/schemas/TemporeleEntiteit"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

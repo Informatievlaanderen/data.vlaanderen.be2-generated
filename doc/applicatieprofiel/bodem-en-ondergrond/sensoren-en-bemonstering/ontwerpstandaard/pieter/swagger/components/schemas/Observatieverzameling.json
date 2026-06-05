@@ -1,0 +1,81 @@
+{
+  "title": "Observatieverzameling",
+  "type": "object",
+  "description": "Collectie van Observaties met dezelfde kenmerken.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Observatieverzameling)",
+      "pattern": "^Observatieverzameling$"
+    },
+    "resultaattijd": {
+      "type": "object",
+      "description": "De resultaattijd van de Observaties.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "geobserveerdObject": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Bemonsteringsobject"
+        },
+        {
+          "$ref": "#/components/schemas/Domeinobject"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Bemonsteringsobject": "#/components/schemas/Bemonsteringsobject",
+          "Domeinobject": "#/components/schemas/Domeinobject"
+        }
+      }
+    },
+    "uitgevoerdMetsensor": {
+      "$ref": "#/components/schemas/Sensor"
+    },
+    "geobserveerdKenmerk": {
+      "$ref": "#/components/schemas/Kenmerktype"
+    },
+    "fenomeentijd": {
+      "$ref": "#/components/schemas/TemporeleEntiteit"
+    },
+    "gebruikteProcedure": {
+      "$ref": "#/components/schemas/Observatieprocedure"
+    },
+    "parameter": {
+      "$ref": "#/components/schemas/BenoemdeWaarde"
+    },
+    "heeftLid": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatie"
+      },
+      "minItems": 1
+    },
+    "metadata": {
+      "$ref": "#/components/schemas/Metadata"
+    }
+  },
+  "required": [
+    "@type",
+    "heeftLid"
+  ]
+}

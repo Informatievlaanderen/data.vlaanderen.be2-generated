@@ -1,0 +1,42 @@
+{
+  "title": "Bemonsteringsobjectverzameling",
+  "type": "object",
+  "description": "Aantal bij elkaar horende Bemonsteringsobjecten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bemonsteringsobjectverzameling)",
+      "pattern": "^Bemonsteringsobjectverzameling$"
+    },
+    "lid": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/RuimtelijkBemonsteringsobject"
+          },
+          {
+            "$ref": "#/components/schemas/Monster"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "RuimtelijkBemonsteringsobject": "#/components/schemas/RuimtelijkBemonsteringsobject",
+            "Monster": "#/components/schemas/Monster"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "lid"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Platform",
+  "type": "object",
+  "description": "Entiteit die fungeert als basis voor andere Entiteiten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Platform)",
+      "pattern": "^Platform$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Platformtype"
+    },
+    "hostVan": {
+      "type": "array",
+      "description": "Lijst van Systeem items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Systeem"
+          },
+          {
+            "$ref": "#/components/schemas/Bemonsteraar"
+          },
+          {
+            "$ref": "#/components/schemas/Sensor"
+          },
+          {
+            "$ref": "#/components/schemas/Toestel"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Systeem": "#/components/schemas/Systeem",
+            "Bemonsteraar": "#/components/schemas/Bemonsteraar",
+            "Sensor": "#/components/schemas/Sensor",
+            "Toestel": "#/components/schemas/Toestel"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "type"
+  ]
+}

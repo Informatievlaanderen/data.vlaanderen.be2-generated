@@ -1,0 +1,73 @@
+{
+  "title": "Systeem",
+  "type": "object",
+  "description": "Samenhangend geheel van componenten die samen één of meer functies vervullen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Systeem)",
+      "pattern": "^Systeem$"
+    },
+    "capaciteit": {
+      "type": "array",
+      "description": "Lijst van Systeemvermogen items.",
+      "items": {
+        "$ref": "#/components/schemas/Systeemvermogen"
+      },
+      "minItems": 1
+    },
+    "werkingsbereik": {
+      "type": "array",
+      "description": "Lijst van Werkingsbereik items.",
+      "items": {
+        "$ref": "#/components/schemas/Werkingsbereik"
+      },
+      "minItems": 1
+    },
+    "overlevingsbereik": {
+      "type": "array",
+      "description": "Lijst van Overlevingscapaciteit items.",
+      "items": {
+        "$ref": "#/components/schemas/Overlevingscapaciteit"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Systeemtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Systeemtype"
+      },
+      "minItems": 1
+    },
+    "gehostDoor": {
+      "type": "array",
+      "description": "Lijst van Platform items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Platform"
+          },
+          {
+            "$ref": "#/components/schemas/Toestel"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Platform": "#/components/schemas/Platform",
+            "Toestel": "#/components/schemas/Toestel"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

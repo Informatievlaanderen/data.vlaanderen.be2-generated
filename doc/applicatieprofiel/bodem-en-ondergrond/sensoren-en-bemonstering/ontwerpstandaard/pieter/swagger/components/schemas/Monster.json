@@ -1,0 +1,149 @@
+{
+  "title": "Monster",
+  "type": "object",
+  "description": "Fysiek staal genomen van een object.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Monster)",
+      "pattern": "^Monster$"
+    },
+    "materiaalklasse": {
+      "$ref": "#/components/schemas/Materiaalklasse"
+    },
+    "bemonsteringstijdstip": {
+      "$ref": "#/components/schemas/TemporeleEntiteit"
+    },
+    "bemonsteringsplaats": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Vlak"
+        },
+        {
+          "$ref": "#/components/schemas/3Dobject"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Punt": "#/components/schemas/Punt",
+          "Curve": "#/components/schemas/Curve",
+          "Vlak": "#/components/schemas/Vlak",
+          "3Dobject": "#/components/schemas/3Dobject"
+        }
+      }
+    },
+    "huidigeLocatie": {
+      "$ref": "#/components/schemas/Locatie"
+    },
+    "monstertype": {
+      "$ref": "#/components/schemas/Monstertype"
+    },
+    "grootte": {
+      "$ref": "#/components/schemas/Maat"
+    },
+    "bemonsteringsmethode": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/BemonsteringsProces"
+        },
+        {
+          "$ref": "#/components/schemas/Bemonsteringsprocedure"
+        },
+        {
+          "$ref": "#/components/schemas/Bemonsteraar"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "BemonsteringsProces": "#/components/schemas/BemonsteringsProces",
+          "Bemonsteringsprocedure": "#/components/schemas/Bemonsteringsprocedure",
+          "Bemonsteraar": "#/components/schemas/Bemonsteraar"
+        }
+      }
+    },
+    "herkomst": {
+      "$ref": "#/components/schemas/Herkomst"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/Bemonsteringsobjecttype"
+    },
+    "geassocieerdeObservatie": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatie"
+      },
+      "minItems": 1
+    },
+    "isResultaatVan": {
+      "type": "array",
+      "description": "Lijst van Bemonstering items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bemonstering"
+          },
+          {
+            "$ref": "#/components/schemas/Monstervoorbereiding"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bemonstering": "#/components/schemas/Bemonstering",
+            "Monstervoorbereiding": "#/components/schemas/Monstervoorbereiding"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "waardeverschaffer": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatie"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "materiaalklasse",
+    "bemonsteringstijdstip",
+    "bemonsteringsmethode",
+    "identificator",
+    "isResultaatVan"
+  ]
+}

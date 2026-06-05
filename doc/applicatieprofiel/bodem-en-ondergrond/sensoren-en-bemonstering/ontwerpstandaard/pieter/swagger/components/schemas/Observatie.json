@@ -1,0 +1,127 @@
+{
+  "title": "Observatie",
+  "type": "object",
+  "description": "Het vaststellen van de waarde van een bepaald kenmerk van een Object op een bepaald tijdstip of tussen twee tijdstippen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Observatie)",
+      "pattern": "^Observatie$"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "fenomeentijd": {
+      "$ref": "#/components/schemas/TemporeleEntiteit"
+    },
+    "resultaattijd": {
+      "$ref": "#/components/schemas/Moment"
+    },
+    "geldigeTijd": {
+      "$ref": "#/components/schemas/Periode"
+    },
+    "resultaatkwaliteit": {
+      "type": "array",
+      "description": "Lijst van Kwaliteitselement items.",
+      "items": {
+        "$ref": "#/components/schemas/Kwaliteitselement"
+      },
+      "minItems": 1
+    },
+    "resultaat": {
+      "$ref": "#/components/schemas/Any"
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Observatietype items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatietype"
+      },
+      "minItems": 1
+    },
+    "opdracht": {
+      "type": "array",
+      "description": "Lijst van Opdracht items.",
+      "items": {
+        "$ref": "#/components/schemas/Opdracht"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdDoor": {
+      "type": "array",
+      "description": "Lijst van Agent items.",
+      "items": {
+        "$ref": "#/components/schemas/Agent"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "geassocieerdeObservatie": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatie"
+      },
+      "minItems": 1
+    },
+    "geobserveerdObject": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Bemonsteringsobject"
+        },
+        {
+          "$ref": "#/components/schemas/Domeinobject"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Bemonsteringsobject": "#/components/schemas/Bemonsteringsobject",
+          "Domeinobject": "#/components/schemas/Domeinobject"
+        }
+      }
+    },
+    "geobserveerdKenmerk": {
+      "$ref": "#/components/schemas/Kenmerktype"
+    },
+    "uitgevoerdMetSensor": {
+      "$ref": "#/components/schemas/Sensor"
+    },
+    "gebruikteProcedure": {
+      "type": "array",
+      "description": "Lijst van Observatieprocedure items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatieprocedure"
+      },
+      "minItems": 1
+    },
+    "metadata": {
+      "$ref": "#/components/schemas/Metadata"
+    }
+  },
+  "required": [
+    "@type",
+    "fenomeentijd",
+    "resultaattijd",
+    "resultaat",
+    "geobserveerdObject",
+    "geobserveerdKenmerk",
+    "uitgevoerdMetSensor"
+  ]
+}
