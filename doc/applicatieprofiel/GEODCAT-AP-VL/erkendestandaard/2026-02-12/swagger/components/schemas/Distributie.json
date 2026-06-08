@@ -1,0 +1,107 @@
+{
+  "title": "Distributie",
+  "type": "object",
+  "description": "Een specifieke voorstellingswijze van een dataset, gekenmerkt door één of meerdere eigenschappen zoals taal, media-type of formaat, schematische organisatie, temporele en ruimtelijke resolutie, granulariteit, ...",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Distributie)",
+      "pattern": "^Distributie$"
+    },
+    "identificator": {
+      "type": "object",
+      "description": "De unieke identificator van de distributie.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "titel": {
+      "type": "array",
+      "description": "Lijst van TaalString items.",
+      "items": {
+        "type": "object",
+        "description": "De naam van de distributie. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "rechten": {
+      "type": "array",
+      "description": "Lijst van JuridischeBepaling items.",
+      "items": {
+        "$ref": "#/components/schemas/JuridischeBepaling"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "alternatieveIdentificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "formaat": {
+      "$ref": "#/components/schemas/Code"
+    },
+    "licentie": {
+      "$ref": "#/components/schemas/LicentieDocument"
+    },
+    "conform": {
+      "type": "array",
+      "description": "Lijst van Standaard items.",
+      "items": {
+        "$ref": "#/components/schemas/Standaard"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "downloadURL": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "toegangsURL": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "wordtAangebodenDoor": {
+      "type": "array",
+      "description": "Lijst van Dataservice items.",
+      "items": {
+        "$ref": "#/components/schemas/Dataservice"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "verdeler": {
+      "$ref": "#/components/schemas/Agent"
+    }
+  },
+  "required": [
+    "@type",
+    "identificator",
+    "toegangsURL"
+  ]
+}
