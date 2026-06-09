@@ -1,0 +1,76 @@
+{
+  "title": "GecodeerdeLithologielaag",
+  "type": "object",
+  "description": "Gecodeerde beschrijving van een lithologische laag.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse GecodeerdeLithologielaag)",
+      "pattern": "^GecodeerdeLithologielaag$"
+    },
+    "waarde": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Record"
+        },
+        {
+          "$ref": "#/components/schemas/LithologischeBeschrijvingwaarde"
+        },
+        {
+          "$ref": "#/components/schemas/FormeleStratigrafiewaarde"
+        },
+        {
+          "$ref": "#/components/schemas/InformeleStratigrafiewaarde"
+        },
+        {
+          "$ref": "#/components/schemas/GecodeerdeLithologiewaarde"
+        },
+        {
+          "$ref": "#/components/schemas/Hydrostratigrafiewaarde"
+        },
+        {
+          "$ref": "#/components/schemas/InformeleHydrostratigrafiewaarde"
+        },
+        {
+          "$ref": "#/components/schemas/GeotechnischeCoderingwaarde"
+        },
+        {
+          "$ref": "#/components/schemas/AntropogeneKenmerkenwaarde"
+        },
+        {
+          "$ref": "#/components/schemas/QuartairStratigrafiewaarde"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Record": "#/components/schemas/Record",
+          "LithologischeBeschrijvingwaarde": "#/components/schemas/LithologischeBeschrijvingwaarde",
+          "FormeleStratigrafiewaarde": "#/components/schemas/FormeleStratigrafiewaarde",
+          "InformeleStratigrafiewaarde": "#/components/schemas/InformeleStratigrafiewaarde",
+          "GecodeerdeLithologiewaarde": "#/components/schemas/GecodeerdeLithologiewaarde",
+          "Hydrostratigrafiewaarde": "#/components/schemas/Hydrostratigrafiewaarde",
+          "InformeleHydrostratigrafiewaarde": "#/components/schemas/InformeleHydrostratigrafiewaarde",
+          "GeotechnischeCoderingwaarde": "#/components/schemas/GeotechnischeCoderingwaarde",
+          "AntropogeneKenmerkenwaarde": "#/components/schemas/AntropogeneKenmerkenwaarde",
+          "QuartairStratigrafiewaarde": "#/components/schemas/QuartairStratigrafiewaarde"
+        }
+      }
+    },
+    "laag": {
+      "$ref": "#/components/schemas/Profielelement"
+    },
+    "geometrie": {
+      "$ref": "#/components/schemas/Curve"
+    }
+  },
+  "required": [
+    "@type",
+    "waarde",
+    "geometrie"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "title": "Sensor",
+  "type": "object",
+  "description": "Toestel of Agent (inclusief Personen of software) waarmee Observaties gemaakt worden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Sensor)",
+      "pattern": "^Sensor$"
+    },
+    "implementeert": {
+      "$ref": "#/components/schemas/Observatieprocedure"
+    },
+    "uitgevoerdeObservatie": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/FormeleStratigrafieBereikInterpretatie"
+          },
+          {
+            "$ref": "#/components/schemas/GecodeerdeLithologieBereikInterpretatie"
+          },
+          {
+            "$ref": "#/components/schemas/HydrostratigrafieBereikInterpretatie"
+          },
+          {
+            "$ref": "#/components/schemas/GeotechnischeCoderingBereikInterpretatie"
+          },
+          {
+            "$ref": "#/components/schemas/AntropogeneKenmerkenBereikInterpretatie"
+          },
+          {
+            "$ref": "#/components/schemas/InformeleStratigrafieBereikInterpretatie"
+          },
+          {
+            "$ref": "#/components/schemas/LithologischeBeschrijvingBereikInterpretatie"
+          },
+          {
+            "$ref": "#/components/schemas/InformeleHydrostratigrafieBereikInterpretatie"
+          },
+          {
+            "$ref": "#/components/schemas/QuartairStratigrafieBereikInterpretatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "FormeleStratigrafieBereikInterpretatie": "#/components/schemas/FormeleStratigrafieBereikInterpretatie",
+            "GecodeerdeLithologieBereikInterpretatie": "#/components/schemas/GecodeerdeLithologieBereikInterpretatie",
+            "HydrostratigrafieBereikInterpretatie": "#/components/schemas/HydrostratigrafieBereikInterpretatie",
+            "GeotechnischeCoderingBereikInterpretatie": "#/components/schemas/GeotechnischeCoderingBereikInterpretatie",
+            "AntropogeneKenmerkenBereikInterpretatie": "#/components/schemas/AntropogeneKenmerkenBereikInterpretatie",
+            "InformeleStratigrafieBereikInterpretatie": "#/components/schemas/InformeleStratigrafieBereikInterpretatie",
+            "LithologischeBeschrijvingBereikInterpretatie": "#/components/schemas/LithologischeBeschrijvingBereikInterpretatie",
+            "InformeleHydrostratigrafieBereikInterpretatie": "#/components/schemas/InformeleHydrostratigrafieBereikInterpretatie",
+            "QuartairStratigrafieBereikInterpretatie": "#/components/schemas/QuartairStratigrafieBereikInterpretatie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "observeert": {
+      "type": "array",
+      "description": "Lijst van Kenmerktype items.",
+      "items": {
+        "$ref": "#/components/schemas/Kenmerktype"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "implementeert",
+    "observeert"
+  ]
+}
