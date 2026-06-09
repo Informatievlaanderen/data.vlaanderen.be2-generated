@@ -1,0 +1,96 @@
+{
+  "title": "Sensor",
+  "type": "object",
+  "description": "Toestel of Agent (inclusief Personen of software) waarmee Observaties gemaakt worden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Sensor)",
+      "pattern": "^Sensor$"
+    },
+    "implementeert": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Observatieprocedure"
+        },
+        {
+          "$ref": "#/components/schemas/Schuifweerstankarakteristiekenprocedure"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Observatieprocedure": "#/components/schemas/Observatieprocedure",
+          "Schuifweerstankarakteristiekenprocedure": "#/components/schemas/Schuifweerstankarakteristiekenprocedure"
+        }
+      }
+    },
+    "uitgevoerdeObservatie": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Schuifweerstandsproef"
+          },
+          {
+            "$ref": "#/components/schemas/Samendrukbaarheidsproef"
+          },
+          {
+            "$ref": "#/components/schemas/Korrelverdeling"
+          },
+          {
+            "$ref": "#/components/schemas/DoorlatendheidsproefVvv"
+          },
+          {
+            "$ref": "#/components/schemas/Boorgatmeting"
+          },
+          {
+            "$ref": "#/components/schemas/DoorlatendheidsproefCv"
+          },
+          {
+            "$ref": "#/components/schemas/DoorlatendheidsproefHvv"
+          },
+          {
+            "$ref": "#/components/schemas/Schuifweerstandskarakteristieken"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Schuifweerstandsproef": "#/components/schemas/Schuifweerstandsproef",
+            "Samendrukbaarheidsproef": "#/components/schemas/Samendrukbaarheidsproef",
+            "Korrelverdeling": "#/components/schemas/Korrelverdeling",
+            "DoorlatendheidsproefVvv": "#/components/schemas/DoorlatendheidsproefVvv",
+            "Boorgatmeting": "#/components/schemas/Boorgatmeting",
+            "DoorlatendheidsproefCv": "#/components/schemas/DoorlatendheidsproefCv",
+            "DoorlatendheidsproefHvv": "#/components/schemas/DoorlatendheidsproefHvv",
+            "Schuifweerstandskarakteristieken": "#/components/schemas/Schuifweerstandskarakteristieken"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "observeert": {
+      "type": "array",
+      "description": "Lijst van Kenmerktype items.",
+      "items": {
+        "$ref": "#/components/schemas/Kenmerktype"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "implementeert",
+    "observeert"
+  ]
+}

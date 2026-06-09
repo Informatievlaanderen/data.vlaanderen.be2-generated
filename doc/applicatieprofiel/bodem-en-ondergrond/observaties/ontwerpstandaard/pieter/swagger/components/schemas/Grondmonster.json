@@ -1,0 +1,88 @@
+{
+  "title": "Grondmonster",
+  "type": "object",
+  "description": "Monster genomen uit de grond voor observatie ex situ.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Grondmonster)",
+      "pattern": "^Grondmonster$"
+    },
+    "bemonsterdObject": {
+      "type": "array",
+      "description": "Lijst van Object items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bemonsteringsobject"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bemonsteringsobject": "#/components/schemas/Bemonsteringsobject"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "domein": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Schuifweerstandsproef"
+          },
+          {
+            "$ref": "#/components/schemas/Samendrukbaarheidsproef"
+          },
+          {
+            "$ref": "#/components/schemas/Korrelverdeling"
+          },
+          {
+            "$ref": "#/components/schemas/DoorlatendheidsproefVvv"
+          },
+          {
+            "$ref": "#/components/schemas/Boorgatmeting"
+          },
+          {
+            "$ref": "#/components/schemas/DoorlatendheidsproefCv"
+          },
+          {
+            "$ref": "#/components/schemas/DoorlatendheidsproefHvv"
+          },
+          {
+            "$ref": "#/components/schemas/Schuifweerstandskarakteristieken"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Schuifweerstandsproef": "#/components/schemas/Schuifweerstandsproef",
+            "Samendrukbaarheidsproef": "#/components/schemas/Samendrukbaarheidsproef",
+            "Korrelverdeling": "#/components/schemas/Korrelverdeling",
+            "DoorlatendheidsproefVvv": "#/components/schemas/DoorlatendheidsproefVvv",
+            "Boorgatmeting": "#/components/schemas/Boorgatmeting",
+            "DoorlatendheidsproefCv": "#/components/schemas/DoorlatendheidsproefCv",
+            "DoorlatendheidsproefHvv": "#/components/schemas/DoorlatendheidsproefHvv",
+            "Schuifweerstandskarakteristieken": "#/components/schemas/Schuifweerstandskarakteristieken"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "bemonsterdObject"
+  ]
+}

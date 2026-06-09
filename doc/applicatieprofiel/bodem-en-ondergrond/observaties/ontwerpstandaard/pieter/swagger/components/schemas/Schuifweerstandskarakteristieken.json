@@ -1,0 +1,185 @@
+{
+  "title": "Schuifweerstandskarakteristieken",
+  "type": "object",
+  "description": "Berekening van waarden op basis waarvan de kritische schuifspanning kan worden bepaald.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Schuifweerstandskarakteristieken)",
+      "pattern": "^Schuifweerstandskarakteristieken$"
+    },
+    "geobserveerdObject": {
+      "$ref": "#/components/schemas/Grondmonster"
+    },
+    "geobserveerdKenmerk": {
+      "$ref": "#/components/schemas/Kenmerktype"
+    },
+    "resultaat": {
+      "$ref": "#/components/schemas/Any"
+    },
+    "gebruikteProcedure": {
+      "type": "array",
+      "description": "Lijst van Observatieprocedure items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatieprocedure"
+          },
+          {
+            "$ref": "#/components/schemas/Schuifweerstankarakteristiekenprocedure"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatieprocedure": "#/components/schemas/Observatieprocedure",
+            "Schuifweerstankarakteristiekenprocedure": "#/components/schemas/Schuifweerstankarakteristiekenprocedure"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "fenomeentijd": {
+      "$ref": "#/components/schemas/TemporeleEntiteit"
+    },
+    "resultaattijd": {
+      "$ref": "#/components/schemas/Moment"
+    },
+    "geldigeTijd": {
+      "$ref": "#/components/schemas/Periode"
+    },
+    "resultaatkwaliteit": {
+      "type": "array",
+      "description": "Lijst van Kwaliteitselement items.",
+      "items": {
+        "$ref": "#/components/schemas/Kwaliteitselement"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Observatietype items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatietype"
+      },
+      "minItems": 1
+    },
+    "opdracht": {
+      "type": "array",
+      "description": "Lijst van Opdracht items.",
+      "items": {
+        "$ref": "#/components/schemas/Opdracht"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdDoor": {
+      "type": "array",
+      "description": "Lijst van Agent items.",
+      "items": {
+        "$ref": "#/components/schemas/Agent"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "geassocieerdeObservatie": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Schuifweerstandsproef"
+          },
+          {
+            "$ref": "#/components/schemas/Samendrukbaarheidsproef"
+          },
+          {
+            "$ref": "#/components/schemas/Korrelverdeling"
+          },
+          {
+            "$ref": "#/components/schemas/DoorlatendheidsproefVvv"
+          },
+          {
+            "$ref": "#/components/schemas/Boorgatmeting"
+          },
+          {
+            "$ref": "#/components/schemas/DoorlatendheidsproefCv"
+          },
+          {
+            "$ref": "#/components/schemas/DoorlatendheidsproefHvv"
+          },
+          {
+            "$ref": "#/components/schemas/Schuifweerstandskarakteristieken"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Schuifweerstandsproef": "#/components/schemas/Schuifweerstandsproef",
+            "Samendrukbaarheidsproef": "#/components/schemas/Samendrukbaarheidsproef",
+            "Korrelverdeling": "#/components/schemas/Korrelverdeling",
+            "DoorlatendheidsproefVvv": "#/components/schemas/DoorlatendheidsproefVvv",
+            "Boorgatmeting": "#/components/schemas/Boorgatmeting",
+            "DoorlatendheidsproefCv": "#/components/schemas/DoorlatendheidsproefCv",
+            "DoorlatendheidsproefHvv": "#/components/schemas/DoorlatendheidsproefHvv",
+            "Schuifweerstandskarakteristieken": "#/components/schemas/Schuifweerstandskarakteristieken"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "domein": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Bemonsteringsobject"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Bemonsteringsobject": "#/components/schemas/Bemonsteringsobject"
+        }
+      }
+    },
+    "fenomeen": {
+      "$ref": "#/components/schemas/Kenmerktype"
+    },
+    "uitgevoerdMetSensor": {
+      "$ref": "#/components/schemas/Sensor"
+    }
+  },
+  "required": [
+    "@type",
+    "geobserveerdObject",
+    "geobserveerdKenmerk",
+    "resultaat",
+    "gebruikteProcedure",
+    "fenomeentijd",
+    "resultaattijd",
+    "domein",
+    "fenomeen",
+    "uitgevoerdMetSensor"
+  ]
+}
