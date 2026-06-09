@@ -1,0 +1,54 @@
+{
+  "title": "PostalInfoHistory",
+  "type": "object",
+  "description": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PostalInfoHistory)",
+      "pattern": "^PostalInfoHistory$"
+    },
+    "datumGebeurtenis": {
+      "type": "object",
+      "description": "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "opvolger": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "voorganger": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "successor": {
+      "$ref": "#/components/schemas/PostInformatie"
+    },
+    "predecessor": {
+      "$ref": "#/components/schemas/PostInformatie"
+    }
+  },
+  "required": [
+    "@type",
+    "datumGebeurtenis",
+    "opvolger",
+    "voorganger",
+    "successor",
+    "predecessor"
+  ]
+}

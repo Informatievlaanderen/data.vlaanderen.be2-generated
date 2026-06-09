@@ -1,0 +1,69 @@
+{
+  "title": "Gemeente",
+  "type": "object",
+  "description": "Officiële administratieve zone van het Belgisch grondgebied. De gemeente is het kleinste administratieve deel van het Belgisch grondgebied waarvan de grenzen enkel door de wetgever kunnen worden gewijzigd.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Gemeente)",
+      "pattern": "^Gemeente$"
+    },
+    "naam": {
+      "type": "array",
+      "description": "Lijst van GeographicalName items.",
+      "items": {
+        "$ref": "#/components/schemas/GeographicalName"
+      },
+      "minItems": 1,
+      "maxItems": 3
+    },
+    "status": {
+      "$ref": "#/components/schemas/Status"
+    },
+    "code": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "hasMunicipality": {
+      "type": "array",
+      "description": "Lijst van Adres items.",
+      "items": {
+        "$ref": "#/components/schemas/Adres"
+      },
+      "minItems": 1
+    },
+    "isAssignedByMunicipality": {
+      "type": "array",
+      "description": "Lijst van Straatnaam items.",
+      "items": {
+        "$ref": "#/components/schemas/Straatnaam"
+      },
+      "minItems": 1
+    },
+    "successor": {
+      "type": "array",
+      "description": "Lijst van MunicipalityHistory items.",
+      "items": {
+        "$ref": "#/components/schemas/MunicipalityHistory"
+      },
+      "minItems": 1
+    },
+    "predecessor": {
+      "type": "array",
+      "description": "Lijst van MunicipalityHistory items.",
+      "items": {
+        "$ref": "#/components/schemas/MunicipalityHistory"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "naam",
+    "status",
+    "code"
+  ]
+}

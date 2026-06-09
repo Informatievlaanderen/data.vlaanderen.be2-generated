@@ -1,0 +1,177 @@
+{
+  "title": "Adres",
+  "type": "object",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Adres)",
+      "pattern": "^Adres$"
+    },
+    "huisnummer": {
+      "type": "object",
+      "description": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "busnummer": {
+      "type": "object",
+      "description": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die hetzelfde huisnummer hebben.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "eindeVanDeLevenscyclusVanDezeVersie": {
+      "type": "object",
+      "description": "undefined",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "adresSorteerveld": {
+      "type": "object",
+      "description": "Transformatie van het huisnummer en busnummer (toevoeging van leading 0's) zodat deze waarde kan gesorteerd worden",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "officieelToegekend": {
+      "type": "object",
+      "description": "Geeft aan of het adres is toegekend door een officiële instantie (gewoonlijk de gemeente) (True). Als een afwijking wordt vastgesteld, kan de gemeente ambtenaar dit aanpassen naar \"False\".",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "beginVanDeLevenscyclusVanDezeVersie": {
+      "type": "object",
+      "description": "undefined",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "isGehechtAan": {
+      "type": "array",
+      "description": "Lijst van Identifier items.",
+      "items": {
+        "$ref": "#/components/schemas/Identifier"
+      },
+      "minItems": 1
+    },
+    "heeftAlsPostInformatie": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "status": {
+      "$ref": "#/components/schemas/Status"
+    },
+    "heeftAlsDeelgemeente": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "heeftAlsStraatnaam": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "heeftAlsGemeente": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "code": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "positie": {
+      "$ref": "#/components/schemas/GeografischePositie"
+    },
+    "hasStreetName": {
+      "$ref": "#/components/schemas/Straatnaam"
+    },
+    "hasMunicipality": {
+      "$ref": "#/components/schemas/Gemeente"
+    },
+    "hasPartOfMunicipality": {
+      "$ref": "#/components/schemas/Deelgemeente"
+    },
+    "successor": {
+      "type": "array",
+      "description": "Lijst van AddressHistory items.",
+      "items": {
+        "$ref": "#/components/schemas/AddressHistory"
+      },
+      "minItems": 1
+    },
+    "predecessor": {
+      "type": "array",
+      "description": "Lijst van AddressHistory items.",
+      "items": {
+        "$ref": "#/components/schemas/AddressHistory"
+      },
+      "minItems": 1
+    },
+    "hasPostalInfo": {
+      "$ref": "#/components/schemas/PostInformatie"
+    }
+  },
+  "required": [
+    "@type",
+    "huisnummer",
+    "eindeVanDeLevenscyclusVanDezeVersie",
+    "officieelToegekend",
+    "beginVanDeLevenscyclusVanDezeVersie",
+    "heeftAlsPostInformatie",
+    "status",
+    "heeftAlsStraatnaam",
+    "heeftAlsGemeente",
+    "code",
+    "positie",
+    "hasStreetName",
+    "hasMunicipality",
+    "hasPostalInfo"
+  ]
+}

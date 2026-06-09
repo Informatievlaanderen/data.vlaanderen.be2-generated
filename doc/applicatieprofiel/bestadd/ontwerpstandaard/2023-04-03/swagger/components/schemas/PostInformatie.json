@@ -1,0 +1,60 @@
+{
+  "title": "PostInformatie",
+  "type": "object",
+  "description": "Identificatie van een subset van adressen gecreëerd voor postbedeling. \nIn de meeste gevallen valt de postal code samen met de gemeente of stad, maar dit is niet altijd het geval.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PostInformatie)",
+      "pattern": "^PostInformatie$"
+    },
+    "naam": {
+      "type": "array",
+      "description": "Lijst van GeographicalName items.",
+      "items": {
+        "$ref": "#/components/schemas/GeographicalName"
+      },
+      "minItems": 1,
+      "maxItems": 3
+    },
+    "code": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "status": {
+      "$ref": "#/components/schemas/Status"
+    },
+    "successor": {
+      "type": "array",
+      "description": "Lijst van PostalInfoHistory items.",
+      "items": {
+        "$ref": "#/components/schemas/PostalInfoHistory"
+      },
+      "minItems": 1
+    },
+    "predecessor": {
+      "type": "array",
+      "description": "Lijst van PostalInfoHistory items.",
+      "items": {
+        "$ref": "#/components/schemas/PostalInfoHistory"
+      },
+      "minItems": 1
+    },
+    "hasPostalInfo": {
+      "type": "array",
+      "description": "Lijst van Adres items.",
+      "items": {
+        "$ref": "#/components/schemas/Adres"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "code",
+    "status"
+  ]
+}

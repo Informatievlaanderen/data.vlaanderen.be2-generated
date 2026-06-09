@@ -1,0 +1,1686 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Components of OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "Straatnaam": {
+        "title": "Straatnaam",
+        "type": "object",
+        "description": "Een adrescomponent die de naam is van een passage of een weg van de ene locatie naar een andere.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Straatnaam)",
+            "pattern": "^Straatnaam$"
+          },
+          "homoniemtoevoeging": {
+            "type": "object",
+            "description": "Toevoeging aan de straatnaam om een onderscheid te maken tussen 2 straten die dezelfde naam hebben binnen dezelfde gemeente, bijv. e.g. Groenstraat (ANBO), Groenstraat (HOWI)",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "beginVanDeLevenscyclusVanDezeVersie": {
+            "type": "object",
+            "description": "undefined",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "eindeVanDeLevenscyclusVanDezeVersie": {
+            "type": "object",
+            "description": "undefined",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "werdToegekendDoorDezeGemeente": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          },
+          "name": {
+            "type": "array",
+            "description": "Lijst van GeographicalName items.",
+            "items": {
+              "$ref": "#/components/schemas/GeographicalName"
+            },
+            "minItems": 1,
+            "maxItems": 3
+          },
+          "code": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "type": {
+            "$ref": "#/components/schemas/StreetNameTypeValue"
+          },
+          "hasStreetName": {
+            "type": "array",
+            "description": "Lijst van Adres items.",
+            "items": {
+              "$ref": "#/components/schemas/Adres"
+            },
+            "minItems": 1
+          },
+          "isAssignedByMunicipality": {
+            "$ref": "#/components/schemas/Gemeente"
+          },
+          "successor": {
+            "type": "array",
+            "description": "Lijst van StreetNameHistory items.",
+            "items": {
+              "$ref": "#/components/schemas/StreetNameHistory"
+            },
+            "minItems": 1
+          },
+          "predecessor": {
+            "type": "array",
+            "description": "Lijst van StreetNameHistory items.",
+            "items": {
+              "$ref": "#/components/schemas/StreetNameHistory"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "homoniemtoevoeging",
+          "beginVanDeLevenscyclusVanDezeVersie",
+          "eindeVanDeLevenscyclusVanDezeVersie",
+          "werdToegekendDoorDezeGemeente",
+          "status",
+          "name",
+          "code",
+          "type",
+          "isAssignedByMunicipality"
+        ]
+      },
+      "Gemeente": {
+        "title": "Gemeente",
+        "type": "object",
+        "description": "Officiële administratieve zone van het Belgisch grondgebied. De gemeente is het kleinste administratieve deel van het Belgisch grondgebied waarvan de grenzen enkel door de wetgever kunnen worden gewijzigd.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Gemeente)",
+            "pattern": "^Gemeente$"
+          },
+          "naam": {
+            "type": "array",
+            "description": "Lijst van GeographicalName items.",
+            "items": {
+              "$ref": "#/components/schemas/GeographicalName"
+            },
+            "minItems": 1,
+            "maxItems": 3
+          },
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "hasMunicipality": {
+            "type": "array",
+            "description": "Lijst van Adres items.",
+            "items": {
+              "$ref": "#/components/schemas/Adres"
+            },
+            "minItems": 1
+          },
+          "isAssignedByMunicipality": {
+            "type": "array",
+            "description": "Lijst van Straatnaam items.",
+            "items": {
+              "$ref": "#/components/schemas/Straatnaam"
+            },
+            "minItems": 1
+          },
+          "successor": {
+            "type": "array",
+            "description": "Lijst van MunicipalityHistory items.",
+            "items": {
+              "$ref": "#/components/schemas/MunicipalityHistory"
+            },
+            "minItems": 1
+          },
+          "predecessor": {
+            "type": "array",
+            "description": "Lijst van MunicipalityHistory items.",
+            "items": {
+              "$ref": "#/components/schemas/MunicipalityHistory"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "naam",
+          "status",
+          "code"
+        ]
+      },
+      "Adres": {
+        "title": "Adres",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Adres)",
+            "pattern": "^Adres$"
+          },
+          "huisnummer": {
+            "type": "object",
+            "description": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "busnummer": {
+            "type": "object",
+            "description": "Officieel toegekende alfanumerieke code die wordt toegevoegd aan het huisnummer om meerdere gebouweenheden, standplaatsen, ligplaatsen of percelen te onderscheiden die hetzelfde huisnummer hebben.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "eindeVanDeLevenscyclusVanDezeVersie": {
+            "type": "object",
+            "description": "undefined",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "adresSorteerveld": {
+            "type": "object",
+            "description": "Transformatie van het huisnummer en busnummer (toevoeging van leading 0's) zodat deze waarde kan gesorteerd worden",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "officieelToegekend": {
+            "type": "object",
+            "description": "Geeft aan of het adres is toegekend door een officiële instantie (gewoonlijk de gemeente) (True). Als een afwijking wordt vastgesteld, kan de gemeente ambtenaar dit aanpassen naar \"False\".",
+            "properties": {
+              "@value": {
+                "type": "boolean"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Boolean$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "beginVanDeLevenscyclusVanDezeVersie": {
+            "type": "object",
+            "description": "undefined",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "isGehechtAan": {
+            "type": "array",
+            "description": "Lijst van Identifier items.",
+            "items": {
+              "$ref": "#/components/schemas/Identifier"
+            },
+            "minItems": 1
+          },
+          "heeftAlsPostInformatie": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          },
+          "heeftAlsDeelgemeente": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "heeftAlsStraatnaam": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "heeftAlsGemeente": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "positie": {
+            "$ref": "#/components/schemas/GeografischePositie"
+          },
+          "hasStreetName": {
+            "$ref": "#/components/schemas/Straatnaam"
+          },
+          "hasMunicipality": {
+            "$ref": "#/components/schemas/Gemeente"
+          },
+          "hasPartOfMunicipality": {
+            "$ref": "#/components/schemas/Deelgemeente"
+          },
+          "successor": {
+            "type": "array",
+            "description": "Lijst van AddressHistory items.",
+            "items": {
+              "$ref": "#/components/schemas/AddressHistory"
+            },
+            "minItems": 1
+          },
+          "predecessor": {
+            "type": "array",
+            "description": "Lijst van AddressHistory items.",
+            "items": {
+              "$ref": "#/components/schemas/AddressHistory"
+            },
+            "minItems": 1
+          },
+          "hasPostalInfo": {
+            "$ref": "#/components/schemas/PostInformatie"
+          }
+        },
+        "required": [
+          "@type",
+          "huisnummer",
+          "eindeVanDeLevenscyclusVanDezeVersie",
+          "officieelToegekend",
+          "beginVanDeLevenscyclusVanDezeVersie",
+          "heeftAlsPostInformatie",
+          "status",
+          "heeftAlsStraatnaam",
+          "heeftAlsGemeente",
+          "code",
+          "positie",
+          "hasStreetName",
+          "hasMunicipality",
+          "hasPostalInfo"
+        ]
+      },
+      "AddressHistory": {
+        "title": "AddressHistory",
+        "type": "object",
+        "description": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AddressHistory)",
+            "pattern": "^AddressHistory$"
+          },
+          "datumGebeurtenis": {
+            "type": "object",
+            "description": "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "voorganger": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "opvolger": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "successor": {
+            "$ref": "#/components/schemas/Adres"
+          },
+          "predecessor": {
+            "$ref": "#/components/schemas/Adres"
+          }
+        },
+        "required": [
+          "@type",
+          "datumGebeurtenis",
+          "voorganger",
+          "opvolger",
+          "successor",
+          "predecessor"
+        ]
+      },
+      "Status": {
+        "title": "Status",
+        "type": "object",
+        "description": "De status bevat de status waarde en de geldigheidsperiode (datum van en datum tot)",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Status)",
+            "pattern": "^Status$"
+          },
+          "geldigTot": {
+            "type": "object",
+            "description": "de einddatum tot wanneer de entiteit geldig is",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "geldigVanaf": {
+            "type": "object",
+            "description": "de startdatum vanaf wanneer de entiteit geldig is.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "status": {
+            "$ref": "#/components/schemas/StatusValue"
+          }
+        },
+        "required": [
+          "@type",
+          "geldigVanaf",
+          "status"
+        ]
+      },
+      "StreetNameHistory": {
+        "title": "StreetNameHistory",
+        "type": "object",
+        "description": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse StreetNameHistory)",
+            "pattern": "^StreetNameHistory$"
+          },
+          "datumGebeurtenis": {
+            "type": "object",
+            "description": "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "voorganger": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "opvolger": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "successor": {
+            "$ref": "#/components/schemas/Straatnaam"
+          },
+          "predecessor": {
+            "$ref": "#/components/schemas/Straatnaam"
+          }
+        },
+        "required": [
+          "@type",
+          "datumGebeurtenis",
+          "voorganger",
+          "opvolger",
+          "successor",
+          "predecessor"
+        ]
+      },
+      "PostalInfoHistory": {
+        "title": "PostalInfoHistory",
+        "type": "object",
+        "description": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PostalInfoHistory)",
+            "pattern": "^PostalInfoHistory$"
+          },
+          "datumGebeurtenis": {
+            "type": "object",
+            "description": "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "opvolger": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "voorganger": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "successor": {
+            "$ref": "#/components/schemas/PostInformatie"
+          },
+          "predecessor": {
+            "$ref": "#/components/schemas/PostInformatie"
+          }
+        },
+        "required": [
+          "@type",
+          "datumGebeurtenis",
+          "opvolger",
+          "voorganger",
+          "successor",
+          "predecessor"
+        ]
+      },
+      "AdresseerbaarObject": {
+        "title": "AdresseerbaarObject",
+        "type": "object",
+        "description": "Ruimtelijk object waaraan een adres kan worden toegekend. De meest voorkomende adresseerbare objecten zijn gebouwen, percelen, gebouwingangen, gemene delen binnen een gebouw etc.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse AdresseerbaarObject)",
+            "pattern": "^AdresseerbaarObject$"
+          },
+          "code": {
+            "$ref": "#/components/schemas/Identifier"
+          }
+        },
+        "required": [
+          "@type",
+          "code"
+        ]
+      },
+      "GeografischePositie": {
+        "title": "GeografischePositie",
+        "type": "object",
+        "description": "Geografische positie aangegeven door een punt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GeografischePositie)",
+            "pattern": "^GeografischePositie$"
+          },
+          "positiespecificatie": {
+            "$ref": "#/components/schemas/PositionSpecificationValue"
+          },
+          "positiegeometriemethode": {
+            "$ref": "#/components/schemas/PositionGeometryMethodValue"
+          },
+          "geometrischPunt": {
+            "$ref": "#/components/schemas/Point"
+          }
+        },
+        "required": [
+          "@type",
+          "positiespecificatie",
+          "positiegeometriemethode",
+          "geometrischPunt"
+        ]
+      },
+      "Deelgemeente": {
+        "title": "Deelgemeente",
+        "type": "object",
+        "description": "Een deel van een gemeente, zoals een voormalige gemeente (voorafgaand aan de fusie van de gemeenten) of een wijk.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Deelgemeente)",
+            "pattern": "^Deelgemeente$"
+          },
+          "naam": {
+            "type": "array",
+            "description": "Lijst van GeographicalName items.",
+            "items": {
+              "$ref": "#/components/schemas/GeographicalName"
+            },
+            "minItems": 1,
+            "maxItems": 3
+          },
+          "code": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          },
+          "hasPartOfMunicipality": {
+            "type": "array",
+            "description": "Lijst van Adres items.",
+            "items": {
+              "$ref": "#/components/schemas/Adres"
+            },
+            "minItems": 1
+          },
+          "successor": {
+            "type": "array",
+            "description": "Lijst van PartOfMunicipalityHistory items.",
+            "items": {
+              "$ref": "#/components/schemas/PartOfMunicipalityHistory"
+            },
+            "minItems": 1
+          },
+          "predecessor": {
+            "type": "array",
+            "description": "Lijst van PartOfMunicipalityHistory items.",
+            "items": {
+              "$ref": "#/components/schemas/PartOfMunicipalityHistory"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "naam",
+          "code",
+          "status"
+        ]
+      },
+      "PartOfMunicipalityHistory": {
+        "title": "PartOfMunicipalityHistory",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PartOfMunicipalityHistory)",
+            "pattern": "^PartOfMunicipalityHistory$"
+          },
+          "datumGebeurtenis": {
+            "type": "object",
+            "description": "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "opvolger": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "voorganger": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "successor": {
+            "$ref": "#/components/schemas/Deelgemeente"
+          },
+          "predecessor": {
+            "$ref": "#/components/schemas/Deelgemeente"
+          }
+        },
+        "required": [
+          "@type",
+          "datumGebeurtenis",
+          "opvolger",
+          "voorganger",
+          "successor",
+          "predecessor"
+        ]
+      },
+      "PostInformatie": {
+        "title": "PostInformatie",
+        "type": "object",
+        "description": "Identificatie van een subset van adressen gecreëerd voor postbedeling. \nIn de meeste gevallen valt de postal code samen met de gemeente of stad, maar dit is niet altijd het geval.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PostInformatie)",
+            "pattern": "^PostInformatie$"
+          },
+          "naam": {
+            "type": "array",
+            "description": "Lijst van GeographicalName items.",
+            "items": {
+              "$ref": "#/components/schemas/GeographicalName"
+            },
+            "minItems": 1,
+            "maxItems": 3
+          },
+          "code": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "status": {
+            "$ref": "#/components/schemas/Status"
+          },
+          "successor": {
+            "type": "array",
+            "description": "Lijst van PostalInfoHistory items.",
+            "items": {
+              "$ref": "#/components/schemas/PostalInfoHistory"
+            },
+            "minItems": 1
+          },
+          "predecessor": {
+            "type": "array",
+            "description": "Lijst van PostalInfoHistory items.",
+            "items": {
+              "$ref": "#/components/schemas/PostalInfoHistory"
+            },
+            "minItems": 1
+          },
+          "hasPostalInfo": {
+            "type": "array",
+            "description": "Lijst van Adres items.",
+            "items": {
+              "$ref": "#/components/schemas/Adres"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "code",
+          "status"
+        ]
+      },
+      "MunicipalityHistory": {
+        "title": "MunicipalityHistory",
+        "type": "object",
+        "description": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse MunicipalityHistory)",
+            "pattern": "^MunicipalityHistory$"
+          },
+          "datumGebeurtenis": {
+            "type": "object",
+            "description": "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Date$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "voorganger": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "opvolger": {
+            "$ref": "#/components/schemas/Identifier"
+          },
+          "successor": {
+            "$ref": "#/components/schemas/Gemeente"
+          },
+          "predecessor": {
+            "$ref": "#/components/schemas/Gemeente"
+          }
+        },
+        "required": [
+          "@type",
+          "datumGebeurtenis",
+          "voorganger",
+          "opvolger",
+          "successor",
+          "predecessor"
+        ]
+      },
+      "Pos": {
+        "title": "Pos",
+        "type": "object",
+        "description": "De positie uitgedrukt in Lambert72 en de Lambert08-notatie.\nIn Lambert-notatie is een locatie gedefinieerd met een X- en Y-coördinaat (dubbels) die de afstand aangeven van een gekozen referentiepunt",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Pos)",
+            "pattern": "^Pos$"
+          },
+          "x": {
+            "type": "object",
+            "description": "undefined",
+            "properties": {
+              "@value": {
+                "type": "number",
+                "format": "double"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Double$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "y": {
+            "type": "object",
+            "description": "undefined",
+            "properties": {
+              "@value": {
+                "type": "number",
+                "format": "double"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Double$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "x",
+          "y"
+        ]
+      },
+      "PositionSpecificationValue": {
+        "title": "PositionSpecificationValue",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PositionSpecificationValue)",
+            "pattern": "^PositionSpecificationValue$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "PositionGeometryMethodValue": {
+        "title": "PositionGeometryMethodValue",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PositionGeometryMethodValue)",
+            "pattern": "^PositionGeometryMethodValue$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "StatusValue": {
+        "title": "StatusValue",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse StatusValue)",
+            "pattern": "^StatusValue$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "LanguageCodeValue": {
+        "title": "LanguageCodeValue",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse LanguageCodeValue)",
+            "pattern": "^LanguageCodeValue$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "StreetNameTypeValue": {
+        "title": "StreetNameTypeValue",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse StreetNameTypeValue)",
+            "pattern": "^StreetNameTypeValue$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "GeographicalName": {
+        "title": "GeographicalName",
+        "type": "object",
+        "description": "Namen zoals gemeentenamen zijn meertalig in België. Er wordt een speciale klasse gebruikt om deze meertalige situatie uit te drukken.\nDe GeographicalName bestaat uit de volgende subelementen: spelling en talen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GeographicalName)",
+            "pattern": "^GeographicalName$"
+          },
+          "geografischeNaam": {
+            "type": "object",
+            "description": "De naam uitgeschreven in de gespecifieerde taal",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "naam": {
+            "$ref": "#/components/schemas/LanguageCodeValue"
+          }
+        },
+        "required": [
+          "@type",
+          "geografischeNaam",
+          "naam"
+        ]
+      },
+      "Identifier": {
+        "title": "Identifier",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Identifier)",
+            "pattern": "^Identifier$"
+          },
+          "namespace": {
+            "type": "object",
+            "description": "De naamruimte die de regio's gebruiken om de regio en het elementtype te identificeren",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "identificatorVanEenVersie": {
+            "type": "object",
+            "description": "Versie van de BeSt identifier; laatste deel van de BeSt identifier Een versionIdentifier kan een datum/tijdstempel zijn (zoals in Vlaanderen) of een nummer (zoals in Wallonië en Brussel).",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "identificatorVanEenObject": {
+            "type": "object",
+            "description": "Een integer die het middelste deel van de BeSt identifier voorstelt een nummer dat het object binnen de naamruimte eenduidig identificeert.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "namespace",
+          "identificatorVanEenVersie",
+          "identificatorVanEenObject"
+        ]
+      },
+      "Coordinates": {
+        "title": "Coordinates",
+        "type": "object",
+        "description": "Positie uitgedrukt volgens de WGS84 standaard (World Geodetic System 1984 op basis van lengtegraad en breedtegraad)",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Coordinates)",
+            "pattern": "^Coordinates$"
+          },
+          "long": {
+            "type": "object",
+            "description": "undefined",
+            "properties": {
+              "@value": {
+                "type": "number",
+                "format": "double"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Double$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "lat": {
+            "type": "object",
+            "description": "undefined",
+            "properties": {
+              "@value": {
+                "type": "number",
+                "format": "double"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^Double$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "long",
+          "lat"
+        ]
+      },
+      "Point": {
+        "title": "Point",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Point)",
+            "pattern": "^Point$"
+          },
+          "geografischePositie(Lam72-Lam08)": {
+            "type": "array",
+            "description": "Lijst van Pos items.",
+            "items": {
+              "$ref": "#/components/schemas/Pos"
+            },
+            "minItems": 1,
+            "maxItems": 2
+          },
+          "coordinates(WGS84)": {
+            "$ref": "#/components/schemas/Coordinates"
+          }
+        },
+        "required": [
+          "@type",
+          "geografischePositie(Lam72-Lam08)",
+          "coordinates(WGS84)"
+        ]
+      }
+    },
+    "links": {
+      "Straatnaam.werdToegekendDoorDezeGemeente": {
+        "operationId": "StraatnaamGET",
+        "parameters": {
+          "id": "$response.body#/Straatnaam.werdToegekendDoorDezeGemeente/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "Straatnaam.status": {
+        "operationId": "StraatnaamGET",
+        "parameters": {
+          "id": "$response.body#/Straatnaam.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen."
+      },
+      "Straatnaam.name": {
+        "operationId": "StraatnaamGET",
+        "parameters": {
+          "id": "$response.body#/Straatnaam.name/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeographicalName` op te halen."
+      },
+      "Straatnaam.code": {
+        "operationId": "StraatnaamGET",
+        "parameters": {
+          "id": "$response.body#/Straatnaam.code/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "Straatnaam.type": {
+        "operationId": "StraatnaamGET",
+        "parameters": {
+          "id": "$response.body#/Straatnaam.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `StreetNameTypeValue` op te halen."
+      },
+      "Straatnaam.hasStreetName": {
+        "operationId": "StraatnaamGET",
+        "parameters": {
+          "id": "$response.body#/Straatnaam.hasStreetName/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Adres` op te halen."
+      },
+      "Straatnaam.isAssignedByMunicipality": {
+        "operationId": "StraatnaamGET",
+        "parameters": {
+          "id": "$response.body#/Straatnaam.isAssignedByMunicipality/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Gemeente` op te halen."
+      },
+      "Straatnaam.successor": {
+        "operationId": "StraatnaamGET",
+        "parameters": {
+          "id": "$response.body#/Straatnaam.successor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `StreetNameHistory` op te halen."
+      },
+      "Straatnaam.predecessor": {
+        "operationId": "StraatnaamGET",
+        "parameters": {
+          "id": "$response.body#/Straatnaam.predecessor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `StreetNameHistory` op te halen."
+      },
+      "Gemeente.naam": {
+        "operationId": "GemeenteGET",
+        "parameters": {
+          "id": "$response.body#/Gemeente.naam/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeographicalName` op te halen."
+      },
+      "Gemeente.status": {
+        "operationId": "GemeenteGET",
+        "parameters": {
+          "id": "$response.body#/Gemeente.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen."
+      },
+      "Gemeente.code": {
+        "operationId": "GemeenteGET",
+        "parameters": {
+          "id": "$response.body#/Gemeente.code/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "Gemeente.hasMunicipality": {
+        "operationId": "GemeenteGET",
+        "parameters": {
+          "id": "$response.body#/Gemeente.hasMunicipality/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Adres` op te halen."
+      },
+      "Gemeente.isAssignedByMunicipality": {
+        "operationId": "GemeenteGET",
+        "parameters": {
+          "id": "$response.body#/Gemeente.isAssignedByMunicipality/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Straatnaam` op te halen."
+      },
+      "Gemeente.successor": {
+        "operationId": "GemeenteGET",
+        "parameters": {
+          "id": "$response.body#/Gemeente.successor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `MunicipalityHistory` op te halen."
+      },
+      "Gemeente.predecessor": {
+        "operationId": "GemeenteGET",
+        "parameters": {
+          "id": "$response.body#/Gemeente.predecessor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `MunicipalityHistory` op te halen."
+      },
+      "Adres.isGehechtAan": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.isGehechtAan/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "Adres.heeftAlsPostInformatie": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.heeftAlsPostInformatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "Adres.status": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen."
+      },
+      "Adres.heeftAlsDeelgemeente": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.heeftAlsDeelgemeente/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "Adres.heeftAlsStraatnaam": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.heeftAlsStraatnaam/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "Adres.heeftAlsGemeente": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.heeftAlsGemeente/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "Adres.code": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.code/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "Adres.positie": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.positie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeografischePositie` op te halen."
+      },
+      "Adres.hasStreetName": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.hasStreetName/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Straatnaam` op te halen."
+      },
+      "Adres.hasMunicipality": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.hasMunicipality/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Gemeente` op te halen."
+      },
+      "Adres.hasPartOfMunicipality": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.hasPartOfMunicipality/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Deelgemeente` op te halen."
+      },
+      "Adres.successor": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.successor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AddressHistory` op te halen."
+      },
+      "Adres.predecessor": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.predecessor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `AddressHistory` op te halen."
+      },
+      "Adres.hasPostalInfo": {
+        "operationId": "AdresGET",
+        "parameters": {
+          "id": "$response.body#/Adres.hasPostalInfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PostInformatie` op te halen."
+      },
+      "AddressHistory.voorganger": {
+        "operationId": "AddressHistoryGET",
+        "parameters": {
+          "id": "$response.body#/AddressHistory.voorganger/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "AddressHistory.opvolger": {
+        "operationId": "AddressHistoryGET",
+        "parameters": {
+          "id": "$response.body#/AddressHistory.opvolger/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "AddressHistory.successor": {
+        "operationId": "AddressHistoryGET",
+        "parameters": {
+          "id": "$response.body#/AddressHistory.successor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Adres` op te halen."
+      },
+      "AddressHistory.predecessor": {
+        "operationId": "AddressHistoryGET",
+        "parameters": {
+          "id": "$response.body#/AddressHistory.predecessor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Adres` op te halen."
+      },
+      "Status.status": {
+        "operationId": "StatusGET",
+        "parameters": {
+          "id": "$response.body#/Status.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `StatusValue` op te halen."
+      },
+      "StreetNameHistory.voorganger": {
+        "operationId": "StreetNameHistoryGET",
+        "parameters": {
+          "id": "$response.body#/StreetNameHistory.voorganger/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "StreetNameHistory.opvolger": {
+        "operationId": "StreetNameHistoryGET",
+        "parameters": {
+          "id": "$response.body#/StreetNameHistory.opvolger/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "StreetNameHistory.successor": {
+        "operationId": "StreetNameHistoryGET",
+        "parameters": {
+          "id": "$response.body#/StreetNameHistory.successor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Straatnaam` op te halen."
+      },
+      "StreetNameHistory.predecessor": {
+        "operationId": "StreetNameHistoryGET",
+        "parameters": {
+          "id": "$response.body#/StreetNameHistory.predecessor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Straatnaam` op te halen."
+      },
+      "PostalInfoHistory.opvolger": {
+        "operationId": "PostalInfoHistoryGET",
+        "parameters": {
+          "id": "$response.body#/PostalInfoHistory.opvolger/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "PostalInfoHistory.voorganger": {
+        "operationId": "PostalInfoHistoryGET",
+        "parameters": {
+          "id": "$response.body#/PostalInfoHistory.voorganger/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "PostalInfoHistory.successor": {
+        "operationId": "PostalInfoHistoryGET",
+        "parameters": {
+          "id": "$response.body#/PostalInfoHistory.successor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PostInformatie` op te halen."
+      },
+      "PostalInfoHistory.predecessor": {
+        "operationId": "PostalInfoHistoryGET",
+        "parameters": {
+          "id": "$response.body#/PostalInfoHistory.predecessor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PostInformatie` op te halen."
+      },
+      "AdresseerbaarObject.code": {
+        "operationId": "AdresseerbaarObjectGET",
+        "parameters": {
+          "id": "$response.body#/AdresseerbaarObject.code/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "GeografischePositie.positiespecificatie": {
+        "operationId": "GeografischePositieGET",
+        "parameters": {
+          "id": "$response.body#/GeografischePositie.positiespecificatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PositionSpecificationValue` op te halen."
+      },
+      "GeografischePositie.positiegeometriemethode": {
+        "operationId": "GeografischePositieGET",
+        "parameters": {
+          "id": "$response.body#/GeografischePositie.positiegeometriemethode/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PositionGeometryMethodValue` op te halen."
+      },
+      "GeografischePositie.geometrischPunt": {
+        "operationId": "GeografischePositieGET",
+        "parameters": {
+          "id": "$response.body#/GeografischePositie.geometrischPunt/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Point` op te halen."
+      },
+      "Deelgemeente.naam": {
+        "operationId": "DeelgemeenteGET",
+        "parameters": {
+          "id": "$response.body#/Deelgemeente.naam/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeographicalName` op te halen."
+      },
+      "Deelgemeente.code": {
+        "operationId": "DeelgemeenteGET",
+        "parameters": {
+          "id": "$response.body#/Deelgemeente.code/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "Deelgemeente.status": {
+        "operationId": "DeelgemeenteGET",
+        "parameters": {
+          "id": "$response.body#/Deelgemeente.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen."
+      },
+      "Deelgemeente.hasPartOfMunicipality": {
+        "operationId": "DeelgemeenteGET",
+        "parameters": {
+          "id": "$response.body#/Deelgemeente.hasPartOfMunicipality/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Adres` op te halen."
+      },
+      "Deelgemeente.successor": {
+        "operationId": "DeelgemeenteGET",
+        "parameters": {
+          "id": "$response.body#/Deelgemeente.successor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PartOfMunicipalityHistory` op te halen."
+      },
+      "Deelgemeente.predecessor": {
+        "operationId": "DeelgemeenteGET",
+        "parameters": {
+          "id": "$response.body#/Deelgemeente.predecessor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PartOfMunicipalityHistory` op te halen."
+      },
+      "PartOfMunicipalityHistory.opvolger": {
+        "operationId": "PartOfMunicipalityHistoryGET",
+        "parameters": {
+          "id": "$response.body#/PartOfMunicipalityHistory.opvolger/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "PartOfMunicipalityHistory.voorganger": {
+        "operationId": "PartOfMunicipalityHistoryGET",
+        "parameters": {
+          "id": "$response.body#/PartOfMunicipalityHistory.voorganger/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "PartOfMunicipalityHistory.successor": {
+        "operationId": "PartOfMunicipalityHistoryGET",
+        "parameters": {
+          "id": "$response.body#/PartOfMunicipalityHistory.successor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Deelgemeente` op te halen."
+      },
+      "PartOfMunicipalityHistory.predecessor": {
+        "operationId": "PartOfMunicipalityHistoryGET",
+        "parameters": {
+          "id": "$response.body#/PartOfMunicipalityHistory.predecessor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Deelgemeente` op te halen."
+      },
+      "PostInformatie.naam": {
+        "operationId": "PostInformatieGET",
+        "parameters": {
+          "id": "$response.body#/PostInformatie.naam/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeographicalName` op te halen."
+      },
+      "PostInformatie.code": {
+        "operationId": "PostInformatieGET",
+        "parameters": {
+          "id": "$response.body#/PostInformatie.code/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "PostInformatie.status": {
+        "operationId": "PostInformatieGET",
+        "parameters": {
+          "id": "$response.body#/PostInformatie.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Status` op te halen."
+      },
+      "PostInformatie.successor": {
+        "operationId": "PostInformatieGET",
+        "parameters": {
+          "id": "$response.body#/PostInformatie.successor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PostalInfoHistory` op te halen."
+      },
+      "PostInformatie.predecessor": {
+        "operationId": "PostInformatieGET",
+        "parameters": {
+          "id": "$response.body#/PostInformatie.predecessor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PostalInfoHistory` op te halen."
+      },
+      "PostInformatie.hasPostalInfo": {
+        "operationId": "PostInformatieGET",
+        "parameters": {
+          "id": "$response.body#/PostInformatie.hasPostalInfo/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Adres` op te halen."
+      },
+      "MunicipalityHistory.voorganger": {
+        "operationId": "MunicipalityHistoryGET",
+        "parameters": {
+          "id": "$response.body#/MunicipalityHistory.voorganger/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "MunicipalityHistory.opvolger": {
+        "operationId": "MunicipalityHistoryGET",
+        "parameters": {
+          "id": "$response.body#/MunicipalityHistory.opvolger/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
+      "MunicipalityHistory.successor": {
+        "operationId": "MunicipalityHistoryGET",
+        "parameters": {
+          "id": "$response.body#/MunicipalityHistory.successor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Gemeente` op te halen."
+      },
+      "MunicipalityHistory.predecessor": {
+        "operationId": "MunicipalityHistoryGET",
+        "parameters": {
+          "id": "$response.body#/MunicipalityHistory.predecessor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Gemeente` op te halen."
+      }
+    }
+  }
+}

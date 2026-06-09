@@ -1,0 +1,54 @@
+{
+  "title": "AddressHistory",
+  "type": "object",
+  "description": "Deze historiek tabel koppelt twee historisch gerelateerde entiteiten.\nElke historische entiteit heeft dezelfde structuur: voorganger, opvolger en eventDate. (opgebouwd door BOSA op basis van mutaties verwerkt in de BeSt Address databank)",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse AddressHistory)",
+      "pattern": "^AddressHistory$"
+    },
+    "datumGebeurtenis": {
+      "type": "object",
+      "description": "Datum van de mutatie die deze voorganger-opvolgerrelatie creëerde.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "voorganger": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "opvolger": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "successor": {
+      "$ref": "#/components/schemas/Adres"
+    },
+    "predecessor": {
+      "$ref": "#/components/schemas/Adres"
+    }
+  },
+  "required": [
+    "@type",
+    "datumGebeurtenis",
+    "voorganger",
+    "opvolger",
+    "successor",
+    "predecessor"
+  ]
+}

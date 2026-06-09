@@ -1,0 +1,61 @@
+{
+  "title": "Deelgemeente",
+  "type": "object",
+  "description": "Een deel van een gemeente, zoals een voormalige gemeente (voorafgaand aan de fusie van de gemeenten) of een wijk.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Deelgemeente)",
+      "pattern": "^Deelgemeente$"
+    },
+    "naam": {
+      "type": "array",
+      "description": "Lijst van GeographicalName items.",
+      "items": {
+        "$ref": "#/components/schemas/GeographicalName"
+      },
+      "minItems": 1,
+      "maxItems": 3
+    },
+    "code": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "status": {
+      "$ref": "#/components/schemas/Status"
+    },
+    "hasPartOfMunicipality": {
+      "type": "array",
+      "description": "Lijst van Adres items.",
+      "items": {
+        "$ref": "#/components/schemas/Adres"
+      },
+      "minItems": 1
+    },
+    "successor": {
+      "type": "array",
+      "description": "Lijst van PartOfMunicipalityHistory items.",
+      "items": {
+        "$ref": "#/components/schemas/PartOfMunicipalityHistory"
+      },
+      "minItems": 1
+    },
+    "predecessor": {
+      "type": "array",
+      "description": "Lijst van PartOfMunicipalityHistory items.",
+      "items": {
+        "$ref": "#/components/schemas/PartOfMunicipalityHistory"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "naam",
+    "code",
+    "status"
+  ]
+}

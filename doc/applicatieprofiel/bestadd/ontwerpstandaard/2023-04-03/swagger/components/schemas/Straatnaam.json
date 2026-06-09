@@ -1,0 +1,124 @@
+{
+  "title": "Straatnaam",
+  "type": "object",
+  "description": "Een adrescomponent die de naam is van een passage of een weg van de ene locatie naar een andere.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Straatnaam)",
+      "pattern": "^Straatnaam$"
+    },
+    "homoniemtoevoeging": {
+      "type": "object",
+      "description": "Toevoeging aan de straatnaam om een onderscheid te maken tussen 2 straten die dezelfde naam hebben binnen dezelfde gemeente, bijv. e.g. Groenstraat (ANBO), Groenstraat (HOWI)",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "beginVanDeLevenscyclusVanDezeVersie": {
+      "type": "object",
+      "description": "undefined",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "eindeVanDeLevenscyclusVanDezeVersie": {
+      "type": "object",
+      "description": "undefined",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "werdToegekendDoorDezeGemeente": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "status": {
+      "$ref": "#/components/schemas/Status"
+    },
+    "name": {
+      "type": "array",
+      "description": "Lijst van GeographicalName items.",
+      "items": {
+        "$ref": "#/components/schemas/GeographicalName"
+      },
+      "minItems": 1,
+      "maxItems": 3
+    },
+    "code": {
+      "$ref": "#/components/schemas/Identifier"
+    },
+    "type": {
+      "$ref": "#/components/schemas/StreetNameTypeValue"
+    },
+    "hasStreetName": {
+      "type": "array",
+      "description": "Lijst van Adres items.",
+      "items": {
+        "$ref": "#/components/schemas/Adres"
+      },
+      "minItems": 1
+    },
+    "isAssignedByMunicipality": {
+      "$ref": "#/components/schemas/Gemeente"
+    },
+    "successor": {
+      "type": "array",
+      "description": "Lijst van StreetNameHistory items.",
+      "items": {
+        "$ref": "#/components/schemas/StreetNameHistory"
+      },
+      "minItems": 1
+    },
+    "predecessor": {
+      "type": "array",
+      "description": "Lijst van StreetNameHistory items.",
+      "items": {
+        "$ref": "#/components/schemas/StreetNameHistory"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "homoniemtoevoeging",
+    "beginVanDeLevenscyclusVanDezeVersie",
+    "eindeVanDeLevenscyclusVanDezeVersie",
+    "werdToegekendDoorDezeGemeente",
+    "status",
+    "name",
+    "code",
+    "type",
+    "isAssignedByMunicipality"
+  ]
+}
