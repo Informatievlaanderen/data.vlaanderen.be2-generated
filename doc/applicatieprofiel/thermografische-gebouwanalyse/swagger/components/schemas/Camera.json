@@ -1,0 +1,169 @@
+{
+  "title": "Camera",
+  "type": "object",
+  "description": "Vast of mobiel observatiesysteem dat beelden verzamelt, verwerkt of bewaart.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Camera)",
+      "pattern": "^Camera$"
+    },
+    "implementeert": {
+      "$ref": "#/components/schemas/Observatieprocedure"
+    },
+    "uitgevoerdeObservatie": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatie"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Systeemtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Systeemtype"
+      },
+      "minItems": 1
+    },
+    "capaciteit": {
+      "type": "array",
+      "description": "Lijst van Systeemvermogen items.",
+      "items": {
+        "$ref": "#/components/schemas/Systeemvermogen"
+      },
+      "minItems": 1
+    },
+    "werkingsbereik": {
+      "type": "array",
+      "description": "Lijst van Werkingsbereik items.",
+      "items": {
+        "$ref": "#/components/schemas/Werkingsbereik"
+      },
+      "minItems": 1
+    },
+    "overlevingsbereik": {
+      "type": "array",
+      "description": "Lijst van Overlevingscapaciteit items.",
+      "items": {
+        "$ref": "#/components/schemas/Overlevingscapaciteit"
+      },
+      "minItems": 1
+    },
+    "gehostDoor": {
+      "type": "array",
+      "description": "Lijst van Platform items.",
+      "items": {
+        "$ref": "#/components/schemas/Platform"
+      },
+      "minItems": 1
+    },
+    "heeftDeployment": {
+      "type": "array",
+      "description": "Lijst van Deployment items.",
+      "items": {
+        "$ref": "#/components/schemas/Deployment"
+      },
+      "minItems": 1
+    },
+    "fabrikant": {
+      "type": "object",
+      "description": "Naam van de fabrikant.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "model": {
+      "type": "object",
+      "description": "Naam van het model van het Toestel.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "functie": {
+      "type": "array",
+      "description": "Lijst van Functie items.",
+      "items": {
+        "$ref": "#/components/schemas/Functie"
+      },
+      "minItems": 1
+    },
+    "taak": {
+      "type": "array",
+      "description": "Lijst van Taak items.",
+      "items": {
+        "$ref": "#/components/schemas/Taak"
+      },
+      "minItems": 1
+    },
+    "locatie": {
+      "$ref": "#/components/schemas/Geometrie"
+    },
+    "hostVan": {
+      "type": "array",
+      "description": "Lijst van Systeem items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Sensor"
+          },
+          {
+            "$ref": "#/components/schemas/Toestel"
+          },
+          {
+            "$ref": "#/components/schemas/MachineLearningModel"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Sensor": "#/components/schemas/Sensor",
+            "Toestel": "#/components/schemas/Toestel",
+            "MachineLearningModel": "#/components/schemas/MachineLearningModel"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "deployment": {
+      "type": "array",
+      "description": "Lijst van Deployment items.",
+      "items": {
+        "$ref": "#/components/schemas/Deployment"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "implementeert",
+    "functie",
+    "taak",
+    "type"
+  ]
+}

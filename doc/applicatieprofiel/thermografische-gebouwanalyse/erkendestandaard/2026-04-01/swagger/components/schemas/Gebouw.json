@@ -1,0 +1,91 @@
+{
+  "title": "Gebouw",
+  "type": "object",
+  "description": "Een gesloten en/of overdekt, bovengronds of ondergronds bouwwerk, dat dient of bestemd is, ofwel om mensen, dieren en voorwerpen onder te brengen, ofwel om economische goederen te vervaardigen of diensten te verstrekken. Een gebouw verwijst naar gelijk welke structuur die op blijvende wijze op een terrein opgetrokken of gebouwd wordt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Gebouw)",
+      "pattern": "^Gebouw$"
+    },
+    "bouwjaar": {
+      "type": "object",
+      "description": "Datum waarop het gebouw voltooid werd. Verbouwingen en renovaties na initiële oplevering worden niet meegeteld.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "laatsteRenovatie": {
+      "type": "object",
+      "description": "Datum waarop het gebouw het laatst gerenoveerd werd. Verbouwingen en renovaties na initiële oplevering worden niet meegeteld.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "kenmerk": {
+      "type": "array",
+      "description": "Lijst van Kenmerk items.",
+      "items": {
+        "$ref": "#/components/schemas/Kenmerk"
+      },
+      "minItems": 1
+    },
+    "adres": {
+      "type": "array",
+      "description": "Lijst van Adresvoorstelling items.",
+      "items": {
+        "$ref": "#/components/schemas/Adresvoorstelling"
+      },
+      "minItems": 1
+    },
+    "status": {
+      "$ref": "#/components/schemas/TypeGebouwstatus"
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Domeinobjecttype items.",
+      "items": {
+        "$ref": "#/components/schemas/Domeinobjecttype"
+      },
+      "minItems": 1
+    },
+    "bestaatUit": {
+      "type": "array",
+      "description": "Lijst van Gebouweenheid items.",
+      "items": {
+        "$ref": "#/components/schemas/Gebouweenheid"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "status"
+  ]
+}

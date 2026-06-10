@@ -1,0 +1,152 @@
+{
+  "title": "Toestel",
+  "type": "object",
+  "description": "Tastbaar Object ontworpen om een specifieke Taak mee uit te voeren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Toestel)",
+      "pattern": "^Toestel$"
+    },
+    "fabrikant": {
+      "type": "object",
+      "description": "Naam van de fabrikant.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "model": {
+      "type": "object",
+      "description": "Naam van het model van het Toestel.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "functie": {
+      "type": "array",
+      "description": "Lijst van Functie items.",
+      "items": {
+        "$ref": "#/components/schemas/Functie"
+      },
+      "minItems": 1
+    },
+    "taak": {
+      "type": "array",
+      "description": "Lijst van Taak items.",
+      "items": {
+        "$ref": "#/components/schemas/Taak"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/Platformtype"
+    },
+    "capaciteit": {
+      "type": "array",
+      "description": "Lijst van Systeemvermogen items.",
+      "items": {
+        "$ref": "#/components/schemas/Systeemvermogen"
+      },
+      "minItems": 1
+    },
+    "werkingsbereik": {
+      "type": "array",
+      "description": "Lijst van Werkingsbereik items.",
+      "items": {
+        "$ref": "#/components/schemas/Werkingsbereik"
+      },
+      "minItems": 1
+    },
+    "overlevingsbereik": {
+      "type": "array",
+      "description": "Lijst van Overlevingscapaciteit items.",
+      "items": {
+        "$ref": "#/components/schemas/Overlevingscapaciteit"
+      },
+      "minItems": 1
+    },
+    "gehostDoor": {
+      "type": "array",
+      "description": "Lijst van Platform items.",
+      "items": {
+        "$ref": "#/components/schemas/Platform"
+      },
+      "minItems": 1
+    },
+    "heeftDeployment": {
+      "type": "array",
+      "description": "Lijst van Deployment items.",
+      "items": {
+        "$ref": "#/components/schemas/Deployment"
+      },
+      "minItems": 1
+    },
+    "locatie": {
+      "$ref": "#/components/schemas/Geometrie"
+    },
+    "hostVan": {
+      "type": "array",
+      "description": "Lijst van Systeem items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Sensor"
+          },
+          {
+            "$ref": "#/components/schemas/Toestel"
+          },
+          {
+            "$ref": "#/components/schemas/MachineLearningModel"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Sensor": "#/components/schemas/Sensor",
+            "Toestel": "#/components/schemas/Toestel",
+            "MachineLearningModel": "#/components/schemas/MachineLearningModel"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "deployment": {
+      "type": "array",
+      "description": "Lijst van Deployment items.",
+      "items": {
+        "$ref": "#/components/schemas/Deployment"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "functie",
+    "taak",
+    "type"
+  ]
+}

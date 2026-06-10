@@ -1,0 +1,165 @@
+{
+  "title": "Observatieverzameling",
+  "type": "object",
+  "description": "Collectie van Observaties met dezelfde kenmerken.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Observatieverzameling)",
+      "pattern": "^Observatieverzameling$"
+    },
+    "geobserveerdObject": {
+      "type": "array",
+      "description": "Lijst van Object items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Gebouw"
+          },
+          {
+            "$ref": "#/components/schemas/Gebouweenheid"
+          },
+          {
+            "$ref": "#/components/schemas/Foto"
+          },
+          {
+            "$ref": "#/components/schemas/BIM_Gebouw"
+          },
+          {
+            "$ref": "#/components/schemas/BIM_Element"
+          },
+          {
+            "$ref": "#/components/schemas/Video"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Gebouw": "#/components/schemas/Gebouw",
+            "Gebouweenheid": "#/components/schemas/Gebouweenheid",
+            "Foto": "#/components/schemas/Foto",
+            "BIM_Gebouw": "#/components/schemas/BIM_Gebouw",
+            "BIM_Element": "#/components/schemas/BIM_Element",
+            "Video": "#/components/schemas/Video"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "uitgevoerdMetSensor": {
+      "type": "array",
+      "description": "Lijst van Sensor items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Sensor"
+          },
+          {
+            "$ref": "#/components/schemas/GNSSOntvanger"
+          },
+          {
+            "$ref": "#/components/schemas/Camera"
+          },
+          {
+            "$ref": "#/components/schemas/Opstelling"
+          },
+          {
+            "$ref": "#/components/schemas/MachineLearningModel"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Sensor": "#/components/schemas/Sensor",
+            "GNSSOntvanger": "#/components/schemas/GNSSOntvanger",
+            "Camera": "#/components/schemas/Camera",
+            "Opstelling": "#/components/schemas/Opstelling",
+            "MachineLearningModel": "#/components/schemas/MachineLearningModel"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "geobserveerdKenmerk": {
+      "type": "array",
+      "description": "Lijst van ObserveerbaarKenmerk items.",
+      "items": {
+        "$ref": "#/components/schemas/ObserveerbaarKenmerk"
+      },
+      "minItems": 1
+    },
+    "fenomeentijd": {
+      "type": "array",
+      "description": "Lijst van ObserveerbaarKenmerk items.",
+      "items": {
+        "$ref": "#/components/schemas/ObserveerbaarKenmerk"
+      },
+      "minItems": 1
+    },
+    "resultaatTijd": {
+      "type": "array",
+      "description": "Lijst van TemporeleEntiteit items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TemporeleEntiteit"
+          },
+          {
+            "$ref": "#/components/schemas/Moment"
+          },
+          {
+            "$ref": "#/components/schemas/Periode"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TemporeleEntiteit": "#/components/schemas/TemporeleEntiteit",
+            "Moment": "#/components/schemas/Moment",
+            "Periode": "#/components/schemas/Periode"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "gebruikteProcedure": {
+      "type": "array",
+      "description": "Lijst van Observatieprocedure items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatieprocedure"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van ObservatieCollectieType items.",
+      "items": {
+        "$ref": "#/components/schemas/ObservatieCollectieType"
+      },
+      "minItems": 1
+    },
+    "geassocieerdeVerzameling": {
+      "type": "array",
+      "description": "Lijst van Observatieverzameling items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatieverzameling"
+      },
+      "minItems": 1
+    },
+    "heeftLid": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatie"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}
