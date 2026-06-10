@@ -1,0 +1,89 @@
+{
+  "title": "Identifier",
+  "type": "object",
+  "description": "The Identifier class represents any identifier issued by any authority, whether a government agency or not. It captures the identifier itself, the type of identifier, and details of the issuing authority, the date on which the identifier was issued.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Identifier)",
+      "pattern": "^Identifier$"
+    },
+    "issuingAuthorityName": {
+      "type": "object",
+      "description": "The name of the agency responsible for issuing the Identifier.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "schemeName": {
+      "type": "object",
+      "description": "Name of the scheme used to construct the identifier.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "dateOfIssue": {
+      "$ref": "#/components/schemas/DateTime"
+    },
+    "issuingAuthorityURI": {
+      "type": "object",
+      "description": "The URI of the issuing authority.",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "schemeURI": {
+      "type": "object",
+      "description": "URI of the scheme used to construct the identifier.",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "identifier": {
+      "type": "array",
+      "description": "Lijst van Literal items.",
+      "items": {
+        "type": "object",
+        "description": "The value of this property is the Identifier itself.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "@value"
+        ]
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

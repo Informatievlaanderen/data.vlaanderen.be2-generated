@@ -1,0 +1,49 @@
+{
+  "title": "Organization",
+  "type": "object",
+  "description": "Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Organization)",
+      "pattern": "^Organization$"
+    },
+    "name": {
+      "$ref": "#/components/schemas/LangString"
+    },
+    "type": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Concept"
+        },
+        {
+          "$ref": "#/components/schemas/Unit"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Concept": "#/components/schemas/Concept",
+          "Unit": "#/components/schemas/Unit"
+        }
+      }
+    },
+    "contactPoint": {
+      "type": "array",
+      "description": "Lijst van ContactPoint items.",
+      "items": {
+        "$ref": "#/components/schemas/ContactPoint"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "name",
+    "contactPoint"
+  ]
+}
