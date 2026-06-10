@@ -10,5 +10,5 @@ Error: Unable to find a label for subject "[urn:oslo-toolchain:a284be2e688759091
 
     at /usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/node_modules/@oslo-flanders/core/lib/interfaces/AppRunner.js:37:33
 
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
 
