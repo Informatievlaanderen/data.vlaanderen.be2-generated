@@ -1,0 +1,84 @@
+{
+  "title": "Verkeersmeting",
+  "type": "object",
+  "description": "Het vaststellen van de waarde van een bepaald kenmerk van het verkeer op een bepaald tijdstip of tussen twee tijdstippen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Verkeersmeting)",
+      "pattern": "^Verkeersmeting$"
+    },
+    "fenomeenTijd": {
+      "$ref": "#/components/schemas/TemporeleEntiteit"
+    },
+    "resultaat": {
+      "$ref": "#/components/schemas/Any"
+    },
+    "resultaattijd": {
+      "$ref": "#/components/schemas/Moment"
+    },
+    "resultaatkwaliteit": {
+      "type": "array",
+      "description": "Lijst van Kwaliteitselement items.",
+      "items": {
+        "$ref": "#/components/schemas/Kwaliteitselement"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdDoor": {
+      "type": "array",
+      "description": "Lijst van Agent items.",
+      "items": {
+        "$ref": "#/components/schemas/Agent"
+      },
+      "minItems": 1
+    },
+    "metadata": {
+      "$ref": "#/components/schemas/Metadata"
+    },
+    "geobserveerdKenmerk": {
+      "$ref": "#/components/schemas/Verkeerskenmerk"
+    },
+    "geobserveerdObject": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Verkeersbemonsteringsobject"
+        },
+        {
+          "$ref": "#/components/schemas/Verkeersdomeinobject"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Verkeersbemonsteringsobject": "#/components/schemas/Verkeersbemonsteringsobject",
+          "Verkeersdomeinobject": "#/components/schemas/Verkeersdomeinobject"
+        }
+      }
+    },
+    "gebruikteProcedure": {
+      "type": "array",
+      "description": "Lijst van Observatieprocedure items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatieprocedure"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdMet": {
+      "$ref": "#/components/schemas/Sensor"
+    }
+  },
+  "required": [
+    "@type",
+    "fenomeenTijd",
+    "resultaat",
+    "resultaattijd",
+    "geobserveerdKenmerk",
+    "geobserveerdObject",
+    "uitgevoerdMet"
+  ]
+}

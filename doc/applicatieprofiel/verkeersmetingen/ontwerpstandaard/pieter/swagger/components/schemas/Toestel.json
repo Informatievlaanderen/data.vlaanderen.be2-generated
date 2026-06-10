@@ -1,0 +1,79 @@
+{
+  "title": "Toestel",
+  "type": "object",
+  "description": "Tastbaar Object ontworpen om een specifieke Taak mee uit te voeren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Toestel)",
+      "pattern": "^Toestel$"
+    },
+    "fabrikant": {
+      "type": "object",
+      "description": "Naam van de fabrikant.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "model": {
+      "type": "object",
+      "description": "Naam van het model van het Toestel.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "functie": {
+      "type": "array",
+      "description": "Lijst van Functie items.",
+      "items": {
+        "$ref": "#/components/schemas/Functie"
+      },
+      "minItems": 1
+    },
+    "taak": {
+      "type": "array",
+      "description": "Lijst van Taak items.",
+      "items": {
+        "$ref": "#/components/schemas/Taak"
+      },
+      "minItems": 1
+    },
+    "hostVan": {
+      "type": "array",
+      "description": "Lijst van Sensor items.",
+      "items": {
+        "$ref": "#/components/schemas/Sensor"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "functie",
+    "taak"
+  ]
+}

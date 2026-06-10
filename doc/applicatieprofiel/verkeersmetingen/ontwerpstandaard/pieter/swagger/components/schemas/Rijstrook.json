@@ -1,0 +1,56 @@
+{
+  "title": "Rijstrook",
+  "type": "object",
+  "description": "In de langsrichting begrensd deel van de rijbaan, bedoeld om de verkeersstroom te geleiden in een bepaalde richting en met doorgaans de breedte van één Voertuig.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Rijstrook)",
+      "pattern": "^Rijstrook$"
+    },
+    "netwerkreferentie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Netwerkreferentie"
+        },
+        {
+          "$ref": "#/components/schemas/Linkreferentie"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Netwerkreferentie": "#/components/schemas/Netwerkreferentie",
+          "Linkreferentie": "#/components/schemas/Linkreferentie"
+        }
+      }
+    },
+    "rijstrook": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "rijstrooktype": {
+      "type": "array",
+      "description": "Lijst van Rijstrooktype items.",
+      "items": {
+        "$ref": "#/components/schemas/Rijstrooktype"
+      },
+      "minItems": 1
+    },
+    "waardeverschaffer": {
+      "type": "array",
+      "description": "Lijst van Verkeersmeting items.",
+      "items": {
+        "$ref": "#/components/schemas/Verkeersmeting"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "netwerkreferentie"
+  ]
+}

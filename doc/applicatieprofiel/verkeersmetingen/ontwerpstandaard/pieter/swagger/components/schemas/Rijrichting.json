@@ -1,0 +1,48 @@
+{
+  "title": "Rijrichting",
+  "type": "object",
+  "description": "Richting waarin het verkeer zich over de weg beweegt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Rijrichting)",
+      "pattern": "^Rijrichting$"
+    },
+    "netwerkreferentie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Netwerkreferentie"
+        },
+        {
+          "$ref": "#/components/schemas/Linkreferentie"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Netwerkreferentie": "#/components/schemas/Netwerkreferentie",
+          "Linkreferentie": "#/components/schemas/Linkreferentie"
+        }
+      }
+    },
+    "rijrichting": {
+      "$ref": "#/components/schemas/Linkrichtingtpe"
+    },
+    "waardeverschaffer": {
+      "type": "array",
+      "description": "Lijst van Verkeersmeting items.",
+      "items": {
+        "$ref": "#/components/schemas/Verkeersmeting"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "netwerkreferentie"
+  ]
+}

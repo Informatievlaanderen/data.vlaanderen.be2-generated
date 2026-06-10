@@ -1,0 +1,45 @@
+{
+  "title": "Voetpad",
+  "type": "object",
+  "description": "Deel van de wegbaan bedoeld voor voetgangers.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Voetpad)",
+      "pattern": "^Voetpad$"
+    },
+    "netwerkreferentie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Netwerkreferentie"
+        },
+        {
+          "$ref": "#/components/schemas/Linkreferentie"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Netwerkreferentie": "#/components/schemas/Netwerkreferentie",
+          "Linkreferentie": "#/components/schemas/Linkreferentie"
+        }
+      }
+    },
+    "waardeverschaffer": {
+      "type": "array",
+      "description": "Lijst van Verkeersmeting items.",
+      "items": {
+        "$ref": "#/components/schemas/Verkeersmeting"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "netwerkreferentie"
+  ]
+}

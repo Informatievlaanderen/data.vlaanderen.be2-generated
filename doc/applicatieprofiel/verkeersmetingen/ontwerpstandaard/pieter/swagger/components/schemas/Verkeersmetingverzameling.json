@@ -1,0 +1,77 @@
+{
+  "title": "Verkeersmetingverzameling",
+  "type": "object",
+  "description": "Collectie van Verkeersmetingen met dezelfde kenmerken.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Verkeersmetingverzameling)",
+      "pattern": "^Verkeersmetingverzameling$"
+    },
+    "geobserveerdObject": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Voertuig"
+        },
+        {
+          "$ref": "#/components/schemas/Rijstrook"
+        },
+        {
+          "$ref": "#/components/schemas/Rijrichting"
+        },
+        {
+          "$ref": "#/components/schemas/Wegobject"
+        },
+        {
+          "$ref": "#/components/schemas/Fietspad"
+        },
+        {
+          "$ref": "#/components/schemas/Voetpad"
+        },
+        {
+          "$ref": "#/components/schemas/Verkeersdeelnemer"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Voertuig": "#/components/schemas/Voertuig",
+          "Rijstrook": "#/components/schemas/Rijstrook",
+          "Rijrichting": "#/components/schemas/Rijrichting",
+          "Wegobject": "#/components/schemas/Wegobject",
+          "Fietspad": "#/components/schemas/Fietspad",
+          "Voetpad": "#/components/schemas/Voetpad",
+          "Verkeersdeelnemer": "#/components/schemas/Verkeersdeelnemer"
+        }
+      }
+    },
+    "uitgevoerdMet": {
+      "$ref": "#/components/schemas/Sensor"
+    },
+    "fenomeentijd": {
+      "$ref": "#/components/schemas/TemporeleEntiteit"
+    },
+    "geobserveerdKenmerk": {
+      "$ref": "#/components/schemas/Verkeerskenmerk"
+    },
+    "metadata": {
+      "$ref": "#/components/schemas/Metadata"
+    },
+    "heeftLid": {
+      "type": "array",
+      "description": "Lijst van Verkeersmeting items.",
+      "items": {
+        "$ref": "#/components/schemas/Verkeersmeting"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "heeftLid"
+  ]
+}

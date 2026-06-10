@@ -1,0 +1,96 @@
+{
+  "title": "Verkeersmeettraject",
+  "type": "object",
+  "description": "Traject waarlangs men kenmerken van het voorbijkomend verkeer meet..",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Verkeersmeettraject)",
+      "pattern": "^Verkeersmeettraject$"
+    },
+    "geometrie": {
+      "$ref": "#/components/schemas/Lijnstring"
+    },
+    "netwerkReferentie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Netwerkreferentie"
+        },
+        {
+          "$ref": "#/components/schemas/Linkreferentie"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Netwerkreferentie": "#/components/schemas/Netwerkreferentie",
+          "Linkreferentie": "#/components/schemas/Linkreferentie"
+        }
+      }
+    },
+    "rijrichting": {
+      "$ref": "#/components/schemas/Rijrichting"
+    },
+    "wegdeel": {
+      "$ref": "#/components/schemas/Wegdeel"
+    },
+    "bemonsterdObject": {
+      "type": "array",
+      "description": "Lijst van Verkeersdomeinobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Voertuig"
+          },
+          {
+            "$ref": "#/components/schemas/Rijstrook"
+          },
+          {
+            "$ref": "#/components/schemas/Rijrichting"
+          },
+          {
+            "$ref": "#/components/schemas/Wegobject"
+          },
+          {
+            "$ref": "#/components/schemas/Fietspad"
+          },
+          {
+            "$ref": "#/components/schemas/Voetpad"
+          },
+          {
+            "$ref": "#/components/schemas/Verkeersdeelnemer"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Voertuig": "#/components/schemas/Voertuig",
+            "Rijstrook": "#/components/schemas/Rijstrook",
+            "Rijrichting": "#/components/schemas/Rijrichting",
+            "Wegobject": "#/components/schemas/Wegobject",
+            "Fietspad": "#/components/schemas/Fietspad",
+            "Voetpad": "#/components/schemas/Voetpad",
+            "Verkeersdeelnemer": "#/components/schemas/Verkeersdeelnemer"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "waardeverschaffer": {
+      "type": "array",
+      "description": "Lijst van Verkeersmeting items.",
+      "items": {
+        "$ref": "#/components/schemas/Verkeersmeting"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "bemonsterdObject"
+  ]
+}
