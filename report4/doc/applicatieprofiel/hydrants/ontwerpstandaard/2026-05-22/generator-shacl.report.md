@@ -2,7 +2,7 @@
 
 #||# -------------------------------------  
 
-Error: Unable to find the domain for subject "[urn:oslo-toolchain:a284be2e688759091ad920a8e3309ed4cf3262f0271cfaaed211a3622f95d240](all-Hydrants.jsonld#L156)".
+Error: Unable to find the domain for subject "[urn:oslo-toolchain:ff1c793b312d9c8bb77c75e904c905603c6c976d3045d208d527d0512e967cb2](all-Hydrants.jsonld#L198)".
 
     at ShaclTemplateGenerationService.createSubjectToShapeIdMap (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/ShaclTemplateGenerationService.js:126:31)
 
