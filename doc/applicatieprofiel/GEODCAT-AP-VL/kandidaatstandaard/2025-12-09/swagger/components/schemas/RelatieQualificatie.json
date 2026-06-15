@@ -1,0 +1,66 @@
+{
+  "title": "RelatieQualificatie",
+  "type": "object",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse RelatieQualificatie)",
+      "pattern": "^RelatieQualificatie$"
+    },
+    "rol": {
+      "$ref": "#/components/schemas/Code"
+    },
+    "catalogusResource(Source)": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/CatalogusResource"
+        },
+        {
+          "$ref": "#/components/schemas/Dataset"
+        },
+        {
+          "$ref": "#/components/schemas/Dataservice"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "CatalogusResource": "#/components/schemas/CatalogusResource",
+          "Dataset": "#/components/schemas/Dataset",
+          "Dataservice": "#/components/schemas/Dataservice"
+        }
+      }
+    },
+    "catalogusResource(Target)": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/CatalogusResource"
+        },
+        {
+          "$ref": "#/components/schemas/Dataset"
+        },
+        {
+          "$ref": "#/components/schemas/Dataservice"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "CatalogusResource": "#/components/schemas/CatalogusResource",
+          "Dataset": "#/components/schemas/Dataset",
+          "Dataservice": "#/components/schemas/Dataservice"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "rol",
+    "catalogusResource(Source)",
+    "catalogusResource(Target)"
+  ]
+}

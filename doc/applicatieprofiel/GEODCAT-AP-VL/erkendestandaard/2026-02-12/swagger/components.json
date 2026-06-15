@@ -1,0 +1,2453 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Components of OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "Code": {
+        "title": "Code",
+        "type": "object",
+        "description": "Enumeratie van Code",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "Catalogus": {
+        "title": "Catalogus",
+        "type": "object",
+        "description": "Een beheerde verzameling van metadata over resources (zoals datasets en dataservices in de context van een datacatalogus).",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Catalogus)",
+            "pattern": "^Catalogus$"
+          },
+          "identificator": {
+            "type": "object",
+            "description": "De unieke identificator voor de catalogus.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "titel": {
+            "type": "array",
+            "description": "Lijst van TaalString items.",
+            "items": {
+              "type": "object",
+              "description": "De naam van de catalogus. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "beschrijving": {
+            "type": "array",
+            "description": "Lijst van TaalString items.",
+            "items": {
+              "type": "object",
+              "description": "Een bondige tekstuele omschrijving van de catalogus. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "contactinformatie": {
+            "$ref": "#/components/schemas/Contactinfo"
+          },
+          "licentie": {
+            "$ref": "#/components/schemas/LicentieDocument"
+          },
+          "alternatieveIdentificator": {
+            "type": "array",
+            "description": "Lijst van Identificator items.",
+            "items": {
+              "$ref": "#/components/schemas/Identificator"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "record": {
+            "type": "array",
+            "description": "Lijst van CatalogusRecord items.",
+            "items": {
+              "$ref": "#/components/schemas/CatalogusRecord"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "uitgever": {
+            "$ref": "#/components/schemas/Agent"
+          },
+          "heeftDataset": {
+            "type": "array",
+            "description": "Lijst van Dataset items.",
+            "items": {
+              "$ref": "#/components/schemas/Dataset"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "heeftDataService": {
+            "type": "array",
+            "description": "Lijst van Dataservice items.",
+            "items": {
+              "$ref": "#/components/schemas/Dataservice"
+            },
+            "minItems": 1,
+            "maxItems": null
+          }
+        },
+        "required": [
+          "@type",
+          "identificator",
+          "titel",
+          "beschrijving",
+          "contactinformatie",
+          "licentie",
+          "uitgever"
+        ]
+      },
+      "CatalogusRecord": {
+        "title": "CatalogusRecord",
+        "type": "object",
+        "description": "Een record in een catalogus beschrijft de registratie van één resource in de catalogus.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse CatalogusRecord)",
+            "pattern": "^CatalogusRecord$"
+          },
+          "identificator": {
+            "type": "object",
+            "description": "De unieke identificator van het record in de catalogus.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "aanmaakdatum": {
+            "type": "object",
+            "description": "De datum van (formele) opname van de bijbehorende dataset of dataservice in de catalogus.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "titel": {
+            "type": "array",
+            "description": "Lijst van TaalString items.",
+            "items": {
+              "type": "object",
+              "description": "De naam van het record in de catalogus. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "wijzigingsdatum": {
+            "type": "object",
+            "description": "De meest recente datum waarop de record in de catalogus is gewijzigd, bijgewerkt of aangepast.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "bronMetadataRecordLandingspagina": {
+            "$ref": "#/components/schemas/URI"
+          },
+          "alternatieveIdentificator": {
+            "type": "array",
+            "description": "Lijst van Identificator items.",
+            "items": {
+              "$ref": "#/components/schemas/Identificator"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "conform": {
+            "type": "array",
+            "description": "Lijst van Standaard items.",
+            "items": {
+              "$ref": "#/components/schemas/Standaard"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "bronMetadatarecord": {
+            "$ref": "#/components/schemas/URI"
+          },
+          "hoofdonderwerp": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CatalogusResource"
+              },
+              {
+                "$ref": "#/components/schemas/Dataset"
+              },
+              {
+                "$ref": "#/components/schemas/Dataservice"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "CatalogusResource": "#/components/schemas/CatalogusResource",
+                "Dataset": "#/components/schemas/Dataset",
+                "Dataservice": "#/components/schemas/Dataservice"
+              }
+            }
+          }
+        },
+        "required": [
+          "@type",
+          "identificator",
+          "wijzigingsdatum",
+          "hoofdonderwerp"
+        ]
+      },
+      "CatalogusResource": {
+        "title": "CatalogusResource",
+        "type": "object",
+        "description": "Een bron (resource) gepubliceerd of beheerd door één agent.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse CatalogusResource)",
+            "pattern": "^CatalogusResource$"
+          },
+          "uitgever": {
+            "$ref": "#/components/schemas/Agent"
+          },
+          "relatie": {
+            "type": "array",
+            "description": "Lijst van CatalogusResource items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/CatalogusResource"
+                },
+                {
+                  "$ref": "#/components/schemas/Dataset"
+                },
+                {
+                  "$ref": "#/components/schemas/Dataservice"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "CatalogusResource": "#/components/schemas/CatalogusResource",
+                  "Dataset": "#/components/schemas/Dataset",
+                  "Dataservice": "#/components/schemas/Dataservice"
+                }
+              }
+            },
+            "minItems": 1,
+            "maxItems": null
+          }
+        },
+        "required": [
+          "@type",
+          "uitgever"
+        ]
+      },
+      "Dataset": {
+        "title": "Dataset",
+        "type": "object",
+        "description": "Een verzameling gegevens, gepubliceerd of samengesteld door één agent, en beschikbaar voor toegang of download in één of meerdere voorstellingswijzen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Dataset)",
+            "pattern": "^Dataset$"
+          },
+          "versie": {
+            "type": "object",
+            "description": "Een unieke aanduiding van een variant van de dataset door middel van een versienummer of -naam van de dataset.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "beschrijving": {
+            "type": "array",
+            "description": "Lijst van TaalString items.",
+            "items": {
+              "type": "object",
+              "description": "Een bondige tekstuele omschrijving van de dataset. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "trefwoord": {
+            "type": "array",
+            "description": "Lijst van TaalString items.",
+            "items": {
+              "type": "object",
+              "description": "Een trefwoord of tag die de resource beschrijft. De meertaligheid is hier verschillend als voor een beschrijvende eigenschap. De taal van elk trefwoord moet aangeduidt worden. Echter het is niet de verwachting dat elk trefwoord in elke taal vertaald wordt. Ook is het niet zo dat er slecht 1 trefwoord per taal is. Er kunnen (zullen) er meerdere zijn.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "titel": {
+            "type": "array",
+            "description": "Lijst van TaalString items.",
+            "items": {
+              "type": "object",
+              "description": "De naam van de dataset. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "identificator": {
+            "type": "object",
+            "description": "De unieke identificator van de dataset.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "publicatiedatum": {
+            "type": "object",
+            "description": "Het tijdsmoment waarop de dataset werd gepubliceerd door de uitgever.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "wijzigingsdatum": {
+            "type": "object",
+            "description": "Het tijdsmoment waarop de dataset werd geactualiseerd",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "creatiedatum": {
+            "type": "object",
+            "description": "Het tijdsmoment waarop de dataset ontstaan is.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "toegankelijkheid": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "alternatieveIdentificator": {
+            "type": "array",
+            "description": "Lijst van Identificator items.",
+            "items": {
+              "$ref": "#/components/schemas/Identificator"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "conform": {
+            "type": "array",
+            "description": "Lijst van Standaard items.",
+            "items": {
+              "$ref": "#/components/schemas/Standaard"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "ruimtelijkVoorstellingstype": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "voorbeeldweergave": {
+            "type": "array",
+            "description": "Lijst van Voorbeeldweergave items.",
+            "items": {
+              "$ref": "#/components/schemas/Voorbeeldweergave"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "status": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "statuut": {
+            "type": "array",
+            "description": "Lijst van Code items.",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "thema": {
+            "type": "array",
+            "description": "Lijst van Code items.",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "landingspagina": {
+            "type": "array",
+            "description": "Lijst van URI items.",
+            "items": {
+              "$ref": "#/components/schemas/URI"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "ruimtelijkeResolutie": {
+            "$ref": "#/components/schemas/Resolutie"
+          },
+          "iSOCategorie": {
+            "type": "array",
+            "description": "Lijst van Code items.",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "iNSPIREThema": {
+            "type": "array",
+            "description": "Lijst van Code items.",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "gEMETConcept": {
+            "type": "array",
+            "description": "Lijst van Code items.",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "herkomst": {
+            "type": "array",
+            "description": "Lijst van HerkomstVerklaring items.",
+            "items": {
+              "$ref": "#/components/schemas/HerkomstVerklaring"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "contactinformatie": {
+            "$ref": "#/components/schemas/Contactinfo"
+          },
+          "geografischeDekking": {
+            "type": "array",
+            "description": "Lijst van Plaats items.",
+            "items": {
+              "$ref": "#/components/schemas/Plaats"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "distributie": {
+            "type": "array",
+            "description": "Lijst van Distributie items.",
+            "items": {
+              "$ref": "#/components/schemas/Distributie"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "eigenaar": {
+            "type": "array",
+            "description": "Lijst van Agent items.",
+            "items": {
+              "$ref": "#/components/schemas/Agent"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "inserie": {
+            "type": "array",
+            "description": "Lijst van DatasetSerie items.",
+            "items": {
+              "$ref": "#/components/schemas/DatasetSerie"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "uitgever": {
+            "$ref": "#/components/schemas/Agent"
+          },
+          "relatie": {
+            "type": "array",
+            "description": "Lijst van CatalogusResource items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/CatalogusResource"
+                },
+                {
+                  "$ref": "#/components/schemas/Dataset"
+                },
+                {
+                  "$ref": "#/components/schemas/Dataservice"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "CatalogusResource": "#/components/schemas/CatalogusResource",
+                  "Dataset": "#/components/schemas/Dataset",
+                  "Dataservice": "#/components/schemas/Dataservice"
+                }
+              }
+            },
+            "minItems": 1,
+            "maxItems": null
+          }
+        },
+        "required": [
+          "@type",
+          "beschrijving",
+          "titel",
+          "identificator",
+          "toegankelijkheid",
+          "contactinformatie",
+          "geografischeDekking",
+          "uitgever"
+        ]
+      },
+      "Distributie": {
+        "title": "Distributie",
+        "type": "object",
+        "description": "Een specifieke voorstellingswijze van een dataset, gekenmerkt door één of meerdere eigenschappen zoals taal, media-type of formaat, schematische organisatie, temporele en ruimtelijke resolutie, granulariteit, ...",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Distributie)",
+            "pattern": "^Distributie$"
+          },
+          "identificator": {
+            "type": "object",
+            "description": "De unieke identificator van de distributie.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "titel": {
+            "type": "array",
+            "description": "Lijst van TaalString items.",
+            "items": {
+              "type": "object",
+              "description": "De naam van de distributie. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "rechten": {
+            "type": "array",
+            "description": "Lijst van JuridischeBepaling items.",
+            "items": {
+              "$ref": "#/components/schemas/JuridischeBepaling"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "alternatieveIdentificator": {
+            "type": "array",
+            "description": "Lijst van Identificator items.",
+            "items": {
+              "$ref": "#/components/schemas/Identificator"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "formaat": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "licentie": {
+            "$ref": "#/components/schemas/LicentieDocument"
+          },
+          "conform": {
+            "type": "array",
+            "description": "Lijst van Standaard items.",
+            "items": {
+              "$ref": "#/components/schemas/Standaard"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "downloadURL": {
+            "$ref": "#/components/schemas/URI"
+          },
+          "toegangsURL": {
+            "$ref": "#/components/schemas/URI"
+          },
+          "wordtAangebodenDoor": {
+            "type": "array",
+            "description": "Lijst van Dataservice items.",
+            "items": {
+              "$ref": "#/components/schemas/Dataservice"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "verdeler": {
+            "$ref": "#/components/schemas/Agent"
+          }
+        },
+        "required": [
+          "@type",
+          "identificator",
+          "toegangsURL"
+        ]
+      },
+      "Dataservice": {
+        "title": "Dataservice",
+        "type": "object",
+        "description": "Een verzameling van operaties die ofwel toegang bieden tot één of meer datasets ofwel een dataverwerkingsdoel hebben.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Dataservice)",
+            "pattern": "^Dataservice$"
+          },
+          "beschrijving": {
+            "type": "array",
+            "description": "Lijst van TaalString items.",
+            "items": {
+              "type": "object",
+              "description": "Een bondige tekstuele omschrijving van de dataservice. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "versie": {
+            "type": "object",
+            "description": "Een unieke aanduiding van een variant van de dataservice door middel van een versienummer of -naam van de dataservice. Voor dataservices wordt dikwijls <a href=\"https://semver.org/lang/nl/\">semantisch versioneren</a> gebruikt. Bij het deployen van services wordt aangeraden om enkel de major version op te nemen in de endpointurl. De versieinformatie die hier opgegeven wordt komt best overeen met de versie die beschikbaar is in de endpointurl.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "identificator": {
+            "type": "object",
+            "description": "De unieke identificator van de dataservice.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "trefwoord": {
+            "type": "array",
+            "description": "Lijst van TaalString items.",
+            "items": {
+              "type": "object",
+              "description": "Een trefwoord of tag die de resource beschrijft. De meertaligheid is hier verschillend als voor een beschrijvende eigenschap. De taal van elk trefwoord moet aangeduidt worden. Echter het is niet de verwachting dat elk trefwoord in elke taal vertaald wordt. Ook is het niet zo dat er slecht 1 trefwoord per taal is. Er kunnen (zullen) er meerderen zijn.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "titel": {
+            "type": "array",
+            "description": "Lijst van TaalString items.",
+            "items": {
+              "type": "object",
+              "description": "De naam van de dataservice. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "creatiedatum": {
+            "type": "object",
+            "description": "Het tijdsmoment waarop de dataservice voor het eerst werd geactiveerd.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "publicatiedatum": {
+            "type": "object",
+            "description": "Het tijdsmoment waarop de service werd gepubliceerd door de uitgever.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "wijzigingsdatum": {
+            "type": "object",
+            "description": "Het tijdsmoment waarop de dataservice werd gewijzigd",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "contactinformatie": {
+            "$ref": "#/components/schemas/Contactinfo"
+          },
+          "endpointURL": {
+            "$ref": "#/components/schemas/URI"
+          },
+          "endpointbeschrijving": {
+            "$ref": "#/components/schemas/URI"
+          },
+          "landingspagina": {
+            "type": "array",
+            "description": "Lijst van URI items.",
+            "items": {
+              "$ref": "#/components/schemas/URI"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "ontwikkelingstoestand": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "landingspaginaVoorAuthenticatie": {
+            "$ref": "#/components/schemas/URI"
+          },
+          "levensfase": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "landingspaginaVoorStatusinformatie": {
+            "$ref": "#/components/schemas/URI"
+          },
+          "alternatieveIdentificator": {
+            "type": "array",
+            "description": "Lijst van Identificator items.",
+            "items": {
+              "$ref": "#/components/schemas/Identificator"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "toegankelijkheid": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "conformAanProtocol": {
+            "type": "array",
+            "description": "Lijst van Standaard items.",
+            "items": {
+              "$ref": "#/components/schemas/Standaard"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "statuut": {
+            "type": "array",
+            "description": "Lijst van Code items.",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "landingspaginaVoorGebruiksinformatie": {
+            "$ref": "#/components/schemas/URI"
+          },
+          "rechten": {
+            "type": "array",
+            "description": "Lijst van JuridischeBepaling items.",
+            "items": {
+              "$ref": "#/components/schemas/JuridischeBepaling"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "thema": {
+            "type": "array",
+            "description": "Lijst van Code items.",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "licentie": {
+            "$ref": "#/components/schemas/LicentieDocument"
+          },
+          "serviceType": {
+            "type": "array",
+            "description": "Lijst van Code items.",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "serviceCategorie": {
+            "type": "array",
+            "description": "Lijst van Code items.",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "geografischeDekking": {
+            "type": "array",
+            "description": "Lijst van Plaats items.",
+            "items": {
+              "$ref": "#/components/schemas/Plaats"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "biedtInformatieAanOver": {
+            "type": "array",
+            "description": "Lijst van Dataset items.",
+            "items": {
+              "$ref": "#/components/schemas/Dataset"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "uitgever": {
+            "$ref": "#/components/schemas/Agent"
+          },
+          "relatie": {
+            "type": "array",
+            "description": "Lijst van CatalogusResource items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/CatalogusResource"
+                },
+                {
+                  "$ref": "#/components/schemas/Dataset"
+                },
+                {
+                  "$ref": "#/components/schemas/Dataservice"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "CatalogusResource": "#/components/schemas/CatalogusResource",
+                  "Dataset": "#/components/schemas/Dataset",
+                  "Dataservice": "#/components/schemas/Dataservice"
+                }
+              }
+            },
+            "minItems": 1,
+            "maxItems": null
+          }
+        },
+        "required": [
+          "@type",
+          "identificator",
+          "titel",
+          "contactinformatie",
+          "endpointbeschrijving",
+          "toegankelijkheid",
+          "uitgever"
+        ]
+      },
+      "JuridischeBepaling": {
+        "title": "JuridischeBepaling",
+        "type": "object",
+        "description": "Een uitspraak of uitdrukking i.v.m. een recht dat verleend wordt bij het gebruiken van een resource.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse JuridischeBepaling)",
+            "pattern": "^JuridischeBepaling$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Plaats": {
+        "title": "Plaats",
+        "type": "object",
+        "description": "Een ruimtelijk gebied dat geïdentificeerd wordt door zijn benaming of geografische beschrijving.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Plaats)",
+            "pattern": "^Plaats$"
+          },
+          "geometrie": {
+            "type": "array",
+            "description": "Lijst van Literal items.",
+            "items": {
+              "type": "object",
+              "description": "de geografische beschrijving van een plaats",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "boundingBox": {
+            "type": "array",
+            "description": "Lijst van Literal items.",
+            "items": {
+              "type": "object",
+              "description": "de afgrenzing van een plaats als een geografische rechthoek",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "centroïDe": {
+            "type": "array",
+            "description": "Lijst van Literal items.",
+            "items": {
+              "type": "object",
+              "description": "het geografische middelpunt van een plaats",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "plaatsnaam": {
+            "type": "array",
+            "description": "Lijst van TaalString items.",
+            "items": {
+              "type": "object",
+              "description": "een eenduidige, beknopte beschrijving die de plaats benoemt. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "HerkomstVerklaring": {
+        "title": "HerkomstVerklaring",
+        "type": "object",
+        "description": "Informatie over ontstaansgeschiedenis van een resource",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse HerkomstVerklaring)",
+            "pattern": "^HerkomstVerklaring$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Voorbeeldweergave": {
+        "title": "Voorbeeldweergave",
+        "type": "object",
+        "description": "Een afbeelding ter illustratie van de geassocieerde data.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Voorbeeldweergave)",
+            "pattern": "^Voorbeeldweergave$"
+          },
+          "titel": {
+            "type": "array",
+            "description": "Lijst van TaalString items.",
+            "items": {
+              "type": "object",
+              "description": "naam van de afbeelding Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.\n\nDit is toegevoegd ter ondersteuning van WCAG.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "beschrijving": {
+            "type": "array",
+            "description": "Lijst van TaalString items.",
+            "items": {
+              "type": "object",
+              "description": "Een bondige tekstuele omschrijving van de afbeelding Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.\n\nDit is toegevoegd ter ondersteuning van WCAG.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "downloadURL": {
+            "$ref": "#/components/schemas/URI"
+          },
+          "mediatype": {
+            "$ref": "#/components/schemas/Code"
+          }
+        },
+        "required": [
+          "@type",
+          "downloadURL"
+        ]
+      },
+      "DatasetSerie": {
+        "title": "DatasetSerie",
+        "type": "object",
+        "description": "Een verzameling die onafhankelijk gepubliceerde datasets groepeert rond gedeelde eigenschappen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse DatasetSerie)",
+            "pattern": "^DatasetSerie$"
+          },
+          "beschrijving": {
+            "type": "array",
+            "description": "Lijst van Literal items.",
+            "items": {
+              "type": "object",
+              "description": "Een bondige tekstuele beschrijving van de Dataset Serie.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "identificator": {
+            "type": "object",
+            "description": "De unieke identificator van de Dataset Serie.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "titel": {
+            "type": "array",
+            "description": "Lijst van Literal items.",
+            "items": {
+              "type": "object",
+              "description": "De naam van de Dataset Serie.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "@value"
+              ]
+            },
+            "minItems": 1
+          },
+          "alternatieveIdentificator": {
+            "$ref": "#/components/schemas/Identificator"
+          },
+          "belanghebbendeWetgeving": {
+            "type": "array",
+            "description": "Lijst van Rechtsgrond items.",
+            "items": {
+              "$ref": "#/components/schemas/Rechtsgrond"
+            },
+            "minItems": 1
+          },
+          "contactinformatie": {
+            "$ref": "#/components/schemas/Contactinfo"
+          },
+          "periodiciteit": {
+            "$ref": "#/components/schemas/Frequentie"
+          },
+          "publicatieDatum": {
+            "type": "object",
+            "description": "Het tijdsmoment waarop de Dataset Serie werd gepubliceerd door de uitgever. Dit is het moment wanneer de Dataset Serie voor het eerst publiekelijk kenbaar gemaakt is. Het is niet noodzakelijk gekijk aan de publicatie datum van de oudste dataset in de verzameling.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "temporeleDekking": {
+            "type": "array",
+            "description": "Lijst van Tijdsperiode items.",
+            "items": {
+              "$ref": "#/components/schemas/Tijdsperiode"
+            },
+            "minItems": 1
+          },
+          "wijzigingsdatum": {
+            "type": "object",
+            "description": "Het meest recente moment waarop de Dataset Serie is bijgewerkt. Dit is niet noodzakelijk hetzelfde moment als de meest recente wijzigingsdatum van de datasets die de Dataset Serie bevat.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "geografischeDekking": {
+            "type": "array",
+            "description": "Lijst van Plaats items.",
+            "items": {
+              "$ref": "#/components/schemas/Plaats"
+            },
+            "minItems": 1
+          },
+          "uitgever": {
+            "type": "array",
+            "description": "Lijst van Agent items.",
+            "items": {
+              "$ref": "#/components/schemas/Agent"
+            },
+            "minItems": 1,
+            "maxItems": null
+          }
+        },
+        "required": [
+          "@type",
+          "beschrijving",
+          "identificator",
+          "titel",
+          "alternatieveIdentificator",
+          "contactinformatie"
+        ]
+      },
+      "Standaard": {
+        "title": "Standaard",
+        "type": "object",
+        "description": "Een specificatie of document dat een referentie vormt waartegen men een entiteit, of het gebruik ervan kan aftoetsen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Standaard)",
+            "pattern": "^Standaard$"
+          },
+          "titel": {
+            "type": "array",
+            "description": "Lijst van TaalString items.",
+            "items": {
+              "type": "object",
+              "description": "naam van de standaard Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "beschrijving": {
+            "type": "object",
+            "description": "Een bondige tekstuele omschrijving van de\nstandaard",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
+          },
+          "versie": {
+            "type": "object",
+            "description": "De versie van de standaard",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "publicatiedatum": {
+            "type": "object",
+            "description": "De datum waarop de standaard werd\ngepubliceerd",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "voorkeurslabel": {
+            "type": "object",
+            "description": "Een afkorting, of notatie waaronder de\nstandaard bekend is. Bijvoorbeeld voor ISO standaarden kan dit het nummer zijn.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "type": {
+            "type": "array",
+            "description": "Lijst van Code items.",
+            "items": {
+              "$ref": "#/components/schemas/Code"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "specificatieURL": {
+            "$ref": "#/components/schemas/URI"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "LicentieDocument": {
+        "title": "LicentieDocument",
+        "type": "object",
+        "description": "Een wettelijk document dat de voorwaarden waaronder men een resource mag gebruiken.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse LicentieDocument)",
+            "pattern": "^LicentieDocument$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "RelatieQualificatie": {
+        "title": "RelatieQualificatie",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse RelatieQualificatie)",
+            "pattern": "^RelatieQualificatie$"
+          },
+          "rol": {
+            "$ref": "#/components/schemas/Code"
+          },
+          "catalogusResource(Source)": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CatalogusResource"
+              },
+              {
+                "$ref": "#/components/schemas/Dataset"
+              },
+              {
+                "$ref": "#/components/schemas/Dataservice"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "CatalogusResource": "#/components/schemas/CatalogusResource",
+                "Dataset": "#/components/schemas/Dataset",
+                "Dataservice": "#/components/schemas/Dataservice"
+              }
+            }
+          },
+          "catalogusResource(Target)": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CatalogusResource"
+              },
+              {
+                "$ref": "#/components/schemas/Dataset"
+              },
+              {
+                "$ref": "#/components/schemas/Dataservice"
+              }
+            ],
+            "discriminator": {
+              "propertyName": "@type",
+              "mapping": {
+                "CatalogusResource": "#/components/schemas/CatalogusResource",
+                "Dataset": "#/components/schemas/Dataset",
+                "Dataservice": "#/components/schemas/Dataservice"
+              }
+            }
+          }
+        },
+        "required": [
+          "@type",
+          "rol",
+          "catalogusResource(Source)",
+          "catalogusResource(Target)"
+        ]
+      },
+      "Tijdsperiode": {
+        "title": "Tijdsperiode",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Tijdsperiode)",
+            "pattern": "^Tijdsperiode$"
+          },
+          "eindDatum": {
+            "type": "object",
+            "description": "Het einde van de periode.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "startDatum": {
+            "type": "object",
+            "description": "De start van de periode.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "heeftStart": {
+            "$ref": "#/components/schemas/Tijdsmoment"
+          },
+          "heeftEinde": {
+            "$ref": "#/components/schemas/Tijdsmoment"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Rechtsgrond": {
+        "title": "Rechtsgrond",
+        "type": "object",
+        "description": "Een legaal concept dat los staat van een bepaalde vorm (het achterliggende idee).",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Rechtsgrond)",
+            "pattern": "^Rechtsgrond$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Identificator": {
+        "title": "Identificator",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Identificator)",
+            "pattern": "^Identificator$"
+          },
+          "notatie": {
+            "type": "object",
+            "description": "String gebruikt om het object uniek te identificeren. Type vd string slaat op het identifierscheme (incl de version ervan), de string zelf op de eigenlijke identifier. Zie definitie Identificator.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "toegekendDoor(String)": {
+            "type": "object",
+            "description": "Naam vd agent die de identificator heeft toegekend.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "toegekendOp": {
+            "type": "object",
+            "description": "Tijdstip waarop de identificator werd uitgegeven.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "gestructureerdeIdentificator": {
+            "$ref": "#/components/schemas/GestructureerdeIdentificator"
+          },
+          "toegekendDoor": {
+            "$ref": "#/components/schemas/Agent"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Resolutie": {
+        "title": "Resolutie",
+        "type": "object",
+        "description": "De maat van detail waaronder data zijn bewaard.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Resolutie)",
+            "pattern": "^Resolutie$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/Decimal"
+          },
+          "resolutieMethode": {
+            "$ref": "#/components/schemas/Code"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde",
+          "resolutieMethode"
+        ]
+      },
+      "Contactinfo": {
+        "title": "Contactinfo",
+        "type": "object",
+        "description": "Een beschrijving van contactinformatie.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Contactinfo)",
+            "pattern": "^Contactinfo$"
+          },
+          "e-Mail": {
+            "$ref": "#/components/schemas/URI"
+          },
+          "contactpagina": {
+            "$ref": "#/components/schemas/URI"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Tijdsmoment": {
+        "title": "Tijdsmoment",
+        "type": "object",
+        "description": "Een temporele entiteit zonder omvang of duur.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Tijdsmoment)",
+            "pattern": "^Tijdsmoment$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Contactpunt": {
+        "title": "Contactpunt",
+        "type": "object",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Contactpunt)",
+            "pattern": "^Contactpunt$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      }
+    },
+    "links": {
+      "Catalogus.contactinformatie": {
+        "operationId": "CatalogusGET",
+        "parameters": {
+          "id": "$response.body#/Catalogus.contactinformatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Contactinfo` op te halen."
+      },
+      "Catalogus.licentie": {
+        "operationId": "CatalogusGET",
+        "parameters": {
+          "id": "$response.body#/Catalogus.licentie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `LicentieDocument` op te halen."
+      },
+      "Catalogus.alternatieveIdentificator": {
+        "operationId": "CatalogusGET",
+        "parameters": {
+          "id": "$response.body#/Catalogus.alternatieveIdentificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Catalogus.record": {
+        "operationId": "CatalogusGET",
+        "parameters": {
+          "id": "$response.body#/Catalogus.record/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CatalogusRecord` op te halen."
+      },
+      "Catalogus.uitgever": {
+        "operationId": "CatalogusGET",
+        "parameters": {
+          "id": "$response.body#/Catalogus.uitgever/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Catalogus.heeftDataset": {
+        "operationId": "CatalogusGET",
+        "parameters": {
+          "id": "$response.body#/Catalogus.heeftDataset/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Dataset` op te halen."
+      },
+      "Catalogus.heeftDataService": {
+        "operationId": "CatalogusGET",
+        "parameters": {
+          "id": "$response.body#/Catalogus.heeftDataService/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Dataservice` op te halen."
+      },
+      "CatalogusRecord.bronMetadataRecordLandingspagina": {
+        "operationId": "CatalogusRecordGET",
+        "parameters": {
+          "id": "$response.body#/CatalogusRecord.bronMetadataRecordLandingspagina/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `URI` op te halen."
+      },
+      "CatalogusRecord.alternatieveIdentificator": {
+        "operationId": "CatalogusRecordGET",
+        "parameters": {
+          "id": "$response.body#/CatalogusRecord.alternatieveIdentificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "CatalogusRecord.conform": {
+        "operationId": "CatalogusRecordGET",
+        "parameters": {
+          "id": "$response.body#/CatalogusRecord.conform/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Standaard` op te halen."
+      },
+      "CatalogusRecord.bronMetadatarecord": {
+        "operationId": "CatalogusRecordGET",
+        "parameters": {
+          "id": "$response.body#/CatalogusRecord.bronMetadatarecord/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `URI` op te halen."
+      },
+      "CatalogusRecord.hoofdonderwerp": {
+        "operationId": "CatalogusRecordGET",
+        "parameters": {
+          "id": "$response.body#/CatalogusRecord.hoofdonderwerp/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CatalogusResource` op te halen."
+      },
+      "CatalogusResource.uitgever": {
+        "operationId": "CatalogusResourceGET",
+        "parameters": {
+          "id": "$response.body#/CatalogusResource.uitgever/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "CatalogusResource.relatie": {
+        "operationId": "CatalogusResourceGET",
+        "parameters": {
+          "id": "$response.body#/CatalogusResource.relatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CatalogusResource` op te halen."
+      },
+      "Dataset.toegankelijkheid": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.toegankelijkheid/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Dataset.alternatieveIdentificator": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.alternatieveIdentificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Dataset.conform": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.conform/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Standaard` op te halen."
+      },
+      "Dataset.ruimtelijkVoorstellingstype": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.ruimtelijkVoorstellingstype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Dataset.voorbeeldweergave": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.voorbeeldweergave/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Voorbeeldweergave` op te halen."
+      },
+      "Dataset.status": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.status/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Dataset.statuut": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.statuut/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Dataset.thema": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.thema/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Dataset.landingspagina": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.landingspagina/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `URI` op te halen."
+      },
+      "Dataset.ruimtelijkeResolutie": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.ruimtelijkeResolutie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Resolutie` op te halen."
+      },
+      "Dataset.iSOCategorie": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.iSOCategorie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Dataset.iNSPIREThema": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.iNSPIREThema/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Dataset.gEMETConcept": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.gEMETConcept/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Dataset.herkomst": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.herkomst/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `HerkomstVerklaring` op te halen."
+      },
+      "Dataset.contactinformatie": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.contactinformatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Contactinfo` op te halen."
+      },
+      "Dataset.geografischeDekking": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.geografischeDekking/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Plaats` op te halen."
+      },
+      "Dataset.distributie": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.distributie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Distributie` op te halen."
+      },
+      "Dataset.eigenaar": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.eigenaar/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Dataset.inserie": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.inserie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DatasetSerie` op te halen."
+      },
+      "Dataset.uitgever": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.uitgever/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Dataset.relatie": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.relatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CatalogusResource` op te halen."
+      },
+      "Distributie.rechten": {
+        "operationId": "DistributieGET",
+        "parameters": {
+          "id": "$response.body#/Distributie.rechten/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `JuridischeBepaling` op te halen."
+      },
+      "Distributie.alternatieveIdentificator": {
+        "operationId": "DistributieGET",
+        "parameters": {
+          "id": "$response.body#/Distributie.alternatieveIdentificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Distributie.formaat": {
+        "operationId": "DistributieGET",
+        "parameters": {
+          "id": "$response.body#/Distributie.formaat/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Distributie.licentie": {
+        "operationId": "DistributieGET",
+        "parameters": {
+          "id": "$response.body#/Distributie.licentie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `LicentieDocument` op te halen."
+      },
+      "Distributie.conform": {
+        "operationId": "DistributieGET",
+        "parameters": {
+          "id": "$response.body#/Distributie.conform/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Standaard` op te halen."
+      },
+      "Distributie.downloadURL": {
+        "operationId": "DistributieGET",
+        "parameters": {
+          "id": "$response.body#/Distributie.downloadURL/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `URI` op te halen."
+      },
+      "Distributie.toegangsURL": {
+        "operationId": "DistributieGET",
+        "parameters": {
+          "id": "$response.body#/Distributie.toegangsURL/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `URI` op te halen."
+      },
+      "Distributie.wordtAangebodenDoor": {
+        "operationId": "DistributieGET",
+        "parameters": {
+          "id": "$response.body#/Distributie.wordtAangebodenDoor/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Dataservice` op te halen."
+      },
+      "Distributie.verdeler": {
+        "operationId": "DistributieGET",
+        "parameters": {
+          "id": "$response.body#/Distributie.verdeler/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Dataservice.contactinformatie": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.contactinformatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Contactinfo` op te halen."
+      },
+      "Dataservice.endpointURL": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.endpointURL/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `URI` op te halen."
+      },
+      "Dataservice.endpointbeschrijving": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.endpointbeschrijving/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `URI` op te halen."
+      },
+      "Dataservice.landingspagina": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.landingspagina/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `URI` op te halen."
+      },
+      "Dataservice.ontwikkelingstoestand": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.ontwikkelingstoestand/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Dataservice.landingspaginaVoorAuthenticatie": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.landingspaginaVoorAuthenticatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `URI` op te halen."
+      },
+      "Dataservice.levensfase": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.levensfase/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Dataservice.landingspaginaVoorStatusinformatie": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.landingspaginaVoorStatusinformatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `URI` op te halen."
+      },
+      "Dataservice.alternatieveIdentificator": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.alternatieveIdentificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "Dataservice.toegankelijkheid": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.toegankelijkheid/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Dataservice.conformAanProtocol": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.conformAanProtocol/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Standaard` op te halen."
+      },
+      "Dataservice.statuut": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.statuut/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Dataservice.landingspaginaVoorGebruiksinformatie": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.landingspaginaVoorGebruiksinformatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `URI` op te halen."
+      },
+      "Dataservice.rechten": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.rechten/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `JuridischeBepaling` op te halen."
+      },
+      "Dataservice.thema": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.thema/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Dataservice.licentie": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.licentie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `LicentieDocument` op te halen."
+      },
+      "Dataservice.serviceType": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.serviceType/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Dataservice.serviceCategorie": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.serviceCategorie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Dataservice.geografischeDekking": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.geografischeDekking/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Plaats` op te halen."
+      },
+      "Dataservice.biedtInformatieAanOver": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.biedtInformatieAanOver/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Dataset` op te halen."
+      },
+      "Dataservice.uitgever": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.uitgever/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Dataservice.relatie": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.relatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CatalogusResource` op te halen."
+      },
+      "Voorbeeldweergave.downloadURL": {
+        "operationId": "VoorbeeldweergaveGET",
+        "parameters": {
+          "id": "$response.body#/Voorbeeldweergave.downloadURL/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `URI` op te halen."
+      },
+      "Voorbeeldweergave.mediatype": {
+        "operationId": "VoorbeeldweergaveGET",
+        "parameters": {
+          "id": "$response.body#/Voorbeeldweergave.mediatype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "DatasetSerie.alternatieveIdentificator": {
+        "operationId": "DatasetSerieGET",
+        "parameters": {
+          "id": "$response.body#/DatasetSerie.alternatieveIdentificator/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identificator` op te halen."
+      },
+      "DatasetSerie.belanghebbendeWetgeving": {
+        "operationId": "DatasetSerieGET",
+        "parameters": {
+          "id": "$response.body#/DatasetSerie.belanghebbendeWetgeving/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Rechtsgrond` op te halen."
+      },
+      "DatasetSerie.contactinformatie": {
+        "operationId": "DatasetSerieGET",
+        "parameters": {
+          "id": "$response.body#/DatasetSerie.contactinformatie/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Contactinfo` op te halen."
+      },
+      "DatasetSerie.periodiciteit": {
+        "operationId": "DatasetSerieGET",
+        "parameters": {
+          "id": "$response.body#/DatasetSerie.periodiciteit/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Frequentie` op te halen."
+      },
+      "DatasetSerie.temporeleDekking": {
+        "operationId": "DatasetSerieGET",
+        "parameters": {
+          "id": "$response.body#/DatasetSerie.temporeleDekking/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Tijdsperiode` op te halen."
+      },
+      "DatasetSerie.geografischeDekking": {
+        "operationId": "DatasetSerieGET",
+        "parameters": {
+          "id": "$response.body#/DatasetSerie.geografischeDekking/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Plaats` op te halen."
+      },
+      "DatasetSerie.uitgever": {
+        "operationId": "DatasetSerieGET",
+        "parameters": {
+          "id": "$response.body#/DatasetSerie.uitgever/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
+      "Standaard.type": {
+        "operationId": "StandaardGET",
+        "parameters": {
+          "id": "$response.body#/Standaard.type/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "Standaard.specificatieURL": {
+        "operationId": "StandaardGET",
+        "parameters": {
+          "id": "$response.body#/Standaard.specificatieURL/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `URI` op te halen."
+      },
+      "RelatieQualificatie.rol": {
+        "operationId": "RelatieQualificatieGET",
+        "parameters": {
+          "id": "$response.body#/RelatieQualificatie.rol/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
+      },
+      "RelatieQualificatie.catalogusResource(Source)": {
+        "operationId": "RelatieQualificatieGET",
+        "parameters": {
+          "id": "$response.body#/RelatieQualificatie.catalogusResource(Source)/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CatalogusResource` op te halen."
+      },
+      "RelatieQualificatie.catalogusResource(Target)": {
+        "operationId": "RelatieQualificatieGET",
+        "parameters": {
+          "id": "$response.body#/RelatieQualificatie.catalogusResource(Target)/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CatalogusResource` op te halen."
+      },
+      "Tijdsperiode.heeftStart": {
+        "operationId": "TijdsperiodeGET",
+        "parameters": {
+          "id": "$response.body#/Tijdsperiode.heeftStart/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Tijdsmoment` op te halen."
+      },
+      "Tijdsperiode.heeftEinde": {
+        "operationId": "TijdsperiodeGET",
+        "parameters": {
+          "id": "$response.body#/Tijdsperiode.heeftEinde/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Tijdsmoment` op te halen."
+      }
+    }
+  }
+}
