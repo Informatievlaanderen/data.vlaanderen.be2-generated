@@ -321,7 +321,6 @@ index.html check
 Directory check
 
 index.html check
-error: missing '/tmp/generated/doc/applicatieprofiel/GEODCAT-AP-VL/index.html'
 
 #||#    + checking /home/circleci/project/config/test/mobiliteit-intelligente-toegang.publication.json
 #||# 
