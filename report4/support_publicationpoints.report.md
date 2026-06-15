@@ -199,6 +199,7 @@ Error: the following directories are unsupported
   "/tmp/generated/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2022-04-21",
   "/tmp/generated/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12",
   "/tmp/generated/doc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2022-02-03",
+  "/tmp/generated/doc/applicatieprofiel/GEODCAT-AP-VL/kandidaatstandaard/2025-12-09",
   "/tmp/generated/doc/applicatieprofiel/GEODCAT-AP-VL/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/begraafplaats/ontwerpstandaard/toolchain4",
   "/tmp/generated/doc/applicatieprofiel/begraafplaatsen",

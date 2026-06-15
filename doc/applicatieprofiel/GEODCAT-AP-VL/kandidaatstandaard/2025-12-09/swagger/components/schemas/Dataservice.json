@@ -1,0 +1,322 @@
+{
+  "title": "Dataservice",
+  "type": "object",
+  "description": "Een verzameling van operaties die ofwel toegang bieden tot één of meer datasets ofwel een dataverwerkingsdoel hebben.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Dataservice)",
+      "pattern": "^Dataservice$"
+    },
+    "beschrijving": {
+      "type": "array",
+      "description": "Lijst van TaalString items.",
+      "items": {
+        "type": "object",
+        "description": "Een bondige tekstuele omschrijving van de dataservice. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "versie": {
+      "type": "object",
+      "description": "Een unieke aanduiding van een variant van de dataservice door middel van een versienummer of -naam van de dataservice. Voor dataservices wordt dikwijls <a href=\"https://semver.org/lang/nl/\">semantisch versioneren</a> gebruikt. Bij het deployen van services wordt aangeraden om enkel de major version op te nemen in de endpointurl. De versieinformatie die hier opgegeven wordt komt best overeen met de versie die beschikbaar is in de endpointurl.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "identificator": {
+      "type": "object",
+      "description": "De unieke identificator van de dataservice.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "trefwoord": {
+      "type": "array",
+      "description": "Lijst van TaalString items.",
+      "items": {
+        "type": "object",
+        "description": "Een trefwoord of tag die de resource beschrijft. De meertaligheid is hier verschillend als voor een beschrijvende eigenschap. De taal van elk trefwoord moet aangeduidt worden. Echter het is niet de verwachting dat elk trefwoord in elke taal vertaald wordt. Ook is het niet zo dat er slecht 1 trefwoord per taal is. Er kunnen (zullen) er meerderen zijn.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "titel": {
+      "type": "array",
+      "description": "Lijst van TaalString items.",
+      "items": {
+        "type": "object",
+        "description": "De naam van de dataservice. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "creatiedatum": {
+      "type": "object",
+      "description": "Het tijdsmoment waarop de dataservice voor het eerst werd geactiveerd.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "publicatiedatum": {
+      "type": "object",
+      "description": "Het tijdsmoment waarop de service werd gepubliceerd door de uitgever.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "wijzigingsdatum": {
+      "type": "object",
+      "description": "Het tijdsmoment waarop de dataservice werd gewijzigd",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "contactinformatie": {
+      "$ref": "#/components/schemas/Contactinfo"
+    },
+    "endpointURL": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "endpointbeschrijving": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "landingspagina": {
+      "type": "array",
+      "description": "Lijst van URI items.",
+      "items": {
+        "$ref": "#/components/schemas/URI"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "ontwikkelingstoestand": {
+      "$ref": "#/components/schemas/Code"
+    },
+    "landingspaginaVoorAuthenticatie": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "levensfase": {
+      "$ref": "#/components/schemas/Code"
+    },
+    "landingspaginaVoorStatusinformatie": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "alternatieveIdentificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "toegankelijkheid": {
+      "$ref": "#/components/schemas/Code"
+    },
+    "conformAanProtocol": {
+      "type": "array",
+      "description": "Lijst van Standaard items.",
+      "items": {
+        "$ref": "#/components/schemas/Standaard"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "statuut": {
+      "type": "array",
+      "description": "Lijst van Code items.",
+      "items": {
+        "$ref": "#/components/schemas/Code"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "landingspaginaVoorGebruiksinformatie": {
+      "$ref": "#/components/schemas/URI"
+    },
+    "rechten": {
+      "type": "array",
+      "description": "Lijst van JuridischeBepaling items.",
+      "items": {
+        "$ref": "#/components/schemas/JuridischeBepaling"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "thema": {
+      "type": "array",
+      "description": "Lijst van Code items.",
+      "items": {
+        "$ref": "#/components/schemas/Code"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "licentie": {
+      "$ref": "#/components/schemas/LicentieDocument"
+    },
+    "serviceType": {
+      "type": "array",
+      "description": "Lijst van Code items.",
+      "items": {
+        "$ref": "#/components/schemas/Code"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "serviceCategorie": {
+      "type": "array",
+      "description": "Lijst van Code items.",
+      "items": {
+        "$ref": "#/components/schemas/Code"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "geografischeDekking": {
+      "type": "array",
+      "description": "Lijst van Plaats items.",
+      "items": {
+        "$ref": "#/components/schemas/Plaats"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "biedtInformatieAanOver": {
+      "type": "array",
+      "description": "Lijst van Dataset items.",
+      "items": {
+        "$ref": "#/components/schemas/Dataset"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "uitgever": {
+      "$ref": "#/components/schemas/Agent"
+    },
+    "relatie": {
+      "type": "array",
+      "description": "Lijst van CatalogusResource items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/CatalogusResource"
+          },
+          {
+            "$ref": "#/components/schemas/Dataset"
+          },
+          {
+            "$ref": "#/components/schemas/Dataservice"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "CatalogusResource": "#/components/schemas/CatalogusResource",
+            "Dataset": "#/components/schemas/Dataset",
+            "Dataservice": "#/components/schemas/Dataservice"
+          }
+        }
+      },
+      "minItems": 1,
+      "maxItems": null
+    }
+  },
+  "required": [
+    "@type",
+    "identificator",
+    "titel",
+    "contactinformatie",
+    "endpointbeschrijving",
+    "toegankelijkheid",
+    "uitgever"
+  ]
+}
