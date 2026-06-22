@@ -10,6 +10,7 @@
       "Observatietype": {
         "title": "Observatietype",
         "type": "object",
+        "description": "Type observatie",
         "properties": {
           "@id": {
             "type": "string",
@@ -28,6 +29,7 @@
       "Domeinobjecttype": {
         "title": "Domeinobjecttype",
         "type": "object",
+        "description": "Type Domeinobject",
         "properties": {
           "@id": {
             "type": "string",
@@ -46,6 +48,7 @@
       "InputType": {
         "title": "InputType",
         "type": "object",
+        "description": "Type Input",
         "properties": {
           "@id": {
             "type": "string",
@@ -83,6 +86,7 @@
       "Systeemtype": {
         "title": "Systeemtype",
         "type": "object",
+        "description": "Type Systeem",
         "properties": {
           "@id": {
             "type": "string",
@@ -101,6 +105,7 @@
       "Meldingstype": {
         "title": "Meldingstype",
         "type": "object",
+        "description": "Type Melding",
         "properties": {
           "@id": {
             "type": "string",
@@ -119,6 +124,7 @@
       "Bemonsteringsobjecttype": {
         "title": "Bemonsteringsobjecttype",
         "type": "object",
+        "description": "Aard van het bemonsteringsobject.",
         "properties": {
           "@id": {
             "type": "string",
@@ -146,6 +152,25 @@
         },
         "required": [
           "@id"
+        ]
+      },
+      "GebeurtenisType": {
+        "title": "GebeurtenisType",
+        "type": "object",
+        "description": "Aard van de Gebeurtenis.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GebeurtenisType)",
+            "pattern": "^GebeurtenisType$"
+          }
+        },
+        "required": [
+          "@type"
         ]
       },
       "Verzameling": {
@@ -187,9 +212,6 @@
                 },
                 {
                   "$ref": "#/components/schemas/Meetpunt"
-                },
-                {
-                  "$ref": "#/components/schemas/Locatie"
                 }
               ],
               "discriminator": {
@@ -201,8 +223,7 @@
                   "Vergunning": "#/components/schemas/Vergunning",
                   "Activiteit": "#/components/schemas/Activiteit",
                   "Gebeurtenis": "#/components/schemas/Gebeurtenis",
-                  "Meetpunt": "#/components/schemas/Meetpunt",
-                  "Locatie": "#/components/schemas/Locatie"
+                  "Meetpunt": "#/components/schemas/Meetpunt"
                 }
               }
             },
@@ -447,9 +468,6 @@
               },
               {
                 "$ref": "#/components/schemas/Meetpunt"
-              },
-              {
-                "$ref": "#/components/schemas/Locatie"
               }
             ],
             "discriminator": {
@@ -461,8 +479,7 @@
                 "Vergunning": "#/components/schemas/Vergunning",
                 "Activiteit": "#/components/schemas/Activiteit",
                 "Gebeurtenis": "#/components/schemas/Gebeurtenis",
-                "Meetpunt": "#/components/schemas/Meetpunt",
-                "Locatie": "#/components/schemas/Locatie"
+                "Meetpunt": "#/components/schemas/Meetpunt"
               }
             }
           },
@@ -494,9 +511,6 @@
                 },
                 {
                   "$ref": "#/components/schemas/Meetpunt"
-                },
-                {
-                  "$ref": "#/components/schemas/Locatie"
                 }
               ],
               "discriminator": {
@@ -508,8 +522,7 @@
                   "Vergunning": "#/components/schemas/Vergunning",
                   "Activiteit": "#/components/schemas/Activiteit",
                   "Gebeurtenis": "#/components/schemas/Gebeurtenis",
-                  "Meetpunt": "#/components/schemas/Meetpunt",
-                  "Locatie": "#/components/schemas/Locatie"
+                  "Meetpunt": "#/components/schemas/Meetpunt"
                 }
               }
             },
@@ -649,9 +662,6 @@
               },
               {
                 "$ref": "#/components/schemas/Meetpunt"
-              },
-              {
-                "$ref": "#/components/schemas/Locatie"
               }
             ],
             "discriminator": {
@@ -663,8 +673,7 @@
                 "Vergunning": "#/components/schemas/Vergunning",
                 "Activiteit": "#/components/schemas/Activiteit",
                 "Gebeurtenis": "#/components/schemas/Gebeurtenis",
-                "Meetpunt": "#/components/schemas/Meetpunt",
-                "Locatie": "#/components/schemas/Locatie"
+                "Meetpunt": "#/components/schemas/Meetpunt"
               }
             }
           },
@@ -1010,13 +1019,17 @@
                 "Geometrie": "#/components/schemas/Geometrie"
               }
             }
+          },
+          "gebeurtenistype": {
+            "$ref": "#/components/schemas/GebeurtenisType"
           }
         },
         "required": [
           "@type",
           "uitvoerder",
           "tijd",
-          "plaats"
+          "plaats",
+          "gebeurtenistype"
         ]
       },
       "Resource": {
@@ -1166,9 +1179,6 @@
                 },
                 {
                   "$ref": "#/components/schemas/Meetpunt"
-                },
-                {
-                  "$ref": "#/components/schemas/Locatie"
                 }
               ],
               "discriminator": {
@@ -1180,8 +1190,7 @@
                   "Vergunning": "#/components/schemas/Vergunning",
                   "Activiteit": "#/components/schemas/Activiteit",
                   "Gebeurtenis": "#/components/schemas/Gebeurtenis",
-                  "Meetpunt": "#/components/schemas/Meetpunt",
-                  "Locatie": "#/components/schemas/Locatie"
+                  "Meetpunt": "#/components/schemas/Meetpunt"
                 }
               }
             },
@@ -1211,7 +1220,7 @@
       "Vergunning": {
         "title": "Vergunning",
         "type": "object",
-        "description": "De Rechtshandeling,zijnde een beslissing,die toelating inhoudt voor een Activiteit.",
+        "description": "De Rechtshandeling, zijnde een beslissing,die toelating inhoudt voor een Activiteit.",
         "properties": {
           "@id": {
             "type": "string",
@@ -1241,7 +1250,7 @@
       "Gebeurtenis": {
         "title": "Gebeurtenis",
         "type": "object",
-        "description": "Iets dat gebeurt of plaatsvindt,doorgaans iets van enig belag.",
+        "description": "Iets dat gebeurt of plaatsvindt,doorgaans iets van enig belang.",
         "properties": {
           "@id": {
             "type": "string",
@@ -1340,6 +1349,9 @@
               }
             }
           },
+          "gebeurtenistype": {
+            "$ref": "#/components/schemas/GebeurtenisType"
+          },
           "type": {
             "$ref": "#/components/schemas/Domeinobjecttype"
           },
@@ -1355,7 +1367,8 @@
         "required": [
           "@type",
           "tijd",
-          "plaats"
+          "plaats",
+          "gebeurtenistype"
         ]
       },
       "Plaats": {
@@ -1410,17 +1423,6 @@
                 "Punt": "#/components/schemas/Punt"
               }
             }
-          },
-          "type": {
-            "$ref": "#/components/schemas/Domeinobjecttype"
-          },
-          "waardeverschaffer": {
-            "type": "array",
-            "description": "Lijst van Observatie items.",
-            "items": {
-              "$ref": "#/components/schemas/Observatie"
-            },
-            "minItems": 1
           }
         },
         "required": [
@@ -1499,9 +1501,6 @@
                 },
                 {
                   "$ref": "#/components/schemas/Meetpunt"
-                },
-                {
-                  "$ref": "#/components/schemas/Locatie"
                 }
               ],
               "discriminator": {
@@ -1513,8 +1512,7 @@
                   "Vergunning": "#/components/schemas/Vergunning",
                   "Activiteit": "#/components/schemas/Activiteit",
                   "Gebeurtenis": "#/components/schemas/Gebeurtenis",
-                  "Meetpunt": "#/components/schemas/Meetpunt",
-                  "Locatie": "#/components/schemas/Locatie"
+                  "Meetpunt": "#/components/schemas/Meetpunt"
                 }
               }
             },
@@ -1549,17 +1547,6 @@
             "type": "string",
             "description": "Object type (klasse BelgischAdres)",
             "pattern": "^BelgischAdres$"
-          },
-          "type": {
-            "$ref": "#/components/schemas/Domeinobjecttype"
-          },
-          "waardeverschaffer": {
-            "type": "array",
-            "description": "Lijst van Observatie items.",
-            "items": {
-              "$ref": "#/components/schemas/Observatie"
-            },
-            "minItems": 1
           }
         },
         "required": [
@@ -1579,17 +1566,6 @@
             "type": "string",
             "description": "Object type (klasse Locatie)",
             "pattern": "^Locatie$"
-          },
-          "type": {
-            "$ref": "#/components/schemas/Domeinobjecttype"
-          },
-          "waardeverschaffer": {
-            "type": "array",
-            "description": "Lijst van Observatie items.",
-            "items": {
-              "$ref": "#/components/schemas/Observatie"
-            },
-            "minItems": 1
           }
         },
         "required": [
@@ -1648,7 +1624,7 @@
           },
           "identificator": {
             "type": "object",
-            "description": "String gebruikt om het object uniek te identificeren. Type vd string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator.",
+            "description": "String gebruikt om het object uniek te identificeren. Type van de string slaat op het identificatiesysteem (incl de versie ervan), de string zelf op de eigenlijke identificator.",
             "properties": {
               "@value": {
                 "type": "string"
@@ -1660,7 +1636,7 @@
           },
           "toegekendDoor(String)": {
             "type": "object",
-            "description": "Naam vd agent die de identificator heeft toegekend.",
+            "description": "Naam van de agent die de identificator heeft toegekend.",
             "properties": {
               "@value": {
                 "type": "string"
@@ -1869,7 +1845,7 @@
           },
           "volledigAdres": {
             "type": "object",
-            "description": "Het complete adres in één string, al dan niet geformatteerd. Vermijdt fouten tgv het opsplitsen ve adres in zijn onderdelen. Geeft de voorgeschreven volgorde vd verschillende onderdelen weer.",
+            "description": "Het complete adres in één string, al dan niet geformatteerd. Vermijdt fouten tgv het opsplitsen ve adres in zijn onderdelen. Geeft de voorgeschreven volgorde van de verschillende onderdelen weer.",
             "properties": {
               "@value": {
                 "type": "string"
@@ -2092,17 +2068,6 @@
           },
           "verwijstNaar": {
             "$ref": "#/components/schemas/BelgischAdres"
-          },
-          "type": {
-            "$ref": "#/components/schemas/Domeinobjecttype"
-          },
-          "waardeverschaffer": {
-            "type": "array",
-            "description": "Lijst van Observatie items.",
-            "items": {
-              "$ref": "#/components/schemas/Observatie"
-            },
-            "minItems": 1
           }
         },
         "required": [
@@ -2146,17 +2111,6 @@
             "required": [
               "@value"
             ]
-          },
-          "type": {
-            "$ref": "#/components/schemas/Domeinobjecttype"
-          },
-          "waardeverschaffer": {
-            "type": "array",
-            "description": "Lijst van Observatie items.",
-            "items": {
-              "$ref": "#/components/schemas/Observatie"
-            },
-            "minItems": 1
           }
         },
         "required": [
@@ -2244,17 +2198,6 @@
             "required": [
               "@value"
             ]
-          },
-          "type": {
-            "$ref": "#/components/schemas/Domeinobjecttype"
-          },
-          "waardeverschaffer": {
-            "type": "array",
-            "description": "Lijst van Observatie items.",
-            "items": {
-              "$ref": "#/components/schemas/Observatie"
-            },
-            "minItems": 1
           }
         },
         "required": [
@@ -2550,10 +2493,10 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Zaak` op te halen."
       },
-      "Activiteit.wasGeassocieerdMet": {
+      "Activiteit.eenActiviteitassociatieIsHetToekennenVanVerantwoordelijkheidAanEenAgentVoorEenActiviteit,WaarbijWordtAangegevenDatDeAgentEenRolHadInDieActiviteit.HetMaaktHetBovendienMogelijkEenPlanTeSpecificeren,NamelijkHetPlanDatDoo": {
         "operationId": "ActiviteitGET",
         "parameters": {
-          "id": "$response.body#/Activiteit.wasGeassocieerdMet/@id"
+          "id": "$response.body#/Activiteit.eenActiviteitassociatieIsHetToekennenVanVerantwoordelijkheidAanEenAgentVoorEenActiviteit,WaarbijWordtAangegevenDatDeAgentEenRolHadInDieActiviteit.HetMaaktHetBovendienMogelijkEenPlanTeSpecificeren,NamelijkHetPlanDatDoo/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
       },
@@ -2669,6 +2612,13 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Locatie` op te halen."
       },
+      "Activiteit.gebeurtenistype": {
+        "operationId": "ActiviteitGET",
+        "parameters": {
+          "id": "$response.body#/Activiteit.gebeurtenistype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GebeurtenisType` op te halen."
+      },
       "Gebeurtenis.tijd": {
         "operationId": "GebeurtenisGET",
         "parameters": {
@@ -2682,6 +2632,13 @@
           "id": "$response.body#/Gebeurtenis.plaats/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Locatie` op te halen."
+      },
+      "Gebeurtenis.gebeurtenistype": {
+        "operationId": "GebeurtenisGET",
+        "parameters": {
+          "id": "$response.body#/Gebeurtenis.gebeurtenistype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GebeurtenisType` op te halen."
       },
       "Gebeurtenis.type": {
         "operationId": "GebeurtenisGET",
@@ -2703,20 +2660,6 @@
           "id": "$response.body#/Plaats.geometrie/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Geometrie` op te halen."
-      },
-      "Plaats.type": {
-        "operationId": "PlaatsGET",
-        "parameters": {
-          "id": "$response.body#/Plaats.type/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen."
-      },
-      "Plaats.waardeverschaffer": {
-        "operationId": "PlaatsGET",
-        "parameters": {
-          "id": "$response.body#/Plaats.waardeverschaffer/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen."
       },
       "Meetpunt.identificator": {
         "operationId": "MeetpuntGET",
@@ -2750,34 +2693,6 @@
         "operationId": "MeetpuntGET",
         "parameters": {
           "id": "$response.body#/Meetpunt.waardeverschaffer/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen."
-      },
-      "BelgischAdres.type": {
-        "operationId": "BelgischAdresGET",
-        "parameters": {
-          "id": "$response.body#/BelgischAdres.type/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen."
-      },
-      "BelgischAdres.waardeverschaffer": {
-        "operationId": "BelgischAdresGET",
-        "parameters": {
-          "id": "$response.body#/BelgischAdres.waardeverschaffer/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen."
-      },
-      "GeografischeNaam.type": {
-        "operationId": "GeografischeNaamGET",
-        "parameters": {
-          "id": "$response.body#/GeografischeNaam.type/@id"
-        },
-        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Domeinobjecttype` op te halen."
-      },
-      "GeografischeNaam.waardeverschaffer": {
-        "operationId": "GeografischeNaamGET",
-        "parameters": {
-          "id": "$response.body#/GeografischeNaam.waardeverschaffer/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Observatie` op te halen."
       }
