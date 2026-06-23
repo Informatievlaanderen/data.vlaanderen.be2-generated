@@ -12,6 +12,19 @@
       "description": "Object type (klasse CatalogusRecord)",
       "pattern": "^CatalogusRecord$"
     },
+    "bronMetadataRecordLandingspagina": {
+      "type": "object",
+      "description": "Een webpagina in een menselijk leesbare vorm van de bron metadata record. Bij voorkeur, zet in op de eigenschap bron metadata record, om een machine leesbare vorm te delen",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
     "identificator": {
       "type": "object",
       "description": "De unieke identificator van het record in de catalogus.",
@@ -42,29 +55,6 @@
         "@type"
       ]
     },
-    "titel": {
-      "type": "array",
-      "description": "Lijst van TaalString items.",
-      "items": {
-        "type": "object",
-        "description": "De naam van het record in de catalogus. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          },
-          "@language": {
-            "type": "string",
-            "pattern": "^nl$"
-          }
-        },
-        "required": [
-          "@value",
-          "@language"
-        ]
-      },
-      "minItems": 1,
-      "maxItems": null
-    },
     "wijzigingsdatum": {
       "type": "object",
       "description": "De meest recente datum waarop de record in de catalogus is gewijzigd, bijgewerkt of aangepast.",
@@ -83,8 +73,18 @@
         "@type"
       ]
     },
-    "bronMetadataRecordLandingspagina": {
-      "$ref": "#/components/schemas/URI"
+    "bronMetadatarecord": {
+      "type": "object",
+      "description": "De record in een andere catalogus waarvan deze record en de beschrijvingen van het bijhorende hoofdonderwerp van afgeleid zijn. Hiermee vindt men de ISO metadata terug waarvan de GeoDCAT-AP Vlaanderen beschrijving is afgeleid.",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
     },
     "alternatieveIdentificator": {
       "type": "array",
@@ -103,9 +103,6 @@
       },
       "minItems": 1,
       "maxItems": null
-    },
-    "bronMetadatarecord": {
-      "$ref": "#/components/schemas/URI"
     },
     "hoofdonderwerp": {
       "oneOf": [

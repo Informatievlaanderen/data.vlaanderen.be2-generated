@@ -12,28 +12,76 @@
       "description": "Object type (klasse Dataservice)",
       "pattern": "^Dataservice$"
     },
-    "beschrijving": {
+    "endpointURL": {
+      "type": "object",
+      "description": "De rootlocatie of het primaire endpoint van de dienst (een web-resolvable URI).",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "endpointbeschrijving": {
+      "type": "object",
+      "description": "Een beschrijving van de diensten die beschikbaar zijn via de end-points, met inbegrip van hun operaties, parameters, enz.",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "landingspagina": {
       "type": "array",
-      "description": "Lijst van TaalString items.",
+      "description": "Lijst van URi items.",
       "items": {
         "type": "object",
-        "description": "Een bondige tekstuele omschrijving van de dataservice. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+        "description": "Een algemene webpagina waarnaar kan worden genavigeerd in een webbrowser, met algemene aanvullende informatie over de dataservice.",
         "properties": {
-          "@value": {
-            "type": "string"
-          },
-          "@language": {
+          "@id": {
             "type": "string",
-            "pattern": "^nl$"
+            "format": "uri"
           }
         },
         "required": [
-          "@value",
-          "@language"
+          "@id"
         ]
       },
       "minItems": 1,
       "maxItems": null
+    },
+    "landingspaginaVoorAuthenticatie": {
+      "type": "object",
+      "description": "Een verwijzing naar de landingspagina met de specifieke informatie over de authenticatie voor de dataservice. Deze eigenschap capteert een onderdeel van de beschrijvende informatie over de service beschreven in de landingspagina. Enkel te gebruiken indien men kan verwijzen naar een sectie of een aparte pagina waar deze specifieke informatie beschikbaar is.",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
+    },
+    "landingspaginaVoorStatusinformatie": {
+      "type": "object",
+      "description": "Een verwijzing naar de statuspagina van de dataservice Deze eigenschap capteert een onderdeel van de beschrijvende informatie over de service beschreven in de landingspagina. Enkel te gebruiken indien men kan verwijzen naar een sectie of een aparte pagina waar deze specifieke informatie beschikbaar is.",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
     },
     "versie": {
       "type": "object",
@@ -59,51 +107,18 @@
         "@value"
       ]
     },
-    "trefwoord": {
-      "type": "array",
-      "description": "Lijst van TaalString items.",
-      "items": {
-        "type": "object",
-        "description": "Een trefwoord of tag die de resource beschrijft. De meertaligheid is hier verschillend als voor een beschrijvende eigenschap. De taal van elk trefwoord moet aangeduidt worden. Echter het is niet de verwachting dat elk trefwoord in elke taal vertaald wordt. Ook is het niet zo dat er slecht 1 trefwoord per taal is. Er kunnen (zullen) er meerderen zijn.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          },
-          "@language": {
-            "type": "string",
-            "pattern": "^nl$"
-          }
-        },
-        "required": [
-          "@value",
-          "@language"
-        ]
+    "landingspaginaVoorGebruiksinformatie": {
+      "type": "object",
+      "description": "Een verwijzing naar de landingspagina met de specifieke informatie over het gebruik van de dataservice. Deze eigenschap capteert een onderdeel van de beschrijvende informatie over de service beschreven in de landingspagina. Enkel te gebruiken indien men kan verwijzen naar een sectie of een aparte pagina waar deze specifieke informatie beschikbaar is.",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
       },
-      "minItems": 1,
-      "maxItems": null
-    },
-    "titel": {
-      "type": "array",
-      "description": "Lijst van TaalString items.",
-      "items": {
-        "type": "object",
-        "description": "De naam van de dataservice. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          },
-          "@language": {
-            "type": "string",
-            "pattern": "^nl$"
-          }
-        },
-        "required": [
-          "@value",
-          "@language"
-        ]
-      },
-      "minItems": 1,
-      "maxItems": null
+      "required": [
+        "@id"
+      ]
     },
     "creatiedatum": {
       "type": "object",
@@ -162,32 +177,11 @@
     "contactinformatie": {
       "$ref": "#/components/schemas/Contactinfo"
     },
-    "endpointURL": {
-      "$ref": "#/components/schemas/URI"
-    },
-    "endpointbeschrijving": {
-      "$ref": "#/components/schemas/URI"
-    },
-    "landingspagina": {
-      "type": "array",
-      "description": "Lijst van URI items.",
-      "items": {
-        "$ref": "#/components/schemas/URI"
-      },
-      "minItems": 1,
-      "maxItems": null
-    },
     "ontwikkelingstoestand": {
       "$ref": "#/components/schemas/Code"
     },
-    "landingspaginaVoorAuthenticatie": {
-      "$ref": "#/components/schemas/URI"
-    },
     "levensfase": {
       "$ref": "#/components/schemas/Code"
-    },
-    "landingspaginaVoorStatusinformatie": {
-      "$ref": "#/components/schemas/URI"
     },
     "alternatieveIdentificator": {
       "type": "array",
@@ -218,9 +212,6 @@
       },
       "minItems": 1,
       "maxItems": null
-    },
-    "landingspaginaVoorGebruiksinformatie": {
-      "$ref": "#/components/schemas/URI"
     },
     "rechten": {
       "type": "array",
@@ -312,10 +303,9 @@
   },
   "required": [
     "@type",
-    "identificator",
-    "titel",
-    "contactinformatie",
     "endpointbeschrijving",
+    "identificator",
+    "contactinformatie",
     "toegankelijkheid",
     "uitgever"
   ]
