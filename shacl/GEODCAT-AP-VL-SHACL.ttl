@@ -28,6 +28,7 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#TijdsperiodeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#RechtsgrondShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#URiShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#TaalstringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#StringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#IdentificatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#DateTimeShape>,
@@ -43,6 +44,18 @@
   <http://purl.org/vocab/vann/usageNote> "Een agent kan op verschillende wijzen interageren met de beschreven entiteiten. Voorbeelden zijn beheerder, uitgever, maker, enz."@nl;
   rdfs:comment "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."@nl;
   shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "naam"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde."@nl;
+    rdfs:comment "De naam van de agent."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Agent.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "De naam van de agent."@nl;
+    shacl:minCount 1;
+    shacl:name "naam"@nl;
+    shacl:path foaf:name
+  ];
   shacl:targetClass dc:Agent .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusRecordShape> a shacl:NodeShape;
@@ -81,6 +94,17 @@
     shacl:maxCount 1;
     shacl:name "aanmaakdatum"@nl;
     shacl:path dc:issued
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "titel"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde."@nl;
+    rdfs:comment "De naam van het record in de catalogus."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusRecord.Titel>;
+    shacl:datatype rdf:langString;
+    shacl:description "De naam van het record in de catalogus."@nl;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "titel"@nl;
+    shacl:path dc:title
   ], [
     a shacl:PropertyShape;
     rdfs:label "wijzigingsdatum"@nl;
@@ -192,6 +216,17 @@ wordt."""@nl;
     shacl:name "identificator"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:identifier
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "titel"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde."@nl;
+    rdfs:comment "De naam van de catalogus."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Catalogus.Titel>;
+    shacl:datatype rdf:langString;
+    shacl:description "De naam van de catalogus."@nl;
+    shacl:minCount 1;
+    shacl:name "titel"@nl;
+    shacl:path dc:title
   ], [
     a shacl:PropertyShape;
     rdfs:label "contactinformatie"@nl;
@@ -377,6 +412,17 @@ Om het verband tussen beiden zichtbaar te maken in het UML model, is de generiek
     shacl:path <http://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorStatusinformatie>
   ], [
     a shacl:PropertyShape;
+    rdfs:label "beschrijving"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde."@nl;
+    rdfs:comment "Een bondige tekstuele omschrijving van de dataservice."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Een bondige tekstuele omschrijving van de dataservice."@nl;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "versie"@nl;
     <http://purl.org/vocab/vann/usageNote> "Voor dataservices wordt dikwijls <a href=\"https://semver.org/lang/nl/\">semantisch versioneren</a> gebruikt. Bij het deployen van services wordt aangeraden om enkel de major version op te nemen in de endpointurl. De versieinformatie die hier opgegeven wordt komt best overeen met de versie die beschikbaar is in de endpointurl."@nl;
     rdfs:comment "Een unieke aanduiding van een variant van de dataservice door middel van een versienummer of -naam van de dataservice."@nl;
@@ -399,6 +445,17 @@ Om het verband tussen beiden zichtbaar te maken in het UML model, is de generiek
     shacl:path dc:identifier
   ], [
     a shacl:PropertyShape;
+    rdfs:label "trefwoord"@nl;
+    <http://purl.org/vocab/vann/usageNote> "De meertaligheid is hier verschillend als voor een beschrijvende eigenschap. De taal van elk trefwoord moet aangeduidt worden. Echter het is niet de verwachting dat elk trefwoord in elke taal vertaald wordt. Ook is het niet zo dat er slecht 1 trefwoord per taal is. Er kunnen (zullen) er meerderen zijn."@nl;
+    rdfs:comment "Een trefwoord of tag die de resource beschrijft."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Trefwoord>;
+    shacl:datatype rdf:langString;
+    shacl:description "Een trefwoord of tag die de resource beschrijft."@nl;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "trefwoord"@nl;
+    shacl:path dcat:keyword
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "landingspagina voor gebruiksinformatie"@nl;
     <http://purl.org/vocab/vann/usageNote> "Deze eigenschap capteert een onderdeel van de beschrijvende informatie over de service beschreven in de landingspagina. Enkel te gebruiken indien men kan verwijzen naar een sectie of een aparte pagina waar deze specifieke informatie beschikbaar is."@nl;
     rdfs:comment "Een verwijzing naar de landingspagina met de specifieke informatie over het gebruik van de dataservice."@nl;
@@ -408,6 +465,18 @@ Om het verband tussen beiden zichtbaar te maken in het UML model, is de generiek
     shacl:maxCount 1;
     shacl:name "landingspagina voor gebruiksinformatie"@nl;
     shacl:path <http://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorGebruiksinformatie>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "titel"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde."@nl;
+    rdfs:comment "De naam van de dataservice."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Dataservice.Titel>;
+    shacl:datatype rdf:langString;
+    shacl:description "De naam van de dataservice."@nl;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:minCount 1;
+    shacl:name "titel"@nl;
+    shacl:path dc:title
   ], [
     a shacl:PropertyShape;
     rdfs:label "creatiedatum"@nl;
@@ -748,6 +817,18 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     shacl:path dcat:version
   ], [
     a shacl:PropertyShape;
+    rdfs:label "beschrijving"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde."@nl;
+    rdfs:comment "Een bondige tekstuele omschrijving van de dataset."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Een bondige tekstuele omschrijving van de dataset."@nl;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:minCount 1;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "landingspagina"@nl;
     <http://purl.org/vocab/vann/usageNote> "De mapping zal de landingspagina invullen met de URL naar de metadata voorstelling waarvan de dataset is afgeleid."@nl;
     rdfs:comment "Een algemene webpagina waarnaar kan worden genavigeerd in een webbrowser, met algemene informatie over de dataset, zijn distributies en/of aanvullende informatie."@nl;
@@ -1033,6 +1114,17 @@ GEMET thesaurus."""@nl;
     shacl:path dc:identifier
   ], [
     a shacl:PropertyShape;
+    rdfs:label "titel"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde."@nl;
+    rdfs:comment "De naam van de distributie."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Distributie.Titel>;
+    shacl:datatype rdf:langString;
+    shacl:description "De naam van de distributie."@nl;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "titel"@nl;
+    shacl:path dc:title
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "downloadURL"@nl;
     <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:distribution_download_url\">DCAT</a>]"@nl;
     rdfs:comment "De URL waar de data gedownload kan worden."@nl;
@@ -1226,6 +1318,17 @@ waaraan de distributie voldoet."""@nl;
     shacl:name "centroïde"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dcat:centroid
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "plaatsnaam"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde."@nl;
+    rdfs:comment "een eenduidige, beknopte beschrijving die de plaats benoemt."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Plaats.Plaatsnaam>;
+    shacl:datatype rdf:langString;
+    shacl:description "een eenduidige, beknopte beschrijving die de plaats benoemt."@nl;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "plaatsnaam"@nl;
+    shacl:path rdfs:label
   ];
   shacl:targetClass dc:Location .
 
@@ -1314,6 +1417,17 @@ waaraan de distributie voldoet."""@nl;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
+    rdfs:label "titel"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde."@nl;
+    rdfs:comment "naam van de standaard"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Standaard.Titel>;
+    shacl:datatype rdf:langString;
+    shacl:description "naam van de standaard"@nl;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "titel"@nl;
+    shacl:path dc:title
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "specificatie URL"@nl;
     rdfs:comment """Een URL waarop men de specificatie kan
 vinden"""@nl;
@@ -1376,6 +1490,13 @@ standaard bekend is."""@nl;
   rdfs:label "String";
   shacl:closed false;
   shacl:targetClass xsd:string .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#TaalstringShape> a shacl:NodeShape;
+  rdfs:label "Taalstring"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Bvb 'Rue Mercator' als string en 'fr' als taal."@nl;
+  rdfs:comment "Combinatie van een string en de taal waarin de inhoud ervan is gesteld."@nl;
+  shacl:closed false;
+  shacl:targetClass rdf:langString .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#TijdsmomentShape> a shacl:NodeShape;
   rdfs:label "Tijdsmoment"@nl;
@@ -1440,6 +1561,19 @@ standaard bekend is."""@nl;
   rdfs:comment "Een afbeelding ter illustratie van de geassocieerde data."@nl;
   shacl:closed false;
   shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "titel"@nl;
+    <http://purl.org/vocab/vann/usageNote> """Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.
+
+Dit is toegevoegd ter ondersteuning van WCAG."""@nl;
+    rdfs:comment "naam van de afbeelding"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Voorbeeldweergave.Titel>;
+    shacl:datatype rdf:langString;
+    shacl:description "naam van de afbeelding"@nl;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "titel"@nl;
+    shacl:path dc:title
+  ], [
     a shacl:PropertyShape;
     rdfs:label "downloadURL"@nl;
     rdfs:comment "De URL waar de afbeelding gedownload kan worden."@nl;
