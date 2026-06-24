@@ -27,9 +27,10 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#RelatieQualificatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#TijdsperiodeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#RechtsgrondShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#GestructureerdeIdentificatorShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#StringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#URiShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#TaalstringShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#StringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#IdentificatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#DateTimeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#ContactinfoShape>,
@@ -829,6 +830,17 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     shacl:path dc:description
   ], [
     a shacl:PropertyShape;
+    rdfs:label "trefwoord"@nl;
+    <http://purl.org/vocab/vann/usageNote> "De meertaligheid is hier verschillend als voor een beschrijvende eigenschap. De taal van elk trefwoord moet aangeduidt worden. Echter het is niet de verwachting dat elk trefwoord in elke taal vertaald wordt. Ook is het niet zo dat er slecht 1 trefwoord per taal is. Er kunnen (zullen) er meerdere zijn."@nl;
+    rdfs:comment "Een trefwoord of tag die de resource beschrijft."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Trefwoord>;
+    shacl:datatype rdf:langString;
+    shacl:description "Een trefwoord of tag die de resource beschrijft."@nl;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "trefwoord"@nl;
+    shacl:path dcat:keyword
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "landingspagina"@nl;
     <http://purl.org/vocab/vann/usageNote> "De mapping zal de landingspagina invullen met de URL naar de metadata voorstelling waarvan de dataset is afgeleid."@nl;
     rdfs:comment "Een algemene webpagina waarnaar kan worden genavigeerd in een webbrowser, met algemene informatie over de dataset, zijn distributies en/of aanvullende informatie."@nl;
@@ -838,6 +850,18 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     shacl:maxCount "n"^^xsd:integer;
     shacl:name "landingspagina"@nl;
     shacl:path dcat:landingPage
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "titel"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde."@nl;
+    rdfs:comment "De naam van de dataset."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Titel>;
+    shacl:datatype rdf:langString;
+    shacl:description "De naam van de dataset."@nl;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:minCount 1;
+    shacl:name "titel"@nl;
+    shacl:path dc:title
   ], [
     a shacl:PropertyShape;
     rdfs:label "identificator"@nl;
@@ -1226,6 +1250,46 @@ waaraan de distributie voldoet."""@nl;
   ];
   shacl:targetClass dcat:Distribution .
 
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#GestructureerdeIdentificatorShape> a shacl:NodeShape;
+  rdfs:label "Gestructureerde Identificator"@nl;
+  rdfs:comment "Identificator van een object opgesplitst in zijn onderdelen."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "lokale identificator"@nl;
+    rdfs:comment "String gebruikt om het object uniek te identificeren binnen de naamruimte."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#GestructureerdeIdentificator.LokaleIdentificator>;
+    shacl:datatype xsd:string;
+    shacl:description "String gebruikt om het object uniek te identificeren binnen de naamruimte."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "lokale identificator"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/generiek#lokaleIdentificator>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "naamruimte"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Laat toe om objecten met dezelfde identificator maar van verschillend type en/of afkomstig uit verschillende domeinen uiteen te houden. In praktijk bv een uri samengesteld uit betekenisvolle elementen zoals een domeinnaam, type en concept (bv https://data.vlaanderen.be/id/adres/)."@nl;
+    rdfs:comment "String die toegvoegd wordt aan de lokaleidentificator om deze globaal uniek te maken."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#GestructureerdeIdentificator.Naamruimte>;
+    shacl:datatype xsd:string;
+    shacl:description "String die toegvoegd wordt aan de lokaleidentificator om deze globaal uniek te maken."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "naamruimte"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/generiek#naamruimte>
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "versie-identificator"@nl;
+    rdfs:comment "Identificator van de specifieke versie van een object."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#GestructureerdeIdentificator.Versie-Identificator>;
+    shacl:datatype xsd:string;
+    shacl:description "Identificator van de specifieke versie van een object."@nl;
+    shacl:maxCount 1;
+    shacl:name "versie-identificator"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/generiek#versieIdentificator>
+  ];
+  shacl:targetClass <http://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator> .
+
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#HerkomstVerklaringShape> a shacl:NodeShape;
   rdfs:label "Herkomst Verklaring"@nl;
   <http://purl.org/vocab/vann/usageNote> "De ontstaansgeschiedenis  kan één enkele stap of een sequentie van stappen omvatten. De opdeling in een aaneengeschakeling van stappen werd buiten scope gehouden.  Daarom is elke instantie van deze klasse een web toegankelijke pagina die de ontstaansgeschiedenis beschrijft."@nl;
@@ -1257,6 +1321,16 @@ waaraan de distributie voldoet."""@nl;
     shacl:maxCount 1;
     shacl:name "toegekend op"@nl;
     shacl:path dc:issued
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "gestructureerde identificator"@nl;
+    rdfs:comment "Identificator vh object opgesplitst in zijn onderdelen."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Identificator.GestructureerdeIdentificator>;
+    shacl:class <http://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator>;
+    shacl:description "Identificator vh object opgesplitst in zijn onderdelen."@nl;
+    shacl:maxCount 1;
+    shacl:name "gestructureerde identificator"@nl;
+    shacl:path <http://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator>
   ], [
     a shacl:PropertyShape;
     rdfs:label "toegekend door"@nl;
@@ -1428,6 +1502,18 @@ waaraan de distributie voldoet."""@nl;
     shacl:path dc:title
   ], [
     a shacl:PropertyShape;
+    rdfs:label "beschrijving"@nl;
+    rdfs:comment """Een bondige tekstuele omschrijving van de
+standaard"""@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Standaard.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description """Een bondige tekstuele omschrijving van de
+standaard"""@nl;
+    shacl:maxCount 1;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
+  ], [
+    a shacl:PropertyShape;
     rdfs:label "specificatie URL"@nl;
     rdfs:comment """Een URL waarop men de specificatie kan
 vinden"""@nl;
@@ -1584,6 +1670,19 @@ Dit is toegevoegd ter ondersteuning van WCAG."""@nl;
     shacl:minCount 1;
     shacl:name "downloadURL"@nl;
     shacl:path dcat:downloadURL
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "beschrijving"@nl;
+    <http://purl.org/vocab/vann/usageNote> """Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.
+
+Dit is toegevoegd ter ondersteuning van WCAG."""@nl;
+    rdfs:comment "Een bondige tekstuele omschrijving van de afbeelding"@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Voorbeeldweergave.Beschrijving>;
+    shacl:datatype rdf:langString;
+    shacl:description "Een bondige tekstuele omschrijving van de afbeelding"@nl;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "beschrijving"@nl;
+    shacl:path dc:description
   ], [
     a shacl:PropertyShape;
     rdfs:label "mediatype"@nl;

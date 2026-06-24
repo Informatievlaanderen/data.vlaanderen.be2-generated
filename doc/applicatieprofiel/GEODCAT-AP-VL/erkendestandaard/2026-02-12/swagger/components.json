@@ -386,6 +386,29 @@
             "minItems": 1,
             "maxItems": null
           },
+          "trefwoord": {
+            "type": "array",
+            "description": "Lijst van Taalstring items.",
+            "items": {
+              "type": "object",
+              "description": "Een trefwoord of tag die de resource beschrijft. De meertaligheid is hier verschillend als voor een beschrijvende eigenschap. De taal van elk trefwoord moet aangeduidt worden. Echter het is niet de verwachting dat elk trefwoord in elke taal vertaald wordt. Ook is het niet zo dat er slecht 1 trefwoord per taal is. Er kunnen (zullen) er meerdere zijn.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
           "landingspagina": {
             "type": "array",
             "description": "Lijst van URi items.",
@@ -400,6 +423,29 @@
               },
               "required": [
                 "@id"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
+          "titel": {
+            "type": "array",
+            "description": "Lijst van Taalstring items.",
+            "items": {
+              "type": "object",
+              "description": "De naam van de dataset. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
               ]
             },
             "minItems": 1,
@@ -637,6 +683,7 @@
         "required": [
           "@type",
           "beschrijving",
+          "titel",
           "identificator",
           "toegankelijkheid",
           "contactinformatie",
@@ -1337,6 +1384,29 @@
               "@id"
             ]
           },
+          "beschrijving": {
+            "type": "array",
+            "description": "Lijst van Taalstring items.",
+            "items": {
+              "type": "object",
+              "description": "Een bondige tekstuele omschrijving van de afbeelding Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.\n\nDit is toegevoegd ter ondersteuning van WCAG.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
           "mediatype": {
             "$ref": "#/components/schemas/Code"
           }
@@ -1518,6 +1588,23 @@
             },
             "minItems": 1,
             "maxItems": null
+          },
+          "beschrijving": {
+            "type": "object",
+            "description": "Een bondige tekstuele omschrijving van de\nstandaard",
+            "properties": {
+              "@value": {
+                "type": "string"
+              },
+              "@language": {
+                "type": "string",
+                "pattern": "^nl$"
+              }
+            },
+            "required": [
+              "@value",
+              "@language"
+            ]
           },
           "specificatieURL": {
             "type": "object",
@@ -1742,6 +1829,63 @@
           "@type"
         ]
       },
+      "GestructureerdeIdentificator": {
+        "title": "GestructureerdeIdentificator",
+        "type": "object",
+        "description": "Identificator van een object opgesplitst in zijn onderdelen.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GestructureerdeIdentificator)",
+            "pattern": "^GestructureerdeIdentificator$"
+          },
+          "lokaleIdentificator": {
+            "type": "object",
+            "description": "String gebruikt om het object uniek te identificeren binnen de naamruimte.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "naamruimte": {
+            "type": "object",
+            "description": "String die toegvoegd wordt aan de lokaleidentificator om deze globaal uniek te maken. Laat toe om objecten met dezelfde identificator maar van verschillend type en/of afkomstig uit verschillende domeinen uiteen te houden. In praktijk bv een uri samengesteld uit betekenisvolle elementen zoals een domeinnaam, type en concept (bv https://data.vlaanderen.be/id/adres/).",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "versie-Identificator": {
+            "type": "object",
+            "description": "Identificator van de specifieke versie van een object.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          }
+        },
+        "required": [
+          "@type",
+          "lokaleIdentificator",
+          "naamruimte"
+        ]
+      },
       "Identificator": {
         "title": "Identificator",
         "type": "object",
@@ -1785,6 +1929,9 @@
               "@value",
               "@type"
             ]
+          },
+          "gestructureerdeIdentificator": {
+            "$ref": "#/components/schemas/GestructureerdeIdentificator"
           },
           "toegekendDoor": {
             "$ref": "#/components/schemas/Agent"
