@@ -195,6 +195,29 @@
               "@type"
             ]
           },
+          "titel": {
+            "type": "array",
+            "description": "Lijst van Taalstring items.",
+            "items": {
+              "type": "object",
+              "description": "De naam van de dataservice. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+              "properties": {
+                "@value": {
+                  "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
+                }
+              },
+              "required": [
+                "@value",
+                "@language"
+              ]
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
           "trefwoord": {
             "type": "array",
             "description": "Lijst van Taalstring items.",
@@ -376,6 +399,7 @@
           "@type",
           "endpointbeschrijving",
           "identificator",
+          "titel",
           "contactinformatie",
           "toegankelijkheid"
         ]
@@ -1205,6 +1229,9 @@
           },
           "ruimtelijkeResolutie": {
             "$ref": "#/components/schemas/Resolutie"
+          },
+          "ruimtelijkVoorstellingstype": {
+            "$ref": "#/components/schemas/Code"
           },
           "status": {
             "$ref": "#/components/schemas/Code"
@@ -2360,6 +2387,13 @@
           "id": "$response.body#/Dataset.ruimtelijkeResolutie/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Resolutie` op te halen."
+      },
+      "Dataset.ruimtelijkVoorstellingstype": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.ruimtelijkVoorstellingstype/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Code` op te halen."
       },
       "Dataset.status": {
         "operationId": "DatasetGET",
