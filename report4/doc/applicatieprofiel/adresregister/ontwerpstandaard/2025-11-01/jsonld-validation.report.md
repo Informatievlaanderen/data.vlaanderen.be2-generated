@@ -2,33 +2,15 @@
 
 #||# -------------------------------------  
 
-node ./bin/runner.js [args]
+2026-06-25T16:00:11.019Z info: Loaded 52 URI prefixes into whitelist
 
+2026-06-25T16:00:11.161Z info: Validation successful! All assigned URIs are whitelisted.
 
+2026-06-25T16:00:11.161Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
 
-Options:
+2026-06-25T16:00:11.161Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-      --version                 Show version number                    [boolean]
+2026-06-25T16:00:11.161Z info: Validation successful! All base URIs seem to be valid.
 
-      --input                   Local path or URL to JSON-LD file to validate.
-
-                                                                      [required]
-
-      --publicationEnvironment  The base URI of environment where the document
-
-                                will be published.                    [required]
-
-      --specificationType       Type of the document.
-
-                                   [choices: "ApplicationProfile", "Vocabulary"]
-
-      --whitelist               Local path or URL to whitelist file (JSON array
-
-                                of URI prefixes).                     [required]
-
-  -h, --help                    Show help                              [boolean]
-
-
-
-Missing required argument: publicationEnvironment
+2026-06-25T16:00:11.161Z info: Validation successful! All referenced classes and attributes seem to be included.
 
