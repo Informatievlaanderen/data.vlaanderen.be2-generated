@@ -1,7 +1,7 @@
 {
   "title": "Distributie",
   "type": "object",
-  "description": "Een specifieke voorstellingswijze van een dataset, gekenmerkt door één of meerdere eigenschappen zoals taal, media-type of formaat, schematische organisatie, temporele en ruimtelijke resolutie, granulariteit, ...",
+  "description": "Een specifieke voorstellingswijze van een dataset,gekenmerkt door één of meerdere eigenschappen zoals taal,media-type of formaat,schematische organisatie,temporele en ruimtelijke resolutie,granulariteit,...",
   "properties": {
     "@id": {
       "type": "string",
@@ -11,6 +11,19 @@
       "type": "string",
       "description": "Object type (klasse Distributie)",
       "pattern": "^Distributie$"
+    },
+    "downloadURL": {
+      "type": "object",
+      "description": "De URL waar de data gedownload kan worden. De URL start het downloaden van de distributie.",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "@id"
+      ]
     },
     "identificator": {
       "type": "object",
@@ -24,45 +37,9 @@
         "@value"
       ]
     },
-    "titel": {
-      "type": "array",
-      "description": "Lijst van Taalstring items.",
-      "items": {
-        "type": "object",
-        "description": "De naam van de distributie. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
-        "properties": {
-          "@value": {
-            "type": "string"
-          },
-          "@language": {
-            "type": "string",
-            "pattern": "^nl$"
-          }
-        },
-        "required": [
-          "@value",
-          "@language"
-        ]
-      },
-      "minItems": 1,
-      "maxItems": null
-    },
-    "downloadURL": {
-      "type": "object",
-      "description": "De URL waar de data gedownload kan worden. [Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:distribution_download_url\">DCAT</a>]",
-      "properties": {
-        "@id": {
-          "type": "string",
-          "format": "uri"
-        }
-      },
-      "required": [
-        "@id"
-      ]
-    },
     "toegangsURL": {
       "type": "object",
-      "description": "Een URL waar de data kan gevonden worden. [Zie <a href=\"https://www.w3.org/TR/2020/REC-vocab-dcat-2-20200204/#Property:distribution_access_url\">DCAT</a>]",
+      "description": "Een URL waar de data kan gevonden worden. Deze url kan zowel verwijzen naar een beschrijvende pagina over hoe toegang tot de data kan verkregen worden als naar een directe link waarmee het downloaden van de distributie gestart kan worden. In het tweede geval wordt ook de eigenschap downloadURL bijkomend ingevuld.",
       "properties": {
         "@id": {
           "type": "string",
@@ -72,36 +49,24 @@
       "required": [
         "@id"
       ]
-    },
-    "rechten": {
-      "type": "array",
-      "description": "Lijst van JuridischeBepaling items.",
-      "items": {
-        "$ref": "#/components/schemas/JuridischeBepaling"
-      },
-      "minItems": 1,
-      "maxItems": null
-    },
-    "alternatieveIdentificator": {
-      "type": "array",
-      "description": "Lijst van Identificator items.",
-      "items": {
-        "$ref": "#/components/schemas/Identificator"
-      },
-      "minItems": 1,
-      "maxItems": null
-    },
-    "formaat": {
-      "$ref": "#/components/schemas/Code"
-    },
-    "licentie": {
-      "$ref": "#/components/schemas/LicentieDocument"
     },
     "conform": {
       "type": "array",
       "description": "Lijst van Standaard items.",
       "items": {
         "$ref": "#/components/schemas/Standaard"
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
+    "licentie": {
+      "$ref": "#/components/schemas/LicentieDocument"
+    },
+    "rechten": {
+      "type": "array",
+      "description": "Lijst van JuridischeBepaling items.",
+      "items": {
+        "$ref": "#/components/schemas/JuridischeBepaling"
       },
       "minItems": 1,
       "maxItems": null
@@ -114,9 +79,6 @@
       },
       "minItems": 1,
       "maxItems": null
-    },
-    "verdeler": {
-      "$ref": "#/components/schemas/Agent"
     }
   },
   "required": [
