@@ -12,6 +12,29 @@
       "description": "Object type (klasse Dataservice)",
       "pattern": "^Dataservice$"
     },
+    "beschrijving": {
+      "type": "array",
+      "description": "Lijst van Taalstring items.",
+      "items": {
+        "type": "object",
+        "description": "Een bondige tekstuele omschrijving van de dataservice. Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": null
+    },
     "creatiedatum": {
       "type": "object",
       "description": "Het tijdsmoment waarop de dataservice voor het eerst werd geactiveerd.",
@@ -143,6 +166,29 @@
         "@value",
         "@type"
       ]
+    },
+    "trefwoord": {
+      "type": "array",
+      "description": "Lijst van Taalstring items.",
+      "items": {
+        "type": "object",
+        "description": "Een trefwoord of tag die de resource beschrijft. De meertaligheid is hier verschillend als voor een beschrijvende eigenschap. De taal van elk trefwoord moet aangeduidt worden. Echter het is niet de verwachting dat elk trefwoord in elke taal vertaald wordt. Ook is het niet zo dat er slecht 1 trefwoord per taal is. Er kunnen (zullen) er meerderen zijn.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": null
     },
     "versie": {
       "type": "object",
