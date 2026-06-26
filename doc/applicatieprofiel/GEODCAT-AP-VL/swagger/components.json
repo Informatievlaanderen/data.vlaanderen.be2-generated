@@ -393,6 +393,9 @@
             },
             "minItems": 1,
             "maxItems": null
+          },
+          "uitgever": {
+            "$ref": "#/components/schemas/Agent"
           }
         },
         "required": [
@@ -401,7 +404,8 @@
           "identificator",
           "titel",
           "contactinformatie",
-          "toegankelijkheid"
+          "toegankelijkheid",
+          "uitgever"
         ]
       },
       "CatalogusResource": {
@@ -444,10 +448,14 @@
             },
             "minItems": 1,
             "maxItems": null
+          },
+          "uitgever": {
+            "$ref": "#/components/schemas/Agent"
           }
         },
         "required": [
-          "@type"
+          "@type",
+          "uitgever"
         ]
       },
       "DatasetSerie": {
@@ -466,17 +474,22 @@
           },
           "beschrijving": {
             "type": "array",
-            "description": "Lijst van Literal items.",
+            "description": "Lijst van Taalstring items.",
             "items": {
               "type": "object",
               "description": "Een bondige tekstuele beschrijving van de Dataset Serie.",
               "properties": {
                 "@value": {
                   "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
                 }
               },
               "required": [
-                "@value"
+                "@value",
+                "@language"
               ]
             },
             "minItems": 1
@@ -495,17 +508,22 @@
           },
           "titel": {
             "type": "array",
-            "description": "Lijst van Literal items.",
+            "description": "Lijst van Taalstring items.",
             "items": {
               "type": "object",
               "description": "De naam van de Dataset Serie.",
               "properties": {
                 "@value": {
                   "type": "string"
+                },
+                "@language": {
+                  "type": "string",
+                  "pattern": "^nl$"
                 }
               },
               "required": [
-                "@value"
+                "@value",
+                "@language"
               ]
             },
             "minItems": 1
@@ -566,6 +584,15 @@
             "required": [
               "@value"
             ]
+          },
+          "uitgever": {
+            "type": "array",
+            "description": "Lijst van Agent items.",
+            "items": {
+              "$ref": "#/components/schemas/Agent"
+            },
+            "minItems": 1,
+            "maxItems": null
           }
         },
         "required": [
@@ -851,6 +878,9 @@
             },
             "minItems": 1,
             "maxItems": null
+          },
+          "verdeler": {
+            "$ref": "#/components/schemas/Agent"
           }
         },
         "required": [
@@ -970,6 +1000,9 @@
             },
             "minItems": 1,
             "maxItems": null
+          },
+          "uitgever": {
+            "$ref": "#/components/schemas/Agent"
           }
         },
         "required": [
@@ -978,7 +1011,8 @@
           "identificator",
           "titel",
           "contactinformatie",
-          "licentie"
+          "licentie",
+          "uitgever"
         ]
       },
       "Dataset": {
@@ -1284,6 +1318,15 @@
             "minItems": 1,
             "maxItems": null
           },
+          "eigenaar": {
+            "type": "array",
+            "description": "Lijst van Agent items.",
+            "items": {
+              "$ref": "#/components/schemas/Agent"
+            },
+            "minItems": 1,
+            "maxItems": null
+          },
           "relatie": {
             "type": "array",
             "description": "Lijst van CatalogusResource items.",
@@ -1310,6 +1353,9 @@
             },
             "minItems": 1,
             "maxItems": null
+          },
+          "uitgever": {
+            "$ref": "#/components/schemas/Agent"
           }
         },
         "required": [
@@ -1319,7 +1365,8 @@
           "titel",
           "contactinformatie",
           "geografischeDekking",
-          "toegankelijkheid"
+          "toegankelijkheid",
+          "uitgever"
         ]
       },
       "Standaard": {
@@ -2171,12 +2218,26 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CatalogusResource` op te halen."
       },
+      "Dataservice.uitgever": {
+        "operationId": "DataserviceGET",
+        "parameters": {
+          "id": "$response.body#/Dataservice.uitgever/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
       "CatalogusResource.relatie": {
         "operationId": "CatalogusResourceGET",
         "parameters": {
           "id": "$response.body#/CatalogusResource.relatie/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CatalogusResource` op te halen."
+      },
+      "CatalogusResource.uitgever": {
+        "operationId": "CatalogusResourceGET",
+        "parameters": {
+          "id": "$response.body#/CatalogusResource.uitgever/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
       },
       "DatasetSerie.alternatieveIdentificator": {
         "operationId": "DatasetSerieGET",
@@ -2219,6 +2280,13 @@
           "id": "$response.body#/DatasetSerie.temporeleDekking/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Tijdsperiode` op te halen."
+      },
+      "DatasetSerie.uitgever": {
+        "operationId": "DatasetSerieGET",
+        "parameters": {
+          "id": "$response.body#/DatasetSerie.uitgever/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
       },
       "CatalogusRecord.alternatieveIdentificator": {
         "operationId": "CatalogusRecordGET",
@@ -2283,6 +2351,13 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Dataservice` op te halen."
       },
+      "Distributie.verdeler": {
+        "operationId": "DistributieGET",
+        "parameters": {
+          "id": "$response.body#/Distributie.verdeler/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
       "Catalogus.alternatieveIdentificator": {
         "operationId": "CatalogusGET",
         "parameters": {
@@ -2324,6 +2399,13 @@
           "id": "$response.body#/Catalogus.heeftDataService/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Dataservice` op te halen."
+      },
+      "Catalogus.uitgever": {
+        "operationId": "CatalogusGET",
+        "parameters": {
+          "id": "$response.body#/Catalogus.uitgever/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
       },
       "Dataset.alternatieveIdentificator": {
         "operationId": "DatasetGET",
@@ -2444,12 +2526,26 @@
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `DatasetSerie` op te halen."
       },
+      "Dataset.eigenaar": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.eigenaar/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
+      },
       "Dataset.relatie": {
         "operationId": "DatasetGET",
         "parameters": {
           "id": "$response.body#/Dataset.relatie/@id"
         },
         "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `CatalogusResource` op te halen."
+      },
+      "Dataset.uitgever": {
+        "operationId": "DatasetGET",
+        "parameters": {
+          "id": "$response.body#/Dataset.uitgever/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Agent` op te halen."
       },
       "Standaard.type": {
         "operationId": "StandaardGET",

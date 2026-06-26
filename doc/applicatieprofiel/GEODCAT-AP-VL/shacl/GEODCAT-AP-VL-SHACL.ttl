@@ -10,7 +10,8 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#> rdfs:member <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#DataserviceShape>,
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#> rdfs:member <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#AgentShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#DataserviceShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusResourceShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#DatasetSerieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusRecordShape>,
@@ -28,9 +29,9 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#RelatieQualificatieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#GestructureerdeIdentificatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#StringShape>,
+    <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#TaalstringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#IdentificatorShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#DateTimeShape>,
-    <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#TaalstringShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#URiShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#ResolutieShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#DecimalShape>,
@@ -38,6 +39,25 @@
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#CodeShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#TijdsmomentShape>,
     <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#ContactpuntShape> .
+
+<https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#AgentShape> a shacl:NodeShape;
+  rdfs:label "Agent"@nl;
+  <http://purl.org/vocab/vann/usageNote> "Een agent kan op verschillende wijzen interageren met de beschreven entiteiten. Voorbeelden zijn beheerder,uitgever,maker,enz."@nl;
+  rdfs:comment "Iemand die of iets dat kan handelen of een effect kan teweeg brengen."@nl;
+  shacl:closed false;
+  shacl:property [
+    a shacl:PropertyShape;
+    rdfs:label "naam"@nl;
+    <http://purl.org/vocab/vann/usageNote> "Omwille van de meertaligheid kunnen er meerdere waarden zijn. De gewenste interpretatie van de cardinaliteit is: per taal slechts 1 waarde."@nl;
+    rdfs:comment "De naam van de agent."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Agent.Naam>;
+    shacl:datatype rdf:langString;
+    shacl:description "De naam van de agent."@nl;
+    shacl:minCount 1;
+    shacl:name "naam"@nl;
+    shacl:path foaf:name
+  ];
+  shacl:targetClass dc:Agent .
 
 <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusRecordShape> a shacl:NodeShape;
   rdfs:label "Catalogus Record"@nl;
@@ -165,6 +185,17 @@ wordt."""@nl;
     shacl:name "relatie"@nl;
     shacl:or ([shacl:class dcat:Resource] [shacl:class dcat:DataService] [shacl:class dcat:Dataset]);
     shacl:path dc:relation
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "uitgever"@nl;
+    rdfs:comment "De uitgever, de entiteit die verantwoordelijk is voor het beschikbaar stellen, van de resource in de catalogus."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#CatalogusResource.Uitgever>;
+    shacl:class dc:Agent;
+    shacl:description "De uitgever, de entiteit die verantwoordelijk is voor het beschikbaar stellen, van de resource in de catalogus."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "uitgever"@nl;
+    shacl:path dc:publisher
   ];
   shacl:targetClass dcat:DataService,
     dcat:Resource,
@@ -273,6 +304,17 @@ Meer informatie zie <a href=\"#wettelijkeinformatie\">hieronder</a>."""@nl;
     shacl:maxCount "n"^^xsd:integer;
     shacl:name "heeft DataService"@nl;
     shacl:path dcat:service
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "uitgever"@nl;
+    rdfs:comment "De uitgever, de entiteit die verantwoordelijk is voor het beschikbaar stellen, van de catalogus."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Catalogus.Uitgever>;
+    shacl:class dc:Agent;
+    shacl:description "De uitgever, de entiteit die verantwoordelijk is voor het beschikbaar stellen, van de catalogus."@nl;
+    shacl:maxCount 1;
+    shacl:minCount 1;
+    shacl:name "uitgever"@nl;
+    shacl:path dc:publisher
   ];
   shacl:targetClass dcat:Catalog .
 
@@ -648,10 +690,10 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     rdfs:label "beschrijving"@nl;
     rdfs:comment "Een bondige tekstuele beschrijving van de Dataset Serie."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#DatasetSerie.Beschrijving>;
+    shacl:datatype rdf:langString;
     shacl:description "Een bondige tekstuele beschrijving van de Dataset Serie."@nl;
     shacl:minCount 1;
     shacl:name "beschrijving"@nl;
-    shacl:nodeKind shacl:Literal;
     shacl:path dc:description
   ], [
     a shacl:PropertyShape;
@@ -669,10 +711,10 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     rdfs:label "titel"@nl;
     rdfs:comment "De naam van de Dataset Serie."@nl;
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#DatasetSerie.Titel>;
+    shacl:datatype rdf:langString;
     shacl:description "De naam van de Dataset Serie."@nl;
     shacl:minCount 1;
     shacl:name "titel"@nl;
-    shacl:nodeKind shacl:Literal;
     shacl:path dc:title
   ], [
     a shacl:PropertyShape;
@@ -757,6 +799,16 @@ Voor complexe of expliciet gestructureerde groeperingen is de correcte represent
     shacl:name "wijzigingsdatum"@nl;
     shacl:nodeKind shacl:Literal;
     shacl:path dc:modified
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "uitgever";
+    rdfs:comment "De uitgever, de entiteit die verantwoordelijk is voor het beschikbaar stellen, van de Dataset Serie."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#DatasetSerie.Uitgever>;
+    shacl:class dc:Agent;
+    shacl:description "De uitgever, de entiteit die verantwoordelijk is voor het beschikbaar stellen, van de Dataset Serie."@nl;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "uitgever";
+    shacl:path dc:publisher
   ];
   shacl:targetClass dcat:DatasetSeries .
 
@@ -1056,6 +1108,16 @@ De waarde NON_PUBLIC geeft aan dat er (wettelijke) beperkingen zijn die verhinde
     shacl:maxCount "n"^^xsd:integer;
     shacl:name "inserie";
     shacl:path dcat:inSeries
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "eigenaar"@nl;
+    rdfs:comment "De agent die de eigendomsrechten heeft."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Dataset.Eigenaar>;
+    shacl:class dc:Agent;
+    shacl:description "De agent die de eigendomsrechten heeft."@nl;
+    shacl:maxCount "n"^^xsd:integer;
+    shacl:name "eigenaar"@nl;
+    shacl:path dc:rightsHolder
   ];
   shacl:targetClass dcat:Dataset .
 
@@ -1185,6 +1247,17 @@ waaraan de distributie voldoet."""@nl;
     shacl:maxCount "n"^^xsd:integer;
     shacl:name "wordt aangeboden door"@nl;
     shacl:path dcat:accessService
+  ], [
+    a shacl:PropertyShape;
+    rdfs:label "verdeler"@nl;
+    <http://purl.org/vocab/vann/usageNote> "[Zie <a href=\"https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact\">GeoDCAT-AP</a>]"@nl;
+    rdfs:comment "De agent die instaat voor de verdeling."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/erkendestandaard/2026-02-12#Distributie.Verdeler>;
+    shacl:class dc:Agent;
+    shacl:description "De agent die instaat voor de verdeling."@nl;
+    shacl:maxCount 1;
+    shacl:name "verdeler"@nl;
+    shacl:path <http://data.europa.eu/930/distributor>
   ];
   shacl:targetClass dcat:Distribution .
 
