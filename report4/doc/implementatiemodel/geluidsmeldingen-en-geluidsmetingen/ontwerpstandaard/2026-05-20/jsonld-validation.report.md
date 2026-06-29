@@ -2,45 +2,45 @@
 
 #||# -------------------------------------  
 
-2026-06-27T15:09:21.010Z info: Loaded 52 URI prefixes into whitelist
+2026-06-29T05:25:13.400Z info: Loaded 52 URI prefixes into whitelist
 
-2026-06-27T15:09:21.229Z warn: Found non-whitelisted assigned URI: https://data.vlaanderen.be/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/ontwerpstandaard/2026-05-20 for subject: [urn:oslo-toolchain:b3029a3619e1dd2da6940e907a3d9bab25c0199a61625e7567dcdb722508eccc](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L147)
+2026-06-29T05:25:13.610Z warn: Found non-whitelisted assigned URI: http://data.vlaanderen.be/ns/ndnn for subject: [urn:oslo-toolchain:b3029a3619e1dd2da6940e907a3d9bab25c0199a61625e7567dcdb722508eccc](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L147)
 
-2026-06-27T15:09:21.229Z warn: Found non-whitelisted assigned URI: https://data.vlaanderen.be/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/ontwerpstandaard/2026-05-20/GebeurtenisType for subject: [urn:oslo-toolchain:c375d3d5d41d129b3df78f9ea2f87e4cd763d824ed060844a989f7ad816dea32](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L156)
+2026-06-29T05:25:13.610Z warn: Found non-whitelisted assigned URI: http://data.vlaanderen.be/ns/ndnn#GebeurtenisType for subject: [urn:oslo-toolchain:c375d3d5d41d129b3df78f9ea2f87e4cd763d824ed060844a989f7ad816dea32](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L156)
 
-2026-06-27T15:09:21.229Z warn: Found non-whitelisted assigned URI: https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/Vergunning for subject: [[urn:oslo-toolchain:e2ef7549c2dfdcec37537f24728e0c68cd9b524d27d55e3d424d037be5e76744](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6256)](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L900)
+2026-06-29T05:25:13.610Z warn: Found non-whitelisted assigned URI: https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/Vergunning for subject: [[urn:oslo-toolchain:e2ef7549c2dfdcec37537f24728e0c68cd9b524d27d55e3d424d037be5e76744](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6256)](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L900)
 
-2026-06-27T15:09:21.230Z warn: Found non-whitelisted assigned URI: https://data.vlaanderen.be/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/ontwerpstandaard/2026-05-20/Activiteittype for subject: [urn:oslo-toolchain:6e29745b15b59f1f6cfbddcdba042152f14836ade237f4036cf927608e6784d0](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L1055)
+2026-06-29T05:25:13.610Z warn: Found non-whitelisted assigned URI: http://data.vlaanderen.be/ns/ndnn#Activiteittype for subject: [urn:oslo-toolchain:6e29745b15b59f1f6cfbddcdba042152f14836ade237f4036cf927608e6784d0](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L1055)
 
-2026-06-27T15:09:21.230Z warn: Found non-whitelisted assigned URI: https://dbpedia.org/ontology/procedure for subject: [urn:oslo-toolchain:b363149fa14c7d31ffd5eea15a28920f820ef02276b54a52dcc59065ebe1a0ca](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L1726)
+2026-06-29T05:25:13.610Z warn: Found non-whitelisted assigned URI: https://dbpedia.org/ontology/procedure for subject: [urn:oslo-toolchain:b363149fa14c7d31ffd5eea15a28920f820ef02276b54a52dcc59065ebe1a0ca](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L1726)
 
-2026-06-27T15:09:21.230Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/prov#uitvoerder for subject: [urn:oslo-toolchain:919d2604eb36b36eca5b652f7ffb0c4b7546dcc33fa917e5ecbe4bec02e5f461](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L4673)
+2026-06-29T05:25:13.611Z warn: Found non-whitelisted assigned URI: https://www.w3.org/ns/prov#uitvoerder for subject: [urn:oslo-toolchain:919d2604eb36b36eca5b652f7ffb0c4b7546dcc33fa917e5ecbe4bec02e5f461](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L4673)
 
-2026-06-27T15:09:21.230Z warn: Found non-whitelisted assigned URI: http://purl.org/dc/terms#wasGeassocieerdMet for subject: [urn:oslo-toolchain:bb46a813da91605f177706efa7a718dfb82b2a6de8210c62c587bfa3a7f476d7](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L5535)
+2026-06-29T05:25:13.611Z warn: Found non-whitelisted assigned URI: http://purl.org/dc/terms#wasGeassocieerdMet for subject: [urn:oslo-toolchain:bb46a813da91605f177706efa7a718dfb82b2a6de8210c62c587bfa3a7f476d7](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L5535)
 
-2026-06-27T15:09:21.230Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature for subject: [urn:oslo-toolchain:622665b0cc930f9faa798055356ca0dbb050fb31af0fbbee1d46b7255f3e3cae](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L5649)
+2026-06-29T05:25:13.611Z warn: Found non-whitelisted assigned URI: http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature for subject: [urn:oslo-toolchain:622665b0cc930f9faa798055356ca0dbb050fb31af0fbbee1d46b7255f3e3cae](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L5649)
 
-2026-06-27T15:09:21.230Z warn: Found non-whitelisted assigned URI: https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/Zaakhandeling for subject: [urn:oslo-toolchain:293d8f76650d180b94e31e855fd61f94f91a8131879b82479bfcb4ac99608b5f](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6260)
+2026-06-29T05:25:13.611Z warn: Found non-whitelisted assigned URI: https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/Zaakhandeling for subject: [urn:oslo-toolchain:293d8f76650d180b94e31e855fd61f94f91a8131879b82479bfcb4ac99608b5f](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6260)
 
-2026-06-27T15:09:21.230Z warn: Found non-whitelisted assigned URI: https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/BestuurlijkeRechtshandeling for subject: [urn:oslo-toolchain:c4ea243626b41f9b1d8501a23942d776c2c6494b33266338212abb17595226af](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6289)
+2026-06-29T05:25:13.611Z warn: Found non-whitelisted assigned URI: https://data.vlaanderen.be/doc/applicatieprofiel/omgevingsvergunning/BestuurlijkeRechtshandeling for subject: [urn:oslo-toolchain:c4ea243626b41f9b1d8501a23942d776c2c6494b33266338212abb17595226af](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6289)
 
-2026-06-27T15:09:21.239Z error: Found missing class or attribute (type): [urn:oslo-toolchain:16e0208882f7485b07e98a621c5f5c41d692aab9abbf6a11c49d626ef2ca8474](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L4737) in Application Profile
+2026-06-29T05:25:13.622Z error: Found missing class or attribute (type): [urn:oslo-toolchain:16e0208882f7485b07e98a621c5f5c41d692aab9abbf6a11c49d626ef2ca8474](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L4737) in Application Profile
 
-2026-06-27T15:09:21.241Z error: Found missing class or attribute (uitvoerder): [urn:oslo-toolchain:919d2604eb36b36eca5b652f7ffb0c4b7546dcc33fa917e5ecbe4bec02e5f461](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L4673) in Application Profile
+2026-06-29T05:25:13.624Z error: Found missing class or attribute (uitvoerder): [urn:oslo-toolchain:919d2604eb36b36eca5b652f7ffb0c4b7546dcc33fa917e5ecbe4bec02e5f461](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L4673) in Application Profile
 
-2026-06-27T15:09:21.241Z error: Found missing class or attribute (tijd): [urn:oslo-toolchain:499d04e544047dcf7047df4d399a485bf43f86f78395f8bccd2cfa8b5cd70a28](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L4705) in Application Profile
+2026-06-29T05:25:13.624Z error: Found missing class or attribute (tijd): [urn:oslo-toolchain:499d04e544047dcf7047df4d399a485bf43f86f78395f8bccd2cfa8b5cd70a28](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L4705) in Application Profile
 
-2026-06-27T15:09:21.241Z error: Found missing class or attribute (plaats): [urn:oslo-toolchain:683402ffe6c6f37c8556edb2d2540073da4f8ba04c444e7f5a83426efc6086f6](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L4819) in Application Profile
+2026-06-29T05:25:13.624Z error: Found missing class or attribute (plaats): [urn:oslo-toolchain:683402ffe6c6f37c8556edb2d2540073da4f8ba04c444e7f5a83426efc6086f6](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L4819) in Application Profile
 
-2026-06-27T15:09:21.241Z error: Found missing class or attribute (Gebeurtenistype): [urn:oslo-toolchain:155fc0b06c8c8db9a7c34f8df479bdb47f89444c03aa722c45f1d10c9c036624](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L5053) in Application Profile
+2026-06-29T05:25:13.624Z error: Found missing class or attribute (Gebeurtenistype): [urn:oslo-toolchain:155fc0b06c8c8db9a7c34f8df479bdb47f89444c03aa722c45f1d10c9c036624](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L5053) in Application Profile
 
-2026-06-27T15:09:21.244Z info: Validation found 10 non-whitelisted assigned URIs
+2026-06-29T05:25:13.627Z info: Validation found 10 non-whitelisted assigned URIs
 
-2026-06-27T15:09:21.244Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
+2026-06-29T05:25:13.627Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
 
-2026-06-27T15:09:21.244Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2026-06-29T05:25:13.627Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
 
-2026-06-27T15:09:21.244Z info: Validation successful! All base URIs seem to be valid.
+2026-06-29T05:25:13.627Z info: Validation successful! All base URIs seem to be valid.
 
-2026-06-27T15:09:21.244Z info: Validation found 5 missing referenced classes or attributes.
+2026-06-29T05:25:13.627Z info: Validation found 5 missing referenced classes or attributes.
 
