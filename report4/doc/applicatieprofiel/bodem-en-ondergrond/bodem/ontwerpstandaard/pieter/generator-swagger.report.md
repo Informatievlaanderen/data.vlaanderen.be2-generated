@@ -2,53 +2,53 @@
 
 #||#  -------------------------------------  
 
-2026-06-29T10:57:00.749Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.742Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.756Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.747Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.758Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.749Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.762Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.755Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.763Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.758Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.767Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.763Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.768Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.765Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.771Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.770Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.773Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.772Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.777Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.780Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.779Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.784Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.784Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.790Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.787Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.794Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.792Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.800Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.795Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.804Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.804Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.817Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.807Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.821Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.812Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.829Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.816Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.832Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.859Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.897Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.860Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.900Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.863Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.904Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.865Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.906Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
-2026-06-29T10:57:00.866Z error: Unknown cardinality for attribute [urn:oslo-toolchain:bc14cbe58546e2c66c5b5a2ab36afd59ac4a99cfc4bd4846e31d968b0f958f04](all-bodem.jsonld#L6761)
+2026-06-29T11:13:44.909Z error: Unknown cardinality for attribute [urn:oslo-toolchain:bc14cbe58546e2c66c5b5a2ab36afd59ac4a99cfc4bd4846e31d968b0f958f04](all-bodem.jsonld#L6799)
 
-2026-06-29T10:57:00.871Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6731)
+2026-06-29T11:13:44.917Z error: Unknown cardinality for attribute [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6769)
 
