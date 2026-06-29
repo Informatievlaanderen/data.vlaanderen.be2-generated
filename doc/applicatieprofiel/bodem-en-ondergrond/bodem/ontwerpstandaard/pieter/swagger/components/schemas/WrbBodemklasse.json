@@ -1,0 +1,88 @@
+{
+  "title": "WrbBodemklasse",
+  "type": "object",
+  "description": "Beschrijving van een bodem volgens de WRB bodemclassificatie.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse WrbBodemklasse)",
+      "pattern": "^WrbBodemklasse$"
+    },
+    "beschrijving": {
+      "type": "object",
+      "description": "Een korte uitleg die de betekenis van de classificatie uit het veld naam weergeeft. TODO.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "naam": {
+      "type": "object",
+      "description": "Naam van de bodem volgens de WRB bodemclassificatie.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "referenceSoilGroupBeschrijving": {
+      "type": "object",
+      "description": "Een korte uitleg die de betekenis van de classificatie uit het veld referencheSoilGroupFull weergeeft. Verplicht in te vullen indien referenceSoilGroupFull is ingevuld.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
+    "afgeleid": {
+      "type": "object",
+      "description": "De WRB classificatie van het bodemobject is bepaald op basis van een bestaande classificatie van het object. Aangeven of de WRB classificatie van het bodemobject in het veld bepaald is (waarde: nee) of afgeleid is van een eerder bepaalde classificatie (waarde: ja).",
+      "properties": {
+        "@value": {
+          "type": "boolean"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Boolean$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "referenceSoilGroupFull": {
+      "$ref": "#/components/schemas/WrbReferenceSoilGroup"
+    },
+    "wrbQualifier": {
+      "type": "array",
+      "description": "Lijst van WrbQualifier items.",
+      "items": {
+        "$ref": "#/components/schemas/WrbQualifier"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "naam",
+    "referenceSoilGroupBeschrijving",
+    "afgeleid",
+    "referenceSoilGroupFull",
+    "wrbQualifier"
+  ]
+}

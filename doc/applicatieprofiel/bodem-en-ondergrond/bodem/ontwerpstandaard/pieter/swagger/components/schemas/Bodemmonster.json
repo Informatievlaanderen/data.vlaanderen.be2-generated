@@ -1,0 +1,156 @@
+{
+  "title": "Bodemmonster",
+  "type": "object",
+  "description": "Monster genomen uit de bodem voor observatie ex situ.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bodemmonster)",
+      "pattern": "^Bodemmonster$"
+    },
+    "bemonsteringstijdstip": {
+      "type": "object",
+      "description": "Moment waarop het Bodemmonster is genomen.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "bemonsteringsplaats": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        },
+        {
+          "$ref": "#/components/schemas/Polygoon"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Curve": "#/components/schemas/Curve",
+          "Punt": "#/components/schemas/Punt",
+          "Polygoon": "#/components/schemas/Polygoon"
+        }
+      }
+    },
+    "monstertype": {
+      "$ref": "#/components/schemas/Bodemmonstertype"
+    },
+    "huidigeLocatie": {
+      "$ref": "#/components/schemas/Locatie"
+    },
+    "grootte": {
+      "$ref": "#/components/schemas/KwantitatieveWaarde"
+    },
+    "herkomst": {
+      "$ref": "#/components/schemas/Herkomst"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/Bemonsteringsobjecttype"
+    },
+    "ontwerp": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemclassificatie"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemprofielobservatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Bodemclassificatie": "#/components/schemas/Bodemclassificatie",
+            "Bodemprofielobservatie": "#/components/schemas/Bodemprofielobservatie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "isResultaatVan": {
+      "type": "array",
+      "description": "Lijst van Bemonstering items.",
+      "items": {
+        "$ref": "#/components/schemas/Bemonstering"
+      },
+      "minItems": 1
+    },
+    "geassocieerdBemonsteringsobject": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bodemmonster"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemlocatie"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemprofielelement"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bodemmonster": "#/components/schemas/Bodemmonster",
+            "Bodemlocatie": "#/components/schemas/Bodemlocatie",
+            "Bodemprofielelement": "#/components/schemas/Bodemprofielelement"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "bemonsteringstijdstip",
+    "identificator",
+    "isResultaatVan"
+  ]
+}

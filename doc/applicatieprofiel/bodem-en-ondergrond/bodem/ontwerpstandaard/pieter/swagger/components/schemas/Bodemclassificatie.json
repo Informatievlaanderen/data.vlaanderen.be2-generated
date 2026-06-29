@@ -1,0 +1,124 @@
+{
+  "title": "Bodemclassificatie",
+  "type": "object",
+  "description": "Observatie waarbij de bodem wordt ingedeeld bij een groep van bodems met dezelfde of verwante eigenschappen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bodemclassificatie)",
+      "pattern": "^Bodemclassificatie$"
+    },
+    "geobserveerdObject": {
+      "$ref": "#/components/schemas/Bodemobject"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "fenomeentijd": {
+      "$ref": "#/components/schemas/TemporeleEntiteit"
+    },
+    "resultaattijd": {
+      "$ref": "#/components/schemas/Moment"
+    },
+    "geldigeTijd": {
+      "$ref": "#/components/schemas/Periode"
+    },
+    "resultaatkwaliteit": {
+      "type": "array",
+      "description": "Lijst van Kwaliteitselement items.",
+      "items": {
+        "$ref": "#/components/schemas/Kwaliteitselement"
+      },
+      "minItems": 1
+    },
+    "resultaat": {
+      "$ref": "#/components/schemas/Any"
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Observatietype items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatietype"
+      },
+      "minItems": 1
+    },
+    "opdracht": {
+      "type": "array",
+      "description": "Lijst van Opdracht items.",
+      "items": {
+        "$ref": "#/components/schemas/Opdracht"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdDoor": {
+      "type": "array",
+      "description": "Lijst van Agent items.",
+      "items": {
+        "$ref": "#/components/schemas/Agent"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "geassocieerdeObservatie": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemclassificatie"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemprofielobservatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Bodemclassificatie": "#/components/schemas/Bodemclassificatie",
+            "Bodemprofielobservatie": "#/components/schemas/Bodemprofielobservatie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "uitgevoerdMetSensor": {
+      "$ref": "#/components/schemas/Sensor"
+    },
+    "gebruikteProcedure": {
+      "type": "array",
+      "description": "Lijst van Observatieprocedure items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatieprocedure"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "geobserveerdObject",
+    "fenomeentijd",
+    "resultaattijd",
+    "resultaat",
+    "uitgevoerdMetSensor"
+  ]
+}

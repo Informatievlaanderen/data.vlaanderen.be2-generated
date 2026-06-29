@@ -1,0 +1,97 @@
+{
+  "title": "Bemonstering",
+  "type": "object",
+  "description": "Handeling waarbij een bepaalde Bemonsteringsprocedure wordt uitgevoerd om één of meer Bemonsteringsobjecten te bekomen of waarbij deze worden bewerkt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bemonstering)",
+      "pattern": "^Bemonstering$"
+    },
+    "conditie": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "wettelijkKader": {
+      "$ref": "#/components/schemas/WettelijkKader"
+    },
+    "opdracht": {
+      "type": "array",
+      "description": "Lijst van Opdracht items.",
+      "items": {
+        "$ref": "#/components/schemas/Opdracht"
+      },
+      "minItems": 1
+    },
+    "bemonsteringstijdstip": {
+      "$ref": "#/components/schemas/TemporeleEntiteit"
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringstype items.",
+      "items": {
+        "$ref": "#/components/schemas/Bemonsteringstype"
+      },
+      "minItems": 1
+    },
+    "doel": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsdoel items.",
+      "items": {
+        "$ref": "#/components/schemas/Bemonsteringsdoel"
+      },
+      "minItems": 1
+    },
+    "gebruikteProcedure": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsprocedure items.",
+      "items": {
+        "$ref": "#/components/schemas/Bemonsteringsprocedure"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdMet": {
+      "$ref": "#/components/schemas/Bemonsteraar"
+    },
+    "resultaat": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bodemmonster"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemlocatie"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemprofielelement"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bodemmonster": "#/components/schemas/Bodemmonster",
+            "Bodemlocatie": "#/components/schemas/Bodemlocatie",
+            "Bodemprofielelement": "#/components/schemas/Bodemprofielelement"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "bemonsteringstijdstip",
+    "uitgevoerdMet",
+    "resultaat"
+  ]
+}

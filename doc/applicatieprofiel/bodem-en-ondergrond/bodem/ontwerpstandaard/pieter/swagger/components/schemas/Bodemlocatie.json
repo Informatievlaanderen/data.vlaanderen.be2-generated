@@ -1,0 +1,186 @@
+{
+  "title": "Bodemlocatie",
+  "type": "object",
+  "description": "Plek waar een bodemonderzoek wordt uitgevoerd.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bodemlocatie)",
+      "pattern": "^Bodemlocatie$"
+    },
+    "geometrie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        },
+        {
+          "$ref": "#/components/schemas/Polygoon"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Curve": "#/components/schemas/Curve",
+          "Punt": "#/components/schemas/Punt",
+          "Polygoon": "#/components/schemas/Polygoon"
+        }
+      }
+    },
+    "positioneleNauwkeurigheid": {
+      "type": "array",
+      "description": "Lijst van PositioneleNauwkeurigheid items.",
+      "items": {
+        "$ref": "#/components/schemas/PositioneleNauwkeurigheid"
+      },
+      "minItems": 1,
+      "maxItems": 2
+    },
+    "gehostPlatform": {
+      "type": "array",
+      "description": "Lijst van Proces items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Proces"
+          },
+          {
+            "$ref": "#/components/schemas/Observatieprocedure"
+          },
+          {
+            "$ref": "#/components/schemas/Sensor"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Proces": "#/components/schemas/Proces",
+            "Observatieprocedure": "#/components/schemas/Observatieprocedure",
+            "Sensor": "#/components/schemas/Sensor"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "ligging": {
+      "type": "array",
+      "description": "Lijst van Locatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Locatie"
+      },
+      "minItems": 1
+    },
+    "maaiveld": {
+      "type": "array",
+      "description": "Lijst van Maaiveld items.",
+      "items": {
+        "$ref": "#/components/schemas/Maaiveld"
+      },
+      "minItems": 1
+    },
+    "diepte": {
+      "$ref": "#/components/schemas/Diepte"
+    },
+    "bodemsite": {
+      "$ref": "#/components/schemas/Bodemsite"
+    },
+    "herkomst": {
+      "$ref": "#/components/schemas/Herkomst"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/Bemonsteringsobjecttype"
+    },
+    "ontwerp": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemclassificatie"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemprofielobservatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Bodemclassificatie": "#/components/schemas/Bodemclassificatie",
+            "Bodemprofielobservatie": "#/components/schemas/Bodemprofielobservatie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "isResultaatVan": {
+      "type": "array",
+      "description": "Lijst van Bemonstering items.",
+      "items": {
+        "$ref": "#/components/schemas/Bemonstering"
+      },
+      "minItems": 1
+    },
+    "geassocieerdBemonsteringsobject": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bodemmonster"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemlocatie"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemprofielelement"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bodemmonster": "#/components/schemas/Bodemmonster",
+            "Bodemlocatie": "#/components/schemas/Bodemlocatie",
+            "Bodemprofielelement": "#/components/schemas/Bodemprofielelement"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "geometrie",
+    "identificator",
+    "isResultaatVan"
+  ]
+}

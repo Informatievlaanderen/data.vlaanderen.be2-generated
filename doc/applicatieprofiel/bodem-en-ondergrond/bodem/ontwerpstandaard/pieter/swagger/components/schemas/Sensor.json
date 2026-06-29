@@ -1,0 +1,49 @@
+{
+  "title": "Sensor",
+  "type": "object",
+  "description": "Toestel of Agent (inclusief Personen of software) waarmee Observaties gemaakt worden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Sensor)",
+      "pattern": "^Sensor$"
+    },
+    "implementeert": {
+      "$ref": "#/components/schemas/Observatieprocedure"
+    },
+    "uitgevoerdeObservatie": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemclassificatie"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemprofielobservatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Bodemclassificatie": "#/components/schemas/Bodemclassificatie",
+            "Bodemprofielobservatie": "#/components/schemas/Bodemprofielobservatie"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "implementeert"
+  ]
+}

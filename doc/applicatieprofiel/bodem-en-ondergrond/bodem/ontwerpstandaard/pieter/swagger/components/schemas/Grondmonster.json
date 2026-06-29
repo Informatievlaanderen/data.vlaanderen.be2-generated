@@ -1,0 +1,103 @@
+{
+  "title": "Grondmonster",
+  "type": "object",
+  "description": "Monster genomen uit de grond voor observatie ex situ.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Grondmonster)",
+      "pattern": "^Grondmonster$"
+    },
+    "herkomst": {
+      "$ref": "#/components/schemas/Herkomst"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/Bemonsteringsobjecttype"
+    },
+    "ontwerp": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemclassificatie"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemprofielobservatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Bodemclassificatie": "#/components/schemas/Bodemclassificatie",
+            "Bodemprofielobservatie": "#/components/schemas/Bodemprofielobservatie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "isResultaatVan": {
+      "type": "array",
+      "description": "Lijst van Bemonstering items.",
+      "items": {
+        "$ref": "#/components/schemas/Bemonstering"
+      },
+      "minItems": 1
+    },
+    "geassocieerdBemonsteringsobject": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bodemmonster"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemlocatie"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemprofielelement"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bodemmonster": "#/components/schemas/Bodemmonster",
+            "Bodemlocatie": "#/components/schemas/Bodemlocatie",
+            "Bodemprofielelement": "#/components/schemas/Bodemprofielelement"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "identificator",
+    "isResultaatVan"
+  ]
+}

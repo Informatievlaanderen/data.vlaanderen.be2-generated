@@ -1,0 +1,50 @@
+{
+  "title": "Bodemprofiel",
+  "type": "object",
+  "description": "Observatie van de opeenvolging van horizonten of lagen waardoor de bodem gekenmerkt wordt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bodemprofiel)",
+      "pattern": "^Bodemprofiel$"
+    },
+    "geometrie": {
+      "$ref": "#/components/schemas/Curve"
+    },
+    "element": {
+      "type": "array",
+      "description": "Lijst van Bodemprofielelement items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bodemprofielelement"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemhorizont"
+          },
+          {
+            "$ref": "#/components/schemas/Bodemlaag"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bodemprofielelement": "#/components/schemas/Bodemprofielelement",
+            "Bodemhorizont": "#/components/schemas/Bodemhorizont",
+            "Bodemlaag": "#/components/schemas/Bodemlaag"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "geometrie",
+    "element"
+  ]
+}
