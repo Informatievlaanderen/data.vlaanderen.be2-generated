@@ -2,11 +2,11 @@
 
 #||# -------------------------------------  
 
-2026-06-29T11:54:13.072Z error: No label found for domain urn:oslo-toolchain:047ecd14c046206c3e6122bd67238ae4d2e39eb4fc2774eb7c9664970ed7483c of attribute [urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-bodem.jsonld#L6629).
+2026-06-29T14:19:09.621Z error: No label found for domain urn:oslo-toolchain:047ecd14c046206c3e6122bd67238ae4d2e39eb4fc2774eb7c9664970ed7483c of attribute [urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-bodem.jsonld#L6725).
 
-2026-06-29T11:54:13.073Z error: No label found for domain urn:oslo-toolchain:047ecd14c046206c3e6122bd67238ae4d2e39eb4fc2774eb7c9664970ed7483c of attribute [urn:oslo-toolchain:5d7518db4509aefc3135b19b233e3c4c8166f2d44618b8be66ab096d5bea2d8d](all-bodem.jsonld#L6655).
+2026-06-29T14:19:09.623Z error: No label found for domain urn:oslo-toolchain:047ecd14c046206c3e6122bd67238ae4d2e39eb4fc2774eb7c9664970ed7483c of attribute [urn:oslo-toolchain:5d7518db4509aefc3135b19b233e3c4c8166f2d44618b8be66ab096d5bea2d8d](all-bodem.jsonld#L6751).
 
-2026-06-29T11:54:13.075Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6895).
+2026-06-29T14:19:09.625Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:055ab03880061343deed4d694339eb564078c6337a488f89d0913f434bd49099](all-bodem.jsonld#L6991).
 
-2026-06-29T11:54:13.075Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:bc14cbe58546e2c66c5b5a2ab36afd59ac4a99cfc4bd4846e31d968b0f958f04](all-bodem.jsonld#L6925).
+2026-06-29T14:19:09.625Z warn: Unable to retrieve max cardinality of property [urn:oslo-toolchain:bc14cbe58546e2c66c5b5a2ab36afd59ac4a99cfc4bd4846e31d968b0f958f04](all-bodem.jsonld#L7021).
 

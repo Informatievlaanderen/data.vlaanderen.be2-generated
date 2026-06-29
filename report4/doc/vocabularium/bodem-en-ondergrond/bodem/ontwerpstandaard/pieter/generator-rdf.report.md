@@ -2,37 +2,5 @@
 
 #||# -------------------------------------  
 
-2026-06-29T11:54:25.500Z error: Unable to find the definition for class [urn:oslo-toolchain:e59c40948c32c991b25453f3a5a501e24ebf4272a2557d3c8229671879880344](all-bodem.jsonld#L424).
-
-2026-06-29T11:54:25.502Z error: Unable to find the definition for class [urn:oslo-toolchain:8db3de62b9e8589a1c369f7b5b142e70369c87f8465bdfc7ceae4868dccb7fc1](all-bodem.jsonld#L448).
-
-2026-06-29T11:54:25.502Z error: Unable to find the definition for class [urn:oslo-toolchain:ca7898a7ca3bddd410355ffe7d0f53703e3da7b16c23ab0d26bc39ba5e410c23](all-bodem.jsonld#L472).
-
-2026-06-29T11:54:25.502Z error: Unable to find the definition for class [urn:oslo-toolchain:e906427030e4c1f36327f1435b7e6d28341aeedd2b8acf2b0e9e1750cfe15632](all-bodem.jsonld#L496).
-
-2026-06-29T11:54:25.503Z error: Unable to find the definition for class [urn:oslo-toolchain:2c9c7e491f4eaee5b4dc384fcf60e59d9e26c15fae562f251a169c27838958bb](all-bodem.jsonld#L587).
-
-2026-06-29T11:54:25.503Z error: Unable to find the definition for class [urn:oslo-toolchain:dec9c89c6188480510f7d26bccef58bf690c18ef1ad426e3451fd0d8e67e5ce3](all-bodem.jsonld#L611).
-
-2026-06-29T11:54:25.503Z error: Unable to find the definition for class [urn:oslo-toolchain:b43ef350650998feae47136ea36d3134dcc4248c90ce865c28a8d1e194686f8e](all-bodem.jsonld#L635).
-
-2026-06-29T11:54:25.503Z error: Unable to find the definition for class [urn:oslo-toolchain:0183dc784489bdc3c07b61929e57b829362ec04ecec728ace88ac9d8d4824782](all-bodem.jsonld#L659).
-
-2026-06-29T11:54:25.504Z error: Unable to find the definition for class [urn:oslo-toolchain:2c3927bb1cadfd851e3cb9db58b6c406511dae16492c49c56889db500f012665](all-bodem.jsonld#L683).
-
-2026-06-29T11:54:25.504Z error: Unable to find the definition for class [urn:oslo-toolchain:23dc641d0f31834755f03223c4c4ac6060d2868aebb3d6f8aa1b0563caba4375](all-bodem.jsonld#L707).
-
-2026-06-29T11:54:25.504Z error: Unable to find the definition for class [urn:oslo-toolchain:a9c16c9351f53f8c46c1f86c49af758e53ad757b6e4cbfe4bb9d2e467f4e4b36](all-bodem.jsonld#L731).
-
-2026-06-29T11:54:25.504Z error: Unable to find the definition for class [urn:oslo-toolchain:c1431e0225bc0af09cb67e6e212e7851dc24f87383c437ebc62818883ed2294b](all-bodem.jsonld#L755).
-
-2026-06-29T11:54:25.504Z error: Unable to find the definition for class [urn:oslo-toolchain:e394ac7743c97c2e8a1cc6a6c1ce2b3b06aa02734af2fc49910e5fc18579b1e1](all-bodem.jsonld#L779).
-
-2026-06-29T11:54:25.505Z error: Unable to find the definition for class [urn:oslo-toolchain:219b5866ada432721f2ae90338888ad543f199aeff5dbe4ea7c1c0b005088f48](all-bodem.jsonld#L803).
-
-2026-06-29T11:54:25.505Z error: Unable to find the definition for class [urn:oslo-toolchain:06fbe540ecc76d87e02a55967bbbc8ae55362433e40ecdaf6f64bff0f4f43026](all-bodem.jsonld#L827).
-
-2026-06-29T11:54:25.506Z error: Unable to find the definition for class [urn:oslo-toolchain:04c908c6fd1abe665c1c863400156fa8f37dade91ed4889f48d270bd8ec79100](all-bodem.jsonld#L1482).
-
-2026-06-29T11:54:25.506Z error: Unable to find the definition for class [urn:oslo-toolchain:ab2f498d5d5bc7dbb298e31b22bfab05814456be0b0800d5ecfec81364bdb4b3](all-bodem.jsonld#L1506).
+2026-06-29T14:19:14.032Z error: Unable to find the definition for class [urn:oslo-toolchain:2c3927bb1cadfd851e3cb9db58b6c406511dae16492c49c56889db500f012665](all-bodem.jsonld#L731).
 
