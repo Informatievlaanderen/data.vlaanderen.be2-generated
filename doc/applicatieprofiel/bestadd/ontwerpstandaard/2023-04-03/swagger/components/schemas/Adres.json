@@ -1,6 +1,7 @@
 {
   "title": "Adres",
   "type": "object",
+  "description": "Een adres identificeert op een voor mensen leesbare manier de vaste locatie van een ruimtelijk object  (gebouw, perceel, standplaats, ligplaats). \r\nHiervoor heeft een adres een identificatie, bijvoorbeeld een huisnummer, waarmee een gebruiker het kan onde",
   "properties": {
     "@id": {
       "type": "string",
@@ -10,18 +11,6 @@
       "type": "string",
       "description": "Object type (klasse Adres)",
       "pattern": "^Adres$"
-    },
-    "huisnummer": {
-      "type": "object",
-      "description": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen.",
-      "properties": {
-        "@value": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "@value"
-      ]
     },
     "busnummer": {
       "type": "object",
@@ -35,27 +24,9 @@
         "@value"
       ]
     },
-    "eindeVanDeLevenscyclusVanDezeVersie": {
+    "huisnummer": {
       "type": "object",
-      "description": "undefined",
-      "properties": {
-        "@value": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "@type": {
-          "type": "string",
-          "pattern": "^DateTime$"
-        }
-      },
-      "required": [
-        "@value",
-        "@type"
-      ]
-    },
-    "adresSorteerveld": {
-      "type": "object",
-      "description": "Transformatie van het huisnummer en busnummer (toevoeging van leading 0's) zodat deze waarde kan gesorteerd worden",
+      "description": "Alfanumerieke code officieel toegekend aan gebouweenheden, ligplaatsen, standplaatsen of percelen.",
       "properties": {
         "@value": {
           "type": "string"
@@ -82,9 +53,21 @@
         "@type"
       ]
     },
+    "adresSorteerveld": {
+      "type": "object",
+      "description": "Transformatie van het huisnummer en busnummer (toevoeging van leading 0's) zodat deze waarde kan gesorteerd worden",
+      "properties": {
+        "@value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "@value"
+      ]
+    },
     "beginVanDeLevenscyclusVanDezeVersie": {
       "type": "object",
-      "description": "undefined",
+      "description": "Geeft aan wanneer het record is aangemaakt in de database van de authentieke bron  Deze lifespan informatie heeft twee doelstellingen: 1. informatie verstrekken over de inhoud van de databank op een bepaald tijdstip. 2. Informatie verstrekken over de vera",
       "properties": {
         "@value": {
           "type": "string",
@@ -100,28 +83,23 @@
         "@type"
       ]
     },
-    "isGehechtAan": {
-      "type": "array",
-      "description": "Lijst van Identifier items.",
-      "items": {
-        "$ref": "#/components/schemas/Identifier"
+    "eindeVanDeLevenscyclusVanDezeVersie": {
+      "type": "object",
+      "description": "Geeft aan wanneer het record werd gearchiveerd in de databank van de authentieke bron  Deze lifespan informatie heeft twee doelstellingen: 1. informatie verstrekken over de inhoud van de databank op een bepaald tijdstip. 2. Informatie verstrekken over de",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
       },
-      "minItems": 1
-    },
-    "heeftAlsPostInformatie": {
-      "$ref": "#/components/schemas/Identifier"
-    },
-    "status": {
-      "$ref": "#/components/schemas/Status"
-    },
-    "heeftAlsDeelgemeente": {
-      "$ref": "#/components/schemas/Identifier"
-    },
-    "heeftAlsStraatnaam": {
-      "$ref": "#/components/schemas/Identifier"
-    },
-    "heeftAlsGemeente": {
-      "$ref": "#/components/schemas/Identifier"
+      "required": [
+        "@value",
+        "@type"
+      ]
     },
     "code": {
       "$ref": "#/components/schemas/Identifier"
@@ -129,49 +107,36 @@
     "positie": {
       "$ref": "#/components/schemas/GeografischePositie"
     },
-    "hasStreetName": {
-      "$ref": "#/components/schemas/Straatnaam"
-    },
-    "hasMunicipality": {
-      "$ref": "#/components/schemas/Gemeente"
+    "status": {
+      "$ref": "#/components/schemas/Status"
     },
     "hasPartOfMunicipality": {
       "$ref": "#/components/schemas/Deelgemeente"
     },
-    "successor": {
-      "type": "array",
-      "description": "Lijst van AddressHistory items.",
-      "items": {
-        "$ref": "#/components/schemas/AddressHistory"
-      },
-      "minItems": 1
-    },
-    "predecessor": {
-      "type": "array",
-      "description": "Lijst van AddressHistory items.",
-      "items": {
-        "$ref": "#/components/schemas/AddressHistory"
-      },
-      "minItems": 1
+    "hasMunicipality": {
+      "$ref": "#/components/schemas/Gemeente"
     },
     "hasPostalInfo": {
       "$ref": "#/components/schemas/PostInformatie"
+    },
+    "isAssignedToAddressableObject": {
+      "$ref": "#/components/schemas/AdresseerbaarObject"
+    },
+    "hasStreetName": {
+      "$ref": "#/components/schemas/Straatnaam"
     }
   },
   "required": [
     "@type",
     "huisnummer",
-    "eindeVanDeLevenscyclusVanDezeVersie",
     "officieelToegekend",
     "beginVanDeLevenscyclusVanDezeVersie",
-    "heeftAlsPostInformatie",
-    "status",
-    "heeftAlsStraatnaam",
-    "heeftAlsGemeente",
+    "eindeVanDeLevenscyclusVanDezeVersie",
     "code",
     "positie",
-    "hasStreetName",
+    "status",
     "hasMunicipality",
-    "hasPostalInfo"
+    "hasPostalInfo",
+    "hasStreetName"
   ]
 }
