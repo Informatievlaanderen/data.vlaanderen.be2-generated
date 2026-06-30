@@ -38,6 +38,14 @@
               "@type"
             ]
           },
+          "voorganger": {
+            "type": "array",
+            "description": "Lijst van Identifier items.",
+            "items": {
+              "$ref": "#/components/schemas/Identifier"
+            },
+            "minItems": 1
+          },
           "opvolger": {
             "type": "array",
             "description": "Lijst van Identifier items.",
@@ -50,6 +58,7 @@
         "required": [
           "@type",
           "gebeurtenisDatum",
+          "voorganger",
           "opvolger"
         ]
       },
@@ -855,6 +864,13 @@
       }
     },
     "links": {
+      "Event.voorganger": {
+        "operationId": "EventGET",
+        "parameters": {
+          "id": "$response.body#/Event.voorganger/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+      },
       "Event.opvolger": {
         "operationId": "EventGET",
         "parameters": {
