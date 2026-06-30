@@ -36,7 +36,15 @@
                 }
               }
             },
-            "links": {}
+            "links": {
+              "Event.opvolger": {
+                "operationId": "EventGET",
+                "parameters": {
+                  "id": "$response.body#/Event.opvolger/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Identifier` op te halen."
+              }
+            }
           },
           "400": {
             "description": "Invalid data supplied.",
@@ -1954,6 +1962,20 @@
                   "id": "$response.body#/GeografischePositie.geometrischPunt/@id"
                 },
                 "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Point` op te halen."
+              },
+              "GeografischePositie.positiegeometriemethode": {
+                "operationId": "GeografischePositieGET",
+                "parameters": {
+                  "id": "$response.body#/GeografischePositie.positiegeometriemethode/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PositieGeometrieMethodeWaarde` op te halen."
+              },
+              "GeografischePositie.positiespecificatie": {
+                "operationId": "GeografischePositieGET",
+                "parameters": {
+                  "id": "$response.body#/GeografischePositie.positiespecificatie/@id"
+                },
+                "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `PositieSpecificatieWaarde` op te halen."
               }
             }
           },
@@ -3258,11 +3280,20 @@
               "@value",
               "@type"
             ]
+          },
+          "opvolger": {
+            "type": "array",
+            "description": "Lijst van Identifier items.",
+            "items": {
+              "$ref": "#/components/schemas/Identifier"
+            },
+            "minItems": 1
           }
         },
         "required": [
           "@type",
-          "gebeurtenisDatum"
+          "gebeurtenisDatum",
+          "opvolger"
         ]
       },
       "Gemeente": {
@@ -3627,11 +3658,19 @@
           },
           "geometrischPunt": {
             "$ref": "#/components/schemas/Point"
+          },
+          "positiegeometriemethode": {
+            "$ref": "#/components/schemas/PositieGeometrieMethodeWaarde"
+          },
+          "positiespecificatie": {
+            "$ref": "#/components/schemas/PositieSpecificatieWaarde"
           }
         },
         "required": [
           "@type",
-          "geometrischPunt"
+          "geometrischPunt",
+          "positiegeometriemethode",
+          "positiespecificatie"
         ]
       },
       "Deelgemeente": {
@@ -3720,6 +3759,42 @@
               "@value"
             ]
           },
+          "beginVanDeLevenscyclusVanDezeVersie": {
+            "type": "object",
+            "description": "Geeft aan wanneer het record is aangemaakt in de database van de authentieke bron  Deze lifespan informatie heeft twee doelstellingen: 1. informatie verstrekken over de inhoud van de databank op een bepaald tijdstip. 2. Informatie verstrekken over de vera",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "eindeVanDeLevenscyclusVanDezeVersie": {
+            "type": "object",
+            "description": "Geeft aan wanneer het record werd gearchiveerd in de databank van de authentieke bron  Deze lifespan informatie heeft twee doelstellingen: 1. informatie verstrekken over de inhoud van de databank op een bepaald tijdstip. 2. Informatie verstrekken over de",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
           "code": {
             "$ref": "#/components/schemas/Identifier"
           },
@@ -3745,6 +3820,8 @@
         "required": [
           "@type",
           "homoniemtoevoeging",
+          "beginVanDeLevenscyclusVanDezeVersie",
+          "eindeVanDeLevenscyclusVanDezeVersie",
           "code",
           "name",
           "type",
