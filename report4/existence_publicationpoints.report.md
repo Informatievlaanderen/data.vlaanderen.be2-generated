@@ -51,8 +51,12 @@ index.html check
 #||#    + checking /home/circleci/project/config/dev/bodem-en-ondergrond.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/pieter'
+error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/grondboringen/ontwerpstandaard/pieter'
 
 index.html check
+error: missing '/tmp/generated/doc/applicatieprofiel/bodem-en-ondergrond/grondboringen/ontwerpstandaard/pieter/index.html'
+error: missing '/tmp/generated/doc/vocabularium/bodem-en-ondergrond/grondboringen/ontwerpstandaard/pieter/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/contactvoorkeuren.publication.json
 #||# 
