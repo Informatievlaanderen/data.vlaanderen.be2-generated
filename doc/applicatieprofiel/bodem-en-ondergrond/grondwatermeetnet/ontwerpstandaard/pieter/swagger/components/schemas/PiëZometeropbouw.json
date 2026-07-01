@@ -1,0 +1,71 @@
+{
+  "title": "PiëZometeropbouw",
+  "type": "object",
+  "description": "Opbouw van de filter.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PiëZometeropbouw)",
+      "pattern": "^PiëZometeropbouw$"
+    },
+    "onderdeel": {
+      "type": "array",
+      "description": "Lijst van PiëZeometeronderdeel items.",
+      "items": {
+        "$ref": "#/components/schemas/PiëZeometeronderdeel"
+      },
+      "minItems": 1
+    },
+    "onderkantPeilbuis": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Observatie"
+        },
+        {
+          "$ref": "#/components/schemas/Peilmeting"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Observatie": "#/components/schemas/Observatie",
+          "Peilmeting": "#/components/schemas/Peilmeting"
+        }
+      }
+    },
+    "bovenkantPeilbuis": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Observatie"
+        },
+        {
+          "$ref": "#/components/schemas/Peilmeting"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Observatie": "#/components/schemas/Observatie",
+          "Peilmeting": "#/components/schemas/Peilmeting"
+        }
+      }
+    },
+    "opvulling": {
+      "type": "array",
+      "description": "Lijst van OpvullingInterval items.",
+      "items": {
+        "$ref": "#/components/schemas/OpvullingInterval"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "onderkantPeilbuis",
+    "bovenkantPeilbuis"
+  ]
+}

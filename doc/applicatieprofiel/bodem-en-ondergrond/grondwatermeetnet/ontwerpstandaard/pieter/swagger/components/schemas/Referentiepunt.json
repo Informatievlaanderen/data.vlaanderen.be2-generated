@@ -1,0 +1,46 @@
+{
+  "title": "Referentiepunt",
+  "type": "object",
+  "description": "Referentiepunt gebruikt voor interpretatie van het resultaat.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Referentiepunt)",
+      "pattern": "^Referentiepunt$"
+    },
+    "datum": {
+      "type": "object",
+      "description": "Tijdsaanduiding die bestaat uit een jaar, een maand en een dag uit die maand waarop de meting plaatsvindt. TO DO.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "meetpunt": {
+      "$ref": "#/components/schemas/Punt"
+    },
+    "referentie": {
+      "$ref": "#/components/schemas/Referentiepunttype"
+    }
+  },
+  "required": [
+    "@type",
+    "datum",
+    "meetpunt",
+    "referentie"
+  ]
+}

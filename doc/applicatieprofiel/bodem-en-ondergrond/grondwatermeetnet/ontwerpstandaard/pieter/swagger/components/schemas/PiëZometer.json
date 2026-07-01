@@ -1,0 +1,159 @@
+{
+  "title": "PiëZometer",
+  "type": "object",
+  "description": "TODO.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse PiëZometer)",
+      "pattern": "^PiëZometer$"
+    },
+    "ingebruik": {
+      "$ref": "#/components/schemas/Periode"
+    },
+    "beheerder": {
+      "$ref": "#/components/schemas/Organisatie"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Bemonsteringsobjecttype"
+    },
+    "positioneleNauwkeurigheid": {
+      "type": "array",
+      "description": "Lijst van PositioneleNauwkeurigheid items.",
+      "items": {
+        "$ref": "#/components/schemas/PositioneleNauwkeurigheid"
+      },
+      "minItems": 1,
+      "maxItems": 2
+    },
+    "gehostPlatform": {
+      "type": "array",
+      "description": "Lijst van Proces items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Proces"
+          },
+          {
+            "$ref": "#/components/schemas/Observatieprocedure"
+          },
+          {
+            "$ref": "#/components/schemas/Sensor"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Proces": "#/components/schemas/Proces",
+            "Observatieprocedure": "#/components/schemas/Observatieprocedure",
+            "Sensor": "#/components/schemas/Sensor"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "geometrie": {
+      "$ref": "#/components/schemas/Curve"
+    },
+    "meetfrequentie": {
+      "$ref": "#/components/schemas/PiëZometerMeetfrequentie"
+    },
+    "referentiepunt": {
+      "type": "array",
+      "description": "Lijst van Referentiepunt items.",
+      "items": {
+        "$ref": "#/components/schemas/Referentiepunt"
+      },
+      "minItems": 1
+    },
+    "ligging": {
+      "type": "array",
+      "description": "Lijst van Locatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Locatie"
+      },
+      "minItems": 1
+    },
+    "maaiveld": {
+      "type": "array",
+      "description": "Lijst van Maaiveld items.",
+      "items": {
+        "$ref": "#/components/schemas/Maaiveld"
+      },
+      "minItems": 1
+    },
+    "diepte": {
+      "$ref": "#/components/schemas/Diepte"
+    },
+    "lidVan": {
+      "type": "array",
+      "description": "Lijst van Meetnet items.",
+      "items": {
+        "$ref": "#/components/schemas/Meetnet"
+      },
+      "minItems": 1
+    },
+    "opbouw": {
+      "$ref": "#/components/schemas/PiëZometeropbouw"
+    },
+    "herkomst": {
+      "$ref": "#/components/schemas/Herkomst"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "ontwerp": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Peilmeting"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Peilmeting": "#/components/schemas/Peilmeting"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "isResultaatVan": {
+      "type": "array",
+      "description": "Lijst van Bemonstering items.",
+      "items": {
+        "$ref": "#/components/schemas/Bemonstering"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "geometrie",
+    "identificator",
+    "isResultaatVan"
+  ]
+}

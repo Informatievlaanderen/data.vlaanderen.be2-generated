@@ -1,0 +1,86 @@
+{
+  "title": "Meetnet",
+  "type": "object",
+  "description": "Stelsel van samenhangende bemonsteringspunten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Meetnet)",
+      "pattern": "^Meetnet$"
+    },
+    "naam": {
+      "type": "array",
+      "description": "Lijst van TaalString items.",
+      "items": {
+        "type": "object",
+        "description": "De naam van het meetnet.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Meetnettype items.",
+      "items": {
+        "$ref": "#/components/schemas/Meetnettype"
+      },
+      "minItems": 1
+    },
+    "beheerder": {
+      "$ref": "#/components/schemas/Organisatie"
+    },
+    "lid": {
+      "type": "array",
+      "description": "Lijst van PiëZometer items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/PiëZometer"
+          },
+          {
+            "$ref": "#/components/schemas/OpenPiëZometer"
+          },
+          {
+            "$ref": "#/components/schemas/GeslotenPiëZometer"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "PiëZometer": "#/components/schemas/PiëZometer",
+            "OpenPiëZometer": "#/components/schemas/OpenPiëZometer",
+            "GeslotenPiëZometer": "#/components/schemas/GeslotenPiëZometer"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}
