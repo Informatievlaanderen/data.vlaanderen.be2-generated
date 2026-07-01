@@ -1,0 +1,149 @@
+{
+  "title": "Grondmonster",
+  "type": "object",
+  "description": "Monster genomen uit de grond voor observatie ex situ.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Grondmonster)",
+      "pattern": "^Grondmonster$"
+    },
+    "materiaalklasse": {
+      "$ref": "#/components/schemas/Materiaalklasse"
+    },
+    "bemonsteringstijdstip": {
+      "$ref": "#/components/schemas/Periode"
+    },
+    "bemonsteringsplaats": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Curve"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Curve": "#/components/schemas/Curve"
+        }
+      }
+    },
+    "huidigeLocatie": {
+      "$ref": "#/components/schemas/Locatie"
+    },
+    "monstertype": {
+      "type": "array",
+      "description": "Lijst van Grondmonstertype items.",
+      "items": {
+        "$ref": "#/components/schemas/Grondmonstertype"
+      },
+      "minItems": 1
+    },
+    "grootte": {
+      "$ref": "#/components/schemas/Maat"
+    },
+    "bemonsteringsmethode": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/BemonsteringsProces"
+        },
+        {
+          "$ref": "#/components/schemas/Bemonsteringsprocedure"
+        },
+        {
+          "$ref": "#/components/schemas/Bemonsteraar"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "BemonsteringsProces": "#/components/schemas/BemonsteringsProces",
+          "Bemonsteringsprocedure": "#/components/schemas/Bemonsteringsprocedure",
+          "Bemonsteraar": "#/components/schemas/Bemonsteraar"
+        }
+      }
+    },
+    "herkomst": {
+      "$ref": "#/components/schemas/Herkomst"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/Bemonsteringsobjecttype"
+    },
+    "isResultaatVan": {
+      "type": "array",
+      "description": "Lijst van Bemonstering items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bemonstering"
+          },
+          {
+            "$ref": "#/components/schemas/Grondboring"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bemonstering": "#/components/schemas/Bemonstering",
+            "Grondboring": "#/components/schemas/Grondboring"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "intentie": {
+      "type": "array",
+      "description": "Lijst van Object items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bemonsteringsobject"
+          },
+          {
+            "$ref": "#/components/schemas/Domeinobject"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bemonsteringsobject": "#/components/schemas/Bemonsteringsobject",
+            "Domeinobject": "#/components/schemas/Domeinobject"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "materiaalklasse",
+    "bemonsteringstijdstip",
+    "bemonsteringsmethode",
+    "identificator",
+    "isResultaatVan",
+    "intentie"
+  ]
+}

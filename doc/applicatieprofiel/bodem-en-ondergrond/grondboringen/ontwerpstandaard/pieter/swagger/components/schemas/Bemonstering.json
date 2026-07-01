@@ -1,0 +1,157 @@
+{
+  "title": "Bemonstering",
+  "type": "object",
+  "description": "Handeling waarbij een bepaalde Bemonsteringsprocedure wordt uitgevoerd om één of meer Bemonsteringsobjecten te bekomen of waarbij deze worden bewerkt.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bemonstering)",
+      "pattern": "^Bemonstering$"
+    },
+    "conditie": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "wettelijkKader": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/WettelijkKaderBoring"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "WettelijkKaderBoring": "#/components/schemas/WettelijkKaderBoring"
+        }
+      }
+    },
+    "opdracht": {
+      "type": "array",
+      "description": "Lijst van Opdracht items.",
+      "items": {
+        "$ref": "#/components/schemas/Opdracht"
+      },
+      "minItems": 1
+    },
+    "bemonsteringstijdstip": {
+      "$ref": "#/components/schemas/TemporeleEntiteit"
+    },
+    "uitgevoerdDoor": {
+      "type": "array",
+      "description": "Lijst van Agent items.",
+      "items": {
+        "$ref": "#/components/schemas/Agent"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringstype items.",
+      "items": {
+        "$ref": "#/components/schemas/Bemonsteringstype"
+      },
+      "minItems": 1
+    },
+    "doel": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsdoel items.",
+      "items": {
+        "$ref": "#/components/schemas/Bemonsteringsdoel"
+      },
+      "minItems": 1
+    },
+    "gebruikteProcedure": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsprocedure items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bemonsteringsprocedure"
+          },
+          {
+            "$ref": "#/components/schemas/Boormethode"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bemonsteringsprocedure": "#/components/schemas/Bemonsteringsprocedure",
+            "Boormethode": "#/components/schemas/Boormethode"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "uitgevoerdMet": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Bemonsteraar"
+        },
+        {
+          "$ref": "#/components/schemas/Boor"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Bemonsteraar": "#/components/schemas/Bemonsteraar",
+          "Boor": "#/components/schemas/Boor"
+        }
+      }
+    },
+    "resultaat": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsobject items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Grondmonster"
+          },
+          {
+            "$ref": "#/components/schemas/Boorgat"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Grondmonster": "#/components/schemas/Grondmonster",
+            "Boorgat": "#/components/schemas/Boorgat"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "bemonsterdObject": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Bemonsteringsobject"
+        },
+        {
+          "$ref": "#/components/schemas/Domeinobject"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Bemonsteringsobject": "#/components/schemas/Bemonsteringsobject",
+          "Domeinobject": "#/components/schemas/Domeinobject"
+        }
+      }
+    }
+  },
+  "required": [
+    "@type",
+    "bemonsteringstijdstip",
+    "uitgevoerdMet",
+    "resultaat",
+    "bemonsterdObject"
+  ]
+}

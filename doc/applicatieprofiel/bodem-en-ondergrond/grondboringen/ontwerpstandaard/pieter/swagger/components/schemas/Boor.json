@@ -1,0 +1,72 @@
+{
+  "title": "Boor",
+  "type": "object",
+  "description": "Het hulpstuk dat kan geplaatst worden in een daartoe geschikte boorhouder van een boormachine en door middel van een draaiende en/of kloppende beweging ronde gate kan aanbrengen in diverse materialen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Boor)",
+      "pattern": "^Boor$"
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Bemonsteraartype items.",
+      "items": {
+        "$ref": "#/components/schemas/Bemonsteraartype"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdeBemonstering": {
+      "type": "array",
+      "description": "Lijst van Bemonstering items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bemonstering"
+          },
+          {
+            "$ref": "#/components/schemas/Grondboring"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bemonstering": "#/components/schemas/Bemonstering",
+            "Grondboring": "#/components/schemas/Grondboring"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "implementeert": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsprocedure items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bemonsteringsprocedure"
+          },
+          {
+            "$ref": "#/components/schemas/Boormethode"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bemonsteringsprocedure": "#/components/schemas/Bemonsteringsprocedure",
+            "Boormethode": "#/components/schemas/Boormethode"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "implementeert"
+  ]
+}
