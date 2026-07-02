@@ -1,0 +1,704 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Components of OpenAPI",
+    "description": "This",
+    "version": "1.0.0"
+  },
+  "components": {
+    "schemas": {
+      "Opmetingmethode": {
+        "title": "Opmetingmethode",
+        "type": "object",
+        "description": "De methode waarmee opmetingen worden gedaan.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Opmetingmethode)",
+            "pattern": "^Opmetingmethode$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Record": {
+        "title": "Record",
+        "type": "object",
+        "description": "Basis datastructuur bestaande uit een collectie van velden van mogelijk verschillende datatypes, typisch een vast aantal in een bepaalde volgorde.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Record)",
+            "pattern": "^Record$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "DiscreetPuntbereik": {
+        "title": "DiscreetPuntbereik",
+        "type": "object",
+        "description": "DiscreetBereik waarbij het fenomeen puntgewijs varieert in de ruimte.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse DiscreetPuntbereik)",
+            "pattern": "^DiscreetPuntbereik$"
+          },
+          "element": {
+            "type": "array",
+            "description": "Lijst van GeometrieWaardepaar items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/GeometrieWaardepaar"
+                },
+                {
+                  "$ref": "#/components/schemas/PuntWaardepaar"
+                },
+                {
+                  "$ref": "#/components/schemas/CurveWaardepaar"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "GeometrieWaardepaar": "#/components/schemas/GeometrieWaardepaar",
+                  "PuntWaardepaar": "#/components/schemas/PuntWaardepaar",
+                  "CurveWaardepaar": "#/components/schemas/CurveWaardepaar"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "domeinOmvang": {
+            "type": "array",
+            "description": "Lijst van Omvang items.",
+            "items": {
+              "$ref": "#/components/schemas/Omvang"
+            },
+            "minItems": 1
+          },
+          "gemeenschappelijkPuntRegel": {
+            "$ref": "#/components/schemas/GemeenschappelijkePuntregel"
+          },
+          "domeinElement": {
+            "type": "array",
+            "description": "Lijst van Domeinobject items.",
+            "items": {
+              "$ref": "#/components/schemas/Domeinobject"
+            },
+            "minItems": 1
+          },
+          "bereikElement": {
+            "type": "array",
+            "description": "Lijst van Attribuutwaarde items.",
+            "items": {
+              "$ref": "#/components/schemas/Attribuutwaarde"
+            },
+            "minItems": 1
+          },
+          "typeBereik": {
+            "$ref": "#/components/schemas/Recordtype"
+          },
+          "crs": {
+            "$ref": "#/components/schemas/Crs"
+          }
+        },
+        "required": [
+          "@type",
+          "domeinOmvang",
+          "gemeenschappelijkPuntRegel",
+          "domeinElement",
+          "typeBereik",
+          "crs"
+        ]
+      },
+      "DiscreetCurvebereik": {
+        "title": "DiscreetCurvebereik",
+        "type": "object",
+        "description": "DiscreetBereik waarbij het fenomeen curvegewijs varieert in de ruimte.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse DiscreetCurvebereik)",
+            "pattern": "^DiscreetCurvebereik$"
+          },
+          "element": {
+            "type": "array",
+            "description": "Lijst van GeometrieWaardepaar items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/GeometrieWaardepaar"
+                },
+                {
+                  "$ref": "#/components/schemas/PuntWaardepaar"
+                },
+                {
+                  "$ref": "#/components/schemas/CurveWaardepaar"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "GeometrieWaardepaar": "#/components/schemas/GeometrieWaardepaar",
+                  "PuntWaardepaar": "#/components/schemas/PuntWaardepaar",
+                  "CurveWaardepaar": "#/components/schemas/CurveWaardepaar"
+                }
+              }
+            },
+            "minItems": 1
+          },
+          "domeinOmvang": {
+            "type": "array",
+            "description": "Lijst van Omvang items.",
+            "items": {
+              "$ref": "#/components/schemas/Omvang"
+            },
+            "minItems": 1
+          },
+          "gemeenschappelijkPuntRegel": {
+            "$ref": "#/components/schemas/GemeenschappelijkePuntregel"
+          },
+          "domeinElement": {
+            "type": "array",
+            "description": "Lijst van Domeinobject items.",
+            "items": {
+              "$ref": "#/components/schemas/Domeinobject"
+            },
+            "minItems": 1
+          },
+          "bereikElement": {
+            "type": "array",
+            "description": "Lijst van Attribuutwaarde items.",
+            "items": {
+              "$ref": "#/components/schemas/Attribuutwaarde"
+            },
+            "minItems": 1
+          },
+          "typeBereik": {
+            "$ref": "#/components/schemas/Recordtype"
+          },
+          "crs": {
+            "$ref": "#/components/schemas/Crs"
+          }
+        },
+        "required": [
+          "@type",
+          "domeinOmvang",
+          "gemeenschappelijkPuntRegel",
+          "domeinElement",
+          "typeBereik",
+          "crs"
+        ]
+      },
+      "GemeenschappelijkePuntregel": {
+        "title": "GemeenschappelijkePuntregel",
+        "type": "object",
+        "description": "TODO.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GemeenschappelijkePuntregel)",
+            "pattern": "^GemeenschappelijkePuntregel$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Geometrie": {
+        "title": "Geometrie",
+        "type": "object",
+        "description": "Vorm- en positiekenmerken van een object.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Geometrie)",
+            "pattern": "^Geometrie$"
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "gml": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in gml-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "opmeting": {
+            "$ref": "#/components/schemas/Opmeting"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Opmeting": {
+        "title": "Opmeting",
+        "type": "object",
+        "description": "Het bepalen van de precieze omvang van iets door het te meten.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Opmeting)",
+            "pattern": "^Opmeting$"
+          },
+          "opnamedatum": {
+            "type": "object",
+            "description": "Datum waarop de Opmeting plaatsvond.",
+            "properties": {
+              "@value": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "@type": {
+                "type": "string",
+                "pattern": "^DateTime$"
+              }
+            },
+            "required": [
+              "@value",
+              "@type"
+            ]
+          },
+          "methode": {
+            "$ref": "#/components/schemas/Opmetingmethode"
+          },
+          "uitgevoerdDoor": {
+            "$ref": "#/components/schemas/Agent"
+          }
+        },
+        "required": [
+          "@type",
+          "methode"
+        ]
+      },
+      "Omvang": {
+        "title": "Omvang",
+        "type": "object",
+        "description": "Informatie over de ruimtelijke of temporele omvang van iets.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Omvang)",
+            "pattern": "^Omvang$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Domeinobject": {
+        "title": "Domeinobject",
+        "type": "object",
+        "description": "Stuk van ruimte of tijd waarvoor attribuutwaarden zijn bepaald.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Domeinobject)",
+            "pattern": "^Domeinobject$"
+          },
+          "ruimtelijkeSamenstelling": {
+            "type": "array",
+            "description": "Lijst van Geometrie items.",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Geometrie"
+                },
+                {
+                  "$ref": "#/components/schemas/Punt"
+                },
+                {
+                  "$ref": "#/components/schemas/Curve"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Geometrie": "#/components/schemas/Geometrie",
+                  "Punt": "#/components/schemas/Punt",
+                  "Curve": "#/components/schemas/Curve"
+                }
+              }
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "GeometrieWaardepaar": {
+        "title": "GeometrieWaardepaar",
+        "type": "object",
+        "description": "Element van een DiscreetRuimtelijkBereik.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse GeometrieWaardepaar)",
+            "pattern": "^GeometrieWaardepaar$"
+          },
+          "geometrie": {
+            "$ref": "#/components/schemas/Domeinobject"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/Record"
+          }
+        },
+        "required": [
+          "@type",
+          "geometrie",
+          "waarde"
+        ]
+      },
+      "PuntWaardepaar": {
+        "title": "PuntWaardepaar",
+        "type": "object",
+        "description": "Waarde van een punt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PuntWaardepaar)",
+            "pattern": "^PuntWaardepaar$"
+          },
+          "geometrie": {
+            "$ref": "#/components/schemas/Domeinobject"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/Record"
+          }
+        },
+        "required": [
+          "@type",
+          "geometrie",
+          "waarde"
+        ]
+      },
+      "Punt": {
+        "title": "Punt",
+        "type": "object",
+        "description": "Een 0-dimensionele geometrische primitieve.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Punt)",
+            "pattern": "^Punt$"
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "gml": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in gml-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "opmeting": {
+            "$ref": "#/components/schemas/Opmeting"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "CurveWaardepaar": {
+        "title": "CurveWaardepaar",
+        "type": "object",
+        "description": "Element van een DiscreetCurveBereik.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse CurveWaardepaar)",
+            "pattern": "^CurveWaardepaar$"
+          },
+          "geometrie": {
+            "$ref": "#/components/schemas/Domeinobject"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/Record"
+          }
+        },
+        "required": [
+          "@type",
+          "geometrie",
+          "waarde"
+        ]
+      },
+      "Curve": {
+        "title": "Curve",
+        "type": "object",
+        "description": "Een 1-dimensionele geometrische primitieve.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Curve)",
+            "pattern": "^Curve$"
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "gml": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in gml-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "opmeting": {
+            "$ref": "#/components/schemas/Opmeting"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
+      "Attribuutwaarde": {
+        "title": "Attribuutwaarde",
+        "type": "object",
+        "description": "Record met een waarde voor een Domeinobject.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Attribuutwaarde)",
+            "pattern": "^Attribuutwaarde$"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/Record"
+          }
+        },
+        "required": [
+          "@type",
+          "waarde"
+        ]
+      },
+      "Recordtype": {
+        "title": "Recordtype",
+        "type": "object",
+        "description": "Datatype van de waarden in het Bereik.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Recordtype)",
+            "pattern": "^Recordtype$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      }
+    },
+    "links": {
+      "DiscreetPuntbereik.element": {
+        "operationId": "DiscreetPuntbereikGET",
+        "parameters": {
+          "id": "$response.body#/DiscreetPuntbereik.element/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeometrieWaardepaar` op te halen."
+      },
+      "DiscreetPuntbereik.domeinOmvang": {
+        "operationId": "DiscreetPuntbereikGET",
+        "parameters": {
+          "id": "$response.body#/DiscreetPuntbereik.domeinOmvang/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Omvang` op te halen."
+      },
+      "DiscreetPuntbereik.gemeenschappelijkPuntRegel": {
+        "operationId": "DiscreetPuntbereikGET",
+        "parameters": {
+          "id": "$response.body#/DiscreetPuntbereik.gemeenschappelijkPuntRegel/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GemeenschappelijkePuntregel` op te halen."
+      },
+      "DiscreetPuntbereik.domeinElement": {
+        "operationId": "DiscreetPuntbereikGET",
+        "parameters": {
+          "id": "$response.body#/DiscreetPuntbereik.domeinElement/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Domeinobject` op te halen."
+      },
+      "DiscreetPuntbereik.bereikElement": {
+        "operationId": "DiscreetPuntbereikGET",
+        "parameters": {
+          "id": "$response.body#/DiscreetPuntbereik.bereikElement/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Attribuutwaarde` op te halen."
+      },
+      "DiscreetPuntbereik.typeBereik": {
+        "operationId": "DiscreetPuntbereikGET",
+        "parameters": {
+          "id": "$response.body#/DiscreetPuntbereik.typeBereik/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Recordtype` op te halen."
+      },
+      "DiscreetPuntbereik.crs": {
+        "operationId": "DiscreetPuntbereikGET",
+        "parameters": {
+          "id": "$response.body#/DiscreetPuntbereik.crs/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Crs` op te halen."
+      },
+      "DiscreetCurvebereik.element": {
+        "operationId": "DiscreetCurvebereikGET",
+        "parameters": {
+          "id": "$response.body#/DiscreetCurvebereik.element/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GeometrieWaardepaar` op te halen."
+      },
+      "DiscreetCurvebereik.domeinOmvang": {
+        "operationId": "DiscreetCurvebereikGET",
+        "parameters": {
+          "id": "$response.body#/DiscreetCurvebereik.domeinOmvang/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Omvang` op te halen."
+      },
+      "DiscreetCurvebereik.gemeenschappelijkPuntRegel": {
+        "operationId": "DiscreetCurvebereikGET",
+        "parameters": {
+          "id": "$response.body#/DiscreetCurvebereik.gemeenschappelijkPuntRegel/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `GemeenschappelijkePuntregel` op te halen."
+      },
+      "DiscreetCurvebereik.domeinElement": {
+        "operationId": "DiscreetCurvebereikGET",
+        "parameters": {
+          "id": "$response.body#/DiscreetCurvebereik.domeinElement/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Domeinobject` op te halen."
+      },
+      "DiscreetCurvebereik.bereikElement": {
+        "operationId": "DiscreetCurvebereikGET",
+        "parameters": {
+          "id": "$response.body#/DiscreetCurvebereik.bereikElement/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Attribuutwaarde` op te halen."
+      },
+      "DiscreetCurvebereik.typeBereik": {
+        "operationId": "DiscreetCurvebereikGET",
+        "parameters": {
+          "id": "$response.body#/DiscreetCurvebereik.typeBereik/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Recordtype` op te halen."
+      },
+      "DiscreetCurvebereik.crs": {
+        "operationId": "DiscreetCurvebereikGET",
+        "parameters": {
+          "id": "$response.body#/DiscreetCurvebereik.crs/@id"
+        },
+        "description": "De waarde van het attribuut `@id` kan gebruikt worden om het gerefereerde object van het type `Crs` op te halen."
+      }
+    }
+  }
+}

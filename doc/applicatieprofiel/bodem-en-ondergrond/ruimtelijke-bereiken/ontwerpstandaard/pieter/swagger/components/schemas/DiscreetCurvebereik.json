@@ -1,0 +1,83 @@
+{
+  "title": "DiscreetCurvebereik",
+  "type": "object",
+  "description": "DiscreetBereik waarbij het fenomeen curvegewijs varieert in de ruimte.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse DiscreetCurvebereik)",
+      "pattern": "^DiscreetCurvebereik$"
+    },
+    "element": {
+      "type": "array",
+      "description": "Lijst van GeometrieWaardepaar items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/GeometrieWaardepaar"
+          },
+          {
+            "$ref": "#/components/schemas/PuntWaardepaar"
+          },
+          {
+            "$ref": "#/components/schemas/CurveWaardepaar"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "GeometrieWaardepaar": "#/components/schemas/GeometrieWaardepaar",
+            "PuntWaardepaar": "#/components/schemas/PuntWaardepaar",
+            "CurveWaardepaar": "#/components/schemas/CurveWaardepaar"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "domeinOmvang": {
+      "type": "array",
+      "description": "Lijst van Omvang items.",
+      "items": {
+        "$ref": "#/components/schemas/Omvang"
+      },
+      "minItems": 1
+    },
+    "gemeenschappelijkPuntRegel": {
+      "$ref": "#/components/schemas/GemeenschappelijkePuntregel"
+    },
+    "domeinElement": {
+      "type": "array",
+      "description": "Lijst van Domeinobject items.",
+      "items": {
+        "$ref": "#/components/schemas/Domeinobject"
+      },
+      "minItems": 1
+    },
+    "bereikElement": {
+      "type": "array",
+      "description": "Lijst van Attribuutwaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/Attribuutwaarde"
+      },
+      "minItems": 1
+    },
+    "typeBereik": {
+      "$ref": "#/components/schemas/Recordtype"
+    },
+    "crs": {
+      "$ref": "#/components/schemas/Crs"
+    }
+  },
+  "required": [
+    "@type",
+    "domeinOmvang",
+    "gemeenschappelijkPuntRegel",
+    "domeinElement",
+    "typeBereik",
+    "crs"
+  ]
+}

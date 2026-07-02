@@ -1,0 +1,45 @@
+{
+  "title": "Domeinobject",
+  "type": "object",
+  "description": "Stuk van ruimte of tijd waarvoor attribuutwaarden zijn bepaald.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Domeinobject)",
+      "pattern": "^Domeinobject$"
+    },
+    "ruimtelijkeSamenstelling": {
+      "type": "array",
+      "description": "Lijst van Geometrie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Geometrie"
+          },
+          {
+            "$ref": "#/components/schemas/Punt"
+          },
+          {
+            "$ref": "#/components/schemas/Curve"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Geometrie": "#/components/schemas/Geometrie",
+            "Punt": "#/components/schemas/Punt",
+            "Curve": "#/components/schemas/Curve"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}
