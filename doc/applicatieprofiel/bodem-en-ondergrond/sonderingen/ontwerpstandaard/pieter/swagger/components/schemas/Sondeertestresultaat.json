@@ -1,0 +1,58 @@
+{
+  "title": "Sondeertestresultaat",
+  "type": "object",
+  "description": "De uitkomst van de sondeertest.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Sondeertestresultaat)",
+      "pattern": "^Sondeertestresultaat$"
+    },
+    "meetpunt": {
+      "type": "array",
+      "description": "Lijst van Sondeermeetpunt items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Sondeermeetpunt"
+          },
+          {
+            "$ref": "#/components/schemas/Weerstand"
+          },
+          {
+            "$ref": "#/components/schemas/Poriedruk"
+          },
+          {
+            "$ref": "#/components/schemas/MagnetischVeld"
+          },
+          {
+            "$ref": "#/components/schemas/GammaStraling"
+          },
+          {
+            "$ref": "#/components/schemas/VoCconcentration"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Sondeermeetpunt": "#/components/schemas/Sondeermeetpunt",
+            "Weerstand": "#/components/schemas/Weerstand",
+            "Poriedruk": "#/components/schemas/Poriedruk",
+            "MagnetischVeld": "#/components/schemas/MagnetischVeld",
+            "GammaStraling": "#/components/schemas/GammaStraling",
+            "VoCconcentration": "#/components/schemas/VoCconcentration"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "meetpunt"
+  ]
+}

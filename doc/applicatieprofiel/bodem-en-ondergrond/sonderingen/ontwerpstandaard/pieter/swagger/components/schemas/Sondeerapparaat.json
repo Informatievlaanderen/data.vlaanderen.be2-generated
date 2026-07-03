@@ -1,0 +1,79 @@
+{
+  "title": "Sondeerapparaat",
+  "type": "object",
+  "description": "Het apparaat dat gebruikt wordt om de sondering uit te voeren.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Sondeerapparaat)",
+      "pattern": "^Sondeerapparaat$"
+    },
+    "sondeerapparaat": {
+      "$ref": "#/components/schemas/SondeerApparaatType"
+    },
+    "meetlichaam": {
+      "$ref": "#/components/schemas/SondeerMeetlichaam"
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Bemonsteraartype items.",
+      "items": {
+        "$ref": "#/components/schemas/Bemonsteraartype"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdeBemonstering": {
+      "type": "array",
+      "description": "Lijst van Bemonstering items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bemonstering"
+          },
+          {
+            "$ref": "#/components/schemas/Sondering"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bemonstering": "#/components/schemas/Bemonstering",
+            "Sondering": "#/components/schemas/Sondering"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "implementeert": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsprocedure items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bemonsteringsprocedure"
+          },
+          {
+            "$ref": "#/components/schemas/Sondeerprocedure"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bemonsteringsprocedure": "#/components/schemas/Bemonsteringsprocedure",
+            "Sondeerprocedure": "#/components/schemas/Sondeerprocedure"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "sondeerapparaat",
+    "implementeert"
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "title": "Sondeertest",
+  "type": "object",
+  "description": "De test die toegepast wordt voor de sondering.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Sondeertest)",
+      "pattern": "^Sondeertest$"
+    },
+    "starttijd": {
+      "type": "object",
+      "description": "Datum en tijdstip waarop de sondemetingen gestart werden.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "sondeertesttype": {
+      "$ref": "#/components/schemas/Sondeertesttype"
+    },
+    "resultaat": {
+      "$ref": "#/components/schemas/Any"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "fenomeentijd": {
+      "$ref": "#/components/schemas/TemporeleEntiteit"
+    },
+    "resultaattijd": {
+      "$ref": "#/components/schemas/Moment"
+    },
+    "geldigeTijd": {
+      "$ref": "#/components/schemas/Periode"
+    },
+    "resultaatkwaliteit": {
+      "type": "array",
+      "description": "Lijst van Kwaliteitselement items.",
+      "items": {
+        "$ref": "#/components/schemas/Kwaliteitselement"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Observatietype items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatietype"
+      },
+      "minItems": 1
+    },
+    "opdracht": {
+      "type": "array",
+      "description": "Lijst van Opdracht items.",
+      "items": {
+        "$ref": "#/components/schemas/Opdracht"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdDoor": {
+      "type": "array",
+      "description": "Lijst van Agent items.",
+      "items": {
+        "$ref": "#/components/schemas/Agent"
+      },
+      "minItems": 1
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "geassocieerdeObservatie": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Sondeertest"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Sondeertest": "#/components/schemas/Sondeertest"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "geobserveerdObject": {
+      "$ref": "#/components/schemas/Grondobject"
+    },
+    "uitgevoerdMetSensor": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Sensor"
+        },
+        {
+          "$ref": "#/components/schemas/Sondeerconus"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Sensor": "#/components/schemas/Sensor",
+          "Sondeerconus": "#/components/schemas/Sondeerconus"
+        }
+      }
+    },
+    "gebruikteProcedure": {
+      "type": "array",
+      "description": "Lijst van Observatieprocedure items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatieprocedure"
+          },
+          {
+            "$ref": "#/components/schemas/Sondeertestprocedure"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatieprocedure": "#/components/schemas/Observatieprocedure",
+            "Sondeertestprocedure": "#/components/schemas/Sondeertestprocedure"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "sondeertesttype",
+    "resultaat",
+    "fenomeentijd",
+    "resultaattijd",
+    "geobserveerdObject",
+    "uitgevoerdMetSensor"
+  ]
+}

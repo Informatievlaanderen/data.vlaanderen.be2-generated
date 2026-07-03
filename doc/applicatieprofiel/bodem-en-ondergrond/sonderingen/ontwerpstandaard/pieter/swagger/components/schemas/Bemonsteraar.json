@@ -1,0 +1,72 @@
+{
+  "title": "Bemonsteraar",
+  "type": "object",
+  "description": "Toestel dat wordt gebruikt door een Bemonsteringsprocedure of deze implementeert om één of meer Bemonsteringsobjecten te bekomen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Bemonsteraar)",
+      "pattern": "^Bemonsteraar$"
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Bemonsteraartype items.",
+      "items": {
+        "$ref": "#/components/schemas/Bemonsteraartype"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdeBemonstering": {
+      "type": "array",
+      "description": "Lijst van Bemonstering items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bemonstering"
+          },
+          {
+            "$ref": "#/components/schemas/Sondering"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bemonstering": "#/components/schemas/Bemonstering",
+            "Sondering": "#/components/schemas/Sondering"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "implementeert": {
+      "type": "array",
+      "description": "Lijst van Bemonsteringsprocedure items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Bemonsteringsprocedure"
+          },
+          {
+            "$ref": "#/components/schemas/Sondeerprocedure"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Bemonsteringsprocedure": "#/components/schemas/Bemonsteringsprocedure",
+            "Sondeerprocedure": "#/components/schemas/Sondeerprocedure"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "implementeert"
+  ]
+}

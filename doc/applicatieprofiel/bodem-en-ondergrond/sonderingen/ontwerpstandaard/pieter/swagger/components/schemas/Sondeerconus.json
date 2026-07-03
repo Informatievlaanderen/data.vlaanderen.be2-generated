@@ -1,0 +1,100 @@
+{
+  "title": "Sondeerconus",
+  "type": "object",
+  "description": "Eigenschappen van de gebruikte sondeerconus.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Sondeerconus)",
+      "pattern": "^Sondeerconus$"
+    },
+    "conusCalibratieDatum": {
+      "type": "object",
+      "description": "De calibratiedatum van de conus.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "conusSerienummer": {
+      "$ref": "#/components/schemas/Identificator"
+    },
+    "conustType": {
+      "$ref": "#/components/schemas/ConusType"
+    },
+    "filterLocatie": {
+      "$ref": "#/components/schemas/FilterLocatie"
+    },
+    "leverancierConus": {
+      "$ref": "#/components/schemas/Agent"
+    },
+    "methodeVerzadiging": {
+      "$ref": "#/components/schemas/MethodeVerzadiging"
+    },
+    "netAreaRatio": {
+      "$ref": "#/components/schemas/KwantitatieveWaarde"
+    },
+    "oppervlakteConus": {
+      "$ref": "#/components/schemas/KwantitatieveWaarde"
+    },
+    "implementeert": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Observatieprocedure"
+        },
+        {
+          "$ref": "#/components/schemas/Sondeertestprocedure"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Observatieprocedure": "#/components/schemas/Observatieprocedure",
+          "Sondeertestprocedure": "#/components/schemas/Sondeertestprocedure"
+        }
+      }
+    },
+    "uitgevoerdeObservatie": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Sondeertest"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Sondeertest": "#/components/schemas/Sondeertest"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "conustType",
+    "oppervlakteConus",
+    "implementeert"
+  ]
+}
