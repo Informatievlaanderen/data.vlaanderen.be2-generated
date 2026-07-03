@@ -681,6 +681,7 @@
       "Sondeparameter": {
         "title": "Sondeparameter",
         "type": "object",
+        "description": "De parameter waarvoor het nulpunt opgemeten werd.",
         "properties": {
           "@id": {
             "type": "string",
@@ -699,6 +700,7 @@
       "SondeerMeetlichaam": {
         "title": "SondeerMeetlichaam",
         "type": "object",
+        "description": "Het object waarop een of meerdere sensoren gemonteerd zijn.",
         "properties": {
           "@id": {
             "type": "string",
@@ -717,6 +719,7 @@
       "SondeerApparaatType": {
         "title": "SondeerApparaatType",
         "type": "object",
+        "description": "Type en kenmerken van het gebruikte sondeerapparaat tijdens de uitvoering van de Sondering.",
         "properties": {
           "@id": {
             "type": "string",
@@ -735,6 +738,7 @@
       "Sondeermethode": {
         "title": "Sondeermethode",
         "type": "object",
+        "description": "De werkwijze van de sondeerprocedure.",
         "properties": {
           "@id": {
             "type": "string",
@@ -912,6 +916,7 @@
       "ConusType": {
         "title": "ConusType",
         "type": "object",
+        "description": "Het type van de conus.",
         "properties": {
           "@id": {
             "type": "string",
@@ -930,6 +935,7 @@
       "FilterLocatie": {
         "title": "FilterLocatie",
         "type": "object",
+        "description": "De plaats van de filter.",
         "properties": {
           "@id": {
             "type": "string",
@@ -948,6 +954,7 @@
       "MethodeVerzadiging": {
         "title": "MethodeVerzadiging",
         "type": "object",
+        "description": "De methode die gebruikt wordt om de verzadiging te meten.",
         "properties": {
           "@id": {
             "type": "string",
@@ -1988,6 +1995,7 @@
       "Sondeertesttype": {
         "title": "Sondeertesttype",
         "type": "object",
+        "description": "Het testtype van de sondering.",
         "properties": {
           "@id": {
             "type": "string",
@@ -2736,6 +2744,79 @@
           "waarde"
         ]
       },
+      "PuntWaardepaar": {
+        "title": "PuntWaardepaar",
+        "type": "object",
+        "description": "Waarde van een punt.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse PuntWaardepaar)",
+            "pattern": "^PuntWaardepaar$"
+          },
+          "geometrie": {
+            "$ref": "#/components/schemas/Domeinobject"
+          },
+          "waarde": {
+            "$ref": "#/components/schemas/Record"
+          }
+        },
+        "required": [
+          "@type",
+          "geometrie",
+          "waarde"
+        ]
+      },
+      "Punt": {
+        "title": "Punt",
+        "type": "object",
+        "description": "Een 0-dimensionele geometrische primitieve.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Punt)",
+            "pattern": "^Punt$"
+          },
+          "wkt": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "gml": {
+            "type": "object",
+            "description": "Geometrie uitgedrukt in gml-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
+            "properties": {
+              "@value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "@value"
+            ]
+          },
+          "opmeting": {
+            "$ref": "#/components/schemas/Opmeting"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
       "Getal": {
         "title": "Getal",
         "type": "object",
@@ -3076,79 +3157,6 @@
             "type": "string",
             "description": "Object type (klasse GeneriekDatatype)",
             "pattern": "^GeneriekDatatype$"
-          }
-        },
-        "required": [
-          "@type"
-        ]
-      },
-      "PuntWaardepaar": {
-        "title": "PuntWaardepaar",
-        "type": "object",
-        "description": "Waarde van een punt.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse PuntWaardepaar)",
-            "pattern": "^PuntWaardepaar$"
-          },
-          "geometrie": {
-            "$ref": "#/components/schemas/Domeinobject"
-          },
-          "waarde": {
-            "$ref": "#/components/schemas/Record"
-          }
-        },
-        "required": [
-          "@type",
-          "geometrie",
-          "waarde"
-        ]
-      },
-      "Punt": {
-        "title": "Punt",
-        "type": "object",
-        "description": "Een 0-dimensionele geometrische primitieve.",
-        "properties": {
-          "@id": {
-            "type": "string",
-            "format": "uri"
-          },
-          "@type": {
-            "type": "string",
-            "description": "Object type (klasse Punt)",
-            "pattern": "^Punt$"
-          },
-          "wkt": {
-            "type": "object",
-            "description": "Geometrie uitgedrukt in wkt-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#wktLiteral\">wktliteral</a> als datatype.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
-          },
-          "gml": {
-            "type": "object",
-            "description": "Geometrie uitgedrukt in gml-formaat. Gebruik <a href=\"http://www.opengis.net/ont/geosparql#gmlLiteral\">gmlliteral</a> als datatype.",
-            "properties": {
-              "@value": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "@value"
-            ]
-          },
-          "opmeting": {
-            "$ref": "#/components/schemas/Opmeting"
           }
         },
         "required": [
