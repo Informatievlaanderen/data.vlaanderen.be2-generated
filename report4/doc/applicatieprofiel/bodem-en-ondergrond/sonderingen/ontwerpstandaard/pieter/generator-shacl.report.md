@@ -2,11 +2,11 @@
 
 #||# -------------------------------------  
 
-2026-07-03T09:27:27.517Z warn: Unable to find the description for subject "[urn:oslo-toolchain:33ab1107d545ec67152b8df19d86cb0cb93d8b2dcbd55d055fa497f5630d7f17](all-sonderingen.jsonld#L694)".
+2026-07-03T09:41:36.912Z warn: Unable to find the description for subject "[urn:oslo-toolchain:33ab1107d545ec67152b8df19d86cb0cb93d8b2dcbd55d055fa497f5630d7f17](all-sonderingen.jsonld#L694)".
 
-2026-07-03T09:27:27.572Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-sonderingen.jsonld#L6402)".
+2026-07-03T09:41:37.001Z warn: Unable to find the description for subject "[urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-sonderingen.jsonld#L6408)".
 
-Error: Unable to find a label for the domain "urn:oslo-toolchain:047ecd14c046206c3e6122bd67238ae4d2e39eb4fc2774eb7c9664970ed7483c" of subject "[urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-sonderingen.jsonld#L6402)".
+Error: Unable to find a label for the domain "urn:oslo-toolchain:047ecd14c046206c3e6122bd67238ae4d2e39eb4fc2774eb7c9664970ed7483c" of subject "[urn:oslo-toolchain:8fc45d55d3b378387c1348f553474222fcc42dd56256cd8f52c34c196e0a0dac](all-sonderingen.jsonld#L6408)".
 
     at PropertyShapeBaseHandler.handle (/usr/local/lib/node_modules/@oslo-flanders/shacl-template-generator/lib/handlers/PropertyShapeBaseHandler.js:141:23)
 
