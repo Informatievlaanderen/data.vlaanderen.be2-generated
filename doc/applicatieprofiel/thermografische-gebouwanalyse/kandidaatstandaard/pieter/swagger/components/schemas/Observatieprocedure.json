@@ -1,0 +1,103 @@
+{
+  "title": "Observatieprocedure",
+  "type": "object",
+  "description": "Stappen die zijn uitgevoerd om de waarde van het geobserveerdKenmerk te bekomen.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Observatieprocedure)",
+      "pattern": "^Observatieprocedure$"
+    },
+    "specificatie": {
+      "type": "array",
+      "description": "Lijst van URI items.",
+      "items": {
+        "type": "object",
+        "description": "Verwijzing naar een document dat de Observatieprocedure beschrijft.",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "@id"
+        ]
+      },
+      "minItems": 1
+    },
+    "input": {
+      "type": "array",
+      "description": "Lijst van Input items.",
+      "items": {
+        "$ref": "#/components/schemas/Input"
+      },
+      "minItems": 1
+    },
+    "output": {
+      "type": "array",
+      "description": "Lijst van Output items.",
+      "items": {
+        "$ref": "#/components/schemas/Output"
+      },
+      "minItems": 1
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Observatieproceduretype items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatieproceduretype"
+      },
+      "minItems": 1
+    },
+    "geïMplementeerdMet": {
+      "type": "array",
+      "description": "Lijst van Sensor items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Sensor"
+          },
+          {
+            "$ref": "#/components/schemas/GnssOntvanger"
+          },
+          {
+            "$ref": "#/components/schemas/Camera"
+          },
+          {
+            "$ref": "#/components/schemas/Opstelling"
+          },
+          {
+            "$ref": "#/components/schemas/MachineLearningModel"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Sensor": "#/components/schemas/Sensor",
+            "GnssOntvanger": "#/components/schemas/GnssOntvanger",
+            "Camera": "#/components/schemas/Camera",
+            "Opstelling": "#/components/schemas/Opstelling",
+            "MachineLearningModel": "#/components/schemas/MachineLearningModel"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}
