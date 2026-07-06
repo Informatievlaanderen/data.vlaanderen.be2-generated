@@ -10,7 +10,7 @@
       "Concept": {
         "title": "Concept",
         "type": "object",
-        "description": "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension).",
+        "description": "An idea or notion.",
         "properties": {
           "@id": {
             "type": "string",
@@ -283,6 +283,25 @@
           "@type"
         ]
       },
+      "Unit": {
+        "title": "Unit",
+        "type": "object",
+        "description": "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension).",
+        "properties": {
+          "@id": {
+            "type": "string",
+            "format": "uri"
+          },
+          "@type": {
+            "type": "string",
+            "description": "Object type (klasse Unit)",
+            "pattern": "^Unit$"
+          }
+        },
+        "required": [
+          "@type"
+        ]
+      },
       "FireHydrant": {
         "title": "FireHydrant",
         "type": "object",
@@ -523,13 +542,14 @@
                 "$ref": "#/components/schemas/Concept"
               },
               {
-                "$ref": "#/components/schemas/Concept"
+                "$ref": "#/components/schemas/Unit"
               }
             ],
             "discriminator": {
               "propertyName": "@type",
               "mapping": {
-                "Concept": "#/components/schemas/Concept"
+                "Concept": "#/components/schemas/Concept",
+                "Unit": "#/components/schemas/Unit"
               }
             }
           },
@@ -551,7 +571,7 @@
       "ContactPoint": {
         "title": "ContactPoint",
         "type": "object",
-        "description": "Emergency information (i.e., e-mail address and telephone number) of a person or department for Fire Hydrants through which the user can get in touch with",
+        "description": "Emergency information i.e., e-mail address and telephone number) of a person or department for Fire Hydrants through which the user can get in touch with.",
         "properties": {
           "@id": {
             "type": "string",
@@ -735,7 +755,7 @@
             ]
           },
           "unit(QuantityValue)": {
-            "$ref": "#/components/schemas/Concept"
+            "$ref": "#/components/schemas/Unit"
           }
         },
         "required": [
