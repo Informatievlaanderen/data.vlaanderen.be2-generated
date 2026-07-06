@@ -1,0 +1,72 @@
+{
+  "title": "Sensor",
+  "type": "object",
+  "description": "Toestel of Agent (inclusief Personen of software) waarmee Observaties gemaakt worden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Sensor)",
+      "pattern": "^Sensor$"
+    },
+    "locatie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Punt": "#/components/schemas/Punt"
+        }
+      }
+    },
+    "implementeert": {
+      "$ref": "#/components/schemas/Observatieprocedure"
+    },
+    "uitgevoerdeObservatie": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatie"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Systeemtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Systeemtype"
+      },
+      "minItems": 1
+    },
+    "gehostDoor": {
+      "type": "array",
+      "description": "Lijst van Platform items.",
+      "items": {
+        "$ref": "#/components/schemas/Platform"
+      },
+      "minItems": 1
+    },
+    "heeftDeployment": {
+      "type": "array",
+      "description": "Lijst van Deployment items.",
+      "items": {
+        "$ref": "#/components/schemas/Deployment"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "implementeert"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "title": "Observatieverzameling",
+  "type": "object",
+  "description": "Collectie van Observaties met dezelfde kenmerken.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Observatieverzameling)",
+      "pattern": "^Observatieverzameling$"
+    },
+    "observatiecollectietype": {
+      "type": "array",
+      "description": "Lijst van ObservatieCollectieType items.",
+      "items": {
+        "$ref": "#/components/schemas/ObservatieCollectieType"
+      },
+      "minItems": 1
+    },
+    "geobserveerdObject": {
+      "type": "array",
+      "description": "Lijst van Object items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Object"
+          },
+          {
+            "$ref": "#/components/schemas/Toestel"
+          },
+          {
+            "$ref": "#/components/schemas/Aansluiting"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Object": "#/components/schemas/Object",
+            "Toestel": "#/components/schemas/Toestel",
+            "Aansluiting": "#/components/schemas/Aansluiting"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "uitgevoerdMetsensor": {
+      "type": "array",
+      "description": "Lijst van Sensor items.",
+      "items": {
+        "$ref": "#/components/schemas/Sensor"
+      },
+      "minItems": 1
+    },
+    "geobserveerdKenmerk": {
+      "type": "array",
+      "description": "Lijst van ObserveerbaarKenmerk items.",
+      "items": {
+        "$ref": "#/components/schemas/ObserveerbaarKenmerk"
+      },
+      "minItems": 1
+    },
+    "fenomeentijd": {
+      "type": "array",
+      "description": "Lijst van TemporeleEntiteit items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TemporeleEntiteit"
+          },
+          {
+            "$ref": "#/components/schemas/Moment"
+          },
+          {
+            "$ref": "#/components/schemas/Periode"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TemporeleEntiteit": "#/components/schemas/TemporeleEntiteit",
+            "Moment": "#/components/schemas/Moment",
+            "Periode": "#/components/schemas/Periode"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "gebruikteProcedure": {
+      "type": "array",
+      "description": "Lijst van Observatieprocedure items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatieprocedure"
+      },
+      "minItems": 1
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "observatietype": {
+      "type": "array",
+      "description": "Lijst van Observatietype items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatietype"
+      },
+      "minItems": 1
+    },
+    "resultaat": {
+      "type": "array",
+      "description": "Lijst van Any items.",
+      "items": {
+        "$ref": "#/components/schemas/Any"
+      },
+      "minItems": 1
+    },
+    "heeftLid": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Observatie"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

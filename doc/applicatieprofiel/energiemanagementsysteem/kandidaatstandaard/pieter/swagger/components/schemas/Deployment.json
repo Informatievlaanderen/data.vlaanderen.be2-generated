@@ -1,0 +1,53 @@
+{
+  "title": "Deployment",
+  "type": "object",
+  "description": "Ingebruikname van een Systeem.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Deployment)",
+      "pattern": "^Deployment$"
+    },
+    "deploymentTijdstip": {
+      "type": "array",
+      "description": "Lijst van TemporeleEntiteit items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/TemporeleEntiteit"
+          },
+          {
+            "$ref": "#/components/schemas/Moment"
+          },
+          {
+            "$ref": "#/components/schemas/Periode"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "TemporeleEntiteit": "#/components/schemas/TemporeleEntiteit",
+            "Moment": "#/components/schemas/Moment",
+            "Periode": "#/components/schemas/Periode"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "host": {
+      "type": "array",
+      "description": "Lijst van Platform items.",
+      "items": {
+        "$ref": "#/components/schemas/Platform"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

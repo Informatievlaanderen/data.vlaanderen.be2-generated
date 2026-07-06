@@ -1,0 +1,129 @@
+{
+  "title": "Aansturing",
+  "type": "object",
+  "description": "Activiteit waarbij de waarde van een kenmerk van een Object wordt aangepast mbv een Aansturingssysteem.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Aansturing)",
+      "pattern": "^Aansturing$"
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Aansturingstype items.",
+      "items": {
+        "$ref": "#/components/schemas/Aansturingstype"
+      },
+      "minItems": 1
+    },
+    "resultaat": {
+      "$ref": "#/components/schemas/Any"
+    },
+    "parameter": {
+      "type": "array",
+      "description": "Lijst van BenoemdeWaarde items.",
+      "items": {
+        "$ref": "#/components/schemas/BenoemdeWaarde"
+      },
+      "minItems": 1
+    },
+    "resultaattijd": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/TemporeleEntiteit"
+        },
+        {
+          "$ref": "#/components/schemas/Moment"
+        },
+        {
+          "$ref": "#/components/schemas/Periode"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "TemporeleEntiteit": "#/components/schemas/TemporeleEntiteit",
+          "Moment": "#/components/schemas/Moment",
+          "Periode": "#/components/schemas/Periode"
+        }
+      }
+    },
+    "uitgevoerdDoor": {
+      "type": "array",
+      "description": "Lijst van Agent items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Persoon"
+          },
+          {
+            "$ref": "#/components/schemas/Organisatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Persoon": "#/components/schemas/Persoon",
+            "Organisatie": "#/components/schemas/Organisatie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "aangestuurdKenmerk": {
+      "$ref": "#/components/schemas/AanstuurbaarKenmerk"
+    },
+    "gebruikteProcedure": {
+      "type": "array",
+      "description": "Lijst van Aansturingsprocedure items.",
+      "items": {
+        "$ref": "#/components/schemas/Aansturingsprocedure"
+      },
+      "minItems": 1
+    },
+    "aangestuurdObject": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Object"
+        },
+        {
+          "$ref": "#/components/schemas/Toestel"
+        },
+        {
+          "$ref": "#/components/schemas/Aansluiting"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Object": "#/components/schemas/Object",
+          "Toestel": "#/components/schemas/Toestel",
+          "Aansluiting": "#/components/schemas/Aansluiting"
+        }
+      }
+    },
+    "uitgevoerdMetAansturingssysteem": {
+      "$ref": "#/components/schemas/Aansturingssysteem"
+    }
+  },
+  "required": [
+    "@type",
+    "resultaat",
+    "resultaattijd",
+    "aangestuurdKenmerk",
+    "aangestuurdObject",
+    "uitgevoerdMetAansturingssysteem"
+  ]
+}

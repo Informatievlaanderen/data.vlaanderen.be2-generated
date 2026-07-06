@@ -1,0 +1,76 @@
+{
+  "title": "Nutsvoorzieningnetwerk",
+  "type": "object",
+  "description": "Verzameling van netwerkelementen van één type nutsvoorziening.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Nutsvoorzieningnetwerk)",
+      "pattern": "^Nutsvoorzieningnetwerk$"
+    },
+    "geografischeNaam": {
+      "type": "array",
+      "description": "Lijst van LangString items.",
+      "items": {
+        "type": "object",
+        "description": "Naam waaronder het netwerk bekend staat.",
+        "properties": {
+          "@value": {
+            "type": "string"
+          },
+          "@language": {
+            "type": "string",
+            "pattern": "^nl$"
+          }
+        },
+        "required": [
+          "@value",
+          "@language"
+        ]
+      },
+      "minItems": 1
+    },
+    "bevoegdePartij": {
+      "type": "array",
+      "description": "Lijst van Agent items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Persoon"
+          },
+          {
+            "$ref": "#/components/schemas/Organisatie"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Persoon": "#/components/schemas/Persoon",
+            "Organisatie": "#/components/schemas/Organisatie"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "nutsvoorzieningnetwerktype": {
+      "$ref": "#/components/schemas/Nutsvoorzieningnetwerktype"
+    },
+    "netwerk": {
+      "type": "array",
+      "description": "Lijst van Nutsvoorzieningnetwerk items.",
+      "items": {
+        "$ref": "#/components/schemas/Nutsvoorzieningnetwerk"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "bevoegdePartij",
+    "nutsvoorzieningnetwerktype"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Platform",
+  "type": "object",
+  "description": "Entiteit die fungeert als basis voor andere Entiteiten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Platform)",
+      "pattern": "^Platform$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Platformtype"
+    },
+    "locatie": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Geometrie"
+        },
+        {
+          "$ref": "#/components/schemas/Punt"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Geometrie": "#/components/schemas/Geometrie",
+          "Punt": "#/components/schemas/Punt"
+        }
+      }
+    },
+    "deployment": {
+      "type": "array",
+      "description": "Lijst van Deployment items.",
+      "items": {
+        "$ref": "#/components/schemas/Deployment"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "type"
+  ]
+}
