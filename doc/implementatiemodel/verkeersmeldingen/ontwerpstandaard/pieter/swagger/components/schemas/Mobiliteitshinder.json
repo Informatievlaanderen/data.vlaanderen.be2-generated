@@ -1,0 +1,44 @@
+{
+  "title": "Mobiliteitshinder",
+  "type": "object",
+  "description": "Verstoring van de normale mobiliteit op het openbaar domein of privé domein met openbaar karakter.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Mobiliteitshinder)",
+      "pattern": "^Mobiliteitshinder$"
+    },
+    "type": {
+      "$ref": "#/components/schemas/Domeinobjecttype"
+    },
+    "waardeverschaffer": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Verkeersmeting"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Verkeersmeting": "#/components/schemas/Verkeersmeting"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Sensor",
+  "type": "object",
+  "description": "Toestel of Agent (inclusief Personen of software) waarmee Observaties gemaakt worden.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Sensor)",
+      "pattern": "^Sensor$"
+    },
+    "ligging": {
+      "type": "array",
+      "description": "Lijst van Locatie items.",
+      "items": {
+        "$ref": "#/components/schemas/Locatie"
+      },
+      "minItems": 1
+    },
+    "type": {
+      "type": "array",
+      "description": "Lijst van Systeemtype items.",
+      "items": {
+        "$ref": "#/components/schemas/Systeemtype"
+      },
+      "minItems": 1
+    },
+    "uitgevoerdeObservatie": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Verkeersmeting"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Verkeersmeting": "#/components/schemas/Verkeersmeting"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

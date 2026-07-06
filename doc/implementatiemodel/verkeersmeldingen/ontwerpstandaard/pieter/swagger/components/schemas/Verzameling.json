@@ -1,0 +1,82 @@
+{
+  "title": "Verzameling",
+  "type": "object",
+  "description": "Een verzameling van resources.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Verzameling)",
+      "pattern": "^Verzameling$"
+    },
+    "heeftLid": {
+      "type": "array",
+      "description": "Lijst van Object items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Object"
+          },
+          {
+            "$ref": "#/components/schemas/Verkeersobject"
+          },
+          {
+            "$ref": "#/components/schemas/Verkeerssituatie"
+          },
+          {
+            "$ref": "#/components/schemas/Mobiliteitshinder"
+          },
+          {
+            "$ref": "#/components/schemas/Melding"
+          },
+          {
+            "$ref": "#/components/schemas/Verzameling"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Object": "#/components/schemas/Object",
+            "Verkeersobject": "#/components/schemas/Verkeersobject",
+            "Verkeerssituatie": "#/components/schemas/Verkeerssituatie",
+            "Mobiliteitshinder": "#/components/schemas/Mobiliteitshinder",
+            "Melding": "#/components/schemas/Melding",
+            "Verzameling": "#/components/schemas/Verzameling"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "type": {
+      "$ref": "#/components/schemas/Domeinobjecttype"
+    },
+    "waardeverschaffer": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Verkeersmeting"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Verkeersmeting": "#/components/schemas/Verkeersmeting"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type"
+  ]
+}

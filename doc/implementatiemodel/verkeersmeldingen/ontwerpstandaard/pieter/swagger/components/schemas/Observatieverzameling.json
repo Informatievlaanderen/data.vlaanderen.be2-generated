@@ -1,0 +1,123 @@
+{
+  "title": "Observatieverzameling",
+  "type": "object",
+  "description": "Collectie van Observaties met dezelfde kenmerken.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Observatieverzameling)",
+      "pattern": "^Observatieverzameling$"
+    },
+    "resultaattijd": {
+      "type": "object",
+      "description": "De resultaattijd van de Observaties.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^DateTime$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "geobserveerdKenmerk": {
+      "$ref": "#/components/schemas/Kenmerktype"
+    },
+    "geobserveerdObject": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/Object"
+        },
+        {
+          "$ref": "#/components/schemas/Verkeersobject"
+        },
+        {
+          "$ref": "#/components/schemas/Verkeerssituatie"
+        },
+        {
+          "$ref": "#/components/schemas/Mobiliteitshinder"
+        },
+        {
+          "$ref": "#/components/schemas/Melding"
+        },
+        {
+          "$ref": "#/components/schemas/Verzameling"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "Object": "#/components/schemas/Object",
+          "Verkeersobject": "#/components/schemas/Verkeersobject",
+          "Verkeerssituatie": "#/components/schemas/Verkeerssituatie",
+          "Mobiliteitshinder": "#/components/schemas/Mobiliteitshinder",
+          "Melding": "#/components/schemas/Melding",
+          "Verzameling": "#/components/schemas/Verzameling"
+        }
+      }
+    },
+    "uitgevoerdMetsensor": {
+      "$ref": "#/components/schemas/Sensor"
+    },
+    "fenomeentijd": {
+      "oneOf": [
+        {
+          "$ref": "#/components/schemas/TemporeleEntiteit"
+        },
+        {
+          "$ref": "#/components/schemas/Moment"
+        },
+        {
+          "$ref": "#/components/schemas/Periode"
+        }
+      ],
+      "discriminator": {
+        "propertyName": "@type",
+        "mapping": {
+          "TemporeleEntiteit": "#/components/schemas/TemporeleEntiteit",
+          "Moment": "#/components/schemas/Moment",
+          "Periode": "#/components/schemas/Periode"
+        }
+      }
+    },
+    "gebruikteProcedure": {
+      "$ref": "#/components/schemas/Observatieprocedure"
+    },
+    "heeftLid": {
+      "type": "array",
+      "description": "Lijst van Observatie items.",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/Observatie"
+          },
+          {
+            "$ref": "#/components/schemas/Verkeersmeting"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "Observatie": "#/components/schemas/Observatie",
+            "Verkeersmeting": "#/components/schemas/Verkeersmeting"
+          }
+        }
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "heeftLid"
+  ]
+}

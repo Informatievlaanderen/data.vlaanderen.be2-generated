@@ -1,0 +1,109 @@
+{
+  "title": "Zaak",
+  "type": "object",
+  "description": "Een zaak is het geheel aan werk gedaan om tot een bestuurlijke of zakelijke beslissing te komen. Een zaak slaat doorgaans neer in een verzameling documenten.",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "@type": {
+      "type": "string",
+      "description": "Object type (klasse Zaak)",
+      "pattern": "^Zaak$"
+    },
+    "naam": {
+      "type": "object",
+      "description": "De naam van de zaak.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "openingsdatum": {
+      "type": "object",
+      "description": "De openingsdatum van de zaak.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "sluitingsdatum": {
+      "type": "object",
+      "description": "De sluitingsdatum van de zaak.",
+      "properties": {
+        "@value": {
+          "type": "string",
+          "format": "date"
+        },
+        "@type": {
+          "type": "string",
+          "pattern": "^Date$"
+        }
+      },
+      "required": [
+        "@value",
+        "@type"
+      ]
+    },
+    "procedure": {
+      "type": "object",
+      "description": "De naam die verwijst naar de formele definitie van een verzameling stappen die in de juiste volgorde leiden tot de afronding van de zaak.",
+      "properties": {
+        "@value": {
+          "type": "string"
+        },
+        "@language": {
+          "type": "string",
+          "pattern": "^nl$"
+        }
+      },
+      "required": [
+        "@value",
+        "@language"
+      ]
+    },
+    "identificator": {
+      "type": "array",
+      "description": "Lijst van Identificator items.",
+      "items": {
+        "$ref": "#/components/schemas/Identificator"
+      },
+      "minItems": 1
+    },
+    "behandelt": {
+      "type": "array",
+      "description": "Lijst van Resource items.",
+      "items": {
+        "$ref": "#/components/schemas/Resource"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "@type",
+    "naam",
+    "openingsdatum",
+    "sluitingsdatum",
+    "procedure"
+  ]
+}
