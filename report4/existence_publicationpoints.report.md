@@ -542,8 +542,10 @@ error: missing '/tmp/generated/doc/applicatieprofiel/verkeersborden/ontwerpstand
 #||#    + checking /home/circleci/project/config/dev/verkeersmeldingen.publication.json
 #||# 
 Directory check
+error: missing '/tmp/generated/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/pieter'
 
 index.html check
+error: missing '/tmp/generated/doc/implementatiemodel/verkeersmeldingen/ontwerpstandaard/pieter/index.html'
 
 #||#    + checking /home/circleci/project/config/dev/verkeersmetingen.publication.json
 #||# 
