@@ -2,71 +2,71 @@
 
 #||# -------------------------------------
 
-2026-07-07T09:22:17.218Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> PartOfMunicipality) is not an association with a source role. Ignoring this connector.
+2026-07-07T09:23:43.124Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> PartOfMunicipality) is not an association with a source role. Ignoring this connector.
 
-2026-07-07T09:22:17.221Z info: Connector Model 2025:BeSt_Domain_Model:PartOfMunicipality:isPartOf is not an association with a source role. Ignoring this connector.
+2026-07-07T09:23:43.127Z info: Connector Model 2025:BeSt_Domain_Model:PartOfMunicipality:isPartOf is not an association with a source role. Ignoring this connector.
 
-2026-07-07T09:22:17.221Z info: Connector Model 2025:BeSt_Domain_Model:PartOfMunicipality:isPartOf has name "isPartOf". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
+2026-07-07T09:23:43.127Z info: Connector Model 2025:BeSt_Domain_Model:PartOfMunicipality:isPartOf has name "isPartOf". but no destination role. Ignoring therefore this connector. If required to be present add a role or cardinality.
 
-2026-07-07T09:22:17.221Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> Municipality) is not an association with a source role. Ignoring this connector.
+2026-07-07T09:23:43.127Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> Municipality) is not an association with a source role. Ignoring this connector.
 
-2026-07-07T09:22:17.221Z info: Connector Model 2025:BeSt_Domain_Model:StreetName:(StreetName -> Municipality) is not an association with a source role. Ignoring this connector.
+2026-07-07T09:23:43.127Z info: Connector Model 2025:BeSt_Domain_Model:StreetName:(StreetName -> Municipality) is not an association with a source role. Ignoring this connector.
 
-2026-07-07T09:22:17.221Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> PostalInfo) is not an association with a source role. Ignoring this connector.
+2026-07-07T09:23:43.127Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> PostalInfo) is not an association with a source role. Ignoring this connector.
 
-2026-07-07T09:22:17.221Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> AddressableObject) is not an association with a source role. Ignoring this connector.
+2026-07-07T09:23:43.127Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> AddressableObject) is not an association with a source role. Ignoring this connector.
 
-2026-07-07T09:22:17.221Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> StreetName) is not an association with a source role. Ignoring this connector.
+2026-07-07T09:23:43.127Z info: Connector Model 2025:BeSt_Domain_Model:Address:(Address -> StreetName) is not an association with a source role. Ignoring this connector.
 
-2026-07-07T09:22:17.222Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model 2025). Using fallback URI (http://todo.com/) instead.
+2026-07-07T09:23:43.128Z warn: [PackageConverterHandler]: No value found for tag "baseURI" in package (Model 2025). Using fallback URI (http://todo.com/) instead.
 
-2026-07-07T09:22:17.224Z warn: [ConnectorConverterHandler]: Connector (hasPostalInfo) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-07-07T09:23:43.130Z warn: [ConnectorConverterHandler]: Connector (hasPostalInfo) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2026-07-07T09:22:17.224Z warn: [ConnectorConverterHandler]: Connector (isAssignedToAddressableObject) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-07-07T09:23:43.131Z warn: [ConnectorConverterHandler]: Connector (isAssignedToAddressableObject) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2026-07-07T09:22:17.225Z warn: [ConnectorConverterHandler]: Connector (hasPartOfMunicipality) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-07-07T09:23:43.131Z warn: [ConnectorConverterHandler]: Connector (hasPartOfMunicipality) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2026-07-07T09:22:17.225Z warn: [ConnectorConverterHandler]: Connector (isPartOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-07-07T09:23:43.131Z warn: [ConnectorConverterHandler]: Connector (isPartOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2026-07-07T09:22:17.225Z warn: [ConnectorConverterHandler]: Connector (isPartOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-07-07T09:23:43.131Z warn: [ConnectorConverterHandler]: Connector (isPartOf) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2026-07-07T09:22:17.225Z warn: [ConnectorConverterHandler]: Connector (hasMunicipality) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-07-07T09:23:43.131Z warn: [ConnectorConverterHandler]: Connector (hasMunicipality) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2026-07-07T09:22:17.225Z warn: [ConnectorConverterHandler]: Connector (isAssignedByMunicipality) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-07-07T09:23:43.131Z warn: [ConnectorConverterHandler]: Connector (isAssignedByMunicipality) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2026-07-07T09:22:17.225Z warn: [ConnectorConverterHandler]: Connector (hasStreetName) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
+2026-07-07T09:23:43.131Z warn: [ConnectorConverterHandler]: Connector (hasStreetName) does not have a package tag defined. Trying to determine the correct base URI based on the source and destination objects their package.
 
-2026-07-07T09:22:17.227Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Address has an empty value for tag usageNote-de.
+2026-07-07T09:23:43.134Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Address has an empty value for tag usageNote-de.
 
-2026-07-07T09:22:17.227Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Address has an empty value for tag usageNote-en.
+2026-07-07T09:23:43.134Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Address has an empty value for tag usageNote-en.
 
-2026-07-07T09:22:17.227Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Address has an empty value for tag usageNote-fr.
+2026-07-07T09:23:43.134Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Address has an empty value for tag usageNote-fr.
 
-2026-07-07T09:22:17.227Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Address has an empty value for tag usageNote-nl.
+2026-07-07T09:23:43.134Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Address has an empty value for tag usageNote-nl.
 
-2026-07-07T09:22:17.228Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StatusValue has an empty value for tag usageNote-de.
+2026-07-07T09:23:43.135Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StatusValue has an empty value for tag usageNote-de.
 
-2026-07-07T09:22:17.228Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StatusValue has an empty value for tag usageNote-en.
+2026-07-07T09:23:43.135Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StatusValue has an empty value for tag usageNote-en.
 
-2026-07-07T09:22:17.228Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StatusValue has an empty value for tag usageNote-fr.
+2026-07-07T09:23:43.135Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StatusValue has an empty value for tag usageNote-fr.
 
-2026-07-07T09:22:17.228Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StatusValue has an empty value for tag usageNote-nl.
+2026-07-07T09:23:43.135Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StatusValue has an empty value for tag usageNote-nl.
 
-2026-07-07T09:22:17.228Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StreetNameTypeValue has an empty value for tag usageNote-de.
+2026-07-07T09:23:43.135Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StreetNameTypeValue has an empty value for tag usageNote-de.
 
-2026-07-07T09:22:17.228Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StreetNameTypeValue has an empty value for tag usageNote-en.
+2026-07-07T09:23:43.135Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StreetNameTypeValue has an empty value for tag usageNote-en.
 
-2026-07-07T09:22:17.228Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StreetNameTypeValue has an empty value for tag usageNote-fr.
+2026-07-07T09:23:43.135Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StreetNameTypeValue has an empty value for tag usageNote-fr.
 
-2026-07-07T09:22:17.228Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StreetNameTypeValue has an empty value for tag usageNote-nl.
+2026-07-07T09:23:43.135Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:StreetNameTypeValue has an empty value for tag usageNote-nl.
 
-2026-07-07T09:22:17.236Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Point:pos (Lam72 - Lam08) has an empty value for tag usageNote-nl.
+2026-07-07T09:23:43.144Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Point:pos (Lam72 - Lam08) has an empty value for tag usageNote-nl.
 
-2026-07-07T09:22:17.236Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Point:pos (Lam72 - Lam08) has an empty value for tag usageNote-fr.
+2026-07-07T09:23:43.144Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Point:pos (Lam72 - Lam08) has an empty value for tag usageNote-fr.
 
-2026-07-07T09:22:17.237Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Point:pos (Lam72 - Lam08) has an empty value for tag usageNote-de.
+2026-07-07T09:23:43.144Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Point:pos (Lam72 - Lam08) has an empty value for tag usageNote-de.
 
-2026-07-07T09:22:17.237Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Point:pos (Lam72 - Lam08) has an empty value for tag usageNote-en.
+2026-07-07T09:23:43.144Z warn: [ConverterHandler]: Entity with path Model 2025:BeSt_Domain_Model:Point:pos (Lam72 - Lam08) has an empty value for tag usageNote-en.
 
 #||# -------------------------------------
 
