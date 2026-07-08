@@ -301,7 +301,37 @@
             "type": "array",
             "description": "Lijst van Locatie items.",
             "items": {
-              "$ref": "#/components/schemas/Locatie"
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/Locatie"
+                },
+                {
+                  "$ref": "#/components/schemas/Plaats"
+                },
+                {
+                  "$ref": "#/components/schemas/BelgischAdres"
+                },
+                {
+                  "$ref": "#/components/schemas/GeografischeNaam"
+                },
+                {
+                  "$ref": "#/components/schemas/Adresvoorstelling"
+                },
+                {
+                  "$ref": "#/components/schemas/Geometrie"
+                }
+              ],
+              "discriminator": {
+                "propertyName": "@type",
+                "mapping": {
+                  "Locatie": "#/components/schemas/Locatie",
+                  "Plaats": "#/components/schemas/Plaats",
+                  "BelgischAdres": "#/components/schemas/BelgischAdres",
+                  "GeografischeNaam": "#/components/schemas/GeografischeNaam",
+                  "Adresvoorstelling": "#/components/schemas/Adresvoorstelling",
+                  "Geometrie": "#/components/schemas/Geometrie"
+                }
+              }
             },
             "minItems": 1
           },
