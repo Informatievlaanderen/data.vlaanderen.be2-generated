@@ -2,15 +2,21 @@
 
 #||# -------------------------------------  
 
-2026-07-09T15:44:26.442Z info: Loaded 54 URI prefixes into whitelist
+2026-07-09T15:51:30.713Z info: Loaded 54 URI prefixes into whitelist
 
-2026-07-09T15:44:26.738Z info: Validation successful! All assigned URIs are whitelisted.
+2026-07-09T15:51:30.913Z error: Found missing class or attribute (Locatie): [urn:oslo-toolchain:c715fdc0035a07528a7680b733044b135c489d231c1512dec3448448ee4fd041](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6047) in Application Profile
 
-2026-07-09T15:44:26.739Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
+2026-07-09T15:51:30.913Z error: Found missing class or attribute (Geometrie): [urn:oslo-toolchain:ac2a7514fa491161f968e1ce94a32dd6ab75f9ac7fe589c7611a4d34d2f152eb](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6348) in Application Profile
 
-2026-07-09T15:44:26.739Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+2026-07-09T15:51:30.914Z error: Found missing class or attribute (Geometrie): [urn:oslo-toolchain:98084eff144341aeacb329df55816db67279b59dffda2990073e66266819aaab](all-geluidsmeldingen-en-geluidsmetingen.jsonld#L6359) in Application Profile
 
-2026-07-09T15:44:26.739Z info: Validation successful! All base URIs seem to be valid.
+2026-07-09T15:51:30.914Z info: Validation successful! All assigned URIs are whitelisted.
 
-2026-07-09T15:44:26.739Z info: Validation successful! All referenced classes and attributes seem to be included.
+2026-07-09T15:51:30.914Z info: Validation successful! All sentences seem to be valid, no spelling mistakes found.
+
+2026-07-09T15:51:30.914Z info: Validation successful! All labels seem to be valid, no spelling mistakes found.
+
+2026-07-09T15:51:30.915Z info: Validation successful! All base URIs seem to be valid.
+
+2026-07-09T15:51:30.915Z info: Validation found 3 missing referenced classes or attributes.
 

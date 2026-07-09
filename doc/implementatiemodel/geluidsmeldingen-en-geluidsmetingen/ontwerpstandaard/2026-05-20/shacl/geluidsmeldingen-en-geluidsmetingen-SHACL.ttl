@@ -131,13 +131,13 @@
     shacl:path <https://data.vlaanderen.be/ns/dossier#vindtPlaatsTijdens>
   ], [
     a shacl:PropertyShape;
-    rdfs:label "Activiteit"@nl;
-    rdfs:comment "Een activiteitassociatie is het toekennen van verantwoordelijkheid aan een agent voor een activiteit, waarbij wordt aangegeven dat de agent een rol had in die activiteit.$ea_notes=Een activiteitassociatie is het toekennen van verantwoordelijkheid aan een agent voor een activiteit, waarbij wordt aangegeven dat de agent een rol had in die activiteit. Het maakt het bovendien mogelijk een plan te specificeren, namelijk het plan dat door de agent wordt beoogd om bepaalde doelstellingen te bereiken in de context van deze activiteit."@nl;
-    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/ontwerpstandaard/2026-05-20#Activiteit.Activiteit>;
+    rdfs:label "wasGeassocieerdMet"@nl;
+    rdfs:comment "Een activiteitassociatie is het toekennen van verantwoordelijkheid aan een agent voor een activiteit, waarbij wordt aangegeven dat de agent een rol had in die activiteit."@nl;
+    rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/ontwerpstandaard/2026-05-20#Activiteit.WasGeassocieerdMet>;
     shacl:class dc:Agent;
-    shacl:description "Een activiteitassociatie is het toekennen van verantwoordelijkheid aan een agent voor een activiteit, waarbij wordt aangegeven dat de agent een rol had in die activiteit.$ea_notes=Een activiteitassociatie is het toekennen van verantwoordelijkheid aan een agent voor een activiteit, waarbij wordt aangegeven dat de agent een rol had in die activiteit. Het maakt het bovendien mogelijk een plan te specificeren, namelijk het plan dat door de agent wordt beoogd om bepaalde doelstellingen te bereiken in de context van deze activiteit."@nl;
-    shacl:name "Activiteit"@nl;
-    shacl:path dc:wasGeassocieerdMet
+    shacl:description "Een activiteitassociatie is het toekennen van verantwoordelijkheid aan een agent voor een activiteit, waarbij wordt aangegeven dat de agent een rol had in die activiteit."@nl;
+    shacl:name "wasGeassocieerdMet"@nl;
+    shacl:path prov:wasAssociatedWith
   ];
   shacl:targetClass prov:Activity .
 
@@ -453,7 +453,7 @@
     shacl:maxCount 1;
     shacl:minCount 1;
     shacl:name "Plaats"@nl;
-    shacl:or ([shacl:class prov:Location] [shacl:class dc:Location] [shacl:class <https://data.vlaanderen.be/ns/adres#Adres>] [shacl:class rdf:langString] [shacl:class <http://www.w3.org/ns/locn#Address>] [shacl:class <http://www.w3.org/ns/locn#Geometry>] [shacl:class <http://www.opengis.net/ont/sf#Point>]);
+    shacl:or ([shacl:class prov:Locatie] [shacl:class dc:Location] [shacl:class <https://data.vlaanderen.be/ns/adres#Adres>] [shacl:class rdf:langString] [shacl:class <http://www.w3.org/ns/locn#Address>] [shacl:class <http://www.w3.org/ns/locn#Geometrie>] [shacl:class <http://www.opengis.net/ont/sf#Point>]);
     shacl:path schemas:plaats
   ], [
     a shacl:PropertyShape;
@@ -485,7 +485,7 @@
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/ontwerpstandaard/2026-05-20#GeometrieShape> a shacl:NodeShape;
   rdfs:label "Geometrie"@nl;
-  rdfs:comment "Vorm- en positiekenmerken van een object."@nl;
+  rdfs:comment "Geometrie van de plaats of het gebied."@nl;
   shacl:closed false;
   shacl:property [
     a shacl:PropertyShape;
@@ -510,7 +510,7 @@
     shacl:nodeKind shacl:Literal;
     shacl:path <http://www.opengis.net/ont/geosparql#asGML>
   ];
-  shacl:targetClass <http://www.w3.org/ns/locn#Geometry>,
+  shacl:targetClass <http://www.w3.org/ns/locn#Geometrie>,
     <http://www.opengis.net/ont/sf#Point> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/ontwerpstandaard/2026-05-20#IdentificatorShape> a shacl:NodeShape;
@@ -602,16 +602,15 @@
   shacl:targetClass rdf:langString .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/ontwerpstandaard/2026-05-20#LocatieShape> a shacl:NodeShape;
-  rdfs:label "Locatie"@nl;
-  <http://purl.org/vocab/vann/usageNote> "Te gebruiken als de manier waarop de geografische positie wordt aangeduid pas zal worden vastgelegd bij implementatie. Is deze manier nu al gekend dan moet dit datatype gesubstitueerd worden door klassen of datatypes zoals Geometrie, GeografischeNaam, Adres etc."@nl;
-  rdfs:comment "Aanduiding van een geografische positie,dmv coördinaten,een toponiem,een adreslabel,een verwijzing naar een plaats/regio of verwijzing naar een adres."@nl;
+  rdfs:label "Locatie";
+  rdfs:comment "Een locatie kan een identificeerbare geografische plaats zijn (ISO 19112), maar kan ook een niet-geografische plaats zijn, zoals een map, rij of kolom."@nl;
   shacl:closed false;
   shacl:targetClass dc:Location,
     <https://data.vlaanderen.be/ns/adres#Adres>,
     rdf:langString,
-    prov:Location,
+    prov:Locatie,
     <http://www.w3.org/ns/locn#Address>,
-    <http://www.w3.org/ns/locn#Geometry>,
+    <http://www.w3.org/ns/locn#Geometrie>,
     <http://www.opengis.net/ont/sf#Point> .
 
 <https://data.test-vlaanderen.be/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/ontwerpstandaard/2026-05-20#MeetpuntShape> a shacl:NodeShape;
@@ -700,7 +699,7 @@
     shacl:description "De relatie tussen de MeldingBody en een geometrie."@nl;
     shacl:maxCount 1;
     shacl:name "geometrie"@nl;
-    shacl:or ([shacl:class <http://www.w3.org/ns/locn#Geometry>] [shacl:class <http://www.opengis.net/ont/sf#Point>]);
+    shacl:or ([shacl:class <http://www.w3.org/ns/locn#Geometrie>] [shacl:class <http://www.opengis.net/ont/sf#Point>]);
     shacl:path <http://www.w3.org/ns/locn#geometry>
   ];
   shacl:targetClass <https://data.vlaanderen.be/ns/melding#MeldingBody> .
@@ -1246,7 +1245,7 @@
     shacl:description "Geometrie van de plaats of het gebied."@nl;
     shacl:maxCount 1;
     shacl:name "geometrie"@nl;
-    shacl:or ([shacl:class <http://www.w3.org/ns/locn#Geometry>] [shacl:class <http://www.opengis.net/ont/sf#Point>]);
+    shacl:or ([shacl:class <http://www.w3.org/ns/locn#Geometrie>] [shacl:class <http://www.opengis.net/ont/sf#Point>]);
     shacl:path <http://www.w3.org/ns/locn#geometry>
   ];
   shacl:targetClass dc:Location .
@@ -1303,7 +1302,7 @@
     rdfs:seeAlso <https://data.test-vlaanderen.be/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/ontwerpstandaard/2026-05-20#Sensor.Ligging>;
     shacl:description "Locatie van de Sensor."@nl;
     shacl:name "ligging"@nl;
-    shacl:or ([shacl:class prov:Location] [shacl:class dc:Location] [shacl:class <https://data.vlaanderen.be/ns/adres#Adres>] [shacl:class rdf:langString] [shacl:class <http://www.w3.org/ns/locn#Address>] [shacl:class <http://www.w3.org/ns/locn#Geometry>] [shacl:class <http://www.opengis.net/ont/sf#Point>]);
+    shacl:or ([shacl:class prov:Locatie] [shacl:class dc:Location] [shacl:class <https://data.vlaanderen.be/ns/adres#Adres>] [shacl:class rdf:langString] [shacl:class <http://www.w3.org/ns/locn#Address>] [shacl:class <http://www.w3.org/ns/locn#Geometrie>] [shacl:class <http://www.opengis.net/ont/sf#Point>]);
     shacl:path <https://data.vlaanderen.be/ns/verkeersmetingen#ligging>
   ], [
     a shacl:PropertyShape;
