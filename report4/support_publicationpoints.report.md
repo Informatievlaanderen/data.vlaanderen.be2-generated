@@ -1,5 +1,7 @@
 #||# checking publication points in directory /home/circleci/project/config/dev
 #||# 
+#||#   + adding supporting /home/circleci/project/config/dev/NDNN.publication.json
+#||#  
 #||#   + adding supporting /home/circleci/project/config/dev/adres.publication.json
 #||#  
 #||#   + adding supporting /home/circleci/project/config/dev/bedrijventerrein.publication.json

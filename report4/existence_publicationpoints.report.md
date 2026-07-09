@@ -1,5 +1,12 @@
 #||# checking publication points in directory /home/circleci/project/config/dev
 #||# 
+#||#    + checking /home/circleci/project/config/dev/NDNN.publication.json
+#||# 
+Directory check
+
+index.html check
+error: missing '/tmp/generated/doc/implementatiemodel/geluidsmeldingen-en-geluidsmetingen/ontwerpstandaard/2026-05-20/index.html'
+
 #||#    + checking /home/circleci/project/config/dev/adres.publication.json
 #||# 
 Directory check
